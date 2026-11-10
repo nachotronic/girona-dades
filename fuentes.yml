@@ -223,6 +223,18 @@ salud:
     nivel: [abs]
     frecuencia: anual
     estado: por_confirmar
+  - id: catsalut_llistes_espera
+    nombre: Listas de espera quirúrgica, consultas y pruebas
+    organismo: CatSalut
+    nivel: [hospital, region_sanitaria]
+    frecuencia: semestral
+    estado: por_confirmar
+  - id: registre_sollicitants_hpo
+    nombre: Solicitantes de vivienda protegida
+    organismo: Agència de l'Habitatge de Catalunya
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
 locales:
   - id: girona_opendata
     nombre: Girona Open Data (padrón, licencias de obra, presupuesto, cartografía)
