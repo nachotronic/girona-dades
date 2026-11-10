@@ -5,6 +5,7 @@ El registro completo, con el organismo, el nivel territorial, la frecuencia y el
 ## Niveles territoriales
 
 - **Sección censal**: Atlas de renta (INE), padrón (INE), Censo 2021 y Catastro (agregando edificios).
+- **Ayuntamiento**: presupuestos, deuda, periodo de pago, coste de servicios y sueldos de cargos electos (Hacienda), contratos y subvenciones.
 - **Municipio**: Incasòl, compraventas, viviendas de uso turístico, AEAT, Hacienda, Idescat, paro.
 - **Provincia o municipios grandes**: Colegio de Registradores y Ministerio de Vivienda.
 - **ABS (Área Básica de Salud)**: indicadores de salud, cruzados con municipio mediante una tabla de equivalencias.

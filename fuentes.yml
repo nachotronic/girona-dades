@@ -104,6 +104,43 @@ hacienda_transportes:
     nivel: [municipio]
     frecuencia: diaria
     estado: por_confirmar
+ayuntamientos:
+  - id: hacienda_periodo_pago
+    nombre: Periodo medio de pago a proveedores
+    organismo: Ministerio de Hacienda
+    nivel: [municipio]
+    frecuencia: mensual
+    estado: por_confirmar
+  - id: hacienda_coste_servicios
+    nombre: Coste efectivo de los servicios
+    organismo: Ministerio de Hacienda
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: hacienda_ispa
+    nombre: Retribuciones de alcaldes y concejales (ISPA)
+    organismo: Ministerio de Hacienda
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: contratacion_publica
+    nombre: Contratos públicos
+    organismo: Plataforma de Contratación del Sector Público / Registre públic de contractes
+    nivel: [municipio]
+    frecuencia: continua
+    estado: por_confirmar
+  - id: bdns_subvenciones
+    nombre: Subvenciones
+    organismo: Base de Datos Nacional de Subvenciones
+    nivel: [municipio]
+    frecuencia: continua
+    estado: por_confirmar
+  - id: sindicatura_comptes
+    nombre: Cuentas anuales y auditorías
+    organismo: Sindicatura de Comptes de Catalunya
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
 poblacion_empleo:
   - id: idescat_emex
     nombre: El municipi en xifres (API)
