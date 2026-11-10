@@ -1,0 +1,2735 @@
+
+
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="shortcut icon" href="../imatges/favicon.ico" type="image/x-icon"/>
+  <title>XIFRA - Sistema d'Informaci&oacute; Estad&iacute;stica Local.</title>
+  <meta name="description" content="Sistema d'informació estadística local de la demarcació de Girona que aporta informació estadística i assessorament tècnic.">
+  <link type="text/css" rel="stylesheet" href="/xifra/css/estilos_uni.css">
+  <link type="text/css" rel="stylesheet" href="/xifra/css/estil.css?id=304454" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script> 
+  <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-340666-14");
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+</head>
+
+<body id="demografia cabecera_DIBA dpt">
+
+	<div id="contingut">
+ 		<div id="main">
+			<div class="badge_DDGI">
+				<a href="https://www.ddgi.cat/web" title="Portal web de la Diputació de Girona" target="_blank">	
+				<img src="/xifra/img/Diputacio_de_Girona_x1.png" srcset="https://www.ddgi.cat/ddgi/docNivell/web/badge/Diputacio_de_Girona_x2.png 2x" alt="Diputació de Girona">
+				</a>
+			</div>
+			<div id="top">
+				<div id="logo"></div>
+				<div id="top-titol">
+					<img src="/xifra/img/top.png" alt="" />
+				</div>
+			</div>
+			<div id="BarraMenu">
+				<a href="/xifra/menu_ini.asp" class="menu_off">Inici XIFRA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="/xifra/default.asp" class="menu_off">Torna al men&uacute;</a>
+			</div>
+		</div>
+
+
+
+	<div id="divContCentral">
+
+
+
+<!--inicio contenido central-->
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td width="5">&nbsp;</td>
+	<td>&nbsp;</td>
+	<td width="5">&nbsp;</td>
+	</tr>
+	<tr>
+	<td width="5"></td>
+	<td>
+
+	<table border="0" CELLPADDING="1" cellspacing="0" width="100%">
+	<tr>
+		
+	<td valign="TOP"><span class="Titred"><span class="titred2">Població. Recomptes</span><br /><span class="titred3">Població total per sexe</span> <a href="../glossari.asp?id=1021" target="glossari"><img src="..//images/info2.gif"></a></span><br>
+	<span class="subtitgrey">Tots els municipis de la prov&iacute;ncia de Girona </span><br>  
+	<span class="linkred3">Any:</span>&nbsp;<span class="txtblack">2025&nbsp;INE, cens de població i habitatge</span></td>
+	<td valign="top" class="txtarrow"><div style="float:right; max-width:450px;"><span class="linkred3">Informació relacionada</span><br />&raquo; <a class="txtgrey5" href="../demografia/dpe.asp?IdMenu=03020102">Població per sexe i edat</a><br />
+&raquo; <a class="txtgrey5" href="../demografia/dps.asp?IdMenu=03020103">Població estacional (ETCA)</a><br />
+&raquo; <a class="txtgrey5" href="../demografia/pre.asp?IdMenu=03020104">Població resident a l'estranger</a><br />
+&raquo; <a class="txtgrey5" href="../entorn/nomenclator.asp?tipo=D&IdMenu=03020105">Nomenclàtor</a><br />
+</div></td><td valign="top" align="right" width="30" class="txtarrow"><a href="/xifra/menu_mun.asp"><img border="0" src="../img/atras.gif" alt="Tornar al men&uacute;" /></a></td>
+	</tr>
+	</table>
+		
+	<form name="formulario" method="POST" action="/xifra/demografia/dpt.asp">
+	<table border="0" CELLPADDING="1" cellspacing="0" width="100%"><tr><td bgColor="#9c9a9c">
+	<table border="0" cellPadding="0" cellSpacing="0" width="100%"><tr bgColor="#eeeeee">
+		<td>
+		
+			&nbsp;<span class="linkred3">Any:</span>&nbsp;
+			<select name="any" class="ft">
+			<option value=DCE2025 SELECTED>2025 Cens</option><option value=DPO2025>2025 Padró continu</option><option value=DCE2024>2024 Cens</option><option value=DPO2024>2024 Padró continu</option><option value=DCE2023>2023 Cens</option><option value=DPO2023>2023 Padró continu</option><option value=DPO2022>2022 Padró continu</option><option value=DPO2021>2021 Padró continu</option><option value=DPO2020>2020 Padró continu</option><option value=DPO2019>2019 Padró continu</option><option value=DPO2018>2018 Padró continu</option><option value=DPO2017>2017 Padró continu</option><option value=DPO2016>2016 Padró continu</option><option value=DPO2015>2015 Padró continu</option><option value=DPO2014>2014 Padró continu</option><option value=DPO2013>2013 Padró continu</option><option value=DPO2012>2012 Padró continu</option><option value=DCE2011>2011 Cens</option><option value=DPO2011>2011 Padró continu</option><option value=DPO2010>2010 Padró continu</option><option value=DPO2009>2009 Padró continu</option><option value=DPO2008>2008 Padró continu</option><option value=DPO2007>2007 Padró continu</option><option value=DPO2006>2006 Padró continu</option><option value=DPO2005>2005 Padró continu</option><option value=DPO2004>2004 Padró continu</option><option value=DPO2003>2003 Padró continu</option><option value=DPO2002>2002 Padró continu</option><option value=DCE2001>2001 Cens</option><option value=DPO2001>2001 Padró continu</option><option value=DPO2000>2000 Padró continu</option><option value=DCE1996>1996 Cens</option><option value=DCE1991>1991 Cens</option><option value=DCE1986>1986 Cens</option>
+			</select>
+			<INPUT TYPE="HIDDEN" NAME="IdMenu" VALUE="03020101">
+			&nbsp;&nbsp;&nbsp;
+			
+			<span class="linkred3">Dades:</span>&nbsp;
+			<select name="dades" class="ft">
+			<option value=0 SELECTED>Absolutes</option>
+			<option value=1 >Percentatge per columnes</option>
+			<option value=2 >Percentatge per files</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;
+					<span class="linkred3">Mapa:</span>&nbsp;
+					<select name="mapa" class="ft">
+					<option value="h" >Homes</option>
+					<option value="d" >Dones</option>
+					<option value="t" SELECTED>Total</option>
+					</select>
+			</td>
+			<td>
+			<input name="boton" type="submit" value="Actualitza" class="ft">
+			</td>
+			<td align="right">
+			<input name="boton" type="submit" value="-" class="miboton" title="Exportar a Excel">
+			<input name="boton" type="submit" value="+" class="mibotonP" title="Exportar 6 períodes">
+ 			<a id="map-sitmun" href="http://sitmun.ddgi.cat/sitmun/ws/../rest/thematic?ws=https://www.ddgi.cat/xifra/arxius/dpt.json" target="_new"><img alt="sitmun" src="../images/icona-mapa5.png" style="margin:0;vertical-align:middle;" title="Exportar a mapa" /></a>
+		
+	</td>
+	</tr></table>
+	</td></tr></table>
+ 	</form>
+		<table id="taula_dades" class="display responsive" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<thead>
+		<tr bgcolor="#dddddd">
+			<td ALIGN="left" class="linkred2">Codi INE</td>
+			<td ALIGN="left" class="linkred2">Municipi</td>
+			<td ALIGN="Right" class="linkred2" width="20%">Homes</td>
+			<td ALIGN="Right" class="linkred2" width="20%">Dones</td>
+			<td ALIGN="Right" class="linkred2" width="20%">Total</td>
+		</tr>
+		</thead>
+		<tbody>
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17001</td>
+		<td ALIGN="Left" class="txtgrey2">Agullana</td>
+		
+			<td ALIGN="Right" class="txtgrey23">435</td>
+  			<td ALIGN="Right" class="txtgrey2">446</td>
+  			<td ALIGN="Right" class="txtblack3">881</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17002</td>
+		<td ALIGN="Left" class="txtgrey2">Aiguaviva</td>
+		
+			<td ALIGN="Right" class="txtgrey23">415</td>
+  			<td ALIGN="Right" class="txtgrey2">390</td>
+  			<td ALIGN="Right" class="txtblack3">805</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17003</td>
+		<td ALIGN="Left" class="txtgrey2">Albanyà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">80</td>
+  			<td ALIGN="Right" class="txtgrey2">78</td>
+  			<td ALIGN="Right" class="txtblack3">158</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17004</td>
+		<td ALIGN="Left" class="txtgrey2">Albons</td>
+		
+			<td ALIGN="Right" class="txtgrey23">432</td>
+  			<td ALIGN="Right" class="txtgrey2">420</td>
+  			<td ALIGN="Right" class="txtblack3">852</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17006</td>
+		<td ALIGN="Left" class="txtgrey2">Alp</td>
+		
+			<td ALIGN="Right" class="txtgrey23">902</td>
+  			<td ALIGN="Right" class="txtgrey2">822</td>
+  			<td ALIGN="Right" class="txtblack3">1.724</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17007</td>
+		<td ALIGN="Left" class="txtgrey2">Amer</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.202</td>
+  			<td ALIGN="Right" class="txtgrey2">1.217</td>
+  			<td ALIGN="Right" class="txtblack3">2.419</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17008</td>
+		<td ALIGN="Left" class="txtgrey2">Anglès</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.942</td>
+  			<td ALIGN="Right" class="txtgrey2">2.962</td>
+  			<td ALIGN="Right" class="txtblack3">5.904</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17009</td>
+		<td ALIGN="Left" class="txtgrey2">Arbúcies</td>
+		
+			<td ALIGN="Right" class="txtgrey23">3.418</td>
+  			<td ALIGN="Right" class="txtgrey2">3.217</td>
+  			<td ALIGN="Right" class="txtblack3">6.635</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17010</td>
+		<td ALIGN="Left" class="txtgrey2">Argelaguer</td>
+		
+			<td ALIGN="Right" class="txtgrey23">233</td>
+  			<td ALIGN="Right" class="txtgrey2">234</td>
+  			<td ALIGN="Right" class="txtblack3">467</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17011</td>
+		<td ALIGN="Left" class="txtgrey2">Armentera, l'</td>
+		
+			<td ALIGN="Right" class="txtgrey23">545</td>
+  			<td ALIGN="Right" class="txtgrey2">531</td>
+  			<td ALIGN="Right" class="txtblack3">1.076</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17012</td>
+		<td ALIGN="Left" class="txtgrey2">Avinyonet de Puigventós</td>
+		
+			<td ALIGN="Right" class="txtgrey23">829</td>
+  			<td ALIGN="Right" class="txtgrey2">840</td>
+  			<td ALIGN="Right" class="txtblack3">1.669</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17015</td>
+		<td ALIGN="Left" class="txtgrey2">Banyoles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">10.326</td>
+  			<td ALIGN="Right" class="txtgrey2">10.561</td>
+  			<td ALIGN="Right" class="txtblack3">20.887</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17016</td>
+		<td ALIGN="Left" class="txtgrey2">Bàscara</td>
+		
+			<td ALIGN="Right" class="txtgrey23">526</td>
+  			<td ALIGN="Right" class="txtgrey2">522</td>
+  			<td ALIGN="Right" class="txtblack3">1.048</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17013</td>
+		<td ALIGN="Left" class="txtgrey2">Begur</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.133</td>
+  			<td ALIGN="Right" class="txtgrey2">2.153</td>
+  			<td ALIGN="Right" class="txtblack3">4.286</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17018</td>
+		<td ALIGN="Left" class="txtgrey2">Bellcaire d'Empordà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">364</td>
+  			<td ALIGN="Right" class="txtgrey2">358</td>
+  			<td ALIGN="Right" class="txtblack3">722</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17019</td>
+		<td ALIGN="Left" class="txtgrey2">Besalú</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.253</td>
+  			<td ALIGN="Right" class="txtgrey2">1.338</td>
+  			<td ALIGN="Right" class="txtblack3">2.591</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17020</td>
+		<td ALIGN="Left" class="txtgrey2">Bescanó</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.539</td>
+  			<td ALIGN="Right" class="txtgrey2">2.548</td>
+  			<td ALIGN="Right" class="txtblack3">5.087</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17021</td>
+		<td ALIGN="Left" class="txtgrey2">Beuda</td>
+		
+			<td ALIGN="Right" class="txtgrey23">101</td>
+  			<td ALIGN="Right" class="txtgrey2">101</td>
+  			<td ALIGN="Right" class="txtblack3">202</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17022</td>
+		<td ALIGN="Left" class="txtgrey2">Bisbal d'Empordà, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">5.867</td>
+  			<td ALIGN="Right" class="txtgrey2">5.864</td>
+  			<td ALIGN="Right" class="txtblack3">11.731</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17234</td>
+		<td ALIGN="Left" class="txtgrey2">Biure</td>
+		
+			<td ALIGN="Right" class="txtgrey23">119</td>
+  			<td ALIGN="Right" class="txtgrey2">108</td>
+  			<td ALIGN="Right" class="txtblack3">227</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17023</td>
+		<td ALIGN="Left" class="txtgrey2">Blanes</td>
+		
+			<td ALIGN="Right" class="txtgrey23">21.131</td>
+  			<td ALIGN="Right" class="txtgrey2">21.315</td>
+  			<td ALIGN="Right" class="txtblack3">42.446</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17029</td>
+		<td ALIGN="Left" class="txtgrey2">Boadella i les Escaules</td>
+		
+			<td ALIGN="Right" class="txtgrey23">130</td>
+  			<td ALIGN="Right" class="txtgrey2">134</td>
+  			<td ALIGN="Right" class="txtblack3">264</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17024</td>
+		<td ALIGN="Left" class="txtgrey2">Bolvir</td>
+		
+			<td ALIGN="Right" class="txtgrey23">255</td>
+  			<td ALIGN="Right" class="txtgrey2">238</td>
+  			<td ALIGN="Right" class="txtblack3">493</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17025</td>
+		<td ALIGN="Left" class="txtgrey2">Bordils</td>
+		
+			<td ALIGN="Right" class="txtgrey23">908</td>
+  			<td ALIGN="Right" class="txtgrey2">916</td>
+  			<td ALIGN="Right" class="txtblack3">1.824</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17026</td>
+		<td ALIGN="Left" class="txtgrey2">Borrassà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">414</td>
+  			<td ALIGN="Right" class="txtgrey2">388</td>
+  			<td ALIGN="Right" class="txtblack3">802</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17027</td>
+		<td ALIGN="Left" class="txtgrey2">Breda</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.942</td>
+  			<td ALIGN="Right" class="txtgrey2">2.022</td>
+  			<td ALIGN="Right" class="txtblack3">3.964</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17028</td>
+		<td ALIGN="Left" class="txtgrey2">Brunyola i Sant Martí Sapresa</td>
+		
+			<td ALIGN="Right" class="txtgrey23">210</td>
+  			<td ALIGN="Right" class="txtgrey2">189</td>
+  			<td ALIGN="Right" class="txtblack3">399</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17031</td>
+		<td ALIGN="Left" class="txtgrey2">Cabanelles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">154</td>
+  			<td ALIGN="Right" class="txtgrey2">132</td>
+  			<td ALIGN="Right" class="txtblack3">286</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17030</td>
+		<td ALIGN="Left" class="txtgrey2">Cabanes</td>
+		
+			<td ALIGN="Right" class="txtgrey23">542</td>
+  			<td ALIGN="Right" class="txtgrey2">456</td>
+  			<td ALIGN="Right" class="txtblack3">998</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17032</td>
+		<td ALIGN="Left" class="txtgrey2">Cadaqués</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.437</td>
+  			<td ALIGN="Right" class="txtgrey2">1.469</td>
+  			<td ALIGN="Right" class="txtblack3">2.906</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17033</td>
+		<td ALIGN="Left" class="txtgrey2">Caldes de Malavella</td>
+		
+			<td ALIGN="Right" class="txtgrey23">4.277</td>
+  			<td ALIGN="Right" class="txtgrey2">4.367</td>
+  			<td ALIGN="Right" class="txtblack3">8.644</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17034</td>
+		<td ALIGN="Left" class="txtgrey2">Calonge i Sant Antoni</td>
+		
+			<td ALIGN="Right" class="txtgrey23">6.129</td>
+  			<td ALIGN="Right" class="txtgrey2">6.139</td>
+  			<td ALIGN="Right" class="txtblack3">12.268</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17035</td>
+		<td ALIGN="Left" class="txtgrey2">Camós</td>
+		
+			<td ALIGN="Right" class="txtgrey23">343</td>
+  			<td ALIGN="Right" class="txtgrey2">357</td>
+  			<td ALIGN="Right" class="txtblack3">700</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17036</td>
+		<td ALIGN="Left" class="txtgrey2">Campdevànol</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.589</td>
+  			<td ALIGN="Right" class="txtgrey2">1.651</td>
+  			<td ALIGN="Right" class="txtblack3">3.240</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17037</td>
+		<td ALIGN="Left" class="txtgrey2">Campelles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">84</td>
+  			<td ALIGN="Right" class="txtgrey2">79</td>
+  			<td ALIGN="Right" class="txtblack3">163</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17038</td>
+		<td ALIGN="Left" class="txtgrey2">Campllong</td>
+		
+			<td ALIGN="Right" class="txtgrey23">264</td>
+  			<td ALIGN="Right" class="txtgrey2">270</td>
+  			<td ALIGN="Right" class="txtblack3">534</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17039</td>
+		<td ALIGN="Left" class="txtgrey2">Camprodon</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.238</td>
+  			<td ALIGN="Right" class="txtgrey2">1.322</td>
+  			<td ALIGN="Right" class="txtblack3">2.560</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17040</td>
+		<td ALIGN="Left" class="txtgrey2">Canet d'Adri</td>
+		
+			<td ALIGN="Right" class="txtgrey23">372</td>
+  			<td ALIGN="Right" class="txtgrey2">370</td>
+  			<td ALIGN="Right" class="txtblack3">742</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17041</td>
+		<td ALIGN="Left" class="txtgrey2">Cantallops</td>
+		
+			<td ALIGN="Right" class="txtgrey23">179</td>
+  			<td ALIGN="Right" class="txtgrey2">188</td>
+  			<td ALIGN="Right" class="txtblack3">367</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17042</td>
+		<td ALIGN="Left" class="txtgrey2">Capmany</td>
+		
+			<td ALIGN="Right" class="txtgrey23">342</td>
+  			<td ALIGN="Right" class="txtgrey2">335</td>
+  			<td ALIGN="Right" class="txtblack3">677</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17044</td>
+		<td ALIGN="Left" class="txtgrey2">Cassà de la Selva</td>
+		
+			<td ALIGN="Right" class="txtgrey23">5.696</td>
+  			<td ALIGN="Right" class="txtgrey2">5.471</td>
+  			<td ALIGN="Right" class="txtblack3">11.167</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17048</td>
+		<td ALIGN="Left" class="txtgrey2">Castell d'Aro, Platja d'Aro i s'Agaró</td>
+		
+			<td ALIGN="Right" class="txtgrey23">6.263</td>
+  			<td ALIGN="Right" class="txtgrey2">6.626</td>
+  			<td ALIGN="Right" class="txtblack3">12.889</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17046</td>
+		<td ALIGN="Left" class="txtgrey2">Castellfollit de la Roca</td>
+		
+			<td ALIGN="Right" class="txtgrey23">487</td>
+  			<td ALIGN="Right" class="txtgrey2">473</td>
+  			<td ALIGN="Right" class="txtblack3">960</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17047</td>
+		<td ALIGN="Left" class="txtgrey2">Castelló d'Empúries</td>
+		
+			<td ALIGN="Right" class="txtgrey23">6.378</td>
+  			<td ALIGN="Right" class="txtgrey2">5.897</td>
+  			<td ALIGN="Right" class="txtblack3">12.275</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17189</td>
+		<td ALIGN="Left" class="txtgrey2">Cellera de Ter, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.021</td>
+  			<td ALIGN="Right" class="txtgrey2">1.012</td>
+  			<td ALIGN="Right" class="txtblack3">2.033</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17049</td>
+		<td ALIGN="Left" class="txtgrey2">Celrà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.805</td>
+  			<td ALIGN="Right" class="txtgrey2">2.808</td>
+  			<td ALIGN="Right" class="txtblack3">5.613</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17050</td>
+		<td ALIGN="Left" class="txtgrey2">Cervià de Ter</td>
+		
+			<td ALIGN="Right" class="txtgrey23">529</td>
+  			<td ALIGN="Right" class="txtgrey2">501</td>
+  			<td ALIGN="Right" class="txtblack3">1.030</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17051</td>
+		<td ALIGN="Left" class="txtgrey2">Cistella</td>
+		
+			<td ALIGN="Right" class="txtgrey23">145</td>
+  			<td ALIGN="Right" class="txtgrey2">140</td>
+  			<td ALIGN="Right" class="txtblack3">285</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17054</td>
+		<td ALIGN="Left" class="txtgrey2">Colera</td>
+		
+			<td ALIGN="Right" class="txtgrey23">243</td>
+  			<td ALIGN="Right" class="txtgrey2">246</td>
+  			<td ALIGN="Right" class="txtblack3">489</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17055</td>
+		<td ALIGN="Left" class="txtgrey2">Colomers</td>
+		
+			<td ALIGN="Right" class="txtgrey23">104</td>
+  			<td ALIGN="Right" class="txtgrey2">102</td>
+  			<td ALIGN="Right" class="txtblack3">206</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17057</td>
+		<td ALIGN="Left" class="txtgrey2">Corçà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">661</td>
+  			<td ALIGN="Right" class="txtgrey2">624</td>
+  			<td ALIGN="Right" class="txtblack3">1.285</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17056</td>
+		<td ALIGN="Left" class="txtgrey2">Cornellà del Terri</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.231</td>
+  			<td ALIGN="Right" class="txtgrey2">1.182</td>
+  			<td ALIGN="Right" class="txtblack3">2.413</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17058</td>
+		<td ALIGN="Left" class="txtgrey2">Crespià</td>
+		
+			<td ALIGN="Right" class="txtgrey23">136</td>
+  			<td ALIGN="Right" class="txtgrey2">117</td>
+  			<td ALIGN="Right" class="txtblack3">253</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17901</td>
+		<td ALIGN="Left" class="txtgrey2">Cruïlles, Monells i Sant Sadurní de l'Heura</td>
+		
+			<td ALIGN="Right" class="txtgrey23">682</td>
+  			<td ALIGN="Right" class="txtgrey2">665</td>
+  			<td ALIGN="Right" class="txtblack3">1.347</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17060</td>
+		<td ALIGN="Left" class="txtgrey2">Darnius</td>
+		
+			<td ALIGN="Right" class="txtgrey23">295</td>
+  			<td ALIGN="Right" class="txtgrey2">266</td>
+  			<td ALIGN="Right" class="txtblack3">561</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17061</td>
+		<td ALIGN="Left" class="txtgrey2">Das</td>
+		
+			<td ALIGN="Right" class="txtgrey23">141</td>
+  			<td ALIGN="Right" class="txtgrey2">120</td>
+  			<td ALIGN="Right" class="txtblack3">261</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17062</td>
+		<td ALIGN="Left" class="txtgrey2">Escala, l'</td>
+		
+			<td ALIGN="Right" class="txtgrey23">5.335</td>
+  			<td ALIGN="Right" class="txtgrey2">5.306</td>
+  			<td ALIGN="Right" class="txtblack3">10.641</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17063</td>
+		<td ALIGN="Left" class="txtgrey2">Espinelves</td>
+		
+			<td ALIGN="Right" class="txtgrey23">123</td>
+  			<td ALIGN="Right" class="txtgrey2">139</td>
+  			<td ALIGN="Right" class="txtblack3">262</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17064</td>
+		<td ALIGN="Left" class="txtgrey2">Espolla</td>
+		
+			<td ALIGN="Right" class="txtgrey23">206</td>
+  			<td ALIGN="Right" class="txtgrey2">193</td>
+  			<td ALIGN="Right" class="txtblack3">399</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17065</td>
+		<td ALIGN="Left" class="txtgrey2">Esponellà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">229</td>
+  			<td ALIGN="Right" class="txtgrey2">215</td>
+  			<td ALIGN="Right" class="txtblack3">444</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17005</td>
+		<td ALIGN="Left" class="txtgrey2">Far d'Empordà, el</td>
+		
+			<td ALIGN="Right" class="txtgrey23">318</td>
+  			<td ALIGN="Right" class="txtgrey2">306</td>
+  			<td ALIGN="Right" class="txtblack3">624</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17066</td>
+		<td ALIGN="Left" class="txtgrey2">Figueres</td>
+		
+			<td ALIGN="Right" class="txtgrey23">24.516</td>
+  			<td ALIGN="Right" class="txtgrey2">25.040</td>
+  			<td ALIGN="Right" class="txtblack3">49.556</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17067</td>
+		<td ALIGN="Left" class="txtgrey2">Flaçà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">567</td>
+  			<td ALIGN="Right" class="txtgrey2">607</td>
+  			<td ALIGN="Right" class="txtblack3">1.174</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17068</td>
+		<td ALIGN="Left" class="txtgrey2">Foixà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">151</td>
+  			<td ALIGN="Right" class="txtgrey2">147</td>
+  			<td ALIGN="Right" class="txtblack3">298</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17069</td>
+		<td ALIGN="Left" class="txtgrey2">Fontanals de Cerdanya</td>
+		
+			<td ALIGN="Right" class="txtgrey23">269</td>
+  			<td ALIGN="Right" class="txtgrey2">247</td>
+  			<td ALIGN="Right" class="txtblack3">516</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17070</td>
+		<td ALIGN="Left" class="txtgrey2">Fontanilles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">94</td>
+  			<td ALIGN="Right" class="txtgrey2">76</td>
+  			<td ALIGN="Right" class="txtblack3">170</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17071</td>
+		<td ALIGN="Left" class="txtgrey2">Fontcoberta</td>
+		
+			<td ALIGN="Right" class="txtgrey23">762</td>
+  			<td ALIGN="Right" class="txtgrey2">720</td>
+  			<td ALIGN="Right" class="txtblack3">1.482</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17902</td>
+		<td ALIGN="Left" class="txtgrey2">Forallac</td>
+		
+			<td ALIGN="Right" class="txtgrey23">871</td>
+  			<td ALIGN="Right" class="txtgrey2">915</td>
+  			<td ALIGN="Right" class="txtblack3">1.786</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17073</td>
+		<td ALIGN="Left" class="txtgrey2">Fornells de la Selva</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.402</td>
+  			<td ALIGN="Right" class="txtgrey2">1.411</td>
+  			<td ALIGN="Right" class="txtblack3">2.813</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17074</td>
+		<td ALIGN="Left" class="txtgrey2">Fortià</td>
+		
+			<td ALIGN="Right" class="txtgrey23">382</td>
+  			<td ALIGN="Right" class="txtgrey2">407</td>
+  			<td ALIGN="Right" class="txtblack3">789</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17075</td>
+		<td ALIGN="Left" class="txtgrey2">Garrigàs</td>
+		
+			<td ALIGN="Right" class="txtgrey23">247</td>
+  			<td ALIGN="Right" class="txtgrey2">232</td>
+  			<td ALIGN="Right" class="txtblack3">479</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17076</td>
+		<td ALIGN="Left" class="txtgrey2">Garrigoles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">105</td>
+  			<td ALIGN="Right" class="txtgrey2">78</td>
+  			<td ALIGN="Right" class="txtblack3">183</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17077</td>
+		<td ALIGN="Left" class="txtgrey2">Garriguella</td>
+		
+			<td ALIGN="Right" class="txtgrey23">501</td>
+  			<td ALIGN="Right" class="txtgrey2">488</td>
+  			<td ALIGN="Right" class="txtblack3">989</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17078</td>
+		<td ALIGN="Left" class="txtgrey2">Ger</td>
+		
+			<td ALIGN="Right" class="txtgrey23">272</td>
+  			<td ALIGN="Right" class="txtgrey2">229</td>
+  			<td ALIGN="Right" class="txtblack3">501</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17079</td>
+		<td ALIGN="Left" class="txtgrey2">Girona</td>
+		
+			<td ALIGN="Right" class="txtgrey23">52.498</td>
+  			<td ALIGN="Right" class="txtgrey2">55.854</td>
+  			<td ALIGN="Right" class="txtblack3">108.352</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17080</td>
+		<td ALIGN="Left" class="txtgrey2">Gombrèn</td>
+		
+			<td ALIGN="Right" class="txtgrey23">101</td>
+  			<td ALIGN="Right" class="txtgrey2">105</td>
+  			<td ALIGN="Right" class="txtblack3">206</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17081</td>
+		<td ALIGN="Left" class="txtgrey2">Gualta</td>
+		
+			<td ALIGN="Right" class="txtgrey23">265</td>
+  			<td ALIGN="Right" class="txtgrey2">172</td>
+  			<td ALIGN="Right" class="txtblack3">437</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17082</td>
+		<td ALIGN="Left" class="txtgrey2">Guils de Cerdanya</td>
+		
+			<td ALIGN="Right" class="txtgrey23">290</td>
+  			<td ALIGN="Right" class="txtgrey2">269</td>
+  			<td ALIGN="Right" class="txtblack3">559</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17083</td>
+		<td ALIGN="Left" class="txtgrey2">Hostalric</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.251</td>
+  			<td ALIGN="Right" class="txtgrey2">2.213</td>
+  			<td ALIGN="Right" class="txtblack3">4.464</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17084</td>
+		<td ALIGN="Left" class="txtgrey2">Isòvol</td>
+		
+			<td ALIGN="Right" class="txtgrey23">172</td>
+  			<td ALIGN="Right" class="txtgrey2">142</td>
+  			<td ALIGN="Right" class="txtblack3">314</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17085</td>
+		<td ALIGN="Left" class="txtgrey2">Jafre</td>
+		
+			<td ALIGN="Right" class="txtgrey23">198</td>
+  			<td ALIGN="Right" class="txtgrey2">186</td>
+  			<td ALIGN="Right" class="txtblack3">384</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17086</td>
+		<td ALIGN="Left" class="txtgrey2">Jonquera, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.711</td>
+  			<td ALIGN="Right" class="txtgrey2">1.699</td>
+  			<td ALIGN="Right" class="txtblack3">3.410</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17087</td>
+		<td ALIGN="Left" class="txtgrey2">Juià</td>
+		
+			<td ALIGN="Right" class="txtgrey23">165</td>
+  			<td ALIGN="Right" class="txtgrey2">155</td>
+  			<td ALIGN="Right" class="txtblack3">320</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17088</td>
+		<td ALIGN="Left" class="txtgrey2">Lladó</td>
+		
+			<td ALIGN="Right" class="txtgrey23">413</td>
+  			<td ALIGN="Right" class="txtgrey2">410</td>
+  			<td ALIGN="Right" class="txtblack3">823</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17089</td>
+		<td ALIGN="Left" class="txtgrey2">Llagostera</td>
+		
+			<td ALIGN="Right" class="txtgrey23">4.836</td>
+  			<td ALIGN="Right" class="txtgrey2">4.743</td>
+  			<td ALIGN="Right" class="txtblack3">9.579</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17090</td>
+		<td ALIGN="Left" class="txtgrey2">Llambilles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">378</td>
+  			<td ALIGN="Right" class="txtgrey2">354</td>
+  			<td ALIGN="Right" class="txtblack3">732</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17091</td>
+		<td ALIGN="Left" class="txtgrey2">Llanars</td>
+		
+			<td ALIGN="Right" class="txtgrey23">255</td>
+  			<td ALIGN="Right" class="txtgrey2">262</td>
+  			<td ALIGN="Right" class="txtblack3">517</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17092</td>
+		<td ALIGN="Left" class="txtgrey2">Llançà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.491</td>
+  			<td ALIGN="Right" class="txtgrey2">2.542</td>
+  			<td ALIGN="Right" class="txtblack3">5.033</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17093</td>
+		<td ALIGN="Left" class="txtgrey2">Llers</td>
+		
+			<td ALIGN="Right" class="txtgrey23">640</td>
+  			<td ALIGN="Right" class="txtgrey2">628</td>
+  			<td ALIGN="Right" class="txtblack3">1.268</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17094</td>
+		<td ALIGN="Left" class="txtgrey2">Llívia</td>
+		
+			<td ALIGN="Right" class="txtgrey23">797</td>
+  			<td ALIGN="Right" class="txtgrey2">775</td>
+  			<td ALIGN="Right" class="txtblack3">1.572</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17095</td>
+		<td ALIGN="Left" class="txtgrey2">Lloret de Mar</td>
+		
+			<td ALIGN="Right" class="txtgrey23">21.156</td>
+  			<td ALIGN="Right" class="txtgrey2">20.788</td>
+  			<td ALIGN="Right" class="txtblack3">41.944</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17096</td>
+		<td ALIGN="Left" class="txtgrey2">Llosses, les</td>
+		
+			<td ALIGN="Right" class="txtgrey23">111</td>
+  			<td ALIGN="Right" class="txtgrey2">86</td>
+  			<td ALIGN="Right" class="txtblack3">197</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17102</td>
+		<td ALIGN="Left" class="txtgrey2">Maçanet de Cabrenys</td>
+		
+			<td ALIGN="Right" class="txtgrey23">389</td>
+  			<td ALIGN="Right" class="txtgrey2">379</td>
+  			<td ALIGN="Right" class="txtblack3">768</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17103</td>
+		<td ALIGN="Left" class="txtgrey2">Maçanet de la Selva</td>
+		
+			<td ALIGN="Right" class="txtgrey23">4.165</td>
+  			<td ALIGN="Right" class="txtgrey2">3.900</td>
+  			<td ALIGN="Right" class="txtblack3">8.065</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17097</td>
+		<td ALIGN="Left" class="txtgrey2">Madremanya</td>
+		
+			<td ALIGN="Right" class="txtgrey23">143</td>
+  			<td ALIGN="Right" class="txtgrey2">134</td>
+  			<td ALIGN="Right" class="txtblack3">277</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17098</td>
+		<td ALIGN="Left" class="txtgrey2">Maià de Montcal</td>
+		
+			<td ALIGN="Right" class="txtgrey23">265</td>
+  			<td ALIGN="Right" class="txtgrey2">233</td>
+  			<td ALIGN="Right" class="txtblack3">498</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17100</td>
+		<td ALIGN="Left" class="txtgrey2">Masarac i Vilarnadal</td>
+		
+			<td ALIGN="Right" class="txtgrey23">156</td>
+  			<td ALIGN="Right" class="txtgrey2">135</td>
+  			<td ALIGN="Right" class="txtblack3">291</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17101</td>
+		<td ALIGN="Left" class="txtgrey2">Massanes</td>
+		
+			<td ALIGN="Right" class="txtgrey23">459</td>
+  			<td ALIGN="Right" class="txtgrey2">422</td>
+  			<td ALIGN="Right" class="txtblack3">881</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17099</td>
+		<td ALIGN="Left" class="txtgrey2">Meranges</td>
+		
+			<td ALIGN="Right" class="txtgrey23">60</td>
+  			<td ALIGN="Right" class="txtgrey2">51</td>
+  			<td ALIGN="Right" class="txtblack3">111</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17105</td>
+		<td ALIGN="Left" class="txtgrey2">Mieres</td>
+		
+			<td ALIGN="Right" class="txtgrey23">188</td>
+  			<td ALIGN="Right" class="txtgrey2">180</td>
+  			<td ALIGN="Right" class="txtblack3">368</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17106</td>
+		<td ALIGN="Left" class="txtgrey2">Mollet de Peralada</td>
+		
+			<td ALIGN="Right" class="txtgrey23">104</td>
+  			<td ALIGN="Right" class="txtgrey2">98</td>
+  			<td ALIGN="Right" class="txtblack3">202</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17107</td>
+		<td ALIGN="Left" class="txtgrey2">Molló</td>
+		
+			<td ALIGN="Right" class="txtgrey23">162</td>
+  			<td ALIGN="Right" class="txtgrey2">188</td>
+  			<td ALIGN="Right" class="txtblack3">350</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17109</td>
+		<td ALIGN="Left" class="txtgrey2">Montagut i Oix</td>
+		
+			<td ALIGN="Right" class="txtgrey23">529</td>
+  			<td ALIGN="Right" class="txtgrey2">485</td>
+  			<td ALIGN="Right" class="txtblack3">1.014</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17110</td>
+		<td ALIGN="Left" class="txtgrey2">Mont-ras</td>
+		
+			<td ALIGN="Right" class="txtgrey23">853</td>
+  			<td ALIGN="Right" class="txtgrey2">837</td>
+  			<td ALIGN="Right" class="txtblack3">1.690</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17111</td>
+		<td ALIGN="Left" class="txtgrey2">Navata</td>
+		
+			<td ALIGN="Right" class="txtgrey23">754</td>
+  			<td ALIGN="Right" class="txtgrey2">750</td>
+  			<td ALIGN="Right" class="txtblack3">1.504</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17112</td>
+		<td ALIGN="Left" class="txtgrey2">Ogassa</td>
+		
+			<td ALIGN="Right" class="txtgrey23">130</td>
+  			<td ALIGN="Right" class="txtgrey2">92</td>
+  			<td ALIGN="Right" class="txtblack3">222</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17114</td>
+		<td ALIGN="Left" class="txtgrey2">Olot</td>
+		
+			<td ALIGN="Right" class="txtgrey23">20.171</td>
+  			<td ALIGN="Right" class="txtgrey2">19.345</td>
+  			<td ALIGN="Right" class="txtblack3">39.516</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17115</td>
+		<td ALIGN="Left" class="txtgrey2">Ordis</td>
+		
+			<td ALIGN="Right" class="txtgrey23">225</td>
+  			<td ALIGN="Right" class="txtgrey2">186</td>
+  			<td ALIGN="Right" class="txtblack3">411</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17116</td>
+		<td ALIGN="Left" class="txtgrey2">Osor</td>
+		
+			<td ALIGN="Right" class="txtgrey23">232</td>
+  			<td ALIGN="Right" class="txtgrey2">197</td>
+  			<td ALIGN="Right" class="txtblack3">429</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17117</td>
+		<td ALIGN="Left" class="txtgrey2">Palafrugell</td>
+		
+			<td ALIGN="Right" class="txtgrey23">12.236</td>
+  			<td ALIGN="Right" class="txtgrey2">12.320</td>
+  			<td ALIGN="Right" class="txtblack3">24.556</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17118</td>
+		<td ALIGN="Left" class="txtgrey2">Palamós i Sant Joan</td>
+		
+			<td ALIGN="Right" class="txtgrey23">9.286</td>
+  			<td ALIGN="Right" class="txtgrey2">9.635</td>
+  			<td ALIGN="Right" class="txtblack3">18.921</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17119</td>
+		<td ALIGN="Left" class="txtgrey2">Palau de Santa Eulàlia</td>
+		
+			<td ALIGN="Right" class="txtgrey23">70</td>
+  			<td ALIGN="Right" class="txtgrey2">54</td>
+  			<td ALIGN="Right" class="txtblack3">124</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17121</td>
+		<td ALIGN="Left" class="txtgrey2">Palau-sator</td>
+		
+			<td ALIGN="Right" class="txtgrey23">177</td>
+  			<td ALIGN="Right" class="txtgrey2">143</td>
+  			<td ALIGN="Right" class="txtblack3">320</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17120</td>
+		<td ALIGN="Left" class="txtgrey2">Palau-saverdera</td>
+		
+			<td ALIGN="Right" class="txtgrey23">765</td>
+  			<td ALIGN="Right" class="txtgrey2">759</td>
+  			<td ALIGN="Right" class="txtblack3">1.524</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17123</td>
+		<td ALIGN="Left" class="txtgrey2">Palol de Revardit</td>
+		
+			<td ALIGN="Right" class="txtgrey23">236</td>
+  			<td ALIGN="Right" class="txtgrey2">227</td>
+  			<td ALIGN="Right" class="txtblack3">463</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17124</td>
+		<td ALIGN="Left" class="txtgrey2">Pals</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.319</td>
+  			<td ALIGN="Right" class="txtgrey2">1.233</td>
+  			<td ALIGN="Right" class="txtblack3">2.552</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17125</td>
+		<td ALIGN="Left" class="txtgrey2">Pardines</td>
+		
+			<td ALIGN="Right" class="txtgrey23">97</td>
+  			<td ALIGN="Right" class="txtgrey2">71</td>
+  			<td ALIGN="Right" class="txtblack3">168</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17126</td>
+		<td ALIGN="Left" class="txtgrey2">Parlavà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">219</td>
+  			<td ALIGN="Right" class="txtgrey2">216</td>
+  			<td ALIGN="Right" class="txtblack3">435</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17128</td>
+		<td ALIGN="Left" class="txtgrey2">Pau</td>
+		
+			<td ALIGN="Right" class="txtgrey23">274</td>
+  			<td ALIGN="Right" class="txtgrey2">284</td>
+  			<td ALIGN="Right" class="txtblack3">558</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17129</td>
+		<td ALIGN="Left" class="txtgrey2">Pedret i Marzà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">102</td>
+  			<td ALIGN="Right" class="txtgrey2">106</td>
+  			<td ALIGN="Right" class="txtblack3">208</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17130</td>
+		<td ALIGN="Left" class="txtgrey2">Pera, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">222</td>
+  			<td ALIGN="Right" class="txtgrey2">227</td>
+  			<td ALIGN="Right" class="txtblack3">449</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17132</td>
+		<td ALIGN="Left" class="txtgrey2">Peralada</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.038</td>
+  			<td ALIGN="Right" class="txtgrey2">1.049</td>
+  			<td ALIGN="Right" class="txtblack3">2.087</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17133</td>
+		<td ALIGN="Left" class="txtgrey2">Planes d'Hostoles, les</td>
+		
+			<td ALIGN="Right" class="txtgrey23">884</td>
+  			<td ALIGN="Right" class="txtgrey2">863</td>
+  			<td ALIGN="Right" class="txtblack3">1.747</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17134</td>
+		<td ALIGN="Left" class="txtgrey2">Planoles</td>
+		
+			<td ALIGN="Right" class="txtgrey23">179</td>
+  			<td ALIGN="Right" class="txtgrey2">134</td>
+  			<td ALIGN="Right" class="txtblack3">313</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17135</td>
+		<td ALIGN="Left" class="txtgrey2">Pont de Molins</td>
+		
+			<td ALIGN="Right" class="txtgrey23">293</td>
+  			<td ALIGN="Right" class="txtgrey2">293</td>
+  			<td ALIGN="Right" class="txtblack3">586</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17136</td>
+		<td ALIGN="Left" class="txtgrey2">Pontós</td>
+		
+			<td ALIGN="Right" class="txtgrey23">156</td>
+  			<td ALIGN="Right" class="txtgrey2">139</td>
+  			<td ALIGN="Right" class="txtblack3">295</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17137</td>
+		<td ALIGN="Left" class="txtgrey2">Porqueres</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.393</td>
+  			<td ALIGN="Right" class="txtgrey2">2.411</td>
+  			<td ALIGN="Right" class="txtblack3">4.804</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17140</td>
+		<td ALIGN="Left" class="txtgrey2">Port de la Selva, el</td>
+		
+			<td ALIGN="Right" class="txtgrey23">532</td>
+  			<td ALIGN="Right" class="txtgrey2">523</td>
+  			<td ALIGN="Right" class="txtblack3">1.055</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17138</td>
+		<td ALIGN="Left" class="txtgrey2">Portbou</td>
+		
+			<td ALIGN="Right" class="txtgrey23">566</td>
+  			<td ALIGN="Right" class="txtgrey2">566</td>
+  			<td ALIGN="Right" class="txtblack3">1.132</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17139</td>
+		<td ALIGN="Left" class="txtgrey2">Preses, les</td>
+		
+			<td ALIGN="Right" class="txtgrey23">960</td>
+  			<td ALIGN="Right" class="txtgrey2">986</td>
+  			<td ALIGN="Right" class="txtblack3">1.946</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17141</td>
+		<td ALIGN="Left" class="txtgrey2">Puigcerdà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">5.050</td>
+  			<td ALIGN="Right" class="txtgrey2">5.003</td>
+  			<td ALIGN="Right" class="txtblack3">10.053</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17142</td>
+		<td ALIGN="Left" class="txtgrey2">Quart</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.113</td>
+  			<td ALIGN="Right" class="txtgrey2">2.048</td>
+  			<td ALIGN="Right" class="txtblack3">4.161</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17043</td>
+		<td ALIGN="Left" class="txtgrey2">Queralbs</td>
+		
+			<td ALIGN="Right" class="txtgrey23">109</td>
+  			<td ALIGN="Right" class="txtgrey2">93</td>
+  			<td ALIGN="Right" class="txtblack3">202</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17143</td>
+		<td ALIGN="Left" class="txtgrey2">Rabós</td>
+		
+			<td ALIGN="Right" class="txtgrey23">108</td>
+  			<td ALIGN="Right" class="txtgrey2">128</td>
+  			<td ALIGN="Right" class="txtblack3">236</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17144</td>
+		<td ALIGN="Left" class="txtgrey2">Regencós</td>
+		
+			<td ALIGN="Right" class="txtgrey23">150</td>
+  			<td ALIGN="Right" class="txtgrey2">124</td>
+  			<td ALIGN="Right" class="txtblack3">274</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17145</td>
+		<td ALIGN="Left" class="txtgrey2">Ribes de Freser</td>
+		
+			<td ALIGN="Right" class="txtgrey23">928</td>
+  			<td ALIGN="Right" class="txtgrey2">911</td>
+  			<td ALIGN="Right" class="txtblack3">1.839</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17146</td>
+		<td ALIGN="Left" class="txtgrey2">Riells i Viabrea</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.368</td>
+  			<td ALIGN="Right" class="txtgrey2">2.259</td>
+  			<td ALIGN="Right" class="txtblack3">4.627</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17147</td>
+		<td ALIGN="Left" class="txtgrey2">Ripoll</td>
+		
+			<td ALIGN="Right" class="txtgrey23">5.366</td>
+  			<td ALIGN="Right" class="txtgrey2">5.446</td>
+  			<td ALIGN="Right" class="txtblack3">10.812</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17148</td>
+		<td ALIGN="Left" class="txtgrey2">Riudarenes</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.303</td>
+  			<td ALIGN="Right" class="txtgrey2">1.221</td>
+  			<td ALIGN="Right" class="txtblack3">2.524</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17149</td>
+		<td ALIGN="Left" class="txtgrey2">Riudaura</td>
+		
+			<td ALIGN="Right" class="txtgrey23">264</td>
+  			<td ALIGN="Right" class="txtgrey2">262</td>
+  			<td ALIGN="Right" class="txtblack3">526</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17150</td>
+		<td ALIGN="Left" class="txtgrey2">Riudellots de la Selva</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.069</td>
+  			<td ALIGN="Right" class="txtgrey2">1.052</td>
+  			<td ALIGN="Right" class="txtblack3">2.121</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17151</td>
+		<td ALIGN="Left" class="txtgrey2">Riumors</td>
+		
+			<td ALIGN="Right" class="txtgrey23">137</td>
+  			<td ALIGN="Right" class="txtgrey2">121</td>
+  			<td ALIGN="Right" class="txtblack3">258</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17152</td>
+		<td ALIGN="Left" class="txtgrey2">Roses</td>
+		
+			<td ALIGN="Right" class="txtgrey23">10.111</td>
+  			<td ALIGN="Right" class="txtgrey2">10.064</td>
+  			<td ALIGN="Right" class="txtblack3">20.175</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17153</td>
+		<td ALIGN="Left" class="txtgrey2">Rupià</td>
+		
+			<td ALIGN="Right" class="txtgrey23">154</td>
+  			<td ALIGN="Right" class="txtgrey2">169</td>
+  			<td ALIGN="Right" class="txtblack3">323</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17154</td>
+		<td ALIGN="Left" class="txtgrey2">Sales de Llierca</td>
+		
+			<td ALIGN="Right" class="txtgrey23">86</td>
+  			<td ALIGN="Right" class="txtgrey2">78</td>
+  			<td ALIGN="Right" class="txtblack3">164</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17155</td>
+		<td ALIGN="Left" class="txtgrey2">Salt</td>
+		
+			<td ALIGN="Right" class="txtgrey23">18.327</td>
+  			<td ALIGN="Right" class="txtgrey2">16.276</td>
+  			<td ALIGN="Right" class="txtblack3">34.603</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17157</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Andreu Salou</td>
+		
+			<td ALIGN="Right" class="txtgrey23">81</td>
+  			<td ALIGN="Right" class="txtgrey2">82</td>
+  			<td ALIGN="Right" class="txtblack3">163</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17183</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Aniol de Finestres</td>
+		
+			<td ALIGN="Right" class="txtgrey23">208</td>
+  			<td ALIGN="Right" class="txtgrey2">173</td>
+  			<td ALIGN="Right" class="txtblack3">381</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17158</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Climent Sescebes</td>
+		
+			<td ALIGN="Right" class="txtgrey23">409</td>
+  			<td ALIGN="Right" class="txtgrey2">282</td>
+  			<td ALIGN="Right" class="txtblack3">691</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17159</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Feliu de Buixalleu</td>
+		
+			<td ALIGN="Right" class="txtgrey23">449</td>
+  			<td ALIGN="Right" class="txtgrey2">434</td>
+  			<td ALIGN="Right" class="txtblack3">883</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17160</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Feliu de Guíxols</td>
+		
+			<td ALIGN="Right" class="txtgrey23">11.302</td>
+  			<td ALIGN="Right" class="txtgrey2">11.758</td>
+  			<td ALIGN="Right" class="txtblack3">23.060</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17161</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Feliu de Pallerols</td>
+		
+			<td ALIGN="Right" class="txtgrey23">851</td>
+  			<td ALIGN="Right" class="txtgrey2">807</td>
+  			<td ALIGN="Right" class="txtblack3">1.658</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17162</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Ferriol</td>
+		
+			<td ALIGN="Right" class="txtgrey23">136</td>
+  			<td ALIGN="Right" class="txtgrey2">112</td>
+  			<td ALIGN="Right" class="txtblack3">248</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17163</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Gregori</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.109</td>
+  			<td ALIGN="Right" class="txtgrey2">2.078</td>
+  			<td ALIGN="Right" class="txtblack3">4.187</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17164</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Hilari Sacalm</td>
+		
+			<td ALIGN="Right" class="txtgrey23">3.072</td>
+  			<td ALIGN="Right" class="txtgrey2">2.999</td>
+  			<td ALIGN="Right" class="txtblack3">6.071</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17165</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Jaume de Llierca</td>
+		
+			<td ALIGN="Right" class="txtgrey23">425</td>
+  			<td ALIGN="Right" class="txtgrey2">436</td>
+  			<td ALIGN="Right" class="txtblack3">861</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17167</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Joan de les Abadesses</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.682</td>
+  			<td ALIGN="Right" class="txtgrey2">1.711</td>
+  			<td ALIGN="Right" class="txtblack3">3.393</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17168</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Joan de Mollet</td>
+		
+			<td ALIGN="Right" class="txtgrey23">265</td>
+  			<td ALIGN="Right" class="txtgrey2">271</td>
+  			<td ALIGN="Right" class="txtblack3">536</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17185</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Joan les Fonts</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.603</td>
+  			<td ALIGN="Right" class="txtgrey2">1.556</td>
+  			<td ALIGN="Right" class="txtblack3">3.159</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17166</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Jordi Desvalls</td>
+		
+			<td ALIGN="Right" class="txtgrey23">421</td>
+  			<td ALIGN="Right" class="txtgrey2">460</td>
+  			<td ALIGN="Right" class="txtblack3">881</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17169</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Julià de Ramis</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.861</td>
+  			<td ALIGN="Right" class="txtgrey2">1.841</td>
+  			<td ALIGN="Right" class="txtblack3">3.702</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17903</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Julià del Llor i Bonmatí</td>
+		
+			<td ALIGN="Right" class="txtgrey23">742</td>
+  			<td ALIGN="Right" class="txtgrey2">720</td>
+  			<td ALIGN="Right" class="txtblack3">1.462</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17171</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Llorenç de la Muga</td>
+		
+			<td ALIGN="Right" class="txtgrey23">129</td>
+  			<td ALIGN="Right" class="txtgrey2">118</td>
+  			<td ALIGN="Right" class="txtblack3">247</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17172</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Martí de Llémena</td>
+		
+			<td ALIGN="Right" class="txtgrey23">375</td>
+  			<td ALIGN="Right" class="txtgrey2">352</td>
+  			<td ALIGN="Right" class="txtblack3">727</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17173</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Martí Vell</td>
+		
+			<td ALIGN="Right" class="txtgrey23">145</td>
+  			<td ALIGN="Right" class="txtgrey2">125</td>
+  			<td ALIGN="Right" class="txtblack3">270</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17174</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Miquel de Campmajor</td>
+		
+			<td ALIGN="Right" class="txtgrey23">136</td>
+  			<td ALIGN="Right" class="txtgrey2">121</td>
+  			<td ALIGN="Right" class="txtblack3">257</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17175</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Miquel de Fluvià</td>
+		
+			<td ALIGN="Right" class="txtgrey23">447</td>
+  			<td ALIGN="Right" class="txtgrey2">411</td>
+  			<td ALIGN="Right" class="txtblack3">858</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17176</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Mori</td>
+		
+			<td ALIGN="Right" class="txtgrey23">83</td>
+  			<td ALIGN="Right" class="txtgrey2">84</td>
+  			<td ALIGN="Right" class="txtblack3">167</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17177</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Pau de Seguries</td>
+		
+			<td ALIGN="Right" class="txtgrey23">363</td>
+  			<td ALIGN="Right" class="txtgrey2">356</td>
+  			<td ALIGN="Right" class="txtblack3">719</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17178</td>
+		<td ALIGN="Left" class="txtgrey2">Sant Pere Pescador</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.221</td>
+  			<td ALIGN="Right" class="txtgrey2">1.064</td>
+  			<td ALIGN="Right" class="txtblack3">2.285</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17180</td>
+		<td ALIGN="Left" class="txtgrey2">Santa Coloma de Farners</td>
+		
+			<td ALIGN="Right" class="txtgrey23">7.194</td>
+  			<td ALIGN="Right" class="txtgrey2">7.024</td>
+  			<td ALIGN="Right" class="txtblack3">14.218</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17181</td>
+		<td ALIGN="Left" class="txtgrey2">Santa Cristina d'Aro</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.997</td>
+  			<td ALIGN="Right" class="txtgrey2">2.975</td>
+  			<td ALIGN="Right" class="txtblack3">5.972</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17182</td>
+		<td ALIGN="Left" class="txtgrey2">Santa Llogaia d'Àlguema</td>
+		
+			<td ALIGN="Right" class="txtgrey23">198</td>
+  			<td ALIGN="Right" class="txtgrey2">202</td>
+  			<td ALIGN="Right" class="txtblack3">400</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17184</td>
+		<td ALIGN="Left" class="txtgrey2">Santa Pau</td>
+		
+			<td ALIGN="Right" class="txtgrey23">801</td>
+  			<td ALIGN="Right" class="txtgrey2">777</td>
+  			<td ALIGN="Right" class="txtblack3">1.578</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17186</td>
+		<td ALIGN="Left" class="txtgrey2">Sarrià de Ter</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.675</td>
+  			<td ALIGN="Right" class="txtgrey2">2.729</td>
+  			<td ALIGN="Right" class="txtblack3">5.404</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17187</td>
+		<td ALIGN="Left" class="txtgrey2">Saus</td>
+		
+			<td ALIGN="Right" class="txtgrey23">440</td>
+  			<td ALIGN="Right" class="txtgrey2">468</td>
+  			<td ALIGN="Right" class="txtblack3">908</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17188</td>
+		<td ALIGN="Left" class="txtgrey2">Selva de Mar, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">112</td>
+  			<td ALIGN="Right" class="txtgrey2">111</td>
+  			<td ALIGN="Right" class="txtblack3">223</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17190</td>
+		<td ALIGN="Left" class="txtgrey2">Serinyà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">630</td>
+  			<td ALIGN="Right" class="txtgrey2">597</td>
+  			<td ALIGN="Right" class="txtblack3">1.227</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17191</td>
+		<td ALIGN="Left" class="txtgrey2">Serra de Daró</td>
+		
+			<td ALIGN="Right" class="txtgrey23">124</td>
+  			<td ALIGN="Right" class="txtgrey2">117</td>
+  			<td ALIGN="Right" class="txtblack3">241</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17192</td>
+		<td ALIGN="Left" class="txtgrey2">Setcases</td>
+		
+			<td ALIGN="Right" class="txtgrey23">107</td>
+  			<td ALIGN="Right" class="txtgrey2">89</td>
+  			<td ALIGN="Right" class="txtblack3">196</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17193</td>
+		<td ALIGN="Left" class="txtgrey2">Sils</td>
+		
+			<td ALIGN="Right" class="txtgrey23">3.534</td>
+  			<td ALIGN="Right" class="txtgrey2">3.390</td>
+  			<td ALIGN="Right" class="txtblack3">6.924</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17052</td>
+		<td ALIGN="Left" class="txtgrey2">Siurana d'Empordà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">87</td>
+  			<td ALIGN="Right" class="txtgrey2">101</td>
+  			<td ALIGN="Right" class="txtblack3">188</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17194</td>
+		<td ALIGN="Left" class="txtgrey2">Susqueda</td>
+		
+			<td ALIGN="Right" class="txtgrey23">61</td>
+  			<td ALIGN="Right" class="txtgrey2">42</td>
+  			<td ALIGN="Right" class="txtblack3">103</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17195</td>
+		<td ALIGN="Left" class="txtgrey2">Tallada d'Empordà, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">253</td>
+  			<td ALIGN="Right" class="txtgrey2">232</td>
+  			<td ALIGN="Right" class="txtblack3">485</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17196</td>
+		<td ALIGN="Left" class="txtgrey2">Terrades</td>
+		
+			<td ALIGN="Right" class="txtgrey23">170</td>
+  			<td ALIGN="Right" class="txtgrey2">167</td>
+  			<td ALIGN="Right" class="txtblack3">337</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17197</td>
+		<td ALIGN="Left" class="txtgrey2">Torrent</td>
+		
+			<td ALIGN="Right" class="txtgrey23">95</td>
+  			<td ALIGN="Right" class="txtgrey2">86</td>
+  			<td ALIGN="Right" class="txtblack3">181</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17198</td>
+		<td ALIGN="Left" class="txtgrey2">Torroella de Fluvià</td>
+		
+			<td ALIGN="Right" class="txtgrey23">388</td>
+  			<td ALIGN="Right" class="txtgrey2">386</td>
+  			<td ALIGN="Right" class="txtblack3">774</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17199</td>
+		<td ALIGN="Left" class="txtgrey2">Torroella de Montgrí</td>
+		
+			<td ALIGN="Right" class="txtgrey23">6.441</td>
+  			<td ALIGN="Right" class="txtgrey2">6.066</td>
+  			<td ALIGN="Right" class="txtblack3">12.507</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17200</td>
+		<td ALIGN="Left" class="txtgrey2">Tortellà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">396</td>
+  			<td ALIGN="Right" class="txtgrey2">452</td>
+  			<td ALIGN="Right" class="txtblack3">848</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17201</td>
+		<td ALIGN="Left" class="txtgrey2">Toses</td>
+		
+			<td ALIGN="Right" class="txtgrey23">111</td>
+  			<td ALIGN="Right" class="txtgrey2">87</td>
+  			<td ALIGN="Right" class="txtblack3">198</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17202</td>
+		<td ALIGN="Left" class="txtgrey2">Tossa de Mar</td>
+		
+			<td ALIGN="Right" class="txtgrey23">3.169</td>
+  			<td ALIGN="Right" class="txtgrey2">3.124</td>
+  			<td ALIGN="Right" class="txtblack3">6.293</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17204</td>
+		<td ALIGN="Left" class="txtgrey2">Ullà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">683</td>
+  			<td ALIGN="Right" class="txtgrey2">573</td>
+  			<td ALIGN="Right" class="txtblack3">1.256</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17205</td>
+		<td ALIGN="Left" class="txtgrey2">Ullastret</td>
+		
+			<td ALIGN="Right" class="txtgrey23">131</td>
+  			<td ALIGN="Right" class="txtgrey2">121</td>
+  			<td ALIGN="Right" class="txtblack3">252</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17203</td>
+		<td ALIGN="Left" class="txtgrey2">Ultramort</td>
+		
+			<td ALIGN="Right" class="txtgrey23">114</td>
+  			<td ALIGN="Right" class="txtgrey2">104</td>
+  			<td ALIGN="Right" class="txtblack3">218</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17206</td>
+		<td ALIGN="Left" class="txtgrey2">Urús</td>
+		
+			<td ALIGN="Right" class="txtgrey23">102</td>
+  			<td ALIGN="Right" class="txtgrey2">99</td>
+  			<td ALIGN="Right" class="txtblack3">201</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17014</td>
+		<td ALIGN="Left" class="txtgrey2">Vajol, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">64</td>
+  			<td ALIGN="Right" class="txtgrey2">46</td>
+  			<td ALIGN="Right" class="txtblack3">110</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17208</td>
+		<td ALIGN="Left" class="txtgrey2">Vall de Bianya, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">659</td>
+  			<td ALIGN="Right" class="txtgrey2">683</td>
+  			<td ALIGN="Right" class="txtblack3">1.342</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17207</td>
+		<td ALIGN="Left" class="txtgrey2">Vall d'en Bas, la</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.649</td>
+  			<td ALIGN="Right" class="txtgrey2">1.616</td>
+  			<td ALIGN="Right" class="txtblack3">3.265</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17170</td>
+		<td ALIGN="Left" class="txtgrey2">Vallfogona de Ripollès</td>
+		
+			<td ALIGN="Right" class="txtgrey23">116</td>
+  			<td ALIGN="Right" class="txtgrey2">107</td>
+  			<td ALIGN="Right" class="txtblack3">223</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17209</td>
+		<td ALIGN="Left" class="txtgrey2">Vall-llobrega</td>
+		
+			<td ALIGN="Right" class="txtgrey23">462</td>
+  			<td ALIGN="Right" class="txtgrey2">440</td>
+  			<td ALIGN="Right" class="txtblack3">902</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17210</td>
+		<td ALIGN="Left" class="txtgrey2">Ventalló</td>
+		
+			<td ALIGN="Right" class="txtgrey23">468</td>
+  			<td ALIGN="Right" class="txtgrey2">454</td>
+  			<td ALIGN="Right" class="txtblack3">922</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17211</td>
+		<td ALIGN="Left" class="txtgrey2">Verges</td>
+		
+			<td ALIGN="Right" class="txtgrey23">581</td>
+  			<td ALIGN="Right" class="txtgrey2">579</td>
+  			<td ALIGN="Right" class="txtblack3">1.160</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17212</td>
+		<td ALIGN="Left" class="txtgrey2">Vidrà</td>
+		
+			<td ALIGN="Right" class="txtgrey23">81</td>
+  			<td ALIGN="Right" class="txtgrey2">86</td>
+  			<td ALIGN="Right" class="txtblack3">167</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17213</td>
+		<td ALIGN="Left" class="txtgrey2">Vidreres</td>
+		
+			<td ALIGN="Right" class="txtgrey23">4.586</td>
+  			<td ALIGN="Right" class="txtgrey2">4.266</td>
+  			<td ALIGN="Right" class="txtblack3">8.852</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17214</td>
+		<td ALIGN="Left" class="txtgrey2">Vilabertran</td>
+		
+			<td ALIGN="Right" class="txtgrey23">487</td>
+  			<td ALIGN="Right" class="txtgrey2">475</td>
+  			<td ALIGN="Right" class="txtblack3">962</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17215</td>
+		<td ALIGN="Left" class="txtgrey2">Vilablareix</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.037</td>
+  			<td ALIGN="Right" class="txtgrey2">2.042</td>
+  			<td ALIGN="Right" class="txtblack3">4.079</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17217</td>
+		<td ALIGN="Left" class="txtgrey2">Viladamat</td>
+		
+			<td ALIGN="Right" class="txtgrey23">265</td>
+  			<td ALIGN="Right" class="txtgrey2">234</td>
+  			<td ALIGN="Right" class="txtblack3">499</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17216</td>
+		<td ALIGN="Left" class="txtgrey2">Viladasens</td>
+		
+			<td ALIGN="Right" class="txtgrey23">111</td>
+  			<td ALIGN="Right" class="txtgrey2">94</td>
+  			<td ALIGN="Right" class="txtblack3">205</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17218</td>
+		<td ALIGN="Left" class="txtgrey2">Vilademuls</td>
+		
+			<td ALIGN="Right" class="txtgrey23">467</td>
+  			<td ALIGN="Right" class="txtgrey2">431</td>
+  			<td ALIGN="Right" class="txtblack3">898</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17220</td>
+		<td ALIGN="Left" class="txtgrey2">Viladrau</td>
+		
+			<td ALIGN="Right" class="txtgrey23">592</td>
+  			<td ALIGN="Right" class="txtgrey2">590</td>
+  			<td ALIGN="Right" class="txtblack3">1.182</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17221</td>
+		<td ALIGN="Left" class="txtgrey2">Vilafant</td>
+		
+			<td ALIGN="Right" class="txtgrey23">2.815</td>
+  			<td ALIGN="Right" class="txtgrey2">2.849</td>
+  			<td ALIGN="Right" class="txtblack3">5.664</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17223</td>
+		<td ALIGN="Left" class="txtgrey2">Vilajuïga</td>
+		
+			<td ALIGN="Right" class="txtgrey23">587</td>
+  			<td ALIGN="Right" class="txtgrey2">593</td>
+  			<td ALIGN="Right" class="txtblack3">1.180</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17224</td>
+		<td ALIGN="Left" class="txtgrey2">Vilallonga de Ter</td>
+		
+			<td ALIGN="Right" class="txtgrey23">216</td>
+  			<td ALIGN="Right" class="txtgrey2">180</td>
+  			<td ALIGN="Right" class="txtblack3">396</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17225</td>
+		<td ALIGN="Left" class="txtgrey2">Vilamacolum</td>
+		
+			<td ALIGN="Right" class="txtgrey23">236</td>
+  			<td ALIGN="Right" class="txtgrey2">165</td>
+  			<td ALIGN="Right" class="txtblack3">401</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17226</td>
+		<td ALIGN="Left" class="txtgrey2">Vilamalla</td>
+		
+			<td ALIGN="Right" class="txtgrey23">608</td>
+  			<td ALIGN="Right" class="txtgrey2">594</td>
+  			<td ALIGN="Right" class="txtblack3">1.202</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17227</td>
+		<td ALIGN="Left" class="txtgrey2">Vilamaniscle</td>
+		
+			<td ALIGN="Right" class="txtgrey23">106</td>
+  			<td ALIGN="Right" class="txtgrey2">79</td>
+  			<td ALIGN="Right" class="txtblack3">185</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17228</td>
+		<td ALIGN="Left" class="txtgrey2">Vilanant</td>
+		
+			<td ALIGN="Right" class="txtgrey23">193</td>
+  			<td ALIGN="Right" class="txtgrey2">212</td>
+  			<td ALIGN="Right" class="txtblack3">405</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17230</td>
+		<td ALIGN="Left" class="txtgrey2">Vila-sacra</td>
+		
+			<td ALIGN="Right" class="txtgrey23">427</td>
+  			<td ALIGN="Right" class="txtgrey2">452</td>
+  			<td ALIGN="Right" class="txtblack3">879</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17222</td>
+		<td ALIGN="Left" class="txtgrey2">Vilaür</td>
+		
+			<td ALIGN="Right" class="txtgrey23">86</td>
+  			<td ALIGN="Right" class="txtgrey2">77</td>
+  			<td ALIGN="Right" class="txtblack3">163</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtgrey2">17233</td>
+		<td ALIGN="Left" class="txtgrey2">Vilobí d'Onyar</td>
+		
+			<td ALIGN="Right" class="txtgrey23">1.709</td>
+  			<td ALIGN="Right" class="txtgrey2">1.589</td>
+  			<td ALIGN="Right" class="txtblack3">3.298</td>
+		
+		</tr>
+
+		
+		<tr BGCOLOR="#FFFFFF">
+		<td ALIGN="Left" class="txtgrey2">17232</td>
+		<td ALIGN="Left" class="txtgrey2">Vilopriu</td>
+		
+			<td ALIGN="Right" class="txtgrey23">116</td>
+  			<td ALIGN="Right" class="txtgrey2">104</td>
+  			<td ALIGN="Right" class="txtblack3">220</td>
+		
+		</tr>
+
+		
+		
+		</tbody>
+		<tfooter>
+		<tr BGCOLOR="#DDDDDD">
+		<td ALIGN="Left" class="txtblack3">TOTAL</td>
+
+		<td ALIGN="left" class="linkred2"></td>
+
+		
+			<td ALIGN="Right" class="txtblack3">416.380</td>
+  			<td ALIGN="Right" class="txtblack3">414.049</td>
+  			<td ALIGN="Right" class="txtblack3">830.429</td>
+		
+		</tr>
+		</tfooter>
+		</table>
+	
+</td>
+<td width="5"></td>
+</tr>
+</table>
+
+	
+<span class="txtgrey2">Font: INE, cens de població i habitatge</span>
+
+</div></div>
+
+<!--final contenido central-->
+
+
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="col">
+        <div class="footer1_DDGI">
+          <address>
+          <span class="footer_titol">Diputaci&oacute; de Girona</span> <span class="footer_subtitol">Promoci&oacute; i Desenvolupament <br> Econ&ograve;mic Local</span> <span>Gran Via de Jaume I, 37, 7&egrave; 1r</span> <span>17001 Girona</span> <span>Tel.: 972 185 000</span> <span><a href="mailto:xifra@ddgi.cat">xifra@ddgi.cat</a></span> <span><a href="https://www.ddgi.cat/web" title="Portal web de la Diputaci&oacute; de Girona" target="_blank">www.ddgi.cat</a></span>
+          </address>
+        </div>
+      </div>
+      <div class="col">
+        <div class="footer2_DDGI">
+          		<a href="https://www.ddgi.cat/web/nivell/5164/agenda-2030" title="Agenda 2030" target="_blank">
+				<img alt="DDGI 2030 ODS 1, 10 i 11" width="176" src="/xifra/img/ODS_Promocio_economica.svg">
+				</a>
+        </div>
+      </div>
+      <div class="col"> </div>
+      <div class="col">
+        <div class="footer4_DDGI">
+          <div class="footer_DGII_menu">
+            <span class="footer_titol">Men&uacute;</span>
+			<ul>
+				<li><a href="/xifra/menu_pro.asp">Dades provincials</a></li>
+				<li><a href="/xifra/menu_mun.asp">Dades municipals</a></li>
+				<li><a href="/xifra/menu_ind.asp">Indicadors</a></li>
+				<li><a href="/xifra/menu_inf.asp">Informes</a></li>
+				<li><a href="/xifra/menu_map.asp">Mapes tem&agrave;tics</a></li>
+				<li><a href="/xifra/menu_est.asp">Estudis</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col">
+		<div class="footer_DDGI_logo"><a href="https://www.ddgi.cat/web" title="Portal web de la Diputació de Girona" target="_blank"> <img alt="Diputació de Girona" style="width:155px" src="https://www.ddgi.cat/ddgi/docNivell/web/footer/Diputacio_Girona_footer.svg"> </a> </div>
+      </div>
+      <div class="col">
+        <div class="footer_DDGI_links">
+          <ul>
+            <li><a href="https://www.ddgi.cat//web/nivell/379/s-/Avis+Legal" target="_blank">Av&iacute;s legal</a></li>
+            <li><a href="https://www.ddgi.cat//web/nivell/380/s-/Proteccio-de-dades" target="_blank">Protecci&oacute; de dades</a> </li>
+            <li> <a href="https://www.ddgi.cat//web/nivell/381/s-/Accessibilitat" target="_blank">Accesibilitat</a> </li>
+            <li> <a href="https://www.ddgi.cat//web/nivell/5897/politica-de-galetes" target="_blank">Pol&iacute;tica de galetes</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>	
+<script>
+	
+$(document).ready(function () {
+$('#taula_dades').DataTable(
+{
+	fixedHeader: true,
+	pageLength: -1,
+	
+	columnDefs: [
+	{
+		targets: '_all',
+		render: function (data, type, row) {
+			if (type == 'sort' || type == 'type') {
+				if(data==="ND") return -1000000;
+					else return data;
+			}
+			return data;
+		}
+	}
+	],
+	
+	language: {
+		"processing": "Processant...",
+		"lengthMenu": "Mostra _MENU_ registres",
+		"zeroRecords": "No s'han trobat registres",
+		"info": "Mostrant del _START_ al _END_ d'un total de _TOTAL_ registres",
+		"infoEmpty": "No hi ha registres disponibles",
+		"infoFiltered": "(filtrat de _MAX_ registres)",
+		"search": "Cerca:",
+		"infoThousands": ".",
+		"decimal": ",",
+		"loadingRecords": "Carregant...",
+		"paginate": {
+			"first": "Primer",
+			"previous": "Anterior",
+			"next": "Següent",
+			"last": "Darrer"
+		},
+		"aria": {
+			"sortAscending": ": Activa per ordenar la columna de manera ascendent",
+			"sortDescending": ": Activa per ordenar la columna de manera descendent"
+		},
+		"buttons": {
+			"print": "Imprimeix",
+			"copy": "Copia",
+			"colvis": "Columnes",
+      
+			"pageLength": {
+				"-1": "Mostra totes les files",
+				"_": "Mostra %d files"
+			},
+			"pdf": "PDF",
+			"csv": "CSV",
+			"excel": "Excel"
+		},
+		"thousands": ".",
+		"datetime": {  
+			"previous": "Anterior",
+			"next": "Següent",
+			"minutes": "Minuts"
+		},
+		"emptyTable": "No hi ha registres disponibles en aquesta taula"
+	}
+} );
+});
+
+	
+</script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.ddgi.cat/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '7']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>
+

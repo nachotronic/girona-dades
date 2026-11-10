@@ -1,0 +1,3345 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat",
+            "id" : "v8i4-fa4q",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-03-18T10:27:52.000Z",
+            "createdAt" : "2024-04-23T08:26:45.000Z",
+            "metadata_updated_at" : "2026-03-18T10:27:47.000Z",
+            "data_updated_at" : "2026-03-18T10:27:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 90,
+                "page_views_last_month" : 388,
+                "page_views_total" : 3984,
+                "page_views_last_week_log" : 6.507794640198696,
+                "page_views_last_month_log" : 8.603626344986191,
+                "page_views_total_log" : 11.960364008877834
+              },
+            "columns_name" :
+              [
+                "Codi Comarca 2023",
+                "Georeferència Municipi",
+                "Codi Província",
+                "Latitud Municipi",
+                "Codi IDESCAT",
+                "Longitud Municipi",
+                "Codi INE",
+                "Iniciats HPO",
+                "Comarca 2023",
+                "Àmbit funcional",
+                "Any",
+                "Municipi",
+                "Província",
+                "Acabats HPO",
+                "LIMADM_MUNICIPI"
+              ],
+            "columns_field_name" :
+              [
+                "codi_comarca_2023",
+                "georefer_ncia_municipi",
+                "codi_prov_ncia",
+                "latitud_municipi",
+                "codi_idescat",
+                "longitud_municipi",
+                "codi_ine",
+                "iniciats_hpo",
+                "comarca_2023",
+                "mbit_funcional",
+                "any",
+                "municipi",
+                "prov_ncia",
+                "acabats_hpo",
+                ":@computed_region_bh64_c7uy"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Point",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Lluçanès.",
+                "Dades de georeferència. Posicionament espacial del municipi. ",
+                "Codi de la província assignat per l’Institut d’Estadística de Catalunya.",
+                "Sistema de coordenades. Localització del municipi en direcció est o oest.",
+                "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+                "Sistema de coordenades. Localització del municipi en direcció nord o sud.",
+                "Codi del municipi assignat per l’Instituto Nacional de Estadística",
+                "Nombre d’habitatges amb protecció oficial iniciats totals",
+                "Nom de la comarca 2023. Incorporació del Lluçanès.",
+                "Vegueria (o àmbit funcional) al que pertany el municipi",
+                "Any d’inici o acabament dels habitatges",
+                "Nom del municipi",
+                "Nom de la província",
+                "Nombre d’habitatges amb protecció oficial acabats totals",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 473,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-04-23T08:38:55.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Habitatge",
+            "domain_tags" :
+              [
+                "habitatge",
+                "construcció",
+                "iniciats",
+                "acabats",
+                "protecció oficial",
+                "catalunya"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Housing with official protection started and finished. Annual historical series 2002 – present"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Viviendas con protección oficial iniciadas y acabadas. Serie historica anual 2002 – actualidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
+        "link" : "https://analisi.transparenciacatalunya.cat/Habitatge/Habitatges-amb-protecció-oficial-iniciats-i-acabat/v8i4-fa4q",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Àrees de referencia en matèria de política d’habitatge",
+            "id" : "fftm-v9b6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació sobre les àrees definides per les diferents normatives en matèria d'habitatge amb la relació dels municipis afectats. Àmbits d'aplicació:\n-\tÀrees de demanda residencial forta i acreditada\n-\tÀrees d'aplicació de l'impost d'habitatges buits\n-\tZones de mercat residencial tensat\n-\tZones geogràfiques a efectes d'aplicació de la normativa d'habitatges de protecció oficial\nPer obtenir més informació metodològica sobre les variables del dataset, consulteu el document adjunt ‘Apunts metodològics’.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-09-22T10:00:27.000Z",
+            "createdAt" : "2022-01-24T14:12:58.000Z",
+            "metadata_updated_at" : "2025-09-22T10:00:27.000Z",
+            "data_updated_at" : "2025-02-14T13:15:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 116,
+                "page_views_total" : 2553,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 6.870364719583405,
+                "page_views_total_log" : 11.318542809702725
+              },
+            "columns_name" :
+              [
+                "Codi IDESCAT",
+                "Municipis segons àrea del PTSH",
+                "Codi província",
+                "Municipi",
+                "Municipis d'intervenció complementària i escassa demanda",
+                "Zona de mercat residencial tensat",
+                "Longitud Municipi",
+                "Latitud Municipi",
+                "Georeferència Municipi",
+                "Comarca",
+                "LIMADM_MUNICIPI",
+                "Província",
+                "Codi INE",
+                "Programa d’actuació concertada (PAC)",
+                "municipis_de_l_amb",
+                "Àmbit funcional",
+                "Zones geogràfiques d'HPO",
+                "Codi comarca"
+              ],
+            "columns_field_name" :
+              [
+                "codi_idescat",
+                "area_ptsh",
+                "codi_provincia",
+                "municipi",
+                "municipis_d_intervencio",
+                "zona_de_mercat_residencial_tensat",
+                "longitud_municipi",
+                "latitud_municipi",
+                "georeferencia_municipi",
+                "comarca",
+                ":@computed_region_bh64_c7uy",
+                "provincia",
+                "codmuni",
+                "programa_d_actuacio_concertada",
+                "municipis_amb",
+                "ambit_funcional",
+                "hpo",
+                "codi_comarca"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Point",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+                "Àmbits d'actuació per assolir les finalitats del Pla territorial sectorial de l'habitatge. Les àrees de demanda residencial forta i acreditada (ADFA) són les que de forma prioritària hauran de dur a terme les polítiques d'habitatge per assolir els objectius de solidaritat urbana.",
+                "Codi de la provincia assignat per l’Institut d’Estadística de Catalunya",
+                "Nom del municipi",
+                "Municipis inclosos en les àrees d'intervenció complementària  que defineix el PTSH a efectes de l'impost d'habitatges buit prevista en la Llei 14/2015.",
+                "Municipis inclosos a la zona de mercat residencial tensat. La ZMRT1 inclou afecta 140 municipis i és efectiva des del 16 de març de 2024. (El 15 de març es va publicar al BOE la llista dels 140 municipis declarats zona de mercat residencial tensat de Catalunya. En aquests municipis hi ha unes dificultats especials per accedir a l’habitatge, i s’hi apliquen les mesures per limitar el preu del lloguer). La ZMRT 2 abasta 131 municipis i és efectiva des del 10 d'octubre de 2024. (El 9 d'octubre es va publicar al BOE la llista dels 131 municipis declarats zona de mercat residencial tensat de Catalunya. En aquests municipis també hi ha unes dificultats especials per accedir a l’habitatge)",
+                "Sistema de coordenades WGS84. Localització del municipi en direcció nord o sud.",
+                "Sistema de coordenades WGS84. Localització del municipi en direcció est o oest.",
+                "Dades de georeferència. Posicionament espacial del municipi.",
+                "Nom de la comarca",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georeferencia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nom de la província",
+                "Codi INE del municipi",
+                "Municipis de més de 50.000 habitants i tots els municipis AMB que tenen l'obligació de subscriure un programa d’actuació concertada",
+                "Municipis que pertanyen a l’Àrea Metropolitana de Barcelona",
+                "Vegueria (o àmbit funcional) al que pertany el municipi",
+                "Zones geogràfiques d'Habitatges amb Protecció Oficial (HPO)",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 907,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-03-18T07:26:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Habitatge",
+            "domain_tags" :
+              [
+                "municipi",
+                "habitatge protegit",
+                "zones hpo",
+                "mercat habitatge tens",
+                "impost habitatges buits",
+                "àrees de demanda forta i acreditada",
+                "contenció renda lloguer",
+                "ods9_indústria innovació i infraestructures",
+                "ods10_reducció de les desigualtats",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Areas and reference zones in housing policy in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Áreas y zonas de referencia en materia de política de vivienda en Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/fftm-v9b6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Habitatge/Àrees-de-referencia-en-matèria-de-política-d-habit/fftm-v9b6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Empreses d’instal·lació, manteniment, reparació i operació d’instal·lacions i productes industrials",
+            "id" : "qcrr-stew",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de les Empreses d’instal·lació, manteniment, reparació i operació d’instal·lacions i productes industrials habilitades inscrites al Registre d'Agents de la Seguretat Industrial de Catalunya (RASIC).\n\nAmb un únic número de RASIC s'inscriuen les empreses habilitades en alguns dels següents camps reglamentaris de seguretat industrial. \n•\tEmpresa Instal·ladora de Gas  \n•\tEmpresa Instal·ladora d'Electricitat (alta tensió, línies o instal·lacions)\n•\tEmpresa Instal·ladora d'Electricitat (baixa tensió)\n•\tEmpresa instal·ladora-mantenidora d'instal·lacions tèrmiques en edificis \n•\tEmpresa frigorista \n•\tEmpresa instal·ladora i/o reparadora d’equips a pressió  \n•\tEmpresa recarregadora i d'inspecció de botelles de respiració autònoma (REBRA)  \n•\tEmpresa recarregadora de recipients transportables (RERT)  \n•\tEmpresa instal·ladora i/o reparadora de productes petrolífers líquids  \n•\tEmpresa instal·ladora i/o mantenidora d’instal·lacions de protecció contra incendis \n•\tEmpresa conservadora d'aparells elevadors - grues autopropulsades  \n•\tEmpresa conservadora d'aparells elevadors - ascensors  \n•\tEmpresa instal·ladora/conservadora d'aparells elevadors - grues torre",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-03T08:21:26.000Z",
+            "createdAt" : "2019-12-18T08:23:28.000Z",
+            "metadata_updated_at" : "2026-11-03T08:20:55.000Z",
+            "data_updated_at" : "2026-11-03T08:21:26.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 665,
+                "page_views_last_month" : 2755,
+                "page_views_total" : 99806,
+                "page_views_last_week_log" : 9.379378367071263,
+                "page_views_last_month_log" : 11.428360172704291,
+                "page_views_total_log" : 16.6068533825983
+              },
+            "columns_name" :
+              [
+                "BT ESP Quiròfans",
+                "Número RASIC registre",
+                "Estat registre",
+                "Grues torre",
+                "Codi Comarca",
+                "PCI Extintors auto",
+                "Telèfon fix",
+                "AT línies auto",
+                "Telèfon mòbil",
+                "PCI Sist fixos aigua neb auto",
+                "ITE Installacions Tèrm en edificis",
+                "Serveis Territorials",
+                "Província",
+                "PCI Sist extinció pols",
+                "PCI Sist abast aigua",
+                "EP reparacions",
+                "BT Installacions categoria",
+                "Ascensors",
+                "AT Installacions",
+                "PCI Protecció contra incendis auto",
+                "BT ESP Línies aèries subt",
+                "AT Línies",
+                "PCI Sist ext aerosols",
+                "PCI Sist control fums i calor",
+                "BT ESP Loc risc incendi o explosió",
+                "PCI Sist boques incendi",
+                "PCI Extintors",
+                "Codi Municipi",
+                "EP Equips a pressió",
+                "PCI Sist Hidrants auto",
+                "PCI Sist ext aerosols auto",
+                "Codi Postal",
+                "Prod Petrolífers líquids",
+                "PCI Sist detecció i alarma",
+                "Grues autopropulsades auto",
+                "Prod Petrolífers líquids Reparació",
+                "PCI Sist escuma física auto",
+                "Grues torre auto",
+                "Gas auto",
+                "BT ESP Làmpades descarrega",
+                "PCI Sist agents gaseosos auto",
+                "PCI Sist detecció i alarma auto",
+                "EP categoria",
+                "PCI Sist boques incendi auto",
+                "Ascensors auto",
+                "PCI Sist extinció pols auto",
+                "ITE auto",
+                "PCI Sist fixos aigua nebulitzada",
+                "PCI Sist escuma física",
+                "PCI Sist agents gaseosos",
+                "Fred Industrial categoria",
+                "PCI Sist senyal luminescent",
+                "EP Equips a pressió auto",
+                "Adreça agrupada",
+                "Fred Industrial auto",
+                "Municipi",
+                "Comarca",
+                "Prod Petrolífers líquids auto",
+                "BT Installacions auto",
+                "BT ESP Installacions generadores",
+                "PCI Sist Ruixadors auto",
+                "PCI Protecció contra incendis",
+                "ITE Calefacció i ACS",
+                "Fred Industrial",
+                "Prod Petrolífers líquids Categoria",
+                "Titular",
+                "Document",
+                "BT ESP Sist Automatització gest tècn",
+                "Adreça web",
+                "PCI Sist control fums i calor auto",
+                "Gas Categoria",
+                "PCI Sist senyal luminescent auto",
+                "PCI Sist hidrants",
+                "PCI Sist ruixadors",
+                "AT Línies Tipus",
+                "Gas",
+                "BT Installacions",
+                "Grues autopropulsades",
+                "ITE Climatització",
+                "Automantenidora",
+                "PCI Sist abast aigua auto",
+                "PCI Sist columna seca",
+                "AT Installacions Tipus",
+                "AT Installacions auto",
+                "PCI Sist columna seca auto",
+                "ITE Installacions tèrmiques",
+                "Correu electrònic"
+              ],
+            "columns_field_name" :
+              [
+                "bt_esp_quirofans",
+                "n_mero_de_rasic",
+                "estat_registre",
+                "grues_torre",
+                "codi_comarca",
+                "pci_extintors_auto",
+                "telefon_fix",
+                "at_linies_auto",
+                "telefon_mobil",
+                "pci_sist_fixos_aigua_neb",
+                "ite_installacions_term",
+                "serveis_territorials",
+                "prov_ncia",
+                "pci_sist_extincio_pols",
+                "pci_sist_abast_aigua",
+                "ep_reparacions",
+                "bt_installacions_categoria",
+                "ascensors",
+                "at_installacions",
+                "pci_proteccio_contra_incendis_auto",
+                "bt_esp_linies_aeries",
+                "at_linies",
+                "pci_sist_ext_aerosols",
+                "pci_sist_control_fums_calor",
+                "bt_esp_loc_risc_incendi",
+                "pci_sist_boques_incendi",
+                "pci_extintors",
+                "codi_municipi",
+                "ep_equips_a_pressio",
+                "pci_sist_hidrants_auto",
+                "pci_sist_ext_aerosols_auto",
+                "codi_postal",
+                "prod_petrolifers_liquids",
+                "pci_sist_deteccio_alarma",
+                "grues_autopropulsades_auto",
+                "prod_petrolifers_liquids_reparacio",
+                "pci_sist_escuma_fisica_auto",
+                "grues_torre_auto",
+                "gas_auto",
+                "bt_esp_lampades_descarrega",
+                "pci_sist_agents_gaseosos_auto",
+                "pci_sist_deteccio_alarma_auto",
+                "ep_categoria",
+                "pci_sist_boques_incendi_auto",
+                "ascensors_auto",
+                "pci_sist_extincio_pols_auto",
+                "ite_auto",
+                "pci_sist_fixos_aigua",
+                "pci_sist_escuma_fisica",
+                "pci_sist_agents_gaseosos",
+                "fred_industrial_categoria",
+                "pci_sist_senyal_luminescent",
+                "ep_equips_a_pressio_auto",
+                "adreca_agrupada",
+                "fred_industrial_auto",
+                "municipi",
+                "comarca",
+                "prod_petrolifers_liquids_auto",
+                "bt_installacions_auto",
+                "bt_esp_installacions",
+                "pci_sist_ruixadors_auto",
+                "pci_proteccio_contra_incendis",
+                "ite_calefaccio_acs",
+                "fred_industrial",
+                "prod_petrolifers_liquids_categoria",
+                "titular",
+                "document",
+                "bt_esp_sist_automatitzacio",
+                "adreca_web",
+                "pci_sist_control_fums_calor_auto",
+                "gas_categoria",
+                "pci_sist_senyal_luminescent_auto",
+                "pci_sist_hidrants",
+                "pci_sist_ruixadors",
+                "at_linies_tipus",
+                "gas",
+                "bt_installacions",
+                "grues_autopropulsades",
+                "ite_climatitzacio",
+                "automantenidora",
+                "pci_sist_abast_aigua_auto",
+                "pci_sist_columna_seca",
+                "at_installacions_tipus",
+                "at_installacions_auto",
+                "pci_sist_columna_seca_auto",
+                "ite_installacions_termiques",
+                "correu_electronic"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Quiròfans o sales d’intervenció.",
+                "Número de RASIC de l’empresa habilitada.",
+                "Indica que l'empresa està en situació d'alta.",
+                "Empresa instal·ladora de grues torre.",
+                "Codi comarcal o de l’entitat territorial singular de l’Aran de 2 dígits oficial a Catalunya, definit per l’Institut d’Estadística de Catalunya (IDESCAT).",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’extintors d’incendis.",
+                "Telèfon fix de l’empresa habilitada.",
+                "Empresa automantenidora de línies elèctriques d’alta tensió.",
+                "Telèfon mòbil de l’empresa habilitada.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per aigua nebulitzada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.",
+                "Serveis Territorials d’Indústria de la Generalitat de Catalunya competents.",
+                "Província de la seu social l’empresa habilitada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per pols.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’abastament d’aigua contra incendis.",
+                "Categoria de l’empresa reparadora d’instal·lacions d’equips a pressió.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió.",
+                "Empresa conservadora d’ascensors.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques d’alta tensió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Línies aèries o subterrànies per a la distribució d’energia.",
+                "Empresa instal·ladora/mantenidora de línies elèctriques d’alta tensió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per aerosols condensats.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes pel control de fums i calor.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Locals amb risc d’incendi o explosió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes de boques d’incendi equipades (BIE).",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’extintors d’incendis.",
+                "Codi municipal de 6 dígits oficial a Catalunya. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions d’equips a pressió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’hidrants.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per aerosols condensats.",
+                "Codi postal de la seu social de l’empresa habilitada. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa instal·ladora d’instal·lacions de productes petrolífers líquids.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis. \nSistemes de detecció i alarma.",
+                "Empresa automantenidora de grues mòbils autorpropulsades.",
+                "Empresa reparadora d’instal·lacions de productes petrolífers líquids.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció d’escuma física.",
+                "Empresa automantenidora de grues torre.",
+                "Empresa automantenidora d’instal·lacions de gasos combustibles.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Llums de descàrrega d’alta tensió, rètols lluminosos o similars.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per agents gasosos.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis. \nSistemes de detecció i alarma.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions d’equips a pressió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes de boques d’incendi equipades (BIE).",
+                "Empresa automantenidora d’ascensors.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per pols.",
+                "Empresa automantenidora d’instal·lacions tèrmiques en edificis.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per aigua nebulitzada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció d’escuma física.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per agents gasosos.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions frigorífiques.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes de senyalització luminescent.",
+                "Empresa automantenidora d’instal·lacions d’equips a pressió.",
+                "Adreça de la seu social de l’empresa habilitada. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa automantenidora d’instal·lacions frigorífiques.",
+                "Municipi de la seu social de l’empresa. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Comarca de la seu social de l’empresa habilitada.",
+                "Empresa automantenidora d’instal·lacions de productes petrolífers líquids.",
+                "Empresa automantenidora d’instal·lacions elèctriques de baixa tensió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Instal·lacions generadores de baixa tensió de potència igual o superior a 10 kW.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per ruixadors automàtics i aigua polvoritzada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.\nCategoria: Calefacció i ACS.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions frigorífiques.",
+                "Categoria de l’empresa instal·ladora d’instal·lacions de productes petrolífers líquids.",
+                "Nom de l’empresa habilitada.",
+                "NIF, CIF o NIE de l’empresa habilitada. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Sistemes d’automatització, gestió tècnica de l’energia i seguretat per a edificis.",
+                "Adreça web de l’empresa habilitada.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes pel control de fums i calor.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions de gasos combustibles.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes de senyalització luminescent.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’hidrants.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per ruixadors automàtics i aigua polvoritzada.",
+                "Categoria de l’empresa instal·ladora/mantenidora de línies elèctriques d’alta tensió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de gasos combustibles.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió.",
+                "Empresa operadora de grues mòbils autopropulsades.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.\nCategoria: Climatització.",
+                "Empresa instal·ladora/mantenidora de les pròpies instal·lacions (només de les instal·lacions de la seva propietat).",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’abastament d’aigua contra incendis",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes de columna seca.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions elèctriques d’alta tensió.",
+                "Empresa automantenidora d’instal·lacions elèctriques d’alta tensió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes de columna seca.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.\nCategoria: Instal·lacions tèrmiques en edificis (RITE).",
+                "Correu electrònic de l’empresa habilitada."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 13666,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-03-25T16:30:48.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "gas",
+                "electricitat",
+                "tèrmica",
+                "frigorista",
+                "equips a pressió",
+                "ascensors",
+                "incendis",
+                "productes petrolífers",
+                "aparells elevadors",
+                "grues",
+                "instal·ladores",
+                "ods8_treball decent i creixement econòmic",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Installation, maintenance, repair and operation companies of facilities and industrial products"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Empresas de instalación, mantenimiento, reparación y operación de instalaciones y productos industriales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qcrr-stew",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Empreses-d-instal-lació-manteniment-reparació-i-op/qcrr-stew",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Anuari estadístic de Catalunya",
+            "id" : "5tmq-pe65",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Anuari estadístic de Catalunya recull la informació bàsica de les principals estadístiques oficials produïdes pels organismes del Sistema estadístic de Catalunya, i la informació més rellevant produïda per altres organismes oficials (del país i de la resta de l'Estat), sobre Catalunya.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:06.000Z",
+            "createdAt" : "2020-10-23T11:23:10.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:06.000Z",
+            "data_updated_at" : "2020-10-23T11:23:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 5,
+                "page_views_last_month" : 21,
+                "page_views_total" : 2744,
+                "page_views_last_week_log" : 2.584962500721156,
+                "page_views_last_month_log" : 4.459431618637297,
+                "page_views_total_log" : 11.42259043389256
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:24:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "idescat",
+                "indicador",
+                "estadística",
+                "demografia",
+                "societat",
+                "població",
+                "cultura",
+                "llengua",
+                "educació",
+                "eleccions",
+                "justícia",
+                "seguretat",
+                "salut",
+                "treball",
+                "qualitat de vida",
+                "condicions de vida",
+                "habitatges i edificis",
+                "ingressos",
+                "consum de les llars",
+                "protecció social",
+                "economia",
+                "macromagnituds",
+                "empreses",
+                "finances",
+                "finances públiques",
+                "inversió",
+                "comerç exterior",
+                "preus",
+                "recerca",
+                "tecnologia",
+                "sectors econòmics",
+                "agricultura",
+                "ramaderia",
+                "pesca",
+                "comerç",
+                "serveis",
+                "construcció",
+                "indústria",
+                "energia",
+                "transport",
+                "turisme",
+                "medi ambient",
+                "territori",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistical yearbook of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Anuario estadístico de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "enllaç" : "https://www.idescat.cat/pub/?id=aec"
+                           },
+                  "description" : "Accediu a l'anuari estadístic de Catalunya al web de l'IDESCAT",
+                  "title" : "Anuari estadístic de Catalunya"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/pub/?id=aec" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5tmq-pe65",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Anuari-estadístic-de-Catalunya/5tmq-pe65",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mapa dels establiments sanitaris autoritzats a Catalunya",
+            "id" : "dt8j-eviw",
+            "resource_name" : null,
+            "parent_fxf" : [ "nrmq-ytje" ],
+            "description" : "Aquest conjunt de dades ofereix les dades identificatives, de localització i d'altres dades bàsiques dels establiments sanitaris autoritzats a Catalunya.\n\nUn establiment sanitari és un conjunt organitzat de mitjans tècnics i instal·lacions on els professionals capacitats, per la seva titulació oficial o habilitació professional, realitzen bàsicament activitats sanitàries de dispensació de medicaments o d’adaptació individual de productes sanitaris, segons el tipus d'establiment. Els tipus d'establiments són: audiopròtesi, farmàcia, farmaciola, òptica i ortopèdia.\n\nAquests establiments necessiten d’una autorització administrativa que lliura el Departament de Salut abans de la seva posada en funcionament o bé per a qualsevol modificació que vulguin realitzar, per garantir que disposen dels requisits tecnicosanitaris comuns per a la seguretat i qualitat de l'assistència sanitària prestada, així com que reuneixen les condicions per a la protecció adequada dels drets dels pacients i per a l'efectiva i permanent disposició dels mitjans necessaris per desenvolupar, en condicions de seguretat i qualitat, la seva activitat.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "map",
+            "updatedAt" : "2026-11-04T01:35:16.000Z",
+            "createdAt" : "2023-07-06T08:02:59.000Z",
+            "metadata_updated_at" : "2026-10-13T11:06:42.000Z",
+            "data_updated_at" : "2026-11-04T01:35:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 133,
+                "page_views_total" : 3902,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 7.066089190457772,
+                "page_views_total_log" : 11.930367747438952
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 13,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_map",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-10-13T11:06:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Authorized health establishments in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Establecimientos sanitarios autorizados en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/dt8j-eviw",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Mapa-dels-establiments-sanitaris-autoritzats-a-Cat/dt8j-eviw",
+        "owner" :
+          {
+            "id" : "76mf-34jr",
+            "user_type" : "interactive",
+            "display_name" : "Álex Artigas"
+          },
+        "creator" :
+          {
+            "id" : "76mf-34jr",
+            "user_type" : "interactive",
+            "display_name" : "Álex Artigas"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Normativa de protecció d’espècies de flora a Catalunya",
+            "id" : "9gn6-64gh",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de les espècies de flora que es troben a Catalunya i estan amenaçades o protegides per alguna normativa a nivell europeu, estatal o autonòmic.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-09-22T09:52:24.000Z",
+            "createdAt" : "2024-12-23T13:31:26.000Z",
+            "metadata_updated_at" : "2025-09-22T09:52:24.000Z",
+            "data_updated_at" : "2025-04-14T08:23:36.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 15,
+                "page_views_last_month" : 40,
+                "page_views_total" : 1433,
+                "page_views_last_week_log" : 4.0,
+                "page_views_last_month_log" : 5.357552004618084,
+                "page_views_total_log" : 10.485829308701906
+              },
+            "columns_name" :
+              [
+                "Àmbit territorial de protecció catalana",
+                "Protecció pel Conveni de Berna",
+                "Protecció estricta-PEIN",
+                "Protecció pel Conveni Barcelona",
+                "Protecció de fanerògames marines",
+                "Protecció estatal",
+                "Protecció catalana",
+                "Protecció de l’explotació",
+                "Grup taxonòmic",
+                "Nom científic",
+                "Autors",
+                "Sinònims",
+                "Protecció europea"
+              ],
+            "columns_field_name" :
+              [
+                "mbit_territorial_de_protecci",
+                "protecci_pel_conveni_de_berna",
+                "protecci_estricta_pein",
+                "protecci_pel_conveni_barcelona",
+                "protecci_de_faner_games",
+                "protecci_estatal",
+                "protecci_catalana",
+                "protecci_de_l_explotaci",
+                "grup_taxon_mic",
+                "nom_cient_fic",
+                "autors",
+                "sin_nims",
+                "protecci_europea"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "En quin espai o territori es protegeix l’espècie pel Catàleg de flora amenaçada de Catalunya (Decret 172/2008 i Resolució ACC/3929/2023), és a dir, si es protegeix per tot Catalunya o per una àrea determinada. En el cas de les no protegides no aplica aquest camp.",
+                "Especies de flora protegides pel Conveni de Berna 1979 relatiu a la conservació de la vida silvestre i del medi natural a Europa (ratificació 1986)",
+                "Espècies de flora estrictament protegides en l'àmbit del Pla d'Espais d'Interès Natural, PEIN (Decret 328/1992 i actualitzat pel Decret 172/2008 a l'Annex 3)",
+                "Especies de flora protegides pel Conveni Barcelona 1995 per la protecció del mar Mediterrani contra la contaminació (ratificació 1999)",
+                "Espècies d'herbassars de fanerògames marines regulades (Ordre de 31 de juliol de 1991)",
+                "Tipus de protecció segons la llista d’espècies silvestres en règim de protecció especial (LESPRE) i del Catàleg espanyol d’espècies amenaçades (CEE) (Reial decret 139/2011)",
+                "Tipus de protecció segons el Catàleg de flora amenaçada de Catalunya (Decret 172/2008 i Resolució ACC/3929/2023)",
+                "Espècies de flora autòctona les quals es regula la seva explotació (Ordre de 1984 o Ordre de 1986)",
+                "Grup al que pertany segons la classificació filogenètica ",
+                "Segons el criteri adoptat per Sáez & Aymerich (2021) a la publicació “An annotated Checklist of the vascular plants of Catalonia”",
+                "Segons el criteri adoptat per Sáez & Aymerich (2021) a la publicació “An annotated Checklist of the vascular plants of Catalonia” i s’inclou l’autor o els autors corresponents a la descripció de cada tàxon",
+                "Segons el criteri adoptat per Sáez & Aymerich (2021)",
+                "Tipus de protecció segons Directiva 92/43/CEE del Consell, de 21 de maig, relativa a la conservació dels hàbitats naturals i de la fauna i la flora silvestres"
+              ],
+            "columns_format" :
+              [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 342,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-12-23T13:36:29.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Ambient",
+            "domain_tags" :
+              [
+                "flora",
+                "flora autòctona",
+                "catàleg flora amenaçada",
+                "espècies protegides",
+                "espècies amenaçades",
+                "en perill d'extinció",
+                "vulnerable",
+                "catàleg",
+                "espais d'interès natural",
+                "directiva hàbitats",
+                "fanerògames marines",
+                "ods15_vida d'ecosistemes terrestres"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Regulations for the protection of flora species in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Normativa de protección de especies de flora en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/9gn6-64gh",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Normativa-de-protecció-d-espècies-de-flora-a-Catal/9gn6-64gh",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre de llicències comercials",
+            "id" : "8dtv-rvgy",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Als efectes del que preveu l’apartat 6 de l’article 8 de la Llei 18/2005, de 27 de desembre, d’equipaments comercials, les llicències comercials de la Generalitat i el seu sentit serà publicat per la Direcció General de Comerç, a través de mitjans telemàtics. El registre divulgat per aquest mitjà contindrà la informació següent: Nom de l’empresa sol·licitant, data d’entrada de la sol·licitud, ubicació de l’establiment, superfície de venda, sector d’oferta i forma, data i sentit de la resolució. S’haurà de garantir la protecció de dades de caràcter personal.\r\n\r\nFont: Article 34, Registre i publicitat, del Decret 378/2006, de 10 d'octubre, pel qual es desplega la Llei 18/2005, de 27 de desembre, d'equipaments comercials.",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-04-27T12:30:03.000Z",
+            "createdAt" : "2017-05-23T13:23:41.000Z",
+            "metadata_updated_at" : "2026-04-27T12:30:02.000Z",
+            "data_updated_at" : "2026-04-27T12:30:03.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 20,
+                "page_views_last_month" : 96,
+                "page_views_total" : 10782,
+                "page_views_last_week_log" : 4.392317422778761,
+                "page_views_last_month_log" : 6.599912842187128,
+                "page_views_total_log" : 13.396470993910388
+              },
+            "columns_name" :
+              [
+                "Codi comarca",
+                "Format de l'establiment",
+                "Sector d'activitat",
+                "LIMADM_MUNICIPI",
+                "Sol·licitant",
+                "Municipi",
+                "Codi municipi",
+                "Sup Venda (m2)",
+                "LIMADM COMARCA",
+                "UTM Y",
+                "NIF Sol·licitant",
+                "Comarca",
+                "UTM X",
+                "Georeferència",
+                "Sentit Resolució (Ferma)",
+                "Data Resolució (Ferma)",
+                "Data Entrada DGC"
+              ],
+            "columns_field_name" :
+              [
+                "codi_comarca",
+                "format_de_l_establiment",
+                "sector_d_activitat",
+                ":@computed_region_bh64_c7uy",
+                "sol_licitant",
+                "municipi",
+                "codi_municipi",
+                "sup_venda_m2",
+                ":@computed_region_wvic_k925",
+                "utm_y",
+                "nif_sol_licitant",
+                "comarca",
+                "utm_x",
+                "georefer_ncia",
+                "sentit_resoluci_ferma",
+                "data_resoluci_ferma",
+                "data_entrada_dgc"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Point",
+                "Text",
+                "Calendar date",
+                "Calendar date"
+              ],
+            "columns_description" :
+              [
+                "Codi de la comarca",
+                "Classificació en funció del format",
+                "Sector d’activitat comercial",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Persona jurídica a nom de la qual està inscrita en el registre",
+                "Ubicació on s’exerceix l’activitat comercial",
+                "Codi del municipi",
+                "Superfície de venda",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Sistema de coordenades universal transversal de Mercator per a la coordenada Y",
+                "Número d'Identificació Fiscal",
+                "Comarca on s’exerceix l’activitat comercial",
+                "Sistema de coordenades universal transversal de Mercator per a la coordenada X",
+                "",
+                "Sentit de la resolució ferma",
+                "Data de la resolució ferma",
+                "Data d’entrada de la sol·licitud"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "2",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                { "view" : "date_dmy", "align" : "left" },
+                { "view" : "date_dmy", "align" : "left" }
+              ],
+            "download_count" : 2680,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-02T10:27:33.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Comerç",
+            "domain_tags" :
+              [
+                "equipaments comercials",
+                "activitat comercial",
+                "comerç",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Commercial licences Registry "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de licencia comerciales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Contínua"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8dtv-rvgy",
+        "link" : "https://analisi.transparenciacatalunya.cat/Comerç/Registre-de-llicències-comercials/8dtv-rvgy",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors anuals de l'IDESCAT",
+            "id" : "vaei-tfwk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Selecció d'indicadors econòmics i socials de Catalunya, amb periodicitat anual, facilitats per l'Idescat i altres agents de l'estadística oficial. Les sèries també mostren les variacions interanuals i les dades comparatives amb Espanya.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:44:49.000Z",
+            "createdAt" : "2020-10-23T11:17:35.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:49.000Z",
+            "data_updated_at" : "2020-10-23T11:17:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 8,
+                "page_views_last_month" : 25,
+                "page_views_total" : 2612,
+                "page_views_last_week_log" : 3.1699250014423126,
+                "page_views_last_month_log" : 4.700439718141093,
+                "page_views_total_log" : 11.351491409320023
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:18:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "indicador",
+                "idescat",
+                "demografia",
+                "població",
+                "població estrangera",
+                "llars famílies i matrimonis",
+                "naixements i defuncions",
+                "migracions",
+                "mobilitat i població estacional",
+                "projeccions",
+                "cultura",
+                "llengua",
+                "educació",
+                "justícia",
+                "seguretat",
+                "salut",
+                "treball",
+                "qualitat de vida",
+                "condicions de vida",
+                "habitatges i edificis",
+                "ingressos i consum de les llars",
+                "protecció social",
+                "macromagnituds",
+                "empreses",
+                "finances",
+                "inversió",
+                "comerç exterior",
+                "preus",
+                "recerca",
+                "tecnologia",
+                "sectors econòmics",
+                "agricultura",
+                "ramaderia",
+                "pesca",
+                "comerç",
+                "serveis  construcció",
+                "indústria",
+                "energia",
+                "transport",
+                "turisme",
+                "medi ambient",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "IDESCAT's annual indicators"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores anuales del IDESCAT"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "enllaç" : "https://www.idescat.cat/indicadors/?id=anuals"
+                    },
+                  "description" : "Accediu als indicadors anuals al web de l'IDESCAT",
+                  "title" : "Indicadors anuals"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/indicadors/?id=anuals" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vaei-tfwk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Indicadors-anuals-de-l-IDESCAT/vaei-tfwk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Cens de població i habitatges",
+            "id" : "6pis-q32q",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Cens de població i habitatges és l'operació estadística que, amb periodicitat decennal, proporciona el recompte de la població resident en el territori d'un país i la seva distribució geogràfica. També proporciona informació sobre les principals característiques demogràfiques i socials de la població i de les llars i famílies.\n\nTerritorialment, ofereix la informació a escala municipal (incloent-hi seccions censals i districtes), comarcal, àmbits del Pla territorial, províncies i Catalunya.\n\nEl Cens de població i habitatges és una operació estadística d'àmbit estatal duta a terme per l'INE. D'ençà del 1991, l'Idescat hi col·labora en diferents aspectes dels treballs censals. El Cens del 2011 s'ha realitzat per primera vegada per mandat europeu.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:21.000Z",
+            "createdAt" : "2020-10-26T14:57:33.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:21.000Z",
+            "data_updated_at" : "2020-10-26T14:57:33.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 22,
+                "page_views_last_month" : 84,
+                "page_views_total" : 5204,
+                "page_views_last_week_log" : 4.523561956057013,
+                "page_views_last_month_log" : 6.409390936137703,
+                "page_views_total_log" : 12.34568244818678
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "cens població",
+                "cens habitatges",
+                "població",
+                "habitatges",
+                "ods17_aliances per aconseguir objectius",
+                "català947"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Population and Housing Census"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Censo de población y viviendas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=censph" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "ENLLAÇ" : "https://idescat.cat/pub/?id=censph" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/6pis-q32q",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Cens-de-població-i-habitatges/6pis-q32q",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Plans de protecció civil en fase de prealerta, alerta o emergència",
+            "id" : "wj9c-j6vf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació sobre l’estat dels plans d’emergència de Protecció Civil amb el nom del pla, l'especificació de la fase d'activació (prealerta, alerta o emergència) i la descripció del fenomen. En alguns casos també s’hi inclouen els comunicats oficials del Centre de Coordinació Operativa de Catalunya (CECAT), que és el centre superior de coordinació i informació de l'estructura de la Protecció Civil de Catalunya, ja que poden contenir consells d’autoprotecció, comarques afectades o restriccions per a la població. Quan no hi ha cap pla d’emergència activat, el conjunt de dades és buit, presenta 0 files.\n\nLes fases són les següents:\n\nPREALERTA: La prealerta es produeix, en general, davant de les situacions següents:\n·\tQuan és previsible un fenomen que pot produir situacions de risc per a la població a mitjà termini.\n·\tTambé es pot produir com a conseqüència del seguiment de maniobres o incidències a determinades instal·lacions, manca de serveis bàsics o essencials, i en la finalització d’emergències fins al retorn a la normalitat.\nLa prealerta no implica l’activació del pla.\n\nALERTA: El pla s'activa en fase d’alerta, en general, davant de les situacions següents:\n·\tQuan hi ha paràmetres objectius que fan preveure una situació d’emergència important per a la població a curt termini.\n·\tDavant d’afectacions per riscos naturals que no afectin ni puguin afectar de forma greu o generalitzada persones, béns o vies de comunicació.\n·\tEn emergències a determinades instal·lacions o infraestructures que no puguin produir danys a l’exterior però que puguin produir alarma en la població.\n\nEMERGÈNCIA: El pla s'activa en fase d’emergència, en general, davant de les situacions següents:\n·\tQuan s’informa de l’activació en fase d’emergència d’un pla especial de la Generalitat per afectació a la zona on es troba el municipi, la comarca o el territori.\n·\tDavant d’emergències que poden comportar o comporten, per la seva evolució, un greu risc per a la població, o el municipi o la comarca.",
+            "attribution" : "Direcció General de Protecció Civil",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-09T16:36:23.000Z",
+            "createdAt" : "2024-07-08T06:46:19.000Z",
+            "metadata_updated_at" : "2025-09-22T10:06:25.000Z",
+            "data_updated_at" : "2026-11-09T16:36:23.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 458,
+                "page_views_last_month" : 2626,
+                "page_views_total" : 29543,
+                "page_views_last_week_log" : 8.842350343413809,
+                "page_views_last_month_log" : 11.359200485133632,
+                "page_views_total_log" : 14.850577547205614
+              },
+            "columns_name" :
+              [
+                "PlaFase",
+                "PlaActivat",
+                "PlaNom",
+                "Descripcio",
+                "PlaAcronim",
+                "FaseDataHora",
+                "PlaIcona",
+                "ComunicatPDF"
+              ],
+            "columns_field_name" :
+              [
+                "plafase",
+                "plaactivat",
+                "planom",
+                "descripcio",
+                "plaacronim",
+                "fasedatahora",
+                "plaicona",
+                "comunicatpdf"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Text", "Text", "Text", "Text", "URL", "URL" ],
+            "columns_description" :
+              [
+                "Fase actual del Pla",
+                "Indica si el Pla està activat o no. (Si/No)",
+                "Nom complet del Pla (ex: Pla especial d’emergència exterior del sector químic de Tarragona)",
+                "Descripció addicional (opcional)",
+                "Acrònim Pla (ex: PLASEQTA)",
+                "Data/hora de l’inici de la fase",
+                "Icona representativa del pla  (URL a icona corresponent de DocumentsOberts) (veure Icones només per a ús i identificació dels plans de Protecció Civil)",
+                "Comunicat del Centre de Coordinació Operativa de Catalunya (CECAT) (URL a Documents Oberts)"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 38238,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-07-12T07:36:01.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "emergències",
+                "seguretat",
+                "plans",
+                "protecció civil",
+                "cecat",
+                "ods3_salut i benestar",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Nombre d’avisos i activacions dels plans de Protecció Civil de la Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://analisi.transparenciacatalunya.cat/Seguretat/Nombre-d-avisos-i-activacions-dels-plans-de-Protec/wfei-fjk5/about_data"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Civil protection plans currently in the pre-alert, alert or emergency phase"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Planes de protección civil en fase de prealerta, alerta o emergència"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/wj9c-j6vf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Plans-de-protecció-civil-en-fase-de-prealerta-aler/wj9c-j6vf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Enquesta social: llars i medi ambient",
+            "id" : "igrh-ytq4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Enquesta social 2008: llars i medi ambient (ES08) és una activitat estadística inclosa en el Pla estadístic de Catalunya 2006–2009 de la qual es presenten resultats sintètics, amb algunes novetats en el Sistema estadístic català en el vessant metodològic, institucional i de continguts.\n\nAquesta nova font estadística ofereix una nova perspectiva en l'àmbit de les estadístiques mediambientals ja que l'objectiu és aproximar-se al comportament percebut i a les actituds de la població quant als grans temes mediambientals que es presenten en la seva vida quotidiana. L'objectiu principal és investigar els hàbits, pautes de consum i actituds de les llars i de la població respecte al medi ambient, així com l'equipament dels habitatges i l'ús que en fan en relació amb els diferents aspectes mediambientals. Les temàtiques considerades objectes d'estudi i rellevants a l'entorn del medi ambient han estat principalment l'aigua, l'energia, els residus, els problemes de soroll i males olors a l'entorn de l'habitatge de residència i l'equipament de l'habitatge i l'ús que en fan els membres de la llar. També s'han considerat aspectes relacionats amb l'estil de vida de les persones, així com les pautes de consum i de mobilitat.\n\nUna altra novetat d'aquesta operació és la metodologia emprada en la recollida de la informació. En el disseny de l'ES08 es va optar per la recollida multicanal, que combina l'enquestació telefònica, presencial i a través d'Internet, per tal de reduir la càrrega i molèsties a la ciutadania a l'hora de subministrar informació per a l'elaboració d'estadística oficial. Aquesta metodologia ha permès donar a les unitats informants les màximes facilitats per subministrar la informació requerida, experiència que s'ha valorat positivament i que serà incorporada en posteriors actuacions estadístiques.\n\nAquesta estadística ha permès també l'obtenció d'un indicador sintètic de medi ambient que posiciona les llars i els individus en funció del seu grau de sensibilització, impacte i hàbits en relació amb els problemes mediambientals. Amb aquesta finalitat es va establir una metodologia de treball comuna, que possibilita la comparabilitat dels resultats obtinguts en les diferents comunitats autònomes que hi han participat.\n\nAquesta activitat s'ha dut a terme amb la col·laboració de diversos instituts d'estadística autonòmics, com són Euskal Estatistika Erakundea (Vincle extern: s'obrirà una nova finestra) (EUSTAT), Instituto de Estadística de Andalucía (Vincle extern: s'obrirà una nova finestra) (IEA), Instituto Galego de Estadística (Vincle extern: s'obrirà una nova finestra) (IGE), Instituto de Estadística de Navarra (Vincle extern: s'obrirà una nova finestra) (IEN) i Instituto Nacional de Estadística (Vincle extern: s'obrirà una nova finestra) (INE), mitjançant un grup de treball tècnic i institucional que va treballar conjuntament en l'elaboració ex novo del disseny de l'operació estadística i del projecte tècnic.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:53.000Z",
+            "createdAt" : "2020-10-26T14:58:15.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:53.000Z",
+            "data_updated_at" : "2020-10-26T14:58:15.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 21,
+                "page_views_total" : 2017,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 4.459431618637297,
+                "page_views_total_log" : 10.978710459106358
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:17.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Ambient",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "llar",
+                "medi ambient",
+                "ods13_acció pel clima",
+                "ods15_vida d'ecosistemes terrestres"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Social Survey: Households and Environment"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Encuesta social: hogares y medio ambiente"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=es" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=es" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/igrh-ytq4",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Enquesta-social-llars-i-medi-ambient/igrh-ytq4",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Enquesta contínua de llars",
+            "id" : "niff-3wey",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Enquesta contínua de llars és una estadística contínua que ofereix informació anualment sobre les característiques demogràfiques bàsiques de la població, de les llars i dels habitatges.\n\nEls objectius de l'Enquesta són, d'una banda, obtenir una estadística anual amb les variables bàsiques de la població, les llars i els habitatges, semblantment als Censos de població i habitatges, però amb informació més agregada. D'altra banda, facilitar l'elaboració d'enquestes a les llars que es puguin adreçar a submostres de l'Enquesta contínua de llars.\n\nL'Enquesta contínua de llars és una operació per mostreig de caràcter continu que realitza l'INE. L'Idescat difon els resultats de la mostra acumulada de dos anys, a 1 de gener, per Catalunya i províncies.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:05.000Z",
+            "createdAt" : "2020-10-26T14:57:49.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:05.000Z",
+            "data_updated_at" : "2020-10-26T14:57:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 9,
+                "page_views_last_month" : 31,
+                "page_views_total" : 2385,
+                "page_views_last_week_log" : 3.3219280948873626,
+                "page_views_last_month_log" : 5.0,
+                "page_views_total_log" : 11.220378327695228
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:50.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "habitatge",
+                "llar",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Continuous Household Survey"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Encuesta continua de hogares"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=ecll" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=ecll"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/niff-3wey",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Enquesta-contínua-de-llars/niff-3wey",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Establiments sanitaris autoritzats a Catalunya",
+            "id" : "nrmq-ytje",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt de dades ofereix les dades identificatives, de localització i d'altres dades bàsiques dels establiments sanitaris autoritzats a Catalunya.\n\nUn establiment sanitari és un conjunt organitzat de mitjans tècnics i instal·lacions on els professionals capacitats, per la seva titulació oficial o habilitació professional, realitzen bàsicament activitats sanitàries de dispensació de medicaments o d’adaptació individual de productes sanitaris, segons el tipus d'establiment. Els tipus d'establiments són: audiopròtesi, farmàcia, farmaciola, òptica i ortopèdia.\n\nAquests establiments necessiten d’una autorització administrativa que atorga el Departament de Salut abans de la seva posada en funcionament o bé per a qualsevol modificació que vulguin realitzar, prèvia sol·licitud de l’entitat titular, per garantir que disposen dels requisits tecnicosanitaris comuns per a la seguretat i qualitat de l'assistència sanitària prestada, així com que reuneixen les condicions per a la protecció adequada dels drets dels pacients i per a l'efectiva i permanent disposició dels mitjans necessaris per desenvolupar, en condicions de seguretat i qualitat, la seva activitat.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-04T01:35:16.000Z",
+            "createdAt" : "2021-03-22T10:55:47.000Z",
+            "metadata_updated_at" : "2026-11-04T01:35:03.000Z",
+            "data_updated_at" : "2026-11-04T01:35:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 93,
+                "page_views_last_month" : 341,
+                "page_views_total" : 6456,
+                "page_views_last_week_log" : 6.554588851677638,
+                "page_views_last_month_log" : 8.417852514885897,
+                "page_views_total_log" : 12.65664831174735
+              },
+            "columns_name" :
+              [
+                "Servei FMT nivell 1",
+                "Número registre",
+                "Nom establiment",
+                "Tipus establiment",
+                "Codi tipus establiment",
+                "Sector sanitari",
+                "Codi regió sanitària",
+                "Servei SPD",
+                "ABS",
+                "Comarques SHP 2",
+                "Codi ABS",
+                "Número de la via",
+                "Província",
+                "Titular",
+                "Codi establiment pare",
+                "Nom de la via",
+                "LIMADM_MUNICIPI 2",
+                "LIMADM COMARCA 2",
+                "Codi municipi",
+                "Bloc",
+                "Codi província",
+                "Comarca",
+                "Portal",
+                "Municipi",
+                "Escala",
+                "Regió sanitària",
+                "Codi comarca",
+                "Tipus de via",
+                "Pis",
+                "Servei FMT nivell 2",
+                "Porta",
+                "Article municipi",
+                "Codi postal",
+                "Codi sector sanitari",
+                "Georeferència",
+                "Codi tipus de via",
+                "Telèfon",
+                "Quilòmetre",
+                "Longitud",
+                "Latitud"
+              ],
+            "columns_field_name" :
+              [
+                "servei_fmt_nivell_1",
+                "establiment_codi",
+                "establiment_nom",
+                "tipus_establiment_nom",
+                "tipus_establiment_codi",
+                "sector_sanitari_nom",
+                "regio_sanitaria_codi",
+                "servei_spd",
+                "abs_nom",
+                ":@computed_region_rv9j_wcg6",
+                "abs_codi",
+                "numero_via",
+                "provincia_nom",
+                "titular_nom",
+                "establiment_pare_codi",
+                "via_nom",
+                ":@computed_region_bh64_c7uy",
+                ":@computed_region_wvic_k925",
+                "municipi_codi",
+                "bloc",
+                "provincia_codi",
+                "comarca_nom",
+                "portal",
+                "municipi_nom",
+                "escala",
+                "regio_sanitaria_nom",
+                "comarca_codi",
+                "tipus_via_nom",
+                "pis",
+                "servei_fmt_nivell_2",
+                "porta",
+                "municipi_article",
+                "codi_postal",
+                "sector_sanitari_codi",
+                "georeferencia",
+                "tipus_via_codi",
+                "telefon",
+                "quilometre",
+                "longitud",
+                "latitud"
+              ],
+            "columns_datatype" :
+              [
+                "Checkbox",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Checkbox",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Checkbox",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Identifica les farmàcies que presten el servei “Formulació magistrals a tercers nivell 1”",
+                "Codi de l’establiment",
+                "Nom de l’establiment",
+                "Tipus d’establiment",
+                "Codi del tipus d’establiment",
+                "Nom del sector sanitari on és l’establiment",
+                "Codi de la regió sanitària on és l'establiment",
+                "Identifica les farmàcies que presten el servei “Seguiment farmacoterapèutic amb sistemes personalitzats de dosificació (SPD)”",
+                "Nom de l’àrea bàsica de salut on és l’establiment",
+                "This column was automatically created in order to record in what polygon from the dataset 'Comarques SHP' (rv9j-wcg6) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Codi de l’àrea bàsica de salut on és l’establiment",
+                "Component de l'adreça de l'establiment",
+                "Nom de la província on és l'establiment",
+                "Nom de la persona titular de l'establiment",
+                "Codi de l’establiment del qual aquest establiment depèn",
+                "Component de l'adreça de l'establiment",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Codi del municipi on és l'establiment",
+                "Component de l'adreça de l'establiment",
+                "Codi de la província on és l'establiment",
+                "Nom de la comarca on és l'establiment",
+                "Component de l'adreça de l'establiment",
+                "Nom del municipi on és l'establiment",
+                "Component de l'adreça de l'establiment",
+                "Nom de la regió sanitària on és l'establiment",
+                "Codi de la comarca on és l'establiment",
+                "Component de l'adreça de l'establiment",
+                "Component de l'adreça de l'establiment",
+                "Identifica les farmàcies que presten el servei “Formulació magistrals a tercers nivell 2”",
+                "Component de l'adreça de l'establiment",
+                "Article del nom del municipi on és l'establiment",
+                "Codi postal corresponent a l’adreça de l'establiment",
+                "Codi del sector sanitari on és l'establiment",
+                "Coordenades geogràfiques",
+                "Component de l'adreça de l'establiment",
+                "Número de telèfon de l'establiment",
+                "Component de l'adreça de l'establiment",
+                "Coordenada geogràfica",
+                "Coordenada geogràfica"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 2281,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-10-06T11:29:19.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [ "salut", "establiment sanitari" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Authorized health establishments in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Establecimientos sanitarios autorizados en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nrmq-ytje",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Establiments-sanitaris-autoritzats-a-Catalunya/nrmq-ytje",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dades del mapa urbanístic de Catalunya",
+            "id" : "epsm-zskb",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de superfície i percentatge de les classificacions del sòl i qualificacions del sòl urbà consolidat agrupades pels municipis de Catalunya.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-26T11:48:42.000Z",
+            "createdAt" : "2018-04-06T13:16:42.000Z",
+            "metadata_updated_at" : "2026-05-26T11:48:20.000Z",
+            "data_updated_at" : "2026-05-26T11:48:42.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 272,
+                "page_views_last_month" : 1253,
+                "page_views_total" : 81997,
+                "page_views_last_week_log" : 8.092757140919852,
+                "page_views_last_month_log" : 10.29232163280204,
+                "page_views_total_log" : 16.32330110116712
+              },
+            "columns_name" :
+              [
+                "16_N4_SNU",
+                "16_N1_SNU",
+                "13_R5_SUC",
+                "05_perce_SNU",
+                "05_SURB",
+                "Costa",
+                "AFT",
+                "07_densitat_pob_km2",
+                "05_perce_SU",
+                "15_SX2_SUC",
+                "05_SUD",
+                "05_perce_SNC",
+                "05_perce_SUR",
+                "05_perce_SND",
+                "15_SS_SUC",
+                "05_SND",
+                "05_SNU",
+                "14_Qual_SUC_Altres",
+                "15_SV_SUC",
+                "Poblacio_padro",
+                "05_perce_SUC",
+                "18_Sol_AE_habt",
+                "Codi_ine_6_txt",
+                "05_SUC",
+                "Superficie_ha",
+                "05_SNC",
+                "NomMun",
+                "12_A1_SUC",
+                "14_M1_SUC",
+                "20_Equip_habt",
+                "13_R4_SUC",
+                "09_Perce_SNC_SU",
+                "10_Perce_SUD_SU",
+                "05_SU",
+                "15_SE_SUC",
+                "15_SD_SUC",
+                "15_SH_SUC",
+                "11_Perce_SND_SU",
+                "012_Qual_SUC_AE",
+                "19_Zverdes_habt",
+                "Any",
+                "06_perce_Class_no_snu",
+                "Muntanya",
+                "13_R6_SUC",
+                "06_Class_no_SNU",
+                "15_Qual_SUC_SISTEMES",
+                "14_M3_SUC",
+                "15_SA_SUC",
+                "14_M2_SUC",
+                "13_R3_SUC",
+                "12_A3_SUC",
+                "15_SP_SUC",
+                "15_ST_SUC",
+                "13_R2_SUC",
+                "Codi_ine_5_txt",
+                "05_perce_SUD",
+                "13_R1_SUC",
+                "15_SX0_SUC",
+                "16_QUAL_snu",
+                "Comarca",
+                "15_SC_SUC",
+                "15_SX1_SUC",
+                "08_densitat_pob_urba_Km2",
+                "16_N2_SNU",
+                "16_N3_SNU",
+                "13_Qual_SUC_R",
+                "12_A2_SUC",
+                "17_Sol_resid_habt",
+                "15_SF_SUC"
+              ],
+            "columns_field_name" :
+              [
+                "_16_n4_snu",
+                "_16_n1_snu",
+                "_13_r5_suc",
+                "_05_perce_snu",
+                "_05_surb",
+                "costa",
+                "aft",
+                "_07_densitat_pob_km2",
+                "_05_perce_su",
+                "_15_sx2_suc",
+                "_05_sud",
+                "_05_perce_snc",
+                "_05_perce_sur",
+                "_05_perce_snd",
+                "_15_ss_suc",
+                "_05_snd",
+                "_05_snu",
+                "_14_qual_suc_altres",
+                "_15_sv_suc",
+                "poblacio_padro",
+                "_05_perce_suc",
+                "_18_sol_ae_habt",
+                "codi_ine_6_txt",
+                "_05_suc",
+                "superficie_ha",
+                "_05_snc",
+                "nommun",
+                "_12_a1_suc",
+                "_14_m1_suc",
+                "_20_equip_habt",
+                "_13_r4_suc",
+                "_09_perce_snc_su",
+                "_10_perce_sud_su",
+                "_05_su",
+                "_15_se_suc",
+                "_15_sd_suc",
+                "_15_sh_suc",
+                "_11_perce_snd_su",
+                "_012_qual_suc_ae",
+                "_19_zverdes_habt",
+                "any",
+                "_06_perce_class_no_snu",
+                "muntanya",
+                "_13_r6_suc",
+                "_06_class_no_snu",
+                "_15_qual_suc_sistemes",
+                "_14_m3_suc",
+                "_15_sa_suc",
+                "_14_m2_suc",
+                "_13_r3_suc",
+                "_12_a3_suc",
+                "_15_sp_suc",
+                "_15_st_suc",
+                "_13_r2_suc",
+                "codi_ine_5_txt",
+                "_05_perce_sud",
+                "_13_r1_suc",
+                "_15_sx0_suc",
+                "_16_qual_snu",
+                "comarca",
+                "_15_sc_suc",
+                "_15_sx1_suc",
+                "_08_densitat_pob_urba_km2",
+                "_16_n2_snu",
+                "_16_n3_snu",
+                "_13_qual_suc",
+                "_12_a2_suc",
+                "_17_sol_resid_habt",
+                "_15_sf_suc"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N4: Activitat autoritzada)",
+                "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N1:Rústic)",
+                "Superfície en Ha residencial en el sòl urbà consolidat (R5: cases agrupades)",
+                "Percentatge del sòl no urbanitzable respecte el total del municipi",
+                "Superfície en Ha del SUD (sòl urbànitzable delimitat)+ SND (sòl no delimitat)",
+                "Indica si és un municipi de costa",
+                "Nom dels àmbits funcionals territorials, 8 en total",
+                "Densitat de població per km2 de cada municipi",
+                "Percentatge del sòl urbà respecte el total del municipi",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SX2: Eixos SECUNDARIS)",
+                "Superfície en Ha del sòl urbanitzable delimitat",
+                "Percentatge del sòl urbà no consolidat respecte el total del municipi",
+                "Percentatge del SUD (sòl urbànitzable delimitat)+ SND (sòl no delimitat) respecte el total del municipi",
+                "Percentatge del sòl urbanitzable no delimitat respecte el total del municipi",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SS: Protecció)",
+                "Superfície en Ha del sòl urbanitzable no delimitat",
+                "Superfície en Ha del sòl no urbanitzable",
+                "Superfície en Ha d'altres.  Suma de les qualificacions del MUC en el sòl urbà consolidat (M1, M2, M3)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SV: Espais lliures, zones verdes)",
+                "Població anual segons el padró continu",
+                "Percentatge del sòl urbà consolidat respecte el total del municipi",
+                "Superfície (en m2) de sòl d'activitat econòmica en sòl urbà consolidat (A1, A2, A3) per cada habitant",
+                "Codi identificatiu de cada municipi segons institut nacional d'estadística",
+                "Superfície en Ha del sòl urbà consolidat ",
+                "Superfície en Ha del municipi mesurat en hectàrees",
+                "Superfície en Ha del sòl urbà subjecte a pla de millora urbana (SNC del MUC)",
+                "Nom del municipi",
+                "Superfície en Ha d'activitat econòmica del municipi.  Qualificació d'activitat econòmica del MUC en el sòl urbà consolidat A1: Industrial",
+                "Superfície en Ha d'altres.  Qualificació del MUC en sòl urbà consolidat (M1: Transformació)",
+                "Superfície (en m2) de sòl d'equipament en sòl urbà consolidat per habitant",
+                "Superfície en Ha residencial en el sòl urbà consolidat (R4: Ordenació oberta)",
+                "Percentatge del sòl urbà no consolidat respecte el sòl urbà (sòl urbà consolidat + sòl urbà no consolidat) del municipi",
+                "Percentatge del sòl urbanitzable delimitat respecte el sòl urbà (sòl urbà consolidat + sòl urbà no consolidat) del municipi",
+                "Superfície en Ha del sòl urbà (sòl urbà consolidat + sòl no consolidat)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SE:Equipaments)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SD: Habitatge dotacional públic)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SH: Hidrogràfic)",
+                "Percentatge del sòl urbanitzable no delimitat respecte el sòl urbà (sòl urbà consolidat + sòl urbà no consolidat) del municipi",
+                "Superfície en Ha d'activitat econòmica del municipi.  Suma de les qualificacions de zona d'activitat econòmica del MUC en el sòl urbà consolidat (A1, A2, A3)",
+                "Superfície (en m2) de zona verda per habitant en sòl urbà consolidat",
+                "Any de les dades",
+                "Percentatge del SUC (sòl urbà consolidat)+ SNC (sòl urbà no consolidat) + SUD (sòl urbanitzable delimitat)+ SND (sòl urbanitzable no delimitat) respecte el total del municipi",
+                "Indica si és un municipi de muntanya",
+                "Superfície en Ha residencial en el sòl urbà consolidat (R6: cases aïllades)",
+                "Superfície en Ha del SUC (sòl urbà consolidat)+ SNC (sòl urbà no consolidat) + SUD (sòl urbanitzable delimitat)+ SND (sòl urbanitzable no delimitat)",
+                "Superfície en Ha dels Sistemes.  Suma de les qualificacions del MUC en el sòl urbà consolidat (SX0, SX1, SX2, SF, SH, SA,SP, SS, ST, SV, SC, SD, SE)",
+                "Superfície en Ha d'altres.  Qualificació del MUC en sòl urbà consolidat (M3: Transformació)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SA: Aeroportuari)",
+                "Superfície en Ha d'altres.  Qualificació del MUC en sòl urbà consolidat (M2: Transformació)",
+                "Superfície en Ha residencial en el sòl urbà consolidat (R3: Ordenació tancada)",
+                "Superfície en Ha d'activitat econòmica del municipi.  Qualificació d'activitat econòmica del MUC en el sòl urbà consolidat A3: Logística",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SP: Portuari)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (ST: Serveis tècnics i ambientals)",
+                "Superfície en Ha residencial en el sòl urbà consolidat (R2: Urbà tradicional)",
+                "Codi identificatiu de cada municipi segons institut nacional d'estadística",
+                "Percentatge del sòl urbanitzable delimitat respecte el total del municipi",
+                "Superfície en Ha residencial en el sòl urbà consolidat (R1: Nucli antic)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SX0: Eixos estructurants)",
+                "Superfície en Ha del sòl no urbanitzable.  Suma de les qualificacions del MUC de zones en el sòl no urbanitzable (N1, N2, N3, N4)",
+                "Nom comarcal",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SC: Costaner)",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SX1: Eixos estructurants)",
+                "Densitat de població per km2 de sòl urbà (consolidat i no consolidat) de cada municipi",
+                "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N2: Protecció)",
+                "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N3: Protecció sectorial)",
+                "Superfície en Ha residencial.  Suma de les qualificacions residencial del MUC en el sòl urbà consolidat (R1, R2, R3, R4, R5, R6)",
+                "Superfície en Ha d'activitat econòmica del municipi.  Qualificació d'activitat econòmica del MUC en el sòl urbà consolidat A2: Serveis",
+                "Superfície (en m2) de sòl residencial en sòl urbà consolidat (R1, R2, R3, R4, R5, R6) per cada habitant",
+                "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SF: Ferroviàri)"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "left"
+                },
+                { "align" : "left" },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "noCommas" : "false",
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "right"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "left"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "align" : "left" },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "align" : "left" },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "left"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "left"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "noCommas" : "true", "align" : "left" },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "align" : "left" },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precision" : "4",
+                  "decimalSeparator" : ",",
+                  "align" : "left",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+       

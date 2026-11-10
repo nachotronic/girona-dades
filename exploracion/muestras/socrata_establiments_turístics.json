@@ -1,0 +1,1184 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Impost sobre les Estades en Establiments Turístics (IEET), per comarca i tipologia d’establiment",
+            "id" : "2nmt-74sj",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt conté les dades dels ingressos generats per l’Impost sobre les Estades en Establiments Turístics (IEET), agregades per marca i per municipi. \n\nEs faciliten les dades des de l’1 d’abril de 2017 fins al darrer període de liquidació vençut: de l’1 d’abril de 2024 al 30 de setembre de 2025 (2025S1).\n\nLes dades anteriors a 2017 no es faciliten degut a que l’estructura de l’impost abans de 2017 era sensiblement diferent a l’actual.\nEl conjunt de dades conté la informació del semestre de meritació, nombre d’autoliquidacions presentades, l’import declarat pel contribuent per l’IEET i l’import del recàrrec municipal, quan n'hi hagi. Els imports estan expressats en unitats d’euro.\n\nLes dades estan agregades territorialment i distribuïdes segons la tipologia d’establiment turístic:\n•\tAlberg de joventut (AJ)\n•\tApartament turístic (AT)\n•\tCàmping (CA)\n•\tEstabliment hoteler (EH)\n•\tHabitatge d’ús turístic (HT)\n•\tTurisme rural (TR)\n•\tAltres tipologies d’establiment (AE)\n•\tCreuers (CR)\n\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, es dona la informació per aquells municipis que tenen uns ingressos anuals de l’IEET superiors a 100.000€ i, alhora, registren un índex de població estacional (ETCA) superior al 95%. Per a la resta de municipis que no compleixen aquests criteris, les dades es donen agregades per marca turística sota el concepte ”Resta de municipis”.\n\nPer aquest mateix motiu de confidencialitat, les dades s’agreguen per unitats territorials de major volum i els import es donen arrodonits al miler d’euros, i també en aquells casos en què un subconjunt presenta poca població d’elements, no se subministra la dada, tot i que sí que se suma en conjunts més amplis. Aquests casos s’indiquen amb el codi “nd”.",
+            "attribution" : "Agència Tributària de Catalunya (ATC)",
+            "attribution_link" : "http://atc.gencat.cat",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T09:54:10.000Z",
+            "createdAt" : "2023-10-04T12:46:47.000Z",
+            "metadata_updated_at" : "2026-09-17T09:54:10.000Z",
+            "data_updated_at" : "2026-04-09T14:39:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 18,
+                "page_views_last_month" : 100,
+                "page_views_total" : 2500,
+                "page_views_last_week_log" : 4.247927513443585,
+                "page_views_last_month_log" : 6.6582114827517955,
+                "page_views_total_log" : 11.28828934218097
+              },
+            "columns_name" :
+              [
+                "AT - recarrec mpal",
+                "CA - recarrec mpal",
+                "TR - recarrec mpal",
+                "HT - quota IEET",
+                "EH - quota IEET",
+                "CA - quota IEET",
+                "Període autoliquidació.",
+                "CA - autoliquidacions",
+                "AJ - quota IEET",
+                "AT - quota IEET",
+                "AT - autoliquidacions",
+                "AJ - recarrec mpal",
+                "HT - autoliquidacions",
+                "EH - recarrec mpal",
+                "TR - autoliquidacions",
+                "EH - autoliquidacions",
+                "Comarca",
+                "AJ - autoliquidacions",
+                "AE - recarrec mpal",
+                "HT - recarrec mpal",
+                "TR - quota IEET",
+                "AE - autoliquidacions",
+                "AE - quota IEET",
+                "CR - autoliquidacions",
+                "CR - quota IEET",
+                "CR - recarrec mpal"
+              ],
+            "columns_field_name" :
+              [
+                "at_recarrec_mpal",
+                "ca_recarrec_mpal",
+                "tr_recarrec_mpal",
+                "ht_import_ingressat",
+                "eh_import_ingressat",
+                "ca_import_ingressat",
+                "per_ode_autoliquidaci",
+                "ca_autoliquidacions",
+                "aj_import_ingressat",
+                "at_import_ingressat",
+                "at_autoliquidacions",
+                "aj_recarrec_mpal",
+                "ht_autoliquidacions",
+                "eh_recarrec_mpal",
+                "tr_autoliquidacions",
+                "eh_autoliquidacions",
+                "comarca",
+                "aj_autoliquidacions",
+                "ae_recarrec_mpal",
+                "ht_recarrec_mpal",
+                "tr_import_ingressat",
+                "ae_autoliquidacions",
+                "ae_import_ingressat",
+                "cr_autoliquidacions",
+                "cr_import_ingressat",
+                "cr_recarrec_mpal"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import ingressat per estades en habitatges d’ús turístic, expressat en euros i arrodonit.",
+                "Import ingressat per estades en establiments hotelers, expressat en euros i arrodonit.",
+                "Import ingressat per estades en càmpings, expressat en euros i arrodonit.",
+                "Període semestral en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació). Els semestre 1 (S1) comprèn de l’1 d’abril al 30 de setembre del mateix any. El semestre 2 (S2) comprèn de l’1 d’octubre del mateix any fins al 31 de març de l’any següent. Davant del semestre s’indiquen les dues últimes xifres de l’any, per exemple, 22S1 correspon al primer semestre de  2022.",
+                "Nombre d’autoliquidacions per estades en càmpings",
+                "Import ingressat per estades en albergs de joventut, expressat en euros i arrodonit.",
+                "Import ingressat per estades en apartaments turístics, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en apartaments turístics",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Nombre d’autoliquidacions per estades en habitatges d’ús turístic",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Nombre d’autoliquidacions per estades en establiments de turisme rural",
+                "Nombre d’autoliquidacions per estades en a establiments hotelers",
+                "Àmbit territorial en el qual s’ha produït el pagament de l’impost.",
+                "Nombre d’autoliquidacions per estades en albergs de joventut",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import ingressat per estades en establiments de turisme rural, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional).",
+                "Import ingressat per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional), expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en creuers",
+                "Import ingressat per estades en creuers, expressat en euros i arrodonit.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 618,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-10-31T08:35:14.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Hisenda",
+            "domain_tags" :
+              [
+                "impost",
+                "tribut",
+                "turisme",
+                "estades turístiques",
+                "agència tributària de catalunya",
+                "ods8_treball decent i creixement econòmic",
+                "ods10_reducció de les desigualtats",
+                "dades obertes"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Data on Taxes on Tourist Establishments (IEET) by region and type of establishment."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos del Impuesto sobre las estancias en establecimientos turísticos (IEET) por comarca y tipología de establecimiento."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/2nmt-74sj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Hisenda/Impost-sobre-les-Estades-en-Establiments-Turístics/2nmt-74sj",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Impost sobre les Estades en Establiments Turístics (IEET) per municipi i tipologia d’establiment",
+            "id" : "q4sr-68c3",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt conté les dades dels ingressos generats per l’Impost sobre les Estades en Establiments Turístics (IEET), agregades per marca i per municipi. \n\nEs faciliten les dades des de l’1 d’abril de 2017 fins al darrer període de liquidació vençut: de l’1 d’abril de 2024 al 30 de setembre de 2025 (2025S1).\nLes dades anteriors a 2017 no es faciliten degut a que l’estructura de l’impost abans de 2017 era sensiblement diferent a l’actual.\n\nEl conjunt de dades conté la informació del semestre de meritació, nombre d’autoliquidacions presentades, l’import declarat pel contribuent, inclosos els recàrrecs municipals quan n'hi hagi, expressats en euros, agregada territorialment i distribuïda segons la tipologia d’establiment turístic.\n\nLes dades estan agregades territorialment i distribuïdes segons la tipologia d’establiment turístic:\n•\tAlberg de joventut (AJ)\n•\tApartament turístic (AT)\n•\tCàmping (CA)\n•\tEstabliment hoteler (EH)\n•\tHabitatge d’ús turístic (HT)\n•\tTurisme rural (TR)\n•\tAltres tipologies d’establiment (AE)\n•\tCreuers (CR)\n\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, es dona la informació per aquells municipis que tenen uns ingressos anuals de l’IEET superiors a 100.000€ i, alhora, registren un índex de població estacional (ETCA) superior al 95%. Per a la resta de municipis que no compleixen aquests criteris, les dades es donen agregades per marca turística sota el concepte ”Resta de municipis”.\n\nPer aquest mateix motiu de confidencialitat, les dades s’agreguen per unitats territorials de major volum i els import es donen arrodonits al miler d’euros, i també en aquells casos en què un subconjunt presenta poca població d’elements, no se subministra la dada, tot i que sí que se suma en conjunts més amplis. Aquests casos s’indiquen amb el codi “nd”.",
+            "attribution" : "Agència Tributària de Catalunya (ATC)",
+            "attribution_link" : "http://atc.gencat.cat",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T09:55:40.000Z",
+            "createdAt" : "2024-02-28T10:58:44.000Z",
+            "metadata_updated_at" : "2026-09-17T09:55:40.000Z",
+            "data_updated_at" : "2026-04-09T14:42:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 94,
+                "page_views_last_month" : 319,
+                "page_views_total" : 4315,
+                "page_views_last_week_log" : 6.569855608330948,
+                "page_views_last_month_log" : 8.321928094887362,
+                "page_views_total_log" : 12.075479149488018
+              },
+            "columns_name" :
+              [
+                "EH - recarrec mpal",
+                "CA - quota IEET",
+                "TR - quota IEET",
+                "AT - autoliquidacions",
+                "AJ - recarrec mpal",
+                "CA - recarrec mpal",
+                "AT - recarrec mpal",
+                "CR - recarrec mpal",
+                "Marca",
+                "EH - quota IEET",
+                "Municipi",
+                "CR - quota IEET",
+                "CR - autoliquidacions",
+                "AE - recarrec mpal",
+                "HT - autoliquidacions",
+                "AJ - autoliquidacions",
+                "AJ - quota IEET",
+                "AT - quota IEET",
+                "CA - autoliquidacions",
+                "HT - quota IEET",
+                "EH - autoliquidacions",
+                "HT - recarrec mpal",
+                "TR - autoliquidacions",
+                "TR - recarrec mpal",
+                "AE - autoliquidacions",
+                "Període autoliquidació",
+                "AE - quota IEET"
+              ],
+            "columns_field_name" :
+              [
+                "eh_recarrec_mpal",
+                "ca_import_ingressat",
+                "tr_import_ingressat",
+                "at_autoliquidacions",
+                "aj_recarrec_mpal",
+                "ca_recarrec_mpal",
+                "at_recarrec_mpal",
+                "cr_recarrec_mpal",
+                "marca",
+                "eh_import_ingressat",
+                "municipi",
+                "cr_import_ingressat",
+                "cr_autoliquidacions",
+                "ae_recarrec_mpal",
+                "ht_autoliquidacions",
+                "aj_autoliquidacions",
+                "aj_import_ingressat",
+                "at_import_ingressat",
+                "ca_autoliquidacions",
+                "ht_import_ingressat",
+                "eh_autoliquidacions",
+                "ht_recarrec_mpal",
+                "tr_autoliquidacions",
+                "tr_recarrec_mpal",
+                "ae_autoliquidacions",
+                "per_ode_autoliquidaci",
+                "ae_import_ingressat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import ingressat per estades en càmpings, expressat en euros i arrodonit.",
+                "Import ingressat per estades en establiments de turisme rural, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en apartaments turístics",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Marca turística en el qual s’ha produït el pagament de l’impost.",
+                "Import ingressat per estades en establiments hotelers, expressat en euros i arrodonit.",
+                "Municipi en el qual s’ha produït el pagament de l’impost.",
+                "Import ingressat per estades en creuers, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en creuers",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Nombre d’autoliquidacions per estades en habitatges d’ús turístic",
+                "Nombre d’autoliquidacions per estades en albergs de joventut",
+                "Import ingressat per estades en albergs de joventut, expressat en unitats d’euro i arrodonit.",
+                "Import ingressat per estades en apartaments turístics, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en càmpings",
+                "Import ingressat per estades en habitatges d’ús turístic, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en a establiments hotelers",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Nombre d’autoliquidacions per estades en establiments de turisme rural",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Nombre d’autoliquidacions per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional).",
+                "Període semestral en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació). Els semestre 1 (S1) comprèn de l’1 d’abril al 30 de setembre del mateix any. El semestre 2 (S2) comprèn de l’1 d’octubre del mateix any fins al 31 de març de l’any següent. Davant del semestre s’indiquen les dues últimes xifres de l’any, per exemple, 22S1 correspon al primer semestre de 2022.",
+                "Import ingressat per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional), expressat en euros i arrodonit."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 830,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-10-31T15:34:13.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Hisenda",
+            "domain_tags" :
+              [
+                "impost",
+                "tribut",
+                "turisme",
+                "estades turístiques",
+                "agència tributària de catalunya",
+                "ods8_treball decent i creixement econòmic",
+                "ods10_reducció de les desigualtats",
+                "dades obertes"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Data on the tax on stays in Tourist Establishments (IEET) by tourist brand, municipality and type of establishment."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos del Impuesto sobre las estancias en establecimientos turísticos (IEET) por marca turística, municipio y tipología de establecimiento."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/q4sr-68c3",
+        "link" : "https://analisi.transparenciacatalunya.cat/Hisenda/Impost-sobre-les-Estades-en-Establiments-Turístics/q4sr-68c3",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Impost sobre les Estades en Establiments Turístics (IEET), per marca turística i tipologia d’establiment",
+            "id" : "rn32-up9n",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt conté les dades dels ingressos generats per l’Impost sobre els Estades en Establiments Turístics (IEET), agregades per marca turística. \n\nEs faciliten les dades des de l’1 d’abril de 2017 fins al darrer període de liquidació vençut: de l’1 d’abril de 2024 al 30 de setembre de 2025 (2025S1).\n\nLes dades anteriors a 2017 no es faciliten degut a que l’estructura de l’impost abans de 2017 era sensiblement diferent a l’actual.\nEl conjunt de dades conté la informació del semestre de meritació, nombre d’autoliquidacions presentades, l’import declarat pel contribuent per l’IEET i l’import del recàrrec municipal, quan n'hi hagi. Els imports estan expressats en unitats d’euro.\n\nLes dades estan agregades territorialment i distribuïdes segons la tipologia d’establiment turístic:\n•\tAlberg de joventut (AJ)\n•\tApartament turístic (AT)\n•\tCàmping (CA)\n•\tEstabliment hoteler (EH)\n•\tHabitatge d’ús turístic (HT)\n•\tTurisme rural (TR)\n•\tAltres tipologies d’establiment (AE)\n•\tCreuers (CR)\n\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, les dades s’agreguen per unitats territorials de major volum i els import es donen arrodonits al miler d’euros.\nPer aquest mateix motiu de confidencialitat, en aquells casos en què un subconjunt presenta poca població d’elements  (p. ex. càmpings a l’Anoia), no se subministra la dada, tot i que sí que se suma en conjunts més amplis (p. ex. càmpings a la marca Paisatges Barcelona). Aquests casos s’indiquen amb el codi “nd”.",
+            "attribution" : "Agència Tributària de Catalunya (ATC)",
+            "attribution_link" : "http://atc.gencat.cat",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T09:53:50.000Z",
+            "createdAt" : "2023-10-04T13:03:16.000Z",
+            "metadata_updated_at" : "2026-09-17T09:53:50.000Z",
+            "data_updated_at" : "2026-04-09T14:50:40.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 19,
+                "page_views_last_month" : 50,
+                "page_views_total" : 2180,
+                "page_views_last_week_log" : 4.321928094887363,
+                "page_views_last_month_log" : 5.672425341971496,
+                "page_views_total_log" : 11.09077405464075
+              },
+            "columns_name" :
+              [
+                "Marca turística",
+                "Període autoliquidació.",
+                "EH - recarrec mpal",
+                "CA - recarrec mpal",
+                "CR - import ingressat",
+                "EH - quota IEET",
+                "CR - quota IEET",
+                "AJ - autoliquidacions",
+                "HT - autoliquidacions",
+                "TR - quota IEET",
+                "HT - recarrec mpal",
+                "HT - quota IEET",
+                "TR - autoliquidacions",
+                "CA - quota IEET",
+                "TR - recarrec mpal",
+                "EH - autoliquidacions",
+                "AE - autoliquidacions",
+                "CA - autoliquidacions",
+                "AE - quota IEET",
+                "AE - recarrec mpal",
+                "AT - quota IEET",
+                "AT - autoliquidacions",
+                "AJ - quota IEET",
+                "AT - recarrec mpal",
+                "AJ - recarrec mpal",
+                "CR - recarrec mpal"
+              ],
+            "columns_field_name" :
+              [
+                "marca_tur_stica",
+                "per_ode_autoliquidaci",
+                "eh_recarrec_mpal",
+                "ca_recarrec_mpal",
+                "cr_import_ingressat",
+                "eh_import_ingressat",
+                "cr_autoliquidacions",
+                "aj_autoliquidacions",
+                "ht_autoliquidacions",
+                "tr_import_ingressat",
+                "ht_recarrec_mpal",
+                "ht_import_ingressat",
+                "tr_autoliquidacions",
+                "ca_import_ingressat",
+                "tr_recarrec_mpal",
+                "eh_autoliquidacions",
+                "ae_autoliquidacions",
+                "ca_autoliquidacions",
+                "ae_import_ingressat",
+                "ae_recarrec_mpal",
+                "at_import_ingressat",
+                "at_autoliquidacions",
+                "aj_import_ingressat",
+                "at_recarrec_mpal",
+                "aj_recarrec_mpal",
+                "cr_recarrec_mpal"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Àmbit territorial en el qual s’ha produït el pagament de l’impost.",
+                "Període semestral en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació). Els semestre 1 (S1) comprèn de l’1 d’abril al 30 de setembre del mateix any. El semestre 2 (S2) comprèn de l’1 d’octubre del mateix any fins al 31 de març de l’any següent. Davant del semestre s’indiquen les dues últimes xifres de l’any, per exemple, 22S1 correspon al primer semestre de 2022. ",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import ingressat per estades en creuers, expressat en euros i arrodonit.",
+                "Import ingressat per estades en establiments hotelers, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en creuers",
+                "Nombre d’autoliquidacions per estades en albergs de joventut",
+                "Nombre d’autoliquidacions per estades en habitatges d’ús turístic",
+                "Import ingressat per estades en establiments de turisme rural, expressat en euros i arrodonit.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import ingressat per estades en habitatges d’ús turístic, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en establiments de turisme rural",
+                "Import ingressat per estades en càmpings, expressat en euros i arrodonit.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Nombre d’autoliquidacions per estades en a establiments hotelers",
+                "Nombre d’autoliquidacions per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional).",
+                "Nombre d’autoliquidacions per estades en càmpings",
+                "Import ingressat per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional), expressat en euros i arrodonit.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import ingressat per estades en apartaments turístics, expressat en euros i arrodonit.",
+                "Nombre d’autoliquidacions per estades en apartaments turístics",
+                "Import ingressat per estades en albergs de joventut, expressat en euros i arrodonit.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+                "Import del recàrrec municipal, quan existeix aquest recàrrec."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 566,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-10-31T08:55:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Hisenda",
+            "domain_tags" :
+              [
+                "impost",
+                "tribut",
+                "turisme",
+                "estades turístiques",
+                "agència tributària de catalunya",
+                "ods8_treball decent i creixement econòmic",
+                "ods10_reducció de les desigualtats",
+                "dades obertes"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Data on Taxes on Tourist Establishments (IEET) by tourist brand and type of establishment."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos del Impuesto sobre las estancias en establecimientos turísticos (IEET) por marca turística y tipología de establecimiento."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Altres"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/rn32-up9n",
+        "link" : "https://analisi.transparenciacatalunya.cat/Hisenda/Impost-sobre-les-Estades-en-Establiments-Turístics/rn32-up9n",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Establiments d’allotjament turístic inscrits al Registre de Turisme de Catalunya",
+            "id" : "t2h3-cgys",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistats d'empreses i establiments turístics que es dediquen professionalment a la prestació del servei d'allotjament turístic i que estan inscrits en el Registre de Turisme de Catalunya.\n\nLes empreses i establiments turístics que hi consten estan  ordenats per municipi i adreça, sense perjudici d'errors, omissions i tràmits pendents d'anotació al Registre de Turisme de Catalunya. Aquests llistats s'emeten únicament a efectes informatius i no generen drets de cap tipus.\n\nQuins tipus d’allotjaments es poden trobar i què són?\n\nApartaments turístics\nAquests tipus d’establiments presten servei d’allotjament temporal en edificis o conjunts continus constituïts en la seva totalitat per apartaments o estudis, com a establiments únics o com a unitats empresarials d’explotació, amb els serveis turístics corresponents. S’identifiquen amb el distintiu \"AT\".\n\nEstabliments de turisme rural\nAquest tipus d’establiment presten servei d’allotjament temporal en habitatges rurals, en règim d’habitacions o de cessió de l’habitatge sencer.\nEstan situats en el medi rural, integrats en edificacions preexistents anteriors a 1950, que respecten la tipologia arquitectònica de la zona i compleixen amb l’exigència de tranquil·litat i integració en el paisatge. Estan senyalitzats amb el distintiu “TR”.\n\nHotels\nAquests establiments presten servei d’allotjament temporal en unitats d’allotjament als usuaris turístics, com a establiment únic o com a unitat empresarial d’explotació amb els serveis turístics corresponents.\nPoden obtenir de l’Administració, independentment del grup i la categoria que els corresponguin, el reconeixement d’una especialitat o una tipologia concreta, i han d’exhibir en aquest cas el distintiu corresponent.\n\nEs classifiquen en dos grups:\n1.\tGrup d'Hotels\nA la vegada, es classifica en dues modalitats: Hotels i Hotels apartament.\n2.\tGrup d'Hostals o pensions\n\nCàmping\nAquests tipus d’establiments presten servei d’allotjament temporal en espais d’ús públic degudament delimitats, destinats a la convivència agrupada de persones a l’aire lliure, mitjançant les modalitats següents:\na.\tAlbergs mòbils (tendes de campanya, caravanes, autocaravanes o qualsevol enginy que pugui ser remolcat per un vehicle de turisme).\nb.\tAlbergs semimòbils (habitatges mòbils o qualsevol altre tipus d’alberg amb rodes que necessiti un transport especial per circular per carretera).\nc.\tAlbergs fixos (bungalous i altres instal·lacions similars).\n\nLlars Compartides\nÉs l'habitatge principal i residència efectiva de la persona titular que cedeix l’ús d’habitacions a canvi de contraprestació econòmica i per a una estada d’igual o inferior a 31 dies. La persona titular (la propietària o la persona que aquesta autoritzi expressament com a titular de l’activitat) ha de residir i compartir l'habitatge amb un màxim de quatre hostes turístics mentre dura l'estada.\n\nÀrees d’acollida d’autocaravanes\nSón espais de terreny degudament delimitats oberts al públic per a l'ocupació exclusiva d'autocaravanes, caravanes i vehicles similars en trànsit, a canvi de contraprestació econòmica, amb una estada màxima no superior a 48 hores.",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-05T06:24:56.000Z",
+            "createdAt" : "2024-04-11T12:00:00.000Z",
+            "metadata_updated_at" : "2026-10-05T06:24:13.000Z",
+            "data_updated_at" : "2026-10-05T06:24:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 6994,
+                "page_views_last_month" : 28325,
+                "page_views_total" : 481979,
+                "page_views_last_week_log" : 12.772108342052116,
+                "page_views_last_month_log" : 14.78983926832515,
+                "page_views_total_log" : 18.87861375678528
+              },
+            "columns_name" :
+              [
+                "Nom del titular",
+                "Primer cognom",
+                "Referència cadastral",
+                "Cèdula d'habitabilitat",
+                "Grup",
+                "Categoria",
+                "Total places",
+                "Total estances",
+                "SSTT",
+                "CIF",
+                "Raó Social del titular",
+                "Marca turística",
+                "Número inscripció",
+                "Dígit de control",
+                "Rètol",
+                "Nom de la via",
+                "Escala",
+                "Bloc",
+                "Codi Postal",
+                "Municipi",
+                "Codi Municipi (IDESCAT)",
+                "Comarca",
+                "Codi Comarca (IDESCAT)",
+                "Unitat d'allotjament",
+                "Modalitat",
+                "Província",
+                "Porta",
+                "Pis",
+                "Número",
+                "Tipus de via",
+                "Estat",
+                "Tipus establiment",
+                "Segon cognom"
+              ],
+            "columns_field_name" :
+              [
+                "nom_del_titular",
+                "primer_cognom",
+                "referencia_cadastral",
+                "cedula_d_habitabilitat",
+                "grup",
+                "categoria",
+                "total_places",
+                "total_estances",
+                "sstt",
+                "cif",
+                "ra_social_del_titular",
+                "marca_tur_stica",
+                "n_mero_inscripci",
+                "d_git_de_control",
+                "r_tol",
+                "nom_de_la_via",
+                "escala",
+                "bloc",
+                "codi_postal",
+                "municipi",
+                "codi_municipi_idescat",
+                "comarca",
+                "codi_comarca_idescat",
+                "unitat_d_allotjament",
+                "modalitat",
+                "prov_ncia",
+                "porta",
+                "pis",
+                "numero",
+                "tipus_de_via",
+                "estat",
+                "tipus_establiment",
+                "segon_cognom"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom del titular de l'establiment quan es persona física.",
+                "Primer cognom del titular de l'establiment quan es persona física.",
+                "Codi alfanumèric i identificador oficial que atorga el cadastre als bens immobles. Permet situar l’immoble de manera inequívoca a la cartografia cadastral.",
+                "Camp que només aplica en el cas que el tipus d’establiment sigui un habitatge d’ús turístic. \nIndica si l’HUT ha obtingut el document que acredita el compliment dels requisits mínims d’habitabilitat i és obligatori per a tots els habitatges.\nEn el cas que l’HUT tingui cèdula d’habitabilitat vigent, el camp mostra el codi alfanumèric d’aquesta cèdula.\nEn el cas que l’HUT hagi obtingut la cèdula però no sigui vigent s’indicarà l’estat de la cèdula.",
+                "Indica el grup de l'establiment de turisme rural.",
+                "Indica la categoria de l'establiment. ",
+                "Indica el total de places d'allotjament de l'establiment",
+                "Indica el total d' estances de l'establiment. ",
+                "Servei Territorial en què es troba l'establiment. ",
+                "NIF, CIF o NIE del titular de l'establiment. ",
+                "Raó Social del titular de l'establiment quan es persona jurídica. ",
+                "Indica la Marca Turística en què es circumscriu l'establiment",
+                "Número d'inscripció al Registre de Turisme de Catalunya.",
+                "Dígit de control per a liquidar la taxa turística amb l’Agència Tributària de Catalunya.",
+                "Rètol de l'establiment. ",
+                "Camp d’adreça que indica la denominació de la via en la qual s’ubica l’establiment",
+                "Camp d’adreça que indica l’ accés a plantes d’un edifici, en el qual es troba l’establiment",
+                "Camp d’adreça que indica l’edifici independent d’altres que forma part d’una  agrupació, on s’ubica l’establiment",
+                "Codi postal.",
+                "Municipi on es troba la població de l’establiment.",
+                "Codi identificador del municipi d’acord amb l’Idescat.",
+                "Comarca en què es troba l'establiment.",
+                "Codi identificador de la comarca d’acord amb l’Idescat.",
+                "Indica el total d’unitats d'allotjament de l'establiment",
+                "Indica la modalitat dins de cada grup de l'establiment de turisme rural.",
+                "Província en què es troba l'establiment.",
+                "Camp d’adreça que indica l’accés a una entitat d’un edifici, en el qual s’ubica l’establiment",
+                "Camp d’adreça que indica el nivell d’alçada dins un edifici, en el qual s’ubica l’establiment",
+                "Camp d’adreça que indica el número o portal de la via en el qual s’ubica l’establiment",
+                "Camp d’adreça que indica el tipus d’espai d’ús públic no edificat destinat a la mobilitat de persones  i/o vehicles (inclou carrers, places, avingudes, carreteres, camins, etc), on es troba l’establiment",
+                "Indica que l'establiment està en situació d'alta. ",
+                "Tipologia de l’establiment: apartament, establiment de turisme rural, càmping, hotel i habitatge d’ús turístic",
+                "Segon cognom del titular de l'establiment quan es persona física."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 32138,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-12-02T11:52:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Turisme",
+            "domain_tags" :
+              [
+                "establiments turístics",
+                "registre de turisme de catalunya",
+                "edificis d'apartaments",
+                "masia",
+                "agroturisme",
+                "casa de pagès",
+                "casa de poble",
+                "hotels",
+                "pensions",
+                "hostals",
+                "acampada",
+                "bungalou",
+                "caravana",
+                "remolc",
+                "ods8_treball decent i creixement econòmic",
+                "allotjaments turístics"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Tourist accommodation establishments recorded in the Catalan Tourism Register"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Establecimientos de alojamiento turístico inscritos en el Registro de Turismo de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/t2h3-cgys",
+        "link" : "https://analisi.transparenciacatalunya.cat/Turisme/Establiments-d-allotjament-turístic-inscrits-al-Re/t2h3-cgys",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Despesa turística",
+            "id" : "jj4h-yqtu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Els informes de despesa turística reflecteixen la diversitat i la complementarietat de les fonts estadístiques, que són necessàries per oferir informació sobre l'impacte que el turisme té sobre l'economia catalana.\n\nLa informació sobre el turisme ha de ser obtinguda mitjançant registres administratius (dades de capacitat hotelera), enquestes a les empreses i als establiments (dades sobre ocupació hotelera o de càmpings, per exemple), enquestes de població (dades sobre el turisme emissor o sobre turisme receptor domèstic) o, finalment, enquestes de turistes en frontera (dades sobre turisme receptor internacional).",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:23.000Z",
+            "createdAt" : "2020-10-26T14:57:46.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:23.000Z",
+            "data_updated_at" : "2020-10-26T14:57:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 17,
+                "page_views_total" : 2319,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 4.169925001442312,
+                "page_views_total_log" : 11.179909090014934
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:48.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Turisme",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Tourism spending"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Gasto turístico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "Enllaç" : "https://www.idescat.cat/estad/turdes"
+                           },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "Enllaç" : "https://www.idescat.cat/estad/turdes" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/jj4h-yqtu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Turisme/Despesa-turística/jj4h-yqtu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 5,
+  "timings" : { "serviceMillis" : 30, "searchMillis" : [ 3, 12 ] },
+  "warnings" : []
+}

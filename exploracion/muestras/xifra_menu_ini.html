@@ -1,0 +1,241 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="shortcut icon" href="imatges/favicon.ico" type="image/x-icon"/>
+        <title>XIFRA - Sistema d'Informaci&oacute; Estad&iacute;stica Local.</title>
+	<meta name="description" content="Sistema d'informació estadística local de la demarcació de Girona que aporta informació estadística i assessorament tècnic.">
+        <link type="text/css" rel="stylesheet" href="css/estil.css?id=830700" />
+        <script src="js/jquery-1.3.2.min.js" type="text/javascript" ></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".slide").click(function(){
+                    $("#"+this.id+"-li").slideToggle();
+                });
+            });
+        </script>
+    </head>
+    <body id="menu_ini">
+        <div id="contingut">
+             <div id="main">
+				<div class="badge_DDGI">
+					<a href="https://www.ddgi.cat/web" title="Portal web de la Diputació de Girona" target="_blank">	
+					<img src="img/Diputacio_de_Girona_x1.png" srcset="https://www.ddgi.cat/ddgi/docNivell/web/badge/Diputacio_de_Girona_x2.png 2x" alt="Diputació de Girona">
+					</a>
+				</div>
+				<div id="top">
+					<div id="logo"></div>
+					<div id="top-titol">
+						<img src="img/top.png" alt="" />
+					</div>
+				</div>
+				<div id="separador2"></div>
+               <div id="colA">
+                    <div id="menu">
+                        <ul>
+                            <li class="head"><a href="menu_ini.asp">Men&uacute;</a></li>
+                            <li><a  href="menu_pre.asp">Presentaci&oacute;</a></li>
+                            <li><a  href="menu_pro.asp">Dades provincials</a></li>
+                            <li><a  href="menu_mun.asp">Dades municipals</a></li>
+                            <li><a  href="menu_ind.asp">Indicadors</a></li>
+                            <li><a  href="menu_inf.asp">Informes</a></li>
+                            <li><a  href="menu_map.asp">Mapes tem&agrave;tics</a></li>
+                            <li><a  href="menu_est.asp">Estudis</a></li>
+                            <li><a  href="novetats.asp">Novetats</a></li>
+                            <li><a  href="links.asp">Enlla&ccedil;os</a></li>
+							<li><a  href="videotutorials.asp">V&iacute;deos tutorials</a></li>
+							<li><a  href="giny.asp">Giny</a></li>
+                        </ul>
+                        <ul id="contacte">
+                            <li class="head">Contacte</li>
+                            <li><a  href="contacte.asp">Dades de contacte</a></li>
+                            <li><a  href="suggeriment.asp">Fes un suggeriment</a></li>
+                            <li><a  href="registre.asp">Registra't</a></li>
+                        </ul>
+                        <ul>
+                            <li class="head">Usuari restringit</li>
+							
+                            <li><a  href="login.asp">Iniciar sessi&oacute;</a></li>
+ 							
+                        </ul>
+						<ul>
+							<li class="head">Idioma</li>
+                           <div id="idiomas">
+								<a href="idioma.asp?idioma=0&url=menu_ini.asp" title="Catal&agrave;">[CAT]</a>
+								<a href="idioma.asp?idioma=1&url=menu_ini.asp" title="Espanyol">[ESP]</a>
+								<a href="idioma.asp?idioma=3&url=menu_ini.asp" title="Fran&ccedil;ais">[FR]</a>
+								<a href="idioma.asp?idioma=2&url=menu_ini.asp" title="English">[EN]</a>
+							</div>						
+						</ul>
+                        <br>
+                        <a href="http://sitmun.ddgi.cat" target="_blank" alt="Xifra Maps"><img src="img/logo_sitmun.jpg" alt="Cartografia Socioeconòmica Local" width="100%"></a>
+
+                    </div>
+                </div>
+                <div id="colB">
+					<div id="sel-ambit">
+							<table cellspacing="0" cellpadding="2" width="100%">
+							<tr>
+								<td style="font-size:11px;">&nbsp;</a></td>
+								<td align="center" style="font-size:11px;width:100px;border-style: solid; border-color: #CCCCCC; border-width:1px 1px 1px 1px;padding:0 5px 0 5px;">&Agrave;mbits territorials</td>
+								<td align="center" style="font-size:11px;width:170px;border-style: solid; border-color: #CCCCCC; border-width:1px 1px 1px 0px;padding:0 5px 0 5px;background-color:#FFFFFF"><a href="ambits.asp" style="color:#292929; text-decoration: none;">Selecci&oacute; de nou &agrave;mbit <img src="img/sel-ambit.jpg" height="10px"></a></td>
+							</tr>
+							</table>
+					</div>
+                    <ul class="blocs">
+                        <li>
+                            <div class="foto">
+                                <a href="menu_mun.asp"><img src="img/dades_municipals.png" alt="" /></a>
+                            </div>
+                            <div class="titol"><a href="menu_mun.asp">Dades municipals</a></div>
+                          <div class="foto-peu">Dades dels 221 municipis</div>
+                        </li>
+                        <li>
+                            <div class="foto">
+                                 <a href="menu_pro.asp"><img src="img/dades_provincials.png" alt="" /></a>
+                            </div>
+                            <div class="titol"><a href="menu_pro.asp">Dades provincials</a></div>
+                          <div class="foto-peu">Total prov&iacute;ncia o agrupacions municipals</div>
+                        </li>
+                       <li>
+                            <div class="foto">
+                                <a href="menu_ind.asp"><img src="img/estadistiques.png" alt="" /></a>
+                            </div>
+                            <div class="titol"><a href="menu_ind.asp">Indicadors</a></div>
+                          <div class="foto-peu">Indicadors dels 221 municipis</div>
+                        </li>
+                   </ul>
+                    <div class="cb"></div>
+                    <!--ul class="blocs2"-->
+                     <ul class="blocs">
+                         <li>
+                            <div class="foto">
+                                <a href="menu_inf.asp"><img src="img/informes.png" alt="" /></a>
+                            </div>
+                            <div class="titol"><a href="menu_inf.asp">Informes</a></div>
+                          <div class="foto-peu">Informaci&oacute; agrupada</div>
+                        </li>
+                        <li>
+                            <div class="foto">
+                                <a href="menu_map.asp"><img src="img/mapes.png" alt="" /></a>
+                            </div>
+                            <div class="titol"><a href="menu_map.asp">Mapes tem&agrave;tics</a></div>
+                          <div class="foto-peu">Mapatge de les dades</div>
+                        </li>
+
+                        <li>
+                            <div class="foto">
+                                <a href="menu_est.asp"><img src="img/estudis.png" alt="" /></a>
+                            </div>
+                            <div class="titol"><a href="menu_est.asp">Estudis</a></div>
+                          <div class="foto-peu">An&agrave;lisi conjuntural i tem&agrave;tica</div>
+                        </li>
+
+						</ul>
+                </div>
+            </div>
+            <div id="separador"></div>
+        </div>
+        
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-340666-14");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.ddgi.cat/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '7']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="col">
+        <div class="footer1_DDGI">
+          <address>
+          <span class="footer_titol">Diputaci&oacute; de Girona</span> <span class="footer_subtitol">Promoci&oacute; i Desenvolupament <br> Econ&ograve;mic Local</span> <span>Gran Via de Jaume I, 37, 7&egrave; 1r</span> <span>17001 Girona</span> <span>Tel.: 972 185 000</span> <span><a href="mailto:xifra@ddgi.cat">xifra@ddgi.cat</a></span> <span><a href="https://www.ddgi.cat/web" title="Portal web de la Diputaci&oacute; de Girona" target="_blank">www.ddgi.cat</a></span>
+          </address>
+        </div>
+      </div>
+      <div class="col">
+        <div class="footer2_DDGI">
+          		<a href="https://www.ddgi.cat/web/nivell/5164/agenda-2030" title="Agenda 2030" target="_blank">
+				<img alt="DDGI 2030 ODS 1, 10 i 11" width="176" src="/xifra/img/ODS_Promocio_economica.svg">
+				</a>
+        </div>
+      </div>
+      <div class="col"> </div>
+      <div class="col">
+        <div class="footer4_DDGI">
+          <div class="footer_DGII_menu">
+            <span class="footer_titol">Men&uacute;</span>
+			<ul>
+				<li><a href="/xifra/menu_pro.asp">Dades provincials</a></li>
+				<li><a href="/xifra/menu_mun.asp">Dades municipals</a></li>
+				<li><a href="/xifra/menu_ind.asp">Indicadors</a></li>
+				<li><a href="/xifra/menu_inf.asp">Informes</a></li>
+				<li><a href="/xifra/menu_map.asp">Mapes tem&agrave;tics</a></li>
+				<li><a href="/xifra/menu_est.asp">Estudis</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col">
+		<div class="footer_DDGI_logo"><a href="https://www.ddgi.cat/web" title="Portal web de la Diputació de Girona" target="_blank"> <img alt="Diputació de Girona" style="width:155px" src="https://www.ddgi.cat/ddgi/docNivell/web/footer/Diputacio_Girona_footer.svg"> </a> </div>
+      </div>
+      <div class="col">
+        <div class="footer_DDGI_links">
+          <ul>
+            <li><a href="https://www.ddgi.cat//web/nivell/379/s-/Avis+Legal" target="_blank">Av&iacute;s legal</a></li>
+            <li><a href="https://www.ddgi.cat//web/nivell/380/s-/Proteccio-de-dades" target="_blank">Protecci&oacute; de dades</a> </li>
+            <li> <a href="https://www.ddgi.cat//web/nivell/381/s-/Accessibilitat" target="_blank">Accesibilitat</a> </li>
+            <li> <a href="https://www.ddgi.cat//web/nivell/5897/politica-de-galetes" target="_blank">Pol&iacute;tica de galetes</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>	
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.ddgi.cat/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '7']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+    </body>
+</html>
+
