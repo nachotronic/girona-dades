@@ -46,7 +46,7 @@ codigo_catastro,nombre_catastro,codi_ine,metodo
 17056,CISTELLA,17051,exacto
 17059,COLERA,17054,exacto
 17060,COLOMERS,17055,exacto
-17062,COR A,,sin_coincidencia
+17062,COR A,17057,exacto
 17061,CORNELLA DEL TERRI,17056,exacto
 17063,CRESPIA,17058,exacto
 17064,CRUILLES MONELLS ST SAD,17901,aproximado:cruilles heura monells sadurni sant
@@ -58,7 +58,7 @@ codigo_catastro,nombre_catastro,codi_ine,metodo
 17070,ESPOLLA,17064,exacto
 17071,ESPONELLA,17065,exacto
 17072,FIGUERES,17066,exacto
-17073,FLA A,,sin_coincidencia
+17073,FLA A,17067,exacto
 17074,FOIXA,17068,exacto
 17036,FONTANALS DE CERDANYA,17069,exacto
 17075,FONTANILLES,17070,exacto
@@ -96,12 +96,12 @@ codigo_catastro,nombre_catastro,codi_ine,metodo
 17096,LLAGOSTERA,17089,exacto
 17097,LLAMBILLES,17090,exacto
 17098,LLANARS,17091,exacto
-17099,LLAN A,,sin_coincidencia
+17099,LLAN A,17092,exacto
 17100,LLERS,17093,exacto
 17101,LLIVIA,17094,exacto
 17102,LLORET DE MAR,17095,exacto
-17108,MA ANET DE CABRENYS,,sin_coincidencia
-17109,MA ANET DE LA SELVA,17103,aproximado:macanet selva
+17108,MA ANET DE CABRENYS,17102,exacto
+17109,MA ANET DE LA SELVA,17103,exacto
 17104,MADREMANYA,17097,exacto
 17110,MAIA DE MONTCAL,17098,exacto
 17106,MASARAC,17100,contenido:masarac vilarnadal
@@ -166,7 +166,7 @@ codigo_catastro,nombre_catastro,codi_ine,metodo
 17176,SANT JORDI DESVALLS,17166,exacto
 17179,SANT JULIA DE RAMIS,17169,exacto
 17251,SANT JULIA DEL LLOR I BONMATI,17903,exacto
-17180,SANT LLOREN DE LA MUGA,17171,aproximado:llorenc muga sant
+17180,SANT LLOREN DE LA MUGA,17171,exacto
 17181,SANT MARTI DE LLEMENA,17172,exacto
 17182,SANT MARTI VELL,17173,exacto
 17183,SANT MIQUEL DE CAMPMAJOR,17174,exacto
@@ -210,7 +210,7 @@ codigo_catastro,nombre_catastro,codi_ine,metodo
 17232,VILADEMULS,17218,exacto
 17234,VILADRAU,17220,exacto
 17235,VILAFANT,17221,exacto
-17237,VILAJU GA,,sin_coincidencia
+17237,VILAJU GA,17223,exacto
 17238,VILALLONGA DE TER,17224,exacto
 17240,VILAMACOLUM,17225,exacto
 17241,VILAMALLA,17226,exacto

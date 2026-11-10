@@ -1,84 +1,37 @@
 # Estado de la última actualización
 
-2026-11-10 16:53 UTC
+2026-11-10 17:14 UTC
 
-## territorio: ok (1 s)
+## territorio: ok (2 s)
 
 ```
 221 municipios, 9 comarcas
 ```
 
-## generalitat: ok (60 s)
+## ine: ok (9582 s)
 
 ```
-qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)
-t2h3-cgys: 47806/112696 filas, filtrado por Codi Municipi (IDESCAT) (codigo)
-q4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)
-u5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)
-69zu-w48s: 5525/23687 filas, filtrado por Codi municipi (codigo)
-8idm-becu: 12803/54611 filas, filtrado por CDMUN (codigo)
-2b4s-skfm: 23007/138769 filas, filtrado por Municipi (nombre)
-8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)
-yqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)
-qnyt-emjc: 47322/338223 filas, filtrado por Regió Policial (RP)=Girona
+10 tablas del Atlas para Girona
+31016 Indicadores de renta media y mediana: 60840 filas
+31017 Distribución por fuente de ingresos: 50700 filas
+31018 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo: 91260 filas
+31019 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo y tramos de edad: 273780 filas
+31020 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo y nacionalidad: 182520 filas
+31021 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo: 182520 filas
+31022 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo y tramos de edad: 547560 filas
+31023 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo y nacionalidad: 365040 filas
+37697 Índice de Gini y Distribución de la renta P80/P20: 20280 filas
+31024 Indicadores demográficos: 70980 filas
 ```
 
-## mitma: ok (22 s)
+## xifra: ok (163 s)
 
 ```
-34010210 (municipio): 1 hojas, 230 filas
-34010220 (municipio): 1 hojas, 227 filas
-34010230 (municipio): 1 hojas, 227 filas
-34010240 (municipio): 1 hojas, 227 filas
-34010250 (municipio): 1 hojas, 227 filas
-36102000 (municipio): 1 hojas, 9 filas
-36102500 (municipio): 1 hojas, 9 filas
-36103000 (municipio): 1 hojas, 9 filas
-36103500 (municipio): 1 hojas, 9 filas
-36104000 (municipio): 1 hojas, 9 filas
-36401000 (municipio): 1 hojas, 9 filas
-36401500 (municipio): 1 hojas, 9 filas
-36402000 (municipio): 1 hojas, 9 filas
-36402500 (municipio): 1 hojas, 9 filas
-36403000 (municipio): 1 hojas, 9 filas
-34010110 (provincia): 5 hojas, 365 filas
-34010120 (provincia): 5 hojas, 363 filas
-34010130 (provincia): 5 hojas, 364 filas
-34010140 (provincia): 5 hojas, 363 filas
-34010150 (provincia): 5 hojas, 366 filas
-34010160 (provincia): 5 hojas, 365 filas
-34010170 (provincia): 5 hojas, 364 filas
-34010180 (provincia): 5 hojas, 363 filas
-34010190 (provincia): 5 hojas, 364 filas
-340101a0 (provincia): 86 hojas, 6038 filas
-340101d0 (provincia): 78 hojas, 5612 filas
-340101h0 (provincia): 78 hojas, 4763 filas
-340101l0 (provincia): 64 hojas, 1024 filas
-34020110 (provincia): 6 hojas, 436 filas
-34020150 (provincia): 6 hojas, 437 filas
-34020160 (provincia): 6 hojas, 437 filas
-34020170 (provincia): 6 hojas, 439 filas
-34020180 (provincia): 30 hojas, 2165 filas
-36100500 (provincia): 1 hojas, 71 filas
-36101000 (provincia): 1 hojas, 72 filas
-36101500 (provincia): 1 hojas, 72 filas
-36200500 (provincia): 1 hojas, 72 filas
-36201000 (provincia): 1 hojas, 73 filas
-36201500 (provincia): 1 hojas, 73 filas
-36300500 (provincia): 1 hojas, 72 filas
-36301000 (provincia): 1 hojas, 73 filas
-36301500 (provincia): 1 hojas, 73 filas
-36400500 (provincia): 1 hojas, 70 filas
+131 tablas de 129 páginas; 0 errores
 ```
 
-## xifra: ok (84 s)
+## catastro: ok (572 s)
 
 ```
-57 tablas de 55 páginas; 0 errores
-```
-
-## catastro: ok (352 s)
-
-```
-221 municipios, 249948 edificios, 514588 viviendas; 5 sin código INE; errores: []
+221 municipios, 249948 edificios, 514588 viviendas; 0 sin código INE; errores: []
 ```
