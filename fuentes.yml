@@ -235,6 +235,109 @@ salud:
     nivel: [municipio]
     frecuencia: anual
     estado: por_confirmar
+clima_y_otros:
+  - id: meteocat_xema
+    nombre: Estaciones meteorológicas XEMA
+    organismo: "Meteocat"
+    nivel: [estacion]
+    frecuencia: diaria
+    estado: por_confirmar
+  - id: aemet_opendata
+    nombre: Series climáticas
+    organismo: "AEMET OpenData"
+    nivel: [estacion]
+    frecuencia: diaria
+    estado: por_confirmar
+  - id: clima_extremos
+    nombre: Calor extremo, sequía, proyecciones
+    organismo: "Meteocat / Copernicus"
+    nivel: [comarca]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: aca_agua
+    nombre: Embalses y consumo de agua
+    organismo: "Agència Catalana de l'Aigua"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: xvpca_aire
+    nombre: Calidad del aire
+    organismo: "XVPCA, Generalitat"
+    nivel: [estacion]
+    frecuencia: horaria
+    estado: por_confirmar
+  - id: incendios
+    nombre: Incendios forestales
+    organismo: "Agents Rurals / Bombers"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: icaen_energia
+    nombre: Consumo eléctrico, autoconsumo, recarga
+    organismo: "ICAEN"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: dgt_vehiculos
+    nombre: Parque de vehículos
+    organismo: "DGT"
+    nivel: [municipio]
+    frecuencia: mensual
+    estado: por_confirmar
+  - id: educacio_centres
+    nombre: Centros y alumnado
+    organismo: "Departament d'Educació"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: censo_estudios
+    nombre: Nivel de estudios
+    organismo: "INE Censo 2021"
+    nivel: [seccion]
+    frecuencia: decenal
+    estado: por_confirmar
+  - id: mossos_delitos
+    nombre: Hechos delictivos conocidos
+    organismo: "Mossos d'Esquadra / Interior"
+    nivel: [municipio]
+    frecuencia: trimestral
+    estado: por_confirmar
+  - id: elecciones
+    nombre: Resultados electorales
+    organismo: "Generalitat / Ministerio del Interior"
+    nivel: [seccion]
+    frecuencia: por_convocatoria
+    estado: por_confirmar
+  - id: drets_socials
+    nombre: Renta garantizada, dependencia
+    organismo: "Departament de Drets Socials"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: turismo_plazas
+    nombre: Plazas turísticas
+    organismo: "Idescat / Registre de Turisme"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: empresas
+    nombre: Empresas y autónomos
+    organismo: "Idescat / Seguridad Social"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: agricultura
+    nombre: Explotaciones agrarias
+    organismo: "INE Censo agrario / DUN"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: conectividad
+    nombre: Cobertura fibra y 5G
+    organismo: "Ministerio de Transformación Digital"
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
 locales:
   - id: girona_opendata
     nombre: Girona Open Data (padrón, licencias de obra, presupuesto, cartografía)
