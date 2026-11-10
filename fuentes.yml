@@ -1,0 +1,145 @@
+# Registro de fuentes. estado: comprobada | por_confirmar
+# nivel: seccion | municipio | comarca | provincia | abs
+vivienda:
+  - id: incasol_fianzas
+    nombre: Alquiler medio a partir de fianzas
+    organismo: Incasòl / Agència de l'Habitatge de Catalunya
+    nivel: [municipio]
+    frecuencia: trimestral
+    estado: por_confirmar
+  - id: compraventas_cat
+    nombre: Compraventas y precio por m2
+    organismo: Agència de l'Habitatge de Catalunya
+    nivel: [municipio]
+    frecuencia: trimestral
+    estado: por_confirmar
+  - id: mivau_valor_tasado
+    nombre: Valor tasado y transacciones
+    organismo: Ministerio de Vivienda y Agenda Urbana
+    nivel: [municipio, provincia]
+    nota: municipios de más de 25.000 habitantes
+    frecuencia: trimestral
+    estado: por_confirmar
+  - id: registradores_eri
+    nombre: Estadística Registral Inmobiliaria
+    organismo: Colegio de Registradores
+    nivel: [provincia]
+    frecuencia: trimestral
+    estado: por_confirmar
+  - id: catastro_inspire
+    nombre: Edificios (año, uso, viviendas, superficie)
+    organismo: Dirección General del Catastro (INSPIRE Atom)
+    nivel: [seccion, municipio]
+    nota: GML por municipio, se agrega por sección censal
+    frecuencia: semestral
+    estado: por_confirmar
+  - id: catastro_estadisticas
+    nombre: Inmuebles urbanos y valor catastral
+    organismo: Dirección General del Catastro
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: ine_censo_2021_viviendas
+    nombre: Viviendas principales, secundarias y vacías
+    organismo: INE, Censo 2021
+    nivel: [seccion, municipio]
+    frecuencia: decenal
+    estado: por_confirmar
+  - id: hut_catalunya
+    nombre: Viviendas de uso turístico
+    organismo: Registre de Turisme de Catalunya
+    nivel: [municipio]
+    frecuencia: continua
+    estado: por_confirmar
+  - id: ine_viviendas_turisticas
+    nombre: Viviendas turísticas (experimental, tabla 39364)
+    organismo: INE
+    nivel: [municipio, provincia]
+    frecuencia: semestral
+    estado: por_confirmar
+  - id: cgpj_lanzamientos
+    nombre: Lanzamientos (desahucios)
+    organismo: CGPJ
+    nivel: [partido_judicial]
+    frecuencia: trimestral
+    estado: por_confirmar
+renta:
+  - id: ine_atlas_renta
+    nombre: Atlas de distribución de renta de los hogares
+    organismo: INE
+    url: https://www.ine.es/dynt3/inebase/index.htm?padre=12385
+    nivel: [seccion, municipio]
+    frecuencia: anual
+    años: 2015-2024
+    estado: comprobada
+  - id: aeat_irpf_municipios
+    nombre: Estadística de declarantes del IRPF por municipios
+    organismo: Agencia Tributaria
+    nivel: [municipio]
+    nota: municipios de más de 1.000 habitantes
+    frecuencia: anual
+    estado: por_confirmar
+  - id: idescat_rfdb
+    nombre: Renta familiar disponible bruta
+    organismo: Idescat
+    nivel: [municipio, comarca]
+    frecuencia: anual
+    estado: por_confirmar
+hacienda_transportes:
+  - id: hacienda_conprel
+    nombre: Presupuestos y liquidaciones de entidades locales
+    organismo: Ministerio de Hacienda
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: hacienda_deuda_viva
+    nombre: Deuda viva de los ayuntamientos
+    organismo: Ministerio de Hacienda
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: mitma_movilidad
+    nombre: Estudio de movilidad con big data
+    organismo: Ministerio de Transportes
+    nivel: [municipio]
+    frecuencia: diaria
+    estado: por_confirmar
+poblacion_empleo:
+  - id: idescat_emex
+    nombre: El municipi en xifres (API)
+    organismo: Idescat
+    url: https://www.idescat.cat/dev/api/emex/
+    nivel: [municipio, comarca]
+    frecuencia: anual
+    estado: comprobada
+  - id: ine_padron
+    nombre: Padrón continuo
+    organismo: INE
+    nivel: [seccion, municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: atur_registrat
+    nombre: Paro registrado
+    organismo: Observatori del Treball / SEPE
+    nivel: [municipio]
+    frecuencia: mensual
+    estado: por_confirmar
+salud:
+  - id: observatori_salut
+    nombre: Indicadores de salud por ABS
+    organismo: Observatori del Sistema de Salut de Catalunya
+    nivel: [abs]
+    frecuencia: anual
+    estado: por_confirmar
+locales:
+  - id: girona_opendata
+    nombre: Girona Open Data (padrón, licencias de obra, presupuesto, cartografía)
+    organismo: Ajuntament de Girona
+    url: https://www.girona.cat/opendata
+    nivel: [barrio, ciudad]
+    estado: comprobada
+  - id: ddgi_xifra
+    nombre: Xifra, portal estadístico
+    organismo: Diputació de Girona
+    nivel: [municipio]
+    estado: por_confirmar
