@@ -247,18 +247,18 @@
             "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
             "contact_email" : null,
             "type" : "dataset",
-            "updatedAt" : "2026-11-10T15:16:20.000Z",
+            "updatedAt" : "2026-11-10T16:46:18.000Z",
             "createdAt" : "2019-03-18T10:23:37.000Z",
-            "metadata_updated_at" : "2026-11-10T15:16:08.000Z",
-            "data_updated_at" : "2026-11-10T15:16:20.000Z",
+            "metadata_updated_at" : "2026-11-10T16:46:07.000Z",
+            "data_updated_at" : "2026-11-10T16:46:18.000Z",
             "page_views" :
               {
-                "page_views_last_week" : 618,
-                "page_views_last_month" : 3572,
-                "page_views_total" : 111091,
-                "page_views_last_week_log" : 9.273795599214266,
-                "page_views_last_month_log" : 11.80292019858527,
-                "page_views_total_log" : 16.761395402992036
+                "page_views_last_week" : 598,
+                "page_views_last_month" : 3555,
+                "page_views_total" : 111111,
+                "page_views_last_week_log" : 9.226412192788786,
+                "page_views_last_month_log" : 11.796039608829771,
+                "page_views_total_log" : 16.761655109396024
               },
             "columns_name" :
               [
@@ -315,7 +315,7 @@
                 {},
                 {}
               ],
-            "download_count" : 18202,
+            "download_count" : 18206,
             "provenance" : "official",
             "lens_view_type" : "tabular",
             "lens_display_type" : "table",
@@ -722,6 +722,6 @@
       }
     ],
   "resultSetSize" : 4,
-  "timings" : { "serviceMillis" : 23, "searchMillis" : [ 4, 7 ] },
+  "timings" : { "serviceMillis" : 24, "searchMillis" : [ 3, 7 ] },
   "warnings" : []
 }

@@ -1,6 +1,6 @@
 {
   "results" : [],
   "resultSetSize" : 0,
-  "timings" : { "serviceMillis" : 17, "searchMillis" : [ 2, 5 ] },
+  "timings" : { "serviceMillis" : 100, "searchMillis" : [ 3, 6 ] },
   "warnings" : []
 }

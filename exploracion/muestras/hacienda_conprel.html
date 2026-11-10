@@ -527,7 +527,7 @@
                         </li>
                         <li class="ultimotextos">
                             v
-                            <span id="label_vApp">1.0.19-n0 SE</span>
+                            <span id="label_vApp">1.0.19-n2 SE</span>
                             <span id="label_vMarco">m3.0.2</span>
                         </li>
                     </ul>
@@ -598,30 +598,4 @@
             dateFormat: 'dd/mm/yy',
             firstDay: 1,
             isRTL: false,
-            showMonthAfterYear: false,
-            yearSuffix: ''
-        };
-        $.datepicker.setDefaults($.datepicker.regional['es']);
-
-
-        if('False' == 'True')
-        {
-            $(window).on("beforeunload", function () {
-                if (window.localStorage) {
-                    window.localStorage.removeItem("PestanaAbierta");
-                }
-            });
-
-            if ($.trim(window.localStorage["PestanaAbierta"]) != "") {
-                if (window.localStorage["PestanaAbierta"] != window.name) {
-                    var url = '/SGFAL/CONPREL/Navegacion/Aviso';
-                    window.location.href = url;
-                }
-            } else {
-                window.name = "PaginaPestana1";
-                window.localStorage["PestanaAbierta"] = window.name;
-            }
-        }
-    });
-</script>
-
+      
