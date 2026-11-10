@@ -23,6 +23,16 @@ vivienda:
     nivel: [municipio, provincia]
     frecuencia: trimestral
     estado: comprobada
+  - id: mitma_suelo_urbano
+    nombre: Estadística de precios de suelo urbano - Boletín Online
+    organismo: Ministerio de Transportes / Vivienda
+    url: https://apps.fomento.gob.es/BoletinOnline2/?nivel=2&orden=36000000
+    descarga: https://apps.fomento.gob.es/BoletinOnline2/sedal/{codigo}.XLS
+    tablas_provincia: ["36100500", "36101000", "36101500", "36200500", "36201000", "36201500", "36300500", "36301000", "36301500", "36400500"]
+    tablas_tamano_municipio: ["36102000", "36102500", "36103000", "36103500", "36104000", "36401000", "36401500", "36402000", "36402500", "36403000"]
+    nivel: [provincia, tramo_municipio]
+    frecuencia: trimestral
+    estado: comprobada
   - id: mivau_valor_tasado
     nombre: Valor tasado y transacciones
     organismo: Ministerio de Vivienda y Agenda Urbana

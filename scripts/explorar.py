@@ -48,6 +48,7 @@ CANDIDATAS = {
     # Ministerio de Transportes, boletín
     "mitma_trans_mun": "https://apps.fomento.gob.es/BoletinOnline2/sedal/34010210.XLS",
     "mitma_valor_medio_prov": "https://apps.fomento.gob.es/BoletinOnline2/sedal/34020150.XLS",
+    "mitma_suelo_10_50k": "https://apps.fomento.gob.es/BoletinOnline2/sedal/36402500.XLS",
     # Hacienda / AEAT
     "hacienda_conprel": "https://serviciostelematicosext.hacienda.gob.es/SGFAL/CONPREL",
     "aeat_irpf_municipios": "https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2023/jrubik7fe28e5d4daeab97eaf47efe29f0716914ab405e.html",
