@@ -346,7 +346,20 @@ locales:
     nivel: [barrio, ciudad]
     estado: comprobada
   - id: ddgi_xifra
-    nombre: Xifra, portal estadístico
+    nombre: Xifra, Sistema d'Informació Estadística Local (importar entero)
     organismo: Diputació de Girona
+    url: https://www.ddgi.cat/xifra/menu_ini.asp
+    nivel: [municipio, comarca, provincia]
+    bloques: [entorno, demografia, calidad_de_vida, hacienda_municipal, turismo, actividad_economica, mercado_de_trabajo]
+    acceso: HTML y Excel; menu_send.asp?IdMenu=<codigo>; parametro de municipio por confirmar
+    estado: comprobada
+  - id: ine_dirce
+    nombre: Empresas por sector y tamaño (DIRCE)
+    organismo: INE
+    nivel: [municipio]
+    estado: por_confirmar
+  - id: iae
+    nombre: Impuesto de Actividades Económicas
+    organismo: Ministerio de Hacienda / ayuntamientos
     nivel: [municipio]
     estado: por_confirmar
