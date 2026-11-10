@@ -1,6 +1,6 @@
 # Estado de la última actualización
 
-2026-11-10 15:52 UTC
+2026-11-10 16:53 UTC
 
 ## territorio: ok (1 s)
 
@@ -8,11 +8,10 @@
 221 municipios, 9 comarcas
 ```
 
-## generalitat: ok (42 s)
+## generalitat: ok (60 s)
 
 ```
 qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)
-hepw-33ik: 5/3645 filas, filtrado por Habitatges (codigo)
 t2h3-cgys: 47806/112696 filas, filtrado por Codi Municipi (IDESCAT) (codigo)
 q4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)
 u5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)
@@ -21,13 +20,13 @@ u5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)
 2b4s-skfm: 23007/138769 filas, filtrado por Municipi (nombre)
 8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)
 yqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)
-qnyt-emjc: 338223/338223 filas, SIN FILTRAR (no se encontró columna de municipio)
+qnyt-emjc: 47322/338223 filas, filtrado por Regió Policial (RP)=Girona
 ```
 
-## mitma: ok (39 s)
+## mitma: ok (22 s)
 
 ```
-34010210 (municipio): 1 hojas, 227 filas
+34010210 (municipio): 1 hojas, 230 filas
 34010220 (municipio): 1 hojas, 227 filas
 34010230 (municipio): 1 hojas, 227 filas
 34010240 (municipio): 1 hojas, 227 filas
@@ -72,19 +71,14 @@ qnyt-emjc: 338223/338223 filas, SIN FILTRAR (no se encontró columna de municipi
 36400500 (provincia): 1 hojas, 70 filas
 ```
 
-## ine: ERROR (10 s)
+## xifra: ok (84 s)
 
 ```
-Traceback (most recent call last):
-  File "/home/runner/work/girona-dades/girona-dades/scripts/actualizar.py", line 27, in main
-    res = importlib.import_module(f"fuentes.{n}").ejecutar()
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/girona-dades/girona-dades/fuentes/ine.py", line 44, in ejecutar
-    tablas = _tablas_girona(salida)
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/girona-dades/girona-dades/fuentes/ine.py", line 34, in _tablas_girona
-    cabezas = {normaliza(s.get("Nombre", "").split(".")[0].split(" sección")[0].split(" distrito")[0]) for s in series[:300]}
-                                                                                                                ~~~~~~^^^^^^
-KeyError: slice(None, 300, None)
+57 tablas de 55 páginas; 0 errores
+```
 
+## catastro: ok (352 s)
+
+```
+221 municipios, 249948 edificios, 514588 viviendas; 5 sin código INE; errores: []
 ```

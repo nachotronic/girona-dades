@@ -1,0 +1,58 @@
+idmenu,titulo,dades,dades_nom,any,tabla,filas,columnas,fichero,url
+030103,Superfície i altitud,,,,0,221,4,030103_superficie-i-altitud_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/entorn/sup_alt.asp?IdMenu=030103
+030104,Classificació urbanística del sòl,0,,2025,0,221,5,030104_classificacio-urbanistica-del-sol_dades_2025_0.csv,https://www.ddgi.cat/xifra/entorn/csu.asp?tipo=1&IdMenu=03010401
+030201,Població. Recomptes,0,,DCE2025,0,221,5,030201_poblacio-recomptes_dades_DCE2025_0.csv,https://www.ddgi.cat/xifra/demografia/dpt.asp?IdMenu=03020101
+030202,Llars,0,,2021,0,222,8,030202_llars_dades_2021_0.csv,https://www.ddgi.cat/xifra/demografia/qll.asp?IdMenu=03020201
+030204,Moviment natural de la població,0,,2024,0,221,5,030204_moviment-natural-de-la-poblacio_dades_2024_0.csv,https://www.ddgi.cat/xifra/demografia/dna.asp?IdMenu=03020401
+030205,Moviment migratori,0,,2024,0,221,7,030205_moviment-migratori_dades_2024_0.csv,https://www.ddgi.cat/xifra/demografia/dii.asp?IdMenu=03020501
+030206,Projeccions,0,,2044,0,221,6,030206_projeccions_dades_2044_0.csv,https://www.ddgi.cat/xifra/demografia/mpr.asp?Escenari=MIT&IdMenu=03020601
+030302,Equipaments culturals,0,,2024,0,221,8,030302_equipaments-culturals_dades_2024_0.csv,https://www.ddgi.cat/xifra/qualitat/qbi.asp?IdMenu=03030201
+030305,Consums energètics,,,2023,0,221,6,030305_consums-energetics_dades_2023_0.csv,https://www.ddgi.cat/xifra/qualitat/cgn.asp?IdMenu=03030501
+030306,Emissions de CO 2,0,,2019,0,221,7,030306_emissions-de-co-2_dades_2019_0.csv,https://www.ddgi.cat/xifra/qualitat/CO2ER.asp?IdMenu=03030601
+030307,Sanitat,0,,2025,0,221,3,030307_sanitat_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/qof.asp?IdMenu=03030703
+030308,Educació,0,,2025,0,221,7,030308_educacio_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/edu_centres.asp?IdMenu=03030801
+030309,Assistencial,0,,2025,0,221,6,030309_assistencial_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/res_gentgran.asp?IdMenu=03030901
+030312,Estat de l'habitatge,0,,2025,0,221,3,030312_estat-de-l-habitatge_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/hbu.asp?IdMenu=03031201
+030313,Equipaments funeraris,0,,2026,0,221,5,030313_equipaments-funeraris_dades_2026_0.csv,https://www.ddgi.cat/xifra/qualitat/qcm.asp?IdMenu=03031301
+030314,Cadastre,,,2025,0,221,9,030314_cadastre_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/cadastre2.asp?opCad=A&IdMenu=03031401
+030701,"Pressupost, grau d'execució, liquidació i magnituds pressupostàries",,,2025,0,20,10,030701_pressupost-grau-d-execucio-liquidacio-i-_dades_2025_0.csv,https://www.ddgi.cat/xifra/financera/pre_capitol.asp?IdMenu=03070101
+030702,Període mitjà de pagament a proveïdors (PMP),,,2026,0,221,10,030702_periode-mitja-de-pagament-a-proveidors-p_dades_2026_0.csv,https://www.ddgi.cat/xifra/financera/pmp.asp?IdMenu=030702
+030703,Compliment objectiu estabilitat pressupostària,,,2025,0,221,8,030703_compliment-objectiu-estabilitat-pressupo_dades_2025_0.csv,https://www.ddgi.cat/xifra/financera/epr.asp?IdMenu=030703
+030704,Deute viu,,,2025,0,221,6,030704_deute-viu_dades_2025_0.csv,https://www.ddgi.cat/xifra/financera/deute_viu.asp?IdMenu=030704
+030705,Fonts de finançament,,,2026,0,221,12,030705_fonts-de-financament_dades_2026_0.csv,https://www.ddgi.cat/xifra/financera/ibu.asp?IdMenu=03070505
+030706,Cost efectiu dels serveis prestats,,,2024,0,45,6,030706_cost-efectiu-dels-serveis-prestats_dades_2024_0.csv,https://www.ddgi.cat/xifra/financera/cesel.asp?IdMenu=030706
+030706,Cost efectiu dels serveis prestats,,,2024,1,20,6,030706_cost-efectiu-dels-serveis-prestats_dades_2024_1.csv,https://www.ddgi.cat/xifra/financera/cesel.asp?IdMenu=030706
+030706,Cost efectiu dels serveis prestats,,,2024,2,23,6,030706_cost-efectiu-dels-serveis-prestats_dades_2024_2.csv,https://www.ddgi.cat/xifra/financera/cesel.asp?IdMenu=030706
+030401,Hotels per categoria,0,,2025,0,222,12,030401_hotels-per-categoria_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/tur_hotels.asp?IdMenu=030401
+030402,Càmpings per categoria,0,,2025,0,221,7,030402_campings-per-categoria_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/tur_campings.asp?IdMenu=030402
+030404,Residències-cases de pagès per tipus,0,,2025,0,221,7,030404_residencies-cases-de-pages-per-tipus_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/tur_casespages.asp?IdMenu=030404
+030405,Oficines de turisme,0,,2025,0,221,3,030405_oficines-de-turisme_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/tur_ofturisme.asp?IdMenu=030405
+030406,Habitatges d'ús turístic,0,,2025,0,221,4,030406_habitatges-d-us-turistic_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/tur_habitatges.asp?IdMenu=030406
+030407,Apartaments d'ús turístic,0,,2025,0,221,4,030407_apartaments-d-us-turistic_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/tur_apartaments.asp?IdMenu=030407
+030504,Empreses (RGSS),0,,,0,221,7,030504_empreses-rgss_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/inss/inssEmp.asp?IdMenu=030504
+030505,Cens d'establiments comercials,,,2023,0,221,4,030505_cens-d-establiments-comercials_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/EstabComercials.asp?IdMenu=030505
+030508,Cens agrari,0,,2020,0,221,9,030508_cens-agrari_dades_2020_0.csv,https://www.ddgi.cat/xifra/activecon/unit_rama.asp?IdMenu=03050802
+030510,Mercat de l'habitatge,,,2023,0,221,5,030510_mercat-de-l-habitatge_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/hme.asp?IdMenu=03051001
+030511,Polítiques d'habitatge,,,2025,0,221,8,030511_politiques-d-habitatge_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/hpo.asp?IdMenu=030511
+030514,Parc de vehicles,0,,2024,0,220,8,030514_parc-de-vehicles_dades_2024_0.csv,https://www.ddgi.cat/xifra/activecon/parc_auto.asp?IdMenu=030514
+030516,Entitats financeres,0,,2026,0,221,6,030516_entitats-financeres_dades_2026_0.csv,https://www.ddgi.cat/xifra/activecon/Ent_Fin2.asp?IdMenu=03051601
+030518,Renda familiar disponible,,,2022,0,94,3,030518_renda-familiar-disponible_dades_2022_0.csv,https://www.ddgi.cat/xifra/activecon/RendaFam.asp?IdMenu=030518
+030520,Producte interior brut,,,2023,0,36,3,030520_producte-interior-brut_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/pib.asp?IdMenu=03052001
+030521,Impost sobre la renda de les persones físiques (IRPF),,,2023,0,221,4,030521_impost-sobre-la-renda-de-les-persones-fi_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/irpf.asp?IdMenu=030521
+030601,Llocs de treball,0,,,0,221,7,030601_llocs-de-treball_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/inss/inssAssal.asp?IdMenu=03060101
+030604,Ocupats,0,,,0,221,5,030604_ocupats_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/atur/osx.asp?IdMenu=03060401
+030606,Atur registrat,,,,0,221,7,030606_atur-registrat_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/atur/aturPeriodes.asp?IdMenu=03060602&agrupat=7
+030608,Atur registrat estrangers,,,,0,221,7,030608_atur-registrat-estrangers_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/atur/aturEstPeriodes.asp?IdMenu=03060802&agrupat=7
+030609,Beneficiaris de prestacions per desocupació,0,,2026,0,221,6,030609_beneficiaris-de-prestacions-per-desocupa_dades_2026_0.csv,https://www.ddgi.cat/xifra/atur/ppd.asp?IdMenu=030609
+030620,Contractació registrada (2006-2018),,,,0,221,7,030620_contractacio-registrada-2006-2018_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/contractes/ContPeriodes.asp?IdMenu=03062001&agrupat=1
+03010102,Consorcis,,,,0,25,4,03010102_consorcis_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/entorn/municipis2.asp?amb=2&IdMenu=03010102
+03010104,Municipis,,,,0,222,7,03010104_municipis_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/entorn/municipis.asp?IdMenu=03010104
+03010105,Mapes,,,2025,0,33,3,03010105_mapes_dades_2025_0.csv,https://www.ddgi.cat/xifra/entorn/mapes.asp?IdMenu=03010105
+03020302,Població segons nacionalitat i sexe,0,,2025,0,55,4,03020302_poblacio-segons-nacionalitat-i-sexe_dades_2025_0.csv,https://www.ddgi.cat/xifra/demografia/dpn2.asp?IdMenu=03020302
+03020303,Població estrangera per sexe i edat,0,,2025,0,20,4,03020303_poblacio-estrangera-per-sexe-i-edat_dades_2025_0.csv,https://www.ddgi.cat/xifra/demografia/dpest.asp?IdMenu=03020303
+03020305,Població segons coneixement del català,0,,2011,0,221,8,03020305_poblacio-segons-coneixement-del-catala_dades_2011_0.csv,https://www.ddgi.cat/xifra/demografia/dnc.asp?IdMenu=03020305
+03030402,Residus industrials,0,,2024,0,221,6,03030402_residus-industrials_dades_2024_0.csv,https://www.ddgi.cat/xifra/qualitat/resid_ind.asp?IdMenu=03030402
+03031002,Dependències i parcs,0,,2025,0,221,5,03031002_dependencies-i-parcs_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/edp.asp?IdMenu=03031002
+03031102,Habitatges principals segons la superfície útil,0,,2021,0,221,11,03031102_habitatges-principals-segons-la-superfic_dades_2021_0.csv,https://www.ddgi.cat/xifra/qualitat/hab_hsu.asp?IdMenu=03031102
+03031107,Locals per activitat,0,,2001,0,221,5,03031107_locals-per-activitat_dades_2001_0.csv,https://www.ddgi.cat/xifra/qualitat/hab_lpa.asp?IdMenu=03031107
+03062403,Relació de llocs de treball i residents,0,,2011,0,221,6,03062403_relacio-de-llocs-de-treball-i-residents_dades_2011_0.csv,https://www.ddgi.cat/xifra/mobilitat/MobilLlocs.asp?IdMenu=03062403
