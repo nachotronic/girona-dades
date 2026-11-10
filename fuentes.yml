@@ -13,6 +13,16 @@ vivienda:
     nivel: [municipio]
     frecuencia: trimestral
     estado: por_confirmar
+  - id: mitma_transacciones
+    nombre: Transacciones inmobiliarias (compraventa) - Boletín Online
+    organismo: Ministerio de Transportes / Vivienda
+    url: https://apps.fomento.gob.es/BoletinOnline2/?nivel=2&orden=34000000
+    descarga: https://apps.fomento.gob.es/BoletinOnline2/sedal/{codigo}.XLS
+    tablas_municipio: ["34010210", "34010220", "34010230", "34010240", "34010250"]
+    tablas_provincia: ["34010110", "34010120", "34010130", "34010140", "34010150", "34010160", "34010170", "34010180", "34010190", "340101a0", "340101d0", "340101h0", "340101l0", "34020110", "34020150", "34020160", "34020170", "34020180"]
+    nivel: [municipio, provincia]
+    frecuencia: trimestral
+    estado: comprobada
   - id: mivau_valor_tasado
     nombre: Valor tasado y transacciones
     organismo: Ministerio de Vivienda y Agenda Urbana

@@ -45,6 +45,9 @@ CANDIDATAS = {
     "xifra_poblacion": "https://www.ddgi.cat/xifra/menu_send.asp?IdMenu=030201",
     "xifra_ambits": "https://www.ddgi.cat/xifra/ambits.asp",
     "xifra_novetats": "https://www.ddgi.cat/xifra/novetats.asp",
+    # Ministerio de Transportes, boletín
+    "mitma_trans_mun": "https://apps.fomento.gob.es/BoletinOnline2/sedal/34010210.XLS",
+    "mitma_valor_medio_prov": "https://apps.fomento.gob.es/BoletinOnline2/sedal/34020150.XLS",
     # Hacienda / AEAT
     "hacienda_conprel": "https://serviciostelematicosext.hacienda.gob.es/SGFAL/CONPREL",
     "aeat_irpf_municipios": "https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2023/jrubik7fe28e5d4daeab97eaf47efe29f0716914ab405e.html",
@@ -56,7 +59,7 @@ for t in TERMINOS_SOCRATA:
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
-    for clave, ext in (("json", "json"), ("xml", "xml"), ("html", "html"), ("csv", "csv")):
+    for clave, ext in (("excel", "xls"), ("json", "json"), ("xml", "xml"), ("html", "html"), ("csv", "csv")):
         if clave in tipo:
             return ext
     return "txt"
