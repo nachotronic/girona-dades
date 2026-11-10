@@ -1,0 +1,46 @@
+name: Actualizar datos
+
+on:
+  workflow_dispatch:
+    inputs:
+      fuentes:
+        description: "Fuentes a ejecutar, separadas por espacios (vacío = todas)"
+        required: false
+        default: ""
+      xifra_historico:
+        description: "Descargar todos los años de Xifra (1) o solo el último (0)"
+        required: false
+        default: "0"
+  schedule:
+    - cron: "0 4 * * 1"  # lunes a las 04:00 UTC
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Descargar y procesar
+        env:
+          XIFRA_HISTORICO: ${{ inputs.xifra_historico || '0' }}
+        run: python scripts/actualizar.py ${{ inputs.fuentes }}
+      - name: Guardar resultados
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed data/estado.md
+          git commit -m "Actualizar datos" || { echo "Sin cambios"; exit 0; }
+          git pull --rebase origin main && git push

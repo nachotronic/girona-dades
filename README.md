@@ -10,7 +10,8 @@ Web de dades obertes sobre la província de Girona: habitatge, renda, població,
 | --- | --- |
 | `docs/` | Catálogo de fuentes e indicadores |
 | `fuentes.yml` | Registro de fuentes que usarán los scripts |
-| `scripts/` | Descarga y limpieza de cada fuente |
+| `fuentes/` | Un módulo por fuente: descarga, limpieza y filtrado a la provincia |
+| `scripts/actualizar.py` | Ejecuta las fuentes y escribe `data/estado.md` |
 | `data/raw/` | Descargas originales (no se suben al repositorio) |
 | `data/processed/` | Datos limpios, con código INE de municipio y sección censal |
 | `web/` | Web estática bilingüe (ca/es) para GitHub Pages |
@@ -21,3 +22,15 @@ Web de dades obertes sobre la província de Girona: habitatge, renda, població,
 2. Scripts de descarga y GitHub Action de actualización periódica.
 3. Web bilingüe en GitHub Pages: primero vivienda y renta.
 4. Dominio propio y nuevas secciones.
+
+## Actualizar los datos
+
+La Action **Actualizar datos** se ejecuta cada lunes y también a mano desde la pestaña Actions. En local:
+
+```
+pip install -r requirements.txt
+python scripts/actualizar.py            # todas las fuentes
+python scripts/actualizar.py xifra ine  # solo algunas
+```
+
+Fuentes disponibles: `territorio`, `generalitat`, `ine`, `mitma`, `xifra`, `catastro`.
