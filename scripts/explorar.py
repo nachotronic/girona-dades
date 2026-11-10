@@ -12,7 +12,7 @@ import requests
 
 SALIDA = pathlib.Path("exploracion")
 MUESTRAS = SALIDA / "muestras"
-LIMITE = 150_000
+LIMITE = 40_000
 UA = {"User-Agent": "girona-dades/0.1 (+https://github.com/nachotronic/girona-dades)"}
 
 SOCRATA = "https://analisi.transparenciacatalunya.cat/api/catalog/v1"
@@ -34,6 +34,11 @@ CANDIDATAS = {
     "ine_operaciones": "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
     "ine_tablas_adrh": "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/ADRH",
     "ine_vut_39364": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/39364?nult=1",
+    "ine_series_30656": "https://servicios.ine.es/wstempus/js/ES/SERIES_TABLA/30656?page=1",
+    "ine_tabla_30656": "https://servicios.ine.es/wstempus/js/ES/TABLA/30656",
+    "ine_jaxi_30656": "https://www.ine.es/jaxiT3/Tabla.htm?t=30656",
+    "ine_csv_30656": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/30656.csv",
+    "ine_variables_adrh": "https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/ADRH",
     # Catastro INSPIRE
     "catastro_bu_atom": "https://www.catastro.hacienda.gob.es/INSPIRE/buildings/ES.SDGC.BU.atom.xml",
     "catastro_bu_atom_17": "https://www.catastro.hacienda.gob.es/INSPIRE/buildings/17/ES.SDGC.BU.atom_17.xml",

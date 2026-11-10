@@ -17,7 +17,6 @@ DOMINIO = "https://analisi.transparenciacatalunya.cat"
 
 CONJUNTOS = {
     "qww9-bvhh": "Preu mitjà del lloguer d'habitatges per municipi",
-    "hepw-33ik": "Preu mitjà del lloguer per àmbits supramunicipals",
     "t2h3-cgys": "Establiments d'allotjament turístic (Registre de Turisme)",
     "q4sr-68c3": "Impost sobre estades en establiments turístics per municipi",
     "u5i2-b24m": "Renda garantida de ciutadania per municipis",
@@ -49,7 +48,7 @@ def _filtra_girona(df: pd.DataFrame) -> tuple[pd.DataFrame, str]:
     if not mejor or puntos < 5:
         # Último recurso: columnas de provincia o demarcación
         for col in df.columns:
-            if any(k in col.lower() for k in ("provincia", "demarcaci", "regio")):
+            if any(k in normaliza(col) for k in ("provincia", "demarcacio", "regio", "regi")):
                 m = df[col].astype(str).str.contains("Girona", case=False, na=False)
                 if m.any():
                     return df[m], f"filtrado por {col}=Girona"

@@ -26,11 +26,21 @@ def _codigos() -> dict[str, list[str]]:
     return res
 
 
+PROVINCIAS_SIGUIENTES = {"huesca", "lleida", "lerida", "tarragona", "barcelona", "teruel", "zaragoza"}
+
+
 def _filtra(df: pd.DataFrame, nombres: set[str]) -> pd.DataFrame:
-    texto = df.astype(str)
-    es_girona = texto.apply(lambda col: col.str.contains("Girona|Gerona", case=False, na=False)).any(axis=1)
-    es_municipio = texto.apply(lambda col: col.map(normaliza).isin(nombres)).any(axis=1)
-    return df[es_girona | es_municipio]
+    """Las tablas municipales agrupan los municipios bajo una fila con el nombre de la
+    provincia. Se toman las filas entre la cabecera 'Girona' y la siguiente provincia."""
+    primera = df.iloc[:, 0].astype(str).str.strip()
+    vacias = df.iloc[:, 1:].isna().all(axis=1)
+    cabeceras = [i for i, (v, vac) in enumerate(zip(primera, vacias)) if vac and v not in ("", "nan")]
+    ini = next((i for i in cabeceras if normaliza(primera.iloc[i]) in {"girona", "gerona"}), None)
+    if ini is None:
+        # Sin cabecera de provincia: filas que nombran municipios de Girona
+        return df[primera.map(normaliza).isin(nombres)]
+    fin = next((i for i in cabeceras if i > ini and normaliza(primera.iloc[i]) not in nombres), len(df))
+    return df.iloc[ini:fin]
 
 
 def ejecutar() -> str:
