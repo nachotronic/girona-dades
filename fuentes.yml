@@ -161,6 +161,61 @@ poblacion_empleo:
     nivel: [municipio]
     frecuencia: mensual
     estado: por_confirmar
+mortalidad_movilidad_estacional:
+  - id: ine_defunciones
+    nombre: Defunciones y tasa de mortalidad
+    organismo: INE (MNP) / Idescat
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: registre_mortalitat
+    nombre: Mortalidad por causa
+    organismo: Departament de Salut, Registre de mortalitat
+    nivel: [comarca, abs]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: idescat_esperanza_vida
+    nombre: Esperanza de vida
+    organismo: Idescat / Observatori de Salut
+    nivel: [comarca, abs]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: censo_movilidad
+    nombre: Movilidad residencia-trabajo/estudio
+    organismo: INE Censo 2021 / Idescat
+    nivel: [municipio]
+    frecuencia: decenal
+    estado: por_confirmar
+  - id: idescat_etca
+    nombre: Población estacional (ETCA)
+    organismo: Idescat
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: ine_turismo_moviles
+    nombre: Medición del turismo a partir de teléfonos móviles
+    organismo: INE
+    nivel: [municipio]
+    frecuencia: mensual
+    estado: por_confirmar
+  - id: segunda_residencia_cruce
+    nombre: Viviendas sin empadronados (Catastro x padrón)
+    organismo: derivado
+    nivel: [seccion]
+    frecuencia: anual
+    estado: propuesto
+  - id: aeat_imputacion_rentas
+    nombre: Imputación de rentas inmobiliarias
+    organismo: Agencia Tributaria
+    nivel: [provincia, municipio]
+    frecuencia: anual
+    estado: por_confirmar
+  - id: arc_residus
+    nombre: Residuos municipales por habitante
+    organismo: Agència de Residus de Catalunya
+    nivel: [municipio]
+    frecuencia: anual
+    estado: por_confirmar
 salud:
   - id: observatori_salut
     nombre: Indicadores de salud por ABS
