@@ -9,6 +9,7 @@ Las coordenadas están en ETRS89 UTM 31N (EPSG:25831); el centro es la media de 
 """
 from __future__ import annotations
 
+import datetime as dt
 import difflib
 import re
 import zipfile
@@ -108,6 +109,7 @@ def ejecutar() -> str:
     df = df.merge(codigos[["codigo_catastro", "codi_ine"]], on="codigo_catastro", how="left")
     df.to_csv(salida / "edificios.csv.gz", index=False, compression="gzip")
     # Antes de 1900 las fechas son poco fiables: se agrupan como "<1900"
+    df.loc[df["anyo"] > dt.date.today().year, "anyo"] = None  # fechas imposibles
     df["decada"] = (df["anyo"].clip(lower=1890) // 10 * 10).astype("Int64").astype(str).replace({"1890": "<1900", "<NA>": "sin_fecha"})
     agg = df.groupby("codi_ine").agg(edificios=("id", "count"), viviendas=("viviendas", "sum"),
                                      superficie_m2=("superficie_m2", "sum"), anyo_mediano=("anyo", "median"))
