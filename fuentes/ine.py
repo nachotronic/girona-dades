@@ -31,6 +31,8 @@ def _tablas_girona(salida) -> list[dict]:
             series = get(f"{API}/SERIES_TABLA/{t['Id']}", params={"page": 1}, pausa=0.3).json()
         except Exception:  # noqa: BLE001
             continue
+        if not isinstance(series, list):  # algunas tablas devuelven un mensaje de error
+            continue
         cabezas = {normaliza(s.get("Nombre", "").split(".")[0].split(" sección")[0].split(" distrito")[0]) for s in series[:300]}
         aciertos = len(cabezas & nombres)
         if aciertos >= 5:

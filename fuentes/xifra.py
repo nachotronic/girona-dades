@@ -99,7 +99,7 @@ def ejecutar() -> str:
     while pendientes:
         url, titulo = pendientes.pop(0)
         idm = re.search(r"IdMenu=(\d+)", url).group(1)
-        if idm in vistos:
+        if idm in vistos or not idm.startswith("03"):  # 03 = dades municipals
             continue
         vistos.add(idm)
         try:
@@ -114,6 +114,9 @@ def ejecutar() -> str:
             pendientes.extend(e for e in _enlaces_menu(html, final)
                               if re.search(r"IdMenu=(\d+)", e[0]).group(1) not in vistos)
             continue
+        # Las páginas de datos enlazan a sus tablas hermanas (03020101 -> 03020102...)
+        pendientes.extend(e for e in _enlaces_menu(html, final)
+                          if re.search(r"IdMenu=(\d+)", e[0]).group(1) not in vistos)
         form = _formulario(html, final)
         if not form:
             _guarda(salida, indice, idm, titulo, None, None, None, tablas, final)

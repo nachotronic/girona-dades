@@ -40,6 +40,9 @@ def _entradas() -> list[tuple[str, str, str]]:
 def _codigos(entradas) -> pd.DataFrame:
     mun = municipios()
     por_nombre = dict(zip(mun["nom_normalitzat"], mun["codi_ine"]))
+    # El feed del Catastro pierde la ç y la ï ("CORÇÀ" llega como "COR A")
+    for nom, ine in zip(mun["nom"], mun["codi_ine"]):
+        por_nombre.setdefault(normaliza(re.sub(r"[çÇïÏüÜ]", " ", nom)), ine)
     filas = []
     for cod, nombre, _ in entradas:
         n = normaliza(nombre)
@@ -104,7 +107,8 @@ def ejecutar() -> str:
         df[c] = pd.to_numeric(df[c], errors="coerce")
     df = df.merge(codigos[["codigo_catastro", "codi_ine"]], on="codigo_catastro", how="left")
     df.to_csv(salida / "edificios.csv.gz", index=False, compression="gzip")
-    df["decada"] = (df["anyo"] // 10 * 10).astype("Int64")
+    # Antes de 1900 las fechas son poco fiables: se agrupan como "<1900"
+    df["decada"] = (df["anyo"].clip(lower=1890) // 10 * 10).astype("Int64").astype(str).replace({"1890": "<1900", "<NA>": "sin_fecha"})
     agg = df.groupby("codi_ine").agg(edificios=("id", "count"), viviendas=("viviendas", "sum"),
                                      superficie_m2=("superficie_m2", "sum"), anyo_mediano=("anyo", "median"))
     res = df[df["uso"].fillna("").str.contains("residential", case=False)]
