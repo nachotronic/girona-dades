@@ -1,0 +1,48 @@
+CODI_ESTACIO,NOM_ESTACIO,CODI_TIPUS,LATITUD,LONGITUD,Georeferència,EMPLACAMENT,ALTITUD,CODI_MUNICIPI,NOM_MUNICIPI,CODI_COMARCA,NOM_COMARCA,CODI_PROVINCIA,NOM_PROVINCIA,CODI_XARXA,NOM_XARXA,CODI_ESTAT,NOM_ESTAT,DATA_ALTA,DATA_BAIXA
+W2,Torroella de Fluvià,A,42.18259,3.05783,POINT (3.05783 42.18259),Camp de Pla d'Avall - Camp de la Creu,7,171984,Torroella de Fluvià,2,Alt Empordà,17,Girona,1,XEMA,1,Desmantellada,14/03/2000,08/04/2014
+UD,Serra de Daró,A,42.02895,3.06227,POINT (3.06227 42.02895),Camí de la Barceloneta - St. Iscle d'Empordà,12,171910,Serra de Daró,10,Baix Empordà,17,Girona,1,XEMA,1,Desmantellada,09/06/1999,01/06/2013
+D6,Portbou - coll dels Belitres,A,42.43514,3.16619,POINT (3.16619 42.43514),Punta de l'Aucell  (zona fronterera),198,171387,Portbou,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,25/03/1998,
+DG,Núria (1.971 m),A,42.39848,2.15517,POINT (2.15517 42.39848),Santuari de Núria,1971,170433,Queralbs,31,Ripollès,17,Girona,1,XEMA,2,Operativa,15/05/1998,
+CB,les Llosses,A,42.15085,2.19914,POINT (2.19914 42.15085),Abocador comarcal,700,170963,Les Llosses,31,Ripollès,17,Girona,1,XEMA,1,Desmantellada,30/11/1995,02/06/2003
+UB,la Tallada d'Empordà,A,42.05394,3.06198,POINT (3.06198 42.05394),Findació Mas Badia - Canet de la Tallada,15,171959,La Tallada d'Empordà,10,Baix Empordà,17,Girona,1,XEMA,2,Operativa,01/05/1989,
+M6,Sant Joan de les Abadesses,A,42.22187,2.24267,POINT (2.24267 42.22187),Agrupació Esportiva del Ripollès,736,171674,Sant Joan de les Abadesses,31,Ripollès,17,Girona,1,XEMA,2,Operativa,13/01/1996,
+XS,Santa Coloma de Farners,A,41.86491,2.66444,POINT (2.66444 41.86491),Dipòsit d'aigua,165,171805,Santa Coloma de Farners,34,Selva,17,Girona,1,XEMA,2,Operativa,26/03/2013,
+UN,Cassà de la Selva,A,41.87448,2.92695,POINT (2.92695 41.87448),Finca Mas Bassets,178,170448,Cassà de la Selva,20,Gironès,17,Girona,1,XEMA,2,Operativa,08/03/1993,
+W3,Ventalló,A,42.15006,3.06494,POINT (3.06494 42.15006),el Camp Lletget - Mare de Déu de l'Om - Montiró,4,172109,Ventalló,2,Alt Empordà,17,Girona,1,XEMA,1,Desmantellada,14/03/2000,12/01/2015
+DO,Castell d'Aro,A,41.80855,3.03241,POINT (3.03241 41.80855),Parc de Bombers,14,170486,"Castell d'Aro, Platja d'Aro i s'Agaró",10,Baix Empordà,17,Girona,1,XEMA,2,Operativa,10/05/2001,
+ZC,Ulldeter (2.413 m),A,42.42102,2.24593,POINT (2.24593 42.42102),Ulldeter,2413,171925,Setcases,31,Ripollès,17,Girona,1,XEMA,2,Operativa,28/09/2011,
+U1,Cabanes - Mas de la Rajoleria,A,42.30648,2.95481,POINT (2.95481 42.30648),"Mas St. Feliu, S.A., camí de St. Feli, s/n",31,170307,Cabanes,2,Alt Empordà,17,Girona,1,XEMA,1,Desmantellada,11/06/1991,10/05/2024
+CK,Santa Coloma de Farners,A,41.86472,2.66451,POINT (2.66451 41.86472),Dipòsit d'aigua,163,171805,Santa Coloma de Farners,34,Selva,17,Girona,1,XEMA,1,Desmantellada,05/02/1996,08/06/2004
+WS,Viladrau,A,41.84008,2.41877,POINT (2.41877 41.84008),Mas Vilarmau,956,172207,Viladrau,24,Osona,17,Girona,1,XEMA,2,Operativa,17/03/2005,
+YS,Cabanes,A,42.32038,2.956401,POINT (2.956401 42.32038),Futura deixalleria,35,170307,Cabanes,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,13/05/2024,
+V6,Viladrau - Aigües de Viladrau,A,41.84256,2.42636,POINT (2.42636 41.84256),"Camí vell de Viladrau, s/n",871,170097,Arbúcies,34,Selva,17,Girona,1,XEMA,1,Desmantellada,03/10/1995,29/03/2005
+DJ,Banyoles,A,42.11655,2.78971,POINT (2.78971 42.11655),Abocador comarcal de Puigpalter,178,170157,Banyoles,28,Pla de l'Estany,17,Girona,1,XEMA,2,Operativa,11/10/1999,
+WF,Vilablareix,A,41.95425,2.77578,POINT (2.77578 41.95425),Mas Saüch,108,172155,Vilablareix,20,Gironès,17,Girona,1,XEMA,1,Desmantellada,11/04/2001,01/10/2015
+YA,Puigcerdà,A,42.44013,1.93482,POINT (1.93482 42.44013),Poliesportiu municipal,1214,171411,Puigcerdà,15,Cerdanya,17,Girona,1,XEMA,2,Operativa,22/03/2016,
+UC,Monells,A,41.97726,2.99705,POINT (2.99705 41.97726),Finca Camps i Armet - Escola Capacitació Agrària,60,179011,"Cruïlles, Monells i Sant Sadurní de l'Heura",10,Baix Empordà,17,Girona,1,XEMA,1,Desmantellada,04/03/1998,15/06/2021
+ZD,la Tosa d'Alp (2.478 m),A,42.32213,1.89716,POINT (1.89716 42.32213),Tosa d'Alp,2478,170062,Alp,15,Cerdanya,17,Girona,1,XEMA,2,Operativa,04/09/2014,
+VZ,Espolla,A,42.38443,3.00739,POINT (3.00739 42.38443),"Llaurants. Ref. Cadastral: Pol. 5, parc.195",84,170643,Espolla,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,07/06/2000,
+D4,Roses,A,42.27068,3.18147,POINT (3.18147 42.27068),Poliesportiu Municipal,23,171523,Roses,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,07/02/1996,
+DP,Das - Aeròdrom,A,42.38603,1.86639,POINT (1.86639 42.38603),Aeròdrom de la Cerdanya,1096,170617,Das,15,Cerdanya,17,Girona,1,XEMA,2,Operativa,22/05/2001,
+VN,Vilobí d'Onyar,A,41.88244,2.74262,POINT (2.74262 41.88244),Camps de Can Salvà,117,172333,Vilobí d'Onyar,34,Selva,17,Girona,1,XEMA,1,Desmantellada,10/11/1998,10/09/2024
+CS,Viladrau - centre,A,41.84502,2.3881,POINT (2.3881 41.84502),Mas del Torrent,777,172207,Viladrau,24,Osona,17,Girona,1,XEMA,1,Desmantellada,05/12/1995,08/06/2004
+J5,Pantà de Darnius - Boadella,A,42.34214,2.83425,POINT (2.83425 42.34214),Presa del Pantà de Darnius - Boadella,159,170600,Darnius,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,05/01/1996,
+XJ,Girona,A,41.98215,2.80552,POINT (2.80552 41.98215),Horts de Santa Eugènia,72,170792,Girona,20,Gironès,17,Girona,1,XEMA,2,Operativa,15/09/2010,
+CF,Lloret de Mar,A,41.72346,2.84282,POINT (2.84282 41.72346),Abocador municipal,63.3,170950,Lloret de Mar,34,Selva,17,Girona,1,XEMA,1,Desmantellada,05/02/1996,16/06/2003
+Y5,Navata,A,42.22792,2.86242,POINT (2.86242 42.22792),Can Tries,152,171117,Navata,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,26/08/2014,
+DN,Anglès,A,41.96093,2.6311,POINT (2.6311 41.96093),Poliesportiu municipal,151,170084,Anglès,34,Selva,17,Girona,1,XEMA,2,Operativa,10/05/2001,
+U2,Sant Pere Pescador,A,42.17716,3.0968,POINT (3.0968 42.17716),"Mas Blanc, Mas Fages 17",3,171788,Sant Pere Pescador,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,01/05/1989,
+DF,la Bisbal d'Empordà,A,41.97752,3.03551,POINT (3.03551 41.97752),Estació depuradora,30,170221,La Bisbal d'Empordà,10,Baix Empordà,17,Girona,1,XEMA,2,Operativa,25/03/1998,
+CG,Molló - Fabert,A,42.37718,2.41452,POINT (2.41452 42.37718),Veïnat de Fabert,1405,171077,Molló,31,Ripollès,17,Girona,1,XEMA,2,Operativa,06/06/1996,
+DC,Olot - pla de Baix,A,42.19144,2.48263,POINT (2.48263 42.19144),Heliport Mossos d'Esquadra,421.5,171143,Olot,19,Garrotxa,17,Girona,1,XEMA,1,Desmantellada,24/04/1998,21/07/2016
+CI,Sant Pau de Segúries,A,42.25835,2.36426,POINT (2.36426 42.25835),Estació meteorològica municipal,853,171772,Sant Pau de Segúries,31,Ripollès,17,Girona,1,XEMA,2,Operativa,24/11/1995,
+Z4,Ulldeter (2.364 m),A,42.42205,2.2524,POINT (2.2524 42.42205),Ulldeter,2364,171925,Setcases,31,Ripollès,17,Girona,1,XEMA,1,Desmantellada,08/11/2000,20/09/2011
+W9,la Vall d'en Bas,A,42.14557,2.4545,POINT (2.4545 42.14557),Escola Verntallat,461,172076,La Vall d'en Bas,19,Garrotxa,17,Girona,1,XEMA,2,Operativa,16/03/2000,
+UO,Fornells de la Selva,A,41.91461,2.82071,POINT (2.82071 41.91461),La Torre de Reset,97,170736,Fornells de la Selva,20,Gironès,17,Girona,1,XEMA,2,Operativa,10/11/1998,
+Z3,Malniu (2.229 m),A,42.46605,1.7785,POINT (1.7785 42.46605),Estany de Malniu,2229,170998,Meranges,15,Cerdanya,17,Girona,1,XEMA,2,Operativa,03/11/1999,
+YP,Palafrugell,A,41.90694,3.16073,POINT (3.16073 41.90694),Horts urbans,35,171175,Palafrugell,10,Baix Empordà,17,Girona,1,XEMA,2,Operativa,02/12/2021,
+UE,Torroella de Montgrí,A,42.02306,3.15719,POINT (3.15719 42.02306),la Feixa Gata,4,171997,Torroella de Montgrí,10,Baix Empordà,17,Girona,1,XEMA,2,Operativa,09/06/1999,
+XZ,Torroella de Fluvià,A,42.18138,3.06207,POINT (3.06207 42.18138),,7,171984,Torroella de Fluvià,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,08/04/2014,
+DM,Girona - Bombers,A,41.96012,2.80696,POINT (2.80696 41.96012),Parc de Bombers,90,170792,Girona,20,Gironès,17,Girona,1,XEMA,1,Desmantellada,10/05/2001,15/09/2010
+W1,Castelló d'Empúries,A,42.24726,3.09022,POINT (3.09022 42.24726),Can Garriga - Mas Bellesguard,5,170470,Castelló d'Empúries,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,14/03/2000,
+YB,Olot,A,42.18811,2.47094,POINT (2.47094 42.18811),Pla de Dalt,435,171143,Olot,19,Garrotxa,17,Girona,1,XEMA,2,Operativa,21/07/2016,
