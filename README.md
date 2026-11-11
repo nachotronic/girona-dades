@@ -14,7 +14,7 @@ Web de dades obertes sobre la província de Girona: habitatge, renda, població,
 | `scripts/actualizar.py` | Ejecuta las fuentes y escribe `data/estado.md` |
 | `data/raw/` | Descargas originales (no se suben al repositorio) |
 | `data/processed/` | Datos limpios, con código INE de municipio y sección censal |
-| `web/` | Web estática bilingüe (ca/es) para GitHub Pages |
+| `web/` | Web estática bilingüe (ca/es). `scripts/construir_web.py` genera `web/datos/municipios.json` y la Action **Publicar web** la sube a GitHub Pages |
 
 ## Plan
 
@@ -34,3 +34,10 @@ python scripts/actualizar.py xifra ine  # solo algunas
 ```
 
 Fuentes disponibles: `territorio`, `generalitat`, `ine`, `mitma`, `xifra`, `catastro`.
+
+## Ver la web en local
+
+```
+python scripts/construir_web.py
+cd web && python -m http.server 8000   # http://localhost:8000
+```

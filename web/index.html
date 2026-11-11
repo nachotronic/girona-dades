@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Girona en dades</title>
+<meta name="description" content="Dades obertes sobre habitatge i renda als 221 municipis de la província de Girona.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="cap">
+  <div class="cap-dins">
+    <div>
+      <p class="marca"><a href="./" data-t="marca">Girona en dades</a></p>
+    </div>
+    <nav class="idiomes" aria-label="Idioma">
+      <button type="button" data-lang="ca" aria-pressed="true">CA</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1 data-t="titol">Habitatge i renda a la província de Girona</h1>
+    <p class="entradeta" data-t="entradeta">Lloguers, compravendes, pisos turístics i renda de les llars, municipi a municipi, amb dades oficials que s'actualitzen cada setmana.</p>
+  </section>
+
+  <section aria-labelledby="h-prov">
+    <h2 id="h-prov" data-t="h_prov">La província en xifres</h2>
+    <div class="xifres" id="xifres"></div>
+  </section>
+
+  <section class="grafics" aria-labelledby="h-evol">
+    <h2 id="h-evol" data-t="h_evol">Com ha evolucionat</h2>
+    <div class="dos">
+      <figure class="grafic">
+        <figcaption><span data-t="g_lloguer">Lloguer mitjà mensual</span> <span class="unitat">€/mes</span></figcaption>
+        <div id="g-lloguer"></div>
+      </figure>
+      <figure class="grafic">
+        <figcaption><span data-t="g_compra">Compravendes d'habitatges</span> <span class="unitat" data-t="u_operacions">operacions per any</span></figcaption>
+        <div id="g-compra"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-mun">
+    <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
+    <p class="ajuda" data-t="ajuda_taula">Toca una capçalera per ordenar i una fila per veure la fitxa del municipi.</p>
+    <div class="filtres">
+      <label class="cerca"><span class="sr" data-t="cerca">Cerca un municipi</span>
+        <input type="search" id="cerca" autocomplete="off" data-tp="cerca_ph" placeholder="Cerca un municipi o comarca">
+      </label>
+      <span id="comptador" class="ajuda"></span>
+    </div>
+    <div class="taula-caixa">
+      <table id="taula">
+        <thead><tr></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="fitxa" class="fitxa" hidden aria-live="polite"></section>
+</main>
+
+<footer class="peu">
+  <div>
+    <h2 data-t="h_fonts">Fonts</h2>
+    <ul class="fonts">
+      <li><a href="https://analisi.transparenciacatalunya.cat/d/qww9-bvhh">Incasòl / Agència de l'Habitatge</a> · <span data-t="f_lloguer">lloguer mitjà a partir de les fiances</span></li>
+      <li><a href="https://apps.fomento.gob.es/BoletinOnline2/?nivel=2&amp;orden=34000000">Ministerio de Transportes</a> · <span data-t="f_compra">compravendes d'habitatges</span></li>
+      <li><a href="https://www.ine.es/dynt3/inebase/index.htm?padre=12385">INE, Atlas de distribución de renta</a> · <span data-t="f_renda">renda neta i índex de Gini</span></li>
+      <li><a href="https://analisi.transparenciacatalunya.cat/d/t2h3-cgys">Registre de Turisme de Catalunya</a> · <span data-t="f_hut">habitatges d'ús turístic</span></li>
+      <li><a href="https://www.catastro.hacienda.gob.es/INSPIRE/buildings/17/ES.SDGC.BU.atom_17.xml">Catastro</a> · <span data-t="f_cat">habitatges i any de construcció</span></li>
+      <li><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a> · <span data-t="f_xifra">població</span></li>
+    </ul>
+    <p class="ajuda"><span data-t="actualitzat">Dades generades el</span> <span id="data-gen"></span> · <a href="https://github.com/nachotronic/girona-dades" data-t="codi">Codi i dades a GitHub</a></p>
+  </div>
+</footer>
+
+<div id="tip" class="tip" role="status" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --fons: #fcfcfb;
+  --fons-2: #f3f2ef;
+  --vora: #e2e0da;
+  --text: #0b0b0b;
+  --text-2: #52514e;
+  --text-3: #75736e;
+  --serie-1: #2a78d6;   /* municipi / sèrie principal */
+  --serie-2: #eb6834;   /* província (comparació) */
+  --barra: #2a78d6;
+  --barra-suau: #b7d3f6;
+  --graella: #ebe9e4;
+  --puja: #b4361f;
+  --baixa: #16794a;
+  --enllac: #1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --fons: #1a1a19;
+    --fons-2: #232321;
+    --vora: #383835;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --text-3: #9a998f;
+    --serie-1: #3987e5;
+    --serie-2: #d95926;
+    --barra: #3987e5;
+    --barra-suau: #184f95;
+    --graella: #2c2c2a;
+    --puja: #f08a73;
+    --baixa: #5cc48f;
+    --enllac: #86b6ef;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --fons: #1a1a19;
+  --fons-2: #232321;
+  --vora: #383835;
+  --text: #f0efec;
+  --text-2: #c3c2b7;
+  --text-3: #9a998f;
+  --serie-1: #3987e5;
+  --serie-2: #d95926;
+  --barra: #3987e5;
+  --barra-suau: #184f95;
+  --graella: #2c2c2a;
+  --puja: #f08a73;
+  --baixa: #5cc48f;
+  --enllac: #86b6ef;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fons);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+a { color: var(--enllac); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.cap { border-bottom: 1px solid var(--vora); }
+.cap-dins, main, .peu > div { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+.cap-dins { display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+.marca { margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+.marca a { color: var(--text); text-decoration: none; }
+.idiomes { display: flex; gap: 4px; }
+.idiomes button {
+  font: inherit; font-size: 14px; padding: 4px 10px; border-radius: 6px;
+  border: 1px solid var(--vora); background: transparent; color: var(--text-2); cursor: pointer;
+}
+.idiomes button[aria-pressed="true"] { background: var(--text); color: var(--fons); border-color: var(--text); }
+
+.intro { padding: 40px 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 12px; max-width: 18em; }
+.entradeta { font-size: 18px; color: var(--text-2); max-width: 40em; margin: 0; }
+h2 { font-size: 22px; letter-spacing: -0.01em; margin: 48px 0 16px; }
+.ajuda { color: var(--text-3); font-size: 14px; margin: 0 0 12px; }
+
+.xifres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 860px) { .xifres { grid-template-columns: repeat(2, 1fr); } }
+.xifra { background: var(--fons-2); border-radius: 10px; padding: 16px; }
+.xifra .etiqueta { font-size: 14px; color: var(--text-2); margin: 0 0 6px; }
+.xifra .valor { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin: 0; line-height: 1.1; }
+.xifra .valor small { font-size: 15px; font-weight: 500; color: var(--text-2); }
+.xifra .nota { font-size: 13px; color: var(--text-3); margin: 6px 0 0; }
+.puja { color: var(--puja); }
+.baixa { color: var(--baixa); }
+
+.dos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px 32px; }
+.grafic { margin: 0; }
+.grafic figcaption { font-weight: 600; margin-bottom: 8px; }
+.grafic .unitat { font-weight: 400; color: var(--text-3); font-size: 14px; margin-left: 4px; }
+.grafic svg { display: block; width: 100%; height: auto; overflow: visible; }
+.grafic .eix text { fill: var(--text-3); font-size: 12px; }
+.grafic .graella line { stroke: var(--graella); }
+.grafic .base { stroke: var(--text-3); }
+.llegenda { display: flex; gap: 16px; font-size: 13px; color: var(--text-2); margin-top: 6px; flex-wrap: wrap; }
+.llegenda i { display: inline-block; width: 12px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+
+.filtres { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+.cerca input {
+  font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--vora);
+  background: var(--fons); color: var(--text); width: min(340px, 100%);
+}
+.filtres .ajuda { margin: 0; }
+.taula-caixa { overflow-x: auto; border: 1px solid var(--vora); border-radius: 10px; max-height: 70vh; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 8px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--vora); }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+thead th {
+  position: sticky; top: 0; background: var(--fons-2); font-weight: 600; color: var(--text-2);
+  cursor: pointer; user-select: none; vertical-align: bottom; white-space: normal; min-width: 90px;
+}
+thead th[aria-sort="ascending"]::after { content: " ▲"; font-size: 10px; }
+thead th[aria-sort="descending"]::after { content: " ▼"; font-size: 10px; }
+tbody tr { cursor: pointer; }
+tbody tr:hover, tbody tr:focus-visible { background: var(--fons-2); outline: none; }
+td.nom { font-weight: 600; }
+td .barra { display: inline-block; height: 6px; border-radius: 3px; background: var(--barra-suau); margin-right: 6px; vertical-align: middle; }
+td.buit { color: var(--text-3); }
+
+.fitxa { margin-top: 48px; padding: 24px; border: 1px solid var(--vora); border-radius: 12px; scroll-margin-top: 16px; }
+.fitxa h2 { margin-top: 0; }
+.fitxa .tanca { float: right; font: inherit; font-size: 14px; background: none; border: 1px solid var(--vora); color: var(--text-2); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.fitxa .sub { color: var(--text-2); margin: -8px 0 20px; }
+.fitxa .dos { margin-top: 24px; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); }
+
+.tip {
+  position: fixed; pointer-events: none; z-index: 10; background: var(--text); color: var(--fons);
+  padding: 6px 10px; border-radius: 6px; font-size: 13px; line-height: 1.4; max-width: 240px;
+}
+.tip b { font-weight: 600; }
+
+.peu { border-top: 1px solid var(--vora); margin-top: 64px; padding: 8px 0 40px; }
+.peu h2 { font-size: 16px; margin-top: 24px; }
+.fonts { padding-left: 18px; color: var(--text-2); font-size: 14px; }
+.fonts li { margin-bottom: 4px; }
+
+@media (max-width: 520px) {
+  .xifra { padding: 12px; }
+  .xifra .valor { font-size: 22px; }
+  .fitxa { padding: 16px; }
+}
