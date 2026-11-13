@@ -584,3 +584,20 @@ thead th { min-width: 0; }
 th, td { padding-left: 10px; padding-right: 10px; }
 @media (max-width: 900px) { th, td { padding-left: 7px; padding-right: 7px; } td .barra { width: auto; max-width: 24px; } }
 @media (min-width: 641px) and (max-width: 980px) and (orientation: portrait) { #mapa { height: calc(72vw + 90px); max-height: 680px; min-height: 0; } }
+/* Escritorio: el panel lateral mide lo mismo que el mapa (con su propio scroll), sin hueco bajo el mapa */
+@media (min-width: 981px) {
+  .mapa-graella { --alt-mapa: clamp(540px, 84vh, 780px); align-items: stretch; }
+  #mapa { height: var(--alt-mapa); min-height: 0; }
+  .mapa-panell { height: var(--alt-mapa); overflow-y: auto; gap: 12px; padding: 18px 22px; scrollbar-width: thin; scrollbar-color: var(--vora-2) transparent; overscroll-behavior: contain; }
+  .mapa-panell > * { flex-shrink: 0; }
+  .mapa-panell .mini-caixa { margin-top: 6px; }
+  .ranquing { gap: 14px; padding-top: 14px; }
+  .ranquing li { padding: 3px 0; }
+}
+@media (min-width: 1200px) {
+  .mapa-graella { grid-template-columns: minmax(0, 1fr) 400px; }
+  .ranquing { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .ranquing > * { min-width: 0; }
+  .ranquing li { font-size: 12.5px; }
+  .mapa-panell .ind-desc:empty { display: none; }
+}

@@ -8,7 +8,7 @@ const T = {
     nav_mapa: "Mapa", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 80 indicadors d'habitatge, renda, població, treball, salut, seguretat, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Més de 110 indicadors d'habitatge, renda, població, treball, salut, seguretat, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -56,6 +56,9 @@ const T = {
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
     k_lloguer: "Lloguer mitjà",
+    k_hab: "Habitants", n_hab: (v) => `${v} nascuts a l'estranger`, k_atur: "Atur (EPA)", n_atur: (p, e) => `${p} · Espanya, ${e}`,
+    k_ipc: "Inflació", n_ipc: (p, e) => `interanual, ${p} · Espanya, ${e}`, k_tur: "Nits d'hotel", n_tur: (v) => `${v} de turistes estrangers`,
+    mesos_curt: ["gen.", "febr.", "març", "abr.", "maig", "juny", "jul.", "ag.", "set.", "oct.", "nov.", "des."],
     k_compra: "Compravendes",
     k_renda: "Renda neta per persona",
     k_esforc: "Esforç del lloguer",
@@ -82,7 +85,7 @@ const T = {
     nav_mapa: "Mapa", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 80 indicadores de vivienda, renta, población, trabajo, salud, seguridad, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Más de 110 indicadores de vivienda, renta, población, trabajo, salud, seguridad, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -130,6 +133,9 @@ const T = {
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
     k_lloguer: "Alquiler medio",
+    k_hab: "Habitantes", n_hab: (v) => `${v} nacidos en el extranjero`, k_atur: "Paro (EPA)", n_atur: (p, e) => `${p} · España, ${e}`,
+    k_ipc: "Inflación", n_ipc: (p, e) => `interanual, ${p} · España, ${e}`, k_tur: "Noches de hotel", n_tur: (v) => `${v} de turistas extranjeros`,
+    mesos_curt: ["ene.", "feb.", "mar.", "abr.", "may.", "jun.", "jul.", "ago.", "sep.", "oct.", "nov.", "dic."],
     k_compra: "Compraventas",
     k_renda: "Renta neta por persona",
     k_esforc: "Esfuerzo del alquiler",
@@ -342,17 +348,22 @@ function variacio(o, a, b, colorea = false) {
 }
 
 function pintaProvincia() {
-  const p = D.provincia;
-  const ll = val(p.alquiler, "2025"), rh = mitjanaRendaLlar();
-  const esf = ll && rh ? (val(p.alquiler, "2024") * 12 / rh) * 100 : null;
-  document.getElementById("xifres").innerHTML = [
-    tile(`${t("k_lloguer")} 2025`, `${fmt(ll)} <small>€/mes</small>`, variacio(p.alquiler, "2025", "2024", true)),
-    tile(`${t("k_compra")} 2025`, fmt(val(p.compraventas, "2025")), variacio(p.compraventas, "2025", "2024")),
+  const p = D.provincia, P = D.prov || {};
+  const ll = val(p.alquiler, "2025");
+  const ultim = (sp, k) => { const s = sp && sp.series && sp.series[k]; return s && s.length ? s[s.length - 1] : null; };
+  const periode = (e) => { const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${t("mesos_curt")[+m[2] - 1]} ${m[1]}`; const q = /^(\d{4})T(\d)$/.exec(e); return q ? `${q[2]}T ${q[1]}` : e; };
+  // % de nacidos en el extranjero, ponderado por población
+  let se = 0, sn = 0; D.municipios.forEach((m) => { const v = m.x && m.x.nascuts_estr; if (v != null && m.poblacion) { se += v * m.poblacion; sn += m.poblacion; } });
+  const aG = ultim(P.paro, "gi"), aE = ultim(P.paro, "esp"), iG = ultim(P.ipc, "gi"), iE = ultim(P.ipc, "esp"), tE = ultim(P.turisme, "gi");
+  const tiles = [
+    tile(t("k_hab"), fmt(p.poblacion), sn ? t("n_hab", pct(se / sn, 0)) : ""),
+    aG ? tile(t("k_atur"), pct(aG[2], 1), t("n_atur", periode(aG[1]), pct(aE && aE[2], 1))) : "",
     tile(`${t("k_renda")} 2024`, `${fmt(val(p.renta_persona, "2024"))} <small>€</small>`, variacio(p.renta_persona, "2024", "2023")),
-    tile(`${t("k_esforc")} 2024`, pct(esf, 0), t("n_esforc")),
-    tile(t("k_hut"), fmt(p.hut), t("n_hut", fmt((p.hut / p.viviendas) * 100, 1))),
-    tile(t("k_antics"), pct((p.viv_antes_1980 / p.viviendas) * 100, 0), t("n_antics")),
-  ].join("");
+    iG ? tile(t("k_ipc"), pct(iG[2], 1, true), t("n_ipc", periode(iG[1]), pct(iE && iE[2], 1, true))) : "",
+    tile(`${t("k_lloguer")} 2025`, `${fmt(ll)} <small>€/mes</small>`, variacio(p.alquiler, "2025", "2024", true)),
+    P.pernoct_total ? tile(`${t("k_tur")} ${P.pernoct_total.any}`, `${fmt(P.pernoct_total.v / 1e6, 1)} <small>M</small>`, tE ? t("n_tur", pct(tE[2], 0)) : "") : "",
+  ];
+  document.getElementById("xifres").innerHTML = tiles.join("");
 }
 
 function mitjanaRendaLlar() {

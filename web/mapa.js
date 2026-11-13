@@ -202,7 +202,7 @@
 
   // Minigráfica: municipio (verde) frente a la provincia (gris)
   function minigrafic(series) {
-    const W = 270, H = 96, mg = { t: 10, r: 6, b: 18, l: 6 };
+    const W = 360, H = 84, mg = { t: 10, r: 6, b: 18, l: 6 };
     const anys = [...new Set(series.flatMap((x) => Object.keys(x.d)))].sort();
     const vals = series.flatMap((x) => Object.values(x.d));
     if (anys.length < 2 || !vals.length) return "";
