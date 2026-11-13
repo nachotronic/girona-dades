@@ -3,6 +3,7 @@
 // ---------- Textos ----------
 const T = {
   ca: {
+    cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
     nav_mapa: "Mapa", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Habitatge · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
@@ -75,6 +76,7 @@ const T = {
     sub: (c, p) => `${c} · ${p} habitants`,
   },
   es: {
+    cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
     nav_mapa: "Mapa", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Vivienda · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",

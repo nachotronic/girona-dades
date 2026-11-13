@@ -195,26 +195,36 @@
     el.querySelector("button").addEventListener("click", () => obreFitxa(props.ine, true));
   }
 
+  const normal = (s) => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let consulta = "";
+
   function omplirSelector() {
     const cont = document.getElementById("indicadors");
-    const temes = TEMES.map((tm) => `<button type="button" class="tema" data-tema="${tm.id}" aria-pressed="${tm.id === tema}">${tm[LANG]}</button>`).join("");
-    const xips = IND.filter((i) => i.tema === tema).map((i) => {
-      const ok = disponible(i, nivell);
-      return `<button type="button" class="xip" role="radio" data-id="${i.id}" aria-checked="${i.id === ind.id}" ${ok ? "" : "disabled"} title="${nomInd(i)}">${nomInd(i, true)}</button>`;
+    const q = normal(consulta.trim());
+    const temes = TEMES.map((tm) => `<button type="button" class="tema" data-tema="${tm.id}" aria-pressed="${!q && tm.id === tema}">${tm[LANG]}</button>`).join("");
+    const llista = q
+      ? IND.filter((i) => normal([...i.ca, ...i.es].join(" ")).includes(q))
+      : IND.filter((i) => i.tema === tema);
+    const xips = llista.map((i) => {
+      const ok = disponible(i, nivell) || (q && (disponible(i, "mun") || disponible(i, "sec")));
+      const pref = q ? `<span class="xip-tema">${TEMES.find((tm) => tm.id === i.tema)[LANG]}</span>` : "";
+      return `<button type="button" class="xip" role="radio" data-id="${i.id}" aria-checked="${i.id === ind.id}" ${ok ? "" : "disabled"} title="${nomInd(i)}">${pref}${nomInd(i, true)}</button>`;
     }).join("");
-    cont.innerHTML = `<div class="temes" role="group">${temes}</div><div class="xips-fila">${xips}</div>`;
+    cont.innerHTML = `<div class="temes" role="group">${temes}</div><div class="xips-fila">${xips || `<p class="cap-ind">${t("cap_ind")}</p>`}</div>`;
     cont.querySelectorAll(".tema").forEach((b) => b.addEventListener("click", () => {
-      tema = b.dataset.tema;
+      tema = b.dataset.tema; consulta = ""; document.getElementById("cerca-ind").value = "";
       const prim = IND.find((i) => i.tema === tema && disponible(i, nivell)) || IND.find((i) => i.tema === tema);
-      if (!disponible(prim, nivell)) nivell = disponible(prim, "mun") ? "mun" : "sec";
-      ind = prim; fixat = null;
-      omplirSelector(); botonsNivell(); pinta();
+      tria(prim);
     }));
-    cont.querySelectorAll(".xip").forEach((b) => b.addEventListener("click", () => {
-      ind = IND.find((i) => i.id === b.dataset.id);
-      cont.querySelectorAll(".xip").forEach((x) => x.setAttribute("aria-checked", String(x === b)));
-      botonsNivell(); pinta();
-    }));
+    cont.querySelectorAll(".xip").forEach((b) => b.addEventListener("click", () => tria(IND.find((i) => i.id === b.dataset.id))));
+  }
+
+  // Selecciona un indicador; si no existe al nivel actual, cambia de nivel
+  async function tria(i) {
+    ind = i; tema = i.tema;
+    if (!disponible(i, nivell)) { nivell = disponible(i, "mun") ? "mun" : "sec"; fixat = null; }
+    if (nivell === "sec") await carregaSeccions();
+    omplirSelector(); botonsNivell(); pinta();
   }
 
   function botonsNivell() {
@@ -224,8 +234,25 @@
     });
   }
 
-  function canviaNivell(n) {
+  let promSeccions = null;
+  function carregaSeccions() {
+    if (!promSeccions) {
+      document.getElementById("mapa").classList.add("carregant");
+      promSeccions = Promise.all([
+        fetch("datos/seccions.geojson").then((r) => r.json()),
+        fetch("datos/seccions.json").then((r) => r.json()),
+      ]).then(([gs, sec]) => {
+        geoSec = gs; SEC = sec;
+        geoSec.features.forEach((f, i) => { f.id = i; });
+        document.getElementById("mapa").classList.remove("carregant");
+      });
+    }
+    return promSeccions;
+  }
+
+  async function canviaNivell(n) {
     if (n === nivell || !disponible(ind, n)) return;
+    if (n === "sec") await carregaSeccions();
     nivell = n; fixat = null; omplirSelector(); botonsNivell(); pinta();
   }
 
@@ -253,17 +280,54 @@
   function encaixa(ine) {
     const f = geoMun.features.find((x) => x.properties.ine === ine);
     if (!f) return;
-    mapa.fitBounds(caixa(f.geometry.coordinates), { padding: 40, maxZoom: 13.5, duration: 800 });
+    mapa.fitBounds(caixa(f.geometry.coordinates), { padding: 60, maxZoom: nivell === "sec" ? 13.5 : 9.6, duration: 800 });
     mapa.getSource("seleccio").setData({ type: "FeatureCollection", features: [f] });
   }
 
-  window.mapaMunicipi = (ine) => {
+  window.mapaMunicipi = async (ine) => {
     if (!mapa) return;
     if (!disponible(ind, "sec")) { ind = IND.find((i) => i.id === "renda"); tema = "ren"; }
+    await carregaSeccions();
     nivell = "sec"; omplirSelector(); botonsNivell(); pinta();
     document.getElementById("s-mapa").scrollIntoView({ behavior: "smooth", block: "start" });
     setTimeout(() => encaixa(ine), 400);
   };
+
+  // Buscador de municipios sobre el mapa
+  function cercador() {
+    const inp = document.getElementById("cerca-mapa"), ll = document.getElementById("cerca-mapa-llista");
+    const caixaC = inp.closest(".cerca-mapa");
+    let res = [], act = -1;
+    const tanca = () => { ll.hidden = true; caixaC.setAttribute("aria-expanded", "false"); act = -1; };
+    const pinta_ = () => {
+      ll.innerHTML = res.map((m, i) => `<li role="option" id="cm-${i}" aria-selected="${i === act}" data-ine="${m.ine}"><b>${m.nom}</b><span>${m.comarca}</span></li>`).join("");
+      ll.hidden = !res.length; caixaC.setAttribute("aria-expanded", String(!!res.length));
+      if (act >= 0) inp.setAttribute("aria-activedescendant", `cm-${act}`); else inp.removeAttribute("aria-activedescendant");
+      ll.querySelectorAll("li").forEach((li) => li.addEventListener("mousedown", (e) => { e.preventDefault(); tria_(li.dataset.ine); }));
+    };
+    const tria_ = (ine) => {
+      const m = munPerIne[ine]; if (!m) return;
+      inp.value = m.nom; tanca(); inp.blur();
+      const f = geoMun.features.find((x) => x.properties.ine === ine);
+      if (nivell === "mun" && f) { fixat = f.properties; info(fixat); }
+      encaixa(ine);
+    };
+    inp.addEventListener("input", () => {
+      const q = normal(inp.value.trim());
+      res = !q ? [] : D.municipios.filter((m) => normal(m.nom).includes(q))
+        .sort((a, b) => (normal(a.nom).startsWith(q) ? 0 : 1) - (normal(b.nom).startsWith(q) ? 0 : 1) || (b.poblacion || 0) - (a.poblacion || 0)).slice(0, 8);
+      act = res.length ? 0 : -1; pinta_();
+    });
+    inp.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" && res.length) { act = (act + 1) % res.length; pinta_(); e.preventDefault(); }
+      else if (e.key === "ArrowUp" && res.length) { act = (act - 1 + res.length) % res.length; pinta_(); e.preventDefault(); }
+      else if (e.key === "Enter" && act >= 0) { tria_(res[act].ine); e.preventDefault(); }
+      else if (e.key === "Escape") tanca();
+    });
+    inp.addEventListener("blur", () => setTimeout(tanca, 100));
+    const ci = document.getElementById("cerca-ind");
+    ci.addEventListener("input", () => { consulta = ci.value; omplirSelector(); });
+  }
 
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
 
@@ -280,14 +344,8 @@
     if (typeof maplibregl === "undefined") return;
     ind = IND.find((i) => i.id === "renda");
     D.municipios.forEach((m) => { munPerIne[m.ine] = m; });
-    const [gm, gs, sec] = await Promise.all([
-      fetch("datos/municipis.geojson").then((r) => r.json()),
-      fetch("datos/seccions.geojson").then((r) => r.json()),
-      fetch("datos/seccions.json").then((r) => r.json()),
-    ]);
-    geoMun = gm; geoSec = gs; SEC = sec;
+    geoMun = await fetch("datos/municipis.geojson").then((r) => r.json());
     geoMun.features.forEach((f, i) => { f.id = i; });
-    geoSec.features.forEach((f, i) => { f.id = i; });
 
     // Sin mapa base: solo el territorio, sobre el color del papel
     const estil = { version: 8, sources: {}, layers: [{ id: "fons", type: "background", paint: { "background-color": css("--paper") || "#fffefb" } }] };
@@ -347,6 +405,6 @@
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { colorsBase(); pinta(); });
     let amplePrev = innerWidth;
     addEventListener("resize", () => { if (Math.abs(innerWidth - amplePrev) > 40) { amplePrev = innerWidth; llegenda(); } });
-    omplirSelector(); botonsNivell();
+    omplirSelector(); botonsNivell(); cercador();
   };
 })();

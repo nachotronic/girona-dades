@@ -12,7 +12,7 @@ import requests
 
 SALIDA = pathlib.Path("exploracion")
 MUESTRAS = SALIDA / "muestras"
-LIMITE = 40_000
+LIMITE = 150_000
 UA = {"User-Agent": "girona-dades/0.1 (+https://github.com/nachotronic/girona-dades)"}
 
 SOCRATA = "https://analisi.transparenciacatalunya.cat/api/catalog/v1"
@@ -24,18 +24,10 @@ TERMINOS_SOCRATA = [
     "fets penals", "renda garantida", "establiments turístics",
 ]
 
-CANDIDATAS = {
-    "ogc_colecciones": "https://www.ine.es/geoserver/ogc/features/v1/collections?f=json",
-    "wfs_secciones_caps": "https://servicios.ine.es/arcgis/services/WFS_INE_SECCIONES_G01/MapServer/WFSServer?service=WFS&request=GetCapabilities",
-    "zip_seccionado_2024": "https://www.ine.es/prodyser/cartografia/seccionado_2024.zip",
-    "zip_seccionado_2025": "https://www.ine.es/prodyser/cartografia/seccionado_2025.zip",
-    "zip_secciones_2024": "https://www.ine.es/prodyser/cartografia/secciones_2024.zip",
-    "pagina_cartografia": "https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1259952026632&p=1259952026632&pagename=ProductosYServicios%2FPYSLayout",
-    "icgc_municipis": "https://datacloud.icgc.cat/datacloud/divisions-administratives/json_unzip/divisions-administratives-v2r1-municipis-50000-20250730.json",
-}
-for t in []:
+CANDIDATAS = {}
+for t in ["càrrecs electes", "composició plens ajuntaments", "alcaldes", "regidors", "eleccions municipals resultats", "ens locals dades generals"]:
     clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
-    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 30})
+    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 8})
 
 
 def extension(tipo: str) -> str:
