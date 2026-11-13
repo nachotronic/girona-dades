@@ -1,0 +1,2090 @@
+[
+{
+"id": "f271",
+"nom": "Superfície",
+"u": "km²",
+"any": "2025",
+"mun": "39.12",
+"com": "575.59",
+"cat": "32107.98"
+},
+{
+"id": "f258",
+"nom": "Altitud",
+"u": "m",
+"any": "2013",
+"mun": "70",
+"com": "_",
+"cat": "_"
+},
+{
+"id": "f328",
+"nom": "Longitud",
+"u": "º",
+"any": "2013",
+"mun": "2.821044",
+"com": "_",
+"cat": "_"
+},
+{
+"id": "f329",
+"nom": "Latitud",
+"u": "º",
+"any": "2013",
+"mun": "41.983797",
+"com": "_",
+"cat": "_"
+},
+{
+"id": "f259",
+"nom": "Coordenades UTM x",
+"u": "m",
+"any": "2013",
+"mun": "485175",
+"com": "_",
+"cat": "_"
+},
+{
+"id": "f260",
+"nom": "Coordenades UTM y",
+"u": "m",
+"any": "2013",
+"mun": "4648075",
+"com": "_",
+"cat": "_"
+},
+{
+"id": "f261",
+"nom": "Superfície",
+"u": "km²",
+"any": "2025",
+"mun": "39.12",
+"com": "575.59",
+"cat": "32107.98"
+},
+{
+"id": "f262",
+"nom": "Densitat",
+"u": "hab./km²",
+"any": "2025",
+"mun": "2769.7",
+"com": "363.0",
+"cat": "253.0"
+},
+{
+"id": "f318",
+"nom": "Homes",
+"u": "",
+"any": "2025",
+"mun": "52498",
+"com": "104037",
+"cat": "4006834"
+},
+{
+"id": "f320",
+"nom": "Dones",
+"u": "",
+"any": "2025",
+"mun": "55854",
+"com": "104930",
+"cat": "4117292"
+},
+{
+"id": "f321",
+"nom": "Població",
+"u": "",
+"any": "2025",
+"mun": "108352",
+"com": "208967",
+"cat": "8124126"
+},
+{
+"id": "f167",
+"nom": "Població de 0 a 14 anys",
+"u": "",
+"any": "2025",
+"mun": "15312",
+"com": "32611",
+"cat": "1079859"
+},
+{
+"id": "f27",
+"nom": "Població de 15 a 64 anys",
+"u": "",
+"any": "2025",
+"mun": "74422",
+"com": "141983",
+"cat": "5442280"
+},
+{
+"id": "f28",
+"nom": "Població de 65 a 84 anys",
+"u": "",
+"any": "2025",
+"mun": "15920",
+"com": "29493",
+"cat": "1356476"
+},
+{
+"id": "f29",
+"nom": "Població de 85 anys i més",
+"u": "",
+"any": "2025",
+"mun": "2698",
+"com": "4880",
+"cat": "245511"
+},
+{
+"id": "f171",
+"nom": "Població",
+"u": "",
+"any": "2025",
+"mun": "108352",
+"com": "208967",
+"cat": "8124126"
+},
+{
+"id": "f176",
+"nom": "Homes de 0 a 14 anys",
+"u": "",
+"any": "2025",
+"mun": "7851",
+"com": "16805",
+"cat": "555498"
+},
+{
+"id": "f33",
+"nom": "Homes de 15 a 64 anys",
+"u": "",
+"any": "2025",
+"mun": "36899",
+"com": "72282",
+"cat": "2760614"
+},
+{
+"id": "f34",
+"nom": "Homes de 65 a 84 anys",
+"u": "",
+"any": "2025",
+"mun": "6907",
+"com": "13370",
+"cat": "608582"
+},
+{
+"id": "f35",
+"nom": "Homes de 85 anys i més",
+"u": "",
+"any": "2025",
+"mun": "841",
+"com": "1580",
+"cat": "82140"
+},
+{
+"id": "f36",
+"nom": "Homes",
+"u": "",
+"any": "2025",
+"mun": "52498",
+"com": "104037",
+"cat": "4006834"
+},
+{
+"id": "f38",
+"nom": "Dones de 0 a 14 anys",
+"u": "",
+"any": "2025",
+"mun": "7461",
+"com": "15806",
+"cat": "524361"
+},
+{
+"id": "f39",
+"nom": "Dones de 15 a 64 anys",
+"u": "",
+"any": "2025",
+"mun": "37523",
+"com": "69701",
+"cat": "2681666"
+},
+{
+"id": "f40",
+"nom": "Dones de 65 a 84 anys",
+"u": "",
+"any": "2025",
+"mun": "9013",
+"com": "16123",
+"cat": "747894"
+},
+{
+"id": "f41",
+"nom": "Dones de 85 anys i més",
+"u": "",
+"any": "2025",
+"mun": "1857",
+"com": "3300",
+"cat": "163371"
+},
+{
+"id": "f42",
+"nom": "Dones",
+"u": "",
+"any": "2025",
+"mun": "55854",
+"com": "104930",
+"cat": "4117292"
+},
+{
+"id": "f69",
+"nom": "Població nascuda a Catalunya",
+"u": "",
+"any": "2025",
+"mun": "65169",
+"com": "131655",
+"cat": "4987842"
+},
+{
+"id": "f72",
+"nom": "Població nascuda a la resta d'Espanya",
+"u": "",
+"any": "2025",
+"mun": "11265",
+"com": "19929",
+"cat": "1097269"
+},
+{
+"id": "f73",
+"nom": "Població nascuda a l'estranger",
+"u": "",
+"any": "2025",
+"mun": "31918",
+"com": "57383",
+"cat": "2039015"
+},
+{
+"id": "f74",
+"nom": "Població",
+"u": "",
+"any": "2025",
+"mun": "108352",
+"com": "208967",
+"cat": "8124126"
+},
+{
+"id": "f183",
+"nom": "Població amb nacionalitat espanyola",
+"u": "",
+"any": "2025",
+"mun": "84599",
+"com": "164393",
+"cat": "6601307"
+},
+{
+"id": "f184",
+"nom": "Població amb nacionalitat estrangera",
+"u": "",
+"any": "2025",
+"mun": "23753",
+"com": "44574",
+"cat": "1522819"
+},
+{
+"id": "f263",
+"nom": "Població",
+"u": "",
+"any": "2025",
+"mun": "108352",
+"com": "208967",
+"cat": "8124126"
+},
+{
+"id": "f178",
+"nom": "Homes amb nacionalitat espanyola",
+"u": "",
+"any": "2025",
+"mun": "39932",
+"com": "79802",
+"cat": "3210979"
+},
+{
+"id": "f77",
+"nom": "Homes amb nacionalitat estrangera",
+"u": "",
+"any": "2025",
+"mun": "12566",
+"com": "24235",
+"cat": "795855"
+},
+{
+"id": "f264",
+"nom": "Homes",
+"u": "",
+"any": "2025",
+"mun": "52498",
+"com": "104037",
+"cat": "4006834"
+},
+{
+"id": "f82",
+"nom": "Dones amb nacionalitat espanyola",
+"u": "",
+"any": "2025",
+"mun": "44667",
+"com": "84591",
+"cat": "3390328"
+},
+{
+"id": "f83",
+"nom": "Dones amb nacionalitat estrangera",
+"u": "",
+"any": "2025",
+"mun": "11187",
+"com": "20339",
+"cat": "726964"
+},
+{
+"id": "f265",
+"nom": "Dones",
+"u": "",
+"any": "2025",
+"mun": "55854",
+"com": "104930",
+"cat": "4117292"
+},
+{
+"id": "f334",
+"nom": "Homes residents a l'estranger",
+"u": "",
+"any": "2026",
+"mun": "3801",
+"com": "5931",
+"cat": "218308"
+},
+{
+"id": "f335",
+"nom": "Dones residents a l'estranger",
+"u": "",
+"any": "2026",
+"mun": "3551",
+"com": "5563",
+"cat": "209115"
+},
+{
+"id": "f336",
+"nom": "Població resident a l'estranger",
+"u": "",
+"any": "2026",
+"mun": "7352",
+"com": "11494",
+"cat": "427423"
+},
+{
+"id": "f341",
+"nom": "Població resident",
+"u": "",
+"any": "2024",
+"mun": "106476",
+"com": "205573",
+"cat": "8012231"
+},
+{
+"id": "f342",
+"nom": "Població estacional ETCA",
+"u": "",
+"any": "2024",
+"mun": "13768",
+"com": "9784",
+"cat": "_"
+},
+{
+"id": "f343",
+"nom": "Població ETCA",
+"u": "",
+"any": "2024",
+"mun": "120244",
+"com": "215357",
+"cat": "_"
+},
+{
+"id": "f344",
+"nom": "Pob. ETCA / pob. resident",
+"u": "%",
+"any": "2024",
+"mun": "112.9",
+"com": "104.8",
+"cat": "_"
+},
+{
+"id": "f380",
+"nom": "Alumnes residents (edat escolar)",
+"u": "",
+"any": "Curs 2024/25",
+"mun": "17085",
+"com": "35545",
+"cat": "1223585"
+},
+{
+"id": "f381",
+"nom": "Alumnes residents que estudien al mateix municipi",
+"u": "%",
+"any": "Curs 2024/25",
+"mun": "93.1",
+"com": "81.1",
+"cat": "81.3"
+},
+{
+"id": "f185",
+"nom": "Naixements. Nens",
+"u": "",
+"any": "2025 (p)",
+"mun": "446",
+"com": "850",
+"cat": "28019"
+},
+{
+"id": "f186",
+"nom": "Naixements. Nenes",
+"u": "",
+"any": "2025 (p)",
+"mun": "420",
+"com": "795",
+"cat": "26230"
+},
+{
+"id": "f187",
+"nom": "Naixements",
+"u": "",
+"any": "2025 (p)",
+"mun": "866",
+"com": "1645",
+"cat": "54249"
+},
+{
+"id": "f181",
+"nom": "Defuncions. Homes",
+"u": "",
+"any": "2024",
+"mun": "355",
+"com": "709",
+"cat": "33611"
+},
+{
+"id": "f182",
+"nom": "Defuncions. Dones",
+"u": "",
+"any": "2024",
+"mun": "375",
+"com": "686",
+"cat": "33913"
+},
+{
+"id": "f188",
+"nom": "Defuncions",
+"u": "",
+"any": "2024",
+"mun": "730",
+"com": "1395",
+"cat": "67524"
+},
+{
+"id": "f179",
+"nom": "Matrimonis",
+"u": "",
+"any": "2024",
+"mun": "410",
+"com": "841",
+"cat": "27836"
+},
+{
+"id": "f98",
+"nom": "Llars amb una persona",
+"u": "",
+"any": "2021",
+"mun": "10524",
+"com": "16842",
+"cat": "762624"
+},
+{
+"id": "f99",
+"nom": "Llars amb dues persones",
+"u": "",
+"any": "2021",
+"mun": "10737",
+"com": "19125",
+"cat": "871499"
+},
+{
+"id": "f100",
+"nom": "Llars amb tres persones",
+"u": "",
+"any": "2021",
+"mun": "7569",
+"com": "14490",
+"cat": "622581"
+},
+{
+"id": "f101",
+"nom": "Llars amb quatre persones",
+"u": "",
+"any": "2021",
+"mun": "6222",
+"com": "12849",
+"cat": "500357"
+},
+{
+"id": "f405",
+"nom": "Llars amb cinc persones i més",
+"u": "",
+"any": "2021",
+"mun": "3663",
+"com": "7800",
+"cat": "232296"
+},
+{
+"id": "f107",
+"nom": "Llars",
+"u": "",
+"any": "2021",
+"mun": "38709",
+"com": "71103",
+"cat": "2989357"
+},
+{
+"id": "f109",
+"nom": "Llars d'una persona",
+"u": "",
+"any": "2021",
+"mun": "10524",
+"com": "16842",
+"cat": "762624"
+},
+{
+"id": "f110",
+"nom": "Llars de dues per. o més (sense nucli)",
+"u": "",
+"any": "2021",
+"mun": "2403",
+"com": "4149",
+"cat": "159150"
+},
+{
+"id": "f111",
+"nom": "Llars de parelles sense fills",
+"u": "",
+"any": "2021",
+"mun": "6810",
+"com": "12534",
+"cat": "597161"
+},
+{
+"id": "f112",
+"nom": "Llars de parelles amb fills",
+"u": "",
+"any": "2021",
+"mun": "11697",
+"com": "24435",
+"cat": "965843"
+},
+{
+"id": "f113",
+"nom": "Llars monoparentals",
+"u": "",
+"any": "2021",
+"mun": "6222",
+"com": "10884",
+"cat": "430471"
+},
+{
+"id": "f114",
+"nom": "Llars amb dos nuclis o més",
+"u": "",
+"any": "2021",
+"mun": "1056",
+"com": "2268",
+"cat": "74108"
+},
+{
+"id": "f115",
+"nom": "Llars",
+"u": "",
+"any": "2021",
+"mun": "38712",
+"com": "71103",
+"cat": "2989357"
+},
+{
+"id": "f322",
+"nom": "Migracions (saldo) amb Catalunya",
+"u": "",
+"any": "2024",
+"mun": "-287",
+"com": "-13",
+"cat": "_"
+},
+{
+"id": "f323",
+"nom": "Migracions (saldo) amb Espanya",
+"u": "",
+"any": "2024",
+"mun": "-15",
+"com": "-75",
+"cat": "-6437"
+},
+{
+"id": "f324",
+"nom": "Saldo migratori intern",
+"u": "",
+"any": "2024",
+"mun": "-302",
+"com": "-88",
+"cat": "-6437"
+},
+{
+"id": "f372",
+"nom": "Immigracions externes",
+"u": "",
+"any": "2024",
+"mun": "4312",
+"com": "6689",
+"cat": "276046"
+},
+{
+"id": "f373",
+"nom": "Emigracions externes",
+"u": "",
+"any": "2024",
+"mun": "2595",
+"com": "3858",
+"cat": "147016"
+},
+{
+"id": "f314",
+"nom": "Immigracions de la resta de la UE",
+"u": "",
+"any": "2024",
+"mun": "507",
+"com": "854",
+"cat": "39385"
+},
+{
+"id": "f316",
+"nom": "Immigracions de la resta del món",
+"u": "",
+"any": "2024",
+"mun": "3805",
+"com": "5835",
+"cat": "236661"
+},
+{
+"id": "f317",
+"nom": "Immigracions externes",
+"u": "",
+"any": "2024",
+"mun": "4312",
+"com": "6689",
+"cat": "276046"
+},
+{
+"id": "f330",
+"nom": "Taxa bruta de natalitat",
+"u": "",
+"any": "2025 (p)",
+"mun": "8.06",
+"com": "7.87",
+"cat": "6.65"
+},
+{
+"id": "f331",
+"nom": "Taxa bruta de mortalitat",
+"u": "",
+"any": "2024",
+"mun": "6.80",
+"com": "6.73",
+"cat": "8.37"
+},
+{
+"id": "f54",
+"nom": "Creixement natural",
+"u": "",
+"any": "2024",
+"mun": "1.84",
+"com": "1.59",
+"cat": "-1.70"
+},
+{
+"id": "f55",
+"nom": "Creixement migratori",
+"u": "",
+"any": "2024",
+"mun": "13.17",
+"com": "13.24",
+"cat": "15.19"
+},
+{
+"id": "f53",
+"nom": "Creixement total de la població",
+"u": "",
+"any": "2024",
+"mun": "17.47",
+"com": "16.38",
+"cat": "13.87"
+},
+{
+"id": "f91",
+"nom": "Població que entén català",
+"u": "",
+"any": "2011",
+"mun": "89279",
+"com": "167810",
+"cat": "6949344"
+},
+{
+"id": "f92",
+"nom": "Població que sap parlar català",
+"u": "",
+"any": "2011",
+"mun": "74991",
+"com": "141119",
+"cat": "5345484"
+},
+{
+"id": "f93",
+"nom": "Població que sap llegir català",
+"u": "",
+"any": "2011",
+"mun": "78324",
+"com": "145905",
+"cat": "5750348"
+},
+{
+"id": "f94",
+"nom": "Població que sap escriure català",
+"u": "",
+"any": "2011",
+"mun": "61843",
+"com": "115264",
+"cat": "4069219"
+},
+{
+"id": "f95",
+"nom": "Població que no entén català",
+"u": "",
+"any": "2011",
+"mun": "4067",
+"com": "8645",
+"cat": "356728"
+},
+{
+"id": "f96",
+"nom": "Població de 2 anys i més",
+"u": "",
+"any": "2011",
+"mun": "93346",
+"com": "176456",
+"cat": "7306072"
+},
+{
+"id": "f293",
+"nom": "Pavellons",
+"u": "",
+"any": "2024",
+"mun": "18",
+"com": "50",
+"cat": "1032"
+},
+{
+"id": "f294",
+"nom": "Pistes poliesportives",
+"u": "",
+"any": "2024",
+"mun": "132",
+"com": "257",
+"cat": "8414"
+},
+{
+"id": "f295",
+"nom": "Camps poliesportius",
+"u": "",
+"any": "2024",
+"mun": "37",
+"com": "93",
+"cat": "2280"
+},
+{
+"id": "f296",
+"nom": "Sales esportives",
+"u": "",
+"any": "2024",
+"mun": "144",
+"com": "241",
+"cat": "9360"
+},
+{
+"id": "f301",
+"nom": "Piscines cobertes",
+"u": "",
+"any": "2024",
+"mun": "11",
+"com": "17",
+"cat": "1107"
+},
+{
+"id": "f302",
+"nom": "Pistes d'atletisme",
+"u": "",
+"any": "2024",
+"mun": "9",
+"com": "9",
+"cat": "436"
+},
+{
+"id": "f299",
+"nom": "Altres espais esportius",
+"u": "",
+"any": "2024",
+"mun": "248",
+"com": "650",
+"cat": "29479"
+},
+{
+"id": "f300",
+"nom": "Espais esportius",
+"u": "",
+"any": "2024",
+"mun": "599",
+"com": "1317",
+"cat": "52108"
+},
+{
+"id": "f386",
+"nom": "Educació primària o inferior",
+"u": "",
+"any": "2024",
+"mun": "11.3",
+"com": "13.8",
+"cat": "12.8"
+},
+{
+"id": "f387",
+"nom": "Primera etapa d’educació secundària",
+"u": "",
+"any": "2024",
+"mun": "24.4",
+"com": "27.8",
+"cat": "27.2"
+},
+{
+"id": "f388",
+"nom": "Segona etapa d’educació secundària",
+"u": "",
+"any": "2024",
+"mun": "25.1",
+"com": "24.2",
+"cat": "23.3"
+},
+{
+"id": "f389",
+"nom": "Educació superior",
+"u": "",
+"any": "2024",
+"mun": "39.1",
+"com": "34.3",
+"cat": "36.7"
+},
+{
+"id": "f266",
+"nom": "Electors (Elec. municipals)",
+"u": "",
+"any": "2023",
+"mun": "68515",
+"com": "130299",
+"cat": "5489975"
+},
+{
+"id": "f149",
+"nom": "Participació (Elec. municipals)",
+"u": "%",
+"any": "2023",
+"mun": "50.0",
+"com": "53.3",
+"cat": "54.8"
+},
+{
+"id": "f267",
+"nom": "Electors (Elec. Parlament Catalunya)",
+"u": "",
+"any": "2024",
+"mun": "68486",
+"com": "130112",
+"cat": "5754952"
+},
+{
+"id": "f254",
+"nom": "Participació (Elec. Parlament Catalunya)",
+"u": "%",
+"any": "2024",
+"mun": "58.4",
+"com": "58.8",
+"cat": "54.8"
+},
+{
+"id": "f268",
+"nom": "Electors (Elec. Congrés)",
+"u": "",
+"any": "2023",
+"mun": "67444",
+"com": "128148",
+"cat": "5703784"
+},
+{
+"id": "f255",
+"nom": "Participació (Elec. Congrés)",
+"u": "%",
+"any": "2023",
+"mun": "61.9",
+"com": "62.4",
+"cat": "62.1"
+},
+{
+"id": "f256",
+"nom": "Participació (Elec. Parlament Europeu)",
+"u": "%",
+"any": "2024",
+"mun": "42.7",
+"com": "41.7",
+"cat": "41.3"
+},
+{
+"id": "f269",
+"nom": "Electors (Elec. Parlament Europeu)",
+"u": "",
+"any": "2024",
+"mun": "69844",
+"com": "132580",
+"cat": "5807185"
+},
+{
+"id": "f221",
+"nom": "Població ocupada",
+"u": "",
+"any": "2024",
+"mun": "48081",
+"com": "92624",
+"cat": "3498248"
+},
+{
+"id": "f222",
+"nom": "Població desocupada",
+"u": "",
+"any": "2024",
+"mun": "4249",
+"com": "8090",
+"cat": "330516"
+},
+{
+"id": "f223",
+"nom": "Població activa",
+"u": "",
+"any": "2024",
+"mun": "52330",
+"com": "100714",
+"cat": "3828764"
+},
+{
+"id": "f60",
+"nom": "Població inactiva",
+"u": "",
+"any": "2024",
+"mun": "37252",
+"com": "69038",
+"cat": "2993468"
+},
+{
+"id": "f224",
+"nom": "Població de 16 anys i més",
+"u": "",
+"any": "2024",
+"mun": "89582",
+"com": "169752",
+"cat": "6822232"
+},
+{
+"id": "f378",
+"nom": "Homes",
+"u": "",
+"any": "10/2026 (p)",
+"mun": "25720",
+"com": "52170",
+"cat": "2040645"
+},
+{
+"id": "f379",
+"nom": "Dones",
+"u": "",
+"any": "10/2026 (p)",
+"mun": "24910",
+"com": "46485",
+"cat": "1804505"
+},
+{
+"id": "f377",
+"nom": "Afiliats a la Seguretat Social segons residència de l'afiliat",
+"u": "",
+"any": "10/2026 (p)",
+"mun": "50630",
+"com": "98660",
+"cat": "3845150"
+},
+{
+"id": "f363",
+"nom": "Afiliacions Seguretat Social segons residència",
+"u": "",
+"any": "10/2026 (p)",
+"mun": "54025",
+"com": "104495",
+"cat": "4041900"
+},
+{
+"id": "f273",
+"nom": "Afiliacions agricultura al R. General SS (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "140",
+"com": "455",
+"cat": "12310"
+},
+{
+"id": "f278",
+"nom": "Afiliacions indústria al R. General SS (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "3410",
+"com": "11985",
+"cat": "480000"
+},
+{
+"id": "f279",
+"nom": "Afiliacions construcció al R. General SS (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "1895",
+"com": "6095",
+"cat": "173425"
+},
+{
+"id": "f280",
+"nom": "Afiliacions serveis al R. General SS (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "78275",
+"com": "99130",
+"cat": "2630950"
+},
+{
+"id": "f282",
+"nom": "Afiliacions al R. General SS (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "83725",
+"com": "117665",
+"cat": "3296690"
+},
+{
+"id": "f229",
+"nom": "Afiliacions agri. R.E.T.A. (ubicació de l'activitat)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "50",
+"com": "355",
+"cat": "20070"
+},
+{
+"id": "f288",
+"nom": "Afiliacions ind. R.E.T.A.. (ubicació comptes de l'activitat)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "360",
+"com": "940",
+"cat": "35985"
+},
+{
+"id": "f289",
+"nom": "Afiliacions const. R.E.T.A. (ubicació de l'activitat)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "655",
+"com": "1785",
+"cat": "69890"
+},
+{
+"id": "f290",
+"nom": "Afiliacions serveis R.E.T.A.. (ubicació de l'activitat)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "7310",
+"com": "12010",
+"cat": "460725"
+},
+{
+"id": "f291",
+"nom": "Afiliacions R.E.T.A. (ubicació de l'activitat)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "8375",
+"com": "15090",
+"cat": "586665"
+},
+{
+"id": "f225",
+"nom": "Afiliacions a centres SS fins a 9 treb. (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "10235",
+"com": "17255",
+"cat": "568790"
+},
+{
+"id": "f284",
+"nom": "Afiliacions a centres SS de 10 a 49 treb. (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "15120",
+"com": "26615",
+"cat": "776925"
+},
+{
+"id": "f390",
+"nom": "Afiliacions a centres SS de 50 a 249 treb. (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "18360",
+"com": "27875",
+"cat": "794985"
+},
+{
+"id": "f227",
+"nom": "Afiliacions a centres SS de 250 i més treb. (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "40010",
+"com": "45915",
+"cat": "1155990"
+},
+{
+"id": "f286",
+"nom": "Afiliacions al R. General SS (ubicació comptes cotització)",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "83725",
+"com": "117665",
+"cat": "3296690"
+},
+{
+"id": "f239",
+"nom": "Comptes de cotització",
+"u": "",
+"any": "09/2026 (p)",
+"mun": "4543",
+"com": "7620",
+"cat": "253133"
+},
+{
+"id": "f375",
+"nom": "Pensions contributives de la S.S.",
+"u": "",
+"any": "2025",
+"mun": "20580",
+"com": "39372",
+"cat": "1790548"
+},
+{
+"id": "f376",
+"nom": "Pensió contributiva mitjana",
+"u": "euros",
+"any": "2025",
+"mun": "1485.55",
+"com": "1402.22",
+"cat": "1384.82"
+},
+{
+"id": "f382",
+"nom": "Homes",
+"u": "",
+"any": "2025",
+"mun": "8219",
+"com": "16296",
+"cat": "754097"
+},
+{
+"id": "f383",
+"nom": "Dones",
+"u": "",
+"any": "2025",
+"mun": "9778",
+"com": "18043",
+"cat": "819960"
+},
+{
+"id": "f384",
+"nom": "Total",
+"u": "",
+"any": "2025",
+"mun": "17997",
+"com": "34339",
+"cat": "1574057"
+},
+{
+"id": "f243",
+"nom": "Atur registrat. Agricultura",
+"u": "",
+"any": "2025",
+"mun": "75.1",
+"com": "159.1",
+"cat": "4827.0"
+},
+{
+"id": "f303",
+"nom": "Atur registrat. Indústria",
+"u": "",
+"any": "2025",
+"mun": "412.5",
+"com": "955.8",
+"cat": "33463.2"
+},
+{
+"id": "f304",
+"nom": "Atur registrat. Construcció",
+"u": "",
+"any": "2025",
+"mun": "320.9",
+"com": "686.3",
+"cat": "23241.4"
+},
+{
+"id": "f305",
+"nom": "Atur registrat. Serveis",
+"u": "",
+"any": "2025",
+"mun": "3049.3",
+"com": "5370.3",
+"cat": "237451.8"
+},
+{
+"id": "f307",
+"nom": "Atur registrat (sense ocupació anterior)",
+"u": "",
+"any": "2025",
+"mun": "438.7",
+"com": "806.5",
+"cat": "26101.4"
+},
+{
+"id": "f308",
+"nom": "Atur registrat",
+"u": "",
+"any": "2025",
+"mun": "4296.4",
+"com": "7978.0",
+"cat": "325084.8"
+},
+{
+"id": "f240",
+"nom": "Atur registrat. Homes",
+"u": "",
+"any": "2025",
+"mun": "1902.2",
+"com": "3511.8",
+"cat": "136788.3"
+},
+{
+"id": "f241",
+"nom": "Atur registrat. Dones",
+"u": "",
+"any": "2025",
+"mun": "2394.3",
+"com": "4466.2",
+"cat": "188296.0"
+},
+{
+"id": "f242",
+"nom": "Atur registrat",
+"u": "",
+"any": "2025",
+"mun": "4296.4",
+"com": "7978.0",
+"cat": "325084.3"
+},
+{
+"id": "f406",
+"nom": "Contractes de lloguer",
+"u": "",
+"any": "2025",
+"mun": "2185",
+"com": "3103",
+"cat": "108057"
+},
+{
+"id": "f407",
+"nom": "Lloguer mitjà (€/mes)",
+"u": "€/mes",
+"any": "2025",
+"mun": "816.0",
+"com": "788.6",
+"cat": "860.7"
+},
+{
+"id": "f250",
+"nom": "Habitatges familiars principals",
+"u": "",
+"any": "2021",
+"mun": "38711",
+"com": "71104",
+"cat": "2989357"
+},
+{
+"id": "f398",
+"nom": "Habitatges familiars no principals",
+"u": "",
+"any": "2021",
+"mun": "11622",
+"com": "17620",
+"cat": "925770"
+},
+{
+"id": "f122",
+"nom": "Habitatges familiars",
+"u": "",
+"any": "2021",
+"mun": "50333",
+"com": "88724",
+"cat": "3915127"
+},
+{
+"id": "f399",
+"nom": "Habitatges familiars principals (%)",
+"u": "",
+"any": "2021",
+"mun": "76.9",
+"com": "80.1",
+"cat": "76.4"
+},
+{
+"id": "f126",
+"nom": "Habitatges familiars principals de propietat",
+"u": "",
+"any": "2021",
+"mun": "24891",
+"com": "47829",
+"cat": "2066591"
+},
+{
+"id": "f128",
+"nom": "Habitatges familiars principals de lloguer",
+"u": "",
+"any": "2021",
+"mun": "11946",
+"com": "18825",
+"cat": "692285"
+},
+{
+"id": "f130",
+"nom": "Habitatges familiars principlas cedits, altres formes",
+"u": "",
+"any": "2021",
+"mun": "1875",
+"com": "4446",
+"cat": "230481"
+},
+{
+"id": "f131",
+"nom": "Habitatges familiars principals",
+"u": "",
+"any": "2021",
+"mun": "38712",
+"com": "71103",
+"cat": "2989357"
+},
+{
+"id": "f401",
+"nom": "Habitatges familiars de lloguer (%)",
+"u": "",
+"any": "2021",
+"mun": "30.9",
+"com": "26.5",
+"cat": "23.2"
+},
+{
+"id": "f402",
+"nom": "Habitatges familiars principals fins a 45 m²",
+"u": "",
+"any": "2021",
+"mun": "3015",
+"com": "3768",
+"cat": "270604"
+},
+{
+"id": "f403",
+"nom": "Habitatges familiars principals de 46 a 60 m²",
+"u": "",
+"any": "2021",
+"mun": "7236",
+"com": "9645",
+"cat": "657547"
+},
+{
+"id": "f190",
+"nom": "Habitatges familiars principals de 61 a 90 m²",
+"u": "",
+"any": "2021",
+"mun": "16668",
+"com": "26601",
+"cat": "1181950"
+},
+{
+"id": "f191",
+"nom": "Habitatges familiars principals de 91 a 120 m²",
+"u": "",
+"any": "2021",
+"mun": "6570",
+"com": "12957",
+"cat": "443055"
+},
+{
+"id": "f192",
+"nom": "Habitatges familiars principals de més de 120 m²",
+"u": "",
+"any": "2021",
+"mun": "5163",
+"com": "13710",
+"cat": "403659"
+},
+{
+"id": "f404",
+"nom": "No hi consta",
+"u": "",
+"any": "2021",
+"mun": "72",
+"com": "4422",
+"cat": "32542"
+},
+{
+"id": "f193",
+"nom": "Habitatges familiars principals",
+"u": "",
+"any": "2021",
+"mun": "38709",
+"com": "71106",
+"cat": "2989357"
+},
+{
+"id": "f385",
+"nom": "Índex socioeconòmic territorial",
+"u": "",
+"any": "2024 (p)",
+"mun": "97.2",
+"com": "93.4",
+"cat": "100.0"
+},
+{
+"id": "f2",
+"nom": "PIB",
+"u": "milions €",
+"any": "2024 (p)",
+"mun": "5354.0",
+"com": "_",
+"cat": "316728.3"
+},
+{
+"id": "f3",
+"nom": "PIB per habitant",
+"u": "€",
+"any": "2024 (p)",
+"mun": "50284",
+"com": "_",
+"cat": "39531"
+},
+{
+"id": "f4",
+"nom": "PIB per habitant  (Catalunya=100)",
+"u": "índex Catalunya=100",
+"any": "2024 (p)",
+"mun": "127.2",
+"com": "_",
+"cat": "100.0"
+},
+{
+"id": "f194",
+"nom": "VAB agricultura",
+"u": "",
+"any": "2023 (p)",
+"mun": "1.6",
+"com": "58.4",
+"cat": "2177.7"
+},
+{
+"id": "f195",
+"nom": "VAB indústria",
+"u": "",
+"any": "2023 (p)",
+"mun": "467.9",
+"com": "1214.6",
+"cat": "52200.0"
+},
+{
+"id": "f196",
+"nom": "VAB construcció",
+"u": "",
+"any": "2023 (p)",
+"mun": "228.8",
+"com": "449.2",
+"cat": "13500.6"
+},
+{
+"id": "f197",
+"nom": "VAB serveis",
+"u": "",
+"any": "2023 (p)",
+"mun": "3903.9",
+"com": "5486.8",
+"cat": "204236.1"
+},
+{
+"id": "f251",
+"nom": "VAB",
+"u": "",
+"any": "2023 (p)",
+"mun": "4602.3",
+"com": "7208.9",
+"cat": "272114.4"
+},
+{
+"id": "f364",
+"nom": "VAB energia, aigua i residus",
+"u": "",
+"any": "2023 (p)",
+"mun": "70.9",
+"com": "120.6",
+"cat": "8105.6"
+},
+{
+"id": "f365",
+"nom": "VAB alimentació, tèxtil i química",
+"u": "",
+"any": "2023 (p)",
+"mun": "315.2",
+"com": "825.1",
+"cat": "23305.1"
+},
+{
+"id": "f207",
+"nom": "VAB maquinària, mat. elèc. i de transport",
+"u": "",
+"any": "2023 (p)",
+"mun": "81.8",
+"com": "268.9",
+"cat": "20789.4"
+},
+{
+"id": "f208",
+"nom": "VAB indústria",
+"u": "",
+"any": "2023 (p)",
+"mun": "467.9",
+"com": "1214.6",
+"cat": "52200.0"
+},
+{
+"id": "f209",
+"nom": "VAB comerç",
+"u": "",
+"any": "2023 (p)",
+"mun": "465.5",
+"com": "900.4",
+"cat": "35483.1"
+},
+{
+"id": "f211",
+"nom": "VAB transport, inf. i comuni.",
+"u": "",
+"any": "2023 (p)",
+"mun": "278.0",
+"com": "367.0",
+"cat": "21360.3"
+},
+{
+"id": "f210",
+"nom": "VAB hostaleria",
+"u": "",
+"any": "2023 (p)",
+"mun": "278.9",
+"com": "398.0",
+"cat": "18733.9"
+},
+{
+"id": "f212",
+"nom": "VAB act. finan. i assegurances",
+"u": "",
+"any": "2023 (p)",
+"mun": "197.7",
+"com": "260.2",
+"cat": "12403.5"
+},
+{
+"id": "f213",
+"nom": "VAB act. immob., tècniques i adm.",
+"u": "",
+"any": "2023 (p)",
+"mun": "1001.7",
+"com": "1462.0",
+"cat": "63175.7"
+},
+{
+"id": "f214",
+"nom": "VAB adm. pública i altres ser.",
+"u": "",
+"any": "2023 (p)",
+"mun": "1682.1",
+"com": "2099.2",
+"cat": "53079.5"
+},
+{
+"id": "f253",
+"nom": "VAB serveis",
+"u": "",
+"any": "2023 (p)",
+"mun": "3903.9",
+"com": "5486.8",
+"cat": "204236.1"
+},
+{
+"id": "f6",
+"nom": "RFDB",
+"u": "milers €",
+"any": "2023 (p)",
+"mun": "2169025",
+"com": "3930701",
+"cat": "165424076"
+},
+{
+"id": "f7",
+"nom": "RFDB per habitant",
+"u": "€",
+"any": "2023 (p)",
+"mun": "20608",
+"com": "19308",
+"cat": "20789"
+},
+{
+"id": "f8",
+"nom": "RFDB per habitant (Catalunya=100)",
+"u": "índex Catalunya=100",
+"any": "2023 (p)",
+"mun": "99.1",
+"com": "92.9",
+"cat": "100.0"
+},
+{
+"id": "f10",
+"nom": "IRPF. Base imposable per declarant",
+"u": "",
+"any": "2024",
+"mun": "30930",
+"com": "29170",
+"cat": "29272"
+},
+{
+"id": "f11",
+"nom": "IRPF. Quota resultant autoliquidació  per declarant",
+"u": "",
+"any": "2024",
+"mun": "9450",
+"com": "8648",
+"cat": "9033"
+},
+{
+"id": "f198",
+"nom": "IBI. Rebuts",
+"u": "",
+"any": "2025 (p)",
+"mun": "83084",
+"com": "142917",
+"cat": "6004904"
+},
+{
+"id": "f199",
+"nom": "IBI. Base imposable",
+"u": "milers €",
+"any": "2025 (p)",
+"mun": "4342785",
+"com": "7804038",
+"cat": "412260886"
+},
+{
+"id": "f200",
+"nom": "IBI. Quota íntegra",
+"u": "€",
+"any": "2025 (p)",
+"mun": "40666521",
+"com": "68937891",
+"cat": "3201405665"
+},
+{
+"id": "f133",
+"nom": "Superfície de terres llaurades",
+"u": "",
+"any": "2020",
+"mun": "366",
+"com": "13550",
+"cat": "800833"
+},
+{
+"id": "f134",
+"nom": "Superfície de pastures permanents",
+"u": "",
+"any": "2020",
+"mun": "12",
+"com": "294",
+"cat": "291383"
+},
+{
+"id": "f345",
+"nom": "Superfície agrícola utilitzada",
+"u": "",
+"any": "2020",
+"mun": "378",
+"com": "13845",
+"cat": "1092215"
+},
+{
+"id": "f391",
+"nom": "Conreus de cereals per a gra",
+"u": "",
+"any": "2020",
+"mun": "245",
+"com": "7378",
+"cat": "360408"
+},
+{
+"id": "f392",
+"nom": "Conreus collits en verd",
+"u": "",
+"any": "2020",
+"mun": "35",
+"com": "3156",
+"cat": "79907"
+},
+{
+"id": "f393",
+"nom": "Altres conreus herbacis",
+"u": "",
+"any": "2020",
+"mun": "61",
+"com": "1748",
+"cat": "48347"
+},
+{
+"id": "f346",
+"nom": "Guarets",
+"u": "",
+"any": "2020",
+"mun": "21",
+"com": "443",
+"cat": "38416"
+},
+{
+"id": "f347",
+"nom": "Conreus de fruiters a l’aire lliure",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "486",
+"cat": "106030"
+},
+{
+"id": "f348",
+"nom": "Conreus d'olivera",
+"u": "",
+"any": "2020",
+"mun": "2",
+"com": "82",
+"cat": "100123"
+},
+{
+"id": "f349",
+"nom": "Conreus de vinya",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "40",
+"cat": "59533"
+},
+{
+"id": "f350",
+"nom": "Altres conreus llenyosos",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "208",
+"cat": "7111"
+},
+{
+"id": "f394",
+"nom": "Conreus en hivernacle",
+"u": "",
+"any": "2020",
+"mun": "1",
+"com": "5",
+"cat": "752"
+},
+{
+"id": "f395",
+"nom": "Horts per a consum propi",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "4",
+"cat": "206"
+},
+{
+"id": "f351",
+"nom": "Terres llaurades",
+"u": "",
+"any": "2020",
+"mun": "366",
+"com": "13550",
+"cat": "800833"
+},
+{
+"id": "f396",
+"nom": "Explotacions amb SAU",
+"u": "",
+"any": "2020",
+"mun": "12",
+"com": "553",
+"cat": "53903"
+},
+{
+"id": "f397",
+"nom": "Explotacions amb ramaderia",
+"u": "",
+"any": "2020",
+"mun": "_",
+"com": "225",
+"cat": "10890"
+},
+{
+"id": "f141",
+"nom": "Caps de bovins",
+"u": "",
+"any": "2020",
+"mun": "_",
+"com": "18023",
+"cat": "676097"
+},
+{
+"id": "f142",
+"nom": "Caps d'ovins",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "5532",
+"cat": "488771"
+},
+{
+"id": "f252",
+"nom": "Caps de cabrum",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "820",
+"cat": "69820"
+},
+{
+"id": "f144",
+"nom": "Caps de porcins",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "80283",
+"cat": "8192796"
+},
+{
+"id": "f145",
+"nom": "Caps d'aviram",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "706074",
+"cat": "42544012"
+},
+{
+"id": "f146",
+"nom": "Caps de conilles mares",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "2835",
+"cat": "138400"
+},
+{
+"id": "f147",
+"nom": "Caps d'equins",
+"u": "",
+"any": "2020",
+"mun": "0",
+"com": "108",
+"cat": "13380"
+},
+{
+"id": "f13",
+"nom": "Habitatges iniciats de protecció oficial",
+"u": "",
+"any": "2025",
+"mun": "32",
+"com": "32",
+"cat": "3128"
+},
+{
+"id": "f14",
+"nom": "Habitatges iniciats",
+"u": "",
+"any": "2025",
+"mun": "267",
+"com": "623",
+"cat": "15589"
+},
+{
+"id": "f215",
+"nom": "Hotels",
+"u": "",
+"any": "2025",
+"mun": "30",
+"com": "59",
+"cat": "3182"
+},
+{
+"id": "f216",
+"nom": "Places d'hotels",
+"u": "",
+"any": "2025",
+"mun": "2179",
+"com": "3188",
+"cat": "331853"
+},
+{
+"id": "f217",
+"nom": "Càmpings",
+"u": "",
+"any": "2025",
+"mun": "0",
+"com": "3",
+"cat": "351"
+},
+{
+"id": "f218",
+"nom": "Places de càmpings",
+"u": "",
+"any": "2025",
+"mun": "0",
+"com": "738",
+"cat": "267507"
+},
+{
+"id": "f219",
+"nom": "Turisme rural",
+"u": "",
+"any": "2025",
+"mun": "1",
+"com": "67",
+"cat": "2773"
+},
+{
+"id": "f220",
+"nom": "Places de turisme rural",
+"u": "",
+"any": "2025",
+"mun": "15",
+"com": "598",
+"cat": "23002"
+},
+{
+"id": "f19",
+"nom": "Turismes",
+"u": "",
+"any": "2024",
+"mun": "46124",
+"com": "96762",
+"cat": "3451607"
+},
+{
+"id": "f325",
+"nom": "Motocicletes",
+"u": "",
+"any": "2024",
+"mun": "12436",
+"com": "23863",
+"cat": "978679"
+},
+{
+"id": "f272",
+"nom": "Vehicles industrials",
+"u": "",
+"any": "2024",
+"mun": "9815",
+"com": "24259",
+"cat": "760767"
+},
+{
+"id": "f326",
+"nom": "Altres vehicles",
+"u": "",
+"any": "2024",
+"mun": "1922",
+"com": "5134",
+"cat": "193639"
+},
+{
+"id": "f163",
+"nom": "Parc de vehicles",
+"u": "",
+"any": "2024",
+"mun": "70297",
+"com": "150018",
+"cat": "5384692"
+},
+{
+"id": "f366",
+"nom": "Residus municipals per càpita",
+"u": "kg/hab./dia",
+"any": "2024",
+"mun": "1.17",
+"com": "1.12",
+"cat": "1.37"
+},
+{
+"id": "f368",
+"nom": "Recollida selectiva de residus municipals",
+"u": "%",
+"any": "2024",
+"mun": "52.3",
+"com": "57.7",
+"cat": "49.2"
+},
+{
+"id": "f371",
+"nom": "Establiments amb declaració de residus ind.",
+"u": "",
+"any": "2024",
+"mun": "61",
+"com": "292",
+"cat": "11570"
+},
+{
+"id": "f369",
+"nom": "Generació de residus",
+"u": "tones",
+"any": "2024",
+"mun": "76828.81",
+"com": "161632.94",
+"cat": "3590630.97"
+}
+]

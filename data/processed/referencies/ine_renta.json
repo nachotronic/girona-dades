@@ -1,0 +1,580 @@
+{
+"53689": [
+{
+"serie": "Total Nacional. Dato base. Renta neta media por persona. ",
+"any": 2024,
+"valor": 15948.0
+},
+{
+"serie": "Total Nacional. Dato base. Renta neta media por hogar. ",
+"any": 2024,
+"valor": 40605.0
+},
+{
+"serie": "Total Nacional. Dato base. Media de la renta por unidad de consumo. ",
+"any": 2024,
+"valor": 23643.0
+},
+{
+"serie": "Total Nacional. Dato base. Mediana de la renta por unidad de consumo. ",
+"any": 2024,
+"valor": 19950.0
+},
+{
+"serie": "Total Nacional. Dato base. Renta bruta media por persona. ",
+"any": 2024,
+"valor": 19716.0
+},
+{
+"serie": "Total Nacional. Dato base. Renta bruta media por hogar. ",
+"any": 2024,
+"valor": 50201.0
+},
+{
+"serie": "Cataluña. Dato base. Renta neta media por persona. ",
+"any": 2024,
+"valor": 17282.0
+},
+{
+"serie": "Cataluña. Dato base. Renta neta media por hogar. ",
+"any": 2024,
+"valor": 44945.0
+},
+{
+"serie": "Cataluña. Dato base. Media de la renta por unidad de consumo. ",
+"any": 2024,
+"valor": 25731.0
+},
+{
+"serie": "Cataluña. Dato base. Mediana de la renta por unidad de consumo. ",
+"any": 2024,
+"valor": 22050.0
+},
+{
+"serie": "Cataluña. Dato base. Renta bruta media por persona. ",
+"any": 2024,
+"valor": 21984.0
+},
+{
+"serie": "Cataluña. Dato base. Renta bruta media por hogar. ",
+"any": 2024,
+"valor": 57176.0
+},
+{
+"serie": "Girona. Dato base. Renta neta media por persona. ",
+"any": 2024,
+"valor": 15986.0
+},
+{
+"serie": "Girona. Dato base. Renta neta media por hogar. ",
+"any": 2024,
+"valor": 42306.0
+},
+{
+"serie": "Girona. Dato base. Media de la renta por unidad de consumo. ",
+"any": 2024,
+"valor": 23834.0
+},
+{
+"serie": "Girona. Dato base. Mediana de la renta por unidad de consumo. ",
+"any": 2024,
+"valor": 20650.0
+},
+{
+"serie": "Girona. Dato base. Renta bruta media por persona. ",
+"any": 2024,
+"valor": 19988.0
+},
+{
+"serie": "Girona. Dato base. Renta bruta media por hogar. ",
+"any": 2024,
+"valor": 52899.0
+}
+],
+"53687": [
+{
+"serie": "Total Nacional. Porcentaje. Fuente de ingreso: salario. ",
+"any": 2024,
+"valor": 60.0
+},
+{
+"serie": "Total Nacional. Porcentaje. Fuente de ingreso: pensiones. ",
+"any": 2024,
+"valor": 20.0
+},
+{
+"serie": "Total Nacional. Porcentaje. Fuente de ingreso: prestaciones por desempleo. ",
+"any": 2024,
+"valor": 1.9
+},
+{
+"serie": "Total Nacional. Porcentaje. Fuente de ingreso: otras prestaciones. ",
+"any": 2024,
+"valor": 4.5
+},
+{
+"serie": "Total Nacional. Porcentaje. Fuente de ingreso: otros ingresos. ",
+"any": 2024,
+"valor": 13.7
+},
+{
+"serie": "Cataluña. Porcentaje. Fuente de ingreso: salario. ",
+"any": 2024,
+"valor": 62.5
+},
+{
+"serie": "Cataluña. Porcentaje. Fuente de ingreso: pensiones. ",
+"any": 2024,
+"valor": 17.9
+},
+{
+"serie": "Cataluña. Porcentaje. Fuente de ingreso: prestaciones por desempleo. ",
+"any": 2024,
+"valor": 1.4
+},
+{
+"serie": "Cataluña. Porcentaje. Fuente de ingreso: otras prestaciones. ",
+"any": 2024,
+"valor": 4.2
+},
+{
+"serie": "Cataluña. Porcentaje. Fuente de ingreso: otros ingresos. ",
+"any": 2024,
+"valor": 14.0
+},
+{
+"serie": "Girona. Porcentaje. Fuente de ingreso: salario. ",
+"any": 2024,
+"valor": 60.5
+},
+{
+"serie": "Girona. Porcentaje. Fuente de ingreso: pensiones. ",
+"any": 2024,
+"valor": 18.7
+},
+{
+"serie": "Girona. Porcentaje. Fuente de ingreso: prestaciones por desempleo. ",
+"any": 2024,
+"valor": 1.7
+},
+{
+"serie": "Girona. Porcentaje. Fuente de ingreso: otras prestaciones. ",
+"any": 2024,
+"valor": 3.6
+},
+{
+"serie": "Girona. Porcentaje. Fuente de ingreso: otros ingresos. ",
+"any": 2024,
+"valor": 15.6
+}
+],
+"53690": [
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.7
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 7.9
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 14.0
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.7
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 7.8
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 13.7
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.8
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 8.0
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 14.2
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.3
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 6.7
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 12.0
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.4
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 6.9
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 12.0
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.2
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 6.6
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 11.9
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.3
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 7.0
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 12.9
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.3
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 7.1
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 12.9
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por debajo de 5.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 3.3
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por debajo de 7.500 Euros. Dato base. ",
+"any": 2024,
+"valor": 7.0
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por debajo de 10.000 Euros. Dato base. ",
+"any": 2024,
+"valor": 13.0
+}
+],
+"53694": [
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 8.9
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 13.9
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 20.2
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 27.4
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 19.9
+},
+{
+"serie": "Total Nacional. Total. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 10.6
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 8.8
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 13.7
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 19.6
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 28.3
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 20.6
+},
+{
+"serie": "Total Nacional. Hombres. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 11.0
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 9.1
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 14.2
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 20.8
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 26.6
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 19.3
+},
+{
+"serie": "Total Nacional. Mujeres. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 10.2
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 7.6
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 11.9
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 17.0
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 33.3
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 24.3
+},
+{
+"serie": "Cataluña. Total. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 13.0
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 7.7
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 12.0
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 16.9
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 34.0
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 24.9
+},
+{
+"serie": "Cataluña. Hombres. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 13.4
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 7.5
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 11.8
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 17.1
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 32.6
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 23.8
+},
+{
+"serie": "Cataluña. Mujeres. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 12.7
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 8.0
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 12.9
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 18.7
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 28.2
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 19.8
+},
+{
+"serie": "Girona. Total. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 9.9
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 8.1
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 12.8
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 18.5
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 28.5
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 20.1
+},
+{
+"serie": "Girona. Hombres. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 10.1
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por debajo 40% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 7.9
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por debajo 50% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 12.9
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por debajo 60% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 18.9
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por encima 140% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 27.8
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por encima 160% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 19.6
+},
+{
+"serie": "Girona. Mujeres. Población con ingresos por unidad de consumo por encima 200% de la mediana. Dato base. ",
+"any": 2024,
+"valor": 9.7
+}
+]
+}
