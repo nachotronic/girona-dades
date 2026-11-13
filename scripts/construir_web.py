@@ -430,6 +430,157 @@ def r(x, n=0):
     return None if x is None or (isinstance(x, float) and math.isnan(x)) else (round(x, n) if n else int(round(x)))
 
 
+# ---------------------------------------------------------------------------
+# Áreas de salud (ABS) y áreas policiales (ABP)
+
+PRIMARIA = {  # clave -> (código, filtro, fórmula)
+    "diabetis": ("APEE00201", None, 100), "grip": ("APEE00103", None, 100), "vac_inf": ("APEE00101", None, 100),
+    "tensio": ("APEE00401", None, 100), "visites": ("APDG00501", "Visites Totals", 1),
+    "presencials": ("APDG00601", None, 100), "econsulta": ("APTI00101", None, 100),
+    "antibio": ("APAD00401", None, 100), "domicili": ("APEE00501", None, 100),
+}
+TITOLS = {
+    "patrimoni": ("contra el patrimoni",),
+    "persones": ("De les lesions", "homicidi", "contra la llibertat", "integritat moral", "Faltes contra les persones"),
+    "sexual": ("llibertat i la indemnitat sexuals",),
+}
+
+
+def arees():
+    """Devuelve ({'abs': {...}, 'abp': {...}}, refs, anys) y copia las geometrías a web/datos."""
+    import shutil
+    res, refs, anys = {"abs": {}, "abp": {}}, {}, {}
+    sal = P / "salut"
+    if (sal / "mortalitat_abs.csv").exists():
+        mo = pd.read_csv(sal / "mortalitat_abs.csv", dtype={"codi_abs": str})
+        for _, f in mo.iterrows():
+            d = {"rme": r(f["rme"], 1), "mort_prem": r(f["prematura"], 1), "mort_bruta": r(f["taxa_bruta"], 1)}
+            if f["codi_abs"] in ("CAT", "GI"):
+                for k, v in d.items():
+                    if v is not None:
+                        refs.setdefault(k, {})["cat" if f["codi_abs"] == "CAT" else "gi"] = v
+            else:
+                res["abs"].setdefault(f["codi_abs"], {}).update(d)
+        anys.update({k: str(mo["periode"].iloc[0]) for k in ("rme", "mort_prem", "mort_bruta")})
+    if (sal / "primaria_abs.csv").exists():
+        pr = pd.read_csv(sal / "primaria_abs.csv", dtype={"codi_abs_a": str, "filtre_1": str})
+        pr["v"] = pd.to_numeric(pr["v"], errors="coerce")
+        for k, (codi, filtre, mult) in PRIMARIA.items():
+            x = pr[pr["codi_indicador"] == codi]
+            if filtre:
+                x = x[x["filtre_1"] == filtre]
+            t = x.pivot_table(index="codi_abs_a", columns="nom_variable", values="v", aggfunc="sum")
+            if not {"n", "d"} <= set(t.columns):
+                continue
+            for codi_abs, f in t.iterrows():
+                v = r(f["n"] / f["d"] * mult, 1) if f["d"] else None
+                if v is None:
+                    continue
+                if codi_abs in ("CAT", "GI"):
+                    refs.setdefault(k, {})["cat" if codi_abs == "CAT" else "gi"] = v
+                else:
+                    res["abs"].setdefault(codi_abs, {})[k] = v
+            anys[k] = int(pr["any"].iloc[0])
+    if (sal / "abs.geojson").exists():
+        g = json.loads((sal / "abs.geojson").read_text(encoding="utf-8"))
+        for f in g["features"]:
+            f["properties"] = {"id": str(f["properties"]["codi"]), "nom": f["properties"]["nom"]}
+        (SALIDA.parent / "abs.geojson").write_text(json.dumps(g, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    pol = P / "policia"
+    if all((pol / n).exists() for n in ("fets_penals_abp.csv.gz", "abp.geojson", "poblacio_abp.csv")):
+        fp = pd.read_csv(pol / "fets_penals_abp.csv.gz")
+        ult = int(fp["any"].max())
+        fp = fp[fp["any"] == ult]
+        pa = pd.read_csv(pol / "poblacio_abp.csv")
+        pob = dict(zip(pa["clau"], pa["poblacio"]))
+        g = json.loads((pol / "abp.geojson").read_text(encoding="utf-8"))
+        claus = [f["properties"]["clau"] for f in g["features"]]
+
+        def calcula(x, p):
+            if not p:
+                return {}
+            tot = x["coneguts"].sum()
+            d = {"fets": r(tot / p * 1000, 1), "resolts": r(x["resolts"].sum() / tot * 100, 1) if tot else None,
+                 "detencions": r(x["detencions"].sum() / p * 1000, 2)}
+            for k, pats in TITOLS.items():
+                m = x["titol"].astype(str).apply(lambda t: any(q.lower() in t.lower() for q in pats))
+                d[k] = r(x.loc[m, "coneguts"].sum() / p * 1000, 2 if k == "sexual" else 1)
+            return d
+
+        for c in claus:
+            res["abp"][c] = calcula(fp[fp["clau"] == c], pob.get(c))
+        cat = calcula(fp, sum(v for v in pob.values() if v == v))
+        gi_claus = [c for c in claus if c != "osona"]
+        gi = calcula(fp[fp["clau"].isin(gi_claus)], sum(pob.get(c) or 0 for c in gi_claus))
+        for k in cat:
+            refs.setdefault(k, {}).update({"cat": cat[k], "gi": gi.get(k)})
+            anys[k] = ult
+        # Municipios de Girona de cada ABP (para el panel)
+        noms = {}
+        try:
+            rel = pd.read_csv(pol / "municipis_abp.csv", dtype=str)
+            t = territorio()
+            nom_ine = dict(zip(t["codi_ine"], t["nom"]))
+            for _, f in rel.iterrows():
+                ine = str(f["CODI_MUNICIPI"]).zfill(6)[:5]
+                if ine in nom_ine:
+                    noms.setdefault(str(f["CODI_ABP_MOSSOS"]).lstrip("0"), set()).add(nom_ine[ine])
+        except Exception as e:  # noqa: BLE001
+            print("AVISO municipios ABP:", e)
+        for f in g["features"]:
+            pr_ = f["properties"]
+            ms = sorted(noms.get(str(pr_["codi"]).split(".")[0].lstrip("0"), []))
+            f["properties"] = {"id": pr_["clau"], "nom": "ABP " + pr_["nom"],
+                               "munis": f"{len(ms)} municipis: " + ", ".join(ms[:12]) + ("…" if len(ms) > 12 else "") if ms else ""}
+        (SALIDA.parent / "abp.geojson").write_text(json.dumps(g, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    return res, refs, anys
+
+
+# ---------------------------------------------------------------------------
+# Valores de referencia: Cataluña (Idescat EMEX) y España / Girona (INE)
+
+def referencias():
+    refs = {}
+    ref = P / "referencies"
+    if (ref / "ine_renta.json").exists():
+        ine = json.loads((ref / "ine_renta.json").read_text(encoding="utf-8"))
+        series = [x for v in ine.values() for x in v]
+        def busca(zona, texto):
+            for x in series:
+                if x["serie"].startswith(zona + ".") and texto in x["serie"] and ("Total." in x["serie"] or "Hombres" not in x["serie"] and "Mujeres" not in x["serie"]):
+                    return x["valor"]
+            return None
+        mapa = {"renda": "Renta neta media por persona", "renda_llar": "Renta neta media por hogar",
+                "pobresa": "debajo 60% de la mediana", "pobresa_sev": "debajo 40% de la mediana",
+                "alts": "encima 200% de la mediana", "salari": "Fuente de ingreso: salario",
+                "pensio": "Fuente de ingreso: pensiones", "prest_atur": "prestaciones por desempleo"}
+        for k, txt in mapa.items():
+            refs[k] = {z: busca(n, txt) for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
+    if (ref / "emex_catalunya.json").exists():
+        e = {x["id"]: x for x in json.loads((ref / "emex_catalunya.json").read_text(encoding="utf-8"))}
+        def c(fid):
+            try:
+                return float(e[fid]["cat"])
+            except (KeyError, TypeError, ValueError):
+                return None
+        def q(a, b, m=100):
+            return round(a / b * m, 1) if a is not None and b else None
+        pob = c("f321")
+        cat = {
+            "lloguer": c("f407"), "estrangers": q(c("f184"), c("f263")),
+            "majors65": q((c("f28") or 0) + (c("f29") or 0), c("f171")),
+            "natalitat": c("f330"), "mortalitat": c("f331"), "unipersonals": q(c("f98"), c("f107")),
+            "atur": q(c("f308"), pob), "ocupats": q(c("f377"), pob), "ocupats_dones": q(c("f379"), c("f377")),
+            "pensions": q(c("f375"), pob), "cotxes": q(c("f19"), pob, 1000), "selectiva": c("f368"),
+            "participacio": c("f149"), "irpf": c("f10"),
+        }
+        for k, v in cat.items():
+            if v is not None:
+                refs.setdefault(k, {})["cat"] = v
+    return {k: {z: x for z, x in v.items() if x is not None} for k, v in refs.items()}
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -497,8 +648,17 @@ def main():
     for a in sorted({a for m in municipios for a in m["renta_persona"]}):
         pares = [(m["renta_persona"][a], m["poblacion"]) for m in municipios if a in m["renta_persona"] and m["poblacion"]]
         prov_renta[a] = r(sum(v * p for v, p in pares) / sum(p for _, p in pares))
+    SALIDA.parent.mkdir(parents=True, exist_ok=True)
+    zones, refs_arees, anys_arees = arees()
+    anys_extra.update(anys_arees)
+    refs = referencias()
+    for k, v in refs_arees.items():
+        refs.setdefault(k, {}).update(v)
+    if prov_alq:
+        refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
+        "arees": zones, "ref": refs,
         "anys": anys_extra,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),

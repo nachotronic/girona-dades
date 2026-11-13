@@ -18,6 +18,7 @@
   const N1 = { f: (v) => fmt(v, 1), c: (v) => fmt(v, Math.abs(v) < 10 && v % 1 ? 1 : 0) };
   const N2 = { f: (v) => fmt(v, 2), c: (v) => fmt(v, 1) };
   const EU = { f: eur, c: (v) => fmt(v) };
+  const A = (k) => (x) => (x && x[k] != null ? x[k] : null);
   const X = (k) => (m) => (m.x && m.x[k] != null ? m.x[k] : null);
   const S = (k) => (x) => (x[k] != null ? x[k] : null);
   const suma = (o, anys) => anys.reduce((s, a) => s + (o && o[a] != null ? o[a] : NaN), 0);
@@ -30,6 +31,7 @@
     { id: "pob", ca: "Població", es: "Población" },
     { id: "tre", ca: "Treball i economia", es: "Trabajo y economía" },
     { id: "sal", ca: "Salut i serveis", es: "Salud y servicios" },
+    { id: "seg", ca: "Seguretat", es: "Seguridad" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "ene", ca: "Energia i residus", es: "Energía y residuos" },
     { id: "pol", ca: "Política", es: "Política" },
@@ -38,7 +40,7 @@
   const IND = [
     // Vivienda
     { id: "lloguer", tema: "hab", ca: ["Lloguer", "Lloguer mitjà (€/mes)"], es: ["Alquiler", "Alquiler medio (€/mes)"], a: 2025, v: (m) => val(m.alquiler, "2025"), ...EU },
-    { id: "var5", tema: "hab", ca: ["Pujada del lloguer", "Variació del lloguer 2020-2025"], es: ["Subida del alquiler", "Variación del alquiler 2020-2025"], v: (m) => { const a = val(m.alquiler, "2025"), b = val(m.alquiler, "2020"); return a && b ? (a / b - 1) * 100 : null; }, f: (v) => pct(v, 0, true), c: (v) => pct(v, 0, true) },
+    { id: "var5", sumable: false, tema: "hab", ca: ["Pujada del lloguer", "Variació del lloguer 2020-2025"], es: ["Subida del alquiler", "Variación del alquiler 2020-2025"], v: (m) => { const a = val(m.alquiler, "2025"), b = val(m.alquiler, "2020"); return a && b ? (a / b - 1) * 100 : null; }, f: (v) => pct(v, 0, true), c: (v) => pct(v, 0, true) },
     { id: "esforc", tema: "hab", ca: ["Esforç del lloguer", "Esforç del lloguer (% de la renda de la llar)"], es: ["Esfuerzo del alquiler", "Esfuerzo del alquiler (% de la renta del hogar)"], a: 2024, v: (m) => esforc(m), ...P0 },
     { id: "compra", tema: "hab", ca: ["Compravendes", "Compravendes per 1.000 habitants"], es: ["Compraventas", "Compraventas por 1.000 habitantes"], a: 2025, v: (m) => (val(m.compraventas, "2025") != null && m.poblacion ? (m.compraventas["2025"] / m.poblacion) * 1000 : null), ...N1 },
     { id: "nova", tema: "hab", ca: ["Obra nova", "Compravendes d'habitatge nou (% del total, 2021-2025)"], es: ["Obra nueva", "Compraventas de vivienda nueva (% del total, 2021-2025)"], v: (m) => { const n = suma(m.cv_nova, ANYS5), t = suma(m.compraventas, ANYS5); return t > 0 ? (n / t) * 100 : null; }, ...P0 },
@@ -57,15 +59,15 @@
     { id: "pobresa", tema: "ren", ca: ["Risc de pobresa", "Població sota el 60 % de la renda mediana (%)"], es: ["Riesgo de pobreza", "Población bajo el 60 % de la renta mediana (%)"], a: "pobresa", v: X("pobresa"), s: S("pobresa"), ...P1 },
     { id: "pobresa_sev", tema: "ren", ca: ["Pobresa severa", "Població sota el 40 % de la renda mediana (%)"], es: ["Pobreza severa", "Población bajo el 40 % de la renta mediana (%)"], a: "pobresa_sev", v: X("pobresa_sev"), s: S("pobresa_sev"), ...P1 },
     { id: "alts", tema: "ren", ca: ["Rendes altes", "Població per sobre del 200 % de la renda mediana (%)"], es: ["Rentas altas", "Población por encima del 200 % de la renta mediana (%)"], a: "alts_ingressos", v: X("alts_ingressos"), s: S("alts_ingressos"), ...P1 },
-    { id: "gini", tema: "ren", ca: ["Desigualtat (Gini)", "Índex de Gini"], es: ["Desigualdad (Gini)", "Índice de Gini"], a: 2024, v: (m) => val(m.gini, "2024"), s: S("gini"), f: (v) => fmt(v, 1), c: (v) => fmt(v, 0) },
-    { id: "p80p20", tema: "ren", ca: ["Ràtio P80/P20", "Renda del 20 % més ric respecte al 20 % més pobre"], es: ["Ratio P80/P20", "Renta del 20 % más rico respecto al 20 % más pobre"], a: 2024, v: null, s: S("p80p20"), ...N2 },
+    { id: "gini", sumable: false, tema: "ren", ca: ["Desigualtat (Gini)", "Índex de Gini"], es: ["Desigualdad (Gini)", "Índice de Gini"], a: 2024, v: (m) => val(m.gini, "2024"), s: S("gini"), f: (v) => fmt(v, 1), c: (v) => fmt(v, 0) },
+    { id: "p80p20", sumable: false, tema: "ren", ca: ["Ràtio P80/P20", "Renda del 20 % més ric respecte al 20 % més pobre"], es: ["Ratio P80/P20", "Renta del 20 % más rico respecto al 20 % más pobre"], a: 2024, v: null, s: S("p80p20"), ...N2 },
     { id: "salari", tema: "ren", ca: ["Ingressos del salari", "Ingressos que provenen del salari (%)"], es: ["Ingresos del salario", "Ingresos que proceden del salario (%)"], a: "ing_salari", v: X("ing_salari"), s: S("ing_salari"), ...P0 },
     { id: "pensio", tema: "ren", ca: ["Ingressos de pensions", "Ingressos que provenen de pensions (%)"], es: ["Ingresos de pensiones", "Ingresos que proceden de pensiones (%)"], a: "ing_pensio", v: X("ing_pensio"), s: S("ing_pensio"), ...P0 },
     { id: "prest_atur", tema: "ren", ca: ["Prestacions d'atur", "Ingressos que provenen de prestacions d'atur (%)"], es: ["Prestaciones de paro", "Ingresos que proceden de prestaciones por desempleo (%)"], a: "ing_atur", v: X("ing_atur"), s: S("ing_atur"), ...P1 },
     { id: "rgc", tema: "ren", ca: ["Renda garantida", "Beneficiaris de la renda garantida per 1.000 habitants"], es: ["Renta garantizada", "Beneficiarios de la renta garantizada por 1.000 habitantes"], a: "rgc", v: X("rgc"), ...N1 },
     { id: "irpf", tema: "ren", ca: ["Base de l'IRPF", "Base imposable mitjana per declarant de l'IRPF (€)"], es: ["Base del IRPF", "Base imponible media por declarante del IRPF (€)"], a: "irpf_base", v: X("irpf_base"), ...EU },
     // Población
-    { id: "pob", tema: "pob", ca: ["Habitants", "Població"], es: ["Habitantes", "Población"], v: (m) => m.poblacion, ...N0 },
+    { id: "pob", sumable: false, tema: "pob", ca: ["Habitants", "Població"], es: ["Habitantes", "Población"], v: (m) => m.poblacion, ...N0 },
     { id: "edat", tema: "pob", ca: ["Edat mitjana", "Edat mitjana de la població (anys)"], es: ["Edad media", "Edad media de la población (años)"], a: "edat", v: X("edat"), s: S("edat"), ...N1 },
     { id: "majors65", tema: "pob", ca: ["Més de 65 anys", "Població de 65 anys i més (%)"], es: ["Más de 65 años", "Población de 65 años y más (%)"], a: "majors65", v: X("majors65"), s: S("majors65"), ...P0 },
     { id: "menors18", tema: "pob", ca: ["Menys de 18 anys", "Població menor de 18 anys (%)"], es: ["Menos de 18 años", "Población menor de 18 años (%)"], a: "menors18", v: X("menors18"), s: S("menors18"), ...P0 },
@@ -84,9 +86,9 @@
     { id: "cotxes", tema: "tre", ca: ["Cotxes", "Turismes per 1.000 habitants"], es: ["Coches", "Turismos por 1.000 habitantes"], a: "cotxes", v: X("cotxes"), ...N0 },
     { id: "ocupats", tema: "tre", ca: ["Afiliats", "Afiliats a la Seguretat Social per 100 habitants (per residència)"], es: ["Afiliados", "Afiliados a la Seguridad Social por 100 habitantes (por residencia)"], v: X("ocupats"), ...N1 },
     { id: "ocupats_dones", tema: "tre", ca: ["Afiliades dones", "Dones entre els afiliats a la Seguretat Social (%)"], es: ["Afiliadas mujeres", "Mujeres entre los afiliados a la Seguridad Social (%)"], v: X("ocupats_dones"), ...P1 },
-    { id: "atur_var", tema: "tre", ca: ["Variació de l'atur", "Variació interanual de l'atur registrat (%)"], es: ["Variación del paro", "Variación interanual del paro registrado (%)"], a: "atur_var", v: X("atur_var"), ...P1 },
+    { id: "atur_var", sumable: false, tema: "tre", ca: ["Variació de l'atur", "Variació interanual de l'atur registrat (%)"], es: ["Variación del paro", "Variación interanual del paro registrado (%)"], a: "atur_var", v: X("atur_var"), ...P1 },
     { id: "atur_estr", tema: "tre", ca: ["Aturats estrangers", "Estrangers entre els aturats registrats (%)"], es: ["Parados extranjeros", "Extranjeros entre los parados registrados (%)"], a: "atur_estr", v: X("atur_estr"), ...P0 },
-    { id: "prest_atur", tema: "tre", ca: ["Prestacions d'atur", "Beneficiaris de prestacions d'atur per 1.000 habitants"], es: ["Prestaciones de paro", "Beneficiarios de prestaciones de paro por 1.000 habitantes"], a: "prest_atur", v: X("prest_atur"), ...N1 },
+    { id: "prest_atur_ben", tema: "tre", ca: ["Prestacions d'atur", "Beneficiaris de prestacions d'atur per 1.000 habitants"], es: ["Prestaciones de paro", "Beneficiarios de prestaciones de paro por 1.000 habitantes"], a: "prest_atur", v: X("prest_atur"), ...N1 },
     { id: "sector_serveis", tema: "tre", ca: ["Serveis", "Llocs de treball als serveis (%)"], es: ["Servicios", "Puestos de trabajo en servicios (%)"], v: X("sector_serveis"), ...P0 },
     { id: "sector_ind", tema: "tre", ca: ["Indústria", "Llocs de treball a la indústria (%)"], es: ["Industria", "Puestos de trabajo en la industria (%)"], v: X("sector_ind"), ...P0 },
     { id: "sector_const", tema: "tre", ca: ["Construcció", "Llocs de treball a la construcció (%)"], es: ["Construcción", "Puestos de trabajo en la construcción (%)"], v: X("sector_const"), ...P0 },
@@ -96,7 +98,23 @@
     { id: "pnc", tema: "sal", ca: ["Pensions no contributives", "Pensions no contributives per 1.000 habitants"], es: ["Pensiones no contributivas", "Pensiones no contributivas por 1.000 habitantes"], a: "pnc", v: X("pnc"), ...N1 },
     { id: "residencies", tema: "sal", ca: ["Residències", "Places en residències per a gent gran per 1.000 habitants"], es: ["Residencias", "Plazas en residencias de mayores por 1.000 habitantes"], a: "residencies", v: X("residencies"), ...N1 },
     { id: "farmacies", tema: "sal", ca: ["Farmàcies", "Farmàcies per 10.000 habitants"], es: ["Farmacias", "Farmacias por 10.000 habitantes"], a: "farmacies", v: X("farmacies"), ...N1 },
-    { id: "sanitaris", tema: "sal", ca: ["Centres sanitaris", "Centres sanitaris (CAP, consultoris, hospitals)"], es: ["Centros sanitarios", "Centros sanitarios (CAP, consultorios, hospitales)"], a: "sanitaris", v: X("sanitaris"), ...N0 },
+    { id: "sanitaris", sumable: false, tema: "sal", ca: ["Centres sanitaris", "Centres sanitaris (CAP, consultoris, hospitals)"], es: ["Centros sanitarios", "Centros sanitarios (CAP, consultorios, hospitales)"], a: "sanitaris", v: X("sanitaris"), ...N0 },
+    { id: "rme", tema: "sal", ca: ["Mortalitat ajustada", "Mortalitat ajustada per edat (Catalunya = 100)"], es: ["Mortalidad ajustada", "Mortalidad ajustada por edad (Cataluña = 100)"], a: "rme", abs: A("rme"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut). Índex: Catalunya = 100, ajustat per edat i sexe.", es: "Datos por área básica de salud (CatSalut). Índice: Cataluña = 100, ajustado por edad y sexo." }, ...N0 },
+    { id: "mort_prem", tema: "sal", ca: ["Mortalitat prematura", "Mortalitat abans dels 75 anys, ajustada (Catalunya = 100)"], es: ["Mortalidad prematura", "Mortalidad antes de los 75 años, ajustada (Cataluña = 100)"], a: "mort_prem", abs: A("mort_prem"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut). Índex: Catalunya = 100, ajustat per edat i sexe.", es: "Datos por área básica de salud (CatSalut). Índice: Cataluña = 100, ajustado por edad y sexo." }, ...N0 },
+    { id: "diabetis", tema: "sal", ca: ["Diabetis", "Prevalença de diabetis tipus 2 en la població atesa (%)"], es: ["Diabetes", "Prevalencia de diabetes tipo 2 en la población atendida (%)"], a: "diabetis", abs: A("diabetis"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P1 },
+    { id: "tensio", tema: "sal", ca: ["Tensió controlada", "Hipertensos amb bon control de la tensió arterial (%)"], es: ["Tensión controlada", "Hipertensos con buen control de la tensión arterial (%)"], a: "tensio", abs: A("tensio"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "grip", tema: "sal", ca: ["Vacuna de la grip", "Vacunats de la grip, 60 anys o més (%)"], es: ["Vacuna de la gripe", "Vacunados de la gripe, 60 años o más (%)"], a: "grip", abs: A("grip"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "vac_inf", tema: "sal", ca: ["Vacunes infantils", "Cobertura vacunal infantil (%)"], es: ["Vacunas infantiles", "Cobertura vacunal infantil (%)"], a: "vac_inf", abs: A("vac_inf"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "presencials", tema: "sal", ca: ["Visites presencials", "Visites presencials a l'atenció primària (%)"], es: ["Visitas presenciales", "Visitas presenciales en atención primaria (%)"], a: "presencials", abs: A("presencials"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "econsulta", tema: "sal", ca: ["eConsulta", "Pacients que fan servir l'eConsulta (%)"], es: ["eConsulta", "Pacientes que usan la eConsulta (%)"], a: "econsulta", abs: A("econsulta"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "antibio", tema: "sal", ca: ["Antibiòtics inadequats", "Antibiòtics en faringitis d'adults, ús inadequat (%)"], es: ["Antibióticos inadecuados", "Antibióticos en faringitis de adultos, uso inadecuado (%)"], a: "antibio", abs: A("antibio"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    // Seguridad (áreas básicas policiales)
+    { id: "fets", tema: "seg", ca: ["Delictes", "Fets penals coneguts per 1.000 habitants"], es: ["Delitos", "Hechos penales conocidos por 1.000 habitantes"], a: "fets", abp: A("fets"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
+    { id: "patrimoni", tema: "seg", ca: ["Furts i robatoris", "Delictes contra el patrimoni per 1.000 habitants"], es: ["Hurtos y robos", "Delitos contra el patrimonio por 1.000 habitantes"], a: "patrimoni", abp: A("patrimoni"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
+    { id: "persones", tema: "seg", ca: ["Contra les persones", "Lesions, homicidis i delictes contra la llibertat per 1.000 habitants"], es: ["Contra las personas", "Lesiones, homicidios y delitos contra la libertad por 1.000 habitantes"], a: "persones", abp: A("persones"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
+    { id: "sexual", tema: "seg", ca: ["Delictes sexuals", "Delictes contra la llibertat sexual per 1.000 habitants"], es: ["Delitos sexuales", "Delitos contra la libertad sexual por 1.000 habitantes"], a: "sexual", abp: A("sexual"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N2 },
+    { id: "resolts", tema: "seg", ca: ["Delictes resolts", "Fets penals resolts (% dels coneguts)"], es: ["Delitos resueltos", "Hechos penales resueltos (% de los conocidos)"], a: "resolts", abp: A("resolts"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...P0 },
+    { id: "detencions", tema: "seg", ca: ["Detencions", "Detencions per 1.000 habitants"], es: ["Detenciones", "Detenciones por 1.000 habitantes"], a: "detencions", abp: A("detencions"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
     // Ayuntamientos
     { id: "deute", tema: "ajt", ca: ["Deute per habitant", "Deute viu de l'ajuntament per habitant (€)"], es: ["Deuda por habitante", "Deuda viva del ayuntamiento por habitante (€)"], a: "deute_hab", v: X("deute_hab"), ...EU },
     { id: "pmp", tema: "ajt", ca: ["Pagament a proveïdors", "Període mitjà de pagament a proveïdors (dies)"], es: ["Pago a proveedores", "Periodo medio de pago a proveedores (días)"], v: X("pmp"), ...N0 },
@@ -129,9 +147,12 @@
   const ROTULS_MOBIL = ["Girona", "Figueres", "Olot", "Ripoll", "Puigcerdà", "Blanes", "Palamós"];
 
   let mapa = null, geoMun = null, geoSec = null, SEC = {}, nivell = "mun", ind = null, llindars = [];
+  // Niveles por áreas (salud y policía): geometría y datos por código de área
+  const NIVELLS = ["mun", "sec", "abs", "abp"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} } };
+  const esArea = (n) => n === "abs" || n === "abp";
   let hoverId = null, munPerIne = {}, valorsActuals = [], fixat = null;
 
-  const disponible = (i, n) => (n === "mun" ? !!i.v : !!i.s);
+  const disponible = (i, n) => (n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
 
   // Cortes por cuantiles, redondeados a una cifra "limpia" para que la leyenda se lea bien
   function quantils(valors) {
@@ -154,16 +175,20 @@
 
   function valorDe(props) {
     if (nivell === "mun") { const m = munPerIne[props.ine]; return m ? ind.v(m) : null; }
+    if (esArea(nivell)) { const x = ZONA[nivell].d[props.id]; return x ? ind[nivell](x) : null; }
     const x = SEC[props.cusec]; return x ? ind.s(x) : null;
   }
   const codiSec = (p) => `${p.cusec.slice(5, 7)}-${p.cusec.slice(7)}`;
   const nomZona = (p) => {
+    if (esArea(nivell)) return { nom: p.nom, lloc: t("area_" + nivell) };
     const m = munPerIne[p.ine], nom = m ? m.nom : p.ine;
     return nivell === "sec" ? { nom, lloc: `${t("seccio")} ${codiSec(p)}` } : { nom, lloc: m ? m.comarca : "" };
   };
 
+  const geoNivell = () => (nivell === "mun" ? geoMun : nivell === "sec" ? geoSec : ZONA[nivell].geo);
+
   function pinta() {
-    const geo = nivell === "mun" ? geoMun : geoSec;
+    const geo = geoNivell();
     const valors = geo.features.map((f) => valorDe(f.properties));
     if (ind.cat) return pintaCat(geo, valors);
     llindars = quantils(valors);
@@ -177,10 +202,10 @@
     const src = mapa.getSource("zones");
     if (!src) return;
     src.setData(geo);
-    mapa.setLayoutProperty("limits-mun", "visibility", nivell === "sec" ? "visible" : "none");
+    mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = !disponible(ind, "sec") ? t("nomes_mun") : "";
-    llegenda(); ranquing(); info(fixat);
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
+    llegenda(); referencies(); ranquing(); info(fixat);
   }
 
   // Indicadores por categorías (partido del alcalde): un color por bloque
@@ -223,13 +248,34 @@
     el.innerHTML = html;
   }
 
+  // Comparación con la provincia, Cataluña y España
+  function valorProvincia() {
+    const r = (D.ref || {})[ind.id];
+    if (r && r.gi != null) return r.gi;
+    if (!ind.v || ind.cat || ind.sumable === false) return null;
+    let s = 0, w = 0;
+    D.municipios.forEach((m) => { const v = ind.v(m); if (v != null && isFinite(v) && m.poblacion) { s += v * m.poblacion; w += m.poblacion; } });
+    return w ? s / w : null;
+  }
+  function referencies() {
+    const el = document.getElementById("referencies");
+    if (!el) return;
+    const r = (D.ref || {})[ind.id] || {};
+    const files = [[t("ref_gi"), valorProvincia(), "gi"], [t("ref_cat"), r.cat, "cat"], [t("ref_esp"), r.esp, "esp"]]
+      .filter((x) => x[1] != null && isFinite(x[1]));
+    if (ind.cat || files.length < 2) { el.innerHTML = ""; return; }
+    const max = Math.max(...files.map((x) => Math.abs(x[1]))) || 1;
+    el.innerHTML = `<h4>${t("ref_titol")}</h4>${files.map(([nom, v, k]) =>
+      `<div class="ref-fila ref-${k}"><span class="ref-nom">${nom}</span><span class="ref-barra"><b style="width:${(Math.abs(v) / max) * 100}%"></b></span><span class="ref-v">${ind.f(v)}</span></div>`).join("")}${r.nota ? `<p class="ref-nota">${r.nota[LANG] || r.nota}</p>` : ""}`;
+  }
+
   function ranquing() {
     if (ind.cat) return;
     const el = document.getElementById("ranquing");
     const fila = (x) => { const z = nomZona(x.p); return `<li data-ine="${x.p.ine}" title="${z.nom}"><span>${z.nom}${nivell === "sec" ? ` · ${codiSec(x.p)}` : ""}</span><span>${ind.c(x.v)}</span></li>`; };
     const alts = valorsActuals.slice(0, 5), baixos = valorsActuals.slice(-5).reverse();
     el.innerHTML = `<div><h4>${t("r_alts")}</h4><ol>${alts.map(fila).join("")}</ol></div><div><h4>${t("r_baixos")}</h4><ol>${baixos.map(fila).join("")}</ol></div>`;
-    el.querySelectorAll("li").forEach((li) => li.addEventListener("click", () => obreFitxa(li.dataset.ine, true)));
+    if (!esArea(nivell)) el.querySelectorAll("li").forEach((li) => li.addEventListener("click", () => obreFitxa(li.dataset.ine, true)));
   }
 
   function info(props) {
@@ -252,8 +298,8 @@
     el.innerHTML = `<p class="nom">${z.nom}</p><p class="lloc">${z.lloc}</p>
       <p class="gran">${v == null ? "–" : ind.f(v)}</p>
       <p class="rel">${v == null ? t("sense_dades") : `${t("posicio", pos + 1, valorsActuals.length)} · ${t("mediana", ind.f(med))}`}</p>
-      <button type="button">${t("obrir_fitxa")} →</button>`;
-    el.querySelector("button").addEventListener("click", () => obreFitxa(props.ine, true));
+      ${esArea(nivell) ? (props.munis ? `<p class="rel munis">${props.munis}</p>` : "") : `<button type="button">${t("obrir_fitxa")} →</button>`}`;
+    const b = el.querySelector("button"); if (b) b.addEventListener("click", () => obreFitxa(props.ine, true));
   }
 
   const normal = (s) => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -267,7 +313,7 @@
       ? IND.filter((i) => normal([...i.ca, ...i.es].join(" ")).includes(q))
       : IND.filter((i) => i.tema === tema);
     const xips = llista.map((i) => {
-      const ok = disponible(i, nivell) || (q && (disponible(i, "mun") || disponible(i, "sec")));
+      const ok = NIVELLS.some((n) => disponible(i, n));
       const pref = q ? `<span class="xip-tema">${TEMES.find((tm) => tm.id === i.tema)[LANG]}</span>` : "";
       return `<button type="button" class="xip" role="radio" data-id="${i.id}" aria-checked="${i.id === ind.id}" ${ok ? "" : "disabled"} title="${nomInd(i)}">${pref}${nomInd(i, true)}</button>`;
     }).join("");
@@ -283,8 +329,8 @@
   // Selecciona un indicador; si no existe al nivel actual, cambia de nivel
   async function tria(i) {
     ind = i; tema = i.tema;
-    if (!disponible(i, nivell)) { nivell = disponible(i, "mun") ? "mun" : "sec"; fixat = null; }
-    if (nivell === "sec") await carregaSeccions();
+    if (!disponible(i, nivell)) { nivell = NIVELLS.find((n) => disponible(i, n)); fixat = null; }
+    await carregaNivell(nivell);
     omplirSelector(); botonsNivell(); pinta();
   }
 
@@ -292,6 +338,9 @@
     document.querySelectorAll(".segment button").forEach((b) => {
       b.setAttribute("aria-pressed", String(b.dataset.nivell === nivell));
       b.disabled = !disponible(ind, b.dataset.nivell);
+      // Los niveles por áreas solo aparecen cuando el indicador existe a ese nivel
+      const nomesArea = !disponible(ind, "mun") && !disponible(ind, "sec");
+      b.hidden = b.disabled && (esArea(b.dataset.nivell) || nomesArea);
     });
   }
 
@@ -311,9 +360,23 @@
     return promSeccions;
   }
 
+  const promZona = {};
+  function carregaZona(n) {
+    if (!promZona[n]) {
+      document.getElementById("mapa").classList.add("carregant");
+      promZona[n] = fetch(`datos/${n}.geojson`).then((r) => r.json()).then((g) => {
+        g.features.forEach((f, i) => { f.id = i; });
+        ZONA[n].geo = g; ZONA[n].d = (D.arees && D.arees[n]) || {};
+        document.getElementById("mapa").classList.remove("carregant");
+      });
+    }
+    return promZona[n];
+  }
+  const carregaNivell = (n) => (n === "sec" ? carregaSeccions() : esArea(n) ? carregaZona(n) : Promise.resolve());
+
   async function canviaNivell(n) {
     if (n === nivell || !disponible(ind, n)) return;
-    if (n === "sec") await carregaSeccions();
+    await carregaNivell(n);
     nivell = n; fixat = null; omplirSelector(); botonsNivell(); pinta();
   }
 
@@ -457,7 +520,7 @@
     mapa.on("click", "zones-fill", (e) => {
       const f = e.features[0], p = f.properties;
       fixat = p; info(p); marca(f);
-      const fm = geoMun.features.find((x) => x.properties.ine === p.ine);
+      const fm = esArea(nivell) ? ZONA[nivell].geo.features[f.id] : geoMun.features.find((x) => x.properties.ine === p.ine);
       if (fm) mapa.getSource("seleccio").setData({ type: "FeatureCollection", features: [fm] });
       if (matchMedia("(pointer: coarse)").matches) amagaTip();
     });

@@ -420,3 +420,17 @@ tbody tr:hover { background: var(--fons-2); }
 .temes { padding-right: 0; }
 .tema { font-size: 16px; padding: 10px 12px 9px; }
 .fitxa-cap { border-bottom: 0; }
+
+/* Comparación provincia / Cataluña / España */
+.referencies:empty { display: none; }
+.referencies { margin: 18px 0 4px; }
+.referencies h4 { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); margin: 0 0 10px; }
+.ref-fila { display: grid; grid-template-columns: 9.5em 1fr auto; align-items: center; gap: 10px; font-size: 13px; padding: 3px 0; }
+.ref-barra { height: 8px; background: var(--fons-2); }
+.ref-barra b { display: block; height: 100%; background: var(--text-3); }
+.ref-gi .ref-barra b { background: var(--accent); }
+.ref-gi .ref-nom { font-weight: 600; }
+.ref-v { font-family: var(--mono); font-size: 12px; min-width: 4.5em; text-align: right; }
+.ref-nota { font-size: 11.5px; color: var(--text-3); margin: 6px 0 0; }
+.info .munis { font-size: 12px; line-height: 1.4; }
+.segment button[hidden] { display: none; }
