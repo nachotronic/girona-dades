@@ -31,16 +31,25 @@ TABLAS = {
     # Sociedades mercantiles
     "6454": "Sociedades constituidas por provincias",
     "6464": "Sociedades disueltas por provincias",
+    # EPA de Cataluña (por CCAA)
+    "65335": "EPA, tasas de paro por sexo y CCAA",
+    # Turismo por destino (puntos y zonas turísticas): filtro por municipios de Girona
+    "2078": "Hoteles por puntos turísticos",
+    "2039": "Hoteles por zonas turísticas",
+    "2076": "Hoteles: plazas y ocupación por puntos turísticos",
 }
+DESTINOS = {"2078", "2039", "2076"}
+# Operaciones cuyas tablas provinciales se buscan por nombre
+OPERACIONES = {"HPT": ("provincia",), "ECM": ("provincia",), "EOAP": ("provincia",), "EOTR": ("provincia",)}
 ZONAS = ("Girona", "Gerona", "Cataluña", "Catalunya", "Total Nacional", "Nacional", "Total nacional")
 
 
-def _tabla(ident: str, nult: int = 400) -> list[dict]:
+def _tabla(ident: str, nult: int = 400, zonas=ZONAS) -> list[dict]:
     d = get(f"{API}/DATOS_TABLA/{ident}?nult={nult}", timeout=600).json()
     res = []
     for s in d:
         nom = s.get("Nombre", "")
-        if not any(z in nom for z in ZONAS):
+        if not any(z in nom for z in zonas):
             continue
         res.append({"nom": nom, "d": [[p.get("Anyo"), p.get("FK_Periodo"), p.get("Valor")] for p in s.get("Data", [])]})
     return res
@@ -50,17 +59,19 @@ def ejecutar() -> str:
     sal = carpeta("provincia")
     lineas, tot = [], {}
     tablas = dict(TABLAS)
-    # Hipotecas: se buscan las tablas provinciales de la operación (código numérico 40)
-    try:
-        for t in get(f"{API}/TABLAS_OPERACION/40").json():
-            n = t["Nombre"]
-            if "provincia" in n.lower() and "vivienda" in n.lower():
-                tablas[str(t["Id"])] = "Hipotecas: " + n
-    except Exception as e:  # noqa: BLE001
-        lineas.append(f"hipotecas (lista de tablas): ERROR {e}")
+    for op, claves in OPERACIONES.items():
+        try:
+            for t in get(f"{API}/TABLAS_OPERACION/{op}").json():
+                n = t["Nombre"]
+                if all(c in n.lower() for c in claves):
+                    tablas[str(t["Id"])] = f"{op}: {n}"
+        except Exception as e:  # noqa: BLE001
+            lineas.append(f"{op} (lista de tablas): ERROR {e}")
+    from .territorio import municipios
+    destinos = tuple(municipios()["nom"].tolist()) + ("Costa Brava", "Pirineu", "Girona", "Platja d", "Escala", "Tossa", "Sant Feliu", "Palam", "Calonge", "Torroella", "Empuriabrava", "Castell")
     for ident, nom in tablas.items():
         try:
-            s = _tabla(ident)
+            s = _tabla(ident, zonas=destinos if ident in DESTINOS else ZONAS)
             tot[ident] = {"nom": nom, "series": s}
             lineas.append(f"{ident} {nom}: {len(s)} series")
         except Exception as e:  # noqa: BLE001
