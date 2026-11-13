@@ -1,0 +1,126 @@
+{
+  "id" : "f87r-vsu7",
+  "name" : "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+  "assetType" : "href",
+  "attribution" : "Departament d'Economia i Finances",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Treball",
+  "createdAt" : 1603724248,
+  "description" : "L'estadística Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat ofereix informació sobre el nombre d'afiliats i afiliacions per municipis, comarques i Aran, àmbits del Pla territorial, províncies i Catalunya. Els afiliats es presenten segons les principals variables demogràfiques (sexe, edat i nacionalitat) i les afiliacions es difonen per aquestes variables demogràfiques i tipus de relació laboral, règim de cotització i sector d'activitat. També es difonen les afiliacions a la Seguretat Social per compte d'altri segons tipus de contracte i tipus de jornada creuades per sexe, edat, nacionalitat i sector d'activitat, així com el grau de temporalitat i parcialitat per sexe.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 1885334,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1603724250,
+  "publicationGroup" : 1273299,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1603724248,
+  "tableId" : 1273299,
+  "totalTimesRated" : 0,
+  "viewCount" : 2599,
+  "viewLastModified" : 1789978416,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1608541807,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 797859,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1608541807,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1608541807,
+      "failureCount" : 0,
+      "startedAt" : 1608541807,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "ENLLAÇ" : "https://idescat.cat/pub/?id=afi"
+      },
+      "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+      "title" : "Enllaç a IDESCAT"
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Trimestral"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Contributors and Affiliations to Social Security based on Contributors' Registered Place of Residence",
+        "Nombre del conjunto de datos (ES)" : "Afiliados y afiliaciones a la Seguridad Social según residencia padronal del afiliado"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "accessPoints" : {
+      "ENLLAÇ" : "https://idescat.cat/pub/?id=afi"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "estadística oficial", "idescat", "seguretat social", "afiliacio", "ods8_treball decent i creixement econòmic" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

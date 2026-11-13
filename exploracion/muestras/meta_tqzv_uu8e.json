@@ -1,0 +1,479 @@
+{
+  "id" : "tqzv-uu8e",
+  "name" : "Àrees bàsiques de salut",
+  "assetType" : "dataset",
+  "attribution" : "Catàleg Tècnic de Dades. Departament de Salut",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1650956512,
+  "description" : "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.\n\nEls següents conjunts de dades descriuen la divisió territorial sanitaria operativa a Catalunya a diferents nivells:<br>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye\">Regions sanitàries</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp\">Sectors sanitaris</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e\">Àrees bàsiques salut</a>\n\nLa divisió territorial sanitària oficial de Catalunya s’estableix per decrets del Govern i per ordres del Departament de Salut que es publiquen al Diari Oficial de la Generalitat de Catalunya (DOGC), i està descrita en la següent pàgina web del Departament de Salut: \n<a href=\"https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia\">https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia</a>.\n\n-- Les àrees bàsiques de salut (ABS) són les unitats territorials bàsiques del sistema sanitari a Catalunya, en les quals es presta l'atenció primària i comunitària de salut d'accés directe de la població, i estan regulades a la Llei 15/1990, de 9 de juliol, d'ordenació sanitària de Catalunya i a les diverses ordres del Departament de Salut per les quals se n'actualitza periòdicament la seva denominació i delimitació.\n<br>\n-- Les regions i els sectors sanitaris són les demarcacions territorials amb què s'estructura el Servei Català de la Salut, es regulen per decrets del Govern, i com a àrees geogràfiques es defineixen: els sectors sanitaris, com a agrupació d'àrees bàsiques de salut, i les regions sanitàries, com a agrupació de sectors sanitaris.\n<br>\nLes ordres del Departament de Salut relatives a les ABS poden modificar la seva denominació i delimitació i crear-ne de noves, i quan es tracta de la creació de noves ABS, les pròpies ordres preveuen la possibilitat que l'efectivitat de la nova delimitació no sigui immediata, per la necessària reordenació prèvia dels recursos i de l'activitat assistencial per adaptar-los al canvi. Durant el temps necessari per a aquesta reordenació, l'activitat assistencial continua prenent com a referència la divisió territorial prèviament vigent, a la qual continuen referides totes les dades relatives a la demanda, els recursos i l'activitat del sistema de salut.\n<br>\nEn aquesta versió operativa del mapa sanitari de Catalunya, la informació publicada és l'efectiva en cada moment i, per la raó explicada en el paràgraf anterior, temporalment pot no coincidir amb la delimitació aprovada per la normativa vigent de referència, eventualitat que la pròpia normativa preveu.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2590,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 3033070,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1748595277,
+  "publicationGroup" : 1562090,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1766135113,
+  "rowsUpdatedBy" : "vdnf-89vw",
+  "tableId" : 2035745,
+  "totalTimesRated" : 0,
+  "viewCount" : 8430,
+  "viewLastModified" : 1779442548,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1651053992,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1506747,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1651053992,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1651053992,
+      "failureCount" : 0,
+      "startedAt" : 1651053992,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "fs3h-nuia",
+      "displayName" : "laura.ayats_gov.ext@gencat.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 26801247,
+    "name" : "Codi",
+    "dataTypeName" : "text",
+    "description" : "Codificació que identifica unívocament una àrea bàsica de salut, que són les àrees territorials primàries d'atenció al ciutadà per cadascuna de les quals hi ha un Equip d'Atenció Primària que se n'ocupa de la prestació del serveis d'atenció primària. Els registres que tenen un codi començat per 99 són valors propis del Catàleg Tècnic de Dades i que s’afegeixen per donar valor de completesa a l’entitat.",
+    "fieldName" : "codi",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16168939,
+    "cachedContents" : {
+      "non_null" : "382",
+      "largest" : "999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "082",
+        "count" : "4"
+      }, {
+        "item" : "383",
+        "count" : "1"
+      }, {
+        "item" : "134",
+        "count" : "1"
+      }, {
+        "item" : "144",
+        "count" : "1"
+      }, {
+        "item" : "121",
+        "count" : "1"
+      }, {
+        "item" : "391",
+        "count" : "1"
+      }, {
+        "item" : "034",
+        "count" : "1"
+      }, {
+        "item" : "039",
+        "count" : "1"
+      }, {
+        "item" : "325",
+        "count" : "1"
+      }, {
+        "item" : "182",
+        "count" : "1"
+      }, {
+        "item" : "115",
+        "count" : "1"
+      }, {
+        "item" : "056",
+        "count" : "1"
+      }, {
+        "item" : "033",
+        "count" : "1"
+      }, {
+        "item" : "223",
+        "count" : "1"
+      }, {
+        "item" : "247",
+        "count" : "1"
+      }, {
+        "item" : "022",
+        "count" : "1"
+      }, {
+        "item" : "183",
+        "count" : "1"
+      }, {
+        "item" : "387",
+        "count" : "1"
+      }, {
+        "item" : "346",
+        "count" : "1"
+      }, {
+        "item" : "065",
+        "count" : "1"
+      } ],
+      "smallest" : "001",
+      "count" : "382",
+      "cardinality" : "379"
+    },
+    "format" : { }
+  }, {
+    "id" : 26801248,
+    "name" : "Nom",
+    "dataTypeName" : "text",
+    "description" : "Nom de l’àrea bàsica de salut.",
+    "fieldName" : "nom",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14061639,
+    "cachedContents" : {
+      "non_null" : "382",
+      "largest" : "Vilassar de Mar",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Berga",
+        "count" : "4"
+      }, {
+        "item" : "Parets del Vallès",
+        "count" : "1"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "1"
+      }, {
+        "item" : "Tarragona - 3",
+        "count" : "1"
+      }, {
+        "item" : "Alt Camp Est",
+        "count" : "1"
+      }, {
+        "item" : "La Bisbal d'Empordà",
+        "count" : "1"
+      }, {
+        "item" : "Barcelona - 05B",
+        "count" : "1"
+      }, {
+        "item" : "Barcelona - 09F",
+        "count" : "1"
+      }, {
+        "item" : "Rubí - 1",
+        "count" : "1"
+      }, {
+        "item" : "Gavà - 2",
+        "count" : "1"
+      }, {
+        "item" : "Viladecans - 1",
+        "count" : "1"
+      }, {
+        "item" : "Vilanova del Camí",
+        "count" : "1"
+      }, {
+        "item" : "Barcelona - 07D",
+        "count" : "1"
+      }, {
+        "item" : "Manresa - 1",
+        "count" : "1"
+      }, {
+        "item" : "Barcelona - 03E",
+        "count" : "1"
+      }, {
+        "item" : "Vilafranca del Penedès - 2",
+        "count" : "1"
+      }, {
+        "item" : "Móra la Nova - Móra d'Ebre",
+        "count" : "1"
+      }, {
+        "item" : "Barcelona - 07B",
+        "count" : "1"
+      }, {
+        "item" : "Artés",
+        "count" : "1"
+      }, {
+        "item" : "Sant Sadurní d'Anoia",
+        "count" : "1"
+      } ],
+      "smallest" : "Abrera",
+      "count" : "382",
+      "cardinality" : "379"
+    },
+    "format" : { }
+  }, {
+    "id" : 26801249,
+    "name" : "Codi sector sanitari",
+    "dataTypeName" : "text",
+    "description" : "Codi del sector sanitari a on pertany l’àrea bàsica de salut.",
+    "fieldName" : "codi_sector_sanitari",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14061638,
+    "cachedContents" : {
+      "non_null" : "382",
+      "largest" : "SS99",
+      "null" : "0",
+      "top" : [ {
+        "item" : "7667",
+        "count" : "37"
+      }, {
+        "item" : "7001",
+        "count" : "23"
+      }, {
+        "item" : "6701",
+        "count" : "23"
+      }, {
+        "item" : "6462",
+        "count" : "21"
+      }, {
+        "item" : "7644",
+        "count" : "20"
+      }, {
+        "item" : "6461",
+        "count" : "20"
+      }, {
+        "item" : "7501",
+        "count" : "19"
+      }, {
+        "item" : "7642",
+        "count" : "19"
+      }, {
+        "item" : "6201",
+        "count" : "17"
+      }, {
+        "item" : "7643",
+        "count" : "16"
+      }, {
+        "item" : "7502",
+        "count" : "16"
+      }, {
+        "item" : "6113",
+        "count" : "15"
+      }, {
+        "item" : "7503",
+        "count" : "15"
+      }, {
+        "item" : "6202",
+        "count" : "13"
+      }, {
+        "item" : "6745",
+        "count" : "11"
+      }, {
+        "item" : "6360",
+        "count" : "11"
+      }, {
+        "item" : "7951",
+        "count" : "10"
+      }, {
+        "item" : "7947",
+        "count" : "10"
+      }, {
+        "item" : "6112",
+        "count" : "9"
+      }, {
+        "item" : "7949",
+        "count" : "8"
+      } ],
+      "smallest" : "6112",
+      "count" : "382",
+      "cardinality" : "31"
+    },
+    "format" : { }
+  }, {
+    "id" : 26801250,
+    "name" : "Nom sector sanitari",
+    "dataTypeName" : "text",
+    "description" : "Nom del sector sanitari.",
+    "fieldName" : "nom_sector_sanitari",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16168938,
+    "format" : { }
+  }, {
+    "id" : 26801251,
+    "name" : "Codi regió sanitària",
+    "dataTypeName" : "text",
+    "description" : "Codi de la regió sanitària a on pertany l’àrea bàsica de salut.  Informació extra, obtinguda a partir de la relació dels sectors sanitaris amb les regions sanitàries.",
+    "fieldName" : "codi_regio_sanitaria",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14061637,
+    "cachedContents" : {
+      "non_null" : "382",
+      "largest" : "NC",
+      "null" : "0",
+      "top" : [ {
+        "item" : "76",
+        "count" : "92"
+      }, {
+        "item" : "79",
+        "count" : "67"
+      }, {
+        "item" : "75",
+        "count" : "50"
+      }, {
+        "item" : "64",
+        "count" : "41"
+      }, {
+        "item" : "67",
+        "count" : "34"
+      }, {
+        "item" : "62",
+        "count" : "30"
+      }, {
+        "item" : "61",
+        "count" : "24"
+      }, {
+        "item" : "70",
+        "count" : "23"
+      }, {
+        "item" : "63",
+        "count" : "11"
+      }, {
+        "item" : "71",
+        "count" : "8"
+      }, {
+        "item" : "NC",
+        "count" : "2"
+      } ],
+      "smallest" : "61",
+      "count" : "382",
+      "cardinality" : "11"
+    },
+    "format" : { }
+  }, {
+    "id" : 26801252,
+    "name" : "Nom regió sanitària",
+    "dataTypeName" : "text",
+    "description" : "Nom de la regió sanitària.",
+    "fieldName" : "nom_regio_sanitaria",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16168937,
+    "cachedContents" : {
+      "non_null" : "382",
+      "largest" : "Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona Metropolitana Nord",
+        "count" : "92"
+      }, {
+        "item" : "Barcelona Ciutat",
+        "count" : "67"
+      }, {
+        "item" : "Barcelona Metropolitana Sud",
+        "count" : "50"
+      }, {
+        "item" : "Girona",
+        "count" : "41"
+      }, {
+        "item" : "Catalunya Central",
+        "count" : "34"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "30"
+      }, {
+        "item" : "Lleida",
+        "count" : "24"
+      }, {
+        "item" : "Penedès",
+        "count" : "23"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "11"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "8"
+      }, {
+        "item" : "No consta",
+        "count" : "2"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "382",
+      "cardinality" : "11"
+    },
+    "format" : { }
+  }, {
+    "id" : 26801253,
+    "name" : "Geometry",
+    "dataTypeName" : "multipolygon",
+    "description" : "Informació geogràfica que defineix l'àrea geogràfica associada a cada una de les regions sanitàries, expressada en el sistema de coordenades EPSG 4326 - WGS 84.",
+    "fieldName" : "geometry",
+    "position" : 7,
+    "renderTypeName" : "multipolygon",
+    "tableColumnId" : 15642894,
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Basic health areas",
+        "Nombre del conjunto de datos (ES)" : "Áreas básicas salud"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Nom d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "dades_de_referència", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

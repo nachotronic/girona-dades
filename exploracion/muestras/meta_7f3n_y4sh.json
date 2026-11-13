@@ -1,0 +1,134 @@
+{
+  "id" : "7f3n-y4sh",
+  "name" : "Indicadors de salut de la Central de Resultats: atenció hospitalària",
+  "assetType" : "href",
+  "attribution" : "Agència de Qualitat i Avaluació Sanitàries de Catalunya (AQuAS)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1486723814,
+  "description" : "Resultats en salut i qualitat assolits pels diferents agents que integren el sistema sanitari de Catalunya en l'àmbit de l'atenció hospitalària.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1554294756,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 131784,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1486723833,
+  "publicationGroup" : 79940,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1486723814,
+  "tableId" : 79940,
+  "totalTimesRated" : 0,
+  "viewCount" : 4574,
+  "viewLastModified" : 1744021356,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1486723833,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 304411,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1486723833,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "html" : "https://aquas.gencat.cat/ca/fem/central-resultats/"
+      },
+      "title" : "Central de Resultats"
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Hospital indicators",
+        "Nombre del conjunto de datos (ES)" : "Datos de los indicadores del ámbito hospitalario"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No"
+      },
+      "Enllaços relacionats" : {
+        "Nom" : "Observatori del Sistema de Salut de Catalunya",
+        "URL" : "http://observatorisalut.gencat.cat/ca/central_de_resultats/resultats_centre/"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "accessPoints" : {
+      "html" : "https://aquas.gencat.cat/ca/fem/central-resultats/"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "href" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "salut", "hospitals", "estadística", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

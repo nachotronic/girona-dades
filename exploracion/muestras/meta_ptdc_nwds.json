@@ -1,0 +1,130 @@
+{
+  "id" : "ptdc-nwds",
+  "name" : "Indicadors de l'Enquesta de Salut de Catalunya",
+  "assetType" : "href",
+  "attribution" : "Departament de Salut",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1486485959,
+  "description" : "Accedeix als indicadors de l'Enquesta de Salut de Catalunya.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1550231787,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 131147,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1486486040,
+  "publicationGroup" : 79388,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1486485959,
+  "tableId" : 79388,
+  "totalTimesRated" : 0,
+  "viewCount" : 3727,
+  "viewLastModified" : 1744020862,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1486486040,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 304399,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1486486040,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "accedeix" : "http://salutweb.gencat.cat/ca/el_departament/estadistiques_sanitaries/enquestes/esca/resultats_enquesta_salut_catalunya/"
+      }
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Catalan Health Survey indicators",
+        "Nombre del conjunto de datos (ES)" : "Indicadores de la Encuesta de Salut de Catalunya"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Visualitzacio" : "No",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Nom d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "accessPoints" : {
+      "accedeix" : "http://salutweb.gencat.cat/ca/el_departament/estadistiques_sanitaries/enquestes/esca/resultats_enquesta_salut_catalunya/"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "href" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "estadístiques", "salut", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

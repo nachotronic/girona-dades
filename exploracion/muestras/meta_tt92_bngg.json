@@ -1,0 +1,2102 @@
+{
+  "id" : "tt92-bngg",
+  "name" : "Indicadors de salut de la Central de Resultats: atenció primària",
+  "assetType" : "dataset",
+  "attribution" : "Agència de Qualitat i Avaluació Sanitàries de Catalunya (AQuAS)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1700671126,
+  "description" : "La Central de Resultats és un instrument promogut pel Departament de Salut i el CatSalut que desenvolupa l'Agència de Qualitat i Avaluació Sanitàries de Catalunya per mesurar, avaluar i difondre els resultats assolits en l'àmbit de l'assistència sanitària per part dels diferents agents integrants del Sistema Sanitari de Catalunya (SISCAT).\n\nEl conjunt de dades correspon als indicadors de l’àmbit d’Atenció Primària presentats a la Central de Resultats. Es pot accedir a l’àmbit d’Atenció Primària clicant a aquest l’enllaç (https://app.powerbi.com/view?r=eyJrIjoiMGNkYmJhNWQtZTEwOS00MzU0LWE3NjctOWNkNjNhNTAwYzhkIiwidCI6IjNiOTQyN2RjLWQzMGUtNDNiYy04YzA2LWZmNzI1MzY3NmZlYyIsImMiOjh9), o bé a través de la pàgina web de la Central de Resultats de l’AQuAS (https://aquas.gencat.cat/ca/fem/central-resultats/).\n\nLes dades estan desglossades segons dimensions (dades generals, adequació, efectivitat, eficiència, experiència de l’usuari i TIC) i per agrupació de casuístiques de fenòmens de salut com pot per exemple la població atesa, indicadors de malalties cròniques, vacunacions o utilització de La Meva Salut entre d’altres.\n\nTanmateix es disposa d’estratificacions segons variables sociodemogràfiques i territorials (de residència de l’assegurat i/o atès i de la ubicació del recurs assistencial) que es descriuen a continuació:\n\n· Anàlisi per sexe, grup d’edat, nivell socioeconòmic, tipus de centre (titularitat, recurs assistencial, nivell de complexitat) entre d’altres.\n\n· Anàlisi territorial per Regió Sanitaria i Àrea de Gestió Assistencial -AGA- (àrea d’influència o referència d’un hospital) i anàlisi per centre d’atenció amb doble òptica de visualització: centrada en la residència del pacient i en el centre o recurs d’atenció.\n\n· Disponibilitat de dades de diferents anys.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1161,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2827709,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1701164822,
+  "publicationGroup" : 1891931,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1705429330,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1894607,
+  "totalTimesRated" : 0,
+  "viewCount" : 4049,
+  "viewLastModified" : 1789648665,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1706799661,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1422529,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1706799661,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1706799661,
+      "failureCount" : 0,
+      "startedAt" : 1706799661,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "76mf-34jr",
+      "displayName" : "Álex Artigas"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 25408741,
+    "name" : "Any",
+    "dataTypeName" : "text",
+    "description" : "Any",
+    "fieldName" : "any",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490717,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "2022",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022",
+        "count" : "6585304"
+      }, {
+        "item" : "2021",
+        "count" : "6264881"
+      }, {
+        "item" : "2020",
+        "count" : "6195438"
+      }, {
+        "item" : "2019",
+        "count" : "6144497"
+      }, {
+        "item" : "2018",
+        "count" : "6026527"
+      }, {
+        "item" : "2017",
+        "count" : "5430900"
+      }, {
+        "item" : "2016",
+        "count" : "3055577"
+      } ],
+      "smallest" : "2016",
+      "count" : "39703124",
+      "cardinality" : "7"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408742,
+    "name" : "Mes",
+    "dataTypeName" : "text",
+    "description" : "Mes",
+    "fieldName" : "mes",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488790,
+    "cachedContents" : {
+      "non_null" : "36981802",
+      "largest" : "12",
+      "null" : "2721322",
+      "top" : [ {
+        "item" : "10",
+        "count" : "3634764"
+      }, {
+        "item" : "04",
+        "count" : "3479014"
+      }, {
+        "item" : "01",
+        "count" : "3472437"
+      }, {
+        "item" : "07",
+        "count" : "3463043"
+      }, {
+        "item" : "11",
+        "count" : "2998646"
+      }, {
+        "item" : "12",
+        "count" : "2994899"
+      }, {
+        "item" : "09",
+        "count" : "2882221"
+      }, {
+        "item" : "08",
+        "count" : "2860602"
+      }, {
+        "item" : "06",
+        "count" : "2807929"
+      }, {
+        "item" : "05",
+        "count" : "2807883"
+      }, {
+        "item" : "03",
+        "count" : "2792853"
+      }, {
+        "item" : "02",
+        "count" : "2787511"
+      } ],
+      "smallest" : "01",
+      "count" : "39703124",
+      "cardinality" : "12"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408743,
+    "name" : "Sexe",
+    "dataTypeName" : "text",
+    "description" : "Sexe",
+    "fieldName" : "sexe",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488792,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "Home",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "Dona",
+        "count" : "19849623"
+      }, {
+        "item" : "Home",
+        "count" : "19846261"
+      } ],
+      "smallest" : "Dona",
+      "count" : "39703124",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408744,
+    "name" : "Grup d'edat",
+    "dataTypeName" : "text",
+    "description" : "Edat",
+    "fieldName" : "grup_edat",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490713,
+    "cachedContents" : {
+      "non_null" : "39554894",
+      "largest" : ">=95",
+      "null" : "148230",
+      "top" : [ {
+        "item" : "70-74",
+        "count" : "2163003"
+      }, {
+        "item" : "65-69",
+        "count" : "2106886"
+      }, {
+        "item" : "60-64",
+        "count" : "2031997"
+      }, {
+        "item" : "75-79",
+        "count" : "2004206"
+      }, {
+        "item" : "15-19",
+        "count" : "2000360"
+      }, {
+        "item" : "55-59",
+        "count" : "1890651"
+      }, {
+        "item" : "50-54",
+        "count" : "1775467"
+      }, {
+        "item" : "45-49",
+        "count" : "1653786"
+      }, {
+        "item" : "75-84",
+        "count" : "1635580"
+      }, {
+        "item" : ">=85",
+        "count" : "1632729"
+      }, {
+        "item" : "55-64",
+        "count" : "1627587"
+      }, {
+        "item" : "65-74",
+        "count" : "1627565"
+      }, {
+        "item" : "40-54",
+        "count" : "1625200"
+      }, {
+        "item" : "20-39",
+        "count" : "1594229"
+      }, {
+        "item" : "40-44",
+        "count" : "1515274"
+      }, {
+        "item" : "80-84",
+        "count" : "1495467"
+      }, {
+        "item" : "85-89",
+        "count" : "1479410"
+      }, {
+        "item" : "05-14",
+        "count" : "1467910"
+      }, {
+        "item" : "01-04",
+        "count" : "1352912"
+      }, {
+        "item" : "35-39",
+        "count" : "1314557"
+      } ],
+      "smallest" : "00",
+      "count" : "39703124",
+      "cardinality" : "31"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 25408745,
+    "name" : "Nivell socioeconòmic",
+    "dataTypeName" : "text",
+    "description" : "Nivell socio econòmic",
+    "fieldName" : "nse",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488766,
+    "cachedContents" : {
+      "non_null" : "170631",
+      "largest" : "No classificable",
+      "null" : "39532493",
+      "top" : [ {
+        "item" : "< 18.000 €",
+        "count" : "44699"
+      }, {
+        "item" : "18.000 - 100.000 €",
+        "count" : "44580"
+      }, {
+        "item" : "Exempts de copagament farmacèutic",
+        "count" : "42028"
+      }, {
+        "item" : "> 100.000 €",
+        "count" : "32849"
+      }, {
+        "item" : "No classificable",
+        "count" : "6475"
+      } ],
+      "smallest" : "> 100.000 €",
+      "count" : "39703124",
+      "cardinality" : "5"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408746,
+    "name" : "Codi RS pacient",
+    "dataTypeName" : "text",
+    "description" : "Codi de la Regió Sanitària del pacient",
+    "fieldName" : "codi_rs_a",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490718,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "79",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "76",
+        "count" : "9515785"
+      }, {
+        "item" : "79",
+        "count" : "7490025"
+      }, {
+        "item" : "75",
+        "count" : "6772310"
+      }, {
+        "item" : "64",
+        "count" : "4149910"
+      }, {
+        "item" : "67",
+        "count" : "3981568"
+      }, {
+        "item" : "62",
+        "count" : "3170532"
+      }, {
+        "item" : "61",
+        "count" : "2566384"
+      }, {
+        "item" : "63",
+        "count" : "1236574"
+      }, {
+        "item" : "71",
+        "count" : "812796"
+      } ],
+      "smallest" : "61",
+      "count" : "39703124",
+      "cardinality" : "9"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408747,
+    "name" : "RS pacient",
+    "dataTypeName" : "text",
+    "description" : "Regió Sanitària del pacient",
+    "fieldName" : "rs_a",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488779,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "Terres de l'Ebre",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "Barcelona Metropolitana Nord",
+        "count" : "9515785"
+      }, {
+        "item" : "Barcelona Ciutat",
+        "count" : "7490025"
+      }, {
+        "item" : "Barcelona Metropolitana Sud",
+        "count" : "6772310"
+      }, {
+        "item" : "Girona",
+        "count" : "4149910"
+      }, {
+        "item" : "Catalunya Central",
+        "count" : "3981568"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "3170532"
+      }, {
+        "item" : "Lleida",
+        "count" : "2566384"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "1236574"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "812796"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "39703124",
+      "cardinality" : "9"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408748,
+    "name" : "Codi AGA pacient",
+    "dataTypeName" : "text",
+    "description" : "Codi de l'Àrea de Gestió Assistencial del pacient",
+    "fieldName" : "codi_aga_a",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490716,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "71",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "30",
+        "count" : "2636742"
+      }, {
+        "item" : "05",
+        "count" : "2566384"
+      }, {
+        "item" : "35",
+        "count" : "2186913"
+      }, {
+        "item" : "24",
+        "count" : "2186711"
+      }, {
+        "item" : "47",
+        "count" : "2082720"
+      }, {
+        "item" : "46",
+        "count" : "2039452"
+      }, {
+        "item" : "70",
+        "count" : "1750673"
+      }, {
+        "item" : "71",
+        "count" : "1617180"
+      }, {
+        "item" : "59",
+        "count" : "1584910"
+      }, {
+        "item" : "33",
+        "count" : "1496133"
+      }, {
+        "item" : "07",
+        "count" : "1361215"
+      }, {
+        "item" : "09",
+        "count" : "1265179"
+      }, {
+        "item" : "25",
+        "count" : "1140551"
+      }, {
+        "item" : "22",
+        "count" : "1085096"
+      }, {
+        "item" : "69",
+        "count" : "1022924"
+      }, {
+        "item" : "66",
+        "count" : "1015344"
+      }, {
+        "item" : "19",
+        "count" : "982359"
+      }, {
+        "item" : "68",
+        "count" : "922175"
+      }, {
+        "item" : "63",
+        "count" : "895447"
+      }, {
+        "item" : "51",
+        "count" : "878529"
+      } ],
+      "smallest" : "01",
+      "count" : "39703124",
+      "cardinality" : "43"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408749,
+    "name" : "AGA pacient",
+    "dataTypeName" : "text",
+    "description" : "Àrea de Gestió Assistencial del pacient",
+    "fieldName" : "aga_a",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488793,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "Vallès Oriental Central",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "Barcelonès Nord i Baix Maresme",
+        "count" : "2636742"
+      }, {
+        "item" : "Lleida",
+        "count" : "2566384"
+      }, {
+        "item" : "Vallès Occidental Est",
+        "count" : "2186913"
+      }, {
+        "item" : "Baix Llobregat Centre i Fontsanta -L'H N",
+        "count" : "2186711"
+      }, {
+        "item" : "Barcelona Nord",
+        "count" : "2082720"
+      }, {
+        "item" : "Barcelona Esquerra",
+        "count" : "2039452"
+      }, {
+        "item" : "Barcelona Dreta",
+        "count" : "1750673"
+      }, {
+        "item" : "Barcelona Litoral Mar",
+        "count" : "1617180"
+      }, {
+        "item" : "Bages i Solsonès",
+        "count" : "1584910"
+      }, {
+        "item" : "Maresme Central",
+        "count" : "1496133"
+      }, {
+        "item" : "Baix Camp i Priorat",
+        "count" : "1361215"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "1265179"
+      }, {
+        "item" : "L'Hospitalet Sud i el Prat de Llobregat",
+        "count" : "1140551"
+      }, {
+        "item" : "Osona",
+        "count" : "1085096"
+      }, {
+        "item" : "Vallès Oriental Central",
+        "count" : "1022924"
+      }, {
+        "item" : "Vallès Occidental Oest",
+        "count" : "1015344"
+      }, {
+        "item" : "Anoia",
+        "count" : "982359"
+      }, {
+        "item" : "Baix Vallès",
+        "count" : "922175"
+      }, {
+        "item" : "Baix Llobregat Litoral i Viladecans",
+        "count" : "895447"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "878529"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "39703124",
+      "cardinality" : "43"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408750,
+    "name" : "Codi ABS pacient",
+    "dataTypeName" : "text",
+    "description" : "Codi l'Àrea Bàsica de Salut del pacient",
+    "fieldName" : "codi_abs_a",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490720,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "408",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "161",
+        "count" : "124693"
+      }, {
+        "item" : "119",
+        "count" : "123471"
+      }, {
+        "item" : "374",
+        "count" : "122785"
+      }, {
+        "item" : "199",
+        "count" : "122515"
+      }, {
+        "item" : "197",
+        "count" : "122241"
+      }, {
+        "item" : "302",
+        "count" : "121358"
+      }, {
+        "item" : "325",
+        "count" : "121256"
+      }, {
+        "item" : "019",
+        "count" : "121199"
+      }, {
+        "item" : "208",
+        "count" : "121156"
+      }, {
+        "item" : "126",
+        "count" : "121050"
+      }, {
+        "item" : "365",
+        "count" : "120936"
+      }, {
+        "item" : "202",
+        "count" : "120896"
+      }, {
+        "item" : "207",
+        "count" : "120870"
+      }, {
+        "item" : "021",
+        "count" : "120776"
+      }, {
+        "item" : "171",
+        "count" : "120635"
+      }, {
+        "item" : "074",
+        "count" : "120481"
+      }, {
+        "item" : "085",
+        "count" : "120351"
+      }, {
+        "item" : "315",
+        "count" : "120132"
+      }, {
+        "item" : "276",
+        "count" : "120082"
+      }, {
+        "item" : "240",
+        "count" : "120020"
+      } ],
+      "smallest" : "001",
+      "count" : "39703124",
+      "cardinality" : "382"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408751,
+    "name" : "ABS pacient",
+    "dataTypeName" : "text",
+    "description" : "Àrea bàsica de salut del pacient",
+    "fieldName" : "abs_a",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488764,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "VILASSAR DE MAR",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "PLA D'URGELL",
+        "count" : "124693"
+      }, {
+        "item" : "FIGUERES",
+        "count" : "123471"
+      }, {
+        "item" : "ST. VICENÇ DELS HORTS 1 - VILA VELLA",
+        "count" : "122785"
+      }, {
+        "item" : "SALT",
+        "count" : "122515"
+      }, {
+        "item" : "SABADELL 6 - SUD",
+        "count" : "122241"
+      }, {
+        "item" : "MONTCADA I REIXAC",
+        "count" : "121358"
+      }, {
+        "item" : "PINEDA DE MAR",
+        "count" : "121256"
+      }, {
+        "item" : "BARCELONA 1D - RAVAL SUD",
+        "count" : "121199"
+      }, {
+        "item" : "SANT FELIU DE GUÍXOLS",
+        "count" : "121156"
+      }, {
+        "item" : "GIRONA 3 - MONTILIVI",
+        "count" : "121050"
+      }, {
+        "item" : "CASTELLDEFELS 1 - EL CASTELL",
+        "count" : "120936"
+      }, {
+        "item" : "SANT BOI DE LLOBREGAT 1 - MONTCLAR",
+        "count" : "120896"
+      }, {
+        "item" : "SANT CELONI",
+        "count" : "120870"
+      }, {
+        "item" : "BARCELONA 2A - SANT ANTONI",
+        "count" : "120776"
+      }, {
+        "item" : "OLOT",
+        "count" : "120635"
+      }, {
+        "item" : "BARCELONA 10D - BESÒS",
+        "count" : "120481"
+      }, {
+        "item" : "BLANES",
+        "count" : "120351"
+      }, {
+        "item" : "VALL DE TENES",
+        "count" : "120132"
+      }, {
+        "item" : "BADALONA 5 - SANT ROC",
+        "count" : "120082"
+      }, {
+        "item" : "TARRAGONA 2 - LA GRANJA-TORREFORTA",
+        "count" : "120020"
+      } ],
+      "smallest" : "ABRERA",
+      "count" : "39703124",
+      "cardinality" : "382"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408752,
+    "name" : "Territori mínim anàlisi pacient",
+    "dataTypeName" : "text",
+    "description" : "Unitat territorial mínima d'anàlisi del pacient",
+    "fieldName" : "utma_a",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488773,
+    "cachedContents" : {
+      "non_null" : "39695884",
+      "largest" : "ABS",
+      "null" : "7240",
+      "top" : [ {
+        "item" : "ABS",
+        "count" : "39695884"
+      } ],
+      "smallest" : "ABS",
+      "count" : "39703124",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408753,
+    "name" : "Codi RS centre",
+    "dataTypeName" : "text",
+    "description" : "Codi de la Regió Sanitària del centre",
+    "fieldName" : "codi_rs_c",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490712,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "79",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "76",
+        "count" : "8395807"
+      }, {
+        "item" : "79",
+        "count" : "6586767"
+      }, {
+        "item" : "75",
+        "count" : "5999849"
+      }, {
+        "item" : "64",
+        "count" : "3643263"
+      }, {
+        "item" : "67",
+        "count" : "3509300"
+      }, {
+        "item" : "62",
+        "count" : "2761590"
+      }, {
+        "item" : "61",
+        "count" : "2279512"
+      }, {
+        "item" : "63",
+        "count" : "1100633"
+      }, {
+        "item" : "71",
+        "count" : "715465"
+      } ],
+      "smallest" : "61",
+      "count" : "39703124",
+      "cardinality" : "9"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408754,
+    "name" : "RS centre",
+    "dataTypeName" : "text",
+    "description" : "Regió Sanitària del centre",
+    "fieldName" : "rs_c",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488781,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "Terres de l'Ebre",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "Barcelona Metropolitana Nord",
+        "count" : "8395807"
+      }, {
+        "item" : "Barcelona Ciutat",
+        "count" : "6586767"
+      }, {
+        "item" : "Barcelona Metropolitana Sud",
+        "count" : "5999849"
+      }, {
+        "item" : "Girona",
+        "count" : "3643263"
+      }, {
+        "item" : "Catalunya Central",
+        "count" : "3509300"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "2761590"
+      }, {
+        "item" : "Lleida",
+        "count" : "2279512"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "1100633"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "715465"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "39703124",
+      "cardinality" : "9"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408755,
+    "name" : "Codi AGA centre",
+    "dataTypeName" : "text",
+    "description" : "Codi l'Àrea Bàsica de Salut del centre",
+    "fieldName" : "codi_aga_c",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490719,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "71",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "30",
+        "count" : "2344488"
+      }, {
+        "item" : "05",
+        "count" : "2279512"
+      }, {
+        "item" : "35",
+        "count" : "1943651"
+      }, {
+        "item" : "24",
+        "count" : "1943444"
+      }, {
+        "item" : "47",
+        "count" : "1826164"
+      }, {
+        "item" : "46",
+        "count" : "1781165"
+      }, {
+        "item" : "70",
+        "count" : "1541195"
+      }, {
+        "item" : "71",
+        "count" : "1438243"
+      }, {
+        "item" : "59",
+        "count" : "1399620"
+      }, {
+        "item" : "33",
+        "count" : "1331415"
+      }, {
+        "item" : "07",
+        "count" : "1201605"
+      }, {
+        "item" : "09",
+        "count" : "1102979"
+      }, {
+        "item" : "25",
+        "count" : "1013657"
+      }, {
+        "item" : "22",
+        "count" : "949278"
+      }, {
+        "item" : "69",
+        "count" : "909996"
+      }, {
+        "item" : "19",
+        "count" : "868524"
+      }, {
+        "item" : "66",
+        "count" : "832455"
+      }, {
+        "item" : "68",
+        "count" : "823031"
+      }, {
+        "item" : "63",
+        "count" : "796208"
+      }, {
+        "item" : "51",
+        "count" : "780587"
+      } ],
+      "smallest" : "01",
+      "count" : "39703124",
+      "cardinality" : "43"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408756,
+    "name" : "AGA centre",
+    "dataTypeName" : "text",
+    "description" : "Àrea Bàsica de Salut del centre",
+    "fieldName" : "aga_c",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488786,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "Vallès Oriental Central",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "Barcelonès Nord i Baix Maresme",
+        "count" : "2344488"
+      }, {
+        "item" : "Lleida",
+        "count" : "2279512"
+      }, {
+        "item" : "Vallès Occidental Est",
+        "count" : "1943651"
+      }, {
+        "item" : "Baix Llobregat Centre i Fontsanta -L'H N",
+        "count" : "1943444"
+      }, {
+        "item" : "Barcelona Nord",
+        "count" : "1826164"
+      }, {
+        "item" : "Barcelona Esquerra",
+        "count" : "1781165"
+      }, {
+        "item" : "Barcelona Dreta",
+        "count" : "1541195"
+      }, {
+        "item" : "Barcelona Litoral Mar",
+        "count" : "1438243"
+      }, {
+        "item" : "Bages i Solsonès",
+        "count" : "1399620"
+      }, {
+        "item" : "Maresme Central",
+        "count" : "1331415"
+      }, {
+        "item" : "Baix Camp i Priorat",
+        "count" : "1201605"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "1102979"
+      }, {
+        "item" : "L'Hospitalet Sud i el Prat de Llobregat",
+        "count" : "1013657"
+      }, {
+        "item" : "Osona",
+        "count" : "949278"
+      }, {
+        "item" : "Vallès Oriental Central",
+        "count" : "909996"
+      }, {
+        "item" : "Anoia",
+        "count" : "868524"
+      }, {
+        "item" : "Vallès Occidental Oest",
+        "count" : "832455"
+      }, {
+        "item" : "Baix Vallès",
+        "count" : "823031"
+      }, {
+        "item" : "Baix Llobregat Litoral i Viladecans",
+        "count" : "796208"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "780587"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "39703124",
+      "cardinality" : "43"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408757,
+    "name" : "Codi ABS centre",
+    "dataTypeName" : "text",
+    "description" : "Codi de l'Àrea de Gestió Assistencial del centre",
+    "fieldName" : "codi_abs_c",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490715,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "408",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "161",
+        "count" : "112120"
+      }, {
+        "item" : "119",
+        "count" : "111108"
+      }, {
+        "item" : "199",
+        "count" : "110117"
+      }, {
+        "item" : "197",
+        "count" : "109648"
+      }, {
+        "item" : "302",
+        "count" : "108657"
+      }, {
+        "item" : "207",
+        "count" : "108605"
+      }, {
+        "item" : "365",
+        "count" : "108570"
+      }, {
+        "item" : "208",
+        "count" : "108503"
+      }, {
+        "item" : "325",
+        "count" : "108459"
+      }, {
+        "item" : "126",
+        "count" : "108433"
+      }, {
+        "item" : "019",
+        "count" : "108350"
+      }, {
+        "item" : "374",
+        "count" : "108312"
+      }, {
+        "item" : "171",
+        "count" : "108232"
+      }, {
+        "item" : "202",
+        "count" : "108051"
+      }, {
+        "item" : "074",
+        "count" : "107748"
+      }, {
+        "item" : "240",
+        "count" : "107635"
+      }, {
+        "item" : "315",
+        "count" : "107573"
+      }, {
+        "item" : "085",
+        "count" : "107459"
+      }, {
+        "item" : "100",
+        "count" : "107408"
+      }, {
+        "item" : "241",
+        "count" : "107131"
+      } ],
+      "smallest" : "001",
+      "count" : "39703124",
+      "cardinality" : "384"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408758,
+    "name" : "ABS centre",
+    "dataTypeName" : "text",
+    "description" : "Àrea de Gestió Assistencial del centre",
+    "fieldName" : "abs_c",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488767,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "VILASSAR DE MAR",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "PLA D'URGELL",
+        "count" : "112120"
+      }, {
+        "item" : "FIGUERES",
+        "count" : "111108"
+      }, {
+        "item" : "SALT",
+        "count" : "110117"
+      }, {
+        "item" : "SABADELL 6 - SUD",
+        "count" : "109648"
+      }, {
+        "item" : "MONTCADA I REIXAC",
+        "count" : "108657"
+      }, {
+        "item" : "SANT CELONI",
+        "count" : "108605"
+      }, {
+        "item" : "CASTELLDEFELS 1 - EL CASTELL",
+        "count" : "108570"
+      }, {
+        "item" : "SANT FELIU DE GUÍXOLS",
+        "count" : "108503"
+      }, {
+        "item" : "PINEDA DE MAR",
+        "count" : "108459"
+      }, {
+        "item" : "GIRONA 3 - MONTILIVI",
+        "count" : "108433"
+      }, {
+        "item" : "BARCELONA 1D - RAVAL SUD",
+        "count" : "108350"
+      }, {
+        "item" : "ST. VICENÇ DELS HORTS 1 - VILA VELLA",
+        "count" : "108312"
+      }, {
+        "item" : "OLOT",
+        "count" : "108232"
+      }, {
+        "item" : "SANT BOI DE LLOBREGAT 1 - MONTCLAR",
+        "count" : "108051"
+      }, {
+        "item" : "BARCELONA 10D - BESÒS",
+        "count" : "107748"
+      }, {
+        "item" : "TARRAGONA 2 - LA GRANJA-TORREFORTA",
+        "count" : "107635"
+      }, {
+        "item" : "VALL DE TENES",
+        "count" : "107573"
+      }, {
+        "item" : "BLANES",
+        "count" : "107459"
+      }, {
+        "item" : "CASSÀ DE LA SELVA",
+        "count" : "107408"
+      }, {
+        "item" : "TARRAGONA 3 - JAUME I",
+        "count" : "107131"
+      } ],
+      "smallest" : "ABRERA",
+      "count" : "39703124",
+      "cardinality" : "384"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408759,
+    "name" : "Codi entitat proveïdora",
+    "dataTypeName" : "text",
+    "description" : "Codi l'entitat proveïdora del centre",
+    "fieldName" : "codi_ep_c",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490721,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "39703124",
+      "count" : "39703124",
+      "cardinality" : "0"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408760,
+    "name" : "Entitat proveïdora",
+    "dataTypeName" : "text",
+    "description" : "Entitat proveïdora del centre",
+    "fieldName" : "ep_c",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488770,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "39703124",
+      "count" : "39703124",
+      "cardinality" : "0"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408761,
+    "name" : "Codi unitat proveïdora",
+    "dataTypeName" : "text",
+    "description" : "Codi de la unitat proveïdora",
+    "fieldName" : "codi_up_c",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15490714,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "15839",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "00014",
+        "count" : "112120"
+      }, {
+        "item" : "00120",
+        "count" : "111108"
+      }, {
+        "item" : "00108",
+        "count" : "110117"
+      }, {
+        "item" : "00360",
+        "count" : "109648"
+      }, {
+        "item" : "00352",
+        "count" : "108657"
+      }, {
+        "item" : "00363",
+        "count" : "108605"
+      }, {
+        "item" : "04376",
+        "count" : "108570"
+      }, {
+        "item" : "00109",
+        "count" : "108503"
+      }, {
+        "item" : "00282",
+        "count" : "108459"
+      }, {
+        "item" : "00104",
+        "count" : "108433"
+      }, {
+        "item" : "00179",
+        "count" : "108312"
+      }, {
+        "item" : "00124",
+        "count" : "108232"
+      }, {
+        "item" : "00197",
+        "count" : "108051"
+      }, {
+        "item" : "00455",
+        "count" : "107748"
+      }, {
+        "item" : "00051",
+        "count" : "107635"
+      }, {
+        "item" : "00396",
+        "count" : "107573"
+      }, {
+        "item" : "00116",
+        "count" : "107459"
+      }, {
+        "item" : "01886",
+        "count" : "107408"
+      }, {
+        "item" : "00353",
+        "count" : "106957"
+      }, {
+        "item" : "00006",
+        "count" : "106831"
+      } ],
+      "smallest" : "00002",
+      "count" : "39703124",
+      "cardinality" : "416"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25408762,
+    "name" : "Unitat proveïdora",
+    "dataTypeName" : "text",
+    "description" : "Unitat proveïdora",
+    "fieldName" : "up_c",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488791,
+    "cachedContents" : {
+      "non_null" : "34992186",
+      "largest" : "PAMEM Atenció Primària",
+      "null" : "4710938",
+      "top" : [ {
+        "item" : "EAP Pla d'Urgell",
+        "count" : "112120"
+      }, {
+        "item" : "EAP Figueres",
+        "count" : "111108"
+      }, {
+        "item" : "EAP Salt",
+        "count" : "110117"
+      }, {
+        "item" : "EAP Sabadell 6 - Sud",
+        "count" : "109648"
+      }, {
+        "item" : "EAP Montcada i Reixac",
+        "count" : "108657"
+      }, {
+        "item" : "EAP Sant Celoni",
+        "count" : "108605"
+      }, {
+        "item" : "EAP Castelldefels 1 - El Castell",
+        "count" : "108570"
+      }, {
+        "item" : "EAP Sant Feliu de Guíxols",
+        "count" : "108503"
+      }, {
+        "item" : "EAP Pineda de Mar",
+        "count" : "108459"
+      }, {
+        "item" : "EAP Girona 3 - Montilivi",
+        "count" : "108433"
+      }, {
+        "item" : "EAP St. Vicenç dels Horts 1 - Vila Vella",
+        "count" : "108312"
+      }, {
+        "item" : "EAP Olot",
+        "count" : "108232"
+      }, {
+        "item" : "EAP Sant Boi de Llobregat 1 - Montclar",
+        "count" : "108051"
+      }, {
+        "item" : "EAP Barcelona 10D - Besòs",
+        "count" : "107748"
+      }, {
+        "item" : "EAP Tarragona 2 - La Granja-Torreforta",
+        "count" : "107635"
+      }, {
+        "item" : "EAP Vall de Tenes",
+        "count" : "107573"
+      }, {
+        "item" : "EAP Blanes",
+        "count" : "107459"
+      }, {
+        "item" : "EAP Cassà de la Selva",
+        "count" : "107408"
+      }, {
+        "item" : "EAP Montornès - Montmeló",
+        "count" : "106957"
+      }, {
+        "item" : "EAP Balaguer",
+        "count" : "106831"
+      } ],
+      "smallest" : "CAC Tarragona Ciutat",
+      "count" : "39703124",
+      "cardinality" : "416"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408763,
+    "name" : "Territori mínim anàlisi centre",
+    "dataTypeName" : "text",
+    "description" : "Unitat territorial mínima d'anàlisi del centre",
+    "fieldName" : "utma_c",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488778,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "UP",
+      "null" : "0",
+      "top" : [ {
+        "item" : "UP",
+        "count" : "39703124"
+      } ],
+      "smallest" : "UP",
+      "count" : "39703124",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408764,
+    "name" : "Àmbit",
+    "dataTypeName" : "text",
+    "description" : "Àmbit de l'indicador",
+    "fieldName" : "ambit",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488787,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Atenció Primària",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Atenció Primària",
+        "count" : "39703124"
+      } ],
+      "smallest" : "Atenció Primària",
+      "count" : "39703124",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408765,
+    "name" : "Dimensió",
+    "dataTypeName" : "text",
+    "description" : "Dimensió de l'indicador",
+    "fieldName" : "dimensio",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488765,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Tecnologies de la informació i comunicació (TIC)",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Efectivitat",
+        "count" : "19381081"
+      }, {
+        "item" : "Dades Generals",
+        "count" : "13995356"
+      }, {
+        "item" : "Adequació",
+        "count" : "5437750"
+      }, {
+        "item" : "Eficiència",
+        "count" : "635290"
+      }, {
+        "item" : "Tecnologies de la informació i comunicació (TIC)",
+        "count" : "253647"
+      } ],
+      "smallest" : "Adequació",
+      "count" : "39703124",
+      "cardinality" : "5"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408766,
+    "name" : "Agrupació",
+    "dataTypeName" : "text",
+    "description" : "Agrupació a què pertany l'indicador",
+    "fieldName" : "agrupacio",
+    "position" : 26,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488775,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Volumetria derivacions fetes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Visites mensuals",
+        "count" : "9420696"
+      }, {
+        "item" : "Atenció malaltia cardiovascular",
+        "count" : "5300157"
+      }, {
+        "item" : "Atenció domiciliària",
+        "count" : "3381759"
+      }, {
+        "item" : "Evolució visites",
+        "count" : "3191466"
+      }, {
+        "item" : "Atenció diabetis mellitus",
+        "count" : "2640964"
+      }, {
+        "item" : "indicadors anticoagulants EQA",
+        "count" : "2639614"
+      }, {
+        "item" : "Ús inadequat d'antiulcerosos",
+        "count" : "2224923"
+      }, {
+        "item" : "Hipotiroïdisme",
+        "count" : "1927903"
+      }, {
+        "item" : "Hipertensió i colesterol",
+        "count" : "1881476"
+      }, {
+        "item" : "Ús inadequat d'antibiòtics",
+        "count" : "1729472"
+      }, {
+        "item" : "Ús inadequat d'hipolipemiants",
+        "count" : "1314930"
+      }, {
+        "item" : "Visites anuals",
+        "count" : "1076885"
+      }, {
+        "item" : "Cobertura vacunal",
+        "count" : "1041407"
+      }, {
+        "item" : "Consumidors de fàrmacs",
+        "count" : "567801"
+      }, {
+        "item" : "Cost segons tractament",
+        "count" : "370887"
+      }, {
+        "item" : "Població assignada",
+        "count" : "170631"
+      }, {
+        "item" : "Ús inadequat de benzodiazepines",
+        "count" : "146045"
+      }, {
+        "item" : "Utilització eConsulta",
+        "count" : "140990"
+      }, {
+        "item" : "Població assignada i atesa",
+        "count" : "133821"
+      }, {
+        "item" : "Receptes",
+        "count" : "132357"
+      } ],
+      "smallest" : "Atenció diabetis mellitus",
+      "count" : "39703124",
+      "cardinality" : "27"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408767,
+    "name" : "Filtre 1",
+    "dataTypeName" : "text",
+    "description" : "Filtre de l'indicador",
+    "fieldName" : "filtre_1",
+    "position" : 27,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488782,
+    "cachedContents" : {
+      "non_null" : "11436269",
+      "largest" : "Visites Totals",
+      "null" : "28266855",
+      "top" : [ {
+        "item" : "Visites Totals",
+        "count" : "2350595"
+      }, {
+        "item" : "Visites Atenció Centre",
+        "count" : "2348263"
+      }, {
+        "item" : "Visites Atenció Telefònica",
+        "count" : "2267197"
+      }, {
+        "item" : "Visites Atenció TIC",
+        "count" : "1878088"
+      }, {
+        "item" : "Visites Atenció Domiciliària",
+        "count" : "1653438"
+      }, {
+        "item" : "Consumidors d'antibiòtics",
+        "count" : "133413"
+      }, {
+        "item" : "Consumidors d'antipsicòtics",
+        "count" : "116427"
+      }, {
+        "item" : "Consumidors d'antidepressius",
+        "count" : "114779"
+      }, {
+        "item" : "Antidepressius",
+        "count" : "105753"
+      }, {
+        "item" : "Consumidors d'hipocolesteremiants",
+        "count" : "103933"
+      }, {
+        "item" : "Consumidors d'antidiabètics orals",
+        "count" : "99249"
+      }, {
+        "item" : "Antipsicòtics",
+        "count" : "94008"
+      }, {
+        "item" : "Hipolemiants",
+        "count" : "89388"
+      }, {
+        "item" : "Antidiabètics orals",
+        "count" : "81738"
+      } ],
+      "smallest" : "Antidepressius",
+      "count" : "39703124",
+      "cardinality" : "14"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408769,
+    "name" : "Agregable",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicador si l'indicador és agregable",
+    "fieldName" : "agregable",
+    "position" : 28,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 15490767,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "null" : "0",
+      "top" : [ {
+        "item" : true,
+        "count" : "39703124"
+      } ],
+      "count" : "39703124",
+      "cardinality" : "1"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408770,
+    "name" : "Codi indicador",
+    "dataTypeName" : "text",
+    "description" : "Codi de l'indicador",
+    "fieldName" : "codi_indicador",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488763,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "APTI00501",
+      "null" : "0",
+      "top" : [ {
+        "item" : "APDG00501",
+        "count" : "9420696"
+      }, {
+        "item" : "APDG00601",
+        "count" : "3191466"
+      }, {
+        "item" : "APAD00501",
+        "count" : "2224923"
+      }, {
+        "item" : "APEE00501",
+        "count" : "1962486"
+      }, {
+        "item" : "APEE00601",
+        "count" : "1927903"
+      }, {
+        "item" : "APEE00401",
+        "count" : "1896069"
+      }, {
+        "item" : "APEE00402",
+        "count" : "1787910"
+      }, {
+        "item" : "APAD00401",
+        "count" : "1729472"
+      }, {
+        "item" : "APEE00202",
+        "count" : "1677580"
+      }, {
+        "item" : "APEE00403",
+        "count" : "1616178"
+      }, {
+        "item" : "APEE00801",
+        "count" : "1541105"
+      }, {
+        "item" : "APEE00502",
+        "count" : "1419273"
+      }, {
+        "item" : "APAD00601",
+        "count" : "1314930"
+      }, {
+        "item" : "APEE00802",
+        "count" : "1098509"
+      }, {
+        "item" : "APDG00201",
+        "count" : "1076885"
+      }, {
+        "item" : "APEE00201",
+        "count" : "963384"
+      }, {
+        "item" : "APEE00302",
+        "count" : "956298"
+      }, {
+        "item" : "APEE00301",
+        "count" : "925178"
+      }, {
+        "item" : "APEE00101",
+        "count" : "595282"
+      }, {
+        "item" : "APEE00701",
+        "count" : "567801"
+      } ],
+      "smallest" : "APAD00201",
+      "count" : "39703124",
+      "cardinality" : "36"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408771,
+    "name" : "Indicador",
+    "dataTypeName" : "text",
+    "description" : "Nom de l'indicador",
+    "fieldName" : "indicador",
+    "position" : 30,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488761,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Volumetria derivacions fetes",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Visites a l'atenció primària",
+        "count" : "10497581"
+      }, {
+        "item" : "Visites presencials a l'atenció primària",
+        "count" : "3191466"
+      }, {
+        "item" : "Ús inadequat d'antiulcerosos (projecte ESSENCIAL)",
+        "count" : "2224923"
+      }, {
+        "item" : "Població atesa al programa d'atenció domiciliària",
+        "count" : "1962486"
+      }, {
+        "item" : "Població amb bon control de l'hipotiroïdisme",
+        "count" : "1927903"
+      }, {
+        "item" : "Població amb bon control de la tensió arterial",
+        "count" : "1896069"
+      }, {
+        "item" : "Població amb cardiopatia isquèmica o accident vascular cerebral en tractament antiagregant",
+        "count" : "1787910"
+      }, {
+        "item" : "Ús inadequat d'antibiòtics en faringitis en adults (projecte ESSENCIAL)",
+        "count" : "1729472"
+      }, {
+        "item" : "Població amb bon control de la diabetis mellitus tipus 2",
+        "count" : "1677580"
+      }, {
+        "item" : "Població amb insuficiència cardíaca congestiva o nefropatia (amb hipertensió o diabetis tipus 2) tractada amb IECA o ARAII",
+        "count" : "1616178"
+      }, {
+        "item" : "Tractament adequat de fibril·lació auricular",
+        "count" : "1541105"
+      }, {
+        "item" : "Població atesa al programa d'atenció domiciliària a qui s’ha fet una valoració integral",
+        "count" : "1419273"
+      }, {
+        "item" : "Ús inadequat d'hipolipemiants (projete ESSENCIAL)",
+        "count" : "1314930"
+      }, {
+        "item" : "Bon control de tractament amb anticoagulants",
+        "count" : "1098509"
+      }, {
+        "item" : "Prevalença de diabetis mellitus tipus 2 en població atesa",
+        "count" : "963384"
+      }, {
+        "item" : "Prevalença de dislipèmia",
+        "count" : "956298"
+      }, {
+        "item" : "Prevalença hipertensió arterial",
+        "count" : "925178"
+      }, {
+        "item" : "Cobertura vacunal de la població infantil",
+        "count" : "595282"
+      }, {
+        "item" : "Consumidors de fàrmacs",
+        "count" : "567801"
+      }, {
+        "item" : "Cost per pacient tractat",
+        "count" : "370887"
+      } ],
+      "smallest" : "Bon control de tractament amb anticoagulants",
+      "count" : "39703124",
+      "cardinality" : "35"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408772,
+    "name" : "Fórmula",
+    "dataTypeName" : "text",
+    "description" : "Fórmula de càlcul",
+    "fieldName" : "formula",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488768,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "n/d2",
+      "null" : "0",
+      "top" : [ {
+        "item" : "n/d*100",
+        "count" : "28392382"
+      }, {
+        "item" : "n/d",
+        "count" : "10868468"
+      }, {
+        "item" : "n/d2",
+        "count" : "264403"
+      }, {
+        "item" : "n1",
+        "count" : "170631"
+      }, {
+        "item" : "n",
+        "count" : "7240"
+      } ],
+      "smallest" : "n",
+      "count" : "39703124",
+      "cardinality" : "5"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408773,
+    "name" : "Tipus variable",
+    "dataTypeName" : "text",
+    "description" : "Mètrica o paràmetre",
+    "fieldName" : "tipus_variable",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488774,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Paràmetre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Paràmetre",
+        "count" : "27626428"
+      }, {
+        "item" : "Mètrica",
+        "count" : "12076696"
+      } ],
+      "smallest" : "Mètrica",
+      "count" : "39703124",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408774,
+    "name" : "Nom variable",
+    "dataTypeName" : "text",
+    "description" : "Nom de la variable (n, p, oe, w, i0, i1,...)",
+    "fieldName" : "nom_variable",
+    "position" : 33,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488760,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "n",
+      "null" : "0",
+      "top" : [ {
+        "item" : "n",
+        "count" : "14181947"
+      }, {
+        "item" : "d",
+        "count" : "13355459"
+      }, {
+        "item" : "ind_0",
+        "count" : "12076696"
+      }, {
+        "item" : "d2",
+        "count" : "89022"
+      } ],
+      "smallest" : "d",
+      "count" : "39703124",
+      "cardinality" : "4"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408775,
+    "name" : "Descripció",
+    "dataTypeName" : "text",
+    "description" : "Descripció del paràmetre",
+    "fieldName" : "descripcio",
+    "position" : 34,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488785,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Volumentria de derivacions",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Població assignada",
+        "count" : "9541886"
+      }, {
+        "item" : "Nombre de visites",
+        "count" : "4830329"
+      }, {
+        "item" : "Persones amb ús inadequat",
+        "count" : "3533354"
+      }, {
+        "item" : "Visites mensuals per habitant",
+        "count" : "2335122"
+      }, {
+        "item" : "Visites presencials",
+        "count" : "2125526"
+      }, {
+        "item" : "Persones amb hipertiroïdisme i bon control de TSH",
+        "count" : "1252722"
+      }, {
+        "item" : "Persones amb bon control de la hipertensió arterial",
+        "count" : "1229976"
+      }, {
+        "item" : "Persones amb ictus isquèmic o cardiopatia isquèmica en tractament antiagregant/anticoagulant",
+        "count" : "1172890"
+      }, {
+        "item" : "Persones diabètiques amb control acceptable",
+        "count" : "1089674"
+      }, {
+        "item" : "Visites totals",
+        "count" : "1065940"
+      }, {
+        "item" : "Persones amb insuficiència cardíaca congestiva o nefropatia tractada amb IECA o ARAII",
+        "count" : "1058770"
+      }, {
+        "item" : "Persones amb tractament adequat de fibril·lació auricular",
+        "count" : "1014280"
+      }, {
+        "item" : "Persones al programa d'atenció domiciliària",
+        "count" : "997535"
+      }, {
+        "item" : "Persones al programa d'atenció domiciliària amb valoració integral",
+        "count" : "920702"
+      }, {
+        "item" : "Persones amb bon control de tractament amb anticoagulants orals",
+        "count" : "727310"
+      }, {
+        "item" : "Persones vacunades",
+        "count" : "691256"
+      }, {
+        "item" : "Població assignada amb hipertiroïdisme",
+        "count" : "675181"
+      }, {
+        "item" : "Persones amb hipercolesterolèmia",
+        "count" : "634288"
+      }, {
+        "item" : "Població assignada amb ictus isquèmic o cardiopatia isquèmica",
+        "count" : "615020"
+      }, {
+        "item" : "Persones amb diabetes mellitus de tipus 2",
+        "count" : "605884"
+      } ],
+      "smallest" : "Cost dels tractaments",
+      "count" : "39703124",
+      "cardinality" : "46"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408776,
+    "name" : "Unitat",
+    "dataTypeName" : "text",
+    "description" : "Unitat de mesura del paràmetre",
+    "fieldName" : "unitats",
+    "position" : 35,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15488784,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "Visites",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Persones",
+        "count" : "20621003"
+      }, {
+        "item" : "Visites",
+        "count" : "9520826"
+      }, {
+        "item" : "%",
+        "count" : "9131416"
+      }, {
+        "item" : "€",
+        "count" : "336664"
+      }, {
+        "item" : "Receptes",
+        "count" : "87832"
+      }, {
+        "item" : "Publicacions",
+        "count" : "1875"
+      }, {
+        "item" : "Derivacions",
+        "count" : "1754"
+      }, {
+        "item" : "Especialitats",
+        "count" : "1754"
+      } ],
+      "smallest" : "€",
+      "count" : "39703124",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 25408777,
+    "name" : "Valor",
+    "dataTypeName" : "number",
+    "description" : "Valor o resultat",
+    "fieldName" : "valor",
+    "position" : 36,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15488762,
+    "cachedContents" : {
+      "non_null" : "39703124",
+      "largest" : "13279996.31",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "1954815"
+      }, {
+        "item" : "100",
+        "count" : "1412886"
+      }, {
+        "item" : "2",
+        "count" : "1210663"
+      }, {
+        "item" : "3",
+        "count" : "907579"
+      }, {
+        "item" : "4",
+        "count" : "739268"
+      }, {
+        "item" : "5",
+        "count" : "630285"
+      }, {
+        "item" : "6",
+        "count" : "547794"
+      }, {
+        "item" : "7",
+        "count" : "489538"
+      }, {
+        "item" : "8",
+        "count" : "444835"
+      }, {
+        "item" : "9",
+        "count" : "408245"
+      }, {
+        "item" : "50",
+        "count" : "406767"
+      }, {
+        "item" : "10",
+        "count" : "384104"
+      }, {
+        "item" : "11",
+        "count" : "354399"
+      }, {
+        "item" : "12",
+        "count" : "333520"
+      }, {
+        "item" : "13",
+        "count" : "315345"
+      }, {
+        "item" : "14",
+        "count" : "299296"
+      }, {
+        "item" : "15",
+        "count" : "285733"
+      }, {
+        "item" : "16",
+        "count" : "273467"
+      }, {
+        "item" : "0",
+        "count" : "269810"
+      }, {
+        "item" : "17",
+        "count" : "258524"
+      } ],
+      "smallest" : "0",
+      "count" : "39703124",
+      "cardinality" : "1558817"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Health indicators of the Results Center: primary care",
+        "Nombre del conjunto de datos (ES)" : "Indicadores de salud de la Central de Resultados: atención primaria"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "ods3_salut i benestar", "salut", "indicadors", "anàlisi", "atenció primària", "regió sanitària", "àrea de gestió assistencial", "àrea bàsica de salut" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,710 @@
+{
+  "id" : "ftq4-h9vk",
+  "name" : "Registre central de població del CatSalut: població per àrea bàsica de salut",
+  "assetType" : "dataset",
+  "attribution" : "Servei Català de la Salut (SCS)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1486558712,
+  "description" : "Dades de població de referència per al Servei Català de la Salut (CatSalut), que és la població amb dret a rebre assistència sanitària de finançament públic a Catalunya, extretes del Registre central de població del CatSalut (RCA).\n\nEl tall a final de cada període anual s'utilitza com a població de referència per al període següent.\n\nConté, per a cadascuna de les regions sanitàries i de les àrees bàsiques de salut del mapa sanitari català, el nombre de persones assegurades per gènere i edat.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 7230,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 1734447,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1590579451,
+  "publicationGroup" : 79602,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowsUpdatedAt" : 1773046765,
+  "rowsUpdatedBy" : "76mf-34jr",
+  "tableId" : 1167186,
+  "totalTimesRated" : 0,
+  "viewCount" : 26388,
+  "viewLastModified" : 1789640622,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1558099544,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 635005,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1558099544,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 15141562,
+    "name" : "any",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "any",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 838836,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026",
+        "count" : "76618"
+      }, {
+        "item" : "2025",
+        "count" : "76469"
+      }, {
+        "item" : "2024",
+        "count" : "76225"
+      }, {
+        "item" : "2023",
+        "count" : "75728"
+      }, {
+        "item" : "2022",
+        "count" : "75493"
+      }, {
+        "item" : "2021",
+        "count" : "75341"
+      }, {
+        "item" : "2019",
+        "count" : "75201"
+      }, {
+        "item" : "2020",
+        "count" : "75092"
+      }, {
+        "item" : "2018",
+        "count" : "74985"
+      }, {
+        "item" : "2017",
+        "count" : "74692"
+      }, {
+        "item" : "2015",
+        "count" : "74179"
+      }, {
+        "item" : "2016",
+        "count" : "74166"
+      }, {
+        "item" : "2014",
+        "count" : "74029"
+      }, {
+        "item" : "2013",
+        "count" : "73974"
+      }, {
+        "item" : "2012",
+        "count" : "73946"
+      } ],
+      "smallest" : "2012",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 15141563,
+    "name" : "codi Regió Sanitària",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "rs_codi",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9637781,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "SE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "78",
+        "count" : "526353"
+      }, {
+        "item" : "64",
+        "count" : "124151"
+      }, {
+        "item" : "67",
+        "count" : "110008"
+      }, {
+        "item" : "62",
+        "count" : "97486"
+      }, {
+        "item" : "61",
+        "count" : "69087"
+      }, {
+        "item" : "76",
+        "count" : "55815"
+      }, {
+        "item" : "79",
+        "count" : "41259"
+      }, {
+        "item" : "63",
+        "count" : "33448"
+      }, {
+        "item" : "75",
+        "count" : "30348"
+      }, {
+        "item" : "71",
+        "count" : "24075"
+      }, {
+        "item" : "70",
+        "count" : "13966"
+      }, {
+        "item" : "SE",
+        "count" : "142"
+      } ],
+      "smallest" : "61",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : { }
+  }, {
+    "id" : 15141564,
+    "name" : "Regió Sanitària",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "rs_nom",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 838837,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "TERRES DE L'EBRE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "BARCELONA",
+        "count" : "526353"
+      }, {
+        "item" : "GIRONA",
+        "count" : "124151"
+      }, {
+        "item" : "CATALUNYA CENTRAL",
+        "count" : "110008"
+      }, {
+        "item" : "CAMP DE TARRAGONA",
+        "count" : "97486"
+      }, {
+        "item" : "LLEIDA",
+        "count" : "69087"
+      }, {
+        "item" : "BARCELONA METROPOLITANA NORD",
+        "count" : "55815"
+      }, {
+        "item" : "BARCELONA CIUTAT",
+        "count" : "41259"
+      }, {
+        "item" : "TERRES DE L'EBRE",
+        "count" : "33448"
+      }, {
+        "item" : "BARCELONA METROPOLITANA SUD",
+        "count" : "30348"
+      }, {
+        "item" : "ALT PIRINEU i ARAN",
+        "count" : "24075"
+      }, {
+        "item" : "PENEDÈS",
+        "count" : "9315"
+      }, {
+        "item" : "PENED�S",
+        "count" : "4651"
+      }, {
+        "item" : "SENSE ESPECIFICAR",
+        "count" : "142"
+      } ],
+      "smallest" : "ALT PIRINEU i ARAN",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : { }
+  }, {
+    "id" : 15141565,
+    "name" : "codi Àrea Bàsica de Saut",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "abs_codi",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9637780,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "SES",
+      "null" : "0",
+      "top" : [ {
+        "item" : "027",
+        "count" : "3138"
+      }, {
+        "item" : "025",
+        "count" : "3138"
+      }, {
+        "item" : "043",
+        "count" : "3130"
+      }, {
+        "item" : "042",
+        "count" : "3129"
+      }, {
+        "item" : "031",
+        "count" : "3117"
+      }, {
+        "item" : "045",
+        "count" : "3113"
+      }, {
+        "item" : "171",
+        "count" : "3111"
+      }, {
+        "item" : "022",
+        "count" : "3110"
+      }, {
+        "item" : "055",
+        "count" : "3110"
+      }, {
+        "item" : "046",
+        "count" : "3109"
+      }, {
+        "item" : "028",
+        "count" : "3108"
+      }, {
+        "item" : "190",
+        "count" : "3107"
+      }, {
+        "item" : "049",
+        "count" : "3104"
+      }, {
+        "item" : "021",
+        "count" : "3102"
+      }, {
+        "item" : "121",
+        "count" : "3101"
+      }, {
+        "item" : "247",
+        "count" : "3101"
+      }, {
+        "item" : "044",
+        "count" : "3100"
+      }, {
+        "item" : "067",
+        "count" : "3099"
+      }, {
+        "item" : "030",
+        "count" : "3098"
+      }, {
+        "item" : "041",
+        "count" : "3098"
+      } ],
+      "smallest" : "001",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : { }
+  }, {
+    "id" : 15141566,
+    "name" : "Àrea Bàsica de Salut",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "abs_nom",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 838838,
+    "width" : 340,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "VILASSAR DE MAR",
+      "null" : "0",
+      "top" : [ {
+        "item" : "BARCELONA 2-E",
+        "count" : "3138"
+      }, {
+        "item" : "BARCELONA 2-G",
+        "count" : "3138"
+      }, {
+        "item" : "BARCELONA 5-B",
+        "count" : "3130"
+      }, {
+        "item" : "BARCELONA 5-A",
+        "count" : "3129"
+      }, {
+        "item" : "BARCELONA 2-K",
+        "count" : "3117"
+      }, {
+        "item" : "BARCELONA 5-D",
+        "count" : "3113"
+      }, {
+        "item" : "OLOT",
+        "count" : "3111"
+      }, {
+        "item" : "BARCELONA 7-E",
+        "count" : "3110"
+      }, {
+        "item" : "BARCELONA 2-B",
+        "count" : "3110"
+      }, {
+        "item" : "BARCELONA 5-E",
+        "count" : "3109"
+      }, {
+        "item" : "BARCELONA 2-H",
+        "count" : "3108"
+      }, {
+        "item" : "BARCELONA 6-C",
+        "count" : "3104"
+      }, {
+        "item" : "BARCELONA 2-A",
+        "count" : "3102"
+      }, {
+        "item" : "TERRASSA A",
+        "count" : "3101"
+      }, {
+        "item" : "LA GARRIGA",
+        "count" : "3101"
+      }, {
+        "item" : "BARCELONA 5-C",
+        "count" : "3100"
+      }, {
+        "item" : "BARCELONA 9-C",
+        "count" : "3099"
+      }, {
+        "item" : "BARCELONA 4-C",
+        "count" : "3098"
+      }, {
+        "item" : "BARCELONA 2-J",
+        "count" : "3098"
+      }, {
+        "item" : "BANYOLES",
+        "count" : "3096"
+      } ],
+      "smallest" : "ABRERA",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : { }
+  }, {
+    "id" : 15141567,
+    "name" : "gènere",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "genere",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9637779,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "Home",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Dona",
+        "count" : "571317"
+      }, {
+        "item" : "Home",
+        "count" : "554821"
+      } ],
+      "smallest" : "Dona",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : { }
+  }, {
+    "id" : 15141568,
+    "name" : "edat",
+    "dataTypeName" : "number",
+    "description" : "Edat de les persones, en anys enters, a 31 de desembre de l'any anterior al de referència.",
+    "fieldName" : "edat",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9637782,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "119",
+      "null" : "0",
+      "top" : [ {
+        "item" : "34",
+        "count" : "11172"
+      }, {
+        "item" : "0",
+        "count" : "11172"
+      }, {
+        "item" : "46",
+        "count" : "11171"
+      }, {
+        "item" : "42",
+        "count" : "11171"
+      }, {
+        "item" : "40",
+        "count" : "11170"
+      }, {
+        "item" : "38",
+        "count" : "11170"
+      }, {
+        "item" : "33",
+        "count" : "11170"
+      }, {
+        "item" : "32",
+        "count" : "11170"
+      }, {
+        "item" : "26",
+        "count" : "11170"
+      }, {
+        "item" : "49",
+        "count" : "11169"
+      }, {
+        "item" : "44",
+        "count" : "11169"
+      }, {
+        "item" : "56",
+        "count" : "11169"
+      }, {
+        "item" : "22",
+        "count" : "11169"
+      }, {
+        "item" : "47",
+        "count" : "11169"
+      }, {
+        "item" : "39",
+        "count" : "11169"
+      }, {
+        "item" : "21",
+        "count" : "11169"
+      }, {
+        "item" : "24",
+        "count" : "11169"
+      }, {
+        "item" : "29",
+        "count" : "11169"
+      }, {
+        "item" : "41",
+        "count" : "11169"
+      }, {
+        "item" : "58",
+        "count" : "11169"
+      } ],
+      "smallest" : "0",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : { }
+  }, {
+    "id" : 15141569,
+    "name" : "població oficial",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "poblacio_oficial",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 838839,
+    "width" : 521,
+    "cachedContents" : {
+      "non_null" : "1126138",
+      "largest" : "732",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "23005"
+      }, {
+        "item" : "2",
+        "count" : "13192"
+      }, {
+        "item" : "3",
+        "count" : "9721"
+      }, {
+        "item" : "4",
+        "count" : "7646"
+      }, {
+        "item" : "5",
+        "count" : "6667"
+      }, {
+        "item" : "6",
+        "count" : "6350"
+      }, {
+        "item" : "77",
+        "count" : "6313"
+      }, {
+        "item" : "84",
+        "count" : "6275"
+      }, {
+        "item" : "94",
+        "count" : "6252"
+      }, {
+        "item" : "90",
+        "count" : "6250"
+      }, {
+        "item" : "86",
+        "count" : "6228"
+      }, {
+        "item" : "82",
+        "count" : "6226"
+      }, {
+        "item" : "79",
+        "count" : "6203"
+      }, {
+        "item" : "85",
+        "count" : "6202"
+      }, {
+        "item" : "74",
+        "count" : "6198"
+      }, {
+        "item" : "87",
+        "count" : "6188"
+      }, {
+        "item" : "78",
+        "count" : "6150"
+      }, {
+        "item" : "80",
+        "count" : "6148"
+      }, {
+        "item" : "92",
+        "count" : "6138"
+      }, {
+        "item" : "89",
+        "count" : "6132"
+      } ],
+      "smallest" : "1",
+      "count" : "1126138",
+      "cardinality" : "1126138"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "groupSeparator" : ".",
+      "align" : "right"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "any",
+        "ascending" : false
+      }, {
+        "columnFieldName" : "rs_nom",
+        "ascending" : true
+      }, {
+        "columnFieldName" : "abs_nom",
+        "ascending" : true
+      }, {
+        "columnFieldName" : "genere",
+        "ascending" : true
+      }, {
+        "columnFieldName" : "edat",
+        "ascending" : true
+      } ]
+    },
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Population central register of the CatSalut (Catalan Health Service): population by basic health area",
+        "Nombre del conjunto de datos (ES)" : "Registro central de población del CatSalut: población por área básica de salud"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Enllaços relacionats" : {
+        "Nom" : "Població de referència del Servei Català de la Salut per a l’any 2026. Consell de Direcció del Servei Català de la Salut, 16 de febrer de 2026.",
+        "URL" : "https://scientiasalut.gencat.cat/handle/11351/11946.3"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 15141562,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 15141564,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 15141566,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 15141567,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 15141568,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "demografia", "població", "estadístiques", "salut", "assegurada", "abs", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
