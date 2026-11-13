@@ -17,6 +17,7 @@
     <a class="marca" href="./"><span class="marca-punt" aria-hidden="true"></span><span data-t="marca">Girona en dades</span></a>
     <nav class="menu" aria-label="Seccions">
       <a href="#s-mapa" data-t="nav_mapa">Mapa</a>
+      <a href="#s-prov" data-t="nav_prov">La província</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -80,9 +81,18 @@
     </div>
   </section>
 
+  <section id="s-prov" class="amplada sec" aria-labelledby="h-prov2">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">02</span> <span data-t="nav_prov">La província</span></p>
+      <h2 id="h-prov2" data-t="h_prov2">Girona davant Catalunya i Espanya</h2>
+      <p class="lead" data-t="lead_prov">Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades.</p>
+    </header>
+    <div class="pg-graella" id="prov-grafics"></div>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">02</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">03</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -130,5 +140,6 @@
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="app.js"></script>
 <script src="mapa.js"></script>
+<script src="provincia.js"></script>
 </body>
 </html>

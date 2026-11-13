@@ -5,7 +5,7 @@ const T = {
   ca: {
     locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
-    nav_mapa: "Mapa", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
+    nav_mapa: "Mapa", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Habitatge · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
     lead_mapa: "Més de 80 indicadors d'habitatge, renda, població, treball, salut, seguretat, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
@@ -79,7 +79,7 @@ const T = {
   es: {
     locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
-    nav_mapa: "Mapa", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
+    nav_mapa: "Mapa", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Vivienda · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
     lead_mapa: "Más de 80 indicadores de vivienda, renta, población, trabajo, salud, seguridad, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
@@ -493,6 +493,7 @@ function blocDe(sigles, e) {
 function pintaTot() {
   aplicaIdioma();
   pintaProvincia();
+  if (window.pintaSeccioProv) window.pintaSeccioProv();
   pintaTaula();
   const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
   document.querySelectorAll(".data-gen").forEach((e) => { e.textContent = dg; });
@@ -511,6 +512,7 @@ addEventListener("resize", () => {
   if (!D || Math.abs(innerWidth - ampleAnterior) < 40) return;
   ampleAnterior = innerWidth;
   pintaProvincia();
+  if (window.pintaSeccioProv) window.pintaSeccioProv();
   if (seleccionat) obreFitxa(seleccionat, false);
 });
 

@@ -581,6 +581,95 @@ def referencias():
     return {k: {z: x for z, x in v.items() if x is not None} for k, v in refs.items()}
 
 
+# ---------------------------------------------------------------------------
+# La provincia: series generales del INE (Girona, Cataluña, España)
+
+def _punts(d, desde=None):
+    """[[año, FK_Periodo, valor]] -> [[x, etiqueta, valor]] ordenado."""
+    res = []
+    for a, fk, v in d:
+        if v is None or a is None:
+            continue
+        if 1 <= fk <= 12:
+            x, et = a + (fk - 1) / 12, f"{a}-{fk:02d}"
+        elif 19 <= fk <= 22:
+            x, et = a + (fk - 19) / 4, f"{a}T{fk - 18}"
+        else:
+            x, et = a, str(a)
+        if desde is None or x >= desde:
+            res.append([round(x, 4), et, v])
+    return sorted(res)
+
+
+def provincia_series():
+    f = P / "provincia" / "ine_series.json"
+    if not f.exists():
+        return {}
+    d = json.loads(f.read_text(encoding="utf-8"))
+
+    def serie(tabla, *claus, zona):
+        for s_ in d.get(tabla, {}).get("series", []):
+            n = s_["nom"]
+            if n.startswith(zona) and all(c in n for c in claus):
+                return s_["d"]
+        return []
+
+    def index(punts, base):
+        b = next((v for x, _, v in punts if x == base), None)
+        return [[x, e, round(v / b * 100, 1)] for x, e, v in punts if x >= base] if b else []
+
+    res = {}
+    # 1. Inflación
+    res["ipc"] = {"tipus": "linia", "u": "%", "dec": 1, "series": {
+        "gi": _punts(serie("76143", "Índice general", "Variación anual", zona="Girona"), 2016),
+        "cat": _punts(serie("76140", "Índice general", "Variación anual", zona="Cataluña"), 2016),
+        "esp": _punts(serie("76134", "Índice general", "Variación anual", zona="Nacional"), 2016)}}
+    # 2. Paro EPA
+    res["paro"] = {"tipus": "linia", "u": "%", "dec": 1, "series": {
+        "gi": _punts(serie("65349", "Tasa de paro", "Ambos sexos", zona="Tasa de paro de la población. Girona"), 2008),
+        "esp": _punts(serie("65349", "Tasa de paro", "Ambos sexos", "Total Nacional", zona="Tasa de paro"), 2008)}}
+    # 3. IPC por grupos, último año
+    grups = []
+    for s_ in d.get("76154", {}).get("series", []):
+        n = s_["nom"]
+        if n.startswith("Girona.") and "Variación anual" in n and "Índice general" not in n:
+            g = n.split(".")[1].strip()
+            esp = serie("76154", f" {g}.", "Variación anual", zona="Total Nacional")
+            pg, pe = _punts(s_["d"]), _punts(esp)
+            if pg and pe:
+                grups.append({"g": g, "gi": pg[-1][2], "esp": pe[-1][2], "any": pg[-1][1]})
+    res["ipc_grups"] = {"tipus": "barres", "u": "%", "dec": 1, "grups": sorted(grups, key=lambda x: -x["gi"])}
+    # 4. Compraventas de vivienda (índice 2007 = 100)
+    cv = {z: _punts(serie("6155", "General", "Compraventa", zona=n)) for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
+    res["compra"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: v[-1][2] for z, v in cv.items() if v},
+                     "any": cv["gi"][-1][1] if cv["gi"] else None,
+                     "series": {z: index(v, 2007) for z, v in cv.items()}}
+    # 5. Turismo: % de pernoctaciones de residentes en el extranjero (años completos)
+    def anual(dd):
+        tot = {}
+        for a, fk, v in dd:
+            if v is not None and 1 <= fk <= 12:
+                tot.setdefault(a, [0, 0]); tot[a][0] += v; tot[a][1] += 1
+        return {a: t for a, (t, n) in tot.items() if n == 12}
+    tur = {}
+    for z, n, tt in (("gi", "Girona", "Pernoctaciones. Total."), ("cat", "Cataluña", "Pernoctaciones. Total."), ("esp", "Nacional", "Pernoctaciones. Total categorías. Total.")):
+        tot = anual(serie("2074", tt, zona=n))
+        ext = anual(serie("2074", "Pernoctaciones", "Residentes en el extranjero", zona=n))
+        tur[z] = sorted([[a, str(a), round(ext[a] / tot[a] * 100, 1)] for a in tot if a in ext and tot[a] and a >= 2005])
+        if z == "gi" and tot:
+            res["pernoct_total"] = {"any": max(tot), "v": tot[max(tot)]}
+    res["turisme"] = {"tipus": "linia", "u": "%", "dec": 0, "series": tur}
+    # 6. Ejecuciones hipotecarias de viviendas (índice 2014 = 100)
+    eh = {z: _punts(serie("10744", "General", zona=n)) for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
+    res["execucions"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2014, "abs": {z: v[-1][2] for z, v in eh.items() if v},
+                         "any": eh["gi"][-1][1] if eh["gi"] else None, "series": {z: index(v, 2014) for z, v in eh.items()}}
+    # 7. Sociedades mercantiles constituidas (índice 2007 = 100)
+    so = {z: _punts(serie("6454", "Mercantiles", "Número de Sociedades", zona=n)) for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
+    res["societats"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: v[-1][2] for z, v in so.items() if v},
+                        "any": so["gi"][-1][1] if so["gi"] else None, "series": {z: index(v, 2007) for z, v in so.items()}}
+    return res
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -658,7 +747,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs,
+        "arees": zones, "ref": refs, "prov": provincia_series(),
         "anys": anys_extra,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),

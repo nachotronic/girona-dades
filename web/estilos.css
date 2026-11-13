@@ -493,3 +493,34 @@ tbody tr:hover { background: var(--fons-2); }
   .fi-r:nth-of-type(5)::before { content: "CAT"; }
   .fi-r:nth-of-type(6)::before { content: "ESP"; }
 }
+
+/* La provincia: gráficos comparados */
+.pg-graella { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 48px; }
+@media (max-width: 860px) { .pg-graella { grid-template-columns: 1fr; gap: 32px; } }
+.pg-fig { margin: 0; border-top: 3px solid var(--tinta); padding-top: 10px; min-width: 0; }
+.pg-fig figcaption { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.pg-tit { font: 800 22px/1.05 var(--sans); font-variation-settings: "wdth" 72; }
+.pg-fig .unitat { font: 11px/1.3 var(--mono); color: var(--text-3); text-align: right; }
+.pg-h { font-size: 15px; line-height: 1.45; margin: 8px 0 10px; color: var(--text-2); }
+.pg-h b { color: var(--tinta); font-weight: 700; }
+.pg-lleg { display: flex; gap: 16px; font-size: 12.5px; margin: 0 0 6px; color: var(--text-2); }
+.pg-dot { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 6px; }
+.pg-dot.pg-gi { background: var(--accent); } .pg-dot.pg-cat { background: var(--tinta); } .pg-dot.pg-esp { background: var(--text-3); }
+.pg { width: 100%; height: auto; display: block; overflow: visible; }
+.pg-g { stroke: var(--vora); stroke-width: 1; }
+.pg-ref { stroke: var(--tinta); stroke-width: 1; }
+.pg-t { font: 10.5px var(--mono); fill: var(--text-3); }
+.pg-l { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.pg-l.pg-gi { stroke: var(--accent); stroke-width: 2.5; } .pg-l.pg-cat { stroke: var(--tinta); } .pg-l.pg-esp { stroke: var(--text-3); stroke-dasharray: 4 3; }
+.pg-p.pg-gi { fill: var(--accent); } .pg-p.pg-cat { fill: var(--tinta); } .pg-p.pg-esp { fill: var(--text-3); }
+.pg-e { font: 600 11px var(--mono); } .pg-e.pg-gi { fill: var(--accent); } .pg-e.pg-cat { fill: var(--tinta); } .pg-e.pg-esp { fill: var(--text-3); }
+.pg-guia { stroke: var(--text-3); stroke-dasharray: 3 3; }
+.pg-font { font: 10.5px var(--mono); color: var(--text-3); margin: 6px 0 0; }
+.pb { display: grid; gap: 7px; margin-top: 4px; }
+.pb-fila { display: grid; grid-template-columns: minmax(120px, 42%) 1fr; gap: 12px; align-items: center; font-size: 12.5px; }
+.pb-nom { line-height: 1.2; }
+.pb-barres { display: grid; gap: 2px; }
+.pb-b { display: flex; align-items: center; gap: 6px; height: 9px; }
+.pb-b b { display: block; height: 100%; }
+.pb-b em { font: normal 10.5px var(--mono); color: var(--text-2); white-space: nowrap; }
+.pg-bg-gi { background: var(--accent); } .pg-bg-esp { background: var(--text-3); }
