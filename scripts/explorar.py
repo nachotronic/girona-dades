@@ -25,14 +25,8 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-import urllib.parse as _u
-for _q in ("àrea bàsica policial", "municipis ABP", "regions policials", "fets penals municipis", "delictes municipi"):
-    CANDIDATAS["socrata_" + _q.replace(" ", "_")] = SOCRATA + "?" + _u.urlencode({"q": _q, "limit": 12})
-CANDIDATAS["emex_girona"] = "https://api.idescat.cat/emex/v1/dades.json?id=170792&lang=cat"
-CANDIDATAS["emex_nodes"] = "https://api.idescat.cat/emex/v1/nodes.json?lang=cat"
-CANDIDATAS["ine_tablas_adrh"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/353"
-CANDIDATAS["ine_operaciones"] = "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES"
-CANDIDATAS["icgc_abp"] = "https://analisi.transparenciacatalunya.cat/api/catalog/v1?" + _u.urlencode({"q": "ABP", "limit": 20})
+for _op in ("IPC", "EPA", "H", "ETDP", "EOH", "EOAC", "ECP", "MNP", "IPV", "EH", "ECV", "SM", "PCAP"):
+    CANDIDATAS["ine_ops_" + _op] = f"https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/{_op}"
 
 
 def extension(tipo: str) -> str:
@@ -49,7 +43,7 @@ def main() -> None:
     for clave, url in CANDIDATAS.items():
         try:
             r = requests.get(url, headers=UA, timeout=120, stream=True)
-            contenido = r.raw.read(LIMITE, decode_content=True)
+            contenido = r.raw.read(LIMITE * 20 if clave.startswith("ine_ops_") else LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
             (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(contenido)
             filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {r.headers.get('content-length', len(contenido))} | {r.url} |")
