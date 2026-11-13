@@ -365,7 +365,7 @@ function mitjanaRendaLlar() {
 // ---------- Tabla ----------
 function pintaTaula() {
   const cap = document.querySelector("#taula thead tr");
-  cap.innerHTML = COLS.map((c) => `<th scope="col" data-col="${c.id}" tabindex="0" aria-sort="${orden.col === c.id ? (orden.dir > 0 ? "ascending" : "descending") : "none"}">${t(c.t)}</th>`).join("");
+  cap.innerHTML = COLS.map((c) => `<th scope="col" data-col="${c.id}" data-c="${c.id}" tabindex="0" aria-sort="${orden.col === c.id ? (orden.dir > 0 ? "ascending" : "descending") : "none"}">${t(c.t)}</th>`).join("");
   cap.querySelectorAll("th").forEach((th) => {
     const canvia = () => {
       const c = th.dataset.col;
@@ -389,10 +389,10 @@ function pintaTaula() {
   document.querySelector("#taula tbody").innerHTML = files.map((m) => {
     const cel = COLS.map((c) => {
       const v = c.v(m);
-      if (c.txt) return `<td class="${c.id === "nom" ? "nom" : "com"}">${v}</td>`;
-      if (v == null) return `<td class="buit">–</td>`;
+      if (c.txt) return `<td data-c="${c.id}" class="${c.id === "nom" ? "nom" : "com"}">${v}</td>`;
+      if (v == null) return `<td data-c="${c.id}" class="buit">–</td>`;
       const b = c.barra ? `<span class="barra" style="width:${Math.max(2, (v / maxs[c.id]) * 48)}px"></span>` : "";
-      return `<td>${b}${c.f(v)}</td>`;
+      return `<td data-c="${c.id}">${b}${c.f(v)}</td>`;
     }).join("");
     return `<tr tabindex="0" data-ine="${m.ine}">${cel}</tr>`;
   }).join("");

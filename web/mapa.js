@@ -628,9 +628,10 @@
     // Sin mapa base: solo el territorio, sobre el color del papel
     const estil = { version: 8, sources: {}, layers: [{ id: "fons", type: "background", paint: { "background-color": css("--paper") || "#fffefb" } }] };
     const estret = innerWidth < 640;
+    const encaixaProv = () => mapa.fitBounds([[1.72, 41.64], [3.33, 42.5]], { padding: innerWidth < 640 ? { top: 56, bottom: 10, left: 10, right: 14 } : { top: 64, bottom: 24, left: 24, right: 24 }, duration: 0 });
     mapa = new maplibregl.Map({
       container: "mapa", style: estil, center: [2.6, 42.05], zoom: 8,
-      minZoom: 7, maxZoom: 14, cooperativeGestures: matchMedia("(pointer: coarse)").matches,
+      minZoom: 6, maxZoom: 14, cooperativeGestures: matchMedia("(pointer: coarse)").matches,
       attributionControl: false, dragRotate: false, pitchWithRotate: false,
     });
     mapa.touchZoomRotate.disableRotation();
@@ -647,7 +648,11 @@
       mapa.addLayer({ id: "seleccio", type: "line", source: "seleccio", paint: { "line-color": "#c8553d", "line-width": 2.5 } });
       colorsBase();
       pinta();
-      mapa.fitBounds([[1.72, 41.64], [3.33, 42.5]], { padding: estret ? 8 : 24, duration: 0 });
+      encaixaProv();
+      // Si cambia el tamaño del contenedor (giro del móvil, barra lateral) y nadie ha movido el mapa, se vuelve a encuadrar
+      let mogut = false;
+      mapa.on("dragstart", () => { mogut = true; }); mapa.on("zoomstart", (e) => { if (e.originalEvent) mogut = true; });
+      new ResizeObserver(() => { mapa.resize(); if (!mogut) encaixaProv(); }).observe(document.getElementById("mapa"));
       // Rótulos de las poblaciones principales, para orientarse sin mapa base
       (estret ? ROTULS_MOBIL : ROTULS).forEach((nom) => {
         const m = D.municipios.find((x) => x.nom === nom); if (!m) return;
