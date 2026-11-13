@@ -1,0 +1,1313 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Regions policials",
+            "id" : "yq89-5upb",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de les regions policials (RP) dependents de la Comissaria Superior Territorial en què s'organitza territorialment la Policia de la Generalitat-Mossos d'Esquadra.",
+            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:36.000Z",
+            "createdAt" : "2025-01-21T12:37:04.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:36.000Z",
+            "data_updated_at" : "2026-07-03T07:38:26.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 11,
+                "page_views_last_month" : 36,
+                "page_views_total" : 637,
+                "page_views_last_week_log" : 3.5849625007211565,
+                "page_views_last_month_log" : 5.20945336562895,
+                "page_views_total_log" : 9.31741261376487
+              },
+            "columns_name" :
+              [
+                "CODI_RP_MOSSOS",
+                "GEOMETRIA_RP_MOSSOS",
+                "OBJECTID",
+                "NOM_RP_MOSSOS",
+                "ACRON_RP_MOSSOS"
+              ],
+            "columns_field_name" :
+              [
+                "codi_rp_mossos",
+                "geometria_rp_mossos",
+                "objectid",
+                "nom_rp_mossos",
+                "acron_rp_mossos"
+              ],
+            "columns_datatype" :
+              [ "Text", "MultiPolygon", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador únic de regió policial.  No és un codi oficial però reflexa l’ordre seguit en el decret d’estructura. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’.",
+                "Informació geogràfica que defineix la zona que delimita la regió policial",
+                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat  evitar els duplicats.",
+                "Nom de la regió policial",
+                "Acrònim d’ús intern que identifica la regió policial, d’acord amb la llista d’abreviatures oficials de la DGP"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 406,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:38:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Police regions"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Regiones policiales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/yq89-5upb",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-policials/yq89-5upb",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Regional policy support to tourism actions 2014-2020",
+            "id" : "xqyn-i57a",
+            "resource_name" : null,
+            "parent_fxf" :
+              [
+                "k6yg-rys7",
+                "sky3-xbfe",
+                "xemf-wcbc",
+                "xjmc-qzan",
+                "7spt-7dpk",
+                "xxuk-eb3q"
+              ],
+            "description" : "Europe is the most visited region in the world. Tourism plays an important role in generating growth and jobs contributing about 10% of EU GDP. EU regional policy supports important sustainable tourism actions.",
+            "attribution" : "REGIO-EVAL@ec.europa.eu",
+            "attribution_link" : "https://cohesiondata.ec.europa.eu/",
+            "contact_email" : null,
+            "type" : "story",
+            "updatedAt" : "2020-11-05T11:11:04.140Z",
+            "createdAt" : "2020-08-18T09:10:49.000Z",
+            "metadata_updated_at" : "2023-01-07T16:22:16.000Z",
+            "data_updated_at" : "2020-11-05T11:11:04.140Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 11,
+                "page_views_last_month" : 36,
+                "page_views_total" : 5596,
+                "page_views_last_week_log" : 3.5849625007211565,
+                "page_views_last_month_log" : 5.20945336562895,
+                "page_views_total_log" : 12.450438032395654
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "story",
+            "lens_display_type" : "story",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-08-18T09:24:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "2014 / 2020 Categorisation",
+            "domain_tags" :
+              [
+                "tourism",
+                "tourist attractions",
+                "national parks",
+                "natural areas",
+                "e-tourism"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Stories-Categories_High-Level-Themes",
+                  "value" : "4. Territorial Development"
+                },
+                {
+                  "key" : "Stories-Categories_EU-programme-period",
+                  "value" : "2014-2020"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/stories/s/xqyn-i57a",
+        "link" : "https://cohesiondata.ec.europa.eu/stories/s/xqyn-i57a",
+        "owner" :
+          {
+            "id" : "p5rd-ygin",
+            "user_type" : "interactive",
+            "display_name" : "John W"
+          },
+        "creator" :
+          {
+            "id" : "p5rd-ygin",
+            "user_type" : "interactive",
+            "display_name" : "John W"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eurobarometer: Citizens' perception of EU Regional policy",
+            "id" : "iny5-gdmz",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy. It is based on 4 previous surveys (2017, 2015, 2013, 2010).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2020-05-23T12:14:44.000Z",
+            "createdAt" : "2019-10-17T12:42:49.000Z",
+            "metadata_updated_at" : "2020-05-23T12:14:44.000Z",
+            "data_updated_at" : "2019-10-17T13:11:50.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 8,
+                "page_views_last_month" : 19,
+                "page_views_total" : 862,
+                "page_views_last_week_log" : 3.1699250014423126,
+                "page_views_last_month_log" : 4.321928094887363,
+                "page_views_total_log" : 9.753216749178955
+              },
+            "columns_name" :
+              [
+                "% no impact",
+                "Answer: n/a",
+                "Total number of responses",
+                "% n/a",
+                "% negative",
+                "Positive impact",
+                "Answer: no impact",
+                "% positive",
+                "Year",
+                "EU countries",
+                "Answer: Negative impact"
+              ],
+            "columns_field_name" :
+              [
+                "no_impact",
+                "answer_n_a",
+                "total",
+                "n_a",
+                "negative",
+                "positive_impact",
+                "answer_no_impact",
+                "positive",
+                "year",
+                "eu_countries",
+                "answer_negative_impact"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "% of \"no impact\" answers",
+                "Respondents who don't know or any other non-applicable answer",
+                "Total number of responses",
+                "% of n/a answers",
+                "% of negative answers",
+                "Respondents who agree EU co-financed projects have a positive impact on the development of the region or city",
+                "Respondents who agree EU co-financed projects have no significative impact on the development of the region or city",
+                "% of positive answers",
+                "Year of the eurobarometer's edition",
+                "EU country Name",
+                "Respondents who agree EU co-financed projects have a negative impact on the development of the region or city"
+              ],
+            "columns_format" :
+              [
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                {},
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                { "noCommas" : "true" },
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 381,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-17T13:11:50.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other: Eurobarometer",
+            "domain_tags" : [ "eurobarometer perception eu regional policy" ],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/iny5-gdmz",
+        "link" : "https://cohesiondata.ec.europa.eu/Other-Eurobarometer/Eurobarometer-Citizens-perception-of-EU-Regional-p/iny5-gdmz",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eurobarometer: Citizens' awareness of EU Regional policy",
+            "id" : "knrf-5uid",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy. It is based on 4 previous surveys (2017, 2015, 2013, 2010).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2020-05-23T12:14:23.000Z",
+            "createdAt" : "2019-10-17T08:50:48.000Z",
+            "metadata_updated_at" : "2020-05-23T12:14:23.000Z",
+            "data_updated_at" : "2019-10-17T14:29:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 7,
+                "page_views_total" : 701,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 3.0,
+                "page_views_total_log" : 9.45532722030456
+              },
+            "columns_name" :
+              [
+                "Answer: no",
+                "Answer: yes",
+                "% no",
+                "EU countries",
+                "Total amount of responses",
+                "Year",
+                "% n/a",
+                "Answer: n/a",
+                "% yes"
+              ],
+            "columns_field_name" :
+              [
+                "answer_no",
+                "answer_yes",
+                "no",
+                "eu_countries",
+                "total",
+                "year",
+                "n_a",
+                "answer_n_a",
+                "yes"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Respondents who have not heard about any EU co-financed projects in their local area",
+                "Respondents who have heard about any EU co-financed projects in their local area",
+                "% of negative answers",
+                "EU country Name",
+                "Total number of responses",
+                "Year of the eurobarometer's edition",
+                "% of  non-applicable answer",
+                "Respondents who don't know or any other non-applicable answer",
+                "% of positive answers"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" }
+              ],
+            "download_count" : 199,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-17T09:28:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other: Eurobarometer",
+            "domain_tags" : [ "eurobarometer awareness eu regional policy" ],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/knrf-5uid",
+        "link" : "https://cohesiondata.ec.europa.eu/Other-Eurobarometer/Eurobarometer-Citizens-awareness-of-EU-Regional-po/knrf-5uid",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Citizens’ perception of EU regional policy in relation with EU funding",
+            "id" : "n73u-s7fh",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "More than three in four EU citizens, 78%, see a positive impact of EU regional investments in their city or region (up 3 percentage points (pp) from 2015). This is one of the key findings of regional policy Eurobarometer 452, which was published today. Citizens' generally positive opinion about Regional policy is also reflected in their view that it should continue investing in all EU regions: 53% of Europeans expressed this opinion. This dataset compares awareness, positive perception and the EU funding per capita in each EU Country.",
+            "attribution" : "European commission - Eurobarometer",
+            "attribution_link" : "http://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Survey/getSurveyDetail/instruments/FLASH/surveyKy/2145",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2020-05-23T12:15:43.000Z",
+            "createdAt" : "2017-07-05T08:14:26.000Z",
+            "metadata_updated_at" : "2020-05-23T12:15:43.000Z",
+            "data_updated_at" : "2017-07-05T08:22:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 11,
+                "page_views_total" : 1264,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 3.5849625007211565,
+                "page_views_total_log" : 10.304921669581674
+              },
+            "columns_name" :
+              [
+                "Funding per capita (€)",
+                "Positive perception (%)",
+                "Awareness (%)",
+                "EU countries"
+              ],
+            "columns_field_name" :
+              [
+                "funding_per_capita",
+                "positive_perception",
+                "awareness",
+                "eu_countries"
+              ],
+            "columns_datatype" : [ "Number", "Number", "Number", "Text" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 278,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-07-05T08:23:32.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other: Eurobarometer",
+            "domain_tags" :
+              [
+                "eu regional policy",
+                "citizens’ perception",
+                "eu funding per capita"
+              ],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/n73u-s7fh",
+        "link" : "https://cohesiondata.ec.europa.eu/Other-Eurobarometer/Citizens-perception-of-EU-regional-policy-in-relat/n73u-s7fh",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "regional policy 2014-2020 EU payment rate",
+            "id" : "vaum-8mpv",
+            "resource_name" : null,
+            "parent_fxf" : [ "vs2b-dct3" ],
+            "description" : "This dataset presents information on EU payments to the Regional Policy supported programmes. \r\nAnnual snapshots are provided in the data and therefore the data must be filtered by year to have an accurate view of the total EU planned amount and payments made.\r\nData is reported on cumulative basis, i.e. the amounts shown in 2017 represent the cumulative payments made from the beginning of the programming period (2014-2017 up to date). \r\nThe dataset is updated on a daily basis.",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://cohesiondata.ec.europa.eu/",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2026-11-13T06:49:46.000Z",
+            "createdAt" : "2021-05-31T10:02:36.000Z",
+            "metadata_updated_at" : "2024-01-04T10:34:31.000Z",
+            "data_updated_at" : "2026-11-13T06:49:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 10,
+                "page_views_last_month" : 22,
+                "page_views_total" : 785,
+                "page_views_last_week_log" : 3.4594316186372978,
+                "page_views_last_month_log" : 4.523561956057013,
+                "page_views_total_log" : 9.618385502258606
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 2,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-01-04T10:34:30.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "2014 / 2020 Finances",
+            "domain_tags" : [],
+            "domain_metadata" : []
+          },
+        "metadata" : { "domain" : "cohesiondata.ec.europa.eu" },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/vaum-8mpv",
+        "link" : "https://cohesiondata.ec.europa.eu/2014-2020-Finances/regional-policy-2014-2020-EU-payment-rate/vaum-8mpv",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Regional Policy 2014-2020 EU Payment Details by EU Countries (daily update)",
+            "id" : "vs2b-dct3",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "This dataset presents information on EU payments to the Regional Policy supported programmes. \r\nAnnual snapshots are provided in the data and therefore the data must be filtered by year to have an accurate view of the total EU planned amount and payments made.\r\nData is reported on cumulative basis, i.e. the amounts shown in 2017 represent the cumulative payments made from the beginning of the programming period (2014-2017 up to date). \r\nThe dataset is updated on a daily basis.",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://cohesiondata.ec.europa.eu/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T06:49:46.000Z",
+            "createdAt" : "2017-07-26T12:22:17.000Z",
+            "metadata_updated_at" : "2025-10-08T10:12:49.000Z",
+            "data_updated_at" : "2026-11-13T06:49:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 59,
+                "page_views_total" : 15106,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 5.906890595608519,
+                "page_views_total_log" : 13.882929573153634
+              },
+            "columns_name" :
+              [
+                "Planned EU amount",
+                "recovery_of_PF_at_closure",
+                "MS",
+                "Cumulative_additional_initial_pre_financing",
+                "Cumulative_initial_pre_financing",
+                "Total net payments",
+                "Cumulative_interim_payments",
+                "Net annual pre-financing",
+                "Recovery_of_annual_pre_financing",
+                "N+3 De-commitment Amount",
+                "MS_Name",
+                "recovery_of_expenses_at_closure",
+                "Annual_pre_financing_covered_by_expenditure",
+                "Recovery_of_initial_pre_financing",
+                "PF_covered_by_expenditure_at_closure_clearing",
+                "REC_at_closure",
+                "Net_initial_pre_financing",
+                "Net interim payments",
+                "Cumulative_Annual_pre_financing",
+                "Recovery_of_expenses",
+                "EU payment rate",
+                "EU Payment Rate on Planned EU Amount",
+                "payment_at_closure",
+                "De_commitments_at_Closure",
+                "Net Planned EU Amount",
+                "Year",
+                "Fund"
+              ],
+            "columns_field_name" :
+              [
+                "planned_eu_amount",
+                "recovery_of_pf_at_closure",
+                "ms",
+                "cumulative_additional_initial_pre_financing",
+                "cumulative_initial_pre_financing",
+                "total_net_payments",
+                "cumulative_interim_payments",
+                "net_annual_pre_financing",
+                "recovery_of_annual_pre_financing",
+                "n_3_decommitment_amount",
+                "ms_name",
+                "recovery_of_expenses_at_closure",
+                "annual_pre_financing_covered_by_expenditure",
+                "recovery_of_initial_pre_financing",
+                "pf_covered_by_expenditure_at_closure_clearing",
+                "rec_at_closure",
+                "net_initial_pre_financing",
+                "net_interim_payments",
+                "cumulative_annual_pre_financing",
+                "recovery_of_expenses",
+                "eu_payment_rate",
+                "eu_payment_rate_on_planned_eu_amount",
+                "payment_at_closure",
+                "de_commitments_at_closure",
+                "net_planned_eu_amount",
+                "year",
+                "fund"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Data is reported from from the System for Fund Management in the European Union (SFC2014) based on the latest adopted version of the programmes. For more information on the planned EU amount see: dataset \"ESIF 2014-2020 Financial plans (daily update). \n\nFor more information on SFC2014 see: https://ec.europa.eu/sfc/en. ",
+                "Recoveries of PF at closure Source : SFC2014 BO, Closure Calculation, Section 6, fields ‘Recovery of PF’ (Initial and ACC Year 2018-2019) (B1)  Or Section 7, field ‘Recovered Pre-Financing’ (RP)",
+                "2-digit Abbreviation for the name of the Member State (ex: BE for Belgium, TC = Territiorial Cooperation).",
+                "Additional initial pre-financing for:\n\n1. GR programmes funded under ERDF and CF of 3,5% of total main allocation in 2015 and same in 2016.\n\nFor more information on additional initial pre-financing for GR programmes see: Regulation (EU) 1839/2015 Art 1(1), (2). \n\n",
+                "Initial pre-financing for:\n\n1. ESI funds programmes and programmes receiving support from both ESI funds  is paid for the years 2014-2016 and represents % of the total main allocation:\n-> 1% in 2014 for 22 MS and all ETC, 1,5% for 6 MS receiving financial assistance (GR, CY, PT, ES, IE and RO);\n-> 1% in 2015 for 25 MS, 1,5% for 3 Member States receiving financial assistance (GR, CY and RO);\n-> 1% in 2016 for 28 MS. ",
+                "Cumulative initial pre-financing plus net additional initial pre-financing plus net annual pre-financing plus net interim payments. ",
+                "The amount reimbursed by the Commission to the Member States based on their submitted interim payment applications, including top-up, where applicable.\nFor more information on interim payments see: Regulation (EU) 1303/2013 Art 19(5), Art 22(6), Art 23(6), Art 23(9), Art 77, Art 83, Art 130 (1), Art 131, Art 142, and Regulation (EU) 1304/2013 Art 23. \n\nFor more information on top-up see: Regulation (EU) 1303/2013 Art 24.  ",
+                "Cumulative annual pre-financing less recovery of annual pre-financing.",
+                "As part of the annual examination and acceptance of accounts, the annual pre-financing is either covered by expenditure by the MS (justified) or recovered.\n\nThese recoveries do not impact the allocation of the programmes (\"EU planned amount\").\nFor more information on annual pre-financing and the annual examination and acceptance of accounts.",
+                "",
+                "",
+                "Recoveries of expenses at closure Source : SFC2014 BO, Closure Calculation, Section 6, field ‘Recovery of Expenditure‘ (B2)  or Section 7, fields ‘Recovered Expenditure’ (RE) + ‘Recoveries’ (REC)",
+                "Also known as clearing of annual pre-financing.\nAs part of the annual examination and acceptance of accounts, the annual pre-financing is either covered by expenditure by the MS (justified) or recovered.\nFor more information on annual pre-financing and the annual examination and acceptance of accounts see: Regulation (EU) 1303/2013 Art 84, Art 137, Art 138 and Art 139.",
+                "The initial pre-financing is recovered in full for: GR programmes in case, by 31 December 2016, the total amount of the additional initial pre-financing paid is not covered by payment applications for that programme.   These recoveries do not impact the allocation of the programmes (\"EU planned amount\").For more information on additional initial pre-financing for GR programmes see: Regulation (EU) 1839/2015 Art 1(1). ",
+                "Clearing at closure amount. Source : SFC2014 BO, Closure calculation, section 7 'State of Budgetary Transactions', sum of 'Cleared Annual' (CLR_A) + 'Cleared Initial' (CLR_I) or section 6 'Proposed Budgetary Transactions', sum of 'Cleared of Annual PF (ACC YEAR 2018-2019)' (B3) + 'Cleared Initial PF' (B7)",
+                "Total closure recoveries Table 7 or Table 6                                                                                                                                                                                calculated as Closure Recovery of PF Amount Table 7 or 6 (€) + Closure Recovery of expenses Table 7 or 6 (€)",
+                "Cumulative initial pre-financing less recovery of additional initial pre-financing.",
+                "Cumulative interim payments less recovery of expenses, plus annual pre-financing covered by expenditure.",
+                "Cumulative annual pre-financing for CF and ERDF,  paid for the years 2016-2023 and represents % of the total main allocation:\n-> 2% in 2016;\n-> 2,625% in 2017;\n-> 2,75% in 2018;\n-> 2,875% in 2019;\n-> 3% in 2020-2020.\nFor more information on annual pre-financing for ESI funds programmes see: Regulation (EU) 1303/2013 Art 134 (1).",
+                "For more information on recovery fo expenses see: Regulation (EU) 1303/2013 Art 131 and Art 139.",
+                "Total net payments divided by planned EU amount.",
+                "",
+                "Closure Payments amount. Source : SFC2014 BO, Closure Calculation, Section 7 'State of Budgetary Transactions', field PAID  Or Section 6 'Proposed Budgetary Transactions', field Amount to Pay (B4)",
+                "Decommitments at closure amount. Source : Closure calculation section 6, field 'Amount to Decommit' (B8 = B6 - B4 - SUSP)",
+                "",
+                "Data is reported on cumulative basis, i.e. the amounts shown in 2017 represent the cumulative payments made from the beginning of the programming period up to date.",
+                "Name of the ESI fund: \nCF (Cohesion Fund);\nERDF (European Regional Development Fund);"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                { "noCommas" : "false", "precision" : "2", "align" : "right" },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "noCommas" : "false",
+                  "align" : "right",
+                  "percentScale" : "100",
+                  "precisionStyle" : "percentage",
+                  "view" : "percent_bar_and_text"
+                },
+                { "noCommas" : "true", "precision" : "2", "align" : "right" },
+                {},
+                {},
+                { "precision" : "2", "align" : "right" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                { "displayStyle" : "plain", "align" : "left" }
+              ],
+            "download_count" : 1874,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-10-08T10:12:49.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "2014 / 2020 Finances",
+            "domain_tags" :
+              [
+                "regional policy",
+                "2014-2020",
+                "eu payment",
+                "eu countries",
+                "erdf",
+                "cf",
+                "cohesion fund"
+              ],
+            "domain_metadata" : []
+          },
+        "metadata" : { "domain" : "cohesiondata.ec.europa.eu" },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/vs2b-dct3",
+        "link" : "https://cohesiondata.ec.europa.eu/2014-2020-Finances/Regional-Policy-2014-2020-EU-Payment-Details-by-EU/vs2b-dct3",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eurobarometer 2019: Citizens' perception of EU Regional policy",
+            "id" : "dvdz-bqkd",
+            "resource_name" : null,
+            "parent_fxf" : [ "iny5-gdmz" ],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy. It is based on 4 previous surveys (2017, 2015, 2013, 2010).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2019-10-22T09:20:59.000Z",
+            "createdAt" : "2019-10-22T09:20:25.000Z",
+            "metadata_updated_at" : "2019-10-22T09:20:59.000Z",
+            "data_updated_at" : "2019-10-17T13:11:50.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 5,
+                "page_views_last_month" : 10,
+                "page_views_total" : 379,
+                "page_views_last_week_log" : 2.584962500721156,
+                "page_views_last_month_log" : 3.4594316186372978,
+                "page_views_total_log" : 8.569855608330949
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-22T09:20:59.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other",
+            "domain_tags" : [],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/dvdz-bqkd",
+        "link" : "https://cohesiondata.ec.europa.eu/Other/Eurobarometer-2019-Citizens-perception-of-EU-Regio/dvdz-bqkd",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eurobarometer 2019: citizens' awareness of EU Regional Policy",
+            "id" : "dw97-bfnc",
+            "resource_name" : null,
+            "parent_fxf" : [ "knrf-5uid" ],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy. It is based on 4 previous surveys (2017, 2015, 2013, 2010).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2019-10-22T09:18:25.000Z",
+            "createdAt" : "2019-10-22T09:18:05.000Z",
+            "metadata_updated_at" : "2019-10-22T09:18:25.000Z",
+            "data_updated_at" : "2019-10-17T14:29:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 4,
+                "page_views_total" : 423,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 2.321928094887362,
+                "page_views_total_log" : 8.727920454563199
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-22T09:18:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other",
+            "domain_tags" : [],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/dw97-bfnc",
+        "link" : "https://cohesiondata.ec.europa.eu/Other/Eurobarometer-2019-citizens-awareness-of-EU-Region/dw97-bfnc",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eurobarometer: most important areas for EU regional policy investment",
+            "id" : "frm6-299w",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy.\n\nRespondents were asked about the domains that should be targeted for investment They were asked whether they think each of 11 domains are more or less important for their city or region . All but one of the domains are mentioned among the more important for their city or region by at least a relative majority of respondents.\n\nMore than nine in ten respondents (91%) consider education, health or social infrastructures one of the more important domains for investment for their city or region, followed by the environment (90%) and renewable and clean energy (87%). At least eight in ten respondents also mention support for small and medium-sized businesses (81%) and research and innovation (80%) are more important.\n\nSmaller majorities mention the other investment domains. At least three quarters of respondents say investment in vocational training (78%) and transport facilities (75%) are the more important, while over six in ten identify energy networks (63%) and just under six in ten say tourism and culture (57%).\n\nFinally, just over half the respondents say that broadband Internet access (51%) is one of the more important domains for investment for their city or region, while just under half say the same about investment in the reception and integration of migrants and refugees (48%).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2020-05-23T12:15:22.000Z",
+            "createdAt" : "2019-10-21T10:10:00.000Z",
+            "metadata_updated_at" : "2020-05-23T12:15:22.000Z",
+            "data_updated_at" : "2019-10-21T10:26:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 6,
+                "page_views_total" : 766,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 2.807354922057604,
+                "page_views_total_log" : 9.583082767502933
+              },
+            "columns_name" :
+              [
+                "Priority",
+                "Total",
+                "EU countries",
+                "Answer: More important",
+                "Answer: Less important",
+                "% Less important",
+                "Answer: n/a",
+                "% n/a",
+                "% More important"
+              ],
+            "columns_field_name" :
+              [
+                "priority",
+                "total",
+                "eu_countries",
+                "answer_more_important",
+                "answer_less_important",
+                "less_important",
+                "answer_n_a",
+                "n_a",
+                "more_important"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Which types of investment should be prioritised by EU regional policy",
+                "Total number of responses",
+                "EU country Name",
+                "Respondents who find this priority of investment more important",
+                "Respondents who find this priority of investment less important",
+                "% of less important answers",
+                "Respondents who don't know or any other non-applicable answer",
+                "% of non-applicable answer",
+                "% of more important answers"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                { "precisionStyle" : "percentage", "percentScale" : "1" }
+              ],
+            "download_count" : 279,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-21T10:26:28.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other: Eurobarometer",
+            "domain_tags" : [ "eurobarometer priorities eu regional policy" ],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/frm6-299w",
+        "link" : "https://cohesiondata.ec.europa.eu/Other-Eurobarometer/Eurobarometer-most-important-areas-for-EU-regional/frm6-299w",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Citizens' perception of EU Regional policy: evolution over time",
+            "id" : "eb9m-xhph",
+            "resource_name" : null,
+            "parent_fxf" : [ "iny5-gdmz" ],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy. It is based on 4 previous surveys (2017, 2015, 2013, 2010).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2019-10-30T10:16:10.000Z",
+            "createdAt" : "2019-10-17T14:10:24.000Z",
+            "metadata_updated_at" : "2019-10-30T10:16:10.000Z",
+            "data_updated_at" : "2019-10-17T13:11:50.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 4,
+                "page_views_total" : 304,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 2.321928094887362,
+                "page_views_total_log" : 8.252665432450248
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-30T10:16:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other",
+            "domain_tags" : [],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/eb9m-xhph",
+        "link" : "https://cohesiondata.ec.europa.eu/Other/Citizens-perception-of-EU-Regional-policy-evolutio/eb9m-xhph",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Citizens' awareness of EU Regional Policy: evolution over time",
+            "id" : "iezi-sg78",
+            "resource_name" : null,
+            "parent_fxf" : [ "knrf-5uid" ],
+            "description" : "This report is part of a series of studies that examines Europeans' awareness of and attitudes towards EU Regional Policy. It is based on 4 previous surveys (2017, 2015, 2013, 2010).",
+            "attribution" : "European Commission",
+            "attribution_link" : "https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/flash/surveyky/2227",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2019-10-30T10:15:09.000Z",
+            "createdAt" : "2019-10-17T11:59:59.000Z",
+            "metadata_updated_at" : "2019-10-30T10:15:09.000Z",
+            "data_updated_at" : "2019-10-17T14:29:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 4,
+                "page_views_total" : 252,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 2.321928094887362,
+                "page_views_total_log" : 7.98299357469431
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-10-30T10:15:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other",
+            "domain_tags" : [],
+            "domain_metadata" : []
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Public Domain"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/iezi-sg78",
+        "link" : "https://cohesiondata.ec.europa.eu/Other/Citizens-awareness-of-EU-Regional-Policy-evolution/iezi-sg78",
+        "owner" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          },
+        "creator" :
+          {
+            "id" : "qq3e-czsu",
+            "user_type" : "interactive",
+            "display_name" : "Yves Durinck"
+          }
+      }
+    ],
+  "resultSetSize" : 392,
+  "timings" : { "serviceMillis" : 27, "searchMillis" : [ 2, 11 ] },
+  "warnings" : []
+}

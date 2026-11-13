@@ -1,0 +1,799 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Fets delictius i infraccions administratives de l'àmbit de l'odi i discriminació",
+            "id" : "y48r-ae59",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets relacionats amb els delictes i les infraccions administratives relacionades amb l’odi i la discriminació de Catalunya.\nEls delictes d'odi són infraccions penals on se selecciona la víctima, el lloc o l’objecte de la infracció per la seva pertinença -real o suposada- a un grup per raó de la seva raça, origen nacional o ètnic, l’idioma, la religió, la minusvalidesa física  mental, l’orientació sexual o altres factors similars.\nEls delictes d’odi es poden fonamentar en els prejudicis següents:\n•\tRaça, origen ètnic.\n•\tXenofòbia. País de procedència.\n•\tDiscapacitat.\n•\tAntisemitisme.\n•\tReligió o creences.\n•\tOrientació o identitat sexual.\n•\tIdeologia.\n•\tAporofòbia / Exclusió social.\n•\tQualsevol altra circumstància, condició social o personal.\nCom a conseqüència de la tasca d’anàlisi de cadascun dels atestats policials d’aquest àmbit, les dades mostrades en aquest conjunt de dades poden diferir de les que apareixen en el de “Fets delinqüencials”.\nLa informació es mostra desagregada si el municipi té més de 20.000 habitants; els municipis inferiors a 20.000 habitants es presenten agregats dins de la seva Àrea Bàsica Policial (ABP) per evitar riscos per a la seguretat o que es pugui incórrer en la vulneració de la protecció de les dades personals de les víctimes o persones involucrades en els diferents fets.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:54.000Z",
+            "createdAt" : "2021-07-28T10:57:26.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:54.000Z",
+            "data_updated_at" : "2026-07-07T13:18:20.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 90,
+                "page_views_last_month" : 380,
+                "page_views_total" : 6350,
+                "page_views_last_week_log" : 6.507794640198696,
+                "page_views_last_month_log" : 8.573647187493323,
+                "page_views_total_log" : 12.632768054728746
+              },
+            "columns_name" :
+              [
+                "Nombre fets o infraccions",
+                "Any",
+                "Tipus de fet",
+                "Mes",
+                "Regió Policial (RP)",
+                "Nombre víctimes",
+                "Àrea Bàsica Policial (ABP)",
+                "Municipi",
+                "Tipus de lloc dels fets",
+                "Títol del fet (Codi Penal) o Llei de referència",
+                "Tipus de fet (Codi penal) o d'Infracció (altres lleis)",
+                "Àmbit fet",
+                "Canal dels fets",
+                "Núm. Mes",
+                "Comarca",
+                "Província"
+              ],
+            "columns_field_name" :
+              [
+                "nombre_fets_o_infraccions",
+                "any",
+                "tipus_de_fet",
+                "nom_mes",
+                "regi_policial_rp",
+                "nombre_v_ctimes",
+                "rea_b_sica_policial_abp",
+                "municipi",
+                "tipus_de_lloc_dels_fets",
+                "t_tol_del_fet_codi_penal",
+                "tipus_de_fet_codi_penal_o",
+                "mbit_fet",
+                "canal_dels_fets",
+                "n_m_mes",
+                "comarca",
+                "prov_ncia"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre de fets coneguts per la PG-ME relacionats amb l’odi i la discriminació",
+                "Número de l’any de les dades",
+                "Àmbit penal (delictes) o infraccions administratives",
+                "Nom del mes de les dades",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Nombre de víctimes dels fets relacionats amb l’odi i la discriminació",
+                "Nom de l'Àrea Bàsica Policial",
+                "Municipi on s’han produït els fets.  En el cas que el fet s’hagi produït en un municipi amb menys de 20.000 habitants la informació es mostrarà d’aquesta manera: “Resta de municipis de l’ABP xxx” En el cas dels municipis de més de 20.000 habitants es mostra el nom del municipi.",
+                "Tipus del lloc on s’han produït els fets (punt de la via, tipus d’establiment, tipus de local, etc.)",
+                "Tipus de fet segons el codi penal (1r nivell) o les lleis relacionades amb l’odi i la discriminació ",
+                "Tipus de fet segons el codi penal (2n nivell) ) o les lleis relacionades amb l’odi i la discriminació",
+                "Motivació que origina el fet o classificació del fet d’odi i discriminació ",
+                "Canal físic o digital on s’han produït els fets",
+                "Número del mes de les dades",
+                "Comarca on s’han produït els fets",
+                "Província on s’han produït els fets"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2201,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-28T11:02:18.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "assistència",
+                "policia",
+                "mossos d'esquadra",
+                "incidents",
+                "odi",
+                "discriminació",
+                "delictes",
+                "infraccions administratives",
+                "activitat operativa policial",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Hate crimes (incidents and ofenses) registered by the Autonomous Police - Mossos d'Esquadra"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos delictivos i infraccions administratives del ámbito del odio i la discriminación"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/y48r-ae59",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-delictius-i-infraccions-administratives-de-l-/y48r-ae59",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Víctimes o persones autores de delictes d'odi i discriminació",
+            "id" : "gci6-2ubm",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació sobre les víctimes i les persones autores relacionades amb els delictes i les infraccions administratives d’odi i discriminació.\nEls delictes d'odi són infraccions penals on se selecciona la víctima, el lloc o l’objecte de la infracció per la seva pertinença -real o suposada- a un grup per raó de la seva raça, origen nacional o ètnic, l’idioma, la religió, la minusvalidesa física  mental, l’orientació sexual o altres factors similars.\nEls delictes d’odi es poden fonamentar en els prejudicis següents:\n•\tRaça, origen ètnic.\n•\tXenofòbia. País de procedència.\n•\tDiscapacitat.\n•\tAntisemitisme.\n•\tReligió o creences.\n•\tOrientació o identitat sexual.\n•\tIdeologia.\n•\tAporofòbia / Exclusió social.\n•\tQualsevol altra circumstància, condició social o personal.\nCom a conseqüència de la tasca d’anàlisi de cadascun dels atestats policials d’aquest àmbit, les dades mostrades en aquest conjunt de dades poden diferir de les que apareixen en el de “Fets delinqüencials”.\nLa informació es mostra desagregada si el municipi té més de 20.000 habitants; els municipis inferiors a 20.000 habitants es presenten agregats dins de la seva Àrea Bàsica Policial (ABP) per evitar riscos per a la seguretat o que es pugui incórrer en la vulneració de la protecció de les dades personals de les víctimes o persones involucrades en els diferents fets.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:31.000Z",
+            "createdAt" : "2021-07-28T11:06:44.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:31.000Z",
+            "data_updated_at" : "2026-07-08T07:34:00.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 115,
+                "page_views_total" : 3400,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.857980995127572,
+                "page_views_total_log" : 11.731743290707842
+              },
+            "columns_name" :
+              [
+                "Tipus de fet (Codi penal) o d’Infracció (altres lleis)",
+                "Tipus de lloc dels fets",
+                "Edat",
+                "Sexe",
+                "Tipus de fet",
+                "Rol",
+                "Nombre víctimes",
+                "Any",
+                "Àmbit fet",
+                "Nom Mes",
+                "Núm. Mes",
+                "Municipi",
+                "Comarca",
+                "Àrea Bàsica Policial (ABP)",
+                "Província",
+                "Regió Policial (RP)"
+              ],
+            "columns_field_name" :
+              [
+                "tipus_de_fet_codi_penal_o",
+                "tipus_de_lloc_dels_fets",
+                "edat_inici_fets",
+                "sexe",
+                "tipus_de_fet",
+                "rol_v_ctima_o_autoria",
+                "nombre",
+                "any",
+                "mbit_procediment_fet",
+                "nom_mes",
+                "n_m_mes",
+                "municipi",
+                "comarca",
+                "rea_b_sica_policial_abp",
+                "prov_ncia",
+                "regi_policial_rp"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Detall del tipus de fet segons el codi penal (2n nivell) ) o les lleis relacionades amb l’odi i la discriminació",
+                "Tipus del lloc on s’han produït els fets (punt de la via, tipus d’establiment, tipus de local, etc.)",
+                "Edat de la víctima o de la persona autora quan es van iniciar els fets",
+                "Home o dona. No s’especifiquen les identitats de gènere ja que els sistemes d’informació policial distingeixen entre “home” i “dona”. Tot i això, pel que fa a la comptabilització, l’atenció i el tractament que reben les víctimes, sempre es respecta la identitat de gènere que aquestes manifestin en el moment de la denúncia.",
+                "Àmbit penal (delictes) o infraccions administratives",
+                "Víctima o persona autora dels fets relacionats amb odi i discriminació",
+                "Nombre de víctimes de cadascun dels fets relacionats amb l’odi i la discriminació Nota: cada atestat policial pot tenir més d’una víctima o persona autora; a l’hora de facilitar la informació demogràfica d’aquestes el nombre de víctimes no es relaciona amb cap atestat policial concret sinó amb l’àmbit i la classificació dels fets. Per aquest motiu el nombre de víctimes serà equivalent a la unitat. ",
+                "Número de l’any de les dades",
+                "Motivació que origina el fet o classificació del fet d’odi i discriminació: -\tAntisemita -\tAporofòbia -\tDiscapacitat física/sensorial -\tDiscapacitat psíquica/mental -\tÈtnic/origen nacional/racial -\tOrientació política -\tReligiós -\tSexisme -\tLGTBI-fòbia",
+                "Nom del mes de les dades",
+                "Número del mes de les dades",
+                "Municipi on s’han produït els fets.  En el cas que el fet s’hagi produït en un municipi amb menys de 20.000 habitants la informació es mostrarà d’aquesta manera: Resta de municipis de l’ABP xxx En el cas dels municipis de més de 20.000 habitants es mostra el nom del municipi.",
+                "Comarca on s’han produït els fets",
+                "Nom de l'Àrea Bàsica Policial",
+                "Província on s’han produït els fets",
+                "Nom de la Regió policial on s’han produït els fets"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2478,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-03-31T11:20:32.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "odi",
+                "discriminació",
+                "delictes",
+                "víctimes",
+                "persones autores",
+                "infraccions administratives",
+                "activitat operativa policial",
+                "assistència",
+                "policia",
+                "mossos d'esquadra",
+                "incidents",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Hate crimes victims and offenders registered by the Autonomous Police - Mossos d'Esquadra"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Víctimes o persones autores de delictes d'odi i discriminació"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/gci6-2ubm",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Víctimes-o-persones-autores-de-delictes-d-odi-i-di/gci6-2ubm",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Equipaments de Catalunya",
+            "id" : "8gmd-gz7i",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.",
+            "attribution" : "Direcció General de Serveis Digitals i Experiència Ciutadana",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T02:37:24.000Z",
+            "createdAt" : "2017-10-11T14:30:42.000Z",
+            "metadata_updated_at" : "2026-09-21T08:52:50.000Z",
+            "data_updated_at" : "2026-11-13T02:37:24.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 338,
+                "page_views_last_month" : 900,
+                "page_views_total" : 29635,
+                "page_views_last_week_log" : 8.405141463136344,
+                "page_views_last_month_log" : 9.815383295813538,
+                "page_views_total_log" : 14.855063118367624
+              },
+            "columns_name" :
+              [
+                "Codi postal",
+                "Sufix de via",
+                "Georeferència",
+                "Població",
+                "Categoria",
+                "Codi del municipi",
+                "Comarca",
+                "Àlies",
+                "Darrera modificació",
+                "UTM Y",
+                "LIMADM COMARCA",
+                "Pàgina web",
+                "Via",
+                "Número",
+                "Identificador",
+                "Telèfon secundari",
+                "Telèfon principal",
+                "Propietats addicionals",
+                "Nom",
+                "Tipus de via",
+                "Correu electrònic",
+                "Fax",
+                "Latitud",
+                "Longitud",
+                "LIMADM_MUNICIPI",
+                "UTM X"
+              ],
+            "columns_field_name" :
+              [
+                "cpostal",
+                "sufix_via",
+                "localitzacio",
+                "poblacio",
+                "categoria",
+                "codi_municipi",
+                "comarca",
+                "alies",
+                "data_modificacio",
+                "utmy",
+                ":@computed_region_wvic_k925",
+                "web",
+                "via",
+                "num",
+                "idequipament",
+                "telefon2",
+                "telefon1",
+                "propietats",
+                "nom",
+                "tipus_via",
+                "email",
+                "fax",
+                "latitud",
+                "longitud",
+                ":@computed_region_bh64_c7uy",
+                "utmx"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Date",
+                "Number",
+                "Number",
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi postal",
+                "Sufix (adreça)",
+                "Georeferència",
+                "Població",
+                "Categories / subcategories de l'equipament",
+                "Codi del municipi",
+                "Comarca",
+                "Àlies de l'equipament",
+                "Data de la darrera modificació",
+                "Coordenada y (UTM)",
+                "",
+                "Pàgina web",
+                "Nom de la via (adreça)",
+                "Número de portal (adreça)",
+                "Identificador intern de l’equipament a la  Base de dades d’Equipaments",
+                "Telèfon secundari",
+                "Telèfon principal",
+                "Propietats addicionals de l'equipament",
+                "Nom de l'eqiupament",
+                "Tipus de via (adreça)",
+                "Adreça de correu electrònic",
+                "Fax",
+                "Latitud",
+                "Longitud",
+                "",
+                "Coordenada x (UTM)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_time" },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "3",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                }
+              ],
+            "download_count" : 31477,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-09-06T07:01:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Urbanisme-infraestructures",
+            "domain_tags" :
+              [
+                "aeroports",
+                "aeròdroms i heliports",
+                "agència tributària de catalunya",
+                "albergs de joventut",
+                "altres espais aptes per a l'ús cultural",
+                "altres prestacions de serveis: serveis experimentals",
+                "arxius",
+                "biblioteques",
+                "borses joves d'habitatge",
+                "centres culturals: ateneus",
+                "centres cívics i cases de cultura",
+                "centres de documentació",
+                "centres de normalització lingüística",
+                "centres de promoció cultural",
+                "centres de recerca",
+                "centres d'innovació i formació ocupacional (cifo)",
+                "centres educatius de justícia juvenil",
+                "centres penitenciaris",
+                "centres sanitaris",
+                "confraries de pescadors",
+                "consells reguladors",
+                "deixalleries",
+                "dependències d'atenció policial - mossos d'esquadra",
+                "ens locals",
+                "ensenyaments de règim especial",
+                "ensenyaments de règim general",
+                "entitats col·laboradores de l'administració (eca)",
+                "equipaments cívics",
+                "equips d'assessorament tècnic de menors",
+                "escoles de capacitació agrària",
+                "escoles de capacitació nauticopesquera",
+                "espais d'art i sales d'exposició",
+                "espais naturals",
+                "estacions d'autobusos",
+                "estructures universitàries",
+                "facultats i escoles",
+                "farmàcies",
+                "fiscalies",
+                "formació de persones adultes",
+                "grans infraestructures de suport a la recerca",
+                "hotels d'entitats",
+                "inspecció tècnica de vehicles (itv)",
+                "instal·lacions esportives",
+                "institucions hospitalàries",
+                "instituts universitaris de recerca",
+                "juntes arbitrals de consum",
+                "jutjats de pau",
+                "jutjats i tribunals",
+                "laboratoris de sanitat ramadera",
+                "museus",
+                "oficines comarcals d'agricultura",
+                "oficines comarcals d'habitatge",
+                "oficines d'acció",
+                "oficines d'atenció",
+                "oficines d'atenció a la víctima del delicte",
+                "oficines d'atenció al ciutadà (oac)",
+                "oficines d'atenció ciutadana",
+                "oficines de benestar social i família",
+                "oficines de català",
+                "oficines de gestió empresarial (oge)",
+                "oficines de la generalitat a l'exterior",
+                "oficines de treball",
+                "oficines de turisme de la xarxa",
+                "oficines del servei d'orientació jurídica",
+                "oficines d'informació a les dones",
+                "oficines municipals d'escolarització",
+                "organitzacions de persones consumidores",
+                "parcs científics i tecnològics",
+                "parcs de bombers",
+                "parcs naturals",
+                "policia de trànsit - mossos d'esquadra",
+                "policies locals",
+                "ports esportius",
+                "punt tic",
+                "punts d'atenció ciutadana",
+                "punts d'autoservei del soc",
+                "servei bàsic d'atenció social",
+                "servei d'acolliment residencial d'urgència",
+                "servei d'ajuda a domicili",
+                "servei d'assessorament tècnic d'atenció social",
+                "servei de centre obert",
+                "servei de les tecnologies de suport i cura",
+                "servei de menjador social",
+                "servei de residència temporal per a persones adultes en situació d'exclusió",
+                "servei de suport als serveis socials bàsics",
+                "servei de suport als serveis socials bàsics (distribució d'aliments)",
+                "servei de suport als serveis socials bàsics (maternoinfantil)",
+                "servei públic de consum",
+                "serveis adreçats a dones en situació de violència masclista i els seus fills",
+                "serveis adreçats a famílies amb problemàtica social i risc d'exclusió social",
+                "serveis adreçats a infància",
+                "adolescència",
+                "joventut",
+                "serveis adreçats a persones afectades pel virus vih/sida",
+                "serveis adreçats a persones amb dependència",
+                "serveis adreçats a persones amb discapacitat física",
+                "serveis adreçats a persones amb discapacitat intel·lectual",
+                "serveis adreçats a persones amb discapacitat sensorial",
+                "serveis adreçats a persones amb drogodependències i/o altres addiccions",
+                "serveis adreçats a persones amb problemàtica social derivada de malaltia mental",
+                "serveis adreçats a persones grans amb dependència o risc social",
+                "serveis comuns adreçats a persones amb discapacitat",
+                "serveis de cuidadors familiars o altres cuidadors no professionals",
+                "serveis de suport als serveis socials especialitzats",
+                "serveis d'informació juvenil",
+                "serveis d'orientació mediadora (som)",
+                "serveis inscrits reses: fora cartera 2009-2010",
+                "teatres",
+                "auditoris i espais escènics especialitzats",
+                "universitats",
+                "smartcatalonia",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Catalonia's equipments"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Equipamientos de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i",
+        "link" : "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Equipaments-de-Catalunya/8gmd-gz7i",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 3,
+  "timings" : { "serviceMillis" : 23, "searchMillis" : [ 2, 9 ] },
+  "warnings" : []
+}

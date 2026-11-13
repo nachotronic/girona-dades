@@ -1,0 +1,3363 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Artefactes explosius sense explotar (Unexploded ordnance, UXO)",
+            "id" : "ndxf-5hmc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Artefactes explosius sense explotar localitzats a Catalunya, el trasllat, custòdia i/o desactivació dels quals és responsabilitat de l’Àrea de Desactivació d’Artefactes Explosius TEDAX-NRBQ de la Policia de la Generalitat – Mossos d’Esquadra.\n\nLa munició de guerra sense explotar també coneguda com UXO (Unexploded Ordnance) és tot aquell explosiu que es va disparar, deixar caure, llençat o projectat, però que no ha explotat degut a un mal funcionament, al seu disseny o per qualsevol altre motiu.\nDurant la Guerra Civil Espanyola, Catalunya va patir bombardejos aeris i atacs amb artilleria molt durs. En el conflicte van intervenir diferents països que van aprofitar la Guerra Civil Espanyola com a camp de proves de noves armes que més endavant van utilitzar a la II Guerra Mundial.\n79 anys després de la Guerra Civil apareixen a Catalunya cada any una mitjana de 1.000 d'aquests artefactes que no han explotat. Es calcula que caldrien entre 20 i 25 anys més per netejar de tots els artefactes emprats a Catalunya.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-10T11:29:32.000Z",
+            "createdAt" : "2021-07-14T09:24:15.000Z",
+            "metadata_updated_at" : "2026-11-10T11:29:31.000Z",
+            "data_updated_at" : "2026-11-10T11:29:32.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 33,
+                "page_views_total" : 1891,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 5.08746284125034,
+                "page_views_total_log" : 10.885696373339396
+              },
+            "columns_name" :
+              [
+                "Nom mes",
+                "Dia",
+                "Any",
+                "Comarca",
+                "ABP",
+                "Municipi",
+                "Tipus artefacte",
+                "Regió Policial (RP)",
+                "Mes",
+                "Nombre",
+                "Model o calibre"
+              ],
+            "columns_field_name" :
+              [
+                "nom_mes",
+                "dia",
+                "any",
+                "comarca",
+                "abp",
+                "municipi",
+                "tipus_artefacte",
+                "regi_policial_rp",
+                "mes",
+                "nombre",
+                "model_o_calibre"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom del mes",
+                "Dia del mes",
+                "Any",
+                "Comarca on s’ha localitzat l’artefacte",
+                "Àrea Bàsica Policial (ABP) on s’ha localitzat l’artefacte",
+                "Municipi on s’ha localitzat l’artefacte",
+                "Tipus d’artefacte localitzat",
+                "Regió Policial (RP) on s’ha localitzat l’artefacte",
+                "Número del mes",
+                "Nombre d’artefactes localitzats",
+                "Model o calibre de la munició, artefacte"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1093,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-14T09:32:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "activitat operativa policial",
+                "artefactes explosius",
+                "tedax-nrbq",
+                "uxo",
+                "policia",
+                "mossos d'esquadra",
+                "ods3_salut i benestar",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Unexploded ordnance, UXO"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Artefactos explosivos sin explotar (Unexploded ordnance, UXO)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ndxf-5hmc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Artefactes-explosius-sense-explotar-Unexploded-ord/ndxf-5hmc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Àrees bàsiques policials",
+            "id" : "i2dd-kfpa",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d'àrees bàsiques policials (ABP) que és la unitat bàsica d’implantació territorial, definida per criteris territorials i policials, en què s'organitza el desplegament del cos de Mossos d'Esquadra. Les ABP s'agrupen en diferents regions policials.",
+            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:11.000Z",
+            "createdAt" : "2025-01-21T13:39:31.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:11.000Z",
+            "data_updated_at" : "2026-07-03T07:38:37.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 22,
+                "page_views_last_month" : 52,
+                "page_views_total" : 756,
+                "page_views_last_week_log" : 4.523561956057013,
+                "page_views_last_month_log" : 5.7279204545632,
+                "page_views_total_log" : 9.56414948998573
+              },
+            "columns_name" :
+              [
+                "CODI_RP_MOSSOS",
+                "NOM_ABP_MOSSOS",
+                "CODI_ABP_MOSSOS",
+                "OBJECTID",
+                "GEOMETRIA_ABP_MOSSOS"
+              ],
+            "columns_field_name" :
+              [
+                "codi_rp_mossos",
+                "nom_abp_mossos",
+                "codi_abp_mossos",
+                "objectid",
+                "geometria_abp_mossos"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Text", "Number", "MultiPolygon" ],
+            "columns_description" :
+              [
+                "Identificador únic de la regió policial a què pertany l’àrea bàsica policial. ",
+                "Nom de l’àrea bàsica policial.",
+                "Identificador únic de l’àrea bàsica policial.",
+                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat i evitar els duplicats.",
+                "Informació geogràfica que defineix la zona que delimita l’àrea bàsica policial."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" },
+                {}
+              ],
+            "download_count" : 576,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:38:54.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Basic police areas"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Áreas básicas policiales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/i2dd-kfpa",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Àrees-bàsiques-policials/i2dd-kfpa",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Controls de velocitat",
+            "id" : "guxp-fqcu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Controls de velocitat realitzats per la Policia de la Generalitat - Mossos d'Esquadra.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-15T10:23:57.000Z",
+            "createdAt" : "2021-08-10T11:17:19.000Z",
+            "metadata_updated_at" : "2026-10-15T10:23:56.000Z",
+            "data_updated_at" : "2026-10-15T10:23:57.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 11,
+                "page_views_last_month" : 41,
+                "page_views_total" : 1763,
+                "page_views_last_week_log" : 3.5849625007211565,
+                "page_views_last_month_log" : 5.392317422778761,
+                "page_views_total_log" : 10.784634845557521
+              },
+            "columns_name" :
+              [
+                "Àrea Regional de Trànsit (ART)/Àrea Bàsica Policial (ABP)",
+                "Nombre",
+                "Mes",
+                "Any",
+                "Regió Policial (RP)",
+                "Nom mes"
+              ],
+            "columns_field_name" :
+              [
+                "rea_regional_de_tr_nsit_art",
+                "nombre",
+                "mes",
+                "any",
+                "regi_policial_rp",
+                "nom_mes"
+              ],
+            "columns_datatype" :
+              [ "Text", "Number", "Number", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)",
+                "Nombre de controls de velocitat realitzats",
+                "Número del mes de les dades",
+                "Número de l’any de les dades",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Nom del mes de les dades"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 888,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T11:19:47.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "vehicle",
+                "mobilitat",
+                "xarxa viària",
+                "trànsit",
+                "accidents",
+                "control velocitat",
+                "ods3_salut i benestar",
+                "ods12_producció i consum responsable"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Speed controls (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Controles de velocidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/guxp-fqcu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Controls-de-velocitat/guxp-fqcu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Fets penals relatius al trànsit coneguts, resolts i detencions",
+            "id" : "8bnm-yv7t",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets penals coneguts, resolts i detencions relatius al trànsit",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:28:02.000Z",
+            "createdAt" : "2021-08-10T10:53:24.000Z",
+            "metadata_updated_at" : "2026-10-13T10:28:01.000Z",
+            "data_updated_at" : "2026-10-13T10:28:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 12,
+                "page_views_last_month" : 37,
+                "page_views_total" : 2287,
+                "page_views_last_week_log" : 3.700439718141092,
+                "page_views_last_month_log" : 5.247927513443585,
+                "page_views_total_log" : 11.159871336778389
+              },
+            "columns_name" :
+              [
+                "Regió Policial (RP)",
+                "Tipus de fet",
+                "Resolts",
+                "Detencions",
+                "Àrea Bàsica Policial (ABP)",
+                "Nom mes",
+                "Mes",
+                "Coneguts",
+                "Títol Codi Penal",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "regi_policial_rp",
+                "tipus_de_fet",
+                "resolts",
+                "detencions",
+                "rea_b_sica_policial_abp",
+                "nom_mes",
+                "mes",
+                "coneguts",
+                "t_tol_codi_penal",
+                "any"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Nom de la Regió policial on s’han produït els fets",
+                "Detall del tipus de fet segons el codi penal",
+                "Nombre de fets resolts",
+                "Nombre de detencions realitzades",
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)",
+                "Nom del mes de les dades",
+                "Número del mes de les dades",
+                "Nombre de fets coneguts",
+                "Classificació del fet en base al nom del títol del codi penal",
+                "Número de l’any de les dades"
+              ],
+            "columns_format" :
+              [ {}, {}, {}, {}, {}, {}, {}, {}, {}, { "noCommas" : "true" } ],
+            "download_count" : 919,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T11:14:43.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "mobilitat",
+                "fets delinqüencials",
+                "patrimoni",
+                "furt",
+                "robatori",
+                "interior vehicle activitat delinqüencial",
+                "denúncia",
+                "falta",
+                "faltes",
+                "delictes",
+                "alcohol",
+                "velocitat",
+                "xarxa viària",
+                "homicidis",
+                "trànsit",
+                "accidents",
+                "lleus",
+                "ferits",
+                "mortals",
+                "víctimes",
+                "persones mortes",
+                "ods3_salut i benestar",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Criminal offences based on road traffic (known), known offences solved and arrests (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos relativos al tráfico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8bnm-yv7t",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-penals-relatius-al-trànsit-coneguts-resolts-i/8bnm-yv7t",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Fets coneguts a la xarxa viària (patrimoni)",
+            "id" : "xq9s-fmcu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets coneguts a la xarxa viària de Catalunya relacionats amb el patrimoni",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:26:12.000Z",
+            "createdAt" : "2021-08-23T10:53:14.000Z",
+            "metadata_updated_at" : "2026-10-13T10:26:11.000Z",
+            "data_updated_at" : "2026-10-13T10:26:12.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 16,
+                "page_views_last_month" : 36,
+                "page_views_total" : 1857,
+                "page_views_last_week_log" : 4.08746284125034,
+                "page_views_last_month_log" : 5.20945336562895,
+                "page_views_total_log" : 10.859534786382653
+              },
+            "columns_name" :
+              [
+                "Nombre",
+                "Regió Policial (RP)",
+                "Any",
+                "Tipus de fet",
+                "Mes",
+                "Àrea Regional de Trànsit (ART)/ Àrea Bàsica Policial (ABP)",
+                "Nom mes"
+              ],
+            "columns_field_name" :
+              [
+                "nombre",
+                "regi_policial_rp",
+                "any",
+                "tipus_de_fet",
+                "mes",
+                "rea_regional_de_tr_nsit_art",
+                "nom_mes"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Number", "Text", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nombre de fets coneguts",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Número de l’any de les dades",
+                "Detall del tipus de fet segons el codi penal",
+                "Número del mes de les dades",
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)",
+                "Nom del mes de les dades"
+              ],
+            "columns_format" :
+              [ {}, {}, { "noCommas" : "true" }, {}, {}, {}, {} ],
+            "download_count" : 1152,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-23T10:58:15.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "activitat delinqüencial",
+                "policia",
+                "mossos d'esquadra",
+                "delictes",
+                "robatoris",
+                "patrimoni",
+                "persones",
+                "vehicle detencions",
+                "fets resolts",
+                "fets coneguts",
+                "mobilitat",
+                "fets xarxa viària",
+                "trànsit",
+                "furt",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Offences in road infrastructures (heritage) "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Delitos y hechos delicuenciales producidos en la red viaria (patrimonio)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xq9s-fmcu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-coneguts-a-la-xarxa-viària-patrimoni-/xq9s-fmcu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Atestats d’accidents de trànsit",
+            "id" : "xfxe-wuxc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Atestats d'accidents de trànsit",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:20:17.000Z",
+            "createdAt" : "2021-08-10T11:28:08.000Z",
+            "metadata_updated_at" : "2026-10-13T10:20:16.000Z",
+            "data_updated_at" : "2026-10-13T10:20:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 36,
+                "page_views_total" : 2556,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 5.20945336562895,
+                "page_views_total_log" : 11.32023644524165
+              },
+            "columns_name" :
+              [
+                "Mes",
+                "Regió Policial (RP)",
+                "Any",
+                "Nombre",
+                "Nom mes",
+                "Àrea Regional de Trànsit (ART)/Àrea Bàsica Policial (ABP)"
+              ],
+            "columns_field_name" :
+              [
+                "mes",
+                "regi_policial_rp",
+                "any",
+                "nombre",
+                "nom_mes",
+                "rea_regional_de_tr_nsit_art"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Number", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Número del mes de les dades",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Número de l’any de les dades",
+                "Nombre d’atestats de trànsit",
+                "Nom del mes de les dades",
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)"
+              ],
+            "columns_format" : [ {}, {}, { "noCommas" : "true" }, {}, {}, {} ],
+            "download_count" : 1204,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T11:31:40.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "vehicle",
+                "fets coneguts",
+                "mobilitat",
+                "fets xarxa viària",
+                "trànsit",
+                "accidents",
+                "investigació",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Police reports of traffic accidents (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Atestados de accidentes de tráfico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xfxe-wuxc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Atestats-d-accidents-de-trànsit/xfxe-wuxc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Intervencions en accidents de trànsit",
+            "id" : "iaq4-5fyp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Intervencions en accidents de trànsit en via interurbana.\nLa Policia de la Generalitat - Mossos d'Esquadra té la competència del control i vigilància del trànsit a Catalunya. En aquells municipis en què hi ha Policia local, aquesta s'ocupa de l'ordenació del trànsit urbà.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:29:55.000Z",
+            "createdAt" : "2021-08-10T11:22:09.000Z",
+            "metadata_updated_at" : "2026-10-13T10:29:54.000Z",
+            "data_updated_at" : "2026-10-13T10:29:55.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 21,
+                "page_views_last_month" : 43,
+                "page_views_total" : 2158,
+                "page_views_last_week_log" : 4.459431618637297,
+                "page_views_last_month_log" : 5.459431618637297,
+                "page_views_total_log" : 11.076147528022506
+              },
+            "columns_name" :
+              [
+                "Mes",
+                "Nom mes",
+                "Nombre intervencions",
+                "Regió Policial (RP)",
+                "Àrea Regional de Trànsit (ART)/ Àrea Bàsica Policial (ABP)",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "mes",
+                "nom_mes",
+                "nombre_intervencions",
+                "regi_policial_rp",
+                "rea_regional_de_tr_nsit_art",
+                "any"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Number", "Text", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Número del mes de les dades",
+                "Nom del mes de les dades",
+                "Nombre d’intervencions en accidents de trànsit",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)",
+                "Número de l’any de les dades"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, { "noCommas" : "true" } ],
+            "download_count" : 1176,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T11:24:52.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "vehicle",
+                "mobilitat",
+                "trànsit",
+                "accidents",
+                "investigació",
+                "intervenció",
+                "serveis policials",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Traffic accident interventions in interurban roads (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Intervenciones en accidentes de tráfico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/iaq4-5fyp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Intervencions-en-accidents-de-trànsit/iaq4-5fyp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Temps d'espera per interposar denúncia a dependències de la  Policia de la Generalitat - Mossos d'Esquadra,  per àmbit geogràfic",
+            "id" : "qxev-y8x7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Període de temps que passa des que una persona arriba a una dependència policial per posar una denúncia fins que és atesa.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:08:57.000Z",
+            "createdAt" : "2021-07-22T09:26:32.000Z",
+            "metadata_updated_at" : "2026-10-13T10:08:57.000Z",
+            "data_updated_at" : "2026-10-13T10:08:57.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 11,
+                "page_views_last_month" : 32,
+                "page_views_total" : 1908,
+                "page_views_last_week_log" : 3.5849625007211565,
+                "page_views_last_month_log" : 5.044394119358453,
+                "page_views_total_log" : 10.898601387403938
+              },
+            "columns_name" :
+              [
+                "Nom mes",
+                "Nombre de visites",
+                "Regió Policial (RP)",
+                "Mes",
+                "Any",
+                "Mitjana Temps Espera",
+                "Àrea Bàsica Policial (ABP)"
+              ],
+            "columns_field_name" :
+              [
+                "nom_mes",
+                "nombre_de_visites",
+                "regi_policial_rp",
+                "mes",
+                "any",
+                "mitjana_temps_espera",
+                "rea_b_sica_policial_abp"
+              ],
+            "columns_datatype" :
+              [ "Text", "Number", "Text", "Number", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nom del mes",
+                "Nombre de persones que han anat a la dependència policial",
+                "Regió Policial (RP) on s’ha produït del fet",
+                "Número del mes",
+                "Any",
+                "Període de temps que passa des que una persona arriba a una dependència policial per posar una denúncia fins que és atesa.",
+                "Àrea Bàsica Policial (ABP) on s’ha produït del fet"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 1070,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-22T09:40:05.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "activitat operativa policial",
+                "temps",
+                "denúncia",
+                "denunciar",
+                "policia",
+                "mossos d'esquadra",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Waiting time to file a complaint (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tiempo de espera para poner una denuncia en las dependències de la Policia de la Generalitat - Mossos d'Esquadra,  por ámbito geográfico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qxev-y8x7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Temps-d-espera-per-interposar-denúncia-a-dependènc/qxev-y8x7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Fets coneguts als aeroports",
+            "id" : "x6tb-fs8y",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets delinqüencials relacionats amb el patrimoni produïts en els aeroports de Catalunya",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:23:31.000Z",
+            "createdAt" : "2021-08-10T11:58:28.000Z",
+            "metadata_updated_at" : "2026-10-13T10:23:30.000Z",
+            "data_updated_at" : "2026-10-13T10:23:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 18,
+                "page_views_last_month" : 33,
+                "page_views_total" : 1785,
+                "page_views_last_week_log" : 4.247927513443585,
+                "page_views_last_month_log" : 5.08746284125034,
+                "page_views_total_log" : 10.802516365121223
+              },
+            "columns_name" :
+              [
+                "Àrea Bàsica Policial (ABP)",
+                "Nom mes",
+                "Mes",
+                "Any",
+                "Regió Policial (RP)",
+                "Tipus de fet",
+                "Aeroport",
+                "Nombre"
+              ],
+            "columns_field_name" :
+              [
+                "rea_b_sica_policial_abp",
+                "nom_mes",
+                "mes",
+                "any",
+                "regi_policial_rp",
+                "tipus_de_fet",
+                "aeroport",
+                "nombre"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [ {}, {}, {}, { "noCommas" : "true" }, {}, {}, {}, {} ],
+            "download_count" : 855,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T12:44:40.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "mobilitat",
+                "fets delinqüencials",
+                "fets transports",
+                "aeroports",
+                "patrimoni",
+                "furt",
+                "robatori",
+                "interior vehicle",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Offences in airports (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos delicuenciales conocidos en los aeropuertos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/x6tb-fs8y",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-coneguts-als-aeroports/x6tb-fs8y",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Fets penals coneguts, fets coneguts resolts i detencions",
+            "id" : "qnyt-emjc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets penals coneguts, resolts i detencions realitzades per la Policia de Catalunya.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-16T11:10:28.000Z",
+            "createdAt" : "2021-07-28T10:19:13.000Z",
+            "metadata_updated_at" : "2026-10-16T11:10:28.000Z",
+            "data_updated_at" : "2026-10-16T11:10:28.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 239,
+                "page_views_last_month" : 972,
+                "page_views_total" : 16850,
+                "page_views_last_week_log" : 7.906890595608519,
+                "page_views_last_month_log" : 9.926295994781112,
+                "page_views_total_log" : 14.040546588299767
+              },
+            "columns_name" :
+              [
+                "Regió Policial (RP)",
+                "Resolts",
+                "Nom mes",
+                "Detencions",
+                "Tipus de fet",
+                "Títol Codi Penal",
+                "Any",
+                "Coneguts",
+                "Àrea Bàsica Policial (ABP)",
+                "Mes"
+              ],
+            "columns_field_name" :
+              [
+                "regi_policial_rp",
+                "resolts",
+                "nom_mes",
+                "detencions",
+                "tipus_de_fet",
+                "t_tol_codi_penal",
+                "any",
+                "coneguts",
+                "rea_b_sica_policial_abp",
+                "mes"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Nom de la Regió policial on s’han produït els fets",
+                "Nombre de fets resolts",
+                "Nom del mes de les dades",
+                "Nombre de detencions realitzades",
+                "Detall del tipus de fet segons el codi penal",
+                "Classificació del fet en base al nom del títol del codi penal",
+                "Número de l’any de les dades",
+                "Nombre de fets coneguts",
+                "Nom de l'Àrea Bàsica Policial",
+                "Número del mes de les dades"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 7882,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-28T10:41:23.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "activitat delinqüencial",
+                "denúncia",
+                "denúncies",
+                "policia",
+                "mossos d'esquadra",
+                "incidents",
+                "falta",
+                "faltes",
+                "delictes",
+                "robatoris",
+                "patrimoni",
+                "persones",
+                "alcohol",
+                "furts",
+                "assassinats",
+                "homicidis",
+                "detencions",
+                "fets resolts",
+                "fets coneguts",
+                "policia local",
+                "policies locals",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Criminal offences (known), known offences solved and arrests"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos penales conocidos, resueltos y detenciones "
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qnyt-emjc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-penals-coneguts-fets-coneguts-resolts-i-deten/qnyt-emjc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Fets coneguts al transport públic",
+            "id" : "b8ba-rfcf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets delinqüencials produïts en el transport públic. Inclou els següents transports públics: autobús (terminal/estació; autobús; parada); metro (infraestructura; comboi; estació); taxi (taxi o parada); tren: AVE (comboi; estació; infraestructura-); tren Ferrocarrils de la Generalitat de Catalunya (comboi, estació, infraestructura, pàrquing); tren RENFE-ADIF (comboi, infraestructura, pàrquing, estació).",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:21:56.000Z",
+            "createdAt" : "2021-08-10T11:38:13.000Z",
+            "metadata_updated_at" : "2026-10-13T10:21:55.000Z",
+            "data_updated_at" : "2026-10-13T10:21:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 13,
+                "page_views_last_month" : 37,
+                "page_views_total" : 2244,
+                "page_views_last_week_log" : 3.8073549220576037,
+                "page_views_last_month_log" : 5.247927513443585,
+                "page_views_total_log" : 11.13249972962851
+              },
+            "columns_name" :
+              [
+                "Taxi",
+                "Any",
+                "Metro",
+                "Tren",
+                "Nom mes",
+                "Regió Policial (RP)",
+                "Àrea Regional de Trànsit (ART)/ Àrea Bàsica Policial (ABP)",
+                "Mes",
+                "Autobús"
+              ],
+            "columns_field_name" :
+              [
+                "taxi",
+                "any",
+                "metro",
+                "tren",
+                "nom_mes",
+                "regi_policial_rp",
+                "rea_regional_de_tr_nsit_art",
+                "mes",
+                "autob_s"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Nombre de fets produïts al transport públic taxi",
+                "Número de l’any de les dades",
+                "Nombre de fets produïts al transport públic metro",
+                "Nombre de fets produïts al transport públic tren",
+                "Nom del mes de les dades",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)",
+                "Número del mes de les dades",
+                "Nombre de fets produïts al transport públic autobús"
+              ],
+            "columns_format" :
+              [ {}, { "noCommas" : "true" }, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 942,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T11:43:26.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "mobilitat",
+                "fets delinqüencials",
+                "fets",
+                "transport públic",
+                "metro",
+                "tren",
+                "taxi",
+                "autobús",
+                "transport",
+                "ods16_pau justícies i institucions sòlides",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Offences in public transports (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos conocidos en el transporte público"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/b8ba-rfcf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-coneguts-al-transport-públic/b8ba-rfcf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Suport a òrgans de coordinació en esdeveniments esportius (2016 – actualitat)",
+            "id" : "5nun-j8uz",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Suport a la coordinació d'esdeveniments esportius en l'àmbit de la seguretat.\nDades a partir de 2016.\n\nActualització de les dades:\nL’actualització de les dades en el portal pot variar en funció del termini d’introducció de la informació en els sistemes policials i del procés de generació dels diferents fitxers que s’han de publicar en el web, els quals han de complir amb unes característiques determinades per ser considerades dades obertes.\n\nEn general el termini d’actualització estimat és d’un o dos mesos a partir de la finalització del termini d’introducció de dades en els sistemes d’informació policial (mensual, trimestral o anual); aquests terminis poden augmentar en aquells conjunts de dades que requereixen de la intervenció de serveis externs a la Direcció General de la Policia.\n\nNormativa aplicable:\nCal tenir en compte que la modificació de la normativa vigent o la variació dels indicadors poden produir diferències en la presentació o la classificació de les dades al llarg de diferents períodes.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:29.000Z",
+            "createdAt" : "2021-07-22T12:43:35.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:29.000Z",
+            "data_updated_at" : "2026-07-02T11:39:03.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 13,
+                "page_views_last_month" : 29,
+                "page_views_total" : 1707,
+                "page_views_last_week_log" : 3.8073549220576037,
+                "page_views_last_month_log" : 4.906890595608519,
+                "page_views_total_log" : 10.738092259620492
+              },
+            "columns_name" :
+              [
+                "Detencions",
+                "Llei SC",
+                "Partit",
+                "Àrea Bàsica Policial (ABP)",
+                "Categoria",
+                "Esport",
+                "Competició",
+                "Any",
+                "Llei Esport",
+                "Mes",
+                "Nom mes",
+                "Coordinador",
+                "Regió Policial (RP)"
+              ],
+            "columns_field_name" :
+              [
+                "detencions",
+                "llei_sc",
+                "partit",
+                "rea_b_sica_policial_abp",
+                "categoria",
+                "esport",
+                "competici",
+                "any",
+                "llei_esport",
+                "mes",
+                "mes_1",
+                "coordinador",
+                "regi_policial_rp"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre de detencions realitzades",
+                "Nombre d’infraccions de la llei de seguretat ciutadana",
+                "Partit al qual s’ha donat suport",
+                "Àrea Bàsica Policial (ABP) on s’ha produït del fet",
+                "Categoria esportiva on es juga l'esdeveniment",
+                "Modalitat esportiva",
+                "Nom de la competició",
+                "Any",
+                "Nombre d’infraccions de la llei de l’esport",
+                "Número del mes",
+                "Nom del mes",
+                "Existència de coordinador en l’esdeveniment",
+                "Regió Policial (RP) on s’ha produït del fet"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 763,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-10-04T09:27:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "activitat operativa policial",
+                "protecció",
+                "esport",
+                "competició esportica",
+                "llei de l'esport",
+                "llei de seguretat ciutadana",
+                "detencions",
+                "policia",
+                "mossos d'esquadra",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Support to the coordination of sporting events (2016 - Present)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Apoyo a órganos de coordinación en eventos deportivos (2016 - Actualidad)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5nun-j8uz",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Suport-a-òrgans-de-coordinació-en-esdeveniments-es/5nun-j8uz",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Controls d’alcoholèmia i de substàncies estupefaents",
+            "id" : "nkkp-u92f",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Controls d'alcoholèmia i de substàncies estupefaents; resultats positius o negatius, ja sigui en controls preventius, en el lloc d’accident, quan s’ha produït una infraccions o requeriments de símptomes.\nLa Policia de la Generalitat - Mossos d'Esquadra té la competència del control i vigilància del trànsit a Catalunya. En aquells municipis en què hi ha Policia local, aquesta s'ocupa de l'ordenació del trànsit urbà.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-15T10:39:17.000Z",
+            "createdAt" : "2021-11-03T11:36:34.000Z",
+            "metadata_updated_at" : "2026-10-15T10:39:16.000Z",
+            "data_updated_at" : "2026-10-15T10:39:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 16,
+                "page_views_last_month" : 42,
+                "page_views_total" : 2945,
+                "page_views_last_week_log" : 4.08746284125034,
+                "page_views_last_month_log" : 5.426264754702098,
+                "page_views_total_log" : 11.52454171503585
+              },
+            "columns_name" :
+              [
+                "Any",
+                "Nombre",
+                "Regió Policial (RP)",
+                "Tipus",
+                "Mes",
+                "Nom mes",
+                "Àrea Regional de Transport (ART)"
+              ],
+            "columns_field_name" :
+              [
+                "any",
+                "nombre",
+                "regi_policial_rp",
+                "tipus",
+                "mes_",
+                "nom_mes",
+                "rea_regional_de_transport"
+              ],
+            "columns_datatype" :
+              [ "Number", "Number", "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Número de l’any de les dades",
+                "Nombre de controls realitzats",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Tipus de control realitzat i resultat",
+                "",
+                "Nom del mes de les dades",
+                "Nom de l'Àrea Bàsica Policial (ABP) o de l’Àrea Regional de Trànsit (ART)"
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1291,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-03-04T09:50:03.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "vehicle",
+                "mobilitat",
+                "trànsit",
+                "accidents",
+                "investigació",
+                "intervenció",
+                "serveis policials",
+                "controls alcoholèmia",
+                "controls de substàncies estupefaents",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Alcohol and drug tests on roads"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Controles de alcoholemia y de sustancias estupefacientes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nkkp-u92f",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Controls-d-alcoholèmia-i-de-substàncies-estupefaen/nkkp-u92f",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Fets delictius i infraccions administratives de l'àmbit de l'odi i discriminació",
+            "id" : "y48r-ae59",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets relacionats amb els delictes i les infraccions administratives relacionades amb l’odi i la discriminació de Catalunya.\nEls delictes d'odi són infraccions penals on se selecciona la víctima, el lloc o l’objecte de la infracció per la seva pertinença -real o suposada- a un grup per raó de la seva raça, origen nacional o ètnic, l’idioma, la religió, la minusvalidesa física  mental, l’orientació sexual o altres factors similars.\nEls delictes d’odi es poden fonamentar en els prejudicis següents:\n•\tRaça, origen ètnic.\n•\tXenofòbia. País de procedència.\n•\tDiscapacitat.\n•\tAntisemitisme.\n•\tReligió o creences.\n•\tOrientació o identitat sexual.\n•\tIdeologia.\n•\tAporofòbia / Exclusió social.\n•\tQualsevol altra circumstància, condició social o personal.\nCom a conseqüència de la tasca d’anàlisi de cadascun dels atestats policials d’aquest àmbit, les dades mostrades en aquest conjunt de dades poden diferir de les que apareixen en el de “Fets delinqüencials”.\nLa informació es mostra desagregada si el municipi té més de 20.000 habitants; els municipis inferiors a 20.000 habitants es presenten agregats dins de la seva Àrea Bàsica Policial (ABP) per evitar riscos per a la seguretat o que es pugui incórrer en la vulneració de la protecció de les dades personals de les víctimes o persones involucrades en els diferents fets.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:54.000Z",
+            "createdAt" : "2021-07-28T10:57:26.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:54.000Z",
+            "data_updated_at" : "2026-07-07T13:18:20.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 90,
+                "page_views_last_month" : 380,
+                "page_views_total" : 6350,
+                "page_views_last_week_log" : 6.507794640198696,
+                "page_views_last_month_log" : 8.573647187493323,
+                "page_views_total_log" : 12.632768054728746
+              },
+            "columns_name" :
+              [
+                "Nombre fets o infraccions",
+                "Any",
+                "Tipus de fet",
+                "Mes",
+                "Regió Policial (RP)",
+                "Nombre víctimes",
+                "Àrea Bàsica Policial (ABP)",
+                "Municipi",
+                "Tipus de lloc dels fets",
+                "Títol del fet (Codi Penal) o Llei de referència",
+                "Tipus de fet (Codi penal) o d'Infracció (altres lleis)",
+                "Àmbit fet",
+                "Canal dels fets",
+                "Núm. Mes",
+                "Comarca",
+                "Província"
+              ],
+            "columns_field_name" :
+              [
+                "nombre_fets_o_infraccions",
+                "any",
+                "tipus_de_fet",
+                "nom_mes",
+                "regi_policial_rp",
+                "nombre_v_ctimes",
+                "rea_b_sica_policial_abp",
+                "municipi",
+                "tipus_de_lloc_dels_fets",
+                "t_tol_del_fet_codi_penal",
+                "tipus_de_fet_codi_penal_o",
+                "mbit_fet",
+                "canal_dels_fets",
+                "n_m_mes",
+                "comarca",
+                "prov_ncia"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre de fets coneguts per la PG-ME relacionats amb l’odi i la discriminació",
+                "Número de l’any de les dades",
+                "Àmbit penal (delictes) o infraccions administratives",
+                "Nom del mes de les dades",
+                "Nom de la Regió policial on s’han produït els fets",
+                "Nombre de víctimes dels fets relacionats amb l’odi i la discriminació",
+                "Nom de l'Àrea Bàsica Policial",
+                "Municipi on s’han produït els fets.  En el cas que el fet s’hagi produït en un municipi amb menys de 20.000 habitants la informació es mostrarà d’aquesta manera: “Resta de municipis de l’ABP xxx” En el cas dels municipis de més de 20.000 habitants es mostra el nom del municipi.",
+                "Tipus del lloc on s’han produït els fets (punt de la via, tipus d’establiment, tipus de local, etc.)",
+                "Tipus de fet segons el codi penal (1r nivell) o les lleis relacionades amb l’odi i la discriminació ",
+                "Tipus de fet segons el codi penal (2n nivell) ) o les lleis relacionades amb l’odi i la discriminació",
+                "Motivació que origina el fet o classificació del fet d’odi i discriminació ",
+                "Canal físic o digital on s’han produït els fets",
+                "Número del mes de les dades",
+                "Comarca on s’han produït els fets",
+                "Província on s’han produït els fets"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2201,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-28T11:02:18.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "assistència",
+                "policia",
+                "mossos d'esquadra",
+                "incidents",
+                "odi",
+                "discriminació",
+                "delictes",
+                "infraccions administratives",
+                "activitat operativa policial",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Hate crimes (incidents and ofenses) registered by the Autonomous Police - Mossos d'Esquadra"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos delictivos i infraccions administratives del ámbito del odio i la discriminación"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/y48r-ae59",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-delictius-i-infraccions-administratives-de-l-/y48r-ae59",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Comissaries de districte de les diferents àrees bàsiques policials de la Policia de la Generalitat – Mossos d’Esquadra",
+            "id" : "gq53-2fng",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "En l'àmbit territorial, la PG-ME s'estructura territorialment en 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre).\nCada Regió policial és l’agrupació de diverses àrees bàsiques policials. Les àrees bàsiques policials són la unitat mínima, geogràfica i poblacional, dotada d’uns serveis bàsica per a l’atenció primària de les demandes de prevenció, seguretat ciutadana, control de trànsit i investigació de primer nivell –Llei 4/2003, de 7 d’abril, d’ordenació del sistema de seguretat pública de Catalunya).\n\nLa comissaria constitueix la seu operativa de l'Àrea Bàsica Policial (ABP), i assegura la prestació dels serveis bàsics d'investigació i seguretat ciutadana:\nLa comissaria de districte és cadascun dels territoris en què es divideix una ABP. El districte exerceix les funcions que són descentralitzades des de l'ABP:\n\n•\tPatrullatge polivalent dels sectors i les demarcacions en què es divideix l'ABP (actuacions d'ofici, per iniciativa pròpia o a requeriment directe dels ciutadans o mitjançant la Sala de comandament).\n•\tActuacions específiques en operacions planificades de seguretat ciutadana\n•\tInvestigació de petits delictes i realització de les primeres actuacions en els delictes que no són competència pròpia d'altres àmbits de l'organització\n•\tManteniment de l'ordre i la convivència, sempre que no calgui la intervenció de les unitats especialitzades\n•\tRecepció de denúncies, instrucció dels atestats policials que se'n derivin i atenció dels requeriments dels ciutadans i de l'autoritat judicial\n•\tRecepció de trucades urgents de la ciutadania al telèfon de tres xifres en requeriment de serveis policials d'assistència o informació\n•\tAuxili a les autoritats judicials i compliment de les seves ordres\n•\tExecució de les ordres i els requeriments de les autoritats amb potestats legals de policia\n•\tAuxili als/les alcaldes/alcaldesses, especialment en el marc dels convenis subscrits de cooperació i de coordinació, si escau, amb la policia local\n•\tAutoprotecció i vigilàncies estàtiques\n•\tTrasllat de persones detingudes.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:56.000Z",
+            "createdAt" : "2021-07-27T11:31:00.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:56.000Z",
+            "data_updated_at" : "2021-07-28T08:18:19.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 70,
+                "page_views_last_month" : 277,
+                "page_views_total" : 4376,
+                "page_views_last_week_log" : 6.149747119504682,
+                "page_views_last_month_log" : 8.118941072723507,
+                "page_views_total_log" : 12.095726668639047
+              },
+            "columns_name" :
+              [
+                "COMISSARIA_C",
+                "COMISSARIA_D",
+                "OBJECTID",
+                "YMAX",
+                "SHAPE_LENGTH",
+                "SHAPE_AREA",
+                "the_geom",
+                "REGIO_C",
+                "ABP_C",
+                "XMAX",
+                "XMIN",
+                "YMIN",
+                "COMISSARIA_POB"
+              ],
+            "columns_field_name" :
+              [
+                "comissaria_c",
+                "comissaria_d",
+                "objectid",
+                "ymax",
+                "shape_length",
+                "shape_area",
+                "the_geom",
+                "regio_c",
+                "abp_c",
+                "xmax",
+                "xmin",
+                "ymin",
+                "comissaria_pob"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "MultiPolygon",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                " Codi de la comissaria",
+                " Nom complert de la comissaria",
+                " Identificador intern de la geometria",
+                "Coordenada Y màxima de la capsa envolvent del polígon*",
+                " Perímetre de la geometria",
+                " Àrea de la geometria",
+                "Columna de georeferència",
+                " Codi de la Regió Policial",
+                " Codi de l'Àrea Bàsica Policial",
+                " Coordenada X màxima de la capsa envolvent del polígon*",
+                " Coordenada X mínima de la capsa envolvent del polígon*",
+                " Coordenada Y mínima de la capsa envolvent del polígon*",
+                " Nombre d’habitants de la comissaria"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {}
+              ],
+            "download_count" : 1708,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-28T08:18:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "àrea bàsica policial",
+                "comissaria",
+                "comissaria de districte",
+                "regió policial",
+                "policia",
+                "mossos d'esquadra",
+                "coordenades",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Autonomous Police - Mossos d'Esquadra District Police stations -"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Comisarías de distrito de las Áreas básicas policiales (comisarías) de la Policia de la Generalitat – Mossos d’Esquadra"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/gq53-2fng",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Comissaries-de-districte-de-les-diferents-àrees-bà/gq53-2fng",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Víctimes o persones autores de delictes d'odi i discriminació",
+            "id" : "gci6-2ubm",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació sobre les víctimes i les persones autores relacionades amb els delictes i les infraccions administratives d’odi i discriminació.\nEls delictes d'odi són infraccions penals on se selecciona la víctima, el lloc o l’objecte de la infracció per la seva pertinença -real o suposada- a un grup per raó de la seva raça, origen nacional o ètnic, l’idioma, la religió, la minusvalidesa física  mental, l’orientació sexual o altres factors similars.\nEls delictes d’odi es poden fonamentar en els prejudicis següents:\n•\tRaça, origen ètnic.\n•\tXenofòbia. País de procedència.\n•\tDiscapacitat.\n•\tAntisemitisme.\n•\tReligió o creences.\n•\tOrientació o identitat sexual.\n•\tIdeologia.\n•\tAporofòbia / Exclusió social.\n•\tQualsevol altra circumstància, condició social o personal.\nCom a conseqüència de la tasca d’anàlisi de cadascun dels atestats policials d’aquest àmbit, les dades mostrades en aquest conjunt de dades poden diferir de les que apareixen en el de “Fets delinqüencials”.\nLa informació es mostra desagregada si el municipi té més de 20.000 habitants; els municipis inferiors a 20.000 habitants es presenten agregats dins de la seva Àrea Bàsica Policial (ABP) per evitar riscos per a la seguretat o que es pugui incórrer en la vulneració de la protecció de les dades personals de les víctimes o persones involucrades en els diferents fets.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:31.000Z",
+            "createdAt" : "2021-07-28T11:06:44.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:31.000Z",
+            "data_updated_at" : "2026-07-08T07:34:00.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 115,
+                "page_views_total" : 3400,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.857980995127572,
+                "page_views_total_log" : 11.731743290707842
+              },
+            "columns_name" :
+              [
+                "Tipus de fet (Codi penal) o d’Infracció (altres lleis)",
+                "Tipus de lloc dels fets",
+                "Edat",
+                "Sexe",
+                "Tipus de fet",
+                "Rol",
+                "Nombre víctimes",
+                "Any",
+                "Àmbit fet",
+                "Nom Mes",
+                "Núm. Mes",
+                "Municipi",
+                "Comarca",
+                "Àrea Bàsica Policial (ABP)",
+                "Província",
+                "Regió Policial (RP)"
+              ],
+            "columns_field_name" :
+              [
+                "tipus_de_fet_codi_penal_o",
+                "tipus_de_lloc_dels_fets",
+                "edat_inici_fets",
+                "sexe",
+                "tipus_de_fet",
+                "rol_v_ctima_o_autoria",
+                "nombre",
+                "any",
+                "mbit_procediment_fet",
+                "nom_mes",
+                "n_m_mes",
+                "municipi",
+                "comarca",
+                "rea_b_sica_policial_abp",
+                "prov_ncia",
+                "regi_policial_rp"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Detall del tipus de fet segons el codi penal (2n nivell) ) o les lleis relacionades amb l’odi i la discriminació",
+                "Tipus del lloc on s’han produït els fets (punt de la via, tipus d’establiment, tipus de local, etc.)",
+                "Edat de la víctima o de la persona autora quan es van iniciar els fets",
+                "Home o dona. No s’especifiquen les identitats de gènere ja que els sistemes d’informació policial distingeixen entre “home” i “dona”. Tot i això, pel que fa a la comptabilització, l’atenció i el tractament que reben les víctimes, sempre es respecta la identitat de gènere que aquestes manifestin en el moment de la denúncia.",
+                "Àmbit penal (delictes) o infraccions administratives",
+                "Víctima o persona autora dels fets relacionats amb odi i discriminació",
+                "Nombre de víctimes de cadascun dels fets relacionats amb l’odi i la discriminació Nota: cada atestat policial pot tenir més d’una víctima o persona autora; a l’hora de facilitar la informació demogràfica d’aquestes el nombre de víctimes no es relaciona amb cap atestat policial concret sinó amb l’àmbit i la classificació dels fets. Per aquest motiu el nombre de víctimes serà equivalent a la unitat. ",
+                "Número de l’any de les dades",
+                "Motivació que origina el fet o classificació del fet d’odi i discriminació: -\tAntisemita -\tAporofòbia -\tDiscapacitat física/sensorial -\tDiscapacitat psíquica/mental -\tÈtnic/origen nacional/racial -\tOrientació política -\tReligiós -\tSexisme -\tLGTBI-fòbia",
+                "Nom del mes de les dades",
+                "Número del mes de les dades",
+                "Municipi on s’han produït els fets.  En el cas que el fet s’hagi produït en un municipi amb menys de 20.000 habitants la informació es mostrarà d’aquesta manera: Resta de municipis de l’ABP xxx En el cas dels municipis de més de 20.000 habitants es mostra el nom del municipi.",
+                "Comarca on s’han produït els fets",
+                "Nom de l'Àrea Bàsica Policial",
+                "Província on s’han produït els fets",
+                "Nom de la Regió policial on s’han produït els fets"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2478,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-03-31T11:20:32.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "odi",
+                "discriminació",
+                "delictes",
+                "víctimes",
+                "persones autores",
+                "infraccions administratives",
+                "activitat operativa policial",
+                "assistència",
+                "policia",
+                "mossos d'esquadra",
+                "incidents",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Hate crimes victims and offenders registered by the Autonomous Police - Mossos d'Esquadra"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Víctimes o persones autores de delictes d'odi i discriminació"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/gci6-2ubm",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Víctimes-o-persones-autores-de-delictes-d-odi-i-di/gci6-2ubm",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dependències de la Policia de la Generalitat – Mossos d’Esquadra",
+            "id" : "8jxf-yu8c",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Localització de les diferents dependències de la Policia de la Generalitat-Mossos d'Esquadra.\nEn l'àmbit territorial, la PG-ME s'estructura territorialment en 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre).\nDe les regions policials, llevat de la Metropolitana Barcelona, depenen, entre d’altres, les àrees bàsiques policials i l'Àrea Regional de Trànsit.\nCada Regió policial és l’agrupació de diverses àrees bàsiques policials i d’altres òrgans.\nLa comissaria de districte és cadascun dels territoris en què es divideix una ABP. El districte exerceix les funcions que són descentralitzades des de l'ABP.\nTambé pot haver-hi altres dependències on hi ha situades diversos serveis: Oficina d’Atenció ciutadana, Oficina policial, Altres dependències",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:17.000Z",
+            "createdAt" : "2021-07-23T11:00:26.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:17.000Z",
+            "data_updated_at" : "2023-03-14T10:33:58.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 136,
+                "page_views_total" : 3173,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 7.098032082960527,
+                "page_views_total_log" : 11.632086412835182
+              },
+            "columns_name" :
+              [
+                "Horari",
+                "LIMADM_MUNICIPI",
+                "Latitud",
+                "codi_ine",
+                "Georeferencia",
+                "LIMADM COMARCA",
+                "CP",
+                "Comarca",
+                "Municipi",
+                "Adreça",
+                "Nom",
+                "Longitud",
+                "Tipus",
+                "Denúncies",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "horari",
+                ":@computed_region_bh64_c7uy",
+                "latitud",
+                "codi_ine",
+                "georeferencia",
+                ":@computed_region_wvic_k925",
+                "cp",
+                "comarca",
+                "municipi",
+                "adre_a",
+                "nom",
+                "longitud",
+                "tipus",
+                "den_ncies",
+                "any"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Point",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Horari d’atenció",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                " Coordenades de la latitud ",
+                "Codi del Municipi",
+                "Georeferencia",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Codi postal",
+                "Comarca",
+                "Municipi",
+                "Adreça postal",
+                "Nom de la dependència policial",
+                " Coordenades de la longitud",
+                "Tipus de dependència policial (Àrea Bàsica Policial,  Comissaria de Districte, Regió policial, Àrea Regional de Trànsit, Oficina d’Atenció ciutadana, Oficina policial, Altres dependències)",
+                "Accepta presentació de denúncies",
+                "Any"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 2444,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-10-20T12:43:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "àrea bàsica policial",
+                "comissaria",
+                "regió policial",
+                "policia",
+                "edifici",
+                "coordenades",
+                "comissaria de districte",
+                "oficina d'atenció ciutadana",
+                "smartcatalonia",
+                "mossos d'esquadra",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Autonomous Police - Mossos d'Esquadra Police stations"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Dependencias de la Policia de la Generalitat – Mossos d’Esquadra"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8jxf-yu8c",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Dependències-de-la-Policia-de-la-Generalitat-Mosso/8jxf-yu8c",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Relació de municipis i àrees bàsiques policials",
+            "id" : "dtpq-6fvw",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de codis de municipi de Catalunya amb l’identificador de l’àrea bàsica policial a la qual pertany cada municipi o districte.",
+            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:07.000Z",
+            "createdAt" : "2025-01-21T13:43:41.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:07.000Z",
+            "data_updated_at" : "2026-07-03T07:43:43.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 45,
+                "page_views_total" : 741,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 5.523561956057013,
+                "page_views_total_log" : 9.535275376620804
+              },
+            "columns_name" :
+              [
+                "OBJECTID",
+                "CODI_ABP_MOSSOS",
+                "CODI_MUNICIPI",
+                "CODI_DISTRICTE",
+                "NOM_DISTRICTE",
+                "GEOMETRIA_MUNICIPI_DISTRICTE"
+              ],
+            "columns_field_name" :
+              [
+                "objectid",
+                "codi_abp_mossos",
+                "codi_municipi",
+                "codi_districte",
+                "nom_districte",
+                "geometria_municipi_districte"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Text", "Text", "Text", "MultiPolygon" ],
+            "columns_description" :
+              [
+                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat i evitar els duplicats.",
+                "Identificador únic de l’àrea bàsica policial a la qual pertany el municipi.",
+                "Codi que identifica de forma unívoca el municipi de Catalunya. És un codi oficial. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’.",
+                "Identificador únic del districtes municipals de Barcelona. S’utilitza només per a les ABP de Barcelona. És un codi oficial.",
+                "Nom del districte",
+                "Informació geogràfica que defineix la zona que delimita el municipi o el districte."
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {}
+              ],
+            "download_count" : 330,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:44:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "List of municipalities and basic police areas"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Relación de municipios y áreas básicas policiales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/dtpq-6fvw",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Relació-de-municipis-i-àrees-bàsiques-policials/dtpq-6fvw",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre d’establiments del sector de l’alimentació animal i de l’àmbit dels SANDACH",
+            "id" : "m48e-zdz9",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Registre del sector de l’alimentació animal i de l’àmbit dels subproductes animals i productes derivats no destinats a consum humà (SANDACH). Inclou  tots els operadors del sector de l’alimentació animal, tant dels animals destinats a la producció d’aliments com dels animals de companyia, així com  els operadors de l’àmbit dels SANDACH de categoria 3; en el cas de productes intermedis i l’ús de SANDACH per a finalitats específiques, també s’inclouen els SANDACH de categoria 1 i 2.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-26T08:28:35.000Z",
+            "createdAt" : "2021-12-20T12:04:52.000Z",
+            "metadata_updated_at" : "2026-10-26T08:28:34.000Z",
+            "data_updated_at" : "2026-10-26T08:28:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 45,
+                "page_views_last_month" : 157,
+                "page_views_total" : 6722,
+                "page_views_last_week_log" : 5.523561956057013,
+                "page_views_last_month_log" : 7.303780748177103,
+                "page_views_total_log" : 12.71488943423155
+              },
+            "columns_name" :
+              [
+                "Empresa",
+                "Nom Activitat",
+                "Alimentació Animal (AA)\n - SANDACH (S)",
+                "Municipi",
+                "Nom establiment",
+                "Província",
+                "Codi municipi (idescat)",
+                "Núm Registre",
+                "Codi\n Comarca",
+                "Comarca",
+                "Data alta\n de l'Activitat",
+                "Codi postal",
+                "Adreça"
+              ],
+            "columns_field_name" :
+              [
+                "empresa",
+                "nom_activitat",
+                "alimentaci_animal_aa_sandach",
+                "municipi",
+                "nom_establiment",
+                "prov_ncia",
+                "codi_municipi_idescat",
+                "n_m_registre",
+                "codi_comarca",
+                "comarca",
+                "data_alta_de_l_activitat",
+                "codi_postal",
+                "adre_a"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Denominació de l’empresa d’Alimentació animal i/o SANDACH.",
+                "Tasca realitzada dins l’àmbit de l’alimentació animal i/o SANDACH.",
+                "Alimentació animal productors o no d’aliments - Subproductes animals no destinats al consum humà.",
+                "Entitat local bàsica de l'organització territorial a la que pertany l’establiment.",
+                "Denominació de l’establiment d’Alimentació animal i/o SANDACH",
+                "Unitat administrativa a la que pertany l'establiment.",
+                "Codi del municipi segons l’Idescat.",
+                "Número de registre d’alimentació animal d’acord amb el Reial Decret 629/2019, de 31 d’octubre, pel qual es regula el registre general d’establiments en el sector  de l’alimentació animal, les condicions d’autorització o registre dels establiments i dels punts d’entrada nacionals, l’activitat dels operadors de pinsos y la Comissió nacional de coordinació en matèria d’alimentació animal, estableix l’estructura d’aquest número. Número de registre SANDACH d’acord amb el Reial decret 1528/2012, de 8 de novembre, pel qual s’estableixen les normes aplicables als SANDACH.",
+                "Codi de la comarca segons l’Idescat.",
+                "Extensió de territori reduïda a la que pertany l’establiment.",
+                "Data en la que s'ha inscrit al registre l’activitat pertinent.",
+                "Sèrie de lletres i/o dígits assignats a la zona a la que pertany l’establiment.",
+                "Referència a l'espai que ocupa l’establiment dins d'una població."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {}
+              ],
+            "download_count" : 1473,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-12-20T12:11:24.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "registre",
+                "alimentació animal",
+                "sandach",
+                "operadors",
+                "pinso",
+                "ods12_producció i consum responsable",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Registre d'establiments del sector de l'alimentació animal i de l'àmbit dels SANDACH"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "http://agricultura.gencat.cat/ca/ambits/ramaderia/dar_alimentacio_animal/registre-establiments-alimentacio-animal-sandach/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Register of feed bussines operators and ABP operators."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de establecimientos del sector de la alimentación animal y del ámbito de los SANDACH."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/m48e-zdz9",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Registre-d-establiments-del-sector-de-l-alimentaci/m48e-zdz9",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Suggeriments, agraïments i queixes rebuts a la Direcció General de la Policia en relació amb l’activitat de la Policia de la Generalitat - Mossos d'Esquadra",
+            "id" : "tqgh-v535",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Motius dels suggeriments, agraïments i queixes que la ciutadania comunica en relació a l'activitat de la Policia de la Generalitat – Mossos d’Esquadra per mitjà del Sistema de Suggeriments, agraïments i queixes (SAQ) de la Direcció General de la Policia. \nCada escrit rebut es tradueix en un registre únic que pot afectar diferents unitats o àrees de l’organització; tanmateix, el SAQ vincula cada registre només a un àmbit i un motiu. En el cas de l’àmbit “Qualitat”, relacionat directament amb el procés de detenció, el sistema vincula cada registre a tants àmbits i motius com es considerin necessaris per reflectir amb més fidelitat els fets descrits pel ciutadà en el seu escrit.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:03.000Z",
+            "createdAt" : "2021-07-28T09:31:06.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:03.000Z",
+            "data_updated_at" : "2026-09-09T09:50:19.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 13,
+                "page_views_last_month" : 24,
+                "page_views_total" : 1940,
+                "page_views_last_week_log" : 3.8073549220576037,
+                "page_views_last_month_log" : 4.643856189774724,
+                "page_views_total_log" : 10.922584402713664
+              },
+            "columns_name" :
+              [
+                "Tipus",
+                "Total",
+                "Regió Policial (RP)",
+                "Motiu",
+                "Àmbit",
+                "Any",
+                "Àrea Bàsica Policial (ABP)",
+                "Nom mes",
+                "Mes"
+              ],
+            "columns_field_name" :
+              [
+                "tipus",
+                "total",
+                "regi_policial_rp",
+                "motiu",
+                "mbit",
+                "any",
+                "rea_b_sica_policial_abp",
+                "nom_mes",
+                "mes"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Tipus de comunicació (Agraïment, queixa o suggeriment)",
+                "Nombre de comunicació rebuda",
+                "Regió policial on pertany a la qual fa referència la comunicació rebuda",
+                "Tema específic sobre el qual s’adreça la comunicació",
+                "Competència o àmbit d’actuació ",
+                " Any",
+                "Nom l’Àrea Bàsica Policial o de servei als quals fan referència la comunicació rebuda",
+                "Nom del mes",
+                "Número del mes"
+              ],
+            "columns_format" :
+              [ {}, {}, {}, {}, {}, { "noCommas" : "true" }, {}, {}, {} ],
+            "download_count" : 820,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-28T09:35:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "atenció ciutadana",
+                "bústia corporativa",
+                "bústia de contacte",
+                "col·laboració ciutadana",
+                "queixes",
+                "suggeriments",
+                "policia",
+                "mossos d'esquadra",
+                "saq",
+                "agraïments",
+                "qualitat",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Suggestions, complaints and acknowledgments received (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Sugerencias, agradecimientos y quejas recibidos en la Dirección General de la Policía en relación con la actividad de la Policia de la Generalitat - Mossos d'Esquadra"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/tqgh-v535",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Suggeriments-agraïments-i-queixes-rebuts-a-la-Dire/tqgh-v535",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 22,
+  "timings" : { "serviceMillis" : 29, "searchMillis" : [ 3, 10 ] },
+  "warnings" : []
+}
