@@ -25,9 +25,12 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-for t in ["càrrecs electes", "composició plens ajuntaments", "alcaldes", "regidors", "eleccions municipals resultats", "ens locals dades generals"]:
+for t in ["afiliats seguretat social municipi", "afiliació règim general municipis", "mortalitat causa", "defuncions causa mort", "llista d'espera", "temps d'espera intervencions quirúrgiques", "esperança de vida àrea bàsica salut", "indicadors salut àrea bàsica"]:
     clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
-    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 8})
+    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
+CANDIDATAS["idescat_emex_afiliats"] = "https://api.idescat.cat/emex/v1/dades.json?id=170792&i=f262,f263,f264&lang=ca"
+CANDIDATAS["idescat_mortalitat_causa"] = "https://www.idescat.cat/indicadors/?id=aec&n=15254&lang=ca"
+CANDIDATAS["seg_social_afiliados_municipio"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST307"
 
 
 def extension(tipo: str) -> str:
