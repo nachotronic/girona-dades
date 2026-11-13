@@ -1,0 +1,1662 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Evolució dels resultats a les eleccions municipals",
+            "id" : "rgty-dgrr",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Evolució dels resultats a les eleccions municipals amb la distribució del nombre de regidors",
+            "attribution" : "Ajuntament de L'Hospitalet de Llobregat",
+            "attribution_link" : "http://www.l-h.cat/laciutat/392492_1.aspx?id=1",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2017-06-14T10:38:40.000Z",
+            "createdAt" : "2017-06-14T09:47:39.000Z",
+            "metadata_updated_at" : "2017-06-14T10:38:40.000Z",
+            "data_updated_at" : "2017-06-14T10:32:48.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 796,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 9.638435913990472
+              },
+            "columns_name" :
+              [
+                "Candidatura",
+                "Vots",
+                "NomCandidatura",
+                "Sigles",
+                "Percentatge",
+                "Regidors",
+                "Any",
+                "logo"
+              ],
+            "columns_field_name" :
+              [
+                "candidatura",
+                "vots",
+                "nomcandidatura",
+                "sigles",
+                "percentatge",
+                "regidors",
+                "any",
+                "logo"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Photo"
+              ],
+            "columns_description" :
+              [
+                "Número de candidatura",
+                "Número de vots obtinguts per la candidatura",
+                "Nom de la candidatura",
+                "Sigles de la candidatura",
+                "Percentatge de la candidatura (o dels vots en blanc) sobre el vot vàlid",
+                "Número de regidors obtinguts\n",
+                "Any de les eleccions",
+                "Logo de la candidatura\n"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "noCommas" : "false",
+                  "precision" : "2",
+                  "align" : "right",
+                  "percentScale" : "100",
+                  "precisionStyle" : "percentage",
+                  "view" : "percent_bar_and_text"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right",
+                  "mask" : "####"
+                },
+                {}
+              ],
+            "download_count" : 50,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-06-14T10:37:29.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector públic",
+            "domain_tags" : [ "eleccions", "municipals" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Actualització_Periodicitat",
+                  "value" : "Quan hi ha dades noves"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/rgty-dgrr",
+        "link" : "https://opendata.l-h.cat/Sector-públic/Evolució-dels-resultats-a-les-eleccions-municipals/rgty-dgrr",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eleccions municipals maig 2011 (resultats)",
+            "id" : "qkur-m4yr",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les eleccions municipals de maig del 2011.",
+            "attribution" : "Ajuntament de L'Hospitalet de Llobregat",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2017-06-14T10:39:21.000Z",
+            "createdAt" : "2017-06-14T10:01:17.000Z",
+            "metadata_updated_at" : "2017-06-14T10:39:21.000Z",
+            "data_updated_at" : "2017-06-14T10:01:20.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 516,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 9.014020470314934
+              },
+            "columns_name" :
+              [
+                "IdCat",
+                "Mesa",
+                "VotsEnBlanc",
+                "Cens",
+                "Eb-CenB",
+                "PxC",
+                "ICV-EUiA-E",
+                "PSC-PM",
+                "VotsCandidatures",
+                "VotsNuls",
+                "PP",
+                "PIRATA.CAT",
+                "VotsTotals",
+                "ERC-VERD-AM",
+                "CUP-PA",
+                "EV-GVE",
+                "UCE",
+                "CiU",
+                "C's",
+                "U PER L'H"
+              ],
+            "columns_field_name" :
+              [
+                "idcat",
+                "mesa",
+                "votsenblanc",
+                "cens",
+                "eb_cenb",
+                "pxc",
+                "icv_euia_e",
+                "psc_pm",
+                "votscandidatures",
+                "votsnuls",
+                "pp",
+                "pirata_cat",
+                "votstotals",
+                "erc_verd_am",
+                "cup_pa",
+                "ev_gve",
+                "uce",
+                "ciu",
+                "c_s",
+                "u_per_l_h"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "Mesa electoral",
+                "Nombre de vots en blanc",
+                "Cens",
+                "",
+                "",
+                "",
+                "",
+                "Nombre de vots a candidatures",
+                "Nombre de vots nuls",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 64,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-06-14T10:01:21.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector públic",
+            "domain_tags" : [ "eleccions", "municipals" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Actualització_Periodicitat",
+                  "value" : "Quan hi ha dades noves"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/qkur-m4yr",
+        "link" : "https://opendata.l-h.cat/Sector-públic/Eleccions-municipals-maig-2011-resultats-/qkur-m4yr",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eleccions municipals maig 2015 (resultats)",
+            "id" : "ynpy-gj8a",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats definitius de les candidatures a les eleccions municipals de maig del 2015.",
+            "attribution" : "Ajuntament de L'Hospitalet de Llobregat",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2017-06-14T10:13:02.000Z",
+            "createdAt" : "2017-06-14T10:05:36.000Z",
+            "metadata_updated_at" : "2017-06-14T10:13:02.000Z",
+            "data_updated_at" : "2017-06-14T10:05:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 534,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 9.06339508128851
+              },
+            "columns_name" :
+              [
+                "PSC-CP",
+                "Mesa",
+                "VotsEnBlanc",
+                "CUP-PA",
+                "UPyD",
+                "PxC",
+                "GANEMOS",
+                "PP",
+                "CiU",
+                "C's",
+                "ICV-EUiA-Pi",
+                "VotsNuls",
+                "VotsTotals",
+                "Cens",
+                "ERC-AM",
+                "VotsCandidatures"
+              ],
+            "columns_field_name" :
+              [
+                "psc_cp",
+                "mesa",
+                "votsenblanc",
+                "cup_pa",
+                "upyd",
+                "pxc",
+                "ganemos",
+                "pp",
+                "ciu",
+                "c_s",
+                "icv_euia_pi",
+                "votsnuls",
+                "votstotals",
+                "cens",
+                "erc_am",
+                "votscandidatures"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "Mesa electoral",
+                "Nombre de vots en blanc",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "Nombre de vots nuls",
+                "Nombre de vots totals",
+                "Cens electoral de la mesa",
+                "",
+                "Nombre de vots a candidatures"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                }
+              ],
+            "download_count" : 45,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-06-14T10:05:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "eleccions", "municipals" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Actualització_Periodicitat",
+                  "value" : "Quan hi ha dades noves"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/ynpy-gj8a",
+        "link" : "https://opendata.l-h.cat/Sector-Públic/Eleccions-municipals-maig-2015-resultats-/ynpy-gj8a",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Eleccions municipals maig 2019 (resultats)",
+            "id" : "7ms5-24qs",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les eleccions municipals del 26 de maig del 2019.",
+            "attribution" : "Ajuntament de L'Hospitalet de Llobregat",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2020-05-20T08:15:23.000Z",
+            "createdAt" : "2019-05-31T08:44:57.000Z",
+            "metadata_updated_at" : "2020-05-20T08:15:23.000Z",
+            "data_updated_at" : "2019-05-31T08:50:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 2,
+                "page_views_last_month" : 2,
+                "page_views_total" : 418,
+                "page_views_last_week_log" : 1.5849625007211563,
+                "page_views_last_month_log" : 1.5849625007211563,
+                "page_views_total_log" : 8.710806433699352
+              },
+            "columns_name" :
+              [
+                "VOX",
+                "LHECP-ECG",
+                "VotsTotals",
+                "VotsNuls",
+                "VotsCandidatures",
+                "PSC-CP",
+                "VotsEnBlanc",
+                "D.EF.",
+                "Cens",
+                "Mesa",
+                "PROPONEMOS",
+                "FC's",
+                "PRIMARIES",
+                "CNV",
+                "JUNTS",
+                "ERC-AM",
+                "C's",
+                "PP",
+                "CUP LH x LR",
+                "CH",
+                "IZQP",
+                "AELH"
+              ],
+            "columns_field_name" :
+              [
+                "vox",
+                "lhecp_ecg",
+                "votstotals",
+                "votsnuls",
+                "votscandidatures",
+                "psc_cp",
+                "votsenblanc",
+                "d_ef",
+                "cens",
+                "mesa",
+                "proponemos",
+                "fc_s",
+                "primaries",
+                "cnv",
+                "junts",
+                "erc_am",
+                "c_s",
+                "pp",
+                "cup_lh_x_lr",
+                "ch",
+                "izqp",
+                "aelh"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 32,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-05-31T08:50:32.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector públic",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Actualització_Periodicitat",
+                  "value" : "Quan hi ha dades noves"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/7ms5-24qs",
+        "link" : "https://opendata.l-h.cat/Sector-públic/Eleccions-municipals-maig-2019-resultats-/7ms5-24qs",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Resultats electorals de la Segona República a Catalunya. Resultats per municipis",
+            "id" : "x8yr-e7bz",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les diferents convocatòries electorals celebrades durant la 2a República, a nivell municipal. \n\nPer qüestions de robustesa d’estructura, aquestes dades són un resum de les taules originals que es poden trobar enllaçades en aquesta mateixa pàgina. \n\n<p>Recerca efectuada pel Dr. Pau Vall Prat (<a href=\"http://www.pauvallprat.com/\">www.pauvallprat.com</a>),&nbsp;<a href=\"https://sira.ub.edu/fitxes/Dret.html?id=pau.vall.ub.edu&amp;lang=ca\">Professor Lector de la UB</a>, i pel Dr. Francesc Amat,&nbsp;<a href=\"https://sira.ub.edu/static/fitxes/EconomiaIEmpresa.html?id=francesc.amat.ub.edu&amp;lang=ca\">Investigador Ram&oacute;n y Cajal a la UB</a>.</p>",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-20T14:46:22.000Z",
+            "createdAt" : "2026-05-20T14:41:23.000Z",
+            "metadata_updated_at" : "2026-05-20T14:46:22.000Z",
+            "data_updated_at" : "2026-05-20T14:46:11.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 33,
+                "page_views_last_month" : 77,
+                "page_views_total" : 408,
+                "page_views_last_week_log" : 5.08746284125034,
+                "page_views_last_month_log" : 6.285402218862249,
+                "page_views_total_log" : 8.67595703294175
+              },
+            "columns_name" :
+              [
+                "Vots altres candidats",
+                "Any",
+                "Font",
+                "Eleccions parcials",
+                "Eleccions",
+                "Votants",
+                "Vots totals a candidats",
+                "Cens",
+                "Vots blancs",
+                "Circumscripció",
+                "Municipi",
+                "Vots nuls",
+                "Vots a favor",
+                "Vots en contra",
+                "Identificador municipal",
+                "Participació",
+                "Data"
+              ],
+            "columns_field_name" :
+              [
+                "vots_altres_candidats",
+                "any",
+                "font",
+                "eleccions_parcials",
+                "eleccions",
+                "votants",
+                "vots_totals_candidats",
+                "cens",
+                "vots_blancs",
+                "circumscripcio",
+                "municipi",
+                "vots_nuls",
+                "vots_a_favor",
+                "vots_en_contra",
+                "identificador_municipal",
+                "participacio",
+                "data"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Calendar date"
+              ],
+            "columns_description" :
+              [
+                "Nombre total de vots a individus que no es postulaven com a candidats en aquella circumscripció",
+                "Any en el qual té lloc la convocatòria electoral",
+                "Font de les dades",
+                "Classificació de les eleccions, segons si són ordinàries o no. Variable categòrica, on: 0 = eleccions ordinàries 1 = segones voltes 2 = eleccions parcials 3 = segones voltes d’eleccions parcials",
+                "Classificació de les eleccions, segons l'objecte de la convocatòria (\"Corts\", \"Parlament\", \"Compromissaris\" o \"Referèndum Estatut\")",
+                "Nombre absolut de persones que van exercir el seu dret a vot en aquell municipi",
+                "Nombre total de vots emesos a favor de candidats/es",
+                "Nombre absolut de persones amb dret a vot en aquell municipi",
+                "Vots blancs emesos en aquell municipi",
+                "Unitat bàsica de recompte de vots (també pot ser anomenat districte electoral)",
+                "Nom del municipi",
+                "Vots nuls emesos en aquell municipi",
+                "Nombre total de vots a favor de l’Estatut de Catalunya (només per Referèndum Estatut)",
+                "Nombre total de vots en contra de l’Estatut de Catalunya (només per Referèndum Estatut)",
+                "Identificador únic per a cada municipi de Catalunya",
+                "Càlcul del percentatge de participació electoral (en %) en aquell municipi  Participació (%) = (Votants / Cens) × 100",
+                "Data en la qual té lloc la convocatòria electoral (format dd/mm/aaaa)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "view" : "date_dmy" }
+              ],
+            "download_count" : 25,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-05-20T14:46:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "vot",
+                "segona república",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Electoral results of the Second Republic in Catalonia. Results for Municipalities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resultados electorales de la Segunda República en Cataluña. Resultados por municipios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/x8yr-e7bz",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-electorals-de-la-Segona-República-a-Cata/x8yr-e7bz",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Resultats electorals de la Segona República a Catalunya. Resultats a la circumscripció electoral de Barcelona ciutat per candidats",
+            "id" : "vdm9-nuh2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les diferents convocatòries electorals celebrades durant la 2a República, a la circumscripció electoral de Barcelona ciutat per candidats.\n<p>Recerca efectuada pel Dr. Pau Vall Prat (<a href=\"http://www.pauvallprat.com/\">www.pauvallprat.com</a>),&nbsp;<a href=\"https://sira.ub.edu/fitxes/Dret.html?id=pau.vall.ub.edu&amp;lang=ca\">Professor Lector de la UB</a>, i pel Dr. Francesc Amat,&nbsp;<a href=\"https://sira.ub.edu/static/fitxes/EconomiaIEmpresa.html?id=francesc.amat.ub.edu&amp;lang=ca\">Investigador Ram&oacute;n y Cajal a la UB</a>.</p>",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-21T09:37:56.000Z",
+            "createdAt" : "2026-05-20T14:52:44.000Z",
+            "metadata_updated_at" : "2026-05-21T09:37:54.000Z",
+            "data_updated_at" : "2026-05-21T09:37:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 9,
+                "page_views_last_month" : 19,
+                "page_views_total" : 133,
+                "page_views_last_week_log" : 3.3219280948873626,
+                "page_views_last_month_log" : 4.321928094887363,
+                "page_views_total_log" : 7.066089190457772
+              },
+            "columns_name" :
+              [
+                "Vots blancs",
+                "Vots altres candidats",
+                "Nom complet del candidat",
+                "Partit",
+                "Sigles coalició",
+                "Nom coalició",
+                "Vots nuls",
+                "Identificador candidat",
+                "Participació",
+                "Cens",
+                "Eleccions",
+                "Votants",
+                "Font",
+                "Nom opció política",
+                "Vots totals a candidats",
+                "Circumscripció",
+                "Data",
+                "Electe",
+                "Sigles opció política",
+                "Sexe",
+                "Any",
+                "Municipi",
+                "Vots a cada candidat",
+                "Identificador municipal",
+                "Districte",
+                "Eleccions parcials"
+              ],
+            "columns_field_name" :
+              [
+                "vots_blancs",
+                "vots_altres_candidats",
+                "nom_complet_candidat",
+                "partit",
+                "sigles_coalicio",
+                "nom_coalicio",
+                "vots_nuls",
+                "identificador_candidat",
+                "participacio",
+                "cens",
+                "eleccions",
+                "votants",
+                "font",
+                "nom_opcio_politica",
+                "vots_totals_candidats",
+                "circumscripcio",
+                "data",
+                "electe",
+                "sigles_opcio_politica",
+                "sexe",
+                "any",
+                "municipi",
+                "vots_candidat",
+                "identificador_municipal",
+                "districte",
+                "eleccions_parcials"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Vots blancs emesos en cada districte municipal",
+                "Nombre total de vots a individus que no es postulaven com a candidats en aquella circumscripció",
+                "Nom complet del candidat/a",
+                "Partit polític al qual pertanyia el/la candidat/a en cada elecció",
+                "Sigles de la coalició en el marc de la qual es va presentar a les eleccions el/la candidat/a",
+                "Nom complet de la coalició ",
+                "Vots nuls emesos en cada districte municipal",
+                "Identificador únic per a cadascun dels individus que es van presentar a eleccions durant la Segona República",
+                "Càlcul del percentatge de participació electoral (en %) en cada districte municipal  Participació (%) = (Votants / Cens) × 100",
+                "Nombre absolut de persones amb dret a vot en cada districte municipal",
+                "Classificació de les eleccions, segons l'objecte de la convocatòria (\"Corts\", \"Parlament\", \"Compromissaris\" o \"Referèndum Estatut\")",
+                "Nombre absolut de persones que van exercir el seu dret a vot en cada districte municipal",
+                "Font de les dades",
+                "Nom de l'opció política",
+                "Nombre total de vots emesos a favor de candidats/es",
+                "Unitat bàsica de recompte de vots (també pot ser anomenat districte electoral)",
+                "Data en la qual té lloc la convocatòria electoral (format dd/mm/aaaa)",
+                "Indica si el candidat va ser elegit o no. Variable dicotòmica, on: -\t1 indica que el candidat/a va ser elegit -\t0 indica que el candidat/a no va ser elegit",
+                "Sigles de l’opció política",
+                "Sexe del candidat. Variable dicotòmica: 1 indica que el/la candidat/a era una dona 2 indica que el/la candidat/a era un home",
+                "Any en el qual té lloc la convocatòria electoral",
+                "Nom del municipi",
+                "Nombre total de vots rebuts per cada candidat/a en cada districte municipal i per tipus d'elecció",
+                "Identificador únic per a cada municipi de Catalunya",
+                "Divisió administrativa dins dels municipis",
+                "Classificació de les eleccions, segons si són ordinàries o no. Variable categòrica, on: 0 = eleccions ordinàries 1 = segones voltes 2 = eleccions parcials 3 = segones voltes d’eleccions parcials"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 8,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-05-20T15:12:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "vot",
+                "segona república",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Electoral results of the Second Republic in Catalonia. Results in the electoral constituency of Barcelona city for candidates"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resultados electorales de la Segunda República en Cataluña. Resultados a la circunscripción electoral de Barcelona ciudad por candidatos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vdm9-nuh2",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-electorals-de-la-Segona-República-a-Cata/vdm9-nuh2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Resultats electorals de la Segona República a Catalunya. Resultats a la circumscripció electoral de Barcelona ciutat",
+            "id" : "iynu-8pmv",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les diferents convocatòries electorals celebrades durant la 2a República a Catalunya, a la circumscripció electoral de Barcelona ciutat per candidats. \n\nPer qüestions de robustesa d’estructura, aquestes dades són un resum de les taules originals que es poden trobar enllaçades en aquesta mateixa pàgina.\n\n<p>Recerca efectuada pel Dr. Pau Vall Prat (<a href=\"http://www.pauvallprat.com/\">www.pauvallprat.com</a>),&nbsp;<a href=\"https://sira.ub.edu/fitxes/Dret.html?id=pau.vall.ub.edu&amp;lang=ca\">Professor Lector de la UB</a>, i pel Dr. Francesc Amat,&nbsp;<a href=\"https://sira.ub.edu/static/fitxes/EconomiaIEmpresa.html?id=francesc.amat.ub.edu&amp;lang=ca\">Investigador Ram&oacute;n y Cajal a la UB</a>.</p>",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-20T14:38:44.000Z",
+            "createdAt" : "2026-05-20T14:23:07.000Z",
+            "metadata_updated_at" : "2026-05-20T14:38:44.000Z",
+            "data_updated_at" : "2026-05-20T14:32:11.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 14,
+                "page_views_last_month" : 35,
+                "page_views_total" : 95,
+                "page_views_last_week_log" : 3.9068905956085187,
+                "page_views_last_month_log" : 5.169925001442312,
+                "page_views_total_log" : 6.584962500721156
+              },
+            "columns_name" :
+              [
+                "Participació",
+                "Eleccions parcials",
+                "Votants",
+                "Districte",
+                "Any",
+                "Vots totals a candidats",
+                "Vots en contra",
+                "Cens",
+                "Municipi",
+                "Identificador municipal",
+                "Circumscripció",
+                "Data",
+                "Vots nuls",
+                "Vots altres candidats",
+                "Eleccions",
+                "Font",
+                "Vots blancs",
+                "Vots a favor"
+              ],
+            "columns_field_name" :
+              [
+                "participacio",
+                "eleccions_parcials",
+                "votants",
+                "districte",
+                "any",
+                "vots_totals_candidats",
+                "vots_en_contra",
+                "cens",
+                "municipi",
+                "identificador_municipal",
+                "circumscripcio",
+                "data",
+                "vots_nuls",
+                "vots_altres_candidats",
+                "eleccions",
+                "font",
+                "vots_blancs",
+                "vots_a_favor"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Càlcul del percentatge de participació electoral (en %) en cada districte municipal  Càlcul del percentatge de participació electoral (en %) en cada districte municipal: (Votants / Cens) × 100",
+                "Classificació de les eleccions, segons si són ordinàries o no. Variable categòrica, on: 0 = eleccions ordinàries 1 = segones voltes 2 = eleccions parcials 3 = segones voltes d’eleccions parcials",
+                "Nombre absolut de persones que van exercir el seu dret a vot en cada districte municipal",
+                "Divisió administrativa dins dels municipis",
+                "Any en el qual té lloc la convocatòria electoral",
+                "Nombre total de vots emesos a favor de candidats/es",
+                "Nombre total de vots en contra de l’Estatut de Catalunya (només per Referèndum Estatut)",
+                "Nombre absolut de persones amb dret a vot en cada districte municipal",
+                "Nom del municipi",
+                "Identificador únic per a cada municipi de Catalunya",
+                "Unitat bàsica de recompte de vots (també pot ser anomenat districte electoral)",
+                "Data en la qual té lloc la convocatòria electoral (format dd/mm/aaaa)",
+                "Vots nuls emesos en cada districte municipal",
+                "Nombre total de vots a individus que no es postulaven com a candidats en aquella circumscripció",
+                "Classificació de les eleccions, segons l'objecte de la convocatòria (\"Corts\", \"Parlament\", \"Compromissaris\" o \"Referèndum Estatut\")",
+                "Font de les dades",
+                "Vots blancs emesos en cada districte municipal",
+                "Nombre total de vots a favor de l’Estatut de Catalunya (només per Referèndum Estatut)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 16,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-05-20T14:32:21.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "vot",
+                "segona república",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Electoral results of the Second Republic in Catalonia. Results in the electoral constituency of Barcelona city for candidates"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resultados electorales de la Segunda República en Cataluña. Resultados a la circunscripción electoral de Barcelona ciudad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/iynu-8pmv",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-electorals-de-la-Segona-República-a-Cata/iynu-8pmv",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Resultats electorals de la Segona República a Catalunya. Resultats per municipis i candidats",
+            "id" : "782f-b47q",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les diferents convocatòries electorals celebrades durant la 2a República a Catalunya, per municipis i candidats.\n<p>Recerca efectuada pel Dr. Pau Vall Prat (<a href=\"http://www.pauvallprat.com/\">www.pauvallprat.com</a>),&nbsp;<a href=\"https://sira.ub.edu/fitxes/Dret.html?id=pau.vall.ub.edu&amp;lang=ca\">Professor Lector de la UB</a>, i pel Dr. Francesc Amat,&nbsp;<a href=\"https://sira.ub.edu/static/fitxes/EconomiaIEmpresa.html?id=francesc.amat.ub.edu&amp;lang=ca\">Investigador Ram&oacute;n y Cajal a la UB</a>.</p>",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-21T09:37:07.000Z",
+            "createdAt" : "2026-05-21T09:22:05.000Z",
+            "metadata_updated_at" : "2026-05-21T09:37:07.000Z",
+            "data_updated_at" : "2026-05-21T09:36:26.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 6,
+                "page_views_last_month" : 16,
+                "page_views_total" : 120,
+                "page_views_last_week_log" : 2.807354922057604,
+                "page_views_last_month_log" : 4.08746284125034,
+                "page_views_total_log" : 6.9188632372745955
+              },
+            "columns_name" :
+              [
+                "Vots a cada candidat",
+                "Vots altres candidats",
+                "Vots totals a candidats",
+                "Cens",
+                "Municipi",
+                "Identificador municipal",
+                "Votants",
+                "Eleccions parcials",
+                "Electe",
+                "Sigles opció política",
+                "Eleccions",
+                "Circumscripció",
+                "Partit",
+                "Vots nuls",
+                "Sexe",
+                "Sigles coalició",
+                "Identificador candidat",
+                "Nom opció política",
+                "Nom complet del candidat",
+                "Nom coalició",
+                "Font",
+                "Vots blancs",
+                "Participació",
+                "Any",
+                "Data"
+              ],
+            "columns_field_name" :
+              [
+                "vots_candidat",
+                "vots_altres_candidats",
+                "vots_totals_candidats",
+                "cens",
+                "municipi",
+                "identificador_municipal",
+                "votants",
+                "eleccions_parcials",
+                "electe",
+                "sigles_opcio_politica",
+                "eleccions",
+                "circumscripcio",
+                "partit",
+                "vots_nuls",
+                "sexe",
+                "sigles_coalicio",
+                "identificador_candidat",
+                "nom_opcio_politica",
+                "nom_complet_candidat",
+                "nom_coalicio",
+                "font",
+                "vots_blancs",
+                "participacio",
+                "any",
+                "data"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Calendar date"
+              ],
+            "columns_description" :
+              [
+                "Nombre total de vots rebuts per cada candidat/a en cada unitat geogràfica i per tipus d'elecció",
+                "Nombre total de vots a individus que no es postulaven com a candidats en aquella circumscripció",
+                "Nombre total de vots emesos a favor de candidats/es",
+                "Nombre absolut de persones amb dret a vot en aquell municipi",
+                "Nom del municipi",
+                "Identificador únic per a cada municipi de Catalunya",
+                "Nombre absolut de persones que van exercir el seu dret a vot en aquell municipi",
+                "Classificació de les eleccions, segons si són ordinàries o no. Variable categòrica, on: 0 = eleccions ordinàries 1 = segones voltes 2 = eleccions parcials 3 = segones voltes d’eleccions parcials",
+                "Indica si el candidat va ser elegit o no. Variable dicotòmica, on: 1 indica que el candidat/a va ser elegit 0 indica que el candidat/a no va ser elegit",
+                "Sigles de l’opció política",
+                "Classificació de les eleccions, segons l'objecte de la convocatòria (\"Corts\", \"Parlament\", \"Compromissaris\" o \"Referèndum Estatut\")",
+                "Unitat bàsica de recompte de vots (també pot ser anomenat districte electoral)",
+                "Partit polític al qual pertanyia el/la candidat/a en cada elecció",
+                "Vots nuls emesos en aquell municipi",
+                "Sexe del candidat. Variable dicotòmica: 1 indica que el/la candidat/a era una dona 2 indica que el/la candidat/a era un home",
+                "Sigles de la coalició en el marc de la qual es va presentar a les eleccions el/la candidat/a",
+                "Identificador únic per a cadascun dels individus que es van presentar a eleccions durant la Segona República",
+                "Nom de l'opció política",
+                "Nom complet del candidat/a",
+                "Nom complet de la coalició ",
+                "Font de les dades",
+                "Vots blancs emesos en aquell municipi",
+                "Càlcul del percentatge de participació electoral (en %) en aquell municipi Participació (%) = (Votants / Cens) × 100",
+                "Any en el qual té lloc la convocatòria electoral",
+                "Data en la qual té lloc la convocatòria electoral (format dd/mm/aaaa)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 8,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-05-21T09:37:07.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "vot",
+                "segona república",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Electoral results of the Second Republic in Catalonia. Results by municipalities and candidates"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resultados electorales de la Segunda República en Cataluña. Resultados por municipios y candidatos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/782f-b47q",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-electorals-de-la-Segona-República-a-Cata/782f-b47q",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 10,
+  "timings" : { "serviceMillis" : 28, "searchMillis" : [ 3, 9 ] },
+  "warnings" : []
+}

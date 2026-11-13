@@ -1,0 +1,1896 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Dades generals dels ens locals de Catalunya",
+            "id" : "6nei-4b44",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació general referent als ens locals de Catalunya, tant d’àmbit territorial com administratiu.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T04:31:40.000Z",
+            "createdAt" : "2020-06-09T11:01:46.000Z",
+            "metadata_updated_at" : "2026-11-13T04:31:12.000Z",
+            "data_updated_at" : "2026-11-13T04:31:40.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 220,
+                "page_views_last_month" : 984,
+                "page_views_total" : 30357,
+                "page_views_last_week_log" : 7.787902559391432,
+                "page_views_last_month_log" : 9.943979914343739,
+                "page_views_total_log" : 14.889789127973279
+              },
+            "columns_name" :
+              [
+                "ALTURA",
+                "ORDENACIO_ALFABETICA",
+                "HORARI",
+                "DELEGACIO_GOVERN",
+                "MUNICIPI",
+                "ARTICLE",
+                "NOM",
+                "PROVINCIA",
+                "TELEFON",
+                "CODCOMARCA",
+                "FAX",
+                "ADREÇA",
+                "COGNOM2",
+                "GERENT",
+                "SALUTACIO",
+                "NOMTIPUS",
+                "TIPUS_ENS_GESTIO",
+                "DISSOLT",
+                "ANY_CENS",
+                "COGNOM1",
+                "SUBTIPUS_ENS",
+                "SUPERFICIE",
+                "AMBIT",
+                "LIMADM_MUNICIPI",
+                "LATITUD",
+                "LIMADM COMARCA",
+                "TRACTAMENT",
+                "CODI_DELEGACIO",
+                "GEOREFERÈNCIA",
+                "E_MAIL",
+                "CODIPROV",
+                "HD",
+                "DATA_ACTUALITZACIO",
+                "CARREC_GERENT",
+                "CARREC_PRESIDENT",
+                "MUNICAT",
+                "PARTIT_JUDICIAL",
+                "METEOCAT",
+                "PLANOL_CARRERS",
+                "LOCALITAT_CP",
+                "GENTILICI",
+                "SIGLACOM",
+                "UBICACIO",
+                "CAPICOM",
+                "DIA_MERCAT",
+                "CODITIPUS",
+                "NOM_COMPLERT",
+                "CLASSIFICACIO",
+                "CODI_ENS",
+                "PRESIDENT",
+                "INSCRIPCIO",
+                "PARTIT_ELECTORAL",
+                "SITUA_GEO_COMARCA",
+                "CODI_MUNICIPI",
+                "WEB",
+                "PARTITPOL",
+                "SITUA_GEO_MUNICIPI",
+                "LONGITUD",
+                "COMARCA",
+                "CENS",
+                "CODI_13",
+                "CODIPOSTAL",
+                "CIF",
+                "NOM_CAPITAL"
+              ],
+            "columns_field_name" :
+              [
+                "altura",
+                "ordenacio_alfabetica",
+                "horari",
+                "delegacio_govern",
+                "municipi",
+                "article",
+                "nom",
+                "provincia",
+                "telefon",
+                "codcomarca",
+                "fax",
+                "adre_a",
+                "cognom2",
+                "gerent",
+                "salutacio",
+                "nomtipus",
+                "tipus_ens_gestio",
+                "dissolt",
+                "any_cens",
+                "cognom1",
+                "subtipus_ens",
+                "superficie",
+                "ambit",
+                ":@computed_region_bh64_c7uy",
+                "latitud",
+                ":@computed_region_wvic_k925",
+                "tractament",
+                "codi_delegacio",
+                "geocoded_column",
+                "e_mail",
+                "codiprov",
+                "hd",
+                "data_actualitzacio",
+                "carrec_gerent",
+                "carrec_president",
+                "municat",
+                "partit_judicial",
+                "meteocat",
+                "planol_carrers",
+                "localitat_cp",
+                "gentilici",
+                "siglacom",
+                "ubicacio",
+                "capicom",
+                "dia_mercat",
+                "coditipus",
+                "nom_complert",
+                "classificacio",
+                "codi_ens",
+                "president",
+                "inscripcio",
+                "partit_electoral",
+                "situa_geo_comarca",
+                "codi_municipi",
+                "web",
+                "partitpol",
+                "situa_geo_municipi",
+                "longitud",
+                "comarca",
+                "cens",
+                "codi_13",
+                "codipostal",
+                "cif",
+                "nom_capital"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "URL",
+                "Text",
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Alçada mitjana del municipi, expressada en mts.",
+                "Camp per ordenar alfabèticament segons l’IEC",
+                "Horari oficial de l’Ens local",
+                "Delegació del Govern de la Generalitat d’adscripció",
+                "Municipi de l’adreça postal",
+                "Article",
+                "Nom President/a",
+                "Nom de la província",
+                "Telèfon oficial de l’Ens local",
+                "Codi oficial estadístic de la comarca",
+                "Fax oficial der l’Ens local",
+                "Adreça postal de l’Ens local",
+                "Cognom2 President/a",
+                "Tractament i nom del gerent del Consell comarcal",
+                "Literal de salutació al/la responsable de l’Ens local",
+                "Descripció del tipus d’Ens local",
+                "Descripció subtipus d’Ens de gestió",
+                "Ens local dissolt o actiu (S/N)",
+                "Any de les dades de població, procedents del padró o del cens",
+                "Cognom1 President/a",
+                "7a. posició del codi 10",
+                "Superfícies de l’Ens local en Km2",
+                "Àmbit geogràfic de l’Ens local",
+                "",
+                "Coordenades latitud",
+                "",
+                "Tractament del responsable de l’Ens local",
+                "Codi de la delegació territorial",
+                "Columna de georeferència",
+                "E-mail oficial de l’Ens local",
+                "Codi oficial estadístic de la província",
+                "Sexe del/ de la responsable de l’Ens local",
+                "Data de l’extracció",
+                "Càrrec del gerent del Consell comarcal",
+                "Càrrec del responsable de l’Ens local",
+                "Informació de l’Ens local a Municat",
+                "Partit judicial d’adscripció del municipi",
+                "Adreça URL a la previsió setmanal de METEOCAT",
+                "Carrerer oficial de la Generalitat de Catalunya",
+                "Localitat postal",
+                "Gentilici dels habitants del municipi",
+                "Sigles de la comarca",
+                "Ubicació orogràfica del municipi",
+                "Municipi capital de comarca (S/N)",
+                "Dia de celebració del mercat",
+                "Codi del tipus",
+                "Nom complet de l’Ens local",
+                "Classificació",
+                "Codi oficial estadístic de l’Ens",
+                "Nom del responsable de l’Ens local",
+                "Només Fundacions(18) Data inscripció registre de Fundacions",
+                "Circumscripció electoral d’adscripció del municipi",
+                "Adreça URL situació geogràfica del municipi en cartografia base GOOGLE",
+                "Codi del municipi on es troba l’ens",
+                "Adreça URL oficial de l’Ens local",
+                "Sigles partit polític/candidatura",
+                "Adreça URL situació geogràfica del municipi en cartografia base VISSIR -  ICGC",
+                "Coordenades longitud",
+                "Nom de la comarca",
+                "Cens de població",
+                "Codi estadístic d’Entitats i nuclis de població",
+                "Codi postal de l’adreça oficial de l’Ens local",
+                "NIF oficial de l’Ens local",
+                "Nom de l’entitat capital del municipi"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "displayStyle" : "email" },
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 33551,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-11-10T08:19:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "ens locals",
+                "ajuntaments",
+                "municipis",
+                "consells comarcals",
+                "comarques",
+                "diputació",
+                "província",
+                "emd",
+                "entitat municipal descentralitzada",
+                "ens de gestió",
+                "dependències",
+                "participacions",
+                "nuclis de població",
+                "entitats de població",
+                "padró",
+                "població",
+                "alcaldes",
+                "regidors",
+                "presidents",
+                "alcaldesses",
+                "regidores",
+                "presidentes",
+                "municat",
+                "smartcatalonia",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "General data of the local entities of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos generales de los entes locales de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/6nei-4b44",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Dades-generals-dels-ens-locals-de-Catalunya/6nei-4b44",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre de convenis de col·laboració i cooperació",
+            "id" : "exh2-diuf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades sobre els convenis i encàrrecs de gestió de les Administracions públiques catalanes inscrits en el Registre de convenis de col·laboració i cooperació.",
+            "attribution" : "Direcció General de Relacions Institucionals i amb el Parlament",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T07:26:18.000Z",
+            "createdAt" : "2019-01-15T08:40:57.000Z",
+            "metadata_updated_at" : "2026-11-13T07:25:15.000Z",
+            "data_updated_at" : "2026-11-13T07:26:18.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 244,
+                "page_views_last_month" : 1011,
+                "page_views_total" : 48355,
+                "page_views_last_week_log" : 7.936637939002572,
+                "page_views_last_month_log" : 9.98299357469431,
+                "page_views_total_log" : 15.56140728958653
+              },
+            "columns_name" :
+              [
+                "Matèria",
+                "Descàrrega annex 6",
+                "Data vigència",
+                "Descàrrega annex 3",
+                "Annex 2",
+                "Descàrrega annex 2",
+                "Total aportacions previstes ens locals",
+                "Descàrrega annex 4",
+                "Número conveni definitiu",
+                "Annex 3",
+                "Drets i obligacions",
+                "Objecte",
+                "Document conveni",
+                "Vigent",
+                "Descàrrega annex 5",
+                "Prorrogable",
+                "Secció",
+                "Total aportacions previstes Generalitat",
+                "Organismes signants per part de la Generalitat",
+                "Descàrrega annex 1",
+                "Sumatori aportacions totals previstes",
+                "Total aportacions previstes altres Organismes",
+                "Títol conveni",
+                "Codi secció",
+                "Durada",
+                "Altres Organismes Signants",
+                "Annex 4",
+                "Annex 1",
+                "Any de signatura",
+                "Annex 6",
+                "Annex 5",
+                "Codi AOC organismes signants ens locals",
+                "Convenis relacionats",
+                "Data signatura",
+                "Compliment i execució",
+                "Organismes signants ens locals"
+              ],
+            "columns_field_name" :
+              [
+                "mat_ria",
+                "descarrega_annex_6",
+                "data_vig_ncia",
+                "descarrega_annex_3",
+                "annex_2",
+                "descarrega_annex_2",
+                "total_aportacions_previstes_1",
+                "descarrega_annex_4",
+                "n_mero_conveni_definitiu",
+                "annex_3",
+                "drets_i_obligacions",
+                "objecte",
+                "desc_rrega_pdf_conveni",
+                "vigent",
+                "descarrega_annex_5",
+                "prorrogable",
+                "secci",
+                "total_aportacions_previstes",
+                "organismes_signants_per_part",
+                "descarrega_annex_1",
+                "sumatori_aportacions_totals",
+                "total_aportacions_previstes_2",
+                "t_tol_conveni",
+                "codi_secci",
+                "durada",
+                "altres_organismes_signants",
+                "annex_4",
+                "annex_1",
+                "any_de_signatura",
+                "annex_6",
+                "annex_5",
+                "codi_aoc_organismes_signants",
+                "convenis_relacionats",
+                "data_signatura",
+                "compliment_i_execuci",
+                "organismes_signants_ens_locals"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "URL",
+                "Calendar date",
+                "URL",
+                "Text",
+                "URL",
+                "Number",
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "URL",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "URL",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Àmbit de col·laboració",
+                "Enllaç a l’annex 6 del conveni.",
+                "Data en què acaba l’aplicació del conveni",
+                "Enllaç a l’annex 3 del conveni.",
+                "Nom del document de l’annex 2.",
+                "Enllaç a l’annex 2 del conveni.",
+                "Import en euros de les despeses a càrrec de l’Administració local signant",
+                "Enllaç a l’annex 4 del conveni.",
+                "Codi amb què es designa un conveni inscrit",
+                "Nom del document de l’annex 3.",
+                "Compromisos de les parts",
+                "Finalitat del conveni",
+                "Enllaç al document del conveni.",
+                "Estat de vigència.",
+                "Enllaç a l’annex 5 del conveni.",
+                "Indica si la durada del conveni es pot ampliar.",
+                "Categoria d’inscripció en funció de l’organisme amb qui la Generalitat o l’Administració local signa un conveni",
+                "Import en euros de les despeses a càrrec dels organismes de la Generalitat de Catalunya signants.",
+                "Nom de l’ens signant de la Generalitat de Catalunya",
+                "Enllaç a l’annex 1 del conveni.",
+                "Sumatori de les despeses dels tres camps anteriors",
+                "Import en euros de les despeses a càrrec d’organismes diferents dels dos camps anteriors",
+                "Nom oficial del conveni",
+                "Codi de la Secció registral on consta inscrit el conveni en funció de l’organisme amb qui la Generalitat o l’Administració local el signa.",
+                "Termini d’aplicació del conveni",
+                "Nom de l’organisme signant, diferent dels dos camps anteriors. Aquests organismes poden ser: Govern, Administració i sector públic de l’Estat; Govern, Administració i sector públic de les altres Comunitats Autònomes; Ciutats Autònomes; òrgans constitucionals i estatutaris; ens públics d’altres estats i organismes internacionals; universitats; col·legis professionals i corporacions de dret públic; i persones físiques i jurídiques de caràcter privat.",
+                "Nom del document de l’annex 4.",
+                "Nom del document de l’annex 1.",
+                "Any en què se signa conveni",
+                "Nom del document de l’annex 6.",
+                "Nom del document de l’annex 5.",
+                "Codi d’identificació que l'Administració Oberta de Catalunya (AOC) atorga a cada organisme signant. No té efectes registrals.",
+                "Codi/s d’inscripció registral del/s conveni/s relacionat/s amb el conveni que es consulta.",
+                "Data de signatura del conveni.",
+                "Informació sobre com s’ha complert i executat el conveni.",
+                "Nom de l’ens local signant"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "displayStyle" : "url" },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {}
+              ],
+            "download_count" : 5595,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-02-13T10:12:01.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "conveni",
+                "encàrrec",
+                "protocol",
+                "acord",
+                "memoràndum",
+                "carta d'intencions",
+                "declaració conjunta",
+                "cooperació",
+                "col·laboració",
+                "catalunya global",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Registration of collaboration and cooperation agreements"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de convenios de colaboración y cooperación"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/exh2-diuf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Registre-de-convenis-de-col-laboració-i-cooperació/exh2-diuf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dades d'ens locals - Ajuntaments",
+            "id" : "vevv-8fvw",
+            "resource_name" : null,
+            "parent_fxf" : [ "6nei-4b44" ],
+            "description" : "Informació general referent als ens locals de Catalunya, tant d’àmbit territorial com administratiu, filtrades ajuntaments.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2026-11-13T04:31:40.000Z",
+            "createdAt" : "2022-10-10T10:24:10.000Z",
+            "metadata_updated_at" : "2026-04-28T14:47:58.000Z",
+            "data_updated_at" : "2026-11-13T04:31:40.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 163,
+                "page_views_last_month" : 527,
+                "page_views_total" : 6301,
+                "page_views_last_week_log" : 7.357552004618085,
+                "page_views_last_month_log" : 9.044394119358454,
+                "page_views_total_log" : 12.62159403901754
+              },
+            "columns_name" :
+              [
+                "INSCRIPCIO",
+                "PROVINCIA",
+                "WEB",
+                "DATA_ACTUALITZACIO",
+                "CODI_ENS",
+                "CODI_13",
+                "NOMTIPUS",
+                "NOM_COMPLERT",
+                "ADREÇA",
+                "CODI_MUNICIPI",
+                "MUNICIPI",
+                "CODI_DELEGACIO",
+                "NOM_CAPITAL",
+                "TELEFON",
+                "FAX",
+                "TRACTAMENT",
+                "PRESIDENT",
+                "NOM",
+                "COGNOM1",
+                "COGNOM2",
+                "CARREC_PRESIDENT",
+                "HD",
+                "PARTITPOL",
+                "GERENT",
+                "CARREC_GERENT",
+                "CIF",
+                "COMARCA",
+                "CODCOMARCA",
+                "CODIPROV",
+                "CAPICOM",
+                "CENS",
+                "ANY_CENS",
+                "CODITIPUS",
+                "SUPERFICIE",
+                "ORDENACIO_ALFABETICA",
+                "ARTICLE",
+                "CODIPOSTAL",
+                "LOCALITAT_CP",
+                "HORARI",
+                "DISSOLT",
+                "SIGLACOM",
+                "ALTURA",
+                "E_MAIL",
+                "GENTILICI",
+                "PARTIT_JUDICIAL",
+                "PARTIT_ELECTORAL",
+                "DELEGACIO_GOVERN",
+                "MUNICAT",
+                "AMBIT",
+                "SITUA_GEO_MUNICIPI",
+                "SITUA_GEO_COMARCA",
+                "PLANOL_CARRERS",
+                "UBICACIO",
+                "LATITUD",
+                "LONGITUD",
+                "SALUTACIO",
+                "DIA_MERCAT",
+                "METEOCAT",
+                "SUBTIPUS_ENS",
+                "TIPUS_ENS_GESTIO",
+                "CLASSIFICACIO",
+                "GEOREFERÈNCIA"
+              ],
+            "columns_field_name" :
+              [
+                "inscripcio",
+                "provincia",
+                "web",
+                "data_actualitzacio",
+                "codi_ens",
+                "codi_13",
+                "nomtipus",
+                "nom_complert",
+                "adre_a",
+                "codi_municipi",
+                "municipi",
+                "codi_delegacio",
+                "nom_capital",
+                "telefon",
+                "fax",
+                "tractament",
+                "president",
+                "nom",
+                "cognom1",
+                "cognom2",
+                "carrec_president",
+                "hd",
+                "partitpol",
+                "gerent",
+                "carrec_gerent",
+                "cif",
+                "comarca",
+                "codcomarca",
+                "codiprov",
+                "capicom",
+                "cens",
+                "any_cens",
+                "coditipus",
+                "superficie",
+                "ordenacio_alfabetica",
+                "article",
+                "codipostal",
+                "localitat_cp",
+                "horari",
+                "dissolt",
+                "siglacom",
+                "altura",
+                "e_mail",
+                "gentilici",
+                "partit_judicial",
+                "partit_electoral",
+                "delegacio_govern",
+                "municat",
+                "ambit",
+                "situa_geo_municipi",
+                "situa_geo_comarca",
+                "planol_carrers",
+                "ubicacio",
+                "latitud",
+                "longitud",
+                "salutacio",
+                "dia_mercat",
+                "meteocat",
+                "subtipus_ens",
+                "tipus_ens_gestio",
+                "classificacio",
+                "geocoded_column"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Point"
+              ],
+            "columns_description" :
+              [
+                "Només Fundacions(18) Data inscripció registre de Fundacions",
+                "Nom de la província",
+                "Adreça URL oficial de l’Ens local",
+                "Data de l’extracció",
+                "Codi oficial estadístic de l’Ens",
+                "Codi estadístic d’Entitats i nuclis de població",
+                "Descripció del tipus d’Ens local",
+                "Nom complet de l’Ens local",
+                "Adreça postal de l’Ens local",
+                "Codi del municipi on es troba l’ens",
+                "Municipi de l’adreça postal",
+                "Codi de la delegació territorial",
+                "Nom de l’entitat capital del municipi",
+                "Telèfon oficial de l’Ens local",
+                "Fax oficial der l’Ens local",
+                "Tractament del responsable de l’Ens local",
+                "Nom del responsable de l’Ens local",
+                "Nom President/a",
+                "Cognom1 President/a",
+                "Cognom2 President/a",
+                "Càrrec del responsable de l’Ens local",
+                "Sexe del/ de la responsable de l’Ens local",
+                "Sigles partit polític/candidatura",
+                "Tractament i nom del gerent del Consell comarcal",
+                "Càrrec del gerent del Consell comarcal",
+                "NIF oficial de l’Ens local",
+                "Nom de la comarca",
+                "Codi oficial estadístic de la comarca",
+                "Codi oficial estadístic de la província",
+                "Municipi capital de comarca (S/N)",
+                "Cens de població",
+                "Any de les dades de població, procedents del padró o del cens",
+                "Codi del tipus",
+                "Superfícies de l’Ens local en Km2",
+                "Camp per ordenar alfabèticament segons l’IEC",
+                "Article",
+                "Codi postal de l’adreça oficial de l’Ens local",
+                "Localitat postal",
+                "Horari oficial de l’Ens local",
+                "Ens local dissolt o actiu (S/N)",
+                "Sigles de la comarca",
+                "Alçada mitjana del municipi, expressada en mts.",
+                "E-mail oficial de l’Ens local",
+                "Gentilici dels habitants del municipi",
+                "Partit judicial d’adscripció del municipi",
+                "Circumscripció electoral d’adscripció del municipi",
+                "Delegació del Govern de la Generalitat d’adscripció",
+                "Informació de l’Ens local a Municat",
+                "Àmbit geogràfic de l’Ens local",
+                "Adreça URL situació geogràfica del municipi en cartografia base VISSIR -  ICGC",
+                "Adreça URL situació geogràfica del municipi en cartografia base GOOGLE",
+                "Carrerer oficial de la Generalitat de Catalunya",
+                "Ubicació orogràfica del municipi",
+                "Coordenades latitud",
+                "Coordenades longitud",
+                "Literal de salutació al/la responsable de l’Ens local",
+                "Dia de celebració del mercat",
+                "Adreça URL a la previsió setmanal de METEOCAT",
+                "7a. posició del codi 10",
+                "Descripció subtipus d’Ens de gestió",
+                "Classificació",
+                "Columna de georeferència"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "displayStyle" : "email" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 950,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-10-10T10:26:52.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "ens locals",
+                "ajuntaments",
+                "municipis",
+                "consells comarcals",
+                "comarques",
+                "diputació",
+                "província",
+                "emd",
+                "entitat municipal descentralitzada",
+                "ens de gestió",
+                "dependències",
+                "participacions",
+                "nuclis de població",
+                "entitats de població",
+                "padró",
+                "població",
+                "alcaldes",
+                "regidors",
+                "presidents",
+                "alcaldesses",
+                "regidores",
+                "presidentes",
+                "municat",
+                "smartcatalonia"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "General data of the local entities of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos generales de los entes locales de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vevv-8fvw",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Dades-d-ens-locals-Ajuntaments/vevv-8fvw",
+        "owner" :
+          {
+            "id" : "m3kn-rqev",
+            "user_type" : "interactive",
+            "display_name" : "SGOID"
+          },
+        "creator" :
+          {
+            "id" : "m3kn-rqev",
+            "user_type" : "interactive",
+            "display_name" : "SGOID"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Tipus ens locals",
+            "id" : "kmks-jb77",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llista de tipus d'ens locals de Catalunya.",
+            "attribution" : "Catàleg Tècnic de Dades. Direcció General d'Administració Local (DGAL)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:24.000Z",
+            "createdAt" : "2021-05-25T10:17:50.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:24.000Z",
+            "data_updated_at" : "2021-05-25T10:19:42.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 137,
+                "page_views_total" : 2555,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 7.10852445677817,
+                "page_views_total_log" : 11.319672120946995
+              },
+            "columns_name" : [ "Codi", "Nom" ],
+            "columns_field_name" : [ "codi", "nom" ],
+            "columns_datatype" : [ "Text", "Text" ],
+            "columns_description" :
+              [
+                "Codificació de 2 dígits per identificar cada un dels tipus d’ens local.   Els registres amb identificador superior a 90 són registres que s’afegeixen per donar valor de completesa a l’entitat.",
+                "Denominació de la tipologia d’ens local.   Un ens local és una entitat organitzativa de caràcter territorial, entenent per entitat, una col·lectivitat considerada com una unitat."
+              ],
+            "columns_format" : [ {}, {} ],
+            "download_count" : 689,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-05-25T10:19:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Local entity type"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tipo entidad local"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/kmks-jb77",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Tipus-ens-locals/kmks-jb77",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Canvis en el mapa local",
+            "id" : "pc3x-yzfc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L’objectiu del dataset és recollir tots els canvis legislatius que han afectat a la creació i alteració de municipis i comarques, entitats municipals descentralitzades i els canvis d’adscripció comarcal des de la I legislatura. \n\nEn aquest dataset es presenten les dades de creació i alteració de municipis i comarques, de les entitats municipals descentralitzades, així com dels canvis d’adscripció comarcal per al període 1981 – fins a l'actualitat.",
+            "attribution" : "Direcció General d'Administració Local (DGAL)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-14T11:28:58.000Z",
+            "createdAt" : "2021-03-08T11:55:51.000Z",
+            "metadata_updated_at" : "2026-08-14T11:28:58.000Z",
+            "data_updated_at" : "2026-08-14T11:28:58.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 46,
+                "page_views_last_month" : 160,
+                "page_views_total" : 6037,
+                "page_views_last_week_log" : 5.554588851677638,
+                "page_views_last_month_log" : 7.330916878114618,
+                "page_views_total_log" : 12.559855041513627
+              },
+            "columns_name" :
+              [
+                "DISPOSICIO",
+                "ENS AFECTATS",
+                "DATA DOGC",
+                "NUMERO DOGC",
+                "URL",
+                "TIPUS MODIFICACIO",
+                "DETALL MODIFICACIO"
+              ],
+            "columns_field_name" :
+              [
+                "disposicio",
+                "nom_ens_afectat",
+                "data_diari",
+                "numero_diari",
+                "url",
+                "tipus_modificacio",
+                "detall_modificacio"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "URL",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom oficial que rep la publicació de la norma",
+                "Indica els noms dels ens objecte de la modificació",
+                "Data de publicació al DOGC de la norma",
+                "Número del DOGC on es publica la norma",
+                "Enllaç web a la norma publicada",
+                "Indica el tipus de tràmit legal que es duu a terme",
+                "Explicació del tipus de modificació"
+              ],
+            "columns_format" :
+              [ {}, {}, { "view" : "date_dmy" }, {}, {}, {}, {} ],
+            "download_count" : 1018,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-10-18T07:58:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "mapa",
+                "local",
+                "municipi",
+                "comarca",
+                "emd",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Changes to the local map"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Cambios en el mapa local"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Canvis-en-el-mapa-local/pc3x-yzfc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Ajuntaments de Catalunya",
+            "id" : "twhi-gz6x",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llista dels ajuntaments de Catalunya.",
+            "attribution" : "Catàleg Tècnic de Dades. Direcció General d'Administració Local (DGAL)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:06.000Z",
+            "createdAt" : "2021-02-24T09:24:31.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:06.000Z",
+            "data_updated_at" : "2024-12-19T10:26:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 107,
+                "page_views_total" : 4308,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 6.754887502163469,
+                "page_views_total_log" : 12.073137383110383
+              },
+            "columns_name" : [ "Nom", "Codi" ],
+            "columns_field_name" : [ "nom", "codi" ],
+            "columns_datatype" : [ "Text", "Text" ],
+            "columns_description" :
+              [
+                "El nom, denominació que rep l'ajuntament, és exactament igual al nom del municipi del qual és corporació local.",
+                "Codificació de 10 dígits format per:       Els sis primers dígits del codi són exactament iguals als del codi del municipi del qual són corporació local (Ídem que Codi)      Els tres següents són tres zeros que canvien de valor quan es codifiquen els ens de gestió dependents, adscrits o vinculats als ajuntaments (organismes autònoms, entitats publiques empresarials i societats mercantils participades íntegrament).      L'últim és un dígit de control."
+              ],
+            "columns_format" : [ {}, {} ],
+            "download_count" : 1844,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-02-24T09:25:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "City Councils of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Ayuntamientos de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/twhi-gz6x",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Ajuntaments-de-Catalunya/twhi-gz6x",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Pressupostos dels ens locals. Dades bàsiques",
+            "id" : "kv4y-3ks8",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació referent als pressupostos dels ens locals tramesos al Departaments de la Presidència. Es mostren les dades principals d’ingressos i despeses per capítols i per àrees de despesa així com el desglossament dels principals ingressos tributaris i el detall dels tipus impositius. Les dades són consolidades de l’ens amb els seus organismes autònoms locals.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T05:31:45.000Z",
+            "createdAt" : "2020-05-27T09:53:49.000Z",
+            "metadata_updated_at" : "2026-11-13T05:30:06.000Z",
+            "data_updated_at" : "2026-11-13T05:31:45.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 52,
+                "page_views_last_month" : 206,
+                "page_views_total" : 5254,
+                "page_views_last_week_log" : 5.7279204545632,
+                "page_views_last_month_log" : 7.693486957499325,
+                "page_views_total_log" : 12.359475048849541
+              },
+            "columns_name" :
+              [
+                "DESC_ESTRUCTURA",
+                "NOM_ENS",
+                "EUROS_HABITANT",
+                "NOM_DOCUMENT",
+                "CODI_ENS",
+                "ANY",
+                "CODI_ESTRUCTURA",
+                "CODI_DOCUMENT",
+                "IMPORT"
+              ],
+            "columns_field_name" :
+              [
+                "desc_estructura",
+                "nom_ens",
+                "euros_habitant",
+                "nom_document",
+                "codi_ens",
+                "any",
+                "codi_estructura",
+                "codi_document",
+                "import"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Descripció d'estructura ",
+                "Nom de l'Ens",
+                "Euros per habitant",
+                "Nom del document",
+                "Codi oficial estadístic (Ordenació ascendent 2) ",
+                "Any (Ordenació descendent 1) ",
+                "Codi de l'estructura (Ordenació ascendent 4) ",
+                "Codi del document (Ordenació ascendent 3) ",
+                "Import"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1185,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-27T09:56:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [
+                              "ingressos",
+                              "despeses",
+                              "tributs",
+                              "ens locals"
+                            ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Local authorities' budgets. Basic data"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Presupuestos de los entes locales. Datos básicos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Contínua"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/kv4y-3ks8",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Pressupostos-dels-ens-locals-Dades-bàsiques/kv4y-3ks8",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Liquidació dels pressupostos dels ens locals. Dades bàsiques",
+            "id" : "ytva-5kp3",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació referent a la liquidació dels pressupostos dels ens locals tramesa al Departament de la Presidència. Es mostren les dades principals d’ingressos i despeses per capítols i per àrees de despesa així com el desglossament dels principals ingressos tributaris. Les dades són consolidades de l’ens amb els seus organismes autònoms locals.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T05:30:06.000Z",
+            "createdAt" : "2020-05-27T09:49:45.000Z",
+            "metadata_updated_at" : "2026-11-13T05:30:06.000Z",
+            "data_updated_at" : "2026-11-12T05:31:57.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 65,
+                "page_views_last_month" : 206,
+                "page_views_total" : 5812,
+                "page_views_last_week_log" : 6.044394119358453,
+                "page_views_last_month_log" : 7.693486957499325,
+                "page_views_total_log" : 12.505067193231886
+              },
+            "columns_name" :
+              [
+                "EUROS_HABITANT",
+                "CODI_ENS",
+                "CODI_DOCUMENT",
+                "IMPORT",
+                "ANY",
+                "NOM_DOCUMENT",
+                "NOM_ENS",
+                "DESC_ESTRUCTURA",
+                "CODI_ESTRUCTURA"
+              ],
+            "columns_field_name" :
+              [
+                "euros_habitant",
+                "codi_ens",
+                "codi_document",
+                "import",
+                "any",
+                "nom_document",
+                "nom_ens",
+                "desc_estructura",
+                "codi_estructura"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Euros per habitant",
+                "Codi oficial estadístic (Ordenació ascendent 2)",
+                "Codi del document (Ordenació ascendent 3)",
+                "Import",
+                "Any (Ordenació descendent 1)",
+                "Nom del document",
+                "Nom de l'Ens",
+                "Descripció d'estructura ",
+                "Codi de l'estructura (Ordenació ascendent 4)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1468,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-27T09:53:41.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "ingressos",
+                "despeses",
+                "tributs",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Budgets liquidation of the local authorities. Basic data"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Liquidación de los presupuestos de los entes locales. Datos básicos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ytva-5kp3",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Liquidació-dels-pressupostos-dels-ens-locals-Dades/ytva-5kp3",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1348,
+  "timings" : { "serviceMillis" : 30, "searchMillis" : [ 3, 12 ] },
+  "warnings" : []
+}

@@ -1,0 +1,727 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Càrrecs electes dels ens locals",
+            "id" : "m5nd-xjza",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació referent als càrrecs electes i als responsables què integren actualment els diversos ens locals. La informació abasta alcaldes/esses i regidors/es, consellers/eres comarcals, diputats/des provincials, presidents/tes de mancomunitats, consorcis, ens de gestió, fundacions, personal tècnic o de comandament, habilitats nacionals.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T04:30:41.000Z",
+            "createdAt" : "2020-06-25T14:54:24.000Z",
+            "metadata_updated_at" : "2026-11-13T04:30:32.000Z",
+            "data_updated_at" : "2026-11-13T04:30:41.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 56,
+                "page_views_last_month" : 293,
+                "page_views_total" : 10955,
+                "page_views_last_week_log" : 5.832890014164742,
+                "page_views_last_month_log" : 8.199672344836364,
+                "page_views_total_log" : 13.419433550705378
+              },
+            "columns_name" :
+              [
+                "DATA_NOMENAMENT",
+                "AREA",
+                "SEXE",
+                "NOM_COMPLERT",
+                "MUNICIPI_REPRESENTA",
+                "CARREC",
+                "PARTIT",
+                "CODI_ENS",
+                "NOM_REGIDOR",
+                "ORDRE",
+                "E-MAIL"
+              ],
+            "columns_field_name" :
+              [
+                "data_nomenament",
+                "area",
+                "sexe",
+                "nom_complert",
+                "municipi_representa",
+                "carrec",
+                "partit",
+                "codi_ens",
+                "nom_regidor",
+                "ordre",
+                "e_mail"
+              ],
+            "columns_datatype" :
+              [
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Data de nomenament",
+                "Àrea de responsabilitat",
+                "Sexe de la persona",
+                "Nom de l'Ens",
+                "Municipi on ha estat escollit (C. Comarcals o Diputacions)",
+                "Càrrec",
+                "Partit polític al que representa",
+                "Codi oficial estadístic de l’Ens",
+                "Nom de la persona/regidor",
+                "Ordre (Per a visualització jeràrquica del Consistori)",
+                "E-mail"
+              ],
+            "columns_format" :
+              [
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 3487,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-06-25T15:02:01.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "càrrecs electes",
+                "responsables locals",
+                "consistori",
+                "composició del ple",
+                "municat",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Elected representatives of the local authorities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Cargos electos de los entes locales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/m5nd-xjza",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Càrrecs-electes-dels-ens-locals/m5nd-xjza",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Composició dels plens d’ajuntaments, consells comarcals i diputacions provincials",
+            "id" : "nm3n-3vbj",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Conjunt de dades referents als càrrecs electes vigents en els plens d’ajuntaments, consells comarcals i diputacions provincials. Amb indicació de l’àrea de responsabilitat corresponent.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T04:30:34.000Z",
+            "createdAt" : "2020-06-04T15:13:42.000Z",
+            "metadata_updated_at" : "2026-11-13T04:30:25.000Z",
+            "data_updated_at" : "2026-11-13T04:30:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 191,
+                "page_views_last_month" : 678,
+                "page_views_total" : 12186,
+                "page_views_last_week_log" : 7.584962500721156,
+                "page_views_last_month_log" : 9.407267764244732,
+                "page_views_total_log" : 13.573055409708704
+              },
+            "columns_name" :
+              [
+                "CARREC",
+                "ORDRE",
+                "NOM_ENS",
+                "CODI_10",
+                "TIPUS_ENS",
+                "MUNICIPI_REPRESENTA",
+                "NOM",
+                "CODI_TIPUS_ENS",
+                "AREA",
+                "PARTIT_POLITIC",
+                "COMARCA",
+                "DATA_NOMENAMENT"
+              ],
+            "columns_field_name" :
+              [
+                "carrec",
+                "ordre",
+                "nom_ens",
+                "codi_10",
+                "tipus_ens",
+                "municipi_representa",
+                "nom",
+                "codi_tipus_ens",
+                "area",
+                "partit_politic",
+                "comarca",
+                "data_nomenament"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date"
+              ],
+            "columns_description" :
+              [
+                "Càrrec ",
+                "Ordre jeràrquic dins del Ple",
+                "Nom complet de l’Ens local",
+                "Codi oficial estadístic",
+                "Descripció del tipus d’Ens",
+                "Municipi on ha estat escollit el càrrec electe",
+                "Nom del càrrec electe",
+                "Codi del tipus d’Ens",
+                "Àrea de Govern, àrea de responsabilitat",
+                "Partit polític / Coalició electoral del càrrec electe",
+                "Comarca",
+                "Data de la pressa de possessió"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" }
+              ],
+            "download_count" : 2078,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-06-04T15:25:48.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "alcaldes",
+                "alcaldesses",
+                "consellers comarcals",
+                "conselleres comarcals",
+                "diputats provincials",
+                "diputades provincials",
+                "municat",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Composition of the plenary meetings of the city councils, county councils and provincial councils"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Composición de los plenos de ayuntamientos, consejos comarcales y diputaciones provinciales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nm3n-3vbj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Composició-dels-plens-d-ajuntaments-consells-comar/nm3n-3vbj",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors per a la distribució de les compensacions econòmiques per a càrrecs electes locals",
+            "id" : "bepu-nr6b",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Indicadors sobre els recursos ordinaris i els imports de les compensacions màximes en l’àmbit de les compensacions econòmiques que la Generalitat atorga als ajuntaments de fins a 2000 habitants perquè puguin retribuir determinats càrrecs electes locals. Un dels requisits obligatoris que determina el Decret 69/2008, d'1 d'abril, que ho regula, és que la totalitat dels recursos ordinaris reconeguts i liquidats del pressupost del municipi, d'acord amb les dades de la liquidació aprovada l'any anterior, no superi en un 75% la mitjana resultant dels pressupostos dels municipis del seu tram de població. Els trams de població considerada són: fins a 100 habitants, de 101 a 500 i de 501 a 2000.\n\nEls recursos ordinaris s’utilitzen en el moment del càlcul de les mitjanes per tram de població, també incloses, així com les mitjanes per tram incrementades en un 75%, dades corresponents a l’exercici pressupostari de dos anys abans de l’inici de la tramitació. Els recursos ordinaris s’obtenen de la suma de recursos corrents, capítols 1 al 5, exceptuant els ingressos per contribucions especials, quotes urbanístiques i els aprofitaments urbanístics. No inclou les subvencions corrents condicionades (enteses com les subvencions extraordinàries, puntuals d’un exercici i no recurrents en cada exercici) que els ens es poden descomptar a la sol·licitud.\n\nD’altra banda, el Decret 69/2008, d'1 d'abril, determina que es publicarà una Ordre de convocatòria en la qual s’indicarà la compensació màxima anual a percebre per cada ajuntament, segons el nombre d’habitants inscrits al Padró d’acord amb els trams establerts al mateix decret. Aquests imports s’actualitzen periòdicament mitjançant acords de Govern i també s’inclouen al conjunt de dades.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-01-12T12:13:38.000Z",
+            "createdAt" : "2026-01-12T12:02:15.000Z",
+            "metadata_updated_at" : "2026-01-12T12:13:38.000Z",
+            "data_updated_at" : "2026-01-12T12:13:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 21,
+                "page_views_last_month" : 55,
+                "page_views_total" : 402,
+                "page_views_last_week_log" : 4.459431618637297,
+                "page_views_last_month_log" : 5.807354922057605,
+                "page_views_total_log" : 8.654636028527968
+              },
+            "columns_name" :
+              [
+                "Data extracció",
+                "Mitjana RO incrementada 75%",
+                "Exercici",
+                "Import recursos ordinaris",
+                "Població",
+                "Mitjana de recursos ordinaris",
+                "Compensació màxima mensual per tram",
+                "Mitjana RO per tram",
+                "Codi ens",
+                "Ens",
+                "Codi comarca",
+                "Codi consell comarcal",
+                "Compensació màxima anual per tram",
+                "Comarca"
+              ],
+            "columns_field_name" :
+              [
+                "data_extraccio",
+                "mitjana_ro_incrementada_75",
+                "exercici",
+                "import_recursos_ordinaris",
+                "poblacio",
+                "mitjana_recursos_ordinaris",
+                "compensacio_maxima_mensual",
+                "mitjana_ro_tram",
+                "codi_ens",
+                "ens",
+                "codi_comarca",
+                "codi_consell_comarcal",
+                "compensacio_maxima_anual",
+                "comarca"
+              ],
+            "columns_datatype" :
+              [
+                "Calendar date",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Data extracció.",
+                "Import total, en euros, de la mitjana de recursos ordinaris reconeguts i liquidats dels pressupostos dels ens locals del tram de població incrementada en un 75%.",
+                "Any de referència de les dades.",
+                "Import total, en euros, dels recursos ordinaris reconeguts i liquidats del pressupost de l’ens local (any de referència: dos anys abans de la convocatòria).",
+                "Nombre d’habitants del municipi segons el padró de dos anys abans de la convocatòria.",
+                "Import total, en euros, de la mitjana de recursos ordinaris (RO) reconeguts i liquidats del pressupost de l’ens local.",
+                "Import total, en euros, de la compensació màxima mensual per tram corresponent a un mes de dedicació completa.",
+                "Import total, en euros, de la mitjana de recursos ordinaris reconeguts i liquidats dels pressupostos dels ens locals del tram de població.",
+                "Codi oficial estadístic numèric identificador de l’ajuntament/ens local beneficiari.",
+                "Denominació oficial de l’ens local.",
+                "Codi de la comarca on es troba el municipi.",
+                "Codi numèric oficial que identifica el consell comarcal on es troba el municipi de l’ens local.",
+                "Import total, en euros, de la compensació màxima anual per tram corresponent a dotze mesos de dedicació completa.",
+                "Nom de la comarca on es troba el municipi."
+              ],
+            "columns_format" :
+              [
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 185,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-01-12T12:13:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "ajuntaments",
+                "ens locals",
+                "pressupost",
+                "ingressos",
+                "alcaldes",
+                "comarca",
+                "població",
+                "municipis",
+                "consells comarcals",
+                "comarques",
+                "municat",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Indicators for the distribution of financial compensation for local elected officials"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores para la distribución de las compensaciones económicas para cargos electos locales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/bepu-nr6b",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Indicadors-per-a-la-distribució-de-les-compensacio/bepu-nr6b",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Obligacions reconegudes pendents de pagament als ens locals en relació amb les subvencions de la Secretaria de Governs Locals i Relacions amb Aran",
+            "id" : "4w8y-gf8x",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Obligacions reconegudes pendents de pagament als ens locals en relació amb els ajuts i les subvencions de la Secretaria de Governs Locals i Relacions amb Aran (Fons de Cooperació Local, Pla únic d’Obres i Serveis, compensació a càrrecs electes i d’altres) en la data que s’informa al fitxer.\n\nEl ens que tenen pendent trametre la documentació economicofinancera obligatòria al Departament de la Presidència, al Departament d’Economia i Finances i a la Sindicatura de Comptes tenen aquests pagaments retinguts fins que completin la tramesa (Decret 80/2023, de 18 d'abril, pel qual es regula l'Inventari de control del compliment de les obligacions de tramesa de la documentació economicofinancera en l'àmbit local i el procediment de suspensió de pagament de subvencions i de transferències davant l'incompliment)",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-09T09:00:44.000Z",
+            "createdAt" : "2020-05-22T08:41:58.000Z",
+            "metadata_updated_at" : "2026-11-09T09:00:43.000Z",
+            "data_updated_at" : "2026-11-09T09:00:44.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 95,
+                "page_views_total" : 4755,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 6.584962500721156,
+                "page_views_total_log" : 12.215532999745657
+              },
+            "columns_name" :
+              [
+                "TipusEns",
+                "Provincia",
+                "Comarca",
+                "Data",
+                "Exercici",
+                "TipusAjut",
+                "NIFCreditor",
+                "NomCreditor",
+                "Retenció",
+                "ImportNet"
+              ],
+            "columns_field_name" :
+              [
+                "tipusens",
+                "provincia",
+                "comarca",
+                "data",
+                "exercici",
+                "tipusajut",
+                "nifcreditor",
+                "nomcreditor",
+                "retenci",
+                "importnet"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Tipus d’ens local",
+                "Província a la que pertany el creditor",
+                "Comarca a la que pertany el creditor",
+                "Data de referència d’obligacions reconegudes",
+                "Exercici de referència",
+                "Tipus d’ajut o subvenció",
+                "NIF de l’ens local creditor",
+                "Nom de l’ens local creditor",
+                "Estat de retenció dels pagaments ",
+                "Import net acumulat per ens, exercici i tipus d’ajut"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1752,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-22T08:53:11.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "ens locals",
+                "deute pendent",
+                "subvencions",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Obligations recognized pending payment to local authorities in relation to subsidies from the Secretariat of Local Administrations and Relations with Aran"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Obligaciones reconocidas pendientes de pago a los entes locales en relación con las subvenciones de la Secretaría de Administraciones Locales y Relaciones con Aran"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/4w8y-gf8x",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Obligacions-reconegudes-pendents-de-pagament-als-e/4w8y-gf8x",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 31, "searchMillis" : [ 7, 10 ] },
+  "warnings" : []
+}
