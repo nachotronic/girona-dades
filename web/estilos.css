@@ -434,3 +434,62 @@ tbody tr:hover { background: var(--fons-2); }
 .ref-nota { font-size: 11.5px; color: var(--text-3); margin: 6px 0 0; }
 .info .munis { font-size: 12px; line-height: 1.4; }
 .segment button[hidden] { display: none; }
+
+/* Año de la serie y minigráfica de evolución */
+.anys-ctl { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; margin: 2px 0 16px; }
+.anys-ctl[hidden] { display: none; }
+.anys-ctl .play { width: 30px; height: 30px; border: 1px solid var(--tinta); background: var(--paper); color: var(--tinta); font: 500 11px/1 var(--mono); cursor: pointer; padding: 0; }
+.anys-ctl .play:hover { background: var(--tinta); color: var(--fons); }
+.anys-ctl input[type=range] { width: 100%; accent-color: var(--accent); }
+.anys-ctl .any-act { font: 800 22px/1 var(--sans); font-variation-settings: "wdth" 72; min-width: 2.6em; text-align: right; }
+.mini-caixa { margin-top: 14px; }
+.mini-tit { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); margin: 0 0 6px; }
+.mini { width: 100%; height: auto; display: block; overflow: visible; }
+.mini-l { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.mini-l.s-mun, .mini-p.s-mun { stroke: var(--serie-1); }
+.mini-p.s-mun { fill: var(--serie-1); }
+.mini-l.s-prov { stroke: var(--text-3); stroke-dasharray: 4 3; stroke-width: 1.5; }
+.mini-p.s-prov { fill: var(--text-3); stroke: none; }
+.mini-sel { stroke: var(--accent); stroke-width: 1; }
+.mini-a { font: 10.5px var(--mono); fill: var(--text-3); }
+.mini-lleg { display: flex; gap: 14px; font-size: 12px; margin-top: 4px; color: var(--text-2); }
+.mini-lleg i { display: inline-block; width: 14px; height: 2px; vertical-align: middle; margin-right: 6px; background: var(--serie-1); }
+.mini-lleg .s-prov i { background: var(--text-3); }
+
+/* Ficha: todos los indicadores comparados */
+.fi { margin-top: 40px; border-top: 3px solid var(--tinta); padding-top: 14px; }
+.fi-tit h3 { font: 800 28px/1.05 var(--sans); font-variation-settings: "wdth" 72; margin: 0 0 8px; }
+.fi-lleg { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--text-2); margin: 0 0 18px; align-items: center; }
+.fi-lleg i { position: static !important; display: inline-block; vertical-align: middle; margin-right: 6px; transform: none !important; }
+.fi-nota { color: var(--text-3); font-size: 11.5px; }
+.fi-tema { margin: 0 0 28px; }
+.fi-tema h4 { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; margin: 0; padding: 10px 0 8px; border-bottom: 1px solid var(--tinta); }
+.fi-fila { display: grid; grid-template-columns: minmax(180px, 1.6fr) minmax(120px, 1fr) 96px 78px 78px 78px; gap: 14px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--vora); font-size: 13.5px; }
+.fi-cap { font: 500 10.5px/1.2 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-3); padding: 8px 0 6px; }
+.fi-cap span:nth-child(n+3) { text-align: right; }
+.fi-nom { font-weight: 600; line-height: 1.25; }
+.fi-nom small { display: block; font-weight: 400; font-size: 11.5px; color: var(--text-3); margin-top: 2px; }
+.fi-v { font: 700 15px/1.1 var(--mono); text-align: right; }
+.fi-v small { display: block; font-weight: 400; font-size: 10.5px; color: var(--text-3); margin-top: 3px; }
+.fi-r { font: 12.5px/1.1 var(--mono); text-align: right; color: var(--text-2); }
+.fi-gi { color: var(--tinta); }
+.fi-strip { position: relative; height: 18px; }
+.fi-strip b { position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: var(--fons-2); }
+.fi-strip i, .fi-lleg i { position: absolute; top: 2px; width: 2px; height: 14px; transform: translateX(-1px); }
+.m-mun { width: 11px !important; height: 11px !important; border-radius: 50%; background: var(--serie-1); top: 3.5px !important; transform: translateX(-5.5px) !important; z-index: 2; }
+.m-gi { background: var(--accent); }
+.m-cat { background: var(--text-2); }
+.m-esp { background: transparent; border-left: 2px dotted var(--text-2); }
+.fi-lleg .m-mun { width: 10px !important; height: 10px !important; }
+.fi-lleg .m-gi, .fi-lleg .m-cat, .fi-lleg .m-esp { width: 2px; height: 12px; }
+@media (max-width: 720px) {
+  .fi-fila { grid-template-columns: 1fr 1fr 1fr 1fr; gap: 6px 10px; }
+  .fi-nom { grid-column: 1 / -1; }
+  .fi-strip { grid-column: 1 / -1; }
+  .fi-cap { display: none; }
+  .fi-v { text-align: left; }
+  .fi-r::before { display: block; font: 10px var(--mono); color: var(--text-3); text-transform: uppercase; margin-bottom: 2px; }
+  .fi-r:nth-of-type(4)::before { content: "Prov."; }
+  .fi-r:nth-of-type(5)::before { content: "CAT"; }
+  .fi-r:nth-of-type(6)::before { content: "ESP"; }
+}

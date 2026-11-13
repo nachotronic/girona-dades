@@ -39,10 +39,10 @@
   // Indicadores: v(m) municipio, s(x) sección; ca/es = [etiqueta corta, título completo]; a = año (o clave de D.anys)
   const IND = [
     // Vivienda
-    { id: "lloguer", tema: "hab", ca: ["Lloguer", "Lloguer mitjà (€/mes)"], es: ["Alquiler", "Alquiler medio (€/mes)"], a: 2025, v: (m) => val(m.alquiler, "2025"), ...EU },
+    { id: "lloguer", tema: "hab", ca: ["Lloguer", "Lloguer mitjà (€/mes)"], es: ["Alquiler", "Alquiler medio (€/mes)"], a: 2025, v: (m) => val(m.alquiler, "2025"), t: (m, a) => val(m.alquiler, a), ...EU },
     { id: "var5", sumable: false, tema: "hab", ca: ["Pujada del lloguer", "Variació del lloguer 2020-2025"], es: ["Subida del alquiler", "Variación del alquiler 2020-2025"], v: (m) => { const a = val(m.alquiler, "2025"), b = val(m.alquiler, "2020"); return a && b ? (a / b - 1) * 100 : null; }, f: (v) => pct(v, 0, true), c: (v) => pct(v, 0, true) },
     { id: "esforc", tema: "hab", ca: ["Esforç del lloguer", "Esforç del lloguer (% de la renda de la llar)"], es: ["Esfuerzo del alquiler", "Esfuerzo del alquiler (% de la renta del hogar)"], a: 2024, v: (m) => esforc(m), ...P0 },
-    { id: "compra", tema: "hab", ca: ["Compravendes", "Compravendes per 1.000 habitants"], es: ["Compraventas", "Compraventas por 1.000 habitantes"], a: 2025, v: (m) => (val(m.compraventas, "2025") != null && m.poblacion ? (m.compraventas["2025"] / m.poblacion) * 1000 : null), ...N1 },
+    { id: "compra", t: (m, a) => (val(m.compraventas, a) != null && m.poblacion ? (m.compraventas[a] / m.poblacion) * 1000 : null), tema: "hab", ca: ["Compravendes", "Compravendes per 1.000 habitants"], es: ["Compraventas", "Compraventas por 1.000 habitantes"], a: 2025, v: (m) => (val(m.compraventas, "2025") != null && m.poblacion ? (m.compraventas["2025"] / m.poblacion) * 1000 : null), ...N1 },
     { id: "nova", tema: "hab", ca: ["Obra nova", "Compravendes d'habitatge nou (% del total, 2021-2025)"], es: ["Obra nueva", "Compraventas de vivienda nueva (% del total, 2021-2025)"], v: (m) => { const n = suma(m.cv_nova, ANYS5), t = suma(m.compraventas, ANYS5); return t > 0 ? (n / t) * 100 : null; }, ...P0 },
     { id: "protegida", tema: "hab", ca: ["Habitatge protegit", "Compravendes d'habitatge protegit (% del total, 2021-2025)"], es: ["Vivienda protegida", "Compraventas de vivienda protegida (% del total, 2021-2025)"], v: (m) => { const n = suma(m.cv_protegida, ANYS5), t = suma(m.compraventas, ANYS5); return t > 0 ? (n / t) * 100 : null; }, ...P1 },
     { id: "hut", tema: "hab", ca: ["Pisos turístics", "Habitatges d'ús turístic per 100 habitatges"], es: ["Pisos turísticos", "Viviendas de uso turístico por 100 viviendas"], v: (m) => (m.viviendas ? (m.hut / m.viviendas) * 100 : null), ...N1 },
@@ -54,12 +54,12 @@
     { id: "anyo", tema: "hab", ca: ["Any de construcció", "Any mitjà de construcció dels habitatges"], es: ["Año de construcción", "Año medio de construcción de las viviendas"], v: (m) => m.anyo_mediano, s: S("anyo_mediano"), f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) },
     { id: "viv_edif", tema: "hab", ca: ["Pisos per edifici", "Habitatges per edifici"], es: ["Pisos por edificio", "Viviendas por edificio"], v: (m) => (m.edificis ? m.viviendas / m.edificis : null), s: (x) => (x.edificis ? x.viviendas / x.edificis : null), ...N1 },
     // Renta y pobreza
-    { id: "renda", tema: "ren", ca: ["Renda per persona", "Renda neta per persona (€)"], es: ["Renta por persona", "Renta neta por persona (€)"], a: 2024, v: (m) => val(m.renta_persona, "2024"), s: S("renta_persona"), ...EU },
-    { id: "renda_llar", tema: "ren", ca: ["Renda per llar", "Renda neta per llar (€)"], es: ["Renta por hogar", "Renta neta por hogar (€)"], a: 2024, v: (m) => val(m.renta_hogar, "2024"), s: S("renta_hogar"), ...EU },
+    { id: "renda", tema: "ren", ca: ["Renda per persona", "Renda neta per persona (€)"], es: ["Renta por persona", "Renta neta por persona (€)"], a: 2024, v: (m) => val(m.renta_persona, "2024"), t: (m, a) => val(m.renta_persona, a), s: S("renta_persona"), ...EU },
+    { id: "renda_llar", tema: "ren", ca: ["Renda per llar", "Renda neta per llar (€)"], es: ["Renta por hogar", "Renta neta por hogar (€)"], a: 2024, v: (m) => val(m.renta_hogar, "2024"), t: (m, a) => val(m.renta_hogar, a), s: S("renta_hogar"), ...EU },
     { id: "pobresa", tema: "ren", ca: ["Risc de pobresa", "Població sota el 60 % de la renda mediana (%)"], es: ["Riesgo de pobreza", "Población bajo el 60 % de la renta mediana (%)"], a: "pobresa", v: X("pobresa"), s: S("pobresa"), ...P1 },
     { id: "pobresa_sev", tema: "ren", ca: ["Pobresa severa", "Població sota el 40 % de la renda mediana (%)"], es: ["Pobreza severa", "Población bajo el 40 % de la renta mediana (%)"], a: "pobresa_sev", v: X("pobresa_sev"), s: S("pobresa_sev"), ...P1 },
     { id: "alts", tema: "ren", ca: ["Rendes altes", "Població per sobre del 200 % de la renda mediana (%)"], es: ["Rentas altas", "Población por encima del 200 % de la renta mediana (%)"], a: "alts_ingressos", v: X("alts_ingressos"), s: S("alts_ingressos"), ...P1 },
-    { id: "gini", sumable: false, tema: "ren", ca: ["Desigualtat (Gini)", "Índex de Gini"], es: ["Desigualdad (Gini)", "Índice de Gini"], a: 2024, v: (m) => val(m.gini, "2024"), s: S("gini"), f: (v) => fmt(v, 1), c: (v) => fmt(v, 0) },
+    { id: "gini", sumable: false, tema: "ren", ca: ["Desigualtat (Gini)", "Índex de Gini"], es: ["Desigualdad (Gini)", "Índice de Gini"], a: 2024, v: (m) => val(m.gini, "2024"), t: (m, a) => val(m.gini, a), s: S("gini"), f: (v) => fmt(v, 1), c: (v) => fmt(v, 0) },
     { id: "p80p20", sumable: false, tema: "ren", ca: ["Ràtio P80/P20", "Renda del 20 % més ric respecte al 20 % més pobre"], es: ["Ratio P80/P20", "Renta del 20 % más rico respecto al 20 % más pobre"], a: 2024, v: null, s: S("p80p20"), ...N2 },
     { id: "salari", tema: "ren", ca: ["Ingressos del salari", "Ingressos que provenen del salari (%)"], es: ["Ingresos del salario", "Ingresos que proceden del salario (%)"], a: "ing_salari", v: X("ing_salari"), s: S("ing_salari"), ...P0 },
     { id: "pensio", tema: "ren", ca: ["Ingressos de pensions", "Ingressos que provenen de pensions (%)"], es: ["Ingresos de pensiones", "Ingresos que proceden de pensiones (%)"], a: "ing_pensio", v: X("ing_pensio"), s: S("ing_pensio"), ...P0 },
@@ -138,7 +138,7 @@
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
     if (curt) return txt;
-    const a = typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
+    const a = i === ind && anyActiu() ? anyActiu() : typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
     return a ? `${txt} · ${a}` : txt;
   };
   let tema = "ren";
@@ -150,6 +150,77 @@
   // Niveles por áreas (salud y policía): geometría y datos por código de área
   const NIVELLS = ["mun", "sec", "abs", "abp"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} } };
   const esArea = (n) => n === "abs" || n === "abp";
+  // Series temporales: año elegido en el mapa (null = el último)
+  let anySel = null;
+  const cacheAnys = {};
+  function anysDe(i) {
+    if (!i.t) return [];
+    if (!cacheAnys[i.id]) {
+      const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
+      cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
+    }
+    return cacheAnys[i.id];
+  }
+  const ambSerie = () => ind && ind.t && nivell === "mun" && anysDe(ind).length > 1;
+  const anyActiu = () => (ambSerie() ? anySel || anysDe(ind)[anysDe(ind).length - 1] : null);
+  function serieProv(i) {
+    if (i.id === "lloguer" && D.provincia && D.provincia.alquiler) return D.provincia.alquiler;
+    const res = {};
+    anysDe(i).forEach((a) => {
+      let s = 0, w = 0;
+      D.municipios.forEach((m) => { const v = i.t(m, a); if (v != null && isFinite(v) && m.poblacion) { s += v * m.poblacion; w += m.poblacion; } });
+      if (w) res[a] = s / w;
+    });
+    return res;
+  }
+  function serieMun(i, m) { const r = {}; anysDe(i).forEach((a) => { const v = i.t(m, a); if (v != null && isFinite(v)) r[a] = v; }); return r; }
+
+  // Minigráfica: municipio (verde) frente a la provincia (gris)
+  function minigrafic(series) {
+    const W = 270, H = 96, mg = { t: 10, r: 6, b: 18, l: 6 };
+    const anys = [...new Set(series.flatMap((x) => Object.keys(x.d)))].sort();
+    const vals = series.flatMap((x) => Object.values(x.d));
+    if (anys.length < 2 || !vals.length) return "";
+    let mn = Math.min(...vals), mx = Math.max(...vals); const pad = (mx - mn) * 0.12 || 1; mn -= pad; mx += pad;
+    const X = (a) => mg.l + ((anys.indexOf(a)) / (anys.length - 1)) * (W - mg.l - mg.r);
+    const Y = (v) => mg.t + (1 - (v - mn) / (mx - mn)) * (H - mg.t - mg.b);
+    const sel = anyActiu();
+    let svg = `<svg viewBox="0 0 ${W} ${H}" class="mini" role="img">`;
+    if (sel && anys.includes(sel)) svg += `<line x1="${X(sel)}" x2="${X(sel)}" y1="${mg.t - 6}" y2="${H - mg.b}" class="mini-sel"/>`;
+    series.forEach((x) => {
+      const pts = anys.filter((a) => x.d[a] != null).map((a) => `${X(a).toFixed(1)},${Y(x.d[a]).toFixed(1)}`);
+      svg += `<polyline points="${pts.join(" ")}" class="mini-l ${x.cls}"/>`;
+      const ult = anys.filter((a) => x.d[a] != null).pop();
+      if (ult) svg += `<circle cx="${X(ult)}" cy="${Y(x.d[ult])}" r="3" class="mini-p ${x.cls}"/>`;
+    });
+    svg += `<text x="${mg.l}" y="${H - 4}" class="mini-a">${anys[0]}</text><text x="${W - mg.r}" y="${H - 4}" text-anchor="end" class="mini-a">${anys[anys.length - 1]}</text></svg>`;
+    const lleg = series.map((x) => `<span class="${x.cls}"><i></i>${x.nom}</span>`).join("");
+    return `<div class="mini-caixa"><p class="mini-tit">${t("evolucio")}</p>${svg}<div class="mini-lleg">${lleg}</div></div>`;
+  }
+
+  let reproduint = null;
+  function controlAnys() {
+    const el = document.getElementById("anys-ctl");
+    if (!ambSerie()) { el.hidden = true; el.innerHTML = ""; return; }
+    const anys = anysDe(ind), act = anyActiu(), idx = anys.indexOf(act);
+    el.hidden = false;
+    el.innerHTML = `<button type="button" class="play" aria-label="${reproduint ? t("atura") : t("reprodueix")}" title="${reproduint ? t("atura") : t("reprodueix")}">${reproduint ? "❚❚" : "▶"}</button>
+      <input type="range" min="0" max="${anys.length - 1}" step="1" value="${idx}" aria-label="${t("any_ctl")}">
+      <span class="any-act">${act}</span>`;
+    const r = el.querySelector("input");
+    r.addEventListener("input", () => { para(); anySel = anys[+r.value]; pinta(); });
+    el.querySelector(".play").addEventListener("click", () => {
+      if (reproduint) { para(); controlAnys(); return; }
+      let k = anys.indexOf(anyActiu()); if (k >= anys.length - 1) k = -1;
+      reproduint = setInterval(() => {
+        k++; anySel = anys[k]; pinta();
+        if (k >= anys.length - 1) { para(); controlAnys(); }
+      }, 900);
+      controlAnys();
+    });
+  }
+  function para() { if (reproduint) { clearInterval(reproduint); reproduint = null; } }
+
   let hoverId = null, munPerIne = {}, valorsActuals = [], fixat = null;
 
   const disponible = (i, n) => (n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
@@ -174,7 +245,7 @@
   const classe = (v) => { if (v == null || !isFinite(v)) return -1; let i = 0; while (i < llindars.length && v >= llindars[i]) i++; return i; };
 
   function valorDe(props) {
-    if (nivell === "mun") { const m = munPerIne[props.ine]; return m ? ind.v(m) : null; }
+    if (nivell === "mun") { const m = munPerIne[props.ine]; return !m ? null : ambSerie() ? ind.t(m, anyActiu()) : ind.v(m); }
     if (esArea(nivell)) { const x = ZONA[nivell].d[props.id]; return x ? ind[nivell](x) : null; }
     const x = SEC[props.cusec]; return x ? ind.s(x) : null;
   }
@@ -191,7 +262,8 @@
     const geo = geoNivell();
     const valors = geo.features.map((f) => valorDe(f.properties));
     if (ind.cat) return pintaCat(geo, valors);
-    llindars = quantils(valors);
+    // Con serie temporal, los cortes se fijan con todos los años para que se vea el cambio
+    llindars = ambSerie() ? quantils(anysDe(ind).flatMap((a) => D.municipios.map((m) => ind.t(m, a)))) : quantils(valors);
     const n = llindars.length + 1;
     geo.features.forEach((f, i) => {
       const c = classe(valors[i]);
@@ -205,7 +277,7 @@
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
-    llegenda(); referencies(); ranquing(); info(fixat);
+    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat);
   }
 
   // Indicadores por categorías (partido del alcalde): un color por bloque
@@ -249,12 +321,12 @@
   }
 
   // Comparación con la provincia, Cataluña y España
-  function valorProvincia() {
-    const r = (D.ref || {})[ind.id];
+  function valorProvincia(i = ind) {
+    const r = (D.ref || {})[i.id];
     if (r && r.gi != null) return r.gi;
-    if (!ind.v || ind.cat || ind.sumable === false) return null;
+    if (!i.v || i.cat || i.sumable === false) return null;
     let s = 0, w = 0;
-    D.municipios.forEach((m) => { const v = ind.v(m); if (v != null && isFinite(v) && m.poblacion) { s += v * m.poblacion; w += m.poblacion; } });
+    D.municipios.forEach((m) => { const v = i.v(m); if (v != null && isFinite(v) && m.poblacion) { s += v * m.poblacion; w += m.poblacion; } });
     return w ? s / w : null;
   }
   function referencies() {
@@ -263,7 +335,8 @@
     const r = (D.ref || {})[ind.id] || {};
     const files = [[t("ref_gi"), valorProvincia(), "gi"], [t("ref_cat"), r.cat, "cat"], [t("ref_esp"), r.esp, "esp"]]
       .filter((x) => x[1] != null && isFinite(x[1]));
-    if (ind.cat || files.length < 2) { el.innerHTML = ""; return; }
+    const ult = anysDe(ind).slice(-1)[0];
+    if (ind.cat || files.length < 2 || (ambSerie() && anyActiu() !== ult)) { el.innerHTML = ""; return; }
     const max = Math.max(...files.map((x) => Math.abs(x[1]))) || 1;
     el.innerHTML = `<h4>${t("ref_titol")}</h4>${files.map(([nom, v, k]) =>
       `<div class="ref-fila ref-${k}"><span class="ref-nom">${nom}</span><span class="ref-barra"><b style="width:${(Math.abs(v) / max) * 100}%"></b></span><span class="ref-v">${ind.f(v)}</span></div>`).join("")}${r.nota ? `<p class="ref-nota">${r.nota[LANG] || r.nota}</p>` : ""}`;
@@ -280,7 +353,11 @@
 
   function info(props) {
     const el = document.getElementById("info");
-    if (!props) { el.innerHTML = `<p class="pista">${t("pista")}</p>`; return; }
+    const mini = (m) => (ind.t && !esArea(nivell) ? minigrafic([
+      ...(m ? [{ nom: m.nom, cls: "s-mun", d: serieMun(ind, m) }] : []),
+      { nom: t("prov_curt"), cls: "s-prov", d: serieProv(ind) },
+    ]) : "");
+    if (!props) { el.innerHTML = `<p class="pista">${t("pista")}</p>${mini(null)}`; return; }
     const z = nomZona(props), v = valorDe(props);
     if (ind.cat) {
       const mm = munPerIne[props.ine], al = mm && mm.pol && mm.pol.alcalde;
@@ -298,6 +375,7 @@
     el.innerHTML = `<p class="nom">${z.nom}</p><p class="lloc">${z.lloc}</p>
       <p class="gran">${v == null ? "–" : ind.f(v)}</p>
       <p class="rel">${v == null ? t("sense_dades") : `${t("posicio", pos + 1, valorsActuals.length)} · ${t("mediana", ind.f(med))}`}</p>
+      ${mini(munPerIne[props.ine])}
       ${esArea(nivell) ? (props.munis ? `<p class="rel munis">${props.munis}</p>` : "") : `<button type="button">${t("obrir_fitxa")} →</button>`}`;
     const b = el.querySelector("button"); if (b) b.addEventListener("click", () => obreFitxa(props.ine, true));
   }
@@ -328,6 +406,7 @@
 
   // Selecciona un indicador; si no existe al nivel actual, cambia de nivel
   async function tria(i) {
+    if (i !== ind) { anySel = null; para(); }
     ind = i; tema = i.tema;
     if (!disponible(i, nivell)) { nivell = NIVELLS.find((n) => disponible(i, n)); fixat = null; }
     await carregaNivell(nivell);
@@ -452,6 +531,56 @@
     const ci = document.getElementById("cerca-ind");
     ci.addEventListener("input", () => { consulta = ci.value; omplirSelector(); });
   }
+
+  // ---------- Ficha completa del municipio: todos los indicadores, por temas ----------
+  function dinsPoligon(pt, geom) {
+    const [x, y] = pt;
+    const anell = (r) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) { const [xi, yi] = r[i], [xj, yj] = r[j]; if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) c = !c; } return c; };
+    const pols = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
+    return pols.some((p) => anell(p[0]) && !p.slice(1).some(anell));
+  }
+  async function areaDe(n, m) {
+    await carregaZona(n);
+    const f = geoMun.features.find((x) => x.properties.ine === m.ine);
+    if (!f) return null;
+    const pt = centre(f);
+    const z = ZONA[n].geo.features.find((x) => dinsPoligon(pt, x.geometry));
+    return z ? z.properties : null;
+  }
+  window.fitxaIndicadors = async (m) => {
+    if (!geoMun) return "";
+    const [abs, abp] = await Promise.all([areaDe("abs", m), areaDe("abp", m)]);
+    const valorM = (i) => {
+      if (i.v) return i.v(m);
+      if (i.abs && abs) return i.abs(ZONA.abs.d[abs.id]);
+      if (i.abp && abp) return i.abp(ZONA.abp.d[abp.id]);
+      return null;
+    };
+    const cap = `<div class="fi-fila fi-cap"><span></span><span class="fi-strip-cap"></span><span>${m.nom}</span><span>${t("ref_gi_curt")}</span><span>${t("ref_cat")}</span><span>${t("ref_esp")}</span></div>`;
+    const blocs = TEMES.map((tm) => {
+      const files = IND.filter((i) => i.tema === tm.id && !i.cat).map((i) => {
+        const v = valorM(i);
+        if (v == null || !isFinite(v)) return "";
+        const r = (D.ref || {})[i.id] || {};
+        const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
+        // Escala: todos los municipios (o áreas) y las referencias
+        const tots = i.v ? D.municipios.map((x) => i.v(x)) : Object.values(ZONA[i.abs ? "abs" : "abp"].d).map((x) => (i.abs || i.abp)(x));
+        const vs = tots.filter((x) => x != null && isFinite(x)).sort((a, b) => a - b);
+        const mn = Math.min(vs[0], ...[gi, cat, esp].filter((x) => x != null)), mx = Math.max(vs[vs.length - 1], ...[gi, cat, esp].filter((x) => x != null));
+        const X = (x) => (mx > mn ? 3 + ((x - mn) / (mx - mn)) * 94 : 50);
+        const pos = vs.length - vs.filter((x) => x <= v).length + 1;
+        const marca = (x, cls, tit) => (x != null && isFinite(x) ? `<i class="${cls}" style="left:${X(x).toFixed(1)}%" title="${tit}: ${i.f(x)}"></i>` : "");
+        const area = !i.v ? `<span class="fi-area">${(i.abs ? abs : abp).nom}</span>` : "";
+        return `<div class="fi-fila"><span class="fi-nom">${nomInd(i, true)}<small>${i[LANG][1]}${area ? " · " : ""}${area}</small></span>
+          <span class="fi-strip" aria-hidden="true"><b></b>${marca(esp, "m-esp", t("ref_esp"))}${marca(cat, "m-cat", t("ref_cat"))}${marca(gi, "m-gi", t("ref_gi"))}${marca(v, "m-mun", m.nom)}</span>
+          <span class="fi-v">${i.f(v)}${i.v && !i.cat ? `<small>${t("posicio_curt", pos, vs.length)}</small>` : ""}</span>
+          <span class="fi-r fi-gi">${gi != null ? i.f(gi) : "–"}</span><span class="fi-r">${cat != null ? i.f(cat) : "–"}</span><span class="fi-r">${esp != null ? i.f(esp) : "–"}</span></div>`;
+      }).join("");
+      return files ? `<section class="fi-tema"><h4>${tm[LANG]}</h4>${cap}${files}</section>` : "";
+    }).join("");
+    return `<div class="fi"><div class="fi-tit"><h3>${t("tots_ind")}</h3>
+      <p class="fi-lleg"><span><i class="m-mun"></i>${m.nom}</span><span><i class="m-gi"></i>${t("ref_gi")}</span><span><i class="m-cat"></i>${t("ref_cat")}</span><span><i class="m-esp"></i>${t("ref_esp")}</span><span class="fi-nota">${t("fi_nota")}</span></p></div>${blocs}</div>`;
+  };
 
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
 

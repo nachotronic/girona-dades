@@ -18,7 +18,7 @@ const T = {
     posicio: (i, n) => `${i}a de ${n}`, mediana: (v) => `mediana ${v}`,
     r_alts: "Més alts", r_baixos: "Més baixos", obrir_fitxa: "Obre la fitxa del municipi",
     h_mapa: "Tota la província, en un mapa",
-    ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals", nivell_abs: "Àrees de salut", nivell_abp: "Àrees policials", area_abs: "Àrea bàsica de salut", area_abp: "Àrea bàsica policial", ref_titol: "Comparació", f_salut: "defuncions, població i atenció primària per àrea bàsica de salut", f_mossos: "fets penals per àrea bàsica policial", f_emex: "valors de referència de Catalunya", ref_gi: "Província de Girona", ref_cat: "Catalunya", ref_esp: "Espanya",
+    ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals", nivell_abs: "Àrees de salut", nivell_abp: "Àrees policials", area_abs: "Àrea bàsica de salut", area_abp: "Àrea bàsica policial", ref_titol: "Comparació", ref_gi_curt: "Província", tots_ind: "Tots els indicadors", posicio_curt: (a, b) => `${a}a de ${b}`, fi_nota: "Barra: del valor més baix al més alt de la província.", any_ctl: "Any", reprodueix: "Reprodueix l'evolució", atura: "Atura", evolucio: "Evolució", prov_curt: "Província", f_salut: "defuncions, població i atenció primària per àrea bàsica de salut", f_mossos: "fets penals per àrea bàsica policial", f_emex: "valors de referència de Catalunya", ref_gi: "Província de Girona", ref_cat: "Catalunya", ref_esp: "Espanya",
     mapa_aria: "Mapa de la província de Girona",
     ajuda_mapa: "Passa per sobre d'un municipi o secció per veure'n el valor; toca'l per obrir-ne la fitxa.",
     f_geo: "límits de municipis i seccions", f_base: "mapa base",
@@ -92,7 +92,7 @@ const T = {
     posicio: (i, n) => `${i}.º de ${n}`, mediana: (v) => `mediana ${v}`,
     r_alts: "Más altos", r_baixos: "Más bajos", obrir_fitxa: "Abrir la ficha del municipio",
     h_mapa: "Toda la provincia, en un mapa",
-    ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales", nivell_abs: "Áreas de salud", nivell_abp: "Áreas policiales", area_abs: "Área básica de salud", area_abp: "Área básica policial", ref_titol: "Comparación", f_salut: "defunciones, población y atención primaria por área básica de salud", f_mossos: "hechos penales por área básica policial", f_emex: "valores de referencia de Cataluña", ref_gi: "Provincia de Girona", ref_cat: "Cataluña", ref_esp: "España",
+    ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales", nivell_abs: "Áreas de salud", nivell_abp: "Áreas policiales", area_abs: "Área básica de salud", area_abp: "Área básica policial", ref_titol: "Comparación", ref_gi_curt: "Provincia", tots_ind: "Todos los indicadores", posicio_curt: (a, b) => `${a}.º de ${b}`, fi_nota: "Barra: del valor más bajo al más alto de la provincia.", any_ctl: "Año", reprodueix: "Reproduce la evolución", atura: "Detener", evolucio: "Evolución", prov_curt: "Provincia", f_salut: "defunciones, población y atención primaria por área básica de salud", f_mossos: "hechos penales por área básica policial", f_emex: "valores de referencia de Cataluña", ref_gi: "Provincia de Girona", ref_cat: "Cataluña", ref_esp: "España",
     mapa_aria: "Mapa de la provincia de Girona",
     ajuda_mapa: "Pasa por encima de un municipio o sección para ver su valor; tócalo para abrir su ficha.",
     f_geo: "límites de municipios y secciones", f_base: "mapa base",
@@ -353,8 +353,6 @@ function pintaProvincia() {
     tile(t("k_hut"), fmt(p.hut), t("n_hut", fmt((p.hut / p.viviendas) * 100, 1))),
     tile(t("k_antics"), pct((p.viv_antes_1980 / p.viviendas) * 100, 0), t("n_antics")),
   ].join("");
-  grafLinia(document.getElementById("g-lloguer"), [{ nom: t("provincia"), color: "var(--serie-1)", dades: p.alquiler }], (v) => `${fmt(v)} €`);
-  grafBarres(document.getElementById("g-compra"), p.compraventas);
 }
 
 function mitjanaRendaLlar() {
@@ -440,6 +438,7 @@ function obreFitxa(ine, desplaca) {
       <figure class="grafic"><figcaption><span>${t("g_renda")}</span><span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
       <figure class="grafic"><figcaption><span>${t("g_compra")}</span><span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
     </div>
+    <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
   f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* */ } });
@@ -452,6 +451,7 @@ function obreFitxa(ine, desplaca) {
     { nom: t("provincia"), color: "var(--serie-2)", dades: D.provincia.renta_persona },
   ], (v) => `${fmt(v)} €`);
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
+  if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 

@@ -17,7 +17,6 @@
     <a class="marca" href="./"><span class="marca-punt" aria-hidden="true"></span><span data-t="marca">Girona en dades</span></a>
     <nav class="menu" aria-label="Seccions">
       <a href="#s-mapa" data-t="nav_mapa">Mapa</a>
-      <a href="#s-evol" data-t="nav_evol">Evolució</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -72,6 +71,7 @@
         </div>
         <h3 id="ind-titol" class="ind-titol"></h3>
         <p class="ind-desc" id="mapa-desc"></p>
+        <div id="anys-ctl" class="anys-ctl" hidden></div>
         <div id="llegenda" class="llegenda-mapa"></div>
         <div id="referencies" class="referencies"></div>
         <div id="info" class="info"></div>
@@ -80,27 +80,9 @@
     </div>
   </section>
 
-  <section id="s-evol" class="amplada sec" aria-labelledby="h-evol">
-    <header class="sec-cap">
-      <p class="sobre"><span class="num">02</span> <span data-t="nav_evol">Evolució</span></p>
-      <h2 id="h-evol" data-t="h_evol">Com ha evolucionat</h2>
-      <p class="lead" data-t="lead_evol">El conjunt de la província, any a any.</p>
-    </header>
-    <div class="dos">
-      <figure class="grafic">
-        <figcaption><span data-t="g_lloguer">Lloguer mitjà mensual</span><span class="unitat">€/mes</span></figcaption>
-        <div id="g-lloguer"></div>
-      </figure>
-      <figure class="grafic">
-        <figcaption><span data-t="g_compra">Compravendes d'habitatges</span><span class="unitat" data-t="u_operacions">operacions per any</span></figcaption>
-        <div id="g-compra"></div>
-      </figure>
-    </div>
-  </section>
-
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">03</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">02</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
