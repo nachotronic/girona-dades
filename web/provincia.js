@@ -19,6 +19,16 @@
       h_execucions: (n, a, d) => `<b>${n}</b> habitatges amb execució hipotecària el ${a}, ${d} que el 2014.`,
       h_societats: (n, a, d, c, e) => `<b>${n}</b> societats noves el ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
       menys: (v) => `un ${v} menys`, mes: (v) => `un ${v} més`,
+      hipoteques: ["Hipoteques sobre habitatges", "Nombre anual. Índex, 2007 = 100"],
+      hipoteca_mitjana: ["Hipoteca mitjana", "Import mitjà per habitatge (€)"],
+      causes: ["De què es mor", "Defuncions per grup de causes (% del total)"],
+      destins: ["On dormen els turistes", "Pernoctacions hoteleres anuals (milions)"],
+      destins_noms: { gi: "Costa Brava", cat: "Lloret de Mar", esp: "Pirineus (tot Catalunya)" },
+      h_hipoteques: (n, a, d, e) => `<b>${n}</b> hipoteques sobre habitatges el ${a}: ${d} que el 2007. A Espanya, ${e}.`,
+      h_hipoteca_mitjana: (g, e, a) => `La hipoteca mitjana a Girona és de <b>${g} €</b> (${a}), davant dels ${e} € d'Espanya.`,
+      h_causes: (n, a, c, v) => `<b>${n}</b> defuncions el ${a}. La primera causa: <b>${c.toLowerCase()}</b> (${v}).`,
+      h_destins: (v, a, l) => `La Costa Brava va sumar <b>${v} milions</b> de nits d'hotel el ${a}; només Lloret de Mar, ${l} milions.`,
+      font_causes: "Font: INE, Estadística de defuncions segons la causa de mort",
       font: "Font: INE",
     },
     es: {
@@ -39,6 +49,16 @@
       h_execucions: (n, a, d) => `<b>${n}</b> viviendas con ejecución hipotecaria en ${a}, ${d} que en 2014.`,
       h_societats: (n, a, d, c, e) => `<b>${n}</b> sociedades nuevas en ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
       menys: (v) => `un ${v} menos`, mes: (v) => `un ${v} más`,
+      hipoteques: ["Hipotecas sobre viviendas", "Número anual. Índice, 2007 = 100"],
+      hipoteca_mitjana: ["Hipoteca media", "Importe medio por vivienda (€)"],
+      causes: ["De qué se muere", "Defunciones por grupo de causas (% del total)"],
+      destins: ["Dónde duermen los turistas", "Pernoctaciones hoteleras anuales (millones)"],
+      destins_noms: { gi: "Costa Brava", cat: "Lloret de Mar", esp: "Pirineos (toda Cataluña)" },
+      h_hipoteques: (n, a, d, e) => `<b>${n}</b> hipotecas sobre viviendas en ${a}: ${d} que en 2007. En España, ${e}.`,
+      h_hipoteca_mitjana: (g, e, a) => `La hipoteca media en Girona es de <b>${g} €</b> (${a}), frente a los ${e} € de España.`,
+      h_causes: (n, a, c, v) => `<b>${n}</b> defunciones en ${a}. La primera causa: <b>${c.toLowerCase()}</b> (${v}).`,
+      h_destins: (v, a, l) => `La Costa Brava sumó <b>${v} millones</b> de noches de hotel en ${a}; solo Lloret de Mar, ${l} millones.`,
+      font_causes: "Fuente: INE, Estadística de defunciones según la causa de muerte",
       font: "Fuente: INE",
     },
   };
@@ -56,8 +76,19 @@
     "Bebidas alcohólicas, tabaco y estupefacientes": "Bebidas alcohólicas y tabaco",
     "Cuidado personal, protección social, y bienes y servicios diversos": "Cuidado personal y otros servicios",
   };
+  const CAUSES = {
+    I: ["Malalties infeccioses", "Enfermedades infecciosas"], II: ["Tumors", "Tumores"],
+    III: ["Malalties de la sang", "Enfermedades de la sangre"], IV: ["Malalties endocrines i metabòliques", "Enfermedades endocrinas y metabólicas"],
+    V: ["Trastorns mentals (demències)", "Trastornos mentales (demencias)"], "VI-VIII": ["Sistema nerviós (Alzheimer…)", "Sistema nervioso (alzhéimer…)"],
+    IX: ["Sistema circulatori (cor, ictus)", "Sistema circulatorio (corazón, ictus)"], X: ["Sistema respiratori", "Sistema respiratorio"],
+    XI: ["Sistema digestiu", "Sistema digestivo"], XII: ["Pell", "Piel"], XIII: ["Ossos i músculs", "Huesos y músculos"],
+    XIV: ["Sistema genitourinari", "Sistema genitourinario"], XVIII: ["Causes mal definides", "Causas mal definidas"],
+    XX: ["Causes externes (accidents, suïcidis)", "Causas externas (accidentes, suicidios)"],
+  };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g) => (LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
+  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : "");
   const etiqueta = (e) => {
     const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${tp("mesos")[+m[2] - 1]} ${m[1]}`;
     const q = /^(\d{4})T(\d)$/.exec(e); if (q) return `${q[2]}T ${q[1]}`;
@@ -71,8 +102,9 @@
     cont.innerHTML = "";
     const claus = ORDRE.filter((k) => sp.series[k] && sp.series[k].length);
     if (!claus.length) return;
-    const W = Math.max(280, cont.clientWidth || 520), H = W < 440 ? 210 : 240, m = { t: 14, r: 46, b: 24, l: 34 };
     const pts = claus.flatMap((k) => sp.series[k]);
+    const ymax = Math.max(...pts.map((p) => Math.abs(p[2])));
+    const W = Math.max(280, cont.clientWidth || 520), H = W < 440 ? 210 : 240, m = { t: 14, r: ymax >= 1e5 ? 58 : 46, b: 24, l: ymax >= 1e5 ? 52 : ymax >= 1e3 ? 42 : 34 };
     const x0 = Math.min(...pts.map((p) => p[0])), x1 = Math.max(...pts.map((p) => p[0]));
     let y0 = Math.min(...pts.map((p) => p[2])), y1 = Math.max(...pts.map((p) => p[2]));
     if (sp.u === "%" && y0 > 0) y0 = 0;
@@ -106,7 +138,7 @@
       const x = xs.reduce((b, c) => (Math.abs(X(c) - px) < Math.abs(X(b) - px) ? c : b));
       guia.setAttribute("x1", X(x)); guia.setAttribute("x2", X(x)); guia.setAttribute("visibility", "visible");
       let html = "", et = "";
-      claus.slice().reverse().forEach((k) => { const p = sp.series[k].find((q) => q[0] === x); if (p) { et = p[1]; html += `<br><i class="pg-dot pg-${k}"></i>${tp(k)}: <b>${fmt(p[2], sp.dec)}${sp.u === "%" ? " %" : ""}</b>`; } });
+      claus.slice().reverse().forEach((k) => { const p = sp.series[k].find((q) => q[0] === x); if (p) { et = p[1]; html += `<br><i class="pg-dot pg-${k}"></i>${nomSerie(sp, k)}: <b>${fmt(p[2], sp.dec)}${unitat(sp)}</b>`; } });
       mostraTip(`<b>${etiqueta(et)}</b>${html}`, ev.clientX, ev.clientY);
     });
     zona.addEventListener("pointerleave", () => { guia.setAttribute("visibility", "hidden"); amagaTip(); });
@@ -116,7 +148,7 @@
     const gs = sp.grups; if (!gs || !gs.length) { cont.innerHTML = ""; return; }
     const mx = Math.max(...gs.flatMap((g) => [Math.abs(g.gi), Math.abs(g.esp)])) || 1;
     const b = (v, k) => `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${pct(v, 1)}</em></span>`;
-    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g)}</span><span class="pb-barres">${b(g.gi, "gi")}${b(g.esp, "esp")}</span></div>`).join("")}</div>`;
+    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}</span><span class="pb-barres">${b(g.gi, "gi")}${b(g.esp, "esp")}</span></div>`).join("")}</div>`;
   }
 
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
@@ -128,6 +160,10 @@
     if (id === "ipc_grups") { const g = sp.grups[0]; return g ? tp("h_ipc_grups", nomGrup(g.g), pct(g.gi, 1), g.any) : ""; }
     if (id === "turisme") { const g = ult(sp, "gi"); return g && P.pernoct_total ? tp("h_turisme", pct(g[2], 0), g[1], fmt(P.pernoct_total.v / 1e6, 1) + " M") : ""; }
     if (["compra", "societats"].includes(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp(`h_${id}`, fmt(sp.abs.gi), sp.any, delta(g[2]), delta(c[2]), delta(e[2])) : ""; }
+    if (id === "hipoteques") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteques", fmt(sp.abs.gi), sp.any, delta(g[2]), delta(e[2])) : ""; }
+    if (id === "hipoteca_mitjana") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteca_mitjana", fmt(g[2]), fmt(e && e[2]), g[1]) : ""; }
+    if (id === "causes") { const g = sp.grups[0]; return g ? tp("h_causes", fmt(sp.total), sp.any, nomGrup(g.g, g.c), pct(g.gi, 1)) : ""; }
+    if (id === "destins") { const g = ult(sp, "gi"), l = ult(sp, "cat"); return g ? tp("h_destins", fmt(g[2], 1), g[1], fmt(l && l[2], 1)) : ""; }
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
     return "";
   }
@@ -136,16 +172,16 @@
     const cont = document.getElementById("prov-grafics");
     if (!cont || !D.prov) return;
     const P = D.prov;
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "turisme", "societats", "execucions"].filter((k) => P[k]);
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes"].filter((k) => P[k]);
     cont.innerHTML = ids.map((id) => {
       const sp = P[id];
       const claus = sp.tipus === "barres" ? ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
       return `<figure class="pg-fig" data-id="${id}">
         <figcaption><span class="pg-tit">${tp(id)[0]}</span><span class="unitat">${tp(id)[1]}</span></figcaption>
         <p class="pg-h">${titular(id, sp, P)}</p>
-        <p class="pg-lleg">${claus.map((k) => `<span><i class="pg-dot pg-${k}"></i>${tp(k)}</span>`).join("")}</p>
+        <p class="pg-lleg">${claus.map((k) => `<span><i class="pg-dot pg-${k}"></i>${nomSerie(sp, k)}</span>`).join("")}</p>
         <div class="pg-c"></div>
-        <p class="pg-font">${tp("font")}</p></figure>`;
+        <p class="pg-font">${tp(id === "causes" ? "font_causes" : "font")}</p></figure>`;
     }).join("");
     cont.querySelectorAll(".pg-fig").forEach((f) => {
       const sp = P[f.dataset.id], c = f.querySelector(".pg-c");

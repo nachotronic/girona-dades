@@ -32,6 +32,7 @@
     { id: "tre", ca: "Treball i economia", es: "Trabajo y economía" },
     { id: "sal", ca: "Salut i serveis", es: "Salud y servicios" },
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
+    { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "ene", ca: "Energia i residus", es: "Energía y residuos" },
     { id: "pol", ca: "Política", es: "Política" },
@@ -53,6 +54,11 @@
     { id: "nous", tema: "hab", ca: ["Des del 2000", "Habitatges construïts des del 2000 (%)"], es: ["Desde 2000", "Viviendas construidas desde 2000 (%)"], v: null, s: (x) => (x.viviendas ? (x.viv_post_2000 / x.viviendas) * 100 : null), ...P0 },
     { id: "anyo", tema: "hab", ca: ["Any de construcció", "Any mitjà de construcció dels habitatges"], es: ["Año de construcción", "Año medio de construcción de las viviendas"], v: (m) => m.anyo_mediano, s: S("anyo_mediano"), f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) },
     { id: "viv_edif", tema: "hab", ca: ["Pisos per edifici", "Habitatges per edifici"], es: ["Pisos por edificio", "Viviendas por edificio"], v: (m) => (m.edificis ? m.viviendas / m.edificis : null), s: (x) => (x.edificis ? x.viviendas / x.edificis : null), ...N1 },
+    { id: "segones", tema: "hab", ca: ["Segones residències", "Habitatges no principals: segones residències i buits (%)"], es: ["Segundas residencias", "Viviendas no principales: segundas residencias y vacías (%)"], a: "segones", v: X("segones"), ...P0 },
+    { id: "lloguer_pct", tema: "hab", ca: ["Llars de lloguer", "Habitatges principals de lloguer (%)"], es: ["Hogares de alquiler", "Viviendas principales de alquiler (%)"], a: "lloguer_pct", v: X("lloguer_pct"), ...P0 },
+    { id: "petits", tema: "hab", ca: ["Pisos petits", "Habitatges principals de 60 m² o menys (%)"], es: ["Pisos pequeños", "Viviendas principales de 60 m² o menos (%)"], a: "petits", v: X("petits"), ...P0 },
+    { id: "grans", tema: "hab", ca: ["Cases grans", "Habitatges principals de més de 120 m² (%)"], es: ["Casas grandes", "Viviendas principales de más de 120 m² (%)"], a: "grans", v: X("grans"), ...P0 },
+    { id: "iniciats", tema: "hab", ca: ["Habitatges iniciats", "Habitatges iniciats per 1.000 habitants"], es: ["Viviendas iniciadas", "Viviendas iniciadas por 1.000 habitantes"], a: "iniciats", v: X("iniciats"), ...N1 },
     // Renta y pobreza
     { id: "renda", tema: "ren", ca: ["Renda per persona", "Renda neta per persona (€)"], es: ["Renta por persona", "Renta neta por persona (€)"], a: 2024, v: (m) => val(m.renta_persona, "2024"), t: (m, a) => val(m.renta_persona, a), s: S("renta_persona"), ...EU },
     { id: "renda_llar", tema: "ren", ca: ["Renda per llar", "Renda neta per llar (€)"], es: ["Renta por hogar", "Renta neta por hogar (€)"], a: 2024, v: (m) => val(m.renta_hogar, "2024"), t: (m, a) => val(m.renta_hogar, a), s: S("renta_hogar"), ...EU },
@@ -66,6 +72,9 @@
     { id: "prest_atur", tema: "ren", ca: ["Prestacions d'atur", "Ingressos que provenen de prestacions d'atur (%)"], es: ["Prestaciones de paro", "Ingresos que proceden de prestaciones por desempleo (%)"], a: "ing_atur", v: X("ing_atur"), s: S("ing_atur"), ...P1 },
     { id: "rgc", tema: "ren", ca: ["Renda garantida", "Beneficiaris de la renda garantida per 1.000 habitants"], es: ["Renta garantizada", "Beneficiarios de la renta garantizada por 1.000 habitantes"], a: "rgc", v: X("rgc"), ...N1 },
     { id: "irpf", tema: "ren", ca: ["Base de l'IRPF", "Base imposable mitjana per declarant de l'IRPF (€)"], es: ["Base del IRPF", "Base imponible media por declarante del IRPF (€)"], a: "irpf_base", v: X("irpf_base"), ...EU },
+    { id: "ist", sumable: false, tema: "ren", ca: ["Índex socioeconòmic", "Índex socioeconòmic territorial (Catalunya = 100)"], es: ["Índice socioeconómico", "Índice socioeconómico territorial (Cataluña = 100)"], a: "ist", v: X("ist"), ...N0 },
+    { id: "rfdb", tema: "ren", ca: ["Renda disponible", "Renda familiar disponible bruta per habitant (€)"], es: ["Renta disponible", "Renta familiar disponible bruta por habitante (€)"], a: "rfdb", v: X("rfdb"), ...EU },
+    { id: "pensio_mitjana", tema: "ren", ca: ["Pensió mitjana", "Pensió contributiva mitjana (€/mes)"], es: ["Pensión media", "Pensión contributiva media (€/mes)"], a: "pensio_mitjana", v: X("pensio_mitjana"), ...EU },
     // Población
     { id: "pob", sumable: false, tema: "pob", ca: ["Habitants", "Població"], es: ["Habitantes", "Población"], v: (m) => m.poblacion, ...N0 },
     { id: "edat", tema: "pob", ca: ["Edat mitjana", "Edat mitjana de la població (anys)"], es: ["Edad media", "Edad media de la población (años)"], a: "edat", v: X("edat"), s: S("edat"), ...N1 },
@@ -78,6 +87,13 @@
     { id: "natalitat", tema: "pob", ca: ["Natalitat", "Naixements per 1.000 habitants"], es: ["Natalidad", "Nacimientos por 1.000 habitantes"], a: "natalitat", v: X("natalitat"), ...N1 },
     { id: "mortalitat", tema: "pob", ca: ["Mortalitat", "Defuncions per 1.000 habitants"], es: ["Mortalidad", "Defunciones por 1.000 habitantes"], a: "mortalitat", v: X("mortalitat"), ...N1 },
     { id: "catala", tema: "pob", ca: ["Parla català", "Població que sap parlar català (%)"], es: ["Habla catalán", "Población que sabe hablar catalán (%)"], a: "catala", v: X("catala"), ...P0 },
+    { id: "enten_cat", tema: "pob", ca: ["Entén el català", "Població que entén el català (%)"], es: ["Entiende el catalán", "Población que entiende el catalán (%)"], a: "enten_cat", v: X("enten_cat"), ...P0 },
+    { id: "nascuts_estr", tema: "pob", ca: ["Nascuts a l'estranger", "Població nascuda a l'estranger (%)"], es: ["Nacidos en el extranjero", "Población nacida en el extranjero (%)"], a: "nascuts_estr", v: X("nascuts_estr"), ...P0 },
+    { id: "immigracio", tema: "pob", ca: ["Immigració", "Immigracions de l'estranger per 1.000 habitants"], es: ["Inmigración", "Inmigraciones del extranjero por 1.000 habitantes"], a: "immigracio", v: X("immigracio"), ...N1 },
+    { id: "creixement", tema: "pob", ca: ["Creixement", "Creixement total de la població (‰)"], es: ["Crecimiento", "Crecimiento total de la población (‰)"], a: "creixement", v: X("creixement"), ...N1 },
+    { id: "monoparentals", tema: "pob", ca: ["Llars monoparentals", "Llars monoparentals (%)"], es: ["Hogares monoparentales", "Hogares monoparentales (%)"], a: "monoparentals", v: X("monoparentals"), ...P0 },
+    { id: "educ_sup", tema: "pob", ca: ["Estudis superiors", "Població de 15 anys i més amb estudis superiors (%)"], es: ["Estudios superiores", "Población de 15 años y más con estudios superiores (%)"], a: "educ_sup", v: X("educ_sup"), ...P0 },
+    { id: "educ_prim", tema: "pob", ca: ["Estudis primaris o menys", "Població de 15 anys i més amb primària o menys (%)"], es: ["Estudios primarios o menos", "Población de 15 años y más con primaria o menos (%)"], a: "educ_prim", v: X("educ_prim"), ...P0 },
     // Trabajo y economía
     { id: "atur", tema: "tre", ca: ["Atur registrat", "Aturats registrats per 100 habitants"], es: ["Paro registrado", "Parados registrados por 100 habitantes"], a: "atur", v: X("atur"), ...N1 },
     { id: "llocs", tema: "tre", ca: ["Llocs de treball", "Llocs de treball per 100 habitants"], es: ["Puestos de trabajo", "Puestos de trabajo por 100 habitantes"], v: X("llocs"), ...N0 },
@@ -93,6 +109,8 @@
     { id: "sector_ind", tema: "tre", ca: ["Indústria", "Llocs de treball a la indústria (%)"], es: ["Industria", "Puestos de trabajo en la industria (%)"], v: X("sector_ind"), ...P0 },
     { id: "sector_const", tema: "tre", ca: ["Construcció", "Llocs de treball a la construcció (%)"], es: ["Construcción", "Puestos de trabajo en la construcción (%)"], v: X("sector_const"), ...P0 },
     { id: "sector_agri", tema: "tre", ca: ["Agricultura", "Llocs de treball a l'agricultura (%)"], es: ["Agricultura", "Puestos de trabajo en la agricultura (%)"], v: X("sector_agri"), ...P1 },
+    { id: "pib_hab", tema: "tre", ca: ["PIB per habitant", "Producte interior brut per habitant (€)"], es: ["PIB por habitante", "Producto interior bruto por habitante (€)"], a: "pib_hab", v: X("pib_hab"), ...EU },
+    { id: "places_tur", tema: "tre", ca: ["Places turístiques", "Places d'hotel, càmping i turisme rural per 1.000 habitants"], es: ["Plazas turísticas", "Plazas de hotel, camping y turismo rural por 1.000 habitantes"], a: "places_tur", v: X("places_tur"), ...N0 },
     // Salud y servicios sociales
     { id: "pensions", tema: "sal", ca: ["Pensionistes", "Pensions contributives per 100 habitants"], es: ["Pensionistas", "Pensiones contributivas por 100 habitantes"], v: X("pensions"), ...N1 },
     { id: "pnc", tema: "sal", ca: ["Pensions no contributives", "Pensions no contributives per 1.000 habitants"], es: ["Pensiones no contributivas", "Pensiones no contributivas por 1.000 habitantes"], a: "pnc", v: X("pnc"), ...N1 },
@@ -122,6 +140,7 @@
     { id: "kwh", tema: "ene", ca: ["Consum elèctric domèstic", "Consum elèctric domèstic per habitant (kWh)"], es: ["Consumo eléctrico doméstico", "Consumo eléctrico doméstico por habitante (kWh)"], a: "kwh_dom", v: X("kwh_dom"), ...N0 },
     { id: "autoconsum", tema: "ene", ca: ["Autoconsum", "Instal·lacions d'autoconsum per 1.000 habitants"], es: ["Autoconsumo", "Instalaciones de autoconsumo por 1.000 habitantes"], v: X("autoconsum"), ...N1 },
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
+    { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
     // Política
     { id: "alcalde", tema: "pol", cat: true, ca: ["Partit de l'alcalde", "Partit de l'alcalde o alcaldessa"], es: ["Partido del alcalde", "Partido del alcalde o alcaldesa"], v: (m) => (m.pol && m.pol.alcalde ? m.pol.alcalde.bloc : null), f: (v) => nomBloc(v), c: (v) => nomBloc(v) },
     { id: "participacio", tema: "pol", ca: ["Participació", "Participació a les municipals (%)"], es: ["Participación", "Participación en las municipales (%)"], a: "eleccions", v: X("participacio"), ...P0 },
@@ -134,6 +153,12 @@
     { id: "vot_alianca", tema: "pol", ca: ["Vot a Aliança Catalana", "Vot a Aliança Catalana a les municipals (% dels vots)"], es: ["Voto a Aliança Catalana", "Voto a Aliança Catalana en las municipales (% de los votos)"], a: "eleccions", v: X("vot_alianca"), ...P0 },
     { id: "vot_comuns", tema: "pol", ca: ["Vot a Comuns", "Vot a Comuns a les municipals (% dels vots)"], es: ["Voto a Comuns", "Voto a Comuns en las municipales (% de los votos)"], a: "eleccions", v: X("vot_comuns"), ...P0 },
     { id: "vot_locals", tema: "pol", ca: ["Vot a les llistes locals", "Vot a les llistes locals a les municipals (% dels vots)"], es: ["Voto a las listas locales", "Voto a las listas locales en las municipales (% de los votos)"], a: "eleccions", v: X("vot_locals"), ...P0 },
+    { id: "part_parlament", tema: "pol", ca: ["Participació al Parlament", "Participació a les eleccions al Parlament (%)"], es: ["Participación al Parlament", "Participación en las elecciones al Parlament (%)"], a: "part_parlament", v: X("part_parlament"), ...P0 },
+    { id: "part_congres", tema: "pol", ca: ["Participació al Congrés", "Participació a les eleccions al Congrés (%)"], es: ["Participación al Congreso", "Participación en las elecciones al Congreso (%)"], a: "part_congres", v: X("part_congres"), ...P0 },
+    { id: "densitat", sumable: false, tema: "ter", ca: ["Densitat", "Habitants per km²"], es: ["Densidad", "Habitantes por km²"], a: "densitat", v: X("densitat"), ...N0 },
+    { id: "sau", sumable: false, tema: "ter", ca: ["Superfície agrícola", "Superfície agrícola utilitzada (% del terme)"], es: ["Superficie agrícola", "Superficie agrícola utilizada (% del término)"], a: "sau", v: X("sau"), ...P0 },
+    { id: "esports", tema: "ter", ca: ["Espais esportius", "Espais esportius per 1.000 habitants"], es: ["Espacios deportivos", "Espacios deportivos por 1.000 habitantes"], a: "esports", v: X("esports"), ...N1 },
+    { id: "motos", tema: "ter", ca: ["Motos", "Motocicletes per 1.000 habitants"], es: ["Motos", "Motocicletas por 1.000 habitantes"], a: "motos", v: X("motos"), ...N0 },
   ];
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];

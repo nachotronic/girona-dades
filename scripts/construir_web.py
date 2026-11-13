@@ -627,6 +627,7 @@ def provincia_series():
     # 2. Paro EPA
     res["paro"] = {"tipus": "linia", "u": "%", "dec": 1, "series": {
         "gi": _punts(serie("65349", "Tasa de paro", "Ambos sexos", zona="Tasa de paro de la población. Girona"), 2008),
+        "cat": _punts(serie("65335", "Cataluña", "Ambos sexos. Total", zona="Tasa de paro"), 2008),
         "esp": _punts(serie("65349", "Tasa de paro", "Ambos sexos", "Total Nacional", zona="Tasa de paro"), 2008)}}
     # 3. IPC por grupos, último año
     grups = []
@@ -645,12 +646,12 @@ def provincia_series():
                      "any": cv["gi"][-1][1] if cv["gi"] else None,
                      "series": {z: index(v, 2007) for z, v in cv.items()}}
     # 5. Turismo: % de pernoctaciones de residentes en el extranjero (años completos)
-    def anual(dd):
+    def anual(dd, minim=12):
         tot = {}
         for a, fk, v in dd:
             if v is not None and 1 <= fk <= 12:
                 tot.setdefault(a, [0, 0]); tot[a][0] += v; tot[a][1] += 1
-        return {a: t for a, (t, n) in tot.items() if n == 12}
+        return {a: t for a, (t, n) in tot.items() if n >= minim}
     tur = {}
     for z, n, tt in (("gi", "Girona", "Pernoctaciones. Total."), ("cat", "Cataluña", "Pernoctaciones. Total."), ("esp", "Nacional", "Pernoctaciones. Total categorías. Total.")):
         tot = anual(serie("2074", tt, zona=n))
@@ -667,7 +668,121 @@ def provincia_series():
     so = {z: _punts(serie("6454", "Mercantiles", "Número de Sociedades", zona=n)) for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
     res["societats"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: v[-1][2] for z, v in so.items() if v},
                         "any": so["gi"][-1][1] if so["gi"] else None, "series": {z: index(v, 2007) for z, v in so.items()}}
+    # 8. Hipotecas sobre viviendas: número anual (índice 2007 = 100) e importe medio
+    def anys_complets(dd):
+        return {a: t for a, t in anual(dd).items()}
+    hn = {z: anys_complets(serie("76317", "Viviendas. Número de hipotecas", zona="Viviendas. Número de hipotecas. " + n)) for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
+    hi = {z: anys_complets(serie("76317", "Viviendas. Importe de hipotecas", zona="Viviendas. Importe de hipotecas. " + n)) for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
+    if hn["gi"]:
+        ser = {z: sorted([[a, str(a), v] for a, v in hn[z].items()]) for z in hn}
+        ug = max(hn["gi"])
+        res["hipoteques"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: hn[z].get(ug) for z in hn}, "any": ug,
+                             "series": {z: index(v, 2007) for z, v in ser.items()}}
+        res["hipoteca_mitjana"] = {"tipus": "linia", "u": "€", "dec": 0, "series": {
+            z: sorted([[a, str(a), round(hi[z][a] * 1000 / hn[z][a])] for a in hn[z] if a in hi[z] and hn[z][a]]) for z in hn}}
+    # 9. Defunciones por causa (capítulos CIE-10), último año: % sobre el total
+    def cap(nom):
+        m = re.search(r"(?:Todas las edades\. )?([IVX]+(?:-[IVX]+)?)\.([^.]+?)\. Total", nom)
+        return (m.group(1), m.group(2).strip()) if m else (None, None)
+    def defs(zona_ok):
+        out = {}
+        for s_ in d.get("73035", {}).get("series", []):
+            n = s_["nom"]
+            if zona_ok(n) and "Todas las edades" in n and "Hombres" not in n and "Mujeres" not in n:
+                c, nom = cap(n)
+                pts = [x for x in s_["d"] if x[2] is not None]
+                if c and pts:
+                    out[c] = (nom, {a: v for a, _, v in pts})
+        return out
+    dg = defs(lambda n: n.startswith("Girona."))
+    de = defs(lambda n: "Total Nacional" in n and not n.startswith("Girona"))
+    if "I-XXII" in dg and "I-XXII" in de:
+        a = max(set(dg["I-XXII"][1]) & set(de["I-XXII"][1]))
+        tg, te = dg["I-XXII"][1][a], de["I-XXII"][1][a]
+        grups = [{"g": nom, "c": c, "gi": round(100 * v[a] / tg, 1), "esp": round(100 * de[c][1].get(a, 0) / te, 1), "n": v[a], "any": a}
+                 for c, (nom, v) in dg.items() if c != "I-XXII" and c in de and a in v]
+        grups = sorted(grups, key=lambda x: -x["gi"])
+        res["causes"] = {"tipus": "barres", "u": "%", "dec": 1, "total": tg, "any": a, "grups": [g for g in grups if g["gi"] >= 1]}
+    # 10. Pernoctaciones hoteleras por destino (millones, años completos)
+    zs = {"gi": ("2039", "Costa Brava"), "cat": ("2078", "17095-Lloret de Mar"), "esp": ("2039", "Pirineus-Prepirineus")}
+    dest = {}
+    for z, (t, nom) in zs.items():
+        tot = {}
+        for s_ in d.get(t, {}).get("series", []):
+            if nom in s_["nom"] and "Pernoctaciones" in s_["nom"]:
+                # Lloret cierra hoteles en invierno: el INE no da esos meses
+                for a, v in anual(s_["d"], 12 if z != "cat" else 7).items():
+                    tot[a] = tot.get(a, 0) + v
+        dest[z] = sorted([[a, str(a), round(v / 1e6, 2)] for a, v in tot.items() if 2005 <= a < dt.date.today().year])
+    res["destins"] = {"tipus": "linia", "u": "M", "dec": 1, "noms": "destins", "series": dest}
     return res
+
+
+# ---------------------------------------------------------------------------
+# Idescat EMEX: indicadores municipales adicionales (con el valor de Cataluña)
+
+def emex_indicadores():
+    f = P / "emex" / "emex_municipis.csv.gz"
+    if not f.exists():
+        return {}, {}, {}
+    e = pd.read_csv(f, dtype={"ine": str, "id": str, "any": str})
+    for c in ("mun", "cat"):
+        e[c] = pd.to_numeric(e[c], errors="coerce")
+    e = e.drop_duplicates(["ine", "id"])
+    mun = e.pivot(index="ine", columns="id", values="mun")
+    cat = e.drop_duplicates("id").set_index("id")["cat"]
+    anys_id = e.drop_duplicates("id").set_index("id")["any"].astype(str).str.extract(r"(\d{4})")[0]
+
+    def col(df, k):
+        return df[k] if k in df else pd.Series(dtype=float)
+
+    def q(a, b, mult=100):
+        return a / b.where(b > 0) * mult
+
+    defs = {  # clave -> (función sobre un "df" de columnas fXX, id de referencia para el año)
+        "educ_sup": (lambda d: col(d, "f389"), "f389"),
+        "educ_prim": (lambda d: col(d, "f386"), "f386"),
+        "nascuts_estr": (lambda d: q(col(d, "f73"), col(d, "f74")), "f73"),
+        "ist": (lambda d: col(d, "f385"), "f385"),
+        "rfdb": (lambda d: col(d, "f7"), "f7"),
+        "pib_hab": (lambda d: col(d, "f3"), "f3"),
+        "segones": (lambda d: 100 - col(d, "f399"), "f399"),
+        "lloguer_pct": (lambda d: col(d, "f401"), "f401"),
+        "petits": (lambda d: q(col(d, "f402").fillna(0) + col(d, "f403").fillna(0), col(d, "f193")), "f402"),
+        "grans": (lambda d: q(col(d, "f192"), col(d, "f193")), "f192"),
+        "monoparentals": (lambda d: q(col(d, "f113"), col(d, "f115")), "f113"),
+        "iniciats": (lambda d: q(col(d, "f14"), col(d, "f321"), 1000), "f14"),
+        "places_tur": (lambda d: q(col(d, "f216").fillna(0) + col(d, "f218").fillna(0) + col(d, "f220").fillna(0), col(d, "f321"), 1000), "f216"),
+        "residus": (lambda d: col(d, "f366"), "f366"),
+        "pensio_mitjana": (lambda d: col(d, "f376"), "f376"),
+        "part_parlament": (lambda d: col(d, "f254"), "f254"),
+        "part_congres": (lambda d: col(d, "f255"), "f255"),
+        "creixement": (lambda d: col(d, "f53"), "f53"),
+        "immigracio": (lambda d: q(col(d, "f372"), col(d, "f321"), 1000), "f372"),
+        "densitat": (lambda d: col(d, "f262"), "f262"),
+        "sau": (lambda d: q(col(d, "f345"), col(d, "f271") * 100), "f345"),
+        "esports": (lambda d: q(col(d, "f300"), col(d, "f321"), 1000), "f300"),
+        "motos": (lambda d: q(col(d, "f325"), col(d, "f321"), 1000), "f325"),
+        "enten_cat": (lambda d: q(col(d, "f91"), col(d, "f96")), "f91"),
+    }
+    catdf = pd.DataFrame([cat.to_dict()])
+    res, refs, anys = {}, {}, {}
+    for k, (fn, rid) in defs.items():
+        try:
+            s_ = fn(mun)
+            c_ = fn(catdf)
+        except Exception as ex:  # noqa: BLE001
+            print("AVISO emex", k, ex)
+            continue
+        for ine, v in s_.items():
+            if v == v and v is not None and math.isfinite(v):
+                res.setdefault(ine, {})[k] = round(float(v), 1)
+        if len(c_) and c_.iloc[0] == c_.iloc[0]:
+            refs[k] = {"cat": round(float(c_.iloc[0]), 1)}
+        a = anys_id.get(rid)
+        if isinstance(a, str):
+            anys[k] = int(a)
+    return res, refs, anys
 
 
 def main():
@@ -693,6 +808,10 @@ def main():
     for ine, x in ge.items():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_ge)
+    em, refs_emex, anys_em = emex_indicadores()
+    for ine, x in em.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_em)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -741,6 +860,8 @@ def main():
     zones, refs_arees, anys_arees = arees()
     anys_extra.update(anys_arees)
     refs = referencias()
+    for k, v in refs_emex.items():
+        refs.setdefault(k, {}).update(v)
     for k, v in refs_arees.items():
         refs.setdefault(k, {}).update(v)
     if prov_alq:
