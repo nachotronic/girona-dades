@@ -3,6 +3,20 @@
 // ---------- Textos ----------
 const T = {
   ca: {
+    h_mapa: "Explora el mapa",
+    ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals",
+    mapa_aria: "Mapa de la província de Girona",
+    ajuda_mapa: "Passa per sobre d'un municipi o secció per veure'n el valor; toca'l per obrir-ne la fitxa.",
+    f_geo: "límits de municipis i seccions", f_base: "mapa base",
+    sense_dades: "Sense dades", seccio: "Secció censal",
+    nomes_mun: "Aquest indicador només existeix per municipi.",
+    veure_seccions: "Veure'l per seccions al mapa",
+    i_lloguer: "Lloguer mitjà 2025 (€/mes)", i_var5: "Variació del lloguer 2020-2025",
+    i_renda: "Renda neta per persona 2024 (€)", i_renda_llar: "Renda neta per llar 2024 (€)",
+    i_esforc: "Esforç del lloguer (% de la renda de la llar)", i_compra: "Compravendes per 1.000 habitants 2025",
+    i_hut: "Habitatges d'ús turístic per 100 habitatges", i_antics: "Habitatges construïts abans de 1980 (%)",
+    i_nous: "Habitatges construïts des del 2000 (%)", i_gini: "Índex de Gini 2024 (desigualtat)",
+    i_pob: "Població", i_estacional: "Població estacional respecte a la resident (%)",
     marca: "Girona en dades",
     titol: "Habitatge i renda a la província de Girona",
     entradeta: "Lloguers, compravendes, pisos turístics i renda de les llars, municipi a municipi, amb dades oficials que s'actualitzen cada setmana.",
@@ -49,6 +63,20 @@ const T = {
     sub: (c, p) => `${c} · ${p} habitants`,
   },
   es: {
+    h_mapa: "Explora el mapa",
+    ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales",
+    mapa_aria: "Mapa de la provincia de Girona",
+    ajuda_mapa: "Pasa por encima de un municipio o sección para ver su valor; tócalo para abrir su ficha.",
+    f_geo: "límites de municipios y secciones", f_base: "mapa base",
+    sense_dades: "Sin datos", seccio: "Sección censal",
+    nomes_mun: "Este indicador solo existe por municipio.",
+    veure_seccions: "Verlo por secciones en el mapa",
+    i_lloguer: "Alquiler medio 2025 (€/mes)", i_var5: "Variación del alquiler 2020-2025",
+    i_renda: "Renta neta por persona 2024 (€)", i_renda_llar: "Renta neta por hogar 2024 (€)",
+    i_esforc: "Esfuerzo del alquiler (% de la renta del hogar)", i_compra: "Compraventas por 1.000 habitantes 2025",
+    i_hut: "Viviendas de uso turístico por 100 viviendas", i_antics: "Viviendas construidas antes de 1980 (%)",
+    i_nous: "Viviendas construidas desde 2000 (%)", i_gini: "Índice de Gini 2024 (desigualdad)",
+    i_pob: "Población", i_estacional: "Población estacional respecto a la residente (%)",
     marca: "Girona en datos",
     titol: "Vivienda y renta en la provincia de Girona",
     entradeta: "Alquileres, compraventas, pisos turísticos y renta de los hogares, municipio a municipio, con datos oficiales que se actualizan cada semana.",
@@ -139,6 +167,7 @@ function aplicaIdioma() {
   document.title = t("marca");
   document.querySelectorAll("[data-t]").forEach((el) => { el.textContent = t(el.dataset.t); });
   document.querySelectorAll("[data-tp]").forEach((el) => { el.placeholder = t(el.dataset.tp); });
+  document.querySelectorAll("[data-ta]").forEach((el) => { el.setAttribute("aria-label", t(el.dataset.ta)); });
   document.querySelectorAll(".idiomes button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === LANG)));
 }
 
@@ -355,6 +384,7 @@ function obreFitxa(ine, desplaca) {
     <button type="button" class="tanca">${t("tanca")}</button>
     <h2>${m.nom}</h2>
     <p class="sub">${t("sub", m.comarca, fmt(m.poblacion))}</p>
+    <div class="accions"><button type="button" class="a-seccions">${t("veure_seccions")}</button></div>
     <div class="xifres">
       ${tile(`${t("k_lloguer")} 2025`, val(m.alquiler, "2025") ? `${fmt(val(m.alquiler, "2025"))} <small>€/mes</small>` : "–", variacio(m.alquiler, "2025", "2024", true))}
       ${tile(`${t("k_compra")} 2025`, fmt(val(m.compraventas, "2025")), variacio(m.compraventas, "2025", "2024"))}
@@ -368,6 +398,7 @@ function obreFitxa(ine, desplaca) {
       <figure class="grafic"><figcaption>${t("g_renda")} <span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
       <figure class="grafic"><figcaption>${t("g_compra")} <span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
     </div>`;
+  f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
   f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* */ } });
   grafLinia(f.querySelector(".g-ll"), [
     { nom: m.nom, color: "var(--serie-1)", dades: m.alquiler },
@@ -388,6 +419,7 @@ function pintaTot() {
   pintaTaula();
   document.getElementById("data-gen").textContent = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
   if (seleccionat) obreFitxa(seleccionat, false);
+  if (window.mapaIdioma) window.mapaIdioma();
 }
 
 document.querySelectorAll(".idiomes button").forEach((b) => b.addEventListener("click", () => {
@@ -407,6 +439,7 @@ addEventListener("resize", () => {
 aplicaIdioma();
 fetch("datos/municipios.json").then((r) => r.json()).then((d) => {
   D = d;
+  if (window.iniciaMapa) window.iniciaMapa();
   const h = location.hash.slice(1);
   if (/^\d{5}$/.test(h)) seleccionat = h;
   pintaTot();

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Girona en dades</title>
 <meta name="description" content="Dades obertes sobre habitatge i renda als 221 municipis de la província de Girona.">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -29,6 +30,28 @@
   <section aria-labelledby="h-prov">
     <h2 id="h-prov" data-t="h_prov">La província en xifres</h2>
     <div class="xifres" id="xifres"></div>
+  </section>
+
+  <section class="mapa-sec" aria-labelledby="h-mapa">
+    <h2 id="h-mapa" data-t="h_mapa">Explora el mapa</h2>
+    <div class="controls">
+      <label class="ctl"><span data-t="ctl_indicador">Indicador</span>
+        <select id="indicador"></select>
+      </label>
+      <div class="ctl" role="group" aria-labelledby="ctl-nivell">
+        <span id="ctl-nivell" data-t="ctl_nivell">Detall</span>
+        <div class="segment">
+          <button type="button" data-nivell="mun" aria-pressed="true" data-t="nivell_mun">Municipis</button>
+          <button type="button" data-nivell="sec" aria-pressed="false" data-t="nivell_sec">Seccions censals</button>
+        </div>
+      </div>
+    </div>
+    <p class="ajuda" id="mapa-desc"></p>
+    <div class="mapa-caixa">
+      <div id="mapa" role="region" data-ta="mapa_aria" aria-label="Mapa"></div>
+      <div id="llegenda" class="llegenda-mapa"></div>
+    </div>
+    <p class="ajuda" data-t="ajuda_mapa">Passa per sobre d'un municipi o secció per veure'n el valor; toca'l per obrir-ne la fitxa.</p>
   </section>
 
   <section class="grafics" aria-labelledby="h-evol">
@@ -74,6 +97,7 @@
       <li><a href="https://www.ine.es/dynt3/inebase/index.htm?padre=12385">INE, Atlas de distribución de renta</a> · <span data-t="f_renda">renda neta i índex de Gini</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/t2h3-cgys">Registre de Turisme de Catalunya</a> · <span data-t="f_hut">habitatges d'ús turístic</span></li>
       <li><a href="https://www.catastro.hacienda.gob.es/INSPIRE/buildings/17/ES.SDGC.BU.atom_17.xml">Catastro</a> · <span data-t="f_cat">habitatges i any de construcció</span></li>
+      <li><a href="https://www.ine.es/ss/Satellite?L=es_ES&amp;c=Page&amp;cid=1259952026632&amp;p=1259952026632&amp;pagename=ProductosYServicios%2FPYSLayout">INE, cartografia de seccions censals 2024</a> · <span data-t="f_geo">límits de municipis i seccions</span> · <span data-t="f_base">mapa base</span> © <a href="https://openfreemap.org">OpenFreeMap</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></li>
       <li><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a> · <span data-t="f_xifra">població</span></li>
     </ul>
     <p class="ajuda"><span data-t="actualitzat">Dades generades el</span> <span id="data-gen"></span> · <a href="https://github.com/nachotronic/girona-dades" data-t="codi">Codi i dades a GitHub</a></p>
@@ -81,6 +105,8 @@
 </footer>
 
 <div id="tip" class="tip" role="status" hidden></div>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="app.js"></script>
+<script src="mapa.js"></script>
 </body>
 </html>

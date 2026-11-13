@@ -110,6 +110,37 @@ def catastro():
     return c.set_index("codi_ine")
 
 
+def atlas_secciones(fichero, indicador, anyo="2024"):
+    d = pd.read_csv(P / "ine" / "atlas_renta" / fichero, dtype=str)
+    col = d.columns[3]
+    d = d[d["Secciones"].notna() & (d[col] == indicador) & (d["Periodo"] == anyo)]
+    return {f["Secciones"][:10]: num(f["Total"]) for _, f in d.iterrows()}
+
+
+def secciones():
+    rp = atlas_secciones("31016.csv.gz", "Renta neta media por persona")
+    rh = atlas_secciones("31016.csv.gz", "Renta neta media por hogar")
+    gi = atlas_secciones("37697.csv.gz", "Índice de Gini")
+    p8 = atlas_secciones("37697.csv.gz", "Distribución de la renta P80/P20")
+    cat = {}
+    ruta = P / "catastro" / "edificios_seccion.csv"
+    if ruta.exists():
+        c = pd.read_csv(ruta, dtype={"cusec": str})
+        cat = {f["cusec"].zfill(10): f for _, f in c.iterrows()}
+    res = {}
+    for cusec in sorted(set(rp) | set(gi) | set(cat)):
+        f = cat.get(cusec)
+        res[cusec] = {
+            "renta_persona": r(rp.get(cusec)), "renta_hogar": r(rh.get(cusec)),
+            "gini": r(gi.get(cusec), 1), "p80p20": r(p8.get(cusec), 1),
+            "viviendas": r(float(f["viviendas"])) if f is not None else None,
+            "viv_antes_1980": r(float(f["viv_antes_1980"])) if f is not None else None,
+            "viv_post_2000": r(float(f["viv_post_2000"])) if f is not None else None,
+            "anyo_mediano": r(float(f["anyo_mediano"])) if f is not None and not pd.isna(f["anyo_mediano"]) else None,
+        }
+    return res
+
+
 def r(x, n=0):
     return None if x is None or (isinstance(x, float) and math.isnan(x)) else (round(x, n) if n else int(round(x)))
 
@@ -182,6 +213,17 @@ def main():
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
     SALIDA.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"{SALIDA}: {SALIDA.stat().st_size // 1024} KB, {len(municipios)} municipios")
+    sec = secciones()
+    (SALIDA.parent / "seccions.json").write_text(json.dumps(sec, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"seccions.json: {len(sec)} secciones")
+    import shutil
+    for nombre in ("municipis.geojson", "seccions.geojson"):
+        origen = P / "geo" / nombre
+        if origen.exists():
+            shutil.copy(origen, SALIDA.parent / nombre)
+            print(f"{nombre}: {origen.stat().st_size // 1024} KB")
+        else:
+            print(f"AVISO: falta {origen}")
 
 
 if __name__ == "__main__":
