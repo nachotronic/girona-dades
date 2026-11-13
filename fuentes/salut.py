@@ -75,7 +75,8 @@ def _mortalidad(sal, codis: set[str]) -> str:
     pob["sexe"] = pob["sexe"].str.strip().str.capitalize()
     dfn["sexe"] = dfn["sexe"].str.strip().str.capitalize()
     # Últimos 5 años completos con defunciones y población
-    anys_d = set(dfn.groupby("any")["casos"].sum().loc[lambda s: s > 40000].index)
+    import datetime as dt
+    anys_d = set(dfn.groupby("any")["casos"].sum().loc[lambda s: s > 40000].index) - set(range(dt.date.today().year, 2100))
     anys = sorted(anys_d & set(pob["any"].dropna().unique()))[-5:]
     d = dfn[dfn["any"].isin(anys)].groupby(["codi_abs", "sexe", "g"])["casos"].sum()
     p = pob[pob["any"].isin(anys)].groupby(["codi_abs", "sexe", "g"])["p"].sum()

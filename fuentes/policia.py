@@ -34,6 +34,7 @@ def ejecutar() -> str:
     sal = carpeta("policia")
     lineas = []
     rel = _csv("dtpq-6fvw")
+    rel = rel.drop(columns=[c for c in rel.columns if "GEOM" in c.upper()])
     rel.to_csv(sal / "municipis_abp.csv", index=False)
     lineas.append(f"relación municipio-ABP: {len(rel)} filas, columnas {list(rel.columns)}")
 
@@ -46,13 +47,36 @@ def ejecutar() -> str:
     prov = gpd.read_file(PROC / "geo" / "municipis.geojson").to_crs(25831)
     limit = prov.union_all() if hasattr(prov, "union_all") else prov.unary_union
     g = g.to_crs(25831)
+    # Población por ABP: población de las ABS (CatSalut) repartida por superficie
+    from .salut import soql
+    ab = soql("tqzv-uu8e")
+    acol = next(c for c in ab.columns if c.lower() in ("geometry", "the_geom", "geometria"))
+    ab = ab[ab[acol].astype(str).str.contains("POLYGON", na=False)].copy()
+    ab = gpd.GeoDataFrame(ab.drop(columns=[acol]), geometry=ab[acol].map(wkt.loads), crs=4326).to_crs(25831)
+    ab["codi"] = ab["codi"].astype(str).str.lstrip("0")
+    pa = soql("ftq4-h9vk", **{"$select": "abs_codi, any, sum(poblacio_oficial) as p", "$group": "abs_codi, any"})
+    pa["any"] = pd.to_numeric(pa["any"], errors="coerce")
+    pa = pa[pa["any"] == pa["any"].max()]
+    pa["abs_codi"] = pa["abs_codi"].astype(str).str.lstrip("0")
+    ab = ab.merge(pa[["abs_codi", "p"]], left_on="codi", right_on="abs_codi", how="left")
+    ab["p"] = pd.to_numeric(ab["p"], errors="coerce").fillna(0)
+    ab["area_abs"] = ab.area
+    ccol0 = next(c for c in g.columns if "CODI_ABP" in c.upper())
+    inter = gpd.overlay(ab[["codi", "p", "area_abs", "geometry"]], g[[ccol0, "geometry"]], how="intersection", keep_geom_type=True)
+    inter["pp"] = inter["p"] * inter.area / inter["area_abs"]
+    pob_abp = inter.groupby(ccol0)["pp"].sum()
+    g["poblacio"] = g[ccol0].map(pob_abp).round()
+    nall = next(c for c in g.columns if "NOM_ABP" in c.upper())
+    g.assign(clau=g[nall].map(clau_abp))[[ccol0, nall, "clau", "poblacio"]].to_csv(sal / "poblacio_abp.csv", index=False)
+    lineas.append(f"población ABP (año {int(pa['any'].max())}): total {g['poblacio'].sum():,.0f}")
+
     dins = g[g.intersection(limit).area > 0.05 * g.area].copy()
     dins["geometry"] = dins.intersection(limit).simplify(40, preserve_topology=True)
     ncol = next(c for c in dins.columns if "NOM_ABP" in c.upper())
     ccol = next(c for c in dins.columns if "CODI_ABP" in c.upper())
     dins = dins.rename(columns={ncol: "nom", ccol: "codi"})
     dins["clau"] = dins["nom"].map(clau_abp)
-    dins.to_crs(4326)[["codi", "nom", "clau", "geometry"]].to_file(
+    dins.to_crs(4326)[["codi", "nom", "clau", "poblacio", "geometry"]].to_file(
         sal / "abp.geojson", driver="GeoJSON", COORDINATE_PRECISION=5)
     lineas.append(f"{len(dins)} ABP en la provincia (de {len(g)}): {', '.join(dins['nom'])}")
 
