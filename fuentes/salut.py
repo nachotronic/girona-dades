@@ -35,6 +35,7 @@ def _abs_girona(sal) -> tuple[set[str], str]:
 
     g = soql("tqzv-uu8e")
     col = next(c for c in g.columns if c.lower() in ("geometry", "the_geom", "geometria"))
+    g = g[g[col].astype(str).str.contains("POLYGON", na=False)].copy()
     g = gpd.GeoDataFrame(g.drop(columns=[col]), geometry=g[col].map(wkt.loads), crs=4326)
     g["codi"] = g["codi"].astype(str).str.lstrip("0")
     prov = gpd.read_file(PROC / "geo" / "municipis.geojson").to_crs(25831)
