@@ -1,0 +1,145 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Atencions dels Serveis Residencials",
+            "id" : "vqd5-kgke",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Atencions dels Serveis Residencials, que inclouen el Servei d’Acolliment Residencial (SAR), el Servei Substitutori de la Llar (SSLL) i el Servei d’Atenció i Acolliment d’Urgència (SAAU). Aquests són serveis gratuïts, residencials i temporals que ofereixen un espai de protecció i recuperació per a les dones i els seus fills i filles a càrrec en situacions de risc per violències masclistes. Les files representen cada vegada que una dona ingressa. Si torna a ingressar o canvia de servei, es crea una nova fila. No s’inclouen les dones ateses que estan en llista d’espera o que finalment no ingressen.",
+            "attribution" : "Departament d'Igualtat i Feminisme",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:38:35.000Z",
+            "createdAt" : "2025-11-24T09:44:31.000Z",
+            "metadata_updated_at" : "2026-09-16T14:38:35.000Z",
+            "data_updated_at" : "2026-03-16T09:46:44.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 19,
+                "page_views_last_month" : 77,
+                "page_views_total" : 554,
+                "page_views_last_week_log" : 4.321928094887363,
+                "page_views_last_month_log" : 6.285402218862249,
+                "page_views_total_log" : 9.116343961237469
+              },
+            "columns_name" :
+              [
+                "Tipus de servei ",
+                "Ingrés ",
+                "Sortida",
+                "Número de fills/filles "
+              ],
+            "columns_field_name" :
+              [ "servei", "ingres", "sortida", "numero_fills_filles" ],
+            "columns_datatype" :
+              [ "Text", "Calendar date", "Calendar date", "Number" ],
+            "columns_description" :
+              [
+                "Tipologia de servei residencial en el qual ingressa. Pot ser Servei Substitutori de la Llar (SSLL), Servei d’Acolliment Residencial (SAR) o Servei d’Atenció i Acolliment d’Urgència (SAAU).",
+                "Mes i any en què ingressa la dona i llurs fills i filles al servei. Els ingressos es realitzen qualsevol dia del mes, però amb la finalitat d’anonimitzar les dades, es mostra el dia 1 de cada mes com a data de tots els ingressos. ",
+                "Mes i any en què surt la dona i llurs fills i filles del servei. Les sortides es realitzen qualsevol dia del mes, però amb la finalitat d’anonimitzar les dades, es mostra el dia 1 de cada mes com a data de totes les sortides.",
+                "Fills i filles que acompanyen la dona en el moment de l’ingrés i que entren al servei residencial amb ella.  "
+              ],
+            "columns_format" :
+              [
+                {},
+                { "view" : "date_dmy" },
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 204,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-11-24T09:52:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "violències masclistes",
+                "dones",
+                "atenció",
+                "servei",
+                "sic",
+                "ods3_salut i benestar",
+                "ods5_igualtat de gènere",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Attentions of Residential Services"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Atenciones de los Servicios Residenciales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Igualtat i Feminisme"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vqd5-kgke",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Atencions-dels-Serveis-Residencials/vqd5-kgke",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 4, 6 ] },
+  "warnings" : []
+}

@@ -1,0 +1,1711 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Registre de casos de COVID-19 a Catalunya per àrea bàsica de salut (ABS) i sexe",
+            "id" : "xuwf-dxjd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen de diversos sistemes d'informació del Departament de Salut i del Servei Català de la Salut, detallats a https://dadescovid.cat/documentacio , i mostren per a cada dia, àrea bàsica de salut, sexe i procediment diagnòstic el nombre de casos identificats com a positius mitjançant alguna prova diagnòstica o per estudi epidemiològic; el procediment diagnòstic s'especifica en la variable 'TipusCasDescripcio'. Tots ells són casos activats pels serveis de vigilància epidemiològica.\n\nEn els casos en què no ha estat possible identificar l'àrea bàsica de salut de residència de la persona identificada com a cas positiu, el valor de la variable 'ABSDescripcio' és 'No classificat'.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:35:21.000Z",
+            "createdAt" : "2020-03-31T07:17:01.000Z",
+            "metadata_updated_at" : "2025-04-07T10:35:21.000Z",
+            "data_updated_at" : "2023-03-17T11:55:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 135,
+                "page_views_last_month" : 277,
+                "page_views_total" : 107018,
+                "page_views_last_week_log" : 7.08746284125034,
+                "page_views_last_month_log" : 8.118941072723507,
+                "page_views_total_log" : 16.70750742781426
+              },
+            "columns_name" :
+              [
+                "RegioSanitariaCodi",
+                "RegioSanitariaDescripcio",
+                "SexeCodi",
+                "SectorSanitariCodi",
+                "SexeDescripcio",
+                "TipusCasDescripcio",
+                "ABSDescripcio",
+                "SectorSanitariDescripcio",
+                "NumCasos",
+                "TipusCasData",
+                "ABSCodi"
+              ],
+            "columns_field_name" :
+              [
+                "regiosanitariacodi",
+                "regiosanitariadescripcio",
+                "sexecodi",
+                "sectorsanitaricodi",
+                "sexedescripcio",
+                "resultatcoviddescripcio",
+                "absdescripcio",
+                "sectorsanitaridescripcio",
+                "numcasos",
+                "data",
+                "abscodi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Calendar date",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codi de la regió sanitària / Código de la región sanitaria / Health region code",
+                "Regió sanitària / Región sanitaria / Health region",
+                "Codi sexe (0-home, 1-dona) / Código sexo (0-hombre, 1-mujer) / Gender code (0-male, 1-female)",
+                "Codi sector sanitari / Código sector sanitario / Health sector code",
+                "Sexe / Sexo / Gender",
+                "Resultat / Resultado / Result",
+                "Àrea bàsica de salut (ABS) / Área básica de salud (ABS) / Basic health area (ABS)",
+                "Sector sanitari / Sector sanitario / Health sector",
+                "Nombre de casos / Número de casos / Case number",
+                "Data / Fecha / Date",
+                "Codi àrea bàsica de salut (ABS) / Código área básica de salud (ABS) / Basic health area code (ABS)"
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {}
+              ],
+            "download_count" : 190960,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-01-04T14:42:45.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid-19",
+                "coronavirus",
+                "sars-cov-2",
+                "covid19",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Record of COVID-19 tests performed in Catalonia. Segregation by gender and ABS"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de test de COVID-19 realizados en Catalunya. Segregación por sexo i ABS"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xuwf-dxjd",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-casos-de-COVID-19-a-Catalunya-per-àrea/xuwf-dxjd",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre central de població del CatSalut: població per àrea bàsica de salut",
+            "id" : "ftq4-h9vk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de població de referència per al Servei Català de la Salut (CatSalut), que és la població amb dret a rebre assistència sanitària de finançament públic a Catalunya, extretes del Registre central de població del CatSalut (RCA).\n\nEl tall a final de cada període anual s'utilitza com a població de referència per al període següent.\n\nConté, per a cadascuna de les regions sanitàries i de les àrees bàsiques de salut del mapa sanitari català, el nombre de persones assegurades per gènere i edat.",
+            "attribution" : "Servei Català de la Salut (SCS)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T10:23:42.000Z",
+            "createdAt" : "2017-02-08T12:58:32.000Z",
+            "metadata_updated_at" : "2026-09-17T10:23:42.000Z",
+            "data_updated_at" : "2026-03-09T08:59:25.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 128,
+                "page_views_last_month" : 504,
+                "page_views_total" : 26388,
+                "page_views_last_week_log" : 7.011227255423254,
+                "page_views_last_month_log" : 8.980139577639157,
+                "page_views_total_log" : 14.687649060930733
+              },
+            "columns_name" :
+              [
+                "Àrea Bàsica de Salut",
+                "gènere",
+                "codi Àrea Bàsica de Saut",
+                "població oficial",
+                "any",
+                "Regió Sanitària",
+                "codi Regió Sanitària",
+                "edat"
+              ],
+            "columns_field_name" :
+              [
+                "abs_nom",
+                "genere",
+                "abs_codi",
+                "poblacio_oficial",
+                "any",
+                "rs_nom",
+                "rs_codi",
+                "edat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "Edat de les persones, en anys enters, a 31 de desembre de l'any anterior al de referència."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 7230,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-27T11:37:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "demografia",
+                "població",
+                "estadístiques",
+                "salut",
+                "assegurada",
+                "abs",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Població de referència del Servei Català de la Salut per a l’any 2026. Consell de Direcció del Servei Català de la Salut, 16 de febrer de 2026."
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://scientiasalut.gencat.cat/handle/11351/11946.3"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Population central register of the CatSalut (Catalan Health Service): population by basic health area"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro central de población del CatSalut: población por área básica de salud"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ftq4-h9vk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-central-de-població-del-CatSalut-població/ftq4-h9vk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Vacunació per al COVID-19: persones vacunades per àrea bàsica de salut",
+            "id" : "wmsw-k3nu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen de diversos sistemes d'informació del Departament de Salut i del Servei Català de la Salut, detallats a https://dadescovid.cat/documentacio , i mostren, per a la data de referencia i per àrea bàsica de salut, sexe i grup d'edat, el nombre acumulat de persones vacunades total o parcialment per al SARS-CoV-2, així com la població de referència.\n\nLes dades fan referència a la població amb dret a rebre assistència sanitària de finançament públic a Catalunya, identificades en el Registre central de població del CatSalut (RCA), i calculada en la data de referència de les dades; així, per la seva variació natural, la població per a una mateixa combinació d'àrea bàsica de salut, sexe i grup d'edat, pot variar en successives actualitzacions de les dades.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:35:44.000Z",
+            "createdAt" : "2021-04-28T09:32:44.000Z",
+            "metadata_updated_at" : "2025-04-07T10:35:44.000Z",
+            "data_updated_at" : "2022-07-27T08:35:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 10,
+                "page_views_last_month" : 25,
+                "page_views_total" : 4712,
+                "page_views_last_week_log" : 3.4594316186372978,
+                "page_views_last_month_log" : 4.700439718141093,
+                "page_views_total_log" : 12.202429966015352
+              },
+            "columns_name" :
+              [
+                "REGIO_CODI",
+                "AGA_CODI",
+                "ABS_CODI",
+                "VACUNACIO_COMPLETADA",
+                "VACUNACIO_INICIADA",
+                "EDAT",
+                "SEXE",
+                "ABS",
+                "SECTOR",
+                "REGIO",
+                "AGA",
+                "POBLACIO_DIANA",
+                "SECTOR_CODI",
+                "SEXE_CODI",
+                "DATA"
+              ],
+            "columns_field_name" :
+              [
+                "regio_codi",
+                "aga_codi",
+                "abs_codi",
+                "vacunacio_completada",
+                "vacunacio_iniciada",
+                "edat",
+                "sexe",
+                "abs",
+                "sector",
+                "regio",
+                "aga",
+                "poblacio_diana",
+                "sector_codi",
+                "sexe_codi",
+                "data"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Calendar date"
+              ],
+            "columns_description" :
+              [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "view" : "date_dmy" }
+              ],
+            "download_count" : 238020,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-04-28T09:36:53.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid",
+                "covid19",
+                "covid-19",
+                "coronavirus",
+                "epidemiologia",
+                "vacuna",
+                "salut",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "COVID-19 vaccination: vaccinated people by basic health area"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Vacunación para el COVID-19: personas vacunadas por área básica de salud"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/wmsw-k3nu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Vacunació-per-al-COVID-19-persones-vacunades-per-à/wmsw-k3nu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Vacunació per al COVID-19: dosis administrades per àrea bàsica de salut",
+            "id" : "tp23-dey4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen de diversos sistemes d'informació del Departament de Salut i del Servei Català de la Salut, detallats a https://dadescovid.cat/documentacio , i mostren per a cada dia, àrea bàsica de salut, sexe i grup d'edat, el nombre de dosis administrades de vacunes per al SARS-CoV-2, amb el detall del producte administrat i del número de dosi, i també el nombre de persones citades en la data de referència per a ser vacunades i per a les quals se n'ha descartat la vacunació, per algun d'aquests motius: per rebuig del pacient, per estar contraindicada la immunització o bé perquè el pacient ha passat la malaltia. \n\nLes dades fan referència a la població amb dret a rebre assistència sanitària de finançament públic a Catalunya, identificades en el Registre central de població del CatSalut (RCA).\n\nEn els casos en què no ha estat possible identificar l'àrea bàsica de salut de residència de la persona a qui s'ha administrat la dosi, o de qui se n'ha descartat la vacunació, el valor de la variable 'ABS' és 'No classificat'.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:14:06.000Z",
+            "createdAt" : "2021-01-26T12:25:32.000Z",
+            "metadata_updated_at" : "2025-04-07T10:14:06.000Z",
+            "data_updated_at" : "2022-07-27T09:56:12.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 68,
+                "page_views_total" : 10456,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 6.10852445677817,
+                "page_views_total_log" : 13.352181396917894
+              },
+            "columns_name" :
+              [
+                "REGIO",
+                "NO_VACUNAT",
+                "EDAT",
+                "SEXE",
+                "DOSI",
+                "ABS_CODI",
+                "FABRICANT",
+                "REGIO_CODI",
+                "RECOMPTE",
+                "DATA",
+                "ABS",
+                "AGA",
+                "AGA_CODI",
+                "SECTOR",
+                "SECTOR_CODI",
+                "SEXE_CODI"
+              ],
+            "columns_field_name" :
+              [
+                "regio",
+                "no_vacunat",
+                "edat",
+                "sexe",
+                "dosi",
+                "abs_codi",
+                "fabricant",
+                "regio_codi",
+                "recompte",
+                "data",
+                "abs",
+                "aga",
+                "aga_codi",
+                "sector",
+                "sector_codi",
+                "sexe_codi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 6721,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-01-26T12:32:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid19",
+                "epidemiologia",
+                "coronavirus",
+                "salut",
+                "covid-19",
+                "covid",
+                "vacuna",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Salut/Dades COVID"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://dadescovid.cat"
+                },
+                {
+                  "key" : "Enllaços-relacionats_Nom_2",
+                  "value" : "Dades actualitzades SARS-CoV-2"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL_2",
+                  "value" : "https://aquas.gencat.cat/ca/actualitat/ultimes-dades-coronavirus/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "COVID-19 vaccination: administered doses by basic health area"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Vacunación para el COVID-19: dosis administradas por área básica de salud"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/tp23-dey4",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Vacunació-per-al-COVID-19-dosis-administrades-per-/tp23-dey4",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Àrees bàsiques de salut",
+            "id" : "tqzv-uu8e",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.\n\nEls següents conjunts de dades descriuen la divisió territorial sanitaria operativa a Catalunya a diferents nivells:<br>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye\">Regions sanitàries</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp\">Sectors sanitaris</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e\">Àrees bàsiques salut</a>\n\nLa divisió territorial sanitària oficial de Catalunya s’estableix per decrets del Govern i per ordres del Departament de Salut que es publiquen al Diari Oficial de la Generalitat de Catalunya (DOGC), i està descrita en la següent pàgina web del Departament de Salut: \n<a href=\"https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia\">https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia</a>.\n\n-- Les àrees bàsiques de salut (ABS) són les unitats territorials bàsiques del sistema sanitari a Catalunya, en les quals es presta l'atenció primària i comunitària de salut d'accés directe de la població, i estan regulades a la Llei 15/1990, de 9 de juliol, d'ordenació sanitària de Catalunya i a les diverses ordres del Departament de Salut per les quals se n'actualitza periòdicament la seva denominació i delimitació.\n<br>\n-- Les regions i els sectors sanitaris són les demarcacions territorials amb què s'estructura el Servei Català de la Salut, es regulen per decrets del Govern, i com a àrees geogràfiques es defineixen: els sectors sanitaris, com a agrupació d'àrees bàsiques de salut, i les regions sanitàries, com a agrupació de sectors sanitaris.\n<br>\nLes ordres del Departament de Salut relatives a les ABS poden modificar la seva denominació i delimitació i crear-ne de noves, i quan es tracta de la creació de noves ABS, les pròpies ordres preveuen la possibilitat que l'efectivitat de la nova delimitació no sigui immediata, per la necessària reordenació prèvia dels recursos i de l'activitat assistencial per adaptar-los al canvi. Durant el temps necessari per a aquesta reordenació, l'activitat assistencial continua prenent com a referència la divisió territorial prèviament vigent, a la qual continuen referides totes les dades relatives a la demanda, els recursos i l'activitat del sistema de salut.\n<br>\nEn aquesta versió operativa del mapa sanitari de Catalunya, la informació publicada és l'efectiva en cada moment i, per la raó explicada en el paràgraf anterior, temporalment pot no coincidir amb la delimitació aprovada per la normativa vigent de referència, eventualitat que la pròpia normativa preveu.",
+            "attribution" : "Catàleg Tècnic de Dades. Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-22T09:35:48.000Z",
+            "createdAt" : "2022-04-26T07:01:52.000Z",
+            "metadata_updated_at" : "2026-05-22T09:35:48.000Z",
+            "data_updated_at" : "2025-12-19T09:05:13.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 97,
+                "page_views_last_month" : 270,
+                "page_views_total" : 8430,
+                "page_views_last_week_log" : 6.614709844115209,
+                "page_views_last_month_log" : 8.082149041353873,
+                "page_views_total_log" : 13.041488043881468
+              },
+            "columns_name" :
+              [
+                "Nom sector sanitari",
+                "Nom regió sanitària",
+                "Nom",
+                "Geometry",
+                "Codi sector sanitari",
+                "Codi regió sanitària",
+                "Codi"
+              ],
+            "columns_field_name" :
+              [
+                "nom_sector_sanitari",
+                "nom_regio_sanitaria",
+                "nom",
+                "geometry",
+                "codi_sector_sanitari",
+                "codi_regio_sanitaria",
+                "codi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "MultiPolygon",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom del sector sanitari.",
+                "Nom de la regió sanitària.",
+                "Nom de l’àrea bàsica de salut.",
+                "Informació geogràfica que defineix l'àrea geogràfica associada a cada una de les regions sanitàries, expressada en el sistema de coordenades EPSG 4326 - WGS 84.",
+                "Codi del sector sanitari a on pertany l’àrea bàsica de salut.",
+                "Codi de la regió sanitària a on pertany l’àrea bàsica de salut.  Informació extra, obtinguda a partir de la relació dels sectors sanitaris amb les regions sanitàries.",
+                "Codificació que identifica unívocament una àrea bàsica de salut, que són les àrees territorials primàries d'atenció al ciutadà per cadascuna de les quals hi ha un Equip d'Atenció Primària que se n'ocupa de la prestació del serveis d'atenció primària. Els registres que tenen un codi començat per 99 són valors propis del Catàleg Tècnic de Dades i que s’afegeixen per donar valor de completesa a l’entitat."
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 2590,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-05-30T08:54:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [ "dades_de_referència", "ods3_salut i benestar" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Basic health areas"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Áreas básicas salud"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/tqzv-uu8e",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Àrees-bàsiques-de-salut/tqzv-uu8e",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Anuari estadístic de Catalunya",
+            "id" : "5tmq-pe65",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Anuari estadístic de Catalunya recull la informació bàsica de les principals estadístiques oficials produïdes pels organismes del Sistema estadístic de Catalunya, i la informació més rellevant produïda per altres organismes oficials (del país i de la resta de l'Estat), sobre Catalunya.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:06.000Z",
+            "createdAt" : "2020-10-23T11:23:10.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:06.000Z",
+            "data_updated_at" : "2020-10-23T11:23:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 15,
+                "page_views_last_month" : 28,
+                "page_views_total" : 2755,
+                "page_views_last_week_log" : 4.0,
+                "page_views_last_month_log" : 4.857980995127573,
+                "page_views_total_log" : 11.428360172704291
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:24:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "idescat",
+                "indicador",
+                "estadística",
+                "demografia",
+                "societat",
+                "població",
+                "cultura",
+                "llengua",
+                "educació",
+                "eleccions",
+                "justícia",
+                "seguretat",
+                "salut",
+                "treball",
+                "qualitat de vida",
+                "condicions de vida",
+                "habitatges i edificis",
+                "ingressos",
+                "consum de les llars",
+                "protecció social",
+                "economia",
+                "macromagnituds",
+                "empreses",
+                "finances",
+                "finances públiques",
+                "inversió",
+                "comerç exterior",
+                "preus",
+                "recerca",
+                "tecnologia",
+                "sectors econòmics",
+                "agricultura",
+                "ramaderia",
+                "pesca",
+                "comerç",
+                "serveis",
+                "construcció",
+                "indústria",
+                "energia",
+                "transport",
+                "turisme",
+                "medi ambient",
+                "territori",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistical yearbook of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Anuario estadístico de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "enllaç" : "https://www.idescat.cat/pub/?id=aec"
+                           },
+                  "description" : "Accediu a l'anuari estadístic de Catalunya al web de l'IDESCAT",
+                  "title" : "Anuari estadístic de Catalunya"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/pub/?id=aec" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5tmq-pe65",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Anuari-estadístic-de-Catalunya/5tmq-pe65",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors de salut de la Central de Resultats: atenció primària",
+            "id" : "tt92-bngg",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La Central de Resultats és un instrument promogut pel Departament de Salut i el CatSalut que desenvolupa l'Agència de Qualitat i Avaluació Sanitàries de Catalunya per mesurar, avaluar i difondre els resultats assolits en l'àmbit de l'assistència sanitària per part dels diferents agents integrants del Sistema Sanitari de Catalunya (SISCAT).\n\nEl conjunt de dades correspon als indicadors de l’àmbit d’Atenció Primària presentats a la Central de Resultats. Es pot accedir a l’àmbit d’Atenció Primària clicant a aquest l’enllaç (https://app.powerbi.com/view?r=eyJrIjoiMGNkYmJhNWQtZTEwOS00MzU0LWE3NjctOWNkNjNhNTAwYzhkIiwidCI6IjNiOTQyN2RjLWQzMGUtNDNiYy04YzA2LWZmNzI1MzY3NmZlYyIsImMiOjh9), o bé a través de la pàgina web de la Central de Resultats de l’AQuAS (https://aquas.gencat.cat/ca/fem/central-resultats/).\n\nLes dades estan desglossades segons dimensions (dades generals, adequació, efectivitat, eficiència, experiència de l’usuari i TIC) i per agrupació de casuístiques de fenòmens de salut com pot per exemple la població atesa, indicadors de malalties cròniques, vacunacions o utilització de La Meva Salut entre d’altres.\n\nTanmateix es disposa d’estratificacions segons variables sociodemogràfiques i territorials (de residència de l’assegurat i/o atès i de la ubicació del recurs assistencial) que es descriuen a continuació:\n\n· Anàlisi per sexe, grup d’edat, nivell socioeconòmic, tipus de centre (titularitat, recurs assistencial, nivell de complexitat) entre d’altres.\n\n· Anàlisi territorial per Regió Sanitaria i Àrea de Gestió Assistencial -AGA- (àrea d’influència o referència d’un hospital) i anàlisi per centre d’atenció amb doble òptica de visualització: centrada en la residència del pacient i en el centre o recurs d’atenció.\n\n· Disponibilitat de dades de diferents anys.",
+            "attribution" : "Agència de Qualitat i Avaluació Sanitàries de Catalunya (AQuAS)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T12:37:45.000Z",
+            "createdAt" : "2023-11-22T16:38:46.000Z",
+            "metadata_updated_at" : "2026-09-17T12:37:45.000Z",
+            "data_updated_at" : "2024-01-16T18:22:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 44,
+                "page_views_last_month" : 161,
+                "page_views_total" : 4049,
+                "page_views_last_week_log" : 5.491853096329675,
+                "page_views_last_month_log" : 7.339850002884624,
+                "page_views_total_log" : 11.98370619265935
+              },
+            "columns_name" :
+              [
+                "Indicador",
+                "Nivell socioeconòmic",
+                "RS centre",
+                "Tipus variable",
+                "Unitat",
+                "Filtre 1",
+                "Codi indicador",
+                "Valor",
+                "Sexe",
+                "Territori mínim anàlisi pacient",
+                "Mes",
+                "Any",
+                "Codi ABS pacient",
+                "Codi RS pacient",
+                "AGA pacient",
+                "Territori mínim anàlisi centre",
+                "Codi entitat proveïdora",
+                "Entitat proveïdora",
+                "RS pacient",
+                "Codi RS centre",
+                "Àmbit",
+                "Nom variable",
+                "Fórmula",
+                "Grup d'edat",
+                "AGA centre",
+                "Codi AGA pacient",
+                "Codi unitat proveïdora",
+                "ABS centre",
+                "Dimensió",
+                "Agregable",
+                "Unitat proveïdora",
+                "Descripció",
+                "Agrupació",
+                "Codi ABS centre",
+                "ABS pacient",
+                "Codi AGA centre"
+              ],
+            "columns_field_name" :
+              [
+                "indicador",
+                "nse",
+                "rs_c",
+                "tipus_variable",
+                "unitats",
+                "filtre_1",
+                "codi_indicador",
+                "valor",
+                "sexe",
+                "utma_a",
+                "mes",
+                "any",
+                "codi_abs_a",
+                "codi_rs_a",
+                "aga_a",
+                "utma_c",
+                "codi_ep_c",
+                "ep_c",
+                "rs_a",
+                "codi_rs_c",
+                "ambit",
+                "nom_variable",
+                "formula",
+                "grup_edat",
+                "aga_c",
+                "codi_aga_a",
+                "codi_up_c",
+                "abs_c",
+                "dimensio",
+                "agregable",
+                "up_c",
+                "descripcio",
+                "agrupacio",
+                "codi_abs_c",
+                "abs_a",
+                "codi_aga_c"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Checkbox",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom de l'indicador",
+                "Nivell socio econòmic",
+                "Regió Sanitària del centre",
+                "Mètrica o paràmetre",
+                "Unitat de mesura del paràmetre",
+                "Filtre de l'indicador",
+                "Codi de l'indicador",
+                "Valor o resultat",
+                "Sexe",
+                "Unitat territorial mínima d'anàlisi del pacient",
+                "Mes",
+                "Any",
+                "Codi l'Àrea Bàsica de Salut del pacient",
+                "Codi de la Regió Sanitària del pacient",
+                "Àrea de Gestió Assistencial del pacient",
+                "Unitat territorial mínima d'anàlisi del centre",
+                "Codi l'entitat proveïdora del centre",
+                "Entitat proveïdora del centre",
+                "Regió Sanitària del pacient",
+                "Codi de la Regió Sanitària del centre",
+                "Àmbit de l'indicador",
+                "Nom de la variable (n, p, oe, w, i0, i1,...)",
+                "Fórmula de càlcul",
+                "Edat",
+                "Àrea Bàsica de Salut del centre",
+                "Codi de l'Àrea de Gestió Assistencial del pacient",
+                "Codi de la unitat proveïdora",
+                "Àrea de Gestió Assistencial del centre",
+                "Dimensió de l'indicador",
+                "Indicador si l'indicador és agregable",
+                "Unitat proveïdora",
+                "Descripció del paràmetre",
+                "Agrupació a què pertany l'indicador",
+                "Codi de l'Àrea de Gestió Assistencial del centre",
+                "Àrea bàsica de salut del pacient",
+                "Codi l'Àrea Bàsica de Salut del centre"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1161,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-11-28T09:47:02.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "ods3_salut i benestar",
+                "salut",
+                "indicadors",
+                "anàlisi",
+                "atenció primària",
+                "regió sanitària",
+                "àrea de gestió assistencial",
+                "àrea bàsica de salut"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Health indicators of the Results Center: primary care"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores de salud de la Central de Resultados: atención primaria"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/tt92-bngg",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Indicadors-de-salut-de-la-Central-de-Resultats-ate/tt92-bngg",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Nombre d'habitants i habitatges per Àrees bàsiques de Salut",
+            "id" : "hj2f-96x6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Recompte d'habitatges i habitants de cada ABS des de juny de 2018. Dades mensuals",
+            "attribution" : "Ajuntament de l'Hospitalet",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2024-02-01T06:45:49.000Z",
+            "createdAt" : "2018-05-30T09:59:06.000Z",
+            "metadata_updated_at" : "2018-06-06T10:18:16.000Z",
+            "data_updated_at" : "2024-02-01T06:45:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 3326,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 11.700006150882867
+              },
+            "columns_name" :
+              [
+                "DataPadro",
+                "NomArea",
+                "AreaBasicaSalut",
+                "Habitants",
+                "Habitatges"
+              ],
+            "columns_field_name" :
+              [
+                "datapadro",
+                "nomarea",
+                "areabasicasalut",
+                "habitants",
+                "habitatges"
+              ],
+            "columns_datatype" :
+              [ "Calendar date", "Text", "Number", "Number", "Number" ],
+            "columns_description" :
+              [
+                "Data de referència de les dades",
+                "Nom de l'Àrea Bàsica de Salut.",
+                "Codi de l'Àrea Bàsica de Salut",
+                "Nombre d'habitants",
+                "Nombre d'habitatges"
+              ],
+            "columns_format" :
+              [
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "left"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "left"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "groupSeparator" : ".",
+                  "align" : "left"
+                }
+              ],
+            "download_count" : 1564,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2018-06-06T10:18:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [ "salut habitants habitatges" ],
+            "domain_metadata" :
+              [
+                { "key" : "Actualització_Periodicitat", "value" : "Mensual" }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/hj2f-96x6",
+        "link" : "https://opendata.l-h.cat/Salut/Nombre-d-habitants-i-habitatges-per-Àrees-bàsiques/hj2f-96x6",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mapa sanitari operatiu de Catalunya",
+            "id" : "av3u-smj4",
+            "resource_name" : null,
+            "parent_fxf" : [ "tqzv-uu8e" ],
+            "description" : "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.\n\nEls següents conjunts de dades descriuen la divisió territorial sanitaria operativa a Catalunya a diferents nivells:<br>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye\">Regions sanitàries</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp\">Sectors sanitaris</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e\">Àrees bàsiques salut</a>\n\nLa divisió territorial sanitària oficial de Catalunya s’estableix per decrets del Govern i per ordres del Departament de Salut que es publiquen al Diari Oficial de la Generalitat de Catalunya (DOGC), i està descrita en la següent pàgina web del Departament de Salut: \n<a href=\"https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia\">https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia</a>.\n\n-- Les àrees bàsiques de salut (ABS) són les unitats territorials bàsiques del sistema sanitari a Catalunya, en les quals es presta l'atenció primària i comunitària de salut d'accés directe de la població, i estan regulades a la Llei 15/1990, de 9 de juliol, d'ordenació sanitària de Catalunya i a les diverses ordres del Departament de Salut per les quals se n'actualitza periòdicament la seva denominació i delimitació.\n<br>\n-- Les regions i els sectors sanitaris són les demarcacions territorials amb què s'estructura el Servei Català de la Salut, es regulen per decrets del Govern, i com a àrees geogràfiques es defineixen: els sectors sanitaris, com a agrupació d'àrees bàsiques de salut, i les regions sanitàries, com a agrupació de sectors sanitaris.\n<br>\nLes ordres del Departament de Salut relatives a les ABS poden modificar la seva denominació i delimitació i crear-ne de noves, i quan es tracta de la creació de noves ABS, les pròpies ordres preveuen la possibilitat que l'efectivitat de la nova delimitació no sigui immediata, per la necessària reordenació prèvia dels recursos i de l'activitat assistencial per adaptar-los al canvi. Durant el temps necessari per a aquesta reordenació, l'activitat assistencial continua prenent com a referència la divisió territorial prèviament vigent, a la qual continuen referides totes les dades relatives a la demanda, els recursos i l'activitat del sistema de salut.\n<br>\nEn aquesta versió operativa del mapa sanitari de Catalunya, la informació publicada és l'efectiva en cada moment i, per la raó explicada en el paràgraf anterior, temporalment pot no coincidir amb la delimitació aprovada per la normativa vigent de referència, eventualitat que la pròpia normativa preveu.",
+            "attribution" : "Catàleg Tècnic de Dades. Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "map",
+            "updatedAt" : "2026-11-12T07:54:11.000Z",
+            "createdAt" : "2024-02-15T09:08:53.000Z",
+            "metadata_updated_at" : "2026-11-12T07:54:11.000Z",
+            "data_updated_at" : "2025-12-19T09:05:13.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 175,
+                "page_views_last_month" : 727,
+                "page_views_total" : 19691,
+                "page_views_last_week_log" : 7.459431618637297,
+                "page_views_last_month_log" : 9.507794640198696,
+                "page_views_total_log" : 14.26532202423487
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 12,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_map",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-11-12T07:54:11.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Basic health areas"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Áreas básicas salud"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/av3u-smj4",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Mapa-sanitari-operatiu-de-Catalunya/av3u-smj4",
+        "owner" :
+          {
+            "id" : "76mf-34jr",
+            "user_type" : "interactive",
+            "display_name" : "Álex Artigas"
+          },
+        "creator" :
+          {
+            "id" : "76mf-34jr",
+            "user_type" : "interactive",
+            "display_name" : "Álex Artigas"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Àrees bàsiques de serveis socials (ABSS)",
+            "id" : "qusy-hyb4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Codificació i geoposicionament de les Àrees bàsiques de serveis socials (ABSS) amb què treballa el Departament de Drets Socials i Inclusió.",
+            "attribution" : "Catàleg Tècnic de Dades. Àrea del Sistema de Informació Social. Gabinet Tècnic. Secretaria General. Departament Drets Socials i Inclusió",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-09-22T09:56:50.000Z",
+            "createdAt" : "2020-03-16T08:13:50.000Z",
+            "metadata_updated_at" : "2025-09-22T09:56:50.000Z",
+            "data_updated_at" : "2025-05-29T11:39:26.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 60,
+                "page_views_last_month" : 217,
+                "page_views_total" : 8113,
+                "page_views_last_week_log" : 5.930737337562887,
+                "page_views_last_month_log" : 7.768184324776926,
+                "page_views_total_log" : 12.986197587206272
+              },
+            "columns_name" :
+              [
+                "Geometria àrea bàsica de serveis socials",
+                "Àrea bàsica de serveis socials",
+                "Identificador àrea bàsica de serveis socials"
+              ],
+            "columns_field_name" :
+              [
+                "geo_area_basica_serveis_socials",
+                "des_area_basica_serveis_socials",
+                "ide_area_basica_serveis_socials"
+              ],
+            "columns_datatype" : [ "MultiPolygon", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Geometria de l’àrea bàsica de serveis socials.",
+                "Nom de l'Àrea bàsica de serveis socials.",
+                "Codi d’ordenació AOC-EACAT."
+              ],
+            "columns_format" : [ {}, {}, { "noCommas" : "true" } ],
+            "download_count" : 2158,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-05-29T11:39:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "limits",
+                "serveis socials",
+                "àrees",
+                "àrees bàsiques",
+                "abss",
+                "ods3_salut i benestar",
+                "dades_de_referència"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "Geoespacial"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Basic areas of social services"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Áreas básicas de servicios sociales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Drets Socials i Inclusió"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qusy-hyb4",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Àrees-bàsiques-de-serveis-socials-ABSS-/qusy-hyb4",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 57,
+  "timings" : { "serviceMillis" : 26, "searchMillis" : [ 4, 8 ] },
+  "warnings" : []
+}

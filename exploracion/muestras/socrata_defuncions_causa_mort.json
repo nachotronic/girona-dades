@@ -1,0 +1,141 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Registre de defuncions per COVID-19 a Catalunya per comarca i sexe",
+            "id" : "uqk7-bf9s",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen del registre RSAcovid19 del Departament de Salut i s'obtenen a partir de les declaracions de les empreses de serveis funeraris.\n\nNomés es tenen en compte les defuncions relacionades amb la COVID-19: que el motiu del certificat de defunció especifiqui que la persona ha mort a causa de la COVID-19, tingui o no un prova diagnòstica PCR o TA amb resultat positiu.\n\nLes defuncions s’imputen a la data de defunció, però apareixen per primera vegada l'endemà del dia de la notificació.\n\nLes dades es mostren per comarques per evitar la identificació de les persones difuntes i garantir-ne la confidencialitat.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:19:40.000Z",
+            "createdAt" : "2020-04-29T10:05:59.000Z",
+            "metadata_updated_at" : "2025-04-07T10:19:40.000Z",
+            "data_updated_at" : "2022-07-27T10:34:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 117,
+                "page_views_total" : 22031,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.882643049361842,
+                "page_views_total_log" : 14.427312844134965
+              },
+            "columns_name" :
+              [
+                "Codi Comarca",
+                "Sexe",
+                "Codi Sexe",
+                "Nombre defuncions",
+                "Comarca",
+                "Data defunció"
+              ],
+            "columns_field_name" :
+              [
+                "comarcacodi",
+                "sexedescripcio",
+                "sexecodi",
+                "numexitus",
+                "comarcadescripcio",
+                "exitusdata"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Number", "Number", "Text", "Calendar date" ],
+            "columns_description" :
+              [
+                "Codi Comarca / Código comarca / Region code",
+                "Sexe / Sexo / Gender",
+                "Codi Sexe / Código Sexo / Gender code",
+                "Nombre defuncions / Número defunciones / Deaths number",
+                "Comarca / Region",
+                "Data defunció / Fecha defunción / Death date"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, { "view" : "date_dmy" } ],
+            "download_count" : 30407,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-01-04T14:42:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid-19",
+                "covid19",
+                "coronavirus",
+                "morts",
+                "mortalitat",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Death records due to COVID-19 in Catalonia. Segregated by gender and region"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de defunciones por COVID-19 en Catalunya. Segregación por sexo y comarca"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/uqk7-bf9s",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-defuncions-per-COVID-19-a-Catalunya-pe/uqk7-bf9s",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 3, 7 ] },
+  "warnings" : []
+}

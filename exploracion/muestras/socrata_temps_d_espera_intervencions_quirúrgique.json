@@ -1,0 +1,157 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Temps d'espera per interposar denúncia a dependències de la  Policia de la Generalitat - Mossos d'Esquadra,  per àmbit geogràfic",
+            "id" : "qxev-y8x7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Període de temps que passa des que una persona arriba a una dependència policial per posar una denúncia fins que és atesa.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-13T10:08:57.000Z",
+            "createdAt" : "2021-07-22T09:26:32.000Z",
+            "metadata_updated_at" : "2026-10-13T10:08:57.000Z",
+            "data_updated_at" : "2026-10-13T10:08:57.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 11,
+                "page_views_last_month" : 32,
+                "page_views_total" : 1908,
+                "page_views_last_week_log" : 3.5849625007211565,
+                "page_views_last_month_log" : 5.044394119358453,
+                "page_views_total_log" : 10.898601387403938
+              },
+            "columns_name" :
+              [
+                "Nom mes",
+                "Nombre de visites",
+                "Regió Policial (RP)",
+                "Mes",
+                "Any",
+                "Mitjana Temps Espera",
+                "Àrea Bàsica Policial (ABP)"
+              ],
+            "columns_field_name" :
+              [
+                "nom_mes",
+                "nombre_de_visites",
+                "regi_policial_rp",
+                "mes",
+                "any",
+                "mitjana_temps_espera",
+                "rea_b_sica_policial_abp"
+              ],
+            "columns_datatype" :
+              [ "Text", "Number", "Text", "Number", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nom del mes",
+                "Nombre de persones que han anat a la dependència policial",
+                "Regió Policial (RP) on s’ha produït del fet",
+                "Número del mes",
+                "Any",
+                "Període de temps que passa des que una persona arriba a una dependència policial per posar una denúncia fins que és atesa.",
+                "Àrea Bàsica Policial (ABP) on s’ha produït del fet"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 1070,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-22T09:40:05.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "activitat operativa policial",
+                "temps",
+                "denúncia",
+                "denunciar",
+                "policia",
+                "mossos d'esquadra",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Waiting time to file a complaint (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tiempo de espera para poner una denuncia en las dependències de la Policia de la Generalitat - Mossos d'Esquadra,  por ámbito geográfico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qxev-y8x7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Temps-d-espera-per-interposar-denúncia-a-dependènc/qxev-y8x7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 23, "searchMillis" : [ 3, 7 ] },
+  "warnings" : []
+}

@@ -1,0 +1,385 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Mortalitat per tot tipus de causa a Catalunya",
+            "id" : "7dt9-azyt",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "MoMo és un sistema per a la Vigilància de la mortalitat diària per totes les causes a Espanya. Té com a objectiu identificar patrons inusuals de mortalitat i estimar l'impacte en la mortalitat de la població de qualsevol esdeveniment d'importància per a guiar l'acció en Salut Pública.\n\nEstà gestionat pel CNE i utilitza dades procedents de diverses administracions públiques.\n\nEn aquest dataset, s'obtenen les dades del sistema MoMo i es filtren per mostrar les dades corresponents a Catalunya.\n\nMés informació:\nhttps://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion",
+            "attribution" : "Instituto de Salud Carlos III (ISCIII)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-13T08:02:38.000Z",
+            "createdAt" : "2020-04-27T14:27:27.000Z",
+            "metadata_updated_at" : "2026-11-13T08:00:22.000Z",
+            "data_updated_at" : "2026-11-13T08:02:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 35,
+                "page_views_last_month" : 101,
+                "page_views_total" : 8693,
+                "page_views_last_week_log" : 5.169925001442312,
+                "page_views_last_month_log" : 6.672425341971495,
+                "page_views_total_log" : 13.085804380278086
+              },
+            "columns_name" :
+              [
+                "Defuncions esperades (Límit superior)",
+                "Sexe",
+                "Data",
+                "Defuncions esperades (Límit inferior)",
+                "Defuncions esperades",
+                "Defuncions observades",
+                "Edat"
+              ],
+            "columns_field_name" :
+              [
+                "defuncions_esperades_sup",
+                "sexe",
+                "data",
+                "defuncions_esperades_inf",
+                "defuncions_esperades",
+                "defuncions_observades",
+                "edad"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Límit superior de l'interval de confiança de les defuncions esperades, corresponent al percentil 99 de la distribució",
+                "Classificació per sexe",
+                "Data a la que fan referència les dades",
+                "Límit inferior de l'interval de confiança de les defuncions esperades, corresponent al percentil 1 de la distribució",
+                "Defuncions esperades resultants del model",
+                "Defuncions observades (es poden incloure correccions per retràs)",
+                "Grup d'edats"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 2265,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-05-09T14:42:50.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "momo",
+                "defuncions",
+                "mortalitat",
+                "estadística",
+                "model",
+                "relacionat covid"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Mortality for all kinds of causes in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mortalidad por todo tipo de causa en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Universitats públiques"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7dt9-azyt",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Mortalitat-per-tot-tipus-de-causa-a-Catalunya/7dt9-azyt",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mortalitat per totes les causes a Catalunya (observada vs esperada) Font: MoMo",
+            "id" : "vkds-6sun",
+            "resource_name" : null,
+            "parent_fxf" : [ "7dt9-azyt" ],
+            "description" : "MoMo és un sistema per a la Vigilància de la mortalitat diària per totes les causes a Espanya. Té com a objectiu identificar patrons inusuals de mortalitat i estimar l'impacte en la mortalitat de la població de qualsevol esdeveniment d'importància per a guiar l'acció en Salut Pública.\n\nEstà gestionat pel CNE i utilitza dades procedents de diverses administracions públiques.\n\nEn aquest dataset, s'obtenen les dades del sistema MoMo i es filtren per mostrar les dades corresponents a Catalunya.\n\nMés informació:\nhttps://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion",
+            "attribution" : "Instituto de Salud Carlos III (ISCIII)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2026-11-13T08:02:38.000Z",
+            "createdAt" : "2020-05-13T13:29:55.000Z",
+            "metadata_updated_at" : "2025-02-19T09:47:00.000Z",
+            "data_updated_at" : "2026-11-13T08:02:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 54,
+                "page_views_last_month" : 144,
+                "page_views_total" : 5319,
+                "page_views_last_week_log" : 5.78135971352466,
+                "page_views_last_month_log" : 7.1799090900149345,
+                "page_views_total_log" : 12.377210530388552
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-23T15:56:05.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                { "key" : "Actors_Tipus-actor", "value" : "Altres" },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Mortality for all kinds of causes in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mortalidad por todo tipo de causa en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vkds-6sun",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Mortalitat-per-totes-les-causes-a-Catalunya-observ/vkds-6sun",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre de defuncions per COVID-19 a Catalunya per comarca i sexe",
+            "id" : "uqk7-bf9s",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen del registre RSAcovid19 del Departament de Salut i s'obtenen a partir de les declaracions de les empreses de serveis funeraris.\n\nNomés es tenen en compte les defuncions relacionades amb la COVID-19: que el motiu del certificat de defunció especifiqui que la persona ha mort a causa de la COVID-19, tingui o no un prova diagnòstica PCR o TA amb resultat positiu.\n\nLes defuncions s’imputen a la data de defunció, però apareixen per primera vegada l'endemà del dia de la notificació.\n\nLes dades es mostren per comarques per evitar la identificació de les persones difuntes i garantir-ne la confidencialitat.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:19:40.000Z",
+            "createdAt" : "2020-04-29T10:05:59.000Z",
+            "metadata_updated_at" : "2025-04-07T10:19:40.000Z",
+            "data_updated_at" : "2022-07-27T10:34:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 117,
+                "page_views_total" : 22031,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.882643049361842,
+                "page_views_total_log" : 14.427312844134965
+              },
+            "columns_name" :
+              [
+                "Codi Comarca",
+                "Sexe",
+                "Codi Sexe",
+                "Nombre defuncions",
+                "Comarca",
+                "Data defunció"
+              ],
+            "columns_field_name" :
+              [
+                "comarcacodi",
+                "sexedescripcio",
+                "sexecodi",
+                "numexitus",
+                "comarcadescripcio",
+                "exitusdata"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Number", "Number", "Text", "Calendar date" ],
+            "columns_description" :
+              [
+                "Codi Comarca / Código comarca / Region code",
+                "Sexe / Sexo / Gender",
+                "Codi Sexe / Código Sexo / Gender code",
+                "Nombre defuncions / Número defunciones / Deaths number",
+                "Comarca / Region",
+                "Data defunció / Fecha defunción / Death date"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, { "view" : "date_dmy" } ],
+            "download_count" : 30407,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-01-04T14:42:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid-19",
+                "covid19",
+                "coronavirus",
+                "morts",
+                "mortalitat",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Death records due to COVID-19 in Catalonia. Segregated by gender and region"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de defunciones por COVID-19 en Catalunya. Segregación por sexo y comarca"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/uqk7-bf9s",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-defuncions-per-COVID-19-a-Catalunya-pe/uqk7-bf9s",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 3,
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 3, 6 ] },
+  "warnings" : []
+}
