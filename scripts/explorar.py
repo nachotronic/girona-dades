@@ -25,12 +25,24 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-for t in ["afiliats seguretat social municipi", "afiliació règim general municipis", "mortalitat causa", "defuncions causa mort", "llista d'espera", "temps d'espera intervencions quirúrgiques", "esperança de vida àrea bàsica salut", "indicadors salut àrea bàsica"]:
-    clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
-    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
-CANDIDATAS["idescat_emex_afiliats"] = "https://api.idescat.cat/emex/v1/dades.json?id=170792&i=f262,f263,f264&lang=ca"
-CANDIDATAS["idescat_mortalitat_causa"] = "https://www.idescat.cat/indicadors/?id=aec&n=15254&lang=ca"
-CANDIDATAS["seg_social_afiliados_municipio"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10/EST305/EST307"
+CANDIDATAS["meta_3cre_fa8v"] = "https://analisi.transparenciacatalunya.cat/api/views/3cre-fa8v.json"
+CANDIDATAS["mostra_3cre_fa8v"] = "https://analisi.transparenciacatalunya.cat/resource/3cre-fa8v.json?$limit=5"
+CANDIDATAS["meta_tt92_bngg"] = "https://analisi.transparenciacatalunya.cat/api/views/tt92-bngg.json"
+CANDIDATAS["mostra_tt92_bngg"] = "https://analisi.transparenciacatalunya.cat/resource/tt92-bngg.json?$limit=5"
+CANDIDATAS["meta_tqzv_uu8e"] = "https://analisi.transparenciacatalunya.cat/api/views/tqzv-uu8e.json"
+CANDIDATAS["mostra_tqzv_uu8e"] = "https://analisi.transparenciacatalunya.cat/resource/tqzv-uu8e.json?$limit=5"
+CANDIDATAS["meta_ftq4_h9vk"] = "https://analisi.transparenciacatalunya.cat/api/views/ftq4-h9vk.json"
+CANDIDATAS["mostra_ftq4_h9vk"] = "https://analisi.transparenciacatalunya.cat/resource/ftq4-h9vk.json?$limit=5"
+CANDIDATAS["meta_7f3n_y4sh"] = "https://analisi.transparenciacatalunya.cat/api/views/7f3n-y4sh.json"
+CANDIDATAS["mostra_7f3n_y4sh"] = "https://analisi.transparenciacatalunya.cat/resource/7f3n-y4sh.json?$limit=5"
+CANDIDATAS["meta_ptdc_nwds"] = "https://analisi.transparenciacatalunya.cat/api/views/ptdc-nwds.json"
+CANDIDATAS["mostra_ptdc_nwds"] = "https://analisi.transparenciacatalunya.cat/resource/ptdc-nwds.json?$limit=5"
+CANDIDATAS["meta_f87r_vsu7"] = "https://analisi.transparenciacatalunya.cat/api/views/f87r-vsu7.json"
+CANDIDATAS["mostra_f87r_vsu7"] = "https://analisi.transparenciacatalunya.cat/resource/f87r-vsu7.json?$limit=5"
+CANDIDATAS["meta_hj2f_96x6"] = "https://analisi.transparenciacatalunya.cat/api/views/hj2f-96x6.json"
+CANDIDATAS["mostra_hj2f_96x6"] = "https://analisi.transparenciacatalunya.cat/resource/hj2f-96x6.json?$limit=5"
+CANDIDATAS["socrata_llistes_espera_catsalut"] = SOCRATA + "?" + urllib.parse.urlencode({"q": "espera CatSalut", "limit": 10})
+CANDIDATAS["catsalut_llistes_web"] = "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/"
 
 
 def extension(tipo: str) -> str:
