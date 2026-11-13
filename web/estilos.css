@@ -299,3 +299,38 @@ td.buit { color: var(--text-3); }
 .fonts li { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.14); }
 .fonts li span { opacity: .75; font-size: 13px; }
 .peu-meta { font-size: 13px; margin: 0; opacity: .85; }
+
+/* ---------- Política ---------- */
+.cat-llista { display: flex; flex-direction: column; gap: 6px; }
+.cat-fila { display: grid; grid-template-columns: 12px minmax(0, 1fr) 70px 28px; align-items: center; gap: 8px; font-size: 13px; }
+.cat-fila > i { width: 12px; height: 12px; border-radius: 3px; }
+.cat-nom { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cat-barra { height: 6px; background: var(--fons-2); border-radius: 3px; overflow: hidden; }
+.cat-barra b { display: block; height: 100%; border-radius: 3px; }
+.cat-n { text-align: right; color: var(--text-2); }
+.punt-bloc { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 10px; vertical-align: 0.08em; }
+.ajt { margin-top: 56px; }
+.ajt-tit { font: 500 28px/1.1 var(--serif); letter-spacing: -0.01em; color: var(--tinta); margin: 0 0 20px; }
+.alcalde { display: flex; align-items: flex-start; gap: 4px; padding: 18px 0 24px; border-top: 1px solid var(--tinta); margin-bottom: 8px; }
+.alcalde .punt-bloc { width: 18px; height: 18px; margin-top: 30px; }
+.alcalde .etiqueta { font-size: 13px; color: var(--text-2); margin: 0 0 6px; }
+.alcalde .anom { font: 500 30px/1.1 var(--serif); color: var(--tinta); margin: 0; letter-spacing: -0.01em; }
+.alcalde .apartit { font-size: 14px; color: var(--text-2); margin: 6px 0 0; }
+.vots { list-style: none; margin: 0; padding: 0; }
+.vots li { display: grid; grid-template-columns: minmax(90px, 150px) 1fr 54px 92px; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--vora); font-size: 13.5px; }
+.vots .sigla { display: flex; align-items: center; gap: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 600; color: var(--tinta); }
+.vots .sigla i, .gnom i { width: 10px; height: 10px; border-radius: 2px; flex: none; display: inline-block; }
+.vbarra { height: 8px; background: var(--fons-2); border-radius: 4px; overflow: hidden; }
+.vbarra b { display: block; height: 100%; border-radius: 4px; }
+.vpct { text-align: right; }
+.vreg { text-align: right; color: var(--text-3); font-size: 12.5px; }
+.escons { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px; }
+.escons i { width: 18px; height: 18px; border-radius: 50%; }
+.grups { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px 24px; }
+.gnom { font-weight: 600; color: var(--tinta); margin: 0 0 6px; display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.gnom span { color: var(--text-3); font-weight: 400; }
+.grup-ple ul { list-style: none; margin: 0; padding: 0; font-size: 13.5px; color: var(--text-2); }
+.grup-ple li { padding: 2px 0; }
+.grup-ple li.alc { color: var(--tinta); font-weight: 600; }
+.grup-ple li span { color: var(--text-3); font-weight: 400; font-size: 12px; }
+@media (max-width: 520px) { .vots li { grid-template-columns: minmax(70px, 110px) 1fr 48px; } .vreg { display: none; } }

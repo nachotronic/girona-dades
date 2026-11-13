@@ -3,11 +3,12 @@
 // ---------- Textos ----------
 const T = {
   ca: {
+    locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
     nav_mapa: "Mapa", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Habitatge · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 45 indicadors d'habitatge, renda, població, treball, ajuntaments i energia. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Gairebé 60 indicadors d'habitatge, renda, població, treball, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -76,11 +77,12 @@ const T = {
     sub: (c, p) => `${c} · ${p} habitants`,
   },
   es: {
+    locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
     nav_mapa: "Mapa", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Vivienda · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 45 indicadores de vivienda, renta, población, trabajo, ayuntamientos y energía. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Casi 60 indicadores de vivienda, renta, población, trabajo, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -157,6 +159,11 @@ try {
   LANG = ["ca", "es"].includes(q) ? q : ["ca", "es"].includes(guardat) ? guardat : ((navigator.language || "").startsWith("es") ? "es" : "ca");
 } catch (e) { /* sin almacenamiento */ }
 const t = (k, ...a) => { const v = T[LANG][k]; return typeof v === "function" ? v(...a) : v; };
+
+// ---------- Bloques políticos ----------
+const BLOC_COLOR = { Junts: "#23a99c", ERC: "#ef8f2a", PSC: "#d2453a", CUP: "#e9cf3a", PP: "#2f6fc0", Vox: "#62a43c", "Aliança": "#3b4a63", Comuns: "#8a4fa8", Locals: "#a5abb5" };
+const colorBloc = (b) => BLOC_COLOR[b] || BLOC_COLOR.Locals;
+const nomBloc = (b) => (b === "Locals" ? t("locals") : b === "Aliança" ? "Aliança Catalana" : b);
 
 // ---------- Formato ----------
 const loc = () => (LANG === "ca" ? "ca-ES" : "es-ES");
@@ -432,7 +439,8 @@ function obreFitxa(ine, desplaca) {
       <figure class="grafic"><figcaption><span>${t("g_lloguer")}</span><span class="unitat">€/mes</span></figcaption><div class="g-ll"></div></figure>
       <figure class="grafic"><figcaption><span>${t("g_renda")}</span><span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
       <figure class="grafic"><figcaption><span>${t("g_compra")}</span><span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
-    </div>`;
+    </div>
+    ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
   f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* */ } });
   grafLinia(f.querySelector(".g-ll"), [
@@ -445,6 +453,40 @@ function obreFitxa(ine, desplaca) {
   ], (v) => `${fmt(v)} €`);
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// ---------- Ayuntamiento: alcaldía, resultados y pleno ----------
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function ajuntament(m) {
+  const p = m.pol || {};
+  if (!p.alcalde && !p.ple && !p.eleccions) return "";
+  const al = p.alcalde;
+  const e = p.eleccions;
+  const max = e && e.resultats.length ? Math.max(...e.resultats.map((r) => r.pct || 0)) : 1;
+  const res = e ? `<figure class="grafic resultats"><figcaption><span>${t("resultats", e.any)}</span>${e.participacio != null ? `<span class="unitat">${t("participacio", pct(e.participacio, 1))}</span>` : ""}</figcaption>
+    <ol class="vots">${e.resultats.map((r) => `<li><span class="sigla"><i style="background:${colorBloc(r.b)}"></i>${esc(r.s)}</span>
+      <span class="vbarra"><b style="width:${((r.pct || 0) / max) * 100}%;background:${colorBloc(r.b)}"></b></span>
+      <span class="vpct">${pct(r.pct, 1)}</span><span class="vreg">${t("regidors", r.reg)}</span></li>`).join("")}</ol></figure>` : "";
+  // Pleno agrupado por candidatura, en el orden de los resultados
+  const grups = {};
+  (p.ple || []).forEach((x) => { (grups[x.partit] = grups[x.partit] || []).push(x); });
+  const ordre = Object.keys(grups).sort((a, b) => grups[b].length - grups[a].length);
+  const ple = p.ple ? `<figure class="grafic ple"><figcaption><span>${t("ple")}</span><span class="unitat">${t("regidors", p.ple.length)}</span></figcaption>
+    <div class="escons">${p.ple.slice().sort((a, b) => ordre.indexOf(a.partit) - ordre.indexOf(b.partit)).map((x) => `<i title="${esc(x.nom)} · ${esc(x.partit)}" style="background:${colorBloc(blocDe(x.partit, e))}"></i>`).join("")}</div>
+    <div class="grups">${ordre.map((g) => `<div class="grup-ple"><p class="gnom"><i style="background:${colorBloc(blocDe(g, e))}"></i>${esc(g)} <span>${grups[g].length}</span></p>
+      <ul>${grups[g].map((x) => `<li${/alcald/i.test(x.carrec) ? ' class="alc"' : ""}>${esc(x.nom)}${/regidor/i.test(x.carrec) ? "" : ` <span>${esc(x.carrec)}</span>`}</li>`).join("")}</ul></div>`).join("")}</div></figure>` : "";
+  return `<div class="ajt"><h3 class="ajt-tit">${t("h_ajt")}</h3>
+    ${al ? `<div class="alcalde"><i class="punt-bloc" style="background:${colorBloc(al.bloc)}"></i><div><p class="etiqueta">${esc(al.carrec || t("alcalde"))}</p><p class="anom">${esc(al.nom)}</p><p class="apartit">${esc(al.partit)} · ${nomBloc(al.bloc)}</p></div></div>` : ""}
+    <div class="dos">${res}${ple}</div></div>`;
+}
+// Bloque de unas siglas a partir de los resultados (si aparecen) o del propio texto
+function blocDe(sigles, e) {
+  const r = e && e.resultats.find((x) => x.s.replace(/\s/g, "") === String(sigles).replace(/\s/g, ""));
+  if (r) return r.b;
+  const toks = new Set(String(sigles).toUpperCase().match(/[A-ZÀ-Ü]+/g) || []);
+  const B = [["Junts", ["CM", "JUNTS", "JXF", "JXCAT", "CIU"]], ["ERC", ["ERC", "AM"]], ["PSC", ["PSC", "CP"]], ["CUP", ["CUP", "AMUNT"]], ["Vox", ["VOX"]], ["PP", ["PP"]], ["Aliança", ["ALIANÇA"]]];
+  for (const [b, ks] of B) if (ks.some((k) => toks.has(k))) return b;
+  return "Locals";
 }
 
 // ---------- Inicio ----------

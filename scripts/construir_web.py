@@ -313,6 +313,102 @@ def generalitat_indicadores(pob):
     return res, anys
 
 
+
+import re
+
+BLOCS = [("Junts", {"CM", "JUNTS", "JXF", "JXCAT", "CIU", "CDC", "PDECAT", "JXC"}),
+         ("ERC", {"ERC", "AM"}),
+         ("PSC", {"PSC", "CP", "PSOE"}),
+         ("CUP", {"CUP", "AMUNT"}),
+         ("Vox", {"VOX"}),
+         ("PP", {"PP"}),
+         ("Comuns", {"ECP", "COMUNS", "ICV", "EUIA", "BEC"}),
+         ("Aliança", {"ALIANÇA"})]
+
+
+def bloc(sigles):
+    """Agrupa unas siglas de candidatura en su bloque político (o 'Locals')."""
+    toks = set(re.findall(r"[A-ZÀ-Ü]+", str(sigles).upper()))
+    for nom, claus in BLOCS:
+        if toks & claus:
+            return nom
+    return "Locals"
+
+
+PARTICULES = {"de", "del", "la", "les", "i", "el", "els", "d", "l"}
+
+
+def nom_propi(n):
+    n = str(n).strip()
+    base = n.replace("(Ind.)", "").replace("(ind.)", "")
+    if base.upper() != base:
+        return n
+    paraules = re.split(r"(\s+|-|'|\()", n.lower())
+    return "".join(p if p in PARTICULES or not p.strip() else p[:1].upper() + p[1:] for p in paraules).replace("(ind.)", "(Ind.)")
+
+
+def _t(x):
+    return None if x is None or (isinstance(x, float) and math.isnan(x)) else str(x).strip()
+
+
+def politica():
+    """Alcalde, pleno y resultados municipales por municipio (Generalitat)."""
+    res, anys = {}, {}
+    try:
+        a = pd.read_csv(uno("generalitat/vevv-8fvw_*"), dtype=str)
+        for _, f in a.iterrows():
+            res.setdefault(f["CODI_ENS"][:5], {})["alcalde"] = {
+                "nom": nom_propi(f["PRESIDENT"]), "carrec": _t(f["CARREC_PRESIDENT"]),
+                "partit": _t(f["PARTITPOL"]) or "", "bloc": bloc(f["PARTITPOL"])}
+    except Exception as e:  # noqa: BLE001
+        print("AVISO alcaldes:", e)
+    try:
+        p = pd.read_csv(uno("generalitat/nm3n-3vbj_*"), dtype=str)
+        p = p[p["TIPUS_ENS"] == "Municipis"]
+        p["o"] = pd.to_numeric(p["ORDRE"], errors="coerce")
+        for ine, g in p.sort_values("o").groupby(p["CODI_10"].str[:5]):
+            res.setdefault(ine, {})["ple"] = [{"nom": nom_propi(f["NOM"]), "carrec": _t(f["CARREC"]) or "", "partit": _t(f["PARTIT_POLITIC"]) or ""} for _, f in g.iterrows() if _t(f["NOM"])]
+    except Exception as e:  # noqa: BLE001
+        print("AVISO plens:", e)
+    try:
+        v = pd.read_csv(uno("generalitat/vq27-2ky2_*"), dtype=str)
+        v["any"] = pd.to_numeric(v["ANY_ELECCIO"], errors="coerce")
+        ua = int(v["any"].max()); anys["eleccions"] = ua
+        v = v[v["any"] == ua]
+        q = pd.read_csv(uno("generalitat/ques-gd6z_*"), dtype=str)
+        q = q[pd.to_numeric(q["ANY_ELECCIO"], errors="coerce") == ua]
+        part = {f["CODI_ENS"][:5]: _xnum(f["VOTANTS_PERCENT"]) for _, f in q.iterrows()}
+        for ine, g in v.groupby(v["CODI_ENS"].str[:5]):
+            rs = []
+            for _, f in g.iterrows():
+                vots = _xnum(f["VOTS"])
+                if not vots:
+                    continue
+                rs.append({"s": _t(f["SIGLES_CANDIDATURA"]) or "?", "b": bloc(f["SIGLES_CANDIDATURA"]), "vots": int(vots),
+                           "pct": r(_xnum(f["% VOTS"]), 1), "reg": int(_xnum(f["REGIDORS"]) or 0)})
+            rs.sort(key=lambda x: -x["vots"])
+            res.setdefault(ine, {})["eleccions"] = {"any": ua, "participacio": r(part.get(ine), 1), "resultats": rs}
+    except Exception as e:  # noqa: BLE001
+        print("AVISO eleccions:", e)
+    return res, anys
+
+
+def indicadores_politica(pol):
+    """Indicadores numéricos para el mapa a partir de los resultados municipales."""
+    out = {}
+    for ine, p in pol.items():
+        e = p.get("eleccions")
+        if not e:
+            continue
+        x = {"participacio": e["participacio"]}
+        tot = sum(z["vots"] for z in e["resultats"]) or None
+        for nom, _ in BLOCS + [("Locals", None)]:
+            vb = sum(z["vots"] for z in e["resultats"] if z["b"] == nom)
+            x["vot_" + nom.lower().replace("ç", "c")] = r(vb / tot * 100, 1) if tot else None
+        out[ine] = x
+    return out
+
+
 def r(x, n=0):
     return None if x is None or (isinstance(x, float) and math.isnan(x)) else (round(x, n) if n else int(round(x)))
 
@@ -340,6 +436,10 @@ def main():
     for ine, x in ge.items():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_ge)
+    pol, anys_pol = politica()
+    for ine, x in indicadores_politica(pol).items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_pol)
 
     municipios = []
     for _, m in t.iterrows():
@@ -365,6 +465,7 @@ def main():
             "viv_antes_1980": r(cat.loc[ine, "viv_antes_1980"]) if ine in cat.index else None,
             "edificis": r(cat.loc[ine, "edificios"]) if ine in cat.index and "edificios" in cat.columns else None,
             "x": extra_mun.get(ine, {}),
+            "pol": pol.get(ine, {}),
         })
 
     # Provincia: alquiler medio ponderado por contratos, compraventas sumadas, renta ponderada por población
@@ -402,7 +503,7 @@ def main():
 
     datos = ordena(datos)
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
-    SALIDA.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    SALIDA.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     print(f"{SALIDA}: {SALIDA.stat().st_size // 1024} KB, {len(municipios)} municipios")
     sec = secciones()
     (SALIDA.parent / "seccions.json").write_text(json.dumps(sec, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
