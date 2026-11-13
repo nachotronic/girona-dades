@@ -25,40 +25,15 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {
-    # Base territorial
-    "idescat_emex_nodes_mun": "https://api.idescat.cat/emex/v1/nodes.json?tipus=mun",
-    "idescat_emex_nodes_com": "https://api.idescat.cat/emex/v1/nodes.json?tipus=com",
-    "idescat_emex_girona": "https://api.idescat.cat/emex/v1/dades.json?id=170792",
-    "idescat_codis_mun": "https://www.idescat.cat/codis/?id=50&n=9&f=ssv",
-    # INE
-    "ine_operaciones": "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
-    "ine_tablas_adrh": "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/ADRH",
-    "ine_vut_39364": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/39364?nult=1",
-    "ine_series_30656": "https://servicios.ine.es/wstempus/js/ES/SERIES_TABLA/30656?page=1",
-    "ine_tabla_30656": "https://servicios.ine.es/wstempus/js/ES/TABLA/30656",
-    "ine_jaxi_30656": "https://www.ine.es/jaxiT3/Tabla.htm?t=30656",
-    "ine_csv_30656": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/30656.csv",
-    "ine_variables_adrh": "https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/ADRH",
-    # Catastro INSPIRE
-    "catastro_bu_atom": "https://www.catastro.hacienda.gob.es/INSPIRE/buildings/ES.SDGC.BU.atom.xml",
-    "catastro_bu_atom_17": "https://www.catastro.hacienda.gob.es/INSPIRE/buildings/17/ES.SDGC.BU.atom_17.xml",
-    "catastro_bu_atom_alt": "http://www.catastro.minhap.es/INSPIRE/buildings/ES.SDGC.bu.atom.xml",
-    # Locales
-    "girona_ckan_paquetes": "https://www.girona.cat/opendata/api/3/action/package_list",
-    "xifra_menu_ini": "https://www.ddgi.cat/xifra/menu_ini.asp",
-    "xifra_menu_mun": "https://www.ddgi.cat/xifra/menu_mun.asp",
-    "xifra_poblacion": "https://www.ddgi.cat/xifra/menu_send.asp?IdMenu=030201",
-    "xifra_ambits": "https://www.ddgi.cat/xifra/ambits.asp",
-    "xifra_novetats": "https://www.ddgi.cat/xifra/novetats.asp",
-    # Ministerio de Transportes, boletín
-    "mitma_trans_mun": "https://apps.fomento.gob.es/BoletinOnline2/sedal/34010210.XLS",
-    "mitma_valor_medio_prov": "https://apps.fomento.gob.es/BoletinOnline2/sedal/34020150.XLS",
-    "mitma_suelo_10_50k": "https://apps.fomento.gob.es/BoletinOnline2/sedal/36402500.XLS",
-    # Hacienda / AEAT
-    "hacienda_conprel": "https://serviciostelematicosext.hacienda.gob.es/SGFAL/CONPREL",
-    "aeat_irpf_municipios": "https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2023/jrubik7fe28e5d4daeab97eaf47efe29f0716914ab405e.html",
+    "ogc_colecciones": "https://www.ine.es/geoserver/ogc/features/v1/collections?f=json",
+    "wfs_secciones_caps": "https://servicios.ine.es/arcgis/services/WFS_INE_SECCIONES_G01/MapServer/WFSServer?service=WFS&request=GetCapabilities",
+    "zip_seccionado_2024": "https://www.ine.es/prodyser/cartografia/seccionado_2024.zip",
+    "zip_seccionado_2025": "https://www.ine.es/prodyser/cartografia/seccionado_2025.zip",
+    "zip_secciones_2024": "https://www.ine.es/prodyser/cartografia/secciones_2024.zip",
+    "pagina_cartografia": "https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1259952026632&p=1259952026632&pagename=ProductosYServicios%2FPYSLayout",
+    "icgc_municipis": "https://datacloud.icgc.cat/datacloud/divisions-administratives/json_unzip/divisions-administratives-v2r1-municipis-50000-20250730.json",
 }
-for t in TERMINOS_SOCRATA:
+for t in []:
     clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
     CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 30})
 
@@ -76,10 +51,11 @@ def main() -> None:
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
     for clave, url in CANDIDATAS.items():
         try:
-            r = requests.get(url, headers=UA, timeout=60)
+            r = requests.get(url, headers=UA, timeout=120, stream=True)
+            contenido = r.raw.read(LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
-            (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(r.content[:LIMITE])
-            filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {len(r.content)} | {r.url} |")
+            (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(contenido)
+            filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {r.headers.get('content-length', len(contenido))} | {r.url} |")
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
