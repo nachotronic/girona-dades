@@ -25,24 +25,14 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-CANDIDATAS["meta_3cre_fa8v"] = "https://analisi.transparenciacatalunya.cat/api/views/3cre-fa8v.json"
-CANDIDATAS["mostra_3cre_fa8v"] = "https://analisi.transparenciacatalunya.cat/resource/3cre-fa8v.json?$limit=5"
-CANDIDATAS["meta_tt92_bngg"] = "https://analisi.transparenciacatalunya.cat/api/views/tt92-bngg.json"
-CANDIDATAS["mostra_tt92_bngg"] = "https://analisi.transparenciacatalunya.cat/resource/tt92-bngg.json?$limit=5"
-CANDIDATAS["meta_tqzv_uu8e"] = "https://analisi.transparenciacatalunya.cat/api/views/tqzv-uu8e.json"
-CANDIDATAS["mostra_tqzv_uu8e"] = "https://analisi.transparenciacatalunya.cat/resource/tqzv-uu8e.json?$limit=5"
-CANDIDATAS["meta_ftq4_h9vk"] = "https://analisi.transparenciacatalunya.cat/api/views/ftq4-h9vk.json"
-CANDIDATAS["mostra_ftq4_h9vk"] = "https://analisi.transparenciacatalunya.cat/resource/ftq4-h9vk.json?$limit=5"
-CANDIDATAS["meta_7f3n_y4sh"] = "https://analisi.transparenciacatalunya.cat/api/views/7f3n-y4sh.json"
-CANDIDATAS["mostra_7f3n_y4sh"] = "https://analisi.transparenciacatalunya.cat/resource/7f3n-y4sh.json?$limit=5"
-CANDIDATAS["meta_ptdc_nwds"] = "https://analisi.transparenciacatalunya.cat/api/views/ptdc-nwds.json"
-CANDIDATAS["mostra_ptdc_nwds"] = "https://analisi.transparenciacatalunya.cat/resource/ptdc-nwds.json?$limit=5"
-CANDIDATAS["meta_f87r_vsu7"] = "https://analisi.transparenciacatalunya.cat/api/views/f87r-vsu7.json"
-CANDIDATAS["mostra_f87r_vsu7"] = "https://analisi.transparenciacatalunya.cat/resource/f87r-vsu7.json?$limit=5"
-CANDIDATAS["meta_hj2f_96x6"] = "https://analisi.transparenciacatalunya.cat/api/views/hj2f-96x6.json"
-CANDIDATAS["mostra_hj2f_96x6"] = "https://analisi.transparenciacatalunya.cat/resource/hj2f-96x6.json?$limit=5"
-CANDIDATAS["socrata_llistes_espera_catsalut"] = SOCRATA + "?" + urllib.parse.urlencode({"q": "espera CatSalut", "limit": 10})
-CANDIDATAS["catsalut_llistes_web"] = "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/"
+import urllib.parse as _u
+for _q in ("àrea bàsica policial", "municipis ABP", "regions policials", "fets penals municipis", "delictes municipi"):
+    CANDIDATAS["socrata_" + _q.replace(" ", "_")] = SOCRATA + "?" + _u.urlencode({"q": _q, "limit": 12})
+CANDIDATAS["emex_girona"] = "https://api.idescat.cat/emex/v1/dades.json?id=170792&lang=cat"
+CANDIDATAS["emex_nodes"] = "https://api.idescat.cat/emex/v1/nodes.json?lang=cat"
+CANDIDATAS["ine_tablas_adrh"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/353"
+CANDIDATAS["ine_operaciones"] = "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES"
+CANDIDATAS["icgc_abp"] = "https://analisi.transparenciacatalunya.cat/api/catalog/v1?" + _u.urlencode({"q": "ABP", "limit": 20})
 
 
 def extension(tipo: str) -> str:
