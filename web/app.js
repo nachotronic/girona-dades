@@ -3,7 +3,19 @@
 // ---------- Textos ----------
 const T = {
   ca: {
-    h_mapa: "Explora el mapa",
+    nav_mapa: "Mapa", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
+    sobre_hero: "Habitatge · Província de Girona",
+    meta_mun: "221 municipis · 536 seccions censals",
+    lead_mapa: "Tria un indicador per comparar els municipis o baixa fins a la secció censal, on la font ho permet.",
+    lead_evol: "El conjunt de la província, any a any.",
+    g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
+    x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
+    x_var5: "Pujada del lloguer", x_esforc: "Esforç del lloguer", x_compra: "Compravendes", x_hut: "Pisos turístics",
+    x_antics: "Abans de 1980", x_nous: "Des del 2000", x_estacional: "Població estacional", x_pob: "Habitants",
+    pista: "Passa per sobre d'una zona del mapa, o toca-la, per veure'n el detall.",
+    posicio: (i, n) => `${i}a de ${n}`, mediana: (v) => `mediana ${v}`,
+    r_alts: "Més alts", r_baixos: "Més baixos", obrir_fitxa: "Obre la fitxa del municipi",
+    h_mapa: "El mapa de l'habitatge i la renda",
     ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals",
     mapa_aria: "Mapa de la província de Girona",
     ajuda_mapa: "Passa per sobre d'un municipi o secció per veure'n el valor; toca'l per obrir-ne la fitxa.",
@@ -28,7 +40,7 @@ const T = {
     u_operacions: "operacions per any",
     u_euros_any: "€/any",
     h_mun: "Municipi a municipi",
-    ajuda_taula: "Toca una capçalera per ordenar i una fila per veure la fitxa del municipi.",
+    ajuda_taula: "Ordena per qualsevol columna i toca una fila per obrir la fitxa del municipi.",
     cerca: "Cerca un municipi",
     cerca_ph: "Cerca un municipi o comarca",
     comptador: (n, t) => `${n} de ${t} municipis`,
@@ -39,7 +51,7 @@ const T = {
     f_hut: "habitatges d'ús turístic",
     f_cat: "habitatges i any de construcció",
     f_xifra: "població",
-    actualitzat: "Dades generades el",
+    actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
     k_lloguer: "Lloguer mitjà",
     k_compra: "Compravendes",
@@ -63,7 +75,19 @@ const T = {
     sub: (c, p) => `${c} · ${p} habitants`,
   },
   es: {
-    h_mapa: "Explora el mapa",
+    nav_mapa: "Mapa", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
+    sobre_hero: "Vivienda · Provincia de Girona",
+    meta_mun: "221 municipios · 536 secciones censales",
+    lead_mapa: "Elige un indicador para comparar los municipios o baja hasta la sección censal, donde la fuente lo permite.",
+    lead_evol: "El conjunto de la provincia, año a año.",
+    g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
+    x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
+    x_var5: "Subida del alquiler", x_esforc: "Esfuerzo del alquiler", x_compra: "Compraventas", x_hut: "Pisos turísticos",
+    x_antics: "Antes de 1980", x_nous: "Desde 2000", x_estacional: "Población estacional", x_pob: "Habitantes",
+    pista: "Pasa por encima de una zona del mapa, o tócala, para ver el detalle.",
+    posicio: (i, n) => `${i}.º de ${n}`, mediana: (v) => `mediana ${v}`,
+    r_alts: "Más altos", r_baixos: "Más bajos", obrir_fitxa: "Abrir la ficha del municipio",
+    h_mapa: "El mapa de la vivienda y la renta",
     ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales",
     mapa_aria: "Mapa de la provincia de Girona",
     ajuda_mapa: "Pasa por encima de un municipio o sección para ver su valor; tócalo para abrir su ficha.",
@@ -88,7 +112,7 @@ const T = {
     u_operacions: "operaciones por año",
     u_euros_any: "€/año",
     h_mun: "Municipio a municipio",
-    ajuda_taula: "Toca una cabecera para ordenar y una fila para ver la ficha del municipio.",
+    ajuda_taula: "Ordena por cualquier columna y toca una fila para abrir la ficha del municipio.",
     cerca: "Busca un municipio",
     cerca_ph: "Busca un municipio o comarca",
     comptador: (n, t) => `${n} de ${t} municipios`,
@@ -99,7 +123,7 @@ const T = {
     f_hut: "viviendas de uso turístico",
     f_cat: "viviendas y año de construcción",
     f_xifra: "población",
-    actualitzat: "Datos generados el",
+    actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
     k_lloguer: "Alquiler medio",
     k_compra: "Compraventas",
@@ -206,7 +230,7 @@ function divisions(max) {
 /** Línea: series = [{nom, color, dades:{any:valor}}] */
 function grafLinia(cont, series, f = (v) => fmt(v)) {
   cont.innerHTML = "";
-  const W = Math.max(300, Math.min(720, cont.clientWidth || 560)), H = W < 440 ? 220 : 260, m = { t: 12, r: 16, b: 28, l: 52 };
+  const W = Math.max(300, Math.min(720, cont.clientWidth || 560)), H = W < 440 ? 220 : 260, m = { t: 24, r: 16, b: 28, l: 52 };
   const anys = [...new Set(series.flatMap((s) => Object.keys(s.dades)))].map(Number).sort((a, b) => a - b);
   if (!anys.length) { cont.textContent = t("sense"); return; }
   const max = niceMax(Math.max(...series.flatMap((s) => Object.values(s.dades))));
@@ -226,13 +250,17 @@ function grafLinia(cont, series, f = (v) => fmt(v)) {
   anys.forEach((a, i) => { if (i % pas === 0 || (i === anys.length - 1 && (anys.length - 1) % pas >= pas / 2)) el("text", { x: x(a), y: H - 8, "text-anchor": "middle" }, ax).textContent = a; });
   series.forEach((s) => {
     const pts = anys.filter((a) => s.dades[a] != null).map((a) => `${x(a)},${y(s.dades[a])}`);
-    el("polyline", { points: pts.join(" "), fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    el("polyline", { points: pts.join(" "), fill: "none", stroke: s.color, "stroke-width": 2.25, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
   });
   // Etiqueta directa del último valor de cada serie
   series.forEach((s) => {
     const [a, v] = ultim(s.dades); if (a == null) return;
     el("circle", { cx: x(+a), cy: y(v), r: 4, fill: s.color, stroke: "var(--fons)", "stroke-width": 2 }, svg);
   });
+  if (series.length === 1) {
+    const [a, v] = ultim(series[0].dades);
+    if (a != null) el("text", { class: "etq-final", x: x(+a) - 8, y: y(v) - 12, "text-anchor": "end", fill: series[0].color }, svg).textContent = f(v);
+  }
   // Capa de hover
   const guia = el("line", { y1: m.t, y2: H - m.b, stroke: "var(--text-3)", "stroke-dasharray": "3 3", visibility: "hidden" }, svg);
   const punts = series.map((s) => el("circle", { r: 4, fill: s.color, stroke: "var(--fons)", "stroke-width": 2, visibility: "hidden" }, svg));
@@ -354,7 +382,7 @@ function pintaTaula() {
   document.querySelector("#taula tbody").innerHTML = files.map((m) => {
     const cel = COLS.map((c) => {
       const v = c.v(m);
-      if (c.txt) return `<td class="${c.id === "nom" ? "nom" : ""}">${v}</td>`;
+      if (c.txt) return `<td class="${c.id === "nom" ? "nom" : "com"}">${v}</td>`;
       if (v == null) return `<td class="buit">–</td>`;
       const b = c.barra ? `<span class="barra" style="width:${Math.max(2, (v / maxs[c.id]) * 48)}px"></span>` : "";
       return `<td>${b}${c.f(v)}</td>`;
@@ -381,10 +409,15 @@ function obreFitxa(ine, desplaca) {
   const [aG, vG] = ultim(m.gini);
   f.hidden = false;
   f.innerHTML = `
-    <button type="button" class="tanca">${t("tanca")}</button>
-    <h2>${m.nom}</h2>
-    <p class="sub">${t("sub", m.comarca, fmt(m.poblacion))}</p>
-    <div class="accions"><button type="button" class="a-seccions">${t("veure_seccions")}</button></div>
+    <div class="fitxa-cap">
+      <div>
+        <p class="sobre">${t("municipi")}</p>
+        <h2>${m.nom}</h2>
+        <p class="sub">${t("sub", m.comarca, fmt(m.poblacion))}</p>
+        <div class="accions"><button type="button" class="a-seccions">${t("veure_seccions")}</button></div>
+      </div>
+      <button type="button" class="tanca">${t("tanca")} ✕</button>
+    </div>
     <div class="xifres">
       ${tile(`${t("k_lloguer")} 2025`, val(m.alquiler, "2025") ? `${fmt(val(m.alquiler, "2025"))} <small>€/mes</small>` : "–", variacio(m.alquiler, "2025", "2024", true))}
       ${tile(`${t("k_compra")} 2025`, fmt(val(m.compraventas, "2025")), variacio(m.compraventas, "2025", "2024"))}
@@ -394,9 +427,9 @@ function obreFitxa(ine, desplaca) {
       ${tile(t("k_antics"), m.viviendas ? pct((m.viv_antes_1980 / m.viviendas) * 100, 0) : "–", m.poblacion_etca ? t("n_estacional", fmt(m.poblacion_etca)) : t("n_antics"))}
     </div>
     <div class="dos">
-      <figure class="grafic"><figcaption>${t("g_lloguer")} <span class="unitat">€/mes</span></figcaption><div class="g-ll"></div></figure>
-      <figure class="grafic"><figcaption>${t("g_renda")} <span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
-      <figure class="grafic"><figcaption>${t("g_compra")} <span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
+      <figure class="grafic"><figcaption><span>${t("g_lloguer")}</span><span class="unitat">€/mes</span></figcaption><div class="g-ll"></div></figure>
+      <figure class="grafic"><figcaption><span>${t("g_renda")}</span><span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
+      <figure class="grafic"><figcaption><span>${t("g_compra")}</span><span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
     </div>`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
   f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* */ } });
@@ -417,7 +450,8 @@ function pintaTot() {
   aplicaIdioma();
   pintaProvincia();
   pintaTaula();
-  document.getElementById("data-gen").textContent = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
+  const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
+  document.querySelectorAll(".data-gen").forEach((e) => { e.textContent = dg; });
   if (seleccionat) obreFitxa(seleccionat, false);
   if (window.mapaIdioma) window.mapaIdioma();
 }
