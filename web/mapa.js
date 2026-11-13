@@ -3,12 +3,12 @@
    Usa las variables globales de app.js: D, t, fmt, pct, val, esforc, mostraTip, amagaTip, obreFitxa, LANG. */
 
 (function () {
-  // Escala secuencial de un solo tono (azul tinta), de claro a oscuro; en modo oscuro se invierte la luminosidad.
-  const RAMPA_CLAR = ["#e3ecf5", "#bccfe4", "#8fb0d2", "#6390bf", "#3d6fa6", "#244f85", "#13335f"];
-  const RAMPA_FOSC = ["#1c2a3d", "#213c5e", "#29517f", "#35699f", "#4c84bd", "#74a4d6", "#aacaec"];
+  // Escala secuencial de un solo tono (verde mar), de claro a oscuro; en modo oscuro se invierte la luminosidad.
+  const RAMPA_CLAR = ["#e4f2ef", "#bfe0da", "#8fc7be", "#5aa9a0", "#2f8a82", "#106b66", "#00423f"];
+  const RAMPA_FOSC = ["#12302d", "#174440", "#1d5a55", "#25726b", "#3a8f86", "#64b3a8", "#a4dbd2"];
   const fosc = () => matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light";
   const rampa = () => (fosc() ? RAMPA_FOSC : RAMPA_CLAR);
-  const sense = () => (fosc() ? "#24272c" : "#e7e3da");
+  const sense = () => (fosc() ? "#23262a" : "#e9ebed");
   const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
   const eur = (v) => `${fmt(v)} €`;
