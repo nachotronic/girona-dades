@@ -262,6 +262,23 @@ def xifra_indicadores(pob, viv):
     pon("natalitat", _xifra("03020401", [4]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2024)
     pon("mortalitat", _xifra("03020402", [4]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2024)
     pon("catala", _xifra("03020305", [3, 7]), lambda i, v: per(v[0], v[1]), 0, 2011)
+    # Trabajo (afiliados a la Seguridad Social por residencia = "Ocupats")
+    pon("ocupats", _xifra("030604", [4]), lambda i, v: per(v[0], pob.get(i)), 1)
+    pon("ocupats_dones", _xifra("030604", [3, 4]), lambda i, v: per(v[0], v[1]), 1)
+    llocs = _xifra("030601", [2, 3, 4, 5, 6])
+    for clau, k in (("sector_agri", 0), ("sector_ind", 1), ("sector_const", 2), ("sector_serveis", 3)):
+        pon(clau, llocs, lambda i, v, k=k: per(v[k], v[4]), 1)
+    pon("atur_var", _xifra("030606", [1, 2]), lambda i, v: (v[1] / v[0] - 1) * 100 if v[0] and v[0] >= 20 else None, 1, 2026)
+    pon("atur_estr", {i: [a[0], b[0]] for i, a in _xifra("030608", [2]).items() for b in [_xifra("030606", [2]).get(i, [None])]},
+        lambda i, v: per(v[0], v[1]) if v[1] and v[1] >= 20 else None, 0, 2026)
+    pon("prest_atur", _xifra("030609", [5]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2026)
+    # Pensiones y servicios
+    pon("pensions", _xifra("03030906", [7]), lambda i, v: per(v[0], pob.get(i)), 1)
+    pon("pnc", _xifra("03030904", [6]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2025)
+    pon("pnc_import", _xifra("03030904", [7]), lambda i, v: v[0], 0, 2025)
+    pon("residencies", _xifra("03030901", [5]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2025)
+    pon("farmacies", _xifra("03030703", [2]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2025)
+    pon("sanitaris", _xifra("03030704", [2, 3, 4, 5, 6]), lambda i, v: sum(x or 0 for x in v), 0, 2025)
     # Periodo medio de pago: último trimestre con dato
     pmp = _xifra("030702", list(range(2, 10)))
     pon("pmp", pmp, lambda i, v: next((x for x in v if x is not None), None), 0)
