@@ -25,15 +25,12 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-CANDIDATAS["idescat_mobilitat"] = "https://www.idescat.cat/mobilitat/?n=2&lang=ca"
-CANDIDATAS["idescat_mobilitat_univ"] = "https://www.idescat.cat/mobilitat/?n=2&t=2024&tipus=univ&geo=mun:170792&lang=ca"
-CANDIDATAS["emouniv_8817_prov"] = "https://www.idescat.cat/pub/?id=emouniv&n=8817&geo=prov:17&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8815_prov"] = "https://www.idescat.cat/pub/?id=emouniv&n=8815&geo=prov:17&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8816_cat"] = "https://www.idescat.cat/pub/?id=emouniv&n=8816&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8816_figueres"] = "https://www.idescat.cat/pub/?id=emouniv&n=8816&geo=mun:170669&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8816_mun_tot"] = "https://www.idescat.cat/pub/?id=emouniv&n=8816&geo=mun&lang=ca&f=ssv"
-CANDIDATAS["idescat_aec_univ"] = "https://www.idescat.cat/indicadors/?id=aec&n=15979&lang=ca"
-CANDIDATAS["idescat_mob_api"] = "https://api.idescat.cat/taules/v2?lang=ca&search=mobilitat"
+B = "https://api.idescat.cat/taules/v2/censph/6000/20200"
+CANDIDATAS["idc_6000_node"] = f"{B}?lang=ca"
+CANDIDATAS["idc_6000_mun"] = f"{B}/mun?lang=ca"
+CANDIDATAS["idc_6000_data_girona"] = f"{B}/mun/data?lang=ca&MUN=170792"
+CANDIDATAS["idc_6000_data"] = f"{B}/mun/data?lang=ca"
+CANDIDATAS["idc_pmh_9145"] = "https://api.idescat.cat/taules/v2/pmh/9145?lang=ca"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
