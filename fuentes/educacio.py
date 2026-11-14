@@ -107,12 +107,43 @@ def _avaluacio(sal, ident: str, nom: str) -> str:
     return f"evaluación {nom}: {len(df)} filas, áreas {sorted(df['area_territorial'].dropna().unique())[:12]}"
 
 
+EMOUNIV = "https://www.idescat.cat/pub/?id=emouniv&lang=ca&f=ssv&n={n}"
+
+
+def _ssv(url: str) -> pd.DataFrame:
+    """Tabla de Idescat en formato ssv: cabecera de notas, fila de títulos que empieza por ';' o 'Codi;'."""
+    txt = get(url, timeout=120).content.decode("utf-8-sig", errors="replace")
+    files = txt.splitlines()
+    ini = next(i for i, f in enumerate(files) if f.startswith(";") or f.startswith("Codi;"))
+    cos = []
+    for f in files[ini:]:
+        if not f.strip():
+            break
+        cos.append(f)
+    return pd.read_csv(io.StringIO("\n".join(cos)), sep=";", dtype=str)
+
+
+def _universitaris(sal) -> str:
+    """Movilidad por estudios universitarios (Idescat, emouniv): dónde estudian los residentes."""
+    mun = _ssv(EMOUNIV.format(n=8816) + "&geo=mun")
+    mun = mun[mun["Codi"].str.startswith("17")]
+    mun.to_csv(sal / "univ_municipis.csv", index=False)
+    com = _ssv(EMOUNIV.format(n=8816) + "&geo=com")
+    com.to_csv(sal / "univ_comarques.csv", index=False)
+    taules = {"prov_residents": (8815, "&geo=prov:17"), "prov_desti": (8816, "&geo=prov:17"), "prov_llocs": (8817, "&geo=prov:17"),
+              "cat_desti": (8816, ""), "cat_residents": (8815, "")}
+    for nom, (n, geo) in taules.items():
+        _ssv(EMOUNIV.format(n=n) + geo).to_csv(sal / f"univ_{nom}.csv", index=False)
+    return f"universitarios: {len(mun)} municipios, {len(com)} comarcas; columnas {list(mun.columns)}"
+
+
 def ejecutar() -> str:
     sal = carpeta("educacio")
     lineas = []
     passos = [("censo", lambda: _censo(sal)), ("matricula", lambda: _matricula(sal)), ("centres", lambda: _centres(sal)),
               ("preinscripcio", lambda: _preinscripcio(sal)),
-              ("6e", lambda: _avaluacio(sal, "rk5x-gny6", "6e")), ("4eso", lambda: _avaluacio(sal, "59vm-wwq7", "4eso"))]
+              ("6e", lambda: _avaluacio(sal, "rk5x-gny6", "6e")), ("4eso", lambda: _avaluacio(sal, "59vm-wwq7", "4eso")),
+              ("universitaris", lambda: _universitaris(sal))]
     for nom, f in passos:
         try:
             lineas.append(f())
