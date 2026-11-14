@@ -1,0 +1,803 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Mobilitat obligada municipal per raó d’estudis no universitaris",
+            "id" : "8w7y-2bfp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aprofitament estadístic a partir de la informació de municipi de residència dels alumnes i els municipis dels centres educatius als quals estan matriculats segons curs, sexe i naturalesa.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-18T08:01:20.000Z",
+            "createdAt" : "2021-04-19T10:06:51.000Z",
+            "metadata_updated_at" : "2026-09-18T08:01:20.000Z",
+            "data_updated_at" : "2026-03-10T10:07:06.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 88,
+                "page_views_last_month" : 257,
+                "page_views_total" : 5717,
+                "page_views_last_week_log" : 6.475733430966398,
+                "page_views_last_month_log" : 8.011227255423254,
+                "page_views_total_log" : 12.481294904631099
+              },
+            "columns_name" :
+              [
+                "Municipi centre",
+                "Sexe",
+                "Grup Edat",
+                "Naturalesa centre",
+                "Codi Municipi centre",
+                "Residència municipi alumne",
+                "Número matrícules estadística",
+                "Codi Residència municipi alumne",
+                "Curs",
+                "Estudis"
+              ],
+            "columns_field_name" :
+              [
+                "municipi_centre",
+                "sexe",
+                "grup_edat",
+                "naturalesa_centre",
+                "codi_municipi_centre",
+                "resid_ncia_municipi_alumne",
+                "n_mero_matr_cules_estad_stica",
+                "codi_resid_ncia_municipi",
+                "curs",
+                "estudis"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Municipi on s’ubica el centre educatiu on l’alumne està matriculat",
+                "Categoria dicotòmica Home/Dona",
+                "Grups d’edat -\tFins a 2 anys -\tDe 3 a 5 anys -\tDe 6 a 11 anys -\tDe 12 a 15 anys -\tDe 16 a 20 anys -\tMajor de 20 anys",
+                "Centre educatiu públic o privat",
+                "Codi del municipi on s’ubica el centre educatiu",
+                "Municipi de residencia de l’alumne",
+                "Nombre d’estudiants amb les mateixes característiques de desplaçament",
+                "Codi del municipi de residencia de l’alumne",
+                "Curs escolar. Des del 2016-2017",
+                "Tipologia d’estudis"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1673,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-04-19T10:14:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "educació",
+                "mobilitat",
+                "estudis no universitaris",
+                "desplaçament",
+                "municipis",
+                "públic",
+                "gènere",
+                "curs",
+                "smartcatalonia",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Non-university studies mobility municipalities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mobilidad obligada municipal por razón d’estudios no universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8w7y-2bfp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Mobilitat-obligada-municipal-per-raó-d-estudis-no-/8w7y-2bfp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Estadística de la mobilitat obligada per raó d'estudis universitaris",
+            "id" : "gspe-4f4s",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Estadística de la mobilitat obligada per raó d'estudis universitaris ofereix informació dels alumnes que es desplacen entre el lloc de residència i el lloc d'estudi, a partir de les dades de matrícula de Catalunya, que fan referència tant als estudiants que hi resideixen com als que no. Les dades es difonen segons el lloc de residència, el lloc d'estudi i el sexe.\n\nL'aprofitament dels registres administratius de la matrícula dels estudiants permet a l'Idescat elaborar aquesta estadística amb periodicitat anual des del curs 2011/2012. La desagregació territorial és per municipis, comarques, àmbits del Pla territorial, províncies i Catalunya.\n\nL'Idescat elabora aquesta estadística a partir de les dades de matrícula recollides per la Secretaria d'Universitats i Recerca del Departament d'Empresa i Coneixement.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:40.000Z",
+            "createdAt" : "2020-10-26T14:58:31.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:40.000Z",
+            "data_updated_at" : "2020-10-26T14:58:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 47,
+                "page_views_total" : 2412,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.584962500721157,
+                "page_views_total_log" : 11.23661220021575
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:33.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "mobilitat",
+                "mobilitat obligada",
+                "estudis universitaris",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on Commuting for University Studies"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de la movilidad obligada por razón de estudios universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "ENLLAÇ" : "https://idescat.cat/pub/?id=emouniv"
+                           },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "ENLLAÇ" : "https://idescat.cat/pub/?id=emouniv" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/gspe-4f4s",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Estadística-de-la-mobilitat-obligada-per-raó-d-est/gspe-4f4s",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Estadística de la mobilitat obligada per raó d'estudis no universitaris",
+            "id" : "um2m-zw96",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Estadística de la mobilitat obligada per raó d'estudis no universitaris ofereix informació dels alumnes que es desplacen entre el lloc de residència i el lloc d'estudi a partir de les dades de matrícula de Catalunya, que fan referència tant als alumnes que hi resideixen com als que no. Les dades es difonen segons el lloc de residència, el lloc d'estudi, el sexe, el tram d'edat i el nivell d'estudis.\n\nL'aprofitament dels registres administratius de la matrícula dels estudiants permet a l'Idescat elaborar aquesta estadística amb periodicitat anual, des del curs 2011/2012. La desagregació territorial és per municipis, comarques, àmbits del Pla territorial, províncies i Catalunya.\n\nL'Idescat elabora aquesta estadística a partir de les dades de matrícula recollides pel Departament d'Educació.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:42.000Z",
+            "createdAt" : "2020-10-26T14:58:30.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:42.000Z",
+            "data_updated_at" : "2020-10-26T14:58:30.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 23,
+                "page_views_last_month" : 40,
+                "page_views_total" : 2266,
+                "page_views_last_week_log" : 4.584962500721157,
+                "page_views_last_month_log" : 5.357552004618084,
+                "page_views_total_log" : 11.146568675740786
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "mobilitat",
+                "mobilitat obligada",
+                "estudis",
+                "estudis no universitaris",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on Commuting for Non-University Studies"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de la movilidad obligada por razón de estudios no universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=emoesc" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "ENLLAÇ" : "https://idescat.cat/pub/?id=emoesc" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/um2m-zw96",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Estadística-de-la-mobilitat-obligada-per-raó-d-est/um2m-zw96",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Equipaments de Catalunya",
+            "id" : "8gmd-gz7i",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.",
+            "attribution" : "Direcció General de Serveis Digitals i Experiència Ciutadana",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-14T02:37:49.000Z",
+            "createdAt" : "2017-10-11T14:30:42.000Z",
+            "metadata_updated_at" : "2026-09-21T08:52:50.000Z",
+            "data_updated_at" : "2026-11-14T02:37:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 306,
+                "page_views_last_month" : 886,
+                "page_views_total" : 29660,
+                "page_views_last_week_log" : 8.262094845370179,
+                "page_views_last_month_log" : 9.792790294301064,
+                "page_views_total_log" : 14.856279617622535
+              },
+            "columns_name" :
+              [
+                "Categoria",
+                "Georeferència",
+                "Població",
+                "Codi del municipi",
+                "Comarca",
+                "Pàgina web",
+                "Codi postal",
+                "Darrera modificació",
+                "LIMADM_MUNICIPI",
+                "Àlies",
+                "Sufix de via",
+                "Identificador",
+                "Telèfon secundari",
+                "UTM X",
+                "Longitud",
+                "LIMADM COMARCA",
+                "Telèfon principal",
+                "Número",
+                "Correu electrònic",
+                "Propietats addicionals",
+                "Fax",
+                "Latitud",
+                "UTM Y",
+                "Via",
+                "Nom",
+                "Tipus de via"
+              ],
+            "columns_field_name" :
+              [
+                "categoria",
+                "localitzacio",
+                "poblacio",
+                "codi_municipi",
+                "comarca",
+                "web",
+                "cpostal",
+                "data_modificacio",
+                ":@computed_region_bh64_c7uy",
+                "alies",
+                "sufix_via",
+                "idequipament",
+                "telefon2",
+                "utmx",
+                "longitud",
+                ":@computed_region_wvic_k925",
+                "telefon1",
+                "num",
+                "email",
+                "propietats",
+                "fax",
+                "latitud",
+                "utmy",
+                "via",
+                "nom",
+                "tipus_via"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "URL",
+                "Text",
+                "Date",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Categories / subcategories de l'equipament",
+                "Georeferència",
+                "Població",
+                "Codi del municipi",
+                "Comarca",
+                "Pàgina web",
+                "Codi postal",
+                "Data de la darrera modificació",
+                "",
+                "Àlies de l'equipament",
+                "Sufix (adreça)",
+                "Identificador intern de l’equipament a la  Base de dades d’Equipaments",
+                "Telèfon secundari",
+                "Coordenada x (UTM)",
+                "Longitud",
+                "",
+                "Telèfon principal",
+                "Número de portal (adreça)",
+                "Adreça de correu electrònic",
+                "Propietats addicionals de l'equipament",
+                "Fax",
+                "Latitud",
+                "Coordenada y (UTM)",
+                "Nom de la via (adreça)",
+                "Nom de l'eqiupament",
+                "Tipus de via (adreça)"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                { "view" : "date_time" },
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "3",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 31654,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-09-06T07:01:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Urbanisme-infraestructures",
+            "domain_tags" :
+              [
+                "aeroports",
+                "aeròdroms i heliports",
+                "agència tributària de catalunya",
+                "albergs de joventut",
+                "altres espais aptes per a l'ús cultural",
+                "altres prestacions de serveis: serveis experimentals",
+                "arxius",
+                "biblioteques",
+                "borses joves d'habitatge",
+                "centres culturals: ateneus",
+                "centres cívics i cases de cultura",
+                "centres de documentació",
+                "centres de normalització lingüística",
+                "centres de promoció cultural",
+                "centres de recerca",
+                "centres d'innovació i formació ocupacional (cifo)",
+                "centres educatius de justícia juvenil",
+                "centres penitenciaris",
+                "centres sanitaris",
+                "confraries de pescadors",
+                "consells reguladors",
+                "deixalleries",
+                "dependències d'atenció policial - mossos d'esquadra",
+                "ens locals",
+                "ensenyaments de règim especial",
+                "ensenyaments de règim general",
+                "entitats col·laboradores de l'administració (eca)",
+                "equipaments cívics",
+                "equips d'assessorament tècnic de menors",
+                "escoles de capacitació agrària",
+                "escoles de capacitació nauticopesquera",
+                "espais d'art i sales d'exposició",
+                "espais naturals",
+                "estacions d'autobusos",
+                "estructures universitàries",
+                "facultats i escoles",
+                "farmàcies",
+                "fiscalies",
+                "formació de persones adultes",
+                "grans infraestructures de suport a la recerca",
+                "hotels d'entitats",
+                "inspecció tècnica de vehicles (itv)",
+                "instal·lacions esportives",
+                "institucions hospitalàries",
+                "instituts universitaris de recerca",
+                "juntes arbitrals de consum",
+                "jutjats de pau",
+                "jutjats i tribunals",
+                "laboratoris de sanitat ramadera",
+                "museus",
+                "oficines comarcals d'agricultura",
+                "oficines comarcals d'habitatge",
+                "oficines d'acció",
+                "oficines d'atenció",
+                "oficines d'atenció a la víctima del delicte",
+                "oficines d'atenció al ciutadà (oac)",
+                "oficines d'atenció ciutadana",
+                "oficines de benestar social i família",
+                "oficines de català",
+                "oficines de gestió empresarial (oge)",
+                "oficines de la generalitat a l'exterior",
+                "oficines de treball",
+                "oficines de turisme de la xarxa",
+                "oficines del servei d'orientació jurídica",
+                "oficines d'informació a les dones",
+                "oficines municipals d'escolarització",
+                "organitzacions de persones consumidores",
+                "parcs científics i tecnològics",
+                "parcs de bombers",
+                "parcs naturals",
+                "policia de trànsit - mossos d'esquadra",
+                "policies locals",
+                "ports esportius",
+                "punt tic",
+                "punts d'atenció ciutadana",
+                "punts d'autoservei del soc",
+                "servei bàsic d'atenció social",
+                "servei d'acolliment residencial d'urgència",
+                "servei d'ajuda a domicili",
+                "servei d'assessorament tècnic d'atenció social",
+                "servei de centre obert",
+                "servei de les tecnologies de suport i cura",
+                "servei de menjador social",
+                "servei de residència temporal per a persones adultes en situació d'exclusió",
+                "servei de suport als serveis socials bàsics",
+                "servei de suport als serveis socials bàsics (distribució d'aliments)",
+                "servei de suport als serveis socials bàsics (maternoinfantil)",
+                "servei públic de consum",
+                "serveis adreçats a dones en situació de violència masclista i els seus fills",
+                "serveis adreçats a famílies amb problemàtica social i risc d'exclusió social",
+                "serveis adreçats a infància",
+                "adolescència",
+                "joventut",
+                "serveis adreçats a persones afectades pel virus vih/sida",
+                "serveis adreçats a persones amb dependència",
+                "serveis adreçats a persones amb discapacitat física",
+                "serveis adreçats a persones amb discapacitat intel·lectual",
+                "serveis adreçats a persones amb discapacitat sensorial",
+                "serveis adreçats a persones amb drogodependències i/o altres addiccions",
+                "serveis adreçats a persones amb problemàtica social derivada de malaltia mental",
+                "serveis adreçats a persones grans amb dependència o risc social",
+                "serveis comuns adreçats a persones amb discapacitat",
+                "serveis de cuidadors familiars o altres cuidadors no professionals",
+                "serveis de suport als serveis socials especialitzats",
+                "serveis d'informació juvenil",
+                "serveis d'orientació mediadora (som)",
+                "serveis inscrits reses: fora cartera 2009-2010",
+                "teatres",
+                "auditoris i espais escènics especialitzats",
+                "universitats",
+                "smartcatalonia",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Catalonia's equipments"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Equipamientos de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i",
+        "link" : "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Equipaments-de-Catalunya/8gmd-gz7i",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 24, "searchMillis" : [ 4, 7 ] },
+  "warnings" : []
+}

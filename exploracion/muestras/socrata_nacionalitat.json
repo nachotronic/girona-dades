@@ -1,0 +1,2165 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Població per nacionalitat i lloc de naixement",
+            "id" : "sjkp-jybz",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Població a 31 de desembre per nacionalitat i lloc de naixement.",
+            "attribution" : "Ajuntament de L'Hospitalet de Llobregat",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2024-01-11T08:09:22.000Z",
+            "createdAt" : "2017-06-14T10:32:19.000Z",
+            "metadata_updated_at" : "2022-01-28T10:08:06.000Z",
+            "data_updated_at" : "2024-01-11T08:09:22.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 4635,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 12.178664851006472
+              },
+            "columns_name" :
+              [
+                "PaisNaixement",
+                "Districte",
+                "Total",
+                "Homes",
+                "ComunitatAutonomaNaixement",
+                "ContinentNacionalitat",
+                "Barri",
+                "Dones",
+                "ContinentNaixement",
+                "CodiBarri",
+                "AnyPadro",
+                "Nacionalitat",
+                "CodiDistricte"
+              ],
+            "columns_field_name" :
+              [
+                "paisnaixement",
+                "districte",
+                "total",
+                "homes",
+                "comunitatautonomanaixement",
+                "continentnacionalitat",
+                "barri",
+                "dones",
+                "continentnaixement",
+                "codibarri",
+                "anypadro",
+                "nacionalitat",
+                "codidistricte"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [ "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "0",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "0",
+                  "groupSeparator" : ".",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "0",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {}
+              ],
+            "download_count" : 859,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-06-14T10:32:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "naixement",
+                "dades estadístiques",
+                "padró",
+                "nacionalitat",
+                "població"
+              ],
+            "domain_metadata" :
+              [ { "key" : "Actualització_Periodicitat", "value" : "Anual" } ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/sjkp-jybz",
+        "link" : "https://opendata.l-h.cat/Demografia/Població-per-nacionalitat-i-lloc-de-naixement/sjkp-jybz",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Població estrangera resident a Catalunya per país de nacionalitat",
+            "id" : "jzx6-bqke",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat dels països i quantitat de residents estrangers a Catalunya, per país. Les dades comencen l'any 2000.\nDades pendents d'actualització.",
+            "attribution" : "Institut d'Estadística de Catalunya (IDESCAT)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-17T10:00:42.000Z",
+            "createdAt" : "2020-02-26T08:18:49.000Z",
+            "metadata_updated_at" : "2026-07-17T10:00:42.000Z",
+            "data_updated_at" : "2022-03-23T14:02:06.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 27,
+                "page_views_last_month" : 98,
+                "page_views_total" : 3156,
+                "page_views_last_week_log" : 4.807354922057604,
+                "page_views_last_month_log" : 6.6293566200796095,
+                "page_views_total_log" : 11.624338545312984
+              },
+            "columns_name" : [
+                               "Any",
+                               "Població",
+                               "Codi País",
+                               "Nacionalitat"
+                             ],
+            "columns_field_name" :
+              [ "any", "poblaci", "codi_pa_s", "nacionalitat" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Anualitat",
+                "Quanitat de residents a Catalunya",
+                "Codi del país d'origen",
+                "Nom del país d'origen"
+              ],
+            "columns_format" : [ { "noCommas" : "true" }, {}, {}, {} ],
+            "download_count" : 1828,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-08T10:13:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "estrangers",
+                "residents",
+                "idescat",
+                "catalunya global",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Foreign population resident in Catalonia by country of nationality"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Población extranjera residente en Cataluña por país de nacionalidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/jzx6-bqke",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Població-estrangera-resident-a-Catalunya-per-país-/jzx6-bqke",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Població per nacionalitat i lloc de naixement (dades mensuals)",
+            "id" : "2rqr-s6wd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Població a final de cada mes per nacionalitat i lloc de naixement.",
+            "attribution" : "Ajuntament de L'Hospitalet",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2024-02-01T06:33:25.000Z",
+            "createdAt" : "2017-07-10T07:47:06.000Z",
+            "metadata_updated_at" : "2017-07-10T08:10:42.000Z",
+            "data_updated_at" : "2024-02-01T06:33:25.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 1098,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 10.101975670949232
+              },
+            "columns_name" :
+              [
+                "ContinentNacionalitat",
+                "CodiBarri",
+                "AnyPadro",
+                "Homes",
+                "ComunitatAutonomaNaixement",
+                "Nacionalitat",
+                "Barri",
+                "MesPadro",
+                "CodiDistricte",
+                "Dones",
+                "PaisNaixement",
+                "Districte",
+                "ContinentNaixement",
+                "Total"
+              ],
+            "columns_field_name" :
+              [
+                "continentnacionalitat",
+                "codibarri",
+                "anypadro",
+                "homes",
+                "comunitatautonomanaixement",
+                "nacionalitat",
+                "barri",
+                "mespadro",
+                "codidistricte",
+                "dones",
+                "paisnaixement",
+                "districte",
+                "continentnaixement",
+                "total"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Continent de nacionalitat",
+                "Codi del barri",
+                "Any del padró",
+                "Nombre d'homes",
+                "Comunitat autònoma de naixement",
+                "Nacionalitat",
+                "Nom del barri",
+                "Mes del padró",
+                "Codi del districte",
+                "Nombre de dones",
+                "País de naixement",
+                "Nom del districte",
+                "Continent de naixement",
+                "Total d'empadronats"
+              ],
+            "columns_format" :
+              [
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                }
+              ],
+            "download_count" : 132,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-07-10T07:51:20.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "població",
+                "dades estadístiques",
+                "nacionalitat",
+                "naixement",
+                "padró"
+              ],
+            "domain_metadata" :
+              [
+                { "key" : "Actualització_Periodicitat", "value" : "Mensual" }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/2rqr-s6wd",
+        "link" : "https://opendata.l-h.cat/Demografia/Població-per-nacionalitat-i-lloc-de-naixement-dade/2rqr-s6wd",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Alumnat en estudis oficials de les universitats catalanes",
+            "id" : "5kd9-2wex",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nou accés, matrícula i titulats en estudis de cicle, grau, màster i doctorat a les universitats catalanes. Cicles i graus es mostren de forma agrupada. Els valors inferiors a 4 estan anonimitzats amb un *. S’inclouen registres amb els totals per Curs/Tipus d’estudi/Tipus d’universitat.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-04T11:37:16.000Z",
+            "createdAt" : "2019-12-18T12:02:43.000Z",
+            "metadata_updated_at" : "2026-08-04T11:37:16.000Z",
+            "data_updated_at" : "2026-08-04T11:37:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 34,
+                "page_views_last_month" : 58,
+                "page_views_total" : 4037,
+                "page_views_last_week_log" : 5.129283016944966,
+                "page_views_last_month_log" : 5.882643049361842,
+                "page_views_total_log" : 11.979425195331475
+              },
+            "columns_name" :
+              [
+                "Sexe",
+                "Curs",
+                "Nou accés",
+                "Titulats",
+                "Tipus de centre",
+                "Tipus d'estudi",
+                "Comarca del centre",
+                "Matrícula ETC",
+                "Matrícula",
+                "Universitat",
+                "Tipus d'universitat",
+                "Nacionalitat"
+              ],
+            "columns_field_name" :
+              [
+                "sexe",
+                "curs",
+                "nou_acc_s",
+                "titulats",
+                "tipus_de_centre",
+                "tipus_d_estudi",
+                "comarca_del_centre",
+                "matr_cula_etc",
+                "matr_cula",
+                "universitat",
+                "tipus_d_universitat",
+                "nacionalitat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Descripció del gènere de l’alumne , dona, home",
+                "Curs acadèmic de les dades",
+                "Nombre d’alumnes que accedeixen a la universitat. Per al doctorat la dada està disponible a partir del curs 17-18. Per als estudis anteriors a l’EEES no està disponible",
+                "Nombre de titulats del curs. En el cas del doctorat, són les tesis llegides",
+                "Descripció del tipus de centre al que fan referència les dades, integrat o adscrit",
+                "Descripció del tipus d’estudi (grau, màster, doctorat i estudis anteriors a l’EEES, les antigues llicenciatures i diplomatures)",
+                "Descripció de la comarca en la es troba centre en el que estan matriculats els estudiants",
+                "Nombre de matrícules en equivalents a temps complet (etc). Es considera 1 etc si matricula 60 crèdits ordinaris de grau o màster en un curs acadèmic. No es disposa de la dada d’etc de doctorat",
+                "Nombre d’alumnes matriculats a la universitat",
+                "Sigles de la Universitat a la que fan referència les dades",
+                "Descripció del tipus d’universitat, pública, privada o no presencial",
+                "Descripció de la nacionalitat de l’alumne, espanyola o estrangera"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1644,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-03-10T10:13:24.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "nou accés",
+                "matrícula",
+                "titulats",
+                "grau",
+                "màster",
+                "doctorat",
+                "universitat",
+                "ods4_educació de qualitat",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students in official studies in Catalan universities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnado en estudios oficiales de las universidades catalanas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5kd9-2wex",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Alumnat-en-estudis-oficials-de-les-universitats-ca/5kd9-2wex",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Personal Docent Investigador a les universitats catalanes",
+            "id" : "qzba-yecp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre de Personal Docent Investigador a les universitats catalanes en alta a 31 de desembre en l’any de referència de les dades. Els valors inferiors a 4 estan anonimitzats amb un *. S’inclouen registres amb els totals per Curs/Tipus d’universitat.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-03T13:32:01.000Z",
+            "createdAt" : "2020-01-20T14:54:40.000Z",
+            "metadata_updated_at" : "2026-08-03T13:32:00.000Z",
+            "data_updated_at" : "2026-08-03T13:32:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 19,
+                "page_views_last_month" : 52,
+                "page_views_total" : 3114,
+                "page_views_last_week_log" : 4.321928094887363,
+                "page_views_last_month_log" : 5.7279204545632,
+                "page_views_total_log" : 11.605016447911364
+              },
+            "columns_name" :
+              [
+                "Any",
+                "Nombre de personal docent investigador permanent a 31 de desembre",
+                "Tipus de centre",
+                "Nombre de personal docent investigador en equivalent a temps complet a 31 de desembre",
+                "Nacionalitat",
+                "Sexe",
+                "Nombre de personal docent investigador  permanent en equivalent a temps complet a 31 de desembre",
+                "Nombre de personal docent investigador a 31 de desembre",
+                "Tipus d'universitat",
+                "Universitat"
+              ],
+            "columns_field_name" :
+              [
+                "any",
+                "nombre_de_personal_docent_2",
+                "tipus_de_centre",
+                "nombre_de_personal_docent_1",
+                "nacionalitat",
+                "sexe",
+                "nombre_de_personal_docent_3",
+                "nombre_de_personal_docent",
+                "tipus_d_universitat",
+                "universitat"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Any de les dades",
+                "Nombre de personal docent investigador permanent en alta a les universitats catalanes a 31 de desembre de l’any de les dades",
+                "Descripció del tipus de centre al que fan referència les dades, integrat o adscrit",
+                "Nombre de personal docent investigador calculat en equivalent a temps complet segons la dedicació del contracte, en alta a 31 de desembre de l’any de les dades",
+                "Descripció de la nacionalitat del professor, espanyola o estrangera",
+                "Descripció del gènere del professor , dona, home",
+                "Nombre de personal docent investigador  permanent calculat en equivalent a temps complet segons la dedicació del contracte, en alta a 31 de desembre de l’any de les dades",
+                "Nombre de personal docent investigador en alta a les universitats catalanes a 31 de desembre de l’any de les dades",
+                "Descripció del tipus d’universitat, pública, privada o no presencial",
+                "Sigles de la Universitat a la que fan referència les dades"
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1613,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-01-20T15:00:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "professorat",
+                "universitat",
+                "smartcatalonia",
+                "ods4_educació de qualitat",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Research Teaching Staff in Catalan universities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Personal Docente Investigador en las universidades catalanas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "Open Data Commons Attribution License"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qzba-yecp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Personal-Docent-Investigador-a-les-universitats-ca/qzba-yecp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Padró d'habitants residents a l'estranger",
+            "id" : "9wxv-jxmx",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Padró d'habitants residents a l'estranger és un registre administratiu on consten les persones de nacionalitat espanyola (tant si és la seva única nacionalitat com si no) que viuen habitualment a l'estranger i el seu últim municipi d'inscripció és a Catalunya.\n\nTerritorialment, ofereix la informació a escala municipal, comarcal, àmbits del Pla territorial, províncies i Catalunya.\n\nLes dades provenen de la informació que les oficines o seccions consulars envien a l'INE, a través del Ministeri d'Afers Exteriors i de Cooperació. L'Idescat du a terme una explotació estadística del fitxer relatiu a Catalunya amb informació per sexe, edat, lloc de naixement, lloc d'inscripció i continent o país de residència, referida a 1 de gener de cada any. També difon informació de les noves inscripcions (que són les altes produïdes durant l'any anterior al de referència).",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:24.000Z",
+            "createdAt" : "2020-10-26T14:59:17.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:24.000Z",
+            "data_updated_at" : "2020-10-26T14:59:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 35,
+                "page_views_total" : 2070,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.169925001442312,
+                "page_views_total_log" : 11.016111838220512
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:19.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "padró",
+                "estranger",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Register of Inhabitants Residing Abroad"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Padrón de habitantes residentes en el extranjero"
+                },
+                { "key" : "Àmbit-geogràfic_Àmbit-geogràfic", "value" : "Món" },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=phre" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=phre"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/9wxv-jxmx",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Padró-d-habitants-residents-a-l-estranger/9wxv-jxmx",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+            "id" : "f87r-vsu7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'estadística Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat ofereix informació sobre el nombre d'afiliats i afiliacions per municipis, comarques i Aran, àmbits del Pla territorial, províncies i Catalunya. Els afiliats es presenten segons les principals variables demogràfiques (sexe, edat i nacionalitat) i les afiliacions es difonen per aquestes variables demogràfiques i tipus de relació laboral, règim de cotització i sector d'activitat. També es difonen les afiliacions a la Seguretat Social per compte d'altri segons tipus de contracte i tipus de jornada creuades per sexe, edat, nacionalitat i sector d'activitat, així com el grau de temporalitat i parcialitat per sexe.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:36.000Z",
+            "createdAt" : "2020-10-26T14:57:28.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:36.000Z",
+            "data_updated_at" : "2020-10-26T14:57:28.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 18,
+                "page_views_last_month" : 49,
+                "page_views_total" : 2606,
+                "page_views_last_week_log" : 4.247927513443585,
+                "page_views_last_month_log" : 5.643856189774724,
+                "page_views_total_log" : 11.348174867535558
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:30.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "seguretat social",
+                "afiliacio",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Contributors and Affiliations to Social Security based on Contributors' Registered Place of Residence"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Afiliados y afiliaciones a la Seguridad Social según residencia padronal del afiliado"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=afi" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=afi" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/f87r-vsu7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Afiliats-i-afiliacions-a-la-Seguretat-Social-segon/f87r-vsu7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Noms i cognoms de la població",
+            "id" : "fdi4-wg4y",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Institut d'Estadística de Catalunya (Idescat) ofereix informació relativa als noms i cognoms de tota la població resident a Catalunya, a partir del Registre de població de Catalunya.\n\nEs pot consultar la freqüència dels diferents noms i cognoms dels homes i dones residents a Catalunya. Aquesta consulta es pot fer segons l'ordenació de freqüències dels noms i cognoms més habituals. També es pot fer una consulta específica de qualsevol nom o cognom i conèixer-ne el nivell de freqüència entre tota la població. Aquesta informació es pot obtenir per al conjunt de Catalunya, per províncies, àmbits del Pla territorial i comarques. En el cas dels noms, també segons el sexe, la dècada de naixement i la nacionalitat.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:14.000Z",
+            "createdAt" : "2020-10-26T14:59:16.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:14.000Z",
+            "data_updated_at" : "2020-10-26T14:59:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 34,
+                "page_views_last_month" : 89,
+                "page_views_total" : 6100,
+                "page_views_last_week_log" : 5.129283016944966,
+                "page_views_last_month_log" : 6.491853096329675,
+                "page_views_total_log" : 12.574830015337632
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:17.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Population's names and surnames"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Nombres y apellidos de la población"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "Enllaç" : "https://www.idescat.cat/estad/ncp" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "Enllaç" : "https://www.idescat.cat/estad/ncp"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/fdi4-wg4y",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Noms-i-cognoms-de-la-població/fdi4-wg4y",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Línia d'atenció contra la violència masclista 900 900 120",
+            "id" : "q2sg-894k",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de les trucades que es reben al telèfon 900 900 120 d’atenció contra la violència masclista.",
+            "attribution" : "Departament d'Igualtat i Feminisme",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-05T16:06:17.000Z",
+            "createdAt" : "2019-05-31T11:51:33.000Z",
+            "metadata_updated_at" : "2026-11-05T16:04:59.000Z",
+            "data_updated_at" : "2026-11-05T16:06:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 85,
+                "page_views_last_month" : 279,
+                "page_views_total" : 11655,
+                "page_views_last_week_log" : 6.426264754702098,
+                "page_views_last_month_log" : 8.129283016944965,
+                "page_views_total_log" : 13.508785162064513
+              },
+            "columns_name" :
+              [
+                "Nacionalitat",
+                "Detall àmbit 3",
+                "Àmbit de la violència 3",
+                "Motiu Trucada",
+                "Nombre fills/filles A",
+                "Detall familiar o persona propera",
+                "Edat",
+                "Ús previ servei",
+                "Detall situació laboral",
+                "Violència econòmica",
+                "Temps residència",
+                "Situació Laboral",
+                "Nombre fills/filles",
+                "Violència detectada",
+                "Violència sexual",
+                "Xarxa",
+                "Relació agressor",
+                "Xarxa_A",
+                "Derivació_C",
+                "Detall professional",
+                "Tipus assessorament",
+                "Estat Civil",
+                "Persona que truca",
+                "Durada segons",
+                "Emergència",
+                "Reclamacions/Queixes",
+                "Violència psicològica ambiental",
+                "Tipus assessorament 2",
+                "Pateixen maltractament",
+                "Relació agressor àmbit laboral",
+                "Situació fills/filles A",
+                "Sexe",
+                "Idioma Traducció",
+                "Violència psicològica",
+                "Violència física",
+                "Violència Vicària",
+                "Traducció",
+                "Violència digital",
+                "Conviu agressor",
+                "Àmbit violència masclista",
+                "Llengua",
+                "Situació fills/filles",
+                "Detall àmbit de la violència",
+                "Àmbit violència 2",
+                "Derivació",
+                "Derivació_A",
+                "Xarxa_B",
+                "Xarxa_C",
+                "Derivació_B",
+                "Detall àmbit",
+                "Motiu trucada 3",
+                "Motiu trucada 2",
+                "Situació familiar",
+                "Mes",
+                "Connexió",
+                "Violència Obstètrica",
+                "Situació legal",
+                "Violència de segon ordre",
+                "Data",
+                "Nacionalitat agressor",
+                "Tipus assessorament 3",
+                "Formació",
+                "Temps de relació",
+                "Província",
+                "Àmbit territorial",
+                "Municipi",
+                "Comarca",
+                "Dia setmana",
+                "Any",
+                "Hora"
+              ],
+            "columns_field_name" :
+              [
+                "nacionalitatagrupada",
+                "detall_mbit_3",
+                "_mbit_de_la_viol_ncia_3",
+                "motiutrucada",
+                "nombrefillsfilles_a",
+                "detallfamiliarpersonaquetruca",
+                "edat",
+                "uspreviservei",
+                "detallsituaciolaboral",
+                "v_economica",
+                "tempsresidencia",
+                "situaciolaboral",
+                "nombrefillsfilles",
+                "viol_ncia_detectada",
+                "v_sexual",
+                "xarxa",
+                "relacioagressor",
+                "xarxa_a",
+                "derivacio_c",
+                "detallprofessional",
+                "tipusassessorament",
+                "estatcivil",
+                "personaquetruca",
+                "duradasegons",
+                "emergencia",
+                "reclamacionsqueixes",
+                "viol_ncia_psicol_gica_ambiental",
+                "tipus_assessorament_2",
+                "pateixenmaltractament",
+                "relacioagressorambitlaboral",
+                "situaciofillsfilles_a",
+                "sexe",
+                "idiomatraduccio",
+                "v_psicologica",
+                "v_fisica",
+                "viol_ncia_vic_ria",
+                "traduccio",
+                "viol_ncia_digital",
+                "conviuagressor",
+                "ambitviolenciamasclista",
+                "llengua",
+                "situaciofillsfilles",
+                "detall_mbit_de_la_viol_ncia",
+                "_mbit_viol_ncia_2",
+                "derivacio",
+                "derivacio_a",
+                "xarxa_b",
+                "xarxa_c",
+                "derivacio_b",
+                "detallambit",
+                "motiu_trucada_3",
+                "motiu_trucada_2",
+                "situaciofamiliar",
+                "mes",
+                "connexi_",
+                "viol_ncia_obst_trica",
+                "situaciolegal",
+                "viol_ncia_de_segon_ordre",
+                "data",
+                "nacionalitatagressor",
+                "tipus_assessorament_3",
+                "formacio",
+                "tempsderelacio",
+                "provincia",
+                "ambitterritorial",
+                "municipi",
+                "comarca",
+                "diasetmana",
+                "any",
+                "hora"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nacionalitat de la persona que truca  o sobre qui es fa la consulta",
+                "Tercera resposta en l'àmbit en que s'ha exercit la violència",
+                "Tercera resposta de l'àmbit en que s'ha donat la violència",
+                "Motiu de la trucada",
+                "Nombre de filles/s de la persona que truca  o sobre qui es fa la consulta agrupada en categories. Fa referència a una segona situació en relació als fills",
+                "Més detalls de la persona que truca, si s’escau",
+                "Edat de la persona que truca o sobre qui es fa la consulta agrupada en categories",
+                "Ús previ del servei de la persona que truca o sobre qui es fa la consulta",
+                "Detall de la situació laboral de la persona que truca o sobre qui es fa la consulta",
+                "Detalla si es pateix violència econòmica",
+                "Anys de residència de la persona estrangera que truca o sobre qui es fa la consulta agrupada",
+                "Situació laboral de la persona que truca o de qui es fa la consulta",
+                "Nombre de fills de la persona que truca o sobre qui es fa la consulta ",
+                "Violència detectada en la trucada",
+                "Detalla si es pateix violència sexual",
+                "Detalla el recurs específic a on s’ha derivat la trucada",
+                "Relació de la persona amb l'agressor",
+                "Detalla el recurs específic a on s’ha derivat la trucada",
+                "Detalla si s’ha derivat la trucada a algun altre servei",
+                "Detall de la persona professional que truca",
+                "Tipus d'assessorament de la trucada en el cas que no es tracti de violència masclista",
+                "Detall de la persona professional que truca en relació a la xarxa de recursos públics",
+                "Persona que truca i relació amb la persona usuària",
+                "Intèrval de la durada de la trucada",
+                "Detalla si es tracta d’una emergència",
+                "Detalla si hi ha hagut reclamacions o queixes",
+                "Violència psicològica ambiental",
+                "Segona resposta del tipus d'assessorament",
+                "Situació de maltractament de les filles/s dins del nucli familiar de la persona que truca  o sobre qui es fa la consulta",
+                "Relació de la persona amb l’agressor en l’àmbit laboral",
+                "Situació en relació als fills de la persona que truca  o sobre qui es fa la consulta Fa referència a una segona situació en relació als fills",
+                "Sexe de la persona que truca o sobre qui es fa la consulta",
+                "Idioma de la traducció",
+                "Detalla si es pateix violència psicològica",
+                "Detalla si es pateix violència física",
+                "Violència vicària exercida",
+                "Detalla si ha calgut traducció per atendre la trucada",
+                "Violència digital exercida",
+                "Detalla si la persona que truca o de qui es fa la consulta conviu amb la persona agressora",
+                "Més informació sobre l’àmbit de la violència masclista",
+                "Idioma en què s’ha efectuat la trucada",
+                "Situació en relació a les filles/s de la persona que truca  o sobre qui es fa la consulta",
+                "Segona resposta de la forma de violència exercida dins d'un àmbit",
+                "Segona resposta de l'àmbit de la violència exercida",
+                "Detalla si s’ha derivat la trucada a algun altre servei",
+                "Detalla si s’ha derivat la trucada a algun altre servei",
+                "Detalla el recurs específic a on s’ha derivat la trucada",
+                "Detalla el recurs específic a on s’ha derivat la trucada",
+                "Detalla si s’ha derivat la trucada a algun altre servei",
+                "Més informació sobre l’àmbit del motiu de la trucada",
+                "Tercer motiu de la trucada",
+                "Segona resposta del motiu de la trucada",
+                "Situació familiar de la persona que truca o sobre qui es fa la consulta",
+                "Mes que s’ha realitzat la trucada",
+                "Tipus de connexió: 1-Watsapp, 2-Trucades i 3-Correus electrònics",
+                "Violència obstètrica exercida",
+                "Situació econòmica de la persona que truca o sobre qui es fa la consulta",
+                "Violència exercida de segon ordre",
+                "Data de la trucada",
+                "Nacionalitat de la persona agressora",
+                "Tercera resposta al tipus d'assessorament donat",
+                "Formació de la persona que truca o sobre qui es fa la consulta",
+                "Temps que fa que dura la relació",
+                "Província des d’on truca la persona",
+                "Àmbit territorial, vegueria d'on procedeix la trucada",
+                "Municipi d'on procedeix la trucada. <20000 habitants, protegit",
+                "Comarca d’on procedeix la trucada",
+                "Dia de la setmana que s’ha realitzat la trucada",
+                "Any que s’ha realitzat la trucada",
+                "Hora de la trucada"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "view" : "date_time" }
+              ],
+            "download_count" : 3195,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-10-16T10:35:45.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "violència masclista",
+                "900",
+                "trucades",
+                "dones",
+                "relacionat covid",
+                "ods5_igualtat de gènere",
+                "ods3_salut i benestar",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Support line against chauvinistic violence 900 900 120"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Línea de atención contra la violencia machista 900 900 120"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Igualtat i Feminisme"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/q2sg-894k",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Línia-d-atenció-contra-la-violència-masclista-900-/q2sg-894k",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Padró municipal d'habitants",
+            "id" : "ez3x-7acy",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Padró municipal d'habitants és el registre administratiu on consten els veïns d'un municipi i constitueix una prova de la seva residència. Cada ajuntament s'encarrega de la creació, la gestió i el manteniment del seu padró. Es tracta d'un registre de dades personals regulat per la Llei de bases de règim local i la Llei de protecció de dades.\n\nL'any 1996 va entrar en funcionament el sistema de gestió contínua i informatitzada dels padrons municipals, basat en la coordinació de l'INE. A partir del 1998 s'obtenen xifres de població (a 1 de gener de cada any), que són declarades oficials pel Consell de Ministres (a finals d'any).\n\nL'Idescat elabora una explotació estadística del Padró municipal d'habitants. La informació es difon pel lloc de residència de la població fins a l'àmbit municipal i està desagregada per sexe, edat, nacionalitat i lloc de naixement.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:14:01.000Z",
+            "createdAt" : "2020-10-26T14:59:18.000Z",
+            "metadata_updated_at" : "2026-09-21T08:14:01.000Z",
+            "data_updated_at" : "2020-10-26T14:59:18.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 91,
+                "page_views_total" : 4347,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 6.523561956057013,
+                "page_views_total_log" : 12.08613622502731
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:20.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "padró",
+                "padró municipal",
+                "ods17_aliances per aconseguir objectius",
+                "ods11_ciutats i comunitats sostenibles",
+                "català947"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Municipal Population Register"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Padrón municipal de habitantes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=pmh" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=pmh" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ez3x-7acy",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Padró-municipal-d-habitants/ez3x-7acy",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Interrupcions voluntàries d’embaràs (IVE) a Catalunya",
+            "id" : "5qx5-hkkr",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt conté dades provinents de l’Estadística d’interrupcions voluntàries d’embaràs (IVE) a Catalunya, amb informació sociodemogràfica i de les característiques de la intervenció de les IVE realitzades en tots els centres sanitaris públics i privats autoritzats.\n\nAquesta estadística oficial és una de les actuacions previstes en el Pla estadístic de Catalunya.\n\nLes dades s’actualitzaran anualment, amb la mateixa periodicitat que l’actuació estadística que n’és la font, i es publiquen amb un grau d’agregació suficient per preservar la confidencialitat de les dades personals a partir de les quals es generen.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T12:16:05.000Z",
+            "createdAt" : "2022-11-03T09:12:22.000Z",
+            "metadata_updated_at" : "2026-09-17T12:16:05.000Z",
+            "data_updated_at" : "2023-11-16T13:09:37.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 29,
+                "page_views_last_month" : 51,
+                "page_views_total" : 1516,
+                "page_views_last_week_log" : 4.906890595608519,
+                "page_views_last_month_log" : 5.700439718141093,
+                "page_views_total_log" : 10.567005370247033
+              },
+            "columns_name" :
+              [
+                "mètode",
+                "situació laboral",
+                "finançament públic",
+                "país de residència",
+                "fills vius",
+                "any",
+                "tipus de centre",
+                "ingressos",
+                "nombre de casos",
+                "primera nacionalitat",
+                "país de naixement",
+                "nom de la comarca de residència",
+                "codi de la comarca de residència",
+                "situació de convivència",
+                "grup d'edat",
+                "fills a càrrec"
+              ],
+            "columns_field_name" :
+              [
+                "metode",
+                "situacio_laboral",
+                "financament_public",
+                "pais_residencia",
+                "fills_vius",
+                "any",
+                "tipus_centre",
+                "ingressos",
+                "nombre_casos",
+                "primera_nacionalitat",
+                "pais_naixement",
+                "nom_comarca_residencia",
+                "codi_comarca_residencia",
+                "situacio_convivencia",
+                "grup_edat",
+                "fills_a_carrec"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Combinació de mètodes utilitzats en la intervenció. Valors possibles d’aquesta variable: 'Farmacològic', 'Quirúrgic', 'No hi consta'.",
+                "Situació laboral de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'Treballadora', 'Aturada o a la recerca de la primera feina remunerada', 'Altres', 'No hi consta'.",
+                "Finançament públic de la intervenció. Valors possibles d’aquesta variable: 'Sí', 'No', 'No hi consta'.",
+                "País de residència de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'Fora d'Espanya', 'Espanya'.",
+                "Fills vius de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'Cap fill viu', 'Amb fills vius', 'No hi consta'.",
+                "Any en què es realitza la intervenció.",
+                "Tipus de centre que realitza la intervenció. Valors possibles d’aquesta variable: 'Extrahospitalari', 'Hospitalari', 'Centre de fora de Catalunya'.",
+                "Disponibilitat d’ingressos de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'Sí', 'No'.",
+                "Nombre de casos.",
+                "Primera nacionalitat de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'No espanyola', 'Espanyola'.",
+                "País de naixement de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'Fora d'Espanya', 'Espanya'.",
+                "Nom de la comarca de residència de la dona a qui se li practica la intervenció.",
+                "Codi de la comarca de residència de la dona a qui se li practica la intervenció.",
+                "Situació de convivència de la dona a qui se li practica la intervenció. Valors possibles d’aquesta variable: 'Sola', 'En parella', 'Amb altres persones', 'No hi consta'.",
+                "Grup d’edat a què pertany la dona a qui se li practica la intervenció.",
+                "Fills a càrrec de la dona a qui se li practica la intervenció."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "0",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 657,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-11-03T11:12:19.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "avortament",
+                "embaràs",
+                "salut",
+                "ods3_salut i benestar",
+                "ods5_igualtat de gènere",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Induced abortions in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Interrupciones voluntarias de embarazo en Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5qx5-hkkr",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Interrupcions-voluntàries-d-embaràs-IVE-a-Cataluny/5qx5-hkkr",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Feminicidis a Catalunya ",
+            "id" : "w4v7-hqgd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Feminicidis perpetuats en els diferents àmbits de violència masclista reconeguts a la Llei 5/2008, del dret de les dones a erradicar la violència masclista (parella o exparella, familiar, sociocomunitari), comesos a Catalunya a partir de l’any 2012.\nLes dades sobre feminicidis poden presentar diferències respecte al número de registres dels Mossos d’Esquadra, Delegación del Gobierno contra la Violencia de Género, o altres organismes, ja que cadascun pot aplicar criteris i protocols de recollida d’informació diferents.",
+            "attribution" : "Departament d'Igualtat i Feminisme. Direcció General per a l’Erradicació de les Violències Masclistes",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:38:39.000Z",
+            "createdAt" : "2025-09-08T13:51:43.000Z",
+            "metadata_updated_at" : "2026-09-16T14:38:39.000Z",
+            "data_updated_at" : "2026-01-05T15:20:19.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 35,
+                "page_views_last_month" : 92,
+                "page_views_total" : 1170,
+                "page_views_last_week_log" : 5.169925001442312,
+                "page_views_last_month_log" : 6.539158811108032,
+                "page_views_total_log" : 10.193525360501216
+              },
+            "columns_name" :
+              [
+                "Relació de l'agressor amb la víctima",
+                "Nombre de filles/fills menors a càrrec",
+                "Feminicidi vinculat",
+                "Nacionalitat agrupada",
+                "Denúncies prèvies per VG (mateix agressor)",
+                "Mesures de protecció (mateix agressor)",
+                "Àmbit territorial",
+                "Data del fet",
+                "Violència vicària",
+                "Feminicidi",
+                "Filles/fills menors a càrrec",
+                "Àmbit del feminicidi",
+                "Edat agrupada"
+              ],
+            "columns_field_name" :
+              [
+                "relacio_agressor_victima",
+                "nombre_fills_menors",
+                "feminicidi_vinculat",
+                "nacionalitat_agrupada",
+                "denuncies_previes",
+                "mesures_proteccio",
+                "ambit_territorial",
+                "data_fet",
+                "violencia_vicaria",
+                "feminicidi",
+                "fills_menors_carrec",
+                "ambit_feminicidi",
+                "edat_agrupada"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Indica el tipus de vincle entre l’agressor i la víctima.   ",
+                "Nombre de filles i fills menors a càrrec de la dona víctima.  ",
+                "S’ha comès l’assassinat o homicidi d’una altra persona de l’entorn de la dona en situació de violència masclista. Aquest homicidi pot ser dels fills i filles conjuntament amb el feminicidi de la mare  o d'altres víctimes com: familiars, veïnat, persones de l’entorn, persones desconegudes que han estat assassinades procurant la protecció de la dona etc.  ",
+                "Nacionalitat a la qual pertany la víctima. Aquesta dada es classifica en les categories següents: espanyola i no espanyola.",
+                "Aquesta variable indica si s’ha denunciat a l’agressor per violència masclista en l’àmbit de la parella i/o ex-parella prèviament al feminicidi o feminicidi vinculat. Es classifica en les categories següents: Sí i No.  ",
+                "Aquesta variable indica si s’han adoptat mesures de protecció prèvies al feminicidi o feminicidi vinculat. Es classifica en les categories següents: Sí i No.  ",
+                "Les vuit vegueries en les que s’organitzen els circuits territorials d’abordatge de les violències masclistes. Aquesta variable es classifica en les categories següents: Alt Pirineu i Aran, Ponent, Comarques Gironines, Comarques Centrals, Metropolità, Penedès, Camp de Tarragona i Terres de l’Ebre.   ",
+                "Dia i mes en què es confirma el feminicidi de manera coordinada entre els serveis que hi intervenen. ",
+                "Fa referència als assassinats o homicidis dels fills o filles d’una dona en situació de violència masclista per castigar o destruir psíquicament a aquesta última, que resta amb vida.  ",
+                "Quan s'ha comès un assassinat o homicidi de dones per raó de gènere, es consideren subjectes dels feminicidis a les dones, de totes les edats. D’acord amb la vigent legislació, per dones ens referim a dones cisgènere i dones transgènere, de qualsevol edat.  ",
+                "Indica si la víctima té filles o fills menors a càrrec. Aquesta variable es classifica en les categories següents: Sí i No.   ",
+                "Aquesta variable indica l’àmbit en el qual s’ha produït el feminicidi. D’acord amb la Llei 17/2020, del 22 de desembre, de modificació de la Llei 5/2008, del dret de les dones a erradicar la violència masclista, els àmbits en els que es manifesten les violències masclistes i, per tant, es classifica aquesta variable, són els següents: àmbit de la parella o exparella, àmbit familiar, àmbit laboral, àmbit social o comunitari, àmbit digital, àmbit institucional, àmbit de la vida política i l'esfera pública de les dones, àmbit educatiu, altres àmbits (qualssevol altres formes anàlogues que lesionin o puguin lesionar la dignitat, la integritat o la llibertat de les dones). ",
+                "Grup d’edat al qual pertany la víctima. Aquesta dada es classifica en les categories següents: de 18 a 30 anys, de 31 a 40 anys, de 41 a 50 anys, de 51 a 60 anys, de 61 a 70 anys, de 71 a 80 anys, Més de 80 anys.  "
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time_24h" },
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 353,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-09-09T09:07:00.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "violències masclistes",
+                "feminicidis",
+                "dones",
+                "dgevm",
+                "ods3_salut i benestar",
+                "ods5_igualtat de gènere",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Femicides in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Feminicidios en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Igualtat i Feminisme"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/w4v7-hqgd",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Feminicidis-a-Catalunya-/w4v7-hqgd",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 12,
+  "timings" : { "serviceMillis" : 25, "searchMillis" : [ 3, 8 ] },
+  "warnings" : []
+}

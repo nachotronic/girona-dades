@@ -1,0 +1,1537 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/censph?lang=ca",
+  "label" : "Cens de població i habitatges",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16400?lang=ca",
+      "label" : "Indicadors d'edat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16401?lang=ca",
+      "label" : "Indicadors de nacionalitat, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16402?lang=ca",
+      "label" : "Indicadors d'any d'arribada i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16719?lang=ca",
+      "label" : "Indicadors d'estudis"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16720?lang=ca",
+      "label" : "Indicadors de relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17089?lang=ca",
+      "label" : "Indicadors d'habitatges"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17090?lang=ca",
+      "label" : "Indicadors d'habitatges per intensitat d'ús a partir del consum elèctric"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17317?lang=ca",
+      "label" : "Indicadors de llars"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/538?lang=ca",
+      "label" : "Població. Per sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/10?lang=ca",
+      "label" : "Població. Per sexe i edat any a any"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/539?lang=ca",
+      "label" : "Població. Per sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/540?lang=ca",
+      "label" : "Població. Per sexe i edat en grans grups"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/61?lang=ca",
+      "label" : "Població. Per sexe i generacions"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16340?lang=ca",
+      "label" : "Població. Per sexe i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16341?lang=ca",
+      "label" : "Població. Per sexe, edat en grans grups i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/5992?lang=ca",
+      "label" : "Població. Per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16352?lang=ca",
+      "label" : "Població. Per nacionalitat, sexe i edat any a any"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16354?lang=ca",
+      "label" : "Població. Per nacionalitat, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/5993?lang=ca",
+      "label" : "Població. Per nacionalitat, sexe i edat en grans grups"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/537?lang=ca",
+      "label" : "Població. Per nacionalitat (continents) i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/21213?lang=ca",
+      "label" : "Població estrangera. Per país de nacionalitat i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/478?lang=ca",
+      "label" : "Població. Per nacionalitat (continents)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/479?lang=ca",
+      "label" : "Població. Per nacionalitat (continents) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/536?lang=ca",
+      "label" : "Població. Per nacionalitat (continents), sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/769?lang=ca",
+      "label" : "Població. Per nacionalitat (continents) i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16356?lang=ca",
+      "label" : "Població. Per nacionalitat, sexe i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6000?lang=ca",
+      "label" : "Població estrangera. Per país de nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6005?lang=ca",
+      "label" : "Població estrangera. Per país de nacionalitat i grup d'edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22171?lang=ca",
+      "label" : "Edat mitjana. Per país de nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/293?lang=ca",
+      "label" : "Població. Per lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16358?lang=ca",
+      "label" : "Població. Per lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/535?lang=ca",
+      "label" : "Població. Per lloc de naixement, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22169?lang=ca",
+      "label" : "Població. Per lloc de naixement, sexe i edat any a any"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16359?lang=ca",
+      "label" : "Població. Per lloc de naixement i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/5990?lang=ca",
+      "label" : "Població. Per lloc de naixement (continents) i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/21211?lang=ca",
+      "label" : "Població. Per país de naixement i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6004?lang=ca",
+      "label" : "Població. Per país de naixement, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/12?lang=ca",
+      "label" : "Població. Per lloc de naixement (CA i estranger)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/122?lang=ca",
+      "label" : "Població. Per lloc de naixement (CA i estranger) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/123?lang=ca",
+      "label" : "Població. Per lloc de naixement (CA i estranger) i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20?lang=ca",
+      "label" : "Població. Per lloc de naixement (CA i estranger) i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/5988?lang=ca",
+      "label" : "Població. Per lloc de naixement (continents)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/5989?lang=ca",
+      "label" : "Població. Per lloc de naixement (continents) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6001?lang=ca",
+      "label" : "Població. Per país de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22170?lang=ca",
+      "label" : "Edat mitjana. Per país de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/112?lang=ca",
+      "label" : "Població. Per lloc de naixement i relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7747?lang=ca",
+      "label" : "Població. Per sexe i per la relació entre el lloc de naixement i el de residència"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7104?lang=ca",
+      "label" : "Població. Per nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7105?lang=ca",
+      "label" : "Població. Per nivell de formació assolit i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7106?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7108?lang=ca",
+      "label" : "Població de 16 anys o més. Per nivell de formació assolit i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16682?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7109?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, nacionalitat i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18009?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, país de nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18011?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18012?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, lloc de naixement i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18013?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, país de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22968?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, estat civil, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22972?lang=ca",
+      "label" : "Població. Per nivell de formació assolit, estat civil, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16683?lang=ca",
+      "label" : "Població. Per nivell de formació assolit i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/15?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/400?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7102?lang=ca",
+      "label" : "Població de 16 anys o més. Per nivell de formació ampliat assolit i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16685?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7103?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, nacionalitat i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18015?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18016?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, lloc de naixement i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22969?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, estat civil, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22973?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit, estat civil, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16686?lang=ca",
+      "label" : "Població. Per nivell de formació ampliat assolit i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16689?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16690?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16691?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22403?lang=ca",
+      "label" : "Població de 15 anys o més. Pel nivell més alt dels estudis en curs, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16692?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16695?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs ampliat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16696?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs ampliat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16697?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs ampliat, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16698?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs ampliat, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18017?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs ampliat, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16699?lang=ca",
+      "label" : "Població. Pel nivell més alt dels estudis en curs ampliat i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16701?lang=ca",
+      "label" : "Població. Pel nivell d'altres estudis en curs i sexe (si cursa més d'un estudi)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16702?lang=ca",
+      "label" : "Població. Per nivell d'altres estudis en curs, sexe i edat quinquennal (si cursa més d'un estudi)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16704?lang=ca",
+      "label" : "Població que cursa estudis universitaris. Per camp d'educació i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/270?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/19?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/18019?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, sexe i edat any a any"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/117?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/118?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, estat civil i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22970?lang=ca",
+      "label" : "Població. Per estat civil, nacionalitat, relació amb l'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22974?lang=ca",
+      "label" : "Població. Per estat civil, lloc de naixement, relació amb l'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16710?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16712?lang=ca",
+      "label" : "Població. Dades bàsiques per la relació amb l'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16708?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22702?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, nacionalitat , sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16709?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22705?lang=ca",
+      "label" : "Població. Per la relació amb l'activitat econòmica, lloc de naixement , sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22707?lang=ca",
+      "label" : "Població de 16 a 64 anys. Per la relació amb l'activitat econòmica, nacionalitat, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22708?lang=ca",
+      "label" : "Població de 16 anys o més. Per la relació amb l'activitat econòmica, nacionalitat, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/408?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/409?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7129?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7131?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7132?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica, nacionalitat, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22372?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22373?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica, lloc de naixement, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17961?lang=ca",
+      "label" : "Població ocupada. Per sector d'activitat econòmica, sexe i situació professional"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17964?lang=ca",
+      "label" : "Població ocupada. Per secció d'activitat econòmica de l'establiment"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17965?lang=ca",
+      "label" : "Població ocupada. Per secció d'activitat econòmica de l'establiment i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17966?lang=ca",
+      "label" : "Població ocupada. Per secció d'activitat econòmica de l'establiment, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17967?lang=ca",
+      "label" : "Població ocupada. Per secció d'activitat econòmica de l'establiment, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22374?lang=ca",
+      "label" : "Població ocupada. Per secció d'activitat econòmica de l'establiment, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17968?lang=ca",
+      "label" : "Població ocupada. Per secció d'activitat econòmica de l'establiment, sexe i situació professional"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17970?lang=ca",
+      "label" : "Població ocupada. Per divisió d'activitat econòmica de l'establiment i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17971?lang=ca",
+      "label" : "Població ocupada. Per divisió d'activitat econòmica de l'establiment, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22375?lang=ca",
+      "label" : "Població ocupada. Per divisió d'activitat econòmica de l'establiment, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17972?lang=ca",
+      "label" : "Població ocupada. Per divisió d'activitat econòmica de l'establiment, sexe i situació professional"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17974?lang=ca",
+      "label" : "Població ocupada. Per grup d'activitat econòmica de l'establiment i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17933?lang=ca",
+      "label" : "Població ocupada. Per branca d'activitat econòmica, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17934?lang=ca",
+      "label" : "Població ocupada. Per branca d'activitat econòmica, ocupació i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7146?lang=ca",
+      "label" : "Població ocupada. Per nacionalitat, branca d'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7149?lang=ca",
+      "label" : "Població ocupada. Per branca d'activitat econòmica, ocupació i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7152?lang=ca",
+      "label" : "Població ocupada. Per grans grups d'ocupació"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7153?lang=ca",
+      "label" : "Població ocupada. Per grans grups d'ocupació i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7154?lang=ca",
+      "label" : "Població ocupada. Per grans grups d'ocupació, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7160?lang=ca",
+      "label" : "Població ocupada. Per grans grups d'ocupació, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22377?lang=ca",
+      "label" : "Població ocupada. Per grans grups d'ocupació, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22380?lang=ca",
+      "label" : "Població ocupada. Per grans grups d'ocupació, nacionalitat, nivell de formació assolit i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17977?lang=ca",
+      "label" : "Població ocupada. Per subgrups principals d'ocupació i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17980?lang=ca",
+      "label" : "Població ocupada. Per subgrups d'ocupació i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/201?lang=ca",
+      "label" : "Població ocupada. Per situació professional i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/219?lang=ca",
+      "label" : "Població ocupada. Per situació professional, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7161?lang=ca",
+      "label" : "Població ocupada. Per situació professional, nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22378?lang=ca",
+      "label" : "Població ocupada. Per situació professional, lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7724?lang=ca",
+      "label" : "Població. Per any d'arribada a l'habitatge"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7725?lang=ca",
+      "label" : "Població. Per any d'arribada a l'habitatge i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7729?lang=ca",
+      "label" : "Població. Per any d'arribada a l'habitatge, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7730?lang=ca",
+      "label" : "Població. Per any d'arribada a l'habitatge, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7569?lang=ca",
+      "label" : "Població. Per any d'arribada al municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7570?lang=ca",
+      "label" : "Població. Per any d'arribada al municipi i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7572?lang=ca",
+      "label" : "Població. Per any d'arribada al municipi, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7573?lang=ca",
+      "label" : "Població. Per any d'arribada al municipi, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/14?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/216?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20607?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, sexe i nacionalitat (continents)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20608?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, país de nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7632?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/160?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7674?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20609?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, lloc de naixement (continents) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20610?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, país de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20611?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, any d'arribada a Espanya i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20612?lang=ca",
+      "label" : "Població. Per any d'arribada a Catalunya, any d'arribada a Espanya i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7718?lang=ca",
+      "label" : "Població. Per any d'arribada a Espanya"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7719?lang=ca",
+      "label" : "Població. Per any d'arribada a Espanya i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20603?lang=ca",
+      "label" : "Població. Per any d'arribada a Espanya, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7721?lang=ca",
+      "label" : "Població. Per any d'arribada a Espanya, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7722?lang=ca",
+      "label" : "Població. Per any d'arribada a Espanya, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20615?lang=ca",
+      "label" : "Població. Per lloc de residència anterior"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20616?lang=ca",
+      "label" : "Població. Per lloc de residència anterior i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20617?lang=ca",
+      "label" : "Població. Per lloc de residència anterior, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20618?lang=ca",
+      "label" : "Població. Per lloc de residència anterior, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/20619?lang=ca",
+      "label" : "Població. Per lloc de residència anterior, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7450?lang=ca",
+      "label" : "Població. Per sexe i lloc de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7451?lang=ca",
+      "label" : "Població. Per sexe, edat i lloc de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16452?lang=ca",
+      "label" : "Població. Per sexe, nacionalitat i lloc de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22824?lang=ca",
+      "label" : "Població. Per sexe, lloc de naixement i lloc de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7452?lang=ca",
+      "label" : "Població. Per grandària del municipi de residència 1 any enrere i municipi de residència actual"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7454?lang=ca",
+      "label" : "Població. Per grandària del municipi de residència actual i lloc de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7456?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer any. Població per sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7457?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer any. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7737?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer any. Població per sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7458?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer any. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7459?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer any. Població per sexe i relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7469?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer any. Població per sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7470?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer any. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7738?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer any. Població per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7471?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer any. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7473?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer any. Població per sexe i relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7494?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer any. Població d'1 any o més per sexe i comunitat autònoma de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7495?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer any. Població per sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7542?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer any. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7739?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer any. Població per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7496?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer any. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7498?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer any. Població per sexe i la relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7501?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer any. Població d'1 any o més per sexe, edat i continent de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7504?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer any. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7502?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer any. Població per nacionalitat, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7503?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer any. Població per nacionalitat, edat i continent de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7505?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer any. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7506?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer any. Població per sexe i relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7510?lang=ca",
+      "label" : "Població. Per sexe i lloc de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7512?lang=ca",
+      "label" : "Població. Per sexe, edat i lloc de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16448?lang=ca",
+      "label" : "Població. Per sexe, nacionalitat i lloc de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7514?lang=ca",
+      "label" : "Població. Per grandària del municipi de residència 10 anys enrere i del municipi de residència actual"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7511?lang=ca",
+      "label" : "Població. Per grandària del municipi de residència actual i lloc de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7516?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer decenni. Població per sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7517?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer decenni. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7734?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer decenni. Població per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7518?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer decenni. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7520?lang=ca",
+      "label" : "Migrants intramunicipals en el darrer decenni. Població per sexe i relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7522?lang=ca",
+      "label" : "Migrants intramunicipals. 2001-2011. Població ocupada de 16 anys i més per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7523?lang=ca",
+      "label" : "Migrants intramunicipals. 2001-2011. Població desocupada de 16 anys i més que ha treballat abans, per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7528?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer decenni. Població per sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7529?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer decenni. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7735?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer decenni. Població per sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7530?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer decenni. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7532?lang=ca",
+      "label" : "Migrants intermunicipals en el darrer decenni. Població per sexe i relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7534?lang=ca",
+      "label" : "Migrants intermunicipals. 2001-2011. Població ocupada de 16 anys i més per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7535?lang=ca",
+      "label" : "Migrants intermunicipals. 2001-2011. Població desocupada de 16 anys i més que ha treballat abans, per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7540?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer decenni. Població per sexe i comunitat autònoma de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7541?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer decenni. Població de 10 anys o més per sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7543?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer decenni. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7736?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer decenni. Població per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7544?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer decenni. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7546?lang=ca",
+      "label" : "Immigrants procedents de la resta d'Espanya en el darrer decenni. Població per sexe i la relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7548?lang=ca",
+      "label" : "Immigrants ocupats de 16 anys i més d'edat procedents de la resta d'Espanya 2001-2011. Per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7549?lang=ca",
+      "label" : "Immigrants desocupats que han treballat abans, de 16 anys i més d'edat procedents de la resta d'Espanya 2001-2011. Per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7554?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per sexe, edat i continent de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7557?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7555?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per sexe, edat quinquennal i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16450?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7556?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per nacionalitat, edat en grans grups i continent de residència 10 anys enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7558?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7560?lang=ca",
+      "label" : "Immigrants procedents de l'estranger en el darrer decenni. Població per sexe i la relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7562?lang=ca",
+      "label" : "Immigrants ocupats de 16 anys i més d'edat procedents de l'estranger 2001-2011. Per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7563?lang=ca",
+      "label" : "Immigrants desocupats que han treballat abans, de 16 anys i més d'edat procedents de l'estranger 2001-2011. Per sexe i professió"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/395?lang=ca",
+      "label" : "Població. Per estat civil i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17191?lang=ca",
+      "label" : "Població. Per estat civil, nacionalitat, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/768?lang=ca",
+      "label" : "Població. Per estat civil i nacionalitat (continents)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7049?lang=ca",
+      "label" : "Població. Per estat civil, nacionalitat (continents) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17189?lang=ca",
+      "label" : "Població. Per estat civil, lloc de naixement, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7038?lang=ca",
+      "label" : "Població. Per estat civil, lloc de naixement, sexe i edat en grans grups"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17190?lang=ca",
+      "label" : "Població. Per estat civil, lloc de naixement (CA i estranger) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22966?lang=ca",
+      "label" : "Població. Per estat civil, lloc de naixement (continents) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7952?lang=ca",
+      "label" : "Llars. Total"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/304?lang=ca",
+      "label" : "Llars. Per grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/8274?lang=ca",
+      "label" : "Llars. Per grandària de la llar (agregat)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7912?lang=ca",
+      "label" : "Llars. Per grandària de la llar i del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/450?lang=ca",
+      "label" : "Grandària mitjana de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7945?lang=ca",
+      "label" : "Grandària mitjana de la llar. Per tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/298?lang=ca",
+      "label" : "Llars. Per nombre i tipus de famílies (agregat)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/300?lang=ca",
+      "label" : "Llars. Per nombre i tipus de nucli"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/531?lang=ca",
+      "label" : "Llars. Per nombre i tipus de nucli (agregat)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7913?lang=ca",
+      "label" : "Llars. Per nombre i tipus de nucli i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17311?lang=ca",
+      "label" : "Llars. Per nombre i tipus de nucli i règim de tinença de l'habitatge principal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17313?lang=ca",
+      "label" : "Llars. Per composició de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17314?lang=ca",
+      "label" : "Llars. Per composició de la llar i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9117?lang=ca",
+      "label" : "Població que viu a la llar. Per tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17315?lang=ca",
+      "label" : "Població que viu a la llar. Per tipus de llar i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17316?lang=ca",
+      "label" : "Població que viu a la llar. Edat mitjana per tipus de llar i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17287?lang=ca",
+      "label" : "Llars unipersonals. Per sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17288?lang=ca",
+      "label" : "Llars unipersonals. Per sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17289?lang=ca",
+      "label" : "Llars unipersonals. Per sexe i edat en grans grups"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17290?lang=ca",
+      "label" : "Llars unipersonals. Per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17291?lang=ca",
+      "label" : "Llars unipersonals. Per nacionalitat, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17292?lang=ca",
+      "label" : "Llars unipersonals. Per estat civil i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17293?lang=ca",
+      "label" : "Llars unipersonals. Per estat civil, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17294?lang=ca",
+      "label" : "Llars unipersonals. Per nivell de formació assolit i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17295?lang=ca",
+      "label" : "Llars unipersonals. Per nivell de formació assolit, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17296?lang=ca",
+      "label" : "Llars unipersonals. Per relació amb l'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9091?lang=ca",
+      "label" : "Llars unipersonals. Per relació amb l'activitat, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9092?lang=ca",
+      "label" : "Llars unipersonals. Per professió i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9094?lang=ca",
+      "label" : "Llars unipersonals. Per sector d'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17297?lang=ca",
+      "label" : "Llars unipersonals. Per règim de tinença de l'habitatge principal, sexe i edat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17298?lang=ca",
+      "label" : "Llars. Per edat dels membres"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17299?lang=ca",
+      "label" : "Llars. Per edat dels membres i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17300?lang=ca",
+      "label" : "Llars. Per edat dels membres i tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17301?lang=ca",
+      "label" : "Llars. Per edat dels membres i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17302?lang=ca",
+      "label" : "Llars. Per edat dels membres i règim de tinença de l'habitatge principal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9101?lang=ca",
+      "label" : "Llars. Per nombre de persones de 65 anys o més i tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9102?lang=ca",
+      "label" : "Llars. Per nombre de persones de 65 anys o més i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7920?lang=ca",
+      "label" : "Llars amb almenys un membre de 65 anys o més. Per tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7921?lang=ca",
+      "label" : "Llars amb almenys un membre de 65 anys o més. Per grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7922?lang=ca",
+      "label" : "Llars amb tots els membres de 65 anys o més. Per tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7923?lang=ca",
+      "label" : "Llars amb tots els membres de 65 anys o més. Per grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/9077?lang=ca",
+      "label" : "Llars. Per nacionalitat dels membres"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17303?lang=ca",
+      "label" : "Llars. Per nacionalitat dels membres i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17304?lang=ca",
+      "label" : "Llars. Per nacionalitat dels membres i tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17305?lang=ca",
+      "label" : "Llars. Per nacionalitat dels membres i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17306?lang=ca",
+      "label" : "Llars. Per nacionalitat dels membres i règim de tinença de l'habitatge principal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7925?lang=ca",
+      "label" : "Llars amb almenys un membre estranger. Per tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7926?lang=ca",
+      "label" : "Llars amb almenys un membre estranger. Per grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7927?lang=ca",
+      "label" : "Llars amb tots els membres estrangers. Per tipus de llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7928?lang=ca",
+      "label" : "Llars amb tots els membres estrangers. Per grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17237?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6211?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe i edat any a any"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6212?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6213?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17238?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe i edat en grans grups"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6219?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6221?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe, edat quinquennal i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6227?lang=ca",
+      "label" : "Població en establiments col·lectius. Per sexe, edat quinquennal i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6215?lang=ca",
+      "label" : "Població en establiments col·lectius. Per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6240?lang=ca",
+      "label" : "Població en establiments col·lectius. Edat mitjana per nacionalitat i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6223?lang=ca",
+      "label" : "Població en establiments col·lectius. Per nacionalitat, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6230?lang=ca",
+      "label" : "Població en establiments col·lectius. Per nacionalitat, sexe i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6214?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de naixement i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17239?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de naixement (continents) i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6222?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de naixement, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6229?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de naixement, sexe i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6234?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de naixement, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6216?lang=ca",
+      "label" : "Població en establiments col·lectius. Per nivell de formació assolit i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17240?lang=ca",
+      "label" : "Població en establiments col·lectius. Per nivell de formació ampliat assolit i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6224?lang=ca",
+      "label" : "Població en establiments col·lectius. Per nivell de formació assolit, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6217?lang=ca",
+      "label" : "Població en establiments col·lectius. Per la relació amb l'activitat econòmica i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6225?lang=ca",
+      "label" : "Població en establiments col·lectius. Per la relació amb l'activitat econòmica, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6228?lang=ca",
+      "label" : "Població en establiments col·lectius.  Per la relació amb l'activitat econòmica, sexe i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17241?lang=ca",
+      "label" : "Població en establiments col·lectius. Per la relació amb l'activitat econòmica, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6235?lang=ca",
+      "label" : "Població en establiments col·lectius. Per la relació amb l'activitat econòmica, sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6218?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de residència 1 any enrere i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6226?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de residència 1 any enrere, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6231?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de residència 1 any enrere, sexe i la relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6232?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de residència 1 any enrere, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6233?lang=ca",
+      "label" : "Població en establiments col·lectius. Per lloc de residència 1 any enrere, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17242?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6236?lang=ca",
+      "label" : "Població en establiments col·lectius. Edat mitjana per tipus d'establiment"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17286?lang=ca",
+      "label" : "Població en establiments col·lectius. Edat mitjana per tipus d'establiment i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6237?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i edat quinquennal"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6347?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i estat civil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6348?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i lloc de naixement"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6349?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i nacionalitat"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6350?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i nivell de formació assolit"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6352?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i lloc de residència 1 any enrere"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6351?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment, sexe i la relació amb l'activitat econòmica"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6239?lang=ca",
+      "label" : "Població en establiments col·lectius. Per tipus d'establiment i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17092?lang=ca",
+      "label" : "Habitatges. Per intensitat d'ús"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17094?lang=ca",
+      "label" : "Habitatges. Per intensitat d'ús i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17093?lang=ca",
+      "label" : "Habitatges. Per consum elèctric"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17095?lang=ca",
+      "label" : "Mediana de consum elèctric anual"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16991?lang=ca",
+      "label" : "Habitatges familiars convencionals"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16992?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i superfície útil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16993?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i tipus d'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16994?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i nombre de plantes sobre rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16995?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i nombre de plantes sota rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16996?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i any de construcció"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16997?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i any de construcció (últim decenni)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17098?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/310?lang=ca",
+      "label" : "Habitatges principals. Per règim de tinença"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/309?lang=ca",
+      "label" : "Habitatges principals. Per any de construcció"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7007?lang=ca",
+      "label" : "Habitatges principals. Per any de construcció (últim decenni)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/358?lang=ca",
+      "label" : "Habitatges principals. Per any de construcció i règim de tinença"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17001?lang=ca",
+      "label" : "Habitatges principals. Per any de construcció i nombre de plantes sobre rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17002?lang=ca",
+      "label" : "Habitatges principals. Per any de construcció i nombre de plantes sota rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/311?lang=ca",
+      "label" : "Habitatges principals. Per superfície útil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/353?lang=ca",
+      "label" : "Habitatges principals. Per superfície útil i règim de tinença"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/352?lang=ca",
+      "label" : "Habitatges principals. Per superfície útil i any de construcció"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7009?lang=ca",
+      "label" : "Habitatges principals. Per superfície útil i any de construcció (últim decenni)"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7057?lang=ca",
+      "label" : "Habitatges principals. Per superfície útil i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17035?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17036?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici i superfície útil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17037?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici i règim de tinença"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17038?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici i any de construcció"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17039?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16998?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici i nombre de plantes sobre rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16999?lang=ca",
+      "label" : "Habitatges principals. Per tipus d'edifici i nombre de plantes sota rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17041?lang=ca",
+      "label" : "Habitatges principals. Per nombre de plantes sobre rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17042?lang=ca",
+      "label" : "Habitatges principals. Per nombre de plantes sobre rasant de l'edifici i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17043?lang=ca",
+      "label" : "Habitatges principals. Per nombre de plantes sobre rasant de l'edifici i superfície útil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17045?lang=ca",
+      "label" : "Habitatges principals. Per nombre de plantes sota rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17046?lang=ca",
+      "label" : "Habitatges principals. Per nombre de plantes sota rasant de l'edifici i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17047?lang=ca",
+      "label" : "Habitatges principals. Per nombre de plantes sota rasant de l'edifici i superfície útil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16983?lang=ca",
+      "label" : "Habitatges principals. Per superfície per ocupant"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17048?lang=ca",
+      "label" : "Habitatges principals. Per superfície per ocupant i grandària de la llar"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17049?lang=ca",
+      "label" : "Habitatges principals. Per grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7062?lang=ca",
+      "label" : "Habitatges principals. Per grandària del municipi i règim de tinença"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/7061?lang=ca",
+      "label" : "Habitatges principals. Per grandària del municipi i per superfície útil"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17050?lang=ca",
+      "label" : "Habitatges principals. Per grandària del municipi i nombre de plantes sobre rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17051?lang=ca",
+      "label" : "Habitatges principals. Per grandària del municipi i nombre de plantes sota rasant de l'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/17052?lang=ca",
+      "label" : "Habitatges principals. Per grandària del municipi i tipus d'edifici"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6354?lang=ca",
+      "label" : "Establiments col·lectius. Per tipus d'establiment"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/6355?lang=ca",
+      "label" : "Establiments col·lectius. Per grandària del municipi"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16845?lang=ca",
+      "label" : "Població i creixement intercensal mitjà anual de la població"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16846?lang=ca",
+      "label" : "Creixement intercensal mitjà anual de la població. Per components"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16847?lang=ca",
+      "label" : "Creixement intercensal mitjà anual de la població. Per components i sexe"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/16394?lang=ca",
+      "label" : "Creixement intercensal de la població. 2011-2021"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22172?lang=ca",
+      "label" : "Població. Per sexe i àrea bàsica de salut"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/22194?lang=ca",
+      "label" : "Habitatges familiars convencionals. Per tipus d'habitatge i àrea bàsica de salut"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/13776?lang=ca",
+      "label" : "Dones per edat i convivència amb els pares"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/13777?lang=ca",
+      "label" : "Dones que conviuen amb almenys un dels progenitors. Segons si tenen fills o no"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/censph/13778?lang=ca",
+      "label" : "Dones segons si tenen fills o no per nacionalitat i per la de la parella"
+    } ]
+  },
+  "version" : "2.0"
+}

@@ -1,0 +1,727 @@
+{
+  "id" : "8w7y-2bfp",
+  "name" : "Mobilitat obligada municipal per raó d’estudis no universitaris",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Educació i Formació Professional",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Educació",
+  "createdAt" : 1618826811,
+  "description" : "Aprofitament estadístic a partir de la informació de municipi de residència dels alumnes i els municipis dels centres educatius als quals estan matriculats segons curs, sexe i naturalesa.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1673,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2051146,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1618827265,
+  "publicationGroup" : 1392187,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1773137226,
+  "rowsUpdatedBy" : "7z7i-u62d",
+  "tableId" : 1392187,
+  "totalTimesRated" : 0,
+  "viewCount" : 5717,
+  "viewLastModified" : 1789718480,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1618902589,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 892007,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1618902588,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1618902589,
+      "failureCount" : 0,
+      "startedAt" : 1618902589,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 19181015,
+    "name" : "Curs",
+    "dataTypeName" : "text",
+    "description" : "Curs escolar. Des del 2016-2017",
+    "fieldName" : "curs",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741488,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "2025/2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025/2026",
+        "count" : "74075"
+      }, {
+        "item" : "2024/2025",
+        "count" : "73607"
+      }, {
+        "item" : "2023/2024",
+        "count" : "71610"
+      }, {
+        "item" : "2022/2023",
+        "count" : "70119"
+      }, {
+        "item" : "2016/2017",
+        "count" : "67113"
+      }, {
+        "item" : "2021/2022",
+        "count" : "66106"
+      }, {
+        "item" : "2020/2021",
+        "count" : "63061"
+      }, {
+        "item" : "2019/2020",
+        "count" : "62643"
+      }, {
+        "item" : "2018/2019",
+        "count" : "62037"
+      }, {
+        "item" : "2017/2018",
+        "count" : "61116"
+      } ],
+      "smallest" : "2016/2017",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181014,
+    "name" : "Sexe",
+    "dataTypeName" : "text",
+    "description" : "Categoria dicotòmica Home/Dona",
+    "fieldName" : "sexe",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741487,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "HOME",
+      "null" : "0",
+      "top" : [ {
+        "item" : "HOME",
+        "count" : "349057"
+      }, {
+        "item" : "DONA",
+        "count" : "322430"
+      } ],
+      "smallest" : "DONA",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181013,
+    "name" : "Grup Edat",
+    "dataTypeName" : "text",
+    "description" : "Grups d’edat -\tFins a 2 anys -\tDe 3 a 5 anys -\tDe 6 a 11 anys -\tDe 12 a 15 anys -\tDe 16 a 20 anys -\tMajor de 20 anys",
+    "fieldName" : "grup_edat",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741486,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "De 6 a 11 anys",
+      "null" : "0",
+      "top" : [ {
+        "item" : "De 16 a 20 anys",
+        "count" : "228155"
+      }, {
+        "item" : "De 6 a 11 anys",
+        "count" : "134887"
+      }, {
+        "item" : "De 12 a 15 anys",
+        "count" : "117646"
+      }, {
+        "item" : "20 o més anys",
+        "count" : "86598"
+      }, {
+        "item" : "De 3 a 5 anys",
+        "count" : "80786"
+      }, {
+        "item" : "2 o menys anys",
+        "count" : "23415"
+      } ],
+      "smallest" : "20 o més anys",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181012,
+    "name" : "Residència municipi alumne",
+    "dataTypeName" : "text",
+    "description" : "Municipi de residencia de l’alumne",
+    "fieldName" : "resid_ncia_municipi_alumne",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741485,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "ZUMARRAGA",
+      "null" : "0",
+      "top" : [ {
+        "item" : "BARCELONA",
+        "count" : "14041"
+      }, {
+        "item" : "SABADELL",
+        "count" : "5432"
+      }, {
+        "item" : "TERRASSA",
+        "count" : "5110"
+      }, {
+        "item" : "L'HOSPITALET DE LLOBREGAT",
+        "count" : "4877"
+      }, {
+        "item" : "BADALONA",
+        "count" : "4850"
+      }, {
+        "item" : "MATARÓ",
+        "count" : "4178"
+      }, {
+        "item" : "TARRAGONA",
+        "count" : "3963"
+      }, {
+        "item" : "GRANOLLERS",
+        "count" : "3871"
+      }, {
+        "item" : "GIRONA",
+        "count" : "3859"
+      }, {
+        "item" : "CORNELLÀ DE LLOBREGAT",
+        "count" : "3686"
+      }, {
+        "item" : "SANT CUGAT DEL VALLÈS",
+        "count" : "3649"
+      }, {
+        "item" : "SANT BOI DE LLOBREGAT",
+        "count" : "3493"
+      }, {
+        "item" : "RUBÍ",
+        "count" : "3422"
+      }, {
+        "item" : "MANRESA",
+        "count" : "3357"
+      }, {
+        "item" : "REUS",
+        "count" : "3286"
+      }, {
+        "item" : "MOLLET DEL VALLÈS",
+        "count" : "3253"
+      }, {
+        "item" : "SANTA COLOMA DE GRAMENET",
+        "count" : "3245"
+      }, {
+        "item" : "VILADECANS",
+        "count" : "3185"
+      }, {
+        "item" : "LLIÇÀ D'AMUNT",
+        "count" : "3098"
+      }, {
+        "item" : "MONTCADA I REIXAC",
+        "count" : "3091"
+      } ],
+      "smallest" : "ABADES",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181007,
+    "name" : "Codi Residència municipi alumne",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi de residencia de l’alumne",
+    "fieldName" : "codi_resid_ncia_municipi",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741480,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "99999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08019",
+        "count" : "14041"
+      }, {
+        "item" : "08187",
+        "count" : "5432"
+      }, {
+        "item" : "08279",
+        "count" : "5110"
+      }, {
+        "item" : "08101",
+        "count" : "4877"
+      }, {
+        "item" : "08015",
+        "count" : "4850"
+      }, {
+        "item" : "08121",
+        "count" : "4178"
+      }, {
+        "item" : "43148",
+        "count" : "3963"
+      }, {
+        "item" : "08096",
+        "count" : "3871"
+      }, {
+        "item" : "17079",
+        "count" : "3859"
+      }, {
+        "item" : "08073",
+        "count" : "3686"
+      }, {
+        "item" : "08205",
+        "count" : "3649"
+      }, {
+        "item" : "08200",
+        "count" : "3493"
+      }, {
+        "item" : "08184",
+        "count" : "3422"
+      }, {
+        "item" : "08113",
+        "count" : "3357"
+      }, {
+        "item" : "43123",
+        "count" : "3286"
+      }, {
+        "item" : "08124",
+        "count" : "3253"
+      }, {
+        "item" : "08245",
+        "count" : "3245"
+      }, {
+        "item" : "08301",
+        "count" : "3185"
+      }, {
+        "item" : "08107",
+        "count" : "3098"
+      }, {
+        "item" : "08125",
+        "count" : "3091"
+      } ],
+      "smallest" : "*",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181011,
+    "name" : "Municipi centre",
+    "dataTypeName" : "text",
+    "description" : "Municipi on s’ubica el centre educatiu on l’alumne està matriculat",
+    "fieldName" : "municipi_centre",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741484,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "XERTA",
+      "null" : "0",
+      "top" : [ {
+        "item" : "BARCELONA",
+        "count" : "50720"
+      }, {
+        "item" : "GIRONA",
+        "count" : "18616"
+      }, {
+        "item" : "LLEIDA",
+        "count" : "17846"
+      }, {
+        "item" : "TARRAGONA",
+        "count" : "14059"
+      }, {
+        "item" : "L'HOSPITALET DE LLOBREGAT",
+        "count" : "11539"
+      }, {
+        "item" : "SANT CUGAT DEL VALLÈS",
+        "count" : "10314"
+      }, {
+        "item" : "MANRESA",
+        "count" : "10176"
+      }, {
+        "item" : "SABADELL",
+        "count" : "9856"
+      }, {
+        "item" : "VIC",
+        "count" : "9270"
+      }, {
+        "item" : "REUS",
+        "count" : "9261"
+      }, {
+        "item" : "GRANOLLERS",
+        "count" : "8583"
+      }, {
+        "item" : "BADALONA",
+        "count" : "8109"
+      }, {
+        "item" : "MATARÓ",
+        "count" : "7831"
+      }, {
+        "item" : "TERRASSA",
+        "count" : "7282"
+      }, {
+        "item" : "FIGUERES",
+        "count" : "7179"
+      }, {
+        "item" : "IGUALADA",
+        "count" : "7076"
+      }, {
+        "item" : "CORNELLÀ DE LLOBREGAT",
+        "count" : "6880"
+      }, {
+        "item" : "OLOT",
+        "count" : "6727"
+      }, {
+        "item" : "CERDANYOLA DEL VALLÈS",
+        "count" : "6576"
+      }, {
+        "item" : "MOLLERUSSA",
+        "count" : "6504"
+      } ],
+      "smallest" : "ABRERA",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181006,
+    "name" : "Codi Municipi centre",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi on s’ubica el centre educatiu",
+    "fieldName" : "codi_municipi_centre",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741479,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "43907",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08019",
+        "count" : "50720"
+      }, {
+        "item" : "17079",
+        "count" : "18616"
+      }, {
+        "item" : "25120",
+        "count" : "17846"
+      }, {
+        "item" : "43148",
+        "count" : "14059"
+      }, {
+        "item" : "08101",
+        "count" : "11539"
+      }, {
+        "item" : "08205",
+        "count" : "10314"
+      }, {
+        "item" : "08113",
+        "count" : "10176"
+      }, {
+        "item" : "08187",
+        "count" : "9856"
+      }, {
+        "item" : "08298",
+        "count" : "9270"
+      }, {
+        "item" : "43123",
+        "count" : "9261"
+      }, {
+        "item" : "08096",
+        "count" : "8583"
+      }, {
+        "item" : "08015",
+        "count" : "8109"
+      }, {
+        "item" : "08121",
+        "count" : "7831"
+      }, {
+        "item" : "08279",
+        "count" : "7282"
+      }, {
+        "item" : "17066",
+        "count" : "7179"
+      }, {
+        "item" : "08102",
+        "count" : "7076"
+      }, {
+        "item" : "08073",
+        "count" : "6880"
+      }, {
+        "item" : "17114",
+        "count" : "6727"
+      }, {
+        "item" : "08266",
+        "count" : "6576"
+      }, {
+        "item" : "25137",
+        "count" : "6504"
+      } ],
+      "smallest" : "*",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181010,
+    "name" : "Estudis",
+    "dataTypeName" : "text",
+    "description" : "Tipologia d’estudis",
+    "fieldName" : "estudis",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741483,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "PROGRAMA DE FORMACIÓ I INSERCIÓ",
+      "null" : "0",
+      "top" : [ {
+        "item" : "FORMACIÓ PROFESSIONAL",
+        "count" : "186741"
+      }, {
+        "item" : "EDUCACIÓ PRIMÀRIA",
+        "count" : "136928"
+      }, {
+        "item" : "EDUCACIÓ SECUNDÀRIA OBLIGATÒRIA",
+        "count" : "117669"
+      }, {
+        "item" : "EDUCACIÓ INFANTIL",
+        "count" : "105629"
+      }, {
+        "item" : "BATXILLERAT",
+        "count" : "68027"
+      }, {
+        "item" : "EDUCACIÓ ESPECIAL",
+        "count" : "22454"
+      }, {
+        "item" : "ARTS PLÀSTIQUES I DISSENY",
+        "count" : "19906"
+      }, {
+        "item" : "PROGRAMA DE FORMACIÓ I INSERCIÓ",
+        "count" : "6236"
+      }, {
+        "item" : "ITINERARIS FORMATIUS ESPECÍFICS",
+        "count" : "4239"
+      }, {
+        "item" : "ENSENYAMENTS ESPORTIUS",
+        "count" : "2227"
+      }, {
+        "item" : "ARTS ESCÈNIQUES",
+        "count" : "855"
+      }, {
+        "item" : "CIRC",
+        "count" : "576"
+      } ],
+      "smallest" : "ARTS ESCÈNIQUES",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181009,
+    "name" : "Naturalesa centre",
+    "dataTypeName" : "text",
+    "description" : "Centre educatiu públic o privat",
+    "fieldName" : "naturalesa_centre",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12741482,
+    "width" : 229,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "PÚBLIC",
+      "null" : "0",
+      "top" : [ {
+        "item" : "PÚBLIC",
+        "count" : "438483"
+      }, {
+        "item" : "PRIVAT",
+        "count" : "232549"
+      }, {
+        "item" : "DESCONEGUT",
+        "count" : "455"
+      } ],
+      "smallest" : "DESCONEGUT",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : { }
+  }, {
+    "id" : 19181008,
+    "name" : "Número matrícules estadística",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’estudiants amb les mateixes característiques de desplaçament",
+    "fieldName" : "n_mero_matr_cules_estad_stica",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 12741481,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "671487",
+      "largest" : "20718",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "327424"
+      }, {
+        "item" : "2",
+        "count" : "98077"
+      }, {
+        "item" : "3",
+        "count" : "48236"
+      }, {
+        "item" : "4",
+        "count" : "30353"
+      }, {
+        "item" : "5",
+        "count" : "20625"
+      }, {
+        "item" : "6",
+        "count" : "15279"
+      }, {
+        "item" : "7",
+        "count" : "12046"
+      }, {
+        "item" : "8",
+        "count" : "9532"
+      }, {
+        "item" : "9",
+        "count" : "7979"
+      }, {
+        "item" : "10",
+        "count" : "6666"
+      }, {
+        "item" : "11",
+        "count" : "5523"
+      }, {
+        "item" : "12",
+        "count" : "4853"
+      }, {
+        "item" : "13",
+        "count" : "4238"
+      }, {
+        "item" : "14",
+        "count" : "3675"
+      }, {
+        "item" : "15",
+        "count" : "3379"
+      }, {
+        "item" : "16",
+        "count" : "3070"
+      }, {
+        "item" : "17",
+        "count" : "2781"
+      }, {
+        "item" : "18",
+        "count" : "2592"
+      }, {
+        "item" : "19",
+        "count" : "2313"
+      }, {
+        "item" : "20",
+        "count" : "2219"
+      } ],
+      "smallest" : "1",
+      "count" : "671487",
+      "cardinality" : "671487"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "curs",
+        "ascending" : false
+      } ]
+    },
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Non-university studies mobility municipalities",
+        "Nombre del conjunto de datos (ES)" : "Mobilidad obligada municipal por razón d’estudios no universitarios"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Educació i Formació Professional",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 19181015,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "educació", "mobilitat", "estudis no universitaris", "desplaçament", "municipis", "públic", "gènere", "curs", "smartcatalonia", "ods4_educació de qualitat" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
