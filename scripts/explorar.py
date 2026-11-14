@@ -25,21 +25,18 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-for t in ["estudiants universitaris procedència", "preinscripció universitària", "matrícula universitat municipi residència",
-          "accés universitat assignacions", "PAU proves accés universitat", "inserció laboral graduats", "estudiants universitaris comarca",
-          "titulats universitaris", "universitat de girona estudiants", "mobilitat estudiants universitaris", "nou accés universitat"]:
-    clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
-    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
-for t in ["població estrangera nacionalitat municipi", "població per nacionalitat", "estrangers per país", "alumnat estranger",
-          "alumnes nacionalitat estrangera", "alumnes nouvinguts", "aules d'acollida", "padró nacionalitat"]:
-    clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
-    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
-CANDIDATAS["ine_ops_DPOP"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/22"
-CANDIDATAS["ine_ops_EEU"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/EEU"
-CANDIDATAS["idescat_universitaris"] = "https://www.idescat.cat/indicadors/?id=aec&n=15729&lang=es"
-for _op in ("IPC", "EPA", "H", "ETDP", "EOH", "EOAC", "ECP", "MNP", "IPV", "EH", "ECV", "SM", "PCAP"):
+S = "https://analisi.transparenciacatalunya.cat"
+for _id in ("gspe-4f4s", "8w7y-2bfp", "5kd9-2wex", "um2m-zw96", "jzx6-bqke"):
+    CANDIDATAS["meta_" + _id] = f"{S}/api/views/{_id}.json"
+    CANDIDATAS["mostra_" + _id] = f"{S}/resource/{_id}.json?$limit=20"
+CANDIDATAS["mostra_8w7y_gi"] = S + "/resource/8w7y-2bfp.json?$limit=20&$where=starts_with(codi_resid_ncia_municipi,'17')"
+for t in ["mobilitat obligada estudis", "alumnat estranger", "estrangers", "nacionalitat", "universitaris residència"]:
+    CANDIDATAS["socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 25})
+CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
+CANDIDATAS["idescat_pmh"] = "https://api.idescat.cat/taules/v2/pmh?lang=ca"
+CANDIDATAS["idescat_censph"] = "https://api.idescat.cat/taules/v2/censph?lang=ca"
+for _op in ("188", "EPC", "PC", "EM", "CPV2021"):
     CANDIDATAS["ine_ops_" + _op] = f"https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/{_op}"
-
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
