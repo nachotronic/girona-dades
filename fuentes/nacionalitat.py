@@ -78,7 +78,9 @@ def _idescat(sal, mun: pd.DataFrame) -> str:
     for taula, nom, extra in (("6000", "paisos", "&SEX=TOTAL"), ("16352", "edat_nac", "&SEX=TOTAL")):
         node = get(f"{IDC}/{taula}?lang=ca").json()["link"]["item"][0]["href"].split("?")[0]
         parts, etiquetes = [], {}
-        for codi in mun["codi6"]:
+        # Idescat solo publica este detalle para los municipios grandes: se piden los que lista el nodo
+        disp = set(get(f"{node}/mun?lang=ca").json()["dimension"]["MUN"]["category"]["index"])
+        for codi in [c for c in mun["codi6"] if c in disp]:
             try:
                 d = get(f"{node}/mun/data?lang=ca&MUN={codi}{extra}", pausa=0.15).json()
             except Exception:  # noqa: BLE001
@@ -92,6 +94,17 @@ def _idescat(sal, mun: pd.DataFrame) -> str:
                                  for k, v in de["dimension"].items()}
                 except Exception:  # noqa: BLE001
                     pass
+        try:
+            pv = _jsonstat(get(f"{node}/prov/data?lang=ca{extra}").json())
+            pv = pv.rename(columns={"PROV": "MUN"})
+            pv["MUN"] = "P" + pv["MUN"].astype(str)
+            parts.append(pv)
+            ct = _jsonstat(get(f"{node}/cat/data?lang=ca{extra}").json())
+            ct = ct.rename(columns={"CAT": "MUN"})
+            ct["MUN"] = "CAT"
+            parts.append(ct)
+        except Exception as e:  # noqa: BLE001
+            lineas.append(f"idescat {taula} prov/cat: ERROR {type(e).__name__}: {str(e)[:200]}")
         df = pd.concat(parts)
         df.to_csv(sal / f"idescat_{nom}.csv.gz", index=False)
         (sal / f"idescat_{nom}_etiquetes.json").write_text(json.dumps(etiquetes, ensure_ascii=False), encoding="utf-8")
