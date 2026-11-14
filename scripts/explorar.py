@@ -25,17 +25,15 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-E = "https://www.idescat.cat/pub/?id=emouniv"
-for n in ("8815", "8816", "8817", "10768"):
-    CANDIDATAS[f"emouniv_{n}"] = f"{E}&n={n}&lang=ca"
-    CANDIDATAS[f"emouniv_{n}_mun"] = f"{E}&n={n}&geo=mun:170792&lang=ca"
-    CANDIDATAS[f"emouniv_{n}_ssv"] = f"{E}&n={n}&geo=mun:170792&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8816_com"] = f"{E}&n=8816&geo=com:20&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8816_prov"] = f"{E}&n=8816&geo=prov:17&lang=ca&f=ssv"
-CANDIDATAS["emouniv_8816_csv"] = f"{E}&n=8816&geo=mun:170792&lang=ca&f=csv"
-CANDIDATAS["emoesc_main"] = "https://www.idescat.cat/pub/?id=emoesc&lang=ca"
-CANDIDATAS["ine_series_33790"] = "https://servicios.ine.es/wstempus/js/ES/SERIES_TABLA/33790?page=1"
-CANDIDATAS["ine_datos_33790_am"] = "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/33790?nult=1&tip=AM"
+CANDIDATAS["idescat_mobilitat"] = "https://www.idescat.cat/mobilitat/?n=2&lang=ca"
+CANDIDATAS["idescat_mobilitat_univ"] = "https://www.idescat.cat/mobilitat/?n=2&t=2024&tipus=univ&geo=mun:170792&lang=ca"
+CANDIDATAS["emouniv_8817_prov"] = "https://www.idescat.cat/pub/?id=emouniv&n=8817&geo=prov:17&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8815_prov"] = "https://www.idescat.cat/pub/?id=emouniv&n=8815&geo=prov:17&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8816_cat"] = "https://www.idescat.cat/pub/?id=emouniv&n=8816&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8816_figueres"] = "https://www.idescat.cat/pub/?id=emouniv&n=8816&geo=mun:170669&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8816_mun_tot"] = "https://www.idescat.cat/pub/?id=emouniv&n=8816&geo=mun&lang=ca&f=ssv"
+CANDIDATAS["idescat_aec_univ"] = "https://www.idescat.cat/indicadors/?id=aec&n=15979&lang=ca"
+CANDIDATAS["idescat_mob_api"] = "https://api.idescat.cat/taules/v2?lang=ca&search=mobilitat"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
