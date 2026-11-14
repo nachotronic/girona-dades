@@ -601,3 +601,4 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .ranquing li { font-size: 12.5px; }
   .mapa-panell .ind-desc:empty { display: none; }
 }
+.pg-bg-cat { background: var(--tinta); }

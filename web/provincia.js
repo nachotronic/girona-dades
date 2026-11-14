@@ -28,6 +28,15 @@
       h_hipoteca_mitjana: (g, e, a) => `La hipoteca mitjana a Girona és de <b>${g} €</b> (${a}), davant dels ${e} € d'Espanya.`,
       h_causes: (n, a, c, v) => `<b>${n}</b> defuncions el ${a}. La primera causa: <b>${c.toLowerCase()}</b> (${v}).`,
       h_destins: (v, a, l) => `La Costa Brava va sumar <b>${v} milions</b> de nits d'hotel el ${a}; només Lloret de Mar, ${l} milions.`,
+      comp_4eso: ["Competències bàsiques a 4t d'ESO", "Puntuació mitjana de català, castellà, anglès i matemàtiques (0-100)"],
+      comp_4eso_mat: ["4t d'ESO per matèries", "Puntuació mitjana a les proves de competències bàsiques (0-100)"],
+      comp_6e: ["Competències bàsiques a 6è de primària", "Puntuació mitjana de català, castellà, anglès i matemàtiques (0-100)"],
+      edu_publica_prov: ["Escola pública", "Alumnes d'infantil a batxillerat en centres públics (%)"],
+      h_comp: (g, c, a, n) => `Els alumnes de ${n} de Girona van treure <b>${g} punts</b> de mitjana el ${a}, davant dels ${c} de Catalunya.`,
+      h_comp_mat: (m, v, a) => `El ${a}, la millor matèria a Girona va ser <b>${m.toLowerCase()}</b> (${v} punts).`,
+      h_publica: (g, c, cu, n) => `El <b>${g}</b> dels ${n} alumnes de la província van a un centre públic (curs ${cu}). A Catalunya, el ${c}.`,
+      n4eso: "4t d'ESO", n6e: "6è",
+      font_edu: "Font: Departament d'Educació",
       font_causes: "Font: INE, Estadística de defuncions segons la causa de mort",
       font: "Font: INE",
     },
@@ -58,6 +67,15 @@
       h_hipoteca_mitjana: (g, e, a) => `La hipoteca media en Girona es de <b>${g} €</b> (${a}), frente a los ${e} € de España.`,
       h_causes: (n, a, c, v) => `<b>${n}</b> defunciones en ${a}. La primera causa: <b>${c.toLowerCase()}</b> (${v}).`,
       h_destins: (v, a, l) => `La Costa Brava sumó <b>${v} millones</b> de noches de hotel en ${a}; solo Lloret de Mar, ${l} millones.`,
+      comp_4eso: ["Competencias básicas en 4.º de ESO", "Puntuación media de catalán, castellano, inglés y matemáticas (0-100)"],
+      comp_4eso_mat: ["4.º de ESO por materias", "Puntuación media en las pruebas de competencias básicas (0-100)"],
+      comp_6e: ["Competencias básicas en 6.º de primaria", "Puntuación media de catalán, castellano, inglés y matemáticas (0-100)"],
+      edu_publica_prov: ["Escuela pública", "Alumnos de infantil a bachillerato en centros públicos (%)"],
+      h_comp: (g, c, a, n) => `Los alumnos de ${n} de Girona sacaron <b>${g} puntos</b> de media en ${a}, frente a los ${c} de Cataluña.`,
+      h_comp_mat: (m, v, a) => `En ${a}, la mejor materia en Girona fue <b>${m.toLowerCase()}</b> (${v} puntos).`,
+      h_publica: (g, c, cu, n) => `El <b>${g}</b> de los ${n} alumnos de la provincia va a un centro público (curso ${cu}). En Cataluña, el ${c}.`,
+      n4eso: "4.º de ESO", n6e: "6.º",
+      font_edu: "Fuente: Departament d'Educació",
       font_causes: "Fuente: INE, Estadística de defunciones según la causa de muerte",
       font: "Fuente: INE",
     },
@@ -85,8 +103,9 @@
     XIV: ["Sistema genitourinari", "Sistema genitourinario"], XVIII: ["Causes mal definides", "Causas mal definidas"],
     XX: ["Causes externes (accidents, suïcidis)", "Causas externas (accidentes, suicidios)"],
   };
+  const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : "");
   const etiqueta = (e) => {
@@ -146,9 +165,11 @@
 
   function barres(cont, sp) {
     const gs = sp.grups; if (!gs || !gs.length) { cont.innerHTML = ""; return; }
-    const mx = Math.max(...gs.flatMap((g) => [Math.abs(g.gi), Math.abs(g.esp)])) || 1;
-    const b = (v, k) => `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${pct(v, 1)}</em></span>`;
-    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}</span><span class="pb-barres">${b(g.gi, "gi")}${b(g.esp, "esp")}</span></div>`).join("")}</div>`;
+    const ks = sp.claus || ["gi", "esp"];
+    const mx = Math.max(...gs.flatMap((g) => ks.map((k) => Math.abs(g[k])))) || 1;
+    const fv = (v) => (sp.u === "%" ? pct(v, 1) : fmt(v, sp.dec));
+    const b = (v, k) => `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
+    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
@@ -164,6 +185,9 @@
     if (id === "hipoteca_mitjana") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteca_mitjana", fmt(g[2]), fmt(e && e[2]), g[1]) : ""; }
     if (id === "causes") { const g = sp.grups[0]; return g ? tp("h_causes", fmt(sp.total), sp.any, nomGrup(g.g, g.c), pct(g.gi, 1)) : ""; }
     if (id === "destins") { const g = ult(sp, "gi"), l = ult(sp, "cat"); return g ? tp("h_destins", fmt(g[2], 1), g[1], fmt(l && l[2], 1)) : ""; }
+    if (id === "comp_4eso" || id === "comp_6e") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_comp", fmt(g[2], 1), fmt(c && c[2], 1), g[1], tp(id === "comp_4eso" ? "n4eso" : "n6e")) : ""; }
+    if (id === "comp_4eso_mat") { const g = [...sp.grups].sort((a, b) => b.gi - a.gi)[0]; return g ? tp("h_comp_mat", nomGrup(g.g, g.c), fmt(g.gi, 1), sp.any) : ""; }
+    if (id === "edu_publica_prov") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_publica", pct(g[2], 0), pct(c && c[2], 0), g[1], fmt(sp.abs && sp.abs.n)) : ""; }
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
     return "";
   }
@@ -172,16 +196,16 @@
     const cont = document.getElementById("prov-grafics");
     if (!cont || !D.prov) return;
     const P = D.prov;
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes"].filter((k) => P[k]);
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "edu_publica_prov", "comp_4eso", "comp_4eso_mat", "comp_6e"].filter((k) => P[k]);
     cont.innerHTML = ids.map((id) => {
       const sp = P[id];
-      const claus = sp.tipus === "barres" ? ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
+      const claus = sp.tipus === "barres" ? sp.claus || ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
       return `<figure class="pg-fig" data-id="${id}">
         <figcaption><span class="pg-tit">${tp(id)[0]}</span><span class="unitat">${tp(id)[1]}</span></figcaption>
         <p class="pg-h">${titular(id, sp, P)}</p>
         <p class="pg-lleg">${claus.map((k) => `<span><i class="pg-dot pg-${k}"></i>${nomSerie(sp, k)}</span>`).join("")}</p>
         <div class="pg-c"></div>
-        <p class="pg-font">${tp(id === "causes" ? "font_causes" : "font")}</p></figure>`;
+        <p class="pg-font">${tp(id === "causes" ? "font_causes" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font")}</p></figure>`;
     }).join("");
     cont.querySelectorAll(".pg-fig").forEach((f) => {
       const sp = P[f.dataset.id], c = f.querySelector(".pg-c");

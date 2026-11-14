@@ -785,6 +785,166 @@ def emex_indicadores():
     return res, refs, anys
 
 
+
+# ---------------------------------------------------------------------------
+# Educació: Departament d'Educació (matrícula, centros, preinscripción) y Censo 2021 (INE)
+
+def _curs_ini(c):
+    m = re.match(r"(\d{4})", str(c))
+    return int(m.group(1)) if m else None
+
+
+def educacio_indicadores(pob):
+    """Devuelve (por municipio, por sección, refs, años)."""
+    d = P / "educacio"
+    res, sec, refs, anys = {}, {}, {}, {}
+    if not d.exists():
+        return res, sec, refs, anys
+    put = lambda ine, k, v, dec=1: res.setdefault(ine, {}).__setitem__(k, round(float(v), dec)) if v == v and v is not None and math.isfinite(float(v)) else None  # noqa: E731
+    # Censo 2021 por sección: estudios superiores y población que cursa estudios superiores
+    f = d / "censo2021_seccions.csv"
+    if f.exists():
+        c = pd.read_csv(f, dtype={"seccion": str, "ine": str})
+        c["pes"] = c["t1_1"] * (1 - c["t4_1"])
+        c = c[c["t9_1"].notna() & c["pes"].notna()]
+        for _, x in c.iterrows():
+            o = {k: round(float(x[t]) * 100, 1) for k, t in (("edu_sup21", "t9_1"), ("edu_cursant", "t7_1")) if x[t] == x[t]}
+            if o:
+                sec[x["seccion"]] = o
+        for ine, g in c.groupby("ine"):
+            put(ine, "edu_sup21", (g["t9_1"] * g["pes"]).sum() / g["pes"].sum() * 100)
+            put(ine, "edu_cursant", (g["t7_1"] * g["pes"]).sum() / g["pes"].sum() * 100)
+        anys.update({"edu_sup21": 2021, "edu_cursant": 2021})
+        fr = d / "censo2021_refs.json"
+        if fr.exists():
+            rj = json.loads(fr.read_text())
+            refs["edu_sup21"] = {z: round(rj[z]["t9_1"] * 100, 1) for z in ("gi", "cat", "esp") if z in rj}
+            refs["edu_cursant"] = {z: round(rj[z]["t7_1"] * 100, 1) for z in ("gi", "cat", "esp") if z in rj}
+    # Matrícula del último curso
+    f = d / "matricula.csv.gz"
+    if f.exists():
+        m = pd.read_csv(f, dtype=str)
+        for k in ("alumnes", "grups"):
+            m[k] = pd.to_numeric(m[k], errors="coerce").fillna(0)
+        curs = _curs_ini(m["curs"].iloc[0])
+        m["gi"] = m["codi_municipi_5"].astype(str).str.startswith("17")
+        base = m["nom_estudis"].isin(["EDUCACIÓ INFANTIL", "EDUCACIÓ PRIMÀRIA", "EDUCACIÓ SECUNDÀRIA OBLIGATÒRIA", "BATXILLERAT"]) & ~m["nom_ensenyament"].str.contains("LLAR D'INFANTS")
+        llar = m["nom_ensenyament"].str.contains("LLAR D'INFANTS")
+
+        def ind(g):
+            o = {}
+            b = g[base.loc[g.index]]
+            if b["alumnes"].sum() >= 500:
+                o["edu_publica"] = 100 * b.loc[b["nom_naturalesa"] == "Públic", "alumnes"].sum() / b["alumnes"].sum()
+            for k, est in (("edu_ratio_pri", "EDUCACIÓ PRIMÀRIA"), ("edu_ratio_eso", "EDUCACIÓ SECUNDÀRIA OBLIGATÒRIA")):
+                e = g[(g["nom_estudis"] == est)]
+                if e["grups"].sum() > 0:
+                    o[k] = e["alumnes"].sum() / e["grups"].sum()
+            o["edu_alumnes"] = g.loc[base.loc[g.index] | llar.loc[g.index], "alumnes"].sum()
+            o["edu_llar"] = g.loc[llar.loc[g.index], "alumnes"].sum()
+            return o
+        for ine, g in m[m["gi"]].groupby("codi_municipi_5"):
+            for k, v in ind(g).items():
+                put(ine, k, v, 0 if k in ("edu_alumnes", "edu_llar") else 1)
+        cat_o, gi_o = ind(m), ind(m[m["gi"]])
+        for k in ("edu_publica", "edu_ratio_pri", "edu_ratio_eso"):
+            if k in cat_o:
+                refs[k] = {"cat": round(cat_o[k], 1), "gi": round(gi_o[k], 1)}
+        refs["edu_alumnes"] = {"gi": int(gi_o["edu_alumnes"])}
+        for k in ("edu_publica", "edu_ratio_pri", "edu_ratio_eso", "edu_alumnes"):
+            anys[k] = curs
+        # Escolarización 0-3 aproximada: alumnos de llar d'infants / (3 × nacimientos del último año)
+        e = P / "emex" / "emex_municipis.csv.gz"
+        if e.exists():
+            em = pd.read_csv(e, dtype={"ine": str, "id": str})
+            nx = em[em["id"] == "f187"].drop_duplicates("ine")
+            nx_m = dict(zip(nx["ine"], pd.to_numeric(nx["mun"], errors="coerce")))
+            nx_cat = pd.to_numeric(nx["cat"], errors="coerce").dropna()
+            for ine, x in res.items():
+                n = nx_m.get(ine)
+                if n and n >= 5 and "edu_llar" in x:
+                    put(ine, "edu_0_3", min(100.0, 100 * x["edu_llar"] / (3 * n)))
+                elif n and n >= 5:
+                    put(ine, "edu_0_3", 0.0)
+            if len(nx_cat) and cat_o.get("edu_llar"):
+                refs["edu_0_3"] = {"cat": round(100 * cat_o["edu_llar"] / (3 * nx_cat.iloc[0]), 1)}
+                ng = sum(v for v in nx_m.values() if v == v)
+                if ng:
+                    refs["edu_0_3"]["gi"] = round(100 * gi_o["edu_llar"] / (3 * ng), 1)
+            anys["edu_0_3"] = curs
+            f381 = em[em["id"] == "f381"].drop_duplicates("ine")
+            for ine, v in zip(f381["ine"], pd.to_numeric(f381["mun"], errors="coerce")):
+                put(ine, "edu_mateix", v)
+            cv = pd.to_numeric(f381["cat"], errors="coerce").dropna()
+            if len(cv):
+                refs["edu_mateix"] = {"cat": round(float(cv.iloc[0]), 1)}
+            anys["edu_mateix"] = curs - 1 if curs else None
+    # Centros docentes del último curso
+    f = d / "centres.csv"
+    if f.exists():
+        c = pd.read_csv(f, dtype=str)
+        for ine, g in c.groupby("codi_municipi"):
+            put(ine, "edu_centres", len(g), 0)
+        refs["edu_centres"] = {"gi": len(c)}
+        anys["edu_centres"] = _curs_ini(c["curs"].iloc[0])
+    # Preinscripción: % de plazas asignadas en la primera petición (P3, 1.º de primaria y 1.º de ESO)
+    f = d / "preinscripcio.csv.gz"
+    if f.exists():
+        p_ = pd.read_csv(f, dtype=str)
+        for k in ("assig", "primera"):
+            p_[k] = pd.to_numeric(p_[k], errors="coerce").fillna(0)
+        p_["c"] = p_["curs"].map(_curs_ini)
+        ult = p_["c"].max()
+        p_ = p_[p_["c"] == ult]
+        for ine, g in p_[p_["codi_municipi_5"].str.startswith("17")].groupby("codi_municipi_5"):
+            if g["assig"].sum() >= 5:
+                put(ine, "edu_primera", 100 * g["primera"].sum() / g["assig"].sum())
+        pg = p_[p_["codi_municipi_5"].str.startswith("17")]
+        refs["edu_primera"] = {"cat": round(100 * p_["primera"].sum() / p_["assig"].sum(), 1),
+                               "gi": round(100 * pg["primera"].sum() / pg["assig"].sum(), 1)}
+        anys["edu_primera"] = int(ult)
+    for x in res.values():
+        x.pop("edu_llar", None)
+    return res, sec, refs, anys
+
+
+def educacio_series():
+    """Series provinciales: competencias básicas y alumnado en centros públicos (Girona vs Cataluña)."""
+    d = P / "educacio"
+    out = {}
+    noms = {"pcat": "Català", "pcast": "Castellà", "pang": "Anglès", "pmat": "Matemàtiques", "pcien": "Ciències"}
+    for nom, f in (("4eso", "avaluacio_4eso.csv"), ("6e", "avaluacio_6e.csv")):
+        if not (d / f).exists():
+            continue
+        a = pd.read_csv(d / f)
+        a = a[a["area_territorial"].isin(["Girona", "CATALUNYA"])]
+        core = [c for c in ("pcat", "pcast", "pang", "pmat") if c in a.columns]
+        a["mitjana"] = a[core].mean(axis=1)
+        ser = {}
+        for z, area in (("gi", "Girona"), ("cat", "CATALUNYA")):
+            g = a[a["area_territorial"] == area].sort_values("any")
+            ser[z] = [[int(x), str(int(x)), round(float(v), 1)] for x, v in zip(g["any"], g["mitjana"]) if v == v]
+        out[f"comp_{nom}"] = {"tipus": "linia", "u": "pt", "dec": 1, "series": ser}
+        ult = int(a["any"].max())
+        u = a[a["any"] == ult].set_index("area_territorial")
+        grups = [{"g": noms[c], "c": c, "gi": round(float(u.loc["Girona", c]), 1), "cat": round(float(u.loc["CATALUNYA", c]), 1), "any": ult}
+                 for c in noms if c in u.columns and u.loc[["Girona", "CATALUNYA"], c].notna().all()]
+        out[f"comp_{nom}_mat"] = {"tipus": "barres", "u": "pt", "dec": 1, "claus": ["gi", "cat"], "any": ult, "grups": grups}
+    f = d / "matricula_historic.csv"
+    if f.exists():
+        h = pd.read_csv(f)
+        h = h[~h["nom_ensenyament"].astype(str).str.contains("LLAR D'INFANTS|IDIOMES|ANGLÈS|FRANCÈS|ALEMANY", regex=True)]
+        ser, tot = {}, {}
+        for z, filt in (("gi", h["gi"] == True), ("cat", pd.Series(True, index=h.index))):  # noqa: E712
+            g = h[filt].groupby(["curs", "nom_naturalesa"])["alumnes"].sum().unstack(fill_value=0)
+            g["pct"] = 100 * g.get("Públic", 0) / g.sum(axis=1)
+            ser[z] = [[_curs_ini(c), str(c), round(float(v), 1)] for c, v in g["pct"].items()]
+            if z == "gi":
+                tot = {"curs": str(g.index[-1]), "n": int(g.drop(columns="pct").iloc[-1].sum())}
+        out["edu_publica_prov"] = {"tipus": "linia", "u": "%", "dec": 1, "series": ser, "abs": tot}
+    return out
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -812,6 +972,10 @@ def main():
     for ine, x in em.items():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_em)
+    ed, ed_sec, refs_ed, anys_ed = educacio_indicadores(pob)
+    for ine, x in ed.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_ed)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -862,13 +1026,15 @@ def main():
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
+    for k, v in refs_ed.items():
+        refs.setdefault(k, {}).update(v)
     for k, v in refs_arees.items():
         refs.setdefault(k, {}).update(v)
     if prov_alq:
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": provincia_series(),
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series()},
         "anys": anys_extra,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
@@ -893,6 +1059,8 @@ def main():
     SALIDA.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     print(f"{SALIDA}: {SALIDA.stat().st_size // 1024} KB, {len(municipios)} municipios")
     sec = secciones()
+    for cusec, x in ed_sec.items():
+        sec.setdefault(cusec, {}).update(x)
     (SALIDA.parent / "seccions.json").write_text(json.dumps(sec, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"seccions.json: {len(sec)} secciones")
     import shutil

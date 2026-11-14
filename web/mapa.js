@@ -27,14 +27,15 @@
   // Temas del selector
   const TEMES = [
     { id: "hab", ca: "Habitatge", es: "Vivienda" },
-    { id: "ren", ca: "Renda i pobresa", es: "Renta y pobreza" },
+    { id: "ren", ca: "Renda", es: "Renta" },
     { id: "pob", ca: "Població", es: "Población" },
-    { id: "tre", ca: "Treball i economia", es: "Trabajo y economía" },
-    { id: "sal", ca: "Salut i serveis", es: "Salud y servicios" },
+    { id: "edu", ca: "Educació", es: "Educación" },
+    { id: "tre", ca: "Treball", es: "Trabajo" },
+    { id: "sal", ca: "Salut", es: "Salud" },
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
-    { id: "ene", ca: "Energia i residus", es: "Energía y residuos" },
+    { id: "ene", ca: "Energia", es: "Energía" },
     { id: "pol", ca: "Política", es: "Política" },
   ];
   // Indicadores: v(m) municipio, s(x) sección; ca/es = [etiqueta corta, título completo]; a = año (o clave de D.anys)
@@ -92,8 +93,19 @@
     { id: "immigracio", tema: "pob", ca: ["Immigració", "Immigracions de l'estranger per 1.000 habitants"], es: ["Inmigración", "Inmigraciones del extranjero por 1.000 habitantes"], a: "immigracio", v: X("immigracio"), ...N1 },
     { id: "creixement", tema: "pob", ca: ["Creixement", "Creixement total de la població (‰)"], es: ["Crecimiento", "Crecimiento total de la población (‰)"], a: "creixement", v: X("creixement"), ...N1 },
     { id: "monoparentals", tema: "pob", ca: ["Llars monoparentals", "Llars monoparentals (%)"], es: ["Hogares monoparentales", "Hogares monoparentales (%)"], a: "monoparentals", v: X("monoparentals"), ...P0 },
-    { id: "educ_sup", tema: "pob", ca: ["Estudis superiors", "Població de 15 anys i més amb estudis superiors (%)"], es: ["Estudios superiores", "Población de 15 años y más con estudios superiores (%)"], a: "educ_sup", v: X("educ_sup"), ...P0 },
-    { id: "educ_prim", tema: "pob", ca: ["Estudis primaris o menys", "Població de 15 anys i més amb primària o menys (%)"], es: ["Estudios primarios o menos", "Población de 15 años y más con primaria o menos (%)"], a: "educ_prim", v: X("educ_prim"), ...P0 },
+    { id: "educ_sup", tema: "edu", ca: ["Estudis superiors", "Població de 15 anys i més amb estudis superiors (%)"], es: ["Estudios superiores", "Población de 15 años y más con estudios superiores (%)"], a: "educ_sup", v: X("educ_sup"), ...P0 },
+    { id: "educ_prim", tema: "edu", ca: ["Estudis primaris o menys", "Població de 15 anys i més amb primària o menys (%)"], es: ["Estudios primarios o menos", "Población de 15 años y más con primaria o menos (%)"], a: "educ_prim", v: X("educ_prim"), ...P0 },
+    // Educación
+    { id: "edu_sup21", sumable: false, tema: "edu", ca: ["Estudis superiors (cens)", "Població de 16 anys i més amb estudis superiors (%)"], es: ["Estudios superiores (censo)", "Población de 16 años y más con estudios superiores (%)"], a: "edu_sup21", v: X("edu_sup21"), s: S("edu_sup21"), nota: { ca: "INE, Cens 2021. Disponible també per secció censal.", es: "INE, Censo 2021. Disponible también por sección censal." }, ...P1 },
+    { id: "edu_cursant", sumable: false, tema: "edu", ca: ["Cursa estudis superiors", "Població de 16 anys i més que cursa estudis superiors (%)"], es: ["Cursa estudios superiores", "Población de 16 años y más que cursa estudios superiores (%)"], a: "edu_cursant", v: X("edu_cursant"), s: S("edu_cursant"), nota: { ca: "INE, Cens 2021. Disponible també per secció censal.", es: "INE, Censo 2021. Disponible también por sección censal." }, ...P1 },
+    { id: "edu_publica", sumable: false, tema: "edu", ca: ["Escola pública", "Alumnes d'infantil, primària, ESO i batxillerat en centres públics (%)"], es: ["Escuela pública", "Alumnos de infantil, primaria, ESO y bachillerato en centros públicos (%)"], a: "edu_publica", v: X("edu_publica"), nota: { ca: "Departament d'Educació. Alumnes matriculats als centres del municipi; la resta van a centres privats i concertats. Només municipis amb 500 alumnes o més: als pobles amb una sola escola sempre és pública.", es: "Departament d'Educació. Alumnos matriculados en los centros del municipio; el resto va a centros privados y concertados. Solo municipios con 500 alumnos o más: en los pueblos con una sola escuela siempre es pública." }, ...P0 },
+    { id: "edu_ratio_pri", sumable: false, tema: "edu", ca: ["Alumnes per grup (primària)", "Alumnes per grup a primària"], es: ["Alumnos por grupo (primaria)", "Alumnos por grupo en primaria"], a: "edu_ratio_pri", v: X("edu_ratio_pri"), nota: { ca: "Departament d'Educació. Mitjana dels centres del municipi.", es: "Departament d'Educació. Media de los centros del municipio." }, ...N1 },
+    { id: "edu_ratio_eso", sumable: false, tema: "edu", ca: ["Alumnes per grup (ESO)", "Alumnes per grup a l'ESO"], es: ["Alumnos por grupo (ESO)", "Alumnos por grupo en la ESO"], a: "edu_ratio_eso", v: X("edu_ratio_eso"), nota: { ca: "Departament d'Educació. Només municipis amb institut.", es: "Departament d'Educació. Solo municipios con instituto." }, ...N1 },
+    { id: "edu_0_3", sumable: false, tema: "edu", ca: ["Escolarització 0-3", "Infants a la llar d'infants per cada 100 de 0 a 2 anys (aprox.)"], es: ["Escolarización 0-3", "Niños en la guardería por cada 100 de 0 a 2 años (aprox.)"], a: "edu_0_3", v: X("edu_0_3"), nota: { ca: "Alumnes de llar d'infants matriculats al municipi (Departament d'Educació) sobre tres vegades els naixements de l'últim any (Idescat). Aproximació: no inclou llars privades no autoritzades i compta infants d'altres municipis.", es: "Alumnos de guardería matriculados en el municipio (Departament d'Educació) sobre tres veces los nacimientos del último año (Idescat). Aproximación: no incluye guarderías privadas no autorizadas y cuenta niños de otros municipios." }, ...P0 },
+    { id: "edu_primera", sumable: false, tema: "edu", ca: ["Primera opció", "Places assignades a la primera opció de la preinscripció (%)"], es: ["Primera opción", "Plazas asignadas en la primera opción de la preinscripción (%)"], a: "edu_primera", v: X("edu_primera"), nota: { ca: "Departament d'Educació. P3, primària i 1r d'ESO.", es: "Departament d'Educació. P3, primaria y 1.º de ESO." }, ...P0 },
+    { id: "edu_mateix", sumable: false, tema: "edu", ca: ["Estudia al municipi", "Alumnes residents que estudien al mateix municipi (%)"], es: ["Estudia en el municipio", "Alumnos residentes que estudian en el mismo municipio (%)"], a: "edu_mateix", v: X("edu_mateix"), nota: { ca: "Idescat, El municipi en xifres.", es: "Idescat, El municipi en xifres." }, ...P0 },
+    { id: "edu_centres", tema: "edu", ca: ["Centres educatius", "Centres educatius (escoles, instituts, llars d'infants i altres)"], es: ["Centros educativos", "Centros educativos (escuelas, institutos, guarderías y otros)"], a: "edu_centres", v: X("edu_centres"), nota: { ca: "Departament d'Educació, directori de centres.", es: "Departament d'Educació, directorio de centros." }, ...N0 },
+    { id: "edu_alumnes", tema: "edu", ca: ["Alumnes", "Alumnes matriculats d'infantil a batxillerat"], es: ["Alumnos", "Alumnos matriculados de infantil a bachillerato"], a: "edu_alumnes", v: X("edu_alumnes"), nota: { ca: "Departament d'Educació. Alumnes als centres del municipi.", es: "Departament d'Educació. Alumnos en los centros del municipio." }, ...N0 },
     // Trabajo y economía
     { id: "atur", tema: "tre", ca: ["Atur registrat", "Aturats registrats per 100 habitants"], es: ["Paro registrado", "Parados registrados por 100 habitantes"], a: "atur", v: X("atur"), ...N1 },
     { id: "llocs", tema: "tre", ca: ["Llocs de treball", "Llocs de treball per 100 habitants"], es: ["Puestos de trabajo", "Puestos de trabajo por 100 habitantes"], v: X("llocs"), ...N0 },
