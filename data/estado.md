@@ -1,17 +1,11 @@
 # Estado de la última actualización
 
-2026-11-14 20:19 UTC
+2026-11-14 20:28 UTC
 
-## nacionalitat: ok (400 s)
+## nacionalitat: ok (2834 s)
 
 ```
+idescat 6000: 8250 filas, 10 municipios, columnas ['YEAR', 'MUN', 'COUNTRY_G', 'SEX', 'CONCEPT', 'valor']
+idescat 16352: 27405 filas, 21 municipios, columnas ['YEAR', 'MUN', 'AGE', 'NATION', 'SEX', 'CONCEPT', 'valor']
 tablas Girona: {'nacionalitats': 33790, 'edat_nacionalitat': 33789}
-nacionalitats (33790): 176800 filas, años 2003-2022, 221 municipios; columnas ['Nacionalidad (principales nacionalidades)', 'ine', 'valor', 'any']
-edat_nacionalitat (33789): 53040 filas, años 2003-2022, 221 municipios; columnas ['Nacionalidad', 'Edad (grandes grupos)', 'ine', 'valor', 'any']
-```
-
-## universitaris: ok (2 s)
-
-```
-universitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']
 ```
