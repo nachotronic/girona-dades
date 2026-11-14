@@ -25,14 +25,13 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-for t in ["alumnes matriculats ensenyament centres docents", "directori centres docents", "avaluació sisè primària resultats centre",
-          "competències bàsiques quart ESO centre", "llars d'infants places", "abandonament escolar", "graduats ESO",
-          "preinscripció escolar", "beques menjador", "professorat centres", "alumnat estranger", "taxa escolarització"]:
+for t in ["estudiants universitaris procedència", "preinscripció universitària", "matrícula universitat municipi residència",
+          "accés universitat assignacions", "PAU proves accés universitat", "inserció laboral graduats", "estudiants universitaris comarca",
+          "titulats universitaris", "universitat de girona estudiants", "mobilitat estudiants universitaris", "nou accés universitat"]:
     clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
     CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
-CANDIDATAS["ine_censo21_indicadores"] = "https://www.ine.es/censos2021/C2021_Indicadores.csv"
-CANDIDATAS["ine_censo21_indicadores_zip"] = "https://www.ine.es/censos2021/C2021_Indicadores.zip"
-CANDIDATAS["ine_ops_EDU"] = "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES"
+CANDIDATAS["ine_ops_EEU"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/EEU"
+CANDIDATAS["idescat_universitaris"] = "https://www.idescat.cat/indicadors/?id=aec&n=15729&lang=es"
 for _op in ("IPC", "EPA", "H", "ETDP", "EOH", "EOAC", "ECP", "MNP", "IPV", "EH", "ECV", "SM", "PCAP"):
     CANDIDATAS["ine_ops_" + _op] = f"https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/{_op}"
 
