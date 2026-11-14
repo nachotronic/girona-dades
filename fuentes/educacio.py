@@ -31,6 +31,14 @@ def _columnas(ident: str) -> dict[str, str]:
 def _censo(sal) -> str:
     r = get(CENSO, timeout=600)
     df = pd.read_csv(io.BytesIO(r.content), dtype=str)
+    # Valores de referencia de Cataluña y España, ponderados por la población de 16 años o más
+    num = df[[c for c in df.columns if c.startswith("t")]].apply(pd.to_numeric, errors="coerce")
+    pes = num["t1_1"] * (1 - num["t4_1"])
+    refs = {}
+    for zona, mask in (("esp", pd.Series(True, index=df.index)), ("cat", df["ccaa"] == "09"), ("gi", df["cpro"] == "17")):
+        w = pes[mask]
+        refs[zona] = {c: round(float((num.loc[mask, c] * w).sum() / w.sum()), 4) for c in ("t7_1", "t8_1", "t9_1", "t10_1", "t5_1", "t6_1")}
+    (sal / "censo2021_refs.json").write_text(json.dumps(refs, indent=1), encoding="utf-8")
     df = df[df["cpro"] == "17"].copy()
     df["seccion"] = df["cpro"] + df["cmun"] + df["dist"] + df["secc"]
     df["ine"] = df["cpro"] + df["cmun"]
