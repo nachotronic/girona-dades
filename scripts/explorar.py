@@ -26,17 +26,17 @@ TERMINOS_SOCRATA = [
 
 CANDIDATAS = {}
 S = "https://analisi.transparenciacatalunya.cat"
-for _id in ("gspe-4f4s", "8w7y-2bfp", "5kd9-2wex", "um2m-zw96", "jzx6-bqke"):
-    CANDIDATAS["meta_" + _id] = f"{S}/api/views/{_id}.json"
-    CANDIDATAS["mostra_" + _id] = f"{S}/resource/{_id}.json?$limit=20"
-CANDIDATAS["mostra_8w7y_gi"] = S + "/resource/8w7y-2bfp.json?$limit=20&$where=starts_with(codi_resid_ncia_municipi,'17')"
-for t in ["mobilitat obligada estudis", "alumnat estranger", "estrangers", "nacionalitat", "universitaris residència"]:
-    CANDIDATAS["socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 25})
-CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
-CANDIDATAS["idescat_pmh"] = "https://api.idescat.cat/taules/v2/pmh?lang=ca"
-CANDIDATAS["idescat_censph"] = "https://api.idescat.cat/taules/v2/censph?lang=ca"
-for _op in ("188", "EPC", "PC", "EM", "CPV2021"):
-    CANDIDATAS["ine_ops_" + _op] = f"https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/{_op}"
+I = "https://servicios.ine.es/wstempus/js/ES"
+for _id in (33754, 33760, 33766, 33753, 33759, 33765):
+    CANDIDATAS[f"ine_series_{_id}"] = f"{I}/SERIES_TABLA/{_id}?page=1"
+CANDIDATAS["ine_datos_33760"] = f"{I}/DATOS_TABLA/33760?nult=1&tip=A"
+CANDIDATAS["idescat_emouniv"] = "https://www.idescat.cat/pub/?id=emouniv&lang=ca"
+CANDIDATAS["idescat_emouniv_es"] = "https://www.idescat.cat/pub/?id=emouniv&lang=es"
+CANDIDATAS["idescat_censph_6000"] = "https://api.idescat.cat/taules/v2/censph/6000?lang=ca"
+CANDIDATAS["idescat_censph_16401"] = "https://api.idescat.cat/taules/v2/censph/16401?lang=ca"
+CANDIDATAS["mostra_8w7y_estudis"] = S + "/resource/8w7y-2bfp.json?$select=estudis,curs,sum(n_mero_matr_cules_estad_stica::number)%20as%20n&$group=estudis,curs&$limit=200"
+CANDIDATAS["mostra_5kd9_gi"] = S + "/resource/5kd9-2wex.json?$select=curs,comarca_del_centre,nacionalitat,tipus_d_estudi,sum(matr_cula::number)%20as%20m&$group=curs,comarca_del_centre,nacionalitat,tipus_d_estudi&$where=universitat='UdG'&$limit=500"
+CANDIDATAS["mostra_5kd9_univ"] = S + "/resource/5kd9-2wex.json?$select=universitat,count(*)&$group=universitat"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
