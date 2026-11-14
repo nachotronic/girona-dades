@@ -18,6 +18,9 @@ const T = {
     posicio: (i, n) => `${i}a de ${n}`, mediana: (v) => `mediana ${v}`,
     r_alts: "Més alts", r_baixos: "Més baixos", obrir_fitxa: "Obre la fitxa del municipi",
     h_mapa: "Tota la província, en un mapa",
+    nac_info: (n, p, e) => `${n} persones, el ${p} dels ${e} estrangers del municipi`, nac_k: (k, p) => `Primera nacionalitat a ${k} municipis: ${p}`,
+    h_nac: "D'on són els estrangers", h_nac_sub: (a, e, p) => `${e} residents de nacionalitat estrangera (${p} de la població), ${a}. Principals països:`, altres_paisos: "Altres països", n_estr: "estrangers", f_nac: "Idescat, Cens anual de població", f_nac_ine: "INE, padró continu. L'INE només detalla les principals nacionalitats; la resta (Hondures, Gàmbia, Índia…) són a «altres països»", font_c: "Font",
+    h_univ: "On estudien els universitaris", h_univ_sub: (n, c) => `${n} universitaris residents, curs ${c}.`, u_mateix: "Al mateix municipi", u_comarca: "A la resta de la comarca", u_fora: "Fora de la comarca", f_univ: "Idescat, mobilitat per estudis universitaris",
     ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals", nivell_abs: "Àrees de salut", nivell_abp: "Àrees policials", area_abs: "Àrea bàsica de salut", area_abp: "Àrea bàsica policial", ref_titol: "Comparació", ref_gi_curt: "Província", tots_ind: "Tots els indicadors", posicio_curt: (a, b) => `${a}a de ${b}`, fi_nota: "Barra: del valor més baix al més alt de la província.", any_ctl: "Any", reprodueix: "Reprodueix l'evolució", atura: "Atura", evolucio: "Evolució", prov_curt: "Província", f_salut: "defuncions, població i atenció primària per àrea bàsica de salut", f_mossos: "fets penals per àrea bàsica policial", f_emex: "valors de referència de Catalunya", ref_gi: "Província de Girona", ref_cat: "Catalunya", ref_esp: "Espanya",
     mapa_aria: "Mapa de la província de Girona",
     ajuda_mapa: "Passa per sobre d'un municipi o secció per veure'n el valor; toca'l per obrir-ne la fitxa.",
@@ -95,6 +98,9 @@ const T = {
     posicio: (i, n) => `${i}.º de ${n}`, mediana: (v) => `mediana ${v}`,
     r_alts: "Más altos", r_baixos: "Más bajos", obrir_fitxa: "Abrir la ficha del municipio",
     h_mapa: "Toda la provincia, en un mapa",
+    nac_info: (n, p, e) => `${n} personas, el ${p} de los ${e} extranjeros del municipio`, nac_k: (k, p) => `Primera nacionalidad en ${k} municipios: ${p}`,
+    h_nac: "De dónde son los extranjeros", h_nac_sub: (a, e, p) => `${e} residentes de nacionalidad extranjera (${p} de la población), ${a}. Principales países:`, altres_paisos: "Otros países", n_estr: "extranjeros", f_nac: "Idescat, Censo anual de población", f_nac_ine: "INE, padrón continuo. El INE solo detalla las principales nacionalidades; el resto (Honduras, Gambia, India…) está en «otros países»", font_c: "Fuente",
+    h_univ: "Dónde estudian los universitarios", h_univ_sub: (n, c) => `${n} universitarios residentes, curso ${c}.`, u_mateix: "En el mismo municipio", u_comarca: "En el resto de la comarca", u_fora: "Fuera de la comarca", f_univ: "Idescat, movilidad por estudios universitarios",
     ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales", nivell_abs: "Áreas de salud", nivell_abp: "Áreas policiales", area_abs: "Área básica de salud", area_abp: "Área básica policial", ref_titol: "Comparación", ref_gi_curt: "Provincia", tots_ind: "Todos los indicadores", posicio_curt: (a, b) => `${a}.º de ${b}`, fi_nota: "Barra: del valor más bajo al más alto de la provincia.", any_ctl: "Año", reprodueix: "Reproduce la evolución", atura: "Detener", evolucio: "Evolución", prov_curt: "Provincia", f_salut: "defunciones, población y atención primaria por área básica de salud", f_mossos: "hechos penales por área básica policial", f_emex: "valores de referencia de Cataluña", ref_gi: "Provincia de Girona", ref_cat: "Cataluña", ref_esp: "España",
     mapa_aria: "Mapa de la provincia de Girona",
     ajuda_mapa: "Pasa por encima de un municipio o sección para ver su valor; tócalo para abrir su ficha.",
@@ -170,6 +176,32 @@ const t = (k, ...a) => { const v = T[LANG][k]; return typeof v === "function" ? 
 const BLOC_COLOR = { Junts: "#23a99c", ERC: "#ef8f2a", PSC: "#d2453a", CUP: "#e9cf3a", PP: "#2f6fc0", Vox: "#62a43c", "Aliança": "#3b4a63", Comuns: "#8a4fa8", Locals: "#a5abb5" };
 const colorBloc = (b) => BLOC_COLOR[b] || BLOC_COLOR.Locals;
 const nomBloc = (b) => (b === "Locals" ? t("locals") : b === "Aliança" ? "Aliança Catalana" : b);
+
+// ---------- Países (nacionalidades) ----------
+const PAIS_COLORS = ["#106b66", "#e3001b", "#2f6fc0", "#ef8f2a", "#8a4fa8", "#62a43c", "#c2577f", "#8c6d3f", "#3b4a63", "#e9cf3a"];
+const nomPais = (c) => { const p = D && D.paisos && D.paisos[c]; return p ? p[LANG === "ca" ? 0 : 1] : c === "ALTRES" ? t("altres_paisos") : c; };
+const colorPais = (c) => { const i = D && D.paisos_ordre ? D.paisos_ordre.indexOf(c) : -1; return i >= 0 && i < PAIS_COLORS.length ? PAIS_COLORS[i] : "#a5abb5"; };
+
+function blocNacionalitats(m) {
+  const n = m.nac;
+  if (!n || !n.p || !n.p.length) return "";
+  const mx = n.p[0][1];
+  const files = n.p.map(([c, k]) => `<li><span class="nb-nom">${nomPais(c)}</span><span class="nb-barra"><b style="width:${(k / mx) * 100}%"></b></span><span class="nb-v">${fmt(k)}<small>${pct((100 * k) / n.ex, 0)}</small></span></li>`).join("");
+  const resta = n.ex - n.p.reduce((s, x) => s + x[1], 0);
+  return `<section class="fitxa-bloc"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
+    <ol class="nb">${files}${resta > 0 ? `<li class="nb-resta"><span class="nb-nom">${t("altres_paisos")}</span><span class="nb-barra"></span><span class="nb-v">${fmt(resta)}<small>${pct((100 * resta) / n.ex, 0)}</small></span></li>` : ""}</ol>
+    <p class="fb-font">${t("font_c")}: ${t(n.font === "ine" ? "f_nac_ine" : "f_nac")}</p></section>`;
+}
+
+function blocUniversitaris(m) {
+  const u = m.x && m.x.univ_split;
+  if (!u) return "";
+  const tot = u[0] + u[1] + u[2] || 1, noms = ["u_mateix", "u_comarca", "u_fora"];
+  return `<section class="fitxa-bloc"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
+    <div class="ub">${u.map((v, i) => (v ? `<b class="ub-${i}" style="width:${(100 * v) / tot}%"></b>` : "")).join("")}</div>
+    <ul class="ub-lleg">${u.map((v, i) => `<li><i class="ub-${i}"></i>${t(noms[i])}<span>${fmt(v)} · ${pct((100 * v) / tot, 0)}</span></li>`).join("")}</ul>
+    <p class="fb-font">${t("font_c")}: ${t("f_univ")}</p></section>`;
+}
 
 // ---------- Formato ----------
 const loc = () => (LANG === "ca" ? "ca-ES" : "es-ES");
@@ -449,6 +481,7 @@ function obreFitxa(ine, desplaca) {
       <figure class="grafic"><figcaption><span>${t("g_renda")}</span><span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
       <figure class="grafic"><figcaption><span>${t("g_compra")}</span><span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
     </div>
+    <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });

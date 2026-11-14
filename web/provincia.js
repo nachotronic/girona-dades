@@ -36,6 +36,12 @@
       h_comp_mat: (m, v, a) => `El ${a}, la millor matèria a Girona va ser <b>${m.toLowerCase()}</b> (${v} punts).`,
       h_publica: (g, c, cu, n) => `El <b>${g}</b> dels ${n} alumnes de la província van a un centre públic (curs ${cu}). A Catalunya, el ${c}.`,
       n4eso: "4t d'ESO", n6e: "6è",
+      univ_fora_prov: ["Universitaris que marxen", "Universitaris residents a la província que estudien fora (%)"],
+      univ_noms: { gi: "Estudien fora de la província", cat: "Places de la província ocupades per gent de fora" },
+      h_univ: (p, n, r, c, p0, c0) => `El <b>${p}</b> dels universitaris de la província estudien fora (${n} de ${r}, curs ${c}). El curs ${c0}, el ${p0}.`,
+      nac_prov: ["D'on són els estrangers", "Principals nacionalitats (% dels estrangers de la província)"],
+      h_nac_prov: (n, a, p, v) => `<b>${n}</b> residents estrangers a la província (${a}). La primera nacionalitat: <b>${p}</b>, el ${v}.`,
+      font_univ: "Font: Idescat, mobilitat per estudis universitaris", font_nac: "Font: Idescat, Cens anual de població",
       font_edu: "Font: Departament d'Educació",
       font_causes: "Font: INE, Estadística de defuncions segons la causa de mort",
       font: "Font: INE",
@@ -75,6 +81,12 @@
       h_comp_mat: (m, v, a) => `En ${a}, la mejor materia en Girona fue <b>${m.toLowerCase()}</b> (${v} puntos).`,
       h_publica: (g, c, cu, n) => `El <b>${g}</b> de los ${n} alumnos de la provincia va a un centro público (curso ${cu}). En Cataluña, el ${c}.`,
       n4eso: "4.º de ESO", n6e: "6.º",
+      univ_fora_prov: ["Universitarios que se van", "Universitarios residentes en la provincia que estudian fuera (%)"],
+      univ_noms: { gi: "Estudian fuera de la provincia", cat: "Plazas de la provincia ocupadas por gente de fuera" },
+      h_univ: (p, n, r, c, p0, c0) => `El <b>${p}</b> de los universitarios de la provincia estudia fuera (${n} de ${r}, curso ${c}). En el curso ${c0}, el ${p0}.`,
+      nac_prov: ["De dónde son los extranjeros", "Principales nacionalidades (% de los extranjeros de la provincia)"],
+      h_nac_prov: (n, a, p, v) => `<b>${n}</b> residentes extranjeros en la provincia (${a}). La primera nacionalidad: <b>${p}</b>, el ${v}.`,
+      font_univ: "Fuente: Idescat, movilidad por estudios universitarios", font_nac: "Fuente: Idescat, Censo anual de población",
       font_edu: "Fuente: Departament d'Educació",
       font_causes: "Fuente: INE, Estadística de defunciones según la causa de muerte",
       font: "Fuente: INE",
@@ -105,7 +117,7 @@
   };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : "");
   const etiqueta = (e) => {
@@ -188,6 +200,8 @@
     if (id === "comp_4eso" || id === "comp_6e") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_comp", fmt(g[2], 1), fmt(c && c[2], 1), g[1], tp(id === "comp_4eso" ? "n4eso" : "n6e")) : ""; }
     if (id === "comp_4eso_mat") { const g = [...sp.grups].sort((a, b) => b.gi - a.gi)[0]; return g ? tp("h_comp_mat", nomGrup(g.g, g.c), fmt(g.gi, 1), sp.any) : ""; }
     if (id === "edu_publica_prov") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_publica", pct(g[2], 0), pct(c && c[2], 0), g[1], fmt(sp.abs && sp.abs.n)) : ""; }
+    if (id === "univ_fora_prov") { const g = ult(sp, "gi"); const g0 = sp.series.gi[0]; return g && sp.abs ? tp("h_univ", pct(g[2], 0), fmt(sp.abs.fora), fmt(sp.abs.residents), sp.abs.curs, pct(g0[2], 0), g0[1]) : ""; }
+    if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
     return "";
   }
@@ -196,7 +210,7 @@
     const cont = document.getElementById("prov-grafics");
     if (!cont || !D.prov) return;
     const P = D.prov;
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "edu_publica_prov", "comp_4eso", "comp_4eso_mat", "comp_6e"].filter((k) => P[k]);
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"].filter((k) => P[k]);
     cont.innerHTML = ids.map((id) => {
       const sp = P[id];
       const claus = sp.tipus === "barres" ? sp.claus || ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
@@ -205,7 +219,7 @@
         <p class="pg-h">${titular(id, sp, P)}</p>
         <p class="pg-lleg">${claus.map((k) => `<span><i class="pg-dot pg-${k}"></i>${nomSerie(sp, k)}</span>`).join("")}</p>
         <div class="pg-c"></div>
-        <p class="pg-font">${tp(id === "causes" ? "font_causes" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font")}</p></figure>`;
+        <p class="pg-font">${tp(id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font")}</p></figure>`;
     }).join("");
     cont.querySelectorAll(".pg-fig").forEach((f) => {
       const sp = P[f.dataset.id], c = f.querySelector(".pg-c");

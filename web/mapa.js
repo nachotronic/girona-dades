@@ -82,6 +82,16 @@
     { id: "majors65", tema: "pob", ca: ["Més de 65 anys", "Població de 65 anys i més (%)"], es: ["Más de 65 años", "Población de 65 años y más (%)"], a: "majors65", v: X("majors65"), s: S("majors65"), ...P0 },
     { id: "menors18", tema: "pob", ca: ["Menys de 18 anys", "Població menor de 18 anys (%)"], es: ["Menos de 18 años", "Población menor de 18 años (%)"], a: "menors18", v: X("menors18"), s: S("menors18"), ...P0 },
     { id: "estrangers", tema: "pob", ca: ["Estrangers", "Població de nacionalitat estrangera (%)"], es: ["Extranjeros", "Población de nacionalidad extranjera (%)"], a: "estrangers", v: X("estrangers"), s: S("estrangers"), ...P0 },
+    // Nacionalidades (censo anual Idescat)
+    { id: "nac_top", tema: "pob", cat: true, ca: ["Principal nacionalitat", "Primera nacionalitat estrangera de cada municipi"], es: ["Principal nacionalidad", "Primera nacionalidad extranjera de cada municipio"], a: "nac", v: (m) => (m.x && m.x.nac_top) || null, f: (v) => nomPais(v), c: (v) => nomPais(v), color: (v) => colorPais(v),
+      infoCat: (m, v, k) => (m && m.x && v ? `<p class="rel">${t("nac_info", fmt(m.x.nac_top_n), pct(m.x.nac_top_pct, 0), fmt(m.x.nac_ex))}</p><p class="rel">${t("nac_k", k, nomPais(v))}</p>` : `<p class="rel">${t("sense_dades")}</p>`), nota: { ca: "INE, padró continu. Nacionalitat, no lloc de naixement. L'INE només detalla les principals nacionalitats: països com Hondures o Gàmbia queden agrupats. Només municipis amb 20 estrangers o més.", es: "INE, padrón continuo. Nacionalidad, no lugar de nacimiento. El INE solo detalla las principales nacionalidades: países como Honduras o Gambia quedan agrupados. Solo municipios con 20 extranjeros o más." }, notaCat: { ca: "Nombre de municipis on és la primera nacionalitat estrangera.", es: "Número de municipios donde es la primera nacionalidad extranjera." } },
+    { id: "nac_top_pct", sumable: false, tema: "pob", ca: ["Pes de la primera nacionalitat", "Primera nacionalitat estrangera (% dels estrangers del municipi)"], es: ["Peso de la primera nacionalidad", "Primera nacionalidad extranjera (% de los extranjeros del municipio)"], a: "nac", v: X("nac_top_pct"), nota: { ca: "INE, padró continu. Nacionalitat, no lloc de naixement. L'INE només detalla les principals nacionalitats: països com Hondures o Gàmbia queden agrupats. Només municipis amb 20 estrangers o més.", es: "INE, padrón continuo. Nacionalidad, no lugar de nacimiento. El INE solo detalla las principales nacionalidades: países como Honduras o Gambia quedan agrupados. Solo municipios con 20 extranjeros o más." }, ...P0 },
+    { id: "nac_MA", sumable: false, tema: "pob", ca: ["Nacionalitat: Marroc", "Residents amb nacionalitat de Marroc (% de la població)"], es: ["Nacionalidad: Marruecos", "Residentes con nacionalidad de Marruecos (% de la población)"], a: "nac_MA", v: X("nac_MA"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
+    { id: "nac_RO", sumable: false, tema: "pob", ca: ["Nacionalitat: Romania", "Residents amb nacionalitat de Romania (% de la població)"], es: ["Nacionalidad: Rumanía", "Residentes con nacionalidad de Rumanía (% de la población)"], a: "nac_RO", v: X("nac_RO"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
+    { id: "nac_FR", sumable: false, tema: "pob", ca: ["Nacionalitat: França", "Residents amb nacionalitat de França (% de la població)"], es: ["Nacionalidad: Francia", "Residentes con nacionalidad de Francia (% de la población)"], a: "nac_FR", v: X("nac_FR"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
+    { id: "nac_RU", sumable: false, tema: "pob", ca: ["Nacionalitat: Rússia", "Residents amb nacionalitat de Rússia (% de la població)"], es: ["Nacionalidad: Rusia", "Residentes con nacionalidad de Rusia (% de la población)"], a: "nac_RU", v: X("nac_RU"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
+    { id: "nac_CO", sumable: false, tema: "pob", ca: ["Nacionalitat: Colòmbia", "Residents amb nacionalitat de Colòmbia (% de la població)"], es: ["Nacionalidad: Colombia", "Residentes con nacionalidad de Colombia (% de la población)"], a: "nac_CO", v: X("nac_CO"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
+    { id: "nac_IT", sumable: false, tema: "pob", ca: ["Nacionalitat: Itàlia", "Residents amb nacionalitat de Itàlia (% de la població)"], es: ["Nacionalidad: Italia", "Residentes con nacionalidad de Italia (% de la población)"], a: "nac_IT", v: X("nac_IT"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
     { id: "llar", tema: "pob", ca: ["Mida de la llar", "Persones per llar"], es: ["Tamaño del hogar", "Personas por hogar"], a: "llar", v: X("llar"), s: S("llar"), ...N2 },
     { id: "unipersonals", tema: "pob", ca: ["Viuen sols", "Llars unipersonals (%)"], es: ["Viven solos", "Hogares unipersonales (%)"], a: "unipersonals", v: X("unipersonals"), s: S("unipersonals"), ...P0 },
     { id: "estacional", tema: "pob", ca: ["Població estacional", "Població estacional respecte a la resident (%)"], es: ["Población estacional", "Población estacional respecto a la residente (%)"], v: (m) => (m.poblacion && m.poblacion_etca ? (m.poblacion_etca / m.poblacion) * 100 : null), ...P0 },
@@ -98,6 +108,8 @@
     // Educación
     { id: "edu_sup21", sumable: false, tema: "edu", ca: ["Estudis superiors (cens)", "Població de 16 anys i més amb estudis superiors (%)"], es: ["Estudios superiores (censo)", "Población de 16 años y más con estudios superiores (%)"], a: "edu_sup21", v: X("edu_sup21"), s: S("edu_sup21"), nota: { ca: "INE, Cens 2021. Disponible també per secció censal.", es: "INE, Censo 2021. Disponible también por sección censal." }, ...P1 },
     { id: "edu_cursant", sumable: false, tema: "edu", ca: ["Cursa estudis superiors", "Població de 16 anys i més que cursa estudis superiors (%)"], es: ["Cursa estudios superiores", "Población de 16 años y más que cursa estudios superiores (%)"], a: "edu_cursant", v: X("edu_cursant"), s: S("edu_cursant"), nota: { ca: "INE, Cens 2021. Disponible també per secció censal.", es: "INE, Censo 2021. Disponible también por sección censal." }, ...P1 },
+    { id: "edu_estr16", sumable: false, tema: "edu", ca: ["Infants estrangers", "Població de 0 a 15 anys de nacionalitat estrangera (%)"], es: ["Niños extranjeros", "Población de 0 a 15 años de nacionalidad extranjera (%)"], a: "edu_estr16", v: X("edu_estr16"), nota: { ca: "Aproximació a l'alumnat estranger: el Departament d'Educació no publica l'alumnat per nacionalitat i municipi. INE, padró continu.", es: "Aproximación al alumnado extranjero: el Departament d'Educació no publica el alumnado por nacionalidad y municipio. INE, padrón continuo." }, ...P0 },
+    { id: "edu_univ", sumable: false, tema: "edu", ca: ["Universitaris", "Estudiants universitaris residents per 1.000 habitants"], es: ["Universitarios", "Estudiantes universitarios residentes por 1.000 habitantes"], a: "edu_univ", v: X("edu_univ"), nota: { ca: "Idescat, a partir de la matrícula de les universitats catalanes. No inclou qui estudia fora de Catalunya.", es: "Idescat, a partir de la matrícula de las universidades catalanas. No incluye a quien estudia fuera de Cataluña." }, ...N1 },
     { id: "edu_publica", sumable: false, tema: "edu", ca: ["Escola pública", "Alumnes d'infantil, primària, ESO i batxillerat en centres públics (%)"], es: ["Escuela pública", "Alumnos de infantil, primaria, ESO y bachillerato en centros públicos (%)"], a: "edu_publica", v: X("edu_publica"), nota: { ca: "Departament d'Educació. Alumnes matriculats als centres del municipi; la resta van a centres privats i concertats. Només municipis amb 500 alumnes o més: als pobles amb una sola escola sempre és pública.", es: "Departament d'Educació. Alumnos matriculados en los centros del municipio; el resto va a centros privados y concertados. Solo municipios con 500 alumnos o más: en los pueblos con una sola escuela siempre es pública." }, ...P0 },
     { id: "edu_ratio_pri", sumable: false, tema: "edu", ca: ["Alumnes per grup (primària)", "Alumnes per grup a primària"], es: ["Alumnos por grupo (primaria)", "Alumnos por grupo en primaria"], a: "edu_ratio_pri", v: X("edu_ratio_pri"), nota: { ca: "Departament d'Educació. Mitjana dels centres del municipi.", es: "Departament d'Educació. Media de los centros del municipio." }, ...N1 },
     { id: "edu_ratio_eso", sumable: false, tema: "edu", ca: ["Alumnes per grup (ESO)", "Alumnes per grup a l'ESO"], es: ["Alumnos por grupo (ESO)", "Alumnos por grupo en la ESO"], a: "edu_ratio_eso", v: X("edu_ratio_eso"), nota: { ca: "Departament d'Educació. Només municipis amb institut.", es: "Departament d'Educació. Solo municipios con instituto." }, ...N1 },
@@ -319,18 +331,19 @@
 
   // Indicadores por categorías (partido del alcalde): un color por bloque
   let recompte = [];
+  const colCat = (v) => (ind.color ? ind.color(v) : colorBloc(v));
   function pintaCat(geo, valors) {
-    geo.features.forEach((f, i) => { f.properties.c = valors[i] ? colorBloc(valors[i]) : sense(); f.properties.v = valors[i]; });
+    geo.features.forEach((f, i) => { f.properties.c = valors[i] ? colCat(valors[i]) : sense(); f.properties.v = valors[i]; });
     valorsActuals = geo.features.map((f, i) => ({ p: f.properties, v: valors[i] })).filter((x) => x.v);
     const n = {}; valorsActuals.forEach((x) => { n[x.v] = (n[x.v] || 0) + 1; });
     recompte = Object.entries(n).sort((a, b) => b[1] - a[1]);
     mapa.getSource("zones").setData(geo);
     mapa.setLayoutProperty("limits-mun", "visibility", "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = t("nomes_mun");
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] : t("nomes_mun");
     const max = recompte.length ? recompte[0][1] : 1;
     document.getElementById("llegenda").innerHTML = `<div class="cat-llista">${recompte.map(([b, k]) =>
-      `<div class="cat-fila"><i style="background:${colorBloc(b)}"></i><span class="cat-nom">${nomBloc(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colorBloc(b)}"></b></span><span class="cat-n">${k}</span></div>`).join("")}</div>`;
+      `<div class="cat-fila"><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`).join("")}</div>${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
     document.getElementById("ranquing").innerHTML = "";
     info(fixat);
   }
@@ -396,6 +409,15 @@
     ]) : "");
     if (!props) { el.innerHTML = `<p class="pista">${t("pista")}</p>${mini(null)}`; return; }
     const z = nomZona(props), v = valorDe(props);
+    if (ind.cat && ind.infoCat) {
+      const k = (recompte.find((x) => x[0] === v) || [0, 0])[1];
+      el.innerHTML = `<p class="nom">${z.nom}</p><p class="lloc">${z.lloc}</p>
+        <p class="gran"><i class="punt-bloc" style="background:${v ? colCat(v) : sense()}"></i>${v ? ind.c(v) : "–"}</p>
+        ${ind.infoCat(munPerIne[props.ine], v, k)}
+        <button type="button">${t("obrir_fitxa")} →</button>`;
+      el.querySelector("button").addEventListener("click", () => obreFitxa(props.ine, true));
+      return;
+    }
     if (ind.cat) {
       const mm = munPerIne[props.ine], al = mm && mm.pol && mm.pol.alcalde;
       const k = (recompte.find((x) => x[0] === v) || [0, 0])[1];

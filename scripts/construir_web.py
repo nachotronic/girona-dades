@@ -977,7 +977,7 @@ def universitaris_indicadores(pob):
     fr = d / "univ_prov_desti.csv"
     if fr.exists():
         curs = _curs_ini(str(pd.read_csv(fr).iloc[0, 0]).replace("Curs ", ""))
-    anys.update({"edu_univ_fora": curs, "edu_univ": curs})
+    anys.update({"edu_univ_fora": curs, "edu_univ": f"{curs}/{str(curs + 1)[2:]}" if curs else None})
     return res, refs, anys
 
 
@@ -1001,6 +1001,107 @@ def universitaris_series():
     ult = t.columns[0]
     return {"univ_fora_prov": {"tipus": "linia", "u": "%", "dec": 1, "series": ser, "noms": "univ",
                                "abs": {"curs": ult.replace("Curs ", ""), "residents": int(res_[ult]), "fora": int(fora[ult]), "nores": int(nores[ult]), "llocs": int(llocs[ult])}}}
+
+
+INE_ISO = {"Alemania": "DE", "Bulgaria": "BG", "Francia": "FR", "Italia": "IT", "Polonia": "PL", "Portugal": "PT", "Rumanía": "RO",
+           "Reino Unido": "GB", "Rusia": "RU", "Ucrania": "UA", "Argelia": "DZ", "Marruecos": "MA", "Nigeria": "NG", "Senegal": "SN",
+           "Argentina": "AR", "Bolivia": "BO", "Brasil": "BR", "Chile": "CL", "Colombia": "CO", "Cuba": "CU", "Ecuador": "EC",
+           "Paraguay": "PY", "Perú": "PE", "República Dominicana": "DO", "Uruguay": "UY", "Venezuela": "VE", "China": "CN", "Pakistán": "PK"}
+
+
+def nacionalitat_indicadores(pob):
+    """Extranjeros por nacionalidad.
+    - Mapa (todos los municipios): INE, padrón 2022, principales nacionalidades (las demás van agrupadas).
+    - Ficha: Idescat, censo anual (165 países) en los municipios grandes; padrón 2022 del INE en el resto.
+    - Infantes extranjeros (0-15): INE, padrón 2022.
+    Devuelve (x por municipio, nac por municipio, paisos, ordre, refs, anys, series prov)."""
+    d = P / "nacionalitat"
+    res, nac, refs, anys, prov = {}, {}, {}, {}, {}
+    f = d / "nacionalitats.csv.gz"
+    if not f.exists():
+        return res, nac, {}, [], refs, anys, prov
+    col = "Nacionalidad (principales nacionalidades)"
+    n = pd.read_csv(f, dtype={"ine": str})
+    ult_ine = int(n["any"].max())
+    n = n[n["any"] == ult_ine]
+    tot = n[n[col] == "Extranjera"].set_index("ine")["valor"]
+    pais = n[n[col].isin(INE_ISO)].copy()
+    pais["c"] = pais[col].map(INE_ISO)
+    pais = pais[pais["valor"] > 0]
+    tops = {}
+    for ine, g in pais.groupby("ine"):
+        g = g.sort_values("valor", ascending=False)
+        ex = tot.get(ine)
+        if ex and ex == ex:
+            nac[ine] = {"any": ult_ine, "ex": int(ex), "font": "ine", "p": [[c, int(v)] for c, v in zip(g["c"].head(10), g["valor"].head(10))]}
+        if ex and ex >= 20 and len(g):
+            c0, v0 = g.iloc[0]["c"], g.iloc[0]["valor"]
+            res.setdefault(ine, {}).update({"nac_top": c0, "nac_top_pct": round(100 * v0 / ex, 1), "nac_top_n": int(v0), "nac_ex": int(ex)})
+            tops[c0] = tops.get(c0, 0) + 1
+    anys["nac"] = ult_ine
+    prov_ine = pais.groupby("c")["valor"].sum().sort_values(ascending=False)
+    ordre = sorted(tops, key=lambda c: (-tops[c], -prov_ine.get(c, 0)))
+    # Pes de les principals nacionalitats sobre la població (padró 2022)
+    tot_pob = n[n[col] == "Total"].set_index("ine")["valor"]
+    principals = list(prov_ine.head(6).index)
+    for ine, g in pais[pais["c"].isin(principals)].groupby("ine"):
+        p_ = tot_pob.get(ine)
+        if p_:
+            for c, v in zip(g["c"], g["valor"]):
+                res.setdefault(ine, {})[f"nac_{c}"] = round(100 * v / p_, 2)
+    for c in principals:
+        refs[f"nac_{c}"] = {"gi": round(100 * prov_ine[c] / tot_pob.sum(), 2)}
+        anys[f"nac_{c}"] = ult_ine
+    # Infants estrangers (0-15) — aproximació a l'alumnat estranger
+    fe = d / "edat_nacionalitat.csv.gz"
+    if fe.exists():
+        e = pd.read_csv(fe, dtype={"ine": str})
+        e = e[(e["any"] == e["any"].max()) & (e["Edad (grandes grupos)"] == "Menos de 16 años")].pivot_table(index="ine", columns="Nacionalidad", values="valor", aggfunc="sum")
+        for ine, x in e.iterrows():
+            if x.get("Total", 0) >= 30:
+                res.setdefault(ine, {})["edu_estr16"] = round(100 * x["Extranjera"] / x["Total"], 1)
+        refs["edu_estr16"] = {"gi": round(100 * e["Extranjera"].sum() / e["Total"].sum(), 1)}
+        anys["edu_estr16"] = int(pd.read_csv(fe, usecols=["any"])["any"].max())
+    # Idescat: detalle completo de países (municipios grandes, provincia y Cataluña)
+    lab = {}
+    fi = d / "idescat_paisos.csv.gz"
+    if fi.exists():
+        lab = json.loads((d / "idescat_paisos_etiquetes.json").read_text()).get("COUNTRY_G", {})
+        i = pd.read_csv(fi, dtype=str, keep_default_na=False, na_values=[""])
+        i = i[(i["SEX"] == "TOTAL")]
+        i["valor"] = pd.to_numeric(i["valor"], errors="coerce")
+        ult = i["YEAR"].max()
+        i = i[i["YEAR"] == ult]
+        iso = i[i["COUNTRY_G"].str.len() == 2]
+        for m, g in iso.groupby("MUN"):
+            t_ = i[(i["MUN"] == m) & (i["COUNTRY_G"] == "TOTAL")]["valor"]
+            if not len(t_):
+                continue
+            g = g[g["valor"] > 0].sort_values("valor", ascending=False)
+            blk = {"any": int(ult), "ex": int(t_.iloc[0]), "font": "idescat", "p": [[c, int(v)] for c, v in zip(g["COUNTRY_G"].head(10), g["valor"].head(10))]}
+            if m[:1].isdigit():
+                nac[m[:5]] = blk
+            elif m in ("P17", "P170000", "CAT") or m.startswith("P17"):
+                prov["gi" if m.startswith("P17") else "cat"] = blk
+        if "gi" in prov:
+            blk = prov.pop("gi")
+            cat_blk = prov.pop("cat", None)
+            catd = dict(cat_blk["p"]) if cat_blk else {}
+            catx = cat_blk["ex"] if cat_blk else None
+            gi_all = iso[iso["MUN"].str.startswith("P17")].sort_values("valor", ascending=False).head(12)
+            cat_all = iso[iso["MUN"] == "CAT"].set_index("COUNTRY_G")["valor"]
+            prov["nac_prov"] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["gi", "cat"] if catx else ["gi"], "any": int(ult), "total": blk["ex"],
+                                "grups": [{"g": c, "c": "pais:" + c, "gi": round(100 * float(v) / blk["ex"], 1),
+                                           **({"cat": round(100 * float(cat_all.get(c, 0)) / catx, 1)} if catx else {})}
+                                          for c, v in zip(gi_all["COUNTRY_G"], gi_all["valor"])]}
+            prov.pop("cat", None)
+    usats = set(ordre) | set(principals) | {c for x in nac.values() for c, _ in x["p"]} | {g["c"][5:] for g in prov.get("nac_prov", {}).get("grups", [])}
+    noms_es = {k: v for k, v in INE_ISO.items()}
+    inv = {v: k for k, v in noms_es.items()}
+    paisos = {c: (lab.get(c) if isinstance(lab.get(c), list) else [lab.get(c, inv.get(c, c)), inv.get(c, lab.get(c, c))]) for c in usats}
+    neteja = lambda x: re.sub(r",\s*(el|la|els|les|l')$", "", str(x)).strip()  # noqa: E731
+    paisos = {c: [neteja(v[0]), neteja(v[1])] for c, v in paisos.items()}
+    return res, nac, paisos, ordre, refs, anys, prov
 
 
 def main():
@@ -1039,6 +1140,11 @@ def main():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_un)
     refs_ed.update(refs_un)
+    nx, nac_mun, paisos, paisos_ordre, refs_nac, anys_nac, prov_nac = nacionalitat_indicadores(pob)
+    for ine, x in nx.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_nac)
+    refs_ed.update(refs_nac)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1069,6 +1175,7 @@ def main():
             "edificis": r(cat.loc[ine, "edificios"]) if ine in cat.index and "edificios" in cat.columns else None,
             "x": extra_mun.get(ine, {}),
             "pol": pol.get(ine, {}),
+            **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
         })
 
     # Provincia: alquiler medio ponderado por contratos, compraventas sumadas, renta ponderada por población
@@ -1097,7 +1204,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series()},
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac}, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": anys_extra,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
