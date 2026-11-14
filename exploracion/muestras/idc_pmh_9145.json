@@ -1,0 +1,13 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/pmh/9145?lang=ca",
+  "label" : "Població a 1 de gener. Per nacionalitat, sexe i edat any a any",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/pmh/9145/10091?lang=ca",
+      "label" : "Població a 1 de gener. Per nacionalitat, sexe i edat any a any"
+    } ]
+  },
+  "version" : "2.0"
+}
