@@ -56,11 +56,65 @@ def _llegeix(ident: int) -> pd.DataFrame:
     return df.drop(columns=[c for c in (mun, "Total", "Periodo", sexe, "Provincias", "Total Nacional") if c and c in df.columns])
 
 
+IDC = "https://api.idescat.cat/taules/v2/censph"
+
+
+def _jsonstat(d: dict) -> pd.DataFrame:
+    """JSON-stat (dataset) a tabla larga con una columna por dimensión (código) y 'valor'."""
+    ids, mida = d["id"], d["size"]
+    cats = [list(d["dimension"][k]["category"]["index"]) for k in ids]
+    if isinstance(d["dimension"][ids[0]]["category"]["index"], dict):
+        cats = [sorted(d["dimension"][k]["category"]["index"], key=d["dimension"][k]["category"]["index"].get) for k in ids]
+    vals = d["value"]
+    if isinstance(vals, dict):
+        vals = [vals.get(str(i)) for i in range(int(pd.Series(mida).prod()))]
+    idx = pd.MultiIndex.from_product(cats, names=ids)
+    return pd.DataFrame({"valor": vals}, index=idx).reset_index()
+
+
+def _idescat(sal, mun: pd.DataFrame) -> str:
+    """Censo anual (Idescat): extranjeros por país (6000) y población por nacionalidad y edad (16352), por municipio."""
+    lineas = []
+    for taula, nom, extra in (("6000", "paisos", "&SEX=TOTAL"), ("16352", "edat_nac", "&SEX=TOTAL")):
+        node = get(f"{IDC}/{taula}?lang=ca").json()["link"]["item"][0]["href"].split("?")[0]
+        parts, etiquetes = [], {}
+        for codi in mun["codi6"]:
+            try:
+                d = get(f"{node}/mun/data?lang=ca&MUN={codi}{extra}", pausa=0.15).json()
+            except Exception:  # noqa: BLE001
+                continue
+            parts.append(_jsonstat(d))
+            if not etiquetes:
+                etiquetes = {k: v["category"].get("label", {}) for k, v in d["dimension"].items()}
+                try:
+                    de = get(f"{node}/mun/data?lang=es&MUN={codi}{extra}").json()
+                    etiquetes = {k: {c: [etiquetes[k].get(c, c), v["category"].get("label", {}).get(c, c)] for c in v["category"].get("label", {})}
+                                 for k, v in de["dimension"].items()}
+                except Exception:  # noqa: BLE001
+                    pass
+        df = pd.concat(parts)
+        df.to_csv(sal / f"idescat_{nom}.csv.gz", index=False)
+        (sal / f"idescat_{nom}_etiquetes.json").write_text(json.dumps(etiquetes, ensure_ascii=False), encoding="utf-8")
+        lineas.append(f"idescat {taula}: {len(df)} filas, {df['MUN'].nunique()} municipios, columnas {list(df.columns)}")
+    return "\n".join(lineas)
+
+
 def ejecutar() -> str:
+    from .territorio import municipios
     sal = carpeta("nacionalitat")
+    lineas = []
+    try:
+        m = municipios()
+        col = next(c for c in m.columns if c in ("codi_idescat", "codi", "codi6", "codi_municipi"))
+        m = m.assign(codi6=m[col].astype(str).str.zfill(6))
+        lineas.append(_idescat(sal, m))
+    except Exception as e:  # noqa: BLE001
+        lineas.append(f"idescat: ERROR {type(e).__name__}: {str(e)[:300]}")
     ids = _busca(sal)
-    lineas = [f"tablas Girona: {ids}"]
+    lineas.append(f"tablas Girona: {ids}")
     for clave, ident in ids.items():
+        if (sal / f"{clave}.csv.gz").exists():
+            continue
         try:
             df = _llegeix(ident)
             df.to_csv(sal / f"{clave}.csv.gz", index=False)

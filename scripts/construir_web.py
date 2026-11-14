@@ -945,6 +945,64 @@ def educacio_series():
     return out
 
 
+def universitaris_indicadores(pob):
+    """Dónde estudian los universitarios residentes en cada municipio (Idescat, emouniv)."""
+    d = P / "educacio"
+    res, refs, anys = {}, {}, {}
+    f = d / "univ_municipis.csv"
+    if not f.exists():
+        return res, refs, anys
+    u = pd.read_csv(f, dtype={"Codi": str})
+    u.columns = ["codi", "nom", "mateix", "comarca", "fora", "total"]
+    for c in ("mateix", "comarca", "fora", "total"):
+        u[c] = pd.to_numeric(u[c], errors="coerce")
+    u["ine"] = u["codi"].str[:5]
+    for _, x in u.iterrows():
+        o = {"univ_n": int(x["total"])} if x["total"] == x["total"] else {}
+        p_ = pob.get(x["ine"])
+        if p_ and x["total"] == x["total"]:
+            o["edu_univ"] = round(1000 * x["total"] / p_, 1)
+        if x["total"] >= 20:
+            o["edu_univ_fora"] = round(100 * x["fora"] / x["total"], 1)
+            o["univ_split"] = [int(x["mateix"]), int(x["comarca"]), int(x["fora"])]
+        res[x["ine"]] = o
+    tot = u[["mateix", "comarca", "fora", "total"]].sum()
+    refs["edu_univ_fora"] = {"gi": round(100 * tot["fora"] / tot["total"], 1)}
+    refs["edu_univ"] = {"gi": round(1000 * tot["total"] / sum(v for v in pob.values() if v == v), 1)}
+    fc = d / "univ_cat_desti.csv"
+    if fc.exists():
+        c = pd.read_csv(fc).iloc[0]
+        refs["edu_univ_fora"]["cat"] = round(100 * float(c.iloc[3]) / float(c.iloc[4]), 1)
+    curs = None
+    fr = d / "univ_prov_desti.csv"
+    if fr.exists():
+        curs = _curs_ini(str(pd.read_csv(fr).iloc[0, 0]).replace("Curs ", ""))
+    anys.update({"edu_univ_fora": curs, "edu_univ": curs})
+    return res, refs, anys
+
+
+def universitaris_series():
+    """Serie provincial: % de universitarios residentes que estudian fuera de la provincia y % de plazas ocupadas por no residentes."""
+    f = P / "educacio" / "univ_prov_residents.csv"
+    if not f.exists():
+        return {}
+    t = pd.read_csv(f).set_index("Unnamed: 0")
+    t = t.apply(lambda c: pd.to_numeric(c, errors="coerce"))
+    fora, res_ = t.loc["Residents que estudien a fora de la província"], t.loc["Alumnes residents (2)"]
+    nores, llocs = t.loc["No residents que estudien a la província"], t.loc["Llocs d'estudi localitzats (1)"]
+    med = res_.median()
+    ser = {"gi": [], "cat": []}
+    for c in reversed(t.columns):
+        if not (res_[c] > 0.7 * med):  # 2018/19 viene incompleto
+            continue
+        ini = _curs_ini(c.replace("Curs ", ""))
+        ser["gi"].append([ini, c.replace("Curs ", ""), round(100 * fora[c] / res_[c], 1)])
+        ser["cat"].append([ini, c.replace("Curs ", ""), round(100 * nores[c] / llocs[c], 1)])
+    ult = t.columns[0]
+    return {"univ_fora_prov": {"tipus": "linia", "u": "%", "dec": 1, "series": ser, "noms": "univ",
+                               "abs": {"curs": ult.replace("Curs ", ""), "residents": int(res_[ult]), "fora": int(fora[ult]), "nores": int(nores[ult]), "llocs": int(llocs[ult])}}}
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -976,6 +1034,11 @@ def main():
     for ine, x in ed.items():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_ed)
+    un, refs_un, anys_un = universitaris_indicadores(pob)
+    for ine, x in un.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_un)
+    refs_ed.update(refs_un)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1034,7 +1097,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series()},
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series()},
         "anys": anys_extra,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
