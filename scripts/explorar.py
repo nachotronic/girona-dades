@@ -30,6 +30,11 @@ for t in ["estudiants universitaris procedència", "preinscripció universitàri
           "titulats universitaris", "universitat de girona estudiants", "mobilitat estudiants universitaris", "nou accés universitat"]:
     clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
     CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
+for t in ["població estrangera nacionalitat municipi", "població per nacionalitat", "estrangers per país", "alumnat estranger",
+          "alumnes nacionalitat estrangera", "alumnes nouvinguts", "aules d'acollida", "padró nacionalitat"]:
+    clave = "socrata_" + "".join(c if c.isalnum() else "_" for c in t)[:40]
+    CANDIDATAS[clave] = SOCRATA + "?" + urllib.parse.urlencode({"q": t, "limit": 10})
+CANDIDATAS["ine_ops_DPOP"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/22"
 CANDIDATAS["ine_ops_EEU"] = "https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/EEU"
 CANDIDATAS["idescat_universitaris"] = "https://www.idescat.cat/indicadors/?id=aec&n=15729&lang=es"
 for _op in ("IPC", "EPA", "H", "ETDP", "EOH", "EOAC", "ECP", "MNP", "IPV", "EH", "ECV", "SM", "PCAP"):
