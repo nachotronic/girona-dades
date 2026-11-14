@@ -1,8 +1,8 @@
 # Estado de la última actualización
 
-2026-11-14 07:23 UTC
+2026-11-14 07:25 UTC
 
-## educacio: ok (20 s)
+## educacio: ok (19 s)
 
 ```
 censo 2021: 533 secciones de Girona
