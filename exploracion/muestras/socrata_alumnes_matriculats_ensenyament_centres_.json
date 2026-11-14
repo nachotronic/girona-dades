@@ -1,0 +1,2835 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Alumnes matriculats per ensenyament i unitats dels centres docents",
+            "id" : "xvme-26kg",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Alumnes matriculats en els centres docents, en els ensenyaments que cursen. També s’inclouen el nombre de grups o unitats en què es distribueixen els alumnes. La font d’informació són els sistemes d’informació del Departament d’Educació. L’actualització és anual.  \nRespecte al recompte de matrícules, estan informats els alumnes dels quals es tingui el sexe informat. S’exclouen els estudis categoritzats com a desconeguts. \nHi ha certes característiques dels ensenyaments com la modalitat que només s’informa en els estudis en que té sentit.\nRespecte els grups o unitats, només s‘inclouen els corresponents als ensenyaments de règim general.\nConsideracions:\n-\tEn el cas dels ensenyaments superiors de disseny, una part dels alumnes cursen els estudis anualment i una altra part semestralment. Per homogeneïtzar les dades s’han considerat totes les matrícules anuals (mostrant les dades del primer semestre pels centres que fan els dos períodes).\n-\tEn el cas de les unitats, per als centres privats i per alguns estudis no es disposa de les dades desagregades a nivell d’ensenyament (només a nivell de grau). En aquest cas s’ha afegir el nombre d’unitats per grau separant aquesta dada del nombre de matrícules.\n-\tL'actualització de les dades anual es fa en tres fases: En la primera fase s’informarà dels ensenyaments de règim general, en la segona dels ensenyaments de règim especial que tenen matrícula anual i en la tercera ensenyaments de règim especial que tenen matriculació no anual.",
+            "attribution" : "Departament d'Educació i Formació Professionalfessional i Formació Professional i Formació Professional i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:43:10.000Z",
+            "createdAt" : "2019-06-04T10:45:32.000Z",
+            "metadata_updated_at" : "2026-09-21T06:43:10.000Z",
+            "data_updated_at" : "2026-04-23T11:01:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 264,
+                "page_views_last_month" : 1194,
+                "page_views_total" : 40871,
+                "page_views_last_week_log" : 8.049848549450562,
+                "page_views_last_month_log" : 10.222794902868111,
+                "page_views_total_log" : 15.3188252203997
+              },
+            "columns_name" :
+              [
+                "Coordenades UTM X",
+                "Codi centre",
+                "Denominació completa",
+                "Coordenades GEO X",
+                "Codi districte municipal",
+                "Nivell",
+                "Nom ensenyament",
+                "Nom comarca",
+                "Nom municipi",
+                "Matrícules. Dones",
+                "Curs",
+                "Any",
+                "Codi comarca",
+                "Codi àrea territorial",
+                "Coordenades GEO Y",
+                "Període matrícula",
+                "Modalitat",
+                "Codi estudis",
+                "Codi municipi_5",
+                "Georeferència",
+                "Codi naturalesa",
+                "Coordenades UTM Y",
+                "Codi municipi_6",
+                "Matrícula concertada",
+                "Codi titularitat",
+                "Nom estudis",
+                "Nom naturalesa",
+                "Nom àrea territorial",
+                "Nom titularitat",
+                "Unitats",
+                "Matrícules. Homes",
+                "Matrícules. Total",
+                "Nom districte municipal",
+                "Codi ensenyament",
+                "Grau",
+                "Temàtica"
+              ],
+            "columns_field_name" :
+              [
+                "coordenades_utm_x",
+                "codi_centre",
+                "denominaci_completa",
+                "coordenades_geo_x",
+                "codi_districte_municipal",
+                "nivell",
+                "nom_ensenyament",
+                "nom_comarca",
+                "nom_municipi",
+                "matr_cules_dones",
+                "curs",
+                "any",
+                "codi_comarca",
+                "codi_delegaci",
+                "coordenades_geo_y",
+                "per_ode_matr_cula",
+                "modalitat",
+                "codi_estudis",
+                "codi_municipi_5",
+                "georefer_ncia",
+                "codi_naturalesa",
+                "coordenades_utm_y",
+                "codi_municip_6",
+                "matr_cula_concertada",
+                "codi_titularitat",
+                "nom_estudis",
+                "nom_naturalesa",
+                "nom_delegaci",
+                "nom_titularitat",
+                "unitats",
+                "matr_cules_homes",
+                "matr_cules_total",
+                "nom_dm",
+                "codi_ensenyament",
+                "grau",
+                "tem_tica"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "ETRS89",
+                "Codi de centre educatiu",
+                "Nom complert del centre educatiu",
+                "WGS84",
+                "Codi del districte del municipi del centre educatiu",
+                "Nivell de l’ensenyament",
+                "Nom de l’ensenyament",
+                "Nom comarca del centre educatiu",
+                "Nom del municipi del centre educatiu",
+                "Nombre de matrícules. Dones",
+                "Curs de referència",
+                "Any inferior del curs",
+                "Codi comarca del centre educatiu",
+                "Codi de l'Àrea Territorial del centre educatiu",
+                "WGS84",
+                "Període de matriculació",
+                "Modalitat en que es cursa l’ensenyament (presencial, semipresencial, distància o lliure)",
+                "Codi de l’estudi",
+                "Codificació a 5 dígits",
+                "",
+                "Codi naturalesa Públic/Privat",
+                "ETRS89",
+                "Codificació a 6 dígits",
+                "Informació sobre si l’ensenyament al centre es concertat o rep fons públics",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Nom de l’estudi",
+                "Públic/Privat",
+                "Àrea Territorial",
+                "Titularitat de la propietat del centre educatiu",
+                "Nombre d'unitats o grups",
+                "Nombre de matrícules. Homes",
+                "Nombre de matrícules. Total",
+                "Nom del districte del municipi del centre educatiu",
+                "Codi de l’ensenyament",
+                "Grau de l’ensenyament",
+                "Família professional dels estudis"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "align" : "left" },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 9458,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-06-08T09:49:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "ensenyament",
+                "estudi",
+                "matrícula",
+                "alumnes",
+                "educació",
+                "grups",
+                "unitats",
+                "docents",
+                "registre",
+                "infantil",
+                "primària",
+                "secundària",
+                "batxillerat",
+                "formació professional",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students enrolled by type of education and education center"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnos matriculados por enseñanza y unidades de los centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xvme-26kg",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Alumnes-matriculats-per-ensenyament-i-unitats-dels/xvme-26kg",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Oferta inicial de places escolars dels estudis obligatoris",
+            "id" : "vaht-2sjk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre de grups, nombre de places i nombre de places ofertades a la preinscripció. Per centre, ensenyament i nivell.\n\nAquest dataset es complementa amb altres fitxers publicats pel Departament d’Educació en relació al nombre d’assignacions finals, el nombre d’alumnes matriculats i el directori de centres educatius.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:35:42.000Z",
+            "createdAt" : "2021-03-17T09:58:25.000Z",
+            "metadata_updated_at" : "2026-09-21T06:35:42.000Z",
+            "data_updated_at" : "2026-03-06T08:32:55.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 71,
+                "page_views_last_month" : 204,
+                "page_views_total" : 11825,
+                "page_views_last_week_log" : 6.169925001442312,
+                "page_views_last_month_log" : 7.679480099505446,
+                "page_views_total_log" : 13.529674561764642
+              },
+            "columns_name" :
+              [
+                "Codi naturalesa",
+                "Codi Àrea Territorial",
+                "Nom titularitat",
+                "Codi centre",
+                "Codi ensenyament",
+                "Codi titularitat",
+                "Curs",
+                "Georeferència",
+                "Denominació completa",
+                "Coordenades_GEO_Y",
+                "LIMADM_MUNICIPI",
+                "Places ofertades a la preinscripció",
+                "Nom DM",
+                "Mixt",
+                "Nombre places",
+                "Codi comarca",
+                "Codi districte municipal",
+                "LIMADM COMARCA",
+                "Nivell",
+                "Coordenades_GEO_X",
+                "Nombre grups",
+                "Nom ensenyament",
+                "Nom naturalesa",
+                "Nom Àrea Territorial",
+                "Nom comarca",
+                "Codi municipi_6",
+                "Nom municipi"
+              ],
+            "columns_field_name" :
+              [
+                "codi_naturalesa_1_2",
+                "codi_delegaci",
+                "nom_titularitat",
+                "codi_centre",
+                "codi_ensenyament",
+                "codi_titularitat",
+                "curs",
+                "georefer_ncia",
+                "denominaci_completa",
+                "coordenades_geo_y",
+                ":@computed_region_bh64_c7uy",
+                "places_ofertades_a_la",
+                "nom_dm",
+                "mixt",
+                "nombre_places",
+                "codi_comarca",
+                "codi_districte_municipal",
+                ":@computed_region_wvic_k925",
+                "nivell",
+                "coordenades_geo_x",
+                "nombre_grups",
+                "nom_ensenyament",
+                "nom_naturalesa",
+                "nom_delegaci",
+                "nom_comarca",
+                "codi_municipi_5",
+                "nom_municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codi naturalesa Públic/Privat",
+                "Codi de l'Àrea Territorial del centre docent",
+                "Titularitat de la propietat del centre educatiu",
+                "Codi de centre educatiu. Identificació única de centre. Camp recomanat per al tractament de dades",
+                "Codi de l’ensenyament",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Curs de referència",
+                "",
+                "Nom complet del centre educatiu",
+                "",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Places ofertades en el procés de preinscripció",
+                "Nom del districte del municipi del centre educatiu",
+                "Un grup és mixt, si pertany a un centre educatiu en una zona rural i té alumnes de nivells i ensenyaments diferents. ",
+                "Nombre de places",
+                "Codi comarca del centre docent",
+                "Codi del districte del municipi del centre educatiu",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nivell",
+                "",
+                "Nombre de grups",
+                "Nom de l’ensenyament",
+                "Públic/privat",
+                "Àrea Territorial",
+                "Nom comarca del centre docent",
+                "Codificació del municipi a 5 dígits",
+                "Nom del municipi del centre educatiu"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2085,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-03-13T16:03:45.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "educació",
+                "ensenyament",
+                "preinscripció",
+                "places",
+                "alumnes",
+                "estudis obligatoris",
+                "oferta educativa",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Educational offer of compulsory studies"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Oferta educativa de los estudios obligatorios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vaht-2sjk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Oferta-inicial-de-places-escolars-dels-estudis-obl/vaht-2sjk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Oferta inicial de places dels estudis post-obligatoris",
+            "id" : "ky5m-v7i9",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre de grups, nombre de places i nombre de places ofertades a la preinscripció. Per centre, ensenyament i nivell.\n\nAquest dataset es complementa amb altres fitxers publicats pel Departament d’Educació en relació al nombre d’assignacions finals, el nombre d’alumnes matriculats i el directori de centres educatius.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-18T08:00:43.000Z",
+            "createdAt" : "2021-05-20T11:57:26.000Z",
+            "metadata_updated_at" : "2026-09-18T08:00:43.000Z",
+            "data_updated_at" : "2026-05-27T09:39:09.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 115,
+                "page_views_last_month" : 386,
+                "page_views_total" : 7825,
+                "page_views_last_week_log" : 6.857980995127572,
+                "page_views_last_month_log" : 8.59618975614441,
+                "page_views_total_log" : 12.934059394900794
+              },
+            "columns_name" :
+              [
+                "Codi municipi_5",
+                "Nom comarca",
+                "Nom naturalesa",
+                "Torn",
+                "Places ofertades a la preinscripció",
+                "Curs",
+                "Nombre grups",
+                "Nombre places",
+                "Codi ensenyament",
+                "Nom ensenyament",
+                "Codi centre",
+                "Codi naturalesa (1,2)",
+                "Àrea territorial",
+                "Nom municipi",
+                "Nivell",
+                "Denominació completa",
+                "Codi comarca",
+                "Codi titularitat",
+                "Nom titularitat",
+                "Codi àrea territorial"
+              ],
+            "columns_field_name" :
+              [
+                "codi_municipi_5",
+                "nom_comarca",
+                "nom_naturalesa",
+                "torn",
+                "places_ofertades_a_la",
+                "curs",
+                "nombre_grups",
+                "nombre_places",
+                "codi_ensenyament",
+                "nom_ensenyament",
+                "codi_centre",
+                "codi_naturalesa_1_2",
+                "nom_delegaci",
+                "nom_municipi",
+                "nivell",
+                "denominaci_completa",
+                "codi_comarca",
+                "codi_titularitat",
+                "nom_titularitat",
+                "codi_delegaci"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codificació del municipi a 5 dígits",
+                "Nom comarca del centre docent",
+                "Públic/privat",
+                "Matí, Tarda, Matí i tarda",
+                "Places ofertades en el procés de preinscripció",
+                "Curs de referència",
+                "Nombre de grups",
+                "Nombre de places",
+                "Codi de l’ensenyament",
+                "Nom de l’ensenyament",
+                "Codi de centre educatiu. Identificació única de centre. Camp recomanat per al tractament de dades",
+                "Codi naturalesa Públic/Privat",
+                "Nom de l'Àrea Territorial",
+                "Nom del municipi del centre educatiu",
+                "Nivell",
+                "Nom complet del centre educatiu",
+                "Codi comarca del centre docent",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Titularitat de la propietat del centre educatiu",
+                "Codi de l'Àrea Territorial del centre docent"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "noCommas" : "false"
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1503,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-05-20T12:02:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "educació",
+                "ensenyament",
+                "preinscripció",
+                "places",
+                "alumnes",
+                "estudis post-obligatoris",
+                "oferta educativa",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on the allocation of places in the pre-enrollment process in compulsory education of pre-school and second cycle "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de la asignación de plazas en el proceso de preinscripción en las enseñanzas obligatorias infantil y segundo ciclo"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ky5m-v7i9",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Oferta-inicial-de-places-dels-estudis-post-obligat/ky5m-v7i9",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Directori de centres docents. Fins curs 2019-2020",
+            "id" : "e2ef-eiqj",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "És un directori de centres educatius amb ensenyaments autoritzats, amb la informació de localització i contacte del centre, amb els ensenyaments autoritzats des de el curs 2015-2016 fins el curs 2019-2020.\nLa font d'informació és el Registre de Centres Docents, que gestiona la Direcció General de Centres Públics. Els directoris s'actualitzen els mesos de setembre i gener.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:37:03.000Z",
+            "createdAt" : "2018-04-13T09:57:12.000Z",
+            "metadata_updated_at" : "2026-09-21T06:37:03.000Z",
+            "data_updated_at" : "2025-12-12T12:31:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 47,
+                "page_views_last_month" : 183,
+                "page_views_total" : 32181,
+                "page_views_last_week_log" : 5.584962500721157,
+                "page_views_last_month_log" : 7.523561956057013,
+                "page_views_total_log" : 14.973966366904204
+              },
+            "columns_name" :
+              [
+                "PA01",
+                "EE",
+                "CFPS",
+                "AA03",
+                "Coordenades UTM X",
+                "CFAM",
+                "PPAS",
+                "AA01",
+                "BATX",
+                "PA02",
+                "ESO",
+                "CFAS",
+                "EPRI",
+                "EINF2C",
+                "ESDI",
+                "ADR",
+                "CFPM",
+                "CRBC",
+                "IDI",
+                "DANE",
+                "Codi naturalesa",
+                "FAX",
+                "Codi municipi_5",
+                "Adreça",
+                "PFI",
+                "Codi titularitat",
+                "Codi centre",
+                "Nom comarca",
+                "Coordenades UTM Y",
+                "Nom DM",
+                "EINF1C",
+                "Codi districte municipal",
+                "Nom municipi",
+                "Telèfon",
+                "Nom localitat",
+                "Coordenades GEO Y",
+                "E-mail centre",
+                "Nom titularitat",
+                "Zona educativa",
+                "Codi municipì_6",
+                "ESCS",
+                "ADULTS",
+                "IFE",
+                "TEGS",
+                "ESCM",
+                "Codi comarca",
+                "TEGM",
+                "ESTR",
+                "Codi postal",
+                "Codi localitat",
+                "georeferència",
+                "MUSS",
+                "Nom àrea territorial",
+                "MUSP",
+                "MUSE",
+                "LIMADM_MUNICIPI",
+                "Codi àrea territorial",
+                "DANS",
+                "Curs",
+                "Any",
+                "Nom naturalesa",
+                "DANP",
+                "Denominació completa",
+                "Coordenades GEO X"
+              ],
+            "columns_field_name" :
+              [
+                "pa01",
+                "ee",
+                "cfps",
+                "aa03",
+                "coordenades_utm_x",
+                "cfam",
+                "ppas",
+                "aa01",
+                "batx",
+                "pa02",
+                "eso",
+                "cfas",
+                "epri",
+                "einf2c",
+                "esdi",
+                "adr",
+                "cfpm",
+                "crbc",
+                "idi",
+                "dane",
+                "codi_naturalesa",
+                "fax",
+                "codi_municipi_5",
+                "adre_a",
+                "pfi",
+                "codi_titularitat",
+                "codi_centre",
+                "nom_comarca",
+                "coordenades_utm_y",
+                "nom_dm",
+                "einf1c",
+                "codi_districte_municipal",
+                "nom_municipi",
+                "tel_fon",
+                "nom_localitat",
+                "coordenades_geo_y",
+                "e_mail_centre",
+                "nom_titularitat",
+                "zona_educativa",
+                "codi_municip_6",
+                "escs",
+                "adults",
+                "ife",
+                "tegs",
+                "escm",
+                "codi_comarca",
+                "tegm",
+                "estr",
+                "codi_postal",
+                "codi_localitat",
+                "georefer_ncia",
+                "muss",
+                "nom_delegaci",
+                "musp",
+                "muse",
+                ":@computed_region_bh64_c7uy",
+                "codi_delegaci",
+                "dans",
+                "curs",
+                "any",
+                "nom_naturalesa",
+                "danp",
+                "denominaci_completa",
+                "coordenades_geo_x"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "Educació especial",
+                "Cicles formatius de grau superior",
+                "Curs preparació a la incorporació a FP grau superior",
+                "ETRS89",
+                "Cicles d'arts plàstiques i disseny grau mitjà",
+                "Curs preparació proves accés a FP grau superior",
+                "Curs específic d'accés als cicles formatius de grau mitjà",
+                "Batxillerat",
+                "",
+                "Educació secundària obligatòria",
+                "Cicles d'arts plàstiques i disseny grau superior",
+                "Educació primària",
+                "Educació infantil 2n cicle",
+                "Ensenyaments superiors de disseny",
+                "Art dramàtic",
+                "Cicles formatius de grau mitjà",
+                "Conservació i restauració de bens culturals",
+                "Idiomes",
+                "Escoles de dansa",
+                "Codi naturalesa Públic/Privat",
+                "Fax del centre",
+                "Codificació del municipi a 5 dígits",
+                "Adreça del centre",
+                "Programa de formació i inserció",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Codi de centre educatiu",
+                "Nom comarca del centre",
+                "ETRS89",
+                "Nom del districte del municipi del centre",
+                "Educació infantil 1er cicle",
+                "Codi del districte del municipi del centre",
+                "Nom del municipi del centre",
+                "Telèfon del centre",
+                "Nom de la localitat del centre",
+                "WGS84",
+                "Adreça electrònica del centre",
+                "Titularitat de la propietat del centre educatiu",
+                "Zona educativa del centre",
+                "Codificació del municipi a 6 dígits",
+                "Estudis d'Arts Escèniques de Grau Superior",
+                "Educació d'adults",
+                "Itineraris Formatius Específics",
+                "Ensenyaments esportius grau superior",
+                "Estudis d'Arts Escèniques de Grau Mitjà",
+                "Codi comarca del centre",
+                "Ensenyaments esportius grau mitjà",
+                "Ensenyaments centres estrangers",
+                "Codi postal del centre",
+                "Codificació de la localitat del centre",
+                "",
+                "Ensenyaments superior de música",
+                "Àrea Territorial",
+                "Ensenyaments professionals de música",
+                "Escoles de música",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Codi de l'Àrea Territorial del centre",
+                "Ensenyaments superior de dansa",
+                "Curs de referència",
+                "Any del curs inferior",
+                "Públic/Privat",
+                "Ensenyaments professionals de dansa",
+                "Nom complet del centre educatiu",
+                "WGS84"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {
+                  "noCommas" : "true",
+                  "rdf" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "groupSeparator" : ","
+                },
+                {},
+                {
+                  "noCommas" : "true",
+                  "rdf" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {
+                  "noCommas" : "false",
+                  "rdf" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "groupSeparator" : ","
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "rdf" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                }
+              ],
+            "download_count" : 7691,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-12-12T12:32:28.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "ensenyament",
+                "directori",
+                "educació",
+                "docents",
+                "registre",
+                "infantil",
+                "primària",
+                "secundària",
+                "batxillerat",
+                "formació professional",
+                "smartcatalonia",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Directoris de centres educatius"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://educacio.gencat.cat/ca/serveis-tramits/directoris-centres"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Directory of education centers"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Directorio de centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Adreça postal"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/e2ef-eiqj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Directori-de-centres-docents-Fins-curs-2019-2020/e2ef-eiqj",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Distribució alumnat postobligatori a ST Girona curs 23-24",
+            "id" : "iqdr-qkkp",
+            "resource_name" : null,
+            "parent_fxf" : [ "xvme-26kg" ],
+            "description" : "Alumnes matriculats en els centres docents, en els ensenyaments que cursen. També s’inclouen el nombre de grups o unitats en què es distribueixen els alumnes. La font d’informació són els sistemes d’informació del Departament d’Educació. L’actualització és anual.  \nRespecte al recompte de matrícules, estan informats els alumnes dels quals es tingui el sexe informat. S’exclouen els estudis categoritzats com a desconeguts. \nHi ha certes característiques dels ensenyaments com la modalitat que només s’informa en els estudis en que té sentit.\nRespecte els grups o unitats, només s‘inclouen els corresponents als ensenyaments de règim general.\nConsideracions:\n-\tEn el cas dels ensenyaments superiors de disseny, una part dels alumnes cursen els estudis anualment i una altra part semestralment. Per homogeneïtzar les dades s’han considerat totes les matrícules anuals (mostrant les dades del primer semestre pels centres que fan els dos períodes).\n-\tEn el cas de les unitats, per als centres privats i per alguns estudis no es disposa de les dades desagregades a nivell d’ensenyament (només a nivell de grau). En aquest cas s’ha afegir el nombre d’unitats per grau separant aquesta dada del nombre de matrícules.\n-\tL'actualització de les dades anual es fa en tres fases: En la primera fase s’informarà dels ensenyaments de règim general, en la segona dels ensenyaments de règim especial que tenen matrícula anual i en la tercera ensenyaments de règim especial que tenen matriculació no anual.",
+            "attribution" : "Departament d'Educació i Formació Professionalfessional i Formació Professional i Formació Professional i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2026-09-18T08:01:46.000Z",
+            "createdAt" : "2024-10-19T17:29:19.000Z",
+            "metadata_updated_at" : "2026-09-18T08:01:46.000Z",
+            "data_updated_at" : "2026-04-23T11:01:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 30,
+                "page_views_total" : 553,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 4.954196310386876,
+                "page_views_total_log" : 9.113742166049189
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-10-19T17:43:15.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students enrolled by type of education and education center"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnos matriculados por enseñanza y unidades de los centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/iqdr-qkkp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Distribució-alumnat-postobligatori-a-ST-Girona-cur/iqdr-qkkp",
+        "owner" :
+          {
+            "id" : "w776-8cnn",
+            "user_type" : "interactive",
+            "display_name" : "raulbatalle@gencat.cat"
+          },
+        "creator" :
+          {
+            "id" : "w776-8cnn",
+            "user_type" : "interactive",
+            "display_name" : "raulbatalle@gencat.cat"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Directori de centres docents TRAÇACOVID",
+            "id" : "3u9c-b74b",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "És un directori de centres  educatius amb la informació de localització i contacte del centre, així com els ensenyaments autoritzats del curs 2021-2022.\nLes geocodificacions dels centres s’han fet mitjançant el sistema de referència EPSG 25831/UTM zona 31M. El criteri ha estat l’accés d’entrada al centre, independentment que coincideixi amb el de l’adreça oficial.\n\nS’inclouen els centres que tenen els següents ensenyaments: \nRègim General\n-\tINFANTIL 1R CICLE\n-\tINFANTIL 2N CICLE\n-\tPRIMÀRIA\n-\tESO\n-\tBATXILLERAT\n-\tCICLES DE FORMACIÓ PROFESSIONAL\n-\tPROGRAMES DE FORMACIÓ I INSERCIÓ (centres docents i centres no docents)\n-\tEDUCACIÓ ESPECIAL\n-\tESCOLES AMB PLANS ESTRANGERS\nRègim Especial – Ensenyaments reglats\n-\tCICLES DE FORMACIÓ ARTÍSTICA\n-\tCICLES DE FORMACIÓ ESCÈNICA\n-\tPROFESSIONAL I SUPERIOR DE MÚSICA\n-\tPROFESSIONAL I SUPERIOR DE DANSA\n-\tART DRAMÀTIC\n-\tENSENYAMENTS ESPORTIUS\n-\tESCOLES OFICIALS D’IDIOMES (en règim presencial o semipresencial)\n-\tFORMACIÓ DE PERSONES ADULTES\n\nQueden excloses els centres que imparteixen exclusivament MÚSICA ELEMENTAL O DANSA ELEMENTAL",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-18T08:01:31.000Z",
+            "createdAt" : "2020-09-29T09:35:35.000Z",
+            "metadata_updated_at" : "2026-09-18T08:01:31.000Z",
+            "data_updated_at" : "2023-03-13T15:58:48.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 20,
+                "page_views_last_month" : 78,
+                "page_views_total" : 9220,
+                "page_views_last_week_log" : 4.392317422778761,
+                "page_views_last_month_log" : 6.303780748177103,
+                "page_views_total_log" : 13.170707501348076
+              },
+            "columns_name" :
+              [
+                "Codi centre",
+                "Coordenades UTM X",
+                "Nom titularitat",
+                "Nom municipi",
+                "Adreça",
+                "LIMADM COMARCA",
+                "Estudis",
+                "Coordenades GEO Y",
+                "Nom DM",
+                "Coordenades GEO X",
+                "Coordenades UTM Y",
+                "Codi postal",
+                "LIMADM_MUNICIPI",
+                "Denominació completa",
+                "Codi districte municipal",
+                "Nom naturalesa",
+                "Codi municipi (6 digits)",
+                "Georeferència",
+                "Codi municipi (5 digits)",
+                "Codi comarca",
+                "Nom comarca"
+              ],
+            "columns_field_name" :
+              [
+                "codi_centre",
+                "coordenades_utm_x",
+                "nom_titularitat",
+                "nom_municipi",
+                "adre_a",
+                ":@computed_region_wvic_k925",
+                "estudis",
+                "coordenades_geo_y",
+                "nom_dm",
+                "coordenades_geo_x",
+                "coordenades_utm_y",
+                "codi_postal",
+                ":@computed_region_bh64_c7uy",
+                "denominaci_completa",
+                "codi_districte_municipal",
+                "nom_naturalesa",
+                "codi_municipi_6_digits",
+                "georefer_ncia",
+                "codi_municipi_5_digits",
+                "codi_comarca",
+                "nom_comarca"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codi del centre educatiu",
+                "ETRS89",
+                "Titularitat de la propietat del centre educatiu",
+                "Nom del municipi del centre",
+                "Adreça del centre",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Estudis autoritzats del centre",
+                "WGS84",
+                "Nom del districte del municipi del centre",
+                "WGS84",
+                "ETRS89",
+                "Codi postal del centre",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nom complert del centre educatiu",
+                "Codi del districte del municipi del centre",
+                "Públic/Privat",
+                "Codificació del municipi a 6 dígits",
+                "",
+                "Codificació del municipi a 5 dígits",
+                "Codi comarca del centre",
+                "Nom comarca del centre"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 427662,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-03-13T15:59:01.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "ensenyament",
+                "directori",
+                "educació",
+                "docents",
+                "registre",
+                "infantil",
+                "primària",
+                "secundària",
+                "batxillerat",
+                "formació professional",
+                "georefències",
+                "educacio covid-19",
+                "covid-19",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Directory of educational centers TRAÇACOVID"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Directorio de centros docentes TRAÇACOVID"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/3u9c-b74b",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Directori-de-centres-docents-TRAÇACOVID/3u9c-b74b",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Directori de centres docents anual. Base 2020",
+            "id" : "kvmv-ahh4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "És un directori de centres  educatius amb ensenyaments autoritzats, amb la informació de localització i contacte del centre, amb els ensenyaments autoritzats. La font d'informació és el Registre de Centres Docents, que gestiona la Direcció General de Centres Públics. Els directoris s'actualitzen els mesos de d’octubre i gener, a partir del curs 2020-2021.\nLes geocodificacions dels centres s’han fet mitjançant el sistema de referència EPSG 25831/UTM zona 31M. El criteri ha estat l’accés d’entrada al centre, independentment que coincideixi amb el de l’adreça oficial.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-09T07:49:31.000Z",
+            "createdAt" : "2020-11-18T16:56:03.000Z",
+            "metadata_updated_at" : "2026-10-09T07:49:26.000Z",
+            "data_updated_at" : "2026-10-09T07:49:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 468,
+                "page_views_last_month" : 1780,
+                "page_views_total" : 78616,
+                "page_views_last_week_log" : 8.873444112515376,
+                "page_views_last_month_log" : 10.798471801101618,
+                "page_views_total_log" : 16.262553691572702
+              },
+            "columns_name" :
+              [
+                "AA01",
+                "ESCM",
+                "CFAS",
+                "EE",
+                "Codi districte municipal",
+                "ESCS",
+                "Codi naturalesa",
+                "Codi àrea territorial",
+                "ADR",
+                "Codi localitat",
+                "LIMADM COMARCA",
+                "CFAM",
+                "E-mail centre",
+                "Nom àrea territorial",
+                "DANP",
+                "MUSE",
+                "ESDI",
+                "ADULTS",
+                "Nom DM",
+                "CFPS",
+                "Nom municipi",
+                "Codi centre",
+                "DANE",
+                "ESO",
+                "Nom comarca",
+                "Coordenades UTM X",
+                "CRBC",
+                "Coordenades GEO Y",
+                "URL",
+                "Coordenades GEO X",
+                "ESTR",
+                "Nom localitat",
+                "PA01",
+                "IFE",
+                "Codi titularitat",
+                "PFI",
+                "Codi postal",
+                "Denominació completa",
+                "Adreça",
+                "PA02",
+                "Nom titularitat",
+                "PPAS",
+                "Curs",
+                "Telèfon",
+                "EPRI",
+                "AA03",
+                "MUSS",
+                "Codi municipi",
+                "EINF1C",
+                "Coordenades UTM Y",
+                "TEGS",
+                "BATX",
+                "CFPM",
+                "Codi comarca",
+                "Georeferència",
+                "Codi municipi_6",
+                "MUSP",
+                "TEGM",
+                "DANS",
+                "Any",
+                "Nom naturalesa",
+                "Imatge",
+                "LIMADM_MUNICIPI",
+                "IDI",
+                "EINF2C"
+              ],
+            "columns_field_name" :
+              [
+                "aa01",
+                "escm",
+                "cfas",
+                "ee",
+                "codi_districte_municipal",
+                "escs",
+                "codi_naturalesa",
+                "codi_delegaci",
+                "adr",
+                "codi_localitat",
+                ":@computed_region_wvic_k925",
+                "cfam",
+                "e_mail_centre",
+                "nom_delegaci",
+                "danp",
+                "muse",
+                "esdi",
+                "adults",
+                "nom_dm",
+                "cfps",
+                "nom_municipi",
+                "codi_centre",
+                "dane",
+                "eso",
+                "nom_comarca",
+                "coordenades_utm_x",
+                "crbc",
+                "coordenades_geo_y",
+                "url",
+                "coordenades_geo_x",
+                "estr",
+                "nom_localitat",
+                "pa01",
+                "ife",
+                "codi_titularitat",
+                "pfi",
+                "codi_postal",
+                "denominaci_completa",
+                "adre_a",
+                "pa02",
+                "nom_titularitat",
+                "ppas",
+                "curs",
+                "tel_fon",
+                "epri",
+                "aa03",
+                "muss",
+                "codi_municipi",
+                "einf1c",
+                "coordenades_utm_y",
+                "tegs",
+                "batx",
+                "cfpm",
+                "codi_comarca",
+                "geo_1",
+                "codi_municipi_6",
+                "musp",
+                "tegm",
+                "dans",
+                "any",
+                "nom_naturalesa",
+                "imatge",
+                ":@computed_region_bh64_c7uy",
+                "idi",
+                "einf2c"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Cursos d’accés a cicles de grau mitjà",
+                "Estudis d’Arts escèniques de grau mitjà",
+                "Cicles de Formació Artística Grau Superior",
+                "Educació Especial",
+                "Codi del districte del municipi del centre",
+                "Estudis d’Arts escèniques de grau superior",
+                "Codi naturalesa Públic/Privat",
+                "Codi de l'Àrea Territorial del centre",
+                "Estudis superiors d'Art Dramàtic",
+                "Codificació de la localitat del centre",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'geo_1' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Cicles de Formació Artística Grau Mig",
+                "Adreça electrònica del centre",
+                "Àrea Territorial",
+                "Estudis de Dansa Professional",
+                "Estudis de Música Elemental ",
+                "Estudis de Disseny Superiors",
+                "Formació d'adults",
+                "Nom del districte del municipi del centre",
+                "Cicles de Formació Professional Grau Superior",
+                "Nom del municipi del centre",
+                "Codi del centre educatiu",
+                "Estudis de Dansa Elemental ",
+                "Educació Secundària Obligatòria",
+                "Nom comarca del centre",
+                "ETRS89",
+                "Conservació i Restauracío de Béns Culturals ",
+                "WGS84",
+                "URL del centre",
+                "WGS84",
+                "Estudis estrangers ",
+                "Nom de la localitat del centre",
+                "Formació per a proves d’accés a CFAM",
+                "Itineraris formatius específics",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Programa de Formació i Inserció",
+                "Codi postal del centre",
+                "Nom complert del centre educatiu",
+                "Adreça del centre",
+                "Formació per a proves d’accés a CFAM",
+                "Titularitat de la propietat del centre educatiu",
+                "Curs de preparació a proves d’accés als CFPS ",
+                "Curs de referència",
+                "Telèfon del centre",
+                "Educació Primària",
+                "Cursos d’accés a cicles de grau superior",
+                "Estudis de Música Superior",
+                "Codificació del municipi a 5 dígits",
+                "Educació Infantil 1r cicle",
+                "ETRS89",
+                "Estudis esportius de Grau Superior ",
+                "Batxillerat",
+                "Cicles de Formació Professional Grau Mitjà",
+                "Codi comarca del centre",
+                "Georeferència",
+                "Codificació del municipi a 6 dígits",
+                "Estudis de Música Professional",
+                "Estudis esportius de Grau Mitjà ",
+                "Estudis de Dansa Superior ",
+                "Any del curs inferior",
+                "Públic/Privat",
+                "URL logo del centre",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'geo_1' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Escola Oficials d'Idiomes ",
+                "Educació Infantil 2n cicle"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "displayStyle" : "email" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "displayStyle" : "url" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 32316,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-10-09T10:44:24.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "educació",
+                "ensenyament",
+                "directori",
+                "docents",
+                "registre",
+                "infantil",
+                "primària",
+                "batxillerat",
+                "formació professional",
+                "georefències",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Directoris de centres educatius"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://educacio.gencat.cat/ca/serveis-tramits/directoris-centres/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Directory of education centers"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Directorio de centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Adreça postal"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/kvmv-ahh4",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Directori-de-centres-docents-anual-Base-2020/kvmv-ahh4",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Estadística de l’assignació de places en el procés de la Preinscripció en els ensenyaments obligatoris i Infantil segon cicle",
+            "id" : "99md-r3rq",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Estadística de l’assignació de places en el procés de la Preinscripció en els ensenyaments obligatoris i Infantil segon cicle: oferta inicial, oferta efectiva, assignacions total, en primera i resta de peticions, a nivell de centre educatiu.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-27T08:42:19.000Z",
+            "createdAt" : "2019-01-22T15:25:16.000Z",
+            "metadata_updated_at" : "2026-10-27T08:42:15.000Z",
+            "data_updated_at" : "2026-10-27T08:42:19.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 89,
+                "page_views_last_month" : 237,
+                "page_views_total" : 32007,
+                "page_views_last_week_log" : 6.491853096329675,
+                "page_views_last_month_log" : 7.894817763307945,
+                "page_views_total_log" : 14.966144913345603
+              },
+            "columns_name" :
+              [
+                "Nom titularitat",
+                "Places ofertades a la preinscripció",
+                "Nom comarca",
+                "Codi municipi_5",
+                "Codi districte municipal",
+                "Nombre grups",
+                "Codi municipi_6",
+                "Nivell",
+                "Curs",
+                "Mixt",
+                "Assignacions",
+                "Nom ensenyament",
+                "Longitud",
+                "Coordenades UTM Y",
+                "Nom municipi",
+                "Nombre places",
+                "Assignacions: Altres peticions",
+                "Nom DM",
+                "LIMADM_MUNICIPI 2",
+                "Denominació completa",
+                "Codi titularitat",
+                "Codi comarca",
+                "LIMADM COMARCA 2",
+                "Georeferència",
+                "Assignacions: 1a peticio",
+                "Nom naturalesa",
+                "Nom Àrea Territorial",
+                "Coordenades UTM X",
+                "Latitud",
+                "Codi centre",
+                "Codi naturalesa",
+                "Codi Àrea Territorial"
+              ],
+            "columns_field_name" :
+              [
+                "nom_titularitat",
+                "places_ofertades_a_la",
+                "nom_comarca",
+                "codi_municipi_5",
+                "codi_districte_municipal",
+                "oferta_inicial_grups",
+                "codi_municipi_6",
+                "nivell",
+                "curs",
+                "mixt",
+                "assignacions",
+                "nom_ensenyament",
+                "coordenades_geo_x",
+                "coordenades_utm_y",
+                "nom_municipi",
+                "oferta_inicial_places",
+                "assignacions_altres_peticions",
+                "nom_dm",
+                ":@computed_region_bh64_c7uy",
+                "denominaci_completa",
+                "codi_titularitat",
+                "codi_comarca",
+                ":@computed_region_wvic_k925",
+                "georefer_ncia",
+                "assignacions_1a_peticio",
+                "nom_naturalesa",
+                "nom_delegaci",
+                "coordenades_utm_x",
+                "coordenades_geo_y",
+                "codi_centre",
+                "codi_naturalesa",
+                "codi_delegaci"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Point",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Titularitat de la propietat del centre educatiu",
+                "Places efectivament ofertades en el procés de preinscripció",
+                "Nom comarca del centre educatiu",
+                "Codificació del municipi a 5 dígits",
+                "Codi del districte del municipi del centre educatiu",
+                "Nombre de grups",
+                "Codificació del municipi a 6 dígits",
+                "Nivell",
+                "Curs de referència",
+                "Un grup és mixt, si pertany a un centre educatiu en una zona rural i té alumnes de nivells i ensenyaments diferents",
+                "Nombre d’assignacions total",
+                "Nom de l’ensenyament",
+                "Longitud expressada en graus decimals. Sistema de referència WGS84",
+                "Coordenada y expressada en metres, Sistema de referència ETRS89",
+                "Nom del municipi del centre educatiu",
+                "Nombre de places",
+                "Nombre d’assignacions en la resta d’ordre de peticions",
+                "Nom del districte del municipi del centre educatiu",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nom complet del centre educatiu",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Codi comarca del centre educatiu",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Georeferència",
+                "Nombre d’assignacions en primera petició",
+                "Públic/Privat",
+                "Àrea Territorial",
+                "Coordenada x expressada en metres, Sistema de referència ETRS89",
+                "Latitud expressada en graus decimals. Sistema de referència WGS84",
+                "Codi de centre educatiu",
+                "Codi naturalesa Públic/Privat",
+                "Codi de l'Àrea Territorial del centre educatiu"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "3"
+                },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "3"
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 6063,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-03-20T09:29:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "ensenyament",
+                "estudi",
+                "preinscripció",
+                "places",
+                "alumnes",
+                "educació",
+                "infantil",
+                "primària",
+                "secundària",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on the allocation of places in the pre-enrollment process in compulsory education of pre-school and second cycle"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de la asignación de plazas en el proceso de preinscripción en las enseñanzas obligatorias infantil y segundo ciclo"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/99md-r3rq",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Estadística-de-l-assignació-de-places-en-el-procés/99md-r3rq",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mobilitat obligada municipal per raó d’estudis no universitaris",
+            "id" : "8w7y-2bfp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aprofitament estadístic a partir de la informació de municipi de residència dels alumnes i els municipis dels centres educatius als quals estan matriculats segons curs, sexe i naturalesa.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-18T08:01:20.000Z",
+            "createdAt" : "2021-04-19T10:06:51.000Z",
+            "metadata_updated_at" : "2026-09-18T08:01:20.000Z",
+            "data_updated_at" : "2026-03-10T10:07:06.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 84,
+                "page_views_last_month" : 254,
+                "page_views_total" : 5713,
+                "page_views_last_week_log" : 6.409390936137703,
+                "page_views_last_month_log" : 7.994353436858858,
+                "page_views_total_log" : 12.480285320936373
+              },
+            "columns_name" :
+              [
+                "Residència municipi alumne",
+                "Codi Municipi centre",
+                "Estudis",
+                "Grup Edat",
+                "Municipi centre",
+                "Número matrícules estadística",
+                "Curs",
+                "Sexe",
+                "Codi Residència municipi alumne",
+                "Naturalesa centre"
+              ],
+            "columns_field_name" :
+              [
+                "resid_ncia_municipi_alumne",
+                "codi_municipi_centre",
+                "estudis",
+                "grup_edat",
+                "municipi_centre",
+                "n_mero_matr_cules_estad_stica",
+                "curs",
+                "sexe",
+                "codi_resid_ncia_municipi",
+                "naturalesa_centre"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Municipi de residencia de l’alumne",
+                "Codi del municipi on s’ubica el centre educatiu",
+                "Tipologia d’estudis",
+                "Grups d’edat -\tFins a 2 anys -\tDe 3 a 5 anys -\tDe 6 a 11 anys -\tDe 12 a 15 anys -\tDe 16 a 20 anys -\tMajor de 20 anys",
+                "Municipi on s’ubica el centre educatiu on l’alumne està matriculat",
+                "Nombre d’estudiants amb les mateixes característiques de desplaçament",
+                "Curs escolar. Des del 2016-2017",
+                "Categoria dicotòmica Home/Dona",
+                "Codi del municipi de residencia de l’alumne",
+                "Centre educatiu públic o privat"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1673,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-04-19T10:14:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "educació",
+                "mobilitat",
+                "estudis no universitaris",
+                "desplaçament",
+                "municipis",
+                "públic",
+                "gènere",
+                "curs",
+                "smartcatalonia",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Non-university studies mobility municipalities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mobilidad obligada municipal por razón d’estudios no universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8w7y-2bfp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Mobilitat-obligada-municipal-per-raó-d-estudis-no-/8w7y-2bfp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Concerts educatius: Unitat, alumnes, dotació de plantilla i despesa",
+            "id" : "8spq-9nx7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació detallada dels concerts educatius, centre a centre: Unitats concertades, alumnes matriculats per nivell educatiu, dotació de plantilla concertada, retribucions (nòmina i seguretat social) i l’import de les despeses de funcionament",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:41:40.000Z",
+            "createdAt" : "2022-05-11T10:47:57.000Z",
+            "metadata_updated_at" : "2026-09-21T06:41:40.000Z",
+            "data_updated_at" : "2026-05-28T09:26:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 98,
+                "page_views_last_month" : 369,
+                "page_views_total" : 8494,
+                "page_views_last_week_log" : 6.6293566200796095,
+                "page_views_last_month_log" : 8.531381460516313,
+                "page_views_total_log" : 13.052398232071583
+              },
+            "columns_name" :
+              [
+                "Alumnes - BATX",
+                "Unitats concertades - BATX",
+                "Alumnes - EdE",
+                "Despeses de funcionament",
+                "Unitats concertades -CFPS",
+                "Alumnes - CFPS",
+                "Nòmina del personal del centre",
+                "Unitats concertades - CFPM",
+                "Unitats concertades - EdE",
+                "Unitats concertades - PRI",
+                "Municipi",
+                "Titularitat",
+                "Unitats concertades - EINF",
+                "Unitats concertades - ESO",
+                "Curs escolar",
+                "Codi_centre",
+                "Alumnes - ESO",
+                "Alumnes - PRI",
+                "Alumnes - EINF",
+                "Nom_centre",
+                "Dotació plantilla",
+                "Seg.Social",
+                "Alumnes - CFPM"
+              ],
+            "columns_field_name" :
+              [
+                "alumnes_batx",
+                "unitats_concertades_batx",
+                "alumnes_ede",
+                "despeses_de_funcionament",
+                "unitats_concertades_cfps",
+                "alumnes_cfps",
+                "brut",
+                "unitats_concertades_cfpm",
+                "unitats_concertades_ede",
+                "unitats_concertades_pri",
+                "municipi",
+                "titularitat",
+                "unitats_concertades_einf",
+                "unitats_concertades_eso",
+                "curs_escolar",
+                "codi_centre",
+                "alumnes_eso",
+                "alumnes_pri",
+                "alumnes_einf",
+                "nom_centre",
+                "dotaci_plantilla",
+                "seg_social",
+                "alumnes_cfpm"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Alumnes de batxillerat",
+                "Nombre d’unitats concertades de batxillerat",
+                "Alumnes en educació especial",
+                "Despeses de funcionament (per despeses corrents)",
+                "Nombre d’unitats concertades de cicles formatius de grau superior",
+                "Alumnes de cicles formatius de grau superior",
+                "Salari del conjunt del personal del centre",
+                "Nombre d’unitats concertades de cicles formatius de grau mitjà",
+                "Nombre d’unitats concertades d’educació especial",
+                "Nombre d’unitats concertades d’educació primària",
+                "Municipi on s’ubica el centre educatiu",
+                "Titularitat del centre educatiu",
+                "Nombre d’unitats concertades d’educació infantil",
+                "Nombre d’unitats concertades d’ESO",
+                "Curs escolar de referència",
+                "Codi del centre educatiu",
+                "Alumnes d’ESO",
+                "Alumnes en educació primària",
+                "Alumnes en educació infantil",
+                "Nom del centre educatiu",
+                "Dotació de plantilla",
+                "Despesa en Seguretat Social",
+                "Alumnes de cicles formatius de grau mitjà"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" },
+                { "decimalSeparator" : ",", "noCommas" : "true" }
+              ],
+            "download_count" : 1468,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-05-11T11:19:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "educació",
+                "centres educatius",
+                "concerts educatius",
+                "alumnes",
+                "dotació de plantilla",
+                "despesa concerts educatius",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Educational subsidy: Units, students, staffing and spending"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Conciertos educativos: Unidad, alumnos, dotación de plantilla y gasto"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8spq-9nx7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Concerts-educatius-Unitat-alumnes-dotació-de-plant/8spq-9nx7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 19,
+  "timings" : { "serviceMillis" : 51, "searchMillis" : [ 5, 27 ] },
+  "warnings" : []
+}

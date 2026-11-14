@@ -1,0 +1,178 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Personal Docent Investigador a les universitats catalanes",
+            "id" : "qzba-yecp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre de Personal Docent Investigador a les universitats catalanes en alta a 31 de desembre en l’any de referència de les dades. Els valors inferiors a 4 estan anonimitzats amb un *. S’inclouen registres amb els totals per Curs/Tipus d’universitat.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-03T13:32:01.000Z",
+            "createdAt" : "2020-01-20T14:54:40.000Z",
+            "metadata_updated_at" : "2026-08-03T13:32:00.000Z",
+            "data_updated_at" : "2026-08-03T13:32:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 18,
+                "page_views_last_month" : 50,
+                "page_views_total" : 3112,
+                "page_views_last_week_log" : 4.247927513443585,
+                "page_views_last_month_log" : 5.672425341971496,
+                "page_views_total_log" : 11.60408986146918
+              },
+            "columns_name" :
+              [
+                "Nombre de personal docent investigador a 31 de desembre",
+                "Nombre de personal docent investigador en equivalent a temps complet a 31 de desembre",
+                "Any",
+                "Nacionalitat",
+                "Nombre de personal docent investigador permanent a 31 de desembre",
+                "Sexe",
+                "Tipus d'universitat",
+                "Tipus de centre",
+                "Universitat",
+                "Nombre de personal docent investigador  permanent en equivalent a temps complet a 31 de desembre"
+              ],
+            "columns_field_name" :
+              [
+                "nombre_de_personal_docent",
+                "nombre_de_personal_docent_1",
+                "any",
+                "nacionalitat",
+                "nombre_de_personal_docent_2",
+                "sexe",
+                "tipus_d_universitat",
+                "tipus_de_centre",
+                "universitat",
+                "nombre_de_personal_docent_3"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Nombre de personal docent investigador en alta a les universitats catalanes a 31 de desembre de l’any de les dades",
+                "Nombre de personal docent investigador calculat en equivalent a temps complet segons la dedicació del contracte, en alta a 31 de desembre de l’any de les dades",
+                "Any de les dades",
+                "Descripció de la nacionalitat del professor, espanyola o estrangera",
+                "Nombre de personal docent investigador permanent en alta a les universitats catalanes a 31 de desembre de l’any de les dades",
+                "Descripció del gènere del professor , dona, home",
+                "Descripció del tipus d’universitat, pública, privada o no presencial",
+                "Descripció del tipus de centre al que fan referència les dades, integrat o adscrit",
+                "Sigles de la Universitat a la que fan referència les dades",
+                "Nombre de personal docent investigador  permanent calculat en equivalent a temps complet segons la dedicació del contracte, en alta a 31 de desembre de l’any de les dades"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1612,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-01-20T15:00:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "professorat",
+                "universitat",
+                "smartcatalonia",
+                "ods4_educació de qualitat",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Research Teaching Staff in Catalan universities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Personal Docente Investigador en las universidades catalanas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "Open Data Commons Attribution License"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qzba-yecp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Personal-Docent-Investigador-a-les-universitats-ca/qzba-yecp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 3, 7 ] },
+  "warnings" : []
+}

@@ -1,0 +1,1396 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Programes d’Esport Escolar",
+            "id" : "sgn3-zknq",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El dataset recull dades dels diferents programes d’esport escolar, des del curs 2013/2014 fins a l’actualitat. Es presenten les dades dels programes d’esport escolar Fitjove, Esport Blanc Escolar i Esport Blau Escolar.",
+            "attribution" : "Departament d'Esports",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-03-17T13:31:14.000Z",
+            "createdAt" : "2022-03-31T14:36:18.000Z",
+            "metadata_updated_at" : "2026-03-17T13:31:14.000Z",
+            "data_updated_at" : "2025-02-03T11:11:00.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 20,
+                "page_views_last_month" : 56,
+                "page_views_total" : 3182,
+                "page_views_last_week_log" : 4.392317422778761,
+                "page_views_last_month_log" : 5.832890014164742,
+                "page_views_total_log" : 11.63617144163592
+              },
+            "columns_name" :
+              [
+                "Esport Blau Escolar: Alumnat participant",
+                "Esport Blau Escolar: Centres participants",
+                "FITJOVE: Participants totals",
+                "FITJOVE: Nois participants 2ª fase",
+                "FITJOVE: Noies participants 1ª fase",
+                "Esport Blanc Escolar: Alumnat participant",
+                "FITJOVE: % Noies participants",
+                "Esport Blanc Escolar: Centres participants",
+                "FITJOVE: Centres educatius participants",
+                "FITJOVE: Participants 1ª fase",
+                "FITJOVE: Territoris participants",
+                "FITJOVE: Participants 2ª fase",
+                "Esport Blau Escolar: Escoles de vela participants",
+                "Esport Blau Escolar: Comarques participants",
+                "Esport Blau Escolar: Municipis participants",
+                "FITJOVE: Noies participants 2ª fase",
+                "Esport Blanc Escolar: alumnat participant Graduació de Neu",
+                "FITJOVE: Centres educatius convidats",
+                "FITJOVE: Nois participants 1ª fase",
+                "Esport Blanc Escolar: centres participants Graduació de Neu",
+                "FITJOVE: Grups de 4t ESO participants",
+                "Curs escolar"
+              ],
+            "columns_field_name" :
+              [
+                "esport_blau_escolar_alumnat",
+                "esport_blau_escolar_centres",
+                "fitjove_participants_totals",
+                "fitjove_nois_participants_1",
+                "fitjove_noies_participants",
+                "esport_blanc_escolar_alumnat",
+                "fitjove_noies_participants_2",
+                "esport_blanc_escolar_centres",
+                "fitjove_centres_educatius",
+                "fitjove_participants_1_fase",
+                "fitjove_territoris",
+                "fitjove_participants_2_fase",
+                "esport_blau_escolar_escoles",
+                "esport_blau_escolar_comarques",
+                "esport_blau_escolar_municipis",
+                "fitjove_noies_participants_1",
+                "esport_blanc_escolar_alumnat_participant_graduaci_de_neu",
+                "fitjove_centres_educatius_convidats",
+                "fitjove_nois_participants",
+                "esport_blanc_escolar_centres_participants_graduacio_de_neu",
+                "fitjove_grups_de_4t_eso",
+                "curs_escolar"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Indica el nombre total d’alumnes participants al programa Esport Blau Escolar. ",
+                "Indica el nombre d’escoles de centres participants al programa Esport Blau Escolar. ",
+                "Indica el nombre total de persones participants al programa FITJOVE. ",
+                "Indica el nombre de nois participants a la segona fase del programa FITJOVE.",
+                "Indica el nombre de noies participants a la primera fase del programa FITJOVE. ",
+                "Indica el nombre total d’alumnes participants al programa Esport Blanc Escolar. ",
+                "Indica el percentatge de noies participants al programa FITJOVE.",
+                "Indica el nombre de centre educatius participants al programa Esport Blanc Escolar. ",
+                "Indica el nombre de centre educatius participants al programa FITJOVE. ",
+                "Indica el nombre total de persones participants a la primera fase del programa FITJOVE.",
+                "Indica el nombre de territoris participants al programa FITJOVE.  ",
+                "Indica el nombre total de persones participants a la segona fase del programa FITJOVE.",
+                "Indica el nombre d’escoles de vela participants al programa Esport Blau Escolar. ",
+                "Indica el nombre de comarques participants al programa Esport Blau Escolar. ",
+                "Indica el nombre de municipis participants al programa Esport Blau Escolar. ",
+                "Indica el nombre de noies participants a la segona fase del programa FITJOVE.",
+                "Indica el nombre total d’alumnes participants a les jornades de la Graduació de Neu del programa Esport Blanc Escolar.",
+                "Indica el nombre de centre educatius  convidats al programa FITJOVE. ",
+                "Indica el nombre de nois participants a la primera fase del programa FITJOVE.",
+                "Indica el nombre de centre educatius participants a les jornades de la Graduació de Neu del programa Esport Blanc Escolar.",
+                "Indica el nombre de grups de quart d’ESO participants al programa FITJOVE.",
+                "Indica els anys que inclou el curs escolar al què es fa referència."
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {
+                  "precisionStyle" : "percentage",
+                  "percentScale" : "1",
+                  "decimalSeparator" : ",",
+                  "precision" : "2"
+                },
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {}
+              ],
+            "download_count" : 547,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-02-03T11:11:06.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "programes",
+                "esport",
+                "ods16_pau justícies i institucions sòlides",
+                "ods4_educació de qualitat",
+                "escola"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "School Sports Programs"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Programas de Deporte Escolar"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Esports" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/sgn3-zknq",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Programes-d-Esport-Escolar/sgn3-zknq",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Avaluació de quart d’Educació Secundària Obligatòria",
+            "id" : "59vm-wwq7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest dataset conté els resultats obtinguts per l'alumnat de quart d’ESO en l'avaluació de les competències i coneixements bàsics al final de l'educació secundària des de l’any 2012.\n\nS’inclou un codi d’alumne (anonimitzat) per poder fer comparativa amb els resultats obtinguts a sisè de primària. No obstant això, aquest codi d’alumne només està disponible a partir de l’any 2016.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:36:22.000Z",
+            "createdAt" : "2022-10-17T11:01:31.000Z",
+            "metadata_updated_at" : "2026-09-21T06:36:22.000Z",
+            "data_updated_at" : "2026-02-10T11:41:14.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 27,
+                "page_views_last_month" : 90,
+                "page_views_total" : 4671,
+                "page_views_last_week_log" : 4.807354922057604,
+                "page_views_last_month_log" : 6.507794640198696,
+                "page_views_total_log" : 12.189824558880018
+              },
+            "columns_name" :
+              [
+                "CODI_ALUMNE",
+                "PCAT_CL",
+                "PCAST_EE",
+                "PANG",
+                "NATURALESA",
+                "HÀBITAT",
+                "PALE_CL",
+                "MES_NAIXEMENT",
+                "PALE_CO",
+                "PCIEN_COMP4",
+                "PCIEN_COMP3",
+                "ANY",
+                "PALE_EE",
+                "PCIEN",
+                "PCAT_EE",
+                "PMAT_EST",
+                "PFRAN_CO",
+                "PCAT",
+                "PFRAN_CL",
+                "PFRAN_EE",
+                "PMAT",
+                "PMAT_EFM",
+                "PMAT_NC",
+                "PALE",
+                "PCIEN_COMP2",
+                "PCIEN_COMP1",
+                "PANG_CL",
+                "PANG_CO",
+                "PMAT_CR",
+                "ÀREA TERRITORIAL",
+                "ANY_NAIXEMENT",
+                "GENERE",
+                "PFRAN",
+                "PANG_EE",
+                "PCAST_CL",
+                "PCAST"
+              ],
+            "columns_field_name" :
+              [
+                "codi_alumne",
+                "pcat_cl",
+                "pcast_ee",
+                "pang",
+                "naturalesa",
+                "h_bitat",
+                "pale_cl",
+                "mes_naixement",
+                "pale_co",
+                "pcien_comp4",
+                "pcien_comp3",
+                "any",
+                "pale_ee",
+                "pcien",
+                "pcat_ee",
+                "pmat_est",
+                "pfran_co",
+                "pcat",
+                "pfran_cl",
+                "pfran_ee",
+                "pmat",
+                "pmat_efm",
+                "pmat_nc",
+                "pale",
+                "pcien_comp2",
+                "pcien_comp1",
+                "pang_cl",
+                "pang_co",
+                "pmat_cr",
+                "area_territorial",
+                "any_naixement",
+                "genere",
+                "pfran",
+                "pang_ee",
+                "pcast_cl",
+                "pcast"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi que identifica unívocament els alumnes que van participar en l’avaluació (anonimitzat)",
+                "Puntuació global de comprensió lectora en llengua catalana",
+                "Puntuació global d'expressió escrita en llengua castellana",
+                "Puntuació global ponderada de la competència lingüística en llengua anglesa",
+                "Determina si el centre de l’alumne/a és públic, privat o concertat",
+                "Municipis per trams de població",
+                "Puntuació global de comprensió lectora en llengua alemanya",
+                "Mes de naixement de l’alumne/a que es presenta a l’avaluació",
+                "Puntuació global de comprensió oral en llengua alemanya",
+                "Puntuació global de la competència d'anàlisi i avaluació d'explicacions tecnològiques d'especial rellevància de la competència cientificotecnològica. ",
+                "Puntuació global de la interpretació d'informació de caràcter cientificotecnològic proporcionada en forma de dades i proves de competència cientificotecnològica",
+                "Any que va tenir lloc l’avaluació",
+                "Puntuació global d'expressió escrita en llengua alemanya",
+                "Puntuació global de competència cientificotecnològica",
+                "Puntuació global d'expressió escrita en llengua catalana",
+                "Puntuació global d’estadística en competència matemàtica",
+                "Puntuació global de comprensió oral en llengua francesa",
+                "Puntuació global ponderada de la competència lingüística en llengua catalana",
+                "Puntuació global de comprensió lectora en llengua francesa",
+                "Puntuació global d'expressió escrita en llengua francesa",
+                "Puntuació global ponderada de competència matemàtica",
+                "Puntuació global d'espai, forma i mesura en competència matemàtica",
+                "Puntuació global de numeració i càlcul en competència matemàtica",
+                "Puntuació global ponderada de la competència lingüística en llengua alemanya",
+                "Puntuació global de la competència de reconeixement dels aspectes principals de la investigació científica de competència cientificotecnològica",
+                "Puntuació global de la competència d'explicar fenòmens naturals i aplicacions tecnològiques utilitzant coneixements científic i tecnològics de competència cientificotecnològica",
+                "Puntuació global de comprensió lectora en llengua anglesa",
+                "Puntuació global de comprensió oral en llengua anglesa",
+                "Puntuació global de canvi i relacions en competència matemàtica",
+                "Nom de l'Àrea Territorial del centre on està matriculat l'alumne",
+                "Any de naixement de l’alumne/a que es presenta a l’avaluació",
+                "\tGènere de l’alumne/a que es presenta a l’avaluació",
+                "Puntuació global ponderada de la competència lingüística en llengua francesa",
+                "Puntuació global d'expressió escrita en llengua anglesa",
+                "Puntuació global de comprensió lectora en llengua castellana",
+                "Puntuació global ponderada de la competència lingüística en llengua castellana"
+              ],
+            "columns_format" :
+              [
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                }
+              ],
+            "download_count" : 1307,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-06-12T11:08:29.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "educació",
+                "alumnes",
+                "quart",
+                "secundària",
+                "avaluació",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Evaluation of fourth grade of secondary education"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Evaluación de cuarto de Educación Secundaria Obligatoria"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/59vm-wwq7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Avaluació-de-quart-d-Educació-Secundària-Obligatòr/59vm-wwq7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Avaluació de sisè d'educació primària",
+            "id" : "rk5x-gny6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest dataset conté els resultats obtinguts per l'alumnat de sisè de primària en l'avaluació de les competències i coneixements bàsics al final de l'educació primària des de l’any 2009.\n\nS’inclou un codi d’alumne (anonimitzat) per poder fer comparativa amb els resultats obtinguts a l'avaluació de competències de quart d’ESO anys després. No obstant això, aquest codi d’alumne només està disponible a partir de l’any 2016.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:42:27.000Z",
+            "createdAt" : "2022-04-04T07:40:44.000Z",
+            "metadata_updated_at" : "2026-09-21T06:42:27.000Z",
+            "data_updated_at" : "2026-02-10T11:21:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 49,
+                "page_views_last_month" : 281,
+                "page_views_total" : 23911,
+                "page_views_last_week_log" : 5.643856189774724,
+                "page_views_last_month_log" : 8.139551352398794,
+                "page_views_total_log" : 14.545447181678094
+              },
+            "columns_name" :
+              [
+                "PANG_CO",
+                "HÀBITAT",
+                "CODI_ALUMNE",
+                "PMED_COMP3",
+                "PANG_EE",
+                "PCAST_CO",
+                "PMAT_EFM",
+                "PMED_COMP1",
+                "GENERE",
+                "PMAT_CR",
+                "PMAT_NC",
+                "PMAT",
+                "PFRAN",
+                "PCAST",
+                "NATURALESA",
+                "ANY_NAIXEMENT",
+                "PCAT_CO",
+                "PFRAN_EE",
+                "PFRAN_CE",
+                "PCAT",
+                "PCAT_EE",
+                "AREA_TERRITORIAL",
+                "PCAST_CL",
+                "PCAST_EE",
+                "MES_NAIXEMENT",
+                "PANG",
+                "PANG_CE",
+                "ANY",
+                "PMED",
+                "PFRAN_CO",
+                "PMED_COMP2",
+                "PCAT_CL"
+              ],
+            "columns_field_name" :
+              [
+                "pang_co",
+                "h_bitat",
+                "codi_alumne",
+                "pmed_comp3",
+                "pang_ee",
+                "pcast_co",
+                "pmat_efm",
+                "pmed_comp1",
+                "genere",
+                "pmat_cr",
+                "pmat_nc",
+                "pmat",
+                "pfran",
+                "pcast",
+                "naturalesa",
+                "any_naixement",
+                "pcat_co",
+                "pfran_ee",
+                "pfran_ce",
+                "pcat",
+                "pcat_ee",
+                "area_territorial",
+                "pcast_cl",
+                "pcast_ee",
+                "mes_naixement",
+                "pang",
+                "pang_ce",
+                "any",
+                "pmed",
+                "pfran_co",
+                "pmed_comp2",
+                "pcat_cl"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Puntuació global de comprensió oral en llengua anglesa",
+                "Municipis per trams de població",
+                "Codi que identifica unívocament els alumnes que van participar en l’avaluació (anonimitzat)",
+                "Puntuació global de la interpretació d'informació de caràcter cientificotecnològic proporcionada en forma de dades i proves associada a l'àrea de coneixement del medi natural",
+                "Puntuació global d'expressió escrita en llengua anglesa",
+                "Puntuació global de comprensió oral en llengua castellana",
+                "Puntuació global d'espai, forma i mesura en competència matemàtica",
+                "Puntuació global de la competència d'explicar fenòmens naturals i aplicacions tecnològiques utilitzant coneixements científic i tecnològics associada a l'àrea de coneixement del medi natural",
+                "Gènere de l’alumne/a que es presenta a l’avaluació",
+                "Puntuació global de relacions i canvi en competència matemàtica",
+                "Puntuació global de numeració i càlcul en competència matemàtica",
+                "Puntuació global ponderada de competència matemàtica",
+                "Puntuació global ponderada de la competència lingüística en llengua francesa",
+                "Puntuació global ponderada de la competència lingüística en llengua castellana",
+                "Determina si el centre de l’alumne/a és públic, privat o concertat",
+                "Any de naixement de l’alumne/a que es presenta a l’avaluació",
+                "Puntuació global de comprensió oral en llengua catalana",
+                "Puntuació global d'expressió escrita en llengua francesa",
+                "Puntuació global de comprensió escrita en llengua francesa",
+                "Puntuació global ponderada de la competència lingüística en llengua catalana",
+                "Puntuació global d'expressió escrita en llengua catalana",
+                "Regió on es troba el centre de l’alumne/a que es presenta a l’avaluació",
+                "Puntuació global de comprensió lectora en llengua castellana",
+                "Puntuació global d'expressió escrita en llengua castellana",
+                "Mes de naixement de l’alumne/a que es presenta a l’avaluació",
+                "Puntuació global ponderada de la competència lingüística en llengua anglesa",
+                "Puntuació global de comprensió escrita en llengua anglesa",
+                "Any en que va tenir lloc l’avaluació",
+                "Puntuació global de la competència associada a l'àrea de coneixement del medi natural",
+                "Puntuació global de comprensió oral en llengua francesa",
+                "Puntuació global de la competència de reconeixement dels aspectes principals de la investigació científica associada a l'àrea de coneixement del medi natural",
+                "Puntuació global de comprensió lectora en llengua catalana"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "precision" : "2" },
+                {},
+                { "noCommas" : "false", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                {},
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                {},
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                {},
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                {},
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" },
+                { "decimalSeparator" : ",", "precision" : "2" }
+              ],
+            "download_count" : 2711,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-04-06T12:18:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "educació",
+                "alumnes",
+                "sisè",
+                "primària",
+                "avaluació",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Evaluation of sixth grade of primary education"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Evaluación de sexto de educación primaria"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/rk5x-gny6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Avaluació-de-sisè-d-educació-primària/rk5x-gny6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre d'explotacions ramaderes",
+            "id" : "7bpt-5azk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest registre es divideix en diferents seccions: apícoles, avícoles, porcines, cunícoles, bovines, ovines i de cabrum, equines, d'altres espècies productives i de centres de recollida de material genètic. Dintre de cadascuna de les seccions, les explotacions es classifiquen en diferents subseccions en funció de la finalitat productiva.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-19T12:48:40.000Z",
+            "createdAt" : "2017-03-01T08:07:14.000Z",
+            "metadata_updated_at" : "2026-10-19T12:48:24.000Z",
+            "data_updated_at" : "2026-10-19T12:48:40.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 220,
+                "page_views_last_month" : 979,
+                "page_views_total" : 61331,
+                "page_views_last_week_log" : 7.787902559391432,
+                "page_views_last_month_log" : 9.936637939002571,
+                "page_views_total_log" : 15.904352376721366
+              },
+            "columns_name" :
+              [
+                "Estat subexplotació",
+                "LONGITUD explotació",
+                "Nom ADS",
+                "Criteri de sostenibilitat",
+                "Capacitat productiva",
+                "Espècie",
+                "Codi zootècnic",
+                "Capacitat altres femelles",
+                "LATITUD explotació",
+                "Capacitat mascles",
+                "COOR X explotació",
+                "Subespècie",
+                "Capacitat animals <1 any",
+                "Tipus explotació",
+                "Codi postal explotació",
+                "Capacitat reposició",
+                "Nom explotació",
+                "Data canvi estat explotació",
+                "Estat explotació",
+                "Capacitat engreix",
+                "Capacitat transhumants",
+                "Capacitat AN>6M no repr",
+                "Codi REGA",
+                "Marca oficial",
+                "Data actualització capacitat",
+                "Data classificació zootècnica",
+                "Autoconsum",
+                "Petita capacitat",
+                "Servei territorial explotació",
+                "Comarca explotació",
+                "Capacitat ous",
+                "Província explotació",
+                "Capacitat ponedores",
+                "Total Nitrogen",
+                "Total Cap ponedores",
+                "Classificació zootècnica",
+                "Forma de cria",
+                "Cap núm. total animals",
+                "Total URM",
+                "Capacitat recria",
+                "Capacitat transició",
+                "Capacitat estants",
+                "Capacitat cria",
+                "Capacitat braves >24",
+                "Capacitat femelles",
+                "Sistema productiu",
+                "Integradora",
+                "Municipi explotació",
+                "Adreça explotació",
+                "Capacitat animals >1 any i <2 anys",
+                "COOR Y explotació",
+                "Data canvi estat subexplotació",
+                "Tipus subexplotació"
+              ],
+            "columns_field_name" :
+              [
+                "estat_subexplotaci_",
+                "longitud",
+                "nom_ads",
+                "criteri_de_sostenibilitat",
+                "capacitat_productiva",
+                "esp_cie",
+                "codi_zoot_cnic",
+                "capacitat_altres_femelles",
+                "latitud",
+                "cap_mascles",
+                "coor_x",
+                "subesp_cie",
+                "capacitat_animals_1_any",
+                "tipus_explotaci",
+                "cp",
+                "cap_reposici",
+                "nom_explotaci",
+                "data_canvi_estat_explotaci_",
+                "estat_explotaci_",
+                "cap_engreix",
+                "cap_transhumant",
+                "capacitat_an_6m_no_repr",
+                "codi_rega",
+                "marca_oficial",
+                "data_actualitzaci_capacitat",
+                "data_classificaci_zoot_cnica",
+                "autoconsum",
+                "petita_capacitat",
+                "servei_territorial",
+                "comarca",
+                "caps_ous",
+                "demarcaci_territorial",
+                "cap_ponedores",
+                "total_nitrogen",
+                "total_cap_ponedores",
+                "classificaci_zoot_cnica",
+                "forma_de_cria",
+                "cap_n_m_total_animals",
+                "total_ub",
+                "cap_recria",
+                "capacitat_transici",
+                "cap_estant",
+                "cap_cria",
+                "capacitat_braves_24",
+                "cap_femelles",
+                "sistema_productiu",
+                "integradora",
+                "municipi",
+                "adre_a_explotaci",
+                "capacitat_animals_1_any_i_2_anys",
+                "coor_y",
+                "data_canvi_estat_subexplotaci_",
+                "tipus_subexplitaci_"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Calendar date",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Estat en el que es troba la subexplotació. Diferenciem subexplotacions actives, inactives i de baixa.",
+                " Coordenades geogràfiques de l'explotació ramadera mesurades en graus.",
+                "Nom de l'Agrupació de Defensa Sanitaria (ADS) vinculada a l'explotació ramadera. Les ADS són entitats són entitats amb personalitat jurídica pròpia, que segueixen un programa sanitari comú aprovat pel Departament d’Agricultura, Ramaderia, Pesca i Alimentació i que compten com a mínim amb un/a veterinari/ària encarregat/da de dur a terme les funcions sanitàries relacionades amb els programes aprovats.",
+                "Diferenciem tres tipus de criteris de sostenibilitat o autocontrol: explotacions ecològiques, integrades o convencionals.",
+                "Classificació establerta per l'espècie porcina i la família apícola.  En el cas de les explotacions porcines es diferencien 4 grups específics (explotació de petita capacitat, grup I, grup II, grup III), d’acord amb les equivalències establertes en la normativa vigent d'ordenació ramadera. En el cas de les explotacions apícoles es diferencien 2 grups d'explotacions: les professionals i les no professionals.",
+                "Les establertes en l'Annex I del Decret 40/2014. Porcí, boví, oví, cabrum, èquids, aus de corral, conills, abelles, espècies pelleteres, espècies cinegètiques de caça major...",
+                "Qualsevol centre o equip autoritzat, dedicat a la recollida, emmagatzematge o distribució de material genètic, ha d'estar registrat, i disposarà d'un o diversos codis, assignat per l'autoritat competent, d'acord amb un codi alfanumèric, que constarà de: a) Un codi amb les lletres ES, a continuació dos dígits, per identificar la comunitat autònoma on s'autoritzi el centre o equip, d'acord amb l'annex II. b) Un codi de dues lletres assignat en funció de l'activitat que es realitzi, d'acord amb la següent taula de correspondències: 1r Recollida de semen: RS. 2n Centre d'emmagatzematge: CA. 3r Equip de recollida d'òvuls / embrions: ET. 4t Distribuïdor: D. c) Dos dígits que s'assignaran de forma correlativa, d'acord amb l'ordre de registre confeccionat a l'efecte en la comunitat autònoma. d) Un codi compost d'una o diverses lletres, en funció de la / les espècie / s amb les que es tingui previst treballar, tenint en compte la taula de correspondències següent: 1r Bovina: B. 2n Ovina / Caprina: OC. 3r Porcina: P. 4t Èquids: E.",
+                "Categoria destinada a l’espècie bovina. Capacitat màxima de femelles reproductores no destinades a la producció de llet.",
+                " Coordenades geogràfiques de l'explotació ramadera mesurades en graus.",
+                " Capacitat màxima de mascles reproductors.",
+                "Coordenades geogràfiques de l'explotació ramadera (format UTM).",
+                "Denominació aplicada per les espècies que formen part del gènere Equus (cavalls, ases, mules, zebres, onagres, somerís) o pel gènere de mamífers remugants de la família dels Bòvids (bovins, bous, búfals i bisons).",
+                "Capacitat màxima d’animals de l'espècie bovina de <1 any",
+                "Distingim principalment dos tipus d'explotacions ramaderes; les de producció i reproducció i les de tipus especial.",
+                " Sèrie de lletres i/o dígits assignats a la zona a la que pertany l'explotació ramadera.",
+                " Capacitat màxima d'animals mascles o femelles destinats a ser futurs reproductors.",
+                "Denominació de l'explotació ramadera.",
+                "Data en la que s'ha inscrit al registre el darrer canvi d'estat de l'explotació.",
+                "Estat en el que es troba l'explotació. Diferenciem explotacions actives, inactives i de baixa.",
+                " Capacitat màxima d'animals mascles o femelles d'explotacions d'engreix amb destinació a l'escorxador.",
+                " Capacitat màxima d'arnes que són desplaçades a un altre o a altres assentaments al llarg de l'any.",
+                "Capacitat màxima d'animals de més de 6 mesos no destinats a reproducció.",
+                "Reial Decret 479/2004, de 26 de març, pel qual s'estableix i regula el Registre General d'Explotacions Ramaderes.  El codi REGA és el codi d’identificació obligatori de les explotacions inscrites en el Registre general d'explotacions ramaderes. Aquest codi respon a l'estructura ES + 2 dígits (província) + 3 dígits (municipi) + 7 dígits (número d'ordre).",
+                "Codi d'àmbit català establert pel Decret 281/1987, de 4 d'agost, sobre la documentació sanitària per al trasllat de bestiar a escorxadors radicats dins l'àmbit territorial de Catalunya, establint que a efectes de control sanitari les explotacions ramaderes de Catalunya tindran assignat un únic número de marca oficial d’identificació, i s’anotarà al Llibre d’Explotació. Està estructurada de la següent forma: els tres primers dígits identifiquen el municipi dins de Catalunya, el quart selecciona dins del municipi o especifica el tipus d'explotació, i dues lletres o números que identifiquen l'explotació dins del municipi. El Decret 40/2014, a la seva disposició derogatòria, deroga l’article 4 del Decret 281/1987. Tanmateix, des de l’any 2004, a Catalunya coexistien dos números per identificar les explotacions ramaderes.",
+                "Data en que s'ha assentat al Registre d'explotacions ramaderes la capacitat màxima autoritzada de la subexplotació ramadera.",
+                "Data en que s'ha resolt l'orientació productiva actual de l'explotació ramadera.",
+                "Aquella explotació on es crien animals amb destinació exclusiva al consum familiar i que no sobrepassi un determinat nombre d'Unitats de Bestiar especificats en la normativa d'ordenació ramadera.",
+                "Aquella explotació que té una capacitat que no supera les unitats de bestiar (UB) que s’indiquen en els annexos per a cada espècie del Decret 40/2014. ",
+                " Espai geogràfic format per diferents municipis i comarques.",
+                "Extensió de territori reduïda a la que pertany l'explotació ramadera.",
+                " Capacitat màxima d'ous produïts per aus de corral.",
+                "Unitat administrativa a la que pertany l'explotació ramadera.",
+                "Capacitat màxima de femelles ponedores d'ous per consum.",
+                "Total de nitrogen excretat per plaça i any a la subexplotació.",
+                "Capacitat màxima total de femelles ponedores independentment de les formes de cria autoritzades per la subexplotació d'aus de corral.",
+                "Orientació productiva de l'explotació ramadera.",
+                "Classificació atorgada segons la forma de cria de les aus de corral amb orientació productiva producció d'ous de consum (producció ecològica, en camp, a terra o en gàbies) o amb orientació productiva producció per carn (etiquetatge facultatiu).",
+                "Capacitat màxima autoritzada d'animals en espècies per les quals no consten categories específiques.",
+                "Total d'Unitats Ramaderes Majorrs (URM) calculades en base al nombre d'animals desglossats per categories especificats a la capacitat màxima autoritzada de la subexplotació.",
+                " Capacitat màxima d'animals en recria.",
+                " Capacitat màxima d'animals des del deslletament fins als 2 mesos d'edat.",
+                "Capacitat màxima d'arnes que es troben tot l'any en un mateix assentament.",
+                " Capacitat màxima d'animals que encara no es troben en edat reproductiva.",
+                "Capacitat màxima de braves de més de 24 mesos.",
+                " Capacitat màxima de femelles reproductores.",
+                "Concepte que fa referència a si els animals estan allotjats i són alimentats dins d'instal·lacions de manera permanent (sistema intensiu), o bé si els animals no estan allotjats ni són alimentats dins d'instal·lacions de manera permanent, i s'alimenten principalment de pastures (sistema extensiu); també pot haver-hi el cas d'un sistema mixt o semiintensiu. En el cas de les explotacions apícoles, els sistemes productius poden ser estants o transhumants.",
+                "Empresa amb la qual l'explotació ramadera té una relació contractual per la qual la part denominada integrador, s'obliga a aportar els animals, els productes per a l'alimentació animal, els productes sanitaris i l'assistència veterinària, i l'altra part, denominada ramader integrat aporta els serveis d'allotjament dels animals, les instal·lacions i la mà d'obra. ",
+                "Entitat local bàsica de l'organització territorial a la que pertany l'explotació ramadera.",
+                " Referència a l'espai que ocupa l'explotació ramadera dins d'una població.",
+                "Capacitat màxima d'animals mascles o femelles amb una edat de >1 any i <2 anys.",
+                "Coordenades geogràfiques de l'explotació ramadera (format UTM).",
+                "Data en la que s'ha inscrit al registre el darrer canvi d'estat de la subexplotació.",
+                "Distingim principalment dos tipus de subexplotacions ramaderes; les de producció i reproducció i les de tipus especial d'acord amb l'establert en el Decret 40/2014, de 25 de març d'ordenació de les explotacions ramaderes."
+              ],
+            "columns_format" :
+              [
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "noCommas" : "true",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "right" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "view" : "date_dmy" },
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                { "view" : "date_ymd" },
+                {}
+              ],
+            "download_count" : 8004,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-01-23T08:59:59.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "ramaderia",
+                "registre",
+                "explotacions",
+                "smartcatalonia",
+                "ods2_fam zero",
+                "ods13_acció pel clima",
+                "ods12_producció i consum responsable"
+              ],
+            "domain_metadata" :
+              [
+                { "key" : "Enllaços-relacionats_Nom", "value" : "Ramaderia" },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "http://agricultura.gencat.cat/ca/ambits/ramaderia/"
+                },
+                {
+                  "key" : "Enllaços-relacionats_Nom_2",
+                  "value" : "Registre d'explotacions ramaderes"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL_2",
+                  "value" : "http://agricultura.gencat.cat/ca/serveis/registres-oficials/ramaderia-sanitat-animal/registre-explotacions-ramaderes/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Register for livestock exploitation"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de explotaciones ganaderas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Adreça postal"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7bpt-5azk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Registre-d-explotacions-ramaderes/7bpt-5azk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 27, "searchMillis" : [ 4, 10 ] },
+  "warnings" : []
+}

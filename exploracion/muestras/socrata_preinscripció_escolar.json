@@ -1,0 +1,269 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Oferta inicial de places escolars dels estudis obligatoris",
+            "id" : "vaht-2sjk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre de grups, nombre de places i nombre de places ofertades a la preinscripció. Per centre, ensenyament i nivell.\n\nAquest dataset es complementa amb altres fitxers publicats pel Departament d’Educació en relació al nombre d’assignacions finals, el nombre d’alumnes matriculats i el directori de centres educatius.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:35:42.000Z",
+            "createdAt" : "2021-03-17T09:58:25.000Z",
+            "metadata_updated_at" : "2026-09-21T06:35:42.000Z",
+            "data_updated_at" : "2026-03-06T08:32:55.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 71,
+                "page_views_last_month" : 204,
+                "page_views_total" : 11825,
+                "page_views_last_week_log" : 6.169925001442312,
+                "page_views_last_month_log" : 7.679480099505446,
+                "page_views_total_log" : 13.529674561764642
+              },
+            "columns_name" :
+              [
+                "Codi naturalesa",
+                "Codi Àrea Territorial",
+                "Nom titularitat",
+                "Codi centre",
+                "Codi ensenyament",
+                "Codi titularitat",
+                "Curs",
+                "Georeferència",
+                "Denominació completa",
+                "Coordenades_GEO_Y",
+                "LIMADM_MUNICIPI",
+                "Places ofertades a la preinscripció",
+                "Nom DM",
+                "Mixt",
+                "Nombre places",
+                "Codi comarca",
+                "Codi districte municipal",
+                "LIMADM COMARCA",
+                "Nivell",
+                "Coordenades_GEO_X",
+                "Nombre grups",
+                "Nom ensenyament",
+                "Nom naturalesa",
+                "Nom Àrea Territorial",
+                "Nom comarca",
+                "Codi municipi_6",
+                "Nom municipi"
+              ],
+            "columns_field_name" :
+              [
+                "codi_naturalesa_1_2",
+                "codi_delegaci",
+                "nom_titularitat",
+                "codi_centre",
+                "codi_ensenyament",
+                "codi_titularitat",
+                "curs",
+                "georefer_ncia",
+                "denominaci_completa",
+                "coordenades_geo_y",
+                ":@computed_region_bh64_c7uy",
+                "places_ofertades_a_la",
+                "nom_dm",
+                "mixt",
+                "nombre_places",
+                "codi_comarca",
+                "codi_districte_municipal",
+                ":@computed_region_wvic_k925",
+                "nivell",
+                "coordenades_geo_x",
+                "nombre_grups",
+                "nom_ensenyament",
+                "nom_naturalesa",
+                "nom_delegaci",
+                "nom_comarca",
+                "codi_municipi_5",
+                "nom_municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codi naturalesa Públic/Privat",
+                "Codi de l'Àrea Territorial del centre docent",
+                "Titularitat de la propietat del centre educatiu",
+                "Codi de centre educatiu. Identificació única de centre. Camp recomanat per al tractament de dades",
+                "Codi de l’ensenyament",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Curs de referència",
+                "",
+                "Nom complet del centre educatiu",
+                "",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Places ofertades en el procés de preinscripció",
+                "Nom del districte del municipi del centre educatiu",
+                "Un grup és mixt, si pertany a un centre educatiu en una zona rural i té alumnes de nivells i ensenyaments diferents. ",
+                "Nombre de places",
+                "Codi comarca del centre docent",
+                "Codi del districte del municipi del centre educatiu",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nivell",
+                "",
+                "Nombre de grups",
+                "Nom de l’ensenyament",
+                "Públic/privat",
+                "Àrea Territorial",
+                "Nom comarca del centre docent",
+                "Codificació del municipi a 5 dígits",
+                "Nom del municipi del centre educatiu"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2085,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-03-13T16:03:45.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "educació",
+                "ensenyament",
+                "preinscripció",
+                "places",
+                "alumnes",
+                "estudis obligatoris",
+                "oferta educativa",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Educational offer of compulsory studies"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Oferta educativa de los estudios obligatorios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vaht-2sjk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Oferta-inicial-de-places-escolars-dels-estudis-obl/vaht-2sjk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 3, 8 ] },
+  "warnings" : []
+}

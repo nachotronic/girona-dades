@@ -1,0 +1,298 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Titulacions per accedir a la funció pública",
+            "id" : "knh8-8nwn",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Titulacions requerides per accedir als diferents grups dels cossos d’administració general i dels cossos d’administració especial de la Generalitat de Catalunya.\n\nLes equivalències amb el títol de batxiller (Llei orgànica d’educació), de tècnic (Llei orgànica d’educació) i de graduat en educació secundària obligatòria (ESO) poden tenir modificacions en funció de canvis en la normativa vigent.",
+            "attribution" : "Escola d'Administració Pública de Catalunya (EAPC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-09T07:05:10.000Z",
+            "createdAt" : "2025-11-28T12:52:57.000Z",
+            "metadata_updated_at" : "2026-11-09T07:05:10.000Z",
+            "data_updated_at" : "2026-05-28T07:45:15.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 120,
+                "page_views_last_month" : 434,
+                "page_views_total" : 8108,
+                "page_views_last_week_log" : 6.9188632372745955,
+                "page_views_last_month_log" : 8.76487159073609,
+                "page_views_total_log" : 12.985308297255852
+              },
+            "columns_name" :
+              [
+                "Titulació requerida",
+                "Grup",
+                "Cos",
+                "Tipus de cos",
+                "Subgrup",
+                "Tipus de professió",
+                "Escala"
+              ],
+            "columns_field_name" :
+              [
+                "titulacio_requerida",
+                "grup",
+                "cos",
+                "tipus_cos",
+                "subgrup",
+                "tipus_professio",
+                "escala"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Titulació requerida per accedir a l’escala corresponent",
+                "Grup d’adscripció del personal funcionari",
+                "Cos funcionarial específic dins l’estructura de la Generalitat de Catalunya",
+                "Categoria general del cos dins l’estructura administrativa",
+                "Subgrup d’adscripció del personal funcionari",
+                "Indica si l’exercici de la professió requereix habilitació legal específica",
+                "Especialitat dins d’un cos funcionarial"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 428,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-11-28T12:56:51.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "titulacions",
+                "cossos d’administració general",
+                "cossos d’administració especial",
+                "personal funcionari",
+                "ods16_pau justícies i institucions sòlides",
+                "eapc"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Qualifications to access the civil service"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Titulaciones para acceder a la función pública"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/knh8-8nwn",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Titulacions-per-accedir-a-la-funció-pública/knh8-8nwn",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Equivalències de titulacions i estudis per accedir a la funció pública",
+            "id" : "hmt8-6epk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Equivalències de les titulacions, estudis o proves superades requerides per accedir als diferents grups dels cossos d’administració general i dels cossos d’administració especial de la Generalitat de Catalunya, amb el títol de batxiller (Llei orgànica d’educació), de tècnic (Llei orgànica d’educació) o de graduat en educació secundària obligatòria (ESO).\n\nPer participar en processos de selecció (oposicions) són vàlides totes les equivalències, tinguin els efectes que tinguin, si estan recollides en les normes reguladores.\n\nAquestes equivalències poden tenir modificacions en funció de canvis en la normativa vigent.",
+            "attribution" : "Escola d'Administració Pública de Catalunya (EAPC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-09T07:16:01.000Z",
+            "createdAt" : "2025-12-09T08:18:05.000Z",
+            "metadata_updated_at" : "2026-11-09T07:16:01.000Z",
+            "data_updated_at" : "2026-05-28T08:06:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 100,
+                "page_views_last_month" : 379,
+                "page_views_total" : 6410,
+                "page_views_last_week_log" : 6.6582114827517955,
+                "page_views_last_month_log" : 8.569855608330949,
+                "page_views_total_log" : 12.646333693380967
+              },
+            "columns_name" :
+              [
+                "Tipus d'estudis",
+                "Requisit",
+                "Tipus de cos",
+                "Subgrup",
+                "Títols i/o estudis o proves superats",
+                "Norma reguladora",
+                "Grup",
+                "Cos"
+              ],
+            "columns_field_name" :
+              [
+                "tipus_estudis",
+                "requisit",
+                "tipus_cos",
+                "subgrup",
+                "titols_estudis_proves",
+                "norma_reguladora",
+                "grup",
+                "cos"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Titulació requerida per accedir al subgrup",
+                "Condició necessària per accedir al cos o lloc",
+                "Categoria general del cos dins l’estructura administrativa",
+                "Subgrup d’adscripció del personal funcionari",
+                "Títols i/o estudis o proves superades derivats d’un sistema educatiu anterior al sistema educatiu vigent o del sistema educatiu vigent",
+                "Norma que estableix les condicions d’accés o regulació del cos",
+                "Grup d’adscripció del personal funcionari",
+                "Cos funcionarial específic dins l’estructura de la Generalitat  de Catalunya"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 338,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-12-09T08:22:26.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "equivalències",
+                "titulacions",
+                "normes reguladores",
+                "cossos d’administració general",
+                "cossos d’administració especial",
+                "personal funcionari",
+                "ods16_pau justícies i institucions sòlides",
+                "eapc"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Equivalence of qualifications and studies to access the civil service"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Equivalencias de titulaciones y estudios para el acceso a la función pública"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" : { "domain" : "analisi.transparenciacatalunya.cat" },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/hmt8-6epk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Equivalències-de-titulacions-i-estudis-per-accedir/hmt8-6epk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 2,
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 3, 7 ] },
+  "warnings" : []
+}
