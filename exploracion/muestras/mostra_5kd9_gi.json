@@ -1,0 +1,1 @@
+{"message":"Query coordinator error: 400; ERROR: invalid input syntax for type numeric: \"*\"","errorCode":"400","data":{"source":"soql-server"}}
