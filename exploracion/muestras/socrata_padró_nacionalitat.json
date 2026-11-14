@@ -1,0 +1,588 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Població per nacionalitat i lloc de naixement",
+            "id" : "sjkp-jybz",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Població a 31 de desembre per nacionalitat i lloc de naixement.",
+            "attribution" : "Ajuntament de L'Hospitalet de Llobregat",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2024-01-11T08:09:22.000Z",
+            "createdAt" : "2017-06-14T10:32:19.000Z",
+            "metadata_updated_at" : "2022-01-28T10:08:06.000Z",
+            "data_updated_at" : "2024-01-11T08:09:22.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 4635,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 12.178664851006472
+              },
+            "columns_name" :
+              [
+                "PaisNaixement",
+                "Districte",
+                "Total",
+                "Homes",
+                "ComunitatAutonomaNaixement",
+                "ContinentNacionalitat",
+                "Barri",
+                "Dones",
+                "ContinentNaixement",
+                "CodiBarri",
+                "AnyPadro",
+                "Nacionalitat",
+                "CodiDistricte"
+              ],
+            "columns_field_name" :
+              [
+                "paisnaixement",
+                "districte",
+                "total",
+                "homes",
+                "comunitatautonomanaixement",
+                "continentnacionalitat",
+                "barri",
+                "dones",
+                "continentnaixement",
+                "codibarri",
+                "anypadro",
+                "nacionalitat",
+                "codidistricte"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [ "", "", "", "", "", "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "0",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "0",
+                  "groupSeparator" : ".",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "0",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {}
+              ],
+            "download_count" : 859,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-06-14T10:32:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "naixement",
+                "dades estadístiques",
+                "padró",
+                "nacionalitat",
+                "població"
+              ],
+            "domain_metadata" :
+              [ { "key" : "Actualització_Periodicitat", "value" : "Anual" } ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/sjkp-jybz",
+        "link" : "https://opendata.l-h.cat/Demografia/Població-per-nacionalitat-i-lloc-de-naixement/sjkp-jybz",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Població per nacionalitat i lloc de naixement (dades mensuals)",
+            "id" : "2rqr-s6wd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Població a final de cada mes per nacionalitat i lloc de naixement.",
+            "attribution" : "Ajuntament de L'Hospitalet",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2024-02-01T06:33:25.000Z",
+            "createdAt" : "2017-07-10T07:47:06.000Z",
+            "metadata_updated_at" : "2017-07-10T08:10:42.000Z",
+            "data_updated_at" : "2024-02-01T06:33:25.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 1098,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 10.101975670949232
+              },
+            "columns_name" :
+              [
+                "ContinentNacionalitat",
+                "CodiBarri",
+                "AnyPadro",
+                "Homes",
+                "ComunitatAutonomaNaixement",
+                "Nacionalitat",
+                "Barri",
+                "MesPadro",
+                "CodiDistricte",
+                "Dones",
+                "PaisNaixement",
+                "Districte",
+                "ContinentNaixement",
+                "Total"
+              ],
+            "columns_field_name" :
+              [
+                "continentnacionalitat",
+                "codibarri",
+                "anypadro",
+                "homes",
+                "comunitatautonomanaixement",
+                "nacionalitat",
+                "barri",
+                "mespadro",
+                "codidistricte",
+                "dones",
+                "paisnaixement",
+                "districte",
+                "continentnaixement",
+                "total"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Continent de nacionalitat",
+                "Codi del barri",
+                "Any del padró",
+                "Nombre d'homes",
+                "Comunitat autònoma de naixement",
+                "Nacionalitat",
+                "Nom del barri",
+                "Mes del padró",
+                "Codi del districte",
+                "Nombre de dones",
+                "País de naixement",
+                "Nom del districte",
+                "Continent de naixement",
+                "Total d'empadronats"
+              ],
+            "columns_format" :
+              [
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                }
+              ],
+            "download_count" : 132,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-07-10T07:51:20.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "població",
+                "dades estadístiques",
+                "nacionalitat",
+                "naixement",
+                "padró"
+              ],
+            "domain_metadata" :
+              [
+                { "key" : "Actualització_Periodicitat", "value" : "Mensual" }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.l-h.cat",
+            "license" : "Creative Commons Attribution 4.0 International"
+          },
+        "permalink" : "https://opendata.l-h.cat/d/2rqr-s6wd",
+        "link" : "https://opendata.l-h.cat/Demografia/Població-per-nacionalitat-i-lloc-de-naixement-dade/2rqr-s6wd",
+        "owner" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          },
+        "creator" :
+          {
+            "id" : "5ged-3nbm",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes de L'Hospitalet"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Padró municipal d'habitants",
+            "id" : "ez3x-7acy",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Padró municipal d'habitants és el registre administratiu on consten els veïns d'un municipi i constitueix una prova de la seva residència. Cada ajuntament s'encarrega de la creació, la gestió i el manteniment del seu padró. Es tracta d'un registre de dades personals regulat per la Llei de bases de règim local i la Llei de protecció de dades.\n\nL'any 1996 va entrar en funcionament el sistema de gestió contínua i informatitzada dels padrons municipals, basat en la coordinació de l'INE. A partir del 1998 s'obtenen xifres de població (a 1 de gener de cada any), que són declarades oficials pel Consell de Ministres (a finals d'any).\n\nL'Idescat elabora una explotació estadística del Padró municipal d'habitants. La informació es difon pel lloc de residència de la població fins a l'àmbit municipal i està desagregada per sexe, edat, nacionalitat i lloc de naixement.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:14:01.000Z",
+            "createdAt" : "2020-10-26T14:59:18.000Z",
+            "metadata_updated_at" : "2026-09-21T08:14:01.000Z",
+            "data_updated_at" : "2020-10-26T14:59:18.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 91,
+                "page_views_total" : 4347,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 6.523561956057013,
+                "page_views_total_log" : 12.08613622502731
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:20.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "padró",
+                "padró municipal",
+                "ods17_aliances per aconseguir objectius",
+                "ods11_ciutats i comunitats sostenibles",
+                "català947"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Municipal Population Register"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Padrón municipal de habitantes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=pmh" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=pmh" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ez3x-7acy",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Padró-municipal-d-habitants/ez3x-7acy",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Padró d'habitants residents a l'estranger",
+            "id" : "9wxv-jxmx",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Padró d'habitants residents a l'estranger és un registre administratiu on consten les persones de nacionalitat espanyola (tant si és la seva única nacionalitat com si no) que viuen habitualment a l'estranger i el seu últim municipi d'inscripció és a Catalunya.\n\nTerritorialment, ofereix la informació a escala municipal, comarcal, àmbits del Pla territorial, províncies i Catalunya.\n\nLes dades provenen de la informació que les oficines o seccions consulars envien a l'INE, a través del Ministeri d'Afers Exteriors i de Cooperació. L'Idescat du a terme una explotació estadística del fitxer relatiu a Catalunya amb informació per sexe, edat, lloc de naixement, lloc d'inscripció i continent o país de residència, referida a 1 de gener de cada any. També difon informació de les noves inscripcions (que són les altes produïdes durant l'any anterior al de referència).",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:24.000Z",
+            "createdAt" : "2020-10-26T14:59:17.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:24.000Z",
+            "data_updated_at" : "2020-10-26T14:59:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 35,
+                "page_views_total" : 2070,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.169925001442312,
+                "page_views_total_log" : 11.016111838220512
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:19.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "padró",
+                "estranger",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Register of Inhabitants Residing Abroad"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Padrón de habitantes residentes en el extranjero"
+                },
+                { "key" : "Àmbit-geogràfic_Àmbit-geogràfic", "value" : "Món" },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=phre" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=phre"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/9wxv-jxmx",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Padró-d-habitants-residents-a-l-estranger/9wxv-jxmx",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 3, 6 ] },
+  "warnings" : []
+}

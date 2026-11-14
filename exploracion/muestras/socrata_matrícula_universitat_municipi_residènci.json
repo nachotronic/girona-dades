@@ -1,0 +1,1986 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Alumnat en estudis oficials de les universitats catalanes",
+            "id" : "5kd9-2wex",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nou accés, matrícula i titulats en estudis de cicle, grau, màster i doctorat a les universitats catalanes. Cicles i graus es mostren de forma agrupada. Els valors inferiors a 4 estan anonimitzats amb un *. S’inclouen registres amb els totals per Curs/Tipus d’estudi/Tipus d’universitat.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-04T11:37:16.000Z",
+            "createdAt" : "2019-12-18T12:02:43.000Z",
+            "metadata_updated_at" : "2026-08-04T11:37:16.000Z",
+            "data_updated_at" : "2026-08-04T11:37:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 34,
+                "page_views_last_month" : 58,
+                "page_views_total" : 4037,
+                "page_views_last_week_log" : 5.129283016944966,
+                "page_views_last_month_log" : 5.882643049361842,
+                "page_views_total_log" : 11.979425195331475
+              },
+            "columns_name" :
+              [
+                "Sexe",
+                "Curs",
+                "Nou accés",
+                "Titulats",
+                "Tipus de centre",
+                "Tipus d'estudi",
+                "Comarca del centre",
+                "Matrícula ETC",
+                "Matrícula",
+                "Universitat",
+                "Tipus d'universitat",
+                "Nacionalitat"
+              ],
+            "columns_field_name" :
+              [
+                "sexe",
+                "curs",
+                "nou_acc_s",
+                "titulats",
+                "tipus_de_centre",
+                "tipus_d_estudi",
+                "comarca_del_centre",
+                "matr_cula_etc",
+                "matr_cula",
+                "universitat",
+                "tipus_d_universitat",
+                "nacionalitat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Descripció del gènere de l’alumne , dona, home",
+                "Curs acadèmic de les dades",
+                "Nombre d’alumnes que accedeixen a la universitat. Per al doctorat la dada està disponible a partir del curs 17-18. Per als estudis anteriors a l’EEES no està disponible",
+                "Nombre de titulats del curs. En el cas del doctorat, són les tesis llegides",
+                "Descripció del tipus de centre al que fan referència les dades, integrat o adscrit",
+                "Descripció del tipus d’estudi (grau, màster, doctorat i estudis anteriors a l’EEES, les antigues llicenciatures i diplomatures)",
+                "Descripció de la comarca en la es troba centre en el que estan matriculats els estudiants",
+                "Nombre de matrícules en equivalents a temps complet (etc). Es considera 1 etc si matricula 60 crèdits ordinaris de grau o màster en un curs acadèmic. No es disposa de la dada d’etc de doctorat",
+                "Nombre d’alumnes matriculats a la universitat",
+                "Sigles de la Universitat a la que fan referència les dades",
+                "Descripció del tipus d’universitat, pública, privada o no presencial",
+                "Descripció de la nacionalitat de l’alumne, espanyola o estrangera"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1644,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-03-10T10:13:24.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "nou accés",
+                "matrícula",
+                "titulats",
+                "grau",
+                "màster",
+                "doctorat",
+                "universitat",
+                "ods4_educació de qualitat",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students in official studies in Catalan universities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnado en estudios oficiales de las universidades catalanas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5kd9-2wex",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Alumnat-en-estudis-oficials-de-les-universitats-ca/5kd9-2wex",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Estadística de la mobilitat obligada per raó d'estudis universitaris",
+            "id" : "gspe-4f4s",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Estadística de la mobilitat obligada per raó d'estudis universitaris ofereix informació dels alumnes que es desplacen entre el lloc de residència i el lloc d'estudi, a partir de les dades de matrícula de Catalunya, que fan referència tant als estudiants que hi resideixen com als que no. Les dades es difonen segons el lloc de residència, el lloc d'estudi i el sexe.\n\nL'aprofitament dels registres administratius de la matrícula dels estudiants permet a l'Idescat elaborar aquesta estadística amb periodicitat anual des del curs 2011/2012. La desagregació territorial és per municipis, comarques, àmbits del Pla territorial, províncies i Catalunya.\n\nL'Idescat elabora aquesta estadística a partir de les dades de matrícula recollides per la Secretaria d'Universitats i Recerca del Departament d'Empresa i Coneixement.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:40.000Z",
+            "createdAt" : "2020-10-26T14:58:31.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:40.000Z",
+            "data_updated_at" : "2020-10-26T14:58:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 47,
+                "page_views_total" : 2412,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.584962500721157,
+                "page_views_total_log" : 11.23661220021575
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:33.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "mobilitat",
+                "mobilitat obligada",
+                "estudis universitaris",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on Commuting for University Studies"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de la movilidad obligada por razón de estudios universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "ENLLAÇ" : "https://idescat.cat/pub/?id=emouniv"
+                           },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "ENLLAÇ" : "https://idescat.cat/pub/?id=emouniv" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/gspe-4f4s",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Estadística-de-la-mobilitat-obligada-per-raó-d-est/gspe-4f4s",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Estadística de la mobilitat obligada per raó d'estudis no universitaris",
+            "id" : "um2m-zw96",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Estadística de la mobilitat obligada per raó d'estudis no universitaris ofereix informació dels alumnes que es desplacen entre el lloc de residència i el lloc d'estudi a partir de les dades de matrícula de Catalunya, que fan referència tant als alumnes que hi resideixen com als que no. Les dades es difonen segons el lloc de residència, el lloc d'estudi, el sexe, el tram d'edat i el nivell d'estudis.\n\nL'aprofitament dels registres administratius de la matrícula dels estudiants permet a l'Idescat elaborar aquesta estadística amb periodicitat anual, des del curs 2011/2012. La desagregació territorial és per municipis, comarques, àmbits del Pla territorial, províncies i Catalunya.\n\nL'Idescat elabora aquesta estadística a partir de les dades de matrícula recollides pel Departament d'Educació.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:42.000Z",
+            "createdAt" : "2020-10-26T14:58:30.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:42.000Z",
+            "data_updated_at" : "2020-10-26T14:58:30.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 23,
+                "page_views_last_month" : 40,
+                "page_views_total" : 2266,
+                "page_views_last_week_log" : 4.584962500721157,
+                "page_views_last_month_log" : 5.357552004618084,
+                "page_views_total_log" : 11.146568675740786
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "mobilitat",
+                "mobilitat obligada",
+                "estudis",
+                "estudis no universitaris",
+                "ods4_educació de qualitat",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on Commuting for Non-University Studies"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de la movilidad obligada por razón de estudios no universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=emoesc" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "ENLLAÇ" : "https://idescat.cat/pub/?id=emoesc" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/um2m-zw96",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Estadística-de-la-mobilitat-obligada-per-raó-d-est/um2m-zw96",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mobilitat obligada municipal per raó d’estudis no universitaris",
+            "id" : "8w7y-2bfp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aprofitament estadístic a partir de la informació de municipi de residència dels alumnes i els municipis dels centres educatius als quals estan matriculats segons curs, sexe i naturalesa.",
+            "attribution" : "Departament d'Educació i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-18T08:01:20.000Z",
+            "createdAt" : "2021-04-19T10:06:51.000Z",
+            "metadata_updated_at" : "2026-09-18T08:01:20.000Z",
+            "data_updated_at" : "2026-03-10T10:07:06.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 88,
+                "page_views_last_month" : 257,
+                "page_views_total" : 5717,
+                "page_views_last_week_log" : 6.475733430966398,
+                "page_views_last_month_log" : 8.011227255423254,
+                "page_views_total_log" : 12.481294904631099
+              },
+            "columns_name" :
+              [
+                "Municipi centre",
+                "Sexe",
+                "Grup Edat",
+                "Naturalesa centre",
+                "Codi Municipi centre",
+                "Residència municipi alumne",
+                "Número matrícules estadística",
+                "Codi Residència municipi alumne",
+                "Curs",
+                "Estudis"
+              ],
+            "columns_field_name" :
+              [
+                "municipi_centre",
+                "sexe",
+                "grup_edat",
+                "naturalesa_centre",
+                "codi_municipi_centre",
+                "resid_ncia_municipi_alumne",
+                "n_mero_matr_cules_estad_stica",
+                "codi_resid_ncia_municipi",
+                "curs",
+                "estudis"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Municipi on s’ubica el centre educatiu on l’alumne està matriculat",
+                "Categoria dicotòmica Home/Dona",
+                "Grups d’edat -\tFins a 2 anys -\tDe 3 a 5 anys -\tDe 6 a 11 anys -\tDe 12 a 15 anys -\tDe 16 a 20 anys -\tMajor de 20 anys",
+                "Centre educatiu públic o privat",
+                "Codi del municipi on s’ubica el centre educatiu",
+                "Municipi de residencia de l’alumne",
+                "Nombre d’estudiants amb les mateixes característiques de desplaçament",
+                "Codi del municipi de residencia de l’alumne",
+                "Curs escolar. Des del 2016-2017",
+                "Tipologia d’estudis"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1673,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-04-19T10:14:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "educació",
+                "mobilitat",
+                "estudis no universitaris",
+                "desplaçament",
+                "municipis",
+                "públic",
+                "gènere",
+                "curs",
+                "smartcatalonia",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Non-university studies mobility municipalities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mobilidad obligada municipal por razón d’estudios no universitarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8w7y-2bfp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Mobilitat-obligada-municipal-per-raó-d-estudis-no-/8w7y-2bfp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Llista de reparació jurídica de víctimes del franquisme (1938-1978)",
+            "id" : "3bjt-k7vu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "En aplicació de la Llei 11/2017 de reparació jurídica de víctimes del franquisme, la qual declara il·legals els tribunals de l’Auditoria de Guerra de l’Exèrcit d’Ocupació que van actuar a Catalunya de l’abril de 1938 a desembre de 1978,  l’Arxiu Nacional de Catalunya publica la relació de persones a les quals es va instruir un procediment judicial militar durant la dictadura de Franco. La relació publicada és fruit de la catalogació feta per l’ANC dels procediments judicials militars de l’Arxiu del Tribunal Militar Territorial Tercer de Barcelona entre els anys 2003 i 2013 i inclou cognoms i nom de la persona represaliada, sexe, edat, lloc de naixement i de residència, tipus de procediment, número de causa, data d’inici de la causa, data de l’aprovació de la sentència o altra resolució, pena imposada, commutació o indult demanat, persones executades i referència d’arxiu dels originals que es conserven a l’Arxiu del Tribunal Militar Territorial Tercer de Barcelona.",
+            "attribution" : "Departament de Cultura",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-09T06:31:37.000Z",
+            "createdAt" : "2018-04-05T15:32:49.000Z",
+            "metadata_updated_at" : "2026-10-09T06:31:19.000Z",
+            "data_updated_at" : "2026-10-09T06:31:37.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 125,
+                "page_views_last_month" : 464,
+                "page_views_total" : 18028,
+                "page_views_last_week_log" : 6.977279923499917,
+                "page_views_last_month_log" : 8.861086905995393,
+                "page_views_total_log" : 14.138031757736755
+              },
+            "columns_name" :
+              [
+                "Municipi_Residencia_Latitud_ETRS89",
+                "Data de la descripció",
+                "Pena",
+                "Tipus procediment 1",
+                "Comunitat autònoma residència",
+                "Commutació/indult (demanat)",
+                "Municipi_Residencia_Longitud_ETRS89",
+                "Ref num arxiu",
+                "Data correccio registre",
+                "Afusellades",
+                "País naixement",
+                "Província residència",
+                "Comarca residència",
+                "Pedanies/Agregats residencia",
+                "Província naixement",
+                "Comarca naixement",
+                "Pedanies/Agregats naixement",
+                "Municipi naixement",
+                "Cognoms",
+                "Num causa",
+                "Cognoms nom",
+                "Municipi_Naixement_Latitud_ETRS89",
+                "Tipus procediment 2",
+                "País residència",
+                "Municipi residència",
+                "Codi",
+                "Edat",
+                "Municipi_Naixement_Longitud_ETRS89",
+                "Sexe",
+                "Autoria de la descripció",
+                "Any aprovació sen o altra resol",
+                "Any inicial",
+                "Nom",
+                "Comunitat autònoma naixement"
+              ],
+            "columns_field_name" :
+              [
+                "municipi_residencia_latitud_etrs89",
+                "data_de_la_descripci_",
+                "pena",
+                "tipus_procediment_1",
+                "comunitat_aut_noma_resid_ncia",
+                "commutaci_indult_demanat",
+                "municipi_residencia_longitud_etrs89",
+                "ref_num_arxiu",
+                "data_correccio_registre",
+                "afusellades",
+                "pa_s_naixement",
+                "prov_ncia_resid_ncia",
+                "comarca_resid_ncia",
+                "pedanies_agregats_residencia",
+                "prov_ncia_naixement",
+                "comarca_naixement",
+                "pedanies_agregats_naixement",
+                "municipi_naixement",
+                "cognoms",
+                "num_causa",
+                "cognoms_nom",
+                "municipi_naixement_latitud_etrs89",
+                "tipus_procediment_2",
+                "pa_s_resid_ncia",
+                "municipi_resid_ncia",
+                "codi",
+                "edat",
+                "municipi_naixement_longitud_etrs89",
+                "sexe",
+                "autoria_de_la_descripci_",
+                "any_aprovaci_sen_o_altra_resol",
+                "any_inicial",
+                "nom",
+                "comunitat_aut_noma_naixement"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Latitud del lloc de residència de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de residència de la víctima o quan declarava viure en més d’un lloc. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Data d’alta del registre a la llista de reparació jurídica de víctimes del franquisme.",
+                "Pena imposada a la víctima. En cas de no disposar d’aquesta informació hi consten dos guionets “--“.",
+                "Hi consta si es tracta d’un consell de guerra o de diligències prèvies. En cas de no disposar d’aquesta informació hi consten dos guionets “--“.",
+                "Comunitat autònoma de residència de la víctima. Consta quan fa referència a comunitats autònomes de l’estat espanyol. Per la resta de casos (lloc de residència de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de residència de la persona processada) hi consten dos guionets “--“.",
+                "Commutació/indult demanat (a vegades no concedits). Quan no es disposa d’aquesta dada està en blanc.",
+                "Longitud del lloc de residència de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de residència de la víctima o quan declarava viure en més d’un lloc. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Número de localització a l’arxiu del procediment. El camp es troba buit quan es tenen referències de l’expedient però no es va trobar el procediment al dipòsit de l’Arxiu del Tribunal Militar Territorial Tercer de Barcelona.",
+                "Data de l’esmena del registre arran de les sol·licituds d’esmena rebuts per part de les víctimes o dels seus familiars. Quan el registre no ha estat corregit aquest camp està en blanc.",
+                "Indica els casos en què la persona processada fou condemnada a mort i executada. En la resta de casos està en blanc.",
+                "País de naixement de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Província de residència de la víctima. Consta quan fa referència a províncies de l’estat espanyol. En el cas de municipis de les Illes Balears hi consta “Illes Balears”. Per la resta de casos (lloc de residència de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de residència de la persona processada) hi consten dos guionets “--“.",
+                "Comarca de residència de la víctima. Consta quan fa referència a comarques de Catalunya, Catalunya Nord, Comunitat Valenciana i franja d’Aragó. Per a la resta de casos (lloc de residència de la persona processada a qualsevol altre municipi de la resta de l’estat espanyol, fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de residència de la persona processada) hi consten dos guionets “--“.",
+                "Pedania/Agregats de residència de la víctima. Només està consignat aquest camp en els casos que la persona processada visqués en alguna entitat local menor. En la resta de casos hi consten dos guionets “--“.",
+                "Província de naixement de la víctima. Consta quan fa referència a províncies de l’estat espanyol. En el cas de municipis de les Illes Balears hi consta “Illes Balears”. Per la resta de casos (lloc de naixement de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de naixement de la persona processada) hi consten dos guionets “--“.",
+                "Comarca de naixement de la víctima. Consta quan fa referència a comarques de Catalunya, Catalunya Nord, Comunitat Valenciana i franja d’Aragó. Per a la resta de casos (lloc de naixement de la persona processada a qualsevol altre municipi de la resta de l’estat espanyol, fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de naixement de la persona processada) hi consten dos guionets “--“.",
+                "Pedania/Agregats de naixement de la víctima. Només està consignat aquest camp en els casos que la persona processada hagués nascut en alguna entitat local menor. En la resta de casos hi consten dos guionets “--“.",
+                "Municipi de naixement de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Cognoms de la víctima.",
+                "Número de causa del procediment seguit contra la víctima. Quan no es disposa d’aquesta dada hi consten dos guionets “--“.",
+                "Cognoms i nom de la víctima (apareixen persones físiques i jurídiques).",
+                "Latitud del lloc de naixement de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de naixement de la víctima. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Hi consta el tipus de procediment: sumaríssim, causa ordinària, diligències prèvies, causa acumulada, entre d’altres. En cas de no disposar d’aquesta informació hi consten dos guionets “--“.",
+                "País de residència de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Municipi de residència de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Autonumèric que identifica unívocament cada registre.",
+                "Edat de la víctima, en el cas de les persones jurídiques s’indica 0. Quan no es disposa de l’edat hi consta “9999”.",
+                "Longitud del lloc de naixement de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de naixement de la víctima. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Sexe de la víctima. Quan es tracta de persones jurídiques hi consten dos guionets “--“. A la resta de casos hi consta home o dona.",
+                "Autoria de l’alta del registre a la llista de reparació jurídica de víctimes del franquisme.",
+                "Any d’aprovació de la sentència o altra resolució del procediment seguit contra la víctima. Quan no es disposa d’aquesta dada està en blanc.",
+                "Any inicial del procediment seguit contra la víctima. Quan no es disposa d’aquesta dada està en blanc.",
+                "Nom de pila de la víctima.",
+                "Comunitat autònoma de naixement de la víctima. Consta quan fa referència a comunitats autònomes de l’estat espanyol. Per la resta de casos (lloc de naixement de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de naixement de la persona processada) hi consten dos guionets “--“."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {}
+              ],
+            "download_count" : 3802,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-03-20T10:06:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Legislació-justícia",
+            "domain_tags" :
+              [
+                "repressió",
+                "consell de guerra",
+                "memòria històrica",
+                "franquisme",
+                "drets humans",
+                "arxius",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Victims of the Franco regime (1938-1978) juridical reparation list"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Lista de reparación jurídica de víctimas del Franquismo (1938-1978)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Espanya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Cultura" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/3bjt-k7vu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Legislació-justícia/Llista-de-reparació-jurídica-de-víctimes-del-franq/3bjt-k7vu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Alumnes matriculats per ensenyament i unitats dels centres docents",
+            "id" : "xvme-26kg",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Alumnes matriculats en els centres docents, en els ensenyaments que cursen. També s’inclouen el nombre de grups o unitats en què es distribueixen els alumnes. La font d’informació són els sistemes d’informació del Departament d’Educació. L’actualització és anual.  \nRespecte al recompte de matrícules, estan informats els alumnes dels quals es tingui el sexe informat. S’exclouen els estudis categoritzats com a desconeguts. \nHi ha certes característiques dels ensenyaments com la modalitat que només s’informa en els estudis en que té sentit.\nRespecte els grups o unitats, només s‘inclouen els corresponents als ensenyaments de règim general.\nConsideracions:\n-\tEn el cas dels ensenyaments superiors de disseny, una part dels alumnes cursen els estudis anualment i una altra part semestralment. Per homogeneïtzar les dades s’han considerat totes les matrícules anuals (mostrant les dades del primer semestre pels centres que fan els dos períodes).\n-\tEn el cas de les unitats, per als centres privats i per alguns estudis no es disposa de les dades desagregades a nivell d’ensenyament (només a nivell de grau). En aquest cas s’ha afegir el nombre d’unitats per grau separant aquesta dada del nombre de matrícules.\n-\tL'actualització de les dades anual es fa en tres fases: En la primera fase s’informarà dels ensenyaments de règim general, en la segona dels ensenyaments de règim especial que tenen matrícula anual i en la tercera ensenyaments de règim especial que tenen matriculació no anual.",
+            "attribution" : "Departament d'Educació i Formació Professionalfessional i Formació Professional i Formació Professional i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:43:10.000Z",
+            "createdAt" : "2019-06-04T10:45:32.000Z",
+            "metadata_updated_at" : "2026-09-21T06:43:10.000Z",
+            "data_updated_at" : "2026-04-23T11:01:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 254,
+                "page_views_last_month" : 1179,
+                "page_views_total" : 40885,
+                "page_views_last_week_log" : 7.994353436858858,
+                "page_views_last_month_log" : 10.204571144249204,
+                "page_views_total_log" : 15.319319306134915
+              },
+            "columns_name" :
+              [
+                "Nom naturalesa",
+                "Georeferència",
+                "Codi naturalesa",
+                "Denominació completa",
+                "Nom àrea territorial",
+                "Nom districte municipal",
+                "Matrícules. Dones",
+                "Codi municipi_5",
+                "Codi municipi_6",
+                "Coordenades UTM Y",
+                "Matrícula concertada",
+                "Modalitat",
+                "Període matrícula",
+                "Curs",
+                "Any",
+                "Codi centre",
+                "Codi àrea territorial",
+                "Codi comarca",
+                "Nom comarca",
+                "Coordenades UTM X",
+                "Coordenades GEO X",
+                "Nom ensenyament",
+                "Codi titularitat",
+                "Nom titularitat",
+                "Nom estudis",
+                "Temàtica",
+                "Grau",
+                "Codi ensenyament",
+                "Matrícules. Total",
+                "Matrícules. Homes",
+                "Unitats",
+                "Nom municipi",
+                "Codi districte municipal",
+                "Nivell",
+                "Codi estudis",
+                "Coordenades GEO Y"
+              ],
+            "columns_field_name" :
+              [
+                "nom_naturalesa",
+                "georefer_ncia",
+                "codi_naturalesa",
+                "denominaci_completa",
+                "nom_delegaci",
+                "nom_dm",
+                "matr_cules_dones",
+                "codi_municipi_5",
+                "codi_municip_6",
+                "coordenades_utm_y",
+                "matr_cula_concertada",
+                "modalitat",
+                "per_ode_matr_cula",
+                "curs",
+                "any",
+                "codi_centre",
+                "codi_delegaci",
+                "codi_comarca",
+                "nom_comarca",
+                "coordenades_utm_x",
+                "coordenades_geo_x",
+                "nom_ensenyament",
+                "codi_titularitat",
+                "nom_titularitat",
+                "nom_estudis",
+                "tem_tica",
+                "grau",
+                "codi_ensenyament",
+                "matr_cules_total",
+                "matr_cules_homes",
+                "unitats",
+                "nom_municipi",
+                "codi_districte_municipal",
+                "nivell",
+                "codi_estudis",
+                "coordenades_geo_y"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Públic/Privat",
+                "",
+                "Codi naturalesa Públic/Privat",
+                "Nom complert del centre educatiu",
+                "Àrea Territorial",
+                "Nom del districte del municipi del centre educatiu",
+                "Nombre de matrícules. Dones",
+                "Codificació a 5 dígits",
+                "Codificació a 6 dígits",
+                "ETRS89",
+                "Informació sobre si l’ensenyament al centre es concertat o rep fons públics",
+                "Modalitat en que es cursa l’ensenyament (presencial, semipresencial, distància o lliure)",
+                "Període de matriculació",
+                "Curs de referència",
+                "Any inferior del curs",
+                "Codi de centre educatiu",
+                "Codi de l'Àrea Territorial del centre educatiu",
+                "Codi comarca del centre educatiu",
+                "Nom comarca del centre educatiu",
+                "ETRS89",
+                "WGS84",
+                "Nom de l’ensenyament",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Titularitat de la propietat del centre educatiu",
+                "Nom de l’estudi",
+                "Família professional dels estudis",
+                "Grau de l’ensenyament",
+                "Codi de l’ensenyament",
+                "Nombre de matrícules. Total",
+                "Nombre de matrícules. Homes",
+                "Nombre d'unitats o grups",
+                "Nom del municipi del centre educatiu",
+                "Codi del districte del municipi del centre educatiu",
+                "Nivell de l’ensenyament",
+                "Codi de l’estudi",
+                "WGS84"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 9461,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-06-08T09:49:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "ensenyament",
+                "estudi",
+                "matrícula",
+                "alumnes",
+                "educació",
+                "grups",
+                "unitats",
+                "docents",
+                "registre",
+                "infantil",
+                "primària",
+                "secundària",
+                "batxillerat",
+                "formació professional",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students enrolled by type of education and education center"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnos matriculados por enseñanza y unidades de los centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xvme-26kg",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Alumnes-matriculats-per-ensenyament-i-unitats-dels/xvme-26kg",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Base cartogràfica de zones de pesca controlada",
+            "id" : "8eyz-fb69",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Zones amb condicions biològiques o piscícoles especials gestionades per societats de pescadors col·laboradores. És necessari la llicència de pesca recreativa i un permís especial d'un dia de durada.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T06:42:50.000Z",
+            "createdAt" : "2019-07-04T10:04:38.000Z",
+            "metadata_updated_at" : "2026-09-17T06:42:50.000Z",
+            "data_updated_at" : "2026-07-28T10:56:51.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 27,
+                "page_views_last_month" : 82,
+                "page_views_total" : 3408,
+                "page_views_last_week_log" : 4.807354922057604,
+                "page_views_last_month_log" : 6.375039431346925,
+                "page_views_total_log" : 11.735132884139947
+              },
+            "columns_name" :
+              [
+                "NOM_ZPC",
+                "COMARCA",
+                "PERMIS",
+                "MUNICIPI",
+                "CONCA",
+                "LLEGENDA",
+                "LONG_KM",
+                "N_PERMISOS",
+                "DIA_DESC",
+                "RIU",
+                "SUP_HA",
+                "MODALITAT",
+                "the_geom",
+                "ART_ESQUER",
+                "SOC_PESC",
+                "OBSERVACIO",
+                "LIM_INF",
+                "CAPTURES",
+                "PER_HAB",
+                "PROVINCIA",
+                "MATRICULA",
+                "LIM_SUP"
+              ],
+            "columns_field_name" :
+              [
+                "nom_zpc",
+                "comarca",
+                "permis",
+                "municipi",
+                "conca",
+                "llegenda",
+                "long_km",
+                "n_permisos",
+                "dia_desc",
+                "riu",
+                "sup_ha",
+                "modalitat",
+                "the_geom",
+                "art_esquer",
+                "soc_pesc",
+                "observacio",
+                "lim_inf",
+                "captures",
+                "per_hab",
+                "provincia",
+                "matricula",
+                "lim_sup"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "MultiLine",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom de la Zona de Pesca Controlada",
+                "Comarca on és la Zona de Pesca Controlada",
+                "Permís",
+                "Municipi on és la Zona de Pesca Controlada",
+                "Conca",
+                "",
+                "Longitud (km)",
+                "Nombre de permisos",
+                "Dia de descans",
+                "Nom del riu",
+                "Superfície (ha)",
+                "Modalitat",
+                "",
+                "Arts i esques permesos",
+                "Societat de pescadors",
+                "Observacions",
+                "Límit inferior",
+                "Captures",
+                "Període hàbil",
+                "Província on és la Zona de Pesca Controlada",
+                "Matrícula",
+                "Límit superior"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1735,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-02-12T13:00:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "agricultura",
+                "territori i paisatge",
+                "ods12_producció i consum responsable",
+                "ods15_vida d'ecosistemes terrestres",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Zones de pesca controlada"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "http://agricultura.gencat.cat/ca/serveis/cartografia-sig/bases-cartografiques/cacera-pesca-continental/zones-pesca-controlada/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Cartographic base of controlled fishing areas"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Base cartográfica de zonas de pesca controlada"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8eyz-fb69",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Base-cartogràfica-de-zones-de-pesca-controlada/8eyz-fb69",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Notes de tall d’accés als estudis universitaris (convocatòries de juny 2023-actualitat) i nombre de places",
+            "id" : "usyn-hngc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Notes de tall en 1a assignació (convocatòria de juny) i nombre de places de cadascuna de les ofertes d’estudi.\nLa nota de tall pot variar cada any, ja que resulta de la relació entre les places disponibles en cada centre i el nombre d’estudiants que les sol·liciten en la preinscripció.",
+            "attribution" : "Oficina d'Accés a la Universitat | ROC (Registre Oficial de Centres Universitaris)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-02T12:37:01.000Z",
+            "createdAt" : "2024-02-07T11:01:49.000Z",
+            "metadata_updated_at" : "2026-10-02T12:36:57.000Z",
+            "data_updated_at" : "2026-10-02T12:37:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 116,
+                "page_views_total" : 2323,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.870364719583405,
+                "page_views_total_log" : 11.18239435340453
+              },
+            "columns_name" :
+              [
+                "Nombre de places",
+                "Sigles Universitat responsable",
+                "Codi Oferta",
+                "Nota de tall",
+                "Nom de l’Oferta",
+                "Via d’accés",
+                "Municipi",
+                "Tipus d’estudi",
+                "Curs acadèmic",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "nombre_de_places",
+                "sigles_universitat_responsable",
+                "codi_oferta",
+                "nota_de_tall",
+                "nom_de_l_oferta",
+                "via_d_acc_s",
+                "municipi",
+                "tipus_d_estudi",
+                "curs_acad_mic",
+                "any"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre de places ofertes",
+                "Universitat responsable de l’estudi en sigles",
+                "Correspon al codi oferta de l’estudi-centre ",
+                "Nota de tall de la primera assignació",
+                "Indica el nom (descripció) de l’oferta de l’estudi",
+                "Indica la via d’accés de l’estudiantat:  1. PAU/CFGS i FP (vies 0-7 / 4-8); 3- Titulats universitaris (via 2)",
+                "Municipi on es realitza",
+                "Indica si és un grau o un màster",
+                "Indica el curs de la convocatòria",
+                "Indica l’any de la convocatòria"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1050,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-02-07T11:10:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "notes de tall",
+                "universitat",
+                "educació",
+                "accés a la universitat",
+                "estudis universitaris",
+                "places ofertes",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Admission cut-off marks for university studies and number of places offered"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Notas de corte de acceso a estudios universitarios y número de plazas ofertadas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/usyn-hngc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Notes-de-tall-d-accés-als-estudis-universitaris-co/usyn-hngc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Vacunació per al COVID-19: dosis administrades per municipi",
+            "id" : "irki-p3c7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen de diversos sistemes d'informació del Departament de Salut i del Servei Català de la Salut, detallats a https://dadescovid.cat/documentacio , i mostren per a cada dia, municipi i sexe, el nombre de dosis administrades de vacunes per al SARS-CoV-2, amb el detall del producte administrat i del número de dosi, i també el nombre de persones citades en la data de referència per a ser vacunades i per a les quals se n'ha descartat la vacunació, per algun d'aquests motius: per rebuig del pacient, per estar contraindicada la immunització o bé perquè el pacient ha passat la malaltia.\n\nLes dades fan referència a la població amb dret a rebre assistència sanitària de finançament públic a Catalunya, identificades en el Registre central de població del CatSalut (RCA).\n\nEn els casos en què no ha estat possible identificar el municipi de residència de la persona a qui s'ha administrat la dosi, o de qui se n'ha descartat la vacunació, el valor de la variable 'MUNICIPI' és 'No classificat'.\n\nI en els casos de persones residents en municipis amb una població inferior a 200 habitants, per evitar la seva identificació i garantir-ne la confidencialitat, en la variable 'MUNICIPI' s'hi fa constar el valor '(Altres municipis)'. Aquesta comprovació de la població del municipi es fa amb les dades del Registre central de població del CatSalut vigents en el moment d'actualitzar aquest conjunt de dades; de manera que és possible que en qualsevol actualització diària de les dades, per la variació natural de la població, municipis al voltant d'aquesta xifra passin el llindar de 200 en un sentit o en l'altre i, per tant, passin a mostrar-se o a deixar de fer-ho.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:25:04.000Z",
+            "createdAt" : "2021-01-26T12:25:49.000Z",
+            "metadata_updated_at" : "2025-04-07T10:25:04.000Z",
+            "data_updated_at" : "2023-03-17T12:05:57.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 122,
+                "page_views_total" : 38470,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 6.94251450533924,
+                "page_views_total_log" : 15.231483710517232
+              },
+            "columns_name" :
+              [
+                "COMARCA",
+                "DISTRICTE",
+                "DATA",
+                "MUNICIPI",
+                "MUNICIPI_CODI",
+                "COMARCA_CODI",
+                "FABRICANT",
+                "PROVINCIA_CODI",
+                "PROVINCIA",
+                "DOSI",
+                "DISTRICTE_CODI",
+                "SEXE_CODI",
+                "RECOMPTE",
+                "SEXE",
+                "NO_VACUNAT"
+              ],
+            "columns_field_name" :
+              [
+                "comarca",
+                "districte",
+                "data",
+                "municipi",
+                "municipi_codi",
+                "comarca_codi",
+                "fabricant",
+                "provincia_codi",
+                "provincia",
+                "dosi",
+                "districte_codi",
+                "sexe_codi",
+                "recompte",
+                "sexe",
+                "no_vacunat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom de la comarca",
+                "Nom del districte",
+                "Data",
+                "Nom del municipi",
+                "Codi del municipi",
+                "Codi de la comarca",
+                "Fabricant de la dosi",
+                "Codi de la provincia",
+                "Nom de la provincia",
+                "Dosi de la vacuna",
+                "Codi del districte",
+                "Codi del sexe",
+                "Recompte",
+                "Sexe de les persones",
+                "Resultat de la vacunació"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {}
+              ],
+            "download_count" : 32551,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-03-09T10:50:18.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid",
+                "covid19",
+                "covid-19",
+                "coronavirus",
+                "epidemiologia",
+                "vacuna",
+                "salut",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Salut/Dades COVID"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://dadescovid.cat"
+                },
+                {
+                  "key" : "Enllaços-relacionats_Nom_2",
+                  "value" : "Dades actualitzades SARS-CoV-2"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL_2",
+                  "value" : "https://aquas.gencat.cat/ca/actualitat/ultimes-dades-coronavirus/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "COVID-19 vaccination by municipality"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Vacunación para el COVID-19 por municipio"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/irki-p3c7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Vacunació-per-al-COVID-19-dosis-administrades-per-/irki-p3c7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+            "id" : "f87r-vsu7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'estadística Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat ofereix informació sobre el nombre d'afiliats i afiliacions per municipis, comarques i Aran, àmbits del Pla territorial, províncies i Catalunya. Els afiliats es presenten segons les principals variables demogràfiques (sexe, edat i nacionalitat) i les afiliacions es difonen per aquestes variables demogràfiques i tipus de relació laboral, règim de cotització i sector d'activitat. També es difonen les afiliacions a la Seguretat Social per compte d'altri segons tipus de contracte i tipus de jornada creuades per sexe, edat, nacionalitat i sector d'activitat, així com el grau de temporalitat i parcialitat per sexe.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:36.000Z",
+            "createdAt" : "2020-10-26T14:57:28.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:36.000Z",
+            "data_updated_at" : "2020-10-26T14:57:28.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 18,
+                "page_views_last_month" : 49,
+                "page_views_total" : 2606,
+                "page_views_last_week_log" : 4.247927513443585,
+                "page_views_last_month_log" : 5.643856189774724,
+                "page_views_total_log" : 11.348174867535558
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:30.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "seguretat social",
+                "afiliacio",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Contributors and Affiliations to Social Security based on Contributors' Registered Place of Residence"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Afiliados y afiliaciones a la Seguridad Social según residencia padronal del afiliado"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=afi" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=afi" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/f87r-vsu7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Afiliats-i-afiliacions-a-la-Seguretat-Social-segon/f87r-vsu7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 31,
+  "timings" : { "serviceMillis" : 26, "searchMillis" : [ 3, 9 ] },
+  "warnings" : []
+}

@@ -1,0 +1,1035 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Població estrangera resident a Catalunya per país de nacionalitat",
+            "id" : "jzx6-bqke",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat dels països i quantitat de residents estrangers a Catalunya, per país. Les dades comencen l'any 2000.\nDades pendents d'actualització.",
+            "attribution" : "Institut d'Estadística de Catalunya (IDESCAT)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-17T10:00:42.000Z",
+            "createdAt" : "2020-02-26T08:18:49.000Z",
+            "metadata_updated_at" : "2026-07-17T10:00:42.000Z",
+            "data_updated_at" : "2022-03-23T14:02:06.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 27,
+                "page_views_last_month" : 98,
+                "page_views_total" : 3156,
+                "page_views_last_week_log" : 4.807354922057604,
+                "page_views_last_month_log" : 6.6293566200796095,
+                "page_views_total_log" : 11.624338545312984
+              },
+            "columns_name" : [
+                               "Any",
+                               "Població",
+                               "Codi País",
+                               "Nacionalitat"
+                             ],
+            "columns_field_name" :
+              [ "any", "poblaci", "codi_pa_s", "nacionalitat" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Anualitat",
+                "Quanitat de residents a Catalunya",
+                "Codi del país d'origen",
+                "Nom del país d'origen"
+              ],
+            "columns_format" : [ { "noCommas" : "true" }, {}, {}, {} ],
+            "download_count" : 1828,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-08T10:13:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "estrangers",
+                "residents",
+                "idescat",
+                "catalunya global",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Foreign population resident in Catalonia by country of nationality"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Población extranjera residente en Cataluña por país de nacionalidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/jzx6-bqke",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Població-estrangera-resident-a-Catalunya-per-país-/jzx6-bqke",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Població resident a l'estranger per país de residència (més de 500 residents)",
+            "id" : "7crz-5gep",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de països estrangers on resideixen més de 500 catalans. Les dades comencen l'any 2009.\nDades pendents d'actualitzar.",
+            "attribution" : "Institut d'Estadística de Catalunya (IDESCAT)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-16T11:32:13.000Z",
+            "createdAt" : "2020-02-26T08:21:17.000Z",
+            "metadata_updated_at" : "2026-07-16T11:32:13.000Z",
+            "data_updated_at" : "2021-07-08T10:14:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 20,
+                "page_views_last_month" : 42,
+                "page_views_total" : 2531,
+                "page_views_last_week_log" : 4.392317422778761,
+                "page_views_last_month_log" : 5.426264754702098,
+                "page_views_total_log" : 11.306061689428342
+              },
+            "columns_name" :
+              [
+                "Homes",
+                "País de residència",
+                "Codi País",
+                "Dones",
+                "Total",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "homes",
+                "pa_s_de_resid_ncia",
+                "codi_pa_s",
+                "dones",
+                "total",
+                "any"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Text", "Number", "Number", "Number" ],
+            "columns_description" :
+              [
+                "Quantitat d'homes residents",
+                "Nom del país de destí",
+                "Codi del país de destí",
+                "Quantitat de dones residents",
+                "Total de residents",
+                "Anualitat"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 1492,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-06T13:25:46.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "residents",
+                "estrangers",
+                "residència",
+                "idescat",
+                "catalunya global",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Population residing abroad by country of residence (more than 500 residents)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Población residente en el extranjero por país de residencia (más de 500 residentes)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7crz-5gep",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Població-resident-a-l-estranger-per-país-de-residè/7crz-5gep",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Exportacions realitzades per Catalunya a nivell mundial",
+            "id" : "uen3-kf3n",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d'exportacions (expedicions en el comerç intracomunitari) de béns entre Catalunya i l'estranger anualment. Les dades comencen a l'any 1994.\nDades pendents d'actualització.",
+            "attribution" : "Institut d'Estadística de Catalunya (IDESCAT)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-17T09:59:22.000Z",
+            "createdAt" : "2020-03-26T09:32:14.000Z",
+            "metadata_updated_at" : "2026-07-17T09:59:22.000Z",
+            "data_updated_at" : "2021-07-27T08:43:58.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 21,
+                "page_views_last_month" : 81,
+                "page_views_total" : 3751,
+                "page_views_last_week_log" : 4.459431618637297,
+                "page_views_last_month_log" : 6.357552004618085,
+                "page_views_total_log" : 11.873444112515376
+              },
+            "columns_name" :
+              [
+                "Import",
+                "País",
+                "Codi país ISO",
+                "Codi país",
+                "Any",
+                "Estat"
+              ],
+            "columns_field_name" :
+              [
+                "import",
+                "pa_s",
+                "codi_pa_s_iso",
+                "codi_pa_s",
+                "any",
+                "estat"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "EN MILERS D'EUROS - Import corresponent a les exportacions realitzades durant un any",
+                "Nom del país destí",
+                "Codi de país en format ISO",
+                "Codi del país destí",
+                "Anualitat",
+                ""
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {}
+              ],
+            "download_count" : 1889,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-27T08:44:04.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Comerç",
+            "domain_tags" :
+              [
+                "exportacions",
+                "comerç",
+                "economia",
+                "estranger",
+                "idescat",
+                "catalunya global",
+                "ods12_producció i consum responsable",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Exports made by Catalonia worldwide"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Exportaciones realizadas por Cataluña a nivel mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/uen3-kf3n",
+        "link" : "https://analisi.transparenciacatalunya.cat/Comerç/Exportacions-realitzades-per-Catalunya-a-nivell-mu/uen3-kf3n",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Importacions realitzades per Catalunya a nivell mundial",
+            "id" : "w9ji-qmj2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d'importacions (introduccions) de béns entre Catalunya i l'estranger anualment. Les dades comencen a l'any 1994.\nDades pendents d'actualització.",
+            "attribution" : "Institut d'Estadística de Catalunya (IDESCAT)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-17T10:00:01.000Z",
+            "createdAt" : "2020-03-26T09:31:50.000Z",
+            "metadata_updated_at" : "2026-07-17T10:00:01.000Z",
+            "data_updated_at" : "2021-07-27T08:43:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 34,
+                "page_views_last_month" : 109,
+                "page_views_total" : 3381,
+                "page_views_last_week_log" : 5.129283016944966,
+                "page_views_last_month_log" : 6.78135971352466,
+                "page_views_total_log" : 11.723660944409984
+              },
+            "columns_name" :
+              [
+                "Estat",
+                "Codi país",
+                "Any",
+                "Import",
+                "País",
+                "Codi país ISO"
+              ],
+            "columns_field_name" :
+              [
+                "estat",
+                "codi_pa_s",
+                "any",
+                "import",
+                "pa_s",
+                "codi_pa_s_iso"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Number", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "",
+                "Codi del país d'origen",
+                "Anualitat",
+                "EN MILERS D'EUROS - Import corresponent a les importacions realitzades durant un any",
+                "Nom del país d'origen",
+                "Codi de país en format ISO"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {}
+              ],
+            "download_count" : 1629,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-27T08:43:32.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Comerç",
+            "domain_tags" :
+              [
+                "importacions",
+                "economia",
+                "estranger",
+                "idescat",
+                "catalunya global",
+                "ods12_producció i consum responsable",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Imports made by Catalonia worldwide"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Importaciones realizadas por Cataluña a nivel mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Mundial"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/w9ji-qmj2",
+        "link" : "https://analisi.transparenciacatalunya.cat/Comerç/Importacions-realitzades-per-Catalunya-a-nivell-mu/w9ji-qmj2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Despesa del turisme estranger",
+            "id" : "t2ec-x6ru",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'estadística Despesa del turisme estranger a Catalunya ofereix informació mensual i anual de la despesa, la despesa mitjana per persona i la despesa mitjana diària per persona, dels turistes residents a l'estranger que tenen Catalunya com a destinació principal del viatge.\n\nLa consulta interactiva d'aquest estadística permet creuar les següents variables principals: país de residència habitual, motiu del viatge, allotjament principal, tipus de despesa, organització i durada del viatge i per vies d'accés. També ofereix la variació interanual de cada variable. El període de referència de les dades és el mes que s'acaba el viatge, amb independència de la durada.\n\nL'Idescat realitza una explotació mensual de l'Enquesta de moviments turístics en frontera i despesa turística de l'INE i amplia els resultats de la despesa per a Catalunya.\n\nAquesta interfície web de consulta interactiva de resultats estadístics forma part del projecte Plataforma Cerdà, que és l'aposta de futur de l'Idescat com a plataforma tecnològica del Sistema integrat d'informació estadística (SIIE)",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:20.000Z",
+            "createdAt" : "2020-10-26T14:57:45.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:20.000Z",
+            "data_updated_at" : "2020-10-26T14:57:45.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 16,
+                "page_views_last_month" : 40,
+                "page_views_total" : 2067,
+                "page_views_last_week_log" : 4.08746284125034,
+                "page_views_last_month_log" : 5.357552004618084,
+                "page_views_total_log" : 11.014020470314936
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:46.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Turisme",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "turisme estranger",
+                "despesa turisme",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Foreign Tourism Expenditure"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Gasto del turismo extranjero"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "ENLLAÇ" : "https://idescat.cat/pub/?id=turdest"
+                           },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "ENLLAÇ" : "https://idescat.cat/pub/?id=turdest" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/t2ec-x6ru",
+        "link" : "https://analisi.transparenciacatalunya.cat/Turisme/Despesa-del-turisme-estranger/t2ec-x6ru",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Padró d'habitants residents a l'estranger",
+            "id" : "9wxv-jxmx",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Padró d'habitants residents a l'estranger és un registre administratiu on consten les persones de nacionalitat espanyola (tant si és la seva única nacionalitat com si no) que viuen habitualment a l'estranger i el seu últim municipi d'inscripció és a Catalunya.\n\nTerritorialment, ofereix la informació a escala municipal, comarcal, àmbits del Pla territorial, províncies i Catalunya.\n\nLes dades provenen de la informació que les oficines o seccions consulars envien a l'INE, a través del Ministeri d'Afers Exteriors i de Cooperació. L'Idescat du a terme una explotació estadística del fitxer relatiu a Catalunya amb informació per sexe, edat, lloc de naixement, lloc d'inscripció i continent o país de residència, referida a 1 de gener de cada any. També difon informació de les noves inscripcions (que són les altes produïdes durant l'any anterior al de referència).",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:24.000Z",
+            "createdAt" : "2020-10-26T14:59:17.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:24.000Z",
+            "data_updated_at" : "2020-10-26T14:59:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 35,
+                "page_views_total" : 2070,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.169925001442312,
+                "page_views_total_log" : 11.016111838220512
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:19.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "padró",
+                "estranger",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Register of Inhabitants Residing Abroad"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Padrón de habitantes residentes en el extranjero"
+                },
+                { "key" : "Àmbit-geogràfic_Àmbit-geogràfic", "value" : "Món" },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=phre" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=phre"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/9wxv-jxmx",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Padró-d-habitants-residents-a-l-estranger/9wxv-jxmx",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Relació de camps, centres de refugi o hospitals amb refugiats espanyols existents a França entre els mesos d’abril i juliol de 1939",
+            "id" : "r2n5-8zfj",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L’exili republicà va ser motivat per la victòria de l’exèrcit franquista en la Guerra Civil espanyola i comportà el desplaçament massiu de milers de refugiats que decidiren d’abandonar el país entre els mesos de gener i febrer de 1939 per por a les represàlies dels vencedors del conflicte.\nLa relació conté els camps, centres de refugi o hospitals distribuïts per tot l’estat francès que acolliren refugiats espanyols entre els mesos d’abril i juliol de 1939. Ha estat elaborada a partir de la informació existent en dos documents dels fons ANC1-511 Generalitat de Catalunya (Exili): Dossier sobre la Conférence Internationale d'Aide aux Réfugiés Espagnols (París, 15-16 juliol 1939), elaborat pel Bureau d'Information (ANC1-511-T-332) i Llista de ciutats i pobles de França que tenen camps o albergs de refugiats espanyols (ANC1-511-T-349).",
+            "attribution" : "Departament de Cultura",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:20:32.000Z",
+            "createdAt" : "2020-02-17T08:09:38.000Z",
+            "metadata_updated_at" : "2025-04-07T10:20:32.000Z",
+            "data_updated_at" : "2020-02-18T13:37:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 20,
+                "page_views_last_month" : 71,
+                "page_views_total" : 3910,
+                "page_views_last_week_log" : 4.392317422778761,
+                "page_views_last_month_log" : 6.169925001442312,
+                "page_views_total_log" : 11.933321820732946
+              },
+            "columns_name" :
+              [
+                "Nens",
+                "TOTAL",
+                "Tipus assentament",
+                "Indret específic",
+                "Font",
+                "Dones",
+                "Georeferència",
+                "Departament",
+                "Latitud",
+                "Homes",
+                "Longitud",
+                "Població",
+                "Tipus refugiat",
+                "Camps repetits juliol",
+                "Codi",
+                "LIMADM COMARCA",
+                "LIMADM_MUNICIPI",
+                "Patrocini"
+              ],
+            "columns_field_name" :
+              [
+                "nens",
+                "total",
+                "tipus_assentament",
+                "indret_espec_fic",
+                "font",
+                "dones",
+                "geocoded_column",
+                "departament",
+                "latitud",
+                "homes",
+                "longitud",
+                "poblaci",
+                "tipus_refugiat",
+                "camps_repetits_juliol",
+                "codi",
+                ":@computed_region_wvic_k925",
+                ":@computed_region_bh64_c7uy",
+                "patrocini"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Point",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre total de nens que hi ha al camp, refugi o hospital. Quan el nombre total de nens és 0 vol dir que no n’hi ha cap o bé que no es disposa d’aquestes dades. Als registres extrets de la font ANC1-511-T-349 sempre hi consta 0 perquè no es disposa d’aquestes dades.",
+                "Nombre total de nens, dones i homes que hi ha al camp, refugi o hospital. Quan el nombre total de persones és 0 vol dir que no es disposa d’aquestes dades. Als registres extrets de la font ANC1-511-T-349 sempre hi consta 0 perquè no es disposa d’aquestes dades.",
+                "Aquest camp conté un total de 8 valors únics que ens informen de la naturalesa de l’assentament. Els assentaments només s’han classificat com a Camp, Centre de refugi o bé Hospital, però en alguns casos també s’hi fa constar alguna altra característica. Als registres extrets de la font ANC1-511-T-349 s’hi ha fet constar sempre Camp, refugi o hospital perquè el document no ens informa del tipus d’assentament.",
+                "S’informa quan es té coneixement que el camp, centre de refugi o hospital es va ubicar en un lloc concret d’una població: carrer, presó, castell, hospital, pavelló, etc... En molts registres aquest camp no està informat.",
+                "Aquest camp conté un total de 2 valors únics que ens informen de la font d’on s’ha extret la informació d’aquell registre: ANC1-511-T-332 o ANC1-511-T-349.",
+                "Nombre total de dones que hi ha al camp, refugi o hospital. Quan el nombre total de dones és 0 vol dir que no n’hi ha cap o bé que no es disposa d’aquestes dades. Als registres extrets de la font ANC1-511-T-349 sempre hi consta 0 perquè no es disposa d’aquestes dades.",
+                "Columna de georeferència",
+                "Nom del Departament en francès.",
+                "Dades numèriques en format decimal i basats en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En 8 registres aquest camp no s’ha informat perquè no s’han pogut localitzar els topònims informats a les fonts.",
+                "Nombre total d’homes que hi ha al camp, refugi o hospital. Quan el nombre total d’homes és 0 vol dir que no n’hi ha cap o bé que no es disposa d’aquestes dades. Als registres extrets de la font ANC1-511-T-349 sempre hi consta 0 perquè no es disposa d’aquestes dades.",
+                "Dades numèriques en format decimal i basats en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En 8 registres aquest camp no s’ha informat perquè no s’han pogut localitzar els topònims informats a les fonts.",
+                "Nom de les poblacions en francès. Si el topònim és una entitat menor o pedania es fa constar amb aquesta sintaxi: Població: Pedania. En el cas dels municipis de la Catalunya nord el topònim es fa constar en català i en francès amb aquesta sintaxi: Català (Francès).",
+                "Aquest camp conté un total de 3 valors únics que ens informen del tipus de refugiat que hi ha en el camp, centre de refugi o hospital. El refugiats només s’han classificat com a Civil o Combatent. Als registres extrets de la font ANC1-511-T-349 s’hi ha fet constar sempre Civil / Combatent perquè el document no ens informa del tipus de refugiat.",
+                "Als registres extrets de la font ANC1-511-T-349 que estan repetits a la font ANC1-511-T-332 s’hi ha fet constar: S. A tota la resta de registres aquest camp no està informat.",
+                "Numeració unívoca del registre.",
+                "",
+                "",
+                "Aquest camp conté un total de 2 valors únics que ens informen si el centre de refugi era patrocinat per un país estranger o pel mateix estat francès. Als registres extrets de la font ANC1-511-T-349 aquest camp no està informat. Tampoc està informat als 15 registres on a [Tipus refugiat] s’hi ha consignat Combatent."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2599,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-02-18T13:37:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Memòria",
+            "domain_tags" :
+              [
+                "exili",
+                "refugiats polítics",
+                "guerra civil",
+                "memòria històrica",
+                "franquisme",
+                "drets humans",
+                "arxius",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "L'exili republicà: camps i centres de refugiats a França"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "http://anc.gencat.cat/ca/detall/article/Lexili-republica"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català (ca) i altres" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "List of camps, refuge centers or hospitals with existing Spanish refugees in France between April and July 1939"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Relación de campos, centros de refugio o hospitales con refugiados españoles existentes en Francia entre los meses de abril y julio de 1939"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "França"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Cultura" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/r2n5-8zfj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Memòria/Relació-de-camps-centres-de-refugi-o-hospitals-amb/r2n5-8zfj",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 7,
+  "timings" : { "serviceMillis" : 23, "searchMillis" : [ 3, 7 ] },
+  "warnings" : []
+}

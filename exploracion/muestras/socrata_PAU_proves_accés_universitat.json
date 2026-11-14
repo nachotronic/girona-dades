@@ -1,0 +1,2158 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Alumnat en estudis oficials de les universitats catalanes",
+            "id" : "5kd9-2wex",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nou accés, matrícula i titulats en estudis de cicle, grau, màster i doctorat a les universitats catalanes. Cicles i graus es mostren de forma agrupada. Els valors inferiors a 4 estan anonimitzats amb un *. S’inclouen registres amb els totals per Curs/Tipus d’estudi/Tipus d’universitat.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-04T11:37:16.000Z",
+            "createdAt" : "2019-12-18T12:02:43.000Z",
+            "metadata_updated_at" : "2026-08-04T11:37:16.000Z",
+            "data_updated_at" : "2026-08-04T11:37:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 34,
+                "page_views_last_month" : 58,
+                "page_views_total" : 4037,
+                "page_views_last_week_log" : 5.129283016944966,
+                "page_views_last_month_log" : 5.882643049361842,
+                "page_views_total_log" : 11.979425195331475
+              },
+            "columns_name" :
+              [
+                "Sexe",
+                "Curs",
+                "Nou accés",
+                "Titulats",
+                "Tipus de centre",
+                "Tipus d'estudi",
+                "Comarca del centre",
+                "Matrícula ETC",
+                "Matrícula",
+                "Universitat",
+                "Tipus d'universitat",
+                "Nacionalitat"
+              ],
+            "columns_field_name" :
+              [
+                "sexe",
+                "curs",
+                "nou_acc_s",
+                "titulats",
+                "tipus_de_centre",
+                "tipus_d_estudi",
+                "comarca_del_centre",
+                "matr_cula_etc",
+                "matr_cula",
+                "universitat",
+                "tipus_d_universitat",
+                "nacionalitat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Descripció del gènere de l’alumne , dona, home",
+                "Curs acadèmic de les dades",
+                "Nombre d’alumnes que accedeixen a la universitat. Per al doctorat la dada està disponible a partir del curs 17-18. Per als estudis anteriors a l’EEES no està disponible",
+                "Nombre de titulats del curs. En el cas del doctorat, són les tesis llegides",
+                "Descripció del tipus de centre al que fan referència les dades, integrat o adscrit",
+                "Descripció del tipus d’estudi (grau, màster, doctorat i estudis anteriors a l’EEES, les antigues llicenciatures i diplomatures)",
+                "Descripció de la comarca en la es troba centre en el que estan matriculats els estudiants",
+                "Nombre de matrícules en equivalents a temps complet (etc). Es considera 1 etc si matricula 60 crèdits ordinaris de grau o màster en un curs acadèmic. No es disposa de la dada d’etc de doctorat",
+                "Nombre d’alumnes matriculats a la universitat",
+                "Sigles de la Universitat a la que fan referència les dades",
+                "Descripció del tipus d’universitat, pública, privada o no presencial",
+                "Descripció de la nacionalitat de l’alumne, espanyola o estrangera"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1644,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-03-10T10:13:24.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "nou accés",
+                "matrícula",
+                "titulats",
+                "grau",
+                "màster",
+                "doctorat",
+                "universitat",
+                "ods4_educació de qualitat",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students in official studies in Catalan universities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnado en estudios oficiales de las universidades catalanas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5kd9-2wex",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Alumnat-en-estudis-oficials-de-les-universitats-ca/5kd9-2wex",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Notes de tall d’accés als estudis universitaris (convocatòria de juny 2022)",
+            "id" : "bvmc-igg6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Quadre comparatiu de la nota de tall de la 1a assignació amb la de l’última assignació. Dades estàtiques corresponents al mes de juny de 2022.  \n\nLes places de cadascun dels centres d'estudis s'adjudiquen, començant per la sol·licitud de l'estudiant preinscrit/a amb la nota més alta i baixant per ordre de nota fins que s'exhaureixen totes les places. \n\nAixí doncs, la nota de tall correspon a la de l'últim/a estudiant que ha obtingut plaça en un determinat centre d'estudis universitari.  \n\nPer això, cal tenir en compte que no es tracta d'una nota prefixada, sinó que pot variar cada any, ja que resulta de la relació entre les places disponibles en cada centre i el nombre d’estudiants que les sol·liciten en la preinscripció.",
+            "attribution" : "Oficina d'Accés a la Universitat",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T09:55:11.000Z",
+            "createdAt" : "2023-06-15T09:26:10.000Z",
+            "metadata_updated_at" : "2026-09-17T09:55:11.000Z",
+            "data_updated_at" : "2024-02-14T08:56:59.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 68,
+                "page_views_total" : 2128,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 6.10852445677817,
+                "page_views_total_log" : 11.055960234452295
+              },
+            "columns_name" :
+              [
+                "Sigles Universitat",
+                "Places orientatives",
+                "Nom del centre d'estudi",
+                "Any",
+                "Nota de tall (a l'inici del procés)",
+                "Codi",
+                "Nota de tall (al final del procés)",
+                "Població",
+                "Via d’accés"
+              ],
+            "columns_field_name" :
+              [
+                "sigles_universitat",
+                "places_orientatives",
+                "nom_del_centre_d_estudi",
+                "any",
+                "nota_de_tall_a_l_inici_del",
+                "codi",
+                "nota_de_tall_al_final_del",
+                "poblaci",
+                "perfil_estudiant"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Universitat on es realitza l’estudi, en sigles ",
+                "Nombre de places orientatives per cada centre-estudi ",
+                "Indica el nom de l’estudi-centre ",
+                "Indica l’any de la convocatòria ",
+                "Nota de tall de la primera assignació ",
+                "Correspon al codi PIN de l’estudi-centre",
+                "Nota de tall de l’última assignació ",
+                "Població on es realitza l’estudi ",
+                "Indica la via d’accés de l’estudiantat:    1. PAU/CFGS i FP (vies 0-7 / 4-8)   2. Més grans de 25 anys (via 9)   3- Titulats universitaris (via 2)   4. Més grans de 45 (via 11) "
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {}
+              ],
+            "download_count" : 639,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-02-14T08:57:04.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "notes de tall",
+                "universitat",
+                "educació",
+                "accés a la universitat",
+                "estudis universitaris",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Admission cut-off marks for university studies "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Notas de corte de acceso a estudios universitarios "
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/bvmc-igg6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Notes-de-tall-d-accés-als-estudis-universitaris-co/bvmc-igg6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Notes de tall d’accés als estudis universitaris (convocatòries de juny 2023-actualitat) i nombre de places",
+            "id" : "usyn-hngc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Notes de tall en 1a assignació (convocatòria de juny) i nombre de places de cadascuna de les ofertes d’estudi.\nLa nota de tall pot variar cada any, ja que resulta de la relació entre les places disponibles en cada centre i el nombre d’estudiants que les sol·liciten en la preinscripció.",
+            "attribution" : "Oficina d'Accés a la Universitat | ROC (Registre Oficial de Centres Universitaris)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-02T12:37:01.000Z",
+            "createdAt" : "2024-02-07T11:01:49.000Z",
+            "metadata_updated_at" : "2026-10-02T12:36:57.000Z",
+            "data_updated_at" : "2026-10-02T12:37:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 116,
+                "page_views_total" : 2323,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.870364719583405,
+                "page_views_total_log" : 11.18239435340453
+              },
+            "columns_name" :
+              [
+                "Nombre de places",
+                "Sigles Universitat responsable",
+                "Codi Oferta",
+                "Nota de tall",
+                "Nom de l’Oferta",
+                "Via d’accés",
+                "Municipi",
+                "Tipus d’estudi",
+                "Curs acadèmic",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "nombre_de_places",
+                "sigles_universitat_responsable",
+                "codi_oferta",
+                "nota_de_tall",
+                "nom_de_l_oferta",
+                "via_d_acc_s",
+                "municipi",
+                "tipus_d_estudi",
+                "curs_acad_mic",
+                "any"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre de places ofertes",
+                "Universitat responsable de l’estudi en sigles",
+                "Correspon al codi oferta de l’estudi-centre ",
+                "Nota de tall de la primera assignació",
+                "Indica el nom (descripció) de l’oferta de l’estudi",
+                "Indica la via d’accés de l’estudiantat:  1. PAU/CFGS i FP (vies 0-7 / 4-8); 3- Titulats universitaris (via 2)",
+                "Municipi on es realitza",
+                "Indica si és un grau o un màster",
+                "Indica el curs de la convocatòria",
+                "Indica l’any de la convocatòria"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1050,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-02-07T11:10:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "notes de tall",
+                "universitat",
+                "educació",
+                "accés a la universitat",
+                "estudis universitaris",
+                "places ofertes",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Admission cut-off marks for university studies and number of places offered"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Notas de corte de acceso a estudios universitarios y número de plazas ofertadas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/usyn-hngc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Notes-de-tall-d-accés-als-estudis-universitaris-co/usyn-hngc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Investigadors/es de Catalunya",
+            "id" : "e373-9uev",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contingut del Portal de la Recerca de Catalunya quant a investigadors/es.\n\nA través de la columna \"timestamp\" es pot seleccionar de quina data es vol obtenir la informació.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-06-05T16:00:30.000Z",
+            "createdAt" : "2021-08-27T12:03:04.000Z",
+            "metadata_updated_at" : "2026-06-05T16:00:10.000Z",
+            "data_updated_at" : "2026-06-05T16:00:30.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 85,
+                "page_views_total" : 3867,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 6.426264754702098,
+                "page_views_total_log" : 11.917372079476841
+              },
+            "columns_name" :
+              [
+                "timestamp",
+                "ruct",
+                "sourceid",
+                "_id",
+                "signatureName",
+                "orcid",
+                "name"
+              ],
+            "columns_field_name" :
+              [
+                "timestamp",
+                "ruct",
+                "sourceid",
+                "_id_",
+                "signaturename",
+                "orcid",
+                "name"
+              ],
+            "columns_datatype" :
+              [
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [ { "view" : "date_dmy" }, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 1136,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-27T12:08:46.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Ciència i Tecnologia",
+            "domain_tags" :
+              [
+                "recerca",
+                "catalunya",
+                "universitats",
+                "centres de recerca",
+                "investigadors",
+                "projectes de recerca",
+                "grups de recerca",
+                "publicacions",
+                "tesis",
+                "articles",
+                "llibres",
+                "capítols o parts de llibres",
+                "accés obert",
+                "portal de la recerca de catalunya"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Researchers of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Investigadores de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci de Serveis Universitaris de Catalunya (CSUC)"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/e373-9uev",
+        "link" : "https://analisi.transparenciacatalunya.cat/Ciència-i-Tecnologia/Investigadors-es-de-Catalunya/e373-9uev",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Departaments de recerca de Catalunya",
+            "id" : "jnw7-zq4n",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contingut del Portal de la Recerca de Catalunya quant a departaments de recerca.\n\nA través de la columna \"timestamp\" es pot seleccionar de quina data es vol obtenir la informació.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-06-05T16:00:15.000Z",
+            "createdAt" : "2021-08-27T11:02:58.000Z",
+            "metadata_updated_at" : "2026-06-05T16:00:06.000Z",
+            "data_updated_at" : "2026-06-05T16:00:15.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 61,
+                "page_views_total" : 2223,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 5.954196310386876,
+                "page_views_total_log" : 11.118941072723509
+              },
+            "columns_name" :
+              [
+                "timestamp",
+                "orcidUncheckedMembers",
+                "code",
+                "phone",
+                "ruct",
+                "sourceid",
+                "_id",
+                "uncheckedMembers",
+                "address",
+                "orcidResearchers",
+                "acronym",
+                "name",
+                "researchers"
+              ],
+            "columns_field_name" :
+              [
+                "timestamp",
+                "orciduncheckedmembers",
+                "code",
+                "phone",
+                "ruct",
+                "sourceid",
+                "_id_",
+                "uncheckedmembers",
+                "address",
+                "orcidresearchers",
+                "acronym",
+                "name",
+                "researchers"
+              ],
+            "columns_datatype" :
+              [
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Data d'actualització de les dades al Portal de la Recerca de Catalunya",
+                "ORCID d’altres investigadors/es del departament, institut o àrea però que no pertanyen a la institució de la que procedeix la informació",
+                "Codi intern del departament, institut o àrea en la institució de la que procedeix la informació",
+                "Telèfon del departament, institut o àrea",
+                "Codi RUCT (https://www.educacion.gob.es/ruct/home) de la institució de la que procedeix la informació",
+                "Llistat agregat de codis identificadors dels departaments en les institucions de les que procedeix la informació ",
+                "Codi identificador del departament en la institució de la que procedeix la informació ",
+                "Altres investigadors del departament, institut o àrea però que no pertanyen a la institució de la que procedeix la informació",
+                "Adreça postal del departament, institut o àrea",
+                "ORCID dels investigadors/es del departament, institut o àrea que pertanyen a la institució de la que procedeix la informació",
+                "Sigles del departament, institut o àrea",
+                "Noms del departament, institut o àrea",
+                "Investigadors del departament, institut o àrea que pertanyen a la institució de la que procedeix la informació"
+              ],
+            "columns_format" :
+              [
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1735,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-04-04T10:26:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Ciència i Tecnologia",
+            "domain_tags" :
+              [
+                "recerca",
+                "catalunya",
+                "universitats",
+                "centres de recerca",
+                "investigadors",
+                "projectes de recerca",
+                "grups de recerca",
+                "publicacions",
+                "tesis",
+                "articles",
+                "llibres",
+                "capítols o parts de llibres",
+                "accés obert",
+                "portal de la recerca de catalunya",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Research departments of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Departamentos de investigación de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci de Serveis Universitaris de Catalunya (CSUC)"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/jnw7-zq4n",
+        "link" : "https://analisi.transparenciacatalunya.cat/Ciència-i-Tecnologia/Departaments-de-recerca-de-Catalunya/jnw7-zq4n",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Relació del personal directiu de les entitats del sector públic i les seves retribucions anuals previstes",
+            "id" : "62n8-i8x7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació de les retribucions del personal directiu corresponent a les entitats del sector públic de l’Administració de la Generalitat, que estan participades majoritàriament per l’Administració i els consorcis i fundacions que hi estan adscrits a l’empara de la Llei 40/2015, d’1 d’octubre, de Règim Jurídic del Sector Públic.\n\nTambé inclou les entitats i autoritats independents: Consell de Treball, Econòmic i Social de Catalunya; Institut Català Internacional per la Pau; Autoritat Catalana de la Competència; Autoritat Catalana de Protecció de Dades; Consell de l'Audiovisual de Catalunya i Institut Català de Finances.\n\nEl personal directiu de les institucions vinculades al Parlament de Catalunya, les entitats del sector públic de les universitats públiques de Catalunya, els centres classificats com a CERCA i la Fundació Institució Catalana de Recerca i Estudis Avançats (ICREA) no s’inclouen en aquesta publicació, en aquests casos, la informació es troba a les seves corresponents pàgines web.\n\nLa informació publicada és la que faciliten les pròpies entitats i inclou els màxims responsables executius que tenen la consideració tant, d’alt càrrec, com de personal directiu.",
+            "attribution" : "Secretaria d'Administració i Funció Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-12T11:11:36.000Z",
+            "createdAt" : "2023-07-19T12:20:55.000Z",
+            "metadata_updated_at" : "2026-11-12T11:11:36.000Z",
+            "data_updated_at" : "2026-11-12T08:18:09.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 556,
+                "page_views_last_month" : 1356,
+                "page_views_total" : 48629,
+                "page_views_last_week_log" : 9.121533517340032,
+                "page_views_last_month_log" : 10.406205005418855,
+                "page_views_total_log" : 15.56955897112606
+              },
+            "columns_name" :
+              [
+                "Retribució fixa anual prevista",
+                "Codi Catàleg",
+                "Cognoms i nom",
+                "Lloc del càrrec acumulat",
+                "Entitat",
+                "Departament",
+                "Data d'actualització",
+                "Denominació del lloc"
+              ],
+            "columns_field_name" :
+              [
+                "retribuci_fixa_anual_prevista",
+                "codi_cat_leg",
+                "cognoms_i_nom",
+                "lloc_del_c_rrec_acumulat",
+                "entitat",
+                "departament",
+                "data_d_actualitzaci_",
+                "denominaci_del_lloc"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Import de la retribució anual de la persona directiva",
+                "Número de codi del Catàleg d’ens",
+                "Nom i cognoms de la persona directiva",
+                "Lloc del càrrec acumulat",
+                "Nom de l’entitat on es troba el lloc de direcció",
+                "Nom del departament a què pertany l'entitat on es troba el lloc de direcció",
+                "Data d'actualització de l'import de les retribucions",
+                "Nom del lloc que ocupa la persona directiva"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precision" : "2",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "currencyStyle" : "EUR",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {}
+              ],
+            "download_count" : 4030,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-01-25T15:54:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "personal directiu",
+                "entitats",
+                "sector públic",
+                "retribucions",
+                "funció pública",
+                "treball",
+                "ods8_treball decent i creixement econòmic",
+                "ods16_pau justícies i institucions sòlides",
+                "treballadors públics"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "List of management staff of public sector entities and their annual planned remunerations"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Relación del personal directivo de las entidades del sector público y sus retribuciones anuales previstas"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/62n8-i8x7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Relació-del-personal-directiu-de-les-entitats-del-/62n8-i8x7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Projectes de recerca de Catalunya",
+            "id" : "xfq5-3rz5",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contingut del Portal de la Recerca de Catalunya quant a projectes de recerca.\n\nA través de la columna \"timestamp\" es pot seleccionar de quina data es vol obtenir la informació.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-06-05T16:01:27.000Z",
+            "createdAt" : "2021-08-27T12:13:23.000Z",
+            "metadata_updated_at" : "2026-06-05T16:00:34.000Z",
+            "data_updated_at" : "2026-06-05T16:01:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 53,
+                "page_views_total" : 2541,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 5.754887502163469,
+                "page_views_total_log" : 11.31174831500496
+              },
+            "columns_name" :
+              [
+                "endDate",
+                "ruct",
+                "uncheckedCoInvestigator",
+                "orcidOtherResearchers",
+                "officialCode",
+                "code",
+                "orcidPrincipalResearchers",
+                "_id",
+                "timestamp",
+                "uncheckedPrincipalInvestigator",
+                "title",
+                "sourceid",
+                "url",
+                "otherResearchers",
+                "orcidUncheckedCoInvestigator",
+                "startDate",
+                "orcidUncheckedPrincipalInvestigator",
+                "programme",
+                "principalResearchers"
+              ],
+            "columns_field_name" :
+              [
+                "enddate",
+                "ruct",
+                "uncheckedcoinvestigator",
+                "orcidotherresearchers",
+                "officialcode",
+                "code",
+                "orcidprincipalresearchers",
+                "_id_",
+                "timestamp",
+                "uncheckedprincipalinvestigator",
+                "title",
+                "sourceid",
+                "uri",
+                "otherresearchers",
+                "orciduncheckedcoinvestigator",
+                "startdate",
+                "orciduncheckedprincipalinvestigator",
+                "programme",
+                "principalresearchers"
+              ],
+            "columns_datatype" :
+              [
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Data de finalització del projecte de recerca",
+                "Codi RUCT (https://www.educacion.gob.es/ruct/home) de la institució de la que procedeix la informació",
+                "Altres investigadors del projecte de recerca que no consten com investigadors al Portal de la Recerca de Catalunya",
+                "ORCID d’altres investigadors/es del projecte de recerca",
+                "Codi oficial del projecte de recerca",
+                "Codi intern del projecte de recerca en la institució de la que procedeix la informació",
+                "ORCID dels investigadors/es principals del projecte de recerca",
+                "Codi identificador del projecte de recerca en la institució de la que procedeix la informació ",
+                "Data d'actualització de les dades al Portal de la Recerca de Catalunya",
+                "Investigadors principals del projecte de recerca que no consten com investigadors al Portal de la Recerca de Catalunya",
+                "Títols del projecte de recerca",
+                "Llistat agregat de codis identificadors dels projectes de recerca en les institucions de les que procedeix la informació",
+                "Adreça web del projecte de recerca",
+                "Altres investigadors del projecte de recerca",
+                "ORCID d’altres investigadors/es del projecte de recerca que no consten com investigadors/es al Portal de la Recerca de Catalunya",
+                "Data d’inici del projecte de recerca",
+                "ORCID d’investigadors/es principals del projecte de recerca que no consten com investigadors/es al Portal de la Recerca de Catalunya",
+                "Programa del projecte de recerca",
+                "Investigadors principals del projecte de recerca"
+              ],
+            "columns_format" :
+              [
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1128,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-07-08T13:20:54.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Ciència i Tecnologia",
+            "domain_tags" :
+              [
+                "recerca",
+                "catalunya",
+                "universitats",
+                "centres de recerca",
+                "investigadors",
+                "projectes de recerca",
+                "grups de recerca",
+                "publicacions",
+                "tesis",
+                "articles",
+                "llibres",
+                "capítols o parts de llibres",
+                "accés obert",
+                "portal de la recerca de catalunya",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Research projects of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Proyectos de investigación de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci de Serveis Universitaris de Catalunya (CSUC)"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xfq5-3rz5",
+        "link" : "https://analisi.transparenciacatalunya.cat/Ciència-i-Tecnologia/Projectes-de-recerca-de-Catalunya/xfq5-3rz5",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Grups de recerca de Catalunya",
+            "id" : "ufpk-rk8r",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contingut del Portal de la Recerca de Catalunya quant a grups de recerca.\n\nA través de la columna \"timestamp\" es pot seleccionar de quina data es vol obtenir la informació.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-06-05T16:00:27.000Z",
+            "createdAt" : "2021-08-27T09:40:02.000Z",
+            "metadata_updated_at" : "2026-06-05T16:00:20.000Z",
+            "data_updated_at" : "2026-06-05T16:00:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 34,
+                "page_views_last_month" : 76,
+                "page_views_total" : 2355,
+                "page_views_last_week_log" : 5.129283016944966,
+                "page_views_last_month_log" : 6.266786540694902,
+                "page_views_total_log" : 11.202123823830462
+              },
+            "columns_name" :
+              [
+                "name",
+                "sourceid",
+                "url",
+                "orcidPrincipalResearchers",
+                "orcidOtherResearchers",
+                "otherResearchers",
+                "ruct",
+                "orcidUncheckedMembers",
+                "code",
+                "uncheckedMembers",
+                "_id",
+                "uncheckedGroupLeader",
+                "orcidUncheckedGroupLeader",
+                "timestamp",
+                "principalResearchers",
+                "sgrCode",
+                "startDate",
+                "acronym"
+              ],
+            "columns_field_name" :
+              [
+                "name",
+                "sourceid",
+                "uri",
+                "orcidprincipalresearchers",
+                "orcidotherresearchers",
+                "otherresearchers",
+                "ruct",
+                "orciduncheckedmembers",
+                "code",
+                "uncheckedmembers",
+                "_id_",
+                "uncheckedgroupleader",
+                "orciduncheckedgroupleader",
+                "timestamp",
+                "principalresearchers",
+                "sgrcode",
+                "startdate",
+                "acronym"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Noms del grup de recerca",
+                "Llistat agregat de codis identificadors dels grups de recerca en les institucions de les que procedeix la informació",
+                "Adreça web del grup de recerca",
+                "ORCID dels investigadors/es principals del grup de recerca",
+                "ORCID dels altres investigadors/es del grup de recerca",
+                "Altres investigadors del grup de recerca",
+                "Codi RUCT (https://www.educacion.gob.es/ruct/home) de la institució de la que procedeix la informació",
+                "ORCID d’altres investigadors/es del grup de recerca que no consten com investigadors/es al Portal de la Recerca de Catalunya",
+                "Codi intern del grup de recerca en la institució de la que procedeix la informació",
+                "Altres investigadors del grup de recerca que no consten com investigadors al Portal de la Recerca de Catalunya",
+                "Codi identificador del grup de recerca en la institució de la que procedeix la informació ",
+                "Investigadors principals del grup de recerca que no consten com investigadors al Portal de la Recerca de Catalunya",
+                "ORCID dels investigadors/es principals del grup de recerca que no consten com investigadors/es al Portal de la Recerca de Catalunya",
+                "Data d'actualització de les dades al Portal de la Recerca de Catalunya",
+                "Investigadors principals del grup de recerca",
+                "Codi oficial del grup de recerca SGR",
+                "Data d’inici del grup de recerca",
+                "Sigles del grup de recerca"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {}
+              ],
+            "download_count" : 2443,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-04-04T10:32:00.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Ciència i Tecnologia",
+            "domain_tags" :
+              [
+                "recerca",
+                "catalunya",
+                "universitats",
+                "centres de recerca",
+                "investigadors",
+                "projectes de recerca",
+                "grups de recerca",
+                "publicacions",
+                "tesis",
+                "articles",
+                "llibres",
+                "capítols o parts de llibres",
+                "accés obert",
+                "portal de la recerca de catalunya",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Research groups in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Grupos de investigación de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci de Serveis Universitaris de Catalunya (CSUC)"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ufpk-rk8r",
+        "link" : "https://analisi.transparenciacatalunya.cat/Ciència-i-Tecnologia/Grups-de-recerca-de-Catalunya/ufpk-rk8r",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Publicacions de recerca de Catalunya",
+            "id" : "mrus-ixpq",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contingut del Portal de la Recerca de Catalunya quant a publicacions.\n\nA través de la columna \"timestamp\" es pot seleccionar de quina data es vol obtenir la informació.",
+            "attribution" : "Departament de Recerca i Universitats",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-06-05T16:09:52.000Z",
+            "createdAt" : "2021-08-27T12:33:23.000Z",
+            "metadata_updated_at" : "2026-06-05T16:00:34.000Z",
+            "data_updated_at" : "2026-06-05T16:09:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 63,
+                "page_views_last_month" : 85,
+                "page_views_total" : 3426,
+                "page_views_last_week_log" : 6.0,
+                "page_views_last_month_log" : 6.426264754702098,
+                "page_views_total_log" : 11.742730476519174
+              },
+            "columns_name" :
+              [
+                "vol",
+                "sourceid",
+                "doi",
+                "endPage",
+                "startPage",
+                "num",
+                "issn",
+                "orcidDirectors",
+                "uncheckedDirectors",
+                "uncheckedAuthors",
+                "orcidUncheckedDirectors",
+                "orcidResearchers",
+                "_id",
+                "isbn",
+                "timestamp",
+                "publishedBy",
+                "date",
+                "title",
+                "researchers",
+                "directors",
+                "orcidUncheckedAuthors",
+                "publishedIn",
+                "documentType",
+                "handle",
+                "authors",
+                "ruct"
+              ],
+            "columns_field_name" :
+              [
+                "vol",
+                "sourceid",
+                "doi",
+                "endpage",
+                "startpage",
+                "num",
+                "issn",
+                "orciddirectors",
+                "uncheckeddirectors",
+                "uncheckedauthors",
+                "orciduncheckeddirectors",
+                "orcidresearchers",
+                "_id_",
+                "isbn",
+                "timestamp",
+                "publishedby",
+                "date",
+                "title",
+                "researchers",
+                "directors",
+                "orciduncheckedauthors",
+                "publishedin",
+                "documenttype",
+                "handle",
+                "authors",
+                "ruct"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Volum de la revista on s’ha publicat l’article",
+                "Llistat agregat de codis identificadors de les publicacions en les institucions de les que procedeix la informació",
+                "DOI de la publicació",
+                "Pàgina final de la publicació",
+                "Pàgina inicial de la publicació",
+                "Número de la revista on s’ha publicat l’article",
+                "ISSN de la revista on s’inclou l’article de revista",
+                "ORCID dels directors/es de la tesi",
+                "Directors de la tesi que no consten com investigadors al Portal de la Recerca de Catalunya",
+                "Autors de la publicació que no consten com investigadors al Portal de la Recerca de Catalunya",
+                "ORCID dels directors/es de la tesi que no consten com investigadors/es al Portal de la Recerca de Catalunya",
+                "ORCID dels investigadors/es-autors/es de la publicació",
+                "Codi identificador de la publicació en la institució de la que procedeix la informació ",
+                "ISBN del llibre o ISBN del llibre on s’inclou el capítol o part de llibre",
+                "Data d'actualització de les dades al Portal de la Recerca de Catalunya",
+                "Editor de la publicació",
+                "Data de publicació",
+                "Títols de la publicació",
+                "Investigadors-autors de la publicació",
+                "Directors de la tesi",
+                "ORCID dels autors/es de la publicació que no consten com investigadors/es al Portal de la Recerca de Catalunya",
+                "Títol de la revista on s’ha publicat l’article",
+                "Tipus de publicació (article de revista, capítol o part de llibre, llibre o tesi)",
+                "Handle de la publicació",
+                "Cadena d’autors de la publicació",
+                "Codi RUCT (https://www.educacion.gob.es/ruct/home) de la institució de la que procedeix la informació"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1780,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-04-06T15:55:49.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Ciència i Tecnologia",
+            "domain_tags" :
+              [
+                "recerca",
+                "catalunya",
+                "universitats",
+                "centres de recerca",
+                "investigadors",
+                "projectes de recerca",
+                "grups de recerca",
+                "publicacions",
+                "tesis",
+                "articles",
+                "llibres",
+                "capítols o parts de llibres",
+                "accés obert",
+                "portal de la recerca de catalunya",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Research publications of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Publicaciones de investigación de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Recerca i Universitats"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci de Serveis Universitaris de Catalunya (CSUC)"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/mrus-ixpq",
+        "link" : "https://analisi.transparenciacatalunya.cat/Ciència-i-Tecnologia/Publicacions-de-recerca-de-Catalunya/mrus-ixpq",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Equipaments de Catalunya",
+            "id" : "8gmd-gz7i",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.",
+            "attribution" : "Direcció General de Serveis Digitals i Experiència Ciutadana",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-14T02:37:49.000Z",
+            "createdAt" : "2017-10-11T14:30:42.000Z",
+            "metadata_updated_at" : "2026-09-21T08:52:50.000Z",
+            "data_updated_at" : "2026-11-14T02:37:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 306,
+                "page_views_last_month" : 886,
+                "page_views_total" : 29660,
+                "page_views_last_week_log" : 8.262094845370179,
+                "page_views_last_month_log" : 9.792790294301064,
+                "page_views_total_log" : 14.856279617622535
+              },
+            "columns_name" :
+              [
+                "Categoria",
+                "Georeferència",
+                "Població",
+                "Codi del municipi",
+                "Comarca",
+                "Pàgina web",
+                "Codi postal",
+                "Darrera modificació",
+                "LIMADM_MUNICIPI",
+                "Àlies",
+                "Sufix de via",
+                "Identificador",
+                "Telèfon secundari",
+                "UTM X",
+                "Longitud",
+                "LIMADM COMARCA",
+                "Telèfon principal",
+                "Número",
+                "Correu electrònic",
+                "Propietats addicionals",
+                "Fax",
+                "Latitud",
+                "UTM Y",
+                "Via",
+                "Nom",
+                "Tipus de via"
+              ],
+            "columns_field_name" :
+              [
+                "categoria",
+                "localitzacio",
+                "poblacio",
+                "codi_municipi",
+                "comarca",
+                "web",
+                "cpostal",
+                "data_modificacio",
+                ":@computed_region_bh64_c7uy",
+                "alies",
+                "sufix_via",
+                "idequipament",
+                "telefon2",
+                "utmx",
+                "longitud",
+                ":@computed_region_wvic_k925",
+                "telefon1",
+                "num",
+                "email",
+                "propietats",
+                "fax",
+                "latitud",
+                "utmy",
+                "via",
+                "nom",
+                "tipus_via"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "URL",
+                "Text",
+                "Date",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Categories / subcategories de l'equipament",
+                "Georeferència",
+                "Població",
+                "Codi del municipi",
+                "Comarca",
+                "Pàgina web",
+                "Codi postal",
+                "Data de la darrera modificació",
+                "",
+                "Àlies de l'equipament",
+                "Sufix (adreça)",
+                "Identificador intern de l’equipament a la  Base de dades d’Equipaments",
+                "Telèfon secundari",
+                "Coordenada x (UTM)",
+                "Longitud",
+                "",
+                "Telèfon principal",
+                "Número de portal (adreça)",
+                "Adreça de correu electrònic",
+                "Propietats addicionals de l'equipament",
+                "Fax",
+                "Latitud",
+                "Coordenada y (UTM)",
+                "Nom de la via (adreça)",
+                "Nom de l'eqiupament",
+                "Tipus de via (adreça)"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                { "view" : "date_time" },
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "3",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 31654,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-09-06T07:01:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Urbanisme-infraestructures",
+            "domain_tags" :
+              [
+                "aeroports",
+                "aeròdroms i heliports",
+                "agència tributària de catalunya",
+                "albergs de joventut",
+                "altres espais aptes per a l'ús cultural",
+                "altres prestacions de serveis: serveis experimentals",
+                "arxius",
+                "biblioteques",
+                "borses joves d'habitatge",
+                "centres culturals: ateneus",
+                "centres cívics i cases de cultura",
+                "centres de documentació",
+                "centres de normalització lingüística",
+                "centres de promoció cultural",
+                "centres de recerca",
+                "centres d'innovació i formació ocupacional (cifo)",
+                "centres educatius de justícia juvenil",
+                "centres penitenciaris",
+                "centres sanitaris",
+                "confraries de pescadors",
+                "consells reguladors",
+                "deixalleries",
+                "dependències d'atenció policial - mossos d'esquadra",
+                "ens locals",
+                "ensenyaments de règim especial",
+                "ensenyaments de règim general",
+                "entitats col·laboradores de l'administració (eca)",
+                "equipaments cívics",
+                "equips d'assessorament tècnic de menors",
+                "escoles de capacitació agrària",
+                "escoles de capacitació nauticopesquera",
+                "espais d'art i sales d'exposició",
+                "espais naturals",
+                "estacions d'autobusos",
+                "estructures universitàries",
+                "facultats i escoles",
+                "farmàcies",
+                "fiscalies",
+                "formació de persones adultes",
+                "grans infraestructures de suport a la recerca",
+                "hotels d'entitats",
+                "inspecció tècnica de vehicles (itv)",
+                "instal·lacions esportives",
+                "institucions hospitalàries",
+                "instituts universitaris de recerca",
+                "juntes arbitrals de consum",
+                "jutjats de pau",
+                "jutjats i tribunals",
+                "laboratoris de sanitat ramadera",
+                "museus",
+                "oficines comarcals d'agricultura",
+                "oficines comarcals d'habitatge",
+                "oficines d'acció",
+                "oficines d'atenció",
+                "oficines d'atenció a la víctima del delicte",
+                "oficines d'atenció al ciutadà (oac)",
+                "oficines d'atenció ciutadana",
+                "oficines de benestar social i família",
+                "oficines de català",
+                "oficines de gestió empresarial (oge)",
+                "oficines de la generalitat a l'exterior",
+                "oficines de treball",
+                "oficines de turisme de la xarxa",
+                "oficines del servei d'orientació jurídica",
+                "oficines d'informació a les dones",
+                "oficines municipals d'escolarització",
+                "organitzacions de persones consumidores",
+                "parcs científics i tecnològics",
+                "parcs de bombers",
+                "parcs naturals",
+                "policia de trànsit - mossos d'esquadra",
+                "policies locals",
+                "ports esportius",
+                "punt tic",
+                "punts d'atenció ciutadana",
+                "punts d'autoservei del soc",
+                "servei bàsic d'atenció social",
+                "servei d'acolliment residencial d'urgència",
+                "servei d'ajuda a domicili",
+                "servei d'assessorament tècnic d'atenció social",
+                "servei de centre obert",
+                "servei de les tecnologies de suport i cura",
+                "servei de menjador social",
+                "servei de residència temporal per a persones adultes en situació d'exclusió",
+                "servei de suport als serveis socials bàsics",
+                "servei de suport als serveis socials bàsics (distribució d'aliments)",
+                "servei de suport als serveis socials bàsics (maternoinfantil)",
+                "servei públic de consum",
+                "serveis adreçats a dones en situació de violència masclista i els seus fills",
+                "serveis adreçats a famílies amb problemàtica social i risc d'exclusió social",
+                "serveis adreçats a infància",
+                "adolescència",
+                "joventut",
+                "serveis adreçats a persones afectades pel virus vih/sida",
+                "serveis adreçats a persones amb dependència",
+                "serveis adreçats a persones amb discapacitat física",
+                "serveis adreçats a persones amb discapacitat intel·lectual",
+                "serveis adreçats a persones amb discapacitat sensorial",
+                "serveis adreçats a persones amb drogodependències i/o altres addiccions",
+                "serveis adreçats a persones amb problemàtica social derivada de malaltia mental",
+                "serveis adreçats a persones grans amb dependència o risc social",
+                "serveis comuns adreçats a persones amb discapacitat",
+                "serveis de cuidadors familiars o altres cuidadors no professionals",
+                "serveis de suport als serveis socials especialitzats",
+                "serveis d'informació juvenil",
+                "serveis d'orientació mediadora (som)",
+                "serveis inscrits reses: fora cartera 2009-2010",
+                "teatres",
+                "auditoris i espais escènics especialitzats",
+                "universitats",
+                "smartcatalonia",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Catalonia's equipments"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Equipamientos de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i",
+        "link" : "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Equipaments-de-Catalunya/8gmd-gz7i",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 11,
+  "timings" : { "serviceMillis" : 27, "searchMillis" : [ 4, 8 ] },
+  "warnings" : []
+}
