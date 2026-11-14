@@ -25,18 +25,17 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-S = "https://analisi.transparenciacatalunya.cat"
-I = "https://servicios.ine.es/wstempus/js/ES"
-for _id in (33754, 33760, 33766, 33753, 33759, 33765):
-    CANDIDATAS[f"ine_series_{_id}"] = f"{I}/SERIES_TABLA/{_id}?page=1"
-CANDIDATAS["ine_datos_33760"] = f"{I}/DATOS_TABLA/33760?nult=1&tip=A"
-CANDIDATAS["idescat_emouniv"] = "https://www.idescat.cat/pub/?id=emouniv&lang=ca"
-CANDIDATAS["idescat_emouniv_es"] = "https://www.idescat.cat/pub/?id=emouniv&lang=es"
-CANDIDATAS["idescat_censph_6000"] = "https://api.idescat.cat/taules/v2/censph/6000?lang=ca"
-CANDIDATAS["idescat_censph_16401"] = "https://api.idescat.cat/taules/v2/censph/16401?lang=ca"
-CANDIDATAS["mostra_8w7y_estudis"] = S + "/resource/8w7y-2bfp.json?$select=estudis,curs,sum(n_mero_matr_cules_estad_stica::number)%20as%20n&$group=estudis,curs&$limit=200"
-CANDIDATAS["mostra_5kd9_gi"] = S + "/resource/5kd9-2wex.json?$select=curs,comarca_del_centre,nacionalitat,tipus_d_estudi,sum(matr_cula::number)%20as%20m&$group=curs,comarca_del_centre,nacionalitat,tipus_d_estudi&$where=universitat='UdG'&$limit=500"
-CANDIDATAS["mostra_5kd9_univ"] = S + "/resource/5kd9-2wex.json?$select=universitat,count(*)&$group=universitat"
+E = "https://www.idescat.cat/pub/?id=emouniv"
+for n in ("8815", "8816", "8817", "10768"):
+    CANDIDATAS[f"emouniv_{n}"] = f"{E}&n={n}&lang=ca"
+    CANDIDATAS[f"emouniv_{n}_mun"] = f"{E}&n={n}&geo=mun:170792&lang=ca"
+    CANDIDATAS[f"emouniv_{n}_ssv"] = f"{E}&n={n}&geo=mun:170792&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8816_com"] = f"{E}&n=8816&geo=com:20&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8816_prov"] = f"{E}&n=8816&geo=prov:17&lang=ca&f=ssv"
+CANDIDATAS["emouniv_8816_csv"] = f"{E}&n=8816&geo=mun:170792&lang=ca&f=csv"
+CANDIDATAS["emoesc_main"] = "https://www.idescat.cat/pub/?id=emoesc&lang=ca"
+CANDIDATAS["ine_series_33790"] = "https://servicios.ine.es/wstempus/js/ES/SERIES_TABLA/33790?page=1"
+CANDIDATAS["ine_datos_33790_am"] = "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/33790?nult=1&tip=AM"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
