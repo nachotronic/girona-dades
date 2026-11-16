@@ -33,13 +33,16 @@ vivienda:
     nivel: [provincia, tramo_municipio]
     frecuencia: trimestral
     estado: comprobada
-  - id: mivau_valor_tasado
-    nombre: Valor tasado y transacciones
+  - id: mitma_valor_tasado
+    nombre: Valor tasado de vivienda libre (€/m²)
     organismo: Ministerio de Vivienda y Agenda Urbana
+    descarga: https://apps.fomento.gob.es/BoletinOnline2/sedal/{codigo}.XLS
+    tablas_municipio: ["35103500"]
+    tablas_provincia: ["35101000"]
     nivel: [municipio, provincia]
     nota: municipios de más de 25.000 habitantes
     frecuencia: trimestral
-    estado: por_confirmar
+    estado: comprobada
   - id: registradores_eri
     nombre: Estadística Registral Inmobiliaria
     organismo: Colegio de Registradores
