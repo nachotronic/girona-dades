@@ -1,0 +1,1238 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Liquidació del pressupost per principals ingressos tributaris",
+            "id" : "4gai-h9xk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt de dades inclou la liquidació pressupostària dels principals ingressos tributaris: impostos, taxes i preus públics.",
+            "attribution" : "Consorci Administració Oberta de Catalunya (AOC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-15T02:50:03.000Z",
+            "createdAt" : "2019-12-09T15:09:57.000Z",
+            "metadata_updated_at" : "2026-11-15T02:50:03.000Z",
+            "data_updated_at" : "2026-11-06T02:50:25.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 50,
+                "page_views_total" : 3587,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 5.672425341971496,
+                "page_views_total_log" : 11.80896417491926
+              },
+            "columns_name" :
+              [
+                "CODI_ENS",
+                "ANY",
+                "CODI_ESTRUCTURA",
+                "CODI_DOCUMENT",
+                "IMPORT",
+                "DESC_ESTRUCTURA",
+                "NOM_DOCUMENT",
+                "EUROS_HABITANT",
+                "NOM_ENS"
+              ],
+            "columns_field_name" :
+              [
+                "codi_ens",
+                "any",
+                "codi_estructura",
+                "codi_document",
+                "import",
+                "desc_estructura",
+                "nom_document",
+                "euros_habitant",
+                "nom_ens"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {}
+              ],
+            "download_count" : 2544,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-12-09T15:20:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "administració pública",
+                "execució pressupost",
+                "tributs",
+                "impostos",
+                "consorci aoc",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Budget settlement for main tributary income"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Liquidación del presupuesto para los principales ingresos tributarios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Administració local"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci AOC"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/4gai-h9xk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Liquidació-del-pressupost-per-principals-ingressos/4gai-h9xk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Inventari públic de control de compliment de les obligacions de tramesa d’informació economicofinancera dels ens locals",
+            "id" : "7fnj-etev",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació referent al compliment de les obligacions de tramesa  economicofinanceres que tenen el ens locals per a un període acumulatiu d’anualitats i informació anual quan a l’estat de les trameses de l’ens local i d’altres ens del seu sector públic del pressupost i la liquidació del pressupost al Departament de la Presidència, del deute a final d’exercici al Departament d’Economia i Finances i del compte general a la Sindicatura de Comptes de Catalunya.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T04:32:08.000Z",
+            "createdAt" : "2021-01-29T13:22:47.000Z",
+            "metadata_updated_at" : "2026-11-16T04:31:25.000Z",
+            "data_updated_at" : "2026-11-16T04:32:08.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 64,
+                "page_views_last_month" : 294,
+                "page_views_total" : 6477,
+                "page_views_last_week_log" : 6.022367813028454,
+                "page_views_last_month_log" : 8.204571144249204,
+                "page_views_total_log" : 12.661332752795188
+              },
+            "columns_name" :
+              [
+                "EstatDeuteFiEx",
+                "PressupostDocAdm",
+                "ObsPressupostDEcoFin",
+                "Comarca",
+                "LiquidacióDEcoFin",
+                "Any",
+                "LiquidacióDocAdm",
+                "PressupostDEcoFin",
+                "ObsPressupostDocAdm",
+                "Província",
+                "DataEstatDeuteFiEx",
+                "DataPressupostDocAdm",
+                "Ens",
+                "Enllaç",
+                "Compliment",
+                "ObsLiquidacióDEcoFin",
+                "CodiEnsMatriu",
+                "ObsCompteGeneral",
+                "DataPressupostDEcoFin",
+                "Codi10",
+                "DataLiquidacióDEcoFin",
+                "CompteGeneral",
+                "ObsLiquidacióDocAdm",
+                "ServeiTerritorial",
+                "DataLiquidacióDocAdm",
+                "DataCompteGeneral",
+                "DataUltimaCarrega",
+                "Població",
+                "TipusEns",
+                "ObsEstatDeuteFiEx"
+              ],
+            "columns_field_name" :
+              [
+                "estatdeutefiex",
+                "pressupostdocadm",
+                "obspressupostdecofin",
+                "comarca",
+                "liquidaci_decofin",
+                "any",
+                "liquidaci_docadm",
+                "pressupostdecofin",
+                "obspressupostdocadm",
+                "prov_ncia",
+                "dataestatdeutefiex",
+                "datapressupostdocadm",
+                "ens",
+                "enlla",
+                "compliment",
+                "obsliquidaci_decofin",
+                "codiensmatriu",
+                "obscomptegeneral",
+                "datapressupostdecofin",
+                "codi10",
+                "dataliquidaci_decofin",
+                "comptegeneral",
+                "obsliquidaci_docadm",
+                "serveiterritorial",
+                "dataliquidaci_docadm",
+                "datacomptegeneral",
+                "dataultimacarrega",
+                "poblaci",
+                "tipusens",
+                "obsestatdeutefiex"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "view" : "date_dmy" },
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2541,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-02-01T15:59:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "pressupost",
+                "liquidació",
+                "deute",
+                "compte general",
+                "ods16_pau justícies i institucions sòlides",
+                "ens locals"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public inventory of compliance monitoring of the reporting obligations of economic information of the local entities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Inventario público de control de cumplimiento de las obligaciones de remisión de información económica de los entes locales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "Open Data Commons Attribution License"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7fnj-etev",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Inventari-públic-de-control-de-compliment-de-les-o/7fnj-etev",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Cost efectiu dels serveis",
+            "id" : "7e8k-3vki",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Totes les entitats locals han de calcular abans del dia 1 de novembre de cada any el cost efectiu dels serveis que presten, partint de les dades contingudes en la liquidació del pressupost general i, si s’escau, dels comptes anuals aprovats de les entitats vinculades o que en depenen, corresponent a l’exercici immediatament anterior.",
+            "attribution" : "Consorci AOC via Ministeri d'Hisenda",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-15T02:25:02.000Z",
+            "createdAt" : "2019-12-10T12:15:18.000Z",
+            "metadata_updated_at" : "2026-11-15T02:25:02.000Z",
+            "data_updated_at" : "2026-07-11T02:25:22.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 45,
+                "page_views_last_month" : 95,
+                "page_views_total" : 2849,
+                "page_views_last_week_log" : 5.523561956057013,
+                "page_views_last_month_log" : 6.584962500721156,
+                "page_views_total_log" : 11.476746203939467
+              },
+            "columns_name" :
+              [
+                "COST_EFECTIU",
+                "TIPUS_GESTIO",
+                "NOM_ENS",
+                "CODI_ENS",
+                "DESCRIPCIO_SERVEI",
+                "ANY"
+              ],
+            "columns_field_name" :
+              [
+                "cost_efectiu",
+                "tipus_gestio",
+                "nom_ens",
+                "codi_ens",
+                "descripcio_servei",
+                "any"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" : [ "", "", "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {} ],
+            "download_count" : 1739,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-12-10T12:18:20.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "cost",
+                "cost efectiu",
+                "serveis",
+                "consorci aoc",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Effective cost of the services"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Coste efectivo de los servicios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Administració local"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci AOC"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7e8k-3vki",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Cost-efectiu-dels-serveis/7e8k-3vki",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Liquidació del pressupost (econòmic i per programes)",
+            "id" : "8squ-bk4r",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt de dades inclou els estats demostratius de l’execució dels ingressos i despeses del Pressupost de l’Ajuntament, així com el càlcul del resultat pressupostari i el romanent de tresoreria.",
+            "attribution" : "Consorci Administració Oberta de Catalunya (AOC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-15T02:45:10.000Z",
+            "createdAt" : "2019-12-09T11:31:44.000Z",
+            "metadata_updated_at" : "2026-11-15T02:45:10.000Z",
+            "data_updated_at" : "2026-11-06T02:55:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 120,
+                "page_views_last_month" : 440,
+                "page_views_total" : 6298,
+                "page_views_last_week_log" : 6.9188632372745955,
+                "page_views_last_month_log" : 8.784634845557521,
+                "page_views_total_log" : 12.620907095885338
+              },
+            "columns_name" :
+              [
+                "CODI_PANTALLA",
+                "IMPORT_REC_PAG",
+                "IMP_EXE_TANC",
+                "NIVELL",
+                "IMPORT_PREV_CRED",
+                "DESCRIPCIO",
+                "ANY_EXERCICI",
+                "NOM_COMPLERT",
+                "CODI_ENS",
+                "ESTRUCTURA",
+                "IMPORT_DRET_OBLIG",
+                "ID_ESTRUCTURA",
+                "TIPUS_PARTIDA",
+                "TIPUS_CLASSIF"
+              ],
+            "columns_field_name" :
+              [
+                "codi_pantalla",
+                "import_rec_pag",
+                "imp_exe_tanc",
+                "nivell",
+                "import_prev_cred",
+                "descripcio",
+                "any_exercici",
+                "nom_complert",
+                "codi_ens",
+                "estructura",
+                "import_dret_oblig",
+                "id_estructura",
+                "tipus_partida",
+                "tipus_classif"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Correspon al codi de l'estructura pressupostaria descrit per la normativa vigent",
+                "Correspon a l'import de la recaptació neta o els pagaments líquids",
+                "Correspon a l'import de la recaptació neta o els pagaments líquids d'exercicis tancats",
+                "Correspon al nivell d'estructura pressupostaria segons la classificació.  Econòmica: capítol (1), article (2), concepte (3) i subconcepte (4).  Per programes: àrea de despesa (1), política de despesa (2), grup de programes (3), programes (4).",
+                "Correspon a l'import de la previsió definitiva o dels crèdits definitius",
+                "Correspon al nom de l'aplicació pressupostaria",
+                "Fa referència a l'any sobre el qual es mostren les dades",
+                "Correspon al nom complert de l'ens al que fa referència",
+                "Correspon al codi INE10 de l'ens al que fa referència",
+                "Correspon al codi intern de l'estructura pressupostària utilitzat per l'aplicatiu que recull les dades",
+                "Correspon a l'import dels drets reconeguts nets o de les obligacions reconegudes netes",
+                "Correspon a l'identificador de l'estructura pressupostària aplicable a un exercici concret",
+                "Descriu si les dades corresponen a ingressos o a despeses",
+                "Tipus de classificació: E=Econòmica; F=Per programes"
+              ],
+            "columns_format" :
+              [
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1823,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-12-09T12:10:00.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "administració pública",
+                "execució",
+                "pressupost",
+                "consorci aoc",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Budget settlement (economic and by programs)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Liquidación del presupuesto (económico y por programas)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Administració local"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci AOC"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8squ-bk4r",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Liquidació-del-pressupost-econòmic-i-per-programes/8squ-bk4r",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Liquidació del pressupost d'entitats del sector públic de la Generalitat no integrades en sistemes corporatius",
+            "id" : "ea7t-ynp6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Liquidació del pressupost d’ingressos i despeses d’entitats del sector públic de la Generalitat de Catalunya. Els imports de la d’execució són els acumulats des de l’1 de gener fins a l’últim dia del mes de referència.\nCada línia del fitxer informa de l'import de cada posició pressupostària de cadascuna de les entitats. A nivell econòmic la partida és de nou dígits, que permet identificar despeses i ingressos segons la seva naturalesa, l’origen del finançament i la funció a la qual va destinat. \nPer a cada posició pressupostària es mostren els imports acumulats relatius als següents conceptes: \n•\tPressupost inicial\n•\tModificacions de pressupost\n•\tPressupost definitiu\n•\tObligacions reconegudes (despeses)\n•\tPagaments de corrent (despeses)\n•\tDrets reconeguts (ingressos)\n•\tCobraments de corrent (ingressos)",
+            "attribution" : "Generalitat de Catalunya. Intervenció General",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-14T06:41:38.000Z",
+            "createdAt" : "2024-06-19T07:58:10.000Z",
+            "metadata_updated_at" : "2026-10-14T06:41:31.000Z",
+            "data_updated_at" : "2026-10-14T06:41:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 86,
+                "page_views_total" : 1114,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 6.442943495848729,
+                "page_views_total_log" : 10.122827994807668
+              },
+            "columns_name" :
+              [
+                "Codi Financament",
+                "Mes",
+                "Drets Reconeguts",
+                "Aplicacio codi",
+                "Programa despesa codi",
+                "Article codi",
+                "Tipologia pressupost",
+                "Mes codi",
+                "Pagaments de Corrent",
+                "Article",
+                "Capitol codi",
+                "Credit/Previsio inicial",
+                "Area despesa",
+                "Entitat",
+                "Programa despesa",
+                "Capitol",
+                "Concepte",
+                "Politica despesa",
+                "Modificacions de Pressupost",
+                "Versio",
+                "Area despesa codi",
+                "Concepte codi",
+                "Cobraments de Corrent",
+                "Exercici",
+                "Credit/Previsio definitiva",
+                "Obligacions Reconegudes",
+                "Entitat codi",
+                "Aplicacio",
+                "Politica despesa codi"
+              ],
+            "columns_field_name" :
+              [
+                "codi_financament",
+                "mes",
+                "drets_reconeguts",
+                "aplicacio_codi",
+                "programa_despesa_codi",
+                "article_codi",
+                "tipologia_pressupost",
+                "mes_codi",
+                "pagaments_de_corrent",
+                "article",
+                "capitol_codi",
+                "credit_previsio_inicial",
+                "area_despesa",
+                "entitat",
+                "programa_despesa",
+                "capitol",
+                "concepte",
+                "politica_despesa",
+                "modificacions_de_pressupost",
+                "versio",
+                "area_despesa_codi",
+                "concepte_codi",
+                "cobraments_de_corrent",
+                "exercici",
+                "credit_previsio_definitiva",
+                "obligacions_reconegudes",
+                "entitat_codi",
+                "aplicacio",
+                "politica_despesa_codi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Codi que s’incorpora a algunes partides per determinar la relació entre els ingressos i les despeses corresponents. Han de respondre a finançaments d'altres administracions per actuacions concretes cofinançades o no (fons finalistes), ingressos de la pròpia Generalitat destinats a una finalitat determinada (fons afectats).",
+                "Nom del mes al que s'acumulen les dades d'execució del pressupost, des de l'1 de gener de l'exercici corresponent fins a l’últim dia del mes indicat",
+                "Import dels drets contrets nets (ingressos) durant l’exercici",
+                "Número de l’aplicació pressupostària, les set primeres posicions de la partida econòmica",
+                "Tres primers dígits del codi funcional",
+                "Número de l’article pressupostari, les dues primeres posicions de la partida econòmica",
+                "Indica si es tracta d’Ingressos (I) o de despeses (D)",
+                "Número del mes al que es refereixen les dades",
+                "Import del pagament efectiu de les obligacions reconegudes",
+                "Segon nivell d'agregació de l'estructura econòmica del pressupost, en què aquesta es classifica en funció de la seva naturalesa. L'article és el conjunt dels dos primers dígits d'aquesta estructura.",
+                "Número del capítol pressupostari, primera posició de la partida econòmica",
+                "Import de la dotació de crèdit de les despeses i la previsions pressupostàries d’ingressos aprovat a la llei de pressupostos",
+                "Nivell més alt de la classificació funcional de la despesa. Agrupa la despesa pública per grans àrees d’actuació per oferir una visió de conjunt de l’execució dels objectius del Govern",
+                "Nom de l’ens amb personalitat jurídica pròpia, objecte de pressupost i responsable de la seva execució. ",
+                "Tercer nivell d'agregació de la classificació funcional de la despesa. Correspon a l'estructura funcional més desagregada per a la presa de decisions d'assignació de recursos pressupostaris.",
+                "Nivell més alt d'agregació de l'estructura econòmica del pressupost. Classifica els ingressos i les despeses en funció de la seva naturalesa.",
+                "Tercer nivell d'agregació de l'estructura econòmica del pressupost, en què aquest es classifica en funció de la seva naturalesa. El concepte és el conjunt dels tres primers dígits d'aquesta estructura. ",
+                "Segon nivell d'agregació de la classificació funcional de la despesa. Agrupa la despesa pública per polítiques concretes d’actuació per oferir una visió de conjunt de l’execució dels objectius del Govern",
+                "Minoracions o increments del pressupost inicial",
+                "El valor serà sempre “definitiu” per a tots els mesos excepte les dades acumulades del mes de desembre que podran tenir el valor “provisional”, “definitiu” ",
+                "Primer dígit del codi funcional",
+                "Número del concepte pressupostari, les tres primeres posicions de la partida econòmica",
+                "Import net cobrat dels drets reconeguts",
+                "Període anual del pressupost, que correspon a l'any natural",
+                "Crèdit i previsió inicial minorat o incrementat per les modificacions pressupostàries",
+                "Import de la fase de la gestió de la despesa en què es comptabilitza formalment que el tercer ha complert els compromisos adquirits i es reconeix el deute a favor del tercer a càrrec del pressupost",
+                "Codi orgànic de 4 dígits que identifica l’entitat en el pressupost",
+                "Conjunt dels set dígits de l'estructura econòmica, en què es classifica, en funció de la seva naturalesa. És el nivell d'aplicació que el Parlament aprova en la Llei de pressupostos.",
+                "Dos primers dígits del codi funcional"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 465,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-06-20T11:06:23.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "execució pressupostària",
+                "entitats del sector públic",
+                "generalitat de catalunya",
+                "ods8_treball decent i creixement econòmic",
+                "ods10_reducció de les desigualtats",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Monthly budget execution of public sector entities of the Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Ejecución mensual del presupuesto de entidades del sector público de la Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ea7t-ynp6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Liquidació-del-pressupost-d-entitats-del-sector-pú/ea7t-ynp6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors per a la distribució de les compensacions econòmiques per a càrrecs electes locals",
+            "id" : "bepu-nr6b",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Indicadors sobre els recursos ordinaris i els imports de les compensacions màximes en l’àmbit de les compensacions econòmiques que la Generalitat atorga als ajuntaments de fins a 2000 habitants perquè puguin retribuir determinats càrrecs electes locals. Un dels requisits obligatoris que determina el Decret 69/2008, d'1 d'abril, que ho regula, és que la totalitat dels recursos ordinaris reconeguts i liquidats del pressupost del municipi, d'acord amb les dades de la liquidació aprovada l'any anterior, no superi en un 75% la mitjana resultant dels pressupostos dels municipis del seu tram de població. Els trams de població considerada són: fins a 100 habitants, de 101 a 500 i de 501 a 2000.\n\nEls recursos ordinaris s’utilitzen en el moment del càlcul de les mitjanes per tram de població, també incloses, així com les mitjanes per tram incrementades en un 75%, dades corresponents a l’exercici pressupostari de dos anys abans de l’inici de la tramitació. Els recursos ordinaris s’obtenen de la suma de recursos corrents, capítols 1 al 5, exceptuant els ingressos per contribucions especials, quotes urbanístiques i els aprofitaments urbanístics. No inclou les subvencions corrents condicionades (enteses com les subvencions extraordinàries, puntuals d’un exercici i no recurrents en cada exercici) que els ens es poden descomptar a la sol·licitud.\n\nD’altra banda, el Decret 69/2008, d'1 d'abril, determina que es publicarà una Ordre de convocatòria en la qual s’indicarà la compensació màxima anual a percebre per cada ajuntament, segons el nombre d’habitants inscrits al Padró d’acord amb els trams establerts al mateix decret. Aquests imports s’actualitzen periòdicament mitjançant acords de Govern i també s’inclouen al conjunt de dades.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-01-12T12:13:38.000Z",
+            "createdAt" : "2026-01-12T12:02:15.000Z",
+            "metadata_updated_at" : "2026-01-12T12:13:38.000Z",
+            "data_updated_at" : "2026-01-12T12:13:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 65,
+                "page_views_total" : 415,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 6.044394119358453,
+                "page_views_total_log" : 8.700439718141093
+              },
+            "columns_name" :
+              [
+                "Mitjana RO incrementada 75%",
+                "Data extracció",
+                "Codi ens",
+                "Import recursos ordinaris",
+                "Exercici",
+                "Compensació màxima anual per tram",
+                "Codi consell comarcal",
+                "Ens",
+                "Codi comarca",
+                "Comarca",
+                "Compensació màxima mensual per tram",
+                "Mitjana de recursos ordinaris",
+                "Mitjana RO per tram",
+                "Població"
+              ],
+            "columns_field_name" :
+              [
+                "mitjana_ro_incrementada_75",
+                "data_extraccio",
+                "codi_ens",
+                "import_recursos_ordinaris",
+                "exercici",
+                "compensacio_maxima_anual",
+                "codi_consell_comarcal",
+                "ens",
+                "codi_comarca",
+                "comarca",
+                "compensacio_maxima_mensual",
+                "mitjana_recursos_ordinaris",
+                "mitjana_ro_tram",
+                "poblacio"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Import total, en euros, de la mitjana de recursos ordinaris reconeguts i liquidats dels pressupostos dels ens locals del tram de població incrementada en un 75%.",
+                "Data extracció.",
+                "Codi oficial estadístic numèric identificador de l’ajuntament/ens local beneficiari.",
+                "Import total, en euros, dels recursos ordinaris reconeguts i liquidats del pressupost de l’ens local (any de referència: dos anys abans de la convocatòria).",
+                "Any de referència de les dades.",
+                "Import total, en euros, de la compensació màxima anual per tram corresponent a dotze mesos de dedicació completa.",
+                "Codi numèric oficial que identifica el consell comarcal on es troba el municipi de l’ens local.",
+                "Denominació oficial de l’ens local.",
+                "Codi de la comarca on es troba el municipi.",
+                "Nom de la comarca on es troba el municipi.",
+                "Import total, en euros, de la compensació màxima mensual per tram corresponent a un mes de dedicació completa.",
+                "Import total, en euros, de la mitjana de recursos ordinaris (RO) reconeguts i liquidats del pressupost de l’ens local.",
+                "Import total, en euros, de la mitjana de recursos ordinaris reconeguts i liquidats dels pressupostos dels ens locals del tram de població.",
+                "Nombre d’habitants del municipi segons el padró de dos anys abans de la convocatòria."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 187,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-01-12T12:13:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "ajuntaments",
+                "ens locals",
+                "pressupost",
+                "ingressos",
+                "alcaldes",
+                "comarca",
+                "població",
+                "municipis",
+                "consells comarcals",
+                "comarques",
+                "municat",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Indicators for the distribution of financial compensation for local elected officials"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores para la distribución de las compensaciones económicas para cargos electos locales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/bepu-nr6b",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Indicadors-per-a-la-distribució-de-les-compensacio/bepu-nr6b",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 6,
+  "timings" : { "serviceMillis" : 25, "searchMillis" : [ 2, 10 ] },
+  "warnings" : []
+}

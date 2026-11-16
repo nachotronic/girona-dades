@@ -19,6 +19,9 @@
       h_execucions: (n, a, d) => `<b>${n}</b> habitatges amb execució hipotecària el ${a}, ${d} que el 2014.`,
       h_societats: (n, a, d, c, e) => `<b>${n}</b> societats noves el ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
       menys: (v) => `un ${v} menys`, mes: (v) => `un ${v} més`,
+      esperanca: ["Esperança de vida", "Anys de vida en néixer"],
+      esperanca_noms: { gi: "Total", cat: "Dones", esp: "Homes" },
+      h_esperanca: (g, a, d, h) => `Qui neix avui a la província pot esperar viure <b>${g} anys</b> (${a}): ${d} les dones i ${h} els homes.`,
       hipoteques: ["Hipoteques sobre habitatges", "Nombre anual. Índex, 2007 = 100"],
       hipoteca_mitjana: ["Hipoteca mitjana", "Import mitjà per habitatge (€)"],
       causes: ["De què es mor", "Defuncions per grup de causes (% del total)"],
@@ -64,6 +67,9 @@
       h_execucions: (n, a, d) => `<b>${n}</b> viviendas con ejecución hipotecaria en ${a}, ${d} que en 2014.`,
       h_societats: (n, a, d, c, e) => `<b>${n}</b> sociedades nuevas en ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
       menys: (v) => `un ${v} menos`, mes: (v) => `un ${v} más`,
+      esperanca: ["Esperanza de vida", "Años de vida al nacer"],
+      esperanca_noms: { gi: "Total", cat: "Mujeres", esp: "Hombres" },
+      h_esperanca: (g, a, d, h) => `Quien nace hoy en la provincia puede esperar vivir <b>${g} años</b> (${a}): ${d} las mujeres y ${h} los hombres.`,
       hipoteques: ["Hipotecas sobre viviendas", "Número anual. Índice, 2007 = 100"],
       hipoteca_mitjana: ["Hipoteca media", "Importe medio por vivienda (€)"],
       causes: ["De qué se muere", "Defunciones por grupo de causas (% del total)"],
@@ -202,6 +208,7 @@
     if (id === "edu_publica_prov") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_publica", pct(g[2], 0), pct(c && c[2], 0), g[1], fmt(sp.abs && sp.abs.n)) : ""; }
     if (id === "univ_fora_prov") { const g = ult(sp, "gi"); const g0 = sp.series.gi[0]; return g && sp.abs ? tp("h_univ", pct(g[2], 0), fmt(sp.abs.fora), fmt(sp.abs.residents), sp.abs.curs, pct(g0[2], 0), g0[1]) : ""; }
     if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
+    if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
     return "";
   }
@@ -210,7 +217,7 @@
     const cont = document.getElementById("prov-grafics");
     if (!cont || !D.prov) return;
     const P = D.prov;
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"].filter((k) => P[k]);
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"].filter((k) => P[k]);
     cont.innerHTML = ids.map((id) => {
       const sp = P[id];
       const claus = sp.tipus === "barres" ? sp.claus || ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
