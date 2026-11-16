@@ -59,15 +59,11 @@ INTERIOR = "https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/"
 ZIPS = {f"int_{t}{f}": f"{INTERIOR}{t}{f}_MESA.zip" for t, f in (
     ("02", "202307"), ("02", "201911"), ("04", "202305"), ("07", "202406"))}
 CANDIDATAS_E = {}
-CANDIDATAS_E["int_descargas"] = "https://infoelectoral.interior.gob.es/es/elecciones-celebradas/area-de-descargas/"
-for q in ("eleccions parlament", "resultats electorals", "eleccions mesa", "eleccions generals", "eleccions europees",
-          "eleccions", "meses electorals", "seccions censals eleccions", "participació electoral"):
-    CANDIDATAS_E["soc_e_" + q.replace(" ", "_").replace("ó", "o").replace("·", "")] = (
-        f"{SOCRATA}?q={urllib.parse.quote(q)}&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset")
-CANDIDATAS_E["gencat_eleccions"] = "https://eleccions.gencat.cat/ca/resultats-electorals/"
-CANDIDATAS_E["gencat_arxiu"] = "https://eleccions.gencat.cat/ca/resultats-electorals/#/"
-CANDIDATAS_E["datosgob_elecciones"] = "https://datos.gob.es/apidata/catalog/dataset/title/elecciones?_pageSize=50"
-
+SOC = "https://analisi.transparenciacatalunya.cat"
+for d in ("ntc4-rnwr", "irrv-2mfc", "tgns-3xuy"):
+    CANDIDATAS_E[f"pe_{d}_meta"] = f"{SOC}/api/views/{d}.json"
+    CANDIDATAS_E[f"pe_{d}_mostra"] = f"{SOC}/resource/{d}.json?$limit=30"
+CANDIDATAS_E["pe_tgns_tot"] = f"{SOC}/resource/tgns-3xuy.json?$limit=5000"
 
 def explora_zips(filas: list) -> None:
     import io, zipfile
@@ -101,7 +97,6 @@ def extension(tipo: str) -> str:
 def main() -> None:
     MUESTRAS.mkdir(parents=True, exist_ok=True)
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
-    explora_zips(filas)
     for clave, url in CANDIDATAS_E.items():
         try:
             r = requests.get(url, headers=UA, timeout=120, stream=True)
