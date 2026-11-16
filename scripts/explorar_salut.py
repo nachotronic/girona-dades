@@ -1,52 +1,51 @@
-"""Exploración puntual de fuentes de salud (listas de espera, farmacia, centros)."""
+"""Exploración puntual de fuentes de salud, ronda 2."""
 import json, pathlib, re, urllib.parse
 import requests
 
-S = pathlib.Path("exploracion/salut"); S.mkdir(parents=True, exist_ok=True)
+S = pathlib.Path("exploracion/salut2"); S.mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "girona-dades/0.1 (+https://github.com/nachotronic/girona-dades)"}
 SOC = "https://analisi.transparenciacatalunya.cat"
 inf = []
 
-def get(url, **kw):
+def get(url, nom=None, lim=400000):
     try:
-        r = requests.get(url, headers=UA, timeout=120, **kw)
-        inf.append(f"{r.status_code} {len(r.content)} {url}")
+        r = requests.get(url, headers=UA, timeout=180)
+        inf.append(f"{r.status_code} {len(r.content)} {nom} {url}")
+        if nom: (S / nom).write_bytes(r.content[:lim])
         return r
     except Exception as e:
-        inf.append(f"ERR {type(e).__name__} {url}"); return None
+        inf.append(f"ERR {type(e).__name__} {nom} {url}"); return None
 
-cat = {}
-for t in ["receptes", "farmàcia", "medicaments", "llista d'espera", "llistes d'espera", "temps d'espera", "Central de Resultats",
-          "salut mental", "hospital", "centres sanitaris", "atenció primària", "morbiditat", "vacunació", "urgències",
-          "altes hospitalàries", "CMBD", "consum de fàrmacs", "prestació farmacèutica", "CatSalut", "Observatori del Sistema de Salut",
-          "àrea bàsica de salut", "regió sanitària"]:
-    r = get(f"{SOC}/api/catalog/v1?" + urllib.parse.urlencode({"q": t, "limit": 40, "domains": "analisi.transparenciacatalunya.cat"}))
-    if r is not None and r.ok:
-        for x in r.json().get("results", []):
-            rs = x["resource"]; cat[rs["id"]] = (rs["name"], rs.get("data_updated_at", "")[:10], rs.get("columns_field_name", []))
-(S / "cataleg.txt").write_text("\n".join(f"{k}\t{v[1]}\t{v[0]}\t{','.join(v[2])[:400]}" for k, v in sorted(cat.items(), key=lambda z: z[1][0])), encoding="utf-8")
+def q(d, nom, **p):
+    get(f"{SOC}/resource/{d}.json?" + urllib.parse.urlencode(p), nom)
 
-for d in ["av3u-smj4", "7f3n-y4sh", "hj2f-96x6", "ftq4-h9vk"] + [k for k, v in cat.items() if re.search(r"recept|farm|espera|medicam|hospital|centres|mental", v[0], re.I)][:25]:
-    r = get(f"{SOC}/resource/{d}.json?$limit=15")
-    if r is not None: (S / f"m_{d}.json").write_bytes(r.content[:60000])
-r = get(f"{SOC}/resource/tt92-bngg.json?$select=any,mes,count(*)&$group=any,mes&$order=any,mes")
-if r is not None: (S / "tt92_anys.json").write_bytes(r.content)
+q("thrd-jj3r", "rec_regions.json", **{"$select": "codi_regio_sanitaria,regio_sanitaria,max(any),count(*)", "$group": "codi_regio_sanitaria,regio_sanitaria"})
+q("thrd-jj3r", "rec_mesos.json", **{"$select": "any,mes,sum(nombre_receptes),sum(import_integre)", "$group": "any,mes", "$order": "any,mes", "$limit": 500})
+q("thrd-jj3r", "rec_edats.json", **{"$select": "grup_edat,count(*)", "$group": "grup_edat"})
+q("44sy-txnv", "vig_mostra.json", **{"$limit": 20, "$order": "data_inici DESC"})
+q("44sy-txnv", "vig_diag.json", **{"$select": "diagnostic,count(*),max(data_inici),min(data_inici)", "$group": "diagnostic"})
+q("44sy-txnv", "vig_ambit.json", **{"$select": "codi_ambit,nom_ambit,codi_regio,nom_regio,count(*)", "$group": "codi_ambit,nom_ambit,codi_regio,nom_regio"})
+q("nrmq-ytje", "est_mostra.json", **{"$limit": 10, "$where": "provincia_codi='17'"})
+q("nrmq-ytje", "est_tipus.json", **{"$select": "servei_fmt_nivell_2,count(*)", "$group": "servei_fmt_nivell_2", "$where": "provincia_codi='17'", "$order": "count(*) DESC", "$limit": 300})
+for d in ["nrmq-ytje", "ptdc-nwds", "av3u-smj4", "thrd-jj3r", "44sy-txnv", "7dt9-azyt"]:
+    get(f"{SOC}/api/views/{d}.json", f"view_{d}.json")
+q("ptdc-nwds", "esca_mostra.json", **{"$limit": 30})
+q("7dt9-azyt", "momo_mostra.json", **{"$limit": 10, "$order": "data DESC"})
 
 B = "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/"
-for p in ["", "intervencions-quirurgiques/", "consultes-externes-especialitats/", "proves-diagnostiques/"]:
-    r = get(B + p)
-    if r is None: continue
-    links = sorted(set(re.findall(r'(?:href|src|data-url)="([^"]+)"', r.text)))
-    (S / f"llistes_{p.strip('/') or 'index'}.txt").write_text("\n".join(links), encoding="utf-8")
-    (S / f"llistes_{p.strip('/') or 'index'}.html").write_text(r.text[:200000], encoding="utf-8")
-for u in ["https://datos.gob.es/en/catalogo/a09002970-recetas-facturadas-al-servei-catala-de-la-salut",
-          "https://datos.gob.es/es/aplicaciones/espera-cat",
-          "https://observatorisalut.gencat.cat/ca/central_de_resultats/",
-          "https://observatorisalut.gencat.cat/ca/observatori-desigualtats-salut/indicadors_comunitaria/",
-          "https://catsalut.gencat.cat/ca/proveidors-professionals/farmacia-medicaments/dades-facturacio/"]:
-    r = get(u)
-    if r is not None:
-        n = re.sub(r"\W+", "_", u)[-60:]
-        (S / f"w_{n}.html").write_text(r.text[:300000], encoding="utf-8")
+for p in ["intervencions-quirurgiques/consulta/", "intervencions-quirurgiques/anys-anteriors/", "intervencions-quirurgiques/informacio/",
+          "consultes-externes-especialitats/consulta/", "proves-diagnostiques/consulta/"]:
+    n = re.sub(r"\W+", "_", p).strip("_")
+    r = get(B + p, f"le_{n}.html", 600000)
+    if r is not None and r.ok:
+        links = sorted(set(re.findall(r'(?:href|src|data-url|action)="([^"]+)"', r.text)))
+        (S / f"le_{n}_links.txt").write_text("\n".join(links), encoding="utf-8")
+for u, n in [("https://web.gencat.cat/ca/generalitat/dades-indicadors/estadistiques-indicadors/salut/esca-salut", "esca_web.html"),
+             ("https://salutweb.gencat.cat/ca/departament/estadistiques-sanitaries/enquestes/esca/", "esca_salutweb.html"),
+             ("https://www.idescat.cat/indicadors/?id=aec&n=15655", "idescat_esca.html")]:
+    r = get(u, n, 600000)
+    if r is not None and r.ok:
+        links = sorted(set(re.findall(r'href="([^"]+)"', r.text)))
+        (S / (n + "_links.txt")).write_text("\n".join(links), encoding="utf-8")
 (S / "informe.txt").write_text("\n".join(inf), encoding="utf-8")
 print("\n".join(inf))
