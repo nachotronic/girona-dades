@@ -31,6 +31,8 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python scripts/construir_web.py
+      # Versiona CSS y JS en cada publicación para que el navegador no mezcle un index.html nuevo con estilos viejos en caché
+      - run: sed -i -E "s/(href|src)=\"([a-z]+\.(css|js))\"/\1=\"\2?v=${GITHUB_SHA::8}\"/g" web/index.html && grep -E "estilos|mapa\.js" web/index.html
       - uses: actions/configure-pages@v5
         with:
           enablement: true
