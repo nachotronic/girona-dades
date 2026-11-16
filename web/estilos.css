@@ -878,3 +878,40 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .info .el-vots .vpct { text-align: right; font: 500 12px/1 var(--mono); color: var(--tinta); }
 .info .gran .punt-bloc { width: 18px; height: 18px; border-radius: 0; }
 .info .gran.el-guany { font-size: 34px; overflow-wrap: anywhere; }
+
+/* ---------- Fitxa: impostos municipals ---------- */
+.fitxa-trib { margin-top: 48px; }
+.fitxa-trib:empty { display: none; }
+.tb .ajt-tit { margin-bottom: 4px; }
+.tb-sub { color: var(--text-2); font-size: 14px; margin: 4px 0 14px; }
+.tb-cos { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.tb-taula { border-top: 3px solid var(--tinta); }
+.tb-taula { overflow-x: auto; }
+.tb table { font-size: 13.5px; }
+.tb thead th { text-align: right; padding: 10px 8px; white-space: nowrap; }
+.tb thead th:first-child, .tb tbody th { text-align: left; }
+.tb tbody th { font: 600 13.5px/1.25 var(--sans); color: var(--tinta); padding: 10px 8px 10px 0; }
+.tb td { text-align: right; padding: 10px 8px; font: 500 12.5px/1 var(--mono); color: var(--text-2); white-space: nowrap; border-top: 1px solid var(--vora); }
+.tb tbody th { border-top: 1px solid var(--vora); }
+.tb td.tb-v { font: 800 17px/1 var(--sans); font-stretch: 72%; color: var(--tinta); }
+.tb thead th.tb-v { color: var(--tinta); }
+.tb-marge { min-width: 128px; }
+.tb-barra { position: relative; display: block; height: 6px; background: var(--fons-2, #eef0f2); margin-bottom: 6px; }
+.tb-barra b { position: absolute; left: 0; top: 0; bottom: 0; background: var(--serie-1); }
+.tb-barra i { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--tinta); }
+.tb-marge small { font: 500 10.5px/1 var(--mono); color: var(--text-3); }
+.tb-max .tb-barra b { background: var(--accent); }
+.tb-max td.tb-v { color: var(--accent); }
+.tb .grafic { margin: 0; }
+@media (max-width: 1100px) { .tb-cos { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 560px) {
+  .tb table, .tb tbody { display: block; }
+  .tb thead { display: none; }
+  .tb tbody tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 8px; border-top: 1px solid var(--vora); padding: 12px 0; }
+  .tb tbody th, .tb td { border: 0; padding: 0; }
+  .tb tbody th { grid-column: 1 / 3; align-self: center; font-size: 14px; }
+  .tb td.tb-v { grid-column: 3; text-align: right; font-size: 19px; }
+  .tb td.tb-r { text-align: left; margin-top: 8px; font-size: 12px; color: var(--text); }
+  .tb td.tb-r::before { content: attr(data-l); display: block; font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); margin-bottom: 4px; }
+  .tb td.tb-marge { grid-column: 1 / -1; margin-top: 10px; text-align: left; min-width: 0; }
+}

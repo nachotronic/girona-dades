@@ -37,6 +37,7 @@
     { id: "eme", ca: "Emergències", es: "Emergencias" },
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
+    { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
     { id: "ele", ca: "Eleccions", es: "Elecciones" },
     { id: "pol", ca: "Alcaldies", es: "Alcaldías" },
@@ -60,6 +61,26 @@
   const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
   const NOTA_SEPE = { ca: "SEPE, atur registrat el darrer dia del mes. Les xifres d'1 a 4 no es publiquen.", es: "SEPE, paro registrado el último día del mes. Las cifras de 1 a 4 no se publican." };
   const NOTA_CONTR = { ca: "SEPE, contractes registrats al mes al municipi del centre de treball.", es: "SEPE, contratos registrados en el mes en el municipio del centro de trabajo." };
+
+  // Impuestos municipales (m.trib: {clave: {año: valor}})
+  const TV = (k) => (m, a) => (a != null && m.trib && m.trib[k] && m.trib[k][a] != null ? m.trib[k][a] : null);
+  const NOTA_TRIB = { ca: "Ministeri d'Hisenda, consulta de tipus impositius municipals (ordenances fiscals que envien els ajuntaments). Les referències són mitjanes ponderades per població; Espanya sense el País Basc ni Navarra.", es: "Ministerio de Hacienda, consulta de tipos impositivos municipales (ordenanzas fiscales que envían los ayuntamientos). Las referencias son medias ponderadas por población; España sin el País Vasco ni Navarra." };
+  const PT = (d) => ({ f: (v) => `${fmt(v, d)} %`, c: (v) => `${fmt(v, Math.min(d, 2))} %` });
+  const TRIB = [
+    ["ibi_u", ["IBI urbà", "Tipus de l'IBI urbà (% del valor cadastral)"], ["IBI urbano", "Tipo del IBI urbano (% del valor catastral)"], { sumable: false, ...PT(2) }],
+    ["ibi_rev", ["Revisió cadastral", "Any de l'última revisió dels valors cadastrals"], ["Revisión catastral", "Año de la última revisión de los valores catastrales"], { sumable: false, f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)),
+      nota: { ca: "Any de l'última ponència de valors del Cadastre al municipi. Com més antiga, més baixos són els valors cadastrals i més alt sol ser el tipus de l'IBI. Ministeri d'Hisenda.", es: "Año de la última ponencia de valores del Catastro en el municipio. Cuanto más antigua, más bajos son los valores catastrales y más alto suele ser el tipo del IBI. Ministerio de Hacienda." } }],
+    ["ibi_r", ["IBI rústic", "Tipus de l'IBI rústic (% del valor cadastral)"], ["IBI rústico", "Tipo del IBI rústico (% del valor catastral)"], { sumable: false, ...PT(2) }],
+    ["ibi_bice", ["IBI d'equipaments (BICE)", "Tipus de l'IBI de béns de característiques especials: autopistes, preses, centrals (%)"], ["IBI de equipamientos (BICE)", "Tipo del IBI de bienes de características especiales: autopistas, presas, centrales (%)"], { sumable: false, ...PT(2) }],
+    ["iae_max", ["IAE", "Coeficient de situació màxim de l'impost d'activitats econòmiques"], ["IAE", "Coeficiente de situación máximo del impuesto de actividades económicas"], { sumable: false, f: (v) => fmt(v, 2), c: (v) => fmt(v, 1) }],
+    ["ivtm_12", ["Impost de circulació", "Impost de vehicles: turisme de 12 a 15,99 CV fiscals (€/any)"], ["Impuesto de circulación", "Impuesto de vehículos: turismo de 12 a 15,99 CV fiscales (€/año)"], { sumable: false, f: (v) => `${fmt(v, 2)} €`, c: (v) => fmt(v) }],
+    ["iivtnu", ["Plusvàlua municipal", "Tipus de l'impost sobre l'increment de valor dels terrenys (%)"], ["Plusvalía municipal", "Tipo del impuesto sobre el incremento de valor de los terrenos (%)"], { sumable: false, ...PT(1) }],
+    ["icio", ["ICIO", "Impost sobre construccions, instal·lacions i obres (% del pressupost)"], ["ICIO", "Impuesto sobre construcciones, instalaciones y obras (% del presupuesto)"], { sumable: false, ...PT(2) }],
+  ];
+  // Máximos legales (TRLRHL): IBI urbano 1,10 % sin incrementos, IAE 3,8, IVTM 2 × cuota mínima (71,94 €), plusvalía 30 %, ICIO 4 %
+  const TRIB_MAX = { ibi_u: 1.1, iae_max: 3.8, ivtm_12: 143.88, iivtnu: 30, icio: 4 };
+  const tribMax = (m, a) => { if (!m.trib || a == null) return null; let n = 0, k = 0; for (const [c, mx] of Object.entries(TRIB_MAX)) { const v = TV(c)(m, a); if (v == null) continue; k++; if (v >= mx - 0.005) n++; } return k >= 4 ? n : null; };
+  window.TRIB_MAX = TRIB_MAX;
 
   // ---------- Eleccions (eleccions.json + un fichero por convocatoria) ----------
   // Zona: [cens, votants, nuls, blancs, [i, vots, ...]] (índices de EL_D.c) o, en los totales, {bloc: vots}
@@ -279,6 +300,10 @@
     { id: "autoconsum", tema: "ene", ca: ["Autoconsum", "Instal·lacions d'autoconsum per 1.000 habitants"], es: ["Autoconsumo", "Instalaciones de autoconsumo por 1.000 habitantes"], v: X("autoconsum"), ...N1 },
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
+    // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
+    ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
+    { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
+      v: (m) => tribMax(m, D.anys && D.anys.trib), t: tribMax, nota: { ca: "Quants d'aquests cinc impostos té l'ajuntament al màxim que permet la llei: IBI urbà (1,10 %, sense increments), IAE (coeficient 3,8), impost de circulació (el doble de la quota mínima), plusvàlua (30 %) i ICIO (4 %). Ministeri d'Hisenda.", es: "Cuántos de estos cinco impuestos tiene el ayuntamiento al máximo que permite la ley: IBI urbano (1,10 %, sin incrementos), IAE (coeficiente 3,8), impuesto de circulación (el doble de la cuota mínima), plusvalía (30 %) e ICIO (4 %). Ministerio de Hacienda." }, f: (v) => `${fmt(v)} / 5`, c: (v) => fmt(v) },
     // Política
     { id: "alcalde", tema: "pol", cat: true, ca: ["Partit de l'alcalde", "Partit de l'alcalde o alcaldessa"], es: ["Partido del alcalde", "Partido del alcalde o alcaldesa"], v: (m) => (m.pol && m.pol.alcalde ? m.pol.alcalde.bloc : null), f: (v) => nomBloc(v), c: (v) => nomBloc(v) },
     // Eleccions: valores de la convocatoria elegida, por municipio y sección
@@ -330,8 +355,6 @@
     { id: "cert_eg", sumable: false, tema: "hab", ca: ["Pisos poc eficients", "Certificats energètics amb qualificació E, F o G (%)"], es: ["Pisos poco eficientes", "Certificados energéticos con calificación E, F o G (%)"], a: "cert_ab", v: X("cert_eg"), nota: { ca: "Institut Català d'Energia, via Xifra.", es: "Institut Català d'Energia, vía Xifra." }, ...P0 },
     { id: "hpo_sol", tema: "hab", ca: ["Demanda d'habitatge protegit", "Sol·licitants d'habitatge de protecció oficial per 1.000 habitants"], es: ["Demanda de vivienda protegida", "Solicitantes de vivienda de protección oficial por 1.000 habitantes"], a: "hpo_sol", v: X("hpo_sol"), nota: { ca: "Registre de sol·licitants d'HPO, via Xifra.", es: "Registro de solicitantes de VPO, vía Xifra." }, ...N1 },
     { id: "ajuts_lloguer", tema: "hab", ca: ["Ajuts al lloguer", "Ajuts al pagament del lloguer per 1.000 habitants"], es: ["Ayudas al alquiler", "Ayudas al pago del alquiler por 1.000 habitantes"], a: "hpo_sol", v: X("ajuts_lloguer"), nota: { ca: "Agència de l'Habitatge, via Xifra.", es: "Agència de l'Habitatge, vía Xifra." }, ...N1 },
-    { id: "ibi_tipus", sumable: false, tema: "ajt", ca: ["Tipus de l'IBI", "Tipus impositiu de l'IBI urbà (%)"], es: ["Tipo del IBI", "Tipo impositivo del IBI urbano (%)"], a: "ibi_tipus", v: X("ibi_tipus"), nota: NX, f: (v) => `${fmt(v, 2)} %`, c: (v) => `${fmt(v, 2)} %` },
-    { id: "ibi_revisio", sumable: false, tema: "ajt", ca: ["Revisió cadastral", "Any de l'última revisió dels valors cadastrals"], es: ["Revisión catastral", "Año de la última revisión de los valores catastrales"], v: X("ibi_revisio"), nota: NX, f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) },
     { id: "ibi_rebut", sumable: false, tema: "ajt", ca: ["Rebut de l'IBI", "Quota íntegra mitjana per rebut de l'IBI (€)"], es: ["Recibo del IBI", "Cuota íntegra media por recibo del IBI (€)"], a: "ibi_rebut", v: X("ibi_rebut"), nota: NE, ...EU },
     { id: "pte_hab", tema: "ajt", ca: ["Diners de l'Estat", "Participació en els tributs de l'Estat per habitant (€)"], es: ["Dinero del Estado", "Participación en los tributos del Estado por habitante (€)"], a: "pte_hab", v: X("pte_hab"), nota: { ca: "Ministeri d'Hisenda, via Xifra. Girona, Figueres i altres municipis grans tenen un règim de cessió diferent.", es: "Ministerio de Hacienda, vía Xifra. Girona, Figueres y otros municipios grandes tienen un régimen de cesión distinto." }, ...EU },
     { id: "esforc_fiscal", sumable: false, tema: "ajt", ca: ["Esforç fiscal", "Coeficient d'esforç fiscal de l'ajuntament"], es: ["Esfuerzo fiscal", "Coeficiente de esfuerzo fiscal del ayuntamiento"], a: "esforc_fiscal", v: X("esforc_fiscal"), nota: { ca: "Ministeri d'Hisenda, via Xifra. Com més alt, més pressió dels tributs locals.", es: "Ministerio de Hacienda, vía Xifra. Cuanto más alto, más presión de los tributos locales." }, ...N2 },
@@ -391,6 +414,7 @@
     }
     if (!cacheAnys[i.id]) {
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini", "renda_bruta", "renda_bruta_llar", "renda_mediana"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
+      if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
     }
     return cacheAnys[i.id];

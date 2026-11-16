@@ -8,7 +8,7 @@ const T = {
     nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 200 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, ajuntaments, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Més de 200 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, ajuntaments, impostos locals, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -55,6 +55,7 @@ const T = {
     f_renda: "renda, pobresa, fonts d'ingressos i demografia",
     f_hut: "habitatges d'ús turístic",
     f_cat: "habitatges i any de construcció",
+    f_trib: "tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)",
     f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, autoconsum, residus",
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
@@ -88,7 +89,7 @@ const T = {
     nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 200 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, ayuntamientos, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Más de 200 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, ayuntamientos, impuestos locales, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -135,6 +136,7 @@ const T = {
     f_renda: "renta, pobreza, fuentes de ingresos y demografía",
     f_hut: "viviendas de uso turístico",
     f_cat: "viviendas y año de construcción",
+    f_trib: "tipos del IBI, IAE, impuesto de circulación, plusvalía e ICIO de cada ayuntamiento (2000-2026)",
     f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, autoconsumo, residuos",
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
@@ -293,7 +295,7 @@ function grafLinia(cont, series, f = (v) => fmt(v)) {
   for (let i = 0; i <= div; i++) {
     const v = (max / div) * i, yy = y(v);
     if (i) el("line", { x1: m.l, x2: W - m.r, y1: yy, y2: yy }, g);
-    el("text", { x: m.l - 8, y: yy + 4, "text-anchor": "end" }, ax).textContent = fmt(v);
+    el("text", { x: m.l - 8, y: yy + 4, "text-anchor": "end" }, ax).textContent = fmt(v, max < 5 && (max / div) % 1 ? 2 : 0);
   }
   el("line", { class: "base", x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b }, svg);
   const pas = Math.ceil(anys.length / (W < 440 ? 4 : 7));
@@ -488,6 +490,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-conj"></div>
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-extra"></div>
+    <div class="fitxa-trib"></div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
@@ -503,6 +506,7 @@ function obreFitxa(ine, desplaca) {
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
   if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
   if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
+  if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
 }

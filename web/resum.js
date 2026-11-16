@@ -66,7 +66,7 @@
   };
   const CLAU = ["pob", "pob_var", "renda", "aeat_bruta", "cj_atur", "lloguer", "esforc", "compra", "hut", "estrangers", "majors65", "educ_sup", "deute", "pres_desp"];
   // Indicadores que no entran en "lo que lo hace distinto" (recuentos, años, categorías o redundantes)
-  const FORA = new Set(["pob", "museus", "ibi_revisio", "sanitaris", "edu_centres", "edu_alumnes", "anyo", "nac_top_pct", "aar", "reb", "alcalde", "esports", "pmp"]);
+  const FORA = new Set(["pob", "museus", "ibi_revisio", "trib_ibi_rev", "trib_max", "sanitaris", "edu_centres", "edu_alumnes", "anyo", "nac_top_pct", "aar", "reb", "alcalde", "esports", "pmp"]);
 
   const vals = (i) => D.municipios.map((x) => [x, i.v(x)]).filter(([, v]) => v != null && isFinite(v));
   function posicio(i, m) {

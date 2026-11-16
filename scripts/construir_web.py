@@ -1471,6 +1471,33 @@ def zona_aar(zona):
     (SALIDA.parent / "aar.geojson").write_text(json.dumps(g, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
+# ---------------------------------------------------------------------------
+# Tipos impositivos municipales (Hacienda, SGFAL)
+
+TRIB_DEC = {"ibi_u": 3, "ibi_r": 3, "ibi_bice": 3, "ibi_rev": 0, "iae_max": 2, "iae_min": 2,
+            "ivtm_8": 2, "ivtm_12": 2, "ivtm_16": 2, "ivtm_moto": 2, "iivtnu": 2, "icio": 2}
+
+
+def tributs():
+    """Series por municipio {ine: {clave: {any: valor}}}, referencias {clave: {any: {gi, cat, esp}}} y último año."""
+    d = P / "tributs"
+    if not (d / "claves.csv.gz").exists():
+        return {}, {}, None
+    k = pd.read_csv(d / "claves.csv.gz", dtype={"ine": str})
+    k = k[k["clave"].isin(TRIB_DEC)]
+    mun = {}
+    for (ine, cl), g in k.groupby(["ine", "clave"]):
+        mun.setdefault(ine, {})[cl] = {int(a): round(float(v), TRIB_DEC[cl]) for a, v in zip(g["any"], g["valor"])}
+    agr = json.loads((d / "agregats.json").read_text(encoding="utf-8")) if (d / "agregats.json").exists() else {}
+    refs = {}
+    for a, zs in agr.items():
+        for z in ("gi", "cat", "esp"):
+            for cl, x in (zs.get(z) or {}).items():
+                if cl in TRIB_DEC and x.get("pond") is not None:
+                    refs.setdefault(cl, {}).setdefault(int(a), {})[z] = round(x["pond"], TRIB_DEC[cl])
+    return mun, refs, int(k["any"].max()) if len(k) else None
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -1517,6 +1544,7 @@ def main():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_emx)
     refs_ed.update(refs_emx)
+    trib, refs_trib, any_trib = tributs()
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1558,6 +1586,7 @@ def main():
             "edificis": r(cat.loc[ine, "edificios"]) if ine in cat.index and "edificios" in cat.columns else None,
             "x": extra_mun.get(ine, {}),
             "pol": pol.get(ine, {}),
+            **({"trib": trib[ine]} if ine in trib else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **fitxa_cm.get(ine, {}),
         })
@@ -1586,12 +1615,15 @@ def main():
         refs.setdefault(k, {}).update(v)
     for k, v in refs_arees.items():
         refs.setdefault(k, {}).update(v)
+    for cl, per_any in refs_trib.items():
+        refs["trib_" + cl] = per_any[max(per_any)]
     if prov_alq:
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series()}, "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": anys_extra,
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {})},
+        "trib_ref": refs_trib,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
