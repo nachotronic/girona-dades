@@ -10,7 +10,7 @@ europees...) hasta el nivel de sección («SE»). El código de territorio es el
 del municipio sin el cero inicial (Gavà = 8089, Girona = 17079).
 
 Genera, por convocatoria, en data/processed/eleccions/:
-  vots_<ID>.csv.gz   nivell, ine, districte, seccio, candidatura, sigles, agrupacio, vots, escons, color
+  vots_<ID>.csv.gz   nivell (MU, SE, CA), ine, districte, seccio, candidatura, sigles, agrupacio, vots, escons, color
   part_<ID>.csv.gz   nivell, ine, districte, seccio, cens, votants, nuls, blancs, candidatures
 """
 from __future__ import annotations
@@ -29,7 +29,7 @@ CONVOCATORIES = [
     "G20191", "M20191", "E20191", "G20192", "A20211",
     "M20231", "G20231", "A20241", "E20241",
 ]
-NIVELLS = ("MU", "SE")
+NIVELLS = ("MU", "SE")  # más CA (Cataluña)
 PAGINA = 50000
 
 
@@ -47,9 +47,10 @@ def _consulta(conjunt: str, where: str, camps: str) -> pd.DataFrame:
 
 
 def _where(ident: str) -> str:
+    """Municipios y secciones de Girona, y el total de Cataluña (nivel CA) como referencia."""
     niv = ",".join(f"'{n}'" for n in NIVELLS)
-    return (f"id_eleccio='{ident}' AND id_nivell_territorial in({niv}) "
-            f"AND starts_with(territori_codi, '17')")
+    return (f"id_eleccio='{ident}' AND ((id_nivell_territorial in({niv}) "
+            f"AND starts_with(territori_codi, '17')) OR id_nivell_territorial='CA')")
 
 
 def _ine(codi: pd.Series) -> pd.Series:
