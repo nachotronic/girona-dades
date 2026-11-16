@@ -1,0 +1,4208 @@
+{
+ "1989": {
+  "t": "Índice de precios de apartamentos (IPAP): índice general nacional y desglose por modalidades",
+  "n": 8,
+  "ej": [
+   "Nacional. Total modalidades. Dato base.",
+   "Nacional. Total modalidades. Tasa de variación interanual.",
+   "Nacional. Estudio. Dato base.",
+   "Nacional. Estudio. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2050": {
+  "t": "Índice de precios de apartamentos (IPAP): índice general nacional y desglose por tarifas",
+  "n": 8,
+  "ej": [
+   "Nacional. Total tarifa. Dato base.",
+   "Nacional. Total tarifa. Tasa de variación interanual.",
+   "Nacional. Tarifa normal. Dato base.",
+   "Nacional. Tarifa normal. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "8317": {
+  "t": "Índice de precios de apartamentos (IPAP): Coeficiente de variación del índice general nacional",
+  "n": 1,
+  "ej": [
+   "Total Nacional. Índice de precios. Total tarifa. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "1990": {
+  "t": "Índice de precios de campings (IPAC): índice general nacional y desglose por tarifas",
+  "n": 10,
+  "ej": [
+   "Nacional. Total tarifas. Dato base.",
+   "Nacional. Total tarifas. Tasa de variación interanual.",
+   "Nacional. Tarifa normal. Dato base.",
+   "Nacional. Tarifa normal. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "1991": {
+  "t": "Índice de precios de campings (IPAC): índice general nacional y desglose por categorías",
+  "n": 8,
+  "ej": [
+   "Nacional. Total categorías. Dato base.",
+   "Nacional. Total categorías. Tasa de variación interanual.",
+   "Nacional. Lujo y 1ª categoría. Dato base.",
+   "Nacional. Lujo y 1ª categoría. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2060": {
+  "t": "Índices de Precios en Alojamientos de Turismo Rural: índices y tasas de variación interanual por comunidades autónomas",
+  "n": 40,
+  "ej": [
+   "Indice de precios de alojamiento de turismo rural. Nacional. Dato base.",
+   "Indice de precios de alojamiento de turismo rural. Nacional. Tasa de variación interanual.",
+   "Indice de precios de alojamiento de turismo rural. Andalucía. Dato base.",
+   "Indice de precios de alojamiento de turismo rural. Andalucía. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2007": {
+  "t": "Índice de Precios en Alojamientos de Turismo Rural (IPTR): índice general nacional y desglose por tarifas",
+  "n": 6,
+  "ej": [
+   "Nacional. Indice de precios de alojamiento de turismo rural. Total tarifa. Dato base.",
+   "Nacional. Indice de precios de alojamiento de turismo rural. Total tarifa. Tasa de variación interanual.",
+   "Nacional. Indice de precios de alojamiento de turismo rural. Tarifa normal. Dato base.",
+   "Nacional. Indice de precios de alojamiento de turismo rural. Tarifa normal. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2008": {
+  "t": "Índice de Precios en Alojamientos de Turismo Rural (IPTR): índice general nacional y desglose por modalidad de alquiler",
+  "n": 6,
+  "ej": [
+   "Nacional. Indice de precios de alojamiento de turismo rural. Total aquiler. Dato base.",
+   "Nacional. Indice de precios de alojamiento de turismo rural. Total aquiler. Tasa de variación interanual.",
+   "Nacional. Indice de precios de alojamiento de turismo rural. Uso compartido. Dato base.",
+   "Nacional. Indice de precios de alojamiento de turismo rural. Uso compartido. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "8318": {
+  "t": "Índice de Precios en Alojamientos de Turismo Rural (IPTR): Coeficiente de variación, índice general nacional",
+  "n": 1,
+  "ej": [
+   "Total Nacional. Índice de precios. Total tarifa. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "12157": {
+  "t": "Índices de precios hoteleros, índices y tasas de variación interanual por categorías",
+  "n": 16,
+  "ej": [
+   "Indice de precios hoteleros (Base 2008). Nacional. Dato base.",
+   "Indice de precios hoteleros (Base 2008). Nacional. Tasa de variación interanual.",
+   "Nacional. Indice de precios hoteleros (Base 2008). Cinco estrellas de oro. Dato base.",
+   "Nacional. Indice de precios hoteleros (Base 2008). Cinco estrellas de oro. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "12156": {
+  "t": "Índices de precios hoteleros, índices y tasas de variación interanual por comunidades autónomas",
+  "n": 40,
+  "ej": [
+   "Indice de precios hoteleros (Base 2008). Nacional. Dato base.",
+   "Indice de precios hoteleros (Base 2008). Nacional. Tasa de variación interanual.",
+   "Indice de precios hoteleros (Base 2008). Andalucía. Dato base.",
+   "Indice de precios hoteleros (Base 2008). Andalucía. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "13874": {
+  "t": "Índices de precios hoteleros. Coeficiente de variación del índice general nacional",
+  "n": 1,
+  "ej": [
+   "Total Nacional. Índice de precios. Total categorías. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "2059": {
+  "t": "Tarifa media diaria (ADR) por comunidades autónomas y provincias",
+  "n": 144,
+  "ej": [
+   "ADR. Nacional. Dato.",
+   "ADR. Nacional. Tasa de variación interanual.",
+   "ADR. Andalucía. Dato.",
+   "ADR. Andalucía. Tasa de variación interanual."
+  ],
+  "gi": [
+   "Girona. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Girona. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. "
+  ]
+ },
+ "46297": {
+  "t": "Tarifa media diaria (ADR)  desglose por zonas turísticas",
+  "n": 90,
+  "ej": [
+   "Andalucía: Costa De Almería. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Andalucía: Costa De Almería. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. ",
+   "Andalucía: Costa De La Luz De Cádiz. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Andalucía: Costa De La Luz De Cádiz. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. "
+  ],
+  "gi": [
+   "Cataluña: Costa Brava. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Cataluña: Costa Brava. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. ",
+   "Pirineus. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Pirineus. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. "
+  ]
+ },
+ "46298": {
+  "t": "Tarifa media diaria (ADR)  desglose por puntos turísticos",
+  "n": 214,
+  "ej": [
+   "Vitoria-Gasteiz. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Vitoria-Gasteiz. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. ",
+   "Albacete. Tarifa media diaria (ADR). Total categorías. Dato. ",
+   "Albacete. Tarifa media diaria (ADR). Total categorías. Tasa de variación interanual. "
+  ],
+  "gi": []
+ },
+ "2058": {
+  "t": "Tarifa media diaria (ADR) Nacional y desglose por categorías",
+  "n": 16,
+  "ej": [
+   "ADR. Nacional. Dato.",
+   "ADR. Nacional. Tasa de variación interanual.",
+   "Nacional. ADR. Cinco estrellas de oro. Dato.",
+   "Nacional. ADR. Cinco estrellas de oro. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2057": {
+  "t": "Ingresos por habitación disponible (RevPAR) por comunidades autónomas y provincias",
+  "n": 144,
+  "ej": [
+   "RevPAR. Nacional. Dato.",
+   "RevPAR. Nacional. Tasa de variación interanual.",
+   "RevPAR. Andalucía. Dato.",
+   "RevPAR. Andalucía. Tasa de variación interanual."
+  ],
+  "gi": [
+   "Girona. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Girona. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. "
+  ]
+ },
+ "46300": {
+  "t": "Ingresos por habitación disponible (RevPAR) por zonas turísticas",
+  "n": 90,
+  "ej": [
+   "Andalucía: Costa De Almería. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Andalucía: Costa De Almería. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. ",
+   "Andalucía: Costa De La Luz De Cádiz. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Andalucía: Costa De La Luz De Cádiz. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. "
+  ],
+  "gi": [
+   "Cataluña: Costa Brava. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Cataluña: Costa Brava. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. ",
+   "Pirineus. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Pirineus. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. "
+  ]
+ },
+ "46301": {
+  "t": "Ingresos por habitación disponible (RevPAR) por puntos turísticos",
+  "n": 214,
+  "ej": [
+   "Vitoria-Gasteiz. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Vitoria-Gasteiz. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. ",
+   "Albacete. Ingresos por habitación disponible (RevPAR). Total categorías. Dato. ",
+   "Albacete. Ingresos por habitación disponible (RevPAR). Total categorías. Tasa de variación interanual. "
+  ],
+  "gi": []
+ },
+ "2056": {
+  "t": "Ingresos por habitación disponible (RevPAR) Nacional y desglose por categorías",
+  "n": 16,
+  "ej": [
+   "RevPAR. Nacional. Dato.",
+   "RevPAR. Nacional. Tasa de variación interanual.",
+   "Nacional. RevPAR. Cinco estrellas de oro. Dato.",
+   "Nacional. RevPAR. Cinco estrellas de oro. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2009": {
+  "t": "Viajeros y pernoctaciones por categorías",
+  "n": 48,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Viajeros. Total categorías. Residentes en el extranjero.",
+   "Nacional. Viajeros. Cinco estrellas de oro. Total."
+  ],
+  "gi": []
+ },
+ "2941": {
+  "t": "Viajeros, pernoctaciones por tipo de alojamiento por comunidades y ciudades autónomas",
+  "n": 600,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Pernoctaciones. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Pernoctaciones. Total categorías. Residentes en España."
+  ],
+  "gi": []
+ },
+ "3149": {
+  "t": "Viajeros, pernoctaciones por tipo de alojamiento por comunidades y ciudades autónomas",
+  "n": 600,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Pernoctaciones. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Pernoctaciones. Total categorías. Residentes en España."
+  ],
+  "gi": []
+ },
+ "3152": {
+  "t": "Viajeros, pernoctaciones por tipo de alojamiento por comunidades y ciudades autónomas",
+  "n": 600,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Pernoctaciones. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Pernoctaciones. Total categorías. Residentes en España."
+  ],
+  "gi": []
+ },
+ "36570": {
+  "t": "Coyuntura turística hotelera: pernoctaciones en establecimientos hoteleros",
+  "n": 40,
+  "ej": [
+   "Nacional. Pernoctaciones. Total categorías. Total.",
+   "Total Nacional. Pernoctaciones. Total categorías. Total. Acumulado en lo que va de año. ",
+   "Andalucía. Pernoctaciones. Total.",
+   "Andalucía. Pernoctaciones. Total categorías. Total. Acumulado en lo que va de año. "
+  ],
+  "gi": []
+ },
+ "61766": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 600,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Viajeros. Total categorías. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total categorías. Total."
+  ],
+  "gi": []
+ },
+ "75197": {
+  "t": "Viajeros y pernoctaciones por puntos turísticos",
+  "n": 552,
+  "ej": [
+   "Nacional. Viajeros. Vitoria-Gastéiz. Residentes en España.",
+   "Nacional. Viajeros. Vitoria-Gastéiz. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Vitoria-Gastéiz. Residentes en España.",
+   "Nacional. Pernoctaciones. Vitoria-Gastéiz. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Girona. Viajero. Total categorías. Residentes en España. Dato. ",
+   "Girona. Viajero. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Girona. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+   "Girona. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Nacional. Establecimientos hoteleros. Viajeros. 17095-Lloret de Mar. Residentes en España.",
+   "Nacional. Establecimientos hoteleros. Viajeros. 17095-Lloret de Mar. Residentes en el extranjero.",
+   "Nacional. Establecimientos hoteleros. Pernoctaciones. 17095-Lloret de Mar. Residentes en España.",
+   "Nacional. Establecimientos hoteleros. Pernoctaciones. 17095-Lloret de Mar. Residentes en el extranjero."
+  ]
+ },
+ "80326": {
+  "t": "Viajeros, pernoctaciones por tipo de alojamiento por comunidades y ciudades autónomas",
+  "n": 600,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Pernoctaciones. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Pernoctaciones. Total categorías. Residentes en España."
+  ],
+  "gi": []
+ },
+ "2044": {
+  "t": "Viajeros, pernoctaciones por tipo de alojamiento por comunidades y ciudades autónomas",
+  "n": 600,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Pernoctaciones. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Pernoctaciones. Total categorías. Residentes en España."
+  ],
+  "gi": []
+ },
+ "2074": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas y provincias",
+  "n": 420,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Viajeros. Total categorías. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total categorías. Total."
+  ],
+  "gi": [
+   "Girona. Viajeros. Total.",
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Total.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "2940": {
+  "t": "Estancia media, por tipo de alojamiento por comunidad y ciudades autónomas.",
+  "n": 100,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Andalucía.   Estancia media",
+   "Esblecimientos hoteleros. Aragón.   Estancia media",
+   "Esblecimientos hoteleros. Asturias (Principado de).   Estancia media"
+  ],
+  "gi": []
+ },
+ "3150": {
+  "t": "Estancia media, por tipo de alojamiento por comunidad y ciudades autónomas",
+  "n": 100,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Andalucía.   Estancia media",
+   "Esblecimientos hoteleros. Aragón.   Estancia media",
+   "Esblecimientos hoteleros. Asturias (Principado de).   Estancia media"
+  ],
+  "gi": []
+ },
+ "3153": {
+  "t": "Estancia media, por tipo de alojamiento por comunidad y ciudades autónomas",
+  "n": 100,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Andalucía.   Estancia media",
+   "Esblecimientos hoteleros. Aragón.   Estancia media",
+   "Esblecimientos hoteleros. Asturias (Principado de).   Estancia media"
+  ],
+  "gi": []
+ },
+ "61767": {
+  "t": "Estancia media por comunidades autónomas",
+  "n": 100,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Andalucía.   Estancia media",
+   "Esblecimientos hoteleros. Aragón.   Estancia media",
+   "Esblecimientos hoteleros. Asturias (Principado de).   Estancia media"
+  ],
+  "gi": []
+ },
+ "67190": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas y provincias",
+  "n": 420,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Viajeros. Total categorías. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total categorías. Total."
+  ],
+  "gi": [
+   "Girona. Viajeros. Total.",
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Total.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "2024": {
+  "t": "Estancia media, por tipo de alojamiento por comunidad y ciudades autónomas",
+  "n": 100,
+  "ej": [
+   "Nacional.  Estancia media",
+   "Andalucía.  Estancia media",
+   "Aragón.  Estancia media",
+   "Asturias (Principado de).  Estancia media"
+  ],
+  "gi": []
+ },
+ "3151": {
+  "t": "Establecimientos estimados, plazas estimadas y personal empleado por tipo de alojamiento y por comunidades y ciudades autónomas",
+  "n": 300,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Personal empleado.",
+   "Andalucía. Número de establecimientos abiertos estimados."
+  ],
+  "gi": []
+ },
+ "3154": {
+  "t": "Establecimientos estimados, plazas estimadas y personal empleado por tipo de alojamiento y por comunidades y ciudades autónomas",
+  "n": 300,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Personal empleado.",
+   "Andalucía. Número de establecimientos abiertos estimados."
+  ],
+  "gi": []
+ },
+ "49368": {
+  "t": "Estancia media, por tipo de alojamiento por comunidades y ciudades autónomas",
+  "n": 80,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Andalucía.   Estancia media",
+   "Esblecimientos hoteleros. Aragón.   Estancia media",
+   "Esblecimientos hoteleros. Asturias (Principado de).   Estancia media"
+  ],
+  "gi": []
+ },
+ "49371": {
+  "t": "Viajeros y pernoctaciones por comunidades, ciudades autónomas y provincias",
+  "n": 420,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Viajeros. Total categorías. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total categorías. Total."
+  ],
+  "gi": [
+   "Girona. Viajeros. Total.",
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Total.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "61768": {
+  "t": "Establecimientos estimados, plazas estimadas y personal empleado por tipo de alojamiento y por comunidades y ciudades autónomas",
+  "n": 300,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Personal empleado.",
+   "Andalucía. Número de establecimientos abiertos estimados."
+  ],
+  "gi": []
+ },
+ "2025": {
+  "t": "Establecimientos estimados, plazas estimadas y personal empleado por tipo de alojamiento y por comunidadesy ciudades autónomas",
+  "n": 300,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Personal empleado.",
+   "Andalucía. Número de establecimientos abiertos estimados."
+  ],
+  "gi": []
+ },
+ "2942": {
+  "t": "Establecimientos estimados, plazas estimadas y personal empleado por tipo de alojamiento y por comunidades y ciudades autónomas",
+  "n": 300,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Personal empleado.",
+   "Andalucía. Número de establecimientos abiertos estimados."
+  ],
+  "gi": []
+ },
+ "49369": {
+  "t": "Establecimientos estimados, plazas estimadas y personal empleado por tipo de alojamiento y por comunidades y ciudades autónomas",
+  "n": 240,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Personal empleado.",
+   "Andalucía. Número de establecimientos abiertos estimados."
+  ],
+  "gi": []
+ },
+ "2039": {
+  "t": "Viajeros y pernoctaciones por zonas turísticas",
+  "n": 192,
+  "ej": [
+   "Nacional. Viajeros. Andalucía: Costa De Almería. Residentes en España.",
+   "Nacional. Viajeros. Andalucía: Costa De Almería. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Andalucía: Costa De Almería. Residentes en España.",
+   "Nacional. Pernoctaciones. Andalucía: Costa De Almería. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Establecimientos hoteleros. Viajeros. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Establecimientos hoteleros. Viajeros. Pirineus-Prepirineus. Residentes en el extranjero.",
+   "Nacional. Establecimientos hoteleros. Pernoctaciones. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Establecimientos hoteleros. Pernoctaciones. Pirineus-Prepirineus. Residentes en el extranjero."
+  ]
+ },
+ "75198": {
+  "t": "Establecimientos, plazas estimadas, grados de ocupación y personal empleado por puntos turísticos",
+  "n": 966,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados. Vitoria-Gastéiz.",
+   "Vitoria-Gasteiz. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Nacional. Número de plazas estimadas. Vitoria-Gastéiz.",
+   "Nacional. Grado de ocupación por plazas. Vitoria-Gastéiz."
+  ],
+  "gi": [
+   "Girona. Número de establecimientos abiertos estimados. Total categorías. Dato. ",
+   "Girona. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Girona. Número de plazas estimadas. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por plazas. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por plazas en fin de semana. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por habitaciones. Total categorías. Dato. ",
+   "Girona. Personal empleado. Total categorías. Dato. ",
+   "Nacional. Establecimientos hoteleros. Número de establecimientos abiertos estimados. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Número de plazas estimadas. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por plazas. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por plazas en fin de semana. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por habitaciones. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Personal empleado. 17095-Lloret de Mar."
+  ]
+ },
+ "2078": {
+  "t": "Viajeros y pernoctaciones por puntos turísticos",
+  "n": 552,
+  "ej": [
+   "Nacional. Viajeros. Vitoria-Gastéiz. Residentes en España.",
+   "Nacional. Viajeros. Vitoria-Gastéiz. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Vitoria-Gastéiz. Residentes en España.",
+   "Nacional. Pernoctaciones. Vitoria-Gastéiz. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Girona. Viajero. Total categorías. Residentes en España. Dato. ",
+   "Girona. Viajero. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Girona. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+   "Girona. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Nacional. Establecimientos hoteleros. Viajeros. 17095-Lloret de Mar. Residentes en España.",
+   "Nacional. Establecimientos hoteleros. Viajeros. 17095-Lloret de Mar. Residentes en el extranjero.",
+   "Nacional. Establecimientos hoteleros. Pernoctaciones. 17095-Lloret de Mar. Residentes en España.",
+   "Nacional. Establecimientos hoteleros. Pernoctaciones. 17095-Lloret de Mar. Residentes en el extranjero."
+  ]
+ },
+ "2038": {
+  "t": "Viajeros y pernoctaciones según país de residencia del viajero",
+  "n": 64,
+  "ej": [
+   "Nacional. Viajeros. Total categorías. Total.",
+   "Nacional. Viajeros. Total categorías. Residentes en España.",
+   "Nacional. Viajeros. Total categorías. Residentes en el extranjero.",
+   "Nacional. Viajeros. Alemania."
+  ],
+  "gi": []
+ },
+ "2069": {
+  "t": "Distribución porcentual de viajeros y pernoctaciones en cada provincia según comunidad autónoma de procedencia",
+  "n": 2120,
+  "ej": [
+   "Establecimientos hoteleros. Nacional. Viajeros. Residencia: Nacional.",
+   "Establecimientos hoteleros. Nacional. Viajeros. Residencia: Andalucía.",
+   "Establecimientos hoteleros. Nacional. Viajeros. Residencia: Aragón.",
+   "Establecimientos hoteleros. Nacional. Viajeros. Residencia: Principado de Asturias."
+  ],
+  "gi": [
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Nacional.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Andalucía.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Aragón.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Principado de Asturias.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Baleares (Illes).",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Canarias.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Cantabria.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Castilla y León.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Castilla- La Mancha.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Cataluña.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Comunitat Valenciana.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Extremadura.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Galicia.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Madrid (Comunidad).",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Murcia (Región).",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Navarra (Comunidad Foral).",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: País Vasco.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: La Rioja.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Ceuta.",
+   "Establecimientos hoteleros. Girona. Viajeros. Residencia: Melilla.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Nacional.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Andalucía.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Aragón.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Principado de Asturias.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Baleares (Illes).",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Canarias.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Cantabria.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Castilla y León.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Castilla- La Mancha.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Cataluña.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Comunitat Valenciana.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Extremadura.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Galicia.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Madrid (Comunidad).",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Murcia (Región).",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Navarra (Comunidad Foral).",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: País Vasco.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: La Rioja.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Ceuta.",
+   "Establecimientos hoteleros. Girona. Pernoctaciones. Residencia: Melilla."
+  ]
+ },
+ "2014": {
+  "t": "Estancia media por categorías",
+  "n": 8,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Nacional. Cinco estrellas de oro.  Estancia media",
+   "Esblecimientos hoteleros. Nacional. Cuatro estrellas de oro.  Estancia media",
+   "Esblecimientos hoteleros. Nacional. Tres estrellas de oro.  Estancia media"
+  ],
+  "gi": []
+ },
+ "2065": {
+  "t": "Estancia media por comunidades autónomas y provincias.",
+  "n": 63,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Establecimientos hoteleros.  Estancia media",
+   "Esblecimientos hoteleros. Andalucía.   Estancia media",
+   "Esblecimientos hoteleros. Almería.  Estancia media",
+   "Esblecimientos hoteleros. Cádiz.  Estancia media"
+  ],
+  "gi": [
+   "Esblecimientos hoteleros. Girona.  Estancia media"
+  ]
+ },
+ "2040": {
+  "t": "Estancia media por zonas turísticas",
+  "n": 48,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Andalucía: Costa De Almería.  Estancia media",
+   "Esblecimientos hoteleros. Nacional. Andalucía: Costa De La Luz De Cádiz.  Estancia media",
+   "Esblecimientos hoteleros. Nacional. Andalucía: Costa Tropical (Granada).  Estancia media",
+   "Esblecimientos hoteleros. Nacional. Andalucía: Costa De La Luz(Huelva).  Estancia media"
+  ],
+  "gi": [
+   "Esblecimientos hoteleros. Nacional. Cataluña: Costa Brava.  Estancia media",
+   "Nacional. Establecimientos hoteleros. Pirineus-Prepirineus."
+  ]
+ },
+ "2077": {
+  "t": "Estancia media por puntos turísticos",
+  "n": 138,
+  "ej": [
+   "Esblecimientos hoteleros. Nacional. Vitoria-Gastéiz.  Estancia media",
+   "Altea. Estancia media. Total categorías. Dato. ",
+   "Carboneras. Estancia media. Total categorías. Dato. ",
+   "Ejido, El. Estancia media. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Girona. Estancia media. Total categorías. Dato. ",
+   "Nacional. Establecimientos hoteleros. 17095-Lloret de Mar."
+  ]
+ },
+ "2011": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado por categorías",
+  "n": 56,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de establecimientos abiertos estimados. Cinco estrellas de oro.",
+   "Nacional. Número de establecimientos abiertos estimados. Cuatro estrellas de oro.",
+   "Nacional. Número de establecimientos abiertos estimados. Tres estrellas de oro."
+  ],
+  "gi": []
+ },
+ "2066": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado por comunidades autónomas y provincias",
+  "n": 441,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Total Nacional. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Grado de ocupación por plazas."
+  ],
+  "gi": [
+   "Girona. Número de establecimientos abiertos estimados.",
+   "Girona. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Girona. Número de plazas estimadas.",
+   "Girona. Grado de ocupación por plazas.",
+   "Girona. Grado de ocupación por plazas en fin de semana.",
+   "Girona. Grado de ocupación por habitaciones.",
+   "Girona. Personal empleado."
+  ]
+ },
+ "2013": {
+  "t": "Establecimientos, plazas estimadas, grados de ocupación y personal empleado por zonas turísticas",
+  "n": 336,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados. Andalucía: Costa De Almería.",
+   "Andalucía: Costa De Almería. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Nacional. Número de plazas estimadas. Andalucía: Costa De Almería.",
+   "Nacional. Grado de ocupación por plazas. Andalucía: Costa De Almería."
+  ],
+  "gi": [
+   "Nacional. Número de establecimientos abiertos estimados. Cataluña: Costa Brava.",
+   "Cataluña: Costa Brava. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Nacional. Número de plazas estimadas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por plazas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por plazas en fin de semana. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por habitaciones. Cataluña: Costa Brava.",
+   "Nacional. Personal empleado. Cataluña: Costa Brava.",
+   "Nacional. Establecimientos hoteleros. Número de establecimientos abiertos estimados. Pirineus-Prepirineus.",
+   "Pirineus. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Nacional. Establecimientos hoteleros. Número de plazas estimadas. Pirineus-Prepirineus.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por plazas. Pirineus-Prepirineus.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por plazas en fin de semana. Pirineus-Prepirineus.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por habitaciones. Pirineus-Prepirineus.",
+   "Nacional. Establecimientos hoteleros. Personal empleado. Pirineus-Prepirineus."
+  ]
+ },
+ "2076": {
+  "t": "Establecimientos, plazas estimadas, grados de ocupación y personal empleado por puntos turísticos",
+  "n": 966,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados. Vitoria-Gastéiz.",
+   "Vitoria-Gasteiz. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Nacional. Número de plazas estimadas. Vitoria-Gastéiz.",
+   "Nacional. Grado de ocupación por plazas. Vitoria-Gastéiz."
+  ],
+  "gi": [
+   "Girona. Número de establecimientos abiertos estimados. Total categorías. Dato. ",
+   "Girona. Número de habitaciones estimadas. Total categorías. Dato. ",
+   "Girona. Número de plazas estimadas. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por plazas. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por plazas en fin de semana. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por habitaciones. Total categorías. Dato. ",
+   "Girona. Personal empleado. Total categorías. Dato. ",
+   "Nacional. Establecimientos hoteleros. Número de establecimientos abiertos estimados. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Número de plazas estimadas. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por plazas. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por plazas en fin de semana. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Grado de ocupación por habitaciones. 17095-Lloret de Mar.",
+   "Nacional. Establecimientos hoteleros. Personal empleado. 17095-Lloret de Mar."
+  ]
+ },
+ "2010": {
+  "t": "Tasas de variación anual de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Nacional. Viajeros. Total. Tasa interanual",
+   "Nacional. Viajeros. Residentes en España. Tasa interanual",
+   "Nacional. Viajeros. Residentes en el extranjero. Tasa interanual",
+   "Nacional. Pernoctaciones. Total. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2027": {
+  "t": "Tasa de variación anual de la estancia media",
+  "n": 1,
+  "ej": [
+   "Nacional. Estancia media. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2012": {
+  "t": "Tasas de variación anual de establecimientos, plazas, grados de ocupación y personal empleado",
+  "n": 7,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.  Tasa interanual",
+   "Total Nacional. Número de habitaciones estimadas. Total categorías. Tasa de variación interanual. ",
+   "Nacional. Número de plazas estimadas.  Tasa interanual",
+   "Nacional. Grado de ocupación por plazas.  Tasa interanual"
+  ],
+  "gi": []
+ },
+ "7904": {
+  "t": "Coeficientes de variación de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Total Nacional. Viajero. Total categorías. Total. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en España. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en el Extranjero. Coeficiente de variación. ",
+   "Total Nacional. Pernoctaciones. Total categorías. Total. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "1993": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "67191": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "2019": {
+  "t": "Viajeros y pernoctaciones por zonas turísticas",
+  "n": 176,
+  "ej": [
+   "Nacional. Viajeros. Andalucía: Costa De Almería. Residentes en España.",
+   "Nacional. Viajeros. Andalucía: Costa De Almería. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Andalucía: Costa De Almería. Residentes en España.",
+   "Nacional. Pernoctaciones. Andalucía: Costa De Almería. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Apartamentos turísticos. Viajeros. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Apartamentos turísticos. Viajeros. Pirineus-Prepirineus. Residentes en el extranjero.",
+   "Nacional. Apartamentos turísticos. Pernoctaciones. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Apartamentos turísticos. Pernoctaciones. Pirineus-Prepirineus. Residentes en el extranjero."
+  ]
+ },
+ "75191": {
+  "t": "Viajeros y pernoctaciones por puntos turísticos",
+  "n": 428,
+  "ej": [
+   "Nacional. Viajeros. Adeje. Residentes en España.",
+   "Nacional. Viajeros. Adeje. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Adeje. Residentes en España.",
+   "Nacional. Pernoctaciones. Adeje. Residentes en el extranjero."
+  ],
+  "gi": []
+ },
+ "2082": {
+  "t": "Viajeros y pernoctaciones por puntos turísticos",
+  "n": 428,
+  "ej": [
+   "Nacional. Viajeros. Adeje. Residentes en España.",
+   "Nacional. Viajeros. Adeje. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Adeje. Residentes en España.",
+   "Nacional. Pernoctaciones. Adeje. Residentes en el extranjero."
+  ],
+  "gi": []
+ },
+ "75192": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "1996": {
+  "t": "Distribución porcentual de los viajeros españoles según comunidad autónoma de procedencia",
+  "n": 800,
+  "ej": [
+   "Nacional. Encuesta de ocupación en apartamentos turísticos. Viajeros. Total categorías. Residencia: Nacional. Indice",
+   "Nacional. Encuesta de ocupación en apartamentos turísticos. Viajeros. Total categorías. Residencia: Andalucía. Indice",
+   "Nacional. Encuesta de ocupación en apartamentos turísticos. Viajeros. Total categorías. Residencia: Aragón. Indice",
+   "Nacional. Encuesta de ocupación en apartamentos turísticos. Viajeros. Total categorías. Residencia: Principado de Asturias. Indice"
+  ],
+  "gi": []
+ },
+ "2063": {
+  "t": "Viajeros y pernoctaciones por provincias",
+  "n": 200,
+  "ej": [
+   "Albacete. Viajero. Total categorías. Residentes en España. Dato. ",
+   "Albacete. Viajero. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Albacete. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+   "Albacete. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. "
+  ],
+  "gi": [
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "75193": {
+  "t": "Plazas, apartamentos, grados de ocupación y personal empleado por puntos turísticos",
+  "n": 642,
+  "ej": [
+   "Nacional. Número de plazas estimadas. Adeje.",
+   "Nacional. Número de apartamentos estimados. Adeje.",
+   "Nacional. Grado de ocupación por plazas. Adeje.",
+   "Nacional. Grado de ocupación por apartamentos. Adeje."
+  ],
+  "gi": []
+ },
+ "1998": {
+  "t": "Viajeros y pernoctaciones según país de residencia",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Total. Porcentaje.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en España. Porcentaje."
+  ],
+  "gi": []
+ },
+ "2043": {
+  "t": "Estancia media por comunidades autónomas",
+  "n": 20,
+  "ej": [
+   "Apartamentos turísticos. Nacional. Apartamentos turísticos.  Estancia media",
+   "Apartamentos turísticos. Andalucía.  Estancia media",
+   "Apartamentos turísticos. Aragón.  Estancia media",
+   "Apartamentos turísticos. Asturias (Principado de).  Estancia media"
+  ],
+  "gi": []
+ },
+ "2020": {
+  "t": "Estancia media por zonas turísticas",
+  "n": 43,
+  "ej": [
+   "Apartamentos turísticos. Nacional. Andalucía: Costa De Almería.  Estancia media",
+   "Estancia media. Total categorías. Andalucía: Costa De La Luz (Huelva). Dato. ",
+   "Apartamentos turísticos. Nacional. Andalucía: Costa De La Luz De Cádiz.  Estancia media",
+   "Apartamentos turísticos. Nacional. Andalucía: Costa Del Sol (Málaga).  Estancia media"
+  ],
+  "gi": [
+   "Apartamentos turísticos. Nacional. Cataluña: Costa Brava.  Estancia media",
+   "Nacional. Apartamentos turísticos. Pirineus-Prepirineus."
+  ]
+ },
+ "2081": {
+  "t": "Estancia media por puntos turísticos",
+  "n": 107,
+  "ej": [
+   "Apartamentos turísticos. Nacional. Adeje.  Estancia media",
+   "Aínsa-Sobrarbe. Estancia media. Total categorías. Dato. ",
+   "Estancia media. Total categorías. Alacant/Alicante. Dato. ",
+   "Apartamentos turísticos. Nacional. Alajero.  Estancia media"
+  ],
+  "gi": []
+ },
+ "2061": {
+  "t": "Estancia media por provincias",
+  "n": 50,
+  "ej": [
+   "Albacete. Estancia media. Total categorías. Dato. ",
+   "Apartamentos turísticos. Alicante.  Estancia media",
+   "Apartamentos turísticos. Almería.  Estancia media",
+   "Araba/Álava. Estancia media. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Apartamentos turísticos. Girona.  Estancia media"
+  ]
+ },
+ "2045": {
+  "t": "Tasa de variación interanual de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Nacional. Viajeros. Total. Tasa interanual",
+   "Nacional. Viajeros. Residentes en España. Tasa interanual",
+   "Nacional. Viajeros. Residentes en el extranjero. Tasa interanual",
+   "Nacional. Pernoctaciones. Total. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2029": {
+  "t": "Tasa de variación interanual de la estancia media",
+  "n": 1,
+  "ej": [
+   "Nacional. Estancia media. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2030": {
+  "t": "Tasa de variación interanual de establecimientos, plazas, grados de ocupación y personal empleado",
+  "n": 7,
+  "ej": [
+   "Nacional. Número de plazas estimadas. Tasa interanual",
+   "Nacional. Número de apartamentos estimados. Tasa interanual",
+   "Nacional. Grado de ocupación por plazas. Tasa interanual",
+   "Nacional. Apartamentos turísticos. Grado de ocupación por plazas en fin de semana."
+  ],
+  "gi": []
+ },
+ "2021": {
+  "t": "Apartamentos, plazas, grados de ocupación y personal empleado por comunidades autónomas",
+  "n": 140,
+  "ej": [
+   "Nacional. Apartamentos turísticos. Número de plazas estimadas.",
+   "Nacional. Apartamentos turísticos. Número de establecimientos abiertos estimados.",
+   "Nacional. Grado de ocupación por plazas.",
+   "Apartamentos turísticos. Nacional. Grado de ocupación por plazas en fin de semana."
+  ],
+  "gi": []
+ },
+ "2022": {
+  "t": "Apartamentos, plazas, grados de ocupación y personal empleado por zonas turísticas",
+  "n": 264,
+  "ej": [
+   "Nacional. Número de plazas estimadas. Andalucía: Costa De Almería.",
+   "Nacional. Número de apartamentos estimados. Andalucía: Costa De Almería.",
+   "Nacional. Grado de ocupación por plazas. Andalucía: Costa De Almería.",
+   "Nacional. Grado de ocupación por apartamentos. Andalucía: Costa De Almería."
+  ],
+  "gi": [
+   "Nacional. Número de plazas estimadas. Cataluña: Costa Brava.",
+   "Nacional. Número de apartamentos estimados. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por plazas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por apartamentos. Cataluña: Costa Brava.",
+   "Nacional. Apartamentos turísticos. Grado de ocupación por apartamentos en fin de semana. Cataluña: Costa Brava.",
+   "Nacional. Personal empleado. Cataluña: Costa Brava.",
+   "Nacional. Apartamentos turísticos. Número de plazas estimadas. Pirineus-Prepirineus.",
+   "Nacional. Apartamentos turísticos. Número de apartamentos estimados. Pirineus-Prepirineus.",
+   "Nacional. Apartamentos turísticos. Grado de ocupación por plazas. Pirineus-Prepirineus.",
+   "Nacional. Apartamentos turísticos. Grado de ocupación por apartamentos. Pirineus-Prepirineus.",
+   "Nacional. Apartamentos turísticos. Grado de ocupación por apartamentos en fin de semana. Pirineus-Prepirineus.",
+   "Nacional. Apartamentos turísticos. Personal empleado. Pirineus-Prepirineus."
+  ]
+ },
+ "2083": {
+  "t": "Plazas, apartamentos, grados de ocupación y personal empleado por puntos turísticos",
+  "n": 642,
+  "ej": [
+   "Nacional. Número de plazas estimadas. Adeje.",
+   "Nacional. Número de apartamentos estimados. Adeje.",
+   "Nacional. Grado de ocupación por plazas. Adeje.",
+   "Nacional. Grado de ocupación por apartamentos. Adeje."
+  ],
+  "gi": []
+ },
+ "2072": {
+  "t": "Plazas, apartamentos, grados de ocupación y personal empleado por provincias",
+  "n": 300,
+  "ej": [
+   "Albacete. Número de plazas estimadas. Total categorías. Dato. ",
+   "Albacete. Número de apartamentos estimados. Total categorías. Dato. ",
+   "Albacete. Grado de ocupación por plazas. Total categorías. Dato. ",
+   "Albacete. Grado de ocupación por apartamentos. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Girona. Número de plazas estimadas.",
+   "Girona. Número de apartamentos estimados.",
+   "Girona. Grado de ocupación por plazas.",
+   "Girona. Grado de ocupación por apartamentos.",
+   "Apartamentos turísticos. Girona. Grado de ocupación por apartamentos en fin de semana.",
+   "Girona. Personal empleado."
+  ]
+ },
+ "7906": {
+  "t": "Coeficientes de variación de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Total Nacional. Viajero. Total categorías. Total. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en España. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en el Extranjero. Coeficiente de variación. ",
+   "Total Nacional. Pernoctaciones. Total categorías. Total. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "2015": {
+  "t": "Viajeros y pernoctaciones por categorías",
+  "n": 24,
+  "ej": [
+   "Nacional. Viajeros. Total acampamentos. Total.",
+   "Nacional. Viajeros. Total acampamentos. Residentes en España.",
+   "Nacional. Viajeros. Total acampamentos. Residentes en el extranjero.",
+   "Nacional. Viajeros. Lujo y 1ª categoría. Total."
+  ],
+  "gi": []
+ },
+ "75194": {
+  "t": "Viajeros y pernoctaciones por puntos turísticos",
+  "n": 204,
+  "ej": [
+   "Alcalà de Xivert. Viajero. Total categorías. Residentes en España. Dato. ",
+   "Alcalà de Xivert. Viajero. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Alcalà de Xivert. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+   "Alcalà de Xivert. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. "
+  ],
+  "gi": [
+   "Nacional. Acampamentos turísticos. Viajeros. 17023-Blanes. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17023-Blanes. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17023-Blanes. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17023-Blanes. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17047-Castello D Empuries. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17047-Castello D Empuries. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17047-Castello D Empuries. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17047-Castello D Empuries. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17048-Castell-Platja D Aro. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17048-Castell-Platja D Aro. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17048-Castell-Platja D Aro. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17048-Castell-Platja D Aro. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17178-Sant Pere Pescador. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17178-Sant Pere Pescador. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17178-Sant Pere Pescador. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17178-Sant Pere Pescador. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17199-Torroella De Montgri. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17199-Torroella De Montgri. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17199-Torroella De Montgri. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17199-Torroella De Montgri. Residentes en el extranjero."
+  ]
+ },
+ "2016": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "67192": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "75195": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "2084": {
+  "t": "Viajeros y pernoctaciones por puntos turísticos",
+  "n": 204,
+  "ej": [
+   "Nacional. Viajeros. Benidorm. Residentes en España.",
+   "Nacional. Viajeros. Benidorm. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Benidorm. Residentes en España.",
+   "Nacional. Pernoctaciones. Benidorm. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Nacional. Acampamentos turísticos. Viajeros. 17023-Blanes. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17023-Blanes. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17023-Blanes. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17023-Blanes. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17047-Castello D Empuries. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17047-Castello D Empuries. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17047-Castello D Empuries. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17047-Castello D Empuries. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17048-Castell-Platja D Aro. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17048-Castell-Platja D Aro. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17048-Castell-Platja D Aro. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17048-Castell-Platja D Aro. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17178-Sant Pere Pescador. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17178-Sant Pere Pescador. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17178-Sant Pere Pescador. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17178-Sant Pere Pescador. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17199-Torroella De Montgri. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. 17199-Torroella De Montgri. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17199-Torroella De Montgri. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. 17199-Torroella De Montgri. Residentes en el extranjero."
+  ]
+ },
+ "75196": {
+  "t": "Establecimientos, plazas, parcelas, grados de ocupación y personal empleado por puntos turísticos",
+  "n": 357,
+  "ej": [
+   "Alcalà de Xivert. Número de establecimientos abiertos estimados. Total categorías. Dato. ",
+   "Alcalà de Xivert. Número de plazas estimadas. Total categorías. Dato. ",
+   "Alcalà de Xivert. Número de parcelas. Total categorías. Dato. ",
+   "Alcalà de Xivert. Parcelas ocupadas. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17199-Torroella De Montgri."
+  ]
+ },
+ "2047": {
+  "t": "Viajeros y pernoctaciones por zonas turísticas",
+  "n": 208,
+  "ej": [
+   "Nacional. Viajeros. Andalucía: Costa De Almería. Residentes en España.",
+   "Nacional. Viajeros. Andalucía: Costa De Almería. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Andalucía: Costa De Almería. Residentes en España.",
+   "Nacional. Pernoctaciones. Andalucía: Costa De Almería. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. P. Natural Alt Pirineu. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. P. Natural Alt Pirineu. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. P. Natural Alt Pirineu. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. P. Natural Alt Pirineu. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Viajeros. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Viajeros. Pirineus-Prepirineus. Residentes en el extranjero.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Acampamentos turísticos. Pernoctaciones. Pirineus-Prepirineus. Residentes en el extranjero."
+  ]
+ },
+ "1997": {
+  "t": "Viajeros y pernoctaciones según país de residencia",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Total. Porcentaje.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en España. Porcentaje."
+  ],
+  "gi": []
+ },
+ "2062": {
+  "t": "Viajeros y pernoctaciones por provincias",
+  "n": 200,
+  "ej": [
+   "Albacete. Viajero. Total categorías. Residentes en España. Dato. ",
+   "Albacete. Viajero. Total categorías. Residentes en el Extranjero. Dato. ",
+   "Albacete. Pernoctaciones. Total categorías. Residentes en España. Dato. ",
+   "Albacete. Pernoctaciones. Total categorías. Residentes en el Extranjero. Dato. "
+  ],
+  "gi": [
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "2041": {
+  "t": "Estancia media por categorías",
+  "n": 4,
+  "ej": [
+   "Acampamentos turísticos. Nacional. Total acampamentos.  Estancia media",
+   "Acampamentos turísticos. Nacional. Lujo y 1ª categoría.  Estancia media",
+   "Acampamentos turísticos. Nacional. 2ª categoría.  Estancia media",
+   "Acampamentos turísticos. Nacional. 3ª categoría.  Estancia media"
+  ],
+  "gi": []
+ },
+ "2017": {
+  "t": "Estancia media por comunidades autónomas",
+  "n": 20,
+  "ej": [
+   "Acampamentos turísticos. Nacional.  Estancia media",
+   "Acampamentos turísticos. Andalucía.  Estancia media",
+   "Acampamentos turísticos. Aragón.  Estancia media",
+   "Acampamentos turísticos. Asturias (Principado de).  Estancia media"
+  ],
+  "gi": []
+ },
+ "2048": {
+  "t": "Estancia media por zonas turísticas",
+  "n": 52,
+  "ej": [
+   "Acampamentos turísticos. Nacional. Andalucía: Costa De Almería.  Estancia media",
+   "Acampamentos turísticos. Nacional. Andalucía: Costa De La Luz(Huelva).  Estancia media",
+   "Acampamentos turísticos. Nacional. Andalucía: Costa De La Luz De Cádiz.  Estancia media",
+   "Acampamentos turísticos. Nacional. Andalucía: Costa Del Sol (Málaga).  Estancia media"
+  ],
+  "gi": [
+   "Acampamentos turísticos. Nacional. Cataluña: Costa Brava.  Estancia media",
+   "Nacional. Acampamentos turísticos. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Pirineus-Prepirineus."
+  ]
+ },
+ "2075": {
+  "t": "Estancia media por puntos turísticos",
+  "n": 51,
+  "ej": [
+   "Acampamentos turísticos. Nacional. Benidorm.  Estancia media",
+   "Acampamentos turísticos. Nacional. Campello (El).  Estancia media",
+   "Acampamentos turísticos. Nacional. Elche/Elx.  Estancia media",
+   "Acampamentos turísticos. Nacional. Villajoyosa/Vila Joiosa (La).  Estancia media"
+  ],
+  "gi": [
+   "Nacional. Acampamentos turísticos. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. 17199-Torroella De Montgri."
+  ]
+ },
+ "2068": {
+  "t": "Estancia media por provincias",
+  "n": 50,
+  "ej": [
+   "Albacete. Estancia media. Total categorías. Dato. ",
+   "Acampamentos turísticos. Alicante.  Estancia media",
+   "Acampamentos turísticos. Almería.  Estancia media",
+   "Araba/Álava. Estancia media. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Acampamentos turísticos. Girona.  Estancia media"
+  ]
+ },
+ "2042": {
+  "t": "Establecimientos, plazas, parcelas, grados de ocupación y personal empleado por categorías",
+  "n": 28,
+  "ej": [
+   "Nacional. Número de establecimientos. Total acampamentos.",
+   "Nacional. Número de establecimientos. Lujo y 1ª categoría.",
+   "Nacional. Número de establecimientos. 2ª categoría.",
+   "Nacional. Número de establecimientos. 3ª categoría."
+  ],
+  "gi": []
+ },
+ "2049": {
+  "t": "Establecimientos, plazas, parcelas, grados de ocupación y personal empleado por zonas turísticas",
+  "n": 364,
+  "ej": [
+   "Nacional. Número de establecimientos. Andalucía: Costa De Almería.",
+   "Nacional. Parcelas ocupadas. Andalucía: Costa De Almería.",
+   "Nacional. Número de plazas. Andalucía: Costa De Almería.",
+   "Nacional. Número de parcelas. Andalucía: Costa De Almería."
+  ],
+  "gi": [
+   "Nacional. Número de establecimientos. Cataluña: Costa Brava.",
+   "Nacional. Parcelas ocupadas. Cataluña: Costa Brava.",
+   "Nacional. Número de plazas. Cataluña: Costa Brava.",
+   "Nacional. Número de parcelas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por parcelas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación de parcelas en fin de semana. Cataluña: Costa Brava.",
+   "Nacional. Personal empleado. Cataluña: Costa Brava.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Número de plazas. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Personal empleado. P. Natural Alt Pirineu.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. Pirineus-Prepirineus.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. Pirineus-Prepirineus.",
+   "Nacional. Acampamentos turísticos. Número de plazas. Pirineus-Prepirineus.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. Pirineus-Prepirineus.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. Pirineus-Prepirineus.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. Pirineus-Prepirineus.",
+   "Nacional. Acampamentos turísticos. Personal empleado. Pirineus-Prepirineus."
+  ]
+ },
+ "1992": {
+  "t": "Establecimientos, plazas, parcelas, grados de ocupación y personal empleado por comunidades autónomas",
+  "n": 140,
+  "ej": [
+   "Nacional. Número de establecimientos.",
+   "Nacional. Número de plazas.",
+   "Nacional. Número de parcelas.",
+   "Nacional. Parcelas ocupadas."
+  ],
+  "gi": []
+ },
+ "2064": {
+  "t": "Establecimientos, parcelas, grados de ocupación y personal empleado por provincias",
+  "n": 350,
+  "ej": [
+   "Albacete. Número de establecimientos abiertos estimados. Total categorías. Dato. ",
+   "Albacete. Número de plazas estimadas. Total categorías. Dato. ",
+   "Albacete. Número de parcelas. Total categorías. Dato. ",
+   "Albacete. Parcelas ocupadas. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Girona. Número de establecimientos.",
+   "Girona. Número de plazas estimadas. Total categorías. Dato. ",
+   "Girona. Número de parcelas.",
+   "Girona. Parcelas ocupadas. Total categorías. Dato. ",
+   "Girona. Grado de ocupación por parcelas.",
+   "Girona. Grado de ocupación de parcelas en fin de semana. Total categorías. Dato. ",
+   "Girona. Personal empleado."
+  ]
+ },
+ "2085": {
+  "t": "Establecimientos, plazas, parcelas, grados de ocupación y personal empleado por puntos turísticos",
+  "n": 357,
+  "ej": [
+   "Nacional. Número de establecimientos. Benidorm.",
+   "Nacional. Número de plazas. Benidorm.",
+   "Nacional. Número de parcelas. Benidorm.",
+   "Nacional. Parcelas ocupadas. Benidorm."
+  ],
+  "gi": [
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17023-Blanes.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17047-Castello D Empuries.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17048-Castell-Platja D Aro.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17178-Sant Pere Pescador.",
+   "Nacional. Acampamentos turísticos. Número de establecimientos. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Número de plazas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Número de parcelas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Parcelas ocupadas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación por parcelas. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Grado de ocupación de parcelas en fin de semana. 17199-Torroella De Montgri.",
+   "Nacional. Acampamentos turísticos. Personal empleado. 17199-Torroella De Montgri."
+  ]
+ },
+ "2026": {
+  "t": "Tasa de variación interanual de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Nacional. Viajeros. Total. Tasa interanual",
+   "Nacional. Viajeros. Residentes en España. Tasa interanual",
+   "Nacional. Viajeros. Residentes en el extranjero. Tasa interanual",
+   "Nacional. Pernoctaciones. Total. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2018": {
+  "t": "Tasa de variación interanual de establecimientos, plazas, grados de ocupación y personal empleado",
+  "n": 7,
+  "ej": [
+   "Nacional. Número de establecimientos. Tasa interanual",
+   "Nacional. Número de plazas. Tasa interanual",
+   "Nacional. Número de parcelas. Tasa interanual",
+   "Nacional. Parcelas ocupadas. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2028": {
+  "t": "Tasa de variación interanual de la estancia media",
+  "n": 1,
+  "ej": [
+   "Nacional. Estancia media. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "7905": {
+  "t": "Coeficientes de variación de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Total Nacional. Viajero. Total categorías. Total. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en España. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en el Extranjero. Coeficiente de variación. ",
+   "Total Nacional. Pernoctaciones. Total categorías. Total. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "1995": {
+  "t": "Viajeros y pernoctaciones por comunidades y ciudades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "49379": {
+  "t": "Viajeros y pernoctaciones por comunidades y ciudades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "67193": {
+  "t": "Viajeros y pernoctaciones por comunidades y ciudades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Total."
+  ],
+  "gi": []
+ },
+ "1999": {
+  "t": "Viajeros y pernoctaciones por zonas turísticas",
+  "n": 304,
+  "ej": [
+   "Andalucía: Costa De Almería. Total categorías. Viajero. Residentes en España. Dato. ",
+   "Andalucía: Costa De Almería. Total categorías. Viajero. Residentes en el Extranjero. Dato. ",
+   "Andalucía: Costa De Almería. Total categorías. Pernoctaciones. Residentes en España. Dato. ",
+   "Andalucía: Costa De Almería. Total categorías. Pernoctaciones. Residentes en el Extranjero. Dato. "
+  ],
+  "gi": [
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Viajeros. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en España.",
+   "Nacional. Pernoctaciones. Cataluña: Costa Brava. Residentes en el extranjero.",
+   "Nacional. Alojamientos de turismo rural. Viajeros. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Alojamientos de turismo rural. Viajeros. Pirineus-Prepirineus. Residentes en el extranjero.",
+   "Nacional. Alojamientos de turismo rural. Pernoctaciones. Pirineus-Prepirineus. Residentes en España.",
+   "Nacional. Alojamientos de turismo rural. Pernoctaciones. Pirineus-Prepirineus. Residentes en el extranjero.",
+   "Nacional. Alojamientos de turismo rural. Viajeros. P. Natural Alt Pirineu. Residentes en España.",
+   "Nacional. Alojamientos de turismo rural. Viajeros. P. Natural Alt Pirineu. Residentes en el extranjero.",
+   "Nacional. Alojamientos de turismo rural. Pernoctaciones. P. Natural Alt Pirineu. Residentes en España.",
+   "Nacional. Alojamientos de turismo rural. Pernoctaciones. P. Natural Alt Pirineu. Residentes en el extranjero."
+  ]
+ },
+ "49380": {
+  "t": "Viajeros y pernoctaciones por provincias",
+  "n": 200,
+  "ej": [
+   "Albacete. Viajeros. Residentes en España.",
+   "Albacete. Viajeros. Residentes en el extranjero.",
+   "Albacete. Pernoctaciones. Residentes en España.",
+   "Albacete. Pernoctaciones. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "2006": {
+  "t": "Distribución porcentual de viajeros y pernoctaciones según comunidad y ciudad autónoma de procedencia",
+  "n": 800,
+  "ej": [
+   "Nacional. Encuesta de ocupación en alojamientos de turismo rural. Viajeros. Total categorías. Residencia: Nacional. Indice",
+   "Nacional. Encuesta de ocupación en alojamientos de turismo rural. Viajeros. Total categorías. Residencia: Andalucía. Indice",
+   "Nacional. Encuesta de ocupación en alojamientos de turismo rural. Viajeros. Total categorías. Residencia: Aragón. Indice",
+   "Nacional. Encuesta de ocupación en alojamientos de turismo rural. Viajeros. Total categorías. Residencia: Principado de Asturias. Indice"
+  ],
+  "gi": []
+ },
+ "2073": {
+  "t": "Viajeros y pernoctaciones por provincias",
+  "n": 200,
+  "ej": [
+   "Albacete. Viajeros. Residentes en España.",
+   "Albacete. Viajeros. Residentes en el extranjero.",
+   "Albacete. Pernoctaciones. Residentes en España.",
+   "Albacete. Pernoctaciones. Residentes en el extranjero."
+  ],
+  "gi": [
+   "Girona. Viajeros. Residentes en España.",
+   "Girona. Viajeros. Residentes en el extranjero.",
+   "Girona. Pernoctaciones. Residentes en España.",
+   "Girona. Pernoctaciones. Residentes en el extranjero."
+  ]
+ },
+ "2023": {
+  "t": "Estancia media por comunidades y ciudades autónomas",
+  "n": 20,
+  "ej": [
+   "Nacional.  Estancia media",
+   "Andalucía.  Estancia media",
+   "Aragón.  Estancia media",
+   "Asturias (Principado de).  Estancia media"
+  ],
+  "gi": []
+ },
+ "2000": {
+  "t": "Estancia media por zonas turísticas",
+  "n": 76,
+  "ej": [
+   "Andalucía: Costa De Almería. Estancia media. Total categorías. Dato. ",
+   "Nacional. Asturias (Principado De): Costa Verde.  Estancia media",
+   "Nacional. Baleares (Illes): Isla De Mallorca.  Estancia media",
+   "Nacional. Canarias: Isla De Gran Canaria.  Estancia media"
+  ],
+  "gi": [
+   "Nacional. Cataluña: Costa Brava.  Estancia media",
+   "Nacional. Alojamientos de turismo rural. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. P. Natural Alt Pirineu."
+  ]
+ },
+ "2067": {
+  "t": "Estancia media por provincias",
+  "n": 50,
+  "ej": [
+   "Albacete.  Estancia media",
+   "Alicante.  Estancia media",
+   "Almería.  Estancia media",
+   "Alava.  Estancia media"
+  ],
+  "gi": [
+   "Girona.  Estancia media"
+  ]
+ },
+ "2031": {
+  "t": "Tasa de variación interanual de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Nacional. Viajeros. Total. Tasa interanual",
+   "Nacional. Viajeros. Residentes en España. Tasa interanual",
+   "Nacional. Viajeros. Residentes en el extranjero. Tasa interanual",
+   "Nacional. Pernoctaciones. Total. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "1994": {
+  "t": "Tasa de variación interanual de la estancia media",
+  "n": 1,
+  "ej": [
+   "Nacional. Estancia media. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2032": {
+  "t": "Tasa de variación interanual de establecimientos, plazas, grados de ocupación y personal empleado",
+  "n": 6,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados. Tasa interanual",
+   "Nacional. Número de plazas estimadas. Tasa interanual",
+   "Nacional. Grado de ocupación por plazas. Tasa interanual",
+   "Nacional. Grado de ocupación por plazas en fin de semana. Tasa interanual"
+  ],
+  "gi": []
+ },
+ "2046": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado por comunidades y ciudades autónomas",
+  "n": 120,
+  "ej": [
+   "Nacional. Número de establecimientos abiertos estimados.",
+   "Nacional. Número de plazas estimadas.",
+   "Nacional. Grado de ocupación por plazas.",
+   "Nacional. Grado de ocupación por habitaciones."
+  ],
+  "gi": []
+ },
+ "2005": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado por zonas turísticas",
+  "n": 456,
+  "ej": [
+   "Andalucía: Costa De Almería. Número de establecimientos abiertos estimados. Total categorías. Dato. ",
+   "Andalucía: Costa De Almería. Número de plazas estimadas. Total categorías. Dato. ",
+   "Andalucía: Costa De Almería. Grado de ocupación por plazas. Total categorías. Dato. ",
+   "Andalucía: Costa De Almería. Grado de ocupación por plazas en fin de semana. Total categorías. Dato. "
+  ],
+  "gi": [
+   "Nacional. Número de establecimientos abiertos estimados. Cataluña: Costa Brava.",
+   "Nacional. Número de plazas estimadas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por plazas. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por plazas en fin de semana. Cataluña: Costa Brava.",
+   "Nacional. Grado de ocupación por habitaciones. Cataluña: Costa Brava.",
+   "Nacional. Alojamientos de turismo rural. Personal empleado. Cataluña: Costa Brava.",
+   "Nacional. Alojamientos de turismo rural. Número de establecimientos abiertos estimados. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. Número de plazas estimadas. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. Grado de ocupación por plazas. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. Grado de ocupación por plazas en fin de semana. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. Grado de ocupación por habitaciones. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. Personal empleado. Pirineus-Prepirineus.",
+   "Nacional. Alojamientos de turismo rural. Número de establecimientos abiertos estimados. P. Natural Alt Pirineu.",
+   "Nacional. Alojamientos de turismo rural. Número de plazas estimadas. P. Natural Alt Pirineu.",
+   "Nacional. Alojamientos de turismo rural. Grado de ocupación por plazas. P. Natural Alt Pirineu.",
+   "Nacional. Alojamientos de turismo rural. Grado de ocupación por plazas en fin de semana. P. Natural Alt Pirineu.",
+   "Nacional. Alojamientos de turismo rural. Grado de ocupación por habitaciones. P. Natural Alt Pirineu.",
+   "Nacional. Alojamientos de turismo rural. Personal empleado. P. Natural Alt Pirineu."
+  ]
+ },
+ "2070": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado por provincias",
+  "n": 300,
+  "ej": [
+   "Albacete. Número de establecimientos abiertos estimados.",
+   "Albacete. Número de plazas estimadas.",
+   "Albacete. Grado de ocupación por plazas.",
+   "Albacete. Grado de ocupación por plazas en fin de semana."
+  ],
+  "gi": [
+   "Girona. Número de establecimientos abiertos estimados.",
+   "Girona. Número de plazas estimadas.",
+   "Girona. Grado de ocupación por plazas.",
+   "Girona. Grado de ocupación por plazas en fin de semana.",
+   "Girona. Grado de ocupación por habitaciones.",
+   "Girona. Personal empleado."
+  ]
+ },
+ "2004": {
+  "t": "Viajeros y pernoctaciones según país de residencia del viajero",
+  "n": 32,
+  "ej": [
+   "Nacional. Viajeros. Total.",
+   "Nacional. Viajeros. Residentes en España.",
+   "Nacional. Viajeros. Residentes en el extranjero.",
+   "Nacional. Alojamientos de turismo rural. Viajeros. Unión Europea (sin España)."
+  ],
+  "gi": []
+ },
+ "7907": {
+  "t": "Coeficientes de variación de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Total Nacional. Viajero. Total categorías. Total. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en España. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total categorías. Residentes en el Extranjero. Coeficiente de variación. ",
+   "Total Nacional. Pernoctaciones. Total categorías. Total. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "2036": {
+  "t": "Índices de ingresos hoteleros, índices y tasas de variación interanual por comunidades autónomas",
+  "n": 40,
+  "ej": [
+   "Nacional. Dato base.",
+   "Nacional. Tasa de variación interanual. Tasa interanual",
+   "Andalucía. Dato base.",
+   "Andalucía. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2054": {
+  "t": "Índices de ingresos hoteleros, índices y tasas de variación interanual por comunidades autónomas",
+  "n": 40,
+  "ej": [
+   "Indice de ingresos hoteleros (Base 2008). Nacional. Dato base.",
+   "Indice de ingresos hoteleros (Base 2008). Nacional. Tasa de variación interanual.",
+   "Indice de ingresos hoteleros (Base 2008). Andalucía. Dato base.",
+   "Indice de ingresos hoteleros (Base 2008). Andalucía. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2055": {
+  "t": "Índices de ingresos hoteleros, índices y tasas de variación interanual por categorías",
+  "n": 16,
+  "ej": [
+   "Indice de ingresos hoteleros (Base 2008). Nacional. Dato base.",
+   "Indice de ingresos hoteleros (Base 2008). Nacional. Tasa de variación interanual.",
+   "Nacional. Indice de ingresos hoteleros (Base 2008). Cinco estrellas de oro. Dato base.",
+   "Nacional. Indice de ingresos hoteleros (Base 2008). Cinco estrellas de oro. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "2037": {
+  "t": "Índices de ingresos hoteleros, índices y tasas de variación interanual por categorías",
+  "n": 16,
+  "ej": [
+   "Nacional. Dato base.",
+   "Nacional. Tasa de variación interanual. Tasa interanual",
+   "Nacional. Cinco estrellas de oro. Dato base.",
+   "Nacional. Cinco estrellas de oro. Tasa de variación interanual."
+  ],
+  "gi": []
+ },
+ "46663": {
+  "t": "Viajeros y pernoctaciones según tipo de establecimiento",
+  "n": 24,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en el Extranjero. Dato. ",
+   "Total Nacional. Viajero. Albergue juvenil. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "49381": {
+  "t": "Viajeros y pernoctaciones según país de residencia",
+  "n": 120,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Dato. ",
+   "Total Nacional. Viajero. Total. Total. Porcentaje. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Porcentaje. "
+  ],
+  "gi": []
+ },
+ "46664": {
+  "t": "Estancia media según tipo de establecimiento",
+  "n": 4,
+  "ej": [
+   "Total Nacional. Estancia media. Total. Dato. ",
+   "Total Nacional. Estancia media. Albergue juvenil. Dato. ",
+   "Total Nacional. Estancia media. Peregrinos del Camino de Santiago. Dato. ",
+   "Total Nacional. Estancia media. Albergue turístico. Dato. "
+  ],
+  "gi": []
+ },
+ "49382": {
+  "t": "Viajeros y pernoctaciones por comunidades y ciudades autónomas",
+  "n": 120,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en el Extranjero. Dato. ",
+   "Total Nacional. Pernoctaciones. Total. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "46665": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado según tipo de establecimiento",
+  "n": 20,
+  "ej": [
+   "Total Nacional. Número de establecimientos abiertos estimados. Total. Dato. ",
+   "Total Nacional. Número de establecimientos abiertos estimados. Albergue juvenil. Dato. ",
+   "Total Nacional. Número de establecimientos abiertos estimados. Peregrinos del Camino de Santiago. Dato. ",
+   "Total Nacional. Número de establecimientos abiertos estimados. Albergue turístico. Dato. "
+  ],
+  "gi": []
+ },
+ "49383": {
+  "t": "Estancia media por comunidades y ciudades autónomas",
+  "n": 20,
+  "ej": [
+   "Total Nacional. Estancia media. Total. Dato. ",
+   "Andalucía. Estancia media. Total. Dato. ",
+   "Aragón. Estancia media. Total. Dato. ",
+   "Asturias, Principado de. Estancia media. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "9664": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en el Extranjero. Dato. ",
+   "Total Nacional. Pernoctaciones. Total. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "9665": {
+  "t": "Viajeros y pernoctaciones según país de residencia",
+  "n": 120,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Dato. ",
+   "Total Nacional. Viajero. Total. Total. Porcentaje. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Porcentaje. "
+  ],
+  "gi": []
+ },
+ "9666": {
+  "t": "Estancia media por comunidades autónomas",
+  "n": 20,
+  "ej": [
+   "Total Nacional. Estancia media. Total. Dato. ",
+   "Andalucía. Estancia media. Total. Dato. ",
+   "Aragón. Estancia media. Total. Dato. ",
+   "Asturias, Principado de. Estancia media. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "9667": {
+  "t": "Establecimientos, plazas, grados de ocupación y personal empleado por comunidades autónomas",
+  "n": 100,
+  "ej": [
+   "Total Nacional. Número de establecimientos abiertos estimados. Total. Dato. ",
+   "Total Nacional. Número de plazas estimadas. Total. Dato. ",
+   "Total Nacional. Grado de ocupación por plazas en fin de semana. Total. Dato. ",
+   "Total Nacional. Grado de ocupación por plazas. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "9671": {
+  "t": "Distribución porcentual de los viajeros y pernoctaciones según comunidad autónoma de procedencia",
+  "n": 800,
+  "ej": [
+   "Total Nacional. Viajero. Total Nacional. Total. Porcentaje. ",
+   "Total Nacional. Viajero. Andalucía. Total. Porcentaje. ",
+   "Total Nacional. Viajero. Aragón. Total. Porcentaje. ",
+   "Total Nacional. Viajero. Asturias, Principado de. Total. Porcentaje. "
+  ],
+  "gi": []
+ },
+ "67194": {
+  "t": "Viajeros y pernoctaciones por comunidades autónomas",
+  "n": 120,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Dato. ",
+   "Total Nacional. Viajero. Total. Residentes en el Extranjero. Dato. ",
+   "Total Nacional. Pernoctaciones. Total. Total. Dato. "
+  ],
+  "gi": []
+ },
+ "9668": {
+  "t": "Tasa de variación interanual de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Tasa de variación interanual. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Tasa de variación interanual. ",
+   "Total Nacional. Viajero. Total. Residentes en el Extranjero. Tasa de variación interanual. ",
+   "Total Nacional. Pernoctaciones. Total. Total. Tasa de variación interanual. "
+  ],
+  "gi": []
+ },
+ "9672": {
+  "t": "Tasa de variación interanual de la estancia media",
+  "n": 1,
+  "ej": [
+   "Total Nacional. Estancia media. Total. Tasa de variación interanual. "
+  ],
+  "gi": []
+ },
+ "9669": {
+  "t": "Tasa de variación interanual de establecimientos, plazas, grados de ocupación y personal empleado",
+  "n": 5,
+  "ej": [
+   "Total Nacional. Número de establecimientos abiertos estimados. Total. Tasa de variación interanual. ",
+   "Total Nacional. Número de plazas estimadas. Total. Tasa de variación interanual. ",
+   "Total Nacional. Grado de ocupación por plazas en fin de semana. Total. Tasa de variación interanual. ",
+   "Total Nacional. Grado de ocupación por plazas. Total. Tasa de variación interanual. "
+  ],
+  "gi": []
+ },
+ "9670": {
+  "t": "Coeficientes de variación de viajeros y pernoctaciones",
+  "n": 6,
+  "ej": [
+   "Total Nacional. Viajero. Total. Total. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total. Residentes en España. Coeficiente de variación. ",
+   "Total Nacional. Viajero. Total. Residentes en el Extranjero. Coeficiente de variación. ",
+   "Total Nacional. Pernoctaciones. Total. Total. Coeficiente de variación. "
+  ],
+  "gi": []
+ },
+ "10839": {
+  "t": "Gasto de los turistas internacionales según comunidad autónoma de destino principal",
+  "n": 128,
+  "ej": [
+   "Gasto total. Total Nacional. Turista. Dato base. ",
+   "Gasto total. Total Nacional. Turista. Tasa de variación anual. ",
+   "Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "23992": {
+  "t": "Gasto de los turistas internacionales según via de acceso",
+  "n": 40,
+  "ej": [
+   "Turista. Total. Gasto total. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Turista. Total. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto medio por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "23998": {
+  "t": "Gasto de los turistas internacionales según comunidad autónoma de destino principal",
+  "n": 160,
+  "ej": [
+   "Total Nacional. Turista. Gasto total. Dato base. ",
+   "Total Nacional. Turista. Gasto total. Tasa de variación anual. ",
+   "Total Nacional. Turista. Gasto medio por persona. Dato base. ",
+   "Total Nacional. Turista. Gasto medio por persona. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "75714": {
+  "t": "Gasto de los turistas internacionales según comunidad autónoma de destino principal",
+  "n": 128,
+  "ej": [
+   "Gasto total. Total Nacional. Turista. Dato base. ",
+   "Gasto total. Total Nacional. Turista. Tasa de variación anual. ",
+   "Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "13949": {
+  "t": "Número de etapas de los viajes y pernoctaciones según comunidad autónoma",
+  "n": 32,
+  "ej": [
+   "Total Nacional. Turista. Dato base. Etapas. ",
+   "Total Nacional. Turista. Dato base. Pernoctaciones. ",
+   "Total Nacional. Turista. Tasa de variación anual. Etapas. ",
+   "Total Nacional. Turista. Tasa de variación anual. Pernoctaciones. "
+  ],
+  "gi": []
+ },
+ "23993": {
+  "t": "Gasto de los turistas internacionales según tipo de alojamiento principal",
+  "n": 72,
+  "ej": [
+   "Turista. Total. Gasto total. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Turista. Total. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto medio por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "23999": {
+  "t": "Número de etapas de los viajes y pernoctaciones según comunidad autónoma",
+  "n": 80,
+  "ej": [
+   "Total Nacional. Turista. Dato base. Etapas. ",
+   "Total Nacional. Turista. Dato base. Pernoctaciones. ",
+   "Total Nacional. Turista. Tasa de variación anual. Etapas. ",
+   "Total Nacional. Turista. Tasa de variación anual. Pernoctaciones. "
+  ],
+  "gi": []
+ },
+ "75715": {
+  "t": "Gasto de los turistas internacionales según país de residencia",
+  "n": 112,
+  "ej": [
+   "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "23994": {
+  "t": "Gasto de los turistas internacionales según país de residencia",
+  "n": 128,
+  "ej": [
+   "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Turista. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto medio por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "24745": {
+  "t": "Gasto de los turistas internacionales según partidas de gasto y comunidad autónoma de destino principal",
+  "n": 128,
+  "ej": [
+   "Total Nacional. Turista. Gasto total. Dato base. ",
+   "Total Nacional. Turista. Gasto total. Tasa de variación anual. ",
+   "Andalucía. Turista. Gasto total. Dato base. ",
+   "Andalucía. Turista. Gasto total. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "75716": {
+  "t": "Gasto de los turistas internacionales según via de acceso",
+  "n": 80,
+  "ej": [
+   "Turista. Total. Gasto total. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Turista. Total. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "10828": {
+  "t": "Gasto de los turistas internacionales según via de acceso",
+  "n": 80,
+  "ej": [
+   "Turista. Total. Gasto total. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Turista. Total. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "24746": {
+  "t": "Gasto de los turistas internacionales según comunidad autónoma de destino principal y país de residencia",
+  "n": 384,
+  "ej": [
+   "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Turista. Gasto total. Andalucía. Dato base. ",
+   "Total. Turista. Gasto total. Andalucía. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "32373": {
+  "t": "Gasto de los turistas internacionales residentes en países de largo radio",
+  "n": 90,
+  "ej": [
+   "Japón. Turista. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Japón. Turista. Gasto medio por persona. Total Nacional. Tasa de variación anual. ",
+   "Japón. Turista. Gasto medio diario por persona. Total Nacional. Dato base. ",
+   "Japón. Turista. Gasto medio diario por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "75717": {
+  "t": "Gasto de los turistas internacionales según partidas de gasto",
+  "n": 32,
+  "ej": [
+   "Gasto total. Total Nacional. Turista. Dato base. ",
+   "Gasto total. Total Nacional. Turista. Tasa de variación anual. ",
+   "Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "10836": {
+  "t": "Gasto de los turistas internacionales según tipo de alojamiento principal",
+  "n": 80,
+  "ej": [
+   "Turista. Total. Gasto total. Total Nacional. Dato base. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Turista. Total. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Total. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "23995": {
+  "t": "Gasto de los turistas internacionales según motivo principal del viaje",
+  "n": 128,
+  "ej": [
+   "Total. Gasto total. Turista. Total Nacional. Dato base. ",
+   "Total. Gasto total. Turista. Total Nacional. Tasa de variación anual. ",
+   "Total. Gasto medio por persona. Turista. Total Nacional. Dato base. ",
+   "Total. Gasto medio por persona. Turista. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "25330": {
+  "t": "Gasto de los excursionistas internacionales según comunidad autónoma de destino principal",
+  "n": 72,
+  "ej": [
+   "Total Nacional. Excursionista. Gasto total. Dato base. ",
+   "Total Nacional. Excursionista. Gasto total. Tasa de variación anual. ",
+   "Total Nacional. Excursionista. Gasto medio por persona. Dato base. ",
+   "Total Nacional. Excursionista. Gasto medio por persona. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "75718": {
+  "t": "Gasto de los turistas internacionales según motivo principal del viaje",
+  "n": 64,
+  "ej": [
+   "Total. Gasto total. Turista. Total Nacional. Dato base. ",
+   "Total. Gasto total. Turista. Total Nacional. Tasa de variación anual. ",
+   "Total. Gasto total. Turista. Total Nacional. Acumulado en lo que va de año. ",
+   "Total. Gasto total. Turista. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "10838": {
+  "t": "Gasto de los turistas internacionales según país de residencia",
+  "n": 112,
+  "ej": [
+   "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "23996": {
+  "t": "Gasto de los turistas internacionales según forma de organización del viaje",
+  "n": 24,
+  "ej": [
+   "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Turista. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto medio por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "10840": {
+  "t": "Gasto de los turistas internacionales según motivo principal del viaje",
+  "n": 64,
+  "ej": [
+   "Total. Gasto total. Turista. Total Nacional. Dato base. ",
+   "Total. Gasto total. Turista. Total Nacional. Tasa de variación anual. ",
+   "Total. Gasto total. Turista. Total Nacional. Acumulado en lo que va de año. ",
+   "Total. Gasto total. Turista. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "23997": {
+  "t": "Gasto de los turistas internacionales según partidas de gasto",
+  "n": 16,
+  "ej": [
+   "Total Nacional. Turista. Gasto total. Dato base. ",
+   "Total Nacional. Turista. Gasto total. Tasa de variación anual. ",
+   "Turista. Gasto en paquete turístico. Total Nacional. Dato base. ",
+   "Turista. Gasto en paquete turístico. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "10841": {
+  "t": "Gasto de los turistas internacionales según forma de organización del viaje",
+  "n": 48,
+  "ej": [
+   "Total. Turista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Total. Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "24743": {
+  "t": "Gasto de los turistas internacionales por lugar de pago",
+  "n": 6,
+  "ej": [
+   "Gasto total. Dato base. Turista. Total Nacional. Total. ",
+   "Gasto total. Dato base. Turista. Total Nacional. Origen. ",
+   "Gasto total. Dato base. Turista. Total Nacional. Destino. ",
+   "Gasto total. Tasa de variación anual. Turista. Total Nacional. Total. "
+  ],
+  "gi": []
+ },
+ "24744": {
+  "t": "Gasto de los turistas internacionales según sexo y edad",
+  "n": 120,
+  "ej": [
+   "Turista. Gasto total. Total Nacional. Dato base. Total. Todas las edades. ",
+   "Turista. Gasto total. Total Nacional. Dato base. Total. De 15 a 24 años. ",
+   "Turista. Gasto total. Total Nacional. Dato base. Total. De 25 a 44 años. ",
+   "Turista. Gasto total. Total Nacional. Dato base. Total. De 45 a 64 años. "
+  ],
+  "gi": []
+ },
+ "25328": {
+  "t": "Gasto de los excursionistas internacionales según via de acceso",
+  "n": 20,
+  "ej": [
+   "Excursionista. Total. Gasto total. Total Nacional. Dato base. ",
+   "Excursionista. Total. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Excursionista. Total. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Excursionista. Total. Gasto medio por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "25329": {
+  "t": "Gasto de los excursionistas internacionales según país de residencia",
+  "n": 64,
+  "ej": [
+   "Total. Excursionista. Gasto total. Total Nacional. Dato base. ",
+   "Total. Excursionista. Gasto total. Total Nacional. Tasa de variación anual. ",
+   "Total. Excursionista. Gasto medio por persona. Total Nacional. Dato base. ",
+   "Total. Excursionista. Gasto medio por persona. Total Nacional. Tasa de variación anual. "
+  ],
+  "gi": []
+ },
+ "13938": {
+  "t": "Gasto de los turistas internacionales según partidas de gasto",
+  "n": 32,
+  "ej": [
+   "Gasto total. Total Nacional. Turista. Dato base. ",
+   "Gasto total. Total Nacional. Turista. Tasa de variación anual. ",
+   "Turista. Gasto total. Total Nacional. Acumulado en lo que va de año. ",
+   "Turista. Gasto total. Total Nacional. Tasa de variación acumulada. "
+  ],
+  "gi": []
+ },
+ "12420": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por alojamiento principal",
+  "n": 72,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "12427": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de destino principal",
+  "n": 216,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Viajes. Acumulado en lo que va de año. ",
+   "Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12434": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por destino principal (extranjero y comunidades autónomas) ",
+  "n": 756,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Viajes. Acumulado en lo que va de año. ",
+   "Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12437": {
+  "t": "Etapas, pernoctaciones y duración media de la etapa por destino (extranjero y comunidades autónomas) de la etapa                                                    ",
+  "n": 378,
+  "ej": [
+   "Total. Etapas. Valor absoluto. ",
+   "Total. Etapas. Distribución porcentual. ",
+   "Total. Etapas. Acumulado en lo que va de año. ",
+   "Total. Etapas. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12446": {
+  "t": "Excursiones y gasto por motivo principal de la excursión                                                                                                            ",
+  "n": 54,
+  "ej": [
+   "Total. Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Total. Excursiones. Acumulado en lo que va de año. Total. ",
+   "Total. Total. Excursiones. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "12448": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por comunidad autónoma de residencia de los viajeros                                                               ",
+  "n": 720,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. ",
+   "Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Viajes. Acumulado en lo que va de año. Total. ",
+   "Total. Viajes. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "12494": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por alojamiento principal",
+  "n": 24,
+  "ej": [
+   "Total. Total. Viajes. Errores de muestreo relativos. ",
+   "Total. Total. Duración media de los viajes. Errores de muestreo relativos. ",
+   "Total. Total. Pernoctaciones. Errores de muestreo relativos. ",
+   "Total. Total. Gasto total. Errores de muestreo relativos. "
+  ],
+  "gi": []
+ },
+ "13234": {
+  "t": "Excursiones, excursiones por persona e índice sobre la media por comunidad autónoma de residencia de los excursionistas",
+  "n": 120,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. Total. ",
+   "Total. Excursiones. Acumulado en lo que va de año. Total. Total. ",
+   "Total. Excursiones por persona. Valor absoluto. Total. Total. ",
+   "Total. Excursiones por persona. Acumulado en lo que va de año. Total. Total. "
+  ],
+  "gi": []
+ },
+ "14297": {
+  "t": "Resultados detallados mensuales",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "24919": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de destino principal                                                                                           ",
+  "n": 108,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Viajes. Variación anual. ",
+   "Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24927": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por destino principal (extranjero y comunidades autónomas) ",
+  "n": 378,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Viajes. Variación anual. ",
+   "Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24931": {
+  "t": "Etapas, pernoctaciones y duración media de la etapa por destino (extranjero y comunidades autónomas) de la etapa",
+  "n": 189,
+  "ej": [
+   "Total. Etapas. Valor absoluto. ",
+   "Total. Etapas. Distribución porcentual. ",
+   "Total. Etapas. Variación anual. ",
+   "Total. Duración media de la etapa. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24938": {
+  "t": "Excursiones y gasto por motivo principal de la excursión                                                                                                            ",
+  "n": 27,
+  "ej": [
+   "Total. Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Total. Excursiones. Variación anual. Total. ",
+   "Total. Total. Gasto total en excursiones. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24942": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por comunidad autónoma de residencia de los viajeros                                                               ",
+  "n": 360,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. ",
+   "Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Viajes. Variación anual. Total. ",
+   "Total. Duración media de los viajes. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24946": {
+  "t": "Excursiones, excursiones por persona e índice sobre la media por comunidad autónoma de residencia de los excursionistas                                             ",
+  "n": 120,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. Total. ",
+   "Total. Excursiones. Acumulado en lo que va de año. Total. Total. ",
+   "Total. Excursiones por persona. Valor absoluto. Total. Total. ",
+   "Total. Excursiones por persona. Acumulado en lo que va de año. Total. Total. "
+  ],
+  "gi": []
+ },
+ "25754": {
+  "t": "Personas no viajeras por sexo, según motivos para no viajar                                                                                       ",
+  "n": 42,
+  "ej": [
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre el total de no viajeros. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre el total de no viajeros. "
+  ],
+  "gi": []
+ },
+ "25755": {
+  "t": "Personas viajeras por sexo, según destino y duración del viaje.                                                                                ",
+  "n": 72,
+  "ej": [
+   "Total. Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "25873": {
+  "t": "Personas viajeras por comunidad autónoma de residencia, según destino y duración del viaje",
+  "n": 360,
+  "ej": [
+   "Total. Total. Personas viajeras por motivos personales. Total. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "25882": {
+  "t": "Personas no viajeras por comunidad autónoma de residencia, según motivos para no viajar",
+  "n": 200,
+  "ej": [
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre el total de no viajeros. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre el total de no viajeros. "
+  ],
+  "gi": []
+ },
+ "67186": {
+  "t": "Personas viajeras por sexo, según destino y duración del viaje.                                                                                ",
+  "n": 72,
+  "ej": [
+   "Total. Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "68550": {
+  "t": "Viajes, pernoctaciones y gasto total por duración del viaje",
+  "n": 9,
+  "ej": [
+   "Viajes. Valor absoluto. Total. Total. HVD. ",
+   "Viajes. Valor absoluto. De 1 a 3 noches. Total. HVD. ",
+   "Viajes. Valor absoluto. De 4 o más noches. Total. HVD. ",
+   "Pernoctaciones. Valor absoluto. Total. Total. HVD. "
+  ],
+  "gi": []
+ },
+ "76186": {
+  "t": "Personas viajeras por edad, según destino y duración del viaje.",
+  "n": 168,
+  "ej": [
+   "Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "12421": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por motivo principal del viaje             ",
+  "n": 90,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "12428": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por alojamiento principal, según tipo de destino principal",
+  "n": 1260,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12435": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por alojamiento principal, según destino principal (extranjero y comunidades autónomas) ",
+  "n": 2268,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12439": {
+  "t": "Etapas con destino interno, pernoctaciones y duración media de la etapa por alojamiento, según comunidad autónoma de destino de la etapa ",
+  "n": 1080,
+  "ej": [
+   "España. Total. Etapas. Valor absoluto. ",
+   "España. Total. Etapas. Distribución porcentual. ",
+   "España. Total. Etapas. Acumulado en lo que va de año. ",
+   "España. Total. Etapas. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12447": {
+  "t": " Excursiones y gasto por tipo de destino principal                                                                                                   ",
+  "n": 108,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Excursiones. Acumulado en lo que va de año. Total. ",
+   "Total. Excursiones. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "12449": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de alojamiento principal, según comunidad autónoma de residencia de los viajeros                          ",
+  "n": 2160,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. Total. ",
+   "Total. Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. Total. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "12495": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por motivo principal del viaje",
+  "n": 30,
+  "ej": [
+   "Total. Total. Viajes. Errores de muestreo relativos. ",
+   "Total. Total. Duración media de los viajes. Errores de muestreo relativos. ",
+   "Total. Total. Pernoctaciones. Errores de muestreo relativos. ",
+   "Total. Total. Gasto total. Errores de muestreo relativos. "
+  ],
+  "gi": []
+ },
+ "14298": {
+  "t": "Excursiones y gasto por comunidad autónoma de residencia de los excursionistas ",
+  "n": 360,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. Total. ",
+   "Total. Excursiones. Distribución porcentual. Total. Total. ",
+   "Total. Excursiones. Acumulado en lo que va de año. Total. Total. ",
+   "Total. Excursiones. Distribución porcentual del acumulado. Total. Total. "
+  ],
+  "gi": []
+ },
+ "15797": {
+  "t": "Viajes, pernoctaciones y duración media por principales características de los viajes",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "24920": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por alojamiento principal, según tipo de destino principal",
+  "n": 630,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24928": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por alojamiento principal, según destino principal (extranjero y comunidades autónomas) ",
+  "n": 1134,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24932": {
+  "t": "Etapas con destino interno, pernoctaciones y duración media de la etapa por alojamiento, según comunidad autónoma de destino de la etapa ",
+  "n": 540,
+  "ej": [
+   "España. Total. Etapas. Valor absoluto. ",
+   "España. Total. Etapas. Distribución porcentual. ",
+   "España. Total. Etapas. Variación anual. ",
+   "España. Total. Duración media de la etapa. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24939": {
+  "t": " Excursiones y gasto por tipo de destino principal                                                                                                   ",
+  "n": 54,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Excursiones. Variación anual. Total. ",
+   "Total. Gasto total en excursiones. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24943": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de alojamiento principal, según comunidad autónoma de residencia de los viajeros                          ",
+  "n": 1080,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. Total. ",
+   "Total. Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Total. Viajes. Variación anual. Total. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24947": {
+  "t": "Excursiones y gasto por comunidad autónoma de residencia de los excursionistas ",
+  "n": 180,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. Total. ",
+   "Total. Excursiones. Distribución porcentual. Total. Total. ",
+   "Total. Excursiones. Variación anual. Total. Total. ",
+   "Total. Gasto total en excursiones. Valor absoluto. Total. Total. "
+  ],
+  "gi": []
+ },
+ "25756": {
+  "t": "Personas viajeras por edad, según destino y duración del viaje.                                                                          ",
+  "n": 168,
+  "ej": [
+   "Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "25867": {
+  "t": "Personas no viajeras por edad, según motivos para no viajar.",
+  "n": 84,
+  "ej": [
+   "Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre el total de no viajeros. ",
+   "Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre personas de la categoría. ",
+   "Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre el total de no viajeros. "
+  ],
+  "gi": []
+ },
+ "61299": {
+  "t": "Viajes, pernoctaciones y duración media por sexo y edad de los viajeros",
+  "n": 162,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. Total. ",
+   "Total. Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. Total. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "61300": {
+  "t": "Viajes, pernoctaciones y duración media por sexo y edad de los viajeros",
+  "n": 81,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. Total. ",
+   "Total. Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Total. Viajes. Variación anual. Total. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "68551": {
+  "t": "Viajes, pernoctaciones y gasto total por tipo de destino principal",
+  "n": 9,
+  "ej": [
+   "Viajes. Valor absoluto. Total. Total. HVD. ",
+   "Viajes. Valor absoluto. España. Total. HVD. ",
+   "Viajes. Valor absoluto. Extranjera. Total. HVD. ",
+   "Pernoctaciones. Valor absoluto. Total. Total. HVD. "
+  ],
+  "gi": []
+ },
+ "76187": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por comunidad autónoma de residencia de los viajeros",
+  "n": 720,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. ",
+   "Total. Viajes. Distribución porcentual. Total. ",
+   "Total. Viajes. Acumulado en lo que va de año. Total. ",
+   "Total. Viajes. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "12422": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de destino principal",
+  "n": 72,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Duración media de los viajes. Valor absoluto. ",
+   "Total. Duración media de los viajes. Distribución porcentual. "
+  ],
+  "gi": []
+ },
+ "12429": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por motivo principal del viaje, según tipo de destino principal",
+  "n": 900,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12436": {
+  "t": "Viajes con destino principal interno, pernoctaciones, duración media y gasto por tipo de origen, según comunidad autónoma de destino principal ",
+  "n": 2160,
+  "ej": [
+   "España. Total. Viajes. Valor absoluto. ",
+   "España. Total. Viajes. Distribución porcentual. ",
+   "España. Total. Viajes. Acumulado en lo que va de año. ",
+   "España. Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12440": {
+  "t": "Etapas con destino interno, pernoctaciones y duración media de la etapa por tipo de origen del viaje, según comunidad autónoma de destino de la etapa ",
+  "n": 1080,
+  "ej": [
+   "España. Total. Etapas. Valor absoluto. ",
+   "España. Total. Etapas. Distribución porcentual. ",
+   "España. Total. Etapas. Acumulado en lo que va de año. ",
+   "España. Total. Etapas. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12442": {
+  "t": "Viajes, pernoctaciones y duración media por nacionalidad de los viajeros",
+  "n": 54,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. Total. ",
+   "Total. Viajes. Distribución porcentual. Total. Total. ",
+   "Total. Viajes. Acumulado en lo que va de año. Total. Total. ",
+   "Total. Viajes. Distribución porcentual del acumulado. Total. Total. "
+  ],
+  "gi": []
+ },
+ "12450": {
+  "t": "Viajes con destino principal interno, pernoctaciones, duración media y gasto por tipo de destino principal, según comunidad autónoma de residencia de los viajeros",
+  "n": 2160,
+  "ej": [
+   "España. Total. Viajes. Valor absoluto. ",
+   "España. Total. Viajes. Distribución porcentual. ",
+   "España. Total. Viajes. Acumulado en lo que va de año. ",
+   "España. Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12497": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de destino principal",
+  "n": 36,
+  "ej": [
+   "Total. Viajes. Errores de muestreo relativos. ",
+   "Total. Duración media de los viajes. Errores de muestreo relativos. ",
+   "Total. Pernoctaciones. Errores de muestreo relativos. ",
+   "Total. Gasto total. Errores de muestreo relativos. "
+  ],
+  "gi": []
+ },
+ "13232": {
+  "t": "Excursiones y gasto por destino principal (extranjero y comunidades autónomas)                                                                                                    ",
+  "n": 378,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Excursiones. Acumulado en lo que va de año. Total. ",
+   "Total. Excursiones. Distribución porcentual del acumulado. Total. "
+  ],
+  "gi": []
+ },
+ "15796": {
+  "t": "Gasto total y gastos medios por principales características de los viajes",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "24921": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por motivo principal del viaje, según tipo de destino principal",
+  "n": 450,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24929": {
+  "t": "Viajes con destino principal interno, pernoctaciones, duración media y gasto por tipo de origen, según comunidad autónoma de destino principal ",
+  "n": 1080,
+  "ej": [
+   "España. Total. Viajes. Valor absoluto. ",
+   "España. Total. Viajes. Distribución porcentual. ",
+   "España. Total. Viajes. Variación anual. ",
+   "España. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24933": {
+  "t": "Etapas con destino interno, pernoctaciones y duración media de la etapa por tipo de origen del viaje, según comunidad autónoma de destino de la etapa ",
+  "n": 540,
+  "ej": [
+   "España. Total. Etapas. Valor absoluto. ",
+   "España. Total. Etapas. Distribución porcentual. ",
+   "España. Total. Etapas. Variación anual. ",
+   "España. Total. Duración media de la etapa. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24935": {
+  "t": "Viajes, pernoctaciones y duración media por nacionalidad de los viajeros",
+  "n": 27,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. Total. ",
+   "Total. Viajes. Distribución porcentual. Total. Total. ",
+   "Total. Viajes. Variación anual. Total. Total. ",
+   "Total. Duración media de los viajes. Valor absoluto. Total. Total. "
+  ],
+  "gi": []
+ },
+ "24940": {
+  "t": "Excursiones y gasto por destino principal (extranjero y comunidades autónomas)                                                                                                    ",
+  "n": 189,
+  "ej": [
+   "Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Excursiones. Variación anual. Total. ",
+   "Total. Gasto total en excursiones. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24944": {
+  "t": "Viajes con destino principal interno, pernoctaciones, duración media y gasto por tipo de destino principal, según comunidad autónoma de residencia de los viajeros",
+  "n": 1080,
+  "ej": [
+   "España. Total. Viajes. Valor absoluto. ",
+   "España. Total. Viajes. Distribución porcentual. ",
+   "España. Total. Viajes. Variación anual. ",
+   "España. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "25758": {
+  "t": "Personas viajeras por nivel de formación alcanzado, según destino y duración del viaje.                                                         ",
+  "n": 96,
+  "ej": [
+   "Total. Total. Personas viajeras por motivos personales. Total. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "25868": {
+  "t": "Personas no viajeras por nivel de formación alcanzado, según motivos para no viajar",
+  "n": 56,
+  "ej": [
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre el total de no viajeros. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre el total de no viajeros. "
+  ],
+  "gi": []
+ },
+ "68552": {
+  "t": "Viajes, pernoctaciones y gasto total por principal medio de transporte",
+  "n": 33,
+  "ej": [
+   "Viajes. Valor absoluto. Total. Total. HVD. ",
+   "Viajes. Valor absoluto. Transporte aereo. Total. HVD. ",
+   "Viajes. Valor absoluto. Transporte marítimo. Total. HVD. ",
+   "Viajes. Valor absoluto. Transporte por ferrocarril. Total. HVD. "
+  ],
+  "gi": []
+ },
+ "76188": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por destino principal (extranjero y comunidades autónomas) ",
+  "n": 378,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Viajes. Variación anual. ",
+   "Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "12423": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de viaje",
+  "n": 126,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "12430": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por duración del viaje, según tipo de destino principal",
+  "n": 720,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "12444": {
+  "t": "Viajes, pernoctaciones y duración media por nivel de formación alcanzado de los viajeros",
+  "n": 90,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. 16 y más años. ",
+   "Total. Total. Viajes. Distribución porcentual. 16 y más años. ",
+   "Total. Total. Viajes. Acumulado en lo que va de año. 16 y más años. ",
+   "Total. Total. Viajes. Distribución porcentual del acumulado. 16 y más años. "
+  ],
+  "gi": []
+ },
+ "12496": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de viaje",
+  "n": 42,
+  "ej": [
+   "Total. Total. Viajes. Errores de muestreo relativos. ",
+   "Total. Total. Duración media de los viajes. Errores de muestreo relativos. ",
+   "Total. Total. Pernoctaciones. Errores de muestreo relativos. ",
+   "Total. Total. Gasto total. Errores de muestreo relativos. "
+  ],
+  "gi": []
+ },
+ "13230": {
+  "t": "Viajes, viajes por persona e índice sobre la media por comunidad autónoma de residencia de los viajeros",
+  "n": 120,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. Total. ",
+   "Total. Viajes. Acumulado en lo que va de año. Total. Total. ",
+   "Total. Viajes por persona. Valor absoluto. Total. Total. ",
+   "Total. Viajes por persona. Acumulado en lo que va de año. Total. Total. "
+  ],
+  "gi": []
+ },
+ "13231": {
+  "t": "Viajes con destino principal interno, viajes por persona e índice sobre la media según comunidad autónoma de destino principal",
+  "n": 120,
+  "ej": [
+   "España. Viajes. Valor absoluto. Total. ",
+   "España. Viajes. Acumulado en lo que va de año. Total. ",
+   "España. Viajes por persona. Valor absoluto. Total. ",
+   "España. Viajes por persona. Acumulado en lo que va de año. Total. "
+  ],
+  "gi": []
+ },
+ "13233": {
+  "t": "Excursiones con destino principal interno, excursiones por persona e índice sobre la media por  comunidad autónoma de destino principal ",
+  "n": 120,
+  "ej": [
+   "España. Excursiones. Valor absoluto. Total. ",
+   "España. Excursiones. Acumulado en lo que va de año. Total. ",
+   "España. Excursiones por persona. Valor absoluto. Total. ",
+   "España. Excursiones por persona. Acumulado en lo que va de año. Total. "
+  ],
+  "gi": []
+ },
+ "24922": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por duración del viaje, según tipo de destino principal",
+  "n": 540,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. ",
+   "Total. Total. Viajes. Distribución porcentual. ",
+   "Total. Total. Viajes. Variación anual. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "24930": {
+  "t": "Viajes con destino principal interno, viajes por persona e índice sobre la media según comunidad autónoma de destino principal",
+  "n": 60,
+  "ej": [
+   "España. Viajes. Valor absoluto. Total. ",
+   "España. Viajes por persona. Valor absoluto. Total. ",
+   "España. Indice sobre la media de los viajes por persona. Valor absoluto. Total. ",
+   "Andalucía. Viajes. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24936": {
+  "t": "Viajes, pernoctaciones y duración media por nivel de formación alcanzado de los viajeros",
+  "n": 45,
+  "ej": [
+   "Total. Total. Viajes. Valor absoluto. 16 y más años. ",
+   "Total. Total. Viajes. Distribución porcentual. 16 y más años. ",
+   "Total. Total. Viajes. Variación anual. 16 y más años. ",
+   "Total. Total. Duración media de los viajes. Valor absoluto. 16 y más años. "
+  ],
+  "gi": []
+ },
+ "24941": {
+  "t": "Excursiones con destino principal interno, excursiones por persona e índice sobre la media por  comunidad autónoma de destino principal ",
+  "n": 60,
+  "ej": [
+   "España. Excursiones. Valor absoluto. Total. ",
+   "España. Excursiones por persona. Valor absoluto. Total. ",
+   "España. Indice sobre la media de las excursiones por persona. Valor absoluto. Total. ",
+   "Andalucía. Excursiones. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "24945": {
+  "t": "Viajes, viajes por persona e índice sobre la media por comunidad autónoma de residencia de los viajeros",
+  "n": 120,
+  "ej": [
+   "Total. Viajes. Valor absoluto. Total. Total. ",
+   "Total. Viajes. Acumulado en lo que va de año. Total. Total. ",
+   "Total. Viajes por persona. Valor absoluto. Total. Total. ",
+   "Total. Viajes por persona. Acumulado en lo que va de año. Total. Total. "
+  ],
+  "gi": []
+ },
+ "25759": {
+  "t": "Personas viajeras por relación con la actividad, según destino y duración del viaje.                                            ",
+  "n": 120,
+  "ej": [
+   "Total. Total. Personas viajeras por motivos personales. Total. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Total. Porcentaje sobre el total de viajeros. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Solo España. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas viajeras por motivos personales. Total. Solo España. Porcentaje sobre el total de viajeros. "
+  ],
+  "gi": []
+ },
+ "25869": {
+  "t": "Personas no viajeras por relación con la actividad, según motivos para no viajar",
+  "n": 56,
+  "ej": [
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Total. Porcentaje sobre el total de no viajeros. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre personas de la categoría. ",
+   "Total. Total. Personas no viajeras por motivos personales. Motivos financieros. Porcentaje sobre el total de no viajeros. "
+  ],
+  "gi": []
+ },
+ "68553": {
+  "t": "Viajes, pernoctaciones y gasto total por alojamiento principal",
+  "n": 27,
+  "ej": [
+   "Viajes. Valor absoluto. Total. Total. HVD. ",
+   "Viajes. Valor absoluto. Hotelero. Total. HVD. ",
+   "Viajes. Valor absoluto. Camping. Total. HVD. ",
+   "Viajes. Valor absoluto. Alojamiento de mercado: como una casa, chalet o apartamento; habitación(es) alquilada(s) en una vivienda.. Total. HVD. "
+  ],
+  "gi": []
+ },
+ "76189": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por tipo de destino principal",
+  "n": 108,
+  "ej": [
+   "Total. Viajes. Valor absoluto. ",
+   "Total. Viajes. Distribución porcentual. ",
+   "Total. Viajes. Variación anual. ",
+   "Total. Duración media de los viajes. Valor absoluto. "
+  ],
+  "gi": []
+ },
+ "12424": {
+  "t": "Excursiones y gasto por motivo principal de la excursión",
+  "n": 27,
+  "ej": [
+   "Total. Total. Excursiones. Valor absoluto. Total. ",
+   "Total. Total. Excursiones. Distribución porcentual. Total. ",
+   "Total. Total. Excursiones. Variación anual. Total. ",
+   "Total. Total. Gasto total en excursiones. Valor absoluto. Total. "
+  ],
+  "gi": []
+ },
+ "12431": {
+  "t": "Viajes, pernoctaciones, duración media y gasto por principal medio de transporte, según tipo de destino principal",
+  "n": 1260,
+  "ej": [
+   "Total. Viajes. Total. Valor absoluto. ",
+   "Total. Viajes. Total. Distribución porcentual. ",
+   "Total. Viajes. Total. Acumulado en lo que va de año. ",
+   "Total. Viajes. Total. Distribución porcentual del acumulado. "
+  ],
+  "gi": []
+ },
+ "37803": {
+  "t": "Distribución porcentual del gasto anual, gasto total, GMD y GMV realizado en destino real dentro de cada comunidad autónoma de destino por país de residencia de los visitantes",
+  "n": 2660,
+  "ej": [
+   "Andalucía. Total. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Total. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Total. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Total. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37804": {
+  "t": "Distribución porcentual del gasto anual, gasto total, GMD y GMV realizado en destino real por cada país de residencia de los visitantes, según comunidad autónoma de destino",
+  "n": 646,
+  "ej": [
+   "Alemania. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Andorra. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Austria. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Bélgica. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. "
+  ],
+  "gi": []
+ },
+ "37805": {
+  "t": "Distribución porcentual del gasto anual, gasto total, GMD y GMV realizado en destino real dentro de cada comunidad autónoma de destino por país de residencia de los visitantes",
+  "n": 2964,
+  "ej": [
+   "Andalucía. Total. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Total. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Total. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Total. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37806": {
+  "t": "Distribución porcentual del gasto anual, gasto total, GMD y GMV realizado en destino real por cada país de residencia de los visitantes, según comunidad autónoma de destino",
+  "n": 722,
+  "ej": [
+   "Alemania. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Andorra. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Austria. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Bélgica. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. "
+  ],
+  "gi": []
+ },
+ "37670": {
+  "t": "Distribución del gasto en destino realizado en cada comunidad autónoma según país de residencia",
+  "n": 665,
+  "ej": [
+   "Andalucía. Total. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37734": {
+  "t": "Distribución del gasto en destino realizado en cada comunidad autónoma según país de residencia",
+  "n": 741,
+  "ej": [
+   "Andalucía. Total. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto total. Porcentaje. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37671": {
+  "t": "Distribución del gasto en destino de cada país de residencia según comunidad autónoma",
+  "n": 646,
+  "ej": [
+   "Alemania. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Alemania. Aragón. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Alemania. Asturias, Principado de. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Alemania. Balears, Illes. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. "
+  ],
+  "gi": []
+ },
+ "37735": {
+  "t": "Distribución del gasto en destino de cada país de residencia según comunidad autónoma",
+  "n": 722,
+  "ej": [
+   "Alemania. Andalucía. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Alemania. Aragón. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Alemania. Asturias, Principado de. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. ",
+   "Alemania. Balears, Illes. Gasto total. Porcentaje. De cada país por Comunidad Autónoma. "
+  ],
+  "gi": []
+ },
+ "37672": {
+  "t": "Gasto medio diario por visitante según comunidad autónoma y país de residencia",
+  "n": 665,
+  "ej": [
+   "Andalucía. Total. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37736": {
+  "t": "Gasto medio diario por visitante según comunidad autónoma y país de residencia",
+  "n": 741,
+  "ej": [
+   "Andalucía. Total. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto medio diario por persona. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37673": {
+  "t": "Gasto medio por visitante según comunidad autónoma y país de residencia",
+  "n": 665,
+  "ej": [
+   "Andalucía. Total. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "37737": {
+  "t": "Gasto medio por visitante según comunidad autónoma y país de residencia",
+  "n": 741,
+  "ej": [
+   "Andalucía. Total. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto medio por persona. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "39367": {
+  "t": "Gasto en destino según comunidad autónoma y país de residencia",
+  "n": 665,
+  "ej": [
+   "Andalucía. Total. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto total. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "39369": {
+  "t": "Gasto en destino según comunidad autónoma y país de residencia",
+  "n": 741,
+  "ej": [
+   "Andalucía. Total. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Alemania. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Andorra. Gasto total. Dato base. De cada Comunidad Autónoma por país. ",
+   "Andalucía. Austria. Gasto total. Dato base. De cada Comunidad Autónoma por país. "
+  ],
+  "gi": []
+ },
+ "48423": {
+  "t": "Número de alojamientos turísticos y noches ocupados por residencia del viajero. Nacional y comunidades autónomas",
+  "n": 180,
+  "ej": [
+   "Número de alojamientos turísticos ocupados. Total. Total Nacional. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Andalucía. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Aragón. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Asturias, Principado de. Dato base. "
+  ],
+  "gi": []
+ },
+ "48428": {
+  "t": "Número de alojamientos turísticos y noches ocupados por residencia del viajero. Nacional y comunidades autónomas.",
+  "n": 180,
+  "ej": [
+   "Número de alojamientos turísticos ocupados. Total. Total Nacional. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Andalucía. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Aragón. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Asturias, Principado de. Dato base. "
+  ],
+  "gi": []
+ },
+ "48440": {
+  "t": "Datos de ocupación en alojamientos turísticos y otros alojamientos de corta estancia (Anual)",
+  "n": 216,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Total. Melilla. Dato base. ",
+   "Pernoctaciones. Total. Ceuta. Dato base. ",
+   "Pernoctaciones. Total. Zaragoza. Dato base. "
+  ],
+  "gi": [
+   "Pernoctaciones. Total. Girona. Dato base. ",
+   "Pernoctaciones. Residentes en el Extranjero. Girona. Dato base. ",
+   "Pernoctaciones. Residentes en España. Girona. Dato base. "
+  ]
+ },
+ "48424": {
+  "t": "Número de alojamientos turísticos y noches ocupados por residencia del viajero. Puntos turísticos.",
+  "n": 954,
+  "ej": [
+   "Número de alojamientos turísticos ocupados. Total. Alacant/Alicante. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Barcelona. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Benalmádena. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Benidorm. Dato base. "
+  ],
+  "gi": []
+ },
+ "48429": {
+  "t": "Número de alojamientos turísticos y noches ocupados por residencia del viajero. Puntos turísticos.",
+  "n": 1206,
+  "ej": [
+   "Número de alojamientos turísticos ocupados. Total. Alacant/Alicante. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Barcelona. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Benalmádena. Dato base. ",
+   "Número de alojamientos turísticos ocupados. Total. Benidorm. Dato base. "
+  ],
+  "gi": []
+ },
+ "48441": {
+  "t": "Datos de ocupación en alojamientos turísticos y otros alojamientos de corta estancia (Mensual)",
+  "n": 60,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Total. Andalucía. Dato base. ",
+   "Pernoctaciones. Total. Aragón. Dato base. ",
+   "Pernoctaciones. Total. Asturias, Principado de. Dato base. "
+  ],
+  "gi": []
+ },
+ "48425": {
+  "t": "Pernoctaciones por residencia del viajero. Nacional y comunidades autónomas",
+  "n": 60,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Total. Andalucía. Dato base. ",
+   "Pernoctaciones. Total. Aragón. Dato base. ",
+   "Pernoctaciones. Total. Asturias, Principado de. Dato base. "
+  ],
+  "gi": []
+ },
+ "48430": {
+  "t": "Pernoctaciones por residencia del viajero. Nacional y comunidades autónomas",
+  "n": 60,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Total. Andalucía. Dato base. ",
+   "Pernoctaciones. Total. Aragón. Dato base. ",
+   "Pernoctaciones. Total. Asturias, Principado de. Dato base. "
+  ],
+  "gi": []
+ },
+ "48426": {
+  "t": "Pernoctaciones por residencia del viajero. Puntos turísticos",
+  "n": 318,
+  "ej": [
+   "Pernoctaciones. Total. Alacant/Alicante. Dato base. ",
+   "Pernoctaciones. Total. Barcelona. Dato base. ",
+   "Pernoctaciones. Total. Benalmádena. Dato base. ",
+   "Pernoctaciones. Total. Benidorm. Dato base. "
+  ],
+  "gi": []
+ },
+ "48431": {
+  "t": "Pernoctaciones por residencia del viajero. Puntos turísticos",
+  "n": 402,
+  "ej": [
+   "Pernoctaciones. Total. Alacant/Alicante. Dato base. ",
+   "Pernoctaciones. Total. Barcelona. Dato base. ",
+   "Pernoctaciones. Total. Benalmádena. Dato base. ",
+   "Pernoctaciones. Total. Benidorm. Dato base. "
+  ],
+  "gi": []
+ },
+ "48427": {
+  "t": "Pernoctaciones por residencia del viajero. Provincias",
+  "n": 159,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Total. Albacete. Dato base. ",
+   "Pernoctaciones. Total. Alicante/Alacant. Dato base. ",
+   "Pernoctaciones. Total. Almería. Dato base. "
+  ],
+  "gi": [
+   "Pernoctaciones. Total. Girona. Dato base. ",
+   "Pernoctaciones. Residentes en el Extranjero. Girona. Dato base. ",
+   "Pernoctaciones. Residentes en España. Girona. Dato base. "
+  ]
+ },
+ "48432": {
+  "t": "Pernoctaciones por residencia del viajero. Zonas turísticas",
+  "n": 78,
+  "ej": [
+   "Pernoctaciones. Total. Andalucía: Costa De Almería. Dato base. ",
+   "Pernoctaciones. Total. Andalucía: Costa De La Luz de Huelva. Dato base. ",
+   "Pernoctaciones. Total. Andalucía: Costa De La Luz De Cádiz. Dato base. ",
+   "Pernoctaciones. Total. Andalucía: Costa Del Sol. Dato base. "
+  ],
+  "gi": [
+   "Pernoctaciones. Total. Cataluña: Costa Brava. Dato base. ",
+   "Pernoctaciones. Total. Cataluña: Pirineus. Dato base. ",
+   "Pernoctaciones. Residentes en el Extranjero. Cataluña: Costa Brava. Dato base. ",
+   "Pernoctaciones. Residentes en el Extranjero. Cataluña: Pirineus. Dato base. ",
+   "Pernoctaciones. Residentes en España. Cataluña: Costa Brava. Dato base. ",
+   "Pernoctaciones. Residentes en España. Cataluña: Pirineus. Dato base. "
+  ]
+ },
+ "48433": {
+  "t": "Pernoctaciones por país y continente de origen. Nacional.",
+  "n": 54,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Europa. Total Nacional. Dato base. ",
+   "Pernoctaciones. Bélgica. Total Nacional. Dato base. ",
+   "Pernoctaciones. Bulgaria. Total Nacional. Dato base. "
+  ],
+  "gi": []
+ },
+ "48434": {
+  "t": "Pernoctaciones por continente de origen. Nacional y Comunidades Autónomas.",
+  "n": 180,
+  "ej": [
+   "Pernoctaciones. Total. Total Nacional. Dato base. ",
+   "Pernoctaciones. Total. Andalucía. Dato base. ",
+   "Pernoctaciones. Total. Aragón. Dato base. ",
+   "Pernoctaciones. Total. Asturias, Principado de. Dato base. "
+  ],
+  "gi": []
+ },
+ "48435": {
+  "t": "Pernoctaciones por tamaño de alojamiento. Nacional",
+  "n": 3,
+  "ej": [
+   "Pernoctaciones. Total Nacional. 10 camas o más. Dato base. ",
+   "Pernoctaciones. Total Nacional. Menos de 10 camas. Dato base. ",
+   "Pernoctaciones. Total Nacional. Total. Dato base. "
+  ],
+  "gi": []
+ },
+ "48436": {
+  "t": "Pernoctaciones por tipo de alojamiento. Nacional",
+  "n": 3,
+  "ej": [
+   "Pernoctaciones. Total Nacional. Total. Dato base. ",
+   "Pernoctaciones. Total Nacional. Entero. Dato base. ",
+   "Pernoctaciones. Total Nacional. Compartido. Dato base. "
+  ],
+  "gi": []
+ },
+ "51361": {
+  "t": "Número de turistas, pernoctaciones y duración media mensuales por continente, país de residencia o agrupación de países.",
+  "n": 633,
+  "ej": [
+   "Viajes. Europa. Total Nacional. Dato base. ",
+   "Viajes. Albania. Total Nacional. Dato base. ",
+   "Viajes. Alemania. Total Nacional. Dato base. ",
+   "Viajes. Andorra. Total Nacional. Dato base. "
+  ],
+  "gi": []
+ },
+ "52046": {
+  "t": "Número de turistas, pernoctaciones y duración media por CCAA de destino, desglosados por continente y país de residencia.",
+  "n": 12660,
+  "ej": [
+   "Viajes. Europa. Dato base. Andalucía. ",
+   "Viajes. Europa. Dato base. Aragón. ",
+   "Viajes. Europa. Dato base. Asturias, Principado de. ",
+   "Viajes. Europa. Dato base. Balears, Illes. "
+  ],
+  "gi": []
+ },
+ "52530": {
+  "t": "RECEPTOR - Número de viajes, pernoctaciones y duración media mensuales por continente y país de destino, desglosados CCAA,PROV de origen.",
+  "n": 14184,
+  "ej": [
+   "Turistas. Afganistán. Total Nacional. Dato base. ",
+   "Turistas. Afganistán. Dato base. Melilla. ",
+   "Turistas. Afganistán. Dato base. Ceuta. ",
+   "Turistas. Afganistán. Dato base. Rioja, La. "
+  ],
+  "gi": [
+   "Turistas. Afganistán. Girona. Dato base. ",
+   "Turistas. Albania. Girona. Dato base. ",
+   "Turistas. Alemania. Girona. Dato base. ",
+   "Turistas. Andorra. Girona. Dato base. ",
+   "Turistas. Angola. Girona. Dato base. ",
+   "Turistas. Antigua y Barbuda. Girona. Dato base. ",
+   "Turistas. Arabia Saudí. Girona. Dato base. ",
+   "Turistas. Argelia. Girona. Dato base. ",
+   "Turistas. Argentina. Girona. Dato base. ",
+   "Turistas. Armenia. Girona. Dato base. ",
+   "Turistas. Australia. Girona. Dato base. ",
+   "Turistas. Austria. Girona. Dato base. ",
+   "Turistas. Azerbaiyán. Girona. Dato base. ",
+   "Turistas. Bahamas. Girona. Dato base. ",
+   "Turistas. Bahréin. Girona. Dato base. ",
+   "Turistas. Bangladesh. Girona. Dato base. ",
+   "Turistas. Barbados. Girona. Dato base. ",
+   "Turistas. Belarús. Girona. Dato base. ",
+   "Turistas. Bélgica. Girona. Dato base. ",
+   "Turistas. Belice. Girona. Dato base. ",
+   "Turistas. Benin. Girona. Dato base. ",
+   "Turistas. Bhután. Girona. Dato base. ",
+   "Turistas. Bolivia. Girona. Dato base. ",
+   "Turistas. Bosnia y Herzegovina. Girona. Dato base. ",
+   "Turistas. Botswana. Girona. Dato base. ",
+   "Turistas. Brasil. Girona. Dato base. ",
+   "Turistas. Brunei. Girona. Dato base. ",
+   "Turistas. Bulgaria. Girona. Dato base. ",
+   "Turistas. Burkina Faso. Girona. Dato base. ",
+   "Turistas. Burundi. Girona. Dato base. ",
+   "Turistas. Cabo Verde. Girona. Dato base. ",
+   "Turistas. Camboya. Girona. Dato base. ",
+   "Turistas. Camerún. Girona. Dato base. ",
+   "Turistas. Canadá. Girona. Dato base. ",
+   "Turistas. Chad. Girona. Dato base. ",
+   "Turistas. Chile. Girona. Dato base. ",
+   "Turistas. China. Girona. Dato base. ",
+   "Turistas. Chipre. Girona. Dato base. ",
+   "Turistas. Colombia. Girona. Dato base. ",
+   "Turistas. Comores. Girona. Dato base. ",
+   "Turistas. Congo. Girona. Dato base. ",
+   "Turistas. Corea. Girona. Dato base. ",
+   "Turistas. Corea del Norte. Girona. Dato base. ",
+   "Turistas. Costa de Marfil. Girona. Dato base. ",
+   "Turistas. Costa Rica. Girona. Dato base. ",
+   "Turistas. Croacia. Girona. Dato base. ",
+   "Turistas. Cuba. Girona. Dato base. ",
+   "Turistas. Dinamarca. Girona. Dato base. ",
+   "Turistas. Djibouti. Girona. Dato base. ",
+   "Turistas. Dominica. Girona. Dato base. ",
+   "Turistas. Ecuador. Girona. Dato base. ",
+   "Turistas. Egipto. Girona. Dato base. ",
+   "Turistas. El Salvador. Girona. Dato base. ",
+   "Turistas. Emiratos Árabes Unidos. Girona. Dato base. ",
+   "Turistas. Eritrea. Girona. Dato base. ",
+   "Turistas. Eslovenia. Girona. Dato base. ",
+   "Turistas. Estados Unidos de América. Girona. Dato base. ",
+   "Turistas. Estonia. Girona. Dato base. ",
+   "Turistas. Etiopía. Girona. Dato base. ",
+   "Turistas. Fiji. Girona. Dato base. "
+  ]
+ },
+ "52047": {
+  "t": "Número de turistas, pernoctaciones y duración media por provincia de destino, desglosados por continente y país de residencia.",
+  "n": 33549,
+  "ej": [
+   "Turistas. Europa. Total Nacional. Dato base. ",
+   "Turistas. Europa. Albacete. Dato base. ",
+   "Turistas. Europa. Alicante/Alacant. Dato base. ",
+   "Turistas. Europa. Almería. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Europa. Girona. Dato base. ",
+   "Turistas. Albania. Girona. Dato base. ",
+   "Turistas. Alemania. Girona. Dato base. ",
+   "Turistas. Andorra. Girona. Dato base. ",
+   "Turistas. Armenia. Girona. Dato base. ",
+   "Turistas. Austria. Girona. Dato base. ",
+   "Turistas. Belarús. Girona. Dato base. ",
+   "Turistas. Bélgica. Girona. Dato base. ",
+   "Turistas. Bosnia y Herzegovina. Girona. Dato base. ",
+   "Turistas. Bulgaria. Girona. Dato base. ",
+   "Turistas. Chipre. Girona. Dato base. ",
+   "Turistas. Croacia. Girona. Dato base. ",
+   "Turistas. Dinamarca. Girona. Dato base. ",
+   "Turistas. Eslovenia. Girona. Dato base. ",
+   "Turistas. Estonia. Girona. Dato base. ",
+   "Turistas. Francia. Girona. Dato base. ",
+   "Turistas. Finlandia. Girona. Dato base. ",
+   "Turistas. Georgia. Girona. Dato base. ",
+   "Turistas. Gibraltar. Girona. Dato base. ",
+   "Turistas. Grecia. Girona. Dato base. ",
+   "Turistas. Hungría. Girona. Dato base. ",
+   "Turistas. Irlanda. Girona. Dato base. ",
+   "Turistas. Islandia. Girona. Dato base. ",
+   "Turistas. Italia. Girona. Dato base. ",
+   "Turistas. Letonia. Girona. Dato base. ",
+   "Turistas. Liechtenstein. Girona. Dato base. ",
+   "Turistas. Lituania. Girona. Dato base. ",
+   "Turistas. Luxemburgo. Girona. Dato base. ",
+   "Turistas. Macedonia del Norte. Girona. Dato base. ",
+   "Turistas. Malta. Girona. Dato base. ",
+   "Turistas. Moldavia. Girona. Dato base. ",
+   "Turistas. Mónaco. Girona. Dato base. ",
+   "Turistas. Montenegro. Girona. Dato base. ",
+   "Turistas. Noruega. Girona. Dato base. ",
+   "Turistas. Países Bajos. Girona. Dato base. ",
+   "Turistas. Polonia. Girona. Dato base. ",
+   "Turistas. Portugal. Girona. Dato base. ",
+   "Turistas. Reino Unido. Girona. Dato base. ",
+   "Turistas. República Checa. Girona. Dato base. ",
+   "Turistas. República Eslovaca. Girona. Dato base. ",
+   "Turistas. Rumanía. Girona. Dato base. ",
+   "Turistas. Rusia. Girona. Dato base. ",
+   "Turistas. San Marino. Girona. Dato base. ",
+   "Turistas. Santa Sede. Girona. Dato base. ",
+   "Turistas. Serbia. Girona. Dato base. ",
+   "Turistas. Suecia. Girona. Dato base. ",
+   "Turistas. Suiza. Girona. Dato base. ",
+   "Turistas. Turquía. Girona. Dato base. ",
+   "Turistas. Ucrania. Girona. Dato base. ",
+   "Turistas. Otros países o territorios de Europa. Girona. Dato base. ",
+   "Turistas. UE27_2020 sin España. Girona. Dato base. ",
+   "Turistas. África. Girona. Dato base. ",
+   "Turistas. Angola. Girona. Dato base. ",
+   "Turistas. Argelia. Girona. Dato base. ",
+   "Turistas. Benin. Girona. Dato base. ",
+   "Turistas. Botswana. Girona. Dato base. ",
+   "Turistas. Burkina Faso. Girona. Dato base. ",
+   "Turistas. Burundi. Girona. Dato base. ",
+   "Turistas. Cabo Verde. Girona. Dato base. ",
+   "Turistas. Camerún. Girona. Dato base. "
+  ]
+ },
+ "52048": {
+  "t": "RECEPTOR - Número de turistas mensuales por municipio de destino, desglosados por continente y país de residencia.",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "52049": {
+  "t": "Número de turistas, pernoctaciones y duración media mensuales por continente y país de destino.",
+  "n": 633,
+  "ej": [
+   "Turistas. Europa. Total Nacional. Dato base. ",
+   "Turistas. Albania. Total Nacional. Dato base. ",
+   "Turistas. Alemania. Total Nacional. Dato base. ",
+   "Turistas. Andorra. Total Nacional. Dato base. "
+  ],
+  "gi": []
+ },
+ "52767": {
+  "t": "EMISOR - Número de viajes, pernoctaciones y duración media mensuales por continente y país de destino, desglosados CCAA,PROV de origen.",
+  "n": 6744,
+  "ej": [
+   "Turistas. Albania. Total Nacional. Dato base. ",
+   "Turistas. Albania. Rioja, La. Dato base. ",
+   "Turistas. Albania. País Vasco. Dato base. ",
+   "Turistas. Albania. Navarra, Comunidad Foral de. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Albania. Girona. Dato base. ",
+   "Turistas. Alemania. Girona. Dato base. ",
+   "Turistas. Andorra. Girona. Dato base. ",
+   "Turistas. Arabia Saudí. Girona. Dato base. ",
+   "Turistas. Argelia. Girona. Dato base. ",
+   "Turistas. Argentina. Girona. Dato base. ",
+   "Turistas. Armenia. Girona. Dato base. ",
+   "Turistas. Australia. Girona. Dato base. ",
+   "Turistas. Austria. Girona. Dato base. ",
+   "Turistas. Azerbaiyán. Girona. Dato base. ",
+   "Turistas. Bahamas. Girona. Dato base. ",
+   "Turistas. Bélgica. Girona. Dato base. ",
+   "Turistas. Bolivia. Girona. Dato base. ",
+   "Turistas. Bosnia y Herzegovina. Girona. Dato base. ",
+   "Turistas. Brasil. Girona. Dato base. ",
+   "Turistas. Bulgaria. Girona. Dato base. ",
+   "Turistas. Cabo Verde. Girona. Dato base. ",
+   "Turistas. Camerún. Girona. Dato base. ",
+   "Turistas. Canadá. Girona. Dato base. ",
+   "Turistas. Chile. Girona. Dato base. ",
+   "Turistas. China. Girona. Dato base. ",
+   "Turistas. Chipre. Girona. Dato base. ",
+   "Turistas. Colombia. Girona. Dato base. ",
+   "Turistas. Corea. Girona. Dato base. ",
+   "Turistas. Costa Rica. Girona. Dato base. ",
+   "Turistas. Croacia. Girona. Dato base. ",
+   "Turistas. Cuba. Girona. Dato base. ",
+   "Turistas. Dinamarca. Girona. Dato base. ",
+   "Turistas. Ecuador. Girona. Dato base. ",
+   "Turistas. Egipto. Girona. Dato base. ",
+   "Turistas. El Salvador. Girona. Dato base. ",
+   "Turistas. Emiratos Árabes Unidos. Girona. Dato base. ",
+   "Turistas. Eslovenia. Girona. Dato base. ",
+   "Turistas. Estados Unidos de América. Girona. Dato base. ",
+   "Turistas. Estonia. Girona. Dato base. ",
+   "Turistas. Filipinas. Girona. Dato base. ",
+   "Turistas. Finlandia. Girona. Dato base. ",
+   "Turistas. Francia. Girona. Dato base. ",
+   "Turistas. Gambia. Girona. Dato base. ",
+   "Turistas. Georgia. Girona. Dato base. ",
+   "Turistas. Gibraltar. Girona. Dato base. ",
+   "Turistas. Grecia. Girona. Dato base. ",
+   "Turistas. Honduras. Girona. Dato base. ",
+   "Turistas. Hungría. Girona. Dato base. ",
+   "Turistas. India. Girona. Dato base. ",
+   "Turistas. Indonesia. Girona. Dato base. ",
+   "Turistas. Irán. Girona. Dato base. ",
+   "Turistas. Irlanda. Girona. Dato base. ",
+   "Turistas. Islandia. Girona. Dato base. ",
+   "Turistas. Israel. Girona. Dato base. ",
+   "Turistas. Italia. Girona. Dato base. ",
+   "Turistas. Japón. Girona. Dato base. ",
+   "Turistas. Jordania. Girona. Dato base. ",
+   "Turistas. Kazajstán. Girona. Dato base. ",
+   "Turistas. Kenia. Girona. Dato base. ",
+   "Turistas. Kirguistán. Girona. Dato base. ",
+   "Turistas. Letonia. Girona. Dato base. ",
+   "Turistas. Lituania. Girona. Dato base. ",
+   "Turistas. Luxemburgo. Girona. Dato base. ",
+   "Turistas. Malasia. Girona. Dato base. "
+  ]
+ },
+ "52050": {
+  "t": "Número de turistas, pernoctaciones y duración media mensuales por continente y país de destino, desglosados por comunidad autónoma de origen.",
+  "n": 12660,
+  "ej": [
+   "Turistas. Europa. Andalucía. Dato base. ",
+   "Turistas. Europa. Aragón. Dato base. ",
+   "Turistas. Europa. Asturias, Principado de. Dato base. ",
+   "Turistas. Europa. Balears, Illes. Dato base. "
+  ],
+  "gi": []
+ },
+ "52051": {
+  "t": "Número de turistas, pernoctaciones y duración media mensuales por continente y país de destino, desglosados por provincia de origen.",
+  "n": 33549,
+  "ej": [
+   "Turistas. Europa. Total Nacional. Dato base. ",
+   "Turistas. Europa. Albacete. Dato base. ",
+   "Turistas. Europa. Alicante/Alacant. Dato base. ",
+   "Turistas. Europa. Almería. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Europa. Girona. Dato base. ",
+   "Turistas. Albania. Girona. Dato base. ",
+   "Turistas. Alemania. Girona. Dato base. ",
+   "Turistas. Andorra. Girona. Dato base. ",
+   "Turistas. Armenia. Girona. Dato base. ",
+   "Turistas. Austria. Girona. Dato base. ",
+   "Turistas. Belarús. Girona. Dato base. ",
+   "Turistas. Bélgica. Girona. Dato base. ",
+   "Turistas. Bosnia y Herzegovina. Girona. Dato base. ",
+   "Turistas. Bulgaria. Girona. Dato base. ",
+   "Turistas. Chipre. Girona. Dato base. ",
+   "Turistas. Croacia. Girona. Dato base. ",
+   "Turistas. Dinamarca. Girona. Dato base. ",
+   "Turistas. Eslovenia. Girona. Dato base. ",
+   "Turistas. Estonia. Girona. Dato base. ",
+   "Turistas. Francia. Girona. Dato base. ",
+   "Turistas. Finlandia. Girona. Dato base. ",
+   "Turistas. Georgia. Girona. Dato base. ",
+   "Turistas. Gibraltar. Girona. Dato base. ",
+   "Turistas. Grecia. Girona. Dato base. ",
+   "Turistas. Hungría. Girona. Dato base. ",
+   "Turistas. Irlanda. Girona. Dato base. ",
+   "Turistas. Islandia. Girona. Dato base. ",
+   "Turistas. Italia. Girona. Dato base. ",
+   "Turistas. Letonia. Girona. Dato base. ",
+   "Turistas. Liechtenstein. Girona. Dato base. ",
+   "Turistas. Lituania. Girona. Dato base. ",
+   "Turistas. Luxemburgo. Girona. Dato base. ",
+   "Turistas. Macedonia del Norte. Girona. Dato base. ",
+   "Turistas. Malta. Girona. Dato base. ",
+   "Turistas. Moldavia. Girona. Dato base. ",
+   "Turistas. Mónaco. Girona. Dato base. ",
+   "Turistas. Montenegro. Girona. Dato base. ",
+   "Turistas. Noruega. Girona. Dato base. ",
+   "Turistas. Países Bajos. Girona. Dato base. ",
+   "Turistas. Polonia. Girona. Dato base. ",
+   "Turistas. Portugal. Girona. Dato base. ",
+   "Turistas. Reino Unido. Girona. Dato base. ",
+   "Turistas. República Checa. Girona. Dato base. ",
+   "Turistas. República Eslovaca. Girona. Dato base. ",
+   "Turistas. Rumanía. Girona. Dato base. ",
+   "Turistas. Rusia. Girona. Dato base. ",
+   "Turistas. San Marino. Girona. Dato base. ",
+   "Turistas. Santa Sede. Girona. Dato base. ",
+   "Turistas. Serbia. Girona. Dato base. ",
+   "Turistas. Suecia. Girona. Dato base. ",
+   "Turistas. Suiza. Girona. Dato base. ",
+   "Turistas. Turquía. Girona. Dato base. ",
+   "Turistas. Ucrania. Girona. Dato base. ",
+   "Turistas. Otros países o territorios de Europa. Girona. Dato base. ",
+   "Turistas. UE27_2020 sin España. Girona. Dato base. ",
+   "Turistas. África. Girona. Dato base. ",
+   "Turistas. Angola. Girona. Dato base. ",
+   "Turistas. Argelia. Girona. Dato base. ",
+   "Turistas. Benin. Girona. Dato base. ",
+   "Turistas. Botswana. Girona. Dato base. ",
+   "Turistas. Burkina Faso. Girona. Dato base. ",
+   "Turistas. Burundi. Girona. Dato base. ",
+   "Turistas. Cabo Verde. Girona. Dato base. ",
+   "Turistas. Camerún. Girona. Dato base. "
+  ]
+ },
+ "52052": {
+  "t": "EMISOR - Número de turistas mensuales por continente y país de destino, desglosados por municipio de origen.",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "52997": {
+  "t": "Número de turistas, pernoctaciones y duración media mensuales por CCAA y provincia de destino desagregados por CCAA y provincia de origen",
+  "n": 15552,
+  "ej": [
+   "Turistas. Total Nacional. Total Nacional. Dato base. ",
+   "Turistas. Total Nacional. Andalucía. Dato base. ",
+   "Turistas. Total Nacional. Aragón. Dato base. ",
+   "Turistas. Total Nacional. Asturias, Principado de. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Total Nacional. Girona. Dato base. ",
+   "Turistas. Albacete. Girona. Dato base. ",
+   "Turistas. Alicante/Alacant. Girona. Dato base. ",
+   "Turistas. Almería. Girona. Dato base. ",
+   "Turistas. Andalucía. Girona. Dato base. ",
+   "Turistas. Araba/Álava. Girona. Dato base. ",
+   "Turistas. Aragón. Girona. Dato base. ",
+   "Turistas. Asturias. Girona. Dato base. ",
+   "Turistas. Asturias, Principado de. Girona. Dato base. ",
+   "Turistas. Ávila. Girona. Dato base. ",
+   "Turistas. Badajoz. Girona. Dato base. ",
+   "Turistas. Balears, Illes. Girona. Dato base. ",
+   "Turistas. Balears, Illes. Girona. Dato base. ",
+   "Turistas. Barcelona. Girona. Dato base. ",
+   "Turistas. Bizkaia. Girona. Dato base. ",
+   "Turistas. Burgos. Girona. Dato base. ",
+   "Turistas. Cáceres. Girona. Dato base. ",
+   "Turistas. Cádiz. Girona. Dato base. ",
+   "Turistas. Canarias. Girona. Dato base. ",
+   "Turistas. Cantabria. Girona. Dato base. ",
+   "Turistas. Cantabria. Girona. Dato base. ",
+   "Turistas. Castellón/Castelló. Girona. Dato base. ",
+   "Turistas. Castilla - La Mancha. Girona. Dato base. ",
+   "Turistas. Castilla y León. Girona. Dato base. ",
+   "Turistas. Cataluña. Girona. Dato base. ",
+   "Turistas. Ceuta. Girona. Dato base. ",
+   "Turistas. Ceuta. Girona. Dato base. ",
+   "Turistas. Ciudad Real. Girona. Dato base. ",
+   "Turistas. Comunitat Valenciana. Girona. Dato base. ",
+   "Turistas. Córdoba. Girona. Dato base. ",
+   "Turistas. Coruña, A. Girona. Dato base. ",
+   "Turistas. Cuenca. Girona. Dato base. ",
+   "Turistas. Extremadura. Girona. Dato base. ",
+   "Turistas. Galicia. Girona. Dato base. ",
+   "Turistas. Gipuzkoa. Girona. Dato base. ",
+   "Turistas. Girona. Total Nacional. Dato base. ",
+   "Turistas. Girona. Andalucía. Dato base. ",
+   "Turistas. Girona. Aragón. Dato base. ",
+   "Turistas. Girona. Asturias, Principado de. Dato base. ",
+   "Turistas. Girona. Balears, Illes. Dato base. ",
+   "Turistas. Girona. Canarias. Dato base. ",
+   "Turistas. Girona. Cantabria. Dato base. ",
+   "Turistas. Girona. Castilla y León. Dato base. ",
+   "Turistas. Girona. Castilla - La Mancha. Dato base. ",
+   "Turistas. Girona. Cataluña. Dato base. ",
+   "Turistas. Girona. Comunitat Valenciana. Dato base. ",
+   "Turistas. Girona. Extremadura. Dato base. ",
+   "Turistas. Girona. Galicia. Dato base. ",
+   "Turistas. Girona. Madrid, Comunidad de. Dato base. ",
+   "Turistas. Girona. Murcia, Región de. Dato base. ",
+   "Turistas. Girona. Navarra, Comunidad Foral de. Dato base. ",
+   "Turistas. Girona. País Vasco. Dato base. ",
+   "Turistas. Girona. Rioja, La. Dato base. ",
+   "Turistas. Girona. Ceuta. Dato base. ",
+   "Turistas. Girona. Melilla. Dato base. ",
+   "Turistas. Girona. Albacete. Dato base. ",
+   "Turistas. Girona. Alicante/Alacant. Dato base. ",
+   "Turistas. Girona. Almería. Dato base. ",
+   "Turistas. Girona. Araba/Álava. Dato base. ",
+   "Turistas. Girona. Asturias. Dato base. "
+  ]
+ },
+ "53266": {
+  "t": "Número de turistas por CCAA y provincia de destino desagregados por CCAA de origen",
+  "n": 1414,
+  "ej": [
+   "Turistas. Total Nacional. Total Nacional. Dato base. ",
+   "Turistas. Total Nacional. Andalucía. Dato base. ",
+   "Turistas. Total Nacional. Aragón. Dato base. ",
+   "Turistas. Total Nacional. Asturias, Principado de. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Total Nacional. Girona. Dato base. ",
+   "Turistas. Ceuta. Girona. Dato base. ",
+   "Turistas. Rioja, La. Girona. Dato base. ",
+   "Turistas. País Vasco. Girona. Dato base. ",
+   "Turistas. Navarra, Comunidad Foral de. Girona. Dato base. ",
+   "Turistas. Murcia, Región de. Girona. Dato base. ",
+   "Turistas. Madrid, Comunidad de. Girona. Dato base. ",
+   "Turistas. Galicia. Girona. Dato base. ",
+   "Turistas. Extremadura. Girona. Dato base. ",
+   "Turistas. Comunitat Valenciana. Girona. Dato base. ",
+   "Turistas. Cataluña. Girona. Dato base. ",
+   "Turistas. Castilla - La Mancha. Girona. Dato base. ",
+   "Turistas. Castilla y León. Girona. Dato base. ",
+   "Turistas. Cantabria. Girona. Dato base. ",
+   "Turistas. Canarias. Girona. Dato base. ",
+   "Turistas. Balears, Illes. Girona. Dato base. ",
+   "Turistas. Asturias, Principado de. Girona. Dato base. ",
+   "Turistas. Aragón. Girona. Dato base. ",
+   "Turistas. Andalucía. Girona. Dato base. ",
+   "Turistas. Melilla. Girona. Dato base. "
+  ]
+ },
+ "53000": {
+  "t": "Número de turistas mensuales por CCAA y provincia de destino desagregados por municipio de origen",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "53267": {
+  "t": "Número de turistas por CCAA y provincia de destino desagregados por PROVINCIA de origen",
+  "n": 3816,
+  "ej": [
+   "Turistas. Total Nacional. Total Nacional. Dato base. ",
+   "Turistas. Total Nacional. Andalucía. Dato base. ",
+   "Turistas. Total Nacional. Aragón. Dato base. ",
+   "Turistas. Total Nacional. Asturias, Principado de. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Total Nacional. Girona. Dato base. ",
+   "Turistas. Ourense. Girona. Dato base. ",
+   "Turistas. Melilla. Girona. Dato base. ",
+   "Turistas. Ceuta. Girona. Dato base. ",
+   "Turistas. Zaragoza. Girona. Dato base. ",
+   "Turistas. Zamora. Girona. Dato base. ",
+   "Turistas. Bizkaia. Girona. Dato base. ",
+   "Turistas. Valladolid. Girona. Dato base. ",
+   "Turistas. Valencia/València. Girona. Dato base. ",
+   "Turistas. Toledo. Girona. Dato base. ",
+   "Turistas. Teruel. Girona. Dato base. ",
+   "Turistas. Tarragona. Girona. Dato base. ",
+   "Turistas. Soria. Girona. Dato base. ",
+   "Turistas. Sevilla. Girona. Dato base. ",
+   "Turistas. Segovia. Girona. Dato base. ",
+   "Turistas. Cantabria. Girona. Dato base. ",
+   "Turistas. Santa Cruz de Tenerife. Girona. Dato base. ",
+   "Turistas. Salamanca. Girona. Dato base. ",
+   "Turistas. Pontevedra. Girona. Dato base. ",
+   "Turistas. Palmas, Las. Girona. Dato base. ",
+   "Turistas. Palencia. Girona. Dato base. ",
+   "Turistas. Asturias. Girona. Dato base. ",
+   "Turistas. Navarra. Girona. Dato base. ",
+   "Turistas. Murcia. Girona. Dato base. ",
+   "Turistas. Málaga. Girona. Dato base. ",
+   "Turistas. Madrid. Girona. Dato base. ",
+   "Turistas. Lugo. Girona. Dato base. ",
+   "Turistas. Rioja, La. Girona. Dato base. ",
+   "Turistas. Lleida. Girona. Dato base. ",
+   "Turistas. León. Girona. Dato base. ",
+   "Turistas. Jaén. Girona. Dato base. ",
+   "Turistas. Huesca. Girona. Dato base. ",
+   "Turistas. Huelva. Girona. Dato base. ",
+   "Turistas. Gipuzkoa. Girona. Dato base. ",
+   "Turistas. Guadalajara. Girona. Dato base. ",
+   "Turistas. Granada. Girona. Dato base. ",
+   "Turistas. Girona. Total Nacional. Dato base. ",
+   "Turistas. Girona. Andalucía. Dato base. ",
+   "Turistas. Girona. Aragón. Dato base. ",
+   "Turistas. Girona. Asturias, Principado de. Dato base. ",
+   "Turistas. Girona. Balears, Illes. Dato base. ",
+   "Turistas. Girona. Canarias. Dato base. ",
+   "Turistas. Girona. Cantabria. Dato base. ",
+   "Turistas. Girona. Castilla y León. Dato base. ",
+   "Turistas. Girona. Castilla - La Mancha. Dato base. ",
+   "Turistas. Girona. Cataluña. Dato base. ",
+   "Turistas. Girona. Comunitat Valenciana. Dato base. ",
+   "Turistas. Girona. Extremadura. Dato base. ",
+   "Turistas. Girona. Galicia. Dato base. ",
+   "Turistas. Girona. Madrid, Comunidad de. Dato base. ",
+   "Turistas. Girona. Murcia, Región de. Dato base. ",
+   "Turistas. Girona. Navarra, Comunidad Foral de. Dato base. ",
+   "Turistas. Girona. País Vasco. Dato base. ",
+   "Turistas. Girona. Rioja, La. Dato base. ",
+   "Turistas. Girona. Ceuta. Dato base. ",
+   "Turistas. Girona. Melilla. Dato base. ",
+   "Turistas. Girona. Albacete. Dato base. ",
+   "Turistas. Girona. Alicante/Alacant. Dato base. ",
+   "Turistas. Girona. Almería. Dato base. ",
+   "Turistas. Girona. Araba/Álava. Dato base. "
+  ]
+ },
+ "53001": {
+  "t": "Número de turistas mensuales por CCAA y provincia de origen desagregados por municipio de destino",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "53463": {
+  "t": "Número de turistas mensuales por CCAA y provincia de destino desagregados por municipio de origen",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "53464": {
+  "t": "Número de turistas mensuales por CCAA de origen desagregados por municipio de destino",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "53356": {
+  "t": "Número de turistas mensuales por CCAA y provincia de destino desagregados por CCAA y provincia de origen",
+  "n": 5112,
+  "ej": [
+   "Turistas. Albacete. Total Nacional. Dato base. ",
+   "Turistas. Albacete. Andalucía. Dato base. ",
+   "Turistas. Albacete. Aragón. Dato base. ",
+   "Turistas. Albacete. Asturias, Principado de. Dato base. "
+  ],
+  "gi": [
+   "Turistas. Albacete. Girona. Dato base. ",
+   "Turistas. Alicante/Alacant. Girona. Dato base. ",
+   "Turistas. Almería. Girona. Dato base. ",
+   "Turistas. Andalucía. Girona. Dato base. ",
+   "Turistas. Araba/Álava. Girona. Dato base. ",
+   "Turistas. Aragón. Girona. Dato base. ",
+   "Turistas. Asturias. Girona. Dato base. ",
+   "Turistas. Asturias, Principado de. Girona. Dato base. ",
+   "Turistas. Ávila. Girona. Dato base. ",
+   "Turistas. Badajoz. Girona. Dato base. ",
+   "Turistas. Balears, Illes. Girona. Dato base. ",
+   "Turistas. Balears, Illes. Girona. Dato base. ",
+   "Turistas. Barcelona. Girona. Dato base. ",
+   "Turistas. Bizkaia. Girona. Dato base. ",
+   "Turistas. Burgos. Girona. Dato base. ",
+   "Turistas. Cáceres. Girona. Dato base. ",
+   "Turistas. Cádiz. Girona. Dato base. ",
+   "Turistas. Canarias. Girona. Dato base. ",
+   "Turistas. Cantabria. Girona. Dato base. ",
+   "Turistas. Cantabria. Girona. Dato base. ",
+   "Turistas. Castellón/Castelló. Girona. Dato base. ",
+   "Turistas. Castilla - La Mancha. Girona. Dato base. ",
+   "Turistas. Castilla y León. Girona. Dato base. ",
+   "Turistas. Cataluña. Girona. Dato base. ",
+   "Turistas. Ceuta. Girona. Dato base. ",
+   "Turistas. Ceuta. Girona. Dato base. ",
+   "Turistas. Ciudad Real. Girona. Dato base. ",
+   "Turistas. Comunitat Valenciana. Girona. Dato base. ",
+   "Turistas. Córdoba. Girona. Dato base. ",
+   "Turistas. Coruña, A. Girona. Dato base. ",
+   "Turistas. Cuenca. Girona. Dato base. ",
+   "Turistas. Extremadura. Girona. Dato base. ",
+   "Turistas. Galicia. Girona. Dato base. ",
+   "Turistas. Gipuzkoa. Girona. Dato base. ",
+   "Turistas. Girona. Total Nacional. Dato base. ",
+   "Turistas. Girona. Andalucía. Dato base. ",
+   "Turistas. Girona. Aragón. Dato base. ",
+   "Turistas. Girona. Asturias, Principado de. Dato base. ",
+   "Turistas. Girona. Balears, Illes. Dato base. ",
+   "Turistas. Girona. Canarias. Dato base. ",
+   "Turistas. Girona. Cantabria. Dato base. ",
+   "Turistas. Girona. Castilla y León. Dato base. ",
+   "Turistas. Girona. Castilla - La Mancha. Dato base. ",
+   "Turistas. Girona. Cataluña. Dato base. ",
+   "Turistas. Girona. Comunitat Valenciana. Dato base. ",
+   "Turistas. Girona. Extremadura. Dato base. ",
+   "Turistas. Girona. Galicia. Dato base. ",
+   "Turistas. Girona. Madrid, Comunidad de. Dato base. ",
+   "Turistas. Girona. Murcia, Región de. Dato base. ",
+   "Turistas. Girona. Navarra, Comunidad Foral de. Dato base. ",
+   "Turistas. Girona. País Vasco. Dato base. ",
+   "Turistas. Girona. Rioja, La. Dato base. ",
+   "Turistas. Girona. Ceuta. Dato base. ",
+   "Turistas. Girona. Melilla. Dato base. ",
+   "Turistas. Girona. Albacete. Dato base. ",
+   "Turistas. Girona. Alicante/Alacant. Dato base. ",
+   "Turistas. Girona. Almería. Dato base. ",
+   "Turistas. Girona. Araba/Álava. Dato base. ",
+   "Turistas. Girona. Asturias. Dato base. ",
+   "Turistas. Girona. Ávila. Dato base. "
+  ]
+ },
+ "53465": {
+  "t": "Número de turistas por provincia de origen desagregados por municipio de destino",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "53002": {
+  "t": "Número de turistas por municipio de origen y destino",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "53462": {
+  "t": "Número de turistas por CCAA y provincia de origen desagregados por municipio de destino",
+  "error": "string indices must be integers, not 'str'"
+ },
+ "58692": {
+  "t": "Distribución del gasto turístico y gasto medio diario realizado según país de destino",
+  "n": 486,
+  "ej": [
+   "Dato base. Total. Gasto total. ",
+   "Dato base. Total. Gasto medio diario. ",
+   "Dato base. Total. Gasto total con tarjetas bancarias. ",
+   "Dato base. Europa. Gasto total. "
+  ],
+  "gi": []
+ },
+ "58717": {
+  "t": "Distribución del gasto turístico y gasto medio diario realizado según país de destino",
+  "n": 486,
+  "ej": [
+   "Dato base. Total. Gasto total. ",
+   "Dato base. Total. Gasto medio diario. ",
+   "Dato base. Total. Gasto total con tarjetas bancarias. ",
+   "Dato base. Europa. Gasto total. "
+  ],
+  "gi": []
+ },
+ "58926": {
+  "t": "Distribución del gasto turístico y gasto medio diario realizado según país de destino - Top mensual",
+  "n": 112,
+  "ej": [
+   "Dato base. Alemania. Gasto medio diario. ",
+   "Dato base. Alemania. Gasto total. ",
+   "Dato base. Austria. Gasto medio diario. ",
+   "Dato base. Austria. Gasto total. "
+  ],
+  "gi": []
+ },
+ "58705": {
+  "t": "Distribución del gasto turístico y gasto medio diario realizado según continente de destino",
+  "n": 21,
+  "ej": [
+   "Dato base. Europa. Gasto total. ",
+   "Dato base. Europa. Gasto medio diario. ",
+   "Dato base. Europa. Gasto total con tarjetas bancarias. ",
+   "Dato base. África. Gasto total. "
+  ],
+  "gi": []
+ },
+ "58709": {
+  "t": "Distribución del gasto turístico y gasto medio diario realizado según continente de destino",
+  "n": 21,
+  "ej": [
+   "Dato base. Europa. Gasto total. ",
+   "Dato base. Europa. Gasto medio diario. ",
+   "Dato base. Europa. Gasto total con tarjetas bancarias. ",
+   "Dato base. África. Gasto total. "
+  ],
+  "gi": []
+ },
+ "58927": {
+  "t": "Distribución del gasto turístico y gasto medio diario realizado según país de destino - Top anual",
+  "n": 112,
+  "ej": [
+   "Dato base. Alemania. Gasto medio diario. ",
+   "Dato base. Alemania. Gasto total. ",
+   "Dato base. Austria. Gasto medio diario. ",
+   "Dato base. Austria. Gasto total. "
+  ],
+  "gi": []
+ }
+}
