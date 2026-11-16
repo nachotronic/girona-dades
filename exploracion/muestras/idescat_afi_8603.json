@@ -1,0 +1,13 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/afi/8603?lang=ca",
+  "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Règim general de la Seguretat Social i Règim especial de treballadors autònoms. A últim dia del mes",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8603/8703?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Règim general de la Seguretat Social i Règim especial de treballadors autònoms. A últim dia del mes"
+    } ]
+  },
+  "version" : "2.0"
+}

@@ -51,6 +51,10 @@
   const sumaP1564 = () => (D.cj ? Object.values(D.cj.pob1564).reduce((s, v) => s + v, 0) : 0);
   const sumaPob = () => D.municipios.reduce((s, m) => s + (m.poblacion || 0), 0);
   const atur = CJ("atur", "m"), contr = CJ("contr", "m"), indef = CJ("indef", "m"), llq = CJ("llq", "t"), cvq = CJ("cvq", "t"), ini = CJ("ini", "t");
+  const afil = CJ("afil", "m"), reta = CJ("reta", "m"), mat = CJ("mat", "m");
+  const suma12 = (f) => (x, a) => { let s = 0; for (let k = 0; k < 12; k++) { const b = k ? antPer("m", a, k) : a, v = b ? f(x, b) : null; if (v == null) return null; s += v; } return s; };
+  const mat12 = suma12(mat), mat12P = suma12((_, a) => CJP("mat", "m")(a));
+  const NOTA_AFI = { ca: "Idescat a partir de la Seguretat Social: afiliacions al règim general i d'autònoms segons el municipi de residència. Mensual des del maig del 2020, trimestral abans.", es: "Idescat a partir de la Seguridad Social: afiliaciones al régimen general y de autónomos según el municipio de residencia. Mensual desde mayo de 2020, trimestral antes." };
   const aturP = CJP("atur", "m"), cvqP = CJP("cvq", "t"), cvq4 = suma4(cvq), cvq4P = suma4((_, a) => cvqP(a));
   const refCJ = (k, per, fn) => () => { const a = D.cj && D.cj.per[per].slice(-1)[0]; return a ? { cat: fn("cat", a), esp: fn("esp", a) } : {}; };
   const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
@@ -113,6 +117,18 @@
     { id: "cj_indef", per: "m", cob: 0.15, sumable: false, tema: "con", ca: ["Contractes indefinits", "Contractes indefinits o convertits en indefinits (% del total)"], es: ["Contratos indefinidos", "Contratos indefinidos o convertidos en indefinidos (% del total)"],
       t: (m, a) => { const i = indef(m, a), c = contr(m, a); return i != null && c ? Math.min(100, (i / c) * 100) : null; }, pv: CJP("indef", "m"), ref: refCJ("indef", "m", (z, a) => CJP("indef", "m", z)(a)),
       nota: { ca: "Només municipis amb almenys 20 contractes al mes. SEPE.", es: "Solo municipios con al menos 20 contratos en el mes. SEPE." }, ...P0 },
+    { id: "cj_afil", per: "m", cob: 0.5, tema: "con", ca: ["Afiliats", "Afiliats a la Seguretat Social per cada 100 residents de 15 a 64 anys"], es: ["Afiliados", "Afiliados a la Seguridad Social por cada 100 residentes de 15 a 64 años"],
+      t: (m, a) => { const v = afil(m, a), p = p1564(m); return v != null && p ? (v / p) * 100 : null; }, pv: (a) => { const v = CJP("afil", "m")(a); return v != null ? (v / sumaP1564()) * 100 : null; },
+      ref: refCJ("afil", "m", (z, a) => (z === "cat" && D.cj.pob_cat && CJP("afil", "m", "cat")(a) != null ? (CJP("afil", "m", "cat")(a) / D.cj.pob_cat.p1564) * 100 : null)), nota: NOTA_AFI, ...N1 },
+    { id: "cj_afil_var", per: "m", cob: 0.5, sumable: false, tema: "con", ca: ["Afiliats: variació anual", "Variació dels afiliats residents respecte al mateix mes de l'any anterior (%)"], es: ["Afiliados: variación anual", "Variación de los afiliados residentes respecto al mismo mes del año anterior (%)"],
+      t: variacio(afil, "m", 12, 50), pv: (a) => varZ("afil", "m", 12)("gi", a), ref: refCJ("afil", "m", (z, a) => varZ("afil", "m", 12)(z, a)),
+      nota: { ca: "Només municipis amb almenys 50 afiliats. Idescat.", es: "Solo municipios con al menos 50 afiliados. Idescat." }, f: (v) => pct(v, 1, true), c: (v) => pct(v, 1, true) },
+    { id: "cj_reta", per: "m", cob: 0.5, sumable: false, tema: "con", ca: ["Autònoms", "Autònoms (% dels afiliats residents)"], es: ["Autónomos", "Autónomos (% de los afiliados residentes)"],
+      t: (m, a) => { const r = reta(m, a), t = afil(m, a); return r != null && t ? (r / t) * 100 : null; }, pv: (a) => { const r = CJP("reta", "m")(a), t = CJP("afil", "m")(a); return r != null && t ? (r / t) * 100 : null; },
+      ref: refCJ("reta", "m", (z, a) => { const r = CJP("reta", "m", z)(a), t = CJP("afil", "m", z)(a); return r != null && t ? (r / t) * 100 : null; }), nota: NOTA_AFI, ...P0 },
+    { id: "cj_mat", per: "m", cob: 0.3, tema: "con", ca: ["Cotxes nous", "Turismes nous matriculats en 12 mesos per 1.000 habitants"], es: ["Coches nuevos", "Turismos nuevos matriculados en 12 meses por 1.000 habitantes"],
+      t: (m, a) => { const v = mat12(m, a); return v != null && m.poblacion ? (v / m.poblacion) * 1000 : null; }, pv: (a) => { const v = mat12P(null, a); return v != null ? (v / sumaPob()) * 1000 : null; },
+      nota: { ca: "DGT, segons el domicili del titular. Inclou les empreses de lloguer, que pugen molt la xifra d'alguns municipis.", es: "DGT, según el domicilio del titular. Incluye las empresas de alquiler, que disparan la cifra de algunos municipios." }, ...N1 },
     { id: "cj_llq", per: "t", cob: 0.2, tema: "con", ca: ["Lloguer del trimestre", "Lloguer mitjà dels contractes nous del trimestre (€/mes)"], es: ["Alquiler del trimestre", "Alquiler medio de los contratos nuevos del trimestre (€/mes)"],
       t: llq, pv: CJP("llq", "t"), nota: { ca: "Incasòl, fiances dipositades. Només municipis amb prou contractes.", es: "Incasòl, fianzas depositadas. Solo municipios con suficientes contratos." }, ...EU },
     { id: "cj_llq_var", per: "t", cob: 0.2, sumable: false, tema: "con", ca: ["Lloguer: variació anual", "Variació del lloguer mitjà respecte al mateix trimestre de l'any anterior (%)"], es: ["Alquiler: variación anual", "Variación del alquiler medio respecto al mismo trimestre del año anterior (%)"],

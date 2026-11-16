@@ -38,11 +38,19 @@ Fuentes disponibles: `territorio`, `generalitat`, `ine`, `mitma`, `xifra`, `cata
 ### Coyuntura
 
 La sección **Conjuntura** y el tema del mismo nombre del mapa usan series mensuales y trimestrales:
-paro registrado y contratos por municipio (SEPE, `fuentes/conjuntura.py`), alquiler trimestral (Incasòl),
-compraventas trimestrales (Ministerio), viviendas iniciadas (Secretaria d'Habitatge) y, para la provincia,
-compraventas, hipotecas, IPC y pernoctaciones del INE. `scripts/conjuntura_web.py` genera
-`web/datos/conjuntura.json`. Además del lunes, la Action se ejecuta los días 2 a 8 de cada mes solo con
-`conjuntura provincia`, para recoger el dato del mes en cuanto se publica.
+
+- Por municipio: paro registrado y contratos (SEPE, `fuentes/conjuntura.py`), afiliados a la Seguridad
+  Social y autónomos por residencia (Idescat, `fuentes/afiliacio.py`), turismos nuevos matriculados
+  (microdatos DGT, `fuentes/dgt.py`), alquiler trimestral (Incasòl), compraventas trimestrales
+  (Ministerio), viviendas iniciadas (Secretaria d'Habitatge) y valor tasado en los municipios de más
+  de 25.000 habitantes (Ministerio, tabla 35103500).
+- Para la provincia: además, compraventas, hipotecas, IPC, sociedades mercantiles y pernoctaciones
+  hoteleras y extrahoteleras del INE, pasajeros del aeropuerto de Girona (Aena, `fuentes/aena.py`) y
+  valor tasado trimestral (Ministerio, tabla 35101000).
+
+`scripts/conjuntura_web.py` genera `web/datos/conjuntura.json`. Además del lunes, la Action se ejecuta
+los días 2 a 8 de cada mes solo con `conjuntura afiliacio dgt aena provincia mitma`, para recoger el
+dato del mes en cuanto se publica. DGT y Aena no vuelven a descargar los meses ya guardados.
 
 ## Ver la web en local
 
