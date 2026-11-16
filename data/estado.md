@@ -1,6 +1,6 @@
 # Estado de la última actualización
 
-2026-11-16 12:15 UTC
+2026-11-16 12:18 UTC
 
 ## mitma: ok (24 s)
 
@@ -20,7 +20,7 @@
 36402000 (municipio): 1 hojas, 9 filas
 36402500 (municipio): 1 hojas, 9 filas
 36403000 (municipio): 1 hojas, 9 filas
-35103500 (municipio): 86 hojas, 1376 filas
+35103500 (municipio): 86 hojas, 1204 filas
 34010110 (provincia): 5 hojas, 365 filas
 34010120 (provincia): 5 hojas, 363 filas
 34010130 (provincia): 5 hojas, 364 filas
