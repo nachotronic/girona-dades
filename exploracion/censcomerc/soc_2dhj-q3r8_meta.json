@@ -1,0 +1,2495 @@
+{
+  "id" : "2dhj-q3r8",
+  "name" : "Servei de consulta del Cens d'establiments comercials de Catalunya (CECC)",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Empresa i Treball",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Comerç",
+  "createdAt" : 1594206497,
+  "description" : "Aquest servei permet consultar diferents estadístiques sobre l'oferta comercial al territori català dels anys 2017, 2018, 2019, 2021 i 2023. Es poden consultar valors agregats segons criteris territorials o bé per sectors d'activitat.\n\nEls anys en blanc (2020 i 2022) la Direcció General de Comerç no va realitzar la col·laboració amb les Cambres de Comerç que donava peu a generar aquest cens.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2345,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 1777007,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1594369437,
+  "publicationGroup" : 1195735,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1753956755,
+  "rowsUpdatedBy" : "eyfz-8js7",
+  "tableId" : 1197256,
+  "totalTimesRated" : 0,
+  "viewCount" : 8509,
+  "viewLastModified" : 1753956752,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1594369492,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 670701,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1594369492,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1594369492,
+      "failureCount" : 0,
+      "startedAt" : 1594369492,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "8qes-nydi",
+      "displayName" : "Empresa i Treball"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 15699248,
+    "name" : "Municipi",
+    "dataTypeName" : "text",
+    "description" : "Àmbit territorial municipal",
+    "fieldName" : "municipi",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 10036390,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Vallgorguina",
+        "count" : "5"
+      }, {
+        "item" : "Parets del Vallès",
+        "count" : "5"
+      }, {
+        "item" : "Jafre",
+        "count" : "5"
+      }, {
+        "item" : "Oliana",
+        "count" : "5"
+      }, {
+        "item" : "Boadella i les Escaules",
+        "count" : "5"
+      }, {
+        "item" : "Quar, la",
+        "count" : "5"
+      }, {
+        "item" : "Esquirol, l'",
+        "count" : "5"
+      }, {
+        "item" : "Albagés, l'",
+        "count" : "5"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "5"
+      }, {
+        "item" : "Benissanet",
+        "count" : "5"
+      }, {
+        "item" : "Artés",
+        "count" : "5"
+      }, {
+        "item" : "Gelida",
+        "count" : "5"
+      }, {
+        "item" : "Albi, l'",
+        "count" : "5"
+      }, {
+        "item" : "Fígols",
+        "count" : "5"
+      }, {
+        "item" : "Peralada",
+        "count" : "5"
+      }, {
+        "item" : "Cerdanyola del Vallès",
+        "count" : "5"
+      }, {
+        "item" : "Garrigàs",
+        "count" : "5"
+      }, {
+        "item" : "Bellprat",
+        "count" : "5"
+      }, {
+        "item" : "Molar, el",
+        "count" : "5"
+      }, {
+        "item" : "Cervelló",
+        "count" : "5"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "4735",
+      "cardinality" : "948"
+    },
+    "format" : { }
+  }, {
+    "id" : 15699249,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Àmbit territorial comarcal",
+    "fieldName" : "comarca",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 10036389,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "Vallès Oriental",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Alt Empordà",
+        "count" : "340"
+      }, {
+        "item" : "Osona",
+        "count" : "250"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "195"
+      }, {
+        "item" : "Segrià",
+        "count" : "190"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "180"
+      }, {
+        "item" : "Anoia",
+        "count" : "165"
+      }, {
+        "item" : "Berguedà",
+        "count" : "155"
+      }, {
+        "item" : "Noguera",
+        "count" : "150"
+      }, {
+        "item" : "Maresme",
+        "count" : "150"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "150"
+      }, {
+        "item" : "Bages",
+        "count" : "150"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "140"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "135"
+      }, {
+        "item" : "Gironès",
+        "count" : "135"
+      }, {
+        "item" : "Selva",
+        "count" : "130"
+      }, {
+        "item" : "Garrigues",
+        "count" : "120"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "115"
+      }, {
+        "item" : "Priorat",
+        "count" : "115"
+      }, {
+        "item" : "Alt Camp",
+        "count" : "115"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "110"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "4735",
+      "cardinality" : "43"
+    },
+    "format" : { }
+  }, {
+    "id" : 15699250,
+    "name" : "Àmbit territorial",
+    "dataTypeName" : "text",
+    "description" : "Àmbit territorial per Vegueries",
+    "fieldName" : "mbit_territorial",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 10036388,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Comarques Gironines",
+        "count" : "1040"
+      }, {
+        "item" : "Ponent",
+        "count" : "745"
+      }, {
+        "item" : "Comarques Centrals",
+        "count" : "700"
+      }, {
+        "item" : "Metropolità",
+        "count" : "655"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "590"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "385"
+      }, {
+        "item" : "Penedès",
+        "count" : "360"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "260"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "4735",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 15699251,
+    "name" : "Any",
+    "dataTypeName" : "number",
+    "description" : "Anualitat",
+    "fieldName" : "any",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036387,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "2023",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2021",
+        "count" : "947"
+      }, {
+        "item" : "2019",
+        "count" : "947"
+      }, {
+        "item" : "2017",
+        "count" : "947"
+      }, {
+        "item" : "2018",
+        "count" : "947"
+      }, {
+        "item" : "2023",
+        "count" : "947"
+      } ],
+      "smallest" : "2017",
+      "count" : "4735",
+      "cardinality" : "5"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 15699252,
+    "name" : "Població",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’habitants total per l’àmbit territorial corresponent",
+    "fieldName" : "poblaci",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036386,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "1636762",
+      "null" : "0",
+      "top" : [ {
+        "item" : "202",
+        "count" : "13"
+      }, {
+        "item" : "162",
+        "count" : "13"
+      }, {
+        "item" : "187",
+        "count" : "12"
+      }, {
+        "item" : "279",
+        "count" : "11"
+      }, {
+        "item" : "179",
+        "count" : "11"
+      }, {
+        "item" : "159",
+        "count" : "11"
+      }, {
+        "item" : "157",
+        "count" : "11"
+      }, {
+        "item" : "186",
+        "count" : "10"
+      }, {
+        "item" : "191",
+        "count" : "10"
+      }, {
+        "item" : "167",
+        "count" : "10"
+      }, {
+        "item" : "147",
+        "count" : "10"
+      }, {
+        "item" : "276",
+        "count" : "9"
+      }, {
+        "item" : "178",
+        "count" : "9"
+      }, {
+        "item" : "206",
+        "count" : "9"
+      }, {
+        "item" : "369",
+        "count" : "9"
+      }, {
+        "item" : "266",
+        "count" : "8"
+      }, {
+        "item" : "175",
+        "count" : "8"
+      }, {
+        "item" : "136",
+        "count" : "8"
+      }, {
+        "item" : "85",
+        "count" : "8"
+      }, {
+        "item" : "176",
+        "count" : "8"
+      } ],
+      "smallest" : "25",
+      "count" : "4735",
+      "cardinality" : "2865"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699253,
+    "name" : "Establiments",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’establiments comercials per àmbit territorial corresponent",
+    "fieldName" : "establiments",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036385,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "27155",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "452"
+      }, {
+        "item" : "1",
+        "count" : "432"
+      }, {
+        "item" : "2",
+        "count" : "366"
+      }, {
+        "item" : "3",
+        "count" : "235"
+      }, {
+        "item" : "4",
+        "count" : "213"
+      }, {
+        "item" : "5",
+        "count" : "181"
+      }, {
+        "item" : "6",
+        "count" : "139"
+      }, {
+        "item" : "8",
+        "count" : "137"
+      }, {
+        "item" : "7",
+        "count" : "123"
+      }, {
+        "item" : "9",
+        "count" : "123"
+      }, {
+        "item" : "11",
+        "count" : "107"
+      }, {
+        "item" : "10",
+        "count" : "101"
+      }, {
+        "item" : "12",
+        "count" : "70"
+      }, {
+        "item" : "13",
+        "count" : "67"
+      }, {
+        "item" : "14",
+        "count" : "63"
+      }, {
+        "item" : "15",
+        "count" : "61"
+      }, {
+        "item" : "17",
+        "count" : "49"
+      }, {
+        "item" : "16",
+        "count" : "47"
+      }, {
+        "item" : "19",
+        "count" : "39"
+      }, {
+        "item" : "21",
+        "count" : "38"
+      } ],
+      "smallest" : "0",
+      "count" : "4735",
+      "cardinality" : "504"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699254,
+    "name" : "Superfície de venda (m2)",
+    "dataTypeName" : "number",
+    "description" : "Espai en metres quadrats de superfície de venda dels establiments comercials",
+    "fieldName" : "superf_cie_de_venda_m2",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036383,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "3265184",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "457"
+      }, {
+        "item" : "102",
+        "count" : "35"
+      }, {
+        "item" : "17",
+        "count" : "16"
+      }, {
+        "item" : "86",
+        "count" : "14"
+      }, {
+        "item" : "56",
+        "count" : "13"
+      }, {
+        "item" : "34",
+        "count" : "13"
+      }, {
+        "item" : "204",
+        "count" : "13"
+      }, {
+        "item" : "13",
+        "count" : "12"
+      }, {
+        "item" : "100",
+        "count" : "12"
+      }, {
+        "item" : "52",
+        "count" : "11"
+      }, {
+        "item" : "22",
+        "count" : "11"
+      }, {
+        "item" : "127",
+        "count" : "11"
+      }, {
+        "item" : "7",
+        "count" : "10"
+      }, {
+        "item" : "96",
+        "count" : "10"
+      }, {
+        "item" : "20",
+        "count" : "10"
+      }, {
+        "item" : "1",
+        "count" : "9"
+      }, {
+        "item" : "125",
+        "count" : "9"
+      }, {
+        "item" : "44",
+        "count" : "9"
+      }, {
+        "item" : "122",
+        "count" : "9"
+      }, {
+        "item" : "148",
+        "count" : "8"
+      } ],
+      "smallest" : "0",
+      "count" : "4735",
+      "cardinality" : "2883"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699255,
+    "name" : "Densitat comercial (est. / 1.000 hab.)",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’establiments comercials per cada 1.000 habitants de l’àmbit territorial corresponent",
+    "fieldName" : "densitat_comercial_est_1",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036382,
+    "cachedContents" : {
+      "non_null" : "4633",
+      "largest" : "116.88",
+      "null" : "102",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "351"
+      }, {
+        "item" : "8.62",
+        "count" : "11"
+      }, {
+        "item" : "8.70",
+        "count" : "11"
+      }, {
+        "item" : "13.16",
+        "count" : "11"
+      }, {
+        "item" : "5.95",
+        "count" : "11"
+      }, {
+        "item" : "11.36",
+        "count" : "11"
+      }, {
+        "item" : "9.58",
+        "count" : "10"
+      }, {
+        "item" : "5.24",
+        "count" : "10"
+      }, {
+        "item" : "5.26",
+        "count" : "9"
+      }, {
+        "item" : "10.99",
+        "count" : "9"
+      }, {
+        "item" : "10.00",
+        "count" : "9"
+      }, {
+        "item" : "5.59",
+        "count" : "9"
+      }, {
+        "item" : "8.47",
+        "count" : "9"
+      }, {
+        "item" : "12.35",
+        "count" : "9"
+      }, {
+        "item" : "5.99",
+        "count" : "9"
+      }, {
+        "item" : "7.17",
+        "count" : "9"
+      }, {
+        "item" : "9.62",
+        "count" : "9"
+      }, {
+        "item" : "6.90",
+        "count" : "8"
+      }, {
+        "item" : "13.33",
+        "count" : "8"
+      }, {
+        "item" : "8.35",
+        "count" : "8"
+      } ],
+      "smallest" : "0.00",
+      "count" : "4735",
+      "cardinality" : "1722"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699256,
+    "name" : "Densitat comercial (m2 / 1.000 hab.)",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’espai en metres quadrats de superfície de venda per cada 1.000 habitants de l’àmbit territorial corresponent",
+    "fieldName" : "densitat_comercial_m2_1_000",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036381,
+    "cachedContents" : {
+      "non_null" : "4634",
+      "largest" : "50421",
+      "null" : "101",
+      "top" : [ {
+        "item" : "0",
+        "count" : "356"
+      }, {
+        "item" : "665",
+        "count" : "8"
+      }, {
+        "item" : "514",
+        "count" : "8"
+      }, {
+        "item" : "696",
+        "count" : "8"
+      }, {
+        "item" : "739",
+        "count" : "7"
+      }, {
+        "item" : "545",
+        "count" : "7"
+      }, {
+        "item" : "428",
+        "count" : "7"
+      }, {
+        "item" : "1261",
+        "count" : "7"
+      }, {
+        "item" : "198",
+        "count" : "7"
+      }, {
+        "item" : "225",
+        "count" : "7"
+      }, {
+        "item" : "379",
+        "count" : "6"
+      }, {
+        "item" : "349",
+        "count" : "6"
+      }, {
+        "item" : "1475",
+        "count" : "6"
+      }, {
+        "item" : "221",
+        "count" : "6"
+      }, {
+        "item" : "333",
+        "count" : "6"
+      }, {
+        "item" : "352",
+        "count" : "6"
+      }, {
+        "item" : "1472",
+        "count" : "6"
+      }, {
+        "item" : "627",
+        "count" : "6"
+      }, {
+        "item" : "782",
+        "count" : "6"
+      }, {
+        "item" : "212",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "4735",
+      "cardinality" : "2276"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699257,
+    "name" : "Superfície mitjana per establiment (m2)",
+    "dataTypeName" : "number",
+    "description" : "Suma de tota la superfície de venda en metres quadrats dividida pel nombre total d’establiments comercials de l’àmbit territorial corresponent",
+    "fieldName" : "superf_cie_mitjana_per",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036380,
+    "cachedContents" : {
+      "non_null" : "4634",
+      "largest" : "3485",
+      "null" : "101",
+      "top" : [ {
+        "item" : "0",
+        "count" : "356"
+      }, {
+        "item" : "102",
+        "count" : "68"
+      }, {
+        "item" : "69",
+        "count" : "44"
+      }, {
+        "item" : "52",
+        "count" : "40"
+      }, {
+        "item" : "61",
+        "count" : "38"
+      }, {
+        "item" : "74",
+        "count" : "37"
+      }, {
+        "item" : "108",
+        "count" : "36"
+      }, {
+        "item" : "73",
+        "count" : "36"
+      }, {
+        "item" : "54",
+        "count" : "35"
+      }, {
+        "item" : "96",
+        "count" : "35"
+      }, {
+        "item" : "115",
+        "count" : "34"
+      }, {
+        "item" : "55",
+        "count" : "33"
+      }, {
+        "item" : "111",
+        "count" : "33"
+      }, {
+        "item" : "34",
+        "count" : "33"
+      }, {
+        "item" : "57",
+        "count" : "33"
+      }, {
+        "item" : "104",
+        "count" : "32"
+      }, {
+        "item" : "85",
+        "count" : "32"
+      }, {
+        "item" : "113",
+        "count" : "32"
+      }, {
+        "item" : "68",
+        "count" : "31"
+      }, {
+        "item" : "107",
+        "count" : "31"
+      } ],
+      "smallest" : "0",
+      "count" : "4735",
+      "cardinality" : "452"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699258,
+    "name" : "Percentatge d'establiments dintre de TUC",
+    "dataTypeName" : "number",
+    "description" : "Percentatge d’establiments que es troben dins de les àrees on majoritàriament viu la població, en les quals s'han d'implantar, amb caràcter general, els establiments comercials",
+    "fieldName" : "percentatge_d_establiments",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036379,
+    "cachedContents" : {
+      "non_null" : "933",
+      "largest" : "1.00",
+      "null" : "3802",
+      "top" : [ {
+        "item" : "0.8333",
+        "count" : "7"
+      }, {
+        "item" : "0.8462",
+        "count" : "6"
+      }, {
+        "item" : "0.75",
+        "count" : "5"
+      }, {
+        "item" : "0.875",
+        "count" : "5"
+      }, {
+        "item" : "1.00",
+        "count" : "5"
+      }, {
+        "item" : "0.907",
+        "count" : "4"
+      }, {
+        "item" : "0.913",
+        "count" : "4"
+      }, {
+        "item" : "0.6667",
+        "count" : "4"
+      }, {
+        "item" : "0.925",
+        "count" : "4"
+      }, {
+        "item" : "0.7778",
+        "count" : "4"
+      }, {
+        "item" : "0.8571",
+        "count" : "4"
+      }, {
+        "item" : "0.90",
+        "count" : "4"
+      }, {
+        "item" : "0.9091",
+        "count" : "3"
+      }, {
+        "item" : "0.1667",
+        "count" : "3"
+      }, {
+        "item" : "0.9111",
+        "count" : "3"
+      }, {
+        "item" : "0.8904",
+        "count" : "3"
+      }, {
+        "item" : "0.5932",
+        "count" : "3"
+      }, {
+        "item" : "0.878",
+        "count" : "3"
+      }, {
+        "item" : "0.4615",
+        "count" : "3"
+      }, {
+        "item" : "0.8605",
+        "count" : "3"
+      } ],
+      "smallest" : "0.0076",
+      "count" : "4735",
+      "cardinality" : "750"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 15699259,
+    "name" : "Percentatge de superfície de venda dintre de TUC",
+    "dataTypeName" : "number",
+    "description" : "Percentatge de superfície de venda que es troben dins de les àrees on majoritàriament viu la població, en les quals s'han d'implantar, amb caràcter general, els establiments comercials",
+    "fieldName" : "percentatge_de_superf_cie",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036377,
+    "cachedContents" : {
+      "non_null" : "933",
+      "largest" : "1.00",
+      "null" : "3802",
+      "top" : [ {
+        "item" : "1.00",
+        "count" : "5"
+      }, {
+        "item" : "0.8479",
+        "count" : "3"
+      }, {
+        "item" : "0.9298",
+        "count" : "3"
+      }, {
+        "item" : "0.6597",
+        "count" : "3"
+      }, {
+        "item" : "0.8113",
+        "count" : "3"
+      }, {
+        "item" : "0.8516",
+        "count" : "3"
+      }, {
+        "item" : "0.5519",
+        "count" : "2"
+      }, {
+        "item" : "0.54",
+        "count" : "2"
+      }, {
+        "item" : "0.5765",
+        "count" : "2"
+      }, {
+        "item" : "0.4415",
+        "count" : "2"
+      }, {
+        "item" : "0.527",
+        "count" : "2"
+      }, {
+        "item" : "0.5391",
+        "count" : "2"
+      }, {
+        "item" : "0.541",
+        "count" : "2"
+      }, {
+        "item" : "0.5518",
+        "count" : "2"
+      }, {
+        "item" : "0.4293",
+        "count" : "2"
+      }, {
+        "item" : "0.4615",
+        "count" : "2"
+      }, {
+        "item" : "0.2621",
+        "count" : "2"
+      }, {
+        "item" : "0.1673",
+        "count" : "2"
+      }, {
+        "item" : "0.0074",
+        "count" : "2"
+      }, {
+        "item" : "0.2933",
+        "count" : "2"
+      } ],
+      "smallest" : "0.0074",
+      "count" : "4735",
+      "cardinality" : "855"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 15699260,
+    "name" : "Percentatge d'establiments",
+    "dataTypeName" : "number",
+    "description" : "Percentatge d’establiments que pertanyen a una categoria.",
+    "fieldName" : "percentatge_d_establiments_1",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036376,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "0.2632",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "1769"
+      }, {
+        "item" : "0.0001",
+        "count" : "1035"
+      }, {
+        "item" : "0.0002",
+        "count" : "378"
+      }, {
+        "item" : "0.0003",
+        "count" : "255"
+      }, {
+        "item" : "0.0005",
+        "count" : "139"
+      }, {
+        "item" : "0.0004",
+        "count" : "127"
+      }, {
+        "item" : "0.0006",
+        "count" : "115"
+      }, {
+        "item" : "0.0007",
+        "count" : "93"
+      }, {
+        "item" : "0.0008",
+        "count" : "72"
+      }, {
+        "item" : "0.001",
+        "count" : "65"
+      }, {
+        "item" : "0.0009",
+        "count" : "56"
+      }, {
+        "item" : "0.0011",
+        "count" : "32"
+      }, {
+        "item" : "0.0013",
+        "count" : "30"
+      }, {
+        "item" : "0.0018",
+        "count" : "26"
+      }, {
+        "item" : "0.0012",
+        "count" : "25"
+      }, {
+        "item" : "0.0027",
+        "count" : "25"
+      }, {
+        "item" : "0.0026",
+        "count" : "24"
+      }, {
+        "item" : "0.0014",
+        "count" : "24"
+      }, {
+        "item" : "0.0024",
+        "count" : "21"
+      }, {
+        "item" : "0.0017",
+        "count" : "20"
+      } ],
+      "smallest" : "0.00",
+      "count" : "4735",
+      "cardinality" : "149"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 15699261,
+    "name" : "Percentatge de superfície de venda",
+    "dataTypeName" : "number",
+    "description" : "Percentatge de superfície de venda que pertany a una categoria.",
+    "fieldName" : "percentatge_de_superf_cie_1",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036375,
+    "cachedContents" : {
+      "non_null" : "4735",
+      "largest" : "0.2184",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "2112"
+      }, {
+        "item" : "0.0001",
+        "count" : "771"
+      }, {
+        "item" : "0.0002",
+        "count" : "270"
+      }, {
+        "item" : "0.0004",
+        "count" : "183"
+      }, {
+        "item" : "0.0003",
+        "count" : "175"
+      }, {
+        "item" : "0.0005",
+        "count" : "162"
+      }, {
+        "item" : "0.0006",
+        "count" : "116"
+      }, {
+        "item" : "0.0007",
+        "count" : "96"
+      }, {
+        "item" : "0.0008",
+        "count" : "53"
+      }, {
+        "item" : "0.0009",
+        "count" : "49"
+      }, {
+        "item" : "0.0012",
+        "count" : "41"
+      }, {
+        "item" : "0.0011",
+        "count" : "39"
+      }, {
+        "item" : "0.001",
+        "count" : "31"
+      }, {
+        "item" : "0.0015",
+        "count" : "30"
+      }, {
+        "item" : "0.0013",
+        "count" : "27"
+      }, {
+        "item" : "0.0014",
+        "count" : "27"
+      }, {
+        "item" : "0.0016",
+        "count" : "27"
+      }, {
+        "item" : "0.0018",
+        "count" : "23"
+      }, {
+        "item" : "0.0019",
+        "count" : "23"
+      }, {
+        "item" : "0.0022",
+        "count" : "22"
+      } ],
+      "smallest" : "0.00",
+      "count" : "4735",
+      "cardinality" : "157"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 15699262,
+    "name" : "Altres",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb la venda de productes de comerç i que no es troben dins d’alguna de la resta de categories que es nombren",
+    "fieldName" : "altres",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036374,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "1971",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "8",
+        "count" : "27"
+      }, {
+        "item" : "10",
+        "count" : "27"
+      }, {
+        "item" : "11",
+        "count" : "26"
+      }, {
+        "item" : "9",
+        "count" : "25"
+      }, {
+        "item" : "16",
+        "count" : "23"
+      }, {
+        "item" : "15",
+        "count" : "22"
+      }, {
+        "item" : "19",
+        "count" : "21"
+      }, {
+        "item" : "13",
+        "count" : "20"
+      }, {
+        "item" : "6",
+        "count" : "20"
+      }, {
+        "item" : "7",
+        "count" : "19"
+      }, {
+        "item" : "4",
+        "count" : "19"
+      }, {
+        "item" : "12",
+        "count" : "18"
+      }, {
+        "item" : "14",
+        "count" : "17"
+      }, {
+        "item" : "17",
+        "count" : "17"
+      }, {
+        "item" : "5",
+        "count" : "17"
+      }, {
+        "item" : "20",
+        "count" : "16"
+      }, {
+        "item" : "21",
+        "count" : "15"
+      }, {
+        "item" : "18",
+        "count" : "15"
+      }, {
+        "item" : "3",
+        "count" : "11"
+      }, {
+        "item" : "28",
+        "count" : "11"
+      } ],
+      "smallest" : "2",
+      "count" : "4735",
+      "cardinality" : "108"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699263,
+    "name" : "Automoció i carburants",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb el sector de l’automoció i els carburants.",
+    "fieldName" : "automoci_i_carburants",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036373,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "1159",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "13",
+        "count" : "31"
+      }, {
+        "item" : "17",
+        "count" : "25"
+      }, {
+        "item" : "14",
+        "count" : "25"
+      }, {
+        "item" : "18",
+        "count" : "22"
+      }, {
+        "item" : "12",
+        "count" : "21"
+      }, {
+        "item" : "11",
+        "count" : "19"
+      }, {
+        "item" : "10",
+        "count" : "17"
+      }, {
+        "item" : "22",
+        "count" : "17"
+      }, {
+        "item" : "21",
+        "count" : "16"
+      }, {
+        "item" : "15",
+        "count" : "15"
+      }, {
+        "item" : "16",
+        "count" : "15"
+      }, {
+        "item" : "32",
+        "count" : "14"
+      }, {
+        "item" : "20",
+        "count" : "14"
+      }, {
+        "item" : "19",
+        "count" : "14"
+      }, {
+        "item" : "23",
+        "count" : "13"
+      }, {
+        "item" : "9",
+        "count" : "13"
+      }, {
+        "item" : "8",
+        "count" : "12"
+      }, {
+        "item" : "27",
+        "count" : "11"
+      }, {
+        "item" : "6",
+        "count" : "10"
+      }, {
+        "item" : "30",
+        "count" : "10"
+      } ],
+      "smallest" : "1",
+      "count" : "4735",
+      "cardinality" : "122"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699264,
+    "name" : "Comerç mixt",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb el sector de la venda en sistema de comerç mixt",
+    "fieldName" : "comer_mixt",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036372,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "963",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "9",
+        "count" : "36"
+      }, {
+        "item" : "7",
+        "count" : "33"
+      }, {
+        "item" : "5",
+        "count" : "32"
+      }, {
+        "item" : "6",
+        "count" : "31"
+      }, {
+        "item" : "3",
+        "count" : "27"
+      }, {
+        "item" : "8",
+        "count" : "26"
+      }, {
+        "item" : "16",
+        "count" : "22"
+      }, {
+        "item" : "13",
+        "count" : "21"
+      }, {
+        "item" : "10",
+        "count" : "21"
+      }, {
+        "item" : "19",
+        "count" : "21"
+      }, {
+        "item" : "17",
+        "count" : "21"
+      }, {
+        "item" : "12",
+        "count" : "20"
+      }, {
+        "item" : "4",
+        "count" : "20"
+      }, {
+        "item" : "15",
+        "count" : "18"
+      }, {
+        "item" : "18",
+        "count" : "18"
+      }, {
+        "item" : "14",
+        "count" : "14"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      }, {
+        "item" : "21",
+        "count" : "11"
+      }, {
+        "item" : "23",
+        "count" : "9"
+      }, {
+        "item" : "24",
+        "count" : "9"
+      } ],
+      "smallest" : "1",
+      "count" : "4735",
+      "cardinality" : "95"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699265,
+    "name" : "Equipament llar",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb la venda de productes per a la llar",
+    "fieldName" : "equipament_llar",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036371,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "4518",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "36",
+        "count" : "13"
+      }, {
+        "item" : "33",
+        "count" : "13"
+      }, {
+        "item" : "20",
+        "count" : "13"
+      }, {
+        "item" : "29",
+        "count" : "11"
+      }, {
+        "item" : "22",
+        "count" : "11"
+      }, {
+        "item" : "48",
+        "count" : "10"
+      }, {
+        "item" : "41",
+        "count" : "9"
+      }, {
+        "item" : "51",
+        "count" : "9"
+      }, {
+        "item" : "31",
+        "count" : "9"
+      }, {
+        "item" : "63",
+        "count" : "9"
+      }, {
+        "item" : "38",
+        "count" : "9"
+      }, {
+        "item" : "24",
+        "count" : "9"
+      }, {
+        "item" : "44",
+        "count" : "9"
+      }, {
+        "item" : "53",
+        "count" : "9"
+      }, {
+        "item" : "30",
+        "count" : "8"
+      }, {
+        "item" : "18",
+        "count" : "8"
+      }, {
+        "item" : "17",
+        "count" : "8"
+      }, {
+        "item" : "37",
+        "count" : "8"
+      }, {
+        "item" : "45",
+        "count" : "8"
+      }, {
+        "item" : "39",
+        "count" : "8"
+      } ],
+      "smallest" : "6",
+      "count" : "4735",
+      "cardinality" : "200"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699266,
+    "name" : "Equipament persona",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb la venda de productes per a la persona",
+    "fieldName" : "equipament_persona",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036370,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "5607",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "14",
+        "count" : "15"
+      }, {
+        "item" : "31",
+        "count" : "11"
+      }, {
+        "item" : "58",
+        "count" : "10"
+      }, {
+        "item" : "44",
+        "count" : "10"
+      }, {
+        "item" : "48",
+        "count" : "10"
+      }, {
+        "item" : "16",
+        "count" : "10"
+      }, {
+        "item" : "24",
+        "count" : "10"
+      }, {
+        "item" : "8",
+        "count" : "9"
+      }, {
+        "item" : "13",
+        "count" : "9"
+      }, {
+        "item" : "18",
+        "count" : "9"
+      }, {
+        "item" : "35",
+        "count" : "9"
+      }, {
+        "item" : "36",
+        "count" : "8"
+      }, {
+        "item" : "7",
+        "count" : "8"
+      }, {
+        "item" : "97",
+        "count" : "8"
+      }, {
+        "item" : "30",
+        "count" : "8"
+      }, {
+        "item" : "42",
+        "count" : "7"
+      }, {
+        "item" : "27",
+        "count" : "7"
+      }, {
+        "item" : "6",
+        "count" : "7"
+      }, {
+        "item" : "34",
+        "count" : "7"
+      }, {
+        "item" : "20",
+        "count" : "7"
+      } ],
+      "smallest" : "2",
+      "count" : "4735",
+      "cardinality" : "216"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699267,
+    "name" : "Lleure i cultura",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb la venda de productes per a la llar",
+    "fieldName" : "lleure_i_cultura",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036369,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "2691",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "7",
+        "count" : "24"
+      }, {
+        "item" : "17",
+        "count" : "23"
+      }, {
+        "item" : "8",
+        "count" : "22"
+      }, {
+        "item" : "19",
+        "count" : "21"
+      }, {
+        "item" : "21",
+        "count" : "20"
+      }, {
+        "item" : "25",
+        "count" : "20"
+      }, {
+        "item" : "18",
+        "count" : "19"
+      }, {
+        "item" : "24",
+        "count" : "16"
+      }, {
+        "item" : "6",
+        "count" : "16"
+      }, {
+        "item" : "14",
+        "count" : "15"
+      }, {
+        "item" : "23",
+        "count" : "15"
+      }, {
+        "item" : "22",
+        "count" : "15"
+      }, {
+        "item" : "15",
+        "count" : "14"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      }, {
+        "item" : "20",
+        "count" : "14"
+      }, {
+        "item" : "9",
+        "count" : "14"
+      }, {
+        "item" : "12",
+        "count" : "13"
+      }, {
+        "item" : "26",
+        "count" : "13"
+      }, {
+        "item" : "27",
+        "count" : "12"
+      }, {
+        "item" : "16",
+        "count" : "11"
+      } ],
+      "smallest" : "2",
+      "count" : "4735",
+      "cardinality" : "131"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699268,
+    "name" : "Quotidià alimentari (exc. vending)",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb la venda de productes alimentaris",
+    "fieldName" : "quotidi_alimentari_exc_vending",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036368,
+    "cachedContents" : {
+      "non_null" : "610",
+      "largest" : "8656",
+      "null" : "4125",
+      "top" : [ {
+        "item" : "70",
+        "count" : "10"
+      }, {
+        "item" : "53",
+        "count" : "9"
+      }, {
+        "item" : "41",
+        "count" : "9"
+      }, {
+        "item" : "64",
+        "count" : "9"
+      }, {
+        "item" : "56",
+        "count" : "9"
+      }, {
+        "item" : "27",
+        "count" : "8"
+      }, {
+        "item" : "66",
+        "count" : "7"
+      }, {
+        "item" : "68",
+        "count" : "7"
+      }, {
+        "item" : "30",
+        "count" : "7"
+      }, {
+        "item" : "61",
+        "count" : "7"
+      }, {
+        "item" : "28",
+        "count" : "7"
+      }, {
+        "item" : "75",
+        "count" : "7"
+      }, {
+        "item" : "36",
+        "count" : "7"
+      }, {
+        "item" : "26",
+        "count" : "7"
+      }, {
+        "item" : "69",
+        "count" : "7"
+      }, {
+        "item" : "49",
+        "count" : "6"
+      }, {
+        "item" : "24",
+        "count" : "6"
+      }, {
+        "item" : "65",
+        "count" : "6"
+      }, {
+        "item" : "45",
+        "count" : "6"
+      }, {
+        "item" : "35",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "4735",
+      "cardinality" : "264"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699269,
+    "name" : "Quotidià no alimentari",
+    "dataTypeName" : "number",
+    "description" : "Activitats econòmiques relacionades amb la venda de productes quotidians no alimentaris.",
+    "fieldName" : "quotidi_no_alimentari",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036367,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "2003",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "10",
+        "count" : "31"
+      }, {
+        "item" : "7",
+        "count" : "30"
+      }, {
+        "item" : "8",
+        "count" : "27"
+      }, {
+        "item" : "14",
+        "count" : "26"
+      }, {
+        "item" : "13",
+        "count" : "26"
+      }, {
+        "item" : "9",
+        "count" : "25"
+      }, {
+        "item" : "15",
+        "count" : "24"
+      }, {
+        "item" : "17",
+        "count" : "22"
+      }, {
+        "item" : "6",
+        "count" : "20"
+      }, {
+        "item" : "12",
+        "count" : "19"
+      }, {
+        "item" : "11",
+        "count" : "19"
+      }, {
+        "item" : "16",
+        "count" : "17"
+      }, {
+        "item" : "19",
+        "count" : "15"
+      }, {
+        "item" : "22",
+        "count" : "14"
+      }, {
+        "item" : "5",
+        "count" : "13"
+      }, {
+        "item" : "20",
+        "count" : "13"
+      }, {
+        "item" : "18",
+        "count" : "13"
+      }, {
+        "item" : "27",
+        "count" : "13"
+      }, {
+        "item" : "24",
+        "count" : "12"
+      }, {
+        "item" : "25",
+        "count" : "12"
+      } ],
+      "smallest" : "3",
+      "count" : "4735",
+      "cardinality" : "110"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699270,
+    "name" : "Superfície Altres",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes de comerç i que no es troben dins d’alguna de la resta de categories que es nombren",
+    "fieldName" : "sup_altres",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036366,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "180118",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "202",
+        "count" : "3"
+      }, {
+        "item" : "1089",
+        "count" : "3"
+      }, {
+        "item" : "996",
+        "count" : "2"
+      }, {
+        "item" : "727",
+        "count" : "2"
+      }, {
+        "item" : "921",
+        "count" : "2"
+      }, {
+        "item" : "931",
+        "count" : "2"
+      }, {
+        "item" : "620",
+        "count" : "2"
+      }, {
+        "item" : "199",
+        "count" : "2"
+      }, {
+        "item" : "692",
+        "count" : "2"
+      }, {
+        "item" : "720",
+        "count" : "2"
+      }, {
+        "item" : "795",
+        "count" : "2"
+      }, {
+        "item" : "801",
+        "count" : "2"
+      }, {
+        "item" : "69",
+        "count" : "2"
+      }, {
+        "item" : "146",
+        "count" : "2"
+      }, {
+        "item" : "252",
+        "count" : "2"
+      }, {
+        "item" : "634",
+        "count" : "2"
+      }, {
+        "item" : "449",
+        "count" : "2"
+      }, {
+        "item" : "499",
+        "count" : "2"
+      }, {
+        "item" : "63",
+        "count" : "2"
+      }, {
+        "item" : "767",
+        "count" : "2"
+      } ],
+      "smallest" : "28",
+      "count" : "4735",
+      "cardinality" : "577"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699271,
+    "name" : "Superfície Automoció i carburants",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes del sector de l'Automoció i els carburants",
+    "fieldName" : "sup_automoci_i_carburants",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036378,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "278426",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "6486",
+        "count" : "2"
+      }, {
+        "item" : "2883",
+        "count" : "2"
+      }, {
+        "item" : "3311",
+        "count" : "2"
+      }, {
+        "item" : "5037",
+        "count" : "2"
+      }, {
+        "item" : "10023",
+        "count" : "2"
+      }, {
+        "item" : "2894",
+        "count" : "2"
+      }, {
+        "item" : "2456",
+        "count" : "2"
+      }, {
+        "item" : "2935",
+        "count" : "2"
+      }, {
+        "item" : "3822",
+        "count" : "2"
+      }, {
+        "item" : "4153",
+        "count" : "2"
+      }, {
+        "item" : "540",
+        "count" : "2"
+      }, {
+        "item" : "8309",
+        "count" : "2"
+      }, {
+        "item" : "12892",
+        "count" : "2"
+      }, {
+        "item" : "3361",
+        "count" : "2"
+      }, {
+        "item" : "1334",
+        "count" : "2"
+      }, {
+        "item" : "1764",
+        "count" : "2"
+      }, {
+        "item" : "716",
+        "count" : "1"
+      }, {
+        "item" : "595",
+        "count" : "1"
+      }, {
+        "item" : "416",
+        "count" : "1"
+      }, {
+        "item" : "560",
+        "count" : "1"
+      } ],
+      "smallest" : "10",
+      "count" : "4735",
+      "cardinality" : "593"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699272,
+    "name" : "Superfície Comerç mixt",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes en sistema de comç mixt",
+    "fieldName" : "sup_comer_mixt",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036395,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "398221",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "4817",
+        "count" : "3"
+      }, {
+        "item" : "2515",
+        "count" : "2"
+      }, {
+        "item" : "416",
+        "count" : "2"
+      }, {
+        "item" : "1408",
+        "count" : "2"
+      }, {
+        "item" : "1582",
+        "count" : "2"
+      }, {
+        "item" : "2159",
+        "count" : "2"
+      }, {
+        "item" : "661",
+        "count" : "2"
+      }, {
+        "item" : "914",
+        "count" : "2"
+      }, {
+        "item" : "1196",
+        "count" : "2"
+      }, {
+        "item" : "1328",
+        "count" : "2"
+      }, {
+        "item" : "1517",
+        "count" : "2"
+      }, {
+        "item" : "1522",
+        "count" : "2"
+      }, {
+        "item" : "189",
+        "count" : "2"
+      }, {
+        "item" : "2015",
+        "count" : "2"
+      }, {
+        "item" : "1062",
+        "count" : "2"
+      }, {
+        "item" : "619",
+        "count" : "2"
+      }, {
+        "item" : "680",
+        "count" : "2"
+      }, {
+        "item" : "747",
+        "count" : "2"
+      }, {
+        "item" : "215",
+        "count" : "2"
+      }, {
+        "item" : "1472",
+        "count" : "2"
+      } ],
+      "smallest" : "74",
+      "count" : "4735",
+      "cardinality" : "578"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699273,
+    "name" : "Superfície Equipament llar",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes d'equipament de la llar",
+    "fieldName" : "sup_equipament_llar",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036391,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "534140",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "3867",
+        "count" : "2"
+      }, {
+        "item" : "4372",
+        "count" : "2"
+      }, {
+        "item" : "11616",
+        "count" : "2"
+      }, {
+        "item" : "1661",
+        "count" : "2"
+      }, {
+        "item" : "7312",
+        "count" : "2"
+      }, {
+        "item" : "14595",
+        "count" : "2"
+      }, {
+        "item" : "545",
+        "count" : "1"
+      }, {
+        "item" : "529",
+        "count" : "1"
+      }, {
+        "item" : "351",
+        "count" : "1"
+      }, {
+        "item" : "676",
+        "count" : "1"
+      }, {
+        "item" : "1127",
+        "count" : "1"
+      }, {
+        "item" : "1137",
+        "count" : "1"
+      }, {
+        "item" : "1175",
+        "count" : "1"
+      }, {
+        "item" : "1237",
+        "count" : "1"
+      }, {
+        "item" : "659",
+        "count" : "1"
+      }, {
+        "item" : "496",
+        "count" : "1"
+      }, {
+        "item" : "1513",
+        "count" : "1"
+      }, {
+        "item" : "1437",
+        "count" : "1"
+      }, {
+        "item" : "1536",
+        "count" : "1"
+      }, {
+        "item" : "615",
+        "count" : "1"
+      } ],
+      "smallest" : "219",
+      "count" : "4735",
+      "cardinality" : "603"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699274,
+    "name" : "Superfície Equipament persona",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes d'equipament personal",
+    "fieldName" : "sup_equipament_persona",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036394,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "556735",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "3245",
+        "count" : "2"
+      }, {
+        "item" : "597",
+        "count" : "2"
+      }, {
+        "item" : "1203",
+        "count" : "2"
+      }, {
+        "item" : "2532",
+        "count" : "2"
+      }, {
+        "item" : "1283",
+        "count" : "2"
+      }, {
+        "item" : "623",
+        "count" : "2"
+      }, {
+        "item" : "666",
+        "count" : "2"
+      }, {
+        "item" : "1150",
+        "count" : "2"
+      }, {
+        "item" : "1417",
+        "count" : "2"
+      }, {
+        "item" : "1831",
+        "count" : "2"
+      }, {
+        "item" : "4959",
+        "count" : "2"
+      }, {
+        "item" : "5981",
+        "count" : "2"
+      }, {
+        "item" : "813",
+        "count" : "2"
+      }, {
+        "item" : "718",
+        "count" : "2"
+      }, {
+        "item" : "320",
+        "count" : "1"
+      }, {
+        "item" : "308",
+        "count" : "1"
+      }, {
+        "item" : "196",
+        "count" : "1"
+      }, {
+        "item" : "291",
+        "count" : "1"
+      }, {
+        "item" : "281",
+        "count" : "1"
+      }, {
+        "item" : "176",
+        "count" : "1"
+      } ],
+      "smallest" : "21",
+      "count" : "4735",
+      "cardinality" : "595"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699275,
+    "name" : "Superfície Lleure i cultura",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes de Lleure i cultura",
+    "fieldName" : "sup_lleure_i_cultura",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036393,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "214990",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "688",
+        "count" : "3"
+      }, {
+        "item" : "1243",
+        "count" : "3"
+      }, {
+        "item" : "1275",
+        "count" : "2"
+      }, {
+        "item" : "520",
+        "count" : "2"
+      }, {
+        "item" : "1010",
+        "count" : "2"
+      }, {
+        "item" : "1153",
+        "count" : "2"
+      }, {
+        "item" : "386",
+        "count" : "2"
+      }, {
+        "item" : "239",
+        "count" : "2"
+      }, {
+        "item" : "454",
+        "count" : "2"
+      }, {
+        "item" : "617",
+        "count" : "2"
+      }, {
+        "item" : "874",
+        "count" : "2"
+      }, {
+        "item" : "878",
+        "count" : "2"
+      }, {
+        "item" : "376",
+        "count" : "2"
+      }, {
+        "item" : "1181",
+        "count" : "2"
+      }, {
+        "item" : "421",
+        "count" : "2"
+      }, {
+        "item" : "301",
+        "count" : "2"
+      }, {
+        "item" : "381",
+        "count" : "2"
+      }, {
+        "item" : "232",
+        "count" : "2"
+      }, {
+        "item" : "714",
+        "count" : "2"
+      }, {
+        "item" : "1360",
+        "count" : "2"
+      } ],
+      "smallest" : "64",
+      "count" : "4735",
+      "cardinality" : "564"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699276,
+    "name" : "Superfície Quotidià alimentari (exc. vending)",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes alimentaris",
+    "fieldName" : "sup_quotidi_alimentari_exc_vending",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036384,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "952242",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "3883",
+        "count" : "2"
+      }, {
+        "item" : "7496",
+        "count" : "2"
+      }, {
+        "item" : "17602",
+        "count" : "2"
+      }, {
+        "item" : "6394",
+        "count" : "2"
+      }, {
+        "item" : "2055",
+        "count" : "2"
+      }, {
+        "item" : "1461",
+        "count" : "2"
+      }, {
+        "item" : "5582",
+        "count" : "2"
+      }, {
+        "item" : "7544",
+        "count" : "2"
+      }, {
+        "item" : "17855",
+        "count" : "2"
+      }, {
+        "item" : "1979",
+        "count" : "1"
+      }, {
+        "item" : "2430",
+        "count" : "1"
+      }, {
+        "item" : "2395",
+        "count" : "1"
+      }, {
+        "item" : "2450",
+        "count" : "1"
+      }, {
+        "item" : "2517",
+        "count" : "1"
+      }, {
+        "item" : "1946",
+        "count" : "1"
+      }, {
+        "item" : "2317",
+        "count" : "1"
+      }, {
+        "item" : "2795",
+        "count" : "1"
+      }, {
+        "item" : "2120",
+        "count" : "1"
+      }, {
+        "item" : "1862",
+        "count" : "1"
+      }, {
+        "item" : "2727",
+        "count" : "1"
+      } ],
+      "smallest" : "1214",
+      "count" : "4735",
+      "cardinality" : "600"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 15699277,
+    "name" : "Superfície Quotidià no alimentari",
+    "dataTypeName" : "number",
+    "description" : "Superfície total dels establiments dedicats a la venda de productes de comerç quotidià no alimentari",
+    "fieldName" : "sup_quotidi_no_alimentari",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 10036392,
+    "cachedContents" : {
+      "non_null" : "609",
+      "largest" : "165994",
+      "null" : "4126",
+      "top" : [ {
+        "item" : "422",
+        "count" : "3"
+      }, {
+        "item" : "914",
+        "count" : "3"
+      }, {
+        "item" : "1232",
+        "count" : "2"
+      }, {
+        "item" : "822",
+        "count" : "2"
+      }, {
+        "item" : "982",
+        "count" : "2"
+      }, {
+        "item" : "1201",
+        "count" : "2"
+      }, {
+        "item" : "578",
+        "count" : "2"
+      }, {
+        "item" : "527",
+        "count" : "2"
+      }, {
+        "item" : "714",
+        "count" : "2"
+      }, {
+        "item" : "776",
+        "count" : "2"
+      }, {
+        "item" : "581",
+        "count" : "2"
+      }, {
+        "item" : "937",
+        "count" : "2"
+      }, {
+        "item" : "1002",
+        "count" : "2"
+      }, {
+        "item" : "1179",
+        "count" : "2"
+      }, {
+        "item" : "832",
+        "count" : "2"
+      }, {
+        "item" : "386",
+        "count" : "2"
+      }, {
+        "item" : "553",
+        "count" : "2"
+      }, {
+        "item" : "556",
+        "count" : "2"
+      }, {
+        "item" : "583",
+        "count" : "2"
+      }, {
+        "item" : "1235",
+        "count" : "2"
+      } ],
+      "smallest" : "165",
+      "count" : "4735",
+      "cardinality" : "573"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Consultation service for the Census of Commercial Establishments of Catalonia",
+        "Nombre del conjunto de datos (ES)" : "Servicio de consulta del Censo de establimentos comerciales de Cataluña (CECC)"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Enllaços relacionats" : {
+        "Nom" : "Aplicatiu del Servei de consulta del Cens d'establiments comercials de Catalunya (CECC)",
+        "URL" : "https://censcomerc.empresa.gencat.cat/#/inici"
+      },
+      "Actors" : {
+        "Departament" : "Empresa i Treball",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Nom d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "municipi", "comarques", "àmbit territorial", "població", "establiments", "superfície de venda (m2)", "densitat comercial (est. / 1.000 hab.)", "densitat comercial (m2 / 1.000 hab.)", "superfície mitjana per establiment (m2)", "percentatge d'establiments dintre de tuc", "percentatge de superfície de venda dintre de tuc", "sector", "percentatge d'establiments", "percentatge de superfície de venda", "codi iae pral", "descripció de l'activitat", "altres", "automoció i carburants", "comerç mixt", "equipament llar", "equipament persona", "lleure i cultura", "quotidià alimentari (exc. vending)", "quotidià no alimentari", "smartcatalonia", "ods8_treball decent i creixement econòmic" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

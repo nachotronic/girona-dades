@@ -1,0 +1,1342 @@
+{
+  "id" : "8dtv-rvgy",
+  "name" : "Registre de llicències comercials",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Empresa i Treball",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Comerç",
+  "createdAt" : 1495545821,
+  "description" : "Als efectes del que preveu l’apartat 6 de l’article 8 de la Llei 18/2005, de 27 de desembre, d’equipaments comercials, les llicències comercials de la Generalitat i el seu sentit serà publicat per la Direcció General de Comerç, a través de mitjans telemàtics. El registre divulgat per aquest mitjà contindrà la informació següent: Nom de l’empresa sol·licitant, data d’entrada de la sol·licitud, ubicació de l’establiment, superfície de venda, sector d’oferta i forma, data i sentit de la resolució. S’haurà de garantir la protecció de dades de caràcter personal.\r\n\r\nFont: Article 34, Registre i publicitat, del Decret 378/2006, de 10 d'octubre, pel qual es desplega la Llei 18/2005, de 27 de desembre, d'equipaments comercials.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2694,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2110824,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1625221653,
+  "publicationGroup" : 130537,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1777293003,
+  "rowsUpdatedBy" : "7jt5-3aar",
+  "tableId" : 1434492,
+  "totalTimesRated" : 0,
+  "viewCount" : 10826,
+  "viewLastModified" : 1777293002,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1526558219,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 946500,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1526558219,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 19725420,
+    "name" : "Sol·licitant",
+    "dataTypeName" : "text",
+    "description" : "Persona jurídica a nom de la qual està inscrita en el registre",
+    "fieldName" : "sol_licitant",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 1251267,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "WORTEN ESPAÑA DISTRIBUCIÓN, SL",
+      "null" : "0",
+      "top" : [ {
+        "item" : "GESDIP, SAU",
+        "count" : "22"
+      }, {
+        "item" : "MERCADONA, SA",
+        "count" : "12"
+      }, {
+        "item" : "LIDL SUPERMERCADOS, SAU",
+        "count" : "10"
+      }, {
+        "item" : "BRICOLAJE BRICOMAN, SLU",
+        "count" : "9"
+      }, {
+        "item" : "BON PREU, SAU",
+        "count" : "8"
+      }, {
+        "item" : "LEROY MERLIN ESPAÑA, SLU",
+        "count" : "8"
+      }, {
+        "item" : "DECATHLON ESPAÑA, SAU",
+        "count" : "7"
+      }, {
+        "item" : "UNIPREUS, SL",
+        "count" : "5"
+      }, {
+        "item" : "DECATHLON ESPAÑA, SA",
+        "count" : "5"
+      }, {
+        "item" : "ALDI MASQUEFA SUPERMERCADOS, SL",
+        "count" : "4"
+      }, {
+        "item" : "EL CORTE INGLÉS, SA",
+        "count" : "4"
+      }, {
+        "item" : "METROVACESA, SA",
+        "count" : "3"
+      }, {
+        "item" : "CABOEL, SL",
+        "count" : "3"
+      }, {
+        "item" : "EURO DEPOT ESPAÑA, SA",
+        "count" : "3"
+      }, {
+        "item" : "PAL BEACH GESTIÓ, SA",
+        "count" : "3"
+      }, {
+        "item" : "AKI BRICOLAJE ESPAÑA, SL",
+        "count" : "2"
+      }, {
+        "item" : "SUPERMERCADOS CHAMPION, SA",
+        "count" : "2"
+      }, {
+        "item" : "CAPRABO, SA",
+        "count" : "2"
+      }, {
+        "item" : "EURO-ABAN, SL",
+        "count" : "2"
+      }, {
+        "item" : "VALUE RETAIL BARCELONA, SL",
+        "count" : "2"
+      } ],
+      "smallest" : "ADM I MSM",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725434,
+    "name" : "Codi municipi",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi",
+    "fieldName" : "codi_municipi",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13110024,
+    "cachedContents" : {
+      "non_null" : "258",
+      "largest" : "439057",
+      "null" : "1",
+      "top" : [ {
+        "item" : "431482",
+        "count" : "21"
+      }, {
+        "item" : "251207",
+        "count" : "14"
+      }, {
+        "item" : "080193",
+        "count" : "12"
+      }, {
+        "item" : "082798",
+        "count" : "11"
+      }, {
+        "item" : "170865",
+        "count" : "10"
+      }, {
+        "item" : "082009",
+        "count" : "9"
+      }, {
+        "item" : "080155",
+        "count" : "9"
+      }, {
+        "item" : "081878",
+        "count" : "8"
+      }, {
+        "item" : "170669",
+        "count" : "7"
+      }, {
+        "item" : "081136",
+        "count" : "7"
+      }, {
+        "item" : "080961",
+        "count" : "5"
+      }, {
+        "item" : "171557",
+        "count" : "5"
+      }, {
+        "item" : "082021",
+        "count" : "5"
+      }, {
+        "item" : "080734",
+        "count" : "5"
+      }, {
+        "item" : "171175",
+        "count" : "5"
+      }, {
+        "item" : "170792",
+        "count" : "5"
+      }, {
+        "item" : "431233",
+        "count" : "5"
+      }, {
+        "item" : "081249",
+        "count" : "4"
+      }, {
+        "item" : "170622",
+        "count" : "4"
+      }, {
+        "item" : "171143",
+        "count" : "4"
+      } ],
+      "smallest" : "080018",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : { }
+  }, {
+    "id" : 19725421,
+    "name" : "Municipi",
+    "dataTypeName" : "text",
+    "description" : "Ubicació on s’exerceix l’activitat comercial",
+    "fieldName" : "municipi",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 1251268,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "Vila-seca",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Tarragona",
+        "count" : "21"
+      }, {
+        "item" : "Lleida",
+        "count" : "14"
+      }, {
+        "item" : "Barcelona",
+        "count" : "12"
+      }, {
+        "item" : "Terrassa",
+        "count" : "11"
+      }, {
+        "item" : "Jonquera, la",
+        "count" : "10"
+      }, {
+        "item" : "Sant Boi de Llobregat",
+        "count" : "9"
+      }, {
+        "item" : "Badalona",
+        "count" : "9"
+      }, {
+        "item" : "Sabadell",
+        "count" : "8"
+      }, {
+        "item" : "Manresa",
+        "count" : "7"
+      }, {
+        "item" : "Figueres",
+        "count" : "7"
+      }, {
+        "item" : "Granollers",
+        "count" : "5"
+      }, {
+        "item" : "Palafrugell",
+        "count" : "5"
+      }, {
+        "item" : "Sant Celoni",
+        "count" : "5"
+      }, {
+        "item" : "Girona",
+        "count" : "5"
+      }, {
+        "item" : "Reus",
+        "count" : "5"
+      }, {
+        "item" : "Cornellà de Llobregat",
+        "count" : "5"
+      }, {
+        "item" : "Salt",
+        "count" : "5"
+      }, {
+        "item" : "Hospitalet de Llobregat, l'",
+        "count" : "4"
+      }, {
+        "item" : "Mollet del Vallès",
+        "count" : "4"
+      }, {
+        "item" : "Olot",
+        "count" : "4"
+      } ],
+      "smallest" : "Abrera",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725432,
+    "name" : "Codi comarca",
+    "dataTypeName" : "text",
+    "description" : "Codi de la comarca",
+    "fieldName" : "codi_comarca",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13110022,
+    "cachedContents" : {
+      "non_null" : "258",
+      "largest" : "41",
+      "null" : "1",
+      "top" : [ {
+        "item" : "11",
+        "count" : "33"
+      }, {
+        "item" : "40",
+        "count" : "31"
+      }, {
+        "item" : "41",
+        "count" : "27"
+      }, {
+        "item" : "13",
+        "count" : "26"
+      }, {
+        "item" : "36",
+        "count" : "26"
+      }, {
+        "item" : "02",
+        "count" : "22"
+      }, {
+        "item" : "33",
+        "count" : "15"
+      }, {
+        "item" : "10",
+        "count" : "10"
+      }, {
+        "item" : "20",
+        "count" : "10"
+      }, {
+        "item" : "07",
+        "count" : "8"
+      }, {
+        "item" : "21",
+        "count" : "7"
+      }, {
+        "item" : "08",
+        "count" : "5"
+      }, {
+        "item" : "12",
+        "count" : "5"
+      }, {
+        "item" : "24",
+        "count" : "5"
+      }, {
+        "item" : "19",
+        "count" : "4"
+      }, {
+        "item" : "34",
+        "count" : "4"
+      }, {
+        "item" : "06",
+        "count" : "4"
+      }, {
+        "item" : "28",
+        "count" : "3"
+      }, {
+        "item" : "17",
+        "count" : "3"
+      }, {
+        "item" : "39",
+        "count" : "2"
+      } ],
+      "smallest" : "02",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : { }
+  }, {
+    "id" : 19725433,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Comarca on s’exerceix l’activitat comercial",
+    "fieldName" : "comarca",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13110023,
+    "cachedContents" : {
+      "non_null" : "258",
+      "largest" : "Vallès Oriental",
+      "null" : "1",
+      "top" : [ {
+        "item" : "Baix Llobregat",
+        "count" : "33"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "31"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "27"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "26"
+      }, {
+        "item" : "Barcelonès",
+        "count" : "26"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "22"
+      }, {
+        "item" : "Segrià",
+        "count" : "15"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "10"
+      }, {
+        "item" : "Gironès",
+        "count" : "10"
+      }, {
+        "item" : "Bages",
+        "count" : "8"
+      }, {
+        "item" : "Maresme",
+        "count" : "7"
+      }, {
+        "item" : "Baix Penedès",
+        "count" : "5"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "5"
+      }, {
+        "item" : "Osona",
+        "count" : "5"
+      }, {
+        "item" : "Anoia",
+        "count" : "4"
+      }, {
+        "item" : "Selva",
+        "count" : "4"
+      }, {
+        "item" : "Garrotxa",
+        "count" : "4"
+      }, {
+        "item" : "Pla de l'Estany",
+        "count" : "3"
+      }, {
+        "item" : "Garraf",
+        "count" : "3"
+      }, {
+        "item" : "Aran",
+        "count" : "2"
+      } ],
+      "smallest" : "Alt Empordà",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : { }
+  }, {
+    "id" : 19725422,
+    "name" : "Format de l'establiment",
+    "dataTypeName" : "text",
+    "description" : "Classificació en funció del format",
+    "fieldName" : "format_de_l_establiment",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 1251269,
+    "width" : 376,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "Sup. Especialitzada",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Sup. Especialitzada",
+        "count" : "88"
+      }, {
+        "item" : "Supermercat",
+        "count" : "58"
+      }, {
+        "item" : "Centre Comercial",
+        "count" : "42"
+      }, {
+        "item" : "Establiment Cial. Col·lectiu",
+        "count" : "16"
+      }, {
+        "item" : "Hipermercat",
+        "count" : "16"
+      }, {
+        "item" : "Recinte Comercial",
+        "count" : "15"
+      }, {
+        "item" : "Altres",
+        "count" : "9"
+      }, {
+        "item" : "Centre Cial. Fabricants",
+        "count" : "6"
+      }, {
+        "item" : "Mercat Municipal",
+        "count" : "4"
+      }, {
+        "item" : "Gran Magatzem",
+        "count" : "4"
+      }, {
+        "item" : "Galeria Comercial",
+        "count" : "1"
+      } ],
+      "smallest" : "Altres",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725423,
+    "name" : "Sector d'activitat",
+    "dataTypeName" : "text",
+    "description" : "Sector d’activitat comercial",
+    "fieldName" : "sector_d_activitat",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 1251270,
+    "width" : 316,
+    "cachedContents" : {
+      "non_null" : "258",
+      "largest" : "Quotidià",
+      "null" : "1",
+      "top" : [ {
+        "item" : "Diversos",
+        "count" : "103"
+      }, {
+        "item" : "Quotidià",
+        "count" : "65"
+      }, {
+        "item" : "Bricolatge",
+        "count" : "21"
+      }, {
+        "item" : "Mobles",
+        "count" : "19"
+      }, {
+        "item" : "Esports",
+        "count" : "16"
+      }, {
+        "item" : "Construcció",
+        "count" : "9"
+      }, {
+        "item" : "Eq. Llar",
+        "count" : "8"
+      }, {
+        "item" : "Automoció",
+        "count" : "5"
+      }, {
+        "item" : "Electrodomèstics",
+        "count" : "5"
+      }, {
+        "item" : "Eq. Persona",
+        "count" : "5"
+      }, {
+        "item" : "Ferreteria",
+        "count" : "1"
+      }, {
+        "item" : "Jardineria",
+        "count" : "1"
+      } ],
+      "smallest" : "Automoció",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725424,
+    "name" : "Sup Venda (m2)",
+    "dataTypeName" : "number",
+    "description" : "Superfície de venda",
+    "fieldName" : "sup_venda_m2",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 1251271,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "38942.00",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2499.00",
+        "count" : "7"
+      }, {
+        "item" : "10000.00",
+        "count" : "2"
+      }, {
+        "item" : "601",
+        "count" : "2"
+      }, {
+        "item" : "2495.00",
+        "count" : "2"
+      }, {
+        "item" : "3782.00",
+        "count" : "1"
+      }, {
+        "item" : "2499.91",
+        "count" : "1"
+      }, {
+        "item" : "4950.00",
+        "count" : "1"
+      }, {
+        "item" : "4829.90",
+        "count" : "1"
+      }, {
+        "item" : "5353.00",
+        "count" : "1"
+      }, {
+        "item" : "259.54",
+        "count" : "1"
+      }, {
+        "item" : "3320.87",
+        "count" : "1"
+      }, {
+        "item" : "2544.91",
+        "count" : "1"
+      }, {
+        "item" : "1740.68",
+        "count" : "1"
+      }, {
+        "item" : "2840.00",
+        "count" : "1"
+      }, {
+        "item" : "2785.00",
+        "count" : "1"
+      }, {
+        "item" : "1959.36",
+        "count" : "1"
+      }, {
+        "item" : "1473.00",
+        "count" : "1"
+      }, {
+        "item" : "1701.42",
+        "count" : "1"
+      }, {
+        "item" : "1766.00",
+        "count" : "1"
+      }, {
+        "item" : "6856.66",
+        "count" : "1"
+      } ],
+      "smallest" : "69.75",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "precision" : "2",
+      "groupSeparator" : ".",
+      "align" : "right"
+    }
+  }, {
+    "id" : 19725425,
+    "name" : "Data Entrada DGC",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data d’entrada de la sol·licitud",
+    "fieldName" : "data_entrada_dgc",
+    "position" : 9,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 1251272,
+    "width" : 292,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "2025-10-16T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2016-02-16T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2011-08-24T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2009-12-16T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2015-01-12T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-11-08T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2015-11-27T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-03-02T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-04-19T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-12-21T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2017-04-03T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-12-28T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2015-11-25T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2015-10-28T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-12-22T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-06-30T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2020-07-09T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2008-07-25T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2016-01-05T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2007-11-06T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2025-10-16T00:00:00.000",
+        "count" : "2"
+      } ],
+      "smallest" : "2005-01-13T00:00:00.000",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "view" : "date_dmy",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725426,
+    "name" : "Data Resolució (Ferma)",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data de la resolució ferma",
+    "fieldName" : "data_resoluci_ferma",
+    "position" : 10,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 1251273,
+    "width" : 364,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "2026-03-04T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2010-09-22T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2010-04-06T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2007-01-04T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2010-06-18T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2012-07-03T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2017-01-09T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-08-28T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2006-10-23T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2020-12-14T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2008-07-25T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2007-05-22T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2018-10-09T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2017-08-01T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2010-07-29T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2007-09-10T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2012-07-20T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2008-04-30T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2023-05-09T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2009-01-15T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2011-07-29T00:00:00.000",
+        "count" : "2"
+      } ],
+      "smallest" : "2006-10-23T00:00:00.000",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "view" : "date_dmy",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725427,
+    "name" : "Sentit Resolució (Ferma)",
+    "dataTypeName" : "text",
+    "description" : "Sentit de la resolució ferma",
+    "fieldName" : "sentit_resoluci_ferma",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 1251274,
+    "width" : 388,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "Favorable",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Favorable",
+        "count" : "243"
+      }, {
+        "item" : "Desfavorable",
+        "count" : "16"
+      } ],
+      "smallest" : "Desfavorable",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 19725428,
+    "name" : "UTM X",
+    "dataTypeName" : "number",
+    "description" : "Sistema de coordenades universal transversal de Mercator per a la coordenada X",
+    "fieldName" : "utm_x",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 1251275,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "512796",
+      "null" : "0",
+      "top" : [ {
+        "item" : "425545",
+        "count" : "3"
+      }, {
+        "item" : "420461",
+        "count" : "2"
+      }, {
+        "item" : "512796",
+        "count" : "2"
+      }, {
+        "item" : "422850",
+        "count" : "2"
+      }, {
+        "item" : "504327",
+        "count" : "2"
+      }, {
+        "item" : "456600",
+        "count" : "2"
+      }, {
+        "item" : "344845",
+        "count" : "2"
+      }, {
+        "item" : "419607",
+        "count" : "2"
+      }, {
+        "item" : "426700",
+        "count" : "2"
+      }, {
+        "item" : "433150",
+        "count" : "2"
+      }, {
+        "item" : "422949",
+        "count" : "2"
+      }, {
+        "item" : "404291",
+        "count" : "2"
+      }, {
+        "item" : "418863",
+        "count" : "2"
+      }, {
+        "item" : "342932",
+        "count" : "2"
+      }, {
+        "item" : "490228",
+        "count" : "1"
+      }, {
+        "item" : "419147",
+        "count" : "1"
+      }, {
+        "item" : "373144",
+        "count" : "1"
+      }, {
+        "item" : "418545",
+        "count" : "1"
+      }, {
+        "item" : "452459",
+        "count" : "1"
+      }, {
+        "item" : "511017",
+        "count" : "1"
+      } ],
+      "smallest" : "274681",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 19725429,
+    "name" : "UTM Y",
+    "dataTypeName" : "number",
+    "description" : "Sistema de coordenades universal transversal de Mercator per a la coordenada Y",
+    "fieldName" : "utm_y",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 1251276,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "46712456",
+      "null" : "0",
+      "top" : [ {
+        "item" : "4588230",
+        "count" : "2"
+      }, {
+        "item" : "4577930",
+        "count" : "2"
+      }, {
+        "item" : "4577736",
+        "count" : "2"
+      }, {
+        "item" : "4619897",
+        "count" : "2"
+      }, {
+        "item" : "4639968",
+        "count" : "2"
+      }, {
+        "item" : "4471100",
+        "count" : "2"
+      }, {
+        "item" : "4601725",
+        "count" : "2"
+      }, {
+        "item" : "4553216",
+        "count" : "2"
+      }, {
+        "item" : "4551215",
+        "count" : "2"
+      }, {
+        "item" : "4600061",
+        "count" : "2"
+      }, {
+        "item" : "4556465",
+        "count" : "2"
+      }, {
+        "item" : "4629403",
+        "count" : "2"
+      }, {
+        "item" : "4575841",
+        "count" : "2"
+      }, {
+        "item" : "4578665",
+        "count" : "2"
+      }, {
+        "item" : "4694549",
+        "count" : "1"
+      }, {
+        "item" : "4607460",
+        "count" : "1"
+      }, {
+        "item" : "4554937",
+        "count" : "1"
+      }, {
+        "item" : "4582315",
+        "count" : "1"
+      }, {
+        "item" : "4609468",
+        "count" : "1"
+      }, {
+        "item" : "4554080",
+        "count" : "1"
+      } ],
+      "smallest" : "4471100",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 19725430,
+    "name" : "NIF Sol·licitant",
+    "dataTypeName" : "text",
+    "description" : "Número d'Identificació Fiscal",
+    "fieldName" : "nif_sol_licitant",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 11562131,
+    "cachedContents" : {
+      "non_null" : "259",
+      "largest" : "W0042481B",
+      "null" : "0",
+      "top" : [ {
+        "item" : "A08785826",
+        "count" : "22"
+      }, {
+        "item" : "A79935607",
+        "count" : "13"
+      }, {
+        "item" : "A46103834",
+        "count" : "12"
+      }, {
+        "item" : "A60195278",
+        "count" : "11"
+      }, {
+        "item" : "B84818442",
+        "count" : "9"
+      }, {
+        "item" : "B84406289",
+        "count" : "9"
+      }, {
+        "item" : "A08665838",
+        "count" : "8"
+      }, {
+        "item" : "A62018064",
+        "count" : "6"
+      }, {
+        "item" : "B25028663",
+        "count" : "5"
+      }, {
+        "item" : "B63667109",
+        "count" : "5"
+      }, {
+        "item" : "A28812618",
+        "count" : "5"
+      }, {
+        "item" : "A28017895",
+        "count" : "4"
+      }, {
+        "item" : "A28017804",
+        "count" : "4"
+      }, {
+        "item" : "A17564170",
+        "count" : "3"
+      }, {
+        "item" : "--",
+        "count" : "3"
+      }, {
+        "item" : "B58196676",
+        "count" : "3"
+      }, {
+        "item" : "B83985713",
+        "count" : "3"
+      }, {
+        "item" : "A43055938",
+        "count" : "2"
+      }, {
+        "item" : "B86369915",
+        "count" : "2"
+      }, {
+        "item" : "D59474577",
+        "count" : "2"
+      } ],
+      "smallest" : "--",
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : { }
+  }, {
+    "id" : 19725431,
+    "name" : "Georeferència",
+    "dataTypeName" : "point",
+    "description" : "",
+    "fieldName" : "georefer_ncia",
+    "position" : 15,
+    "renderTypeName" : "point",
+    "tableColumnId" : 13110021,
+    "cachedContents" : {
+      "non_null" : "258",
+      "null" : "1",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ 1.254358212, 41.117434237 ],
+          "type" : "Point"
+        },
+        "count" : "21"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.626842574, 41.614730589 ],
+          "type" : "Point"
+        },
+        "count" : "14"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.177241106, 41.382405393 ],
+          "type" : "Point"
+        },
+        "count" : "12"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.010294804, 41.562958779 ],
+          "type" : "Point"
+        },
+        "count" : "11"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.87315709, 42.416903579 ],
+          "type" : "Point"
+        },
+        "count" : "10"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.042704219, 41.347524275 ],
+          "type" : "Point"
+        },
+        "count" : "9"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.247791638, 41.450026028 ],
+          "type" : "Point"
+        },
+        "count" : "9"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.108551925, 41.546378033 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.826928753, 41.723055286 ],
+          "type" : "Point"
+        },
+        "count" : "7"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.960886614, 42.267209601 ],
+          "type" : "Point"
+        },
+        "count" : "7"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.792056075, 41.975053949 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.824865628, 41.983155443 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.49251912, 41.689962987 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.108491969, 41.155016386 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.070159567, 41.355171447 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.286822072, 41.60808662 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 3.164065976, 41.914954578 ],
+          "type" : "Point"
+        },
+        "count" : "5"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.484354623, 42.183182657 ],
+          "type" : "Point"
+        },
+        "count" : "4"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.093044846, 41.330736272 ],
+          "type" : "Point"
+        },
+        "count" : "4"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.082391608, 41.469853438 ],
+          "type" : "Point"
+        },
+        "count" : "4"
+      } ],
+      "count" : "259",
+      "cardinality" : "259"
+    },
+    "format" : { }
+  }, {
+    "id" : 19725435,
+    "name" : "LIMADM_MUNICIPI",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_bh64_c7uy",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13110025,
+    "computationStrategy" : {
+      "source_columns" : [ "georefer_ncia" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_bh64-c7uy",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 19725436,
+    "name" : "LIMADM COMARCA",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_wvic_k925",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13110026,
+    "computationStrategy" : {
+      "source_columns" : [ "georefer_ncia" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_wvic-k925",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Contínua"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Commercial licences Registry ",
+        "Nombre del conjunto de datos (ES)" : "Registro de licencia comerciales"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Empresa i Treball",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "equipaments comercials", "activitat comercial", "comerç", "ods8_treball decent i creixement econòmic" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

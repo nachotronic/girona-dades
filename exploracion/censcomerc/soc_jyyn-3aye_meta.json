@@ -1,0 +1,1352 @@
+{
+  "id" : "jyyn-3aye",
+  "name" : "Ocupació comercial de ciutats catalanes (IATC)",
+  "assetType" : "dataset",
+  "attribution" : "EIXOS Economic Observatory (Eixos.cat)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Comerç",
+  "createdAt" : 1588236471,
+  "description" : "El dataset inclou les dades de composició i d'ocupació comercial de ciutats catalanes.\n\nLes dades provenen de la inspecció directa de locals comercials, mitjançant treball de camp realitzat periòdicament per una xarxa de col·laboradors geogràfics, que han identificat, classificat i geolocalitzat tots i cada un dels locals comercials de les ciutats que es mostren.\n\nTot i que la base de dades original es desagrega per local comercial, aquí les dades han estat agregades a nivell de districte, fent servir l'indicador d'ocupació comercial i el total  de locals per tipus d'activitat comercial dins el districte. \n\nL'ocupació s'expressa mitjançant l' Índex d'Aprofitament del Teixit Comercial, que és el percentatge de locals comercials actius respecte el total de locals comercials disponibles en una àrea geogràfica determinada. \n\nDades a desembre 2019. \n\nS'han fet servir en l'informe que quantifica l'impacte del tancament comercial provocat pel covid19. Dimensiona escenaris hipotètics post-covid19 en funció de l'ocupació de locals comercials amb activitats econòmiques.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1602,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 1714984,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1588766423,
+  "publicationGroup" : 1149508,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1588766422,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1153492,
+  "totalTimesRated" : 0,
+  "viewCount" : 6896,
+  "viewLastModified" : 1789718510,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1588842699,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 620135,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1588842699,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1588842699,
+      "failureCount" : 0,
+      "startedAt" : 1588842699,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 14879072,
+    "name" : "the_geom",
+    "dataTypeName" : "multipolygon",
+    "description" : "Columna de georeferència",
+    "fieldName" : "the_geom",
+    "position" : 1,
+    "renderTypeName" : "multipolygon",
+    "tableColumnId" : 9426310,
+    "format" : { }
+  }, {
+    "id" : 14879073,
+    "name" : "MUNICIPI",
+    "dataTypeName" : "text",
+    "description" : "Codi IDESCAT del municipi",
+    "fieldName" : "municipi",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9387006,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "431482",
+      "null" : "0",
+      "top" : [ {
+        "item" : "080193",
+        "count" : "10"
+      }, {
+        "item" : "251207",
+        "count" : "9"
+      }, {
+        "item" : "431482",
+        "count" : "9"
+      }, {
+        "item" : "170792",
+        "count" : "6"
+      } ],
+      "smallest" : "080193",
+      "count" : "34",
+      "cardinality" : "4"
+    },
+    "format" : { }
+  }, {
+    "id" : 14879074,
+    "name" : "NOM_MUNICIPI",
+    "dataTypeName" : "text",
+    "description" : "Nom del municipi",
+    "fieldName" : "nom_municipi",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9387001,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "Tarragona",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "10"
+      }, {
+        "item" : "Tarragona",
+        "count" : "9"
+      }, {
+        "item" : "Lleida",
+        "count" : "9"
+      }, {
+        "item" : "Girona",
+        "count" : "6"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "34",
+      "cardinality" : "4"
+    },
+    "format" : { }
+  }, {
+    "id" : 14879075,
+    "name" : "DISTRICTE",
+    "dataTypeName" : "number",
+    "description" : "Número de districte",
+    "fieldName" : "districte",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9387002,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "10",
+      "null" : "0",
+      "top" : [ {
+        "item" : "4",
+        "count" : "4"
+      }, {
+        "item" : "1",
+        "count" : "4"
+      }, {
+        "item" : "3",
+        "count" : "4"
+      }, {
+        "item" : "6",
+        "count" : "4"
+      }, {
+        "item" : "5",
+        "count" : "4"
+      }, {
+        "item" : "2",
+        "count" : "4"
+      }, {
+        "item" : "8",
+        "count" : "3"
+      }, {
+        "item" : "7",
+        "count" : "3"
+      }, {
+        "item" : "9",
+        "count" : "3"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      } ],
+      "smallest" : "1",
+      "count" : "34",
+      "cardinality" : "10"
+    },
+    "format" : { }
+  }, {
+    "id" : 14879076,
+    "name" : "NOM_DISTRICTE",
+    "dataTypeName" : "text",
+    "description" : "Nom del districte",
+    "fieldName" : "nom_districte",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9387003,
+    "cachedContents" : {
+      "non_null" : "10",
+      "largest" : "Sarrià-Sant Gervasi",
+      "null" : "24",
+      "top" : [ {
+        "item" : "Ciutat Vella",
+        "count" : "1"
+      }, {
+        "item" : "Eixample",
+        "count" : "1"
+      }, {
+        "item" : "Sarrià-Sant Gervasi",
+        "count" : "1"
+      }, {
+        "item" : "Nou Barris",
+        "count" : "1"
+      }, {
+        "item" : "Sant Andreu",
+        "count" : "1"
+      }, {
+        "item" : "Horta-Guinardó",
+        "count" : "1"
+      }, {
+        "item" : "Sants-Montjuïc",
+        "count" : "1"
+      }, {
+        "item" : "Sant Martí",
+        "count" : "1"
+      }, {
+        "item" : "Gràcia",
+        "count" : "1"
+      }, {
+        "item" : "Les Corts",
+        "count" : "1"
+      } ],
+      "smallest" : "Ciutat Vella",
+      "count" : "34",
+      "cardinality" : "10"
+    },
+    "format" : { }
+  }, {
+    "id" : 14879078,
+    "name" : "MUNDISSEC",
+    "dataTypeName" : "text",
+    "description" : "Codi municipi i codi districte",
+    "fieldName" : "mundissec",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9426311,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "43148209000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "25120708000",
+        "count" : "1"
+      }, {
+        "item" : "43148208000",
+        "count" : "1"
+      }, {
+        "item" : "43148207000",
+        "count" : "1"
+      }, {
+        "item" : "17079202000",
+        "count" : "1"
+      }, {
+        "item" : "25120702000",
+        "count" : "1"
+      }, {
+        "item" : "43148205000",
+        "count" : "1"
+      }, {
+        "item" : "08019301000",
+        "count" : "1"
+      }, {
+        "item" : "17079204000",
+        "count" : "1"
+      }, {
+        "item" : "08019304000",
+        "count" : "1"
+      }, {
+        "item" : "08019305000",
+        "count" : "1"
+      }, {
+        "item" : "25120706000",
+        "count" : "1"
+      }, {
+        "item" : "25120704000",
+        "count" : "1"
+      }, {
+        "item" : "17079205000",
+        "count" : "1"
+      }, {
+        "item" : "08019306000",
+        "count" : "1"
+      }, {
+        "item" : "08019308000",
+        "count" : "1"
+      }, {
+        "item" : "25120709000",
+        "count" : "1"
+      }, {
+        "item" : "08019310000",
+        "count" : "1"
+      }, {
+        "item" : "08019307000",
+        "count" : "1"
+      }, {
+        "item" : "43148204000",
+        "count" : "1"
+      }, {
+        "item" : "17079206000",
+        "count" : "1"
+      } ],
+      "smallest" : "08019301000",
+      "count" : "34",
+      "cardinality" : "34"
+    },
+    "format" : { }
+  }, {
+    "id" : 14879079,
+    "name" : "QUOTIDIÀ",
+    "dataTypeName" : "number",
+    "description" : "Quotidià alimentari",
+    "fieldName" : "quotidi",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9387005,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "1632",
+      "null" : "0",
+      "top" : [ {
+        "item" : "22",
+        "count" : "2"
+      }, {
+        "item" : "7",
+        "count" : "2"
+      }, {
+        "item" : "124",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "727",
+        "count" : "1"
+      }, {
+        "item" : "43",
+        "count" : "1"
+      }, {
+        "item" : "79",
+        "count" : "1"
+      }, {
+        "item" : "69",
+        "count" : "1"
+      }, {
+        "item" : "593",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "792",
+        "count" : "1"
+      }, {
+        "item" : "1038",
+        "count" : "1"
+      }, {
+        "item" : "37",
+        "count" : "1"
+      }, {
+        "item" : "90",
+        "count" : "1"
+      }, {
+        "item" : "68",
+        "count" : "1"
+      }, {
+        "item" : "67",
+        "count" : "1"
+      }, {
+        "item" : "59",
+        "count" : "1"
+      }, {
+        "item" : "305",
+        "count" : "1"
+      }, {
+        "item" : "1036",
+        "count" : "1"
+      }, {
+        "item" : "702",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "32"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879080,
+    "name" : "PERSONA",
+    "dataTypeName" : "number",
+    "description" : "Equipament per a la persona",
+    "fieldName" : "persona",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386994,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "2030",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      }, {
+        "item" : "69",
+        "count" : "1"
+      }, {
+        "item" : "548",
+        "count" : "1"
+      }, {
+        "item" : "189",
+        "count" : "1"
+      }, {
+        "item" : "169",
+        "count" : "1"
+      }, {
+        "item" : "2030",
+        "count" : "1"
+      }, {
+        "item" : "39",
+        "count" : "1"
+      }, {
+        "item" : "98",
+        "count" : "1"
+      }, {
+        "item" : "1366",
+        "count" : "1"
+      }, {
+        "item" : "974",
+        "count" : "1"
+      }, {
+        "item" : "102",
+        "count" : "1"
+      }, {
+        "item" : "714",
+        "count" : "1"
+      }, {
+        "item" : "434",
+        "count" : "1"
+      }, {
+        "item" : "6",
+        "count" : "1"
+      }, {
+        "item" : "2",
+        "count" : "1"
+      }, {
+        "item" : "210",
+        "count" : "1"
+      }, {
+        "item" : "136",
+        "count" : "1"
+      }, {
+        "item" : "118",
+        "count" : "1"
+      }, {
+        "item" : "446",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "32"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879081,
+    "name" : "LLAR",
+    "dataTypeName" : "number",
+    "description" : "Equipament per a la llar",
+    "fieldName" : "llar",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386996,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "857",
+      "null" : "0",
+      "top" : [ {
+        "item" : "38",
+        "count" : "2"
+      }, {
+        "item" : "1",
+        "count" : "2"
+      }, {
+        "item" : "0",
+        "count" : "2"
+      }, {
+        "item" : "12",
+        "count" : "2"
+      }, {
+        "item" : "371",
+        "count" : "1"
+      }, {
+        "item" : "7",
+        "count" : "1"
+      }, {
+        "item" : "300",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "360",
+        "count" : "1"
+      }, {
+        "item" : "25",
+        "count" : "1"
+      }, {
+        "item" : "265",
+        "count" : "1"
+      }, {
+        "item" : "100",
+        "count" : "1"
+      }, {
+        "item" : "287",
+        "count" : "1"
+      }, {
+        "item" : "2",
+        "count" : "1"
+      }, {
+        "item" : "157",
+        "count" : "1"
+      }, {
+        "item" : "21",
+        "count" : "1"
+      }, {
+        "item" : "328",
+        "count" : "1"
+      }, {
+        "item" : "24",
+        "count" : "1"
+      }, {
+        "item" : "32",
+        "count" : "1"
+      }, {
+        "item" : "456",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "30"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879082,
+    "name" : "SERVEIS",
+    "dataTypeName" : "number",
+    "description" : "Serveis comercials",
+    "fieldName" : "serveis",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386997,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "4149",
+      "null" : "0",
+      "top" : [ {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "348",
+        "count" : "1"
+      }, {
+        "item" : "362",
+        "count" : "1"
+      }, {
+        "item" : "108",
+        "count" : "1"
+      }, {
+        "item" : "135",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "386",
+        "count" : "1"
+      }, {
+        "item" : "39",
+        "count" : "1"
+      }, {
+        "item" : "314",
+        "count" : "1"
+      }, {
+        "item" : "507",
+        "count" : "1"
+      }, {
+        "item" : "27",
+        "count" : "1"
+      }, {
+        "item" : "1596",
+        "count" : "1"
+      }, {
+        "item" : "395",
+        "count" : "1"
+      }, {
+        "item" : "449",
+        "count" : "1"
+      }, {
+        "item" : "2147",
+        "count" : "1"
+      }, {
+        "item" : "1612",
+        "count" : "1"
+      }, {
+        "item" : "4149",
+        "count" : "1"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      }, {
+        "item" : "6",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "34"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879083,
+    "name" : "RESTAURACIÓ",
+    "dataTypeName" : "number",
+    "description" : "Hostaleria i restauració",
+    "fieldName" : "restauraci",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386999,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "3314",
+      "null" : "0",
+      "top" : [ {
+        "item" : "26",
+        "count" : "2"
+      }, {
+        "item" : "1790",
+        "count" : "1"
+      }, {
+        "item" : "88",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "7",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "106",
+        "count" : "1"
+      }, {
+        "item" : "565",
+        "count" : "1"
+      }, {
+        "item" : "126",
+        "count" : "1"
+      }, {
+        "item" : "165",
+        "count" : "1"
+      }, {
+        "item" : "819",
+        "count" : "1"
+      }, {
+        "item" : "67",
+        "count" : "1"
+      }, {
+        "item" : "732",
+        "count" : "1"
+      }, {
+        "item" : "143",
+        "count" : "1"
+      }, {
+        "item" : "3314",
+        "count" : "1"
+      }, {
+        "item" : "573",
+        "count" : "1"
+      }, {
+        "item" : "157",
+        "count" : "1"
+      }, {
+        "item" : "697",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "213",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "33"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879084,
+    "name" : "CULTURA",
+    "dataTypeName" : "number",
+    "description" : "Serveis culturals",
+    "fieldName" : "cultura",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9387008,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "702",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5",
+        "count" : "2"
+      }, {
+        "item" : "14",
+        "count" : "2"
+      }, {
+        "item" : "29",
+        "count" : "2"
+      }, {
+        "item" : "2",
+        "count" : "2"
+      }, {
+        "item" : "108",
+        "count" : "1"
+      }, {
+        "item" : "245",
+        "count" : "1"
+      }, {
+        "item" : "135",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "327",
+        "count" : "1"
+      }, {
+        "item" : "401",
+        "count" : "1"
+      }, {
+        "item" : "192",
+        "count" : "1"
+      }, {
+        "item" : "702",
+        "count" : "1"
+      }, {
+        "item" : "287",
+        "count" : "1"
+      }, {
+        "item" : "23",
+        "count" : "1"
+      }, {
+        "item" : "26",
+        "count" : "1"
+      }, {
+        "item" : "30",
+        "count" : "1"
+      }, {
+        "item" : "51",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "30"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879085,
+    "name" : "TRANSPORT PRIVAT",
+    "dataTypeName" : "number",
+    "description" : "Activitats lligades al vehicle privat",
+    "fieldName" : "transport_privat",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9387000,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "707",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2"
+      }, {
+        "item" : "47",
+        "count" : "2"
+      }, {
+        "item" : "6",
+        "count" : "2"
+      }, {
+        "item" : "1",
+        "count" : "2"
+      }, {
+        "item" : "3",
+        "count" : "2"
+      }, {
+        "item" : "218",
+        "count" : "1"
+      }, {
+        "item" : "225",
+        "count" : "1"
+      }, {
+        "item" : "73",
+        "count" : "1"
+      }, {
+        "item" : "223",
+        "count" : "1"
+      }, {
+        "item" : "266",
+        "count" : "1"
+      }, {
+        "item" : "440",
+        "count" : "1"
+      }, {
+        "item" : "67",
+        "count" : "1"
+      }, {
+        "item" : "25",
+        "count" : "1"
+      }, {
+        "item" : "211",
+        "count" : "1"
+      }, {
+        "item" : "31",
+        "count" : "1"
+      }, {
+        "item" : "26",
+        "count" : "1"
+      }, {
+        "item" : "127",
+        "count" : "1"
+      }, {
+        "item" : "30",
+        "count" : "1"
+      }, {
+        "item" : "63",
+        "count" : "1"
+      }, {
+        "item" : "62",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "29"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879086,
+    "name" : "ALTRES COMERÇOS",
+    "dataTypeName" : "number",
+    "description" : "Altres tipus de comerç",
+    "fieldName" : "altres_comer_os",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386993,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "872",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5",
+        "count" : "2"
+      }, {
+        "item" : "2",
+        "count" : "2"
+      }, {
+        "item" : "37",
+        "count" : "2"
+      }, {
+        "item" : "7",
+        "count" : "1"
+      }, {
+        "item" : "66",
+        "count" : "1"
+      }, {
+        "item" : "232",
+        "count" : "1"
+      }, {
+        "item" : "345",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "358",
+        "count" : "1"
+      }, {
+        "item" : "300",
+        "count" : "1"
+      }, {
+        "item" : "25",
+        "count" : "1"
+      }, {
+        "item" : "299",
+        "count" : "1"
+      }, {
+        "item" : "171",
+        "count" : "1"
+      }, {
+        "item" : "21",
+        "count" : "1"
+      }, {
+        "item" : "872",
+        "count" : "1"
+      }, {
+        "item" : "32",
+        "count" : "1"
+      }, {
+        "item" : "337",
+        "count" : "1"
+      }, {
+        "item" : "48",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "16",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "31"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879087,
+    "name" : "ALTRES ACTIVITATS",
+    "dataTypeName" : "number",
+    "description" : "Altres activitats econòmiques que ocupen local en planta baixa, però no són comerços",
+    "fieldName" : "altres_activitats",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386998,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "531",
+      "null" : "0",
+      "top" : [ {
+        "item" : "147",
+        "count" : "2"
+      }, {
+        "item" : "23",
+        "count" : "2"
+      }, {
+        "item" : "2",
+        "count" : "2"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "330",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "64",
+        "count" : "1"
+      }, {
+        "item" : "42",
+        "count" : "1"
+      }, {
+        "item" : "108",
+        "count" : "1"
+      }, {
+        "item" : "531",
+        "count" : "1"
+      }, {
+        "item" : "37",
+        "count" : "1"
+      }, {
+        "item" : "98",
+        "count" : "1"
+      }, {
+        "item" : "20",
+        "count" : "1"
+      }, {
+        "item" : "67",
+        "count" : "1"
+      }, {
+        "item" : "59",
+        "count" : "1"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      }, {
+        "item" : "382",
+        "count" : "1"
+      }, {
+        "item" : "21",
+        "count" : "1"
+      }, {
+        "item" : "26",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "31"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879088,
+    "name" : "LOCALS BUITS",
+    "dataTypeName" : "number",
+    "description" : "Locals comercials sense activitat",
+    "fieldName" : "locals_buits",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9387007,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "2424",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2054",
+        "count" : "1"
+      }, {
+        "item" : "88",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "685",
+        "count" : "1"
+      }, {
+        "item" : "343",
+        "count" : "1"
+      }, {
+        "item" : "516",
+        "count" : "1"
+      }, {
+        "item" : "1512",
+        "count" : "1"
+      }, {
+        "item" : "61",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "77",
+        "count" : "1"
+      }, {
+        "item" : "241",
+        "count" : "1"
+      }, {
+        "item" : "682",
+        "count" : "1"
+      }, {
+        "item" : "113",
+        "count" : "1"
+      }, {
+        "item" : "68",
+        "count" : "1"
+      }, {
+        "item" : "451",
+        "count" : "1"
+      }, {
+        "item" : "340",
+        "count" : "1"
+      }, {
+        "item" : "299",
+        "count" : "1"
+      }, {
+        "item" : "1687",
+        "count" : "1"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "34"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879089,
+    "name" : "LOCALS ACTIUS",
+    "dataTypeName" : "number",
+    "description" : "Locals comercials amb activitat",
+    "fieldName" : "locals_actius",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9387004,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "14639",
+      "null" : "0",
+      "top" : [ {
+        "item" : "7979",
+        "count" : "1"
+      }, {
+        "item" : "172",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "173",
+        "count" : "1"
+      }, {
+        "item" : "1491",
+        "count" : "1"
+      }, {
+        "item" : "343",
+        "count" : "1"
+      }, {
+        "item" : "862",
+        "count" : "1"
+      }, {
+        "item" : "1074",
+        "count" : "1"
+      }, {
+        "item" : "6722",
+        "count" : "1"
+      }, {
+        "item" : "868",
+        "count" : "1"
+      }, {
+        "item" : "309",
+        "count" : "1"
+      }, {
+        "item" : "5410",
+        "count" : "1"
+      }, {
+        "item" : "705",
+        "count" : "1"
+      }, {
+        "item" : "3904",
+        "count" : "1"
+      }, {
+        "item" : "778",
+        "count" : "1"
+      }, {
+        "item" : "39",
+        "count" : "1"
+      }, {
+        "item" : "84",
+        "count" : "1"
+      }, {
+        "item" : "27",
+        "count" : "1"
+      }, {
+        "item" : "262",
+        "count" : "1"
+      }, {
+        "item" : "843",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "34"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14879090,
+    "name" : "IATC",
+    "dataTypeName" : "number",
+    "description" : "Índex d'aprofitament del teixit comercial",
+    "fieldName" : "iatc",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9386995,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "0.8901",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.7959",
+        "count" : "1"
+      }, {
+        "item" : "0.7208",
+        "count" : "1"
+      }, {
+        "item" : "0.7827",
+        "count" : "1"
+      }, {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "0.5746",
+        "count" : "1"
+      }, {
+        "item" : "0.8103",
+        "count" : "1"
+      }, {
+        "item" : "0.7248",
+        "count" : "1"
+      }, {
+        "item" : "0.7271",
+        "count" : "1"
+      }, {
+        "item" : "0.5603",
+        "count" : "1"
+      }, {
+        "item" : "0.8086",
+        "count" : "1"
+      }, {
+        "item" : "0.5526",
+        "count" : "1"
+      }, {
+        "item" : "0.8113",
+        "count" : "1"
+      }, {
+        "item" : "0.6106",
+        "count" : "1"
+      }, {
+        "item" : "0.556",
+        "count" : "1"
+      }, {
+        "item" : "0.8214",
+        "count" : "1"
+      }, {
+        "item" : "0.6049",
+        "count" : "1"
+      }, {
+        "item" : "0.7224",
+        "count" : "1"
+      }, {
+        "item" : "0.5575",
+        "count" : "1"
+      }, {
+        "item" : "0.8865",
+        "count" : "1"
+      }, {
+        "item" : "0.7171",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "34",
+      "cardinality" : "34"
+    },
+    "format" : {
+      "precisionStyle" : "percentage",
+      "percentScale" : "1",
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Catalan Cities Retail Occupancy",
+        "Nombre del conjunto de datos (ES)" : "Ocupación comercial de  ciudades catalanas"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "comerç", "ocupació", "locals buits", "salut comercial", "locals tancats", "locals comercials", "botigues", "eixos comercials", "economia", "impacte econòmic", "coronavirus", "promoció econòmica", "economic development", "retail", "highstreet", "geo", "mapa", "ciutat", "capital", "barcelona", "girona", "lleida", "tarragona", "relacionat covid", "smartcatalonia" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
