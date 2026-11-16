@@ -1,0 +1,31 @@
+Fets delictius i infraccions administratives de l'àmbit de l'odi i discriminació
+Fets relacionats amb els delictes i les infraccions administratives relacionades amb l’odi i la discriminació de Catalunya.
+Els delictes d'odi són infraccions penals on se selecciona la víctima, el lloc o l’objecte de la infracció per la seva pertinença -real o suposada- a un grup per raó de la seva raça, origen nacional o ètnic, l’idioma, la religió, la minusvalidesa física  mental, l’orientació sexual o altres factors similars.
+Els delictes d’odi es poden fonamentar en els prejudicis següents:
+•	Raça, origen ètnic.
+•	Xenofòbia. País de procedència.
+•	Discapacitat.
+•	Antisemitisme.
+•	Religió o creences.
+•	Orientació o identitat sexual.
+•	Ideologia.
+•	Aporofòbia / Exclusió social.
+•	Qualsevol altra circumstància, condició social o personal.
+Com a conseqüència de la tasca d’anàlisi de cadascun dels atestats policials d’aquest àmbit, les dades mostrades en aquest conjunt de dades poden diferir de les que apareixen en el de “Fets delinqüencials”.
+La informació es mostra desagregada si el municipi té més de 20.000 habitants; els municipis inferiors a 20.000 habitants es presenten agregats dins de la seva Àrea Bàsica Policial (ABP) per evitar riscos per a la seguretat o que es pugui incórrer en la vulneració de la protecció de les dades personals de les víctimes o persones involucrades en els diferents fets.
+any | Any
+n_m_mes | Núm. Mes
+nom_mes | Mes
+regi_policial_rp | Regió Policial (RP)
+rea_b_sica_policial_abp | Àrea Bàsica Policial (ABP)
+prov_ncia | Província
+comarca | Comarca
+municipi | Municipi
+tipus_de_lloc_dels_fets | Tipus de lloc dels fets
+canal_dels_fets | Canal dels fets
+tipus_de_fet | Tipus de fet
+t_tol_del_fet_codi_penal | Títol del fet (Codi Penal) o Llei de referència
+tipus_de_fet_codi_penal_o | Tipus de fet (Codi penal) o d'Infracció (altres lleis)
+mbit_fet | Àmbit fet
+nombre_fets_o_infraccions | Nombre fets o infraccions
+nombre_v_ctimes | Nombre víctimes
