@@ -45,6 +45,7 @@ PX_TAULES = {  # fichero -> (clave, procedimientos que se guardan; None = todos)
     "OUJII021": ("llancaments", None),
     "OUJII012": ("impagament", None),
     "OUJII009": ("concursos", None),
+    "OUSCN002": ("scn", None),  # servicios comunes: lanzamientos cumplidos en los partidos que los tienen
 }
 DES_DE = 2012  # años que se guardan de la base PC-Axis
 

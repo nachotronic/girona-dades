@@ -33,6 +33,12 @@ def r(x, n=1):
     return round(float(x), n)
 
 
+def _nom(n: str) -> str:
+    """'Bisbal d'Empordà, la' -> 'la Bisbal d'Empordà'."""
+    m = re.match(r"^(.*),\s*(la|el|les|els|l')$", str(n).strip())
+    return (f"{m.group(2)}{'' if m.group(2).endswith(chr(39)) else ' '}{m.group(1)}") if m else str(n)
+
+
 def taxa(n, p, per=1000, dec=1):
     return r(n / p * per, dec) if p and n == n else None
 
@@ -85,7 +91,7 @@ def _partits(municipios):
     nom_m = {m["ine"]: m["nom"] for m in municipios}
     pj = {}
     for id_, g in rel.groupby("id"):
-        pj[id_] = {"nom": g["pj_nom"].iloc[0], "pob": sum(pob.get(i, 0) for i in g["ine"]),
+        pj[id_] = {"nom": _nom(g["pj_nom"].iloc[0]), "pob": sum(pob.get(i, 0) for i in g["ine"]),
                    "munis": sorted(nom_m.get(i, i) for i in g["ine"])}
     return rel, pj
 
@@ -122,6 +128,9 @@ def _pcaxis(pj, pp, refs, anys):
     civ_p, _ = total("civil", "Pendientes al finalizar")
     print(f"PC-Axis {a}: bloques penales {bl_p}; civiles {bl_c}")
     ll = val("llancaments", "total", "")
+    # En los partidos con servicio común, los lanzamientos los practica el servicio (cumplimiento positivo)
+    for k, v in val("scn", "lanzamientos", "devueltos. con cumplim").items():
+        ll[k] = ll.get(k, 0) + v
     ll_lau = val("llancaments", ".*arrendamientos", "")
     ll_hip = val("llancaments", ".*hipotecaria", "")
     verb = val("civil", "verbales arrendaticios", "ingresados")
@@ -278,7 +287,9 @@ def _mossos(refs, anys):
         for t, x in a[a["tipus"] != "total"].groupby("tipus"):
             refs.setdefault("mo_" + t, {}).update({"cat": taxa(x["coneguts"].sum(), pob_cat, 1000, 2),
                                                    "gi": taxa(x[x["clau"].isin(claus_gi)]["coneguts"].sum(), pob_gi, 1000, 2)})
-            anys["mo_" + t] = f"12 m. fins {fins}"
+            y, mm = int(fins[:4]), int(fins[5:7])
+            ini = f"{mm % 12 + 1:02d}/{y - 1 if mm < 12 else y}"
+            anys["mo_" + t] = f"{ini}–{mm:02d}/{y}"
         # Regiones policiales: población = suma de sus ABP
         abp_rp = a.drop_duplicates("clau").set_index("clau")["rp"].to_dict()
         pob_rp = {}
@@ -372,7 +383,7 @@ def construir(municipios, salida: pathlib.Path) -> dict:
     zona_pj = {}
     if rel is not None:
         for _, f in rel.iterrows():
-            x.setdefault(f["ine"], {}).update({"pj": f["id"], "pj_nom": f["pj_nom"]})
+            x.setdefault(f["ine"], {}).update({"pj": f["id"], "pj_nom": _nom(f["pj_nom"])})
         try:
             zona_pj = _pcaxis(pj, pp, refs, anys)
         except Exception as e:  # noqa: BLE001
@@ -387,7 +398,7 @@ def construir(municipios, salida: pathlib.Path) -> dict:
             for f in g["features"]:
                 id_ = normaliza(f["properties"]["pj_nom"])
                 ms = pj.get(id_, {}).get("munis", [])
-                f["properties"] = {"id": id_, "nom": f["properties"]["pj_nom"],
+                f["properties"] = {"id": id_, "nom": _nom(f["properties"]["pj_nom"]),
                                    "munis": f"{len(ms)} municipis: " + ", ".join(ms[:12]) + ("…" if len(ms) > 12 else "") if ms else ""}
             (salida / "pj.geojson").write_text(json.dumps(g, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     prov.update(_crisis(pp))
