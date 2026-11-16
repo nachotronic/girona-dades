@@ -3,12 +3,12 @@
 // ---------- Textos ----------
 const T = {
   ca: {
-    locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals",
+    locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals", f_eleccions: "resultats per secció censal: Parlament, Congrés, municipals i europees (2010-2024)",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
     nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 140 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Més de 140 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, ajuntaments, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -83,12 +83,12 @@ const T = {
     sub: (c, p) => `${c} · ${p} habitants`,
   },
   es: {
-    locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales",
+    locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales", f_eleccions: "resultados por sección censal: Parlament, Congreso, municipales y europeas (2010-2024)",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
     nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 140 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Más de 140 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, ayuntamientos, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -173,9 +173,9 @@ try {
 const t = (k, ...a) => { const v = T[LANG][k]; return typeof v === "function" ? v(...a) : v; };
 
 // ---------- Bloques políticos ----------
-const BLOC_COLOR = { Junts: "#23a99c", ERC: "#ef8f2a", PSC: "#d2453a", CUP: "#e9cf3a", PP: "#2f6fc0", Vox: "#62a43c", "Aliança": "#3b4a63", Comuns: "#8a4fa8", Locals: "#a5abb5" };
+const BLOC_COLOR = { Junts: "#23a99c", "JxSí": "#1f6f8b", ERC: "#ef8f2a", PSC: "#d2453a", CUP: "#e9cf3a", PP: "#2f6fc0", Vox: "#62a43c", Cs: "#c2577f", "Aliança": "#3b4a63", Comuns: "#8a4fa8", Locals: "#a5abb5", Altres: "#d3d6db" };
 const colorBloc = (b) => BLOC_COLOR[b] || BLOC_COLOR.Locals;
-const nomBloc = (b) => (b === "Locals" ? t("locals") : b === "Aliança" ? "Aliança Catalana" : b);
+const nomBloc = (b) => (b === "Locals" ? t("locals") : b === "Aliança" ? "Aliança Catalana" : b === "JxSí" ? "Junts pel Sí" : b === "Cs" ? (LANG === "es" ? "Ciudadanos" : "Ciutadans") : b === "Altres" ? (LANG === "es" ? "Otros" : "Altres") : b);
 
 // ---------- Países (nacionalidades) ----------
 const PAIS_COLORS = ["#106b66", "#e3001b", "#2f6fc0", "#ef8f2a", "#8a4fa8", "#62a43c", "#c2577f", "#8c6d3f", "#3b4a63", "#e9cf3a"];

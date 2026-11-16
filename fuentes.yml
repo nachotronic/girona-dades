@@ -385,3 +385,14 @@ locales:
     organismo: Ministerio de Hacienda / ayuntamientos
     nivel: [municipio]
     estado: por_confirmar
+
+eleccions:
+  - id: generalitat_processos_electorals
+    nombre: Processos electorals (vots, participació, convocatòries)
+    organismo: Generalitat de Catalunya
+    url: https://analisi.transparenciacatalunya.cat/d/ntc4-rnwr
+    conjuntos: [ntc4-rnwr, irrv-2mfc, tgns-3xuy]
+    nivel: [seccion, municipio]
+    frecuencia: por convocatoria
+    estado: comprobada
+    nota: Interior (infoelectoral) bloquea las descargas desde GitHub Actions (Cloudflare); la Generalitat publica las mismas convocatorias por sección.
