@@ -273,7 +273,7 @@
     { id: "menors18", tema: "pob", ca: ["Menys de 18 anys", "Població menor de 18 anys (%)"], es: ["Menos de 18 años", "Población menor de 18 años (%)"], a: "menors18", v: X("menors18"), s: S("menors18"), ...P0 },
     { id: "estrangers", tema: "pob", ca: ["Estrangers", "Població de nacionalitat estrangera (%)"], es: ["Extranjeros", "Población de nacionalidad extranjera (%)"], a: "estrangers", v: X("estrangers"), s: S("estrangers"), ...P0 },
     // Nacionalidades (censo anual Idescat)
-    { id: "nac_top", tema: "pob", cat: true, ca: ["Principal nacionalitat", "Primera nacionalitat estrangera de cada municipi"], es: ["Principal nacionalidad", "Primera nacionalidad extranjera de cada municipio"], a: "nac", v: (m) => (m.x && m.x.nac_top) || null, f: (v) => nomPais(v), c: (v) => nomPais(v), color: (v) => colorPais(v),
+    { id: "nac_top", tema: "pob", cat: true, ca: ["Principal nacionalitat", "Primera nacionalitat estrangera de cada municipi"], es: ["Principal nacionalidad", "Primera nacionalidad extranjera de cada municipio"], a: "nac", maxCat: 5, v: (m) => (m.x && m.x.nac_top) || null, f: (v) => nomPais(v), c: (v) => nomPais(v), color: (v) => colorPais(v),
       infoCat: (m, v, k) => (m && m.x && v ? `<p class="rel">${t("nac_info", fmt(m.x.nac_top_n), pct(m.x.nac_top_pct, 0), fmt(m.x.nac_ex))}</p><p class="rel">${t("nac_k", k, nomPais(v))}</p>` : `<p class="rel">${t("sense_dades")}</p>`), nota: { ca: "INE, padró continu. Nacionalitat, no lloc de naixement. L'INE només detalla les principals nacionalitats: països com Hondures o Gàmbia queden agrupats. Només municipis amb 20 estrangers o més.", es: "INE, padrón continuo. Nacionalidad, no lugar de nacimiento. El INE solo detalla las principales nacionalidades: países como Honduras o Gambia quedan agrupados. Solo municipios con 20 extranjeros o más." }, notaCat: { ca: "Nombre de municipis on és la primera nacionalitat estrangera.", es: "Número de municipios donde es la primera nacionalidad extranjera." } },
     { id: "nac_top_pct", sumable: false, tema: "pob", ca: ["Pes de la primera nacionalitat", "Primera nacionalitat estrangera (% dels estrangers del municipi)"], es: ["Peso de la primera nacionalidad", "Primera nacionalidad extranjera (% de los extranjeros del municipio)"], a: "nac", v: X("nac_top_pct"), nota: { ca: "INE, padró continu. Nacionalitat, no lloc de naixement. L'INE només detalla les principals nacionalitats: països com Hondures o Gàmbia queden agrupats. Només municipis amb 20 estrangers o més.", es: "INE, padrón continuo. Nacionalidad, no lugar de nacimiento. El INE solo detalla las principales nacionalidades: países como Honduras o Gambia quedan agrupados. Solo municipios con 20 extranjeros o más." }, ...P0 },
     { id: "nac_MA", sumable: false, tema: "pob", ca: ["Nacionalitat: Marroc", "Residents amb nacionalitat de Marroc (% de la població)"], es: ["Nacionalidad: Marruecos", "Residentes con nacionalidad de Marruecos (% de la población)"], a: "nac_MA", v: X("nac_MA"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
@@ -684,8 +684,18 @@
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : t("nomes_mun");
     const max = recompte.length ? recompte[0][1] : 1;
-    document.getElementById("llegenda").innerHTML = `<div class="cat-llista">${recompte.map(([b, k]) =>
-      `<div class="cat-fila"><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`).join("")}</div>${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
+    // Con muchas categorías (nacionalidades) solo se ven las primeras; el resto, desplegable
+    const N = ind.maxCat && recompte.length > ind.maxCat + 1 ? ind.maxCat : 0;
+    const fila = ([b, k], i) => `<div class="cat-fila"${N && i >= N ? " hidden" : ""}><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`;
+    const ll = document.getElementById("llegenda");
+    ll.innerHTML = `<div class="cat-llista">${recompte.map(fila).join("")}</div>${N ? `<button type="button" class="cat-mes" aria-expanded="false">${t("cat_mes", recompte.length - N)}</button>` : ""}${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
+    const bm = ll.querySelector(".cat-mes");
+    if (bm) bm.addEventListener("click", () => {
+      const obert = bm.getAttribute("aria-expanded") !== "true";
+      ll.querySelectorAll(".cat-fila").forEach((f, i) => { f.hidden = !obert && i >= N; });
+      bm.setAttribute("aria-expanded", String(obert));
+      bm.textContent = obert ? t("cat_menys") : t("cat_mes", recompte.length - N);
+    });
     document.getElementById("ranquing").innerHTML = "";
     controlAnys(); referencies(); info(fixat);
   }

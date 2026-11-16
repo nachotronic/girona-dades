@@ -722,6 +722,9 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .ub-lleg li { display: flex; align-items: center; gap: 8px; font-size: 14px; padding: 5px 0; border-bottom: 1px solid var(--graella); }
 .ub-lleg li i { width: 12px; height: 12px; flex: none; }
 .ub-lleg li span { margin-left: auto; font: 500 13px var(--mono); }
+.cat-fila[hidden] { display: none; }
+.cat-mes { margin: 10px 0 0; padding: 0; background: none; border: 0; border-bottom: 1px solid currentColor; color: var(--tinta); font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .04em; cursor: pointer; }
+.cat-mes:hover { color: var(--accent); }
 .cat-nota { font-size: 12px; color: var(--text-3); margin: 8px 0 0; }
 @media (max-width: 820px) {
   .fitxa-blocs { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
