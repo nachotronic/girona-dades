@@ -70,7 +70,10 @@ def ejecutar() -> str:
         try:
             gi, ag = _any(a)
         except Exception as e:  # noqa: BLE001
-            linies.append(f"{a}: {type(e).__name__}: {str(e)[:100]}")
+            if "404" in str(e) and a > ultim:
+                linies.append(f"{a}: todavía no publicado")
+            else:
+                linies.append(f"{a}: {type(e).__name__}: {str(e)[:100]}")
             continue
         gi.to_csv(desti, index=False)
         agr = pd.concat([agr[agr["any"] != a], ag])

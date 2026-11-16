@@ -53,6 +53,7 @@ FONTS = {
     "geometria": ("INE, seccionat censal 2024", "fix"),
     "salut": ("CatSalut: àrees bàsiques de salut, receptes, infeccions i centres", "setmanal/mensual"),
     "llistes_espera": ("CatSalut, llistes d'espera per hospital", "mensual"),
+    "vehicles": ("DGT, parc de vehicles per municipi", "anual"),
     "policia": ("Mossos d'Esquadra, fets penals", "mensual"),
     "referencies": ("Valors de referència de Catalunya i Espanya", "anual"),
     "provincia": ("INE, sèries de la província", "mensual"),
