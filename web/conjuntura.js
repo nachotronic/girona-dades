@@ -156,7 +156,8 @@
     const pas = (() => { const r = (y1 - y0) / 3, q = Math.pow(10, Math.floor(Math.log10(r || 1))); return [1, 2, 2.5, 5, 10].map((k) => k * q).find((k) => k >= r); })();
     for (let v = Math.ceil(y0 / pas) * pas; v <= y1; v += pas) {
       el("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: Math.abs(v) < 1e-9 ? "cj-zero" : "cj-g" }, svg);
-      el("text", { x: m.l, y: Y(v) - 3, class: "cj-t" }, svg).textContent = c.u === "€" ? `${fmt(v / 1000, 0)}k` : fmt(v, pas < 1 ? 1 : 0);
+      if (Y(v) > H - m.b - 10) continue; // la etiqueta pisaría el eje
+      el("text", { x: m.l, y: Y(v) - 3, class: "cj-t" }, svg).textContent = c.u === "€" && v >= 1e4 ? `${fmt(v / 1000, 0)}k` : fmt(v, pas < 1 ? 1 : 0);
     }
     for (let i = ini; i <= fi; i++) {
       const p = ps[i];
@@ -175,7 +176,7 @@
       const u = ultIdx(s);
       if (u >= ini && z === "gi") {
         el("circle", { cx: X(u), cy: Y(s[u]), r: 3, class: "cj-p" }, svg);
-        el("text", { x: X(u) + 6, y: Y(s[u]) + 3.5, class: "cj-e" }, svg).textContent = c.u === "%" ? fmt(s[u], 1) : c.u === "€" ? `${fmt(s[u] / 1000, 0)}k` : fmt(s[u]);
+        el("text", { x: X(u) + 6, y: Y(s[u]) + 3.5, class: "cj-e" }, svg).textContent = c.u === "%" ? fmt(s[u], 1) : c.u === "€" && s[u] >= 1e4 ? `${fmt(s[u] / 1000, 0)}k` : fmt(s[u]);
       }
     });
     const guia = el("line", { y1: m.t, y2: H - m.b, class: "cj-guia", visibility: "hidden" }, svg);
