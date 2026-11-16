@@ -1,0 +1,468 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Estadística de prestacions per atur",
+            "id" : "t9nt-r58c",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Les prestacions d'atur tenen una durada limitada i s'atorguen a condició d'haver perdut el lloc de treball involuntàriament, de l'existència d'una relació jurídica prèvia amb la Seguretat Social i del compliment d'uns requisits determinats de cotització. Les gestiona el Servei Públic d'Ocupació Estatal (SEPE), que depèn del Ministeri d'Ocupació i Seguretat Social.\n\nS'ofereix anualment informació del nombre de prestacions, la prestació mitjana i l'import anual d'atur per a Catalunya. L'Idescat elabora aquesta estadística des de l'any 1991 a partir de la informació que subministra el SEPE.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:14:13.000Z",
+            "createdAt" : "2020-10-26T14:58:38.000Z",
+            "metadata_updated_at" : "2026-09-21T08:14:13.000Z",
+            "data_updated_at" : "2020-10-26T14:58:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 35,
+                "page_views_last_month" : 53,
+                "page_views_total" : 2486,
+                "page_views_last_week_log" : 5.169925001442312,
+                "page_views_last_month_log" : 5.754887502163469,
+                "page_views_total_log" : 11.280190792216906
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "prestacions",
+                "atur",
+                "ods1_fi de la pobresa",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistics on unemployment benefits"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Estadística de prestaciones por desempleo"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=aturp" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=aturp"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/t9nt-r58c",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Estadística-de-prestacions-per-atur/t9nt-r58c",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Enquesta de població activa",
+            "id" : "tker-fajx",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Enquesta de població activa és la principal font d'informació estadística del mercat de treball. L'objectiu principal és conèixer la relació de la població amb l'activitat econòmica: població activa, població ocupada, població desocupada, taxes d'activitat, ocupació i atur.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:32.000Z",
+            "createdAt" : "2020-10-26T14:58:05.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:32.000Z",
+            "data_updated_at" : "2020-10-26T14:58:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 22,
+                "page_views_last_month" : 52,
+                "page_views_total" : 3120,
+                "page_views_last_week_log" : 4.523561956057013,
+                "page_views_last_month_log" : 5.7279204545632,
+                "page_views_total_log" : 11.60779264191921
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:58:06.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "ods8_treball decent i creixement econòmic",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Active population survey "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Encuesta de población activa"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "Enllaç" : "https://www.idescat.cat/estad/epa" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "Enllaç" : "https://www.idescat.cat/estad/epa"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/tker-fajx",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Enquesta-de-població-activa/tker-fajx",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Punts d’orientació del Consorci per a la Formació Contínua de Catalunya",
+            "id" : "qsgb-mu78",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades dels punts d’orientació professional que hi ha disponible per tot el territori català que formen part dels programes d’orientació del Consorci per a la Formació Contínua.",
+            "attribution" : "Consorci per a la Formació Contínua de Catalunya (CFCC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T01:15:12.000Z",
+            "createdAt" : "2023-05-29T11:29:33.000Z",
+            "metadata_updated_at" : "2026-11-16T01:15:04.000Z",
+            "data_updated_at" : "2026-11-16T01:15:12.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 53,
+                "page_views_last_month" : 127,
+                "page_views_total" : 1668,
+                "page_views_last_week_log" : 5.754887502163469,
+                "page_views_last_month_log" : 7.0,
+                "page_views_total_log" : 10.704768239362599
+              },
+            "columns_name" :
+              [
+                "Latitud",
+                "Comarca",
+                "Emprenedoria",
+                "Municipio",
+                "Requisits d'accés",
+                "Formació per a la carrera professional",
+                "Acreditació de competències professionals",
+                "Codi municipi",
+                "Inserció laboral",
+                "LIMADM_MUNICIPI",
+                "Només telemàtics",
+                "LIMADM COMARCA",
+                "Georeferència",
+                "Enllaç web",
+                "Millorar en el lloc de treball",
+                "Codi comarca",
+                "Longitud",
+                "Entitat",
+                "Servei",
+                "Especialització sectorial",
+                "Públic objectiu"
+              ],
+            "columns_field_name" :
+              [
+                "latitud",
+                "comarca",
+                "emprenedoria",
+                "municipio",
+                "requisits_d_acc_s",
+                "formaci_per_a_la_carrera",
+                "acreditaci_de_compet_ncies",
+                "codi_municipi",
+                "inserci_laboral",
+                ":@computed_region_bh64_c7uy",
+                "nom_s_telem_tics",
+                ":@computed_region_wvic_k925",
+                "georefer_ncia",
+                "enlla_web",
+                "millorar_en_el_lloc_de_treball",
+                "codi_comarca",
+                "logitud",
+                "entitat",
+                "servei",
+                "especialitzaci_sectorial",
+                "p_blic_objectiu"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Point",
+                "URL",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Latitud de l’entitat d’orientació",
+                "Comarca de l’entitat d’orientació",
+                "Opcions possibles: \tSí/No/No informat",
+                "Municipi de l’entitat d’orientació",
+                "Opcions possibles: \tAlumnat del centre /Atur /Ser estudiant /Persones treballadores ocupades/No informat",
+                "Orientació professional emmarcada en el sector d’origen o de destí de la persona usuària. Mantenir el lloc de Treball, promocionar transversal o verticalment. Opcions possibles: \tSí/No/No informat",
+                "Opcions possibles: \tSí/No/No informat",
+                "Codi del municipi de l’entitat d’orientació",
+                "Indicarem no si l’acció es per a persones treballadores ocupades. Opcions possibles: \tSí/No/No informat",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Orientació només telemàtica \tSí /No",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "",
+                "URL a la web de l’entitat d’orientació",
+                "Indica si l’orientació professional es basa en la prevenció (manteniment del lloc de Treball) i emmarcada en el sector d’origen o de destí de la persona usuària. Opcions possibles: \tSí/No/No informat",
+                "Codi de la comarca de l’entitat d’orientació",
+                "Longitud de l’entitat d’orientació",
+                "Nom de l’entitat orientadora",
+                "Nom del programa que se li dona des del Consorci per a la Formació Contínua per referir-se als programes d’orientació",
+                "Opcions possibles: \tAgroalimentària /Agroalimentària-Agrària /Agroalimentària-Indústries alimentàries /Construcció i instal·lacions /Construcció i instal·lacions-Edificació i obra civil /Construcció i instal·lacions-Electricitat i electrònica /Construcció i instal·lacions-Instal·lació i manteniment /Energia verda i sostenibilitat-Energia i aigua /Indústria del metall i mobilitat /Indústria del metall i mobilitat-Fabricació mecànica /Indústria del metall i mobilitat-Transport i manteniment de vehicles /Indústria manufacturera /Indústria manufacturera-Química /Oci i benestar /Oci i benestar-Hostaleria i Turisme /Oci i benestar-Imatge personal /Salut i atenció a les persones /Salut i atenció a les persones-Sanitat /Salut i atenció a les persones-Serveis socioculturals i a la comunitat /Serveis a les empreses /Serveis a les empreses-Administració i gestió /Serveis a les empreses-Comerç i màrqueting /Transformació digital /Transformació digital-Informàtica i comunicacions/No informat",
+                "Opcions possibles: \tJoves/Majors de 30 anys/Majors de 45 anys /No informat"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 287,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-05-29T14:17:30.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" : [ "punt orientació", "orientació professional" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Cercador de Punts d'Informació i Orientació professionals"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://fp.gencat.cat/ca/detalls/article/Cercador-de-Punts-dInformacio-i-Orientacio-professionals"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Guidance points of the Consorci per a la Formació Continua de Catalunya"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Puntos de orientación del Consorci per a la Formació Continua de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qsgb-mu78",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Punts-d-orientació-del-Consorci-per-a-la-Formació-/qsgb-mu78",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 3,
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 1, 9 ] },
+  "warnings" : []
+}

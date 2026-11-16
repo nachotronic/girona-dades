@@ -1,0 +1,846 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat",
+            "id" : "j8h8-vxug",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Habitatges construïts i acabats a Catalunya trimestralment des de l’any 2000 fins a l’actualitat.\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-11-10T09:43:54.000Z",
+            "createdAt" : "2023-11-27T16:57:14.000Z",
+            "metadata_updated_at" : "2025-11-10T09:43:45.000Z",
+            "data_updated_at" : "2025-11-10T09:43:54.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 50,
+                "page_views_last_month" : 130,
+                "page_views_total" : 1618,
+                "page_views_last_week_log" : 5.672425341971496,
+                "page_views_last_month_log" : 7.03342300153745,
+                "page_views_total_log" : 10.660887270302567
+              },
+            "columns_name" :
+              [
+                "Iniciats octubre-desembre",
+                "Àmbit funcional",
+                "Iniciats abril-juny",
+                "Iniciats anuals",
+                "Georeferència Municipi",
+                "Acabats juliol-setembre",
+                "LIMADM COMARCA",
+                "Anuals acabats",
+                "Acabats gener-març",
+                "Acabats abril-juny",
+                "Latitud Municipi",
+                "LIMADM_MUNICIPI",
+                "Codi INE",
+                "Longitud Municipi",
+                "Província",
+                "Iniciats juliol-setembre",
+                "Codi IDESCAT",
+                "Codi Comarca 2015",
+                "Codi Comarca 2023",
+                "Comarca 2023",
+                "Codi Província",
+                "Any",
+                "Acabats octubre-desembre",
+                "Iniciats gener-març",
+                "Comarca 2015",
+                "Municipi"
+              ],
+            "columns_field_name" :
+              [
+                "iniciats_octubre_desembre",
+                "mbit_funcional",
+                "iniciats_abril_juny",
+                "iniciats_anuals",
+                "georefer_ncia_municipi",
+                "acabats_juliol_setembre",
+                ":@computed_region_wvic_k925",
+                "anuals_acabats",
+                "acabats_gener_mar",
+                "acabats_abril_juny",
+                "latitud_municipi",
+                ":@computed_region_bh64_c7uy",
+                "codi_ine",
+                "longitud_municipi",
+                "prov_ncia",
+                "iniciats_juliol_setembre",
+                "codi_idescat",
+                "codi_comarca_2015",
+                "codi_comarca_2023",
+                "comarca_2023",
+                "codi_prov_ncia",
+                "any",
+                "acabats_octubre_desembre",
+                "iniciats_gener_mar",
+                "comarca_2015",
+                "municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Point",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nombre d’habitatges iniciats durant el període d’octubre a desembre",
+                "Vegueria (o àmbit funcional) al que pertany el municipi",
+                "Nombre d’habitatges iniciats durant el període d’abril a juny",
+                "Nombre d’habitatges iniciats totals. Sumatori dels habitatges iniciats trimestralment.",
+                "Dades de georeferència. Posicionament espacial del municipi. ",
+                "Nombre d’habitatges acabats durant el període de juliol a setembre",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nombre d’habitatges acabats totals. Sumatori dels habitatges acabats trimestralment.",
+                "Nombre d’habitatges acabats durant el període de gener a març",
+                "Nombre d’habitatges acabats durant el període d’abril a juny",
+                "Sistema de coordenades. Localització del municipi en direcció est o oest.",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Codi del municipi assignat per l’Instituto Nacional de Estadística",
+                "Sistema de coordenades. Localització del municipi en direcció nord o sud.",
+                "Nom de la província",
+                "Nombre d’habitatges iniciats durant el període de juliol a setembre",
+                "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Moianès.",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Lluçanès.",
+                "Nom de la comarca 2023. Incorporació del Lluçanès.",
+                "Codi de la província assignat per l’Institut d’Estadística de Catalunya.",
+                "Any d’inici o acabament dels habitatges",
+                "Nombre d’habitatges acabats durant el període d’octubre a desembre",
+                "Nombre d’habitatges iniciats durant el període de gener a març",
+                "Nom de la comarca 2015. Incorporació del Moianès.",
+                "Nom del municipi"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {}
+              ],
+            "download_count" : 439,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-11-27T17:12:28.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Habitatge",
+            "domain_tags" :
+              [
+                "habitatge",
+                "construcció",
+                "iniciats",
+                "acabats",
+                "catalunya",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Homes started and finished. Quarterly historical series 1990 – present"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Viviendas iniciadas y acabadas. Serie historica trimestral 2000 – actualidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/j8h8-vxug",
+        "link" : "https://analisi.transparenciacatalunya.cat/Habitatge/Habitatges-iniciats-i-acabats-Sèrie-històrica-trim/j8h8-vxug",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Habitatges iniciats i acabats. Sèrie històrica anual 1990 – actualitat",
+            "id" : "txkt-yjtq",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Habitatges construïts i acabats a Catalunya des de l’any 1990 fins a l’actualitat.\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-04-08T06:36:54.000Z",
+            "createdAt" : "2023-11-27T14:47:56.000Z",
+            "metadata_updated_at" : "2026-04-08T06:36:45.000Z",
+            "data_updated_at" : "2026-04-08T06:36:54.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 52,
+                "page_views_last_month" : 124,
+                "page_views_total" : 1460,
+                "page_views_last_week_log" : 5.7279204545632,
+                "page_views_last_month_log" : 6.965784284662088,
+                "page_views_total_log" : 10.5127404628035
+              },
+            "columns_name" :
+              [
+                "Àmbit funcional",
+                "LIMADM COMARCA",
+                "Província",
+                "Georeferència Municipi",
+                "Any",
+                "Codi Comarca 2023",
+                "Municipi",
+                "Codi Província",
+                "LIMADM_MUNICIPI",
+                "Comarca 2015",
+                "Codi IDESCAT",
+                "Codi INE",
+                "Codi Comarca 2015",
+                "Comarca 2023",
+                "Iniciats totals",
+                "Acabats totals",
+                "Longitud Municipi",
+                "Latitud Municipi"
+              ],
+            "columns_field_name" :
+              [
+                "mbit_funcional",
+                ":@computed_region_wvic_k925",
+                "prov_ncia",
+                "georefer_ncia_municipi",
+                "any",
+                "codi_comarca_2023",
+                "municipi",
+                "codi_prov_ncia",
+                ":@computed_region_bh64_c7uy",
+                "comarca_2015",
+                "codi_idescat",
+                "codi_ine",
+                "codi_comarca_2015",
+                "comarca_2023",
+                "iniciats_totals",
+                "acabats_totals",
+                "longitud_municipi",
+                "latitud_municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Point",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Vegueria (o àmbit funcional) al que pertany el municipi",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nom de la província",
+                "Dades de georeferència. Posicionament espacial del municipi. ",
+                "Any d’inici o acabament dels habitatges",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Lluçanès.",
+                "Nom del municipi",
+                "Codi de la província assignat per l’Institut d’Estadística de Catalunya.",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Nom de la comarca 2015. Incorporació del Moianès.",
+                "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+                "Codi del municipi assignat per l’Instituto Nacional de Estadística",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Moianès.",
+                "Nom de la comarca 2023. Incorporació del Lluçanès.",
+                "Nombre d’habitatges iniciats totals",
+                "Nombre d’habitatges acabats totals",
+                "Sistema de coordenades. Localització del municipi en direcció nord o sud.",
+                "Sistema de coordenades. Localització del municipi en direcció est o oest."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 1264,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-11-27T16:57:20.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Habitatge",
+            "domain_tags" :
+              [
+                "habitatge",
+                "construcció",
+                "iniciats",
+                "acabats",
+                "catalunya",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Homes started and finished. Annual historical series 1990 – present"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Viviendas iniciadas y acabadas. Serie historica anual 1990 – actualidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/txkt-yjtq",
+        "link" : "https://analisi.transparenciacatalunya.cat/Habitatge/Habitatges-iniciats-i-acabats-Sèrie-històrica-anua/txkt-yjtq",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat",
+            "id" : "v8i4-fa4q",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-03-18T10:27:52.000Z",
+            "createdAt" : "2024-04-23T08:26:45.000Z",
+            "metadata_updated_at" : "2026-03-18T10:27:47.000Z",
+            "data_updated_at" : "2026-03-18T10:27:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 111,
+                "page_views_last_month" : 408,
+                "page_views_total" : 4072,
+                "page_views_last_week_log" : 6.807354922057604,
+                "page_views_last_month_log" : 8.67595703294175,
+                "page_views_total_log" : 11.991876099003415
+              },
+            "columns_name" :
+              [
+                "Longitud Municipi",
+                "Codi IDESCAT",
+                "Municipi",
+                "Iniciats HPO",
+                "Acabats HPO",
+                "Any",
+                "Comarca 2023",
+                "Latitud Municipi",
+                "Codi INE",
+                "Àmbit funcional",
+                "Província",
+                "LIMADM_MUNICIPI",
+                "Georeferència Municipi",
+                "Codi Comarca 2023",
+                "Codi Província"
+              ],
+            "columns_field_name" :
+              [
+                "longitud_municipi",
+                "codi_idescat",
+                "municipi",
+                "iniciats_hpo",
+                "acabats_hpo",
+                "any",
+                "comarca_2023",
+                "latitud_municipi",
+                "codi_ine",
+                "mbit_funcional",
+                "prov_ncia",
+                ":@computed_region_bh64_c7uy",
+                "georefer_ncia_municipi",
+                "codi_comarca_2023",
+                "codi_prov_ncia"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Point",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Sistema de coordenades. Localització del municipi en direcció nord o sud.",
+                "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+                "Nom del municipi",
+                "Nombre d’habitatges amb protecció oficial iniciats totals",
+                "Nombre d’habitatges amb protecció oficial acabats totals",
+                "Any d’inici o acabament dels habitatges",
+                "Nom de la comarca 2023. Incorporació del Lluçanès.",
+                "Sistema de coordenades. Localització del municipi en direcció est o oest.",
+                "Codi del municipi assignat per l’Instituto Nacional de Estadística",
+                "Vegueria (o àmbit funcional) al que pertany el municipi",
+                "Nom de la província",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Dades de georeferència. Posicionament espacial del municipi. ",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Lluçanès.",
+                "Codi de la província assignat per l’Institut d’Estadística de Catalunya."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 483,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-04-23T08:38:55.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Habitatge",
+            "domain_tags" :
+              [
+                "habitatge",
+                "construcció",
+                "iniciats",
+                "acabats",
+                "protecció oficial",
+                "catalunya"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Housing with official protection started and finished. Annual historical series 2002 – present"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Viviendas con protección oficial iniciadas y acabadas. Serie historica anual 2002 – actualidad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
+        "link" : "https://analisi.transparenciacatalunya.cat/Habitatge/Habitatges-amb-protecció-oficial-iniciats-i-acabat/v8i4-fa4q",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dades meteorològiques de la XEMA",
+            "id" : "nzvn-apee",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades meteorològiques registrades a totes les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA) del Servei Meteorològic de Catalunya (METEOCAT). Aquest data base conté variables mesurades amb una freqüència inferior a la diària, generalment semi-horària.\n\nÉs possible trobar informació sobre les metadades d'estacions i variables a:\n- Variables: https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\n- Estacions: https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\n\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T10:46:22.000Z",
+            "createdAt" : "2019-03-18T10:23:37.000Z",
+            "metadata_updated_at" : "2026-11-16T10:46:08.000Z",
+            "data_updated_at" : "2026-11-16T10:46:22.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 690,
+                "page_views_last_month" : 3407,
+                "page_views_total" : 111656,
+                "page_views_last_week_log" : 9.432541900388259,
+                "page_views_last_month_log" : 11.73470962022584,
+                "page_views_total_log" : 16.768714173861603
+              },
+            "columns_name" :
+              [
+                "ID",
+                "CODI_ESTACIO",
+                "CODI_VARIABLE",
+                "DATA_LECTURA",
+                "DATA_EXTREM",
+                "VALOR_LECTURA",
+                "CODI_ESTAT",
+                "CODI_BASE"
+              ],
+            "columns_field_name" :
+              [
+                "id",
+                "codi_estacio",
+                "codi_variable",
+                "data_lectura",
+                "data_extrem",
+                "valor_lectura",
+                "codi_estat",
+                "codi_base"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Columna d'identificació",
+                "Codi identificador de l’Estació Meteorològica Automàtica",
+                "Codi identificador de la variable meteorològica",
+                "Data i Hora Inicial de la lectura (els registres es troben etiquetats per davant). L’hora es facilita en Temps Universal (T.U.)",
+                "Data i Hora en què s’ha registrat el valor màxim o mínim. L’hora es facilita en Temps Universal (T.U.). Aquest camp només apareix en variables extremes",
+                "Valor de la variable meteorològica",
+                "Atribut que informa del resultat del procés de validació. Els possibles atributs són: espai en blanc (la dada no ha iniciat el procés de validació), T (el procés de validació s’ha iniciat, però no ha finalitzat), V (dada vàlida). Els valors no vàlids no es mostren",
+                "Base temporal en què s’ha mesurat la variable meteorològica. La base temporal pot ser HO (horària) o SH (semi-horària)"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time" },
+                { "view" : "date_dmy_time" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 18249,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-01-18T00:21:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Ambient",
+            "domain_tags" :
+              [
+                "meteorologia",
+                "mesura",
+                "estació",
+                "smartcatalonia",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "Meteorologia"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Meteo data of XEMA"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos meteorológicos de la XEMA"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "METEOCAT"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Contínua"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nzvn-apee",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Dades-meteorològiques-de-la-XEMA/nzvn-apee",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 2, 8 ] },
+  "warnings" : []
+}

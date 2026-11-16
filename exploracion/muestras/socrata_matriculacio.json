@@ -1,0 +1,793 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Matriculacions mensuals de vehicles electrificats i híbrids a Catalunya",
+            "id" : "eds6-562k",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació que caracteritza les matriculacions de vehicles electrificats i híbrids a nivell municipal, comarcal i provincial a Catalunya amb caracterització de tipologia i de tecnologia de propulsió.",
+            "attribution" : "Institut Català d'Energia (ICAEN)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:45:08.000Z",
+            "createdAt" : "2020-10-29T16:05:01.000Z",
+            "metadata_updated_at" : "2026-09-21T06:45:08.000Z",
+            "data_updated_at" : "2026-09-07T12:08:57.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 39,
+                "page_views_last_month" : 115,
+                "page_views_total" : 6141,
+                "page_views_last_week_log" : 5.321928094887363,
+                "page_views_last_month_log" : 6.857980995127572,
+                "page_views_total_log" : 12.584492796975875
+              },
+            "columns_name" :
+              [
+                "Descripció",
+                "Municipi",
+                "CPostal",
+                "Client",
+                "Model",
+                "Uts",
+                "Tipus alta",
+                "Codi IDESCAT",
+                "Provincia",
+                "Comarca",
+                "Mes",
+                "Any",
+                "Tipus Vehicle",
+                "Tecnologia",
+                "Marca"
+              ],
+            "columns_field_name" :
+              [
+                "descripci",
+                "municipi",
+                "cpostal",
+                "client",
+                "model",
+                "uts",
+                "tipus_alta",
+                "codi_idescat",
+                "provincia",
+                "comarca",
+                "mes",
+                "any",
+                "tipus_vehicle",
+                "tecnologia",
+                "marca"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Informació descriptiva i d’ús del vehicle",
+                "Municipi de matriculació del vehicle",
+                "Codi postal de la localitat de matriculació del vehicle",
+                "Tipus de propietari, (Particular/Empresa)",
+                "Model del vehicle, disponible a partir de 2020",
+                "Nombre de vehicles coincidents amb les característiques del registre",
+                "Modalitat d’adquisició o alta",
+                "Codificació del municipi segons l'Idescat",
+                "Província de matriculació del vehicle",
+                "Comarca de matriculació del vehicle",
+                "Mes de referència del registre",
+                "Any de referència del registre",
+                "Classificació de la tipologia del vehicle, fins a 12 tipus diferents",
+                "Caracterització de la motorització del vehicle",
+                "Presenta la informació de la marca comercial del vehicle."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2093,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-10-07T07:44:43.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Transport",
+            "domain_tags" :
+              [
+                "matriculacions",
+                "vehicles",
+                "municipal",
+                "elèctric",
+                "eficient",
+                "smartcatalonia",
+                "ods7_energia assequible i no contaminant"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Monthly electrified and hybrid vehicle registrations in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Matriculaciones mensuales de vehículos electrificados e híbridos en Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/eds6-562k",
+        "link" : "https://analisi.transparenciacatalunya.cat/Transport/Matriculacions-mensuals-de-vehicles-electrificats-/eds6-562k",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Alumnes matriculats per ensenyament i unitats dels centres docents",
+            "id" : "xvme-26kg",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Alumnes matriculats en els centres docents, en els ensenyaments que cursen. També s’inclouen el nombre de grups o unitats en què es distribueixen els alumnes. La font d’informació són els sistemes d’informació del Departament d’Educació. L’actualització és anual.  \nRespecte al recompte de matrícules, estan informats els alumnes dels quals es tingui el sexe informat. S’exclouen els estudis categoritzats com a desconeguts. \nHi ha certes característiques dels ensenyaments com la modalitat que només s’informa en els estudis en que té sentit.\nRespecte els grups o unitats, només s‘inclouen els corresponents als ensenyaments de règim general.\nConsideracions:\n-\tEn el cas dels ensenyaments superiors de disseny, una part dels alumnes cursen els estudis anualment i una altra part semestralment. Per homogeneïtzar les dades s’han considerat totes les matrícules anuals (mostrant les dades del primer semestre pels centres que fan els dos períodes).\n-\tEn el cas de les unitats, per als centres privats i per alguns estudis no es disposa de les dades desagregades a nivell d’ensenyament (només a nivell de grau). En aquest cas s’ha afegir el nombre d’unitats per grau separant aquesta dada del nombre de matrícules.\n-\tL'actualització de les dades anual es fa en tres fases: En la primera fase s’informarà dels ensenyaments de règim general, en la segona dels ensenyaments de règim especial que tenen matrícula anual i en la tercera ensenyaments de règim especial que tenen matriculació no anual.",
+            "attribution" : "Departament d'Educació i Formació Professionalfessional i Formació Professional i Formació Professional i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:43:10.000Z",
+            "createdAt" : "2019-06-04T10:45:32.000Z",
+            "metadata_updated_at" : "2026-09-21T06:43:10.000Z",
+            "data_updated_at" : "2026-04-23T11:01:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 252,
+                "page_views_last_month" : 1174,
+                "page_views_total" : 40934,
+                "page_views_last_week_log" : 7.98299357469431,
+                "page_views_last_month_log" : 10.198445041452363,
+                "page_views_total_log" : 15.32104727488266
+              },
+            "columns_name" :
+              [
+                "Coordenades GEO Y",
+                "Nom naturalesa",
+                "Codi estudis",
+                "Codi naturalesa",
+                "Georeferència",
+                "Codi comarca",
+                "Codi districte municipal",
+                "Nivell",
+                "Coordenades GEO X",
+                "Matrícules. Dones",
+                "Nom ensenyament",
+                "Coordenades UTM X",
+                "Nom comarca",
+                "Codi àrea territorial",
+                "Codi centre",
+                "Nom municipi",
+                "Any",
+                "Unitats",
+                "Matrícules. Homes",
+                "Matrícules. Total",
+                "Codi ensenyament",
+                "Grau",
+                "Temàtica",
+                "Nom estudis",
+                "Nom districte municipal",
+                "Nom titularitat",
+                "Codi titularitat",
+                "Curs",
+                "Matrícula concertada",
+                "Denominació completa",
+                "Codi municipi_5",
+                "Codi municipi_6",
+                "Coordenades UTM Y",
+                "Modalitat",
+                "Període matrícula",
+                "Nom àrea territorial"
+              ],
+            "columns_field_name" :
+              [
+                "coordenades_geo_y",
+                "nom_naturalesa",
+                "codi_estudis",
+                "codi_naturalesa",
+                "georefer_ncia",
+                "codi_comarca",
+                "codi_districte_municipal",
+                "nivell",
+                "coordenades_geo_x",
+                "matr_cules_dones",
+                "nom_ensenyament",
+                "coordenades_utm_x",
+                "nom_comarca",
+                "codi_delegaci",
+                "codi_centre",
+                "nom_municipi",
+                "any",
+                "unitats",
+                "matr_cules_homes",
+                "matr_cules_total",
+                "codi_ensenyament",
+                "grau",
+                "tem_tica",
+                "nom_estudis",
+                "nom_dm",
+                "nom_titularitat",
+                "codi_titularitat",
+                "curs",
+                "matr_cula_concertada",
+                "denominaci_completa",
+                "codi_municipi_5",
+                "codi_municip_6",
+                "coordenades_utm_y",
+                "modalitat",
+                "per_ode_matr_cula",
+                "nom_delegaci"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "WGS84",
+                "Públic/Privat",
+                "Codi de l’estudi",
+                "Codi naturalesa Públic/Privat",
+                "",
+                "Codi comarca del centre educatiu",
+                "Codi del districte del municipi del centre educatiu",
+                "Nivell de l’ensenyament",
+                "WGS84",
+                "Nombre de matrícules. Dones",
+                "Nom de l’ensenyament",
+                "ETRS89",
+                "Nom comarca del centre educatiu",
+                "Codi de l'Àrea Territorial del centre educatiu",
+                "Codi de centre educatiu",
+                "Nom del municipi del centre educatiu",
+                "Any inferior del curs",
+                "Nombre d'unitats o grups",
+                "Nombre de matrícules. Homes",
+                "Nombre de matrícules. Total",
+                "Codi de l’ensenyament",
+                "Grau de l’ensenyament",
+                "Família professional dels estudis",
+                "Nom de l’estudi",
+                "Nom del districte del municipi del centre educatiu",
+                "Titularitat de la propietat del centre educatiu",
+                "Codi de la titularitat de la propietat del centre educatiu",
+                "Curs de referència",
+                "Informació sobre si l’ensenyament al centre es concertat o rep fons públics",
+                "Nom complert del centre educatiu",
+                "Codificació a 5 dígits",
+                "Codificació a 6 dígits",
+                "ETRS89",
+                "Modalitat en que es cursa l’ensenyament (presencial, semipresencial, distància o lliure)",
+                "Període de matriculació",
+                "Àrea Territorial"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                { "align" : "left" },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 9465,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-06-08T09:49:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" :
+              [
+                "centres",
+                "departament",
+                "ensenyament",
+                "estudi",
+                "matrícula",
+                "alumnes",
+                "educació",
+                "grups",
+                "unitats",
+                "docents",
+                "registre",
+                "infantil",
+                "primària",
+                "secundària",
+                "batxillerat",
+                "formació professional",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students enrolled by type of education and education center"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnos matriculados por enseñanza y unidades de los centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xvme-26kg",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Alumnes-matriculats-per-ensenyament-i-unitats-dels/xvme-26kg",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Empreses instal·ladores i comprovadores del funcionament de dispositius de limitació de velocitat",
+            "id" : "5ye6-eqvt",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Les empreses instal·ladores i comprovadores de dispositius de limitació de velocitat són entitats, tallers o fabricants autoritzats per instal·lar i comprovar el funcionament dels dispositius de limitació, abans de la matriculació dels vehicles i també en vehicles que ja estan en servei.",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-03T08:19:33.000Z",
+            "createdAt" : "2024-03-25T09:40:49.000Z",
+            "metadata_updated_at" : "2026-11-03T08:19:33.000Z",
+            "data_updated_at" : "2026-11-03T08:19:33.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 71,
+                "page_views_total" : 1544,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 6.169925001442312,
+                "page_views_total_log" : 10.593391122791736
+              },
+            "columns_name" :
+              [
+                "Adreça de l'establiment",
+                "Rao social",
+                "Codi postal",
+                "Municipi",
+                "Comarca",
+                "Titular",
+                "Codi Comarca",
+                "Codi Municipi",
+                "Numero registre",
+                "Contrasenya"
+              ],
+            "columns_field_name" :
+              [
+                "adre_a_titular",
+                "rao_social",
+                "codi_postal",
+                "municipi",
+                "comarca",
+                "titular",
+                "codi_comarca",
+                "codi_municipi",
+                "numero_registre",
+                "contrasenya"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Adreça de l'establiment",
+                "Nom de la persona jurídica titular de l’establiment",
+                "Codi postal",
+                "Nom del municipi",
+                "Nom de la comarca",
+                "Nom del professional o empresa titular",
+                "Codi comarcal o de l’entitat territorial singular de l’Aran de 2 dígits oficial a Catalunya, definit per l’Institut d’Estadística de Catalunya (IDESCAT)",
+                "Codi municipal de 6 dígits oficial a Catalunya, definit per l’Institut d’Estadística de Catalunya (IDESCAT)",
+                "Codi identificador del Registre d'Agents de la Seguretat Industrial de Catalunya",
+                "Codi que informa sobre les marques de vehicles per les quals el taller està autoritzat"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {}
+              ],
+            "download_count" : 332,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-03-25T09:46:59.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Transport",
+            "domain_tags" :
+              [
+                "medi ambient",
+                "vehicles",
+                "cotxe",
+                "empreses",
+                "instal·ladores",
+                "seguretat",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Installation and control companies of speed limitation devices"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Empresas instaladoras y comprobadoras del funcionamiento de dispositivos de limitación de velocidad"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5ye6-eqvt",
+        "link" : "https://analisi.transparenciacatalunya.cat/Transport/Empreses-instal-ladores-i-comprovadores-del-funcio/5ye6-eqvt",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Distribució alumnat postobligatori a ST Girona curs 23-24",
+            "id" : "iqdr-qkkp",
+            "resource_name" : null,
+            "parent_fxf" : [ "xvme-26kg" ],
+            "description" : "Alumnes matriculats en els centres docents, en els ensenyaments que cursen. També s’inclouen el nombre de grups o unitats en què es distribueixen els alumnes. La font d’informació són els sistemes d’informació del Departament d’Educació. L’actualització és anual.  \nRespecte al recompte de matrícules, estan informats els alumnes dels quals es tingui el sexe informat. S’exclouen els estudis categoritzats com a desconeguts. \nHi ha certes característiques dels ensenyaments com la modalitat que només s’informa en els estudis en que té sentit.\nRespecte els grups o unitats, només s‘inclouen els corresponents als ensenyaments de règim general.\nConsideracions:\n-\tEn el cas dels ensenyaments superiors de disseny, una part dels alumnes cursen els estudis anualment i una altra part semestralment. Per homogeneïtzar les dades s’han considerat totes les matrícules anuals (mostrant les dades del primer semestre pels centres que fan els dos períodes).\n-\tEn el cas de les unitats, per als centres privats i per alguns estudis no es disposa de les dades desagregades a nivell d’ensenyament (només a nivell de grau). En aquest cas s’ha afegir el nombre d’unitats per grau separant aquesta dada del nombre de matrícules.\n-\tL'actualització de les dades anual es fa en tres fases: En la primera fase s’informarà dels ensenyaments de règim general, en la segona dels ensenyaments de règim especial que tenen matrícula anual i en la tercera ensenyaments de règim especial que tenen matriculació no anual.",
+            "attribution" : "Departament d'Educació i Formació Professionalfessional i Formació Professional i Formació Professional i Formació Professional",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2026-09-18T08:01:46.000Z",
+            "createdAt" : "2024-10-19T17:29:19.000Z",
+            "metadata_updated_at" : "2026-09-18T08:01:46.000Z",
+            "data_updated_at" : "2026-04-23T11:01:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 26,
+                "page_views_last_month" : 37,
+                "page_views_total" : 562,
+                "page_views_last_week_log" : 4.754887502163469,
+                "page_views_last_month_log" : 5.247927513443585,
+                "page_views_total_log" : 9.13699111208023
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-10-19T17:43:15.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Educació",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Students enrolled by type of education and education center"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Alumnos matriculados por enseñanza y unidades de los centros docentes"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Educació i Formació Professional"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/iqdr-qkkp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Educació/Distribució-alumnat-postobligatori-a-ST-Girona-cur/iqdr-qkkp",
+        "owner" :
+          {
+            "id" : "w776-8cnn",
+            "user_type" : "interactive",
+            "display_name" : "raulbatalle@gencat.cat"
+          },
+        "creator" :
+          {
+            "id" : "w776-8cnn",
+            "user_type" : "interactive",
+            "display_name" : "raulbatalle@gencat.cat"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 2, 7 ] },
+  "warnings" : []
+}
