@@ -94,7 +94,7 @@
   const periodes = (per) => D.cj.per[per];
   const salt = (per) => (per === "m" ? 12 : 4);
   const ultIdx = (s) => { for (let i = s.length - 1; i >= 0; i--) if (s[i] != null) return i; return -1; };
-  const fv = (v, c) => (v == null ? "–" : c.mega && v >= 1e5 ? `${fmt(v / 1e6, 2)} M` : c.u === "%" ? pct(v, c.dec ?? 1) : fmt(v, c.dec || 0) + (c.u === "€" ? " €" : ""));
+  const fv = (v, c) => (v == null ? "–" : c.mega && v >= 1e6 ? `${fmt(v / 1e6, 2)} M` : c.u === "%" ? pct(v, c.dec ?? 1) : fmt(v, c.dec || 0) + (c.u === "€" ? " €" : ""));
   const signe = (v, d = 1) => (v == null || !isFinite(v) ? "–" : pct(v, d, true));
   const puntsTxt = (v) => (v == null ? "–" : tx("punts", (v > 0 ? "+" : "") + fmt(v, 1)));
   const suma = (s, i, n) => { let x = 0; for (let k = i - n + 1; k <= i; k++) { if (k < 0 || s[k] == null) return null; x += s[k]; } return x; };

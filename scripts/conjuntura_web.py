@@ -269,9 +269,12 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     # Turismos nuevos matriculados
     if len(dgt):
         tn = dgt[(dgt["tipus"] == "turisme") & (dgt["nou"].astype(str) == "True")]
-        for i, g in tn.groupby("ine"):
-            if i in mun:
-                mun[i]["mat"] = arr(g.groupby("per")["n"].sum().to_dict(), M)
+        # Un municipio sin filas en un mes descargado tiene 0 matriculaciones, no un dato ausente
+        mesos_dgt = set(dgt["per"])
+        per_mun = {i: g.groupby("per")["n"].sum().to_dict() for i, g in tn.groupby("ine")}
+        for i in mun:
+            d = per_mun.get(i, {})
+            mun[i]["mat"] = arr({p: d.get(p, 0) for p in mesos_dgt}, M)
     # Valor tasado (solo municipios de más de 25.000 habitantes)
     for n, i in nombres.items():
         if n in vt and i in mun:

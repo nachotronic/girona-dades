@@ -39,6 +39,13 @@ def _filtra(df: pd.DataFrame, nombres: set[str]) -> pd.DataFrame:
     if ini is None:
         # Sin cabecera de provincia: filas que nombran municipios de Girona en alguna de las
         # tres primeras columnas (la tabla 35103500 lleva provincia y municipio en columnas 2 y 3)
+        # Si una columna lleva la provincia solo en la primera fila de cada grupo, se rellena
+        # hacia abajo y se toman las filas de Girona (evita el Torrent de Valencia o el Mieres de Asturias)
+        for c in range(min(3, df.shape[1])):
+            col = df.iloc[:, c]
+            ff = col.ffill().astype(str).str.strip().map(normaliza)
+            if col.isna().mean() >= 0.5 and (ff == "girona").any():
+                return df[ff == "girona"]
         cols = df.iloc[:, :3].astype(str).apply(lambda c: c.str.strip().map(normaliza))
         return df[cols.isin(nombres).any(axis=1)]
     fin = next((i for i in cabeceras if i > ini and normaliza(primera.iloc[i]) not in nombres), len(df))
