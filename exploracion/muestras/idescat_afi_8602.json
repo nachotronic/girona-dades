@@ -1,0 +1,13 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/afi/8602?lang=ca",
+  "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Tots els règims. A últim dia del mes",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8602/8702?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Tots els règims. A últim dia del mes"
+    } ]
+  },
+  "version" : "2.0"
+}

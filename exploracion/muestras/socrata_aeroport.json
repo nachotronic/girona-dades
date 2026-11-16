@@ -1,0 +1,847 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Fets coneguts als aeroports",
+            "id" : "x6tb-fs8y",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Fets delinqüencials relacionats amb el patrimoni produïts en els aeroports de Catalunya",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T11:27:06.000Z",
+            "createdAt" : "2021-08-10T11:58:28.000Z",
+            "metadata_updated_at" : "2026-11-16T11:27:06.000Z",
+            "data_updated_at" : "2026-10-13T10:23:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 26,
+                "page_views_last_month" : 43,
+                "page_views_total" : 1800,
+                "page_views_last_week_log" : 4.754887502163469,
+                "page_views_last_month_log" : 5.459431618637297,
+                "page_views_total_log" : 10.814582465906277
+              },
+            "columns_name" :
+              [
+                "Mes",
+                "Nom mes",
+                "Any",
+                "Regió Policial (RP)",
+                "Àrea Bàsica Policial (ABP)",
+                "Aeroport",
+                "Tipus de fet",
+                "Nombre"
+              ],
+            "columns_field_name" :
+              [
+                "mes",
+                "nom_mes",
+                "any",
+                "regi_policial_rp",
+                "rea_b_sica_policial_abp",
+                "aeroport",
+                "tipus_de_fet",
+                "nombre"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [ {}, {}, { "noCommas" : "true" }, {}, {}, {}, {}, {} ],
+            "download_count" : 863,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-10T12:44:40.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "policia",
+                "mossos d'esquadra",
+                "persones",
+                "mobilitat",
+                "fets delinqüencials",
+                "fets transports",
+                "aeroports",
+                "patrimoni",
+                "furt",
+                "robatori",
+                "interior vehicle",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Offences in airports (Autonomous Police - Mossos d'Esquadra)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Hechos delicuenciales conocidos en los aeropuertos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/x6tb-fs8y",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Fets-coneguts-als-aeroports/x6tb-fs8y",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Infraestructures aeroportuàries de Catalunya",
+            "id" : "d9uf-3de8",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llista de les infraestructures aeroportuàries existents a Catalunya amb el nom del gestor,  les diferents tipologies i el punt de referència d'ubicació.",
+            "attribution" : "Catàleg Tècnic de Dades. Direcció General de Transports i Mobilitat. Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-21T06:54:37.000Z",
+            "createdAt" : "2024-10-24T09:21:53.000Z",
+            "metadata_updated_at" : "2026-09-21T06:54:37.000Z",
+            "data_updated_at" : "2026-07-03T07:30:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 38,
+                "page_views_total" : 636,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 5.285402218862249,
+                "page_views_total_log" : 9.3151495622563
+              },
+            "columns_name" :
+              [
+                "TIPOLOGIA_INFRA_AEROPORTUARIA",
+                "UTM_Y_INFRA_AEROPORTUARIA",
+                "GESTOR_INFRA_AEROPORTUARIA",
+                "NOM_INFRA_AEROPORTUARIA",
+                "UTM_X_INFRA_AEROPORTUARIA",
+                "IDE_INFRA_AEROPORTUARIA",
+                "LIMADM_MUNICIPI",
+                "IDE_TIPOLOGIA_INFRA_AEROPORTUARIA",
+                "LONGITUD_WGS84_INFRA_AEROPORTUARIA",
+                "LATITUD_WGS84_INFRA_AEROPORTUARIA",
+                "Georreferència"
+              ],
+            "columns_field_name" :
+              [
+                "tipologia_infra_aeroportuaria",
+                "utm_y_infra_aeroportuaria",
+                "gestor_infra_aeroportuaria",
+                "nom_infra_aeroportuaria",
+                "utm_x_infra_aeroportuaria",
+                "ide_infra_aeroportuaria",
+                ":@computed_region_bh64_c7uy",
+                "ide_tipologia_infra",
+                "longitud_wgs84_infra",
+                "latitud_wgs84_infra",
+                "georrefer_ncia"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Point"
+              ],
+            "columns_description" :
+              [
+                "Nom de les diferents tipologies aeroportuàries.",
+                "Coordenada UTM (Y) de la infraestructura.",
+                "Informació del gestor de la infraestructura aeroportuària.",
+                "Nom de la infraestructura aeroportuària",
+                "Coordenada UTM (X) de la infraestructura.",
+                "Identificador de la infraestructura aeroportuària. Consta de 4 dígits els dos primers depenen de la tipologia d’infraestructura i els dos restants es tracta d’una numeració ascendent.",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georrefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Identificador de la tipologia aeroportuària.",
+                "Longitud de la localització de la infraestructura segons el sistema de coordenades WGS84.",
+                "Latitud de la localització de la infraestructura segons el sistema de coordenades WGS84. ",
+                "Columna de georeferència"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : "." },
+                { "decimalSeparator" : ".", "noCommas" : "false" },
+                {}
+              ],
+            "download_count" : 510,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:31:03.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Urbanisme-infraestructures",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "aeroport",
+                "aeròdrom",
+                "aviació",
+                "heliport",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Airport infrastructure in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Infraestructuras aeroportuarias de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/d9uf-3de8",
+        "link" : "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Infraestructures-aeroportuàries-de-Catalunya/d9uf-3de8",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mapa de Protecció Civil de Catalunya: Risc radiològic",
+            "id" : "5qme-z2jc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Conté els nou datasets que s'indiquen a continuació:\n•\tInstal·lacions radioactives amb autorització (IRA):localització on s'ubiquen instal·lacions radioactives i la quantitat de fonts segons categoria.\n•\tMunicipis amb instal·lacions radioactives: municipis on s'ubiquen instal·lacions radioactives i la quantitat de fonts segons categoria.\n•\tInstal·lacions de vigilància radiològica (IVR):localització de les instal·lacions de vigilància radiològica (IVR).\n•\tMunicipis amb instal·lacions de vigilància radiològica: municipis que dins el seu àmbit territorial disposen d'instal·lacions adherides al protocol de vigilància radiològica.\n•\tRadi d'1 km al voltant de IVR: distància de 1 km de radi al voltant de cada instal·lació de vigilància radiològica (IVR). Els municipis dins del radi tenen la obligació de redactar un pla d'actuació municipal per risc radiològic.\n•\tRadi de 2 km al voltant de IVR: distància de 2km de radi al voltant de cada instal·lació de vigilància radiològica (IVR). Els municipis dins del radi se'ls recomana que redactin un pla d'actuació municipal per risc radiològic.\n•\tMunicipis dins radi 1km d'una IVR: municipis dins d'una distància de 1km al voltant de cada instal·lació de vigilància radiològica (IVR). Per tant, són municipis obligats a redactar un pla d'actuació municipal per risc radiològic.\n•\tMunicipis dins radi 2km d'una IVR: municipis dins d'una distància de 2 km al voltant de cada instal·lació de vigilància radiològica (IVR). Per tant, són municipis a qui es recomana redactar un pla d'actuació municipal per risc radiològic.\n•\tAltres afectacions: municipis que dins el seu territori disposen d'alguna instal·lació nuclear, diferent d'una central nuclear, i municipis amb grans ports o aeroports amb un flux significatiu de mercaderies radioactives.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:45:16.000Z",
+            "createdAt" : "2017-02-16T15:20:33.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:16.000Z",
+            "data_updated_at" : "2017-02-16T15:20:33.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 45,
+                "page_views_total" : 3211,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.523561956057013,
+                "page_views_total_log" : 11.649256177517316
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-02-16T15:21:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "emergències",
+                "seguretat",
+                "ods1_fi de la pobresa",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Map of Civil Protection in Catalonia: radiological risk"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mapa de Protección Civil de Cataluña: Riesgo radiológico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques "
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                { "key" : "Actors_Visualitzacio", "value" : "No" },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "servei WMS" : "https://pcivil.icgc.cat/ogc/geoservei?map=/opt/idec/dades/pcivil/risc_radiologic.map",
+                      "mapa de protecció civil de catalunya" : "http://pcivil.icgc.cat/pcivil/map.jsp"
+                    },
+                  "description" : "Des del mapa de Protecció Civil de Catalunya està disponible la descàrrega en els formats KML i SHP.\nURL al servei WMS: https://pcivil.icgc.cat/ogc/geoservei?map=/opt/idec/dades/pcivil/risc_radiologic.map",
+                  "title" : "Dades"
+                },
+                {
+                  "urls" :
+                    {
+                      "Metadades del servei" : "https://ide.cat/geonetwork/srv/cat/catalog.search#/search?resultType=details&any=radcat&fast=index&_content_type=json&from=1&to=20&sortBy=relevance"
+                    },
+                  "title" : "Especificacions tècniques"
+                }
+              ],
+            "access_points" :
+              {
+                "servei WMS" : "https://pcivil.icgc.cat/ogc/geoservei?map=/opt/idec/dades/pcivil/risc_radiologic.map",
+                "mapa de protecció civil de catalunya" : "http://pcivil.icgc.cat/pcivil/map.jsp"
+              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5qme-z2jc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Mapa-de-Protecció-Civil-de-Catalunya-Risc-radiològ/5qme-z2jc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Equipaments de Catalunya",
+            "id" : "8gmd-gz7i",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.",
+            "attribution" : "Direcció General de Serveis Digitals i Experiència Ciutadana",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T02:37:46.000Z",
+            "createdAt" : "2017-10-11T14:30:42.000Z",
+            "metadata_updated_at" : "2026-09-21T08:52:50.000Z",
+            "data_updated_at" : "2026-11-16T02:37:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 284,
+                "page_views_last_month" : 909,
+                "page_views_total" : 29704,
+                "page_views_last_week_log" : 8.154818109052105,
+                "page_views_last_month_log" : 9.829722735086058,
+                "page_views_total_log" : 14.858418168086523
+              },
+            "columns_name" :
+              [
+                "Identificador",
+                "Tipus de via",
+                "Correu electrònic",
+                "UTM X",
+                "Sufix de via",
+                "Telèfon principal",
+                "Georeferència",
+                "Propietats addicionals",
+                "Nom",
+                "Número",
+                "Àlies",
+                "Longitud",
+                "Fax",
+                "Telèfon secundari",
+                "LIMADM COMARCA",
+                "Pàgina web",
+                "Via",
+                "UTM Y",
+                "LIMADM_MUNICIPI",
+                "Categoria",
+                "Darrera modificació",
+                "Població",
+                "Latitud",
+                "Comarca",
+                "Codi postal",
+                "Codi del municipi"
+              ],
+            "columns_field_name" :
+              [
+                "idequipament",
+                "tipus_via",
+                "email",
+                "utmx",
+                "sufix_via",
+                "telefon1",
+                "localitzacio",
+                "propietats",
+                "nom",
+                "num",
+                "alies",
+                "longitud",
+                "fax",
+                "telefon2",
+                ":@computed_region_wvic_k925",
+                "web",
+                "via",
+                "utmy",
+                ":@computed_region_bh64_c7uy",
+                "categoria",
+                "data_modificacio",
+                "poblacio",
+                "latitud",
+                "comarca",
+                "cpostal",
+                "codi_municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "URL",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Date",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Identificador intern de l’equipament a la  Base de dades d’Equipaments",
+                "Tipus de via (adreça)",
+                "Adreça de correu electrònic",
+                "Coordenada x (UTM)",
+                "Sufix (adreça)",
+                "Telèfon principal",
+                "Georeferència",
+                "Propietats addicionals de l'equipament",
+                "Nom de l'eqiupament",
+                "Número de portal (adreça)",
+                "Àlies de l'equipament",
+                "Longitud",
+                "Fax",
+                "Telèfon secundari",
+                "",
+                "Pàgina web",
+                "Nom de la via (adreça)",
+                "Coordenada y (UTM)",
+                "",
+                "Categories / subcategories de l'equipament",
+                "Data de la darrera modificació",
+                "Població",
+                "Latitud",
+                "Comarca",
+                "Codi postal",
+                "Codi del municipi"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "3",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "3",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                { "view" : "date_time" },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "9",
+                  "groupSeparator" : "."
+                },
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {}
+              ],
+            "download_count" : 31667,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-09-06T07:01:22.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Urbanisme-infraestructures",
+            "domain_tags" :
+              [
+                "aeroports",
+                "aeròdroms i heliports",
+                "agència tributària de catalunya",
+                "albergs de joventut",
+                "altres espais aptes per a l'ús cultural",
+                "altres prestacions de serveis: serveis experimentals",
+                "arxius",
+                "biblioteques",
+                "borses joves d'habitatge",
+                "centres culturals: ateneus",
+                "centres cívics i cases de cultura",
+                "centres de documentació",
+                "centres de normalització lingüística",
+                "centres de promoció cultural",
+                "centres de recerca",
+                "centres d'innovació i formació ocupacional (cifo)",
+                "centres educatius de justícia juvenil",
+                "centres penitenciaris",
+                "centres sanitaris",
+                "confraries de pescadors",
+                "consells reguladors",
+                "deixalleries",
+                "dependències d'atenció policial - mossos d'esquadra",
+                "ens locals",
+                "ensenyaments de règim especial",
+                "ensenyaments de règim general",
+                "entitats col·laboradores de l'administració (eca)",
+                "equipaments cívics",
+                "equips d'assessorament tècnic de menors",
+                "escoles de capacitació agrària",
+                "escoles de capacitació nauticopesquera",
+                "espais d'art i sales d'exposició",
+                "espais naturals",
+                "estacions d'autobusos",
+                "estructures universitàries",
+                "facultats i escoles",
+                "farmàcies",
+                "fiscalies",
+                "formació de persones adultes",
+                "grans infraestructures de suport a la recerca",
+                "hotels d'entitats",
+                "inspecció tècnica de vehicles (itv)",
+                "instal·lacions esportives",
+                "institucions hospitalàries",
+                "instituts universitaris de recerca",
+                "juntes arbitrals de consum",
+                "jutjats de pau",
+                "jutjats i tribunals",
+                "laboratoris de sanitat ramadera",
+                "museus",
+                "oficines comarcals d'agricultura",
+                "oficines comarcals d'habitatge",
+                "oficines d'acció",
+                "oficines d'atenció",
+                "oficines d'atenció a la víctima del delicte",
+                "oficines d'atenció al ciutadà (oac)",
+                "oficines d'atenció ciutadana",
+                "oficines de benestar social i família",
+                "oficines de català",
+                "oficines de gestió empresarial (oge)",
+                "oficines de la generalitat a l'exterior",
+                "oficines de treball",
+                "oficines de turisme de la xarxa",
+                "oficines del servei d'orientació jurídica",
+                "oficines d'informació a les dones",
+                "oficines municipals d'escolarització",
+                "organitzacions de persones consumidores",
+                "parcs científics i tecnològics",
+                "parcs de bombers",
+                "parcs naturals",
+                "policia de trànsit - mossos d'esquadra",
+                "policies locals",
+                "ports esportius",
+                "punt tic",
+                "punts d'atenció ciutadana",
+                "punts d'autoservei del soc",
+                "servei bàsic d'atenció social",
+                "servei d'acolliment residencial d'urgència",
+                "servei d'ajuda a domicili",
+                "servei d'assessorament tècnic d'atenció social",
+                "servei de centre obert",
+                "servei de les tecnologies de suport i cura",
+                "servei de menjador social",
+                "servei de residència temporal per a persones adultes en situació d'exclusió",
+                "servei de suport als serveis socials bàsics",
+                "servei de suport als serveis socials bàsics (distribució d'aliments)",
+                "servei de suport als serveis socials bàsics (maternoinfantil)",
+                "servei públic de consum",
+                "serveis adreçats a dones en situació de violència masclista i els seus fills",
+                "serveis adreçats a famílies amb problemàtica social i risc d'exclusió social",
+                "serveis adreçats a infància",
+                "adolescència",
+                "joventut",
+                "serveis adreçats a persones afectades pel virus vih/sida",
+                "serveis adreçats a persones amb dependència",
+                "serveis adreçats a persones amb discapacitat física",
+                "serveis adreçats a persones amb discapacitat intel·lectual",
+                "serveis adreçats a persones amb discapacitat sensorial",
+                "serveis adreçats a persones amb drogodependències i/o altres addiccions",
+                "serveis adreçats a persones amb problemàtica social derivada de malaltia mental",
+                "serveis adreçats a persones grans amb dependència o risc social",
+                "serveis comuns adreçats a persones amb discapacitat",
+                "serveis de cuidadors familiars o altres cuidadors no professionals",
+                "serveis de suport als serveis socials especialitzats",
+                "serveis d'informació juvenil",
+                "serveis d'orientació mediadora (som)",
+                "serveis inscrits reses: fora cartera 2009-2010",
+                "teatres",
+                "auditoris i espais escènics especialitzats",
+                "universitats",
+                "smartcatalonia",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Catalonia's equipments"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Equipamientos de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i",
+        "link" : "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Equipaments-de-Catalunya/8gmd-gz7i",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 2, 7 ] },
+  "warnings" : []
+}

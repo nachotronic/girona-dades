@@ -31,6 +31,10 @@ TABLAS = {
     # Sociedades mercantiles
     "6454": "Sociedades constituidas por provincias",
     "6464": "Sociedades disueltas por provincias",
+    # Sociedades mercantiles mensuales
+    "6295": "Sociedades constituidas por provincias (mensual)",
+    "6305": "Sociedades disueltas por provincias (mensual)",
+    "76417": "Sociedades por provincias (base nueva)",
     # EPA de Cataluña (por CCAA)
     "65335": "EPA, tasas de paro por sexo y CCAA",
     # Turismo por destino (puntos y zonas turísticas): filtro por municipios de Girona

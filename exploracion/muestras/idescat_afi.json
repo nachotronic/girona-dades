@@ -1,0 +1,661 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/afi?lang=ca",
+  "label" : "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8604?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8605?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8607?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8606?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8608?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8609?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21588?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/20647?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/20646?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21589?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21358?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21359?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21360?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21361?lang=ca",
+      "label" : "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10599?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10600?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21380?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10601?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21381?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21384?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21592?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21385?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21382?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8601?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9295?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9517?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9298?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21627?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8602?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Tots els règims. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8603?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Règim general de la Seguretat Social i Règim especial de treballadors autònoms. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9297?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9519?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9300?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21628?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/8598?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9296?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9518?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9299?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21629?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/9545?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10602?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i règim de cotització (Règim general i RETA). A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13338?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13339?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13340?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13341?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21630?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13342?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13343?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13272?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13266?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13268?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13269?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21631?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13270?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13271?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10796?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16337?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21392?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16339?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21393?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21400?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21407?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21394?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21401?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10779?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10780?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10781?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10782?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21633?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10784?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i tipus de jornada. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10786?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10787?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10788?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10789?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21632?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16282?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16344?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16345?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16346?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21634?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16350?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de contracte. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16351?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de jornada. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21593?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21398?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21405?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21411?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21414?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21415?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de contracte. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21416?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de jornada. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21417?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grup de cotització. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21606?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21395?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21402?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21408?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21635?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10783?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10790?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16347?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grup de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21420?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21607?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21396?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21403?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21409?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21636?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13344?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13345?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16348?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grup de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21424?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21608?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21397?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21404?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21410?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13273?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/13274?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/16349?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grup de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21427?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10776?lang=ca",
+      "label" : "Grau de temporalitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/10777?lang=ca",
+      "label" : "Grau de parcialitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21598?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21599?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21440?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21600?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21441?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21439?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21601?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21442?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21449?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21638?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21446?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21453?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21459?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21462?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21602?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21447?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21454?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21460?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21461?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21603?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21443?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21450?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21456?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21639?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21642?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21645?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21604?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21444?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21451?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21457?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21640?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21643?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21646?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21605?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21445?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21452?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21458?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21644?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i pluriactivitat de l'autònom. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21647?lang=ca",
+      "label" : "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21649?lang=ca",
+      "label" : "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21471?lang=ca",
+      "label" : "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i sexe. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21472?lang=ca",
+      "label" : "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i grups d'edat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21473?lang=ca",
+      "label" : "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21474?lang=ca",
+      "label" : "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afi/21648?lang=ca",
+      "label" : "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i situació de pluriactivitat. A últim dia del mes"
+    } ]
+  },
+  "version" : "2.0"
+}

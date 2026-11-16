@@ -1,0 +1,17 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/e03?lang=ca",
+  "label" : "Estimació mensual de la població activa",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/e03/22273?lang=ca",
+      "label" : "Població activa, ocupada i desocupada"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/e03/22274?lang=ca",
+      "label" : "Taxes d'activitat, ocupació i atur"
+    } ]
+  },
+  "version" : "2.0"
+}

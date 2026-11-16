@@ -8,7 +8,7 @@ const T = {
     nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 140 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, ajuntaments, impostos locals, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Més de 200 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, ajuntaments, impostos locals, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -89,7 +89,7 @@ const T = {
     nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 140 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, ayuntamientos, impuestos locales, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Más de 200 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, ayuntamientos, impuestos locales, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -285,6 +285,7 @@ function grafLinia(cont, series, f = (v) => fmt(v)) {
   const anys = [...new Set(series.flatMap((s) => Object.keys(s.dades)))].map(Number).sort((a, b) => a - b);
   if (!anys.length) { cont.textContent = t("sense"); return; }
   const max = niceMax(Math.max(...series.flatMap((s) => Object.values(s.dades))));
+  m.l = Math.max(m.l, 14 + 8 * fmt(max).length);
   const x = escala(anys[0], anys[anys.length - 1], m.l, W - m.r);
   const y = escala(0, max, H - m.b, m.t);
   const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, cont);
@@ -472,6 +473,7 @@ function obreFitxa(ine, desplaca) {
       </div>
       <button type="button" class="tanca">${t("tanca")} ✕</button>
     </div>
+    <div class="fitxa-resum"></div>
     <div class="xifres">
       ${tile(`${t("k_lloguer")} 2025`, val(m.alquiler, "2025") ? `${fmt(val(m.alquiler, "2025"))} <small>€/mes</small>` : "–", variacio(m.alquiler, "2025", "2024", true))}
       ${tile(`${t("k_compra")} 2025`, fmt(val(m.compraventas, "2025")), variacio(m.compraventas, "2025", "2024"))}
@@ -487,6 +489,7 @@ function obreFitxa(ine, desplaca) {
     </div>
     <div class="fitxa-conj"></div>
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
+    <div class="fitxa-extra"></div>
     <div class="fitxa-trib"></div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
@@ -502,6 +505,7 @@ function obreFitxa(ine, desplaca) {
   ], (v) => `${fmt(v)} €`);
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
   if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
+  if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
   if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
