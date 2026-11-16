@@ -1371,6 +1371,19 @@ def main():
         sec.setdefault(cusec, {}).update(x)
     (SALIDA.parent / "seccions.json").write_text(json.dumps(sec, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"seccions.json: {len(sec)} secciones")
+    # Coyuntura (mensual y trimestral), en un fichero aparte
+    import conjuntura_web
+    emex = pd.read_csv(P / "emex" / "emex_municipis.csv.gz", dtype=str)
+    e27 = emex[emex["id"] == "f27"]
+    pob1564 = dict(zip(e27["ine"].str.zfill(5), pd.to_numeric(e27["mun"], errors="coerce")))
+    cj = conjuntura_web.construir(municipios, pob1564)
+    cj["generado"] = datos["generado"]
+    # Población de Cataluña (total y de 15 a 64 años) para las tasas de referencia
+    cat = lambda f: pd.to_numeric(emex[emex["id"] == f]["cat"].str.replace("_", ""), errors="coerce").dropna()
+    if len(cat("f27")) and len(cat("f321")):
+        cj["pob_cat"] = {"p1564": int(cat("f27").iloc[0]), "pob": int(cat("f321").iloc[0])}
+    (SALIDA.parent / "conjuntura.json").write_text(json.dumps(cj, ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
+    print(f"conjuntura.json: {(SALIDA.parent / 'conjuntura.json').stat().st_size // 1024} KB, {len(cj['per']['m'])} meses, {len(cj['per']['t'])} trimestres")
     import shutil
     for nombre in ("municipis.geojson", "seccions.geojson"):
         origen = P / "geo" / nombre

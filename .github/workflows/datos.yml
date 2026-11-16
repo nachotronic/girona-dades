@@ -12,7 +12,8 @@ on:
         required: false
         default: "0"
   schedule:
-    - cron: "0 4 * * 1"  # lunes a las 04:00 UTC
+    - cron: "0 4 * * 1"  # lunes a las 04:00 UTC: todas las fuentes
+    - cron: "0 9 2-8 * *"  # primeros días de mes: solo coyuntura (paro del SEPE, INE mensual)
 
 permissions:
   contents: write
@@ -35,7 +36,8 @@ jobs:
       - name: Descargar y procesar
         env:
           XIFRA_HISTORICO: ${{ inputs.xifra_historico || '0' }}
-        run: python scripts/actualizar.py ${{ inputs.fuentes }}
+          FUENTES: ${{ github.event.schedule == '0 9 2-8 * *' && 'conjuntura provincia' || inputs.fuentes }}
+        run: python scripts/actualizar.py $FUENTES
       - name: Guardar resultados
         if: always()
         run: |

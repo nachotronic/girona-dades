@@ -38,6 +38,21 @@ for q in ("bombers", "agents rurals", "incendis forestals", "incendis", "emergè
           "regions emergència", "àrees bàsiques agents rurals", "denúncies agents rurals", "superfície forestal"):
     CANDIDATAS["soc_" + q.replace(" ", "_").replace("à", "a").replace("è", "e").replace("ú", "u")] = (
         f"{SOCRATA}?q={urllib.parse.quote(q)}&limit=40&only=dataset")
+# Coyuntura: paro, contratos y demandantes por municipio (SEPE, mensual)
+SEPE = "https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/"
+for a in (2025, 2026):
+    CANDIDATAS[f"sepe_paro_{a}"] = f"{SEPE}Paro_por_municipios_{a}_csv.csv"
+    CANDIDATAS[f"sepe_contratos_{a}"] = f"{SEPE}Contratos_por_municipios_{a}_csv.csv"
+    CANDIDATAS[f"sepe_dtes_{a}"] = f"{SEPE}Dtes_empleo_por_municipios_{a}_csv.csv"
+CANDIDATAS["sepe_portal"] = "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-estadisticos/municipios.html"
+CANDIDATAS["sepe_datos_abiertos"] = "https://datos.gob.es/apidata/catalog/dataset/publisher/EA0021470?_pageSize=50"
+# Afiliación a la Seguridad Social por municipio
+CANDIDATAS["ss_afil_mun"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/2341/2342/2343"
+CANDIDATAS["ss_datosgob"] = "https://datos.gob.es/apidata/catalog/dataset/title/afiliados?_pageSize=50"
+# Idescat: índice de estadísticas de la API de tablas
+CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
+for t in ("atur registrat", "afiliats", "contractes", "habitatges iniciats", "pernoctacions", "ocupacio hotelera", "matriculacio", "fiances", "atur", "treballadors"):
+    CANDIDATAS[f"socrata_{t.replace(' ', '_')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()

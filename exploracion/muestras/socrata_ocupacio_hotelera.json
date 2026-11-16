@@ -1,0 +1,124 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Despesa turística",
+            "id" : "jj4h-yqtu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Els informes de despesa turística reflecteixen la diversitat i la complementarietat de les fonts estadístiques, que són necessàries per oferir informació sobre l'impacte que el turisme té sobre l'economia catalana.\n\nLa informació sobre el turisme ha de ser obtinguda mitjançant registres administratius (dades de capacitat hotelera), enquestes a les empreses i als establiments (dades sobre ocupació hotelera o de càmpings, per exemple), enquestes de població (dades sobre el turisme emissor o sobre turisme receptor domèstic) o, finalment, enquestes de turistes en frontera (dades sobre turisme receptor internacional).",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:23.000Z",
+            "createdAt" : "2020-10-26T14:57:46.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:23.000Z",
+            "data_updated_at" : "2020-10-26T14:57:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 39,
+                "page_views_total" : 2343,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.321928094887363,
+                "page_views_total_log" : 11.194756854422248
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:48.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Turisme",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Tourism spending"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Gasto turístico"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "Enllaç" : "https://www.idescat.cat/estad/turdes"
+                           },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "Enllaç" : "https://www.idescat.cat/estad/turdes" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/jj4h-yqtu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Turisme/Despesa-turística/jj4h-yqtu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 17, "searchMillis" : [ 2, 5 ] },
+  "warnings" : []
+}

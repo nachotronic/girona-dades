@@ -1,0 +1,3539 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Contractació pública a Catalunya: inscripcions al Registre públic de contractes",
+            "id" : "hb6v-jcbf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Inscripcions al Registre públic de contractes de l’activitat contractual de tots els òrgans de contractació de Catalunya. Inclou informació sobre les adjudicacions contractuals, modificacions, pròrrogues i liquidacions. Cada fila representa: \n- Un expedient\n- Un lot de l’expedient, per als expedients amb lots",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-14T10:10:41.000Z",
+            "createdAt" : "2016-06-30T11:12:31.000Z",
+            "metadata_updated_at" : "2026-11-14T10:10:41.000Z",
+            "data_updated_at" : "2026-11-10T10:55:54.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 268,
+                "page_views_last_month" : 2424,
+                "page_views_total" : 39117,
+                "page_views_last_week_log" : 8.071462362556625,
+                "page_views_last_month_log" : 11.243769031961854,
+                "page_views_total_log" : 15.255544990538938
+              },
+            "columns_name" :
+              [
+                "Número de lot",
+                "Tipus de contracte",
+                "Import de la modificació",
+                "Agrupació organisme",
+                "Tipus de liquidació",
+                "Exercici",
+                "Descripció del lot",
+                "Àmbit organitzatiu",
+                "Número de pròrroga",
+                "Lot desert",
+                "Data aprovació modificació",
+                "Data de liquidació",
+                "Organisme contractant",
+                "Termini modificació mesos",
+                "Data inici pròrroga",
+                "Descripció de l’expedient",
+                "Durada dies",
+                "Termini modificació dies",
+                "Tipus de modificació",
+                "Número de modificació",
+                "Import de la liquidació",
+                "Termini modificació anys",
+                "Import d’adjudicació",
+                "Causa de resolució",
+                "Data fi pròrroga",
+                "Durada anys",
+                "Data d’adjudicació",
+                "Adjudicatari",
+                "Durada mesos",
+                "Procediment d’adjudicació",
+                "Codi CPV",
+                "Codi de l’expedient",
+                "Identificador agrupació organisme",
+                "Identificador organisme contractant",
+                "Situació contractual"
+              ],
+            "columns_field_name" :
+              [
+                "numero_lot",
+                "tipus_contracte",
+                "import_modificacio",
+                "agrupacio_organisme",
+                "tipus_liquidacio",
+                "exercici",
+                "contracte",
+                "subjecte_ambit",
+                "numero_prorroga",
+                "lot_desert",
+                "data_aprovacio_modificacio",
+                "data_liquidacio",
+                "organisme_contractant",
+                "mesos_termini_modificacio",
+                "data_inici_prorroga",
+                "descripcio_expedient",
+                "dies_durada",
+                "dies_termini_modificacio",
+                "tipus_modificacio",
+                "numero_modificacio",
+                "import_liquidacio",
+                "anys_termini_modificacio",
+                "import_adjudicacio",
+                "causa_resolucio",
+                "data_fi_prorroga",
+                "anys_durada",
+                "data_adjudicacio",
+                "adjudicatari",
+                "mesos_durada",
+                "procediment_adjudicacio",
+                "codi_cpv",
+                "codi_expedient",
+                "id_agrupacio_organisme",
+                "id_organisme_contractant",
+                "situaci_contractual"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Número de lot",
+                "Tipus de contracte (obres, serveis, subministraments, etc.)",
+                "Import de la modificació, en cas de modificació",
+                "Nom del departament o entitat d'adscripció de l’organisme contractant de cada contracte",
+                "Tipus de liquidació, en cas que s’hagi liquidat (liquidació per compliment o liquidació per resolució)",
+                "Any de l’inici d’execució del contracte",
+                "Descripció del lot ",
+                "Àmbit organitzatiu (Generalitat / àmbit local / universitats / ens estatutaris /altre ens)",
+                "Número de pròrroga, en cas de pròrroga",
+                "Indicador de lot desert (Si / No)",
+                "Data d’aprovació de la modificació, en cas de modificació",
+                "Data de la liquidació, en cas que s’hagi liquidat",
+                "Nom de l’organisme contractant de cada contracte",
+                "Mesos de modificació del termini, en cas de modificació",
+                "Data inici de la pròrroga, en cas de pròrroga",
+                "Objecte del contracte",
+                "Duració del contracte en dies",
+                "Dies de modificació del termini, en cas de modificació",
+                "Tipus de modificació, en cas de modificació (variació del termini d’execució, variacions en les prestacions dels objectes, sense efectes econòmics, altres modificacions, etc.)",
+                "Número de modificació, en cas de modificació",
+                "Import de la liquidació, en cas que s’hagi liquidat",
+                "Anys de modificació del termini, en cas de modificació",
+                "Import d'adjudicació del contracte o la pròrroga",
+                "Causa de la liquidació, en cas que s’hagi liquidat per resolució",
+                "Data fi de la pròrroga, en cas de pròrroga",
+                "Duració del contracte en anys",
+                "Data d'adjudicació",
+                "Nom de l'adjudicatari",
+                "Duració del contracte en mesos",
+                "Procediment d'adjudicació del contracte (menor, obert, basats en acord marc, específic de sistema dinàmic, etc.)",
+                "Codi de Producte (CPV)",
+                "Codi de l'expedient de contractació",
+                "Codi identificador del departament o entitat d'adscripció de l’organisme contractant de cada contracte",
+                "Codi identificador de l’organisme contractant de cada contracte",
+                "Identificació de la font d'informació (adjudicacions / pròrrogues / modificacions / liquidacions)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "view" : "date_dmy" },
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "2",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "aggregate" : "sum",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {}
+              ],
+            "download_count" : 53860,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-12-16T09:16:30.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "contractes",
+                "contractació pública",
+                "empreses",
+                "registre públic de contractes",
+                "adjudicació",
+                "òrgan de contractació",
+                "ods16_pau justícies i institucions sòlides",
+                "ods5_igualtat de gènere"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement in Catalonia: contracts registered in the Public Register of Contracts"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación pública en Cataluña: contratos inscritos en el Registro público de contratos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/hb6v-jcbf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-a-Catalunya-inscripcions-al-R/hb6v-jcbf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Tipus contracte laboral",
+            "id" : "72e7-rgfh",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Tipus d'acord entre l'empresari i el treballador pel qual aquest s'obliga a prestar determinats serveis per compte de l'empresari i sota la seva direcció, a canvi d'una retribució.",
+            "attribution" : "Catàleg Tècnic de Dades. Observatori del Treball i Model Productiu. Secretaria de Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:07:37.000Z",
+            "createdAt" : "2023-01-23T15:57:59.000Z",
+            "metadata_updated_at" : "2026-09-17T07:07:37.000Z",
+            "data_updated_at" : "2023-01-24T15:27:22.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 38,
+                "page_views_total" : 1013,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.285402218862249,
+                "page_views_total_log" : 9.985841937003341
+              },
+            "columns_name" : [ "Codi", "Descripció", "Nom" ],
+            "columns_field_name" : [ "codi", "descripci", "nom" ],
+            "columns_datatype" : [ "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador únic de tipus de contracte laboral. No és un codi oficial, és propi del catàleg tècnic de dades.  Els registres que tenen un codi començat per 9 són registres que s’afegeixen per donar valor de completesa a l’entitat",
+                "Definició i característiques principals del tipus de contracte laboral.",
+                "Nom que rep el tipus de contracte laboral"
+              ],
+            "columns_format" :
+              [ { "decimalSeparator" : ",", "groupSeparator" : "." }, {}, {} ],
+            "download_count" : 556,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-01-23T16:05:49.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Type of employment contract"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tipo contrato laboral"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/72e7-rgfh",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Tipus-contracte-laboral/72e7-rgfh",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Resolucions del Tribunal Català de Contractes del Sector Públic (TCCSP)",
+            "id" : "dkrd-id95",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de resolucions dictaminades pel Tribunal Català de Contractes del Sector Públic (TCCSP).\n\nNota: Aquest dataset té com a última data d'actualització abril del 2018. S'està treballant per preparar l'actualització de les dades del darrer any.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:44:46.000Z",
+            "createdAt" : "2017-03-21T17:43:53.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:46.000Z",
+            "data_updated_at" : "2018-04-03T08:17:48.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 52,
+                "page_views_last_month" : 151,
+                "page_views_total" : 9076,
+                "page_views_last_week_log" : 5.7279204545632,
+                "page_views_last_month_log" : 7.247927513443586,
+                "page_views_total_log" : 13.147999842060191
+              },
+            "columns_name" :
+              [
+                "Sentit",
+                "Num Expedient",
+                "Veus",
+                "Num Resolució",
+                "URL",
+                "Data resolució"
+              ],
+            "columns_field_name" :
+              [
+                "sentit",
+                "num_expedient",
+                "veus",
+                "num_resoluci",
+                "url",
+                "data_resoluci"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Text", "Text", "URL", "Calendar date" ],
+            "columns_description" :
+              [
+                "Sentit de la Resolució",
+                "Número de l'expedient administratiu",
+                "Informació per classificar les resolucions",
+                "Número de la Resolució",
+                "URL de la Resolució",
+                "Data de la Resolució"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" }
+              ],
+            "download_count" : 2190,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-03-06T10:31:49.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Legislació-justícia",
+            "domain_tags" :
+              [
+                "resolucions",
+                "tccsp",
+                "contractes",
+                "sector públic",
+                "contractació",
+                "contractació pública",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Resolutions of the Catalan Court of Public Sector Contracts (TCCSP)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resoluciones del Tribunal Catalán de Contratos del Sector Público (TCCSP)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/dkrd-id95",
+        "link" : "https://analisi.transparenciacatalunya.cat/Legislació-justícia/Resolucions-del-Tribunal-Català-de-Contractes-del-/dkrd-id95",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Tipus de contracte públic",
+            "id" : "bjwx-j5v2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Tipus d'acord de voluntats entre un òrgan o una entitat del sector públic i una persona física o jurídica (contractista), per la qual aquesta darrera s'obliga a realitzar una prestació, fer una obra o lliurar un bé a canvi d'un preu.",
+            "attribution" : "Catàleg Tècnic de Dades. Junta Consultiva de Contractació Pública de Catalunya. Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-03T07:35:12.000Z",
+            "createdAt" : "2025-11-20T08:45:15.000Z",
+            "metadata_updated_at" : "2026-07-03T07:35:12.000Z",
+            "data_updated_at" : "2026-07-03T07:35:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 54,
+                "page_views_total" : 421,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 5.78135971352466,
+                "page_views_total_log" : 8.721099188707186
+              },
+            "columns_name" :
+              [
+                "Nom tipus de contracte",
+                "Descripció tipus de contracte",
+                "Identificador del tipus de contracte"
+              ],
+            "columns_field_name" :
+              [
+                "des_nom_tipus_contracte",
+                "des_tipus_contracte",
+                "ide_tipus_contracte"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nom del tipus de contracte",
+                "Descripció del contracte públic, realitzada en funció de la Llei de Contractes del Sector Públic",
+                "Identificador únic del tipus de contracte.\nEls registres amb identificador que comencen per 9. Són registres propis del catàleg de dades que s’afegeixen per donar valor de completesa a l’entitat"
+              ],
+            "columns_format" :
+              [ {}, {}, { "decimalSeparator" : ",", "groupSeparator" : "." } ],
+            "download_count" : 228,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:35:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : " Type of public contract"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : " Tipo de contrato público"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/bjwx-j5v2",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Tipus-de-contracte-públic/bjwx-j5v2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació patrimonial: Altes i baixes de contractes per anys",
+            "id" : "nr3m-sqzb",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació de les altes i les baixes de contractes patrimonials per anys, amb informació de les adquisicions lucratives, els arrendaments, les novacions d’arrendament, les alienacions, les cessions a tercers i les baixes.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:44:50.000Z",
+            "createdAt" : "2018-06-07T09:41:05.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:50.000Z",
+            "data_updated_at" : "2018-06-07T09:41:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 45,
+                "page_views_total" : 2647,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 5.523561956057013,
+                "page_views_total_log" : 11.37068740680722
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2018-06-07T09:41:05.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "contractació patrimonial",
+                "arrendaments",
+                "alienacions",
+                "cessions",
+                "administració pública",
+                "ods16_pau justícies i institucions sòlides",
+                "ods12_producció i consum responsable"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Heritage contracting: Registration and termination of contracts for years"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación patrimonial: Altas y bajas de contratos por años"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Europa"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Adreça postal"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "Accedeix" : "http://economia.gencat.cat/ca/ambits-actuacio/patrimoni/bens-generalitat-catalunya/contractacio-patrimonial/altes-baixes-contractes-per-anys/"
+                    }
+                }
+              ],
+            "access_points" :
+              {
+                "Accedeix" : "http://economia.gencat.cat/ca/ambits-actuacio/patrimoni/bens-generalitat-catalunya/contractacio-patrimonial/altes-baixes-contractes-per-anys/"
+              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nr3m-sqzb",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-patrimonial-Altes-i-baixes-de-contrac/nr3m-sqzb",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació pública a Catalunya: publicacions a la Plataforma de serveis de contractació pública",
+            "id" : "ybgg-dgi6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Publicacions de l’activitat contractual de tots els òrgans de contractació de Catalunya a la Plataforma de serveis de contractació pública (PSCP), entre altres, anuncis de licitació, d’avaluació, d’adjudicació i de formalització de contractes. \n\nCada fila representa:\n\n- Un expedient\n- Un lot de l’expedient, per als expedients amb lots\n- Un expedient per a les publicacions agregades\n\nLes publicacions de la fase d&rsquo;execuci&oacute; estan contingudes al conjunt de dades \"Contractaci&oacute; p&uacute;blica a Catalunya: publicacions de la fase d&rsquo;execuci&oacute; a la Plataforma de serveis de contractaci&oacute; p&uacute;blica\", que trobareu a l'enlla&ccedil;&nbsp;<a href=\"https://analisi.transparenciacatalunya.cat/Economia/Contractaci-p-blica-a-Catalunya-publicacions-de-la/8idu-wkjv/about_data\">https://analisi.transparenciacatalunya.cat/Economia/Contractaci-p-blica-a-Catalunya-publicacions-de-la/8idu-wkjv/about_data</a>\n<p><em>Com a conseq&uuml;&egrave;ncia d'una incid&egrave;ncia t&egrave;cnica, aquest conjunt de dades presenta informaci&oacute; incompleta (manquen expedients) en les versions anteriors del conjunt de dades durant el per&iacute;ode compr&egrave;s entre el 15.06.2026 i el 19.06.2026. Disculpeu les mol&egrave;sties.</em></p>",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T09:00:13.000Z",
+            "createdAt" : "2023-02-02T07:51:58.000Z",
+            "metadata_updated_at" : "2026-11-16T09:00:04.000Z",
+            "data_updated_at" : "2026-11-16T09:00:13.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 559,
+                "page_views_last_month" : 2262,
+                "page_views_total" : 38893,
+                "page_views_last_week_log" : 9.129283016944967,
+                "page_views_last_month_log" : 11.144020869266893,
+                "page_views_total_log" : 15.247259993941253
+              },
+            "columns_name" :
+              [
+                "url_json_anulacio",
+                "url_json_futura",
+                "objecte_contracte",
+                "nom_organ",
+                "valor_estimat_expedient",
+                "url_json_cpm",
+                "codi_departament_ens",
+                "url_json_previ",
+                "data_publicacio_contracte_agregat",
+                "id_intern",
+                "url_json_licitacio",
+                "codi_expedient",
+                "tipus_financament",
+                "pressupost_licitacio_amb_iva",
+                "enllac_publicacio",
+                "fase_publicacio",
+                "url_json_avaluacio",
+                "url_json_adjudicacio",
+                "no_admet_eina_licitacio_electronica",
+                "url_json_agregada",
+                "data_publicacio_formalitzacio",
+                "identificacio_adjudicatari",
+                "procediment",
+                "codi_organ",
+                "es_agregada",
+                "data_adjudicacio_contracte",
+                "data_publicacio_anul",
+                "import_adjudicacio_sense_iva",
+                "pressupost_licitacio_sense_iva",
+                "codi_unitat",
+                "descripcio_lot",
+                "altres_eines_licitacio_electronica",
+                "codi_cpv",
+                "codi_dir3",
+                "tipus_identificacio_adjudicatari",
+                "data_publicacio_futura",
+                "data_formalitzacio_contracte",
+                "denominacio_adjudicatari",
+                "data_publicacio_previ",
+                "data_publicacio_encarrec",
+                "lloc_execucio",
+                "tipus_contracte",
+                "codi_ambit",
+                "nom_ambit",
+                "data_publicacio_anunci",
+                "data_publicacio_avaluacio",
+                "codi_ine10",
+                "pressupost_licitacio_amb_iva_expedient",
+                "numero_lot",
+                "termini_presentacio_ofertes",
+                "data_publicacio_adjudicacio",
+                "durada_contracte",
+                "nom_unitat",
+                "codi_nuts",
+                "nom_departament_ens",
+                "resultat",
+                "eina_presentacio_electronica",
+                "tipus_empresa",
+                "data_publicacio_consulta_mercat",
+                "import_adjudicacio_amb_iva",
+                "racionalitzacio_contractacio",
+                "url_json_formalitzacio",
+                "valor_estimat_contracte",
+                "denominacio",
+                "tipus_tramitacio",
+                "ofertes_rebudes",
+                "pressupost_licitacio_sense_iva_expedient"
+              ],
+            "columns_field_name" :
+              [
+                "url_json_anulacio",
+                "url_json_futura",
+                "objecte_contracte",
+                "nom_organ",
+                "valor_estimat_expedient",
+                "url_json_cpm",
+                "codi_departament_ens",
+                "url_json_previ",
+                "data_publicacio_contracte",
+                "id_intern",
+                "url_json_licitacio",
+                "codi_expedient",
+                "tipus_financament",
+                "pressupost_licitacio_amb",
+                "enllac_publicacio",
+                "fase_publicacio",
+                "url_json_avaluacio",
+                "url_json_adjudicacio",
+                "no_admet_eina_licitacio",
+                "url_json_agregada",
+                "data_publicacio_formalitzacio",
+                "identificacio_adjudicatari",
+                "procediment",
+                "codi_organ",
+                "es_agregada",
+                "data_adjudicacio_contracte",
+                "data_publicacio_anul",
+                "import_adjudicacio_sense",
+                "pressupost_licitacio_sense",
+                "codi_unitat",
+                "descripcio_lot",
+                "altres_eines_licitacio",
+                "codi_cpv",
+                "codi_dir3",
+                "tipus_identificacio",
+                "data_publicacio_futura",
+                "data_formalitzacio_contracte",
+                "denominacio_adjudicatari",
+                "data_publicacio_previ",
+                "data_publicacio_encarrec",
+                "lloc_execucio",
+                "tipus_contracte",
+                "codi_ambit",
+                "nom_ambit",
+                "data_publicacio_anunci",
+                "data_publicacio_avaluacio",
+                "codi_ine10",
+                "pressupost_licitacio_amb_1",
+                "numero_lot",
+                "termini_presentacio_ofertes",
+                "data_publicacio_adjudicacio",
+                "durada_contracte",
+                "nom_unitat",
+                "codi_nuts",
+                "nom_departament_ens",
+                "resultat",
+                "eina_presentacio_electronica",
+                "tipus_empresa",
+                "data_publicacio_consulta",
+                "import_adjudicacio_amb_iva",
+                "racionalitzacio_contractacio",
+                "url_json_formalitzacio",
+                "valor_estimat_contracte",
+                "denominacio",
+                "tipus_tramitacio",
+                "ofertes_rebudes",
+                "pressupost_licitacio_sense_1"
+              ],
+            "columns_datatype" :
+              [
+                "URL",
+                "URL",
+                "Text",
+                "Text",
+                "Number",
+                "URL",
+                "Text",
+                "URL",
+                "Calendar date",
+                "Text",
+                "URL",
+                "Text",
+                "Text",
+                "Number",
+                "URL",
+                "Text",
+                "URL",
+                "URL",
+                "Text",
+                "URL",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "URL",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Enllaç per descarregar informació de la fase d’anul·lació",
+                "Enllaç per descarregar  tota la informació de la fase d’alerta futura",
+                "Descripció del contracte",
+                "Descripció de l'organisme contractant",
+                "Valor estimat del contracte sense IVA (a nivell expedient, per tant, comú a tots els lots)\"",
+                "Enllaç per descarregar informació de la fase consulta preliminar del mercat",
+                "Identificador de les entitats de l’Administració i del sector públic de Catalunya ",
+                "Enllaç per descarregar informació de la fase anunci previ",
+                "Data de la publicació agregada  ",
+                "identificador intern",
+                "Enllaç per descarregar informació de la fase anunci de licitació",
+                "Codi de l'expedient de contractació",
+                "Tipus de finançament de fons europeus afectat ",
+                "Pressupost de licitació del lot (amb IVA)",
+                "Enllaç de la publicació a  la Plataforma de serveis de contractació pública",
+                "Última fase publicada (de l’expedient) ",
+                "Enllaç per descarregar informació de la fase d’avaluació",
+                "Enllaç per descarregar informació de la fase d’adjudicació",
+                "Supòsits taxats en els que no  és obligatori l’ús de les eines de licitació electrònica",
+                "Enllaç per descarregar informació de la publicació  agregada ",
+                "Data de publicació de l’anunci de la formalització",
+                "Identificació de l'empresa adjudicatària/contractista",
+                "Procediment d’adjudicació",
+                "Identificador de l'organisme contractant",
+                "Indicador de si el contracte ha estat publicat de manera  agregada (Sí/No)",
+                "Data d'adjudicació del contracte",
+                "Data de publicació de l'anul·lació (desert, desistiment, renúncia, resolució de tribunal, publicació per error)",
+                "Import adjudicació sense IVA. En cas que hi hagi més d’una empresa adjudicatària, els diferents valors es concatenen amb “||”.",
+                "Pressupost de licitació del lot (sense IVA)",
+                "Identificador de la unitat de contractació",
+                "Descripció del lot",
+                "Altres eines de presentació electrònica d’ofertes ",
+                "Codi del Vocabulari comú de contractes públics (CPV)",
+                "Identificador del directori d'unitats orgàniques i oficines de registres de les administracions públiques",
+                "Tipus d'identificació de l’empresa adjudicatària/contractista (NIF, UTE, DUNS, VIES o Altres)",
+                "Data de publicació de l'alerta futura ",
+                "Data de formalització del contracte",
+                "Denominació de l'empresa adjudicatària/contractista",
+                "Data de publicació de l'anunci previ",
+                "Data de publicació de l’encàrrec a mitjà propi",
+                "Lloc d'execució del contracte ",
+                "Tipus de contracte (obres, serveis, subministraments,....)",
+                "Identificador de l'àmbit organitzatiu",
+                "Àmbit organitzatiu (Departaments i sector públic de la Generalitat de Catalunya /Organismes independents i/o estatutaris / Entitats de l'Administració local / Universitats /Altres ens)",
+                "Data de publicació de l'anunci de licitació",
+                "Data de publicació de la fase de l’avaluació de l’expedient",
+                "Codi INE10",
+                "Pressupost de licitació de l’expedient amb IVA  (en cas de diversos lots és la suma de tots els lots)",
+                "Identificador del lot",
+                "Data fi de recepció d'ofertes\t",
+                "Data de publicació de l'adjudicació",
+                "Durada del contracte en anys, mesos i dies o en un interval de dates",
+                "Descripció de la unitat de contractació",
+                "Nomenclatura de les unitats territorials estadístiques",
+                "Descripció de  les entitats de l’Administració i del sector públic de Catalunya",
+                "El resultat relatiu al sistema PLASCP (Desistiment, Desert, Renúncia, Adjudicació, Formalització)",
+                "Eina corporativa de presentació electrònica d’ofertes utilitzada",
+                "Tipus d’empresa adjudicatària/contractista (Pime / No Pime)",
+                "Data de publicació de la consulta preliminar del mercat",
+                "Import adjudicació amb IVA. En cas que hi hagi més d’una empresa adjudicatària, els diferents valors es concatenen amb “||”. ",
+                "Sistema de racionalització de la contractació ",
+                "Enllaç per descarregar informació de la fase de formalització",
+                "Valor estimat del lot (sense IVA)",
+                "Denominació del contracte",
+                "Tipus de tramitació",
+                "Número d'ofertes rebudes",
+                "Pressupost de licitació de l’expedient sense IVA (en cas de diversos lots és la suma de tots els lots)"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : ","
+                },
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time" },
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time" },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                { "view" : "date_dmy_time" },
+                { "view" : "date_dmy_time" },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : ","
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time" },
+                { "view" : "date_dmy_time" },
+                {},
+                { "view" : "date_dmy_time" },
+                { "view" : "date_dmy_time" },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                { "view" : "date_dmy_time" },
+                { "view" : "date_dmy_time" },
+                {},
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : ","
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "view" : "date_dmy_time_24h" },
+                { "view" : "date_dmy_time" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time" },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : ","
+                },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true",
+                  "precision" : "2",
+                  "groupSeparator" : ","
+                }
+              ],
+            "download_count" : 10631,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-06-27T15:16:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "plataforma de serveis de contractació pública",
+                "anunci licitació",
+                "adjudicació",
+                "anunci formalització",
+                "contractació pública",
+                "contractes",
+                "perfils de contractant",
+                "òrgan de contractació",
+                "empreses",
+                "pscp",
+                "sobre digital",
+                "oferta telemàtica",
+                "ods12_producció i consum responsable",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement in Catalonia: publications on the Public Recruitment Services Platform "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación pública en Catalunya: publicaciones en la Plataforma de servicios de contratación pública"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ybgg-dgi6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-a-Catalunya-publicacions-a-la/ybgg-dgi6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Divisió del Vocabulari Comú de Contractes Públics (CPV)",
+            "id" : "xt26-pmju",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La nomenclatura CPV (Common Procurement Vocabulary) estableix un sistema de classificació únic per a la contractació pública destinat a estandarditzar les referències utilitzades per descriure l'objecte dels contractes. És un sistema d'identificació i categorització de totes les activitats econòmiques susceptibles de ser contractades mitjançant licitació o concurs públic a la Unió Europea. El seu ús és obligatori a la Unió Europea des de l'1 de febrer de 2006.\n\nEn aquesta entitat trobareu el llistat de codis del nivell de divisió CPV.\n\nÉs el nivell més general del CPV. La divisió correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents).",
+            "attribution" : "Catàleg Tècnic de Dades. Estàndard UE. D. G. de Contractació Pública/Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:17.000Z",
+            "createdAt" : "2025-11-20T08:44:38.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:17.000Z",
+            "data_updated_at" : "2025-11-25T12:41:53.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 53,
+                "page_views_total" : 372,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.754887502163469,
+                "page_views_total_log" : 8.543031820255239
+              },
+            "columns_name" :
+              [ "Descripció divisió CPV", "Identificador divisió CPV" ],
+            "columns_field_name" : [ "des_divisio_cpv", "ide_divisio_cpv" ],
+            "columns_datatype" : [ "Text", "Text" ],
+            "columns_description" :
+              [
+                "Descripció del nivell divisió del CPV",
+                "Identificador únic de la divisió CPV, correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el nivell més general del CPV"
+              ],
+            "columns_format" : [ {}, {} ],
+            "download_count" : 253,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-11-25T12:42:03.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : " Division of the Common Vocabulary of Public Contracts (CPV)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "División del Vocabulario Común de Contratos Públicos (CPV)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/xt26-pmju",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Divisió-del-Vocabulari-Comú-de-Contractes-Públics-/xt26-pmju",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Grup del Vocabulari Comú de Contractes Públics (CPV)",
+            "id" : "wz3h-t3dj",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La nomenclatura CPV (Common Procurement Vocabulary) estableix un sistema de classificació únic per a la contractació pública destinat a estandarditzar les referències utilitzades per descriure l'objecte dels contractes. és un sistema d'identificació i categorització de totes les activitats econòmiques susceptibles de ser contractades mitjançant licitació o concurs públic a la Unió Europea. El seu ús és obligatori a la Unió Europea des de l'1 de febrer de 2006.\n\nEs troba el llistat de codis del nivell de grup CPV. \n\nÉs el segon nivell més general del CPV. El grup correspon als 3 primers dígits del codi XXX00000-Y (El dígit \"Y\" representa la validació dels dígits precedents).",
+            "attribution" : "Catàleg Tècnic de Dades. Estàndard UE. D. G. de Contractació Pública/Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:01.000Z",
+            "createdAt" : "2025-11-20T08:44:50.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:01.000Z",
+            "data_updated_at" : "2025-11-25T12:42:36.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 42,
+                "page_views_total" : 314,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 5.426264754702098,
+                "page_views_total_log" : 8.29920801838728
+              },
+            "columns_name" :
+              [
+                "Descripció grup CPV",
+                "Identificador divisió CPV",
+                "Identificador grup CPV"
+              ],
+            "columns_field_name" :
+              [ "des_grup_cpv", "ide_divisio_cpv", "ide_grup_cpv" ],
+            "columns_datatype" : [ "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Descripció del nivell grup del CPV",
+                "Identificador de la divisió a la qual pertany el grup CPV, correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el nivell més general del CPV",
+                "Identificador únic del grup CPV, correspon als 3 primers dígits del codi XXX00000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el segon nivell més general del CPV"
+              ],
+            "columns_format" : [ {}, {}, {} ],
+            "download_count" : 254,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-11-25T12:42:47.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Group of the Common Vocabulary of Public Contracts (CPV)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Grupo del Vocabulario Común de Contratos Públicos (CPV)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/wz3h-t3dj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Grup-del-Vocabulari-Comú-de-Contractes-Públics-CPV/wz3h-t3dj",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació de la Generalitat de Catalunya: menors",
+            "id" : "qjue-2pk9",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades dels contractes menors de l’Administració de la Generalitat de Catalunya i el seu sector públic dels darrers cinc anys revisades i tancades a 1 d’abril de cada exercici. A partir d’aquestes dades, la Direcció General de Contractació Pública elabora tots els seus informes de seguiment de la contractació pública.\nPer a més informació:  https://web.gencat.cat/ca/generalitat/accio-govern/contractacio-publica/estadistiques-indicadors",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-21T12:27:19.000Z",
+            "createdAt" : "2019-12-11T10:09:35.000Z",
+            "metadata_updated_at" : "2026-10-21T12:24:24.000Z",
+            "data_updated_at" : "2026-10-21T12:27:19.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 80,
+                "page_views_last_month" : 342,
+                "page_views_total" : 10609,
+                "page_views_last_week_log" : 6.339850002884625,
+                "page_views_last_month_log" : 8.422064766172811,
+                "page_views_total_log" : 13.373137035802129
+              },
+            "columns_name" :
+              [
+                "Tipus de contracte",
+                "Departament d'adscripció",
+                "Any",
+                "Objecte del contracte",
+                "Procediment d'adjudicació",
+                "Òrgan de contractació",
+                "Import adjudicat sense IVA",
+                "Àmbit subjectiu",
+                "Empresa adjudicatària",
+                "Codi d'expedient"
+              ],
+            "columns_field_name" :
+              [
+                "tipus_de_contracte",
+                "departament_d_adscripci",
+                "any",
+                "objecte_del_contracte",
+                "procediment_d_adjudicaci",
+                "rgan_de_contractaci",
+                "import_adjudicat_sense_iva",
+                "mbit_subjectiu",
+                "empresa_adjudicat_ria",
+                "codi_d_expedient"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Tipus de contracte",
+                "Departament d’adscripció de l’òrgan de contractació que realitza el contracte",
+                "Any en que es formalitza el contracte menor",
+                "Objecte del contracte menor",
+                "Procediment d’adjudicació ",
+                "Òrgan de contractació que formalitza el contracte menor",
+                "Import adjudicat sense IVA",
+                "Àmbit subjectiu de l’òrgan de contractació ",
+                "Empresa adjudicatària del contracte",
+                "Indica el codi d’expedient del contracte"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "noCommas" : "false",
+                  "groupSeparator" : "."
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2662,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-01-21T11:16:00.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "contractació",
+                "contractació menor",
+                "direcció general de contractació pública",
+                "dgcp",
+                "registre públic de contractes",
+                "ods16_pau justícies i institucions sòlides",
+                "ods12_producció i consum responsable"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement of the Government of Catalonia: minors"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación de la Generalitat de Catalunya: menores"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qjue-2pk9",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-de-la-Generalitat-de-Catalunya-menors/qjue-2pk9",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació pública tramitada d'emergència durant la pandèmia de la COVID-19",
+            "id" : "5fq6-4v39",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contractes tramitats per emergència de la Generalitat de Catalunya i el seu sector públic durant la pandèmia de la COVID-19. \nLes dades fan referència a contractes tramitats d'emergència que s'han fet a partir del 12 de març de 2020, data de la publicació del Reial Decret-Llei 7/2020, pel que s'adopten mesures urgents per respondre a l'impacte econòmic de la COVID-19.\nLes dades del visor provenen de la Plataforma de Serveis de Contractació Pública (PSCP), tenen caràcter provisional i varien constantment a mesura que els òrgans van incorporant més contractes tramitats d'emergència a la PSCP.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:44:53.000Z",
+            "createdAt" : "2020-05-25T11:20:56.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:53.000Z",
+            "data_updated_at" : "2020-12-16T22:15:39.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 50,
+                "page_views_total" : 4406,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.672425341971496,
+                "page_views_total_log" : 12.105581181277435
+              },
+            "columns_name" :
+              [
+                "Enllaç a la publicació",
+                "Òrgan de contractació",
+                "Tipus de contracte",
+                "Codi d'expedient",
+                "Codi CPV",
+                "Data d'adjudicació",
+                "Import d'adjudicació (sense IVA)",
+                "Empresa adjudicatària",
+                "Data de publicació",
+                "Valor estimat del contracte",
+                "Pressupost de licitació (sense IVA)",
+                "Descripció de la prestació",
+                "Àmbit subjectiu",
+                "Objecte del contracte",
+                "Tipus d'expedient"
+              ],
+            "columns_field_name" :
+              [
+                "enlla_a_la_publicaci",
+                "rgan_de_contractaci",
+                "tipus_de_contracte",
+                "codi_d_expedient",
+                "codi_cpv",
+                "data_d_adjudicaci",
+                "import_d_adjudicaci_sense",
+                "empresa_adjudicat_ria",
+                "data_de_publicaci",
+                "valor_estimat_del_contracte",
+                "pressupost_de_licitaci_sense",
+                "descripci_de_la_prestaci",
+                "mbit_subjectiu",
+                "objecte_del_contracte",
+                "tipus_d_expedient"
+              ],
+            "columns_datatype" :
+              [
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Enllaç a la publicació a la PSCP",
+                "Òrgan que ha contractat aquell lot",
+                "Tipologia del contracte",
+                "Codi d’expedient informat pels òrgans de contractació",
+                "Codi CPV informat segons la descripció del contracte",
+                "Data en la que s’adjudica el contracte",
+                "Import final adjudicat sense IVA en euros",
+                "Empresa adjudicatària del contracte",
+                "Data en la que es publica el contracte",
+                "Valor estimat del contracte en euros",
+                "Pressupost de licitació sense IVA en euros",
+                "Descripció informada per l’òrgan de contractació on s’expliquen els detalls del contracte",
+                "Àmbit subjectiu al qual pertany l’òrgan de contractació ",
+                "Descripció de l’objecte del lot en concret",
+                "Forma de tramitació de l’expedient"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2214,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-27T07:23:43.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "emergència",
+                "contractes",
+                "direcció general de contractació pública",
+                "pscp",
+                "covid",
+                "coronavirus",
+                "covid-19",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement processed emergency during the COVID-19 pandemic"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación pública tramitada de emergencia durante la pandemia del COVID-19"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5fq6-4v39",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-tramitada-d-emergència-durant/5fq6-4v39",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Ajut extraordinari per a persones treballadores afectades per un ERTO i persones amb contracte fix discontinu beneficiàries de la prestació extraordinària 2021 (segona convocatòria)",
+            "id" : "6vni-k5nd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació de les persones beneficiàries de l'ajut extraordinari\nadreçat a persones treballadores afectades per un expedient de regulació temporal d'ocupació com a conseqüència de la crisi derivada de la COVID-19 i a persones amb contracte fix discontinu beneficiàries de la prestació extraordinària.\nAquest ajut extraordinari consisteix en una prestació econòmica de pagament únic, adreçat a les persones treballadores amb bases reguladores baixes i que hagin presentat el formulari d’inscripció prèvia que preveu l’Ordre EMT/137/2021, de 25 de juny, i que compleixin els requisits.",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-05-06T08:44:48.000Z",
+            "createdAt" : "2021-08-09T08:32:42.000Z",
+            "metadata_updated_at" : "2025-05-06T08:44:48.000Z",
+            "data_updated_at" : "2021-11-04T15:47:39.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 26,
+                "page_views_last_month" : 56,
+                "page_views_total" : 16124,
+                "page_views_last_week_log" : 4.754887502163469,
+                "page_views_last_month_log" : 5.832890014164742,
+                "page_views_total_log" : 13.977011540085343
+              },
+            "columns_name" :
+              [
+                "NIF sol·licitant",
+                "Estat",
+                "Import",
+                "Cognom i Nom sol·licitant"
+              ],
+            "columns_field_name" :
+              [
+                "nif_sol_licitant",
+                "estat",
+                "import",
+                "cognom_i_nom_sol_licitant"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Number", "Text" ],
+            "columns_description" :
+              [
+                "NIF sol·licitant (4 dígits del mig: posició 4,5,6 i 7)",
+                "Sentit de la resolució ",
+                "Quantitat que cobrarà la persona beneficiària",
+                "Nom sol·licitant (Inicials cognoms i nom)"
+              ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 1066,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-08-09T08:36:14.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "ajut",
+                "erto",
+                "covid",
+                "covid-19",
+                "coronavirus",
+                "prestació",
+                "fix discontinu",
+                "treballadores",
+                "compte altri",
+                "suspensió",
+                "soc",
+                "erte",
+                "ods8_treball decent i creixement econòmic",
+                "ods1_fi de la pobresa"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Extraordinary assistance/aid for workers affected by an ERTE and people with discontinuous fixed contract beneficiaries of the extraordinary benefit 2021 (second announcement)  "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Ayuda extraordinaria para personas trabajadoras afectadas por un ERTE y personas con contrato fijo discontinuo beneficiarias de la prestación extraordinària 2021 (segunda convocatòria)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/6vni-k5nd",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Ajut-extraordinari-per-a-persones-treballadores-af/6vni-k5nd",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació Infraestructures de la Generalitat de Catalunya, SAU",
+            "id" : "ebau-mm24",
+            "resource_name" : null,
+            "parent_fxf" : [ "hb6v-jcbf" ],
+            "description" : "Dades de contractes de Catalunya",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2026-11-10T10:55:54.000Z",
+            "createdAt" : "2022-03-09T16:46:17.000Z",
+            "metadata_updated_at" : "2026-09-16T13:11:05.000Z",
+            "data_updated_at" : "2026-11-10T10:55:54.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 58,
+                "page_views_total" : 1873,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 5.882643049361842,
+                "page_views_total_log" : 10.871905237659186
+              },
+            "columns_name" :
+              [
+                "Identificador organisme contractant",
+                "Durada anys",
+                "Descripció de l’expedient",
+                "Durada mesos",
+                "Data inici pròrroga",
+                "Agrupació organisme",
+                "Data d’adjudicació",
+                "Àmbit organitzatiu",
+                "Organisme contractant",
+                "Situació contractual",
+                "Codi de l’expedient",
+                "Codi CPV",
+                "Adjudicatari",
+                "Exercici",
+                "Procediment d’adjudicació",
+                "Data fi pròrroga",
+                "Lot desert",
+                "Identificador agrupació organisme",
+                "Descripció del lot",
+                "Número de lot",
+                "Import d’adjudicació",
+                "Durada dies",
+                "Tipus de contracte",
+                "Número de pròrroga"
+              ],
+            "columns_field_name" :
+              [
+                "id_organisme_contractant",
+                "anys_durada",
+                "descripcio_expedient",
+                "mesos_durada",
+                "data_inici_prorroga",
+                "agrupacio_organisme",
+                "data_adjudicacio",
+                "subjecte_ambit",
+                "organisme_contractant",
+                "situaci_contractual",
+                "codi_expedient",
+                "codi_cpv",
+                "adjudicatari",
+                "exercici",
+                "procediment_adjudicacio",
+                "data_fi_prorroga",
+                "lot_desert",
+                "id_agrupacio_organisme",
+                "contracte",
+                "numero_lot",
+                "import_adjudicacio",
+                "dies_durada",
+                "tipus_contracte",
+                "numero_prorroga"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi identificador de l’organisme contractant de cada contracte",
+                "Duració del contracte en anys",
+                "Objecte del contracte",
+                "Duració del contracte en mesos",
+                "Data inici de la pròrroga, en cas de pròrroga",
+                "Nom del departament o entitat d'adscripció de l’organisme contractant de cada contracte",
+                "Data d'adjudicació",
+                "Àmbit organitzatiu (Generalitat / àmbit local / universitats / ens estatutaris /altre ens)",
+                "Nom de l’organisme contractant de cada contracte",
+                "Identificació de la font d'informació (adjudicacions / pròrrogues / modificacions / liquidacions)",
+                "Codi de l'expedient de contractació",
+                "Codi de Producte (CPV)",
+                "Nom de l'adjudicatari",
+                "Any de l’inici d’execució del contracte",
+                "Procediment d'adjudicació del contracte (menor, obert, basats en acord marc, específic de sistema dinàmic, etc.)",
+                "Data fi de la pròrroga, en cas de pròrroga",
+                "Indicador de lot desert (Si / No)",
+                "Codi identificador del departament o entitat d'adscripció de l’organisme contractant de cada contracte",
+                "Descripció del lot ",
+                "Número de lot",
+                "Import d'adjudicació del contracte o la pròrroga",
+                "Duració del contracte en dies",
+                "Tipus de contracte (obres, serveis, subministraments, etc.)",
+                "Número de pròrroga, en cas de pròrroga"
+              ],
+            "columns_format" :
+              [
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {
+                  "noCommas" : "false",
+                  "precision" : "2",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "aggregate" : "sum",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 64,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-03-09T16:46:23.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [
+                              "contractes",
+                              "contractació pública",
+                              "empreses"
+                            ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                { "key" : "Idioma_Idioma", "value" : "català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ebau-mm24",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Contractació-Infraestructures-de-la-Generalitat-de/ebau-mm24",
+        "owner" :
+          {
+            "id" : "vgep-ey3i",
+            "user_type" : "interactive",
+            "display_name" : "dtrepat@gencat.cat"
+          },
+        "creator" :
+          {
+            "id" : "vgep-ey3i",
+            "user_type" : "interactive",
+            "display_name" : "dtrepat@gencat.cat"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Classe del Vocabulari Comú de Contractes Públics (CPV)",
+            "id" : "dqkk-fmc2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La nomenclatura CPV (Common Procurement Vocabulary) estableix un sistema de classificació únic per a la contractació pública destinat a estandarditzar les referències utilitzades per descriure l'objecte dels contractes. És un sistema d'identificació i categorització de totes les activitats econòmiques susceptibles de ser contractades mitjançant licitació o concurs públic a la Unió Europea. El seu ús és obligatori a la Unió Europea des de l'1 de febrer de 2006.\n\nEs troba el llistat de codis del nivell de classe CPV. \n\nÉs el tercer nivell del CPV. La classe correspon als 4 primers dígits del codi XXXX0000-Y (El dígit \"Y\" representa la validació dels dígits precedents).",
+            "attribution" : "Catàleg Tècnic de Dades. Estàndard UE. D. G. de Contractació Pública/Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:44.000Z",
+            "createdAt" : "2025-11-20T08:44:25.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:44.000Z",
+            "data_updated_at" : "2025-11-25T12:45:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 38,
+                "page_views_total" : 317,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.285402218862249,
+                "page_views_total_log" : 8.312882955284357
+              },
+            "columns_name" :
+              [
+                "Identificador grup CPV",
+                "Descripció classe CPV",
+                "Identificador divisió CPV",
+                "Identificador classe CPV"
+              ],
+            "columns_field_name" :
+              [
+                "ide_grup_cpv",
+                "des_classe_cpv",
+                "ide_divisio_cpv",
+                "ide_classe_cpv"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador del grup al qual pertany la classe CPV, correspon als 3 primers dígits del codi XXX00000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el segon nivell més general del CPV",
+                "Descripció del nivell classe del CPV",
+                "Identificador de la divisió a la qual pertany el grup CPV, correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el nivell més general del CPV",
+                "Identificador únic de la classe CPV, correspon als 4 primers dígits del codi XXXX0000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el tercer nivell del CPV"
+              ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 290,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-11-25T12:45:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Class of the Common Vocabulary of Public Agreements (CPV)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Clase del Vocabulario Común de Contratos Públicos (CPV)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/dqkk-fmc2",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Classe-del-Vocabulari-Comú-de-Contractes-Públics-C/dqkk-fmc2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Categoria del Vocabulari Comú de Contractes Públics (CPV)",
+            "id" : "nup8-zuaj",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La nomenclatura CPV (Common Procurement Vocabulary) estableix un sistema de classificació únic per a la contractació pública destinat a estandarditzar les referències utilitzades per descriure l'objecte dels contractes. És un sistema d'identificació i categorització de totes les activitats econòmiques susceptibles de ser contractades mitjançant licitació o concurs públic a la Unió Europea. El seu ús és obligatori a la Unió Europea des de l'1 de febrer de 2006.\n\nEs troba el llistat de codis del nivell de Categoria de CPV. És l’últim nivell del CPV. Aquest 4t. nivell és el més detallat dins del Codi CPV.\n\nLa categoria correspon als 5 primers dígits del codi XXXXX000-Y (Cada un dels 3 últims dígits aporta un major grau de precisió dins de la categoria i el dígit \"Y\" representa la validació dels dígits precedents).",
+            "attribution" : "Catàleg Tècnic de Dades. Estàndard UE. D. G. de Contractació Pública/Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:28.000Z",
+            "createdAt" : "2025-11-20T08:44:11.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:28.000Z",
+            "data_updated_at" : "2025-11-25T12:44:41.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 54,
+                "page_views_total" : 342,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.78135971352466,
+                "page_views_total_log" : 8.422064766172811
+              },
+            "columns_name" :
+              [
+                "Identificador divisió CPV",
+                "Identificador categoria CPV",
+                "Descripció categoria CPV",
+                "Identificador grup CPV",
+                "Identificador classe CPV"
+              ],
+            "columns_field_name" :
+              [
+                "ide_divisio_cpv",
+                "ide_categoria_cpv",
+                "des_categoria_cpv",
+                "ide_grup_cpv",
+                "ide_classe_cpv"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador de la divisió a la qual pertany el grup CPV, correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el nivell més general del CPV",
+                "Identificador únic de la categoria CPV, correspon als 5 primers dígits del codi XXXXX000-Y (Cada un dels 3 últims dígits aporta un major grau de precisió dins de la categoria i el dígit \"Y\" representa la validació dels dígits precedents). És l’últim nivell del CPV",
+                "Descripció del nivell categoria del CPV",
+                "Identificador del grup al qual pertany la classe CPV, correspon als 3 primers dígits del codi XXX00000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el segon nivell més general del CPV",
+                "Identificador de la classe a la qual pertany la categoria CPV, correspon als 4 primers dígits del codi XXXX0000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el tercer nivell del CPV"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {} ],
+            "download_count" : 177,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-11-25T12:44:51.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Category of the Common Vocabulary of Public Agreements (CPV)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Categoría del Vocabulario Común de Contratos Públicos (CPV)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nup8-zuaj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Categoria-del-Vocabulari-Comú-de-Contractes-Públic/nup8-zuaj",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació programada de la Generalitat de Catalunya i el seu sector públic",
+            "id" : "u9d7-egbx",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Es recull la previsió de contractació anual, excloent la contractació menor, que duran a terme  els òrgans de contractació de l’administració de la Generalitat de Catalunya i del seu sector públic.\n\nLes dades facilitades són només una previsió de contractació i no impliquen cap obligació legal de dur a terme aquestes licitacions, ni en cap cas suposen una obligació pel que respecta als imports, als terminis previstos, ni a qualsevol altre dada que hi figuri.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:43:08.000Z",
+            "createdAt" : "2019-03-15T09:58:22.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:08.000Z",
+            "data_updated_at" : "2026-02-20T09:31:50.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 59,
+                "page_views_last_month" : 157,
+                "page_views_total" : 11007,
+                "page_views_last_week_log" : 5.906890595608519,
+                "page_views_last_month_log" : 7.303780748177103,
+                "page_views_total_log" : 13.426264754702098
+              },
+            "columns_name" :
+              [
+                "Departament/Ens",
+                "Trimestre",
+                "Tipus de contracte",
+                "Procediment d'adjudicació",
+                "Durada",
+                "Pròrroga prevista",
+                "Reserva social",
+                "Any",
+                "Descripció del contracte",
+                "Agrupació",
+                "Import estimat VEC"
+              ],
+            "columns_field_name" :
+              [
+                "departament_ens",
+                "mes_trimestre",
+                "tipus_de_contracte",
+                "procediment_d_adjudicaci",
+                "durada_en_anys",
+                "pr_rroga_prevista",
+                "reserva_social",
+                "any",
+                "descripci_del_contracte",
+                "agrupaci",
+                "import_estimat_vec"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Òrgan de contractació que programa la licitació",
+                "Moment previst de publicació de la licitació",
+                "Tipus de contracte previst",
+                "Procediment d’adjudicació previst",
+                "Nombre d’anys previstos pel contracte. En alguns casos inclou la durada de la pròrroga",
+                "Previsió o no de prorrogar el contracte",
+                "Contracte amb reserva social prevista",
+                "Anualitat",
+                "Objecte del contracte previst",
+                "Categoria a la qual pertany l’objecte de contracte",
+                "Valor estimat del contracte previst en €"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 3907,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-02-22T15:36:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "contractació pública",
+                "contractació programada",
+                "contractació",
+                "programada",
+                "licitació",
+                "transparència",
+                "programació",
+                "licitacions",
+                "direcció general de contractació pública",
+                "dgcp",
+                "ods12_producció i consum responsable",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Programmed contracting of the Government of Catalonia and its public sector"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación programada de la Generalitat de Catalunya y su sector público"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/u9d7-egbx",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-programada-de-la-Generalitat-de-Catal/u9d7-egbx",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació Infraestructures de la Generalitat de Catalunya, SAU (adjudicacions i pròrrogues)",
+            "id" : "ntxw-7et7",
+            "resource_name" : null,
+            "parent_fxf" : [ "hb6v-jcbf" ],
+            "description" : "Dades de contractes de Catalunya",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2026-11-10T10:55:54.000Z",
+            "createdAt" : "2022-03-08T12:06:36.000Z",
+            "metadata_updated_at" : "2026-09-16T13:30:44.000Z",
+            "data_updated_at" : "2026-11-10T10:55:54.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 74,
+                "page_views_total" : 2011,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 6.22881869049588,
+                "page_views_total_log" : 10.974414589805528
+              },
+            "columns_name" :
+              [
+                "Import d’adjudicació",
+                "Situació contractual",
+                "Data d’adjudicació",
+                "Durada dies",
+                "Descripció de l’expedient",
+                "Descripció del lot",
+                "Adjudicatari",
+                "Data inici pròrroga",
+                "Lot desert",
+                "Identificador organisme contractant",
+                "Agrupació organisme",
+                "Codi CPV",
+                "Durada anys",
+                "Codi de l’expedient",
+                "Organisme contractant",
+                "Número de lot",
+                "Procediment d’adjudicació",
+                "Durada mesos",
+                "Data fi pròrroga",
+                "Identificador agrupació organisme",
+                "Tipus de contracte",
+                "Número de pròrroga",
+                "Àmbit organitzatiu",
+                "Exercici"
+              ],
+            "columns_field_name" :
+              [
+                "import_adjudicacio",
+                "situaci_contractual",
+                "data_adjudicacio",
+                "dies_durada",
+                "descripcio_expedient",
+                "contracte",
+                "adjudicatari",
+                "data_inici_prorroga",
+                "lot_desert",
+                "id_organisme_contractant",
+                "agrupacio_organisme",
+                "codi_cpv",
+                "anys_durada",
+                "codi_expedient",
+                "organisme_contractant",
+                "numero_lot",
+                "procediment_adjudicacio",
+                "mesos_durada",
+                "data_fi_prorroga",
+                "id_agrupacio_organisme",
+                "tipus_contracte",
+                "numero_prorroga",
+                "subjecte_ambit",
+                "exercici"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Import d'adjudicació del contracte o la pròrroga",
+                "Identificació de la font d'informació (adjudicacions / pròrrogues / modificacions / liquidacions)",
+                "Data d'adjudicació",
+                "Duració del contracte en dies",
+                "Objecte del contracte",
+                "Descripció del lot ",
+                "Nom de l'adjudicatari",
+                "Data inici de la pròrroga, en cas de pròrroga",
+                "Indicador de lot desert (Si / No)",
+                "Codi identificador de l’organisme contractant de cada contracte",
+                "Nom del departament o entitat d'adscripció de l’organisme contractant de cada contracte",
+                "Codi de Producte (CPV)",
+                "Duració del contracte en anys",
+                "Codi de l'expedient de contractació",
+                "Nom de l’organisme contractant de cada contracte",
+                "Número de lot",
+                "Procediment d'adjudicació del contracte (menor, obert, basats en acord marc, específic de sistema dinàmic, etc.)",
+                "Duració del contracte en mesos",
+                "Data fi de la pròrroga, en cas de pròrroga",
+                "Codi identificador del departament o entitat d'adscripció de l’organisme contractant de cada contracte",
+                "Tipus de contracte (obres, serveis, subministraments, etc.)",
+                "Número de pròrroga, en cas de pròrroga",
+                "Àmbit organitzatiu (Generalitat / àmbit local / universitats / ens estatutaris /altre ens)",
+                "Any de l’inici d’execució del contracte"
+              ],
+            "columns_format" :
+              [
+                {
+                  "noCommas" : "false",
+                  "precision" : "2",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "aggregate" : "sum",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                }
+              ],
+            "download_count" : 59,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-03-10T14:45:14.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [
+                              "contractes",
+                              "contractació pública",
+                              "empreses"
+                            ],
+            "domain_metadata" :
+              [
+                { "key" : "Idioma_Idioma", "value" : "català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ntxw-7et7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Contractació-Infraestructures-de-la-Generalitat-de/ntxw-7et7",
+        "owner" :
+          {
+            "id" : "vgep-ey3i",
+            "user_type" : "interactive",
+            "display_name" : "dtrepat@gencat.cat"
+          },
+        "creator" :
+          {
+            "id" : "vgep-ey3i",
+            "user_type" : "interactive",
+            "display_name" : "dtrepat@gencat.cat"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació pública a Catalunya: publicacions de la fase d’execució a la Plataforma de serveis de contractació pública",
+            "id" : "8idu-wkjv",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Publicacions de la fase d’execució dels contractes de tots els òrgans de contractació de Catalunya a la Plataforma de serveis de contractació pública (PSCP), entre altres, modificacions, cessions, successions, pròrrogues, ampliacions del termini d'execució, subcontractacions, suspensions, imposicions de penalitats, indemnitzacions i extincions.\nCada fila representa:\n\n- Un expedient\n- Un lot de l’expedient, per als expedients amb lots\n- Un expedient per a les publicacions agregades\n\nAquest conjunt de dades únicament inclou les publicacions de la fase d’execució. Per consultar la resta de publicacions us heu de dirigir al conjunt de dades \"Contractació pública a Catalunya: publicacions a la Plataforma de serveis de contractació pública\", que trobareu a l'enllaç https://analisi.transparenciacatalunya.cat/Economia/Contractaci-p-blica-a-Catalunya-publicacions-a-la-/ybgg-dgi6/about_data",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T02:12:32.000Z",
+            "createdAt" : "2025-09-05T10:37:02.000Z",
+            "metadata_updated_at" : "2026-11-16T02:12:16.000Z",
+            "data_updated_at" : "2026-11-16T02:12:32.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 55,
+                "page_views_last_month" : 235,
+                "page_views_total" : 2932,
+                "page_views_last_week_log" : 5.807354922057605,
+                "page_views_last_month_log" : 7.8826430493618425,
+                "page_views_total_log" : 11.518161355756956
+              },
+            "columns_name" :
+              [
+                "Codi àmbit",
+                "Codi INE10",
+                "Codi expedient",
+                "Nom departament ens",
+                "Codi DIR3",
+                "Descripció lot",
+                "Data fi",
+                "Numero lot",
+                "Data",
+                "Tipus actuació execució",
+                "Nom unitat",
+                "Codi òrgan",
+                "URL JSON",
+                "Identificació",
+                "Codi departament ens",
+                "Nom àmbit",
+                "Nom òrgan",
+                "Denominació actuació",
+                "Import sense iva",
+                "Denominació",
+                "Observacions",
+                "Codi unitat"
+              ],
+            "columns_field_name" :
+              [
+                "codi_ambit",
+                "codi_ine10",
+                "codi_expedient",
+                "nom_departament_ens",
+                "codi_dir3",
+                "descripcio_lot",
+                "data_fi",
+                "numero_lot",
+                "data",
+                "tipus_actuacio_execucio",
+                "nom_unitat",
+                "codi_organ",
+                "url_json",
+                "identificacio",
+                "codi_departament_ens",
+                "nom_ambit",
+                "nom_organ",
+                "denominacio_actuacio",
+                "import_sense_iva",
+                "denominacio",
+                "observacions",
+                "codi_unitat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Identificador de l'àmbit organitzatiu",
+                "Codi INE10",
+                "Codi de l'expedient de contractació",
+                "Descripció de les entitats de l’Administració i del sector públic de Catalunya",
+                "Identificador del directori d'unitats orgàniques i oficines de registres de les administracions públiques",
+                "Descripció del lot",
+                "Data de fi de l'actuació d'execució",
+                "Identificador del lot",
+                "Data de l'actuació d'execució",
+                "Tipus d’actuació d’execució",
+                "Descripció de la unitat de contractació",
+                "Identificador de l'organisme contractant",
+                "Enllaç per descarregar informació de la fase d’execució",
+                "Identificació de l'empresa",
+                "Identificador de les entitats de l’Administració i del sector públic de Catalunya",
+                "Àmbit organitzatiu (Departaments i sector públic de la Generalitat de Catalunya /Organismes independents i/o estatutaris / Entitats de l'Administració local / Universitats /Altres ens)",
+                "Descripció de l'organisme contractant",
+                "Denominació de l’actuació d’execució",
+                "Import sense IVA de l’actuació d’execució",
+                "Denominació de l'empresa",
+                "Observacions per ampliar la informació de la publicació, si escau",
+                "Identificador de la unitat de contractació"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 709,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-04-15T15:20:24.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "plataforma de serveis de contractació pública",
+                "contractació pública",
+                "contractes",
+                "perfils de contractant",
+                "òrgan de contractació",
+                "empreses",
+                "pscp",
+                "sobre digital",
+                "oferta telemàtica",
+                "modificacions",
+                "cessions",
+                "successions",
+                "pròrrogues",
+                "ampliacions del termini d'execució",
+                "subcontractacions",
+                "suspensions",
+                "imposicions de penalitats",
+                "indemnitzacions",
+                "extincions",
+                "ods8_treball decent i creixement econòmic",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement in Catalonia: publications of the execution phase on the Public Procurement Services Platform"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación pública en Cataluña: publicaciones de la fase de ejecución en la Plataforma de servicios de contratación pública"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8idu-wkjv",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-a-Catalunya-publicacions-de-l/8idu-wkjv",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Classificació empresarial subgrups",
+            "id" : "77uc-c84x",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llista d'activitats especifiques que realitzen les empreses que opten a contractes administratius d'obres o de serveis.",
+            "attribution" : "Catàleg Tècnic de Dades. Junta Consultiva de Contractació Administrativa. Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:07:50.000Z",
+            "createdAt" : "2022-02-22T09:56:27.000Z",
+            "metadata_updated_at" : "2026-09-17T07:07:50.000Z",
+            "data_updated_at" : "2022-02-22T09:58:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 65,
+                "page_views_total" : 1519,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 6.044394119358453,
+                "page_views_total_log" : 10.569855608330949
+              },
+            "columns_name" : [ "Codi Grup", "Codi  Subgrup", "Nom" ],
+            "columns_field_name" : [ "codi_grup", "codi_subgrup", "nom" ],
+            "columns_datatype" : [ "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador alfanumèric que identifica de forma unívoca un grup de la classificació de les empreses per contractes administratius d'obres o de serveis.   La classificació empresarial és la determinació que fa l'Administració (mitjançant òrgans especialitzats) de la solvència econòmica i tècnica de les empreses licitadores en els contractes administratius d'obres o de serveis i s'expressa mitjançant tres conceptes: •\tGrup (classificació general d'activitats) •\tSubgrup (subdivisió d'un grup general d'activitats) •\tCategoria (límit econòmic màxim al qual pot licitar l'empresa d'acord amb l'anualitat mitjana del contracte)",
+                "Codi que conjuntament amb el codi del grup identifica de forma unívoca un subgrup de la classificació de les empreses per contractes administratius.   Els subgrups que estan associats a un grup de codi igual a una xifra numèrica són valors propis del Catàleg Tècnic de Dades que s’afegeixen per donar valor de completesa a l’entitat.",
+                "Denominació del subgrup de la classificació de les empreses per contractes administratius d'obres o de serveis."
+              ],
+            "columns_format" : [ {}, {}, {} ],
+            "download_count" : 772,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-02-22T09:58:21.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Business classification subgroups"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Clasificación empresarial subgrupos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/77uc-c84x",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Classificació-empresarial-subgrups/77uc-c84x",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació de la Generalitat de Catalunya: adjudicacions dels darrers 5 anys",
+            "id" : "nn7v-4yxe",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Adjudicacions l’Administració de la Generalitat de Catalunya i el seu sector públic. A partir d’aquestes dades, la Direcció General de Contractació Pública elabora tots els seus informes de seguiment de la contractació pública.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-21T12:33:07.000Z",
+            "createdAt" : "2019-12-11T11:39:35.000Z",
+            "metadata_updated_at" : "2026-10-21T12:32:21.000Z",
+            "data_updated_at" : "2026-10-21T12:33:07.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 159,
+                "page_views_total" : 6148,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 7.321928094887362,
+                "page_views_total_log" : 12.586136091480487
+              },
+            "columns_name" :
+              [
+                "Clàusules socials de conciliació laboral i familiar",
+                "Lot número",
+                "Àmbit subjectiu",
+                "Any",
+                "Departament d'adscripció",
+                "Objecte del lot",
+                "Clàusules socials d'igualtat de gènere",
+                "Clàusules socials de drets humans",
+                "Clàusules socials d'inserció laboral",
+                "Clàusules socials de comerç just",
+                "Clàusules socials",
+                "Clàusules socials d'estabilitat laboral",
+                "Codi CPV",
+                "Clàusules socials altres",
+                "Data d'adjudicació",
+                "Clàusules socials de transparència fiscal",
+                "Tramitació amb mesures",
+                "Òrgan de contractació",
+                "Import licitat",
+                "Codi d'expedient",
+                "Nombre de lots",
+                "Nombre de clàusules socials",
+                "Forma de tramitació",
+                "Tipus de contracte",
+                "Responsable del contracte",
+                "Empresa adjudicatària",
+                "Clàusules socials alimentàries",
+                "Clàusules socials sense informació de tiologia",
+                "Descripció del contracte",
+                "Clàusules socials de foment de les PIME",
+                "Procediment d'adjudicació",
+                "Clàusules socials de millora condicions laborals",
+                "Import adjudicat sense IVA",
+                "Clàusules socials de formació de treballadors",
+                "Clàusules ambientals",
+                "Clàusules socials d'accessibilitat"
+              ],
+            "columns_field_name" :
+              [
+                "clsoc_conciliaci_laboral_i_familiar",
+                "lot_n_mero",
+                "mbit_subjectiu",
+                "any",
+                "departament_d_adscripci",
+                "objecte_del_lot",
+                "clsoc_igualtat_g_nere",
+                "clsoc_drets_humans",
+                "clsoc_inserci_laboral",
+                "clsoc_comer_just",
+                "cl_usules_socials",
+                "clsoc_estabilitat_laboral",
+                "codi_cpv",
+                "clsoc_altres",
+                "data_d_adjudicaci",
+                "clsoc_transpar_ncia_fiscal",
+                "tramitaci_amb_mesures",
+                "rgan_de_contractaci",
+                "import_licitat",
+                "codi_d_expedient",
+                "nombre_de_lots",
+                "clsoc_nombre",
+                "forma_de_tramitaci",
+                "tipus_de_contracte",
+                "responsable_del_contracte",
+                "empresa_adjudicat_ria",
+                "clsoc_aliment_ries",
+                "clsoc_sense_informar",
+                "descripci_del_contracte",
+                "clsoc_foment_pime",
+                "procediment_d_adjudicaci",
+                "clsoc_millora_condicions_laborals",
+                "import_adjudicat_sense_iva",
+                "clsoc_formaci_treballadors",
+                "cl_usules_ambientals",
+                "clsoc_accessibilitat"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Indica si s’incorporen clàusules socials de conciliació laboral i familiar",
+                "Número de lot del contracte",
+                "Àmbit subjectiu al qual pertany l’òrgan de contractació ",
+                "Any d’adjudicació",
+                "Departament d’adscripció de l’òrgan de contractació",
+                "Descripció de l’objecte del lot en concret",
+                "Indica si s’incorporen clàusules socials d’igualtat de gènere",
+                "Indica si s’incorporen clàusules socials de drets humans",
+                "Indica si s’incorporen clàusules socials d’inserció 

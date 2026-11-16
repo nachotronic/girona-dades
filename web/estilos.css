@@ -717,3 +717,64 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .fitxa-blocs { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
   .nb li { grid-template-columns: minmax(0, 8.5em) minmax(0, 1fr) 6em; gap: 8px; font-size: 13.5px; }
 }
+
+/* ---------- Conjuntura ---------- */
+:root { --cj-barra: #cdd1d5; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --cj-barra: #3a3e43; } }
+:root[data-theme="dark"] { --cj-barra: #3a3e43; }
+.cj-graella { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 3px solid var(--tinta); }
+.cj-fig { margin: 0; padding: 14px 20px 18px; border-bottom: 1px solid var(--vora); min-width: 0; display: flex; flex-direction: column; }
+.cj-graella > .cj-fig:not(:nth-child(3n + 1)) { border-left: 1px solid var(--vora); }
+.cj-fig figcaption { display: flex; flex-direction: column; gap: 3px; }
+.cj-tit { font: 800 21px/1.05 var(--sans); font-variation-settings: "wdth" 72; color: var(--tinta); }
+.cj-u { font: 11px/1.3 var(--mono); color: var(--text-3); }
+.cj-xifra { font: 800 clamp(38px, 4.2vw, 54px)/.95 var(--sans); font-variation-settings: "wdth" 72; letter-spacing: -0.02em; color: var(--tinta); margin: 14px 0 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.cj-per { font: 500 11.5px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--text-2); }
+.cj-var { font-size: 13.5px; color: var(--text-2); margin: 8px 0 0; }
+.cj-var b, .cj-comp b, .cj-acum b { color: var(--tinta); font-weight: 700; }
+.cj-puja::before { content: "▲ "; font-size: .8em; }
+.cj-baixa::before { content: "▼ "; font-size: .8em; }
+.cj-comp { display: flex; flex-wrap: wrap; gap: 2px 12px; font: 11.5px/1.5 var(--mono); color: var(--text-3); margin: 6px 0 0; }
+.cj-comp b { font-weight: 600; }
+.cj-c { margin-top: 12px; }
+.cj-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.cj-b { fill: var(--cj-barra); }
+.cj-b-ult { fill: var(--accent); }
+.cj-b-ant { fill: var(--tinta); }
+.cj-base { stroke: var(--tinta); stroke-width: 1; }
+.cj-zero { stroke: var(--vora-2); stroke-width: 1; }
+.cj-g { stroke: var(--graella); stroke-width: 1; }
+.cj-t { font: 10px var(--mono); fill: var(--text-3); }
+.cj-l { fill: none; stroke-width: 1.6; stroke-linejoin: round; }
+.cj-l-gi { stroke: var(--accent); stroke-width: 2.4; }
+.cj-l-cat { stroke: var(--tinta); }
+.cj-l-esp { stroke: var(--text-3); stroke-dasharray: 4 3; }
+.cj-p { fill: var(--accent); }
+.cj-e { font: 600 11px var(--mono); fill: var(--accent); }
+.cj-guia { stroke: var(--text-3); stroke-dasharray: 3 3; }
+.cj-lleg { font: 10.5px var(--mono); color: var(--text-3); margin: 6px 0 0; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.cj-lleg i { display: inline-block; width: 9px; height: 9px; }
+.cj-lleg i + i, .cj-lleg .cj-l-ant { margin-left: 8px; }
+.cj-l-ult { background: var(--accent); } .cj-l-ant { background: var(--tinta); }
+.cj-acum { font-size: 13px; color: var(--text-2); margin: 8px 0 0; }
+.cj-peu { margin: auto 0 0; padding-top: 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; font: 10.5px var(--mono); color: var(--text-3); }
+.cj-mapa { font: 500 12px var(--sans); background: none; border: 1px solid var(--tinta); color: var(--tinta); border-radius: 0; padding: 5px 10px; cursor: pointer; }
+.cj-mapa:hover { background: var(--tinta); color: var(--fons); }
+@media (max-width: 1020px) {
+  .cj-graella { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cj-graella > .cj-fig:not(:nth-child(3n + 1)) { border-left: 0; }
+  .cj-graella > .cj-fig:nth-child(2n) { border-left: 1px solid var(--vora); }
+}
+@media (max-width: 620px) {
+  .cj-graella { grid-template-columns: 1fr; }
+  .cj-graella > .cj-fig:nth-child(2n) { border-left: 0; }
+  .cj-fig { padding: 14px 0 18px; }
+}
+.fitxa-conj { margin-top: 40px; }
+.cj-sub { color: var(--text-2); font-size: 14px; margin: 4px 0 12px; }
+.cj-fitxa { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 3px solid var(--tinta); }
+.cj-fitxa > .cj-fig + .cj-fig { border-left: 1px solid var(--vora); }
+.cj-fig-mun .cj-xifra { font-size: clamp(30px, 3vw, 40px); }
+@media (max-width: 1020px) { .cj-fitxa { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cj-fitxa > .cj-fig:nth-child(odd) { border-left: 0; } }
+@media (max-width: 560px) { .cj-fitxa { grid-template-columns: 1fr; } .cj-fitxa > .cj-fig { border-left: 0 !important; padding-left: 0; padding-right: 0; } }
+.fitxa-conj .ajt-tit { margin-bottom: 4px; }

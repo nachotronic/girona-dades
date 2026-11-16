@@ -17,6 +17,7 @@
     <a class="marca" href="./"><span class="marca-punt" aria-hidden="true"></span><span data-t="marca">Girona en dades</span></a>
     <nav class="menu" aria-label="Seccions">
       <a href="#s-mapa" data-t="nav_mapa">Mapa</a>
+      <a href="#s-conj" data-t="nav_conj">Conjuntura</a>
       <a href="#s-prov" data-t="nav_prov">La província</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
@@ -90,9 +91,18 @@
     </div>
   </section>
 
+  <section id="s-conj" class="amplada sec" aria-labelledby="h-conj">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">02</span> <span data-t="nav_conj">Conjuntura</span></p>
+      <h2 id="h-conj" data-t="h_conj">Com va la província, mes a mes</h2>
+      <p class="lead" data-t="lead_conj">L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.</p>
+    </header>
+    <div class="cj-graella" id="conj"></div>
+  </section>
+
   <section id="s-prov" class="amplada sec" aria-labelledby="h-prov2">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">02</span> <span data-t="nav_prov">La província</span></p>
+      <p class="sobre"><span class="num">03</span> <span data-t="nav_prov">La província</span></p>
       <h2 id="h-prov2" data-t="h_prov2">Girona davant Catalunya i Espanya</h2>
       <p class="lead" data-t="lead_prov">Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades.</p>
     </header>
@@ -101,7 +111,7 @@
 
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">03</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">04</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -137,6 +147,9 @@
       <li><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra">població, treball, ajuntaments, energia</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/">Dades obertes de la Generalitat</a><span data-t="f_gen">renda garantida, autoconsum, residus</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/3cre-fa8v">CatSalut i Observatori del Sistema de Salut</a><span data-t="f_salut">defuncions, població i atenció primària per àrea bàsica de salut</span></li>
+      <li><a href="https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-estadisticos/municipios.html">SEPE</a><span data-t="f_sepe">atur registrat i contractes per municipi, cada mes</span></li>
+      <li><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INE, estadístiques mensuals</a><span data-t="f_ine_mes">compravendes, hipoteques, IPC i ocupació hotelera de la província</span></li>
+      <li><a href="https://analisi.transparenciacatalunya.cat/d/j8h8-vxug">Secretaria d'Habitatge</a><span data-t="f_iniciats">habitatges iniciats i acabats per municipi, cada trimestre</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/qnyt-emjc">Mossos d'Esquadra</a><span data-t="f_mossos">fets penals per àrea bàsica policial</span></li>
       <li><a href="https://www.idescat.cat/codis/?id=50&amp;n=87">Idescat, codis territorials</a><span data-t="f_idescat_codis">divisions territorials dels Agents Rurals i dels Bombers (municipis de cada àrea)</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/g2ay-3vnj">Bombers de la Generalitat</a><span data-t="f_bombers">actuacions per municipi</span></li>
@@ -152,6 +165,7 @@
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="app.js"></script>
 <script src="mapa.js"></script>
+<script src="conjuntura.js"></script>
 <script src="provincia.js"></script>
 </body>
 </html>

@@ -176,11 +176,13 @@ poblacion_empleo:
     frecuencia: anual
     estado: por_confirmar
   - id: atur_registrat
-    nombre: Paro registrado
-    organismo: Observatori del Treball / SEPE
+    nombre: Paro registrado, contratos y demandantes de empleo
+    organismo: SEPE (datos abiertos)
+    descarga: https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Paro_por_municipios_{año}_csv.csv
+    modulo: fuentes/conjuntura.py
     nivel: [municipio]
     frecuencia: mensual
-    estado: por_confirmar
+    estado: comprobada
 mortalidad_movilidad_estacional:
   - id: ine_defunciones
     nombre: Defunciones y tasa de mortalidad
