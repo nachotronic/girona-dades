@@ -27,6 +27,13 @@
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
+ "comerc": {
+  "estat": "ok",
+  "intent": "2026-11-16T15:31:22Z",
+  "ok": "2026-11-16T15:31:22Z",
+  "durada": 3,
+  "resum": "CECC 4735 files, anys 2017,2018,2019,2021,2023, 217 municipis de Girona; sense codi: Bellver de Cerdanya, Brunyola, Calonge, Calonge de Segarra, Castell-Platja d'Aro, Fogars de la Selva, Lles de Cerdanya, Masarac, Montellà i Martinet, Palamós, Prats i Sansor, Prullans, Riu de Cerdanya; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc"
+ },
  "conjuntura": {
   "estat": "ok",
   "intent": "2026-11-16T14:00:18Z",
