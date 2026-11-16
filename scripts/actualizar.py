@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "aena", "eleccions", "aeat", "padro", "pressupostos", "tributs"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "aena", "eleccions", "aeat", "padro", "pressupostos", "tributs", "cgpj", "interior"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -69,6 +69,8 @@ FONTS = {
     "padro": ("INE, padró i empreses (DIRCE)", "anual"),
     "pressupostos": ("Generalitat, liquidació dels pressupostos municipals", "anual"),
     "tributs": ("Ministerio de Hacienda, tipus impositius municipals", "anual"),
+    "cgpj": ("CGPJ, estadística judicial per partit judicial", "trimestral"),
+    "interior": ("Ministerio del Interior, Balance de Criminalidad", "trimestral"),
 }
 
 
