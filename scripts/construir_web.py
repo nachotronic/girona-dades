@@ -2108,6 +2108,15 @@ def main():
     for m in municipios:
         m["x"].update(jw["x"].get(m["ine"], {}))
     anys_extra.update(jw["anys"])
+    # Turismo: tema «tur» del mapa, sección Turisme y bloque de la ficha
+    import turisme_web
+    tw = turisme_web.construir(municipios)
+    for m in municipios:
+        if m["ine"] in tw["mun"]:
+            m["tur"] = tw["mun"][m["ine"]]
+        if m["ine"] in tw["fitxa"]:
+            m["turf"] = tw["fitxa"][m["ine"]]
+    anys_extra.update(tw["anys"])
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -2127,7 +2136,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "com_ref": refs_com, "sol_mes": mes_sol,
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"],
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

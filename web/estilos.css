@@ -585,7 +585,7 @@ tbody tr:hover td:first-child { background: var(--fons-2); }
 }
 /* Gráficos de La província y ficha: márgenes en tablet */
 @media (min-width: 641px) and (max-width: 980px) { .fitxa h2 { font-size: 44px; } }
-@media (max-width: 760px) { .menu a { white-space: nowrap; font-size: 10.5px; letter-spacing: .02em; } }
+@media (max-width: 760px) { .menu { overflow-x: auto; scrollbar-width: none; } .menu::-webkit-scrollbar { display: none; } .menu a { flex: 1 0 auto; padding-left: 9px; padding-right: 9px; white-space: nowrap; font-size: 10.5px; letter-spacing: .02em; } }
 @media (max-width: 640px) {
   .pg-fig figcaption { display: block; }
   .pg-fig figcaption .unitat { display: block; text-align: left; margin-top: 4px; }
@@ -930,6 +930,22 @@ th, td { padding-left: 10px; padding-right: 10px; }
 }
 
 .pb-n { font: 400 11px var(--mono); color: var(--text-3); white-space: nowrap; }
+
+/* Turismo: ficha del municipio y sección */
+.tur-xifres { margin-bottom: 40px; }
+.fitxa-tur { margin-top: 40px; }
+.tu .xifres { margin: 8px 0 24px; }
+.tu-dos { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.tu-barres { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; height: 180px; align-items: end; padding-top: 8px; }
+.tu-mes { display: flex; flex-direction: column; align-items: center; height: 100%; }
+.tu-col { flex: 1; width: 100%; display: flex; flex-direction: column-reverse; }
+.tu-col b { display: block; width: 100%; }
+.tu-rec, .tu-lleg i.tu-rec { background: var(--serie-1); }
+.tu-int, .tu-lleg i.tu-int { background: var(--serie-2); }
+.tu-mes i { font: 400 11px/1 var(--mono); color: var(--text-3); margin-top: 6px; font-style: normal; }
+.tu-lleg { display: flex; gap: 16px; font: 400 12px/1.2 var(--mono); color: var(--text-2); margin: 10px 0 0; }
+.tu-lleg i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
+
 /* Fitxa: comerç */
 .fx-com { grid-column: 1 / -1; }
 .fx-grans { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--tinta); }

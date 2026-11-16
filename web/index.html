@@ -26,6 +26,7 @@
       <a href="#s-mapa" data-t="nav_mapa">Mapa</a>
       <a href="#s-conj" data-t="nav_conj">Conjuntura</a>
       <a href="#s-prov" data-t="nav_prov">La província</a>
+      <a href="#s-tur" data-t="nav_tur">Turisme</a>
       <a href="#s-salut" data-t="nav_salut">Salut</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
@@ -120,9 +121,19 @@
     <div class="pg-graella" id="prov-grafics"></div>
   </section>
 
+  <section id="s-tur" class="amplada sec" aria-labelledby="h-tur">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">04</span> <span data-t="nav_tur">Turisme</span></p>
+      <h2 id="h-tur" data-t="h_tur">Qui ve, on dorm i quant gasta</h2>
+      <p class="lead" data-t="lead_tur">Places, pernoctacions, ocupació, preus dels hotels, d'on vénen els turistes i quant gasten. Província de Girona davant Catalunya i Espanya. Al mapa, el tema «Turisme» ho baixa a cada municipi.</p>
+    </header>
+    <div class="xifres tur-xifres" id="tur-xifres"></div>
+    <div class="pg-graella" id="tur-grafics"></div>
+  </section>
+
   <section id="s-salut" class="amplada sec" aria-labelledby="h-salut">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">04</span> <span data-t="nav_salut">Salut</span></p>
+      <p class="sobre"><span class="num">05</span> <span data-t="nav_salut">Salut</span></p>
       <h2 id="h-salut" data-t="h_salut">Llistes d'espera, receptes i infeccions</h2>
       <p class="lead" data-t="lead_salut">Quant s'espera per operar-se o per veure l'especialista a cada hospital, quants medicaments es receten i com circulen la grip i les infeccions respiratòries. Regió sanitària de Girona davant Catalunya.</p>
     </header>
@@ -131,7 +142,7 @@
 
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">05</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">06</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -191,6 +202,9 @@
       <li data-font="dgt"><a href="https://www.dgt.es/menusecundario/dgt-en-cifras/matraba-listados/">DGT</a><span data-t="f_dgt">matriculacions de vehicles per municipi, cada mes</span></li>
       <li data-font="comerc"><a href="https://censcomerc.empresa.gencat.cat/#/territori">Generalitat, Cens d'establiments comercials</a><span data-t="f_comerc">comerços i superfície de venda per sector i municipi, locals buits (Mapa del Comerç Català 2022) i llicències de grans establiments</span></li>
       <li data-font="aena"><a href="https://www.aena.es/es/estadisticas/informes-mensuales.html">Aena</a><span data-t="f_aena">passatgers de l'aeroport de Girona, cada mes</span></li>
+      <li data-font="turisme"><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INE, turisme</a><span data-t="f_turisme">ocupació, preus dels hotels, despesa i turistes per municipi segons la telefonia mòbil</span></li>
+      <li data-font="turisme"><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra_tur">hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any</span></li>
+      <li data-font="turisme"><a href="https://analisi.transparenciacatalunya.cat/d/q4sr-68c3">Agència Tributària de Catalunya</a><span data-t="f_ieet">impost sobre les estades en establiments turístics</span></li>
     </ul>
     <p class="peu-meta"><span data-t="actualitzat">Actualitzat el</span> <span class="data-gen"></span> · <a href="https://github.com/nachotronic/girona-dades" data-t="codi">Codi i dades a GitHub</a></p>
   </div>
@@ -204,6 +218,7 @@
 <script src="provincia.js"></script>
 <script src="resum.js"></script>
 <script src="tributs.js"></script>
+<script src="turisme.js"></script>
 <script src="insercio.js"></script>
 </body>
 </html>

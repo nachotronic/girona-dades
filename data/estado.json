@@ -174,6 +174,13 @@
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
+ "turisme": {
+  "estat": "avís",
+  "intent": "2026-11-16T16:19:19Z",
+  "ok": null,
+  "durada": 1403,
+  "resum": "s, ocupación y personal por provincias: 6 series\nINE 2061 Apartamentos: estancia media por provincias: 1 series\nINE 2073 Turismo rural: viajeros y pernoctaciones por provincias: 4 series\nINE 2070 Turismo rural: plazas, ocupación y personal por provincias: 6 series\nINE 2067 Turismo rural: estancia media por provincias: 1 series\nINE 48427 Pernoctaciones en alojamientos turísticos y de corta estancia por provincias (mensual): 6 series\nINE 48440 Ocupación en alojamientos turísticos y de corta estancia (anual): 9 series\nINE 23998 EGATUR: gasto de los turistas internacionales por CCAA de destino: 16 series\nINE 24745 EGATUR: partidas de gasto por CCAA: 32 series\nINE 23988 FRONTUR: turistas internacionales por CCAA de destino: 4 series\nINE 52047 Turistas extranjeros por provincia de destino y país (telefonía móvil): 1266 series\nINE 52997 Turistas residentes por provincia de destino y provincia de origen (telefonía móvil): 1251 series\nXifra hotels: 23 anys (2003–2025)\nXifra campings: 23 anys (2003–2025)\nXifra rural: 23 anys (2003–2025)\nXifra oficines: 32 anys (1994–2025)\nXifra hut: 11 anys (2015–2025)\nXifra apart: 11 anys (2015–2025)\nTelefonía móvil rec (52048): ERROR TypeError: string indices must be integers, not 'str'\nTelefonía móvil int (53464): 221 municipios\nViviendas turísticas INE 39363 (viviendas y plazas): 221 municipios\nViviendas turísticas INE 39366 (porcentaje sobre las viviendas): 221 municipios\n2nmt-74sj → ieet_comarques.csv: 790 files\n83qv-sib8 → platges.csv: 271 files"
+ },
  "universitaris": {
   "estat": "ok",
   "intent": "2026-11-16T12:19:03Z",
