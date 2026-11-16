@@ -205,6 +205,111 @@
     font_mossos: "Fuente: Mossos d'Esquadra, hechos penales conocidos", font_interior: "Fuente: Ministerio del Interior, Balance de Criminalidad",
     font_cgpj: "Fuente: Consejo General del Poder Judicial",
   });
+  // Turismo
+  Object.assign(TP.ca, {
+    t_pern_idx: ["Nits d'hotel", "Pernoctacions hoteleres a l'any, índex 2019 = 100"],
+    h_t_pern_idx: (n, a, v) => `<b>${n} milions</b> de nits d'hotel a la província el ${a}, ${v} que el 2019.`,
+    t_pern_tipus: ["On dormen", "Pernoctacions per tipus d'allotjament (milions)"],
+    h_t_pern_tipus: (t, a, g, p) => `<b>${t} milions</b> de pernoctacions en allotjaments turístics el ${a}. Els ${g} en sumen el ${p}.`,
+    t_pern_evol: ["Hotels, càmpings i la resta", "Pernoctacions a l'any (milions)"],
+    tt_noms: { gi: "Hotels", cat: "Càmpings", esp: "Apartaments i turisme rural" },
+    h_t_pern_evol: (h, c, a) => `Els hotels van sumar <b>${h} milions</b> de nits el ${a}; els càmpings, ${c} milions.`,
+    t_estac: ["Quan vénen", "Pernoctacions hoteleres de cada mes (% de l'any)"],
+    h_t_estac: (g, c) => `El juliol i l'agost concentren <b>el ${g}</b> de les nits d'hotel de la província. A Catalunya, el ${c}.`,
+    t_ocup: ["Ocupació dels hotels", "Grau d'ocupació per places, mitjana de l'any (%)"],
+    h_t_ocup: (g, a, c, e) => `Els hotels de la província van tenir ocupades <b>el ${g}</b> de les places el ${a} (Catalunya, ${c}; Espanya, ${e}).`,
+    t_adr: ["Preu de l'habitació", "Tarifa mitjana diària, ADR (€)"],
+    h_t_adr: (g, a, c) => `Una habitació d'hotel costava <b>${g} €</b> per nit de mitjana el ${a}. A Catalunya, ${c} €.`,
+    t_revpar: ["Ingrés per habitació", "Ingrés per habitació disponible, RevPAR (€)"],
+    h_t_revpar: (g, a, c) => `Cada habitació disponible va ingressar <b>${g} €</b> per nit de mitjana el ${a} (Catalunya, ${c} €).`,
+    t_estada: ["Quants dies es queden", "Estada mitjana als hotels (dies)"],
+    h_t_estada: (g, a, e) => `L'estada mitjana als hotels de la província és de <b>${g} dies</b> (${a}). A Espanya, ${e}.`,
+    t_ext: ["Turisme estranger", "Pernoctacions hoteleres de residents a l'estranger (%)"],
+    h_t_ext: (g, a) => `<b>El ${g}</b> de les nits d'hotel són de turistes estrangers (${a}).`,
+    t_personal: ["Feina als allotjaments", "Persones ocupades, mitjana de l'any"],
+    h_t_personal: (h, c, a) => `Els hotels de la província donen feina a <b>${h} persones</b> de mitjana (${a}); els càmpings, a ${c}.`,
+    t_punts: ["Destinacions", "Pernoctacions hoteleres per punt turístic (milions)"],
+    h_t_punts: (p, v, a) => `<b>${p}</b> és el primer destí hoteler de la província: ${v} milions de nits el ${a}.`,
+    t_orig_ext: ["D'on vénen els estrangers", "Turistes estrangers per país (%, telefonia mòbil)"],
+    h_t_orig_ext: (p, v, n, a) => `<b>${p}</b>: el ${v} dels ${n} milions de visites de turistes estrangers del ${a}.`,
+    t_orig_nac: ["D'on vénen els de fora", "Turistes d'altres províncies per comunitat (%, telefonia mòbil)"],
+    h_t_orig_nac: (p, v, a) => `El ${v} dels turistes espanyols d'altres províncies són de <b>${p}</b> (${a}).`,
+    t_mov_mes: ["Turistes cada mes", "Turistes a la província segons la telefonia mòbil"],
+    mov_noms: { gi: "Estrangers", cat: "D'altres províncies" },
+    h_t_mov_mes: (v, d) => `<b>${v}</b> turistes estrangers a la província el ${d}, segons la posició dels mòbils.`,
+    t_gasto_pers: ["Quant gasten", "Despesa mitjana per turista estranger i viatge (€)"],
+    h_t_gasto_pers: (c, a, e) => `Un turista estranger gasta <b>${c} €</b> per viatge a Catalunya (${a}). A Espanya, ${e} €.`,
+    t_gasto_dia: ["Despesa per dia", "Despesa mitjana diària per turista estranger (€)"],
+    h_t_gasto_dia: (c, a, e) => `<b>${c} €</b> al dia per turista estranger a Catalunya (${a}); ${e} € a Espanya.`,
+    t_ieet: ["Impost turístic", "Recaptació de l'IEET a les comarques gironines (milions d'€)"],
+    h_t_ieet: (v, a) => `L'impost turístic va recaptar <b>${v} milions d'euros</b> a les comarques gironines el ${a}.`,
+    t_ieet_tipus: ["Qui paga l'impost", "Recaptació de l'IEET per tipus d'allotjament (milions d'€)"],
+    h_t_ieet_tipus: (g, v, a) => `Els <b>${g}</b> aporten ${v} milions de l'impost turístic (${a}).`,
+    t_places: ["Places turístiques", "Places per tipus d'allotjament, avui"],
+    h_t_places: (n, p) => `La província té <b>${n} places turístiques</b>, ${p} per cada 100 habitants.`,
+    t_aena: ["Aeroport de Girona", "Passatgers a l'any (milions)"],
+    h_t_aena: (v, a) => `<b>${v} milions</b> de passatgers a l'aeroport de Girona el ${a}.`,
+    tt: { hotel: "Hotels", camp: "Càmpings", apt: "Apartaments turístics", rural: "Turisme rural", hut: "Habitatges d'ús turístic", llar: "Llars compartides", plat: "Pisos de plataformes", alberg: "Albergs", altres: "Altres", creuers: "Creuers" },
+    mesos_c: ["gen", "feb", "mar", "abr", "mai", "jun", "jul", "ago", "set", "oct", "nov", "des"],
+    font_tur: "Font: INE, enquestes d'ocupació en allotjaments turístics", font_irsh: "Font: INE, indicadors de rendibilitat del sector hoteler",
+    font_mov: "Font: INE, mesurament del turisme a partir de la telefonia mòbil (estadística experimental)", font_egatur: "Font: INE, Egatur (Catalunya i Espanya; no hi ha dada provincial)",
+    font_ieet: "Font: Agència Tributària de Catalunya, IEET per comarca", font_reg: "Font: Registre de Turisme de Catalunya", font_aena: "Font: Aena",
+  });
+  Object.assign(TP.es, {
+    t_pern_idx: ["Noches de hotel", "Pernoctaciones hoteleras al año, índice 2019 = 100"],
+    h_t_pern_idx: (n, a, v) => `<b>${n} millones</b> de noches de hotel en la provincia en ${a}, ${v} que en 2019.`,
+    t_pern_tipus: ["Dónde duermen", "Pernoctaciones por tipo de alojamiento (millones)"],
+    h_t_pern_tipus: (t, a, g, p) => `<b>${t} millones</b> de pernoctaciones en alojamientos turísticos en ${a}. Los ${g} suman el ${p}.`,
+    t_pern_evol: ["Hoteles, campings y el resto", "Pernoctaciones al año (millones)"],
+    tt_noms: { gi: "Hoteles", cat: "Campings", esp: "Apartamentos y turismo rural" },
+    h_t_pern_evol: (h, c, a) => `Los hoteles sumaron <b>${h} millones</b> de noches en ${a}; los campings, ${c} millones.`,
+    t_estac: ["Cuándo vienen", "Pernoctaciones hoteleras de cada mes (% del año)"],
+    h_t_estac: (g, c) => `Julio y agosto concentran <b>el ${g}</b> de las noches de hotel de la provincia. En Cataluña, el ${c}.`,
+    t_ocup: ["Ocupación de los hoteles", "Grado de ocupación por plazas, media del año (%)"],
+    h_t_ocup: (g, a, c, e) => `Los hoteles de la provincia tuvieron ocupadas <b>el ${g}</b> de las plazas en ${a} (Cataluña, ${c}; España, ${e}).`,
+    t_adr: ["Precio de la habitación", "Tarifa media diaria, ADR (€)"],
+    h_t_adr: (g, a, c) => `Una habitación de hotel costaba <b>${g} €</b> por noche de media en ${a}. En Cataluña, ${c} €.`,
+    t_revpar: ["Ingreso por habitación", "Ingreso por habitación disponible, RevPAR (€)"],
+    h_t_revpar: (g, a, c) => `Cada habitación disponible ingresó <b>${g} €</b> por noche de media en ${a} (Cataluña, ${c} €).`,
+    t_estada: ["Cuántos días se quedan", "Estancia media en los hoteles (días)"],
+    h_t_estada: (g, a, e) => `La estancia media en los hoteles de la provincia es de <b>${g} días</b> (${a}). En España, ${e}.`,
+    t_ext: ["Turismo extranjero", "Pernoctaciones hoteleras de residentes en el extranjero (%)"],
+    h_t_ext: (g, a) => `<b>El ${g}</b> de las noches de hotel son de turistas extranjeros (${a}).`,
+    t_personal: ["Empleo en los alojamientos", "Personas ocupadas, media del año"],
+    h_t_personal: (h, c, a) => `Los hoteles de la provincia dan empleo a <b>${h} personas</b> de media (${a}); los campings, a ${c}.`,
+    t_punts: ["Destinos", "Pernoctaciones hoteleras por punto turístico (millones)"],
+    h_t_punts: (p, v, a) => `<b>${p}</b> es el primer destino hotelero de la provincia: ${v} millones de noches en ${a}.`,
+    t_orig_ext: ["De dónde vienen los extranjeros", "Turistas extranjeros por país (%, telefonía móvil)"],
+    h_t_orig_ext: (p, v, n, a) => `<b>${p}</b>: el ${v} de los ${n} millones de visitas de turistas extranjeros de ${a}.`,
+    t_orig_nac: ["De dónde vienen los de fuera", "Turistas de otras provincias por comunidad (%, telefonía móvil)"],
+    h_t_orig_nac: (p, v, a) => `El ${v} de los turistas españoles de otras provincias son de <b>${p}</b> (${a}).`,
+    t_mov_mes: ["Turistas cada mes", "Turistas en la provincia según la telefonía móvil"],
+    mov_noms: { gi: "Extranjeros", cat: "De otras provincias" },
+    h_t_mov_mes: (v, d) => `<b>${v}</b> turistas extranjeros en la provincia en ${d}, según la posición de los móviles.`,
+    t_gasto_pers: ["Cuánto gastan", "Gasto medio por turista extranjero y viaje (€)"],
+    h_t_gasto_pers: (c, a, e) => `Un turista extranjero gasta <b>${c} €</b> por viaje en Cataluña (${a}). En España, ${e} €.`,
+    t_gasto_dia: ["Gasto por día", "Gasto medio diario por turista extranjero (€)"],
+    h_t_gasto_dia: (c, a, e) => `<b>${c} €</b> al día por turista extranjero en Cataluña (${a}); ${e} € en España.`,
+    t_ieet: ["Impuesto turístico", "Recaudación del IEET en las comarcas gerundenses (millones de €)"],
+    h_t_ieet: (v, a) => `El impuesto turístico recaudó <b>${v} millones de euros</b> en las comarcas gerundenses en ${a}.`,
+    t_ieet_tipus: ["Quién paga el impuesto", "Recaudación del IEET por tipo de alojamiento (millones de €)"],
+    h_t_ieet_tipus: (g, v, a) => `Los <b>${g}</b> aportan ${v} millones del impuesto turístico (${a}).`,
+    t_places: ["Plazas turísticas", "Plazas por tipo de alojamiento, hoy"],
+    h_t_places: (n, p) => `La provincia tiene <b>${n} plazas turísticas</b>, ${p} por cada 100 habitantes.`,
+    t_aena: ["Aeropuerto de Girona", "Pasajeros al año (millones)"],
+    h_t_aena: (v, a) => `<b>${v} millones</b> de pasajeros en el aeropuerto de Girona en ${a}.`,
+    tt: { hotel: "Hoteles", camp: "Campings", apt: "Apartamentos turísticos", rural: "Turismo rural", hut: "Viviendas de uso turístico", llar: "Hogares compartidos", plat: "Pisos de plataformas", alberg: "Albergues", altres: "Otros", creuers: "Cruceros" },
+    mesos_c: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+    font_tur: "Fuente: INE, encuestas de ocupación en alojamientos turísticos", font_irsh: "Fuente: INE, indicadores de rentabilidad del sector hotelero",
+    font_mov: "Fuente: INE, medición del turismo a partir de la telefonía móvil (estadística experimental)", font_egatur: "Fuente: INE, Egatur (Cataluña y España; no hay dato provincial)",
+    font_ieet: "Fuente: Agència Tributària de Catalunya, IEET por comarca", font_reg: "Fuente: Registre de Turisme de Catalunya", font_aena: "Fuente: Aena",
+  });
+  const ORIG = {
+    Francia: ["França", "Francia"], Alemania: ["Alemanya", "Alemania"], "Reino Unido": ["Regne Unit", "Reino Unido"], "Países Bajos": ["Països Baixos", "Países Bajos"],
+    "Bélgica": ["Bèlgica", "Bélgica"], Suiza: ["Suïssa", "Suiza"], Italia: ["Itàlia", "Italia"], "Estados Unidos de América": ["Estats Units", "Estados Unidos"], Irlanda: ["Irlanda", "Irlanda"],
+    "Cataluña": ["Catalunya (Barcelona, Lleida i Tarragona)", "Cataluña (Barcelona, Lleida y Tarragona)"], "Madrid, Comunidad de": ["Madrid", "Madrid"], "Comunitat Valenciana": ["País Valencià", "Comunidad Valenciana"],
+    "Aragón": ["Aragó", "Aragón"], "Andalucía": ["Andalusia", "Andalucía"],
+  };
   const MO = {
     furts: ["Furts", "Hurtos"], robatori_forca: ["Robatoris amb força", "Robos con fuerza"], robatori_vehicle: ["Robatoris en vehicles", "Robos en vehículos"],
     robatori_violencia: ["Robatoris amb violència", "Robos con violencia"], estafes: ["Estafes", "Estafas"], danys: ["Danys", "Daños"], lesions: ["Lesions", "Lesiones"],
@@ -244,7 +349,7 @@
   };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : "");
   const etiqueta = (e) => {
@@ -345,7 +450,32 @@
     if (id === "rec_hab" || id === "rec_euros") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp(`h_${id}`, fmt(g[2], id === "rec_hab" ? 1 : 0), g[1], fmt(c && c[2], id === "rec_hab" ? 1 : 0)) : ""; }
     if (id === "rec_grups") { const g = sp.grups[0]; return g ? tp("h_rec_grups", nomGrup(g.g, g.c), fmt(g.gi, 1), fmt(g.cat, 1)) : ""; }
     if (id === "inf_setm" || id === "grip_setm") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_inf", fmt(g[2]), tp("setmana", etiqueta(g[1])), fmt(c && c[2])) : ""; }
+    if (/^t_/.test(id)) return titularTur(id, sp);
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
+    return "";
+  }
+
+  function titularTur(id, sp) {
+    const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), gs = sp.grups || [];
+    const d0 = (v) => fmt(v, 0), d1 = (v) => fmt(v, 1);
+    if (id === "t_pern_idx" && g) return tp("h_t_pern_idx", d1(sp.abs.gi / 1e6), g[1], delta(g[2]));
+    if (id === "t_pern_tipus" && gs.length) return tp("h_t_pern_tipus", d1(sp.total), sp.any, nomGrup(gs[0].g, gs[0].c).toLowerCase(), pct((gs[0].gi / sp.total) * 100, 0));
+    if (id === "t_pern_evol" && g) return tp("h_t_pern_evol", d1(g[2]), c ? d1(c[2]) : "–", g[1]);
+    if (id === "t_estac" && gs.length >= 8) { const s = (k) => (gs[6][k] || 0) + (gs[7][k] || 0); return tp("h_t_estac", pct(s("gi"), 0), pct(s("cat"), 0)); }
+    if (id === "t_ocup" && g) return tp("h_t_ocup", pct(g[2], 0), g[1], c ? pct(c[2], 0) : "–", e ? pct(e[2], 0) : "–");
+    if ((id === "t_adr" || id === "t_revpar") && g) return tp("h_" + id, d0(g[2]), g[1], c ? d0(c[2]) : "–");
+    if (id === "t_estada" && g) return tp("h_t_estada", fmt(g[2], 1), g[1], e ? fmt(e[2], 1) : "–");
+    if (id === "t_ext" && g) return tp("h_t_ext", pct(g[2], 0), g[1]);
+    if (id === "t_personal" && g) return tp("h_t_personal", d0(g[2]), c ? d0(c[2]) : "–", g[1]);
+    if (id === "t_punts" && gs.length) return tp("h_t_punts", gs[0].g, fmt(gs[0].gi, 1), sp.any);
+    if (id === "t_orig_ext" && gs.length) return tp("h_t_orig_ext", nomGrup(gs[0].g, gs[0].c), pct(gs[0].gi, 0), fmt(sp.total / 1e6, 1), sp.any);
+    if (id === "t_orig_nac" && gs.length) return tp("h_t_orig_nac", nomGrup(gs[0].g, gs[0].c), pct(gs[0].gi, 0), sp.any);
+    if (id === "t_mov_mes" && g) return tp("h_t_mov_mes", d0(g[2]), etiqueta(g[1]));
+    if ((id === "t_gasto_pers" || id === "t_gasto_dia") && c) return tp("h_" + id, d0(c[2]), c[1], e ? d0(e[2]) : "–");
+    if (id === "t_ieet" && g) return tp("h_t_ieet", fmt(g[2], 1), g[1]);
+    if (id === "t_ieet_tipus" && gs.length) return tp("h_t_ieet_tipus", nomGrup(gs[0].g, gs[0].c).toLowerCase(), fmt(gs[0].gi, 1), sp.any);
+    if (id === "t_places" && sp.total) return tp("h_t_places", d0(sp.total), D.tur.t_resum && D.tur.t_resum.pob ? d0((sp.total / D.tur.t_resum.pob) * 100) : "–");
+    if (id === "t_aena" && g) return tp("h_t_aena", fmt(g[2], 2), g[1]);
     return "";
   }
 
@@ -369,8 +499,17 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
     pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+  };
+
+  window.pintaSeccioTurisme = () => {
+    const T = { ...(D.tur || {}), ...(D.prov && D.prov.destins ? { destins: D.prov.destins } : {}) }, sec = document.getElementById("s-tur");
+    if (!T || !Object.keys(T).length) { if (sec) sec.hidden = true; return; }
+    const ids = ["t_places", "t_pern_tipus", "t_pern_idx", "t_pern_evol", "t_estac", "t_mov_mes", "t_orig_ext", "t_orig_nac", "t_ext", "t_punts", "destins", "t_ocup", "t_estada", "t_adr", "t_revpar", "t_gasto_pers", "t_gasto_dia", "t_ieet", "t_ieet_tipus", "t_personal", "t_aena"];
+    const font = (id) => (/^t_(adr|revpar)$/.test(id) ? "font_irsh" : /^t_(orig|mov)/.test(id) ? "font_mov" : /^t_gasto/.test(id) ? "font_egatur" : /^t_ieet/.test(id) ? "font_ieet" : id === "t_places" ? "font_reg" : id === "t_aena" ? "font_aena" : "font_tur");
+    pintaGrafics(document.getElementById("tur-grafics"), T, ids, font);
+    if (window.xifresTurisme) window.xifresTurisme(document.getElementById("tur-xifres"));
   };
 
   window.pintaSeccioSalut = () => {

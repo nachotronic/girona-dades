@@ -126,6 +126,8 @@ TAULES_INE = {
     # Gasto de los turistas internacionales (EGATUR) por CCAA
     "23998": "EGATUR: gasto de los turistas internacionales por CCAA de destino",
     "24745": "EGATUR: partidas de gasto por CCAA",
+    # Turistas internacionales (Frontur) por CCAA de destino
+    "23988": "FRONTUR: turistas internacionales por CCAA de destino",
     # Telefonía móvil (experimental): turistas por provincia de destino
     "52047": "Turistas extranjeros por provincia de destino y país (telefonía móvil)",
     "52997": "Turistas residentes por provincia de destino y provincia de origen (telefonía móvil)",
@@ -178,20 +180,39 @@ ORIGENS = {"Total", "Total Nacional", "Francia", "Alemania", "Reino Unido", "Pa�
            "Estados Unidos de América", "Irlanda", "Cataluña", "Madrid, Comunidad de", "Comunitat Valenciana", "Aragón", "Andalucía"}
 
 
+def _valors_municipis(taula: str) -> list[dict]:
+    """Valores de la variable «municipio» de la tabla para los municipios de Girona (con reintentos)."""
+    for intent in range(4):
+        try:
+            grups = get(f"{INE}/GRUPOS_TABLA/{taula}").json()
+            gm = next(g for g in grups if "unicipio" in g["Nombre"])
+            vals = get(f"{INE}/VALORES_GRUPOSTABLA/{taula}/{gm['Id']}").json()
+            return [v for v in vals if re.match(r"^17\d{3}$", str(v.get("Codigo", "")))]
+        except Exception:  # noqa: BLE001
+            if intent == 3:
+                raise
+            time.sleep(10 * (intent + 1))
+    return []
+
+
+def _per_municipi(taula: str, nult: int):
+    """Descarga la tabla municipio a municipio (filtro tv=variable:valor). Devuelve (municipio, series), errores."""
+    vals = _valors_municipis(taula)
+    res, errors = [], 0
+    for v in vals:
+        try:
+            res.append((v, get(f"{INE}/DATOS_TABLA/{taula}?tv={v['FK_Variable']}:{v['Id']}&nult={nult}", timeout=300, pausa=0.2).json()))
+        except Exception:  # noqa: BLE001
+            errors += 1
+    return res, errors, len(vals)
+
+
 def movils() -> tuple[pd.DataFrame, list[str]]:
     files, lin = [], []
     for clau, (taula, _) in MOVILS.items():
         try:
-            grups = get(f"{INE}/GRUPOS_TABLA/{taula}").json()
-            gm = next(g for g in grups if "unicipio" in g["Nombre"])
-            vals = [v for v in get(f"{INE}/VALORES_GRUPOSTABLA/{taula}/{gm['Id']}").json() if re.match(r"^17\d{3}$", str(v.get("Codigo", "")))]
-            errors = 0
-            for v in vals:
-                try:
-                    d = get(f"{INE}/DATOS_TABLA/{taula}?tv={v['FK_Variable']}:{v['Id']}&nult=120", timeout=300, pausa=0.2).json()
-                except Exception:  # noqa: BLE001
-                    errors += 1
-                    continue
+            dades, errors, n = _per_municipi(taula, 120)
+            for v, d in dades:
                 for s in d:
                     parts = [x.strip() for x in s["Nombre"].split(".") if x.strip()]
                     orig = next((x for x in parts if x not in ("Turistas", "Dato base", v["Nombre"])), None)
@@ -200,9 +221,33 @@ def movils() -> tuple[pd.DataFrame, list[str]]:
                     for p in s.get("Data", []):
                         if p.get("Valor") is not None and 1 <= p.get("FK_Periodo", 0) <= 12:
                             files.append({"t": clau, "ine": v["Codigo"], "orig": orig, "mes": f"{p['Anyo']}-{p['FK_Periodo']:02d}", "turistes": p["Valor"]})
-            lin.append(f"Telefonía móvil {clau} ({taula}): {len(vals)} municipios" + (f", ERROR en {errors}" if errors else ""))
+            lin.append(f"Telefonía móvil {clau} ({taula}): {n} municipios" + (f", ERROR en {errors}" if errors else ""))
         except Exception as e:  # noqa: BLE001
             lin.append(f"Telefonía móvil {clau} ({taula}): ERROR {type(e).__name__}: {str(e)[:120]}")
+    return pd.DataFrame(files), lin
+
+
+# INE experimental: viviendas turísticas (anuncios en plataformas) por municipio, semestral
+VTE = {"39363": "viviendas y plazas", "39366": "porcentaje sobre las viviendas"}
+
+
+def vte() -> tuple[pd.DataFrame, list[str]]:
+    files, lin = [], []
+    for taula, nom in VTE.items():
+        try:
+            dades, errors, n = _per_municipi(taula, 30)
+            for v, d in dades:
+                for s in d:
+                    n_ = s["Nombre"]
+                    k = "pct" if "Porcentaje" in n_ else "places_viv" if "por vivienda" in n_ else "places" if "Plazas" in n_ else "viv" if "Viviendas turísticas" in n_ else None
+                    if not k:
+                        continue
+                    for p in s.get("Data", []):
+                        if p.get("Valor") is not None:
+                            files.append({"ine": v["Codigo"], "clau": k, "any": p["Anyo"], "mes": p["FK_Periodo"], "valor": p["Valor"]})
+            lin.append(f"Viviendas turísticas INE {taula} ({nom}): {n} municipios" + (f", ERROR en {errors}" if errors else ""))
+        except Exception as e:  # noqa: BLE001
+            lin.append(f"Viviendas turísticas INE {taula}: ERROR {type(e).__name__}: {str(e)[:120]}")
     return pd.DataFrame(files), lin
 
 
@@ -241,6 +286,15 @@ def ejecutar() -> str:
     m, l = movils()
     lineas += l
     if len(m):
-        m.to_csv(sal / "moviles.csv.gz", index=False)
+        # Si una de las dos tablas falla, se conserva la que había
+        f = sal / "moviles.csv.gz"
+        if f.exists() and set(m["t"]) != set(MOVILS):
+            ant = pd.read_csv(f, dtype={"ine": str})
+            m = pd.concat([ant[~ant["t"].isin(set(m["t"]))], m])
+        m.to_csv(f, index=False)
+    v, l = vte()
+    lineas += l
+    if len(v):
+        v.to_csv(sal / "viviendas_turisticas.csv", index=False)
     lineas += socrata()
     return "\n".join(lineas)

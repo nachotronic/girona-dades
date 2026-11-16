@@ -5,6 +5,7 @@ const T = {
   ca: {
     locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals", f_eleccions: "resultats per secció censal: Parlament, Congrés, municipals i europees (2010-2024)",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
+    nav_tur: "Turisme", h_tur: "Qui ve, on dorm i quant gasta", lead_tur: "Places, pernoctacions, ocupació, preus dels hotels, d'on vénen els turistes i quant gasten. Província de Girona davant Catalunya i Espanya. Al mapa, el tema «Turisme» ho baixa a cada municipi.", f_turisme: "ocupació, preus dels hotels, despesa i turistes per municipi segons la telefonia mòbil", f_xifra_tur: "hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any", f_ieet: "impost sobre les estades en establiments turístics",
     nav_salut: "Salut", h_salut: "Llistes d'espera, receptes i infeccions", lead_salut: "Quant s'espera per operar-se o per veure l'especialista a cada hospital, quants medicaments es receten i com circulen la grip i les infeccions respiratòries. Regió sanitària de Girona davant Catalunya.",
     nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
@@ -91,6 +92,7 @@ const T = {
   es: {
     locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales", f_eleccions: "resultados por sección censal: Parlament, Congreso, municipales y europeas (2010-2024)",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
+    nav_tur: "Turismo", h_tur: "Quién viene, dónde duerme y cuánto gasta", lead_tur: "Plazas, pernoctaciones, ocupación, precios de los hoteles, de dónde vienen los turistas y cuánto gastan. Provincia de Girona frente a Cataluña y España. En el mapa, el tema «Turismo» lo baja a cada municipio.", f_turisme: "ocupación, precios de los hoteles, gasto y turistas por municipio según la telefonía móvil", f_xifra_tur: "hoteles, campings, turismo rural y viviendas de uso turístico por municipio y año", f_ieet: "impuesto sobre las estancias en establecimientos turísticos",
     nav_salut: "Salud", h_salut: "Listas de espera, recetas e infecciones", lead_salut: "Cuánto se espera para operarse o para ver al especialista en cada hospital, cuántos medicamentos se recetan y cómo circulan la gripe y las infecciones respiratorias. Región sanitaria de Girona frente a Cataluña.",
     nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
@@ -500,6 +502,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-conj"></div>
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-extra"></div>
+    <div class="fitxa-tur"></div>
     <div class="fitxa-trib"></div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
@@ -517,6 +520,7 @@ function obreFitxa(ine, desplaca) {
   if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
   if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
   if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
+  if (window.fitxaTurisme) window.fitxaTurisme(f.querySelector(".fitxa-tur"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -576,7 +580,7 @@ function pintaTot() {
   aplicaIdioma();
   pintaProvincia();
   if (window.pintaConjuntura) window.pintaConjuntura();
-  if (window.pintaSeccioProv) { window.pintaSeccioProv(); window.pintaSeccioSalut(); }
+  if (window.pintaSeccioProv) { window.pintaSeccioProv(); window.pintaSeccioSalut(); if (window.pintaSeccioTurisme) window.pintaSeccioTurisme(); }
   pintaTaula();
   const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
   document.querySelectorAll(".data-gen").forEach((e) => { e.textContent = dg; });
@@ -597,7 +601,7 @@ addEventListener("resize", () => {
   ampleAnterior = innerWidth;
   pintaProvincia();
   if (window.pintaConjuntura) window.pintaConjuntura();
-  if (window.pintaSeccioProv) { window.pintaSeccioProv(); window.pintaSeccioSalut(); }
+  if (window.pintaSeccioProv) { window.pintaSeccioProv(); window.pintaSeccioSalut(); if (window.pintaSeccioTurisme) window.pintaSeccioTurisme(); }
   if (seleccionat) obreFitxa(seleccionat, false);
 });
 

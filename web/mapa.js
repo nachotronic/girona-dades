@@ -73,6 +73,7 @@
   // Temas del selector
   const TEMES = [
     { id: "con", ca: "Conjuntura", es: "Coyuntura" },
+    { id: "tur", ca: "Turisme", es: "Turismo" },
     { id: "hab", ca: "Habitatge", es: "Vivienda" },
     { id: "ren", ca: "Renda", es: "Renta" },
     { id: "pob", ca: "Població", es: "Población" },
@@ -113,6 +114,39 @@
   // Parque de vehículos (DGT, anual): m.veh = {clave: {año: valor}}, D.veh_ref = {clave: {año: {gi, cat, esp}}}
   const VH = (k) => (m, a) => (a != null && m.veh && m.veh[k] && m.veh[k][a] != null ? m.veh[k][a] : null);
   const VHR = (k, z) => (a) => { const r = D.veh_ref && D.veh_ref[k] && D.veh_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  // Turismo: m.tur = {clave: {año: valor}}, D.tur_ref = {clave: {año: {gi}}}, D.anys["tur_" + clave] = último año
+  const TU = (k) => (m, a) => (a != null && m.tur && m.tur[k] && m.tur[k][a] != null ? m.tur[k][a] : null);
+  const TUR = (k) => (a) => { const r = D.tur_ref && D.tur_ref[k] && D.tur_ref[k][a]; return r && r.gi != null ? r.gi : null; };
+  const NT = {
+    reg: { ca: "Registre de Turisme de Catalunya (establiments d'alta avui). Taxa sobre la població resident. Als pisos turístics antics sense places informades se'ls assigna la mitjana del municipi.", es: "Registre de Turisme de Catalunya (establecimientos de alta hoy). Tasa sobre la población residente. A los pisos turísticos antiguos sin plazas informadas se les asigna la media del municipio." },
+    xifra: { ca: "Xifra, Diputació de Girona, a partir del Registre de Turisme de Catalunya (situació a final d'any).", es: "Xifra, Diputació de Girona, a partir del Registre de Turisme de Catalunya (situación a final de año)." },
+    camp: { ca: "Places de càmping: Xifra (Diputació de Girona) fins al 2024 i Registre de Turisme de Catalunya avui. Taxa sobre la població resident.", es: "Plazas de camping: Xifra (Diputació de Girona) hasta 2024 y Registre de Turisme de Catalunya hoy. Tasa sobre la población residente." },
+    mov: { ca: "INE, estadística experimental a partir de la posició dels telèfons mòbils: turistes que passen almenys una nit al municipi, sumats els dotze mesos de l'any (un turista que torna un altre mes compta dues vegades). Els d'altres províncies no inclouen els de la mateixa província de Girona.", es: "INE, estadística experimental a partir de la posición de los teléfonos móviles: turistas que pasan al menos una noche en el municipio, sumados los doce meses del año (un turista que vuelve otro mes cuenta dos veces). Los de otras provincias no incluyen los de la misma provincia de Girona." },
+    ieet: { ca: "Agència Tributària de Catalunya: impost sobre les estades en establiments turístics (IEET) i recàrrec municipal, autoliquidacions dels dos semestres. Només els 21 municipis que publica la Generalitat.", es: "Agència Tributària de Catalunya: impuesto sobre las estancias en establecimientos turísticos (IEET) y recargo municipal, autoliquidaciones de los dos semestres. Solo los 21 municipios que publica la Generalitat." },
+    punts: { ca: "INE, Enquesta d'ocupació hotelera: només els punts turístics que l'INE publica (Lloret, Girona, Roses, Platja d'Aro…).", es: "INE, Encuesta de ocupación hotelera: solo los puntos turísticos que publica el INE (Lloret, Girona, Roses, Platja d'Aro…)." },
+  };
+  const TURI = [
+    ["pl_h", ["Places turístiques", "Places en allotjaments turístics per 100 habitants"], ["Plazas turísticas", "Plazas en alojamientos turísticos por 100 habitantes"], NT.reg, N1],
+    ["pl_hotel_h", ["Places d'hotel", "Places d'hotel per 100 habitants"], ["Plazas de hotel", "Plazas de hotel por 100 habitantes"], NT.reg, N1],
+    ["pl_camp_h", ["Places de càmping", "Places de càmping per 100 habitants"], ["Plazas de camping", "Plazas de camping por 100 habitantes"], NT.camp, N1],
+    ["pl_hut_h", ["Places en pisos turístics", "Places en habitatges d'ús turístic per 100 habitants"], ["Plazas en pisos turísticos", "Plazas en viviendas de uso turístico por 100 habitantes"], NT.reg, N1],
+    ["pl_rural_h", ["Places de turisme rural", "Places de turisme rural per 100 habitants"], ["Plazas de turismo rural", "Plazas de turismo rural por 100 habitantes"], NT.reg, N2],
+    ["hut_viv", ["Pisos turístics per habitatge", "Habitatges d'ús turístic per 100 habitatges"], ["Pisos turísticos por vivienda", "Viviendas de uso turístico por 100 viviendas"], NT.xifra, N1],
+    ["hut_n", ["Pisos turístics", "Habitatges d'ús turístic registrats"], ["Pisos turísticos", "Viviendas de uso turístico registradas"], NT.xifra, { sumable: true, ...N0 }],
+    ["hotels", ["Hotels i hostals", "Hotels, hostals i pensions"], ["Hoteles y hostales", "Hoteles, hostales y pensiones"], NT.xifra, { sumable: true, ...N0 }],
+    ["rural_n", ["Cases de turisme rural", "Establiments de turisme rural"], ["Casas de turismo rural", "Establecimientos de turismo rural"], NT.xifra, { sumable: true, ...N0 }],
+    ["mov_rec_h", ["Turistes estrangers", "Turistes estrangers a l'any per habitant (telefonia mòbil)"], ["Turistas extranjeros", "Turistas extranjeros al año por habitante (telefonía móvil)"], NT.mov, N1],
+    ["mov_int_h", ["Turistes d'altres províncies", "Turistes d'altres províncies a l'any per habitant (telefonia mòbil)"], ["Turistas de otras provincias", "Turistas de otras provincias al año por habitante (telefonía móvil)"], NT.mov, N1],
+    ["mov_rec", ["Turistes estrangers (total)", "Turistes estrangers a l'any (telefonia mòbil)"], ["Turistas extranjeros (total)", "Turistas extranjeros al año (telefonía móvil)"], NT.mov, { sumable: true, ...N0 }],
+    ["mov_ext_p", ["Pes del turisme estranger", "Turistes estrangers sobre el total (%)"], ["Peso del turismo extranjero", "Turistas extranjeros sobre el total (%)"], NT.mov, { sumable: false, ...P0 }],
+    ["mov_fr", ["Turistes francesos", "Francesos sobre els turistes estrangers (%)"], ["Turistas franceses", "Franceses sobre los turistas extranjeros (%)"], NT.mov, { sumable: false, ...P0 }],
+    ["estiu_p", ["Estacionalitat", "Turistes del juliol i l'agost sobre els de tot l'any (%)"], ["Estacionalidad", "Turistas de julio y agosto sobre los de todo el año (%)"], NT.mov, { sumable: false, ...P0 }],
+    ["ieet_h", ["Impost turístic", "Impost turístic recaptat per habitant (€/any)"], ["Impuesto turístico", "Impuesto turístico recaudado por habitante (€/año)"], NT.ieet, { cob: 0.05, ...EU }],
+    ["pern_h", ["Nits d'hotel per habitant", "Pernoctacions hoteleres a l'any per habitant"], ["Noches de hotel por habitante", "Pernoctaciones hoteleras al año por habitante"], NT.punts, { cob: 0.02, ...N1 }],
+    ["ocup", ["Ocupació hotelera", "Grau d'ocupació hotelera per places, mitjana de l'any (%)"], ["Ocupación hotelera", "Grado de ocupación hotelera por plazas, media del año (%)"], NT.punts, { cob: 0.02, sumable: false, ...P0 }],
+    ["adr", ["Preu de l'hotel", "Tarifa mitjana diària per habitació, ADR (€)"], ["Precio del hotel", "Tarifa media diaria por habitación, ADR (€)"], NT.punts, { cob: 0.02, sumable: false, ...EU }],
+    ["platges", ["Platges", "Platges i trams de costa catalogats"], ["Playas", "Playas y tramos de costa catalogados"], { ca: "Generalitat, catàleg de platges de Catalunya.", es: "Generalitat, catálogo de playas de Cataluña." }, { sumable: true, ...N0 }],
+  ];
   const NOTA_VEH = { ca: "DGT, dades municipals: vehicles segons el domicili del titular, amb les empreses de lloguer i flotes incloses on tenen la seu.", es: "DGT, datos municipales: vehículos según el domicilio del titular, con las empresas de alquiler y flotas incluidas donde tienen la sede." };
   const VEH = [
     ["total_h", ["Vehicles per habitant", "Parc de vehicles per 1.000 habitants"], ["Vehículos por habitante", "Parque de vehículos por 1.000 habitantes"], N0],
@@ -323,7 +357,7 @@
     { id: "sector_const", tema: "tre", ca: ["Construcció", "Llocs de treball a la construcció (%)"], es: ["Construcción", "Puestos de trabajo en la construcción (%)"], v: X("sector_const"), ...P0 },
     { id: "sector_agri", tema: "tre", ca: ["Agricultura", "Llocs de treball a l'agricultura (%)"], es: ["Agricultura", "Puestos de trabajo en la agricultura (%)"], v: X("sector_agri"), ...P1 },
     { id: "pib_hab", tema: "tre", ca: ["PIB per habitant", "Producte interior brut per habitant (€)"], es: ["PIB por habitante", "Producto interior bruto por habitante (€)"], a: "pib_hab", v: X("pib_hab"), ...EU },
-    { id: "places_tur", tema: "tre", ca: ["Places turístiques", "Places d'hotel, càmping i turisme rural per 1.000 habitants"], es: ["Plazas turísticas", "Plazas de hotel, camping y turismo rural por 1.000 habitantes"], a: "places_tur", v: X("places_tur"), ...N0 },
+    { id: "places_tur", tema: "tur", ca: ["Places turístiques", "Places d'hotel, càmping i turisme rural per 1.000 habitants"], es: ["Plazas turísticas", "Plazas de hotel, camping y turismo rural por 1.000 habitantes"], a: "places_tur", v: X("places_tur"), ...N0 },
     // Salud y servicios sociales
     { id: "pensions", tema: "sal", ca: ["Pensionistes", "Pensions contributives per 100 habitants"], es: ["Pensionistas", "Pensiones contributivas por 100 habitantes"], v: X("pensions"), ...N1 },
     { id: "pnc", tema: "sal", ca: ["Pensions no contributives", "Pensions no contributives per 1.000 habitants"], es: ["Pensiones no contributivas", "Pensiones no contributivas por 1.000 habitantes"], a: "pnc", v: X("pnc"), ...N1 },
@@ -383,6 +417,8 @@
     // Parque de vehículos (DGT)
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
+    // Turismo
+    ...TURI.map(([k, ca, es, nota, ext]) => ({ id: "tur_" + k, tema: "tur", ca, es, a: "tur_" + k, v: (m) => TU(k)(m, D.anys && D.anys["tur_" + k]), t: TU(k), pv: TUR(k), nota, ...ext })),
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
@@ -463,6 +499,8 @@
     { id: "furgonetes", tema: "ter", ca: ["Furgonetes i camions", "Vehicles industrials per 1.000 habitants"], es: ["Furgonetas y camiones", "Vehículos industriales por 1.000 habitantes"], a: "furgonetes", v: X("furgonetes"), nota: NE, ...N0 },
   ];
   NOUS.forEach((n) => { let k = -1; IND.forEach((i, j) => { if (i.tema === n.tema) k = j; }); IND.splice(k + 1, 0, n); });
+  // Turismo: también la población estacional, las segundas residencias y los pisos turísticos del tema Vivienda
+  ["estacional", "segones", "hut"].forEach((id, k) => { const m = IND.find((i) => i.id === id), p = IND.findIndex((i) => i.id === "tur_pl_rural_h"); if (m && p >= 0) IND.splice(p + 1 + k, 0, { ...m, id: "tur_" + id + "_c", tema: "tur" }); });
   // Los indicadores de coyuntura muestran el último periodo con datos
   // Las matriculaciones mensuales también en el tema Vehicles, después del parque
   { const m = IND.find((i) => i.id === "cj_mat"), p = IND.findIndex((i) => i.id === "veh_tur_h"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: "veh_mat", tema: "veh" }); }
@@ -501,7 +539,8 @@
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini", "renda_bruta", "renda_bruta_llar", "renda_mediana"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
-      cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
+      if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
     return cacheAnys[i.id];
   }

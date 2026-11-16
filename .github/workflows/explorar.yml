@@ -15,7 +15,6 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: python scripts/explorar_turisme.py
       - run: python scripts/actualizar.py turisme
       - name: Guardar resultados
         run: |
