@@ -1781,6 +1781,25 @@ def comerc():
     for c in num_cols:
         df[c] = pd.to_numeric(df[c], errors="coerce")
     df = df.drop_duplicates(["municipi", "any"])
+    # Las dades obertes solo traen los sectores de los municipios grandes: el resto sale de la API
+    # de la aplicación del censo (un sector que no aparece = 0 establecimientos)
+    fs = d / "sectors_municipis.csv"
+    if fs.exists():
+        NOMS_API = {"Altres": "altres", "Automoció i carburants": "automoci_i_carburants", "Comerç mixt": "comer_mixt",
+                    "Equipament llar": "equipament_llar", "Equipament persona": "equipament_persona", "Lleure i cultura": "lleure_i_cultura",
+                    "Quotidià alimentari": "quotidi_alimentari_exc_vending", "Quotidià no alimentari": "quotidi_no_alimentari"}
+        sa = pd.read_csv(fs, dtype={"ine": str, "any": int})
+        sa["col"] = sa["sector"].map(NOMS_API)
+        sa = sa[sa["col"].notna()]
+        pv = sa.pivot_table(index=["ine", "any"], columns="col", values="establiments", aggfunc="sum")
+        for (ine, a), fila in pv.iterrows():
+            sel = (df["ine"] == ine) & (df["any"] == a)
+            # Antes de 2021 la API devuelve todos los sectores vacíos en los municipios pequeños: no es un 0
+            if fila.fillna(0).sum() == 0 and (df.loc[sel, "establiments"].fillna(0) > 0).any():
+                continue
+            if sel.any() and df.loc[sel, SECTORS_COM["alim"]].isna().all():
+                for c in SECTORS_COM.values():
+                    df.loc[sel, c] = fila.get(c, 0) if fila.get(c, 0) == fila.get(c, 0) else 0
 
     def calc(x):
         pob, n, sup = x.get("poblaci"), x.get("establiments"), x.get("superf_cie_de_venda_m2")
@@ -1803,7 +1822,13 @@ def comerc():
     for ambit, g in (("gi", gi), ("cat", df)):
         for a, ga in g.groupby("any"):
             s = {c: ga[c].sum() for c in num_cols}
-            for k, v in calc(s).items():
+            o = calc(s)
+            # Sectores: solo con los municipios que los tienen (en Cataluña, los ~120 grandes)
+            gs = ga[ga[SECTORS_COM["alim"]].notna()]
+            if len(gs) < len(ga):
+                os_ = calc({c: gs[c].sum() for c in num_cols})
+                o.update({k: v for k, v in os_.items() if k.startswith("s_") or k == "p_quot"})
+            for k, v in o.items():
                 v = arr(v, k)
                 if v is not None:
                     refs.setdefault(k, {}).setdefault(int(a), {})[ambit] = v
