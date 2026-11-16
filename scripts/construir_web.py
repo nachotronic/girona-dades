@@ -19,6 +19,15 @@ P = RAIZ / "data" / "processed"
 SALIDA = RAIZ / "web" / "datos" / "municipios.json"
 
 
+def estat_fonts() -> dict:
+    """Última descarga correcta y estado de cada fuente (data/estado.json, lo escribe scripts/actualizar.py)."""
+    try:
+        e = json.loads((RAIZ / "data" / "estado.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {k: {"estat": v.get("estat"), "ok": v.get("ok")} for k, v in e.items()}
+
+
 def num(s):
     """'17.794' -> 17794 ; '33,0' -> 33.0 ; NaN -> None"""
     if s is None or (isinstance(s, float) and math.isnan(s)):
@@ -894,7 +903,7 @@ def complements_indicadores(pob):
     # IRPF por municipio (AEAT, municipios de más de 1.000 habitantes)
     fa = P / "aeat" / "irpf_municipios.csv"
     if fa.exists():
-        a = pd.read_csv(fa, dtype={"ine": str, "any": str})
+        a = pd.read_csv(fa, dtype={"ine": str, "any": str}).sort_values("any")  # el último año prevalece
         def c_(row, *noms):
             for n in noms:
                 v = row.get(f"t0|{n}|1")
@@ -1634,6 +1643,7 @@ def main():
             **({"pres": prov_pres} if prov_pres else {}),
         },
         "municipios": municipios,
+        "fonts": estat_fonts(),
     }
     def ordena(o):
         if isinstance(o, dict):

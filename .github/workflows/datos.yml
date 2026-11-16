@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: datos
@@ -34,7 +35,10 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Descargar y procesar
+        id: descarga
+        timeout-minutes: 300  # deja margen dentro de las 340 del job para guardar y avisar
         env:
+          PROBLEMES_MD: ${{ runner.temp }}/problemes.md
           XIFRA_HISTORICO: ${{ inputs.xifra_historico || '0' }}
           FUENTES: ${{ github.event.schedule == '0 9 2-8 * *' && 'conjuntura afiliacio dgt aena provincia mitma' || inputs.fuentes }}
         run: python scripts/actualizar.py $FUENTES
@@ -43,6 +47,47 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed data/estado.md
+          git add data/processed data/estado.md data/estado.json
           git commit -m "Actualizar datos" || { echo "Sin cambios"; exit 0; }
           git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME"
+      # Avisos: una issue abierta (con email al propietario) mientras alguna fuente falle o lleve
+      # más de 15 días sin descargarse bien; se cierra sola cuando todo vuelve a estar bien.
+      # Solo en main, para que las pruebas en ramas no abran issues.
+      - name: Avisar de problemas
+        if: always() && github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB: ${{ job.status }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PROBLEMES_MD: ${{ runner.temp }}/problemes.md
+        run: |
+          ETIQUETA="actualitzacio-dades"
+          gh label create "$ETIQUETA" --color e3001b --description "Problemes a l'actualització automàtica" 2>/dev/null || true
+          OBERTA=$(gh issue list --label "$ETIQUETA" --state open --json number -q '.[0].number')
+          COS="$RUNNER_TEMP/cos.md"
+          if [ "$JOB" != "success" ]; then
+            printf 'L\x27execució [%s](%s) ha acabat amb estat **%s** (cancel·lada, temps esgotat o error del procés).\n\n' "$GITHUB_RUN_NUMBER" "$RUN" "$JOB" > "$COS"
+          else
+            : > "$COS"
+          fi
+          if [ -s "$PROBLEMES_MD" ]; then
+            printf 'Fonts amb problemes després de l\x27execució [%s](%s):\n\n' "$GITHUB_RUN_NUMBER" "$RUN" >> "$COS"
+            cat "$PROBLEMES_MD" >> "$COS"
+            printf '\n\nDetall a [data/estado.md](%s/%s/blob/main/data/estado.md).\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" >> "$COS"
+          fi
+          if [ -s "$COS" ]; then
+            if [ -n "$OBERTA" ]; then
+              # No repetir el aviso si la lista de problemas no ha cambiado desde el último
+              ULTIM=$(gh issue view "$OBERTA" --json body,comments -q 'if (.comments | length) > 0 then .comments[-1].body else .body end' | grep '^- ' || true)
+              if [ "$JOB" = "success" ] && [ "$ULTIM" = "$(grep '^- ' "$COS" || true)" ]; then
+                echo "Problemas sin cambios desde el último aviso"
+              else
+                gh issue comment "$OBERTA" --body-file "$COS"
+              fi
+            else
+              gh issue create --title "Actualització de dades: hi ha fonts amb problemes" --label "$ETIQUETA" \
+                --assignee "$GITHUB_REPOSITORY_OWNER" --body-file "$COS"
+            fi
+          elif [ -n "$OBERTA" ]; then
+            gh issue close "$OBERTA" --comment "Totes les fonts tornen a estar bé (execució [$GITHUB_RUN_NUMBER]($RUN))."
+          fi

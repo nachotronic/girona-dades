@@ -56,6 +56,10 @@ const T = {
     f_hut: "habitatges d'ús turístic",
     f_cat: "habitatges i any de construcció",
     f_trib: "tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)",
+    f_aeat: "declarants de l'IRPF per municipi", f_padro: "població oficial de cada municipi i empreses", f_nac: "població per nacionalitat", f_pres: "liquidació dels pressupostos municipals",
+    f_edu: "alumnes, centres, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
+    f_dgt: "matriculacions de vehicles per municipi, cada mes", f_aena: "passatgers de l'aeroport de Girona, cada mes",
+    font_act: "Descarregat", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
     f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, autoconsum, residus",
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
@@ -137,6 +141,10 @@ const T = {
     f_hut: "viviendas de uso turístico",
     f_cat: "viviendas y año de construcción",
     f_trib: "tipos del IBI, IAE, impuesto de circulación, plusvalía e ICIO de cada ayuntamiento (2000-2026)",
+    f_aeat: "declarantes del IRPF por municipio", f_padro: "población oficial de cada municipio y empresas", f_nac: "población por nacionalidad", f_pres: "liquidación de los presupuestos municipales",
+    f_edu: "alumnos, centros, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
+    f_dgt: "matriculaciones de vehículos por municipio, cada mes", f_aena: "pasajeros del aeropuerto de Girona, cada mes",
+    font_act: "Descargado", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
     f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, autoconsumo, residuos",
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
@@ -545,6 +553,22 @@ function blocDe(sigles, e) {
   return "Locals";
 }
 
+// ---------- Fecha de descarga de cada fuente (data/estado.json) ----------
+function pintaFonts() {
+  const F = D.fonts || {};
+  document.querySelectorAll(".fonts li[data-font]").forEach((li) => {
+    const f = F[li.dataset.font];
+    let el = li.querySelector(".font-act");
+    if (!f || !f.ok) { if (el) el.remove(); return; }
+    if (!el) { el = document.createElement("span"); el.className = "font-act"; li.appendChild(el); }
+    const dia = new Date(f.ok).toLocaleDateString(loc(), { day: "numeric", month: "short", year: "numeric" });
+    const avis = f.estat !== "ok";
+    el.classList.toggle("avis", avis);
+    el.textContent = `${t(avis ? "font_avis" : "font_act")}: ${dia}`;
+    if (avis) el.title = t("font_avis_t"); else el.removeAttribute("title");
+  });
+}
+
 // ---------- Inicio ----------
 function pintaTot() {
   aplicaIdioma();
@@ -554,6 +578,7 @@ function pintaTot() {
   pintaTaula();
   const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
   document.querySelectorAll(".data-gen").forEach((e) => { e.textContent = dg; });
+  pintaFonts();
   if (seleccionat) obreFitxa(seleccionat, false);
   if (window.mapaIdioma) window.mapaIdioma();
 }
