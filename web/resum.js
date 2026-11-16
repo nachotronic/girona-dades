@@ -221,12 +221,10 @@
     const files = ks.map((k) => { const v = c["s_" + k][a], pv = ref("s_" + k, "gi");
       return `<li><span class="nb-nom">${TX[LANG].sect[k]}</span><span class="nb-barra"><b style="width:${(100 * v) / mx}%"></b>${pv != null ? `<i class="fx-ref" style="left:${(100 * pv) / mx}%"></i>` : ""}</span><span class="nb-v">${fmt(v, 1)}<small>${pv != null ? fmt(pv, 1) : ""}</small></span></li>`; }).join("");
     const b = m.com_f && m.com_f.buits, rb = (D.ref || {}).com_buits || {};
-    const g = ((m.com_f && m.com_f.grans) || []).slice(0, 6);
     return `<section class="fitxa-bloc fx-com"><h3>${tx("h_com")}</h3><p class="fb-sub">${tx("h_com_sub", a, fmt(c.n[a]), fmt(c.sup && c.sup[a]))}</p>
       <div class="fx-dues"><div><p class="fx-sub2">${tx("com_sect")}</p><ul class="nb fx-nb">${files}</ul></div>
       <div><figure class="grafic"><figcaption><span>${tx("com_evol")}</span></figcaption><div class="g-com"></div></figure></div></div>
       ${b ? `<p class="fx-dada">${tx("com_buits", fmt(b.buits), fmt(b.total), pct((100 * b.buits) / b.total, 1), pct(rb.cat, 1))}</p>` : ""}
-      ${g.length ? `<p class="fx-sub2">${tx("com_grans")}</p><ul class="fx-grans">${g.map((e) => `<li><span>${e.nom}</span><span>${e.f || ""}</span><span>${e.s ? `${fmt(e.s)} ${tx("m2")}` : ""}</span></li>`).join("")}</ul>` : ""}
       <p class="fb-font">${LANG === "ca" ? "Barra: municipi. Marca i xifra petita: província. Sense cens el 2020 ni el 2022." : "Barra: municipio. Marca y cifra pequeña: provincia. Sin censo en 2020 ni en 2022."}</p></section>`;
   }
 
