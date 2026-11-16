@@ -458,6 +458,20 @@ TITOLS = {
 }
 
 
+def _dins(x, y, geom):
+    """Punto dentro de un (Multi)Polygon GeoJSON, por paridad de cruces."""
+    polis = geom["coordinates"] if geom["type"] == "MultiPolygon" else [geom["coordinates"]]
+    for poli in polis:
+        dins = False
+        for anell in poli:
+            for (x1, y1), (x2, y2) in zip(anell, anell[1:] + anell[:1]):
+                if (y1 > y) != (y2 > y) and x < (x2 - x1) * (y - y1) / (y2 - y1) + x1:
+                    dins = not dins
+        if dins:
+            return True
+    return False
+
+
 def _codis_abs(sal):
     f = sal / "abs.geojson"
     if not f.exists():
@@ -546,7 +560,8 @@ def arees():
             tot = sum(pob_abs.get(c_, 0) for c_ in x.index)
             if tot:
                 refs.setdefault(k, {})["gi"] = r(x.sum() / tot * mult, 1 if mult == 1000 else 0)
-            anys[k] = f"{setm[0]}/{setm[-1]}"
+            d0, d1 = pd.Timestamp(setm[0]), pd.Timestamp(setm[-1]) + pd.Timedelta(days=6)
+            anys[k] = f"{d0.day}/{d0.month}–{d1.day}/{d1.month}/{d1.year}"
         fr = sal / "infeccions_rs.csv"
         if fr.exists():
             rs = pd.read_csv(fr, dtype={"rs": str})
@@ -563,17 +578,14 @@ def arees():
         shutil.copy(sal / "centres.geojson", SALIDA.parent / "centres.geojson")
         cg = json.loads((sal / "centres.geojson").read_text(encoding="utf-8"))
         per_abs = {}
-        # Asignación de cada centro a su ABS por contención del punto
-        try:
-            import geopandas as gpd
-            from shapely.geometry import shape
-            ga = gpd.read_file(sal / "abs.geojson")
-            pts = gpd.GeoDataFrame([f["properties"] for f in cg["features"]], geometry=[shape(f["geometry"]) for f in cg["features"]], crs=4326)
-            j = gpd.sjoin(pts, ga[["codi", "geometry"]], predicate="within")
-            for (c_, t_), n in j.groupby(["codi", "t"]).size().items():
-                per_abs.setdefault(str(c_), {})[t_] = int(n)
-        except Exception as e:  # noqa: BLE001
-            print("AVISO centres per ABS:", e)
+        # Asignación de cada centro a su ABS por contención del punto (sin dependencias geográficas)
+        ga = json.loads((sal / "abs.geojson").read_text(encoding="utf-8")) if (sal / "abs.geojson").exists() else {"features": []}
+        for f in cg["features"]:
+            x, y = f["geometry"]["coordinates"]
+            c_ = next((str(a["properties"]["codi"]) for a in ga["features"] if _dins(x, y, a["geometry"])), None)
+            if c_:
+                per_abs.setdefault(c_, {}).setdefault(f["properties"]["t"], 0)
+                per_abs[c_][f["properties"]["t"]] += 1
         for c_, d in per_abs.items():
             if c_ in res["abs"]:
                 res["abs"][c_]["cap_n"] = d.get("cap", 0) + d.get("continuada", 0)
@@ -1130,6 +1142,14 @@ def _mes_x(m):
     return round(a + (mm - 1) / 12, 4)
 
 
+NOMS_HOSP = {
+    "Hospital U de Girona Doctor Josep Trueta": "Hospital Josep Trueta (Girona)",
+    "Hosp. d'Olot i Comarcal de la Garrotxa": "Hospital d'Olot",
+    "HC Sant Jaume Calella i HC de Blanes": "Hospital de Blanes i Calella",
+    "Hospital Santa Caterina": "Hospital Santa Caterina (Salt)",
+}
+
+
 def salut_series():
     sal = P / "salut"
     out = {}
@@ -1156,6 +1176,7 @@ def salut_series():
             u = x[x["mes"] == ult]
             gi = u[u["regio"] == "Girona"].groupby("grup")[["pacients", "pond"]].sum()
             ca = u.groupby("grup")[["pacients", "pond"]].sum()
+            gi = gi[~gi.index.astype(str).str.startswith("Resta")]
             top = gi.sort_values("pacients", ascending=False).head(10 if tipus != "quirurgiques" else 12)
             grups = [{"g": nom, "c": "", "gi": round(float(v.pond / v.pacients), 0), "cat": round(float(ca.loc[nom, "pond"] / ca.loc[nom, "pacients"]), 0),
                       "n": int(v.pacients)} for nom, v in top.iterrows() if v.pacients and ca.loc[nom, "pacients"]]
@@ -1175,7 +1196,7 @@ def salut_series():
             h["dies"] = h["pond"] / h["pacients"]
             h = h.sort_values("dies", ascending=False)
             out[k] = {"tipus": "barres", "u": "dies", "dec": 0, "claus": ["gi"], "any": ult,
-                      "grups": [{"g": nom, "c": "", "gi": round(float(v.dies), 0), "n": int(v.pacients)} for nom, v in h.iterrows()]}
+                      "grups": [{"g": NOMS_HOSP.get(nom, nom), "c": "", "gi": round(float(v.dies), 0), "n": int(v.pacients)} for nom, v in h.iterrows()]}
     # Recetas: por habitante y año (años completos), y grupos terapéuticos en los últimos 12 meses
     pr = sal / "poblacio_rs.csv"
     fm = sal / "receptes_mes.csv"

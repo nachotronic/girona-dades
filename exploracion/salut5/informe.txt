@@ -1,4 +1,0 @@
-200 1143 equip_cats.json https://analisi.transparenciacatalunya.cat/resource/8gmd-gz7i.json?%24select=categoria%2C+count%28%2A%29&%24where=categoria+like+%27%25Salut%25%27+AND+codi_municipi+like+%2717%25%27&%24group=categoria&%24limit=500
-ERR ConnectionError idescat_cerca.html https://www.idescat.cat/cercador/?q=enquesta+de+salut&lang=ca
-404 7814 salutweb_esca.html https://salutweb.gencat.cat/ca/el_departament/estadistiques_sanitaries/enquestes/esca/
-ERR ConnectTimeout esca_browse.html https://scientiasalut.gencat.cat/handle/11351/1566/browse?resetOffset=true&type=dateissued&order=DESC&rpp=100
