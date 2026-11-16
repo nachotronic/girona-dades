@@ -14,7 +14,7 @@ import traceback
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ))
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "aeat", "padro", "pressupostos"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "eleccions", "aeat", "padro", "pressupostos"]
 
 
 def main(nombres: list[str]) -> int:

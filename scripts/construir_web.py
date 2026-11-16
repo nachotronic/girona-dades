@@ -1642,6 +1642,9 @@ def main():
             print(f"{nombre}: {origen.stat().st_size // 1024} KB")
         else:
             print(f"AVISO: falta {origen}")
+    # Resultados electorales por convocatoria (municipio y sección), en ficheros aparte
+    import eleccions_web
+    print(eleccions_web.construir(SALIDA.parent))
 
 
 if __name__ == "__main__":
