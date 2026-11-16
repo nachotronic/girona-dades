@@ -133,7 +133,7 @@
   // Comercio (CECC, anual): m.com = {clave: {año: valor}}, D.com_ref = {clave: {año: {gi, cat}}}
   const CM = (k) => (m, a) => (a != null && m.com && m.com[k] && m.com[k][a] != null ? m.com[k][a] : null);
   const CMR = (k, z) => (a) => { const r = D.com_ref && D.com_ref[k] && D.com_ref[k][a]; return r && r[z] != null ? r[z] : null; };
-  const NOTA_COM = { ca: "Cens d'establiments comercials de Catalunya (Generalitat i Cambres de Comerç): comerç al detall amb establiment, sense bars ni restaurants ni serveis. No hi ha cens del 2020 ni del 2022.", es: "Censo de establecimientos comerciales de Cataluña (Generalitat y Cámaras de Comercio): comercio minorista con establecimiento, sin bares ni restaurantes ni servicios. No hay censo de 2020 ni de 2022." };
+  const NOTA_COM = { ca: "Cens d'establiments comercials de Catalunya (Generalitat i Cambres de Comerç): comerç al detall amb establiment, sense bars ni restaurants ni serveis. No hi ha cens del 2020 ni del 2022, i el desglossament per sectors dels municipis petits només existeix des del 2021.", es: "Censo de establecimientos comerciales de Cataluña (Generalitat y Cámaras de Comercio): comercio minorista con establecimiento, sin bares ni restaurantes ni servicios. No hay censo de 2020 ni de 2022, y el desglose por sectores de los municipios pequeños solo existe desde 2021." };
   const COM = [
     ["est_h", ["Comerços per habitant", "Establiments comercials per 1.000 habitants"], ["Comercios por habitante", "Establecimientos comerciales por 1.000 habitantes"], N1],
     ["n", ["Establiments comercials", "Comerços al detall amb establiment"], ["Establecimientos comerciales", "Comercios minoristas con establecimiento"], N0],
