@@ -200,7 +200,7 @@ function blocNacionalitats(m) {
   const mx = n.p[0][1];
   const files = n.p.map(([c, k]) => `<li><span class="nb-nom">${nomPais(c)}</span><span class="nb-barra"><b style="width:${(k / mx) * 100}%"></b></span><span class="nb-v">${fmt(k)}<small>${pct((100 * k) / n.ex, 0)}</small></span></li>`).join("");
   const resta = n.ex - n.p.reduce((s, x) => s + x[1], 0);
-  return `<section class="fitxa-bloc"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
+  return `<section class="fitxa-bloc fx-nac"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
     <ol class="nb">${files}${resta > 0 ? `<li class="nb-resta"><span class="nb-nom">${t("altres_paisos")}</span><span class="nb-barra"></span><span class="nb-v">${fmt(resta)}<small>${pct((100 * resta) / n.ex, 0)}</small></span></li>` : ""}</ol>
     <p class="fb-font">${t("font_c")}: ${t(n.font === "ine" ? "f_nac_ine" : "f_nac")}</p></section>`;
 }
@@ -209,7 +209,7 @@ function blocUniversitaris(m) {
   const u = m.x && m.x.univ_split;
   if (!u) return "";
   const tot = u[0] + u[1] + u[2] || 1, noms = ["u_mateix", "u_comarca", "u_fora"];
-  return `<section class="fitxa-bloc"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
+  return `<section class="fitxa-bloc fx-univ"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
     <div class="ub">${u.map((v, i) => (v ? `<b class="ub-${i}" style="width:${(100 * v) / tot}%"></b>` : "")).join("")}</div>
     <ul class="ub-lleg">${u.map((v, i) => `<li><i class="ub-${i}"></i>${t(noms[i])}<span>${fmt(v)} · ${pct((100 * v) / tot, 0)}</span></li>`).join("")}</ul>
     <p class="fb-font">${t("font_c")}: ${t("f_univ")}</p></section>`;
@@ -467,7 +467,7 @@ function obreFitxa(ine, desplaca) {
   const m = D.municipios.find((x) => x.ine === ine);
   if (!m) return;
   seleccionat = ine;
-  try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
+  if (!window.EMB) try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
   const f = document.getElementById("fitxa");
   const [aR, vR] = ultim(m.renta_persona);
   const esf = esforc(m);
@@ -612,9 +612,13 @@ Promise.all([
     Object.entries(cj.per).forEach(([k, l]) => { cj.idx[k] = {}; l.forEach((a, i) => { cj.idx[k][a] = i; }); });
     D.cj = cj;
   }
-  if (window.iniciaMapa) window.iniciaMapa();
+  // Inserción (iframe): solo se carga el mapa si la pieza lo necesita, y la ficha sin desplazar la página
+  const E = window.EMB;
+  const pMapa = window.iniciaMapa && (!E || E.ambMapa) ? window.iniciaMapa() : null;
   const h = location.hash.slice(1);
-  if (/^\d{5}$/.test(h)) seleccionat = h;
+  if (E) seleccionat = E.ine || null;
+  else if (/^\d{5}$/.test(h)) seleccionat = h;
   pintaTot();
-  if (seleccionat) obreFitxa(seleccionat, true);
+  if (E) E.inicia(pMapa);
+  else if (seleccionat) obreFitxa(seleccionat, true);
 });

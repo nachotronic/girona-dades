@@ -1,0 +1,85 @@
+/* ---------- Gráficos insertables (iframe) ---------- */
+
+/* Botón «Insereix» en cada pieza de la página */
+.emb-btn {
+  display: inline-flex; align-items: center; gap: 6px; margin: 10px 0 0; padding: 4px 0;
+  font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--text-3); background: none; border: 0; border-radius: 0; cursor: pointer;
+}
+.emb-btn span { font-weight: 600; letter-spacing: 0; }
+.emb-btn:hover, .emb-btn:focus-visible { color: var(--accent); }
+.emb-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cj-fig > .emb-btn, .pg-fig > .emb-btn { align-self: flex-start; }
+.emb-btn-sol { margin: 4px 0 8px; }
+.emb-btn-mapa { align-self: flex-start; margin: -8px 0 0; }
+.fitxa-conj > .emb-btn, .fitxa-trib > .emb-btn, .fitxa-ind > .emb-btn, .fitxa-resum > .emb-btn { margin-top: 6px; }
+
+/* Diálogo con el código */
+.emb-dlg {
+  width: min(620px, calc(100vw - 32px)); padding: 20px 22px 18px; border: 0; border-top: 4px solid var(--accent); border-radius: 0;
+  background: var(--paper); color: var(--text); box-shadow: none;
+}
+.emb-dlg::backdrop { background: rgba(15, 17, 19, .55); }
+.emb-dlg-cap { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.emb-dlg h3 { font: 800 26px/1.05 var(--sans); font-variation-settings: "wdth" 72; color: var(--tinta); margin: 6px 0 8px; }
+.emb-dlg-x { font: 400 18px/1 var(--sans); background: none; border: 0; color: var(--text-2); cursor: pointer; padding: 2px 4px; }
+.emb-dlg-x:hover { color: var(--accent); }
+.emb-dlg-ajuda { font-size: 14px; color: var(--text-2); margin: 0 0 12px; }
+.emb-dlg textarea {
+  display: block; width: 100%; resize: vertical; padding: 10px 12px; font: 12px/1.5 var(--mono); color: var(--tinta);
+  background: var(--fons-2); border: 1px solid var(--vora-2); border-radius: 0; word-break: break-all;
+}
+.emb-dlg textarea:focus { outline: 2px solid var(--tinta); outline-offset: -1px; }
+.emb-dlg-accions { display: flex; align-items: center; gap: 18px; margin-top: 12px; flex-wrap: wrap; }
+.emb-dlg-copia { font: 700 14px/1 var(--sans); padding: 11px 16px; background: var(--tinta); color: var(--paper); border: 0; border-radius: 0; cursor: pointer; }
+.emb-dlg-copia:hover { background: var(--accent); color: #fff; }
+.emb-dlg-accions a { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--tinta); }
+.emb-dlg-nota { font-size: 12.5px; color: var(--text-3); margin: 14px 0 0; }
+.emb-sobre { font: 500 11px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); margin: 0; }
+
+/* ---------- Dentro del iframe ---------- */
+.emb-cap, .emb-peu { display: none; }
+.emb, .emb body { height: auto; min-height: 0; scroll-padding-top: 0; }
+.emb body { background: var(--paper); padding: 2px 2px 0; overflow-x: hidden; }
+.emb:not(.emb-a) body { visibility: hidden; }
+.emb body > :not(main):not(.emb-cap):not(.emb-peu):not(.tip) { display: none !important; }
+.emb .emb-btn, .emb .fitxa-cap, .emb .cj-mapa { display: none !important; }
+/* Solo la pieza y la cadena de contenedores que lleva a ella; los contenedores, sin márgenes ni rejillas */
+.emb .emb-cami > :not(.emb-cami):not(.emb-diana) { display: none !important; }
+.emb .emb-cami { display: block !important; margin: 0 !important; padding: 0 !important; border: 0 !important; max-width: none !important; width: auto !important; min-height: 0 !important; height: auto !important; }
+.emb .emb-diana { margin: 0 !important; }
+.emb .emb-cap { display: block; padding: 0 0 10px; }
+.emb .emb-mun { font: 800 26px/1.05 var(--sans); font-variation-settings: "wdth" 72; color: var(--tinta); margin: 4px 0 0; }
+.emb .emb-mun span { font: 400 13px var(--mono); color: var(--text-3); margin-left: 6px; }
+.emb .emb-peu {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 6px 16px; flex-wrap: wrap;
+  margin-top: 12px; padding: 8px 0 6px; border-top: 1px solid var(--tinta); font: 400 11px/1.4 var(--mono); color: var(--text-3);
+}
+.emb .emb-marca { display: inline-flex; align-items: center; gap: 6px; color: var(--tinta); text-decoration: none; white-space: nowrap; margin-left: auto; }
+.emb .emb-marca b { font: 800 13px/1 var(--sans); font-variation-settings: "wdth" 72; letter-spacing: .01em; }
+.emb .emb-marca:hover b { color: var(--accent); }
+.emb .emb-marca .marca-punt { width: 8px; height: 8px; background: var(--accent); display: inline-block; }
+
+/* Piezas sueltas */
+.emb .cj-fig { padding: 12px 0 4px; border-top: 3px solid var(--tinta); border-bottom: 0; }
+.emb .fitxa-conj .cj-fitxa, .emb .dos { display: grid; }
+.emb .grafic { margin: 0; }
+.emb .fitxa-bloc, .emb .ajt, .emb .tb, .emb .rs, .emb .fi { margin-top: 0 !important; }
+
+/* Mapa insertado: título, mapa y leyenda en una columna */
+.emb .mapa-graella {
+  display: flex !important; flex-direction: column; width: auto !important; margin: 0 !important;
+  border: 0 !important; border-top: 3px solid var(--tinta) !important; overflow: visible;
+}
+.emb .mapa-menu, .emb #ranquing, .emb #referencies { display: none !important; }
+.emb .mapa-panell { display: contents !important; }
+.emb .mapa-panell > * { order: 6; }
+.emb .ind-titol { order: 1; margin: 10px 0 2px; }
+.emb .ind-desc { order: 2; margin: 0 0 8px; }
+.emb .ind-desc:empty { display: none; }
+.emb .anys-ctl { order: 3; margin-bottom: 8px; }
+.emb .segment-panell { order: 4; margin-bottom: 8px; align-self: flex-start; }
+.emb .mapa-caixa { order: 5; }
+.emb .llegenda-mapa { order: 6; margin-top: 10px; max-width: 420px; }
+.emb .info { order: 7; margin-top: 12px; max-width: 460px; }
+.emb #mapa { height: auto !important; aspect-ratio: 4 / 3; max-height: 620px; min-height: 300px !important; }

@@ -1022,6 +1022,16 @@
     document.getElementById("s-mapa").scrollIntoView({ behavior: "smooth", block: "start" });
   };
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
+  // Inserción (iframe): estado actual del mapa y arranque con un indicador, nivel y año dados
+  window.mapaEstat = () => (ind ? { id: ind.id, nivell, any: anySel, nom: nomInd(ind) } : null);
+  let llest; window.mapaLlest = new Promise((r) => { llest = r; });
+  window.mapaEmbed = async ({ id, nivell: n, any }) => {
+    await window.mapaLlest;
+    const i = IND.find((x) => x.id === id);
+    if (i) await tria(i);
+    if (n && n !== nivell) await canviaNivell(n);
+    if (any && anysDe(ind).includes(any)) { anySel = any; pinta(); }
+  };
 
   function colorsBase() {
     if (!mapa || !mapa.getLayer("zones-line")) return;
@@ -1045,7 +1055,7 @@
     const encaixaProv = () => mapa.fitBounds([[1.72, 41.64], [3.33, 42.5]], { padding: innerWidth < 640 ? { top: 56, bottom: 10, left: 10, right: 14 } : { top: 64, bottom: 24, left: 24, right: 24 }, duration: 0 });
     mapa = new maplibregl.Map({
       container: "mapa", style: estil, center: [2.6, 42.05], zoom: 8,
-      minZoom: 6, maxZoom: 14, cooperativeGestures: matchMedia("(pointer: coarse)").matches,
+      minZoom: 6, maxZoom: 14, cooperativeGestures: !!window.EMB || matchMedia("(pointer: coarse)").matches,
       attributionControl: false, dragRotate: false, pitchWithRotate: false,
     });
     mapa.touchZoomRotate.disableRotation();
@@ -1063,6 +1073,7 @@
       colorsBase();
       pinta();
       encaixaProv();
+      llest();
       // Si cambia el tamaño del contenedor (giro del móvil, barra lateral) y nadie ha movido el mapa, se vuelve a encuadrar
       let mogut = false;
       mapa.on("dragstart", () => { mogut = true; }); mapa.on("zoomstart", (e) => { if (e.originalEvent) mogut = true; });
