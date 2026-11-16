@@ -464,6 +464,8 @@ tbody tr:hover { background: var(--fons-2); }
 .fi-nota { color: var(--text-3); font-size: 11.5px; }
 .fi-tema { margin: 0 0 28px; }
 .fi-tema h4 { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; margin: 0; padding: 10px 0 8px; border-bottom: 1px solid var(--tinta); }
+.fi-zones { margin: 0; padding: 8px 0; font-size: 13.5px; color: var(--text-2, inherit); border-bottom: 1px solid var(--vora); }
+.fi-zones b { font-weight: 600; color: var(--tinta); }
 .fi-fila { display: grid; grid-template-columns: minmax(180px, 1.6fr) minmax(120px, 1fr) 96px 78px 78px 78px; gap: 14px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--vora); font-size: 13.5px; }
 .fi-cap { font: 500 10.5px/1.2 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-3); padding: 8px 0 6px; }
 .fi-cap span:nth-child(n+3) { text-align: right; }
