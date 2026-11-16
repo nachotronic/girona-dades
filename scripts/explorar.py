@@ -25,17 +25,19 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-# Coyuntura, segunda ronda (2): niveles de Idescat, transporte, DGT
+# Coyuntura, segunda ronda (3)
 IDC = "https://api.idescat.cat/taules/v2"
-for ruta in ("afi/8602", "afi/8603", "afic", "e03", "ee", "e01"):
-    CANDIDATAS["idescat_" + ruta.replace("/", "_")] = f"{IDC}/{ruta}?lang=ca"
+CANDIDATAS["idescat_afi_8703"] = f"{IDC}/afi/8603/8703?lang=ca"
+CANDIDATAS["idescat_afi_8703_mun"] = f"{IDC}/afi/8603/8703/mun?lang=ca"
+CANDIDATAS["idescat_afi_8703_data"] = f"{IDC}/afi/8603/8703/mun/data?lang=ca&MUN=170792"
+CANDIDATAS["idescat_afi_8702_data"] = f"{IDC}/afi/8602/8702/mun/data?lang=ca&MUN=170792"
+CANDIDATAS["idescat_afic_14995"] = f"{IDC}/afic/14995?lang=ca"
 INE = "https://servicios.ine.es/wstempus/js/ES"
-for op in ("TV", "TMOV_R", "TMOV_I", "IRAV", "IPVA"):
-    CANDIDATAS[f"ine_tablas_{op}"] = f"{INE}/TABLAS_OPERACION/{op}"
-CANDIDATAS["ine_49259"] = f"{INE}/DATOS_TABLA/49259?nult=3"
 CANDIDATAS["ine_6295"] = f"{INE}/DATOS_TABLA/6295?nult=3"
-CANDIDATAS["aena_mensuales"] = "https://www.aena.es/es/estadisticas/informes-mensuales.html"
-CANDIDATAS["dgt_mat_202609"] = "https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip"
+CSV = "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/{}.csv"
+for t in ("52048", "53463", "53464", "52047", "59060"):
+    CANDIDATAS[f"inecsv_{t}"] = CSV.format(t)
+CANDIDATAS["aena_2026"] = "https://www.aena.es/es/estadisticas/informes-mensuales.html?anio=2026"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
@@ -64,7 +66,7 @@ def main() -> None:
                 filas.append(f"| {clave} | {r.status_code} | zip | {len(r.content)} | {url} |")
                 continue
             r = requests.get(url, headers=UA, timeout=120, stream=True)
-            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_")) else LIMITE, decode_content=True)
+            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_", "aena_")) else LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
             (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(contenido)
             filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {r.headers.get('content-length', len(contenido))} | {r.url} |")
