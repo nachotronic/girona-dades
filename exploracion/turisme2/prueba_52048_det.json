@@ -1,0 +1,261 @@
+[{"COD":"TMOV177347", "Nombre":"Turistas. Alemania. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":850.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177345", "Nombre":"Turistas. Andorra. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":99.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177333", "Nombre":"Turistas. Austria. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":474.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177334", "Nombre":"Turistas. Bélgica. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":246.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2743040", "Nombre":"Dato base. Girona. Bosnia y Herzegovina. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV158946", "Nombre":"Turistas. Bulgaria. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV2608143", "Nombre":"Dato base. Girona. Croacia. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177335", "Nombre":"Turistas. Dinamarca. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":129.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2709947", "Nombre":"Dato base. Girona. Eslovenia. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV143417", "Nombre":"Turistas. Estonia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177336", "Nombre":"Turistas. Francia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":2209.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV143415", "Nombre":"Turistas. Finlandia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":32.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177337", "Nombre":"Turistas. Grecia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":30.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV186324", "Nombre":"Turistas. Hungría. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":54.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177338", "Nombre":"Turistas. Irlanda. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":166.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2608142", "Nombre":"Dato base. Girona. Islandia. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177339", "Nombre":"Turistas. Italia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":485.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV158947", "Nombre":"Turistas. Letonia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":32.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2540678", "Nombre":"Dato base. Girona. Liechtenstein. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":86.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV143418", "Nombre":"Turistas. Lituania. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177340", "Nombre":"Turistas. Luxemburgo. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":206.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV186325", "Nombre":"Turistas. Malta. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177341", "Nombre":"Turistas. Noruega. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":40.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177342", "Nombre":"Turistas. Países Bajos. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":720.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177343", "Nombre":"Turistas. Polonia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":325.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177344", "Nombre":"Turistas. Portugal. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":119.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177346", "Nombre":"Turistas. Reino Unido. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":694.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177351", "Nombre":"Turistas. República Checa. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":93.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2671229", "Nombre":"Dato base. Girona. República Eslovaca. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177348", "Nombre":"Turistas. Rumanía. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":199.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177352", "Nombre":"Turistas. Rusia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":52.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177349", "Nombre":"Turistas. Suecia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":233.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177350", "Nombre":"Turistas. Suiza. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":260.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2533169", "Nombre":"Dato base. Girona. Turquía. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV143416", "Nombre":"Turistas. Ucrania. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177353", "Nombre":"Turistas. Marruecos. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":155.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2535825", "Nombre":"Dato base. Girona. Senegal. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":38.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV143419", "Nombre":"Turistas. Argentina. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":89.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV143420", "Nombre":"Turistas. Brasil. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":74.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177354", "Nombre":"Turistas. Canadá. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":128.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV166735", "Nombre":"Turistas. Chile. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177357", "Nombre":"Turistas. Colombia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":72.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177355", "Nombre":"Turistas. Estados Unidos de América. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":521.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV158948", "Nombre":"Turistas. Honduras. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":56.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV177356", "Nombre":"Turistas. México. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":75.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2535826", "Nombre":"Dato base. Girona. Perú. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177358", "Nombre":"Turistas. China. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":162.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2533168", "Nombre":"Dato base. Girona. Corea. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV187497", "Nombre":"Turistas. Emiratos Árabes Unidos. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV143421", "Nombre":"Turistas. India. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":70.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV158949", "Nombre":"Turistas. Israel. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV185265", "Nombre":"Turistas. Japón. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV2480248", "Nombre":"Dato base. Girona. Singapur. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV143422", "Nombre":"Turistas. Australia. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV177332", "Nombre":"Turistas. Total. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1764543600000, "FK_TipoDato":1, "FK_Periodo":12, "Anyo":2025, "Valor":9849.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV158950", "Nombre":"Turistas. Nueva Zelanda. Girona. Dato base. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+]

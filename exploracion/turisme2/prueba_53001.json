@@ -1,0 +1,297 @@
+[{"COD":"TMOV2104866", "Nombre":"Dato base. Girona. Total Nacional. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":17100.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":13945.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":14254.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726312", "Nombre":"Dato base. Girona. Andalucía. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":639.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":631.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":558.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131673", "Nombre":"Dato base. Girona. Almería. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":66.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":98.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":45.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131774", "Nombre":"Dato base. Girona. Cádiz. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":46.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":39.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":53.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131819", "Nombre":"Dato base. Girona. Córdoba. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":68.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":64.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":36.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131864", "Nombre":"Dato base. Girona. Granada. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":64.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":118.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":105.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131908", "Nombre":"Dato base. Girona. Huelva. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":43.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131938", "Nombre":"Dato base. Girona. Jaén. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":85.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":59.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":59.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132024", "Nombre":"Dato base. Girona. Málaga. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":93.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":123.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":113.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132208", "Nombre":"Dato base. Girona. Sevilla. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":174.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":103.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":135.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726327", "Nombre":"Dato base. Girona. Aragón. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":335.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":360.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":302.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131923", "Nombre":"Dato base. Girona. Huesca. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":70.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":53.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":81.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132253", "Nombre":"Dato base. Girona. Teruel. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":33.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132344", "Nombre":"Dato base. Girona. Zaragoza. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":232.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":298.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":200.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726342", "Nombre":"Dato base. Girona. Asturias, Principado de. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":48.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":38.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132085", "Nombre":"Dato base. Girona. Asturias. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":48.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":38.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726356", "Nombre":"Dato base. Girona. Balears, Illes. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":515.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":181.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":215.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131715", "Nombre":"Dato base. Girona. Balears, Illes. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":515.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":181.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":215.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726371", "Nombre":"Dato base. Girona. Canarias. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":123.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":131.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":115.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132115", "Nombre":"Dato base. Girona. Palmas, Las. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":62.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":81.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":52.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132160", "Nombre":"Dato base. Girona. Santa Cruz de Tenerife. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":61.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":50.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":63.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726384", "Nombre":"Dato base. Girona. Cantabria. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":36.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":44.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132176", "Nombre":"Dato base. Girona. Cantabria. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":36.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":44.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726414", "Nombre":"Dato base. Girona. Castilla - La Mancha. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":201.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":239.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":237.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131646", "Nombre":"Dato base. Girona. Albacete. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":56.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":40.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":65.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131804", "Nombre":"Dato base. Girona. Ciudad Real. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":49.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":43.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131849", "Nombre":"Dato base. Girona. Cuenca. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1131878", "Nombre":"Dato base. Girona. Guadalajara. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":70.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":80.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":55.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132269", "Nombre":"Dato base. Girona. Toledo. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":51.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":59.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726399", "Nombre":"Dato base. Girona. Castilla y León. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":201.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":190.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":166.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131686", "Nombre":"Dato base. Girona. Ávila. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1131744", "Nombre":"Dato base. Girona. Burgos. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":38.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":47.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":48.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131953", "Nombre":"Dato base. Girona. León. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1132099", "Nombre":"Dato base. Girona. Palencia. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1132145", "Nombre":"Dato base. Girona. Salamanca. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1132193", "Nombre":"Dato base. Girona. Segovia. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":30.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132224", "Nombre":"Dato base. Girona. Soria. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1132297", "Nombre":"Dato base. Girona. Valladolid. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":48.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":54.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":34.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132328", "Nombre":"Dato base. Girona. Zamora. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1726430", "Nombre":"Dato base. Girona. Cataluña. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":12407.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":9361.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":10017.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131730", "Nombre":"Dato base. Girona. Barcelona. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":11113.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":8133.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":8864.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131967", "Nombre":"Dato base. Girona. Lleida. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":538.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":534.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":573.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132238", "Nombre":"Dato base. Girona. Tarragona. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":756.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":694.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":580.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726444", "Nombre":"Dato base. Girona. Comunitat Valenciana. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":925.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":970.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":818.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131658", "Nombre":"Dato base. Girona. Alicante/Alacant. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":218.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":303.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":195.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131789", "Nombre":"Dato base. Girona. Castellón/Castelló. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":233.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":125.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":172.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132282", "Nombre":"Dato base. Girona. Valencia/València. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":474.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":542.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":451.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726459", "Nombre":"Dato base. Girona. Extremadura. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":60.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":63.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":36.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131700", "Nombre":"Dato base. Girona. Badajoz. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":46.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131759", "Nombre":"Dato base. Girona. Cáceres. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":36.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726475", "Nombre":"Dato base. Girona. Galicia. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":167.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":123.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":132.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131833", "Nombre":"Dato base. Girona. Coruña, A. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":61.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":33.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":61.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131998", "Nombre":"Dato base. Girona. Lugo. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1132068", "Nombre":"Dato base. Girona. Ourense. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":58.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":46.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132131", "Nombre":"Dato base. Girona. Pontevedra. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":48.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":39.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":42.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726489", "Nombre":"Dato base. Girona. Madrid, Comunidad de. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":915.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":1092.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":1069.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132010", "Nombre":"Dato base. Girona. Madrid. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":915.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":1092.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":1069.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2256574", "Nombre":"Dato base. Girona. Melilla. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV2306109", "Nombre":"Dato base. Girona. Melilla. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[]
+}
+,{"COD":"TMOV1726503", "Nombre":"Dato base. Girona. Murcia, Región de. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":222.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":167.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":135.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132040", "Nombre":"Dato base. Girona. Murcia. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":222.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":167.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":135.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726515", "Nombre":"Dato base. Girona. Navarra, Comunidad Foral de. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":94.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":77.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":84.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132054", "Nombre":"Dato base. Girona. Navarra. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":94.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":77.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":84.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726529", "Nombre":"Dato base. Girona. País Vasco. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":190.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":249.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":263.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131630", "Nombre":"Dato base. Girona. Araba/Álava. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":32.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":33.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":44.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1132312", "Nombre":"Dato base. Girona. Bizkaia. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":75.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":131.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":77.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131893", "Nombre":"Dato base. Girona. Gipuzkoa. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":83.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":85.0, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":142.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726542", "Nombre":"Dato base. Girona. Rioja, La. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":41.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":44.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1131982", "Nombre":"Dato base. Girona. Rioja, La. Turistas. ", "FK_Unidad":256, "FK_Escala":1, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":41.0, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":44.0, "Secreto":false}
+]
+}
+]

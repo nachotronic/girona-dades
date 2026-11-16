@@ -1,0 +1,697 @@
+{
+  "id" : "9qmy-ujbd",
+  "name" : "Centres nàutics",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Esport",
+  "createdAt" : 1552899277,
+  "description" : "Llista dels centres nàutics: centres que, mitjançant la contractació de serveis, ofereixen la possibilitat de fer activitats nauticorecreatives i de pesca, tals com vela lleugera, vela de creuer, piragüisme, motonàutica, esquí nàutic, pesca esportiva etc.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2203,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 3191838,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1794566224,
+  "publicationGroup" : 832115,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1794566780,
+  "rowsUpdatedBy" : "7yiu-nmxh",
+  "tableId" : 2159975,
+  "totalTimesRated" : 0,
+  "viewCount" : 5959,
+  "viewLastModified" : 1794566779,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1553074352,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1583021,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1553074352,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 27564612,
+    "name" : "Nom",
+    "dataTypeName" : "text",
+    "description" : "Nom del centre",
+    "fieldName" : "nom",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 6412851,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "ZHAO XU",
+      "null" : "0",
+      "top" : [ {
+        "item" : "LASSDIVE",
+        "count" : "3"
+      }, {
+        "item" : "COSTABRAVA BOATS",
+        "count" : "3"
+      }, {
+        "item" : "FREEDOM BOAT CLUB",
+        "count" : "2"
+      }, {
+        "item" : "FISH TOUR EXTREME",
+        "count" : "2"
+      }, {
+        "item" : "COSTA BRAVA RENT JETSKI",
+        "count" : "1"
+      }, {
+        "item" : "DELTERRAL FISHING TRIPS",
+        "count" : "1"
+      }, {
+        "item" : "SAIL EMOTIONS",
+        "count" : "1"
+      }, {
+        "item" : "MANI RENT BOATS",
+        "count" : "1"
+      }, {
+        "item" : "CANALS I MAR",
+        "count" : "1"
+      }, {
+        "item" : "COSTA BRAVA RENT A BOAT",
+        "count" : "1"
+      }, {
+        "item" : "BLANES BOATS",
+        "count" : "1"
+      }, {
+        "item" : "CLUB DEPORTIVO DE NAVEGACIÓN SITGES",
+        "count" : "1"
+      }, {
+        "item" : "CREUERS DELTA DE L'EBRE",
+        "count" : "1"
+      }, {
+        "item" : "WINDCAMBRILS",
+        "count" : "1"
+      }, {
+        "item" : "CELISPORT",
+        "count" : "1"
+      }, {
+        "item" : "DIVEMAR",
+        "count" : "1"
+      }, {
+        "item" : "WATER TOYS TEAM",
+        "count" : "1"
+      }, {
+        "item" : "BRAVA CHARTER",
+        "count" : "1"
+      }, {
+        "item" : "PIKARO LLORET RENTAL BOATS",
+        "count" : "1"
+      }, {
+        "item" : "LLOBARRETE CHARTER",
+        "count" : "1"
+      } ],
+      "smallest" : "AIGUADOLÇ VELA",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564613,
+    "name" : "Adreça",
+    "dataTypeName" : "text",
+    "description" : "Adreça de la ubicació del centre",
+    "fieldName" : "adre_a",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 6412850,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "via Via PLATJA 37",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Carrer del Cap Blanc 14",
+        "count" : "2"
+      }, {
+        "item" : "C. Eduard Maristany (Port Esportiu Badalona - Moll Ribera) 25",
+        "count" : "2"
+      }, {
+        "item" : "C. de la Riba des Poal 0",
+        "count" : "2"
+      }, {
+        "item" : "Platja Llarga 0",
+        "count" : "2"
+      }, {
+        "item" : "Plaça del Port 0",
+        "count" : "2"
+      }, {
+        "item" : "Psg. Maritim 1",
+        "count" : "2"
+      }, {
+        "item" : "Carrer Esplenada del port 0 S/N",
+        "count" : "2"
+      }, {
+        "item" : "C. Esplanada del Port (Port Blanes) s/n",
+        "count" : "2"
+      }, {
+        "item" : "Crta. del Port (Port de l'Ametlla de Mar) s/n",
+        "count" : "2"
+      }, {
+        "item" : "Pg. Marítim s/n",
+        "count" : "2"
+      }, {
+        "item" : "C. Salvador Albert i Pey (Port Marina Palamós) s/n",
+        "count" : "2"
+      }, {
+        "item" : "Port Cala Canyelles s/n",
+        "count" : "2"
+      }, {
+        "item" : "Passeig Miramar 42",
+        "count" : "2"
+      }, {
+        "item" : "Port d'Aro",
+        "count" : "1"
+      }, {
+        "item" : "Pg. Maritim s/n",
+        "count" : "1"
+      }, {
+        "item" : "Moll de Gregal (Port Olímpic) 33",
+        "count" : "1"
+      }, {
+        "item" : "Av. de la Mar Menuda 6",
+        "count" : "1"
+      }, {
+        "item" : "C. Port Olímpic s/n",
+        "count" : "1"
+      }, {
+        "item" : "Port Ginesta local 521",
+        "count" : "1"
+      }, {
+        "item" : "Club Nàutic l'Hospitalet de l'Infant-Vandellòs s/n",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564614,
+    "name" : "Codi postal",
+    "dataTypeName" : "text",
+    "description" : "Codi postal",
+    "fieldName" : "codi_postal",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 6427353,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "43895",
+      "null" : "0",
+      "top" : [ {
+        "item" : "17300",
+        "count" : "16"
+      }, {
+        "item" : "17230",
+        "count" : "16"
+      }, {
+        "item" : "17480",
+        "count" : "15"
+      }, {
+        "item" : "17258",
+        "count" : "15"
+      }, {
+        "item" : "17488",
+        "count" : "15"
+      }, {
+        "item" : "43580",
+        "count" : "14"
+      }, {
+        "item" : "08870",
+        "count" : "13"
+      }, {
+        "item" : "17310",
+        "count" : "11"
+      }, {
+        "item" : "43850",
+        "count" : "11"
+      }, {
+        "item" : "17487",
+        "count" : "10"
+      }, {
+        "item" : "08005",
+        "count" : "10"
+      }, {
+        "item" : "43540",
+        "count" : "9"
+      }, {
+        "item" : "17220",
+        "count" : "9"
+      }, {
+        "item" : "17250",
+        "count" : "9"
+      }, {
+        "item" : "43860",
+        "count" : "8"
+      }, {
+        "item" : "43840",
+        "count" : "7"
+      }, {
+        "item" : "17130",
+        "count" : "7"
+      }, {
+        "item" : "17490",
+        "count" : "7"
+      }, {
+        "item" : "17320",
+        "count" : "7"
+      }, {
+        "item" : "17470",
+        "count" : "7"
+      } ],
+      "smallest" : "08003",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564615,
+    "name" : "Municipi",
+    "dataTypeName" : "text",
+    "description" : "Municipi on es troba el centre",
+    "fieldName" : "municipi",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 6428169,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "Vilassar de Mar",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "27"
+      }, {
+        "item" : "Palamós",
+        "count" : "17"
+      }, {
+        "item" : "Blanes",
+        "count" : "16"
+      }, {
+        "item" : "Cadaqués",
+        "count" : "15"
+      }, {
+        "item" : "Sitges",
+        "count" : "15"
+      }, {
+        "item" : "Deltebre",
+        "count" : "13"
+      }, {
+        "item" : "Cambrils",
+        "count" : "11"
+      }, {
+        "item" : "Roses",
+        "count" : "11"
+      }, {
+        "item" : "Castell-Platja d'Aro",
+        "count" : "9"
+      }, {
+        "item" : "Lloret de Mar",
+        "count" : "9"
+      }, {
+        "item" : "Tarragona",
+        "count" : "9"
+      }, {
+        "item" : "Sant Pere Pescador",
+        "count" : "8"
+      }, {
+        "item" : "Castelló d'Empúries",
+        "count" : "7"
+      }, {
+        "item" : "Torroella de Montgrí (l'Estartit)",
+        "count" : "7"
+      }, {
+        "item" : "Vilanova i la Geltrú",
+        "count" : "7"
+      }, {
+        "item" : "Ametlla de Mar, l'",
+        "count" : "7"
+      }, {
+        "item" : "Ràpita, la",
+        "count" : "7"
+      }, {
+        "item" : "Sant Feliu de Guíxols",
+        "count" : "7"
+      }, {
+        "item" : "Salou",
+        "count" : "7"
+      }, {
+        "item" : "Castelldefels",
+        "count" : "6"
+      } ],
+      "smallest" : "Alcanar",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564616,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Comarca on es troba el centre",
+    "fieldName" : "comarca",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 6412853,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "Vallès Oriental",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Baix Empordà",
+        "count" : "70"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "64"
+      }, {
+        "item" : "Barcelonès",
+        "count" : "36"
+      }, {
+        "item" : "Selva, la",
+        "count" : "34"
+      }, {
+        "item" : "Maresme",
+        "count" : "32"
+      }, {
+        "item" : "Garraf",
+        "count" : "24"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "24"
+      }, {
+        "item" : "Baix Ebre",
+        "count" : "23"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "20"
+      }, {
+        "item" : "Montsià",
+        "count" : "13"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "9"
+      }, {
+        "item" : "Baix Penedès",
+        "count" : "7"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "3"
+      }, {
+        "item" : "Gironès",
+        "count" : "2"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "2"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "1"
+      } ],
+      "smallest" : "Alt Empordà",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564617,
+    "name" : "Província",
+    "dataTypeName" : "text",
+    "description" : "Província on es troba el centre",
+    "fieldName" : "prov_ncia",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 11894028,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "Tarragona",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Girona",
+        "count" : "170"
+      }, {
+        "item" : "Barcelona",
+        "count" : "107"
+      }, {
+        "item" : "Tarragona",
+        "count" : "86"
+      }, {
+        "item" : "tarragona",
+        "count" : "1"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564618,
+    "name" : "Modalitat",
+    "dataTypeName" : "text",
+    "description" : "Tipologia de centre",
+    "fieldName" : "modalitat",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 6412852,
+    "cachedContents" : {
+      "non_null" : "363",
+      "largest" : "Xàrter, Windsurf/Kytesurf, Lloguer D'Artefactes Flotants (Sense Ensenyament, Sense Guiatge), Altres",
+      "null" : "1",
+      "top" : [ {
+        "item" : "Xàrter",
+        "count" : "70"
+      }, {
+        "item" : "Motonàutica",
+        "count" : "23"
+      }, {
+        "item" : "Artefactes Flotants",
+        "count" : "17"
+      }, {
+        "item" : "Xàrter, Altres",
+        "count" : "17"
+      }, {
+        "item" : "Xàrter, Pesca Recreativa",
+        "count" : "16"
+      }, {
+        "item" : "Altres",
+        "count" : "14"
+      }, {
+        "item" : "Vela Lleugera",
+        "count" : "12"
+      }, {
+        "item" : "Excursions Marítimes",
+        "count" : "10"
+      }, {
+        "item" : "Vela Lleugera, Windsurf/Kytesurf, Artefactes Flotants, Altres",
+        "count" : "9"
+      }, {
+        "item" : "Artefactes Flotants, Altres",
+        "count" : "9"
+      }, {
+        "item" : "Pesca Recreativa",
+        "count" : "9"
+      }, {
+        "item" : "Excursions Marítimes, Xàrter, Pesca Recreativa",
+        "count" : "8"
+      }, {
+        "item" : "Vela Lleugera, Windsurf/Kytesurf, Artefactes Flotants",
+        "count" : "8"
+      }, {
+        "item" : "Xàrter, Pesca Recreativa, Altres",
+        "count" : "7"
+      }, {
+        "item" : "Windsurf/Kytesurf",
+        "count" : "6"
+      }, {
+        "item" : "Vela Lleugera, Windsurf/Kytesurf",
+        "count" : "5"
+      }, {
+        "item" : "Motonàutica, Activitats Arrossegament",
+        "count" : "5"
+      }, {
+        "item" : "Vela Lleugera, Altres",
+        "count" : "4"
+      }, {
+        "item" : "Vela Lleugera, Windsurf/Kytesurf, Altres",
+        "count" : "3"
+      }, {
+        "item" : "Motonàutica, Altres",
+        "count" : "3"
+      } ],
+      "smallest" : "Activitats Arrossegament",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  }, {
+    "id" : 27564619,
+    "name" : "CIF/NIF",
+    "dataTypeName" : "text",
+    "description" : "Document acreditatiu",
+    "fieldName" : "cif_nif",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16612841,
+    "cachedContents" : {
+      "non_null" : "364",
+      "largest" : "Y5645424L",
+      "null" : "0",
+      "top" : [ {
+        "item" : "B55136923",
+        "count" : "3"
+      }, {
+        "item" : "Q5856227C",
+        "count" : "3"
+      }, {
+        "item" : "B17936097",
+        "count" : "2"
+      }, {
+        "item" : "45827824W",
+        "count" : "2"
+      }, {
+        "item" : "G66143009",
+        "count" : "2"
+      }, {
+        "item" : "B57766727",
+        "count" : "2"
+      }, {
+        "item" : "39843005J",
+        "count" : "2"
+      }, {
+        "item" : "X0014836R",
+        "count" : "2"
+      }, {
+        "item" : "40445110R",
+        "count" : "2"
+      }, {
+        "item" : "B17462409",
+        "count" : "2"
+      }, {
+        "item" : "B43510635",
+        "count" : "2"
+      }, {
+        "item" : "G08393739",
+        "count" : "2"
+      }, {
+        "item" : "46141892M",
+        "count" : "2"
+      }, {
+        "item" : "B55296032",
+        "count" : "2"
+      }, {
+        "item" : "B66906033",
+        "count" : "2"
+      }, {
+        "item" : "B17424763",
+        "count" : "2"
+      }, {
+        "item" : "45933130Z",
+        "count" : "1"
+      }, {
+        "item" : "40931425G",
+        "count" : "1"
+      }, {
+        "item" : "40902285M",
+        "count" : "1"
+      }, {
+        "item" : "B67574053",
+        "count" : "1"
+      } ],
+      "smallest" : "12855748J",
+      "count" : "364",
+      "cardinality" : "364"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "attachments" : [ {
+      "filename" : "centres-nautics-autoritzats-do.xlsx",
+      "assetId" : "5a3530e2-6ee3-4c91-9fb5-9c396cc289b3",
+      "name" : "centres-nautics-autoritzats.xlsx"
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Nautical centers",
+        "Nombre del conjunto de datos (ES)" : "Centros náuticos"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Enllaços relacionats" : {
+        "Nom" : "Centres nàutics",
+        "URL" : "http://agricultura.gencat.cat/ca/ambits/nautica-busseig/centres-activitats-maritimes/centres-nautics/"
+      },
+      "Actors" : {
+        "Departament" : "Agricultura, Ramaderia, Pesca i Alimentació",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "pesca", "vela", "piragüisme", "moto nàutica", "esquí nàutic", "ods4_educació de qualitat", "ods14_vida submarina" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

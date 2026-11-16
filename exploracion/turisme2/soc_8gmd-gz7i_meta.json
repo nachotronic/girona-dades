@@ -1,0 +1,2029 @@
+{
+  "id" : "8gmd-gz7i",
+  "name" : "Equipaments de Catalunya",
+  "assetType" : "dataset",
+  "attribution" : "Direcció General de Serveis Digitals i Experiència Ciutadana",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1507732242,
+  "description" : "La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 32554,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locale" : "en_US",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2151107,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1630911682,
+  "publicationGroup" : 230419,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1794796666,
+  "rowsUpdatedBy" : "ayxa-4tpi",
+  "tableId" : 1463568,
+  "totalTimesRated" : 0,
+  "viewCount" : 29708,
+  "viewLastModified" : 1789980770,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1542616569,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 986215,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1542616569,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 20001703,
+    "name" : "Identificador",
+    "dataTypeName" : "text",
+    "description" : "Identificador intern de l’equipament a la  Base de dades d’Equipaments",
+    "fieldName" : "idequipament",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060569,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "9993371",
+      "null" : "0",
+      "top" : [ {
+        "item" : "736286",
+        "count" : "1"
+      }, {
+        "item" : "3041343",
+        "count" : "1"
+      }, {
+        "item" : "10629588",
+        "count" : "1"
+      }, {
+        "item" : "23317960",
+        "count" : "1"
+      }, {
+        "item" : "546868",
+        "count" : "1"
+      }, {
+        "item" : "715276",
+        "count" : "1"
+      }, {
+        "item" : "3624092",
+        "count" : "1"
+      }, {
+        "item" : "574239",
+        "count" : "1"
+      }, {
+        "item" : "738947",
+        "count" : "1"
+      }, {
+        "item" : "10627674",
+        "count" : "1"
+      }, {
+        "item" : "419772",
+        "count" : "1"
+      }, {
+        "item" : "416691",
+        "count" : "1"
+      }, {
+        "item" : "714973",
+        "count" : "1"
+      }, {
+        "item" : "415667",
+        "count" : "1"
+      }, {
+        "item" : "2578895",
+        "count" : "1"
+      }, {
+        "item" : "547188",
+        "count" : "1"
+      }, {
+        "item" : "10629834",
+        "count" : "1"
+      }, {
+        "item" : "2580825",
+        "count" : "1"
+      }, {
+        "item" : "1283399",
+        "count" : "1"
+      }, {
+        "item" : "23316524",
+        "count" : "1"
+      } ],
+      "smallest" : "10059565",
+      "count" : "32467",
+      "cardinality" : "32467"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 20001704,
+    "name" : "Àlies",
+    "dataTypeName" : "text",
+    "description" : "Àlies de l'equipament",
+    "fieldName" : "alies",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060570,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "ZONA POLIESPORTIVA MUNICIPAL EIXAMPLE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Zona esportiva municipal",
+        "count" : "202"
+      }, {
+        "item" : "Complex esportiu municipal",
+        "count" : "177"
+      }, {
+        "item" : "PISTA POLIESPORTIVA MUNICIPAL",
+        "count" : "119"
+      }, {
+        "item" : "PISCINES MUNICIPALS",
+        "count" : "101"
+      }, {
+        "item" : "CAMP DE FUTBOL MUNICIPAL",
+        "count" : "94"
+      }, {
+        "item" : "Zona Esportiva Municipal                                                                                                                                                                                                                                  ",
+        "count" : "92"
+      }, {
+        "item" : "PISCINA MUNICIPAL",
+        "count" : "90"
+      }, {
+        "item" : "ZONA ESPORTIVA MUNICIPAL",
+        "count" : "88"
+      }, {
+        "item" : "Zona esportiva municipal                                                                                                                                                                                                                                  ",
+        "count" : "69"
+      }, {
+        "item" : "PAVELLÓ POLIESPORTIU MUNICIPAL",
+        "count" : "58"
+      }, {
+        "item" : "Complex Esportiu Municipal                                                                                                                                                                                                                                ",
+        "count" : "48"
+      }, {
+        "item" : "Sala Polivalent",
+        "count" : "43"
+      }, {
+        "item" : "PISTA POLIESPORTIVA",
+        "count" : "35"
+      }, {
+        "item" : "CAMP DE FUTBOL",
+        "count" : "33"
+      }, {
+        "item" : "PAVELLÓ MUNICIPAL",
+        "count" : "32"
+      }, {
+        "item" : "Esc. de Música Municipal",
+        "count" : "29"
+      }, {
+        "item" : "Jutjat de Guàrdia",
+        "count" : "29"
+      }, {
+        "item" : "PAVELLÓ MUNICIPAL D'ESPORTS",
+        "count" : "27"
+      }, {
+        "item" : "Centre Cívic",
+        "count" : "25"
+      }, {
+        "item" : "Deganat",
+        "count" : "23"
+      } ],
+      "smallest" : "22@",
+      "count" : "32467",
+      "cardinality" : "28340"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001705,
+    "name" : "Nom",
+    "dataTypeName" : "text",
+    "description" : "Nom de l'eqiupament",
+    "fieldName" : "nom",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060571,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "ZONA POLIESPORTIVA PG. DE LA MEDITERRÀNIA",
+      "null" : "0",
+      "top" : [ {
+        "item" : "PISCINES MUNICIPALS",
+        "count" : "203"
+      }, {
+        "item" : "PISTA POLIESPORTIVA MUNICIPAL",
+        "count" : "180"
+      }, {
+        "item" : "CAMP DE FUTBOL MUNICIPAL",
+        "count" : "164"
+      }, {
+        "item" : "ZONA ESPORTIVA MUNICIPAL",
+        "count" : "131"
+      }, {
+        "item" : "PISCINA MUNICIPAL",
+        "count" : "128"
+      }, {
+        "item" : "PAVELLÓ POLIESPORTIU MUNICIPAL",
+        "count" : "95"
+      }, {
+        "item" : "CAMP DE FUTBOL",
+        "count" : "52"
+      }, {
+        "item" : "PAVELLÓ MUNICIPAL",
+        "count" : "48"
+      }, {
+        "item" : "PAVELLÓ MUNICIPAL D'ESPORTS",
+        "count" : "43"
+      }, {
+        "item" : "Sala Polivalent",
+        "count" : "43"
+      }, {
+        "item" : "PISTA POLIESPORTIVA",
+        "count" : "41"
+      }, {
+        "item" : "CAMP MUNICIPAL D'ESPORTS",
+        "count" : "37"
+      }, {
+        "item" : "CAMP MUNICIPAL DE FUTBOL",
+        "count" : "30"
+      }, {
+        "item" : "Esc. de Música Municipal",
+        "count" : "29"
+      }, {
+        "item" : "Jutjat de Guàrdia",
+        "count" : "29"
+      }, {
+        "item" : "INSTAL·LACIONS ESPORTIVES MUNICIPALS",
+        "count" : "28"
+      }, {
+        "item" : "POLIESPORTIU MUNICIPAL",
+        "count" : "26"
+      }, {
+        "item" : "Centre Cívic",
+        "count" : "25"
+      }, {
+        "item" : "Deganat",
+        "count" : "23"
+      }, {
+        "item" : "Jutjat de Primera Instància i Instrucció núm.  2",
+        "count" : "22"
+      } ],
+      "smallest" : "22@Barcelona",
+      "count" : "32467",
+      "cardinality" : "28601"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001706,
+    "name" : "Categoria",
+    "dataTypeName" : "text",
+    "description" : "Categories / subcategories de l'equipament",
+    "fieldName" : "categoria",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060572,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "31621",
+      "largest" : "Universitats|Universitats|Públiques|Recerca|Estructures universitàries|Universitats|",
+      "null" : "846",
+      "top" : [ {
+        "item" : "Salut|Farmàcies||",
+        "count" : "2895"
+      }, {
+        "item" : "Educació. Formació|Ensenyaments de règim general|3. Educació primària|Educació. Formació|Ensenyaments de règim general|1. Llar d'infants|",
+        "count" : "1637"
+      }, {
+        "item" : "Educació. Formació|Ensenyaments de règim general|1. Llar d'infants|",
+        "count" : "1310"
+      }, {
+        "item" : "Salut|Centres sanitaris|1. Centres d'atenció primària (CAP)|",
+        "count" : "1202"
+      }, {
+        "item" : "Cultura|Centres culturals: ateneus, centres cívics i cases de cultura||",
+        "count" : "1040"
+      }, {
+        "item" : "Esports. Lleure|Instal·lacions esportives|Pista|",
+        "count" : "1032"
+      }, {
+        "item" : "Serveis socials especialitzats|Serveis adreçats a persones grans amb dependència o risc social|Servei de residència assistida per a gent gran de caràcter temporal o permanent|",
+        "count" : "977"
+      }, {
+        "item" : "Justícia|Jutjats de pau||",
+        "count" : "971"
+      }, {
+        "item" : "Justícia|Jutjats i tribunals||",
+        "count" : "956"
+      }, {
+        "item" : "Cultura|Biblioteques||",
+        "count" : "953"
+      }, {
+        "item" : "Administració pública|Ens locals|Ajuntaments|",
+        "count" : "947"
+      }, {
+        "item" : "Serveis socials especialitzats|Serveis adreçats a persones grans amb dependència o risc social|Servei de centre de dia per a gent gran de caràcter temporal o permanent|",
+        "count" : "917"
+      }, {
+        "item" : "Esports. Lleure|Instal·lacions esportives|Camp|",
+        "count" : "650"
+      }, {
+        "item" : "Tecnologia. Innovació|Punt TIC||",
+        "count" : "595"
+      }, {
+        "item" : "Cultura|Biblioteques|Públiques|",
+        "count" : "591"
+      }, {
+        "item" : "Serveis socials bàsics|Servei d'ajuda a domicili||",
+        "count" : "505"
+      }, {
+        "item" : "Medi ambient|Deixalleries||",
+        "count" : "495"
+      }, {
+        "item" : "Cultura|Altres espais aptes per a l'ús cultural||",
+        "count" : "485"
+      }, {
+        "item" : "Esports. Lleure|Instal·lacions esportives|Piscina a l'aire lliure|",
+        "count" : "411"
+      }, {
+        "item" : "Serveis socials bàsics|Servei bàsic d'atenció social||",
+        "count" : "393"
+      } ],
+      "smallest" : "Administració pública|Centres de documentació||",
+      "count" : "32467",
+      "cardinality" : "599"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001707,
+    "name" : "Tipus de via",
+    "dataTypeName" : "text",
+    "description" : "Tipus de via (adreça)",
+    "fieldName" : "tipus_via",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060573,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "4668",
+      "largest" : "via",
+      "null" : "27799",
+      "top" : [ {
+        "item" : "c.",
+        "count" : "2476"
+      }, {
+        "item" : "pl.",
+        "count" : "818"
+      }, {
+        "item" : "av.",
+        "count" : "434"
+      }, {
+        "item" : "C.",
+        "count" : "183"
+      }, {
+        "item" : "pg.",
+        "count" : "163"
+      }, {
+        "item" : "ctra.",
+        "count" : "93"
+      }, {
+        "item" : "Av.",
+        "count" : "89"
+      }, {
+        "item" : "rbla.",
+        "count" : "66"
+      }, {
+        "item" : "rda.",
+        "count" : "40"
+      }, {
+        "item" : "camí",
+        "count" : "34"
+      }, {
+        "item" : "ptge.",
+        "count" : "30"
+      }, {
+        "item" : "Ctra.",
+        "count" : "30"
+      }, {
+        "item" : "Pl.",
+        "count" : "29"
+      }, {
+        "item" : "rblt.",
+        "count" : "26"
+      }, {
+        "item" : "via",
+        "count" : "26"
+      }, {
+        "item" : "Carrer",
+        "count" : "16"
+      }, {
+        "item" : "gv",
+        "count" : "16"
+      }, {
+        "item" : "Pg.",
+        "count" : "13"
+      }, {
+        "item" : "Camí",
+        "count" : "11"
+      }, {
+        "item" : "Passeig",
+        "count" : "8"
+      } ],
+      "smallest" : "-",
+      "count" : "32467",
+      "cardinality" : "52"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001708,
+    "name" : "Via",
+    "dataTypeName" : "text",
+    "description" : "Nom de la via (adreça)",
+    "fieldName" : "via",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060574,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : " Zulueta",
+      "null" : "0",
+      "top" : [ {
+        "item" : " Major",
+        "count" : "236"
+      }, {
+        "item" : "  - ",
+        "count" : "99"
+      }, {
+        "item" : " Casa Consistorial",
+        "count" : "92"
+      }, {
+        "item" : " Vila",
+        "count" : "87"
+      }, {
+        "item" : " Carrer del Foc, 57",
+        "count" : "83"
+      }, {
+        "item" : " Gran Via de les Corts Catalanes, 111 (Edifici C)",
+        "count" : "78"
+      }, {
+        "item" : " Ajuntament",
+        "count" : "75"
+      }, {
+        "item" : " Gran Via de les Corts Catalanes, 111 (edifici I)",
+        "count" : "71"
+      }, {
+        "item" : " Església",
+        "count" : "41"
+      }, {
+        "item" : " Via Laietana, 2",
+        "count" : "38"
+      }, {
+        "item" : " Passeig Lluís Companys, 14-16",
+        "count" : "37"
+      }, {
+        "item" : " Catalunya",
+        "count" : "36"
+      }, {
+        "item" : " Gran Via de les Corts Catalanes, 111 (edifici P)",
+        "count" : "35"
+      }, {
+        "item" : " Via Augusta, 202-226",
+        "count" : "33"
+      }, {
+        "item" : "de l' Hospital",
+        "count" : "31"
+      }, {
+        "item" : " Av. Francesc Macià, 34-36, Torre-1 Eix Macià",
+        "count" : "30"
+      }, {
+        "item" : " Gran Via de les Corts Catalanes, 111 (edifici S)",
+        "count" : "30"
+      }, {
+        "item" : " Nou",
+        "count" : "30"
+      }, {
+        "item" : "de la Vila",
+        "count" : "29"
+      }, {
+        "item" : "de l' Església",
+        "count" : "29"
+      } ],
+      "smallest" : "  ",
+      "count" : "32467",
+      "cardinality" : "24871"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001709,
+    "name" : "Sufix de via",
+    "dataTypeName" : "text",
+    "description" : "Sufix (adreça)",
+    "fieldName" : "sufix_via",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060575,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "32467",
+      "count" : "32467",
+      "cardinality" : "0"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001710,
+    "name" : "Número",
+    "dataTypeName" : "text",
+    "description" : "Número de portal (adreça)",
+    "fieldName" : "num",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060576,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "4624",
+      "largest" : "s/n",
+      "null" : "27843",
+      "top" : [ {
+        "item" : "1",
+        "count" : "627"
+      }, {
+        "item" : "0",
+        "count" : "515"
+      }, {
+        "item" : "2",
+        "count" : "255"
+      }, {
+        "item" : "3",
+        "count" : "164"
+      }, {
+        "item" : "7",
+        "count" : "149"
+      }, {
+        "item" : "5",
+        "count" : "131"
+      }, {
+        "item" : "4",
+        "count" : "114"
+      }, {
+        "item" : "10",
+        "count" : "109"
+      }, {
+        "item" : "8",
+        "count" : "109"
+      }, {
+        "item" : "s/n",
+        "count" : "100"
+      }, {
+        "item" : "11",
+        "count" : "94"
+      }, {
+        "item" : "6",
+        "count" : "89"
+      }, {
+        "item" : "15",
+        "count" : "83"
+      }, {
+        "item" : "9",
+        "count" : "73"
+      }, {
+        "item" : "16",
+        "count" : "68"
+      }, {
+        "item" : "14",
+        "count" : "65"
+      }, {
+        "item" : "13",
+        "count" : "62"
+      }, {
+        "item" : "22",
+        "count" : "59"
+      }, {
+        "item" : "12",
+        "count" : "59"
+      }, {
+        "item" : "18",
+        "count" : "57"
+      } ],
+      "smallest" : "-",
+      "count" : "32467",
+      "cardinality" : "259"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 20001711,
+    "name" : "Codi postal",
+    "dataTypeName" : "text",
+    "description" : "Codi postal",
+    "fieldName" : "cpostal",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060577,
+    "width" : 184,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "F-66000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08003",
+        "count" : "283"
+      }, {
+        "item" : "08038",
+        "count" : "256"
+      }, {
+        "item" : "8075",
+        "count" : "235"
+      }, {
+        "item" : "08830",
+        "count" : "210"
+      }, {
+        "item" : "08028",
+        "count" : "200"
+      }, {
+        "item" : "08800",
+        "count" : "198"
+      }, {
+        "item" : "08002",
+        "count" : "193"
+      }, {
+        "item" : "08001",
+        "count" : "191"
+      }, {
+        "item" : "43500",
+        "count" : "187"
+      }, {
+        "item" : "08940",
+        "count" : "186"
+      }, {
+        "item" : "08500",
+        "count" : "182"
+      }, {
+        "item" : "17600",
+        "count" : "177"
+      }, {
+        "item" : "08030",
+        "count" : "168"
+      }, {
+        "item" : "17800",
+        "count" : "163"
+      }, {
+        "item" : "08700",
+        "count" : "161"
+      }, {
+        "item" : "08017",
+        "count" : "156"
+      }, {
+        "item" : "08014",
+        "count" : "152"
+      }, {
+        "item" : "08029",
+        "count" : "149"
+      }, {
+        "item" : "08720",
+        "count" : "149"
+      }, {
+        "item" : "08191",
+        "count" : "147"
+      } ],
+      "smallest" : "-",
+      "count" : "32467",
+      "cardinality" : "1429"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 20001712,
+    "name" : "Població",
+    "dataTypeName" : "text",
+    "description" : "Població",
+    "fieldName" : "poblacio",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060578,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "27342",
+      "largest" : "Xerta",
+      "null" : "5125",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "5062"
+      }, {
+        "item" : "Lleida",
+        "count" : "590"
+      }, {
+        "item" : "Girona",
+        "count" : "508"
+      }, {
+        "item" : "Sabadell",
+        "count" : "488"
+      }, {
+        "item" : "Hospitalet de Llobregat, l'",
+        "count" : "445"
+      }, {
+        "item" : "Terrassa",
+        "count" : "439"
+      }, {
+        "item" : "Tarragona",
+        "count" : "438"
+      }, {
+        "item" : "Badalona",
+        "count" : "373"
+      }, {
+        "item" : "Reus",
+        "count" : "330"
+      }, {
+        "item" : "Mataró",
+        "count" : "287"
+      }, {
+        "item" : "Vendrell, el",
+        "count" : "273"
+      }, {
+        "item" : "Manresa",
+        "count" : "264"
+      }, {
+        "item" : "Santa Coloma de Gramenet",
+        "count" : "224"
+      }, {
+        "item" : "Granollers",
+        "count" : "204"
+      }, {
+        "item" : "Tortosa",
+        "count" : "201"
+      }, {
+        "item" : "Vilanova i la Geltrú",
+        "count" : "198"
+      }, {
+        "item" : "Sant Boi de Llobregat",
+        "count" : "198"
+      }, {
+        "item" : "Sant Cugat del Vallès",
+        "count" : "196"
+      }, {
+        "item" : "Cerdanyola del Vallès",
+        "count" : "188"
+      }, {
+        "item" : "Vic",
+        "count" : "174"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "32467",
+      "cardinality" : "949"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001729,
+    "name" : "Codi del municipi",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi",
+    "fieldName" : "codi_municipi",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13327910,
+    "cachedContents" : {
+      "non_null" : "27342",
+      "largest" : "439076",
+      "null" : "5125",
+      "top" : [ {
+        "item" : "080193",
+        "count" : "5062"
+      }, {
+        "item" : "251207",
+        "count" : "590"
+      }, {
+        "item" : "170792",
+        "count" : "508"
+      }, {
+        "item" : "081878",
+        "count" : "488"
+      }, {
+        "item" : "081017",
+        "count" : "445"
+      }, {
+        "item" : "082798",
+        "count" : "439"
+      }, {
+        "item" : "431482",
+        "count" : "438"
+      }, {
+        "item" : "080155",
+        "count" : "373"
+      }, {
+        "item" : "431233",
+        "count" : "330"
+      }, {
+        "item" : "081213",
+        "count" : "287"
+      }, {
+        "item" : "431634",
+        "count" : "273"
+      }, {
+        "item" : "081136",
+        "count" : "264"
+      }, {
+        "item" : "082457",
+        "count" : "224"
+      }, {
+        "item" : "080961",
+        "count" : "204"
+      }, {
+        "item" : "431554",
+        "count" : "201"
+      }, {
+        "item" : "083073",
+        "count" : "198"
+      }, {
+        "item" : "082009",
+        "count" : "198"
+      }, {
+        "item" : "082055",
+        "count" : "196"
+      }, {
+        "item" : "082665",
+        "count" : "188"
+      }, {
+        "item" : "082981",
+        "count" : "174"
+      } ],
+      "smallest" : "080018",
+      "count" : "32467",
+      "cardinality" : "947"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001714,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Comarca",
+    "fieldName" : "comarca",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060579,
+    "width" : 184,
+    "cachedContents" : {
+      "non_null" : "27342",
+      "largest" : "Vallès Oriental",
+      "null" : "5125",
+      "top" : [ {
+        "item" : "Barcelonès",
+        "count" : "6193"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "2075"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "1945"
+      }, {
+        "item" : "Maresme",
+        "count" : "1278"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "1252"
+      }, {
+        "item" : "Segrià",
+        "count" : "1036"
+      }, {
+        "item" : "Gironès",
+        "count" : "896"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "831"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "826"
+      }, {
+        "item" : "Bages",
+        "count" : "777"
+      }, {
+        "item" : "Osona",
+        "count" : "761"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "727"
+      }, {
+        "item" : "Selva",
+        "count" : "622"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "607"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "524"
+      }, {
+        "item" : "Anoia",
+        "count" : "521"
+      }, {
+        "item" : "Baix Penedès",
+        "count" : "520"
+      }, {
+        "item" : "Baix Ebre",
+        "count" : "444"
+      }, {
+        "item" : "Garraf",
+        "count" : "387"
+      }, {
+        "item" : "Noguera",
+        "count" : "371"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "32467",
+      "cardinality" : "42"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001715,
+    "name" : "Telèfon principal",
+    "dataTypeName" : "text",
+    "description" : "Telèfon principal",
+    "fieldName" : "telefon1",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060580,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "28061",
+      "largest" : " 938208000",
+      "null" : "4406",
+      "top" : [ {
+        "item" : "               ",
+        "count" : "275"
+      }, {
+        "item" : "112",
+        "count" : "247"
+      }, {
+        "item" : "93 857 40 00",
+        "count" : "48"
+      }, {
+        "item" : "93 316 20 00",
+        "count" : "45"
+      }, {
+        "item" : "938272300      ",
+        "count" : "34"
+      }, {
+        "item" : "93 552 67 00",
+        "count" : "34"
+      }, {
+        "item" : "93 400 69 00",
+        "count" : "33"
+      }, {
+        "item" : "93 402 46 00",
+        "count" : "31"
+      }, {
+        "item" : "93 495 80 00",
+        "count" : "29"
+      }, {
+        "item" : "900226226",
+        "count" : "26"
+      }, {
+        "item" : "938708753",
+        "count" : "26"
+      }, {
+        "item" : "902 930 200",
+        "count" : "25"
+      }, {
+        "item" : "93 483 10 00",
+        "count" : "25"
+      }, {
+        "item" : "972503088",
+        "count" : "24"
+      }, {
+        "item" : "93 304 65 00",
+        "count" : "24"
+      }, {
+        "item" : "93 551 20 00",
+        "count" : "22"
+      }, {
+        "item" : "932235151",
+        "count" : "20"
+      }, {
+        "item" : "977861232",
+        "count" : "20"
+      }, {
+        "item" : "93 304 67 00",
+        "count" : "20"
+      }, {
+        "item" : "937433407",
+        "count" : "18"
+      } ],
+      "smallest" : "               ",
+      "count" : "32467",
+      "cardinality" : "20622"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001716,
+    "name" : "Telèfon secundari",
+    "dataTypeName" : "text",
+    "description" : "Telèfon secundari",
+    "fieldName" : "telefon2",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060581,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "1286",
+      "largest" : "Tel. 93 295 44 ",
+      "null" : "31181",
+      "top" : [ {
+        "item" : "973142029",
+        "count" : "21"
+      }, {
+        "item" : "061 Salut Respo",
+        "count" : "10"
+      }, {
+        "item" : "936220624",
+        "count" : "10"
+      }, {
+        "item" : "607072186",
+        "count" : "10"
+      }, {
+        "item" : "93 553 61 01",
+        "count" : "5"
+      }, {
+        "item" : "935543162",
+        "count" : "4"
+      }, {
+        "item" : "977 42 17 26",
+        "count" : "4"
+      }, {
+        "item" : "938056104",
+        "count" : "4"
+      }, {
+        "item" : "972796077",
+        "count" : "3"
+      }, {
+        "item" : "977 70 29 54",
+        "count" : "3"
+      }, {
+        "item" : "93 557 34 01",
+        "count" : "3"
+      }, {
+        "item" : "973532529",
+        "count" : "3"
+      }, {
+        "item" : "972942545",
+        "count" : "3"
+      }, {
+        "item" : "977778512(Reus2",
+        "count" : "3"
+      }, {
+        "item" : "973727366(Hosp.",
+        "count" : "2"
+      }, {
+        "item" : "415388.47",
+        "count" : "2"
+      }, {
+        "item" : "973267222",
+        "count" : "2"
+      }, {
+        "item" : "977510517",
+        "count" : "2"
+      }, {
+        "item" : "973 70 00 50",
+        "count" : "2"
+      }, {
+        "item" : "977 87 00 05",
+        "count" : "2"
+      } ],
+      "smallest" : "00 32 2 230 21 ",
+      "count" : "32467",
+      "cardinality" : "1180"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001717,
+    "name" : "Fax",
+    "dataTypeName" : "text",
+    "description" : "Fax",
+    "fieldName" : "fax",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060582,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "13712",
+      "largest" : "T1: 93 297 16 4",
+      "null" : "18755",
+      "top" : [ {
+        "item" : "               ",
+        "count" : "5225"
+      }, {
+        "item" : "---------",
+        "count" : "37"
+      }, {
+        "item" : "932304459",
+        "count" : "26"
+      }, {
+        "item" : "93 495 80 01",
+        "count" : "25"
+      }, {
+        "item" : "973 65 04 86",
+        "count" : "14"
+      }, {
+        "item" : "93 552 67 01",
+        "count" : "14"
+      }, {
+        "item" : "93 552 69 65",
+        "count" : "13"
+      }, {
+        "item" : "93 400 69 80",
+        "count" : "13"
+      }, {
+        "item" : "93 227 29 90",
+        "count" : "12"
+      }, {
+        "item" : "973 72 73 93",
+        "count" : "10"
+      }, {
+        "item" : "93 241 53 42",
+        "count" : "10"
+      }, {
+        "item" : "933002174",
+        "count" : "9"
+      }, {
+        "item" : "-",
+        "count" : "8"
+      }, {
+        "item" : "977924241",
+        "count" : "8"
+      }, {
+        "item" : "93 889 10 63",
+        "count" : "8"
+      }, {
+        "item" : "93 316 27 01",
+        "count" : "7"
+      }, {
+        "item" : "932304654",
+        "count" : "7"
+      }, {
+        "item" : "972 77 20 89",
+        "count" : "7"
+      }, {
+        "item" : "973-640537",
+        "count" : "7"
+      }, {
+        "item" : "93 716 06 46",
+        "count" : "7"
+      } ],
+      "smallest" : "               ",
+      "count" : "32467",
+      "cardinality" : "7291"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001718,
+    "name" : "UTM X",
+    "dataTypeName" : "number",
+    "description" : "Coordenada x (UTM)",
+    "fieldName" : "utmx",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 2060583,
+    "width" : 148,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "4697167.02852638",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1342"
+      }, {
+        "item" : "427504.9067855701",
+        "count" : "195"
+      }, {
+        "item" : "427948.172",
+        "count" : "83"
+      }, {
+        "item" : "431562.5359972282",
+        "count" : "38"
+      }, {
+        "item" : "431629.0640596227",
+        "count" : "37"
+      }, {
+        "item" : "427996.7316643046",
+        "count" : "33"
+      }, {
+        "item" : "425654.9974472718",
+        "count" : "30"
+      }, {
+        "item" : "427737.8869633523",
+        "count" : "30"
+      }, {
+        "item" : "441266.082",
+        "count" : "30"
+      }, {
+        "item" : "352466.715",
+        "count" : "28"
+      }, {
+        "item" : "484356.989",
+        "count" : "28"
+      }, {
+        "item" : "417400.567",
+        "count" : "28"
+      }, {
+        "item" : "428316.5038503907",
+        "count" : "27"
+      }, {
+        "item" : "485271.265",
+        "count" : "26"
+      }, {
+        "item" : "430924.312",
+        "count" : "25"
+      }, {
+        "item" : "485278.5642934039",
+        "count" : "25"
+      }, {
+        "item" : "1.0",
+        "count" : "24"
+      }, {
+        "item" : "434551.7451060694",
+        "count" : "23"
+      }, {
+        "item" : "432173.8672184746",
+        "count" : "22"
+      }, {
+        "item" : "426108.1919792688",
+        "count" : "22"
+      } ],
+      "smallest" : "-9688348.93788473",
+      "count" : "32467",
+      "cardinality" : "24319"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "precision" : "3",
+      "groupSeparator" : ".",
+      "align" : "right"
+    }
+  }, {
+    "id" : 20001719,
+    "name" : "UTM Y",
+    "dataTypeName" : "number",
+    "description" : "Coordenada y (UTM)",
+    "fieldName" : "utmy",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 2060584,
+    "width" : 148,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "8652988.906819047",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1342"
+      }, {
+        "item" : "4579518.327491797",
+        "count" : "195"
+      }, {
+        "item" : "4578628.937",
+        "count" : "83"
+      }, {
+        "item" : "4581487.483111117",
+        "count" : "38"
+      }, {
+        "item" : "4582437.066411014",
+        "count" : "37"
+      }, {
+        "item" : "4583094.806658751",
+        "count" : "33"
+      }, {
+        "item" : "4605876.34",
+        "count" : "32"
+      }, {
+        "item" : "4599785.169275121",
+        "count" : "30"
+      }, {
+        "item" : "4579672.630774889",
+        "count" : "30"
+      }, {
+        "item" : "4648037.737",
+        "count" : "28"
+      }, {
+        "item" : "4600283.129",
+        "count" : "28"
+      }, {
+        "item" : "4553582.42",
+        "count" : "28"
+      }, {
+        "item" : "4581446.16082413",
+        "count" : "27"
+      }, {
+        "item" : "4647689.855",
+        "count" : "26"
+      }, {
+        "item" : "4582996.102",
+        "count" : "25"
+      }, {
+        "item" : "4648296.68504839",
+        "count" : "25"
+      }, {
+        "item" : "4584317.696818481",
+        "count" : "23"
+      }, {
+        "item" : "4582143.263243681",
+        "count" : "22"
+      }, {
+        "item" : "4579785.052434893",
+        "count" : "22"
+      }, {
+        "item" : "4564737.203",
+        "count" : "21"
+      } ],
+      "smallest" : "-6605720.587496366",
+      "count" : "32467",
+      "cardinality" : "24312"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "precision" : "3",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 20001720,
+    "name" : "Longitud",
+    "dataTypeName" : "number",
+    "description" : "Longitud",
+    "fieldName" : "longitud",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 2060585,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "18.0981774",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1311"
+      }, {
+        "item" : "2.1332244",
+        "count" : "195"
+      }, {
+        "item" : "2.13872974",
+        "count" : "83"
+      }, {
+        "item" : "2.18151159",
+        "count" : "38"
+      }, {
+        "item" : "2.1822",
+        "count" : "37"
+      }, {
+        "item" : "2.139648279",
+        "count" : "33"
+      }, {
+        "item" : "-1.4887438843851004",
+        "count" : "32"
+      }, {
+        "item" : "2.1359913",
+        "count" : "30"
+      }, {
+        "item" : "2.1086131",
+        "count" : "30"
+      }, {
+        "item" : "2.811161727324525",
+        "count" : "28"
+      }, {
+        "item" : "2.142649073",
+        "count" : "28"
+      }, {
+        "item" : "2.295176390803293",
+        "count" : "27"
+      }, {
+        "item" : "2.00958861",
+        "count" : "25"
+      }, {
+        "item" : "2.8222802",
+        "count" : "25"
+      }, {
+        "item" : "2.173707383",
+        "count" : "24"
+      }, {
+        "item" : "2.218127093",
+        "count" : "24"
+      }, {
+        "item" : "1.2426144204290377",
+        "count" : "23"
+      }, {
+        "item" : "2.822207293",
+        "count" : "22"
+      }, {
+        "item" : "2.1164942",
+        "count" : "22"
+      }, {
+        "item" : "2.188686",
+        "count" : "22"
+      } ],
+      "smallest" : "-120.6074352",
+      "count" : "32467",
+      "cardinality" : "25747"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "precision" : "9",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 20001721,
+    "name" : "Latitud",
+    "dataTypeName" : "number",
+    "description" : "Latitud",
+    "fieldName" : "latitud",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 2060586,
+    "width" : 184,
+    "cachedContents" : {
+      "non_null" : "32467",
+      "largest" : "52.5116305",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "1311"
+      }, {
+        "item" : "41.3639112",
+        "count" : "195"
+      }, {
+        "item" : "41.355947521",
+        "count" : "83"
+      }, {
+        "item" : "41.382002021",
+        "count" : "38"
+      }, {
+        "item" : "41.3905603",
+        "count" : "37"
+      }, {
+        "item" : "41.397976084",
+        "count" : "33"
+      }, {
+        "item" : "0.00000000000001272222",
+        "count" : "32"
+      }, {
+        "item" : "41.5462745",
+        "count" : "30"
+      }, {
+        "item" : "41.3653219",
+        "count" : "30"
+      }, {
+        "item" : "41.98418668572207",
+        "count" : "28"
+      }, {
+        "item" : "41.381187315",
+        "count" : "28"
+      }, {
+        "item" : "41.60243411988297",
+        "count" : "27"
+      }, {
+        "item" : "41.549949434",
+        "count" : "25"
+      }, {
+        "item" : "41.9865367",
+        "count" : "25"
+      }, {
+        "item" : "41.395535143",
+        "count" : "24"
+      }, {
+        "item" : "41.409551324",
+        "count" : "24"
+      }, {
+        "item" : "41.981071059",
+        "count" : "23"
+      }, {
+        "item" : "41.12014290917284",
+        "count" : "23"
+      }, {
+        "item" : "41.3661865",
+        "count" : "22"
+      }, {
+        "item" : "41.387955",
+        "count" : "22"
+      } ],
+      "smallest" : "0.0",
+      "count" : "32467",
+      "cardinality" : "25751"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "precision" : "9",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 20001722,
+    "name" : "Correu electrònic",
+    "dataTypeName" : "text",
+    "description" : "Adreça de correu electrònic",
+    "fieldName" : "email",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060587,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "9139",
+      "largest" : " llgt.igualtat@llagosta.cat",
+      "null" : "23328",
+      "top" : [ {
+        "item" : "ovalles@savosa.cat",
+        "count" : "26"
+      }, {
+        "item" : "consorcidelbages@consorcidelbages.cat",
+        "count" : "19"
+      }, {
+        "item" : "usuari@aransalut.com",
+        "count" : "17"
+      }, {
+        "item" : "informatica@concadebarbera.cat",
+        "count" : "14"
+      }, {
+        "item" : "telecentres@paeria.cat",
+        "count" : "14"
+      }, {
+        "item" : "fesclic@ajsabadell.cat",
+        "count" : "14"
+      }, {
+        "item" : "tvalencia@ssibe.cat",
+        "count" : "13"
+      }, {
+        "item" : "cuencass@gramenet.diba.es",
+        "count" : "13"
+      }, {
+        "item" : "gerenciamutua@mutuaterrassa.es",
+        "count" : "12"
+      }, {
+        "item" : "mmariano@copate.cat",
+        "count" : "12"
+      }, {
+        "item" : "fcipres@siresa.cat",
+        "count" : "12"
+      }, {
+        "item" : "comissiosm@gss.scs.es",
+        "count" : "11"
+      }, {
+        "item" : "ajuntament@vallfogona.net",
+        "count" : "11"
+      }, {
+        "item" : "nbel@mancomunitat.cat",
+        "count" : "11"
+      }, {
+        "item" : "ajuntament@vilanovameia.cat",
+        "count" : "10"
+      }, {
+        "item" : "laznar@copate.cat",
+        "count" : "10"
+      }, {
+        "item" : "info@angles.cat",
+        "count" : "9"
+      }, {
+        "item" : "medi.ambient@girones.cat",
+        "count" : "9"
+      }, {
+        "item" : "info@nautaran.org",
+        "count" : "9"
+      }, {
+        "item" : "atenciociutadatorroella@ssibe.cat",
+        "count" : "8"
+      } ],
+      "smallest" : "-",
+      "count" : "32467",
+      "cardinality" : "6321"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001723,
+    "name" : "Pàgina web",
+    "dataTypeName" : "url",
+    "description" : "Pàgina web",
+    "fieldName" : "web",
+    "position" : 21,
+    "renderTypeName" : "url",
+    "tableColumnId" : 2060588,
+    "width" : 136,
+    "format" : { },
+    "subColumnTypes" : [ "url", "description" ]
+  }, {
+    "id" : 20001724,
+    "name" : "Darrera modificació",
+    "dataTypeName" : "date",
+    "description" : "Data de la darrera modificació",
+    "fieldName" : "data_modificacio",
+    "position" : 22,
+    "renderTypeName" : "date",
+    "tableColumnId" : 2060589,
+    "width" : 292,
+    "cachedContents" : {
+      "non_null" : "32434",
+      "largest" : "2022-09-08T08:08:34.000Z",
+      "null" : "33",
+      "top" : [ {
+        "item" : "2022-09-08T07:31:57.000Z",
+        "count" : "87"
+      }, {
+        "item" : "2022-09-08T07:32:33.000Z",
+        "count" : "69"
+      }, {
+        "item" : "2022-09-08T07:31:58.000Z",
+        "count" : "64"
+      }, {
+        "item" : "2022-09-08T07:32:37.000Z",
+        "count" : "56"
+      }, {
+        "item" : "2022-09-08T07:32:29.000Z",
+        "count" : "56"
+      }, {
+        "item" : "2022-09-08T07:54:19.000Z",
+        "count" : "55"
+      }, {
+        "item" : "2018-03-22T13:26:20.000Z",
+        "count" : "55"
+      }, {
+        "item" : "2022-09-08T08:04:24.000Z",
+        "count" : "55"
+      }, {
+        "item" : "2022-09-08T07:32:43.000Z",
+        "count" : "54"
+      }, {
+        "item" : "2022-09-08T07:32:49.000Z",
+        "count" : "54"
+      }, {
+        "item" : "2018-03-22T13:26:19.000Z",
+        "count" : "54"
+      }, {
+        "item" : "2022-09-08T07:32:47.000Z",
+        "count" : "54"
+      }, {
+        "item" : "2022-09-08T07:31:43.000Z",
+        "count" : "54"
+      }, {
+        "item" : "2022-09-08T07:32:17.000Z",
+        "count" : "53"
+      }, {
+        "item" : "2022-09-08T08:04:25.000Z",
+        "count" : "53"
+      }, {
+        "item" : "2022-09-08T07:54:11.000Z",
+        "count" : "53"
+      }, {
+        "item" : "2022-09-08T08:06:59.000Z",
+        "count" : "52"
+      }, {
+        "item" : "2022-09-08T07:53:51.000Z",
+        "count" : "52"
+      }, {
+        "item" : "2022-07-28T23:42:53.000Z",
+        "count" : "52"
+      }, {
+        "item" : "2022-09-08T07:31:32.000Z",
+        "count" : "52"
+      } ],
+      "smallest" : "2018-03-22T13:26:16.000Z",
+      "count" : "32467",
+      "cardinality" : "1248"
+    },
+    "format" : {
+      "view" : "date_time"
+    }
+  }, {
+    "id" : 20001725,
+    "name" : "Propietats addicionals",
+    "dataTypeName" : "text",
+    "description" : "Propietats addicionals de l'equipament",
+    "fieldName" : "propietats",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 2060590,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "18046",
+      "largest" : "Tractaments|Alcoholisme/Tabaquisme/Altres drogues/Tractaments amb metadona/Prescriptor de metadona/Dispensador de metadona/Programa d'intercanvi de xeringues",
+      "null" : "14421",
+      "top" : [ {
+        "item" : "Any de construcció|0|Any del cens|0|Superfície total en m2|0|Titularitat|Adm. local: ajuntament",
+        "count" : "474"
+      }, {
+        "item" : "Accessibilitat|SI",
+        "count" : "362"
+      }, {
+        "item" : "Codi Territorial|Girona|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "318"
+      }, {
+        "item" : "Codi Territorial|Lleida|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "290"
+      }, {
+        "item" : "Codi Territorial|Tarragona|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "261"
+      }, {
+        "item" : "Codi Territorial|Maresme-Vallès Oriental|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "260"
+      }, {
+        "item" : "Any de construcció|0|Any del cens|0|Superfície total en m2|0|Titularitat|Pública   ",
+        "count" : "249"
+      }, {
+        "item" : "Codi Territorial|Barcelona Comarques|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "243"
+      }, {
+        "item" : "Codi Territorial|Baix Llobregat|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "243"
+      }, {
+        "item" : "Codi Territorial|Vallès Occidental|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "241"
+      }, {
+        "item" : "Codi Territorial|Consorci d'Educació de Barcelona|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "240"
+      }, {
+        "item" : "Codi Territorial|Catalunya Central|Naturalesa|Públic|Titularitat|Departament d'Ensenyament",
+        "count" : "239"
+      }, {
+        "item" : "Codi Territorial|Girona|Naturalesa|Públic|Titularitat|Corporacions Locals",
+        "count" : "161"
+      }, {
+        "item" : "Codi Territorial|Lleida|Naturalesa|Públic|Titularitat|Corporacions Locals",
+        "count" : "151"
+      }, {
+        "item" : "Codi Territorial|Catalunya Central|Naturalesa|Públic|Titularitat|Corporacions Locals",
+        "count" : "143"
+      }, {
+        "item" : "Any de construcció|0|Any del cens|0|Superfície total en m2|0|Titularitat|Generalitat",
+        "count" : "140"
+      }, {
+        "item" : "Any de construcció|0|Any del cens|0|Superfície total en m2|0|Titularitat|Privada",
+        "count" : "137"
+      }, {
+        "item" : "Codi Territorial|Tarragona|Naturalesa|Públic|Titularitat|Corporacions Locals",
+        "count" : "136"
+      }, {
+        "item" : "Codi Territorial|Maresme-Vallès Oriental|Naturalesa|Públic|Titularitat|Corporacions Locals",
+        "count" : "135"
+      }, {
+        "item" : "Codi Territorial|Consorci d'Educació de Barcelona|Naturalesa|Públic|Titularitat|Corporacions Locals",
+        "count" : "131"
+      } ],
+      "smallest" : "Accés|Cal demanar cita prèviament|Especialitats|Administració local,Arqueologia,Arxivística,Història local,Premsa comarcal|Horari d'estiu|DL Tancat<br/>DM Tancat<br/>DX Tancat<br/>DJ de 10:30 a 14:00<br/>DV de 10:30 a 14:00<br/>DS de 10:30 a 14:00 i de 16:00 a 19:00<br/>DG de 10:30 a 14:00 i de 16:00 a 19:00|Horari d'hivern|DL Tancat<br/>DM Tancat<br/>DX Tancat<br/>DJ de 10:30 a 14:00<br/>DV de 10:30 a 14:00<br/>DS de 10:30 a 14:00 i de 15:30 a 18:00<br/>DG de 10:30 a 14:00|Període|1 a 31 d'agost|Serveis|Circulació interna,Conferències i presentacions,Exposicions,Visites escolars,Cursos i tallers de formació d'usuaris,Consulta a sala,Informació bibliogràfica,Informació local,Cursos i tallers de suport a la formació i a l'autoformació|Titularitat|Adm. local: ajuntament",
+      "count" : "32467",
+      "cardinality" : "10503"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001726,
+    "name" : "Georeferència",
+    "dataTypeName" : "point",
+    "description" : "Georeferència",
+    "fieldName" : "localitzacio",
+    "position" : 24,
+    "renderTypeName" : "point",
+    "tableColumnId" : 8859294,
+    "cachedContents" : {
+      "non_null" : "31157",
+      "null" : "1310",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ 2.1332245, 41.36391 ],
+          "type" : "Point"
+        },
+        "count" : "195"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1387298, 41.35595 ],
+          "type" : "Point"
+        },
+        "count" : "83"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1815116, 41.382004 ],
+          "type" : "Point"
+        },
+        "count" : "39"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1822, 41.39056 ],
+          "type" : "Point"
+        },
+        "count" : "37"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1396482, 41.397976 ],
+          "type" : "Point"
+        },
+        "count" : "33"
+      }, {
+        "item" : {
+          "coordinates" : [ -1.4887439, 1.27E-14 ],
+          "type" : "Point"
+        },
+        "count" : "32"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.2951765, 41.602432 ],
+          "type" : "Point"
+        },
+        "count" : "31"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1359913, 41.365322 ],
+          "type" : "Point"
+        },
+        "count" : "30"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.108613, 41.546276 ],
+          "type" : "Point"
+        },
+        "count" : "30"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1426492, 41.381187 ],
+          "type" : "Point"
+        },
+        "count" : "29"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.8111618, 41.984188 ],
+          "type" : "Point"
+        },
+        "count" : "28"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.2426144, 41.120144 ],
+          "type" : "Point"
+        },
+        "count" : "28"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.0095887, 41.54995 ],
+          "type" : "Point"
+        },
+        "count" : "28"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.8222072, 41.98107 ],
+          "type" : "Point"
+        },
+        "count" : "26"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.218127, 41.40955 ],
+          "type" : "Point"
+        },
+        "count" : "25"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1737075, 41.395535 ],
+          "type" : "Point"
+        },
+        "count" : "25"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.8222802, 41.986538 ],
+          "type" : "Point"
+        },
+        "count" : "25"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.188686, 41.387955 ],
+          "type" : "Point"
+        },
+        "count" : "22"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1164942, 41.366188 ],
+          "type" : "Point"
+        },
+        "count" : "22"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.1148597, 41.16103 ],
+          "type" : "Point"
+        },
+        "count" : "21"
+      } ],
+      "count" : "32467",
+      "cardinality" : "24308"
+    },
+    "format" : { }
+  }, {
+    "id" : 20001727,
+    "name" : "LIMADM COMARCA",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : ":@computed_region_wvic_k925",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8859296,
+    "computationStrategy" : {
+      "source_columns" : [ "localitzacio" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_wvic-k925",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 20001728,
+    "name" : "LIMADM_MUNICIPI",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : ":@computed_region_bh64_c7uy",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8859295,
+    "computationStrategy" : {
+      "source_columns" : [ "localitzacio" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_bh64-c7uy",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Setmanal"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Catalonia's equipments",
+        "Nombre del conjunto de datos (ES)" : "Equipamientos de Cataluña"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Presidència",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Coordenades",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "aeroports", "aeròdroms i heliports", "agència tributària de catalunya", "albergs de joventut", "altres espais aptes per a l'ús cultural", "altres prestacions de serveis: serveis experimentals", "arxius", "biblioteques", "borses joves d'habitatge", "centres culturals: ateneus", "centres cívics i cases de cultura", "centres de documentació", "centres de normalització lingüística", "centres de promoció cultural", "centres de recerca", "centres d'innovació i formació ocupacional (cifo)", "centres educatius de justícia juvenil", "centres penitenciaris", "centres sanitaris", "confraries de pescadors", "consells reguladors", "deixalleries", "dependències d'atenció policial - mossos d'esquadra", "ens locals", "ensenyaments de règim especial", "ensenyaments de règim general", "entitats col·laboradores de l'administració (eca)", "equipaments cívics", "equips d'assessorament tècnic de menors", "escoles de capacitació agrària", "escoles de capacitació nauticopesquera", "espais d'art i sales d'exposició", "espais naturals", "estacions d'autobusos", "estructures universitàries", "facultats i escoles", "farmàcies", "fiscalies", "formació de persones adultes", "grans infraestructures de suport a la recerca", "hotels d'entitats", "inspecció tècnica de vehicles (itv)", "instal·lacions esportives", "institucions hospitalàries", "instituts universitaris de recerca", "juntes arbitrals de consum", "jutjats de pau", "jutjats i tribunals", "laboratoris de sanitat ramadera", "museus", "oficines comarcals d'agricultura", "oficines comarcals d'habitatge", "oficines d'acció", "oficines d'atenció", "oficines d'atenció a la víctima del delicte", "oficines d'atenció al ciutadà (oac)", "oficines d'atenció ciutadana", "oficines de benestar social i família", "oficines de català", "oficines de gestió empresarial (oge)", "oficines de la generalitat a l'exterior", "oficines de treball", "oficines de turisme de la xarxa", "oficines del servei d'orientació jurídica", "oficines d'informació a les dones", "oficines municipals d'escolarització", "organitzacions de persones consumidores", "parcs científics i tecnològics", "parcs de bombers", "parcs naturals", "policia de trànsit - mossos d'esquadra", "policies locals", "ports esportius", "punt tic", "punts d'atenció ciutadana", "punts d'autoservei del soc", "servei bàsic d'atenció social", "servei d'acolliment residencial d'urgència", "servei d'ajuda a domicili", "servei d'assessorament tècnic d'atenció social", "servei de centre obert", "servei de les tecnologies de suport i cura", "servei de menjador social", "servei de residència temporal per a persones adultes en situació d'exclusió", "servei de suport als serveis socials bàsics", "servei de suport als serveis socials bàsics (distribució d'aliments)", "servei de suport als serveis socials bàsics (maternoinfantil)", "servei públic de consum", "serveis adreçats a dones en situació de violència masclista i els seus fills", "serveis adreçats a famílies amb problemàtica social i risc d'exclusió social", "serveis adreçats a infància", "adolescència", "joventut", "serveis adreçats a persones afectades pel virus vih/sida", "serveis adreçats a persones amb dependència", "serveis adreçats a persones amb discapacitat física", "serveis adreçats a persones amb discapacitat intel·lectual", "serveis adreçats a persones amb discapacitat sensorial", "serveis adreçats a persones amb drogodependències i/o altres addiccions", "serveis adreçats a persones amb problemàtica social derivada de malaltia mental", "serveis adreçats a persones grans amb dependència o risc social", "serveis comuns adreçats a persones amb discapacitat", "serveis de cuidadors familiars o altres cuidadors no professionals", "serveis de suport als serveis socials especialitzats", "serveis d'informació juvenil", "serveis d'orientació mediadora (som)", "serveis inscrits reses: fora cartera 2009-2010", "teatres", "auditoris i espais escènics especialitzats", "universitats", "smartcatalonia", "ods9_indústria innovació i infraestructures" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,1894 @@
+{
+  "id" : "rn32-up9n",
+  "name" : "Impost sobre les Estades en Establiments Turístics (IEET), per marca turística i tipologia d’establiment",
+  "assetType" : "dataset",
+  "attribution" : "Agència Tributària de Catalunya (ATC)",
+  "attributionLink" : "http://atc.gencat.cat",
+  "averageRating" : 0,
+  "category" : "Hisenda",
+  "createdAt" : 1696424596,
+  "description" : "Aquest conjunt conté les dades dels ingressos generats per l’Impost sobre els Estades en Establiments Turístics (IEET), agregades per marca turística. \n\nEs faciliten les dades des de l’1 d’abril de 2017 fins al darrer període de liquidació vençut: de l’1 d’abril de 2024 al 30 de setembre de 2025 (2025S1).\n\nLes dades anteriors a 2017 no es faciliten degut a que l’estructura de l’impost abans de 2017 era sensiblement diferent a l’actual.\nEl conjunt de dades conté la informació del semestre de meritació, nombre d’autoliquidacions presentades, l’import declarat pel contribuent per l’IEET i l’import del recàrrec municipal, quan n'hi hagi. Els imports estan expressats en unitats d’euro.\n\nLes dades estan agregades territorialment i distribuïdes segons la tipologia d’establiment turístic:\n•\tAlberg de joventut (AJ)\n•\tApartament turístic (AT)\n•\tCàmping (CA)\n•\tEstabliment hoteler (EH)\n•\tHabitatge d’ús turístic (HT)\n•\tTurisme rural (TR)\n•\tAltres tipologies d’establiment (AE)\n•\tCreuers (CR)\n\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, les dades s’agreguen per unitats territorials de major volum i els import es donen arrodonits al miler d’euros.\nPer aquest mateix motiu de confidencialitat, en aquells casos en què un subconjunt presenta poca població d’elements  (p. ex. càmpings a l’Anoia), no se subministra la dada, tot i que sí que se suma en conjunts més amplis (p. ex. càmpings a la marca Paisatges Barcelona). Aquests casos s’indiquen amb el codi “nd”.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 575,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2969579,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1730364942,
+  "publicationGroup" : 1866010,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1775746240,
+  "rowsUpdatedBy" : "8pnz-5xij",
+  "tableId" : 1986985,
+  "totalTimesRated" : 0,
+  "viewCount" : 2217,
+  "viewLastModified" : 1789638830,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1697700949,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1470118,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1697700949,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1697700949,
+      "failureCount" : 0,
+      "startedAt" : 1697700949,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "8pnz-5xij",
+      "displayName" : "claudi.cervello@atc.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 26486696,
+    "name" : "Període autoliquidació.",
+    "dataTypeName" : "text",
+    "description" : "Període semestral en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació). Els semestre 1 (S1) comprèn de l’1 d’abril al 30 de setembre del mateix any. El semestre 2 (S2) comprèn de l’1 d’octubre del mateix any fins al 31 de març de l’any següent. Davant del semestre s’indiquen les dues últimes xifres de l’any, per exemple, 22S1 correspon al primer semestre de 2022. ",
+    "fieldName" : "per_ode_autoliquidaci",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378496,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "25S1",
+      "null" : "1",
+      "top" : [ {
+        "item" : "22S2",
+        "count" : "9"
+      }, {
+        "item" : "19S1",
+        "count" : "9"
+      }, {
+        "item" : "24S1",
+        "count" : "9"
+      }, {
+        "item" : "24S2",
+        "count" : "9"
+      }, {
+        "item" : "21S1",
+        "count" : "9"
+      }, {
+        "item" : "17T1",
+        "count" : "9"
+      }, {
+        "item" : "17S2",
+        "count" : "9"
+      }, {
+        "item" : "23S1",
+        "count" : "9"
+      }, {
+        "item" : "20S1",
+        "count" : "9"
+      }, {
+        "item" : "18S1",
+        "count" : "9"
+      }, {
+        "item" : "18S2",
+        "count" : "9"
+      }, {
+        "item" : "19S2",
+        "count" : "9"
+      }, {
+        "item" : "22S1",
+        "count" : "9"
+      }, {
+        "item" : "23S2",
+        "count" : "9"
+      }, {
+        "item" : "17S1",
+        "count" : "9"
+      }, {
+        "item" : "21S2",
+        "count" : "9"
+      }, {
+        "item" : "20S2",
+        "count" : "9"
+      }, {
+        "item" : "25S1",
+        "count" : "9"
+      }, {
+        "item" : "17T3",
+        "count" : "8"
+      }, {
+        "item" : "17T2",
+        "count" : "4"
+      } ],
+      "smallest" : "17S1",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486697,
+    "name" : "Marca turística",
+    "dataTypeName" : "text",
+    "description" : "Àmbit territorial en el qual s’ha produït el pagament de l’impost.",
+    "fieldName" : "marca_tur_stica",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378495,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "Val d'Aran",
+      "null" : "1",
+      "top" : [ {
+        "item" : "Costa Barcelona",
+        "count" : "20"
+      }, {
+        "item" : "Costa Brava",
+        "count" : "20"
+      }, {
+        "item" : "Barcelona",
+        "count" : "20"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "19"
+      }, {
+        "item" : "Val d'Aran",
+        "count" : "19"
+      }, {
+        "item" : "Pirineus",
+        "count" : "19"
+      }, {
+        "item" : "Costa Daurada",
+        "count" : "19"
+      }, {
+        "item" : "Terres de Lleida",
+        "count" : "19"
+      }, {
+        "item" : "Paisatges Barcelona",
+        "count" : "19"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486698,
+    "name" : "AJ - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en albergs de joventut",
+    "fieldName" : "aj_autoliquidacions",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378494,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "45"
+      }, {
+        "item" : "4",
+        "count" : "14"
+      }, {
+        "item" : "7",
+        "count" : "13"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "10",
+        "count" : "9"
+      }, {
+        "item" : "8",
+        "count" : "9"
+      }, {
+        "item" : "11",
+        "count" : "8"
+      }, {
+        "item" : "6",
+        "count" : "6"
+      }, {
+        "item" : "5",
+        "count" : "4"
+      }, {
+        "item" : "12",
+        "count" : "4"
+      }, {
+        "item" : "17",
+        "count" : "4"
+      }, {
+        "item" : "16",
+        "count" : "4"
+      }, {
+        "item" : "28",
+        "count" : "3"
+      }, {
+        "item" : "18",
+        "count" : "3"
+      }, {
+        "item" : "34",
+        "count" : "3"
+      }, {
+        "item" : "29",
+        "count" : "3"
+      }, {
+        "item" : "15",
+        "count" : "2"
+      }, {
+        "item" : "30",
+        "count" : "2"
+      }, {
+        "item" : "33",
+        "count" : "2"
+      }, {
+        "item" : "86",
+        "count" : "2"
+      } ],
+      "smallest" : "10",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486699,
+    "name" : "AJ - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en albergs de joventut, expressat en euros i arrodonit.",
+    "fieldName" : "aj_import_ingressat",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378493,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "45"
+      }, {
+        "item" : "2.000,00",
+        "count" : "13"
+      }, {
+        "item" : "1.000,00",
+        "count" : "13"
+      }, {
+        "item" : "3.000,00",
+        "count" : "10"
+      }, {
+        "item" : "4.000,00",
+        "count" : "6"
+      }, {
+        "item" : "1000",
+        "count" : "4"
+      }, {
+        "item" : "2000",
+        "count" : "4"
+      }, {
+        "item" : "5.000,00",
+        "count" : "4"
+      }, {
+        "item" : "7.000,00",
+        "count" : "3"
+      }, {
+        "item" : "25000",
+        "count" : "3"
+      }, {
+        "item" : "5000",
+        "count" : "3"
+      }, {
+        "item" : "21.000,00",
+        "count" : "3"
+      }, {
+        "item" : "12.000,00",
+        "count" : "3"
+      }, {
+        "item" : "8.000,00",
+        "count" : "3"
+      }, {
+        "item" : "11000",
+        "count" : "3"
+      }, {
+        "item" : "4000",
+        "count" : "3"
+      }, {
+        "item" : "13.000,00",
+        "count" : "2"
+      }, {
+        "item" : "0,00",
+        "count" : "2"
+      }, {
+        "item" : "23.000,00",
+        "count" : "2"
+      }, {
+        "item" : "15.000,00",
+        "count" : "2"
+      } ],
+      "smallest" : "0,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486721,
+    "name" : "AJ - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "aj_recarrec_mpal",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986217,
+    "cachedContents" : {
+      "non_null" : "8",
+      "largest" : "389.000,00",
+      "null" : "167",
+      "top" : [ {
+        "item" : "1.135.000,00",
+        "count" : "1"
+      }, {
+        "item" : "1.554.000,00",
+        "count" : "1"
+      }, {
+        "item" : "1873000",
+        "count" : "1"
+      }, {
+        "item" : "2494000",
+        "count" : "1"
+      }, {
+        "item" : "2582000",
+        "count" : "1"
+      }, {
+        "item" : "3069000",
+        "count" : "1"
+      }, {
+        "item" : "3525000",
+        "count" : "1"
+      }, {
+        "item" : "389.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "1.135.000,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486700,
+    "name" : "AT - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en apartaments turístics",
+    "fieldName" : "at_autoliquidacions",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378492,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "18"
+      }, {
+        "item" : "15",
+        "count" : "6"
+      }, {
+        "item" : "10",
+        "count" : "6"
+      }, {
+        "item" : "17",
+        "count" : "5"
+      }, {
+        "item" : "6",
+        "count" : "4"
+      }, {
+        "item" : "18",
+        "count" : "4"
+      }, {
+        "item" : "9",
+        "count" : "4"
+      }, {
+        "item" : "8",
+        "count" : "4"
+      }, {
+        "item" : "27",
+        "count" : "3"
+      }, {
+        "item" : "4",
+        "count" : "3"
+      }, {
+        "item" : "13",
+        "count" : "3"
+      }, {
+        "item" : "14",
+        "count" : "3"
+      }, {
+        "item" : "23",
+        "count" : "3"
+      }, {
+        "item" : "60",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "49",
+        "count" : "2"
+      }, {
+        "item" : "135",
+        "count" : "2"
+      }, {
+        "item" : "115",
+        "count" : "2"
+      }, {
+        "item" : "19",
+        "count" : "2"
+      }, {
+        "item" : "20",
+        "count" : "2"
+      } ],
+      "smallest" : "10",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486701,
+    "name" : "AT - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en apartaments turístics, expressat en euros i arrodonit.",
+    "fieldName" : "at_import_ingressat",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378491,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "18"
+      }, {
+        "item" : "1.000,00",
+        "count" : "16"
+      }, {
+        "item" : "2.000,00",
+        "count" : "7"
+      }, {
+        "item" : "1000",
+        "count" : "6"
+      }, {
+        "item" : "11.000,00",
+        "count" : "6"
+      }, {
+        "item" : "0,00",
+        "count" : "6"
+      }, {
+        "item" : "9.000,00",
+        "count" : "5"
+      }, {
+        "item" : "3.000,00",
+        "count" : "5"
+      }, {
+        "item" : "5.000,00",
+        "count" : "4"
+      }, {
+        "item" : "2000",
+        "count" : "4"
+      }, {
+        "item" : "3000",
+        "count" : "3"
+      }, {
+        "item" : "13.000,00",
+        "count" : "3"
+      }, {
+        "item" : "25.000,00",
+        "count" : "3"
+      }, {
+        "item" : "7.000,00",
+        "count" : "3"
+      }, {
+        "item" : "10000",
+        "count" : "2"
+      }, {
+        "item" : "41.000,00",
+        "count" : "2"
+      }, {
+        "item" : "12.000,00",
+        "count" : "2"
+      }, {
+        "item" : "10.000,00",
+        "count" : "2"
+      }, {
+        "item" : "24.000,00",
+        "count" : "2"
+      }, {
+        "item" : "132.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486720,
+    "name" : "AT - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "at_recarrec_mpal",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986216,
+    "cachedContents" : {
+      "non_null" : "10",
+      "largest" : "85.000,00",
+      "null" : "165",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1"
+      }, {
+        "item" : "0,00",
+        "count" : "1"
+      }, {
+        "item" : "210.000,00",
+        "count" : "1"
+      }, {
+        "item" : "277.000,00",
+        "count" : "1"
+      }, {
+        "item" : "347000",
+        "count" : "1"
+      }, {
+        "item" : "477000",
+        "count" : "1"
+      }, {
+        "item" : "478000",
+        "count" : "1"
+      }, {
+        "item" : "565000",
+        "count" : "1"
+      }, {
+        "item" : "569000",
+        "count" : "1"
+      }, {
+        "item" : "85.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486702,
+    "name" : "CA - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en càmpings",
+    "fieldName" : "ca_autoliquidacions",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378490,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "55"
+      }, {
+        "item" : "13",
+        "count" : "8"
+      }, {
+        "item" : "5",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "6"
+      }, {
+        "item" : "14",
+        "count" : "5"
+      }, {
+        "item" : "15",
+        "count" : "5"
+      }, {
+        "item" : "6",
+        "count" : "4"
+      }, {
+        "item" : "16",
+        "count" : "4"
+      }, {
+        "item" : "40",
+        "count" : "4"
+      }, {
+        "item" : "12",
+        "count" : "4"
+      }, {
+        "item" : "43",
+        "count" : "3"
+      }, {
+        "item" : "44",
+        "count" : "3"
+      }, {
+        "item" : "80",
+        "count" : "3"
+      }, {
+        "item" : "45",
+        "count" : "3"
+      }, {
+        "item" : "92",
+        "count" : "3"
+      }, {
+        "item" : "41",
+        "count" : "3"
+      }, {
+        "item" : "37",
+        "count" : "2"
+      }, {
+        "item" : "100",
+        "count" : "2"
+      }, {
+        "item" : "76",
+        "count" : "2"
+      }, {
+        "item" : "47",
+        "count" : "2"
+      } ],
+      "smallest" : "10",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486703,
+    "name" : "CA - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en càmpings, expressat en euros i arrodonit.",
+    "fieldName" : "ca_import_ingressat",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378489,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "55"
+      }, {
+        "item" : "3.000,00",
+        "count" : "5"
+      }, {
+        "item" : "2.000,00",
+        "count" : "4"
+      }, {
+        "item" : "11.000,00",
+        "count" : "3"
+      }, {
+        "item" : "76.000,00",
+        "count" : "3"
+      }, {
+        "item" : "69.000,00",
+        "count" : "2"
+      }, {
+        "item" : "5000",
+        "count" : "2"
+      }, {
+        "item" : "75.000,00",
+        "count" : "2"
+      }, {
+        "item" : "28.000,00",
+        "count" : "2"
+      }, {
+        "item" : "126.000,00",
+        "count" : "2"
+      }, {
+        "item" : "14.000,00",
+        "count" : "2"
+      }, {
+        "item" : "5.000,00",
+        "count" : "2"
+      }, {
+        "item" : "7.000,00",
+        "count" : "2"
+      }, {
+        "item" : "111.000,00",
+        "count" : "1"
+      }, {
+        "item" : "247000",
+        "count" : "1"
+      }, {
+        "item" : "44.000,00",
+        "count" : "1"
+      }, {
+        "item" : "138.000,00",
+        "count" : "1"
+      }, {
+        "item" : "9.000,00",
+        "count" : "1"
+      }, {
+        "item" : "2067000",
+        "count" : "1"
+      }, {
+        "item" : "506.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "10000",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486719,
+    "name" : "CA - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "ca_recarrec_mpal",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986215,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "175",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486704,
+    "name" : "EH - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en a establiments hotelers",
+    "fieldName" : "eh_autoliquidacions",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378488,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "15"
+      }, {
+        "item" : "73",
+        "count" : "7"
+      }, {
+        "item" : "55",
+        "count" : "4"
+      }, {
+        "item" : "85",
+        "count" : "4"
+      }, {
+        "item" : "79",
+        "count" : "3"
+      }, {
+        "item" : "111",
+        "count" : "3"
+      }, {
+        "item" : "5",
+        "count" : "3"
+      }, {
+        "item" : "82",
+        "count" : "3"
+      }, {
+        "item" : "354",
+        "count" : "3"
+      }, {
+        "item" : "70",
+        "count" : "3"
+      }, {
+        "item" : "67",
+        "count" : "2"
+      }, {
+        "item" : "72",
+        "count" : "2"
+      }, {
+        "item" : "377",
+        "count" : "2"
+      }, {
+        "item" : "312",
+        "count" : "2"
+      }, {
+        "item" : "13",
+        "count" : "2"
+      }, {
+        "item" : "105",
+        "count" : "2"
+      }, {
+        "item" : "116",
+        "count" : "2"
+      }, {
+        "item" : "63",
+        "count" : "2"
+      }, {
+        "item" : "335",
+        "count" : "2"
+      }, {
+        "item" : "95",
+        "count" : "2"
+      } ],
+      "smallest" : "103",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486705,
+    "name" : "EH - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en establiments hotelers, expressat en euros i arrodonit.",
+    "fieldName" : "eh_import_ingressat",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378487,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "15"
+      }, {
+        "item" : "131.000,00",
+        "count" : "2"
+      }, {
+        "item" : "1.406.000,00",
+        "count" : "2"
+      }, {
+        "item" : "2.000,00",
+        "count" : "2"
+      }, {
+        "item" : "106.000,00",
+        "count" : "2"
+      }, {
+        "item" : "239.000,00",
+        "count" : "2"
+      }, {
+        "item" : "100.000,00",
+        "count" : "2"
+      }, {
+        "item" : "132.000,00",
+        "count" : "2"
+      }, {
+        "item" : "128.000,00",
+        "count" : "2"
+      }, {
+        "item" : "151000",
+        "count" : "2"
+      }, {
+        "item" : "12400000,00%",
+        "count" : "1"
+      }, {
+        "item" : "3.843.000,00",
+        "count" : "1"
+      }, {
+        "item" : "20197000",
+        "count" : "1"
+      }, {
+        "item" : "155.000,00",
+        "count" : "1"
+      }, {
+        "item" : "4.179.000,00",
+        "count" : "1"
+      }, {
+        "item" : "426.000,00",
+        "count" : "1"
+      }, {
+        "item" : "42.000,00",
+        "count" : "1"
+      }, {
+        "item" : "413000",
+        "count" : "1"
+      }, {
+        "item" : "1.411.000,00",
+        "count" : "1"
+      }, {
+        "item" : "170.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "0,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486718,
+    "name" : "EH - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "eh_recarrec_mpal",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986214,
+    "cachedContents" : {
+      "non_null" : "12",
+      "largest" : "9.000,00",
+      "null" : "163",
+      "top" : [ {
+        "item" : "0,00",
+        "count" : "1"
+      }, {
+        "item" : "156.000,00",
+        "count" : "1"
+      }, {
+        "item" : "15.690.000,00",
+        "count" : "1"
+      }, {
+        "item" : "19.309.000,00",
+        "count" : "1"
+      }, {
+        "item" : "26425000",
+        "count" : "1"
+      }, {
+        "item" : "3000",
+        "count" : "1"
+      }, {
+        "item" : "31195000",
+        "count" : "1"
+      }, {
+        "item" : "36699000",
+        "count" : "1"
+      }, {
+        "item" : "37598000",
+        "count" : "1"
+      }, {
+        "item" : "45035000",
+        "count" : "1"
+      }, {
+        "item" : "7.575.000,00",
+        "count" : "1"
+      }, {
+        "item" : "9.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "0,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486706,
+    "name" : "HT - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en habitatges d’ús turístic",
+    "fieldName" : "ht_autoliquidacions",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378486,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "11"
+      }, {
+        "item" : "114",
+        "count" : "2"
+      }, {
+        "item" : "1.192",
+        "count" : "2"
+      }, {
+        "item" : "265",
+        "count" : "2"
+      }, {
+        "item" : "5670",
+        "count" : "1"
+      }, {
+        "item" : "1.695",
+        "count" : "1"
+      }, {
+        "item" : "1.748",
+        "count" : "1"
+      }, {
+        "item" : "7.983",
+        "count" : "1"
+      }, {
+        "item" : "5.864",
+        "count" : "1"
+      }, {
+        "item" : "228",
+        "count" : "1"
+      }, {
+        "item" : "246",
+        "count" : "1"
+      }, {
+        "item" : "3.125",
+        "count" : "1"
+      }, {
+        "item" : "1824",
+        "count" : "1"
+      }, {
+        "item" : "93800,00%",
+        "count" : "1"
+      }, {
+        "item" : "1.971",
+        "count" : "1"
+      }, {
+        "item" : "95",
+        "count" : "1"
+      }, {
+        "item" : "619",
+        "count" : "1"
+      }, {
+        "item" : "9",
+        "count" : "1"
+      }, {
+        "item" : "4",
+        "count" : "1"
+      }, {
+        "item" : "1.048",
+        "count" : "1"
+      } ],
+      "smallest" : "1.006",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486707,
+    "name" : "HT - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en habitatges d’ús turístic, expressat en euros i arrodonit.",
+    "fieldName" : "ht_import_ingressat",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378485,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "11"
+      }, {
+        "item" : "23.000,00",
+        "count" : "5"
+      }, {
+        "item" : "1.000,00",
+        "count" : "4"
+      }, {
+        "item" : "16.000,00",
+        "count" : "4"
+      }, {
+        "item" : "126.000,00",
+        "count" : "3"
+      }, {
+        "item" : "0,00",
+        "count" : "3"
+      }, {
+        "item" : "25.000,00",
+        "count" : "3"
+      }, {
+        "item" : "50000",
+        "count" : "2"
+      }, {
+        "item" : "28.000,00",
+        "count" : "2"
+      }, {
+        "item" : "38.000,00",
+        "count" : "2"
+      }, {
+        "item" : "12.000,00",
+        "count" : "2"
+      }, {
+        "item" : "33000",
+        "count" : "2"
+      }, {
+        "item" : "19.000,00",
+        "count" : "2"
+      }, {
+        "item" : "13.000,00",
+        "count" : "2"
+      }, {
+        "item" : "54.000,00",
+        "count" : "2"
+      }, {
+        "item" : "43000",
+        "count" : "2"
+      }, {
+        "item" : "15.000,00",
+        "count" : "2"
+      }, {
+        "item" : "5.000,00",
+        "count" : "2"
+      }, {
+        "item" : "2.000,00",
+        "count" : "2"
+      }, {
+        "item" : "21.000,00",
+        "count" : "2"
+      } ],
+      "smallest" : "0,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486717,
+    "name" : "HT - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "ht_recarrec_mpal",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986213,
+    "cachedContents" : {
+      "non_null" : "34",
+      "largest" : "9723000",
+      "null" : "141",
+      "top" : [ {
+        "item" : "0,00",
+        "count" : "13"
+      }, {
+        "item" : "0",
+        "count" : "4"
+      }, {
+        "item" : "1000",
+        "count" : "2"
+      }, {
+        "item" : "1.000,00",
+        "count" : "2"
+      }, {
+        "item" : "14.000,00",
+        "count" : "1"
+      }, {
+        "item" : "2000",
+        "count" : "1"
+      }, {
+        "item" : "3.000,00",
+        "count" : "1"
+      }, {
+        "item" : "3.205.000,00",
+        "count" : "1"
+      }, {
+        "item" : "4000",
+        "count" : "1"
+      }, {
+        "item" : "4.029.000,00",
+        "count" : "1"
+      }, {
+        "item" : "6126000",
+        "count" : "1"
+      }, {
+        "item" : "7299000",
+        "count" : "1"
+      }, {
+        "item" : "9463000",
+        "count" : "1"
+      }, {
+        "item" : "9723000",
+        "count" : "1"
+      }, {
+        "item" : "10.000,00",
+        "count" : "1"
+      }, {
+        "item" : "11915000",
+        "count" : "1"
+      }, {
+        "item" : "1.366.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486708,
+    "name" : "TR - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en establiments de turisme rural",
+    "fieldName" : "tr_autoliquidacions",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378484,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "37"
+      }, {
+        "item" : "8",
+        "count" : "7"
+      }, {
+        "item" : "6",
+        "count" : "5"
+      }, {
+        "item" : "7",
+        "count" : "3"
+      }, {
+        "item" : "97",
+        "count" : "3"
+      }, {
+        "item" : "81",
+        "count" : "3"
+      }, {
+        "item" : "109",
+        "count" : "3"
+      }, {
+        "item" : "87",
+        "count" : "3"
+      }, {
+        "item" : "4",
+        "count" : "3"
+      }, {
+        "item" : "77",
+        "count" : "3"
+      }, {
+        "item" : "585",
+        "count" : "2"
+      }, {
+        "item" : "10",
+        "count" : "2"
+      }, {
+        "item" : "73",
+        "count" : "2"
+      }, {
+        "item" : "105",
+        "count" : "2"
+      }, {
+        "item" : "199",
+        "count" : "2"
+      }, {
+        "item" : "92",
+        "count" : "2"
+      }, {
+        "item" : "117",
+        "count" : "2"
+      }, {
+        "item" : "323",
+        "count" : "2"
+      }, {
+        "item" : "9",
+        "count" : "2"
+      }, {
+        "item" : "104",
+        "count" : "2"
+      } ],
+      "smallest" : "10",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486709,
+    "name" : "TR - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en establiments de turisme rural, expressat en euros i arrodonit.",
+    "fieldName" : "tr_import_ingressat",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378483,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "37"
+      }, {
+        "item" : "9.000,00",
+        "count" : "10"
+      }, {
+        "item" : "1.000,00",
+        "count" : "10"
+      }, {
+        "item" : "0,00",
+        "count" : "7"
+      }, {
+        "item" : "1000",
+        "count" : "5"
+      }, {
+        "item" : "16.000,00",
+        "count" : "4"
+      }, {
+        "item" : "14.000,00",
+        "count" : "4"
+      }, {
+        "item" : "12.000,00",
+        "count" : "4"
+      }, {
+        "item" : "8.000,00",
+        "count" : "3"
+      }, {
+        "item" : "38.000,00",
+        "count" : "3"
+      }, {
+        "item" : "23.000,00",
+        "count" : "3"
+      }, {
+        "item" : "8000",
+        "count" : "3"
+      }, {
+        "item" : "15000",
+        "count" : "3"
+      }, {
+        "item" : "10.000,00",
+        "count" : "3"
+      }, {
+        "item" : "11.000,00",
+        "count" : "3"
+      }, {
+        "item" : "56.000,00",
+        "count" : "2"
+      }, {
+        "item" : "5.000,00",
+        "count" : "2"
+      }, {
+        "item" : "3.000,00",
+        "count" : "2"
+      }, {
+        "item" : "69.000,00",
+        "count" : "2"
+      }, {
+        "item" : "25.000,00",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486716,
+    "name" : "TR - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "tr_recarrec_mpal",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986212,
+    "cachedContents" : {
+      "non_null" : "12",
+      "largest" : "4000",
+      "null" : "163",
+      "top" : [ {
+        "item" : "0,00",
+        "count" : "6"
+      }, {
+        "item" : "0",
+        "count" : "2"
+      }, {
+        "item" : "111.000,00",
+        "count" : "1"
+      }, {
+        "item" : "206000",
+        "count" : "1"
+      }, {
+        "item" : "224000",
+        "count" : "1"
+      }, {
+        "item" : "4000",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486710,
+    "name" : "AE - autoliquidacions",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional).",
+    "fieldName" : "ae_autoliquidacions",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378482,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "61"
+      }, {
+        "item" : "4",
+        "count" : "11"
+      }, {
+        "item" : "10",
+        "count" : "7"
+      }, {
+        "item" : "11",
+        "count" : "7"
+      }, {
+        "item" : "6",
+        "count" : "7"
+      }, {
+        "item" : "8",
+        "count" : "6"
+      }, {
+        "item" : "9",
+        "count" : "6"
+      }, {
+        "item" : "5",
+        "count" : "5"
+      }, {
+        "item" : "7",
+        "count" : "5"
+      }, {
+        "item" : "13",
+        "count" : "4"
+      }, {
+        "item" : "15",
+        "count" : "3"
+      }, {
+        "item" : "19",
+        "count" : "3"
+      }, {
+        "item" : "24",
+        "count" : "2"
+      }, {
+        "item" : "48",
+        "count" : "2"
+      }, {
+        "item" : "12",
+        "count" : "2"
+      }, {
+        "item" : "59",
+        "count" : "2"
+      }, {
+        "item" : "26",
+        "count" : "2"
+      }, {
+        "item" : "14",
+        "count" : "2"
+      }, {
+        "item" : "32",
+        "count" : "2"
+      }, {
+        "item" : "21",
+        "count" : "2"
+      } ],
+      "smallest" : "10",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486711,
+    "name" : "AE - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en altres tipologies d’establiments (inclou establiments no identificats, àrees de pernocta i establiments amb codi provisional), expressat en euros i arrodonit.",
+    "fieldName" : "ae_import_ingressat",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378481,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "61"
+      }, {
+        "item" : "3.000,00",
+        "count" : "13"
+      }, {
+        "item" : "1.000,00",
+        "count" : "13"
+      }, {
+        "item" : "2.000,00",
+        "count" : "12"
+      }, {
+        "item" : "10.000,00",
+        "count" : "5"
+      }, {
+        "item" : "5.000,00",
+        "count" : "4"
+      }, {
+        "item" : "11000",
+        "count" : "4"
+      }, {
+        "item" : "12000",
+        "count" : "4"
+      }, {
+        "item" : "1000",
+        "count" : "4"
+      }, {
+        "item" : "7.000,00",
+        "count" : "4"
+      }, {
+        "item" : "6.000,00",
+        "count" : "4"
+      }, {
+        "item" : "2000",
+        "count" : "4"
+      }, {
+        "item" : "4.000,00",
+        "count" : "3"
+      }, {
+        "item" : "0",
+        "count" : "3"
+      }, {
+        "item" : "0,00",
+        "count" : "3"
+      }, {
+        "item" : "42000",
+        "count" : "2"
+      }, {
+        "item" : "9.000,00",
+        "count" : "2"
+      }, {
+        "item" : "16000",
+        "count" : "2"
+      }, {
+        "item" : "44000",
+        "count" : "2"
+      }, {
+        "item" : "10000",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486715,
+    "name" : "AE - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "ae_recarrec_mpal",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986211,
+    "cachedContents" : {
+      "non_null" : "9",
+      "largest" : "58.000,00",
+      "null" : "166",
+      "top" : [ {
+        "item" : "1.000,00",
+        "count" : "1"
+      }, {
+        "item" : "100.000,00",
+        "count" : "1"
+      }, {
+        "item" : "107000",
+        "count" : "1"
+      }, {
+        "item" : "114000",
+        "count" : "1"
+      }, {
+        "item" : "242000",
+        "count" : "1"
+      }, {
+        "item" : "281000",
+        "count" : "1"
+      }, {
+        "item" : "319000",
+        "count" : "1"
+      }, {
+        "item" : "5.000,00",
+        "count" : "1"
+      }, {
+        "item" : "58.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "1.000,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  }, {
+    "id" : 26486712,
+    "name" : "CR - quota IEET",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’autoliquidacions per estades en creuers",
+    "fieldName" : "cr_autoliquidacions",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378480,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "137"
+      }, {
+        "item" : "6",
+        "count" : "4"
+      }, {
+        "item" : "14",
+        "count" : "3"
+      }, {
+        "item" : "10",
+        "count" : "2"
+      }, {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "13",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "40",
+        "count" : "1"
+      }, {
+        "item" : "148",
+        "count" : "1"
+      }, {
+        "item" : "44",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "104",
+        "count" : "1"
+      }, {
+        "item" : "164",
+        "count" : "1"
+      }, {
+        "item" : "171",
+        "count" : "1"
+      }, {
+        "item" : "169",
+        "count" : "1"
+      }, {
+        "item" : "9",
+        "count" : "1"
+      }, {
+        "item" : "4",
+        "count" : "1"
+      }, {
+        "item" : "145",
+        "count" : "1"
+      }, {
+        "item" : "125",
+        "count" : "1"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      } ],
+      "smallest" : "10",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486713,
+    "name" : "CR - import ingressat",
+    "dataTypeName" : "text",
+    "description" : "Import ingressat per estades en creuers, expressat en euros i arrodonit.",
+    "fieldName" : "cr_import_ingressat",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15378479,
+    "cachedContents" : {
+      "non_null" : "174",
+      "largest" : "nd",
+      "null" : "1",
+      "top" : [ {
+        "item" : "nd",
+        "count" : "137"
+      }, {
+        "item" : "2779000",
+        "count" : "1"
+      }, {
+        "item" : "112000",
+        "count" : "1"
+      }, {
+        "item" : "471.000,00",
+        "count" : "1"
+      }, {
+        "item" : "2628000",
+        "count" : "1"
+      }, {
+        "item" : "465.000,00",
+        "count" : "1"
+      }, {
+        "item" : "1400000",
+        "count" : "1"
+      }, {
+        "item" : "26000",
+        "count" : "1"
+      }, {
+        "item" : "15.000,00",
+        "count" : "1"
+      }, {
+        "item" : "9.000,00",
+        "count" : "1"
+      }, {
+        "item" : "2469000",
+        "count" : "1"
+      }, {
+        "item" : "34000",
+        "count" : "1"
+      }, {
+        "item" : "526.000,00",
+        "count" : "1"
+      }, {
+        "item" : "10.000,00",
+        "count" : "1"
+      }, {
+        "item" : "132000",
+        "count" : "1"
+      }, {
+        "item" : "22.000,00",
+        "count" : "1"
+      }, {
+        "item" : "60000",
+        "count" : "1"
+      }, {
+        "item" : "2.000,00",
+        "count" : "1"
+      }, {
+        "item" : "6.000,00",
+        "count" : "1"
+      }, {
+        "item" : "69.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "10.000,00",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26486714,
+    "name" : "CR - recarrec mpal",
+    "dataTypeName" : "text",
+    "description" : "Import del recàrrec municipal, quan existeix aquest recàrrec.",
+    "fieldName" : "cr_recarrec_mpal",
+    "position" : 26,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15986210,
+    "cachedContents" : {
+      "non_null" : "9",
+      "largest" : "922.000,00",
+      "null" : "166",
+      "top" : [ {
+        "item" : "1515000",
+        "count" : "1"
+      }, {
+        "item" : "2042000",
+        "count" : "1"
+      }, {
+        "item" : "23.000,00",
+        "count" : "1"
+      }, {
+        "item" : "235.000,00",
+        "count" : "1"
+      }, {
+        "item" : "2796000",
+        "count" : "1"
+      }, {
+        "item" : "3009000",
+        "count" : "1"
+      }, {
+        "item" : "3957000",
+        "count" : "1"
+      }, {
+        "item" : "799.000,00",
+        "count" : "1"
+      }, {
+        "item" : "922.000,00",
+        "count" : "1"
+      } ],
+      "smallest" : "1515000",
+      "count" : "175",
+      "cardinality" : "175"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Semestral"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Data on Taxes on Tourist Establishments (IEET) by tourist brand and type of establishment.",
+        "Nombre del conjunto de datos (ES)" : "Datos del Impuesto sobre las estancias en establecimientos turísticos (IEET) por marca turística y tipología de establecimiento."
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Altres",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "rowLabel" : "Dades per semestres de recaptació i marca turística",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "impost", "tribut", "turisme", "estades turístiques", "agència tributària de catalunya", "ods8_treball decent i creixement econòmic", "ods10_reducció de les desigualtats", "dades obertes" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

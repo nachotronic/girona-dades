@@ -1,0 +1,94 @@
+[{"COD":"TMOV2104866", "Nombre":"Dato base. Girona. Total Nacional. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":17100.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726312", "Nombre":"Dato base. Girona. Andalucía. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":639.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726327", "Nombre":"Dato base. Girona. Aragón. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":335.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726342", "Nombre":"Dato base. Girona. Asturias, Principado de. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":48.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726356", "Nombre":"Dato base. Girona. Balears, Illes. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":515.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726371", "Nombre":"Dato base. Girona. Canarias. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":123.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726384", "Nombre":"Dato base. Girona. Cantabria. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV1726414", "Nombre":"Dato base. Girona. Castilla - La Mancha. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":201.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726399", "Nombre":"Dato base. Girona. Castilla y León. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":201.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726430", "Nombre":"Dato base. Girona. Cataluña. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":12407.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726444", "Nombre":"Dato base. Girona. Comunitat Valenciana. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":925.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726459", "Nombre":"Dato base. Girona. Extremadura. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":60.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726475", "Nombre":"Dato base. Girona. Galicia. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":167.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726489", "Nombre":"Dato base. Girona. Madrid, Comunidad de. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":915.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV2256574", "Nombre":"Dato base. Girona. Melilla. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[]
+}
+,{"COD":"TMOV1726503", "Nombre":"Dato base. Girona. Murcia, Región de. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":222.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726515", "Nombre":"Dato base. Girona. Navarra, Comunidad Foral de. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":94.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726529", "Nombre":"Dato base. Girona. País Vasco. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":190.0, "Secreto":false}
+]
+}
+,{"COD":"TMOV1726542", "Nombre":"Dato base. Girona. Rioja, La. Turistas. ", "Unidad":{"Id":256, "Nombre":"Viajes", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1788213600000, "FK_TipoDato":1, "FK_Periodo":9, "Anyo":2026, "Valor":41.0, "Secreto":false}
+]
+}
+]

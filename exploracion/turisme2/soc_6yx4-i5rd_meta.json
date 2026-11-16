@@ -1,0 +1,295 @@
+{
+  "id" : "6yx4-i5rd",
+  "name" : "Marques Turístiques",
+  "assetType" : "dataset",
+  "attribution" : "Catàleg Tècnic de Dades. Secretari del Consell de Direcció de l'Agència Catalana de Turisme.",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Turisme",
+  "createdAt" : 1742902427,
+  "description" : "Divisió territorial establerta  per a possibles actuacions orientades a  potenciar el turisme. Aquesta divisió en marques turístiques correspon a agrupacions de diferents comarques.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 286,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 3017952,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1742907078,
+  "publicationGroup" : 2023287,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1782817583,
+  "rowsUpdatedBy" : "vdnf-89vw",
+  "tableId" : 2023287,
+  "totalTimesRated" : 0,
+  "viewCount" : 663,
+  "viewLastModified" : 1782817582,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1742913209,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1497470,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1742913209,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1742913209,
+      "failureCount" : 0,
+      "startedAt" : 1742913209,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "bseg-bnn7",
+      "displayName" : "Oficina de Gestió Tècnica de Dades"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 26725231,
+    "name" : "Codi marca turística",
+    "dataTypeName" : "text",
+    "description" : "Codificació de 4 caràcters que identifica unívocament una Marca Turística. El codi està format pels caràcters MT acompanyats de dos dígits numèrics i correspon a la codificació que proporciona el Departament de Comerç, Consum i Turisme.",
+    "fieldName" : "codi_marca_turistica",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16168900,
+    "cachedContents" : {
+      "non_null" : "43",
+      "largest" : "MT11",
+      "null" : "0",
+      "top" : [ {
+        "item" : "MT01",
+        "count" : "9"
+      }, {
+        "item" : "MT05",
+        "count" : "6"
+      }, {
+        "item" : "MT11",
+        "count" : "6"
+      }, {
+        "item" : "MT06",
+        "count" : "6"
+      }, {
+        "item" : "MT08",
+        "count" : "5"
+      }, {
+        "item" : "MT02",
+        "count" : "5"
+      }, {
+        "item" : "MT09",
+        "count" : "4"
+      }, {
+        "item" : "MT04",
+        "count" : "1"
+      }, {
+        "item" : "MT10",
+        "count" : "1"
+      } ],
+      "smallest" : "MT01",
+      "count" : "43",
+      "cardinality" : "43"
+    },
+    "format" : { }
+  }, {
+    "id" : 26725230,
+    "name" : "Nom marca turística",
+    "dataTypeName" : "text",
+    "description" : "Nom que rep la Marca Turística. La divisió establerta pel Departament de Comerç, Consum i Turisme va sorgir per a possibles actuacions per potenciar el turisme. Una divisió de marca turística és una agrupació de comarques.",
+    "fieldName" : "nom_marca_turistica",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16168899,
+    "cachedContents" : {
+      "non_null" : "43",
+      "largest" : "Val d'Aran",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Pirineus",
+        "count" : "9"
+      }, {
+        "item" : "Costa Daurada",
+        "count" : "6"
+      }, {
+        "item" : "Terres de Lleida",
+        "count" : "6"
+      }, {
+        "item" : "Costa Barcelona",
+        "count" : "6"
+      }, {
+        "item" : "Costa Brava",
+        "count" : "5"
+      }, {
+        "item" : "Paisatges Barcelona",
+        "count" : "5"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "4"
+      }, {
+        "item" : "Val d'Aran",
+        "count" : "1"
+      }, {
+        "item" : "Barcelona",
+        "count" : "1"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "43",
+      "cardinality" : "43"
+    },
+    "format" : { }
+  }, {
+    "id" : 26725229,
+    "name" : "Codi comarca",
+    "dataTypeName" : "text",
+    "description" : "Codificació de la comarca.",
+    "fieldName" : "codi_comarca",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16168898,
+    "cachedContents" : {
+      "non_null" : "43",
+      "largest" : "43",
+      "null" : "0",
+      "top" : [ {
+        "item" : "06",
+        "count" : "1"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      }, {
+        "item" : "03",
+        "count" : "1"
+      }, {
+        "item" : "13",
+        "count" : "1"
+      }, {
+        "item" : "01",
+        "count" : "1"
+      }, {
+        "item" : "28",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "40",
+        "count" : "1"
+      }, {
+        "item" : "39",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "23",
+        "count" : "1"
+      }, {
+        "item" : "20",
+        "count" : "1"
+      }, {
+        "item" : "25",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "02",
+        "count" : "1"
+      }, {
+        "item" : "34",
+        "count" : "1"
+      }, {
+        "item" : "07",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "38",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      } ],
+      "smallest" : "01",
+      "count" : "43",
+      "cardinality" : "43"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Tourism brands",
+        "Nombre del conjunto de datos (ES)" : "Marcas Turísticas"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Dades d'Alt Valor" : {
+        "Categoria" : "No són dades d’alt valor"
+      },
+      "Actors" : {
+        "Departament" : "Empresa i Treball",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "dades_de_referència" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
