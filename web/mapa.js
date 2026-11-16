@@ -133,7 +133,7 @@
   // Comercio (CECC, anual): m.com = {clave: {año: valor}}, D.com_ref = {clave: {año: {gi, cat}}}
   const CM = (k) => (m, a) => (a != null && m.com && m.com[k] && m.com[k][a] != null ? m.com[k][a] : null);
   const CMR = (k, z) => (a) => { const r = D.com_ref && D.com_ref[k] && D.com_ref[k][a]; return r && r[z] != null ? r[z] : null; };
-  const NOTA_COM = { ca: "Cens d'establiments comercials de Catalunya (Generalitat i Cambres de Comerç): comerç al detall amb establiment, sense bars ni restaurants ni serveis. No hi ha cens del 2020 ni del 2022. Els punts vermells són els grans establiments amb llicència comercial de la Generalitat.", es: "Censo de establecimientos comerciales de Cataluña (Generalitat y Cámaras de Comercio): comercio minorista con establecimiento, sin bares ni restaurantes ni servicios. No hay censo de 2020 ni de 2022. Los puntos rojos son los grandes establecimientos con licencia comercial de la Generalitat." };
+  const NOTA_COM = { ca: "Cens d'establiments comercials de Catalunya (Generalitat i Cambres de Comerç): comerç al detall amb establiment, sense bars ni restaurants ni serveis. No hi ha cens del 2020 ni del 2022.", es: "Censo de establecimientos comerciales de Cataluña (Generalitat y Cámaras de Comercio): comercio minorista con establecimiento, sin bares ni restaurantes ni servicios. No hay censo de 2020 ni de 2022." };
   const COM = [
     ["est_h", ["Comerços per habitant", "Establiments comercials per 1.000 habitants"], ["Comercios por habitante", "Establecimientos comerciales por 1.000 habitantes"], N1],
     ["n", ["Establiments comercials", "Comerços al detall amb establiment"], ["Establecimientos comerciales", "Comercios minoristas con establecimiento"], N0],
@@ -686,29 +686,7 @@
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
-    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres(); capaGrans();
-  }
-
-  // Grandes establecimientos con licencia comercial: puntos encima de los indicadores de comercio
-  let promGrans = null, ambGrans = true;
-  function capaGrans() {
-    const vis = ind && ind.tema === "com" && nivell === "mun";
-    const ll = document.getElementById("llegenda-grans");
-    if (ll) ll.hidden = !vis;
-    if (vis && !promGrans) {
-      promGrans = fetch("datos/comerc_grans.geojson").then((r) => r.json()).then((g) => {
-        mapa.addSource("grans", { type: "geojson", data: g });
-        mapa.addLayer({ id: "grans-p", type: "circle", source: "grans",
-          paint: { "circle-radius": ["interpolate", ["linear"], ["get", "s"], 0, 3.5, 3000, 6, 10000, 10], "circle-color": "#e3001b", "circle-opacity": 0.9, "circle-stroke-color": css("--paper") || "#fff", "circle-stroke-width": 1.2 } });
-        capaGrans();
-      }).catch(() => {});
-      return;
-    }
-    if (mapa.getLayer("grans-p")) mapa.setLayoutProperty("grans-p", "visibility", vis && ambGrans ? "visible" : "none");
-  }
-  function granSota(e) {
-    if (!ambGrans || !mapa.getLayer("grans-p") || mapa.getLayoutProperty("grans-p", "visibility") === "none") return null;
-    return mapa.queryRenderedFeatures(e.point, { layers: ["grans-p"] })[0] || null;
+    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres();
   }
 
   // CAP y hospitales: capa de puntos encima de los indicadores de salud (se puede ocultar)
@@ -1226,13 +1204,6 @@
       if (f) mapa.setFeatureState({ source: "zones", id: hoverId }, { hover: true });
     };
     mapa.on("mousemove", "zones-fill", (e) => {
-      const g = granSota(e);
-      if (g) {
-        const q = g.properties, m = D.municipios.find((x) => x.ine === q.ine);
-        mapa.getCanvas().style.cursor = "default";
-        mostraTip(`<b>${q.nom}</b><br>${q.f || ""}${q.s ? ` · ${fmt(q.s)} m²` : ""}${q.a ? ` · ${q.a}` : ""}${m ? `<br>${m.nom}` : ""}`, e.originalEvent.clientX, e.originalEvent.clientY);
-        return;
-      }
       const c = centreSota(e);
       if (c) {
         const t_ = NOM_TIPUS_C[c.properties.t];
@@ -1259,8 +1230,6 @@
     document.querySelectorAll(".segment button").forEach((b) => b.addEventListener("click", () => canviaNivell(b.dataset.nivell)));
     const chk = document.getElementById("mostra-centres");
     if (chk) chk.addEventListener("change", () => { ambCentres = chk.checked; capaCentres(); });
-    const chkG = document.getElementById("mostra-grans");
-    if (chkG) chkG.addEventListener("change", () => { ambGrans = chkG.checked; capaGrans(); });
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { colorsBase(); pinta(); });
     let amplePrev = innerWidth;
     addEventListener("resize", () => { if (Math.abs(innerWidth - amplePrev) > 40) { amplePrev = innerWidth; llegenda(); } });
