@@ -1,0 +1,77 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/afic?lang=ca",
+  "label" : "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
+  "link" : {
+    "item" : [ {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14983?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per sector d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14987?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per secció d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14990?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per divisió d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14993?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per grandària del compte de cotització. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14984?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per sector d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14988?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per secció d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14991?lang=ca",
+      "label" : "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per divisió d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14995?lang=ca",
+      "label" : "Afiliacions al Règim especial de treballadors autònoms. Per sector d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14996?lang=ca",
+      "label" : "Afiliacions al Règim especial de treballadors autònoms. Per secció d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14997?lang=ca",
+      "label" : "Afiliacions al Règim especial de treballadors autònoms. Per divisió d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14942?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per sector d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14943?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per secció d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14944?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per divisió d'activitat econòmica. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14941?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per grandària del compte de cotització. A últim dia de mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14945?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per sector d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14946?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per secció d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
+    }, {
+      "class" : "collection",
+      "href" : "https://api.idescat.cat/taules/v2/afic/14947?lang=ca",
+      "label" : "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per divisió d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
+    } ]
+  },
+  "version" : "2.0"
+}
