@@ -1727,6 +1727,51 @@ def tributs():
     return mun, refs, int(k["any"].max()) if len(k) else None
 
 
+def vehicles():
+    """Parque de vehículos de la DGT (anual). Devuelve {ine: {clave: {any: valor}}},
+    {clave: {any: {gi, cat, esp}}} y el último año. Las claves ya son indicadores calculados."""
+    d = P / "vehicles"
+    fs = sorted(d.glob("dgt_mun_*.csv")) if d.exists() else []
+    if not fs:
+        return {}, {}, None
+
+    def calc(x):
+        pob, tot = x.get("pob"), x.get("total")
+        fuel = sum(x.get(k) or 0 for k in ("gasolina", "diesel", "elec", "glp", "gnl", "altres"))
+        dist = sum(x.get(k) or 0 for k in ("dist_b", "dist_c", "dist_eco", "dist_0", "sense_dist"))
+        q = lambda a, b, f=1: (a / b * f) if a is not None and b else None  # noqa: E731
+        return {
+            "n": tot, "total_h": q(tot, pob, 1000), "tur_h": q(x.get("tur"), pob, 1000),
+            "moto_h": q((x.get("moto") or 0) + (x.get("cicl") or 0), pob, 1000),
+            "furg_h": q((x.get("furg") or 0) + (x.get("cam") or 0), pob, 1000),
+            "elec_p": q(x.get("elec"), fuel, 100), "diesel_p": q(x.get("diesel"), fuel, 100),
+            "eco_p": q((x.get("dist_eco") or 0) + (x.get("dist_0") or 0), dist, 100), "sense_p": q(x.get("sense_dist"), dist, 100),
+            "tur4_p": q(x.get("tur_4"), x.get("tur"), 100), "antig_tur": x.get("antig_tur"), "cond_h": q(x.get("cond"), pob, 100),
+        }
+
+    dec = {"n": 0, "total_h": 0, "tur_h": 0, "moto_h": 0, "furg_h": 0, "elec_p": 2, "diesel_p": 1, "eco_p": 1, "sense_p": 1, "tur4_p": 1, "antig_tur": 1, "cond_h": 1}
+    arr = lambda v, k: None if v is None or (isinstance(v, float) and math.isnan(v)) else (round(v, dec[k]) if dec[k] else int(round(v)))  # noqa: E731
+    mun = {}
+    for f in fs:
+        a = int(f.stem.split("_")[-1])
+        for x in pd.read_csv(f, dtype={"ine": str}).to_dict("records"):
+            x = {k: (None if isinstance(v, float) and math.isnan(v) else v) for k, v in x.items()}
+            if x.get("pob") and x["pob"] < 1:
+                continue
+            for k, v in calc(x).items():
+                v = arr(v, k)
+                if v is not None:
+                    mun.setdefault(x["ine"], {}).setdefault(k, {})[a] = v
+    refs = {}
+    if (d / "agregats.csv").exists():
+        for x in pd.read_csv(d / "agregats.csv").to_dict("records"):
+            for k, v in calc(x).items():
+                v = arr(v, k)
+                if v is not None:
+                    refs.setdefault(k, {}).setdefault(int(x["any"]), {})[x["ambit"]] = v
+    return mun, refs, max(int(f.stem.split("_")[-1]) for f in fs)
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -1774,6 +1819,7 @@ def main():
     anys_extra.update(anys_emx)
     refs_ed.update(refs_emx)
     trib, refs_trib, any_trib = tributs()
+    veh, refs_veh, any_veh = vehicles()
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1816,6 +1862,7 @@ def main():
             "x": extra_mun.get(ine, {}),
             "pol": pol.get(ine, {}),
             **({"trib": trib[ine]} if ine in trib else {}),
+            **({"veh": veh[ine]} if ine in veh else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **fitxa_cm.get(ine, {}),
         })
@@ -1851,8 +1898,8 @@ def main():
     datos = {
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series()}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {})},
-        "trib_ref": refs_trib,
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {})},
+        "trib_ref": refs_trib, "veh_ref": refs_veh,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

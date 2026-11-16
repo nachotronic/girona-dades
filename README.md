@@ -48,6 +48,10 @@ La sección **Conjuntura** y el tema del mismo nombre del mapa usan series mensu
   hoteleras y extrahoteleras del INE, pasajeros del aeropuerto de Girona (Aena, `fuentes/aena.py`) y
   valor tasado trimestral (Ministerio, tabla 35101000).
 
+El tema **Vehicles** del mapa usa el parque de vehículos anual de la DGT por municipio (tipo, carburante,
+etiqueta ambiental, antigüedad y conductores, desde 2020; `fuentes/vehicles.py`), con Catalunya y España
+de referencia, y las matriculaciones mensuales.
+
 `scripts/conjuntura_web.py` genera `web/datos/conjuntura.json`. Además del lunes, la Action se ejecuta
 los días 2 a 8 de cada mes solo con `conjuntura afiliacio dgt aena provincia mitma`, para recoger el
 dato del mes en cuanto se publica. DGT y Aena no vuelven a descargar los meses ya guardados.

@@ -36,6 +36,7 @@
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
     { id: "eme", ca: "Emergències", es: "Emergencias" },
     { id: "ter", ca: "Territori", es: "Territorio" },
+    { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
@@ -61,6 +62,25 @@
   const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
   const NOTA_SEPE = { ca: "SEPE, atur registrat el darrer dia del mes. Les xifres d'1 a 4 no es publiquen.", es: "SEPE, paro registrado el último día del mes. Las cifras de 1 a 4 no se publican." };
   const NOTA_CONTR = { ca: "SEPE, contractes registrats al mes al municipi del centre de treball.", es: "SEPE, contratos registrados en el mes en el municipio del centro de trabajo." };
+
+  // Parque de vehículos (DGT, anual): m.veh = {clave: {año: valor}}, D.veh_ref = {clave: {año: {gi, cat, esp}}}
+  const VH = (k) => (m, a) => (a != null && m.veh && m.veh[k] && m.veh[k][a] != null ? m.veh[k][a] : null);
+  const VHR = (k, z) => (a) => { const r = D.veh_ref && D.veh_ref[k] && D.veh_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_VEH = { ca: "DGT, dades municipals: vehicles segons el domicili del titular, amb les empreses de lloguer i flotes incloses on tenen la seu.", es: "DGT, datos municipales: vehículos según el domicilio del titular, con las empresas de alquiler y flotas incluidas donde tienen la sede." };
+  const VEH = [
+    ["total_h", ["Vehicles per habitant", "Parc de vehicles per 1.000 habitants"], ["Vehículos por habitante", "Parque de vehículos por 1.000 habitantes"], N0],
+    ["n", ["Parc de vehicles", "Vehicles registrats al municipi"], ["Parque de vehículos", "Vehículos registrados en el municipio"], N0],
+    ["tur_h", ["Cotxes per habitant", "Turismes per 1.000 habitants"], ["Coches por habitante", "Turismos por 1.000 habitantes"], N0],
+    ["moto_h", ["Motos per habitant", "Motocicletes i ciclomotors per 1.000 habitants"], ["Motos por habitante", "Motocicletas y ciclomotores por 1.000 habitantes"], N0],
+    ["furg_h", ["Furgonetes i camions", "Furgonetes i camions per 1.000 habitants"], ["Furgonetas y camiones", "Furgonetas y camiones por 1.000 habitantes"], N0],
+    ["elec_p", ["Elèctrics i híbrids endollables", "Vehicles electrificats (% del parc)"], ["Eléctricos e híbridos enchufables", "Vehículos electrificados (% del parque)"], { f: (v) => pct(v, 2), c: (v) => pct(v, 1) }],
+    ["diesel_p", ["Dièsel", "Vehicles dièsel (% del parc)"], ["Diésel", "Vehículos diésel (% del parque)"], P1],
+    ["eco_p", ["Etiqueta ECO o 0", "Vehicles amb etiqueta ambiental ECO o 0 emissions (% del parc)"], ["Etiqueta ECO o 0", "Vehículos con etiqueta ambiental ECO o 0 emisiones (% del parque)"], P1],
+    ["sense_p", ["Sense etiqueta", "Vehicles sense etiqueta ambiental de la DGT (% del parc)"], ["Sin etiqueta", "Vehículos sin etiqueta ambiental de la DGT (% del parque)"], P1],
+    ["tur4_p", ["Cotxes de menys de 4 anys", "Turismes de menys de 4 anys (% dels turismes)"], ["Coches de menos de 4 años", "Turismos de menos de 4 años (% de los turismos)"], P1],
+    ["antig_tur", ["Edat dels cotxes", "Antiguitat mitjana dels turismes (anys)"], ["Edad de los coches", "Antigüedad media de los turismos (años)"], N1],
+    ["cond_h", ["Conductors", "Persones amb permís de conduir per cada 100 habitants"], ["Conductores", "Personas con permiso de conducir por cada 100 habitantes"], N1],
+  ];
 
   // Impuestos municipales (m.trib: {clave: {año: valor}})
   const TV = (k) => (m, a) => (a != null && m.trib && m.trib[k] && m.trib[k][a] != null ? m.trib[k][a] : null);
@@ -246,7 +266,6 @@
     { id: "llocs", tema: "tre", ca: ["Llocs de treball", "Llocs de treball per 100 habitants"], es: ["Puestos de trabajo", "Puestos de trabajo por 100 habitantes"], v: X("llocs"), ...N0 },
     { id: "autonoms", tema: "tre", ca: ["Autònoms", "Autònoms per 100 habitants"], es: ["Autónomos", "Autónomos por 100 habitantes"], v: X("autonoms"), ...N1 },
     { id: "empreses", tema: "tre", ca: ["Empreses", "Empreses per 1.000 habitants"], es: ["Empresas", "Empresas por 1.000 habitantes"], v: X("empreses"), ...N1 },
-    { id: "cotxes", tema: "tre", ca: ["Cotxes", "Turismes per 1.000 habitants"], es: ["Coches", "Turismos por 1.000 habitantes"], a: "cotxes", v: X("cotxes"), ...N0 },
     { id: "ocupats", tema: "tre", ca: ["Afiliats", "Afiliats a la Seguretat Social per 100 habitants (per residència)"], es: ["Afiliados", "Afiliados a la Seguridad Social por 100 habitantes (por residencia)"], v: X("ocupats"), ...N1 },
     { id: "ocupats_dones", tema: "tre", ca: ["Afiliades dones", "Dones entre els afiliats a la Seguretat Social (%)"], es: ["Afiliadas mujeres", "Mujeres entre los afiliados a la Seguridad Social (%)"], v: X("ocupats_dones"), ...P1 },
     { id: "atur_var", sumable: false, tema: "tre", ca: ["Variació de l'atur", "Variació interanual de l'atur registrat (%)"], es: ["Variación del paro", "Variación interanual del paro registrado (%)"], a: "atur_var", v: X("atur_var"), ...P1 },
@@ -308,6 +327,9 @@
     { id: "autoconsum", tema: "ene", ca: ["Autoconsum", "Instal·lacions d'autoconsum per 1.000 habitants"], es: ["Autoconsumo", "Instalaciones de autoconsumo por 1.000 habitantes"], v: X("autoconsum"), ...N1 },
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
+    // Parque de vehículos (DGT)
+    ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
+      ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
@@ -389,6 +411,8 @@
   ];
   NOUS.forEach((n) => { let k = -1; IND.forEach((i, j) => { if (i.tema === n.tema) k = j; }); IND.splice(k + 1, 0, n); });
   // Los indicadores de coyuntura muestran el último periodo con datos
+  // Las matriculaciones mensuales también en el tema Vehicles, después del parque
+  { const m = IND.find((i) => i.id === "cj_mat"), p = IND.findIndex((i) => i.id === "veh_tur_h"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: "veh_mat", tema: "veh" }); }
   IND.forEach((i) => { if (i.per) i.v = (m) => (D.cj ? i.t(m, anysDe(i).slice(-1)[0]) : null); });
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
@@ -423,6 +447,7 @@
     if (!cacheAnys[i.id]) {
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini", "renda_bruta", "renda_bruta_llar", "renda_mediana"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
     }
     return cacheAnys[i.id];
