@@ -14,8 +14,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
-      - run: python scripts/explorar.py
+      - run: pip install requests beautifulsoup4
+      - run: python scripts/explorar_sgfal.py
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
