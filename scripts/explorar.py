@@ -50,15 +50,52 @@ for d in ("ntc4-rnwr", "irrv-2mfc", "tgns-3xuy"):
     CANDIDATAS_E[f"pe_{d}_mostra"] = f"{SOC}/resource/{d}.json?$limit=30"
 CANDIDATAS_E["pe_tgns_tot"] = f"{SOC}/resource/tgns-3xuy.json?$limit=5000"
 
-# AEAT, IRPF por municipios: cómo llegar a la página de inicio de cada año (el hash cambia)
-AEAT_S = "https://sede.agenciatributaria.gob.es"
-AEAT_P = AEAT_S + "/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/"
+# Parque de vehículos por municipio (DGT): páginas índice; explora_parque() sigue los enlaces
+DGT = "https://www.dgt.es"
 CANDIDATAS_E = {
-    "aeat_2023_inici": AEAT_P + "2023/jrubik56c8a4941ca3d442b24b56b4ceb716f086a75f33.html",
-    "aeat_2022_inici": AEAT_P + "2022/jrubik1198fe8ede3dc662d7abca172447262a03941a02.html",
-    "aeat_2024_home": AEAT_P + "2024/home.html",
-    "aeat_2023_home": AEAT_P + "2023/home.html",
+    "dgt_cifras": DGT + "/menusecundario/dgt-en-cifras/",
+    "dgt_listados": DGT + "/menusecundario/dgt-en-cifras/matraba-listados/",
+    "dgt_resultados": DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/",
+    "dgt_iest": "https://sedeapl.dgt.gob.es/WEB_IEST_CONSULTA/",
+    "socrata_parc": SOCRATA + "?q=parc%20vehicles%20municipi&limit=20",
+    "socrata_vehicles_tipus": SOCRATA + "?q=vehicles%20carburant&limit=20",
 }
+
+
+def explora_parque(filas: list) -> None:
+    """Sigue los enlaces de las páginas de la DGT que hablan de parque y guarda lo que encuentre."""
+    import re
+    vistos = set()
+    pendientes = [(k, u) for k, u in CANDIDATAS_E.items() if k.startswith("dgt_") and "sedeapl" not in u]
+    n = 0
+    while pendientes and n < 40:
+        clave, url = pendientes.pop(0)
+        if url in vistos:
+            continue
+        vistos.add(url)
+        try:
+            r = requests.get(url, headers=UA, timeout=120)
+            n += 1
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| {clave} | error | {type(e).__name__} | | {url} |")
+            continue
+        tipo = r.headers.get("content-type", "")
+        filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {len(r.content)} | {r.url} |")
+        if "html" not in tipo:
+            (MUESTRAS / f"{clave}.{'zip' if 'zip' in tipo else extension(tipo)}").write_bytes(r.content[:3_000_000])
+            continue
+        (MUESTRAS / f"{clave}.html").write_bytes(r.content[:600_000])
+        for href in sorted(set(re.findall(r'href="([^"#]+)"', r.text))):
+            low = href.lower()
+            if not any(k in low for k in ("parque", "parc", "censo", "tablas-estadisticas", "series-historicas", "anuario")):
+                continue
+            absu = urllib.parse.urljoin(r.url, href)
+            if "dgt.es" not in absu or absu in vistos:
+                continue
+            pendientes.append((f"dgt_l{len(vistos) + len(pendientes):02d}", absu))
+        time.sleep(1)
+    (MUESTRAS / "dgt_enllacos.txt").write_text("\n".join(sorted(vistos)), encoding="utf-8")
+
 
 def explora_zips(filas: list) -> None:
     import io, zipfile
@@ -108,13 +145,14 @@ def main() -> None:
                 filas.append(f"| {clave} | {r.status_code} | zip | {len(r.content)} | {url} |")
                 continue
             r = requests.get(url, headers=UA, timeout=120, stream=True)
-            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_", "aena_")) else LIMITE, decode_content=True)
+            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_", "aena_", "dgt_")) else LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
             (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(contenido)
             filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {r.headers.get('content-length', len(contenido))} | {r.url} |")
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
+    explora_parque(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
