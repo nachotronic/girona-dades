@@ -683,10 +683,10 @@
             "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
             "contact_email" : null,
             "type" : "dataset",
-            "updatedAt" : "2026-11-16T10:46:22.000Z",
+            "updatedAt" : "2026-11-16T11:46:25.000Z",
             "createdAt" : "2019-03-18T10:23:37.000Z",
-            "metadata_updated_at" : "2026-11-16T10:46:08.000Z",
-            "data_updated_at" : "2026-11-16T10:46:22.000Z",
+            "metadata_updated_at" : "2026-11-16T11:46:06.000Z",
+            "data_updated_at" : "2026-11-16T11:46:25.000Z",
             "page_views" :
               {
                 "page_views_last_week" : 690,
@@ -841,6 +841,6 @@
       }
     ],
   "resultSetSize" : 4,
-  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 2, 8 ] },
+  "timings" : { "serviceMillis" : 29, "searchMillis" : [ 2, 14 ] },
   "warnings" : []
 }

@@ -1547,6 +1547,6 @@
       }
     ],
   "resultSetSize" : 10,
-  "timings" : { "serviceMillis" : 32, "searchMillis" : [ 3, 15 ] },
+  "timings" : { "serviceMillis" : 27, "searchMillis" : [ 3, 10 ] },
   "warnings" : []
 }

@@ -2556,500 +2556,6 @@
       {
         "resource" :
           {
-            "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Segrià",
-            "id" : "ay52-ewe6",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "El sistema d'informació geogràfica d'identificació de parcel·les agrícoles (SIGPAC) és un registre públic de caràcter administratiu que conté informació de les parcel·les, amb especial atenció a les susceptibles de beneficiar-se de les ajudes comunitàries relacionades amb la superfície. Aquest registre depèn del Fons Espanyol de Garantia Agrària (FEGA) i del Departament d'Agricultura, Ramaderia, Pesca i Alimentació de la Generalitat de Catalunya. \nAquest fitxer conté els recintes i les parcel·les de la comarca del Segrià de l'any 2017 al 2026, amb sistema de referència cartogràfic ETRS89.",
-            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-07-23T10:35:15.000Z",
-            "createdAt" : "2020-04-02T12:04:26.000Z",
-            "metadata_updated_at" : "2026-07-23T10:35:15.000Z",
-            "data_updated_at" : "2026-07-23T09:54:19.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 33,
-                "page_views_last_month" : 80,
-                "page_views_total" : 3560,
-                "page_views_last_week_log" : 5.08746284125034,
-                "page_views_last_month_log" : 6.339850002884625,
-                "page_views_total_log" : 11.798066720363064
-              },
-            "columns_name" :
-              [
-                "ID_PAR",
-                "MUNICIPI",
-                "PRO",
-                "INC",
-                "SR",
-                "Shape_Leng",
-                "PENDENT",
-                "PV",
-                "CA",
-                "US",
-                "Shape_Area",
-                "ID_COM",
-                "REGIO",
-                "HA",
-                "ZON",
-                "COMARCA",
-                "POL",
-                "MUN",
-                "AGR",
-                "the_geom",
-                "ID_REC",
-                "ID_MUN",
-                "CAMPANYA",
-                "REC",
-                "PAR"
-              ],
-            "columns_field_name" :
-              [
-                "id_par",
-                "municipi",
-                "pro",
-                "inc",
-                "sr",
-                "shape_leng",
-                "pendent",
-                "pv",
-                "ca",
-                "us",
-                "shape_area",
-                "id_com",
-                "regio",
-                "ha",
-                "zon",
-                "comarca",
-                "pol",
-                "mun",
-                "agr",
-                "the_geom",
-                "id_rec",
-                "id_mun",
-                "campanya",
-                "rec",
-                "par"
-              ],
-            "columns_datatype" :
-              [
-                "Text",
-                "Text",
-                "Number",
-                "Text",
-                "Number",
-                "Number",
-                "Number",
-                "Text",
-                "Number",
-                "Text",
-                "Number",
-                "Text",
-                "Text",
-                "Number",
-                "Number",
-                "Text",
-                "Number",
-                "Number",
-                "Number",
-                "MultiPolygon",
-                "Text",
-                "Text",
-                "Text",
-                "Number",
-                "Number"
-              ],
-            "columns_description" :
-              [
-                "Codi identificador de la parcel·la. Concatenació dels 6 camps següents: PRO, MUN, AGR, ZON, POL, PAR",
-                "Nom del Municipi",
-                "Codi numèric de la província",
-                "Incidència de l'ús del sòl assignat",
-                "Coeficient de regadiu (SR=0 Secà i SR=100 Regadiu)",
-                "Valor del perímetre de la geometria en m",
-                "Pendent mitjà del recinte en percentatge (%)",
-                "Codi de parcel·la vitícola (2 lletres i 3 números). Camp informat només en usos vitícoles",
-                "Coeficient d’admissibilitat en %. Aquest coeficient té valors de 0 a 100 pels usos de pastura (PA, PR i PS), sent zero per a la resta d’usos",
-                "Codi ús SIGPAC: TA: Terra arable; FO: Forestal; OF: Olivera i fruiter; TH: Horta; PA: Pastura arbrada; VO: Vinya i olivera; IV: Hivernacle; PR: Pastura arbustiva; VF: Vinya i fruiter; FY: Fruiter; PS: Pastiu; FV: Fruita seca i vinya; CI: Cítric; ED: Edificació; FL: Fruita seca i olivera; FS: Fruita seca; ZU: Zona urbana; ZV: Zona censurada; OV: Olivera; CA: Vial; VI: Vinya; AG: Superfícies d’aigua; IM: Improductiu",
-                "Valor de l’àrea de la geometria en m2",
-                "Codi de comarca",
-                "Codi de regió format per 4 dígits. Els dos primers fan referència a la Regió i els dos últims al Grup de Cultiu",
-                "Superfície del recinte en hectàrees i 4 decimals",
-                "Codi numèric de la zona (normalment conté el valor 0)",
-                "Nom de la Comarca",
-                "Codi numèric del polígon",
-                "Codi numèric del municipi",
-                "Codi numèric de l’agregat (normalment conté el valor 0)",
-                "Geometria de cada polígon",
-                "Camp clau i codi únic que identifica el recinte. És el resultat de la concatenació dels 7 camps següents: PRO, MUN, AGR, ZON, POL, PAR, REC",
-                "Codi Cadastral del municipi",
-                "Any de la campanya. Cada any es publica una capa actualitzada",
-                "Codi numèric del recinte",
-                "Codi numèric de la parcel·la"
-              ],
-            "columns_format" :
-              [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                { "noCommas" : "true" },
-                {},
-                {}
-              ],
-            "download_count" : 1546,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2026-07-23T10:35:15.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Medi Rural-Pesca",
-            "domain_tags" :
-              [
-                "sigpac",
-                "campanya",
-                "segrià",
-                "recinte",
-                "pac",
-                "ods2_fam zero",
-                "ods13_acció pel clima"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "System of geographical information of agricultural parcels (SIGPAC) of the region Segrià "
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Sistema de información geográfica de parcelas agrícolas (SIGPAC) de la comarca Segrià "
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Dades geogràfiques"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ay52-ewe6",
-        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Sistema-d-informació-geogràfica-de-parcel-les-agrí/ay52-ewe6",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Alt Penedès",
-            "id" : "yrfc-5qkr",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "El sistema d'informació geogràfica d'identificació de parcel·les agrícoles (SIGPAC) és un registre públic de caràcter administratiu que conté informació de les parcel·les, amb especial atenció a les susceptibles de beneficiar-se de les ajudes comunitàries relacionades amb la superfície. Aquest registre depèn del Fons Espanyol de Garantia Agrària (FEGA) i del Departament d'Agricultura, Ramaderia, Pesca i Alimentació de la Generalitat de Catalunya. \n\nAquest fitxer conté els recintes i les parcel·les de la comarca de l'Alt Penedès de l'any 2017 al 2026, amb sistema de referència cartogràfic ETRS89.",
-            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-05-21T11:11:13.000Z",
-            "createdAt" : "2020-03-19T11:01:48.000Z",
-            "metadata_updated_at" : "2026-05-21T11:11:13.000Z",
-            "data_updated_at" : "2026-05-13T08:13:49.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 28,
-                "page_views_last_month" : 53,
-                "page_views_total" : 2826,
-                "page_views_last_week_log" : 4.857980995127573,
-                "page_views_last_month_log" : 5.754887502163469,
-                "page_views_total_log" : 11.465056167831177
-              },
-            "columns_name" :
-              [
-                "ID_PAR",
-                "CA",
-                "CAMPANYA",
-                "ZON",
-                "SR",
-                "PAR",
-                "Shape_Area",
-                "US",
-                "PV",
-                "Shape_Leng",
-                "MUNICIPI",
-                "ID_MUN",
-                "ID_REC",
-                "ID_COM",
-                "HA",
-                "REC",
-                "MUN",
-                "the_geom",
-                "PRO",
-                "POL",
-                "INCIDENCIA",
-                "COMARCA",
-                "REGIO",
-                "PENDENT",
-                "AGR"
-              ],
-            "columns_field_name" :
-              [
-                "id_par",
-                "ca",
-                "campanya",
-                "zon",
-                "sr",
-                "par",
-                "shape_area",
-                "us",
-                "pv",
-                "shape_leng",
-                "municipi",
-                "id_mun",
-                "id_rec",
-                "id_com",
-                "ha",
-                "rec",
-                "mun",
-                "the_geom",
-                "pro",
-                "pol",
-                "inc",
-                "comarca",
-                "regio",
-                "pendent",
-                "agr"
-              ],
-            "columns_datatype" :
-              [
-                "Text",
-                "Number",
-                "Text",
-                "Text",
-                "Number",
-                "Text",
-                "Number",
-                "Text",
-                "Text",
-                "Number",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Number",
-                "Text",
-                "Text",
-                "MultiPolygon",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Number",
-                "Text"
-              ],
-            "columns_description" :
-              [
-                "Codi identificador de la parcel·la. Concatenació dels 6 camps següents: PRO, MUN, AGR, ZON, POL, PAR ",
-                "Coeficient d'admissibilitat en %. Aquest coeficient té valors de 0 a 100 pels usos de pastura (PA, PR i PS), sent zero per a la resta d'usos ",
-                "Any de la campanya. Cada any es publica una capa actualitzada ",
-                "Codi numèric de la zona (normalment conté el valor 0) ",
-                "Coeficient de regadiu (SR=0 Secà i SR=100 Regadiu)",
-                "Codi numèric de la parcel·la ",
-                "Valor de l'àrea de la geometria en m2 ",
-                "Codi ús SIGPAC: TA: Terra arable; FO: Forestal; OF: Olivera i fruiter; TH: Horta; PA: Pastura arbrada; VO: Vinya i olivera; IV: Hivernacle; PR: Pastura arbustiva; VF: Vinya i fruiter; FY: Fruiter; PS: Pastiu; FV: Fruita seca i vinya; CI: Cítric; ED: Edificació; FL: Fruita seca i olivera; FS: Fruita seca; ZU: Zona urbana; ZV: Zona censurada; OV: Olivera; CA: Vial; VI: Vinya; AG: Superfícies d'aigua; IM: Improductiu ",
-                "Codi de parcel·la vitícola (2 lletres i 3 números). Camp informat només en usos vitícoles ",
-                "Valor del perímetre de la geometria en m ",
-                "Nom del municipi ",
-                "Codi Cadastral del municipi ",
-                "Camp clau i codi únic que identifica el recinte. És el resultat de la concatenació dels 7 camps següents: PRO, MUN, AGR, ZON, POL, PAR, REC ",
-                "Codi de comarca ",
-                "Superfície del recinte en hectàrees i 4 decimals ",
-                "Codi numèric del recinte ",
-                "Codi numèric del municipi ",
-                "Geometria de cada polígon ",
-                "Codi numèric de la província ",
-                "Codi numèric del polígon ",
-                "Incidència de l'ús del sòl assignat",
-                "Nom de la comarca ",
-                "Codi de regió format per 4 dígits. Els dos primers fan referència a la Regió i els dos últims al Grup de Cultiu ",
-                "Pendent mitjà del recinte en percentatge (%) ",
-                "Codi numèric de l'agregat (normalment conté el valor 0) "
-              ],
-            "columns_format" :
-              [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-              ],
-            "download_count" : 1322,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2023-11-27T13:59:13.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Medi Rural-Pesca",
-            "domain_tags" :
-              [
-                "sigpac",
-                "campanya",
-                "alt penedès",
-                "recinte",
-                "pac",
-                "ods2_fam zero",
-                "ods13_acció pel clima"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "System of geographical information of agricultural parcels (SIGPAC) of the region of Alt Penedès"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Sistema de información geográfica de parcelas agrícolas (SIGPAC) de la comarca Alt Penedès"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Dades geogràfiques"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Dades estàtiques"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/yrfc-5qkr",
-        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Sistema-d-informació-geogràfica-de-parcel-les-agrí/yrfc-5qkr",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
             "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Urgell",
             "id" : "5ytz-a6f2",
             "resource_name" : null,
@@ -3281,6 +2787,253 @@
           },
         "permalink" : "https://analisi.transparenciacatalunya.cat/d/5ytz-a6f2",
         "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Sistema-d-informació-geogràfica-de-parcel-les-agrí/5ytz-a6f2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Segrià",
+            "id" : "ay52-ewe6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El sistema d'informació geogràfica d'identificació de parcel·les agrícoles (SIGPAC) és un registre públic de caràcter administratiu que conté informació de les parcel·les, amb especial atenció a les susceptibles de beneficiar-se de les ajudes comunitàries relacionades amb la superfície. Aquest registre depèn del Fons Espanyol de Garantia Agrària (FEGA) i del Departament d'Agricultura, Ramaderia, Pesca i Alimentació de la Generalitat de Catalunya. \nAquest fitxer conté els recintes i les parcel·les de la comarca del Segrià de l'any 2017 al 2026, amb sistema de referència cartogràfic ETRS89.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-23T10:35:15.000Z",
+            "createdAt" : "2020-04-02T12:04:26.000Z",
+            "metadata_updated_at" : "2026-07-23T10:35:15.000Z",
+            "data_updated_at" : "2026-07-23T09:54:19.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 33,
+                "page_views_last_month" : 80,
+                "page_views_total" : 3560,
+                "page_views_last_week_log" : 5.08746284125034,
+                "page_views_last_month_log" : 6.339850002884625,
+                "page_views_total_log" : 11.798066720363064
+              },
+            "columns_name" :
+              [
+                "ID_PAR",
+                "MUNICIPI",
+                "PRO",
+                "INC",
+                "SR",
+                "Shape_Leng",
+                "PENDENT",
+                "PV",
+                "CA",
+                "US",
+                "Shape_Area",
+                "ID_COM",
+                "REGIO",
+                "HA",
+                "ZON",
+                "COMARCA",
+                "POL",
+                "MUN",
+                "AGR",
+                "the_geom",
+                "ID_REC",
+                "ID_MUN",
+                "CAMPANYA",
+                "REC",
+                "PAR"
+              ],
+            "columns_field_name" :
+              [
+                "id_par",
+                "municipi",
+                "pro",
+                "inc",
+                "sr",
+                "shape_leng",
+                "pendent",
+                "pv",
+                "ca",
+                "us",
+                "shape_area",
+                "id_com",
+                "regio",
+                "ha",
+                "zon",
+                "comarca",
+                "pol",
+                "mun",
+                "agr",
+                "the_geom",
+                "id_rec",
+                "id_mun",
+                "campanya",
+                "rec",
+                "par"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "MultiPolygon",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi identificador de la parcel·la. Concatenació dels 6 camps següents: PRO, MUN, AGR, ZON, POL, PAR",
+                "Nom del Municipi",
+                "Codi numèric de la província",
+                "Incidència de l'ús del sòl assignat",
+                "Coeficient de regadiu (SR=0 Secà i SR=100 Regadiu)",
+                "Valor del perímetre de la geometria en m",
+                "Pendent mitjà del recinte en percentatge (%)",
+                "Codi de parcel·la vitícola (2 lletres i 3 números). Camp informat només en usos vitícoles",
+                "Coeficient d’admissibilitat en %. Aquest coeficient té valors de 0 a 100 pels usos de pastura (PA, PR i PS), sent zero per a la resta d’usos",
+                "Codi ús SIGPAC: TA: Terra arable; FO: Forestal; OF: Olivera i fruiter; TH: Horta; PA: Pastura arbrada; VO: Vinya i olivera; IV: Hivernacle; PR: Pastura arbustiva; VF: Vinya i fruiter; FY: Fruiter; PS: Pastiu; FV: Fruita seca i vinya; CI: Cítric; ED: Edificació; FL: Fruita seca i olivera; FS: Fruita seca; ZU: Zona urbana; ZV: Zona censurada; OV: Olivera; CA: Vial; VI: Vinya; AG: Superfícies d’aigua; IM: Improductiu",
+                "Valor de l’àrea de la geometria en m2",
+                "Codi de comarca",
+                "Codi de regió format per 4 dígits. Els dos primers fan referència a la Regió i els dos últims al Grup de Cultiu",
+                "Superfície del recinte en hectàrees i 4 decimals",
+                "Codi numèric de la zona (normalment conté el valor 0)",
+                "Nom de la Comarca",
+                "Codi numèric del polígon",
+                "Codi numèric del municipi",
+                "Codi numèric de l’agregat (normalment conté el valor 0)",
+                "Geometria de cada polígon",
+                "Camp clau i codi únic que identifica el recinte. És el resultat de la concatenació dels 7 camps següents: PRO, MUN, AGR, ZON, POL, PAR, REC",
+                "Codi Cadastral del municipi",
+                "Any de la campanya. Cada any es publica una capa actualitzada",
+                "Codi numèric del recinte",
+                "Codi numèric de la parcel·la"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 1546,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-23T10:35:15.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "sigpac",
+                "campanya",
+                "segrià",
+                "recinte",
+                "pac",
+                "ods2_fam zero",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "System of geographical information of agricultural parcels (SIGPAC) of the region Segrià "
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Sistema de información geográfica de parcelas agrícolas (SIGPAC) de la comarca Segrià "
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ay52-ewe6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Sistema-d-informació-geogràfica-de-parcel-les-agrí/ay52-ewe6",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -3544,142 +3297,392 @@
       {
         "resource" :
           {
-            "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Maresme",
-            "id" : "wnq9-ib5p",
+            "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Alt Penedès",
+            "id" : "yrfc-5qkr",
             "resource_name" : null,
             "parent_fxf" : [],
-            "description" : "El sistema d'informació geogràfica d'identificació de parcel·les agrícoles (SIGPAC) és un registre públic de caràcter administratiu que conté informació de les parcel·les, amb especial atenció a les susceptibles de beneficiar-se de les ajudes comunitàries relacionades amb la superfície. Aquest registre depèn del Fons Espanyol de Garantia Agrària (FEGA) i del Departament d'Agricultura, Ramaderia, Pesca i Alimentació de la Generalitat de Catalunya. \nAquest fitxer conté els recintes i les parcel·les de la comarca del Maresme de l'any 2017 al 2026, amb sistema de referència cartogràfic ETRS89.",
+            "description" : "El sistema d'informació geogràfica d'identificació de parcel·les agrícoles (SIGPAC) és un registre públic de caràcter administratiu que conté informació de les parcel·les, amb especial atenció a les susceptibles de beneficiar-se de les ajudes comunitàries relacionades amb la superfície. Aquest registre depèn del Fons Espanyol de Garantia Agrària (FEGA) i del Departament d'Agricultura, Ramaderia, Pesca i Alimentació de la Generalitat de Catalunya. \n\nAquest fitxer conté els recintes i les parcel·les de la comarca de l'Alt Penedès de l'any 2017 al 2026, amb sistema de referència cartogràfic ETRS89.",
             "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
             "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
             "contact_email" : null,
             "type" : "dataset",
-            "updatedAt" : "2026-07-23T08:45:24.000Z",
-            "createdAt" : "2020-03-24T12:10:26.000Z",
-            "metadata_updated_at" : "2026-07-23T08:45:24.000Z",
-            "data_updated_at" : "2026-07-23T08:20:30.000Z",
+            "updatedAt" : "2026-05-21T11:11:13.000Z",
+            "createdAt" : "2020-03-19T11:01:48.000Z",
+            "metadata_updated_at" : "2026-05-21T11:11:13.000Z",
+            "data_updated_at" : "2026-05-13T08:13:49.000Z",
             "page_views" :
               {
-                "page_views_last_week" : 37,
-                "page_views_last_month" : 49,
-                "page_views_total" : 2462,
-                "page_views_last_week_log" : 5.247927513443585,
-                "page_views_last_month_log" : 5.643856189774724,
-                "page_views_total_log" : 11.266200912498961
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 53,
+                "page_views_total" : 2826,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 5.754887502163469,
+                "page_views_total_log" : 11.465056167831177
               },
             "columns_name" :
               [
-                "PENDENT",
-                "ID_COM",
+                "ID_PAR",
                 "CA",
-                "PV",
-                "COMARCA",
                 "CAMPANYA",
-                "ID_MUN",
                 "ZON",
+                "SR",
                 "PAR",
+                "Shape_Area",
+                "US",
+                "PV",
+                "Shape_Leng",
+                "MUNICIPI",
+                "ID_MUN",
+                "ID_REC",
+                "ID_COM",
                 "HA",
                 "REC",
-                "REGIO",
-                "Shape_Leng",
-                "POL",
-                "ID_REC",
-                "Shape_Area",
-                "MUNICIPI",
-                "US",
-                "the_geom",
                 "MUN",
-                "INC",
+                "the_geom",
                 "PRO",
-                "SR",
-                "ID_PAR",
+                "POL",
+                "INCIDENCIA",
+                "COMARCA",
+                "REGIO",
+                "PENDENT",
                 "AGR"
               ],
             "columns_field_name" :
               [
-                "pendent",
-                "id_com",
+                "id_par",
                 "ca",
-                "pv",
-                "comarca",
                 "campanya",
-                "id_mun",
                 "zon",
+                "sr",
                 "par",
+                "shape_area",
+                "us",
+                "pv",
+                "shape_leng",
+                "municipi",
+                "id_mun",
+                "id_rec",
+                "id_com",
                 "ha",
                 "rec",
-                "regio",
-                "shape_leng",
-                "pol",
-                "id_rec",
-                "shape_area",
-                "municipi",
-                "us",
-                "the_geom",
                 "mun",
-                "inc",
+                "the_geom",
                 "pro",
-                "sr",
-                "id_par",
+                "pol",
+                "inc",
+                "comarca",
+                "regio",
+                "pendent",
                 "agr"
               ],
             "columns_datatype" :
               [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
                 "Number",
                 "Text",
                 "Number",
                 "Text",
                 "Text",
-                "Text",
-                "Text",
-                "Number",
-                "Number",
-                "Number",
                 "Number",
                 "Text",
-                "Number",
-                "Number",
+                "Text",
+                "Text",
                 "Text",
                 "Number",
                 "Text",
                 "Text",
                 "MultiPolygon",
-                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
                 "Text",
                 "Number",
-                "Number",
-                "Text",
-                "Number"
+                "Text"
               ],
             "columns_description" :
               [
-                "Pendent mitjà del recinte en percentatge (%)",
-                "Codi de comarca",
-                "Coeficient d’admissibilitat en %. Aquest coeficient té valors de 0 a 100 pels usos de pastura (PA, PR i PS), sent zero per a la resta d’usos",
-                "Codi de parcel·la vitícola (2 lletres i 3 números). Camp informat només en usos vitícoles",
-                "Nom de la Comarca",
-                "Any de la campanya. Cada any es publica una capa actualitzada",
-                "Codi Cadastral del municipi",
-                "Codi numèric de la zona (normalment conté el valor 0)",
-                "Codi numèric de la parcel·la",
-                "Superfície del recinte en hectàrees i 4 decimals",
-                "Codi numèric del recinte",
-                "Codi de regió format per 4 dígits. Els dos primers fan referència a la Regió i els dos últims al Grup de Cultiu",
-                "Valor del perímetre de la geometria en m",
-                "Codi numèric del polígon",
-                "Camp clau i codi únic que identifica el recinte. És el resultat de la concatenació dels 7 camps següents: PRO, MUN, AGR, ZON, POL, PAR, REC",
-                "Valor de l’àrea de la geometria en m2",
-                "Nom del Municipi",
-                "Codi ús SIGPAC: TA: Terra arable; FO: Forestal; OF: Olivera i fruiter; TH: Horta; PA: Pastura arbrada; VO: Vinya i olivera; IV: Hivernacle; PR: Pastura arbustiva; VF: Vinya i fruiter; FY: Fruiter; PS: Pastiu; FV: Fruita seca i vinya; CI: Cítric; ED: Edificació; FL: Fruita seca i olivera; FS: Fruita seca; ZU: Zona urbana; ZV: Zona censurada; OV: Olivera; CA: Vial; VI: Vinya; AG: Superfícies d’aigua; IM: Improductiu",
-                "Geometria de cada polígon",
-                "Codi numèric del municipi",
-                "Incidència de l'ús del sòl assignat",
-                "Codi numèric de la província",
+                "Codi identificador de la parcel·la. Concatenació dels 6 camps següents: PRO, MUN, AGR, ZON, POL, PAR ",
+                "Coeficient d'admissibilitat en %. Aquest coeficient té valors de 0 a 100 pels usos de pastura (PA, PR i PS), sent zero per a la resta d'usos ",
+                "Any de la campanya. Cada any es publica una capa actualitzada ",
+                "Codi numèric de la zona (normalment conté el valor 0) ",
                 "Coeficient de regadiu (SR=0 Secà i SR=100 Regadiu)",
-                "Codi identificador de la parcel·la. Concatenació dels 6 camps següents: PRO, MUN, AGR, ZON, POL, PAR",
-                "Codi numèric de l’agregat (normalment conté el valor 0)"
+                "Codi numèric de la parcel·la ",
+                "Valor de l'àrea de la geometria en m2 ",
+                "Codi ús SIGPAC: TA: Terra arable; FO: Forestal; OF: Olivera i fruiter; TH: Horta; PA: Pastura arbrada; VO: Vinya i olivera; IV: Hivernacle; PR: Pastura arbustiva; VF: Vinya i fruiter; FY: Fruiter; PS: Pastiu; FV: Fruita seca i vinya; CI: Cítric; ED: Edificació; FL: Fruita seca i olivera; FS: Fruita seca; ZU: Zona urbana; ZV: Zona censurada; OV: Olivera; CA: Vial; VI: Vinya; AG: Superfícies d'aigua; IM: Improductiu ",
+                "Codi de parcel·la vitícola (2 lletres i 3 números). Camp informat només en usos vitícoles ",
+                "Valor del perímetre de la geometria en m ",
+                "Nom del municipi ",
+                "Codi Cadastral del municipi ",
+                "Camp clau i codi únic que identifica el recinte. És el resultat de la concatenació dels 7 camps següents: PRO, MUN, AGR, ZON, POL, PAR, REC ",
+                "Codi de comarca ",
+                "Superfície del recinte en hectàrees i 4 decimals ",
+                "Codi numèric del recinte ",
+                "Codi numèric del municipi ",
+                "Geometria de cada polígon ",
+                "Codi numèric de la província ",
+                "Codi numèric del polígon ",
+                "Incidència de l'ús del sòl assignat",
+                "Nom de la comarca ",
+                "Codi de regió format per 4 dígits. Els dos primers fan referència a la Regió i els dos últims al Grup de Cultiu ",
+                "Pendent mitjà del recinte en percentatge (%) ",
+                "Codi numèric de l'agregat (normalment conté el valor 0) "
               ],
             "columns_format" :
               [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1322,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-11-27T13:59:13.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "sigpac",
+                "campanya",
+                "alt penedès",
+                "recinte",
+                "pac",
+                "ods2_fam zero",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "System of geographical information of agricultural parcels (SIGPAC) of the region of Alt Penedès"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Sistema de información geográfica de parcelas agrícolas (SIGPAC) de la comarca Alt Penedès"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/yrfc-5qkr",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Sistema-d-informació-geogràfica-de-parcel-les-agrí/yrfc-5qkr",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Sistema d'informació geogràfica de parcel·les agrícoles (SIGPAC) de la comarca Pla de l'Estany",
+            "id" : "358m-5bh2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El sistema d'informació geogràfica d'identificació de parcel·les agrícoles (SIGPAC) és un registre públic de caràcter administratiu que conté informació de les parcel·les, amb especial atenció a les susceptibles de beneficiar-se de les ajudes comunitàries relacionades amb la superfície. Aquest registre depèn del Fons Espanyol de Garantia Agrària (FEGA) i del Departament d'Agricultura, Ramaderia, Pesca i Alimentació de la Generalitat de Catalunya. \nAquest fitxer conté els recintes i les parcel·les de la comarca del Pla de l'Estany de l'any 2017 al 2026, amb sistema de referència cartogràfic ETRS89.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-23T08:03:57.000Z",
+            "createdAt" : "2020-03-24T12:47:59.000Z",
+            "metadata_updated_at" : "2026-07-23T08:03:57.000Z",
+            "data_updated_at" : "2026-07-23T07:58:21.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 29,
+                "page_views_last_month" : 55,
+                "page_views_total" : 2394,
+                "page_views_last_week_log" : 4.906890595608519,
+                "page_views_last_month_log" : 5.807354922057605,
+                "page_views_total_log" : 11.225809940623543
+              },
+            "columns_name" :
+              [
+                "COMARCA",
+                "REC",
+                "PV",
+                "US",
+                "REGIO",
+                "CA",
+                "ID_MUN",
+                "ID_PAR",
+                "CAMPANYA",
+                "INC",
+                "HA",
+                "Shape_Leng",
+                "PAR",
+                "POL",
+                "the_geom",
+                "ID_REC",
+                "PENDENT",
+                "PRO",
+                "AGR",
+                "SR",
+                "Shape_Area",
+                "MUN",
+                "ID_COM",
+                "ZON",
+                "MUNICIPI"
+              ],
+            "columns_field_name" :
+              [
+                "comarca",
+                "rec",
+                "pv",
+                "us",
+                "regio",
+                "ca",
+                "id_mun",
+                "id_par",
+                "campanya",
+                "inc",
+                "ha",
+                "shape_leng",
+                "par",
+                "pol",
+                "the_geom",
+                "id_rec",
+                "pendent",
+                "pro",
+                "agr",
+                "sr",
+                "shape_area",
+                "mun",
+                "id_com",
+                "zon",
+                "municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "MultiPolygon",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom de la Comarca",
+                "Codi numèric del recinte",
+                "Codi de parcel·la vitícola (2 lletres i 3 números). Camp informat només en usos vitícoles",
+                "Codi ús SIGPAC: TA: Terra arable; FO: Forestal; OF: Olivera i fruiter; TH: Horta; PA: Pastura arbrada; VO: Vinya i olivera; IV: Hivernacle; PR: Pastura arbustiva; VF: Vinya i fruiter; FY: Fruiter; PS: Pastiu; FV: Fruita seca i vinya; CI: Cítric; ED: Edificació; FL: Fruita seca i olivera; FS: Fruita seca; ZU: Zona urbana; ZV: Zona censurada; OV: Olivera; CA: Vial; VI: Vinya; AG: Superfícies d’aigua; IM: Improductiu",
+                "Codi de regió format per 4 dígits. Els dos primers fan referència a la Regió i els dos últims al Grup de Cultiu",
+                "Coeficient d’admissibilitat en %. Aquest coeficient té valors de 0 a 100 pels usos de pastura (PA, PR i PS), sent zero per a la resta d’usos",
+                "Codi Cadastral del municipi",
+                "Codi identificador de la parcel·la. Concatenació dels 6 camps següents: PRO, MUN, AGR, ZON, POL, PAR",
+                "Any de la campanya. Cada any es publica una capa actualitzada",
+                "Incidència de l'ús del sòl assignat",
+                "Superfície del recinte en hectàrees i 4 decimals",
+                "Valor del perímetre de la geometria en m",
+                "Codi numèric de la parcel·la",
+                "Codi numèric del polígon",
+                "Geometria de cada polígon",
+                "Camp clau i codi únic que identifica el recinte. És el resultat de la concatenació dels 7 camps següents: PRO, MUN, AGR, ZON, POL, PAR, REC",
+                "Pendent mitjà del recinte en percentatge (%)",
+                "Codi numèric de la província",
+                "Codi numèric de l’agregat (normalment conté el valor 0)",
+                "Coeficient de regadiu (SR=0 Secà i SR=100 Regadiu)",
+                "Valor de l’àrea de la geometria en m2",
+                "Codi numèric del municipi",
+                "Codi de comarca",
+                "Codi numèric de la zona (normalment conté el valor 0)",
+                "Nom del Municipi"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
                 {},
                 {},
                 {},
@@ -3701,12 +3704,9 @@
                 {},
                 {},
                 {},
-                {},
-                {},
-                {},
                 {}
               ],
-            "download_count" : 1406,
+            "download_count" : 1430,
             "provenance" : "official",
             "lens_view_type" : "tabular",
             "lens_display_type" : "table",
@@ -3714,8 +3714,6 @@
             "backend" : "nbe",
             "blob_mime_type" : null,
             "hide_from_data_json" : false,
-            "publication_date" : "2026-07-23T08:45:24.000Z"
+            "publication_date" : "2026-07-23T08:03:57.000Z"
           },
-        "classification" :
-          {
-  
+        "classification" 

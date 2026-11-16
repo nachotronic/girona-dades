@@ -350,124 +350,6 @@
       {
         "resource" :
           {
-            "name" : "Zone omogenee per rischio Incendi boschivi - Elenco Comuni",
-            "id" : "iych-7ac2",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Il rischio “Incendi boschivi” si riferisce a fenomeni legati all’insorgenza ed estensione di focolai che possono espandersi su aree boscate, cespugliate o arborate, comprese eventuali strutture e infrastrutture antropizzate poste all’interno delle predette aree, oppure su terreni coltivati o incolti e pascoli ad esse limitrofi.",
-            "attribution" : "Regione Lombardia",
-            "attribution_link" : "https://goo.gl/cP0pt6",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2021-06-11T10:37:36.000Z",
-            "createdAt" : "2014-10-17T15:23:29.000Z",
-            "metadata_updated_at" : "2021-06-11T10:37:36.000Z",
-            "data_updated_at" : "2017-10-27T06:53:46.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 24,
-                "page_views_last_month" : 89,
-                "page_views_total" : 4653,
-                "page_views_last_week_log" : 4.643856189774724,
-                "page_views_last_month_log" : 6.491853096329675,
-                "page_views_total_log" : 12.184255495405349
-              },
-            "columns_name" :
-              [
-                "CODICE_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
-                "PROVINCIA",
-                "ISTAT",
-                "NOME_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
-                "COMUNE"
-              ],
-            "columns_field_name" :
-              [
-                "codice_zona_omogenea_rischio_incendi_boschivi",
-                "provincia",
-                "istat",
-                "nome_zona_omogenea_rischio_incendi_boschivi",
-                "comune"
-              ],
-            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
-            "columns_description" : [ "", "", "", "", "" ],
-            "columns_format" :
-              [
-                { "displayStyle" : "plain", "align" : "left" },
-                {},
-                {},
-                { "displayStyle" : "plain", "align" : "left" },
-                {}
-              ],
-            "download_count" : 4515,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2017-10-27T07:17:26.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Protezione Civile",
-            "domain_tags" :
-              [
-                "avvisi",
-                "avviso",
-                "criticità",
-                "allerta",
-                "allertamento",
-                "rischio",
-                "rischi",
-                "incendi boschivi",
-                "incendio boschivo",
-                "zone omogenee",
-                "protezione civile",
-                "centro funzionale",
-                "sala operativa"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Dettagli_Direzione",
-                  "value" : "Sicurezza, protezione civile e immigrazione"
-                },
-                {
-                  "key" : "Frequenza-di-aggiornamento_Frequenza",
-                  "value" : "Non definita"
-                },
-                {
-                  "key" : "Frequenza-di-aggiornamento_Data-ultima-modifica",
-                  "value" : "27/10/2017"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "www.dati.lombardia.it",
-            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
-          },
-        "permalink" : "https://www.dati.lombardia.it/d/iych-7ac2",
-        "link" : "https://www.dati.lombardia.it/Protezione-Civile/Zone-omogenee-per-rischio-Incendi-boschivi-Elenco-/iych-7ac2",
-        "owner" :
-          {
-            "id" : "7pvs-5xuu",
-            "user_type" : "interactive",
-            "display_name" : "Regione Lombardia"
-          },
-        "creator" :
-          {
-            "id" : "7pvs-5xuu",
-            "user_type" : "interactive",
-            "display_name" : "Regione Lombardia"
-          }
-      },
-      {
-        "resource" :
-          {
             "name" : "Incendis forestals per comarques a Catalunya. Any anterior",
             "id" : "crs7-idxi",
             "resource_name" : null,
@@ -628,6 +510,124 @@
             "id" : "a4b5-gx6v",
             "user_type" : "interactive",
             "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Zone omogenee per rischio Incendi boschivi - Elenco Comuni",
+            "id" : "iych-7ac2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Il rischio “Incendi boschivi” si riferisce a fenomeni legati all’insorgenza ed estensione di focolai che possono espandersi su aree boscate, cespugliate o arborate, comprese eventuali strutture e infrastrutture antropizzate poste all’interno delle predette aree, oppure su terreni coltivati o incolti e pascoli ad esse limitrofi.",
+            "attribution" : "Regione Lombardia",
+            "attribution_link" : "https://goo.gl/cP0pt6",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2021-06-11T10:37:36.000Z",
+            "createdAt" : "2014-10-17T15:23:29.000Z",
+            "metadata_updated_at" : "2021-06-11T10:37:36.000Z",
+            "data_updated_at" : "2017-10-27T06:53:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 89,
+                "page_views_total" : 4653,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 6.491853096329675,
+                "page_views_total_log" : 12.184255495405349
+              },
+            "columns_name" :
+              [
+                "CODICE_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
+                "PROVINCIA",
+                "ISTAT",
+                "NOME_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
+                "COMUNE"
+              ],
+            "columns_field_name" :
+              [
+                "codice_zona_omogenea_rischio_incendi_boschivi",
+                "provincia",
+                "istat",
+                "nome_zona_omogenea_rischio_incendi_boschivi",
+                "comune"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" : [ "", "", "", "", "" ],
+            "columns_format" :
+              [
+                { "displayStyle" : "plain", "align" : "left" },
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {}
+              ],
+            "download_count" : 4515,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-10-27T07:17:26.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Protezione Civile",
+            "domain_tags" :
+              [
+                "avvisi",
+                "avviso",
+                "criticità",
+                "allerta",
+                "allertamento",
+                "rischio",
+                "rischi",
+                "incendi boschivi",
+                "incendio boschivo",
+                "zone omogenee",
+                "protezione civile",
+                "centro funzionale",
+                "sala operativa"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dettagli_Direzione",
+                  "value" : "Sicurezza, protezione civile e immigrazione"
+                },
+                {
+                  "key" : "Frequenza-di-aggiornamento_Frequenza",
+                  "value" : "Non definita"
+                },
+                {
+                  "key" : "Frequenza-di-aggiornamento_Data-ultima-modifica",
+                  "value" : "27/10/2017"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/iych-7ac2",
+        "link" : "https://www.dati.lombardia.it/Protezione-Civile/Zone-omogenee-per-rischio-Incendi-boschivi-Elenco-/iych-7ac2",
+        "owner" :
+          {
+            "id" : "7pvs-5xuu",
+            "user_type" : "interactive",
+            "display_name" : "Regione Lombardia"
+          },
+        "creator" :
+          {
+            "id" : "7pvs-5xuu",
+            "user_type" : "interactive",
+            "display_name" : "Regione Lombardia"
           }
       },
       {
@@ -2209,6 +2209,6 @@
       }
     ],
   "resultSetSize" : 11,
-  "timings" : { "serviceMillis" : 180, "searchMillis" : [ 3, 8 ] },
+  "timings" : { "serviceMillis" : 27, "searchMillis" : [ 3, 11 ] },
   "warnings" : []
 }

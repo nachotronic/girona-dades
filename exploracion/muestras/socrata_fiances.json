@@ -369,6 +369,6 @@
       }
     ],
   "resultSetSize" : 2,
-  "timings" : { "serviceMillis" : 19, "searchMillis" : [ 2, 7 ] },
+  "timings" : { "serviceMillis" : 25, "searchMillis" : [ 6, 6 ] },
   "warnings" : []
 }

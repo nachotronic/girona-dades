@@ -1,0 +1,373 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Pressupostos dels ens municipals de Catalunya",
+            "id" : "4g9s-gzp6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Pressupostos dels ens municipals de Catalunya segons classificació econòmica i per programes.",
+            "attribution" : "Consorci Administració Oberta de Catalunya (AOC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-15T04:15:17.000Z",
+            "createdAt" : "2017-01-10T11:58:29.000Z",
+            "metadata_updated_at" : "2026-11-15T04:15:17.000Z",
+            "data_updated_at" : "2026-11-06T04:29:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 136,
+                "page_views_last_month" : 665,
+                "page_views_total" : 15741,
+                "page_views_last_week_log" : 7.098032082960527,
+                "page_views_last_month_log" : 9.379378367071263,
+                "page_views_total_log" : 13.942331224510575
+              },
+            "columns_name" :
+              [
+                "DESCRIPCIO",
+                "ID_ESTRUCTURA",
+                "ESTRUCTURA",
+                "NOM_COMPLERT",
+                "NIVELL",
+                "CODI_ENS",
+                "TIPUS_PARTIDA",
+                "ANY_EXERCICI",
+                "TIPUS_CLASSIF",
+                "IMPORT",
+                "CODI_PANTALLA"
+              ],
+            "columns_field_name" :
+              [
+                "descripcio",
+                "id_estructura",
+                "estructura",
+                "nom_complert",
+                "nivell",
+                "codi_ens",
+                "tipus_partida",
+                "any_exercici",
+                "tipus_classif",
+                "import",
+                "codi_pantalla"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Fa referència a la denominació concepte de la partida econòmica",
+                "Codi intern de l'estructura de l'aplicació pressupostària",
+                "Codificació de l'aplicació pressupostària a partir del codi_pantalla",
+                "Nom de l'ens",
+                "Fa referència al nivell dels codis de classificació",
+                "Fa referència a l’ID del ens",
+                "Fa referència a Despeses (D) o Ingressos (I)",
+                "Any de l'exercici pressupostari",
+                "Fa referència a Econòmic (E) o Funcional (F)",
+                "Fa referència a l'import econòmic",
+                "Fa referència als codis de classificació econòmica de l'Ordre EHA/3564/2008"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_y", "align" : "left" },
+                {},
+                {
+                  "noCommas" : "true",
+                  "rdf" : "",
+                  "precision" : "2",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "aggregate" : "sum",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {}
+              ],
+            "download_count" : 3130,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-03-05T10:41:33.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "pressupost",
+                "municipal",
+                "ajuntaments",
+                "ingressos",
+                "despeses",
+                "consorci aoc",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Budgets of the municipal entities of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Presupuestos de los entes municipales de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Administració local"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "Consorci AOC"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/4g9s-gzp6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Pressupostos-dels-ens-municipals-de-Catalunya/4g9s-gzp6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Distribució del Fons de Cooperació Local de Catalunya",
+            "id" : "ka4a-fyht",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Fons de cooperació local de Catalunya (FCLC) és un fons dinerari establert per dotar de recursos als governs locals de Catalunya, el qual es nodreix dels ingressos tributaris de la Generalitat de Catalunya. En termes legals, aquesta participació té la consideració jurídica d’una transferència d’assignació territorial destinada a finançar globalment l’activitat dels ens locals i, per aquest motiu, aquests ens la poden destinar lliurement a fer front a despeses i inversions derivades del seu funcionament o de l’acompliment de les seves competències.\n\nEls destinataris són els municipis, les comarques i les entitats municipals descentralitzades dels municipis de Catalunya.\n\nEl FCLC té el seu fonament legal a l’article 149 de la Constitució espanyola i a l’article 219 de l’Estatut d’Autonomia de Catalunya. Cal tenir en compte, però, que la seva regulació és la que contenen les normes de règim local estatals i catalanes, així com cada una de les lleis de pressupostos aprovades.\n\nAixí doncs, correspon a la Generalitat distribuir el FCLC, mitjançant la Llei anual de pressupostos, i actualment els criteris principals que s’utilitzen són els de: població (volum de població agrupada per trams en l’àmbit de cada ens local), despeses derivades de la gestió del territori (existència de nuclis de població diferenciats, superfície del territori, capitalitat comarcal, població disseminada, etc.), o altres de magnitud econòmica (com ara l’existència de diferències en la renda comarcal per càpita).\n\nEn tot cas, el lliurament als ens locals del FCLC resta condicionat al fet que els destinataris compleixin adequadament l’obligació de trametre els pressupostos, les liquidacions pressupostàries anuals i els qüestionaris estadístics homogeneïtzats d’aquestes dades al Departament de la Presidència, així com els comptes anuals a la Sindicatura de Comptes, d’acord amb el que estableix la legislació sectorial.",
+            "attribution" : "Secretaria de Governs Locals i de Relacions amb l'Aran",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-03-31T07:55:08.000Z",
+            "createdAt" : "2020-06-08T10:08:57.000Z",
+            "metadata_updated_at" : "2026-03-31T07:55:08.000Z",
+            "data_updated_at" : "2026-03-23T14:26:39.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 51,
+                "page_views_last_month" : 235,
+                "page_views_total" : 6640,
+                "page_views_last_week_log" : 5.700439718141093,
+                "page_views_last_month_log" : 7.8826430493618425,
+                "page_views_total_log" : 12.697184783224516
+              },
+            "columns_name" :
+              [
+                "Entitat municipal descentralitzada",
+                "Codi ens",
+                "Ens beneficiari",
+                "FCLC Extraordinari",
+                "Municipi",
+                "Comarca",
+                "FCLC Supramunicipal",
+                "NIF",
+                "Import FCLC",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "entitat_municipal_descentralitzada",
+                "codi_10",
+                "ens_beneficiari",
+                "fclc_extraordinari",
+                "municipi",
+                "comarca",
+                "fclc_supramunicipal",
+                "nif",
+                "import",
+                "any"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Nom de l’entitat municipal descentralitzada (EMD) beneficiària, vigent a 1 de gener de l'any següent a l'any de referència de les dades per assegurar que es captura l'estat administratiu complet de l'any vençut.",
+                "Codi oficial estadístic numèric identificador de l’ens local beneficiari.",
+                "Tipus d’ens local beneficiari del FCLC: entitat municipal descentralitzada, municipi, comarca, Àrea Metropolitana de Barcelona o Mancomunitat de Municipis de la Comarca del Lluçanès.",
+                "Import distribuït del FCLC extraordinari.",
+                "Nom del municipi beneficiari o municipi al qual pertany l’ens beneficiari, vigent a 1 de gener de l'any següent a l'any de referència de les dades per assegurar que es captura l'estat administratiu complet de l'any vençut.",
+                "Nom de la comarca beneficiària o comarca a la qual pertany l’ens beneficiari, vigent a 1 de gener de l'any següent a l'any de referència de les dades per assegurar que es captura l'estat administratiu complet de l'any vençut.",
+                "Import del FCLC distribuït per al foment de la prestació supramunicipal de serveis.",
+                "NIF de l’ens local beneficiari.",
+                "Import del FCLC distribuït pel tram de lliure disposició.",
+                "Anualitat corresponent a la distribució del FCLC."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "false",
+                  "groupSeparator" : "."
+                },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 961,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-03-23T14:26:50.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "subvencions",
+                "fons de cooperació local de catalunya",
+                "fclc",
+                "municat",
+                "pressupost",
+                "ingressos",
+                "ens locals",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Catalonia's Local Cooperation Fund distribution"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Distribución del Fondo de Cooperación Local de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ka4a-fyht",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Distribució-del-Fons-de-Cooperació-Local-de-Catalu/ka4a-fyht",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 2,
+  "timings" : { "serviceMillis" : 20, "searchMillis" : [ 2, 8 ] },
+  "warnings" : []
+}

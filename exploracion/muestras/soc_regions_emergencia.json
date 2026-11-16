@@ -413,6 +413,138 @@
       {
         "resource" :
           {
+            "name" : "Regions d’emergències",
+            "id" : "i5uz-s4g6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de les regions d’emergència (RE) en què s’articula la implantació territorial del cos de Bombers de la Generalitat.",
+            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:41.000Z",
+            "createdAt" : "2025-01-21T12:26:29.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:41.000Z",
+            "data_updated_at" : "2026-07-03T07:38:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 33,
+                "page_views_last_month" : 54,
+                "page_views_total" : 727,
+                "page_views_last_week_log" : 5.08746284125034,
+                "page_views_last_month_log" : 5.78135971352466,
+                "page_views_total_log" : 9.507794640198696
+              },
+            "columns_name" :
+              [
+                "NOM_RE_BOMBERS",
+                "GEOMETRIA_RE_BOMBERS",
+                "CODI_RE_BOMBERS",
+                "ACRON_RE_BOMBERS",
+                "OBJECTID"
+              ],
+            "columns_field_name" :
+              [
+                "nom_re_bombers",
+                "geometria_re_bombers",
+                "codi_re_bombers",
+                "acron_re_bombers",
+                "objectid"
+              ],
+            "columns_datatype" :
+              [ "Text", "MultiPolygon", "Text", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Nom de la regió d’emergències",
+                "Informació geogràfica que defineix la zona que delimita la regió d’emergències.",
+                "Identificador únic de la regió d’emergències.  No és un codi oficial. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’.",
+                "Acrònim d’ús intern que identifica la regió d’emergències.  El registres que comencen per N s’afegeixen per donar valor de completesa a l’entitat.",
+                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat i evitar els duplicats."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 418,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:38:21.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Emergency regions"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Regiones de emergencias"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/i5uz-s4g6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-d-emergències/i5uz-s4g6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
             "name" : "Consum d’aigua a Catalunya per comarques",
             "id" : "2gws-ubmt",
             "resource_name" : null,
@@ -704,141 +836,9 @@
             "user_type" : "interactive",
             "display_name" : "Dades Obertes Catalunya"
           }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Regions d’emergències",
-            "id" : "i5uz-s4g6",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Llistat de les regions d’emergència (RE) en què s’articula la implantació territorial del cos de Bombers de la Generalitat.",
-            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-09-17T07:08:41.000Z",
-            "createdAt" : "2025-01-21T12:26:29.000Z",
-            "metadata_updated_at" : "2026-09-17T07:08:41.000Z",
-            "data_updated_at" : "2026-07-03T07:38:10.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 33,
-                "page_views_last_month" : 54,
-                "page_views_total" : 727,
-                "page_views_last_week_log" : 5.08746284125034,
-                "page_views_last_month_log" : 5.78135971352466,
-                "page_views_total_log" : 9.507794640198696
-              },
-            "columns_name" :
-              [
-                "NOM_RE_BOMBERS",
-                "GEOMETRIA_RE_BOMBERS",
-                "CODI_RE_BOMBERS",
-                "ACRON_RE_BOMBERS",
-                "OBJECTID"
-              ],
-            "columns_field_name" :
-              [
-                "nom_re_bombers",
-                "geometria_re_bombers",
-                "codi_re_bombers",
-                "acron_re_bombers",
-                "objectid"
-              ],
-            "columns_datatype" :
-              [ "Text", "MultiPolygon", "Text", "Text", "Number" ],
-            "columns_description" :
-              [
-                "Nom de la regió d’emergències",
-                "Informació geogràfica que defineix la zona que delimita la regió d’emergències.",
-                "Identificador únic de la regió d’emergències.  No és un codi oficial. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’.",
-                "Acrònim d’ús intern que identifica la regió d’emergències.  El registres que comencen per N s’afegeixen per donar valor de completesa a l’entitat.",
-                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat i evitar els duplicats."
-              ],
-            "columns_format" :
-              [
-                {},
-                {},
-                { "decimalSeparator" : ",", "groupSeparator" : "." },
-                {},
-                { "noCommas" : "true" }
-              ],
-            "download_count" : 418,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2026-07-03T07:38:21.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Seguretat",
-            "domain_tags" : [ "dades_de_referència" ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Emergency regions"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Regiones de emergencias"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Dades geogràfiques"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Interior i Seguretat Pública"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/i5uz-s4g6",
-        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-d-emergències/i5uz-s4g6",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
       }
     ],
   "resultSetSize" : 6,
-  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 2, 8 ] },
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 3, 8 ] },
   "warnings" : []
 }
