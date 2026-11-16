@@ -9,6 +9,7 @@ pernoctaciones y viajeros en hoteles (INE, mensual) e IPC.
 from __future__ import annotations
 
 import glob
+import re
 import json
 import math
 import pathlib
@@ -139,6 +140,76 @@ def _iniciats():
     return ini, aca
 
 
+def _afiliacio():
+    f = P / "conjuntura" / "afiliacio.csv"
+    return pd.read_csv(f, dtype={"ambit": str, "mes": str}) if f.exists() else pd.DataFrame(columns=["mes", "ambit", "reg", "valor"])
+
+
+def _dgt():
+    fs = sorted(glob.glob(str(P / "conjuntura" / "dgt" / "mat_*.csv")))
+    parts = []
+    for f in fs:
+        d = pd.read_csv(f, dtype={"ine": str})
+        a = pathlib.Path(f).stem[4:]
+        d["per"] = f"{a[:4]}-{a[4:]}"
+        parts.append(d)
+    return pd.concat(parts) if parts else pd.DataFrame(columns=["ine", "tipus", "nou", "electric", "n", "per"])
+
+
+def _aena():
+    f = P / "conjuntura" / "aena.csv"
+    return pd.read_csv(f, dtype={"mes": str}) if f.exists() else pd.DataFrame(columns=["mes", "aeroport", "passatgers"])
+
+
+def _valor_taxat():
+    """Boletín del Ministerio. Tabla 35101000 (provincias): columnas por año y trimestre.
+    Tabla 35103500 (municipios > 25.000 hab.): una hoja por trimestre (t<q>a<año>) con
+    provincia, municipio y valor por antigüedad; se toma la columna «Total».
+    Devuelve dos dicts {nombre normalizado: {periodo: €/m²}}."""
+    from fuentes.comun import normaliza
+    prov, mun = {}, {}
+    for f in sorted(glob.glob(str(P / "mitma" / "35101000_*"))):
+        df = pd.read_csv(f, header=None, dtype=str)
+        # Fila con «Año 2019», «Año 2020»... (el título de la hoja también puede decir «Años»)
+        fa = next((i for i in range(min(15, len(df))) if df.iloc[i].astype(str).str.strip().str.match(r"(?i)año \d{4}$").any()), None)
+        if fa is None:
+            continue
+        anys = df.iloc[fa].ffill()
+        cols = {}
+        for j in range(1, df.shape[1]):
+            a = str(anys.iloc[j])
+            y = "".join(ch for ch in a if ch.isdigit())[:4]
+            if len(y) == 4:
+                q = sum(1 for k in range(1, j) if str(anys.iloc[k]) == a) + 1
+                if q <= 4:
+                    cols[j] = f"{y}T{q}"
+        for _, fila in df.iloc[fa + 1:].iterrows():
+            n = normaliza(str(fila[0]))
+            if not n or n == "nan":
+                continue
+            vals = {p: v for j, p in cols.items() if not pd.isna(v := pd.to_numeric(str(fila[j]).replace(",", "."), errors="coerce"))}
+            if vals:
+                prov.setdefault(n, {}).update(vals)
+    for f in sorted(glob.glob(str(P / "mitma" / "35103500_t*a*.csv"))):
+        m = re.search(r"_t(\d)a(\d{4})", f)
+        if not m:
+            continue
+        per = f"{m.group(2)}T{m.group(1)}"
+        df = pd.read_csv(f, header=None, dtype=str)
+        cap = next((i for i in range(min(10, len(df))) if df.iloc[i].astype(str).str.strip().eq("Total").any()), None)
+        cm = next((i for i in range(min(10, len(df))) if df.iloc[i].astype(str).str.strip().eq("Municipio").any()), None)
+        if cap is None or cm is None:
+            continue
+        jt = int(df.iloc[cap].astype(str).str.strip().eq("Total").to_numpy().argmax())
+        jm = int(df.iloc[cm].astype(str).str.strip().eq("Municipio").to_numpy().argmax())
+        for _, fila in df.iloc[max(cap, cm) + 1:].iterrows():
+            n = normaliza(str(fila[jm]))
+            v = pd.to_numeric(str(fila[jt]).replace(",", "."), errors="coerce")
+            if n and n != "nan" and not pd.isna(v):
+                mun.setdefault(n, {})[per] = float(v)
+    return prov, mun
+
+
 def construir(municipios: list[dict], pob1564: dict) -> dict:
     from fuentes.comun import normaliza
     ines = [m["ine"] for m in municipios]
@@ -150,11 +221,15 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     cvq = _compraventes_trim(nombres)
     ini, aca = _iniciats()
     ine = _ine()
+    afi = _afiliacio()
+    dgt = _dgt()
+    aena = _aena()
+    vt_prov, vt = _valor_taxat()
 
-    ults = [df["per"].max() for df in (paro, contr) if len(df)]
+    ults = [df["per"].max() for df in (paro, contr) if len(df)] + ([afi["mes"].max()] if len(afi) else [])
     ults += [max(_serie_ine(ine, "6150", "Girona.", "General. Compraventa. Número") or {"": ""}), max(_serie_ine(ine, "2074", "Girona.", "Pernoctaciones. Total") or {"": ""})]
     ult_m = max([x for x in ults if x] or ["2026-01"])
-    cands_t = [llq["per"].max() if len(llq) else None] + [max(v) for v in cvq.values() if v]
+    cands_t = [llq["per"].max() if len(llq) else None] + [max(v) for v in cvq.values() if v] + [max(v) for v in vt.values() if v]
     ult_t = max([x for x in cands_t if x] or ["2026T1"])
     M, T = _mesos(ult_m), _trimestres(ult_t)
 
@@ -183,6 +258,24 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     for i, s in ini.items():
         if i in mun:
             mun[i]["ini"] = arr(s, T)
+    # Afiliación por residencia (régimen general + autónomos) y autónomos
+    if len(afi):
+        piv = afi.pivot_table(index=["ambit", "mes"], columns="reg", values="valor", aggfunc="sum").reset_index()
+        for i, g in piv.groupby("ambit"):
+            if i in mun:
+                mun[i]["afil"] = arr(dict(zip(g["mes"], g.get("rg", 0) + g.get("reta", 0))), M)
+                if "reta" in g:
+                    mun[i]["reta"] = arr(dict(zip(g["mes"], g["reta"])), M)
+    # Turismos nuevos matriculados
+    if len(dgt):
+        tn = dgt[(dgt["tipus"] == "turisme") & (dgt["nou"].astype(str) == "True")]
+        for i, g in tn.groupby("ine"):
+            if i in mun:
+                mun[i]["mat"] = arr(g.groupby("per")["n"].sum().to_dict(), M)
+    # Valor tasado (solo municipios de más de 25.000 habitantes)
+    for n, i in nombres.items():
+        if n in vt and i in mun:
+            mun[i]["vt"] = arr(vt[n], T)
     mun = {i: {k: v for k, v in x.items() if any(y is not None for y in v)} for i, x in mun.items()}
 
     # Series de la provincia, Cataluña y España
@@ -227,6 +320,43 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     if ipc["gi"]:
         prov["ipc"] = {"per": "m", **{a: [s.get(p) for p in M] for a, s in ipc.items() if s}}
 
+    if len(afi):
+        piv = afi.pivot_table(index=["ambit", "mes"], columns="reg", values="valor", aggfunc="sum").reset_index()
+        ser_af, ser_re = {}, {}
+        for a in ("gi", "cat"):
+            g = piv[piv["ambit"] == a]
+            if not len(g) and a == "gi":
+                g = piv[piv["ambit"].str.startswith("17")].groupby("mes")[["rg", "reta"]].sum().reset_index()
+            if len(g):
+                ser_af[a] = arr(dict(zip(g["mes"], g["rg"] + g["reta"])), M)
+                ser_re[a] = arr(dict(zip(g["mes"], g["reta"])), M)
+        if ser_af.get("gi"):
+            prov["afil"] = {"per": "m", **ser_af}
+            prov["reta"] = {"per": "m", **ser_re}
+    if len(dgt):
+        tur = dgt[dgt["tipus"] == "turisme"]
+        nous = tur[tur["nou"].astype(str) == "True"].groupby("per")["n"].sum()
+        el = tur[(tur["nou"].astype(str) == "True") & (tur["electric"].astype(str) == "True")].groupby("per")["n"].sum()
+        prov["mat"] = {"per": "m", "gi": arr(nous.to_dict(), M)}
+        prov["mat_el"] = {"per": "m", "gi": [round(el.get(p, 0) / nous[p] * 100, 1) if p in nous and nous[p] else None for p in M]}
+    if len(aena):
+        g = aena[aena["aeroport"] == "girona"]
+        if len(g):
+            prov["aena"] = {"per": "m", "gi": arr(dict(zip(g["mes"], g["passatgers"])), M)}
+    soc = {"gi": _serie_ine(ine, "6295", "Girona.", "Mercantiles. Número de Sociedades"),
+           "cat": _serie_ine(ine, "6295", "Cataluña.", "Mercantiles. Número de Sociedades"),
+           "esp": _serie_ine(ine, "6295", "Total Nacional.", "Mercantiles. Número de Sociedades")}
+    if soc["gi"]:
+        prov["soc"] = {"per": "m", **{a: arr(x, M) for a, x in soc.items() if x}}
+    # Pernoctaciones fuera de hoteles: apartamentos (2063), campings (2062) y turismo rural (2073)
+    ext = {}
+    for t_ in ("2063", "2062", "2073"):
+        for r_ in ("Residentes en España", "Residentes en el extranjero"):
+            for p, v in _serie_ine(ine, t_, "Girona.", "Pernoctaciones", r_).items():
+                ext[p] = ext.get(p, 0) + (v or 0)
+    if ext:
+        prov["extra"] = {"per": "m", "gi": arr(ext, M)}
+
     # Trimestrales de la provincia
     if len(llq):
         g = llq.dropna(subset=["renda", "contr"])
@@ -239,4 +369,7 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     if ini:
         prov["ini"] = {"per": "t", "gi": [_n(sum(s[p] for s in ini.values() if p in s)) if any(p in s for s in ini.values()) else None for p in T]}
         prov["aca"] = {"per": "t", "gi": [_n(sum(s[p] for s in aca.values() if p in s)) if any(p in s for s in aca.values()) else None for p in T]}
+    vz = {a: vt_prov.get(normaliza(n)) for a, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
+    if vz["gi"]:
+        prov["vt"] = {"per": "t", **{a: arr(x, T) for a, x in vz.items() if x}}
     return {"per": {"m": M, "t": T}, "mun": mun, "pob1564": {k: int(v) for k, v in pob1564.items() if v}, "prov": prov}

@@ -772,10 +772,10 @@ th, td { padding-left: 10px; padding-right: 10px; }
 }
 .fitxa-conj { margin-top: 40px; }
 .cj-sub { color: var(--text-2); font-size: 14px; margin: 4px 0 12px; }
-.cj-fitxa { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 3px solid var(--tinta); }
-.cj-fitxa > .cj-fig + .cj-fig { border-left: 1px solid var(--vora); }
+.cj-fitxa { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 3px solid var(--tinta); }
+.cj-fitxa > .cj-fig:not(:nth-child(3n + 1)) { border-left: 1px solid var(--vora); }
 .cj-fig-mun .cj-xifra { font-size: clamp(30px, 3vw, 40px); }
-@media (max-width: 1020px) { .cj-fitxa { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cj-fitxa > .cj-fig:nth-child(odd) { border-left: 0; } }
+@media (max-width: 1020px) { .cj-fitxa { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cj-fitxa > .cj-fig:nth-child(odd) { border-left: 0; } .cj-fitxa > .cj-fig:nth-child(even) { border-left: 1px solid var(--vora); } }
 @media (max-width: 560px) { .cj-fitxa { grid-template-columns: 1fr; } .cj-fitxa > .cj-fig { border-left: 0 !important; padding-left: 0; padding-right: 0; } }
 .fitxa-conj .ajt-tit { margin-bottom: 4px; }
 
@@ -784,3 +784,5 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .menu a { flex: 1 1 auto; padding-left: 4px; padding-right: 4px; letter-spacing: 0; }
 }
 @media (max-width: 374px) { .menu a { font-size: 9.5px; padding-left: 2px; padding-right: 2px; } }
+.cj-grup { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 36px 0 10px; }
+.cj-grups > .cj-grup:first-child { margin-top: 0; }

@@ -14,13 +14,23 @@
       ipc: ["Inflació", "Variació anual de l'IPC (%)"],
       llq: ["Lloguer mitjà", "Contractes nous del trimestre (€/mes)"],
       ini: ["Habitatges iniciats", "Obres començades al trimestre"],
+      afil: ["Afiliats a la Seguretat Social", "Residents a la província, a final de mes"],
+      reta: ["Autònoms", "Afiliats al règim d'autònoms, a final de mes"],
+      dtes: ["Demandants d'ocupació", "Inscrits al SEPE, aturats o no"],
+      vt: ["Preu de l'habitatge", "Valor taxat de l'habitatge lliure (€/m²)"],
+      extra: ["Apartaments, càmpings i rural", "Pernoctacions al mes"],
+      aena: ["Aeroport de Girona", "Passatgers al mes"],
+      mat: ["Cotxes nous", "Turismes nous matriculats al mes"],
+      soc: ["Empreses noves", "Societats mercantils constituïdes al mes"],
+      g_feina: "Feina", g_hab: "Habitatge", g_tur: "Turisme i mobilitat", g_eco: "Preus i empreses",
+      electrics: (v) => `${v} elèctrics`,
       vs: (p) => `respecte a ${p}`, punts: (v) => `${v} punts`, ult12: "Últims 12 mesos", ult4: "Últims 4 trimestres",
       cat: "Catalunya", esp: "Espanya", gi: "Girona", interanual: "Interanual",
       al_mapa: "Per municipis al mapa", font: "Font", tot_mes: "Tots els mesos des del 2019",
       h_fitxa: "Conjuntura", sub_fitxa: "Últims tres anys, mes a mes o trimestre a trimestre.",
       f_atur: ["Atur registrat", "persones"], f_contr: ["Contractes signats", "al municipi del centre de treball"],
       f_llq: ["Lloguer mitjà del trimestre", "€/mes, contractes nous"], f_cvq: ["Compravendes d'habitatges", "per trimestre"],
-      f_ini: ["Habitatges iniciats", "per trimestre"], sense: "Sense dades recents per a aquest municipi.",
+      f_ini: ["Habitatges iniciats", "per trimestre"], f_afil: ["Afiliats a la Seguretat Social", "residents al municipi"], f_mat: ["Cotxes nous", "turismes matriculats per veïns i empreses"], sense: "Sense dades recents per a aquest municipi.",
       llegenda: (p, a) => `<i class="cj-l-ult"></i>${p} <i class="cj-l-ant"></i>${a}`,
     },
     es: {
@@ -34,13 +44,23 @@
       ipc: ["Inflación", "Variación anual del IPC (%)"],
       llq: ["Alquiler medio", "Contratos nuevos del trimestre (€/mes)"],
       ini: ["Viviendas iniciadas", "Obras empezadas en el trimestre"],
+      afil: ["Afiliados a la Seguridad Social", "Residentes en la provincia, a final de mes"],
+      reta: ["Autónomos", "Afiliados al régimen de autónomos, a final de mes"],
+      dtes: ["Demandantes de empleo", "Inscritos en el SEPE, parados o no"],
+      vt: ["Precio de la vivienda", "Valor tasado de la vivienda libre (€/m²)"],
+      extra: ["Apartamentos, campings y rural", "Pernoctaciones en el mes"],
+      aena: ["Aeropuerto de Girona", "Pasajeros en el mes"],
+      mat: ["Coches nuevos", "Turismos nuevos matriculados en el mes"],
+      soc: ["Empresas nuevas", "Sociedades mercantiles constituidas en el mes"],
+      g_feina: "Empleo", g_hab: "Vivienda", g_tur: "Turismo y movilidad", g_eco: "Precios y empresas",
+      electrics: (v) => `${v} eléctricos`,
       vs: (p) => `respecto a ${p}`, punts: (v) => `${v} puntos`, ult12: "Últimos 12 meses", ult4: "Últimos 4 trimestres",
       cat: "Cataluña", esp: "España", gi: "Girona", interanual: "Interanual",
       al_mapa: "Por municipios en el mapa", font: "Fuente", tot_mes: "Todos los meses desde 2019",
       h_fitxa: "Coyuntura", sub_fitxa: "Últimos tres años, mes a mes o trimestre a trimestre.",
       f_atur: ["Paro registrado", "personas"], f_contr: ["Contratos firmados", "en el municipio del centro de trabajo"],
       f_llq: ["Alquiler medio del trimestre", "€/mes, contratos nuevos"], f_cvq: ["Compraventas de viviendas", "por trimestre"],
-      f_ini: ["Viviendas iniciadas", "por trimestre"], sense: "Sin datos recientes para este municipio.",
+      f_ini: ["Viviendas iniciadas", "por trimestre"], f_afil: ["Afiliados a la Seguridad Social", "residentes en el municipio"], f_mat: ["Coches nuevos", "turismos matriculados por vecinos y empresas"], sense: "Sin datos recientes para este municipio.",
       llegenda: (p, a) => `<i class="cj-l-ult"></i>${p} <i class="cj-l-ant"></i>${a}`,
     },
   };
@@ -48,16 +68,26 @@
 
   // flux: se suman los últimos 12 meses (4 trimestres); pp: la variación se da en puntos
   const TARGETES = [
-    { id: "atur", per: "m", mapa: "cj_atur", font: "SEPE" },
-    { id: "contr", per: "m", flux: true, mapa: "cj_contr", font: "SEPE" },
-    { id: "indef", per: "m", pp: true, linia: true, u: "%", dec: 1, mapa: "cj_indef", font: "SEPE" },
-    { id: "cv", per: "m", flux: true, mapa: "cj_cvq_var", font: "INE, ETDP" },
-    { id: "hip", per: "m", flux: true, font: "INE, Hipoteques" },
-    { id: "hip_imp", per: "m", linia: true, u: "€", font: "INE, Hipoteques" },
-    { id: "pern", per: "m", flux: true, mega: true, font: "INE, EOH" },
-    { id: "ipc", per: "m", pp: true, linia: true, u: "%", dec: 1, nivell: true, font: "INE, IPC" },
-    { id: "llq", per: "t", u: "€", mapa: "cj_llq", font: "Incasòl" },
+    { id: "atur", g: "feina", per: "m", mapa: "cj_atur", font: "SEPE" },
+    { id: "afil", g: "feina", per: "m", mapa: "cj_afil", font: "Idescat, Seguretat Social" },
+    { id: "contr", g: "feina", per: "m", flux: true, mapa: "cj_contr", font: "SEPE" },
+    { id: "indef", g: "feina", per: "m", pp: true, linia: true, u: "%", dec: 1, mapa: "cj_indef", font: "SEPE" },
+    { id: "reta", g: "feina", per: "m", mapa: "cj_reta", font: "Idescat, Seguretat Social" },
+    { id: "dtes", g: "feina", per: "m", font: "SEPE" },
+    { id: "cv", g: "hab", per: "m", flux: true, mapa: "cj_cvq_var", font: "INE, ETDP" },
+    { id: "hip", g: "hab", per: "m", flux: true, font: "INE, Hipoteques" },
+    { id: "hip_imp", g: "hab", per: "m", linia: true, u: "€", font: "INE, Hipoteques" },
+    { id: "llq", g: "hab", per: "t", u: "€", mapa: "cj_llq", font: "Incasòl" },
+    { id: "vt", g: "hab", per: "t", u: "€", linia: true, font: "Ministeri d'Habitatge" },
+    { id: "ini", g: "hab", per: "t", flux: true, mapa: "cj_ini", font: "Secretaria d'Habitatge" },
+    { id: "pern", g: "tur", per: "m", flux: true, mega: true, font: "INE, EOH" },
+    { id: "extra", g: "tur", per: "m", flux: true, mega: true, font: "INE, EOAP, EOAC, EOTR" },
+    { id: "aena", g: "tur", per: "m", flux: true, mega: true, font: "Aena" },
+    { id: "ipc", g: "eco", per: "m", pp: true, linia: true, u: "%", dec: 1, nivell: true, font: "INE, IPC" },
+    { id: "soc", g: "eco", per: "m", flux: true, font: "INE, Societats mercantils" },
+    { id: "mat", g: "eco", per: "m", flux: true, mapa: "cj_mat", font: "DGT" },
   ];
+  const GRUPS = ["feina", "hab", "tur", "eco"];
 
   const NS = "http://www.w3.org/2000/svg";
   const el = (tag, at, pare) => { const e = document.createElementNS(NS, tag); Object.entries(at).forEach(([k, v]) => e.setAttribute(k, v)); if (pare) pare.appendChild(e); return e; };
@@ -172,6 +202,8 @@
       return `<span>${tx(z)} <b class="${c.nivell ? "" : cls(v)}">${c.nivell ? fv(v, c) : c.pp ? puntsTxt(v) : signe(v)}</b></span>`;
     }).join("");
     const n = salt(c.per), acum = c.flux ? suma(s, i, n) : null, acumAnt = c.flux ? suma(s, i - n, n) : null;
+    let extraTxt = "";
+    if (c.id === "mat" && D.cj.prov.mat_el && D.cj.prov.mat_el.gi && D.cj.prov.mat_el.gi[i] != null) extraTxt = `<p class="cj-acum">${tx("electrics", pct(D.cj.prov.mat_el.gi[i], 1))}</p>`;
     const acumTxt = acum != null ? `<p class="cj-acum">${tx(c.per === "m" ? "ult12" : "ult4")}: <b>${fv(acum, c)}</b>${acumAnt ? ` <span class="${cls((acum / acumAnt - 1) * 100)}">${signe((acum / acumAnt - 1) * 100)}</span>` : ""}</p>` : "";
     const varTxt = c.nivell ? `<p class="cj-var">${ant ? `${tx("vs", etPer(ant))}: <b>${fv(s[i - n], c)}</b>` : ""}</p>`
       : `<p class="cj-var"><b class="${cls(va)}">${c.pp ? puntsTxt(va) : signe(va)}</b> ${ant ? tx("vs", etPer(ant)) : ""}</p>`;
@@ -182,7 +214,7 @@
       ${comp ? `<p class="cj-comp">${c.nivell ? "" : `${tx("interanual")} · `}${comp}</p>` : ""}
       <div class="cj-c"></div>
       ${!c.linia && ant ? `<p class="cj-lleg">${tx("llegenda", etPer(ps[i]), etPer(ant))}</p>` : ""}
-      ${acumTxt}
+      ${acumTxt}${extraTxt}
       <p class="cj-peu"><span>${tx("font")}: ${c.font}</span>${c.mapa ? `<button type="button" class="cj-mapa" data-ind="${c.mapa}">${tx("al_mapa")} →</button>` : ""}</p>
     </figure>`;
   }
@@ -191,7 +223,10 @@
     const cont = document.getElementById("conj");
     if (!cont) return;
     if (!D.cj) { cont.closest("section").hidden = true; return; }
-    cont.innerHTML = TARGETES.map(targeta).join("");
+    cont.innerHTML = GRUPS.map((g) => {
+      const html = TARGETES.filter((c) => c.g === g).map(targeta).join("");
+      return html ? `<h3 class="cj-grup">${tx("g_" + g)}</h3><div class="cj-graella">${html}</div>` : "";
+    }).join("");
     cont.querySelectorAll(".cj-fig").forEach((f) => {
       const c = TARGETES.find((x) => x.id === f.dataset.id), sp = D.cj.prov[c.id], g = f.querySelector(".cj-c");
       if (c.linia) linies(g, sp, c.per, c, c.per === "m" ? 61 : 20);
@@ -203,7 +238,9 @@
   // Ficha municipal: cuatro series en columnas
   const FITXA = [
     { k: "atur", per: "m", t: "f_atur" },
+    { k: "afil", per: "m", t: "f_afil" },
     { k: "contr", per: "m", t: "f_contr", flux: true },
+    { k: "mat", per: "m", t: "f_mat", flux: true },
     { k: "llq", per: "t", t: "f_llq", u: "€" },
     { k: "cvq", per: "t", t: "f_cvq", flux: true },
   ];

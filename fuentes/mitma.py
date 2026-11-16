@@ -37,8 +37,10 @@ def _filtra(df: pd.DataFrame, nombres: set[str]) -> pd.DataFrame:
     cabeceras = [i for i, (v, vac) in enumerate(zip(primera, vacias)) if vac and v not in ("", "nan")]
     ini = next((i for i in cabeceras if normaliza(primera.iloc[i]) in {"girona", "gerona"}), None)
     if ini is None:
-        # Sin cabecera de provincia: filas que nombran municipios de Girona
-        return df[primera.map(normaliza).isin(nombres)]
+        # Sin cabecera de provincia: filas que nombran municipios de Girona en alguna de las
+        # tres primeras columnas (la tabla 35103500 lleva provincia y municipio en columnas 2 y 3)
+        cols = df.iloc[:, :3].astype(str).apply(lambda c: c.str.strip().map(normaliza))
+        return df[cols.isin(nombres).any(axis=1)]
     fin = next((i for i in cabeceras if i > ini and normaliza(primera.iloc[i]) not in nombres), len(df))
     return df.iloc[ini:fin]
 
