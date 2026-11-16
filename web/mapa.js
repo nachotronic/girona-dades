@@ -33,6 +33,7 @@
     { id: "tre", ca: "Treball", es: "Trabajo" },
     { id: "sal", ca: "Salut", es: "Salud" },
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
+    { id: "eme", ca: "Emergències", es: "Emergencias" },
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "ene", ca: "Energia", es: "Energía" },
@@ -157,6 +158,18 @@
     { id: "sexual", tema: "seg", ca: ["Delictes sexuals", "Delictes contra la llibertat sexual per 1.000 habitants"], es: ["Delitos sexuales", "Delitos contra la libertad sexual por 1.000 habitantes"], a: "sexual", abp: A("sexual"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N2 },
     { id: "resolts", tema: "seg", ca: ["Delictes resolts", "Fets penals resolts (% dels coneguts)"], es: ["Delitos resueltos", "Hechos penales resueltos (% de los conocidos)"], a: "resolts", abp: A("resolts"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...P0 },
     { id: "detencions", tema: "seg", ca: ["Detencions", "Detencions per 1.000 habitants"], es: ["Detenciones", "Detenciones por 1.000 habitantes"], a: "detencions", abp: A("detencions"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
+    // Emergencias: divisiones territoriales de Agents Rurals y Bombers (Idescat), Bombers e incendios forestales
+    { id: "aar", tema: "eme", cat: true, ca: ["Àrea d'Agents Rurals", "Àrea bàsica dels Agents Rurals de cada municipi"], es: ["Área de Agents Rurals", "Área básica de los Agents Rurals de cada municipio"], v: X("aar"), f: (v) => v, c: (v) => v, color: (v) => colorArea(v),
+      infoCat: (m, v, k) => (m && m.x && v ? `<p class="rel">${t("aar_info", m.x.arr, k)}</p><p class="rel">${t("reb_info", m.x.reb)}</p>` : `<p class="rel">${t("sense_dades")}</p>`), nota: { ca: "Idescat, codis territorials (novetat de novembre de 2026). A Girona les àrees bàsiques coincideixen amb les comarques, excepte la Cerdanya (àrea regional de l'Alt Pirineu) i Espinelves, Vidrà i Viladrau, que van amb Osona - Lluçanès.", es: "Idescat, códigos territoriales (novedad de noviembre de 2026). En Girona las áreas básicas coinciden con las comarcas, salvo la Cerdanya (área regional del Alt Pirineu) y Espinelves, Vidrà y Viladrau, que van con Osona - Lluçanès." }, notaCat: { ca: "Nombre de municipis de la província a cada àrea.", es: "Número de municipios de la provincia en cada área." } },
+    { id: "reb", tema: "eme", cat: true, ca: ["Regió de Bombers", "Regió d'emergències dels Bombers de la Generalitat"], es: ["Región de Bombers", "Región de emergencias de los Bombers de la Generalitat"], v: X("reb"), f: (v) => v, c: (v) => v, color: (v) => (String(v).startsWith("Girona") ? "#106b66" : "#ef8f2a"),
+      infoCat: (m, v, k) => (m && m.x && v ? `<p class="rel">${t("reb_k", k)}</p><p class="rel">${t("aar_info", m.x.arr, null)} · ${m.x.aar}</p>` : `<p class="rel">${t("sense_dades")}</p>`), nota: { ca: "Idescat, codis territorials (novetat de novembre de 2026). La Cerdanya, Espinelves, Vidrà i Viladrau depenen de la regió Centre.", es: "Idescat, códigos territoriales (novedad de noviembre de 2026). La Cerdanya, Espinelves, Vidrà y Viladrau dependen de la región Centre." }, notaCat: { ca: "Nombre de municipis de la província a cada regió.", es: "Número de municipios de la provincia en cada región." } },
+    { id: "bombers", tema: "eme", ca: ["Actuacions dels Bombers", "Actuacions urgents dels Bombers per 1.000 habitants"], es: ["Actuaciones de Bombers", "Actuaciones urgentes de Bombers por 1.000 habitantes"], a: "bombers", v: X("bombers"), aar: A("bombers"), nota: { ca: "Bombers de la Generalitat, actuacions urgents ateses al municipi (sense pràctiques, simulacres ni dispositius preventius). Taxa sobre la població resident: a la costa i al Pirineu l'estiu i el turisme l'inflen.", es: "Bombers de la Generalitat, actuaciones urgentes atendidas en el municipio (sin prácticas, simulacros ni dispositivos preventivos). Tasa sobre la población residente: en la costa y el Pirineo el verano y el turismo la inflan." }, ...N1 },
+    { id: "bomb_inc_urba", tema: "eme", ca: ["Incendis urbans", "Incendis urbans atesos pels Bombers per 1.000 habitants"], es: ["Incendios urbanos", "Incendios urbanos atendidos por Bombers por 1.000 habitantes"], a: "bomb_inc_urba", v: X("bomb_inc_urba"), aar: A("bomb_inc_urba"), nota: { ca: "Bombers de la Generalitat, actuacions urgents ateses al municipi (sense pràctiques, simulacres ni dispositius preventius). Taxa sobre la població resident: a la costa i al Pirineu l'estiu i el turisme l'inflen.", es: "Bombers de la Generalitat, actuaciones urgentes atendidas en el municipio (sin prácticas, simulacros ni dispositivos preventivos). Tasa sobre la población residente: en la costa y el Pirineo el verano y el turismo la inflan." }, ...N2 },
+    { id: "bomb_inc_veg", tema: "eme", ca: ["Incendis de vegetació", "Incendis de vegetació atesos pels Bombers per 1.000 habitants"], es: ["Incendios de vegetación", "Incendios de vegetación atendidos por Bombers por 1.000 habitantes"], a: "bomb_inc_veg", v: X("bomb_inc_veg"), aar: A("bomb_inc_veg"), nota: { ca: "Bombers de la Generalitat, actuacions urgents ateses al municipi (sense pràctiques, simulacres ni dispositius preventius). Taxa sobre la població resident: a la costa i al Pirineu l'estiu i el turisme l'inflen.", es: "Bombers de la Generalitat, actuaciones urgentes atendidas en el municipio (sin prácticas, simulacros ni dispositivos preventivos). Tasa sobre la población residente: en la costa y el Pirineo el verano y el turismo la inflan." }, ...N2 },
+    { id: "bomb_salvaments", tema: "eme", ca: ["Salvaments", "Salvaments i rescats dels Bombers per 1.000 habitants"], es: ["Salvamentos", "Salvamentos y rescates de Bombers por 1.000 habitantes"], a: "bomb_salvaments", v: X("bomb_salvaments"), aar: A("bomb_salvaments"), nota: { ca: "Bombers de la Generalitat, actuacions urgents ateses al municipi (sense pràctiques, simulacres ni dispositius preventius). Taxa sobre la població resident: a la costa i al Pirineu l'estiu i el turisme l'inflen.", es: "Bombers de la Generalitat, actuaciones urgentes atendidas en el municipio (sin prácticas, simulacros ni dispositivos preventivos). Tasa sobre la población residente: en la costa y el Pirineo el verano y el turismo la inflan." }, ...N2 },
+    { id: "bomb_mobilitat", tema: "eme", ca: ["Accidents de trànsit", "Actuacions dels Bombers en accidents i mobilitat per 1.000 habitants"], es: ["Accidentes de tráfico", "Actuaciones de Bombers en accidentes y movilidad por 1.000 habitantes"], a: "bomb_mobilitat", v: X("bomb_mobilitat"), aar: A("bomb_mobilitat"), nota: { ca: "Bombers de la Generalitat, actuacions urgents ateses al municipi (sense pràctiques, simulacres ni dispositius preventius). Taxa sobre la població resident: a la costa i al Pirineu l'estiu i el turisme l'inflen.", es: "Bombers de la Generalitat, actuaciones urgentes atendidas en el municipio (sin prácticas, simulacros ni dispositivos preventivos). Tasa sobre la población residente: en la costa y el Pirineo el verano y el turismo la inflan." }, ...N2 },
+    { id: "inc_forestals", tema: "eme", ca: ["Incendis forestals", "Incendis forestals per any i 10.000 ha de terme"], es: ["Incendios forestales", "Incendios forestales por año y 10.000 ha de término"], a: "inc_forestals", v: X("inc_forestals"), aar: A("inc_forestals"), nota: { ca: "Incendis forestals segons el municipi on es van iniciar (Departament d'Agricultura; l'últim any és provisional). Un gran incendi pot cremar més enllà del terme on comença.", es: "Incendios forestales según el municipio donde se iniciaron (Departament d'Agricultura; el último año es provisional). Un gran incendio puede quemar más allá del término donde empieza." }, ...N2 },
+    { id: "ha_cremades", tema: "eme", ca: ["Superfície cremada", "Superfície cremada en incendis forestals (% del terme, acumulat)"], es: ["Superficie quemada", "Superficie quemada en incendios forestales (% del término, acumulado)"], a: "ha_cremades", v: X("ha_cremades"), aar: A("ha_cremades"), nota: { ca: "Incendis forestals segons el municipi on es van iniciar (Departament d'Agricultura; l'últim any és provisional). Un gran incendi pot cremar més enllà del terme on comença.", es: "Incendios forestales según el municipio donde se iniciaron (Departament d'Agricultura; el último año es provisional). Un gran incendio puede quemar más allá del término donde empieza." }, f: (v) => pct(v, v < 1 ? 2 : 1), c: (v) => pct(v, v < 1 ? 2 : 0) },
     // Ayuntamientos
     { id: "deute", tema: "ajt", ca: ["Deute per habitant", "Deute viu de l'ajuntament per habitant (€)"], es: ["Deuda por habitante", "Deuda viva del ayuntamiento por habitante (€)"], a: "deute_hab", v: X("deute_hab"), ...EU },
     { id: "pmp", tema: "ajt", ca: ["Pagament a proveïdors", "Període mitjà de pagament a proveïdors (dies)"], es: ["Pago a proveedores", "Periodo medio de pago a proveedores (días)"], v: X("pmp"), ...N0 },
@@ -197,8 +210,11 @@
 
   let mapa = null, geoMun = null, geoSec = null, SEC = {}, nivell = "mun", ind = null, llindars = [];
   // Niveles por áreas (salud y policía): geometría y datos por código de área
-  const NIVELLS = ["mun", "sec", "abs", "abp"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} } };
-  const esArea = (n) => n === "abs" || n === "abp";
+  const NIVELLS = ["mun", "sec", "abs", "abp", "aar"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} } };
+  const esArea = (n) => n === "abs" || n === "abp" || n === "aar";
+  // Colores fijos para las áreas básicas de Agents Rurals (por orden de la lista de Idescat)
+  const AREES_AAR = ["Alt Empordà", "Baix Empordà", "Garrotxa", "Gironès", "Pla de l'Estany", "Ripollès", "Selva", "Cerdanya", "Osona - Lluçanès"];
+  const colorArea = (v) => { const i = AREES_AAR.indexOf(v); return i >= 0 ? PAIS_COLORS[i] : "#a5abb5"; };
   // Series temporales: año elegido en el mapa (null = el último)
   let anySel = null;
   const cacheAnys = {};
@@ -345,7 +361,7 @@
     document.getElementById("llegenda").innerHTML = `<div class="cat-llista">${recompte.map(([b, k]) =>
       `<div class="cat-fila"><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`).join("")}</div>${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
     document.getElementById("ranquing").innerHTML = "";
-    info(fixat);
+    controlAnys(); referencies(); info(fixat);
   }
 
   function llegenda() {
@@ -396,7 +412,7 @@
     if (ind.cat) return;
     const el = document.getElementById("ranquing");
     const fila = (x) => { const z = nomZona(x.p); return `<li data-ine="${x.p.ine}" title="${z.nom}"><span>${z.nom}${nivell === "sec" ? ` · ${codiSec(x.p)}` : ""}</span><span>${ind.c(x.v)}</span></li>`; };
-    const alts = valorsActuals.slice(0, 5), baixos = valorsActuals.slice(-5).reverse();
+    const nr = Math.min(5, Math.floor(valorsActuals.length / 2)), alts = valorsActuals.slice(0, nr), baixos = valorsActuals.slice(-nr).reverse();
     el.innerHTML = `<div><h4>${t("r_alts")}</h4><ol>${alts.map(fila).join("")}</ol></div><div><h4>${t("r_baixos")}</h4><ol>${baixos.map(fila).join("")}</ol></div>`;
     if (!esArea(nivell)) el.querySelectorAll("li").forEach((li) => li.addEventListener("click", () => obreFitxa(li.dataset.ine, true)));
   }
@@ -635,7 +651,8 @@
           <span class="fi-v">${i.f(v)}${i.v && !i.cat ? `<small>${t("posicio_curt", pos, vs.length)}</small>` : ""}</span>
           <span class="fi-r fi-gi">${gi != null ? i.f(gi) : "–"}</span><span class="fi-r">${cat != null ? i.f(cat) : "–"}</span><span class="fi-r">${esp != null ? i.f(esp) : "–"}</span></div>`;
       }).join("");
-      return files ? `<section class="fi-tema"><h4>${tm[LANG]}</h4>${cap}${files}</section>` : "";
+      const zones = tm.id === "eme" && m.x && m.x.aar ? `<p class="fi-zones">${t("area_aar")}: <b>${m.x.aar}</b> · ${t("reb_info", `<b>${m.x.reb}</b>`)}</p>` : "";
+      return files ? `<section class="fi-tema"><h4>${tm[LANG]}</h4>${zones}${cap}${files}</section>` : "";
     }).join("");
     return `<div class="fi"><div class="fi-tit"><h3>${t("tots_ind")}</h3>
       <p class="fi-lleg"><span><i class="m-mun"></i>${m.nom}</span><span><i class="m-gi"></i>${t("ref_gi")}</span><span><i class="m-cat"></i>${t("ref_cat")}</span><span><i class="m-esp"></i>${t("ref_esp")}</span><span class="fi-nota">${t("fi_nota")}</span></p></div>${blocs}</div>`;
