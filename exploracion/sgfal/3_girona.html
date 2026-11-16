@@ -1,0 +1,1703 @@
+
+
+<!DOCTYPE HTML>
+<html lang="es-ES" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" xmlns:og="http://ogp.me/ns#">
+
+
+
+
+<head>
+
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/SGFAL/ConsultaTipos/Marco/css/macenet.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <title>Consulta de información impositiva municipal</title>
+
+    <link href="../estilos/app.css" rel="stylesheet" type="text/css" />
+    <style>
+        table.tabla td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            vertical-align: middle;
+        }
+        th {
+            vertical-align: middle;
+        }
+        table.tabla tr:hover td {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+
+    <!-- Favicon -->
+    <link id="Favicon1" rel="shortcut icon" href="//serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/Marco/img/favicon.ico" type="image/x-icon"></link>
+    <link id="Favicon2" rel="icon" href="//serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/Marco/img/favicon.ico" type="image/ico"></link>
+
+    <!-- Metadatos HTML -->
+    <meta name="application-name" lang="es" content="Consulta información impositiva municipal" />
+    <meta name="title" lang="es" content="Consulta información impositiva municipal" />
+    <meta name="description" lang="es" content="Aplicación informática Consulta información impositiva municipal" />
+    
+    <meta name="keywords" lang="es" content="SGFAL, HACIENDA, EELL, Entidades Locales, Secretaría General de Financiación Autonómica y Local, Ministerio de Hacienda, Financiación, CCAA, Comunidades Autónomas, SGCAL, MINHAP, Secretaría General de Coordinación Autonómica y Local, SISCATI, Tipos Impositivos, Consulta, Tipos Impositivos Entidades Locales, Consulta información impositiva municipal, Consulta tipos impositivos, consulta impuestos ayuntamientos" />
+
+    <meta name="author" lang="es" content="SGFAL" />
+
+    <!-- Metadatos Dublincore (DCMI) -->
+    <meta name="DC.subject" lang="es" content="Consulta información impositiva municipal" />
+    <meta name="DC.title" lang="es" content="Consulta información impositiva municipal" />
+    <meta name="DC.description" lang="es" content="Aplicación informática Consulta información impositiva municipal" />
+    <meta name="DC.language" scheme="RFC1766" content="es" />
+    <meta name="DC.creator" content="SGFAL" />
+</head>
+
+<body id="home">
+
+    <form method="post" action="./formulario_consultam2022.aspx" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ2ODUwNjEzNg9kFgJmD2QWBgIBDxYCHgRocmVmBVMvL3NlcnZpY2lvc3RlbGVtYXRpY29zZXh0LmhhY2llbmRhLmdvYi5lcy9TR0ZBTC9Db25zdWx0YVRpcG9zL01hcmNvL2ltZy9mYXZpY29uLmljb2QCAg8WAh8ABVMvL3NlcnZpY2lvc3RlbGVtYXRpY29zZXh0LmhhY2llbmRhLmdvYi5lcy9TR0ZBTC9Db25zdWx0YVRpcG9zL01hcmNvL2ltZy9mYXZpY29uLmljb2QCAw9kFg4CAQ9kFgQCAQ8WAh4HVmlzaWJsZWhkAgMPFgIfAWhkAgIPFgIeBWNsYXNzBQVjYWJfYhYCZg9kFgICAQ8PFgIeCEltYWdlVXJsBRx+L01hcmNvL2ltZy9Fc2N1ZG9Qcm9waW8ucG5nZGQCAw8WAh8BZ2QCBA8WAh8BaGQCBQ8WAh8BaGQCBg9kFsABAgEPDxYCHgRUZXh0BQZHaXJvbmFkZAICDw8WAh8EBQYxNy0wNzlkZAIEDw8WAh8EBQQxOTkwZGQCBQ9kFgICAQ8PFgIfBAUEMTk5MGRkAgcPDxYCHwQFBDIwMjVkZAIIDw8WAh8EBQQyMDI2ZGQCCQ8PFgIfBAUFMSwwNDFkZAIKD2QWAgIBDw8WAh8EBQUxLDA0MWRkAg0PZBYCAgEPZBYCAgEPEGRkFgECAWQCDg9kFgICAQ9kFgICAQ8PFgIfBGVkZAIQDw8WAh8EBQQyMDI1ZGQCEQ8PFgIfBAUEMjAyNmRkAhIPDxYCHwQFBTEsMDQxZGQCEw9kFgICAQ8PFgIfBAUFMSwwNDFkZAIVDw8WAh8EBQQyMDI1ZGQCFg8PFgIfBAUEMjAyNmRkAhcPDxYCHwQFBTEsMDA1ZGQCGA9kFgICAQ8PFgIfBAUFMSwwMDVkZAIaDw8WAh8EBQQyMDI1ZGQCGw8PFgIfBAUEMjAyNmRkAhwPDxYCHwQFBDMsODBkZAIdD2QWAgIBDw8WAh8EBQQzLDgwZGQCHw8PFgIfBAUEMjAyNWRkAiAPDxYCHwQFBDIwMjZkZAIhDw8WAh8EBQQyLDQ0ZGQCIg9kFgICAQ8PFgIfBAUEMiw0NGRkAiQPDxYCHwQFBDIwMjVkZAIlDw8WAh8EBQQyMDI2ZGQCJg8PFgIfBAUENCwwMGRkAicPZBYCAgEPDxYCHwQFBDQsMDBkZAIoDw8WAh8EBQQyMDI1ZGQCKQ8PFgIfBAUEMjAyNmRkAisPDxYCHwQFBTI1LDI0ZGQCLA9kFgICAQ8PFgIfBAUFMjUsMjRkZAIuDw8WAh8EBQU2NywyNGRkAi8PZBYCAgEPDxYCHwQFBTY3LDI0ZGQCMQ8PFgIfBAUFMTQyLDRkZAIyD2QWAgIBDw8WAh8EBQUxNDIsNGRkAjQPDxYCHwQFAzE3OGRkAjUPZBYCAgEPDxYCHwQFAzE3OGRkAjcPDxYCHwQFAzIyNGRkAjgPZBYCAgEPDxYCHwQFAzIyNGRkAjkPDxYCHwQFBDIwMjVkZAI6Dw8WAh8EBQQyMDI2ZGQCPA8PFgIfBAUGMTY1LDY4ZGQCPQ9kFgICAQ8PFgIfBAUGMTY1LDY4ZGQCPw8PFgIfBAUGMjM1LDg0ZGQCQA9kFgICAQ8PFgIfBAUGMjM1LDg0ZGQCQg8PFgIfBAUGMjk0LDkyZGQCQw9kFgICAQ8PFgIfBAUGMjk0LDkyZGQCRA8PFgIfBAUEMjAyNWRkAkUPDxYCHwQFBDIwMjZkZAJHDw8WAh8EBQU4NCwwOGRkAkgPZBYCAgEPDxYCHwQFBTg0LDA4ZGQCSg8PFgIfBAUGMTY1LDY4ZGQCSw9kFgICAQ8PFgIfBAUGMTY1LDY4ZGQCTQ8PFgIfBAUGMjM1LDg0ZGQCTg9kFgICAQ8PFgIfBAUGMjM1LDg0ZGQCUA8PFgIfBAUGMjk0LDkyZGQCUQ9kFgICAQ8PFgIfBAUGMjk0LDkyZGQCUg8PFgIfBAUEMjAyNWRkAlMPDxYCHwQFBDIwMjZkZAJVDw8WAh8EBQUzNSwzMmRkAlYPZBYCAgEPDxYCHwQFBTM1LDMyZGQCWA8PFgIfBAUFNTUsMTJkZAJZD2QWAgIBDw8WAh8EBQU1NSwxMmRkAlsPDxYCHwQFBjE2NSw2OGRkAlwPZBYCAgEPDxYCHwQFBjE2NSw2OGRkAl0PDxYCHwQFBDIwMjVkZAJeDw8WAh8EBQQyMDI2ZGQCYA8PFgIfBAUFMzUsMzJkZAJhD2QWAgIBDw8WAh8EBQUzNSwzMmRkAmMPDxYCHwQFBTU1LDEyZGQCZA9kFgICAQ8PFgIfBAUFNTUsMTJkZAJmDw8WAh8EBQYxNjUsNjhkZAJnD2QWAgIBDw8WAh8EBQYxNjUsNjhkZAJoDw8WAh8EBQQyMDI1ZGQCaQ8PFgIfBAUEMjAyNmRkAmsPDxYCHwQFBDgsODRkZAJsD2QWAgIBDw8WAh8EBQQ4LDg0ZGQCbg8PFgIfBAUEOCw4NGRkAm8PZBYCAgEPDxYCHwQFBDgsODRkZAJxDw8WAh8EBQUxNSwwNGRkAnIPZBYCAgEPDxYCHwQFBTE1LDA0ZGQCdA8PFgIfBAUEMzAsMmRkAnUPZBYCAgEPDxYCHwQFBDMwLDJkZAJ3Dw8WAh8EBQU2MCwyNGRkAngPZBYCAgEPDxYCHwQFBTYwLDI0ZGQCeg8PFgIfBAUGMTIxLDE2ZGQCew9kFgICAQ8PFgIfBAUGMTIxLDE2ZGQCfA8PFgIfBAUEMjAyNWRkAn0PDxYCHwQFBDIwMjZkZAJ/Dw8WAh8EBQQwLDE1ZGQCgAEPZBYCAgEPDxYCHwQFBDAsMTVkZAKCAQ8PFgIfBAUEMCwxNWRkAoMBD2QWqgECAQ8PFgIfBAUEMCwxNWRkAgUPDxYCHwQFBDAsMTRkZAIHD2QWAgIBDw8WAh8EBQQwLDE0ZGQCCw8PFgIfBAUEMCwxNGRkAg0PZBYCAgEPDxYCHwQFBDAsMTRkZAIRDw8WAh8EBQQwLDE2ZGQCEw9kFgICAQ8PFgIfBAUEMCwxNmRkAhcPDxYCHwQFBDAsMThkZAIZD2QWAgIBDw8WAh8EBQQwLDE4ZGQCHQ8PFgIfBAUEMCwxOWRkAh8PZBYCAgEPDxYCHwQFBDAsMTlkZAIjDw8WAh8EBQQwLDIwZGQCJQ9kFgICAQ8PFgIfBAUEMCwyMGRkAikPDxYCHwQFBDAsMTlkZAIrD2QWAgIBDw8WAh8EBQQwLDE5ZGQCLw8PFgIfBAUEMCwxNWRkAjEPZBYCAgEPDxYCHwQFBDAsMTVkZAI1Dw8WAh8EBQQwLDEyZGQCNw9kFgICAQ8PFgIfBAUEMCwxMmRkAjsPDxYCHwQFBDAsMTBkZAI9D2QWAgIBDw8WAh8EBQQwLDEwZGQCQQ8PFgIfBAUEMCwwOWRkAkMPZBYCAgEPDxYCHwQFBDAsMDlkZAJHDw8WAh8EBQQwLDA5ZGQCSQ9kFgICAQ8PFgIfBAUEMCwwOWRkAk0PDxYCHwQFBDAsMDlkZAJPD2QWAgIBDw8WAh8EBQQwLDA5ZGQCUw8PFgIfBAUEMCwwOWRkAlUPZBYCAgEPDxYCHwQFBDAsMDlkZAJZDw8WAh8EBQQwLDEwZGQCWw9kFgICAQ8PFgIfBAUEMCwxMGRkAl8PDxYCHwQFBDAsMTNkZAJhD2QWAgIBDw8WAh8EBQQwLDEzZGQCZQ8PFgIfBAUEMCwxN2RkAmcPZBYCAgEPDxYCHwQFBDAsMTdkZAJrDw8WAh8EBQQwLDIzZGQCbQ9kFgICAQ8PFgIfBAUEMCwyM2RkAnEPDxYCHwQFBDAsNDBkZAJzD2QWAgIBDw8WAh8EBQQwLDQwZGQCdQ8PFgIfBAUEMjAyNWRkAncPDxYCHwQFBDIwMjZkZAJ/Dw8WAh8EBQQyMDI1ZGQCgQEPDxYCHwQFBDIwMjZkZAKFAQ8PFgIfBAUFMzAsMDBkZAKHAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKLAQ8PFgIfBAUFMzAsMDBkZAKNAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKRAQ8PFgIfBAUFMzAsMDBkZAKTAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKXAQ8PFgIfBAUFMzAsMDBkZAKZAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKdAQ8PFgIfBAUFMzAsMDBkZAKfAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKjAQ8PFgIfBAUFMzAsMDBkZAKlAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKpAQ8PFgIfBAUFMzAsMDBkZAKrAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAKvAQ8PFgIfBAUFMzAsMDBkZAKxAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAK1AQ8PFgIfBAUFMzAsMDBkZAK3AQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAK7AQ8PFgIfBAUFMzAsMDBkZAK9AQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALBAQ8PFgIfBAUFMzAsMDBkZALDAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALHAQ8PFgIfBAUFMzAsMDBkZALJAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALNAQ8PFgIfBAUFMzAsMDBkZALPAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALTAQ8PFgIfBAUFMzAsMDBkZALVAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALZAQ8PFgIfBAUFMzAsMDBkZALbAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALfAQ8PFgIfBAUFMzAsMDBkZALhAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALlAQ8PFgIfBAUFMzAsMDBkZALnAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALrAQ8PFgIfBAUFMzAsMDBkZALtAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZALxAQ8PFgIfBAUFMzAsMDBkZALzAQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAL3AQ8PFgIfBAUFMzAsMDBkZAL5AQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAL9AQ8PFgIfBAUFMzAsMDBkZAL/AQ9kFgICAQ8PFgIfBAUFMzAsMDBkZAIJDw8WAh8EBQsxLjEuOC1uMiBTRWRkZBUBJLZG4MAok9dLGUej8g4LZk52" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B34BD0AC" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAFPcBbmugnFGJrVDuP3csxIpKtkOD8L/WtXYDCA5YPGlp8O2ucp+tUyeANxWGnB/AFvAIt0LB8i267cW4NrIU/yKO1ueZ9WKtOYb5aln9PLmx/DWffUGyehf2QOoIEvB21ve7Z2SE4qDIYOceToBm2sci2ARZLWPNN4SjfvQPgHY48BvSdLXQx54VKTLQFYgI2+E/88EnfFU837uGVPEg17LTQJrakbodsQhcRawDfQUsCq1Ynj1i2L2mehpK4tAB83Dw26vuiu7Cyxa6HUtni4zXv3IR6LeXZ7M8p+sOWV9cy23gQmWr1VRVccGnCAAvgDEwgJZrE0rHMyh4COm3b+9nEx2UCq9wckEUQ0QoRCBKjifPutRlTcXUH96ggmRqtI5h36+N+9oAGfMVR8Rd4znQnEedp4IKm3cCl01e1gWWPZFhVlUJButJm6v5FGqCiWNOocN2mtP080N5bDGJHB2oqM7/MHNK0U4Z3y3EH3m+jz4jbygruZ5DHOz1UlfqDecp+iSfZ8NO8BKWiD1dHzKY5wwZWxbtYgS7bDGvWrO8N/dMP+ibv2v02rZTYHd2e1OucWvhgPA4uVKiwCl4zcFPXH01cKyWwheUZ9DDYTXZwIslp1Z3pQ9mbBbzMV18dAgOGGh+WxdH+mR8WDlyka9hfCggRaHMnn2vbh8ecBWY5KmnmvE7GcmJNWKv7LERHAQVp+NaH9F65TsYMpMHI5uutols//tLxCyxPL9M/oSk0jpIuEUsGkiGjinN5Mk+1v+ofJJNcp4fzz386LcGlPvyoY4wzwbcXzlhfRSJ1BQFUoJufZZQ5Ixy3Gm4h2qeJ5mTtfI33y5IHO0ucsj95lkL4NVamhEh2Bs7tSO/4QZI9hK5jfnaoWf5ieZzlv1IijAGqqjNQxyVvwChjW5nWo2nkfUw3tJidQBEcAjANBY3+8R0oHTGK7jGqmaku5h6ETUoYyu9MytFwfl8wn2q0a3YLU+RsU2PvT3pHNYQLvp1gazfSuZzED9yr10BGli1i5C95gxy4WZ6FSi63sDQcW5kAPIyCQxZ6Jv2Kd0nvSS4xY6eo6h3KMnUh5Uj3IMpEmzkbGOXSGsnRSo5uKd1ciCrTd9tUwZsrM+UJwAnBYy9U5g1eYRQ4GhhocVqnN8gxKMur3E+zSwWlv6LANPSQHghgMjcXRZmWIlWMan1MMkLp933qEb4iL1dW3hayR2dRaUNjIz/fRRJIumWjjC70f61t6GrFSQRnlfD4yZtF29f3DwtUsbwBNPDXVD3fwL9h0H6nirb6BGmgrgXkjmk0GrMvcKAkMuuzM8iKWcKHnkGB2rH4X7mpdG4m2TAqsc2+CUWGb11p+hSfHNb3vMc+VB97pEzxtO6vpc/xrvmVNllud9YfhedcGrkuqiLVD9ayHUp9omP7D/pS9FkrGjXfQHP6sKC7caBHsjV4C49hwYUyqzViBTsGMLWGfi7eI5E4vgyqBMMn9O9Xos+vyZKemXqSCeB0AFDM8gN1hhBo5AQBs34SzyLFjF/t+n0Wa4ocZzGQIoXtLgwZCo19rybK3IVPg832bzQz4WC3bJ0I5YVWrnsDOpR+XgP7NpTa3oXcDNp2emxAIPyiD4DLpYgkwOmaVSCw5o+c61P9grRonJkzHqtQ6H50vs8xWP1A6mZdNO9fCR2hwYssEd4kMR9koitZgFF7PvJo03x7nMABHPXrj0lLNj/OFStwiXOrVt869HpG+M9ydi9JnZooPeMuGnaF9LlgIe2rIsk8PzQPXDyPJ9V1R9laDsqlmYftXqjfJC1S3H" />
+</div>
+        <input type="hidden" name="ctl00$idControlMaster" id="idControlMaster" value="20261116T132732385" />
+
+        
+        <div class="container">
+            
+            <div class="cabecera">
+                <h1 class="oculto">
+                    <span>MINISTERIO DE HACIENDA</span>
+                </h1>
+                
+                
+                
+                <div id="imagenEscudo" class="cab_b">
+                    <div class="titulocab">
+                        <div class="escudo">
+                            <a href="http://www.hacienda.gob.es" id="referencia_escudo" title="Ir a la página del Ministerio" target="_blank">
+                                <img id="Image1" src="../Marco/img/EscudoPropio.png" alt="Escudo Gobierno de España. Ir a la pagina inicial." />
+                            </a>
+                        </div>
+                        <div class="texto">
+                            <p>
+                                <span>
+                                    Consulta información impositiva municipal
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cab_c">
+                    <div id="menuBarra" class="botonera">
+                        
+                        <div class="textosbotonera">
+                            <ul>
+                                
+
+                                <div class="textosbotonera_derecha">
+                                    
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clear">
+            </div>
+            
+            <div class="ancho_fijo">
+                
+                
+                
+                
+                
+                <div class="central">
+                    
+                    <div class="contenido_macenet">
+                        
+                        
+    <div id="divCentrar">
+        
+        <h2 class="titulo">Municipio: <span id="MainContentPlaceHolder_LBL_corporacion" class="borde_azul">Girona</span> - Código: <span id="MainContentPlaceHolder_LBL_codigo" class="borde_azul">17-079</span> [C01]</h2>
+
+      <table cellspacing="0" cellpadding="0" style="text-align: left;  
+            margin-right: auto;" border="0">
+
+        <tr>
+            <td valign="top" align="left">
+                    <table width="800px">
+                        <tr  width="100%">
+                            <td align="left" width="60%">
+                                <table class="borde_completo" height="236" cellspacing="0" cellpadding="0" align="center" border="0" width="100%">
+                                    <tr>
+                                        <td width="100%">
+                                            <table class="tabla" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+                                                <tr>
+                                                    <th colspan="3" style="height: 21px" class="letra_azul">Bienes inmuebles</th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="letra_azul_peque">
+                                                        <label for="MainContentPlaceHolder_C02" id="MainContentPlaceHolder_lblCatastrales">
+                                                        Año de entrada en vigor de valores catastrales de urbana,
+                                                            resultantes de procedimientos de valoración colectiva de carácter general.
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1" style="height: 21px">
+                                                        <span id="MainContentPlaceHolder_C02_ant" class="dato_azul1">1990</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C02_td" class="azul2" style="height: 21px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C02" type="text" value="1990" size="8" readonly="readonly" id="MainContentPlaceHolder_C02" disabled="disabled" class="aspNetDisabled borde_azul" />&nbsp;&nbsp;&nbsp;
+                                                    </td>
+
+                                                    <td class="azul3" style="height: 21px">C02</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="letra_marron_peque">
+                                                        <label for="MainContentPlaceHolder_C03" id="MainContentPlaceHolder_lblTipoGravamen">
+                                                            Tipo de gravamen urbana: (uso residencial)
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_BI_1" class="letra_azul_peque">2025</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul2">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_BI_1" class="letra_azul_peque">2026</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul3">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1">
+                                                        <span id="MainContentPlaceHolder_C03_ant" class="dato_azul1">1,041</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C03_td" class="azul2">
+                                                        <input name="ctl00$MainContentPlaceHolder$C03" type="text" value="1,041" size="8" readonly="readonly" id="MainContentPlaceHolder_C03" disabled="disabled" class="aspNetDisabled borde_azul" />&nbsp; %
+                                                    </td>
+
+                                                    <td class="azul3">C03</td>
+                                                </tr>
+                                                <tr id="MainContentPlaceHolder_C42_tr">
+	<td id="MainContentPlaceHolder_C42_td" class="azul1">
+                                                                    <label for="MainContentPlaceHolder_C42" id="MainContentPlaceHolder_Lbl_42" class="letra_marron_peque">¿Está incluido en la aplicación     del art. 32.2 del TRLCI     (R.D. Leg. 1/2004)?</label>
+                                                                </td>
+	<td class="azul2" style="vertical-align:middle;text-align: center;">
+                                                                     <select name="ctl00$MainContentPlaceHolder$C42" id="MainContentPlaceHolder_C42" disabled="disabled" class="aspNetDisabled municipios">
+		<option value="X">---</option>
+		<option selected="selected" value="N">No</option>
+		<option value="S">Si</option>
+
+	</select>
+                                                                     </td>
+	<td class="azul3">
+                                                                    C42</td>
+</tr>
+
+                                                            <tr id="MainContentPlaceHolder_C43_tr">
+	<td>
+                                                                    <label for="MainContentPlaceHolder_C43" id="MainContentPlaceHolder_lblC43">Coef. de Actualización</label>
+                                                                </td>
+	<td class="azul2">
+                                                                    <input name="ctl00$MainContentPlaceHolder$C43" type="text" size="8" readonly="readonly" id="MainContentPlaceHolder_C43" disabled="disabled" class="aspNetDisabled borde_azul" />
+                                                                </td>
+	<td class="azul3">
+                                                                    C43</td>
+</tr>
+
+                                                
+
+                                                <tr>
+                                                    <td colspan="3"class="letra_marron_peque" >
+                                                        <label for="MainContentPlaceHolder_C04" id="MainContentPlaceHolder_lblTipoGravamenRusica">
+                                                                    Tipo de gravamen rústica:
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_BI_2" class="letra_azul_peque">2025</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul2">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_BI_2" class="letra_azul_peque">2026</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul3">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1">
+                                                        <span id="MainContentPlaceHolder_C04_ant" class="dato_azul1">1,041</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C04_td" class="azul2">
+                                                        <input name="ctl00$MainContentPlaceHolder$C04" type="text" value="1,041" size="8" readonly="readonly" id="MainContentPlaceHolder_C04" disabled="disabled" class="aspNetDisabled borde_azul" />&nbsp; %
+                                                    </td>
+
+                                                    <td class="azul3">C04</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="letra_marron_peque">
+                                                        <label for="MainContentPlaceHolder_C05" id="MainContentPlaceHolder_lblGravamenCarac">
+                                                                    Tipo de gravamen de características especiales:
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_BI_3" class="letra_azul_peque">2025</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul2">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_BI_3" class="letra_azul_peque">2026</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul3">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1">
+                                                        <span id="MainContentPlaceHolder_C05_ant" class="dato_azul1">1,005</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C05_td" class="azul2">
+                                                        <input name="ctl00$MainContentPlaceHolder$C05" type="text" value="1,005" size="8" readonly="readonly" id="MainContentPlaceHolder_C05" disabled="disabled" class="aspNetDisabled borde_azul" />&nbsp; %
+                                                    </td>
+
+                                                    <td class="azul3">C05</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="40%">
+                                <table class="borde_completo" height="236" cellspacing="0" cellpadding="0" width="100%"
+                                    align="left" border="0">
+                                    <tr>
+                                        <td valign="top">
+                                            <table class="tabla" height="191" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+                                                <tr>
+                                                    <th colspan="3">
+                                                        <font class="letra_azul">Actividades económicas</font></th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <label for="MainContentPlaceHolder_C06" id="MainContentPlaceHolder_lblCoefSituacion">Coeficiente de situación <strong>Máximo</strong>:</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_AE_1" class="letra_azul_peque">2025</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_AE_1" class="letra_azul_peque">2026</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul3">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1" align="center">
+                                                        <span id="MainContentPlaceHolder_C06_ant" class="dato_azul1">3,80</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C06_td" class="azul2" valign="middle" align="center" height="25">
+                                                        <input name="ctl00$MainContentPlaceHolder$C06" type="text" value="3,80" size="6" readonly="readonly" id="MainContentPlaceHolder_C06" disabled="disabled" class="aspNetDisabled borde_azul" />
+                                                    </td>
+
+                                                    <td class="azul3" align="center">
+                                                        C06
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <label for="MainContentPlaceHolder_C07" id="MainContentPlaceHolder_lblCoeMinimo">Coeficiente de situación <strong>Mínimo</strong>:</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_AE_2" class="letra_azul_peque">2025</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_AE_2" class="letra_azul_peque">2026</span>&nbsp;
+                                                    </td>
+                                                    <td class="azul3">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="azul1" align="center">
+                                                        <span id="MainContentPlaceHolder_C07_ant" class="dato_azul1">2,44</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C07_td" class="azul2" valign="middle" align="center" height="25">
+                                                        <input name="ctl00$MainContentPlaceHolder$C07" type="text" value="2,44" size="6" readonly="readonly" id="MainContentPlaceHolder_C07" disabled="disabled" class="aspNetDisabled borde_azul" />                                                           
+                                                    </td>
+
+                                                    <td class="azul3" align="center">
+                                                        C07
+                                                    </td>
+                                                </tr>                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td colspan="2">
+                                <table class="borde_completo" cellspacing="0" cellpadding="0" width="100%" align="center"
+                                    border="0">
+                                    <tr>
+                                        <td valign="middle" height="55">
+                                            <table class="tabla" cellspacing="0" cellpadding="0" align="center" border="0">
+                                                <tr>
+                                                    <th class="letra_azul">
+                                                        <label for="MainContentPlaceHolder_C17" id="MainContentPlaceHolder_lblIcio">
+                                                            Construcciones, instalaciones y obras
+                                                        </label>
+                                                    </th>
+                                                    <th class="azul1" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_ICIO_1" class="letra_azul_peque">2025</span>
+                                                    </th>
+                                                    <th class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_ICIO_1" class="letra_azul_peque">2026</span>
+                                                    </th>
+                                                    <td class="azul33">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" width="149">
+                                                        <font class="letra_marron_peque">Tipo de gravamen </font>
+                                                    </td>
+                                                    <td class="azul1" align="center" width="51">
+                                                        <span id="MainContentPlaceHolder_C17_ant" class="dato_azul1">4,00</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C17_td" class="azul2" align="center" width="85">
+                                                        <input name="ctl00$MainContentPlaceHolder$C17" type="text" value="4,00" readonly="readonly" id="MainContentPlaceHolder_C17" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                    </td>
+
+                                                    <td class="azul3" align="center" width="35">C17</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table class="borde_completo" cellspacing="0" cellpadding="0" width="100%" align="left"
+                                    border="0">
+                                    <tr>
+                                        <td valign="middle" height="55">
+                                            <table class="tabla" cellspacing="0" cellpadding="0" width="580" align="center" border="0">
+                                                <tr>
+                                                    <th colspan="4" class="letra_azul" valign="bottom">
+                                                        <label>Vehículos de tracción mecánica (tarifas)</label>                                                        
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" height="25" style="width: 270px">
+                                                        <font class="letra_marron_peque"><strong>Turismos</strong></font>
+                                                    </td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IVTM_1" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IVTM_1" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td  class="azul3" style="width: 55px">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C18" id="MainContentPlaceHolder_lblC18">De menos de 8 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C18_ant" class="dato_azul1">25,24</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C18_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C18" type="text" value="25,24" size="6" readonly="readonly" id="MainContentPlaceHolder_C18" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C19" id="MainContentPlaceHolder_lblC19">De 8 hasta 11,99 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C19_ant" class="dato_azul1">67,24</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C19_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C19" type="text" value="67,24" size="6" readonly="readonly" id="MainContentPlaceHolder_C19" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C19</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C20" id="MainContentPlaceHolder_lblC20">De 12 hasta 15,99 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C20_ant" class="dato_azul1">142,4</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C20_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C20" type="text" value="142,4" size="6" readonly="readonly" id="MainContentPlaceHolder_C20" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C21" id="MainContentPlaceHolder_lblC21">De 16 hasta 19,99 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C21_ant" class="dato_azul1">178</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C21_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C21" type="text" value="178" size="6" readonly="readonly" id="MainContentPlaceHolder_C21" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C22" id="MainContentPlaceHolder_lblC22">De 20 caballos fiscales en adelante</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C22_ant" class="dato_azul1">224</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C22_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C22" type="text" value="224" size="6" readonly="readonly" id="MainContentPlaceHolder_C22" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C22</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" height="5">
+                                                        <img height="5" src="../imgs/pixel.gif" alt="Pixel" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" height="25" style="width: 270px">
+                                                        <font class="letra_marron_peque"><strong>Autobuses</strong></font></td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IVTM_2" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IVTM_2" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td class="azul3" style="width: 55px">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C23" id="MainContentPlaceHolder_lblC23">De menos de 21 plazas</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C23_ant" class="dato_azul1">165,68</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C23_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C23" type="text" value="165,68" size="6" readonly="readonly" id="MainContentPlaceHolder_C23" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C24" id="MainContentPlaceHolder_lblC24">De 21 a 50 plazas</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C24_ant" class="dato_azul1">235,84</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C24_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C24" type="text" value="235,84" size="6" readonly="readonly" id="MainContentPlaceHolder_C24" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C25" id="MainContentPlaceHolder_lblC25">De más de 50 plazas</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C25_ant" class="dato_azul1">294,92</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C25_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C25" type="text" value="294,92" size="6" readonly="readonly" id="MainContentPlaceHolder_C25" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C25</td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td colspan="5" height="5">
+                                                        <img height="5" src="../imgs/pixel.gif" alt="Pixel" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" height="25" style="width: 270px">
+                                                        <font class="letra_marron_peque"><strong>Camiones</strong></font></td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IVTM_3" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IVTM_3" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td  class="azul3" style="width: 55px">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C26" id="MainContentPlaceHolder_lblC26">De menos de 1.000 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C26_ant" class="dato_azul1">84,08</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C26_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C26" type="text" value="84,08" size="6" readonly="readonly" id="MainContentPlaceHolder_C26" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C26</td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C27" id="MainContentPlaceHolder_lblC27">De 1.000 a 2.999 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C27_ant" class="dato_azul1">165,68</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C27_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C27" type="text" value="165,68" size="6" readonly="readonly" id="MainContentPlaceHolder_C27" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C27</td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C28" id="MainContentPlaceHolder_lblC28">De más de 2.999 a 9.999 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C28_ant" class="dato_azul1">235,84</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C28_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C28" type="text" value="235,84" size="6" readonly="readonly" id="MainContentPlaceHolder_C28" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C28</td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C29" id="MainContentPlaceHolder_lblC29">De más de 9.999 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C29_ant" class="dato_azul1">294,92</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C29_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C29" type="text" value="294,92" size="6" readonly="readonly" id="MainContentPlaceHolder_C29" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C29</td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td colspan="5" height="5">
+                                                        <img height="5" src="../imgs/pixel.gif" alt="Pixel" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" height="25" style="width: 270px">
+                                                        <font class="letra_marron_peque"><strong>Tractores</strong></font></td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IVTM_4" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IVTM_4" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td class="azul3" style="width: 55px">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C30" id="MainContentPlaceHolder_lblC30">De menos de 16 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C30_ant" class="dato_azul1">35,32</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C30_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C30" type="text" value="35,32" size="6" readonly="readonly" id="MainContentPlaceHolder_C30" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C31" id="MainContentPlaceHolder_lblC31">De 16 a 25 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C31_ant" class="dato_azul1">55,12</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C31_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C31" type="text" value="55,12" size="6" readonly="readonly" id="MainContentPlaceHolder_C31" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C32" id="MainContentPlaceHolder_lblC32">De más de 25 caballos fiscales</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C32_ant" class="dato_azul1">165,68</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C32_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C32" type="text" value="165,68" size="6" readonly="readonly" id="MainContentPlaceHolder_C32" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C32</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td colspan="5" height="5">
+                                                        <img height="5" src="../imgs/pixel.gif" alt="Pixel" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" height="25" style="width: 270px">
+                                                        <font class="letra_marron_peque"><strong>Remolques</strong></font></td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IVTM_5" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IVTM_5" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td class="azul3" style="width: 55px">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C33" id="MainContentPlaceHolder_lblC33">De menos de 1.000 y más de 750 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C33_ant" class="dato_azul1">35,32</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C33_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C33" type="text" value="35,32" size="6" readonly="readonly" id="MainContentPlaceHolder_C33" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C34" id="MainContentPlaceHolder_lblC34">De 1.000 a 2.999 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C34_ant" class="dato_azul1">55,12</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C34_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C34" type="text" value="55,12" size="6" readonly="readonly" id="MainContentPlaceHolder_C34" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C35" id="MainContentPlaceHolder_lblC35">De más de 2.999 kg de carga útil</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C35_ant" class="dato_azul1">165,68</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C35_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C35" type="text" value="165,68" size="6" readonly="readonly" id="MainContentPlaceHolder_C35" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C35</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" height="5">
+                                                        <img height="5" src="../imgs/pixel.gif" alt="" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" height="25" style="width: 270px">
+                                                        <font class="letra_marron_peque"><strong>Otros vehículos</strong></font></td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IVTM_6" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IVTM_6" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td class="azul3" style="width: 55px">
+                                                        &nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C36" id="MainContentPlaceHolder_lblC36">Ciclomotores</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C36_ant" class="dato_azul1">8,84</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C36_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C36" type="text" value="8,84" size="6" readonly="readonly" id="MainContentPlaceHolder_C36" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C36</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C37" id="MainContentPlaceHolder_lblC37">Motocicletas hasta 125 c.c.</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C37_ant" class="dato_azul1">8,84</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C37_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C37" type="text" value="8,84" size="6" readonly="readonly" id="MainContentPlaceHolder_C37" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C37</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C38" id="MainContentPlaceHolder_lblC38">Motocicletas de más de 125 c.c. hasta 250 c.c.</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C38_ant" class="dato_azul1">15,04</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C38_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C38" type="text" value="15,04" size="6" readonly="readonly" id="MainContentPlaceHolder_C38" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C39" id="MainContentPlaceHolder_lblC39">Motocicletas de más de 250 c.c. hasta 500 c.c.</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C39_ant" class="dato_azul1">30,2</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C39_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C39" type="text" value="30,2" size="6" readonly="readonly" id="MainContentPlaceHolder_C39" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C40" id="MainContentPlaceHolder_lblC40">Motocicletas de más de 500 c.c. hasta 1.000 c.c.</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C40_ant" class="dato_azul1">60,24</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C40_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C40" type="text" value="60,24" size="6" readonly="readonly" id="MainContentPlaceHolder_C40" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C40</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left" style="height: 17px; width: 270px;">
+                                                        <label for="MainContentPlaceHolder_C41" id="MainContentPlaceHolder_lblC41">Motocicletas de más de 1.000 c.c.</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="height: 17px; width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C41_ant" class="dato_azul1">121,16</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C41_td" class="azul2" align="center" style="width: 74px; height: 17px">
+                                                        <input name="ctl00$MainContentPlaceHolder$C41" type="text" value="121,16" size="6" readonly="readonly" id="MainContentPlaceHolder_C41" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; €
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="height: 17px; width: 55px;">
+                                                        C41</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table cellspacing="0" cellpadding="1" width="100%" align="left"
+                                    border="0">
+                                    <tr>
+                                        <td valign="middle" height="55">
+                                            <table class="tabla" cellspacing="0" cellpadding="1" width="100%" align="center" border="0">
+                                                <tr>
+                                                    <th colspan="3" class="letra_azul" valign="bottom" align="center">
+                                                        <label>
+                                                            Incremento de valor de los terrenos de naturaleza urbana</label>
+                                                    </th>
+                                                  <th class="letra_azul" style="width: 55px">
+                                                       <img src="../Marco/img/Acciones/info.png" border="0" alt="Ayuda" class="ayuda" id="AyUrbana" />
+                                                        </th>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" colspan="4">
+                                                        <font class="letra_marron_peque"><strong>Coeficientes sobre la base imponible</strong></font>
+                                                    </td>
+                                                </tr>
+                                                <tr class="azul22">
+                                                    <td align="left">
+                                                        <font class="letra_marron_peque"><strong>Periodo</strong></font>
+                                                    </td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IIVTNU_1" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IIVTNU_1" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C51" id="MainContentPlaceHolder_lblC51">Inferior a un año</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C51_ant" class="dato_azul1">0,15</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C51_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C51" type="text" value="0,15" size="6" readonly="readonly" id="MainContentPlaceHolder_C51" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C51</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C52" id="MainContentPlaceHolder_lblC52">1 año</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C52_ant" class="dato_azul1">0,15</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C52_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C52" type="text" value="0,15" size="6" readonly="readonly" id="MainContentPlaceHolder_C52" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C52</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C53" id="MainContentPlaceHolder_lblC53">2 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C53_ant" class="dato_azul1">0,14</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C53_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C53" type="text" value="0,14" size="6" readonly="readonly" id="MainContentPlaceHolder_C53" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C53</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C54" id="MainContentPlaceHolder_lblC54">3 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C54_ant" class="dato_azul1">0,14</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C54_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C54" type="text" value="0,14" size="6" readonly="readonly" id="MainContentPlaceHolder_C54" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C54</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C55" id="MainContentPlaceHolder_lblC55">4 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C55_ant" class="dato_azul1">0,16</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C55_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C55" type="text" value="0,16" size="6" readonly="readonly" id="MainContentPlaceHolder_C55" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C56" id="MainContentPlaceHolder_lblC56">5 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C56_ant" class="dato_azul1">0,18</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C56_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C56" type="text" value="0,18" size="6" readonly="readonly" id="MainContentPlaceHolder_C56" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C56</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C57" id="MainContentPlaceHolder_lblC57">6 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C57_ant" class="dato_azul1">0,19</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C57_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C57" type="text" value="0,19" size="6" readonly="readonly" id="MainContentPlaceHolder_C57" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C57</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C58" id="MainContentPlaceHolder_lblC58">7 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C58_ant" class="dato_azul1">0,20</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C58_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C58" type="text" value="0,20" size="6" readonly="readonly" id="MainContentPlaceHolder_C58" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C58</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C59" id="MainContentPlaceHolder_lblC59">8 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C59_ant" class="dato_azul1">0,19</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C59_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C59" type="text" value="0,19" size="6" readonly="readonly" id="MainContentPlaceHolder_C59" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C59</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C60" id="MainContentPlaceHolder_lblC60">9 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C60_ant" class="dato_azul1">0,15</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C60_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C60" type="text" value="0,15" size="6" readonly="readonly" id="MainContentPlaceHolder_C60" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C60</td>
+                                                </tr>
+                                               <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C61" id="MainContentPlaceHolder_lblC61">10 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C61_ant" class="dato_azul1">0,12</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C61_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C61" type="text" value="0,12" size="6" readonly="readonly" id="MainContentPlaceHolder_C61" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C61</td>
+                                                </tr>
+                                               <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C62" id="MainContentPlaceHolder_lblC62">11 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C62_ant" class="dato_azul1">0,10</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C62_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C62" type="text" value="0,10" size="6" readonly="readonly" id="MainContentPlaceHolder_C62" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C62</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C63" id="MainContentPlaceHolder_lblC63">12 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C63_ant" class="dato_azul1">0,09</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C63_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C63" type="text" value="0,09" size="6" readonly="readonly" id="MainContentPlaceHolder_C63" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C63</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C64" id="MainContentPlaceHolder_lblC64">13 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C64_ant" class="dato_azul1">0,09</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C64_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C64" type="text" value="0,09" size="6" readonly="readonly" id="MainContentPlaceHolder_C64" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C64</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C65" id="MainContentPlaceHolder_lblC65">14 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C65_ant" class="dato_azul1">0,09</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C65_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C65" type="text" value="0,09" size="6" readonly="readonly" id="MainContentPlaceHolder_C65" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C65</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C66" id="MainContentPlaceHolder_lblC66">15 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C66_ant" class="dato_azul1">0,09</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C66_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C66" type="text" value="0,09" size="6" readonly="readonly" id="MainContentPlaceHolder_C66" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C66</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C67" id="MainContentPlaceHolder_lblC67">16 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C67_ant" class="dato_azul1">0,10</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C67_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C67" type="text" value="0,10" size="6" readonly="readonly" id="MainContentPlaceHolder_C67" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C67</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C68" id="MainContentPlaceHolder_lblC68">17 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C68_ant" class="dato_azul1">0,13</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C68_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C68" type="text" value="0,13" size="6" readonly="readonly" id="MainContentPlaceHolder_C68" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C68</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C69" id="MainContentPlaceHolder_lblC69">18 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="  width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C69_ant" class="dato_azul1">0,17</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C69_td" class="azul2" align="center" style="width: 74px; ">
+                                                        <input name="ctl00$MainContentPlaceHolder$C69" type="text" value="0,17" size="6" readonly="readonly" id="MainContentPlaceHolder_C69" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; % 
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style=" width: 55px;">
+                                                        C69</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C70" id="MainContentPlaceHolder_lblC70">19 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style=" width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C70_ant" class="dato_azul1">0,23</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C70_td" class="azul2" align="center" style="width: 74px; ">
+                                                        <input name="ctl00$MainContentPlaceHolder$C70" type="text" value="0,23" size="6" readonly="readonly" id="MainContentPlaceHolder_C70" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; % 
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style=" width: 55px;">
+                                                        C70</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C71" id="MainContentPlaceHolder_lblC71">Igual o superior a 20 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style=" width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C71_ant" class="dato_azul1">0,40</span>
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C71_td" class="azul2" align="center" style="width: 74px; ">
+                                                        <input name="ctl00$MainContentPlaceHolder$C71" type="text" value="0,40" size="6" readonly="readonly" id="MainContentPlaceHolder_C71" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; % 
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style=" width: 55px;">
+                                                        C71</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td class="azul33" align="left" colspan="4">
+                                                        <font class="letra_marron_peque"><strong>% de reducción aplicado a los nuevos valores catastralesresultantes de procedimientos 
+                                                                                                    de valoración colectiva de carácter general. 
+                                                                                                    Art. 107.3 del TRLRHL (R.D. Leg. 2/2004)
+                                                                                                    (Valor máximo 60%)</strong></font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left"  style="width: 270px" style=" width: 40%;">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IIVTNU_2" class="letra_azul_peque">2025</span>
+                                                        </td>
+                                                    <td class="azul1" align="center" style="width: 118px" colspan="2">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IIVTNU_2" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_Label40" class="letra_azul_peque"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left"  style="width: 270px" style=" width: 40%;">
+                                                         <label for="MainContentPlaceHolder_C12" id="MainContentPlaceHolder_C12_ant"></label>&nbsp;
+
+                                                    </td>
+                                                    <td class="C12_td" align="center" style="width: 118px" colspan="2">
+                                                       <input name="ctl00$MainContentPlaceHolder$C12" type="text" size="6" readonly="readonly" id="MainContentPlaceHolder_C12" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+                                                    <td class="azul3" align="center">
+                                                        C12
+                                                    </td>
+                                                </tr>
+                                                <!-- SEGUNDA TABLA: Tipos de gravamen-->
+                                                <tr>
+                                                    <td align="left" colspan="4">
+                                                        <font class="letra_marron_peque"><strong>Tipos de gravamen</strong></font>
+                                                    </td>
+                                                </tr>
+                                                <tr class="azul22">
+                                                    <td align="left">
+                                                        <font class="letra_marron_peque"><strong>Periodo</strong></font>
+                                                    </td>
+                                                    <td class="azul1" align="center" style="width: 118px">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IIVTNU_3" class="letra_azul_peque">2025</span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IIVTNU_3" class="letra_azul_peque">2026</span>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C72" id="MainContentPlaceHolder_lblC72">Inferior a un año</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C72_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C72_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C72" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C72" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C72</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C73" id="MainContentPlaceHolder_lblC73">1 año</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C73_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C73_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C73" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C73" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C73</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C74" id="MainContentPlaceHolder_lblC74">2 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C74_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C74_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C74" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C74" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C74</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C75" id="MainContentPlaceHolder_lblC75">3 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C75_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C75_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C75" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C75" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                       
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C75</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C76" id="MainContentPlaceHolder_lblC76">4 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C76_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C76_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C76" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C76" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C76</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C77" id="MainContentPlaceHolder_lblC77">5 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C77_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C77_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C77" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C77" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C77</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        
+                                                        <label for="MainContentPlaceHolder_C78" id="MainContentPlaceHolder_lblC78">6 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C78_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C78_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C78" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C78" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C78</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C79" id="MainContentPlaceHolder_lblC79">7 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C79_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C79_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C79" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C79" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C79</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C80" id="MainContentPlaceHolder_lblC80">8 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C80_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C80_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C80" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C80" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C80</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C81" id="MainContentPlaceHolder_lblC81">9 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C81_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C81_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C81" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C81" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C81</td>
+                                                </tr>
+                                               <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C82" id="MainContentPlaceHolder_lblC82">10 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C82_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C82_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C82" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C82" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C82</td>
+                                                </tr>
+                                               <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C83" id="MainContentPlaceHolder_lblC83">11 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C83_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C83_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C83" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C83" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C83</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C84" id="MainContentPlaceHolder_lblC84">12 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C84_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C84_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C84" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C84" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C84</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C85" id="MainContentPlaceHolder_lblC85">13 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C85_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C85_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C85" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C85" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C85</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C86" id="MainContentPlaceHolder_lblC86">14 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C86_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C86_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C86" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C86" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C86</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C87" id="MainContentPlaceHolder_lblC87">15 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C87_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C87_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C87" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C87" disabled="disabled" class="aspNetDisabled borde_azul" />&nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C87</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C88" id="MainContentPlaceHolder_lblC88">16 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C88_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C88_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C88" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C88" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C88</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C89" id="MainContentPlaceHolder_lblC89">17 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C89_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C89_td" class="azul2" align="center" style="width: 74px;">
+                                                        <input name="ctl00$MainContentPlaceHolder$C89" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C89" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style="width: 55px;">
+                                                        C89</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C90" id="MainContentPlaceHolder_lblC90">18 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style="  width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C90_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C90_td" class="azul2" align="center" style="width: 74px; ">
+                                                        <input name="ctl00$MainContentPlaceHolder$C90" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C90" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style=" width: 55px;">
+                                                        C90</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C91" id="MainContentPlaceHolder_lblC91">19 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style=" width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C91_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C91_td" class="azul2" align="center" style="width: 74px; ">
+                                                        <input name="ctl00$MainContentPlaceHolder$C91" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C91" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style=" width: 55px;">
+                                                        C91</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="borde_abajo" align="left">
+                                                        <label for="MainContentPlaceHolder_C92" id="MainContentPlaceHolder_lblC92">Igual o superior a 20 años</label>
+                                                    </td>
+                                                    <td class="azul1_borde_bajo" align="center" style=" width: 118px;">
+                                                        <span id="MainContentPlaceHolder_C92_ant" class="dato_azul1">30,00</span>&nbsp;
+                                                    </td>
+                                                    <td id="MainContentPlaceHolder_C92_td" class="azul2" align="center" style="width: 74px; ">
+                                                        <input name="ctl00$MainContentPlaceHolder$C92" type="text" value="30,00" size="6" readonly="readonly" id="MainContentPlaceHolder_C92" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                        
+                                                    </td>
+
+                                                    <td class="azul3" align="center" style=" width: 55px;">
+                                                        C92</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td class="azul33" align="left" colspan="4">
+                                                        <font class="letra_azul"><strong>% Coeficiente reductor sobre el valor del terreno
+                                                                                                Art. 107.2.a) del TRLRHL (R.D. Leg. 2/2004, modificado por R.D.-ley 26/2021)
+                                                                                                (Valor máximo 15%)</strong></font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left"  style="width: 270px" style=" width: 40%;">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_ant_IIVTNU_4" class="letra_azul_peque"></span>
+
+                                                    </td>
+                                                    <td class="azul1" align="center" style="width: 118px" colspan="2">
+                                                        <span id="MainContentPlaceHolder_LBL_ejer_act_IIVTNU_4" class="letra_azul_peque"></span>
+                                                    </td>
+                                                    <td class="azul2" align="center">
+                                                        <span id="MainContentPlaceHolder_Label93" class="letra_azul_peque"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left"  style="width: 270px" style=" width: 40%;">
+                                                         <label for="MainContentPlaceHolder_C93" id="MainContentPlaceHolder_C93_ant"></label>&nbsp;
+
+                                                    </td>
+                                                    <td class="azul2" align="center" style="width: 118px" colspan="2">
+                                                       <input name="ctl00$MainContentPlaceHolder$C93" type="text" size="6" readonly="readonly" id="MainContentPlaceHolder_C93" disabled="disabled" class="aspNetDisabled borde_azul" /> &nbsp; %
+                                                       
+                                                    </td>
+                                                    <td class="azul3" align="center">
+                                                        C93
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table cellspacing="0" cellpadding="0" border="0" style="width:100%; text-align: left">
+                                    <tr>
+                                        <td valign="middle" height="55">
+                                            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                <tr>
+                                                    <td height="50">
+                                                    <div id="MainContentPlaceHolder_Botonera" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;MainContentPlaceHolder_BT_volver&#39;)" style="text-align: left">
+	
+                                                        <input type="submit" name="ctl00$MainContentPlaceHolder$BT_volver" value="Volver" id="MainContentPlaceHolder_BT_volver" />
+                                                            
+                                                        <input type="submit" name="ctl00$MainContentPlaceHolder$BT_imprimir" value="Vista impresión" id="MainContentPlaceHolder_BT_imprimir" />
+                                                    
+</div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+  </div>
+    <map id="Map">
+        <area alt="Ayuda" shape="rect" coords="520,60,601,88" href="javascript:ayuda()" />
+    </map>
+    
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="pie">
+                <h2 class="oculto">
+                    <span id="labelTituloPiectl00_labelTituloPie">Ministerio de Hacienda</span>
+                </h2>
+                <div class="listados">
+                    <div id="textos" class="textos">
+                        <ul>
+                            <li>
+                                <a id="HyperLink1" href="../Marco/aspx/Accesibilidad.aspx" target="_blank">Accesibilidad</a></li>
+                            <li class="ultimotextos">v
+                            <span id="label_vApp">1.1.8-n2 SE</span>
+                                <span id="label_vMarco">m2.1.17</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="iconosacc" class="iconosacc">
+                        <ul>
+                            <li><a title="Abre nueva ventana: Validador CSS 3.0 del W3C" href="http://jigsaw.w3.org/css-validator/validator?profile=css3&uri=https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/formulario_consultam2022.aspx"
+                                target="_blank">
+                                <img id="ImageCSS" src="../Marco/img/ministerio/css.gif" alt="CSS 3.0 (Abre nueva ventana)" style="height:25px;" /></a> </li>
+                            <li><a title="Abre nueva ventana: Validador XHTML 1.0 del W3C" href="http://validator.w3.org/check?uri=https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/formulario_consultam2022.aspx"
+                                target="_blank">
+                                <img id="ImageXHTML" src="../Marco/img/ministerio/xhtml.gif" alt="XHTML 1.0 (Abre nueva ventana)" style="height:25px;" /></a> </li>
+                            
+                            <li><a title="Abre nueva ventana: Las Directrices de Accesibilidad para el Contenido Web 2.1 (WCAG 2.1)."
+                                href="https://www.w3.org/WAI/WCAG2AA-Conformance.html" target="_blank">
+                                <img src="/SGFAL/ConsultaTipos/Marco/img/ministerio/wcag2.1AA-blue-v.gif"
+                                    alt="Nivel Doble-A de Conformidad con las Directrices de Accesibilidad para el Contenido Web 2.1 (WCAG 2.1). (Abre nueva ventana)" height="25" />
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/SGFAL/ConsultaTipos/WebResource.axd?d=oErGJ4V5Elcz5cHEBXY65xahztHts6-UDVI4GEtjEqVigFEkUmE-xADiRDpozratFv4qAARsrkZhIMObJbpYpebL4CQ1&amp;t=639190916600000000" type="text/javascript"></script>
+</form>
+</body>
+</html>
