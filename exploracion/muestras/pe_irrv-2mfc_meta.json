@@ -1,0 +1,405 @@
+{
+  "id" : "irrv-2mfc",
+  "name" : "Processos electorals - Participació",
+  "assetType" : "dataset",
+  "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Sector Públic",
+  "createdAt" : 1573034242,
+  "description" : "Dades de participació en els processos electorals celebrats a Catalunya (cens, nombre de votants, vots nuls, vots en blanc, vots vàlids,...)",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1451,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2282931,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1648804777,
+  "publicationGroup" : 1035631,
+  "publicationStage" : "published",
+  "rowIdentifierColumnId" : 21215847,
+  "rowsUpdatedAt" : 1750409463,
+  "rowsUpdatedBy" : "swga-9mh5",
+  "tableId" : 1552310,
+  "totalTimesRated" : 0,
+  "viewCount" : 7544,
+  "viewLastModified" : 1758534456,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1610708022,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1111358,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1610708022,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1610708022,
+      "failureCount" : 0,
+      "startedAt" : 1610708022,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 21215847,
+    "name" : "INDEX_AUTONUMERIC",
+    "dataTypeName" : "text",
+    "description" : "Índex autonumèric del dataset",
+    "fieldName" : "index_autonumeric",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14002758,
+    "format" : { }
+  }, {
+    "id" : 21215848,
+    "name" : "ID_ELECCIO",
+    "dataTypeName" : "text",
+    "description" : "Identificador de l'elecció (Tipus+Any+Seqüencial)",
+    "fieldName" : "id_eleccio",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104550,
+    "format" : { }
+  }, {
+    "id" : 21215849,
+    "name" : "NOM_ELECCIO",
+    "dataTypeName" : "text",
+    "description" : "Nom del procés electoral",
+    "fieldName" : "nom_eleccio",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104551,
+    "format" : { }
+  }, {
+    "id" : 21215850,
+    "name" : "ID_NIVELL_TERRITORIAL",
+    "dataTypeName" : "text",
+    "description" : "Identificador del nivell territorial (Municipi, Vegueria, Comarca...)",
+    "fieldName" : "id_nivell_territorial",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104552,
+    "format" : { }
+  }, {
+    "id" : 21215851,
+    "name" : "NOM_NIVELL_TERRITORIAL",
+    "dataTypeName" : "text",
+    "description" : "Nom del nivell territorial del registre (Municipi, Comarca...)",
+    "fieldName" : "nom_nivell_territorial",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104553,
+    "format" : { }
+  }, {
+    "id" : 21215852,
+    "name" : "TERRITORI_CODI",
+    "dataTypeName" : "text",
+    "description" : "Codi del territori",
+    "fieldName" : "territori_codi",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104566,
+    "format" : { }
+  }, {
+    "id" : 21215853,
+    "name" : "TERRITORI_NOM",
+    "dataTypeName" : "text",
+    "description" : "Nom del territori",
+    "fieldName" : "territori_nom",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104554,
+    "format" : { }
+  }, {
+    "id" : 21215854,
+    "name" : "DISTRICTE",
+    "dataTypeName" : "text",
+    "description" : "Districte electoral",
+    "fieldName" : "districte",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104560,
+    "format" : { }
+  }, {
+    "id" : 21215855,
+    "name" : "SECCIO",
+    "dataTypeName" : "text",
+    "description" : "Secció electoral",
+    "fieldName" : "seccio",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104568,
+    "format" : { }
+  }, {
+    "id" : 21215856,
+    "name" : "MESA",
+    "dataTypeName" : "text",
+    "description" : "Mesa electoral",
+    "fieldName" : "mesa",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104555,
+    "format" : { }
+  }, {
+    "id" : 21215857,
+    "name" : "CENS_ELECTORAL",
+    "dataTypeName" : "number",
+    "description" : "Cens del territori",
+    "fieldName" : "cens_electoral",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104571,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215858,
+    "name" : "PADRO",
+    "dataTypeName" : "number",
+    "description" : "Padró d'habitants del territori",
+    "fieldName" : "padro",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104569,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215859,
+    "name" : "ESCONS",
+    "dataTypeName" : "number",
+    "description" : "Escons a escollir a la circumscripció",
+    "fieldName" : "escons",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104558,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215860,
+    "name" : "NOMBRE_MESES",
+    "dataTypeName" : "number",
+    "description" : "Nombre de meses electorals ",
+    "fieldName" : "nombre_meses",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104563,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215861,
+    "name" : "VOTANTS",
+    "dataTypeName" : "number",
+    "description" : "Nombre de votants",
+    "fieldName" : "votants",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104559,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215862,
+    "name" : "ABSTENCIO",
+    "dataTypeName" : "number",
+    "description" : "Nombre de persones que s'han abstingut",
+    "fieldName" : "abstencio",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104565,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215863,
+    "name" : "VOTS_NULS",
+    "dataTypeName" : "number",
+    "description" : "Vots nuls",
+    "fieldName" : "vots_nuls",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104572,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215864,
+    "name" : "VOTS_BLANCS",
+    "dataTypeName" : "number",
+    "description" : "Vots en blanc",
+    "fieldName" : "vots_blancs",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104564,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215865,
+    "name" : "VOTS_CANDIDATURES",
+    "dataTypeName" : "number",
+    "description" : "Vots a candidatures",
+    "fieldName" : "vots_candidatures",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104567,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215866,
+    "name" : "VOTS_VALIDS",
+    "dataTypeName" : "number",
+    "description" : "Vots vàlids (a candidatures + en blanc)",
+    "fieldName" : "vots_valids",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104570,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215867,
+    "name" : "VOTS_PRIMER_AVAN",
+    "dataTypeName" : "number",
+    "description" : "Votants al primer avanç de participació",
+    "fieldName" : "vots_primer_avan",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104562,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215868,
+    "name" : "HORA_PRIMER_AVAN",
+    "dataTypeName" : "text",
+    "description" : "Hora del primer avanç de participació",
+    "fieldName" : "hora_primer_avan",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104556,
+    "format" : { }
+  }, {
+    "id" : 21215869,
+    "name" : "VOTS_SEGON_AVAN",
+    "dataTypeName" : "number",
+    "description" : "Votants al segon avanç de participació",
+    "fieldName" : "vots_segon_avan",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 8104561,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21215870,
+    "name" : "HORA_SEGON_AVAN",
+    "dataTypeName" : "text",
+    "description" : "Hora del segon avanç de participació",
+    "fieldName" : "hora_segon_avan",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8104557,
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "index_autonumeric",
+        "ascending" : false
+      } ]
+    },
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Elections - Participation",
+        "Nombre del conjunto de datos (ES)" : "Procesos electorales - Participación"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Dades d'Alt Valor" : {
+        "Categoria" : "No són dades d’alt valor"
+      },
+      "Enllaços relacionats" : {
+        "Nom" : "Evolució de la taxa de participació en els processos electorals celebrats a Catalunya",
+        "URL" : "https://eleccions.gencat.cat/ca/resultats-i-eleccions-anteriors/estadistiques/Estadistiques-de-participacio-electoral/"
+      },
+      "Actors" : {
+        "Departament" : "Justícia i Qualitat Democràtica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "rowIdentifier" : 21215847,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 21215847,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "eleccions", "procés electoral", "participació", "ods16_pau justícies i institucions sòlides" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
