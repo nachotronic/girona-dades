@@ -26,6 +26,7 @@ CONJUNTOS = {
     "8aaj-ypcb": "Indicadors territorials de l'Observatori del Territori",
     "yqwd-vj5e": "Metadades estacions meteorològiques automàtiques (XEMA)",
     "qnyt-emjc": "Fets penals coneguts, resolts i detencions",
+    "j8h8-vxug": "Habitatges iniciats i acabats (trimestral)",
     # Cargos electos (se actualizan a diario)
     "nm3n-3vbj": "Composició dels plens d'ajuntaments",
     "vevv-8fvw": "Dades d'ens locals - Ajuntaments",
