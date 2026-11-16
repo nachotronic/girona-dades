@@ -1479,6 +1479,185 @@
       {
         "resource" :
           {
+            "name" : "Relació de llocs de treball del personal laboral dels departaments de l’Administració de la Generalitat de Catalunya",
+            "id" : "g25x-kht6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació de llocs de treball del personal laboral dels departaments de l’Administració de la Generalitat de Catalunya vigent on consten, entre altres informacions, la denominació i les característiques essencials dels llocs i els requisits per ocupar-los.",
+            "attribution" : "Direcció General de Funció Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-03-16T15:49:52.000Z",
+            "createdAt" : "2023-06-01T13:57:50.000Z",
+            "metadata_updated_at" : "2026-03-16T15:49:52.000Z",
+            "data_updated_at" : "2025-11-07T11:26:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 150,
+                "page_views_last_month" : 473,
+                "page_views_total" : 13067,
+                "page_views_last_week_log" : 7.238404739325079,
+                "page_views_last_month_log" : 8.88874324889826,
+                "page_views_total_log" : 13.673750739438065
+              },
+            "columns_name" :
+              [
+                "TITULACIO",
+                "PROV LLOC",
+                "UNITAT DIRECTIVA",
+                "FORMACIONS ESP",
+                "NOM LLOC",
+                "PREFIX",
+                "Any",
+                "HORARI",
+                "OBSERVACIONS",
+                "COMPLEMENTS",
+                "CODI",
+                "LOCALITAT",
+                "DEPARTAMENT",
+                "JORNADA",
+                "RCN"
+              ],
+            "columns_field_name" :
+              [
+                "titulacio",
+                "prov_lloc",
+                "unitat_directiva",
+                "formacions_esp",
+                "nom_lloc",
+                "prefix",
+                "any",
+                "horari",
+                "observacions",
+                "complements",
+                "codi",
+                "localitat",
+                "departament",
+                "jornada",
+                "rcn"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Taula de titulació específica per al personal laboral: 0013 FP2-Branca metall. 0014 Llicenciatura en marina civil. 0015 Tècnic/a superior en integració social. 0016 Tècnic/a superior en anatomia patològica i citològica. 0025 FP1-Sanitària auxiliar infermeria. 0027 Tècnic/a superior en educació infantil. 0028 Tècnic/a en cures auxiliars d'infermeria. 0400 Psicologia. 0600 Biologia. 0900 Informàtica. 1400 Medicina. 1401 Medicina de l'educació física i l'esport. 1402 Medicina del treball. 1800 Dret. 1900 Ciències de la informació. 2100 Arquitectura. 2500 Enginyeria agrònoma. 3300 Infermeria. 3301 Infermeria del treball. 3400 Diplomatura en fisioteràpia. 3500 Podologia. 3800 Treball social (assistent/a social). 4700 Enginyeria tècnica agrícola. 5200 Diplomatura en marina civil. 6200 Diplomatura en teràpia ocupacional.  ",
+                "Forma de provisió del lloc: CM=concurs de mèrits.",
+                "Nom de la unitat directiva del lloc de treball",
+                "Taula de formacions específiques: 002 Coneixements de comptabilitat. 003 Coneixements de contractació. 005 Coneixements de llenguatge jurídic. 010 Llicenciatura en dret. 014 Coneixements d'informàtica. 020 Experiència en gestió de personal. 022 Coneixements de dret. 025 Experiència en contractació administrativa. 028 Experiència en comptabilitat. 030 Experiència en l'àmbit docent. 031 Coneixements de ciències de la informació. 033 Coneixements de graduat/ada social. 036 Coneixements d'organització del treball. 042 Coneixements de pedagogia. 047 Experiència en actuació processal. 049 Experiència en informàtica. 052 Experiència en normalització lingüística. 053 Certificat de nivell C2 de català (fins al gener de 2014, nivell D). 058 Experiència en gestió pressupostària. 066 Coneixements de gestió administrativa. 067 Experiència en gestió administrativa. 075 Coneixements de prevenció de la contaminació. 076 Coneixements d'idiomes. 077 Coneixements d'anglès. 078 Coneixements de francès. 089 Coneixement avançat de l'Office de Microsoft (Access, Word i Excel). 094 Coneixements de cartografia. 095 Experiència en cartografia. 100 Especialització en submarinisme. 101 Assistent/a social. 104 Reprografia. 105 Coneixements de formació ocupacional. 109 Llicenciatura en pedagogia. 110 Llicenciatura en psicologia. 112 Experiència en laboratori d'anàlisi. 113 Experiència en plans de seguretat i/o higiene. 114 Coneixements de l'àmbit de l'esport. 115 Experiència en l'àmbit de l'esport. 119 Titulació en relacions públiques. 121 Coneixements del món juvenil. 124 Experiència en temes de GIP. 129 Formació professional agrària. 131 Economia agrària. 139 Experiència en sistemes d'autoedició. 141 Coneixements d'història i cultura catalana. 142 Producció editorial, pressupostos i costos. 144 Especialització en diagnòstics menors i coneixements socials. 145 Especialització en justícia de menors. 147 Coneixements en matèria de drogodependència. 150 Experiència en atenció al públic. 151 Coneixements de desenvolupament rural. 154 Experiència en tecnologia d'aliments i bromatologia. 156 Experiència en el tractament de plagues vegetals. 157 Coneixements de tecnologia de produccions ramaderes. 158 Especialista en viticultura i enologia. 161 Experiència en àrees de comunicació, premsa i protocol. 165 Coneixements d'enquadernació i restauració. 167 Experiència en fotografia. 171 Experiència en cultura i tradició popular. 172 Experiència en promoció cultural. 173 Experiència en difusió cultural. 174 Experiència en restauració de béns mobles. 175 Experiència en anàlisis químiques. 176 Experiència en documentalisme. 178 Experiència en imatge i so. 194 Preferentment llicenciatura o diplomatura en informàtica. 197 Experiència en anàlisi econòmica i financera. 209 Experiència en control de tresoreria. 211 Experiència en estats financers i gestió tributària. 212 Experiència en control de caixa. 221 Experiència en dret mercantil. 224 Coneixements d'operació AS/400. 225 Coneixements de programació Cobol. 226 Coneixements d'anàlisi d'eines AS/400. 227 Coneixements de microinformàtica. 228 Experiència en temes dona-home. 230 Especialista en activitats i associacionisme. 232 Experiència en parcs i espais naturals. 233 Experiència en transmissions. 234 Experiència en documentació i arxivística. 235 Experiència en manteniment de xarxes de transmissions. 236 Experiència en espècies cinegètiques protegides. 237 Experiència en muntatge de vídeos. 240 Coneixements de tècniques forestals. 241 Coneixements de tècniques de jardineria. 242 Psicomotricitat. 249 Experiència en cuina. 253 Coneixements de dret civil i penal. 255 Dos anys d'experiència en la funció inspectora. 258 Coneixements i experiència en treballs editorials. 259 Coneixements i experiència en treballs de magatzem. 260 Coneixements i experiència en treballs audiovisuals. 261 Coneixements i experiència en treballs de paleta. 262 Coneixements i experiència en treballs de pintor/a. 263 Coneixements i experiència en treballs de fuster/a. 265 Coneixements i experiència en treballs de calefactor/a. 268 Coneixements i experiència en treballs de cuiner/a. 269 Coneixements i experiència en treballs de jardiner/a. 272 Coneixements i experiència en treballs de reprografia. 273 Coneixements i experiència en treballs d'informació. 275 Coneixements i/o experiència en planificació. 283 Coneixements i/o experiència en telecomunicacions. 300 Experiència específica en instal·lacions de telefonia, alarmes i altres equips d'interès en l'àmbit de la seguretat. 301 Coneixements i experiència en l'ús d'instrumentació electrònica. 307 Coneixements i experiència en treballs de manteniment. 308 Experiència en treballs d'espectacles. 312 Experiència en suports audiovisuals. 335 Coneixements i experiència en operació cinematogràfica. 338 Tècnic/a especialista d'imatge i so. 339 Tècnic/a especialista en la branca sanitària. Especialitat audioprotesista. 340 Coneixements i experiència en control del trànsit. 341 Coneixements i experiència en treballs tècnics d'obres públiques. 345 Experiència com a intèrpret de carilló. 346 Carnet d'instal·lador/a d'electricitat, aigua i/o gas. 348 Coneixements i/o experiència en sistemes d'informació geogràfica. 349 Coneixements i/o experiència en control de la contaminació. 358 Carnet de conduir B. 359 Coneixements i/o experiència en espais naturals. 368 Experiència en microfilmació. 370 Coneixements i experiència en tasques estadístiques. 371 Coneixements i experiència en treball de ludoteca. 376 Experiència en barris i col·legis marginals. 380 Coneixements i/o experiència en seguretat i alarmes. 389 Coneixements i/o experiència en prestació social substitutòria. 391 Coneixements i/o experiència en planificació i avaluació de formació. 392 Coneixements i/o experiència en gestió d'organitzacions. 394 Experiència en prospecció del sòl i mesura de propietats físiques del sòl. 395 Experiència en maquinària agrícola. 400 Coneixements de radiocomunicació. 402 Experiència en contractació del personal laboral. 409 Experiència en tasques relacionades amb la infància i l'adolescència en risc social. 410 Coneixements de normativa referent a la infància i l'adolescència. 412 Experiència en temes de formació. 422 Carnet de conduir C1. 423 Coneixements de correcció de textos. 430 Experiència en atenció a proveïdors. 433 Coneixements de programes de gestió de xarxa d'àrea local. 435 Coneixements i experiència en gestió pressupostària en organismes autònoms. 441 Coneixements de biblioteconomia. 451 Coneixements i/o experiència en l'aplicació informàtica del registre. 452 Coneixements i/o experiència en programaris de tractament d'imatges. 453 Coneixements i/o experiència en disseny assistit per ordinador. 458 Experiència en gestió de xarxes de vigilància de la qualitat de l'aire. 463 Coneixements i/o experiència en gestió d'estocs. 464 Coneixements del fons editorial de la Generalitat de Catalunya. 466 Coneixements i/o experiència en maneig de bases de dades. 467 Coneixements i/o experiència en tractament de textos. 468 Coneixements i/o experiència en maneig de fulls de càlcul. 469 Experiència en l'ús d'Internet. 470 Coneixements i/o experiència en sistemes de treball en xarxa. 477 Coneixements de didàctica i pedagogia de l'àmbit eqüestre. 478 Experiència en centres eqüestres. 484 Coneixements i/o experiència en prevenció de riscos laborals. 493 Coneixements i/o experiència en preedició i postedició de textos per a la traducció automàtica. 497 Coneixements en Mac OS. 498 Coneixements d'aranès. 500 Coneixements i/o experiència en normes de qualitat UNE 65.001 (EN45001)/ISO 17025. 518 Coneixements i/o experiència en llenguatges de programació i disseny de pàgines web. 522 Experiència en tasques administratives i en tasques relatives a la viabilitat viària. 523 Experiència en conservació de carreteres. 524 Experiència en aforaments. 525 Carnet de conduir C. 526 Curs d'explotació de carreteres. 552 Curs de formació de formadors/ores STCW/OMI. 553 Certificat d'especialitat de marina mercant. 554 Titulació professional per al comandament de vaixells o màquines. 555 Experiència en la gestió mediàtica de les emergències.",
+                "Nom del lloc de treball",
+                "Codis de prefix de tractament del personal laboral (càrrec): AJ Cap de la unitat del grup d'emergències mèdiques. A8 Responsable d'àrea de control, assegurament i foment de la qualitat de vins i caves. BE Coordinador/a assistencial (diplomat/ada en infermeria grup B). B0 Delegat/ada de zona. C1 Coordinador/a d'equip de suport cultural. C2 Coordinador/a d'equip de dinamització lingüística. C4 Responsable d'equip de suport cultural. C5 Coordinador/a de processos bibliogràfics. C6 Responsable de gestió administrativa. E6 Director/a de llars d'infants. IA Responsable d'equip dels grups d'intervenció immediata. I1 Cap de sala de gestió d'emergències. I2 Coordinador/a de seguretat viària i mobilitat. I3 Responsable de gestió de trànsit. JE Coordinador/a de medi obert. JV Coordinador/a de grups de dinamització lingüística. JX Coordinador/a de dinamització lingüística de Barcelona ciutat i comarques. JY Coordinador/a de dinamització lingüística de Girona, Lleida i Tarragona. JZ Coordinador/a tècnic/a especialista en patologia forense. J1 Director/a de centres A-Justícia Juvenil. L1 Cap de primera-Manteniment. L2 Cap de segona-Manteniment. L4 Encarregat/ada. L5 Cap d'equip. M2 Cap de sala de xarxa de comunicacions. O1 Coordinador/a general de conservació i explotació. O4 Encarregat/ada C1. O5 Cap d'equip C2. PQ Cap d'unitats operatives. PU Cap d'unitats bàsiques. PV Responsable de sistemes i comunicacions. PX Responsable d'unitats de suport a la gestió. P5 Cap d'àrea.",
+                "Any de publicació del lloc de treball a la RLT",
+                "Horari de treball: N=normal, C=continuat, E=especial, T=règim de torns.",
+                "Claus d'observacions: CB Requeriment de carnet de conduir B. CE Lloc de categoria identificada a extingir en el VI Conveni únic. CF Lloc de categoria identificada per funcionaritzar en el VI Conveni únic o per adaptació. CG requeriment de carnet de conduir C. CS Per ocupar aquest lloc de treball cal disposar de la certificació d'haver cursat 264 hores de formació de la llengua de signes catalana, reconeguda pel Departament d'Educació (article 6 de la Llei 17/2010, del 3 de juny, de la llengua de signes catalana). D Lloc adaptat per a persones amb disminució. DF Lloc adaptat per a persones amb disminució amb funcions de naturalesa funcionarial. DI Article 25 del VI Conveni únic. DP lloc de treball reservat segons l'article 25 del VI Conveni únic i lloc polivalent previst en l'article 19.5 del VI Conveni únic. E Lloc declarat a extingir. EC Lloc a amortitzar (Acord GOV/16/2010, DOGC núm. 5569). ED Lloc declarat a extingir i amb el requisit d'ocupació de disposar de la formació pedagògica i didàctica prevista en l'article 100.2 de la Llei orgànica 2/2006, de 3 de maig, d'educació. EG Lloc declarat a extingir, a conseqüència del procés de funcionarització de guardes de reserva de fauna. EN Les persones que ocupin aquests llocs de treball podran ser nomenades encarregats/ades de curs i percebre, mentre duri l'esmentat nomenament, el complement previst en l'article 36 del VI Conveni únic. FD Lloc de categoria identificada a funcionaritzar en el VI Conveni únic i amb el requisit d'ocupació de disposar de la formació pedagògica i didàctica prevista en l'article 100.2 de la Llei orgànica 2/2006, de 3 de maig, d'educació. FT Lloc de treball amb funcions de naturalesa funcionarial amb caràcter discontinu. F3 Lloc de treball amb funcions de naturalesa funcionarial inclòs en la fase 3 del procés de funcionarització. G Per a la provisió d'aquest lloc és requisit el grau de doctor. IT Caràcter itinerant. M Mobilitat dins l'àmbit territorial competencial del centre de treball. P Llocs polivalents previstos en l'article 19.5 del VI Conveni únic. PT Llocs polivalents previstos en l'article 19.5 del VI Conveni únic; i amb caràcter discontinu. SP Per ocupar aquest lloc és necessari disposar de la titulació prevista en l'article 4.2 de la Llei 3/2008, de 23 d'abril, de l'exercici de les professions de l'esport. T Lloc amb caràcter discontinu.",
+                "Complements inherents al lloc de treball.",
+                "Codi del lloc de treball",
+                "Localitat del lloc de treball",
+                "Nom del departament del lloc de treball",
+                "Jornada de treball: N=normal, I=inferior a la normal, E=especial, T=règim de torns.",
+                "Requisit de certificat negatiu del Registre central de delinqüents sexuals: S= sí, N=no."
+              ],
+            "columns_format" :
+              [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 2990,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-06-14T07:19:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "personal laboral",
+                "relació de llocs de treball",
+                "rlt",
+                "funció pública",
+                "treball",
+                "dataset_presidència",
+                "ods16_pau justícies i institucions sòlides",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "List of jobs of the labor personnel of the departments of the Administration of the Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Relación de puestos de trabajo del personal laboral de los departamentos de la Administración de la Generalidad de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/g25x-kht6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Relació-de-llocs-de-treball-del-personal-laboral-d/g25x-kht6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
             "name" : "Selecció del Panel de Polítiques Públiques Locals de Participació Ciutadana (2020, 2022 i 2024)",
             "id" : "62wr-uxxx",
             "resource_name" : null,
@@ -2076,188 +2255,9 @@
             "user_type" : "interactive",
             "display_name" : "Dades Obertes Catalunya"
           }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Relació de llocs de treball del personal laboral dels departaments de l’Administració de la Generalitat de Catalunya",
-            "id" : "g25x-kht6",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Relació de llocs de treball del personal laboral dels departaments de l’Administració de la Generalitat de Catalunya vigent on consten, entre altres informacions, la denominació i les característiques essencials dels llocs i els requisits per ocupar-los.",
-            "attribution" : "Direcció General de Funció Pública",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-03-16T15:49:52.000Z",
-            "createdAt" : "2023-06-01T13:57:50.000Z",
-            "metadata_updated_at" : "2026-03-16T15:49:52.000Z",
-            "data_updated_at" : "2025-11-07T11:26:31.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 150,
-                "page_views_last_month" : 473,
-                "page_views_total" : 13067,
-                "page_views_last_week_log" : 7.238404739325079,
-                "page_views_last_month_log" : 8.88874324889826,
-                "page_views_total_log" : 13.673750739438065
-              },
-            "columns_name" :
-              [
-                "TITULACIO",
-                "PROV LLOC",
-                "UNITAT DIRECTIVA",
-                "FORMACIONS ESP",
-                "NOM LLOC",
-                "PREFIX",
-                "Any",
-                "HORARI",
-                "OBSERVACIONS",
-                "COMPLEMENTS",
-                "CODI",
-                "LOCALITAT",
-                "DEPARTAMENT",
-                "JORNADA",
-                "RCN"
-              ],
-            "columns_field_name" :
-              [
-                "titulacio",
-                "prov_lloc",
-                "unitat_directiva",
-                "formacions_esp",
-                "nom_lloc",
-                "prefix",
-                "any",
-                "horari",
-                "observacions",
-                "complements",
-                "codi",
-                "localitat",
-                "departament",
-                "jornada",
-                "rcn"
-              ],
-            "columns_datatype" :
-              [
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text"
-              ],
-            "columns_description" :
-              [
-                "Taula de titulació específica per al personal laboral: 0013 FP2-Branca metall. 0014 Llicenciatura en marina civil. 0015 Tècnic/a superior en integració social. 0016 Tècnic/a superior en anatomia patològica i citològica. 0025 FP1-Sanitària auxiliar infermeria. 0027 Tècnic/a superior en educació infantil. 0028 Tècnic/a en cures auxiliars d'infermeria. 0400 Psicologia. 0600 Biologia. 0900 Informàtica. 1400 Medicina. 1401 Medicina de l'educació física i l'esport. 1402 Medicina del treball. 1800 Dret. 1900 Ciències de la informació. 2100 Arquitectura. 2500 Enginyeria agrònoma. 3300 Infermeria. 3301 Infermeria del treball. 3400 Diplomatura en fisioteràpia. 3500 Podologia. 3800 Treball social (assistent/a social). 4700 Enginyeria tècnica agrícola. 5200 Diplomatura en marina civil. 6200 Diplomatura en teràpia ocupacional.  ",
-                "Forma de provisió del lloc: CM=concurs de mèrits.",
-                "Nom de la unitat directiva del lloc de treball",
-                "Taula de formacions específiques: 002 Coneixements de comptabilitat. 003 Coneixements de contractació. 005 Coneixements de llenguatge jurídic. 010 Llicenciatura en dret. 014 Coneixements d'informàtica. 020 Experiència en gestió de personal. 022 Coneixements de dret. 025 Experiència en contractació administrativa. 028 Experiència en comptabilitat. 030 Experiència en l'àmbit docent. 031 Coneixements de ciències de la informació. 033 Coneixements de graduat/ada social. 036 Coneixements d'organització del treball. 042 Coneixements de pedagogia. 047 Experiència en actuació processal. 049 Experiència en informàtica. 052 Experiència en normalització lingüística. 053 Certificat de nivell C2 de català (fins al gener de 2014, nivell D). 058 Experiència en gestió pressupostària. 066 Coneixements de gestió administrativa. 067 Experiència en gestió administrativa. 075 Coneixements de prevenció de la contaminació. 076 Coneixements d'idiomes. 077 Coneixements d'anglès. 078 Coneixements de francès. 089 Coneixement avançat de l'Office de Microsoft (Access, Word i Excel). 094 Coneixements de cartografia. 095 Experiència en cartografia. 100 Especialització en submarinisme. 101 Assistent/a social. 104 Reprografia. 105 Coneixements de formació ocupacional. 109 Llicenciatura en pedagogia. 110 Llicenciatura en psicologia. 112 Experiència en laboratori d'anàlisi. 113 Experiència en plans de seguretat i/o higiene. 114 Coneixements de l'àmbit de l'esport. 115 Experiència en l'àmbit de l'esport. 119 Titulació en relacions públiques. 121 Coneixements del món juvenil. 124 Experiència en temes de GIP. 129 Formació professional agrària. 131 Economia agrària. 139 Experiència en sistemes d'autoedició. 141 Coneixements d'història i cultura catalana. 142 Producció editorial, pressupostos i costos. 144 Especialització en diagnòstics menors i coneixements socials. 145 Especialització en justícia de menors. 147 Coneixements en matèria de drogodependència. 150 Experiència en atenció al públic. 151 Coneixements de desenvolupament rural. 154 Experiència en tecnologia d'aliments i bromatologia. 156 Experiència en el tractament de plagues vegetals. 157 Coneixements de tecnologia de produccions ramaderes. 158 Especialista en viticultura i enologia. 161 Experiència en àrees de comunicació, premsa i protocol. 165 Coneixements d'enquadernació i restauració. 167 Experiència en fotografia. 171 Experiència en cultura i tradició popular. 172 Experiència en promoció cultural. 173 Experiència en difusió cultural. 174 Experiència en restauració de béns mobles. 175 Experiència en anàlisis químiques. 176 Experiència en documentalisme. 178 Experiència en imatge i so. 194 Preferentment llicenciatura o diplomatura en informàtica. 197 Experiència en anàlisi econòmica i financera. 209 Experiència en control de tresoreria. 211 Experiència en estats financers i gestió tributària. 212 Experiència en control de caixa. 221 Experiència en dret mercantil. 224 Coneixements d'operació AS/400. 225 Coneixements de programació Cobol. 226 Coneixements d'anàlisi d'eines AS/400. 227 Coneixements de microinformàtica. 228 Experiència en temes dona-home. 230 Especialista en activitats i associacionisme. 232 Experiència en parcs i espais naturals. 233 Experiència en transmissions. 234 Experiència en documentació i arxivística. 235 Experiència en manteniment de xarxes de transmissions. 236 Experiència en espècies cinegètiques protegides. 237 Experiència en muntatge de vídeos. 240 Coneixements de tècniques forestals. 241 Coneixements de tècniques de jardineria. 242 Psicomotricitat. 249 Experiència en cuina. 253 Coneixements de dret civil i penal. 255 Dos anys d'experiència en la funció inspectora. 258 Coneixements i experiència en treballs editorials. 259 Coneixements i experiència en treballs de magatzem. 260 Coneixements i experiència en treballs audiovisuals. 261 Coneixements i experiència en treballs de paleta. 262 Coneixements i experiència en treballs de pintor/a. 263 Coneixements i experiència en treballs de fuster/a. 265 Coneixements i experiència en treballs de calefactor/a. 268 Coneixements i experiència en treballs de cuiner/a. 269 Coneixements i experiència en treballs de jardiner/a. 272 Coneixements i experiència en treballs de reprografia. 273 Coneixements i experiència en treballs d'informació. 275 Coneixements i/o experiència en planificació. 283 Coneixements i/o experiència en telecomunicacions. 300 Experiència específica en instal·lacions de telefonia, alarmes i altres equips d'interès en l'àmbit de la seguretat. 301 Coneixements i experiència en l'ús d'instrumentació electrònica. 307 Coneixements i experiència en treballs de manteniment. 308 Experiència en treballs d'espectacles. 312 Experiència en suports audiovisuals. 335 Coneixements i experiència en operació cinematogràfica. 338 Tècnic/a especialista d'imatge i so. 339 Tècnic/a especialista en la branca sanitària. Especialitat audioprotesista. 340 Coneixements i experiència en control del trànsit. 341 Coneixements i experiència en treballs tècnics d'obres públiques. 345 Experiència com a intèrpret de carilló. 346 Carnet d'instal·lador/a d'electricitat, aigua i/o gas. 348 Coneixements i/o experiència en sistemes d'informació geogràfica. 349 Coneixements i/o experiència en control de la contaminació. 358 Carnet de conduir B. 359 Coneixements i/o experiència en espais naturals. 368 Experiència en microfilmació. 370 Coneixements i experiència en tasques estadístiques. 371 Coneixements i experiència en treball de ludoteca. 376 Experiència en barris i col·legis marginals. 380 Coneixements i/o experiència en seguretat i alarmes. 389 Coneixements i/o experiència en prestació social substitutòria. 391 Coneixements i/o experiència en planificació i avaluació de formació. 392 Coneixements i/o experiència en gestió d'organitzacions. 394 Experiència en prospecció del sòl i mesura de propietats físiques del sòl. 395 Experiència en maquinària agrícola. 400 Coneixements de radiocomunicació. 402 Experiència en contractació del personal laboral. 409 Experiència en tasques relacionades amb la infància i l'adolescència en risc social. 410 Coneixements de normativa referent a la infància i l'adolescència. 412 Experiència en temes de formació. 422 Carnet de conduir C1. 423 Coneixements de correcció de textos. 430 Experiència en atenció a proveïdors. 433 Coneixements de programes de gestió de xarxa d'àrea local. 435 Coneixements i experiència en gestió pressupostària en organismes autònoms. 441 Coneixements de biblioteconomia. 451 Coneixements i/o experiència en l'aplicació informàtica del registre. 452 Coneixements i/o experiència en programaris de tractament d'imatges. 453 Coneixements i/o experiència en disseny assistit per ordinador. 458 Experiència en gestió de xarxes de vigilància de la qualitat de l'aire. 463 Coneixements i/o experiència en gestió d'estocs. 464 Coneixements del fons editorial de la Generalitat de Catalunya. 466 Coneixements i/o experiència en maneig de bases de dades. 467 Coneixements i/o experiència en tractament de textos. 468 Coneixements i/o experiència en maneig de fulls de càlcul. 469 Experiència en l'ús d'Internet. 470 Coneixements i/o experiència en sistemes de treball en xarxa. 477 Coneixements de didàctica i pedagogia de l'àmbit eqüestre. 478 Experiència en centres eqüestres. 484 Coneixements i/o experiència en prevenció de riscos laborals. 493 Coneixements i/o experiència en preedició i postedició de textos per a la traducció automàtica. 497 Coneixements en Mac OS. 498 Coneixements d'aranès. 500 Coneixements i/o experiència en normes de qualitat UNE 65.001 (EN45001)/ISO 17025. 518 Coneixements i/o experiència en llenguatges de programació i disseny de pàgines web. 522 Experiència en tasques administratives i en tasques relatives a la viabilitat viària. 523 Experiència en conservació de carreteres. 524 Experiència en aforaments. 525 Carnet de conduir C. 526 Curs d'explotació de carreteres. 552 Curs de formació de formadors/ores STCW/OMI. 553 Certificat d'especialitat de marina mercant. 554 Titulació professional per al comandament de vaixells o màquines. 555 Experiència en la gestió mediàtica de les emergències.",
-                "Nom del lloc de treball",
-                "Codis de prefix de tractament del personal laboral (càrrec): AJ Cap de la unitat del grup d'emergències mèdiques. A8 Responsable d'àrea de control, assegurament i foment de la qualitat de vins i caves. BE Coordinador/a assistencial (diplomat/ada en infermeria grup B). B0 Delegat/ada de zona. C1 Coordinador/a d'equip de suport cultural. C2 Coordinador/a d'equip de dinamització lingüística. C4 Responsable d'equip de suport cultural. C5 Coordinador/a de processos bibliogràfics. C6 Responsable de gestió administrativa. E6 Director/a de llars d'infants. IA Responsable d'equip dels grups d'intervenció immediata. I1 Cap de sala de gestió d'emergències. I2 Coordinador/a de seguretat viària i mobilitat. I3 Responsable de gestió de trànsit. JE Coordinador/a de medi obert. JV Coordinador/a de grups de dinamització lingüística. JX Coordinador/a de dinamització lingüística de Barcelona ciutat i comarques. JY Coordinador/a de dinamització lingüística de Girona, Lleida i Tarragona. JZ Coordinador/a tècnic/a especialista en patologia forense. J1 Director/a de centres A-Justícia Juvenil. L1 Cap de primera-Manteniment. L2 Cap de segona-Manteniment. L4 Encarregat/ada. L5 Cap d'equip. M2 Cap de sala de xarxa de comunicacions. O1 Coordinador/a general de conservació i explotació. O4 Encarregat/ada C1. O5 Cap d'equip C2. PQ Cap d'unitats operatives. PU Cap d'unitats bàsiques. PV Responsable de sistemes i comunicacions. PX Responsable d'unitats de suport a la gestió. P5 Cap d'àrea.",
-                "Any de publicació del lloc de treball a la RLT",
-                "Horari de treball: N=normal, C=continuat, E=especial, T=règim de torns.",
-                "Claus d'observacions: CB Requeriment de carnet de conduir B. CE Lloc de categoria identificada a extingir en el VI Conveni únic. CF Lloc de categoria identificada per funcionaritzar en el VI Conveni únic o per adaptació. CG requeriment de carnet de conduir C. CS Per ocupar aquest lloc de treball cal disposar de la certificació d'haver cursat 264 hores de formació de la llengua de signes catalana, reconeguda pel Departament d'Educació (article 6 de la Llei 17/2010, del 3 de juny, de la llengua de signes catalana). D Lloc adaptat per a persones amb disminució. DF Lloc adaptat per a persones amb disminució amb funcions de naturalesa funcionarial. DI Article 25 del VI Conveni únic. DP lloc de treball reservat segons l'article 25 del VI Conveni únic i lloc polivalent previst en l'article 19.5 del VI Conveni únic. E Lloc declarat a extingir. EC Lloc a amortitzar (Acord GOV/16/2010, DOGC núm. 5569). ED Lloc declarat a extingir i amb el requisit d'ocupació de disposar de la formació pedagògica i didàctica prevista en l'article 100.2 de la Llei orgànica 2/2006, de 3 de maig, d'educació. EG Lloc declarat a extingir, a conseqüència del procés de funcionarització de guardes de reserva de fauna. EN Les persones que ocupin aquests llocs de treball podran ser nomenades encarregats/ades de curs i percebre, mentre duri l'esmentat nomenament, el complement previst en l'article 36 del VI Conveni únic. FD Lloc de categoria identificada a funcionaritzar en el VI Conveni únic i amb el requisit d'ocupació de disposar de la formació pedagògica i didàctica prevista en l'article 100.2 de la Llei orgànica 2/2006, de 3 de maig, d'educació. FT Lloc de treball amb funcions de naturalesa funcionarial amb caràcter discontinu. F3 Lloc de treball amb funcions de naturalesa funcionarial inclòs en la fase 3 del procés de funcionarització. G Per a la provisió d'aquest lloc és requisit el grau de doctor. IT Caràcter itinerant. M Mobilitat dins l'àmbit territorial competencial del centre de treball. P Llocs polivalents previstos en l'article 19.5 del VI Conveni únic. PT Llocs polivalents previstos en l'article 19.5 del VI Conveni únic; i amb caràcter discontinu. SP Per ocupar aquest lloc és necessari disposar de la titulació prevista en l'article 4.2 de la Llei 3/2008, de 23 d'abril, de l'exercici de les professions de l'esport. T Lloc amb caràcter discontinu.",
-                "Complements inherents al lloc de treball.",
-                "Codi del lloc de treball",
-                "Localitat del lloc de treball",
-                "Nom del departament del lloc de treball",
-                "Jornada de treball: N=normal, I=inferior a la normal, E=especial, T=règim de torns.",
-                "Requisit de certificat negatiu del Registre central de delinqüents sexuals: S= sí, N=no."
-              ],
-            "columns_format" :
-              [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ],
-            "download_count" : 2990,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2023-06-14T07:19:58.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Treball",
-            "domain_tags" :
-              [
-                "personal laboral",
-                "relació de llocs de treball",
-                "rlt",
-                "funció pública",
-                "treball",
-                "dataset_presidència",
-                "ods16_pau justícies i institucions sòlides",
-                "ods8_treball decent i creixement econòmic"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "List of jobs of the labor personnel of the departments of the Administration of the Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Relación de puestos de trabajo del personal laboral de los departamentos de la Administración de la Generalidad de Cataluña"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Nom d'element"
-                },
-                { "key" : "Actors_Departament", "value" : "Presidència" },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Anual"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/g25x-kht6",
-        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Relació-de-llocs-de-treball-del-personal-laboral-d/g25x-kht6",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
       }
     ],
   "resultSetSize" : 10,
-  "timings" : { "serviceMillis" : 29, "searchMillis" : [ 2, 12 ] },
+  "timings" : { "serviceMillis" : 38, "searchMillis" : [ 2, 18 ] },
   "warnings" : []
 }
