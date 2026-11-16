@@ -1,8 +1,8 @@
 # Estado de la última actualización
 
-2026-11-16 12:12 UTC
+2026-11-16 12:16 UTC
 
-## eleccions: ok (34 s)
+## eleccions: ok (37 s)
 
 ```
 A20101: 19487 filas de votos, participación {'SE': 526, 'MU': 222, 'CA': 1}
