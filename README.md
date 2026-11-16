@@ -1,4 +1,4 @@
-# Girona en dades / Girona en datos
+# Girona en xifres
 
 Web de datos abiertos sobre la provincia de Girona: vivienda, renta, población, empleo, salud y finanzas municipales, por municipio y sección censal. Inspirada en [datosclaros.es](https://www.datosclaros.es/vivienda-en-espana/).
 
