@@ -1,27 +1,27 @@
 # Estado de la última actualización
 
-2026-11-16 11:45 UTC
+2026-11-16 12:12 UTC
 
-## eleccions: ok (21 s)
+## eleccions: ok (34 s)
 
 ```
-A20101: 19448 filas de votos, participación {'SE': 526, 'MU': 222}
-M20111: 3821 filas de votos, participación {'SE': 525, 'MU': 221}
-G20111: 9724 filas de votos, participación {'SE': 526, 'MU': 222}
-A20121: 11952 filas de votos, participación {'SE': 525, 'MU': 222}
-E20141: 29328 filas de votos, participación {'SE': 530, 'MU': 222}
-M20151: 3936 filas de votos, participación {'SE': 531, 'MU': 221}
-A20151: 8294 filas de votos, participación {'SE': 532, 'MU': 222}
-G20151: 8294 filas de votos, participación {'SE': 532, 'MU': 222}
-G20161: 7540 filas de votos, participación {'SE': 532, 'MU': 222}
-A20171: 8294 filas de votos, participación {'SE': 532, 'MU': 222}
-G20191: 9789 filas de votos, participación {'SE': 531, 'MU': 222}
-M20191: 3851 filas de votos, participación {'SE': 530, 'MU': 221}
-E20191: 24096 filas de votos, participación {'SE': 531, 'MU': 222}
-G20192: 10542 filas de votos, participación {'SE': 531, 'MU': 222}
-A20211: 13608 filas de votos, participación {'SE': 534, 'MU': 222}
-M20231: 4110 filas de votos, participación {'SE': 536, 'MU': 221}
-G20231: 9108 filas de votos, participación {'SE': 537, 'MU': 222}
-A20241: 11385 filas de votos, participación {'SE': 537, 'MU': 222}
-E20241: 25806 filas de votos, participación {'SE': 537, 'MU': 222}
+A20101: 19487 filas de votos, participación {'SE': 526, 'MU': 222, 'CA': 1}
+M20111: 3859 filas de votos, participación {'SE': 525, 'MU': 221, 'CA': 1}
+G20111: 9740 filas de votos, participación {'SE': 526, 'MU': 222, 'CA': 1}
+A20121: 11970 filas de votos, participación {'SE': 525, 'MU': 222, 'CA': 1}
+E20141: 29367 filas de votos, participación {'SE': 530, 'MU': 222, 'CA': 1}
+M20151: 3986 filas de votos, participación {'SE': 531, 'MU': 221, 'CA': 1}
+A20151: 8305 filas de votos, participación {'SE': 532, 'MU': 222, 'CA': 1}
+G20151: 8307 filas de votos, participación {'SE': 532, 'MU': 222, 'CA': 1}
+G20161: 7551 filas de votos, participación {'SE': 532, 'MU': 222, 'CA': 1}
+A20171: 8305 filas de votos, participación {'SE': 532, 'MU': 222, 'CA': 1}
+G20191: 9804 filas de votos, participación {'SE': 531, 'MU': 222, 'CA': 1}
+M20191: 4165 filas de votos, participación {'SE': 530, 'MU': 221, 'CA': 1}
+E20191: 24128 filas de votos, participación {'SE': 531, 'MU': 222, 'CA': 1}
+G20192: 10558 filas de votos, participación {'SE': 531, 'MU': 222, 'CA': 1}
+A20211: 13631 filas de votos, participación {'SE': 534, 'MU': 222, 'CA': 1}
+M20231: 4184 filas de votos, participación {'SE': 536, 'MU': 221, 'CA': 1}
+G20231: 9123 filas de votos, participación {'SE': 537, 'MU': 222, 'CA': 1}
+A20241: 11403 filas de votos, participación {'SE': 537, 'MU': 222, 'CA': 1}
+E20241: 25840 filas de votos, participación {'SE': 537, 'MU': 222, 'CA': 1}
 ```
