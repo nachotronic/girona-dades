@@ -25,12 +25,21 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-B = "https://api.idescat.cat/taules/v2/censph/6000/20200"
-CANDIDATAS["idc_6000_node"] = f"{B}?lang=ca"
-CANDIDATAS["idc_6000_mun"] = f"{B}/mun?lang=ca"
-CANDIDATAS["idc_6000_data_girona"] = f"{B}/mun/data?lang=ca&MUN=170792"
-CANDIDATAS["idc_6000_data"] = f"{B}/mun/data?lang=ca"
-CANDIDATAS["idc_pmh_9145"] = "https://api.idescat.cat/taules/v2/pmh/9145?lang=ca"
+# Coyuntura: paro, contratos y demandantes por municipio (SEPE, mensual)
+SEPE = "https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/"
+for a in (2025, 2026):
+    CANDIDATAS[f"sepe_paro_{a}"] = f"{SEPE}Paro_por_municipios_{a}_csv.csv"
+    CANDIDATAS[f"sepe_contratos_{a}"] = f"{SEPE}Contratos_por_municipios_{a}_csv.csv"
+    CANDIDATAS[f"sepe_dtes_{a}"] = f"{SEPE}Dtes_empleo_por_municipios_{a}_csv.csv"
+CANDIDATAS["sepe_portal"] = "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-estadisticos/municipios.html"
+CANDIDATAS["sepe_datos_abiertos"] = "https://datos.gob.es/apidata/catalog/dataset/publisher/EA0021470?_pageSize=50"
+# Afiliación a la Seguridad Social por municipio
+CANDIDATAS["ss_afil_mun"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/2341/2342/2343"
+CANDIDATAS["ss_datosgob"] = "https://datos.gob.es/apidata/catalog/dataset/title/afiliados?_pageSize=50"
+# Idescat: índice de estadísticas de la API de tablas
+CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
+for t in ("atur registrat", "afiliats", "contractes", "habitatges iniciats", "pernoctacions", "ocupacio hotelera", "matriculacio", "fiances", "atur", "treballadors"):
+    CANDIDATAS[f"socrata_{t.replace(' ', '_')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
