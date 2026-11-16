@@ -2,14 +2,14 @@
 import json, pathlib, re, urllib.parse
 import requests
 
-S = pathlib.Path("exploracion/salut4"); S.mkdir(parents=True, exist_ok=True)
+S = pathlib.Path("exploracion/salut5"); S.mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "girona-dades/0.1 (+https://github.com/nachotronic/girona-dades)"}
 SOC = "https://analisi.transparenciacatalunya.cat"
 inf = []
 
 def get(url, nom=None, lim=400000):
     try:
-        r = requests.get(url, headers=UA, timeout=180)
+        r = requests.get(url, headers=UA, timeout=400)
         inf.append(f"{r.status_code} {len(r.content)} {nom} {url}")
         if nom: (S / nom).write_bytes(r.content[:lim])
         return r
@@ -19,24 +19,10 @@ def get(url, nom=None, lim=400000):
 def q(d, nom, **p):
     get(f"{SOC}/resource/{d}.json?" + urllib.parse.urlencode(p), nom)
 
-CS = "https://catsalut.gencat.cat/.content/xml/llistes-espera/"
-import datetime as dt
-for tipus in ["quirurgiques", "externes", "diagnostiques"]:
-    trobats = 0
-    a, m = dt.date.today().year, dt.date.today().month
-    for _ in range(14):
-        r = get(f"{CS}{tipus}-{a}-{m:02d}.xml", None)
-        if r is not None and r.ok and b"<Row" in r.content:
-            (S / f"le_{tipus}-{a}-{m:02d}.xml").write_bytes(r.content[:1500000])
-            trobats += 1
-            if trobats >= 2: break
-        m -= 1
-        if m == 0: a, m = a - 1, 12
-    for y in ["2019-01", "2021-06", "2023-01", "2024-06"]:
-        r = get(f"{CS}{tipus}-{y}.xml", None)
-SOC2 = SOC
-q("8gmd-gz7i", "equip_mostra.json", **{"$limit": 5})
-get(f"{SOC}/api/views/8gmd-gz7i.json", "view_8gmd.json")
+q("8gmd-gz7i", "equip_cats.json", **{"$select": "categoria, count(*)", "$where": "categoria like '%Salut%' AND codi_municipi like '17%'", "$group": "categoria", "$limit": 500})
+for u, n in [("https://www.idescat.cat/cercador/?q=enquesta+de+salut&lang=ca", "idescat_cerca.html"),
+             ("https://salutweb.gencat.cat/ca/el_departament/estadistiques_sanitaries/enquestes/esca/", "salutweb_esca.html")]:
+    get(u, n, 600000)
 SC = "https://scientiasalut.gencat.cat"
 r = get(f"{SC}/handle/11351/1566/browse?resetOffset=true&type=dateissued&order=DESC&rpp=100", "esca_browse.html", 900000)
 if r is not None and r.ok:
