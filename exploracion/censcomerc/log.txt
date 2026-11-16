@@ -1,0 +1,10 @@
+200 555 https://censcomerc.empresa.gencat.cat/api/sector/filtre/municipi?municipi=Agullana&year=2023
+200 906 https://censcomerc.empresa.gencat.cat/api/sector/filtre/municipi?municipi=Girona&year=2023
+200 806 https://censcomerc.empresa.gencat.cat/api/sector/filtre/municipi?year=2023&municipi=Besal%C3%BA
+200 954 https://censcomerc.empresa.gencat.cat/api/sectors/filtre?year=2023
+200 954 https://censcomerc.empresa.gencat.cat/api/sectors/filtre?year=2023&municipi=Agullana
+200 10971 https://censcomerc.empresa.gencat.cat/api/activitat/filtre?year=2023&municipi=Agullana
+200 176539 https://censcomerc.empresa.gencat.cat/api/municipis/filtre/?year=2023
+404 21 https://censcomerc.empresa.gencat.cat/api/sectors/
+404 21 https://censcomerc.empresa.gencat.cat/api/sectors/
+404 21 https://censcomerc.empresa.gencat.cat/api/sectors/
