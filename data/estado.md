@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 14:59 UTC
+Última ejecución: 2026-11-16 15:06 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@
 | catastro — Catastro INSPIRE, edificis | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | semestral |
 | geometria — INE, seccionat censal 2024 | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | fix |
 | salut — CatSalut, àrees bàsiques de salut | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | anual |
-| policia — Mossos d'Esquadra, fets penals | ok | 2026-11-16 14:58 | 2026-11-16 14:58 | mensual |
+| policia — Mossos d'Esquadra, fets penals | ok | 2026-11-16 15:05 | 2026-11-16 15:05 | mensual |
 | referencies — Valors de referència de Catalunya i Espanya | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | anual |
 | provincia — INE, sèries de la província | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | mensual |
 | emex — Idescat, El municipi en xifres | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
@@ -29,18 +29,19 @@
 | padro — INE, padró i empreses (DIRCE) | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | pressupostos — Generalitat, liquidació dels pressupostos municipals | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | tributs — Ministerio de Hacienda, tipus impositius municipals | ok | 2026-11-16 13:08 | 2026-11-16 13:08 | anual |
-| cgpj — CGPJ, estadística judicial per partit judicial | avís | — | 2026-11-16 14:53 | trimestral |
-| interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-16 14:57 | 2026-11-16 14:57 | trimestral |
+| cgpj — CGPJ, estadística judicial per partit judicial | ok | 2026-11-16 15:01 | 2026-11-16 15:01 | trimestral |
+| interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-16 15:05 | 2026-11-16 15:05 | trimestral |
 
 ## Detalle de la última ejecución
 
-### cgpj: avís (255 s)
+### cgpj: ok (211 s)
 
 ```
 partidos judiciales: 9 en la provincia, 221 municipios (Bisbal d'Empordà, la, Blanes, Figueres, Girona, Olot, Puigcerdà, Ripoll, Sant Feliu de Guíxols, Santa Coloma de Farners)
 geometría: 9 partidos
 población INE 2852: 53 zonas, años 2007-2021
-ERROR violencia sobre la mujer: KeyError: 'any'
+violencia sobre la mujer: 26 trimestres (1T2019 a 4T2025), 52 ficheros nuevos; partidos de Girona con denuncias en el último: 9
+trimestres sin fichero: 3T2022, 4T2022, 1T2026, 2T2026, 3T2026
 crisis: 6 series, hasta 2T2026; lanzamientos Girona último año: 946
 PC-Axis: BOL19952025.zip, 4462 órganos con código en los .vs
 OUJII001 (penal): años 2012-2025, partidos de Girona 9, procedimientos 40: ACTUACIONES DERIVADAS DE PETICIONES DE OTROS ORGANOS JUDICIALES | ASUNTOS ACEPTADOS PENDIENTES DE INCOAR | ASUNTOS DE INSTRUCCION COMPLEJA | ASUNTOS LEY EXTRANJERIA | ASUNTOS QUE HAYAN APERTURADO PIEZAS SEPARADAS Art. 762.6 | ASUNTOS REPARTIDOS PENDIENTES DE ACEPTAR | CAUSAS CON LA INSTRUCCION PRORROGADA | DILIGENCIAS INDETERMINADAS | Despachos Nacionales | Despachos Unión Europea. Actos de Comunicación | Despachos Unión Europea. Diligencias urgentes | Despachos Unión Europea. Resto | Despachos otros Paises | Diligencias Previas | Diligencias urgentes | EJECUTORIAS PENDIENTES DE INCOAR | Habeas Corpus | INCIDENTES TOTAL PENAL | Incidentes del Art. 241.1 LOPJ (Penal) | Incidentes en Ejecucion (Penal) | Incidentes en Tramite (Penal) | JUICIOS DE FALTAS SENTENCIADOS PENDIENTES DE FIRMEZA | JUICIOS POR DELITOS LEVES SENTENCIADOS PENDIENTES DE FIRMEZA | Juicios de Faltas | Juicios sobre Delitos Leves | MOVIMIENTO JUICIOS DE FALTAS DE ENJUCIAMIENTO RAPIDO E INMEDIATO | MOVIMIENTO JUICIOS SOBRE DELITOS LEVES DE ENJUCIAMIENTO RAPIDO E INMEDIATO | NUMERO DE CAUSAS CON PRESO PROVISIONAL | NUMERO DE DILIGENCIAS URGENTES REMITIDAS AL JUZGADO DE LO PENAL PARA SU EJECUCION | NUMERO TOTAL DE INMIGRANTES PUESTOS A DISPOSICION JUDICIAL EN ASUNTOS DE EXTRANJERIA | PIEZAS SEPARADAS DEL ART. 762.6 L.E.CRIM | PROCEDIMIENTOS DECLARADOS DE ESPECIAL COMPLEJIDAD A LOS EFECTOS DEL ARTICULO 84.6 LOPJ | PROCEDIMIENTOS POR DELITOS CONTRA LA INFANCIA Y LA ADOLESCENCIA | PROCESOS DEL JUZGADO DE INSTRUCCION
@@ -50,7 +51,7 @@ OUJII012 (impagament): años 2021-2025, partidos de Girona 9, procedimientos 5: 
 OUJII009 (concursos): años 2016-2025, partidos de Girona 9, procedimientos 1: Numero
 ```
 
-### interior: ok (47 s)
+### interior: ok (37 s)
 
 ```
 2019T4: 3 tablas
@@ -61,10 +62,10 @@ OUJII009 (concursos): años 2016-2025, partidos de Girona 9, procedimientos 1: N
 2024T4: 3 tablas
 2025T4: 3 tablas
 2026T2: 3 tablas
-municipios de Girona: Banyoles, Blanes, Figueres, Girona, Lloret de Mar, Olot, Palafrugell, Roses, Salt, Sant Feliu de GuÃ­xols; años 2018-2026; último periodo: 2026T2
+municipios de Girona: Banyoles, Blanes, Figueres, Girona, Lloret de Mar, Olot, Palafrugell, Roses, Salt, Sant Feliu de Guíxols; años 2018-2026; último periodo: 2026T2
 ```
 
-### policia: ok (36 s)
+### policia: ok (37 s)
 
 ```
 relación municipio-ABP: 956 filas, columnas ['OBJECTID', 'CODI_MUNICIPI', 'CODI_ABP_MOSSOS', 'CODI_DISTRICTE', 'NOM_DISTRICTE']
