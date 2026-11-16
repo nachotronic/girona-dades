@@ -1,0 +1,2214 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Incendis forestals a Catalunya. Anys 2011-2024",
+            "id" : "bks7-dkfd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació dels incendis forestals esdevinguts a Catalunya des de l’1 de gener de 2011 al 31 de desembre de 2024, amb detall de la data, el municipi en el quan s’ha iniciat i la superfície forestal i no forestal afectada, en hectàrees.\nEl conjunt de dades ha estat realitzat prenent com a punt de partida les dades facilitades pel Departament d’Interior al Departament d’Agricultura, Ramaderia, Pesca i Alimentació. Aquestes dades es contrasten i completen amb altres fonts: Consorci del Parc Natural de Collserola, Diputació de Barcelona, la Vall d'Aran i després de depurar-les, corregir-les i adaptar-les, es publiquen finalment les dades provisionals fins el moment que les podem tancar com a definitives.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-23T11:04:08.000Z",
+            "createdAt" : "2021-05-21T09:53:27.000Z",
+            "metadata_updated_at" : "2026-10-23T11:04:08.000Z",
+            "data_updated_at" : "2026-06-17T12:02:15.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 124,
+                "page_views_last_month" : 402,
+                "page_views_total" : 12428,
+                "page_views_last_week_log" : 6.965784284662088,
+                "page_views_last_month_log" : 8.654636028527968,
+                "page_views_total_log" : 13.601422605700362
+              },
+            "columns_name" :
+              [
+                "CODI MUNICIPI",
+                "DATA INCENDI",
+                "TERMEMUNIC",
+                "HANOFOREST",
+                "CODI COMARCA",
+                "HAFORESTAL",
+                "COMARCA",
+                "HAARBRADES",
+                "HANOARBRAD"
+              ],
+            "columns_field_name" :
+              [
+                "codi_municipi",
+                "data_incendi",
+                "termemunic",
+                "hanoforest",
+                "codi_comarca",
+                "haforestal",
+                "comarca",
+                "haarbrades",
+                "hanoarbrad"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi Idescat del municipi.",
+                "Data d’inici de l’incendi.",
+                "Municipi d’inici de l’incendi.",
+                "Superfície no forestal (urbana, agrícola) cremada, en hectàrees.",
+                "Codi Idescat de la comarca.",
+                "Superfície forestal cremada, en hectàrees. Suma la columna HaArbrades + HaNoArbrades.",
+                "Comarca d’inici de l’incendi.",
+                "Superfície forestal arbrada cremada, en hectàrees.",
+                "Superfície forestal de matoll, herbàcia o pastura cremada, en hectàrees."
+              ],
+            "columns_format" :
+              [
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "precision" : "2" },
+                {},
+                { "precision" : "2" },
+                {},
+                { "precision" : "2" },
+                { "precision" : "2" }
+              ],
+            "download_count" : 2749,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-05-21T10:00:43.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "incendi",
+                "forestal",
+                "ods12_producció i consum responsable",
+                "ods15_vida d'ecosistemes terrestres",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Dades d'incendis"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "http://agricultura.gencat.cat/ca/ambits/medi-natural/incendis-forestals/dades-incendis/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Forest fires by counties in Catalonia. 2011-2024."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Incendios forestales por comarca en Catalunya. Años 2011-2024."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/bks7-dkfd",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Incendis-forestals-a-Catalunya-Anys-2011-2024/bks7-dkfd",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Incendis forestals per comarques a Catalunya. Any en curs",
+            "id" : "9r29-e8ha",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació dels incendis forestals esdevinguts a Catalunya des de l’1 de gener, amb detall de la data, el municipi en el quan s’han iniciat i les superfícies forestals i no forestals afectades, en hectàrees. Totes les dades son provisionals i estan pendents de validació.\nEl conjunt de dades ha estat realitzat prenent com a punt de partida les dades facilitades pel Departament d’Interior al Departament d’Agricultura, Ramaderia, Pesca i Alimentació. Aquestes dades es contrasten i completen amb altres fonts: Consorci del Parc Natural de Collserola, Diputació de Barcelona, la Vall d'Aran i després de depurar-les, corregir-les i adaptar-les, es publiquen finalment les dades provisionals fins el moment que les podem tancar com a definitives.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-23T11:03:15.000Z",
+            "createdAt" : "2021-05-19T07:40:56.000Z",
+            "metadata_updated_at" : "2026-10-23T11:03:15.000Z",
+            "data_updated_at" : "2026-09-16T05:57:17.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 64,
+                "page_views_last_month" : 225,
+                "page_views_total" : 11747,
+                "page_views_last_week_log" : 6.022367813028454,
+                "page_views_last_month_log" : 7.820178962415189,
+                "page_views_total_log" : 13.520127550324851
+              },
+            "columns_name" :
+              [
+                "TERMEMUNIC",
+                "DATA INCENDI",
+                "COMARCA",
+                "CODI MUNICIPI",
+                "CODI COMARCA",
+                "HANOARBRAD",
+                "HAARBRADES",
+                "HAFORESTAL",
+                "HANOFOREST"
+              ],
+            "columns_field_name" :
+              [
+                "termemunic",
+                "data_incendi",
+                "comarca",
+                "codi_municipi",
+                "codi_comarca",
+                "hanoarbrad",
+                "haarbrades",
+                "haforestal",
+                "hanoforest"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Municipi d’inici de l’incendi.",
+                "Data d’inici de l’incendi.",
+                "Comarca d’inici de l’incendi.",
+                "Codi Idescat del municipi d’inici de l’incendi.",
+                "Codi Idescat de la comarca.",
+                "Superfície forestal de matoll, herbàcia o pastura cremada, en hectàrees.",
+                "Superfície forestal arbrada cremada, en hectàrees.",
+                "Superfície forestal cremada, en hectàrees. Suma la columna HaArbrades + HaNoArbrades.",
+                "Superfície no forestal (urbana, agrícola) cremada, en hectàrees."
+              ],
+            "columns_format" :
+              [
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "precision" : "4" },
+                {
+                  "precisionStyle" : "standard",
+                  "decimalSeparator" : ",",
+                  "precision" : "4"
+                },
+                { "decimalSeparator" : ",", "precision" : "4" },
+                { "decimalSeparator" : ",", "precision" : "4" }
+              ],
+            "download_count" : 1583,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-05-19T09:07:49.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "incendi",
+                "forestal",
+                "ods12_producció i consum responsable",
+                "ods15_vida d'ecosistemes terrestres",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Dades d'incendis"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "http://agricultura.gencat.cat/ca/ambits/medi-natural/incendis-forestals/dades-incendis/"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Forest fires by counties in Catalonia. Current year."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Incendios forestales por comarca en Catalunya. Año en curso."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/9r29-e8ha",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Incendis-forestals-per-comarques-a-Catalunya-Any-e/9r29-e8ha",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Zone omogenee per rischio Incendi boschivi - Elenco Comuni",
+            "id" : "iych-7ac2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Il rischio “Incendi boschivi” si riferisce a fenomeni legati all’insorgenza ed estensione di focolai che possono espandersi su aree boscate, cespugliate o arborate, comprese eventuali strutture e infrastrutture antropizzate poste all’interno delle predette aree, oppure su terreni coltivati o incolti e pascoli ad esse limitrofi.",
+            "attribution" : "Regione Lombardia",
+            "attribution_link" : "https://goo.gl/cP0pt6",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2021-06-11T10:37:36.000Z",
+            "createdAt" : "2014-10-17T15:23:29.000Z",
+            "metadata_updated_at" : "2021-06-11T10:37:36.000Z",
+            "data_updated_at" : "2017-10-27T06:53:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 89,
+                "page_views_total" : 4653,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 6.491853096329675,
+                "page_views_total_log" : 12.184255495405349
+              },
+            "columns_name" :
+              [
+                "CODICE_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
+                "PROVINCIA",
+                "ISTAT",
+                "NOME_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
+                "COMUNE"
+              ],
+            "columns_field_name" :
+              [
+                "codice_zona_omogenea_rischio_incendi_boschivi",
+                "provincia",
+                "istat",
+                "nome_zona_omogenea_rischio_incendi_boschivi",
+                "comune"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" : [ "", "", "", "", "" ],
+            "columns_format" :
+              [
+                { "displayStyle" : "plain", "align" : "left" },
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {}
+              ],
+            "download_count" : 4515,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-10-27T07:17:26.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Protezione Civile",
+            "domain_tags" :
+              [
+                "avvisi",
+                "avviso",
+                "criticità",
+                "allerta",
+                "allertamento",
+                "rischio",
+                "rischi",
+                "incendi boschivi",
+                "incendio boschivo",
+                "zone omogenee",
+                "protezione civile",
+                "centro funzionale",
+                "sala operativa"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dettagli_Direzione",
+                  "value" : "Sicurezza, protezione civile e immigrazione"
+                },
+                {
+                  "key" : "Frequenza-di-aggiornamento_Frequenza",
+                  "value" : "Non definita"
+                },
+                {
+                  "key" : "Frequenza-di-aggiornamento_Data-ultima-modifica",
+                  "value" : "27/10/2017"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/iych-7ac2",
+        "link" : "https://www.dati.lombardia.it/Protezione-Civile/Zone-omogenee-per-rischio-Incendi-boschivi-Elenco-/iych-7ac2",
+        "owner" :
+          {
+            "id" : "7pvs-5xuu",
+            "user_type" : "interactive",
+            "display_name" : "Regione Lombardia"
+          },
+        "creator" :
+          {
+            "id" : "7pvs-5xuu",
+            "user_type" : "interactive",
+            "display_name" : "Regione Lombardia"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Incendis forestals per comarques a Catalunya. Any anterior",
+            "id" : "crs7-idxi",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació dels incendis forestals esdevinguts a Catalunya des de l’1 de gener, amb detall de la data, el municipi en el quan s’han iniciat i les superfícies forestals i no forestals afectades, en hectàrees. Totes les dades son provisionals i estan pendents de validació.\nEl conjunt de dades ha estat realitzat prenent com a punt de partida les dades facilitades pel Departament d’Interior al Departament d’Agricultura, Ramaderia, Pesca i Alimentació. Aquestes dades es contrasten i completen amb altres fonts: Consorci del Parc Natural de Collserola, Diputació de Barcelona, la Vall d'Aran i després de depurar-les, corregir-les i adaptar-les, es publiquen finalment les dades provisionals fins el moment que les podem tancar com a definitives.",
+            "attribution" : "Departament d'Agricultura, Ramaderia, Pesca i Alimentació",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-23T11:03:45.000Z",
+            "createdAt" : "2022-02-02T09:57:36.000Z",
+            "metadata_updated_at" : "2026-10-23T11:03:45.000Z",
+            "data_updated_at" : "2026-06-19T10:24:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 45,
+                "page_views_last_month" : 154,
+                "page_views_total" : 4521,
+                "page_views_last_week_log" : 5.523561956057013,
+                "page_views_last_month_log" : 7.276124405274238,
+                "page_views_total_log" : 12.142745276751528
+              },
+            "columns_name" :
+              [
+                "HA FORESTALS",
+                "CODI COMARCA",
+                "CODI MUNICIPI",
+                "HA NO ARBRADES",
+                "COMARCA",
+                "DATA INCENDI",
+                "HA ARBRADES",
+                "HA NO FORESTALS",
+                "TERME MUNICIPAL"
+              ],
+            "columns_field_name" :
+              [
+                "ha_forestals",
+                "codi_comarca",
+                "codi_municipi",
+                "ha_no_arbrades",
+                "comarca",
+                "data_incendi",
+                "ha_arbrades",
+                "ha_no_forestals",
+                "terme_municipal"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Superfície forestal cremada, en hectàrees. Suma la columna HaArbrades + HaNoArbrades",
+                "Data d’inici de l’incendi",
+                "Comarca d’inici de l’incendi",
+                "Superfície forestal de matoll, herbàcia o pastura cremada, en hectàrees",
+                "Codi Idescat de la comarca",
+                "Any de l’incendi",
+                "Superfície forestal arbrada cremada, en hectàrees",
+                "Superfície no forestal (urbana, agrícola) cremada, en hectàrees",
+                "Municipi d’inici de l’incendi"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 1175,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-02-02T10:01:30.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "incendi",
+                "forestal",
+                "ods12_producció i consum responsable",
+                "ods15_vida d'ecosistemes terrestres",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Forest fires by counties in Catalonia. Last year"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Incendios forestales por comarca en Catalunya. Año anterior"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/crs7-idxi",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Incendis-forestals-per-comarques-a-Catalunya-Any-a/crs7-idxi",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Zone omogenee per rischio Incendi boschivi - Centroidi",
+            "id" : "iuvh-em9x",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Il rischio “Incendi boschivi” si riferisce a fenomeni legati all’insorgenza ed estensione di focolai che possono espandersi su aree boscate, cespugliate o arborate, comprese eventuali strutture e infrastrutture antropizzate poste all’interno delle predette aree, oppure su terreni coltivati o incolti e pascoli ad esse limitrofi.",
+            "attribution" : "Regione Lombardia",
+            "attribution_link" : "https://goo.gl/cP0pt6",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2021-06-11T10:31:33.000Z",
+            "createdAt" : "2014-10-17T15:23:20.000Z",
+            "metadata_updated_at" : "2021-06-11T10:31:33.000Z",
+            "data_updated_at" : "2017-10-27T07:30:48.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 19,
+                "page_views_last_month" : 46,
+                "page_views_total" : 1174,
+                "page_views_last_week_log" : 4.321928094887363,
+                "page_views_last_month_log" : 5.554588851677638,
+                "page_views_total_log" : 10.198445041452363
+              },
+            "columns_name" :
+              [
+                "Limiti amministrativi 2014 delle province di Regione Lombardia",
+                "CENTROIDE (city)",
+                "CENTROIDE (zip)",
+                "CENTROIDE (address)",
+                "Limiti amministrativi 2015 delle province di Regione Lombardia",
+                "CENTROIDE (state)",
+                "CENTROIDE",
+                "CODICE_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI",
+                "NOME_ZONA_OMOGENEA_RISCHIO_INCENDI_BOSCHIVI"
+              ],
+            "columns_field_name" :
+              [
+                ":@computed_region_6hky_swhk",
+                "centroide_city",
+                "centroide_zip",
+                "centroide_address",
+                ":@computed_region_ttgh_9sm5",
+                "centroide_state",
+                "centroide",
+                "codice_zona_omogenea_rischio_incendi_boschivi",
+                "nome_zona_omogenea_rischio_incendi_boschivi"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Point",
+                "Text",
+                "Text"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                { "displayStyle" : "plain", "align" : "left" }
+              ],
+            "download_count" : 2832,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-10-27T07:30:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Protezione Civile",
+            "domain_tags" :
+              [
+                "avvisi",
+                "avviso",
+                "criticità",
+                "allerta",
+                "allertamento",
+                "rischio",
+                "rischi",
+                "incendi boschivi",
+                "incendio boschivo",
+                "zone omogenee",
+                "protezione civile",
+                "centro funzionale",
+                "sala operativa"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dettagli_Direzione",
+                  "value" : "Sicurezza, protezione civile e immigrazione"
+                },
+                {
+                  "key" : "Frequenza-di-aggiornamento_Frequenza",
+                  "value" : "Non definita"
+                },
+                {
+                  "key" : "Frequenza-di-aggiornamento_Data-ultima-modifica",
+                  "value" : "27/10/2017"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/iuvh-em9x",
+        "link" : "https://www.dati.lombardia.it/Protezione-Civile/Zone-omogenee-per-rischio-Incendi-boschivi-Centroi/iuvh-em9x",
+        "owner" :
+          {
+            "id" : "7pvs-5xuu",
+            "user_type" : "interactive",
+            "display_name" : "Regione Lombardia"
+          },
+        "creator" :
+          {
+            "id" : "7pvs-5xuu",
+            "user_type" : "interactive",
+            "display_name" : "Regione Lombardia"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Empreses d’instal·lació, manteniment, reparació i operació d’instal·lacions i productes industrials",
+            "id" : "qcrr-stew",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de les Empreses d’instal·lació, manteniment, reparació i operació d’instal·lacions i productes industrials habilitades inscrites al Registre d'Agents de la Seguretat Industrial de Catalunya (RASIC).\n\nAmb un únic número de RASIC s'inscriuen les empreses habilitades en alguns dels següents camps reglamentaris de seguretat industrial. \n•\tEmpresa Instal·ladora de Gas  \n•\tEmpresa Instal·ladora d'Electricitat (alta tensió, línies o instal·lacions)\n•\tEmpresa Instal·ladora d'Electricitat (baixa tensió)\n•\tEmpresa instal·ladora-mantenidora d'instal·lacions tèrmiques en edificis \n•\tEmpresa frigorista \n•\tEmpresa instal·ladora i/o reparadora d’equips a pressió  \n•\tEmpresa recarregadora i d'inspecció de botelles de respiració autònoma (REBRA)  \n•\tEmpresa recarregadora de recipients transportables (RERT)  \n•\tEmpresa instal·ladora i/o reparadora de productes petrolífers líquids  \n•\tEmpresa instal·ladora i/o mantenidora d’instal·lacions de protecció contra incendis \n•\tEmpresa conservadora d'aparells elevadors - grues autopropulsades  \n•\tEmpresa conservadora d'aparells elevadors - ascensors  \n•\tEmpresa instal·ladora/conservadora d'aparells elevadors - grues torre",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-03T08:21:26.000Z",
+            "createdAt" : "2019-12-18T08:23:28.000Z",
+            "metadata_updated_at" : "2026-11-03T08:20:55.000Z",
+            "data_updated_at" : "2026-11-03T08:21:26.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 662,
+                "page_views_last_month" : 2658,
+                "page_views_total" : 100285,
+                "page_views_last_week_log" : 9.372865060112588,
+                "page_views_last_month_log" : 11.376668061857668,
+                "page_views_total_log" : 16.613760693145473
+              },
+            "columns_name" :
+              [
+                "ITE Installacions Tèrm en edificis",
+                "BT ESP Làmpades descarrega",
+                "PCI Sist boques incendi",
+                "PCI Sist Ruixadors auto",
+                "ITE Climatització",
+                "PCI Sist senyal luminescent",
+                "Titular",
+                "Telèfon mòbil",
+                "PCI Sist abast aigua",
+                "Document",
+                "AT línies auto",
+                "EP reparacions",
+                "Número RASIC registre",
+                "AT Línies",
+                "Codi Comarca",
+                "BT Installacions",
+                "PCI Sist extinció pols",
+                "Estat registre",
+                "BT ESP Sist Automatització gest tècn",
+                "Telèfon fix",
+                "Correu electrònic",
+                "Gas Categoria",
+                "PCI Sist ext aerosols",
+                "PCI Sist columna seca auto",
+                "PCI Sist abast aigua auto",
+                "PCI Sist ruixadors",
+                "AT Línies Tipus",
+                "Adreça web",
+                "PCI Extintors",
+                "PCI Sist control fums i calor auto",
+                "PCI Sist agents gaseosos",
+                "PCI Sist escuma física",
+                "PCI Sist fixos aigua nebulitzada",
+                "ITE auto",
+                "PCI Sist extinció pols auto",
+                "Ascensors auto",
+                "PCI Sist boques incendi auto",
+                "EP categoria",
+                "PCI Sist detecció i alarma auto",
+                "PCI Sist agents gaseosos auto",
+                "Gas auto",
+                "Grues torre auto",
+                "PCI Sist escuma física auto",
+                "Prod Petrolífers líquids Reparació",
+                "PCI Sist columna seca",
+                "PCI Extintors auto",
+                "Grues autopropulsades",
+                "AT Installacions auto",
+                "PCI Sist senyal luminescent auto",
+                "Fred Industrial",
+                "PCI Sist control fums i calor",
+                "BT ESP Línies aèries subt",
+                "PCI Protecció contra incendis auto",
+                "AT Installacions",
+                "Ascensors",
+                "BT Installacions categoria",
+                "PCI Sist ext aerosols auto",
+                "BT ESP Quiròfans",
+                "PCI Sist fixos aigua neb auto",
+                "Fred Industrial categoria",
+                "EP Equips a pressió auto",
+                "Fred Industrial auto",
+                "Serveis Territorials",
+                "AT Installacions Tipus",
+                "PCI Sist hidrants",
+                "Gas",
+                "Província",
+                "PCI Sist detecció i alarma",
+                "Prod Petrolífers líquids",
+                "Codi Postal",
+                "Codi Municipi",
+                "Automantenidora",
+                "ITE Installacions tèrmiques",
+                "Comarca",
+                "Prod Petrolífers líquids auto",
+                "BT ESP Installacions generadores",
+                "Grues autopropulsades auto",
+                "PCI Sist Hidrants auto",
+                "Grues torre",
+                "BT Installacions auto",
+                "PCI Protecció contra incendis",
+                "Municipi",
+                "BT ESP Loc risc incendi o explosió",
+                "ITE Calefacció i ACS",
+                "EP Equips a pressió",
+                "Adreça agrupada",
+                "Prod Petrolífers líquids Categoria"
+              ],
+            "columns_field_name" :
+              [
+                "ite_installacions_term",
+                "bt_esp_lampades_descarrega",
+                "pci_sist_boques_incendi",
+                "pci_sist_ruixadors_auto",
+                "ite_climatitzacio",
+                "pci_sist_senyal_luminescent",
+                "titular",
+                "telefon_mobil",
+                "pci_sist_abast_aigua",
+                "document",
+                "at_linies_auto",
+                "ep_reparacions",
+                "n_mero_de_rasic",
+                "at_linies",
+                "codi_comarca",
+                "bt_installacions",
+                "pci_sist_extincio_pols",
+                "estat_registre",
+                "bt_esp_sist_automatitzacio",
+                "telefon_fix",
+                "correu_electronic",
+                "gas_categoria",
+                "pci_sist_ext_aerosols",
+                "pci_sist_columna_seca_auto",
+                "pci_sist_abast_aigua_auto",
+                "pci_sist_ruixadors",
+                "at_linies_tipus",
+                "adreca_web",
+                "pci_extintors",
+                "pci_sist_control_fums_calor_auto",
+                "pci_sist_agents_gaseosos",
+                "pci_sist_escuma_fisica",
+                "pci_sist_fixos_aigua",
+                "ite_auto",
+                "pci_sist_extincio_pols_auto",
+                "ascensors_auto",
+                "pci_sist_boques_incendi_auto",
+                "ep_categoria",
+                "pci_sist_deteccio_alarma_auto",
+                "pci_sist_agents_gaseosos_auto",
+                "gas_auto",
+                "grues_torre_auto",
+                "pci_sist_escuma_fisica_auto",
+                "prod_petrolifers_liquids_reparacio",
+                "pci_sist_columna_seca",
+                "pci_extintors_auto",
+                "grues_autopropulsades",
+                "at_installacions_auto",
+                "pci_sist_senyal_luminescent_auto",
+                "fred_industrial",
+                "pci_sist_control_fums_calor",
+                "bt_esp_linies_aeries",
+                "pci_proteccio_contra_incendis_auto",
+                "at_installacions",
+                "ascensors",
+                "bt_installacions_categoria",
+                "pci_sist_ext_aerosols_auto",
+                "bt_esp_quirofans",
+                "pci_sist_fixos_aigua_neb",
+                "fred_industrial_categoria",
+                "ep_equips_a_pressio_auto",
+                "fred_industrial_auto",
+                "serveis_territorials",
+                "at_installacions_tipus",
+                "pci_sist_hidrants",
+                "gas",
+                "prov_ncia",
+                "pci_sist_deteccio_alarma",
+                "prod_petrolifers_liquids",
+                "codi_postal",
+                "codi_municipi",
+                "automantenidora",
+                "ite_installacions_termiques",
+                "comarca",
+                "prod_petrolifers_liquids_auto",
+                "bt_esp_installacions",
+                "grues_autopropulsades_auto",
+                "pci_sist_hidrants_auto",
+                "grues_torre",
+                "bt_installacions_auto",
+                "pci_proteccio_contra_incendis",
+                "municipi",
+                "bt_esp_loc_risc_incendi",
+                "ite_calefaccio_acs",
+                "ep_equips_a_pressio",
+                "adreca_agrupada",
+                "prod_petrolifers_liquids_categoria"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Llums de descàrrega d’alta tensió, rètols lluminosos o similars.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes de boques d’incendi equipades (BIE).",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per ruixadors automàtics i aigua polvoritzada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.\nCategoria: Climatització.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes de senyalització luminescent.",
+                "Nom de l’empresa habilitada.",
+                "Telèfon mòbil de l’empresa habilitada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’abastament d’aigua contra incendis.",
+                "NIF, CIF o NIE de l’empresa habilitada. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa automantenidora de línies elèctriques d’alta tensió.",
+                "Categoria de l’empresa reparadora d’instal·lacions d’equips a pressió.",
+                "Número de RASIC de l’empresa habilitada.",
+                "Empresa instal·ladora/mantenidora de línies elèctriques d’alta tensió.",
+                "Codi comarcal o de l’entitat territorial singular de l’Aran de 2 dígits oficial a Catalunya, definit per l’Institut d’Estadística de Catalunya (IDESCAT).",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per pols.",
+                "Indica que l'empresa està en situació d'alta.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Sistemes d’automatització, gestió tècnica de l’energia i seguretat per a edificis.",
+                "Telèfon fix de l’empresa habilitada.",
+                "Correu electrònic de l’empresa habilitada.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions de gasos combustibles.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per aerosols condensats.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes de columna seca.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’abastament d’aigua contra incendis",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per ruixadors automàtics i aigua polvoritzada.",
+                "Categoria de l’empresa instal·ladora/mantenidora de línies elèctriques d’alta tensió.",
+                "Adreça web de l’empresa habilitada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’extintors d’incendis.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes pel control de fums i calor.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per agents gasosos.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció d’escuma física.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per aigua nebulitzada.",
+                "Empresa automantenidora d’instal·lacions tèrmiques en edificis.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per pols.",
+                "Empresa automantenidora d’ascensors.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes de boques d’incendi equipades (BIE).",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions d’equips a pressió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis. \nSistemes de detecció i alarma.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per agents gasosos.",
+                "Empresa automantenidora d’instal·lacions de gasos combustibles.",
+                "Empresa automantenidora de grues torre.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció d’escuma física.",
+                "Empresa reparadora d’instal·lacions de productes petrolífers líquids.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes de columna seca.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’extintors d’incendis.",
+                "Empresa operadora de grues mòbils autopropulsades.",
+                "Empresa automantenidora d’instal·lacions elèctriques d’alta tensió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes de senyalització luminescent.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions frigorífiques.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.\nSistemes pel control de fums i calor.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Línies aèries o subterrànies per a la distribució d’energia.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques d’alta tensió.",
+                "Empresa conservadora d’ascensors.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes d’extinció per aerosols condensats.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Quiròfans o sales d’intervenció.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis.\nSistemes fixos d’extinció per aigua nebulitzada.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions frigorífiques.",
+                "Empresa automantenidora d’instal·lacions d’equips a pressió.",
+                "Empresa automantenidora d’instal·lacions frigorífiques.",
+                "Serveis Territorials d’Indústria de la Generalitat de Catalunya competents.",
+                "Categoria de l’empresa instal·ladora/mantenidora d’instal·lacions elèctriques d’alta tensió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’hidrants.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de gasos combustibles.",
+                "Província de la seu social l’empresa habilitada.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis. \nSistemes de detecció i alarma.",
+                "Empresa instal·ladora d’instal·lacions de productes petrolífers líquids.",
+                "Codi postal de la seu social de l’empresa habilitada. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Codi municipal de 6 dígits oficial a Catalunya. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa instal·ladora/mantenidora de les pròpies instal·lacions (només de les instal·lacions de la seva propietat).",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.\nCategoria: Instal·lacions tèrmiques en edificis (RITE).",
+                "Comarca de la seu social de l’empresa habilitada.",
+                "Empresa automantenidora d’instal·lacions de productes petrolífers líquids.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Instal·lacions generadores de baixa tensió de potència igual o superior a 10 kW.",
+                "Empresa automantenidora de grues mòbils autorpropulsades.",
+                "Empresa automantenidora d’instal·lacions de protecció contra incendis. \nSistemes d’hidrants.",
+                "Empresa instal·ladora de grues torre.",
+                "Empresa automantenidora d’instal·lacions elèctriques de baixa tensió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions de protecció contra incendis.",
+                "Municipi de la seu social de l’empresa. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions elèctriques de baixa tensió. \nCategoria: Especialista. \nSubcategoria: Locals amb risc d’incendi o explosió.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions tèrmiques en edificis.\nCategoria: Calefacció i ACS.",
+                "Empresa instal·ladora/mantenidora d’instal·lacions d’equips a pressió.",
+                "Adreça de la seu social de l’empresa habilitada. En alguns registres el valor apareix com ‘No aplica’ perquè la informació no es publica per motius de protecció de dades personals.",
+                "Categoria de l’empresa instal·ladora d’instal·lacions de productes petrolífers líquids."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 13742,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-03-25T16:30:48.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "gas",
+                "electricitat",
+                "tèrmica",
+                "frigorista",
+                "equips a pressió",
+                "ascensors",
+                "incendis",
+                "productes petrolífers",
+                "aparells elevadors",
+                "grues",
+                "instal·ladores",
+                "ods8_treball decent i creixement econòmic",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Installation, maintenance, repair and operation companies of facilities and industrial products"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Empresas de instalación, mantenimiento, reparación y operación de instalaciones y productos industriales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qcrr-stew",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Empreses-d-instal-lació-manteniment-reparació-i-op/qcrr-stew",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Pericolosità sul territorio 2015",
+            "id" : "abg9-dtbw",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Pericolosità presenti sul territorio con dettaglio comunale",
+            "attribution" : "Protezione Civile della Regione",
+            "attribution_link" : "http://pianiemergenza.protezionecivile.fvg.it/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2024-09-09T07:32:28.000Z",
+            "createdAt" : "2015-06-19T09:02:39.000Z",
+            "metadata_updated_at" : "2024-09-09T07:32:28.000Z",
+            "data_updated_at" : "2015-06-24T14:22:08.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 88,
+                "page_views_total" : 3579,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 6.475733430966398,
+                "page_views_total_log" : 11.805743872151618
+              },
+            "columns_name" :
+              [
+                "Codice ISTAT",
+                "Tipologie dissesti geologici",
+                "Rischio incendi boschivi",
+                "Presenza di siti valanghivi",
+                "Comune",
+                "Pericolosità idrauliche presenti sul territorio",
+                "Zona Sismica (DGR 845/2010)",
+                "Innalzamento falda freatica"
+              ],
+            "columns_field_name" :
+              [
+                "codice_istat",
+                "tipologie_dissesti_geologici",
+                "rischio_incendi_boschivi",
+                "presenza_di_siti_valanghivi",
+                "comune",
+                "pericolosit_idrauliche_presenti_sul_territorio",
+                "zona_sismica_dgr_845_2010",
+                "innalzamento_falda_freatica"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [ {}, {}, {}, {}, {}, { "align" : "left" }, {}, {} ],
+            "download_count" : 3419,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2015-06-25T14:39:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Giustizia, sistema giuridico e sicurezza pubblica",
+            "domain_tags" :
+              [
+                "protezione civile",
+                "pericolosità",
+                "sismica",
+                "geologia",
+                "idraulica",
+                "difesa del suolo"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Aggiornamento_Frequenza-di-aggiornamento",
+                  "value" : "Mai"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.friuliveneziagiulia.it",
+            "license" : "Italian Open Data License 2.0"
+          },
+        "permalink" : "https://www.dati.friuliveneziagiulia.it/d/abg9-dtbw",
+        "link" : "https://www.dati.friuliveneziagiulia.it/Giustizia-sistema-giuridico-e-sicurezza-pubblica/Pericolosità-sul-territorio-2015/abg9-dtbw",
+        "owner" :
+          {
+            "id" : "bxi2-gp47",
+            "user_type" : "interactive",
+            "display_name" : "Protezione Civile FVG"
+          },
+        "creator" :
+          {
+            "id" : "bxi2-gp47",
+            "user_type" : "interactive",
+            "display_name" : "Protezione Civile FVG"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dades d’incidents operatius gestionats pel CAT112",
+            "id" : "jq8m-d7cw",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades d’incidents operatius gestionats pel CAT112 (entrada telèfon d’emergències 112 Catalunya), amb el detall d’àmbit geogràfic (província, comarca i municipi) i tipologia del incident.\nEs consideren incidents operatius els que són una emergència real i generen una activació dels cossos d’emergència.\nEs detallen els incidents operatius on l’àmbit de gestió és el territori de Catalunya.\nUn incident operatiu pot tenir associat una o més trucades.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-10T08:01:29.000Z",
+            "createdAt" : "2019-08-13T10:25:00.000Z",
+            "metadata_updated_at" : "2026-11-10T08:00:05.000Z",
+            "data_updated_at" : "2026-11-10T08:01:29.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 74,
+                "page_views_last_month" : 198,
+                "page_views_total" : 8580,
+                "page_views_last_week_log" : 6.22881869049588,
+                "page_views_last_month_log" : 7.636624620543649,
+                "page_views_total_log" : 13.066930068864098
+              },
+            "columns_name" :
+              [
+                "ANY",
+                "TIPUS",
+                "MUNICIPI",
+                "MES",
+                "PROVINCIA",
+                "COMARCA",
+                "INCIDENTS"
+              ],
+            "columns_field_name" :
+              [
+                "any",
+                "tipus",
+                "municipi",
+                "mes",
+                "provincia",
+                "comarca",
+                "incidents"
+              ],
+            "columns_datatype" :
+              [ "Number", "Text", "Text", "Number", "Text", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Any gestió de l’incident",
+                "Tipus d'incident",
+                "Municipi de l’incident",
+                "Nombre del mes de gestió de l’incident",
+                "Província de l’incident",
+                "Comarca de l’incident",
+                "Quantitat d'incidents"
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 2159,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-07T08:02:18.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "112",
+                "incident",
+                "accident",
+                "altres incidències",
+                "assistència sanitària",
+                "civisme",
+                "fuita",
+                "incendi",
+                "medi ambient",
+                "meteorologia",
+                "seguretat",
+                "trànsit",
+                "ods3_salut i benestar",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Operational incident data managed by the CAT112"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos de incidentes operativos gestionados por el CAT112"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/jq8m-d7cw",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Dades-d-incidents-operatius-gestionats-pel-CAT112/jq8m-d7cw",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dades de trucades operatives gestionades pel CAT112",
+            "id" : "mfqb-sbx4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de trucades operatives gestionades pel CAT112 (entrada telèfon d’emergències 112 Catalunya), amb el detall d’àmbit geogràfic (província, comarca i municipi) i tipologia del incident.\nEs consideren trucades operatives les trucades que són una emergència real i generen una activació dels cossos d’emergència.\nEs detallen les trucades operatives d’incidents on l’àmbit de gestió és el territori de Catalunya.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-10T08:02:58.000Z",
+            "createdAt" : "2019-08-13T10:35:33.000Z",
+            "metadata_updated_at" : "2026-11-10T08:00:31.000Z",
+            "data_updated_at" : "2026-11-10T08:02:58.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 58,
+                "page_views_last_month" : 159,
+                "page_views_total" : 10221,
+                "page_views_last_week_log" : 5.882643049361842,
+                "page_views_last_month_log" : 7.321928094887362,
+                "page_views_total_log" : 13.31938987600021
+              },
+            "columns_name" :
+              [
+                "TIPUS",
+                "PROVINCIA",
+                "ANY",
+                "MES",
+                "MUNICIPI",
+                "TRUCADES",
+                "COMARCA"
+              ],
+            "columns_field_name" :
+              [
+                "tipus",
+                "provincia",
+                "any",
+                "mes",
+                "municipi",
+                "trucades",
+                "comarca"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Number", "Number", "Text", "Number", "Text" ],
+            "columns_description" :
+              [
+                "Tipus de trucada",
+                "Província de la trucada",
+                "Any gestió de la trucada",
+                "Nombre del mes de gestió de la trucada",
+                "Municipi de la trucada",
+                "Quantitat de trucades",
+                "Comarca de la trucada"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 2605,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-07T08:04:29.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "112",
+                "trucades",
+                "accident",
+                "altres incidències",
+                "assistència sanitària",
+                "civisme",
+                "fuita",
+                "incendi",
+                "medi ambient",
+                "meteorologia",
+                "seguretat",
+                "trànsit",
+                "ods3_salut i benestar",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Operational call data managed by CAT112"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Datos de llamadas operativas gestionadas por el CAT112"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/mfqb-sbx4",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Dades-de-trucades-operatives-gestionades-pel-CAT11/mfqb-sbx4",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Agrupacions de Defensa Forestal",
+            "id" : "gjvs-xwsf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Les agrupacions de defensa forestal (ADF) són agrupacions formades per propietaris forestals i els ajuntaments dels municipis del seu àmbit territorial i tenen com a finalitat la prevenció i la lluita contra els incendis forestals.\n\nLes agrupacions de defensa forestal es van regular a partir de l'any 1986 com a conseqüència del programa \"Foc Verd\", elaborat pel Departament d'Agricultura tot i que l'origen cal cercar-lo en els antics grups d'extinció d'incendis i auxili immediat que es van començar a formar a principis dels anys seixanta a Catalunya.\n\nL’àmbit territorial d'una ADF pot ser municipal o supramunicipal, segons les masses forestals que hi pertanyin i dels seus límits. Poden formar part d'una ADF:\n\n•\tPropietaris forestals.\n•\tAjuntaments.\n•\tAssociacions de propietaris forestals constituïdes legalment.\n•\tOrganitzacions professionals agràries.\n•\tAssociacions que tinguin com a finalitat la defensa de la natura, vinculades al municipi o als municipis en qüestió.",
+            "attribution" : "Departament d’Agricultura, Ramaderia i Pesca",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-08T12:32:12.000Z",
+            "createdAt" : "2026-10-08T12:25:30.000Z",
+            "metadata_updated_at" : "2026-10-08T12:32:12.000Z",
+            "data_updated_at" : "2026-10-08T12:32:06.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 54,
+                "page_views_last_month" : 169,
+                "page_views_total" : 199,
+                "page_views_last_week_log" : 5.78135971352466,
+                "page_views_last_month_log" : 7.409390936137703,
+                "page_views_total_log" : 7.643856189774724
+              },
+            "columns_name" :
+              [
+                "Codi municipis",
+                "Comarques",
+                "Número ADF",
+                "Municipis",
+                "Nom ADF",
+                "Codi comarques"
+              ],
+            "columns_field_name" :
+              [
+                "codi_municipis",
+                "comarques",
+                "numero_adf",
+                "municipis",
+                "nom_adf",
+                "codi_comarques"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Codi idescat dels municipis que conformen l’ADF",
+                "Noms de la o les comarques a on està registrada l’ADF",
+                "Número de registre de l’Agrupació de Defensa Forestal (ADF)",
+                "Nom dels municipis que conformen l’ADF",
+                "Nom de l’Agrupació de Defensa Forestal",
+                "Codi idescat de la comarques"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 22,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-10-08T12:32:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "adf",
+                "agrupació",
+                "defensa",
+                "forestal",
+                "ods13_acció pel clima",
+                "ods15_vida d'ecosistemes terrestres"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Forest Fire Defense Group"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Agrupación de Defensa Forestal"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Agricultura, Ramaderia, Pesca i Alimentació"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/gjvs-xwsf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Agrupacions-de-Defensa-Forestal/gjvs-xwsf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre d'Entitats de Medi Ambient",
+            "id" : "ygq5-mccp",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Aquest conjunt de dades conté la informació del Registre d’Entitats de Medi Ambient de Catalunya, un registre públic d’inscripció voluntària regulat pel Decret 2/2022. Inclou les dades bàsiques de les entitats sense ànim de lucre que tenen com a finalitat la protecció del medi ambient, com ara la denominació, la finalitat ambiental i l’àmbit territorial d’actuació.",
+            "attribution" : "Servei d'Educació Ambiental i Ús Públic",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-14T11:14:36.000Z",
+            "createdAt" : "2026-07-01T11:18:53.000Z",
+            "metadata_updated_at" : "2026-07-14T11:14:36.000Z",
+            "data_updated_at" : "2026-07-14T11:12:31.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 62,
+                "page_views_last_month" : 199,
+                "page_views_total" : 833,
+                "page_views_last_week_log" : 5.977279923499917,
+                "page_views_last_month_log" : 7.643856189774724,
+                "page_views_total_log" : 9.703903573444665
+              },
+            "columns_name" :
+              [
+                "Boscos, incendis i reforestació",
+                "Tipus d’entitat",
+                "Contaminació (aire, acústica, lumínica)",
+                "Municipi on té la seu social",
+                "Aigües continentals",
+                "Delegació a Catalunya",
+                "NIF de l'entitat",
+                "Residus",
+                "Comarca on té la seu social",
+                "Contacte",
+                "Nom de l'entitat",
+                "Altres àmbits (4)",
+                "Data d’inscripció",
+                "Altres àmbits (1)",
+                "Estat de la inscripció",
+                "Altres àmbits",
+                "Custòdia del territori",
+                "Agricultura",
+                "Altres àmbits (2)",
+                "Altres àmbits (3)",
+                "Àmbit territorial d’actuació",
+                "Província on té la seu social",
+                "Educació i sensibilització ambiental",
+                "Comarca principal d’actuació",
+                "Medi litoral marí",
+                "Altres àmbits (5)",
+                "Mobilitat sostenible",
+                "Municipi principal d’actuació",
+                "Conservació de la biodiversitat",
+                "Finalitat ambiental",
+                "Energies renovables",
+                "Ordenació del territori",
+                "Àmbits d’actuació principals"
+              ],
+            "columns_field_name" :
+              [
+                "boscos_incendis_reforestacio",
+                "tipus_entitat",
+                "contaminacio_aire_acustica",
+                "municipi_seu_social",
+                "aigues_continentals",
+                "delegacio_catalunya",
+                "nif_entitat",
+                "residus",
+                "comarca_seu_social",
+                "contacte",
+                "nom_entitat",
+                "altres_ambits_4",
+                "data_inscripcio",
+                "altres_ambits_1",
+                "estat_inscripcio",
+                "altres_ambits",
+                "custodia_territori",
+                "agricultura",
+                "altres_ambits_2",
+                "altres_ambits_3",
+                "ambit_territorial_actuacio",
+                "provincia_seu_social",
+                "educacio_sensibilitzacio",
+                "comarca_principal_actuacio",
+                "medi_litoral_mari",
+                "altres_ambits_5",
+                "mobilitat_sostenible",
+                "municipi_principal_actuacio",
+                "conservacio_biodiversitat",
+                "finalitat_ambiental",
+                "energies_renovables",
+                "ordenacio_territori",
+                "ambits_actuacio_principals"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Indica si l’entitat actua en l’àmbit de la gestió forestal, la prevenció d’incendis o la reforestació.",
+                "Tipus d’entitat sense ànim de lucre (per exemple: associació o fundació).",
+                "Indica si l’entitat treballa en l’àmbit de la contaminació de l’aire, acústica o lumínica.",
+                "Municipi de la seu social de l’entitat.",
+                "Indica si l’entitat actua en l’àmbit de les aigües continentals (rius, llacs, aqüífers).",
+                "Indicador de si l’entitat té delegació a Catalunya (sí/no), en cas que la seu social sigui fora del territori.",
+                "Número d’identificació fiscal (NIF) de l’entitat.",
+                "Indica si l’entitat desenvolupa activitats relacionades amb la prevenció o gestió de residus.",
+                "Comarca on es troba la seu social de l’entitat.",
+                "Correu electrònic de contacte de l’entitat.",
+                "Denominació oficial de l’entitat inscrita al Registre d’Entitats de Medi Ambient.",
+                "Quart altre àmbit principal d’actuació de l’entitat no inclòs en la llista d’àmbits predefinits.",
+                "Data d’inscripció de l’entitat al Registre d’Entitats de Medi Ambient.",
+                "Descripció d’un altre àmbit principal d’actuació de l’entitat no inclòs en la llista d’àmbits predefinits.",
+                "Estat de la inscripció de l’entitat al registre (activa o baixa).",
+                "Indica si l’entitat actua en altres àmbits ambientals no especificats.",
+                "Indica si l’entitat desenvolupa projectes de custòdia del territori.",
+                "Indica si l’entitat desenvolupa activitats en l’àmbit de l’agricultura i la sostenibilitat agrària.",
+                "Segon altre àmbit principal d’actuació de l’entitat no inclòs en la llista d’àmbits predefinits.",
+                "Tercer altre àmbit principal d’actuació de l’entitat no inclòs en la llista d’àmbits predefinits.",
+                "Àmbit territorial d’actuació de l’entitat (tot Catalunya o part del territori).",
+                "Província on es troba la seu social de l’entitat.",
+                "Indica si l’entitat actua en educació i sensibilització ambiental.",
+                "Comarca o comarques d’actuació, en cas que l’àmbit territorial sigui parcial.",
+                "Indica si l’entitat actua en l’àmbit del medi litoral i marí.",
+                "Cinquè altre àmbit principal d’actuació de l’entitat no inclòs en la llista d’àmbits predefinits.",
+                "Indica si l’entitat treballa en l’àmbit de la mobilitat sostenible.",
+                "Municipi o municipis d’actuació, en cas que l’àmbit territorial sigui parcial.",
+                "Indica si l’entitat desenvolupa activitats relacionades amb la biodiversitat i la conservació de la natura",
+                "Finalitat ambiental declarada per l’entitat (general o específica).",
+                "Indica si l’entitat desenvolupa activitats relacionades amb les energies renovables.",
+                "Indica si l’entitat actua en l’àmbit de l’ordenació del territori.",
+                "Àmbits principals d’activitat de l’entitat en matèria de medi ambient."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "displayStyle" : "normal" },
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 148,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-01T11:42:46.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Ambient",
+            "domain_tags" :
+              [
+                "medi ambient",
+                "entitats ambientals",
+                "associacions",
+                "fundacions",
+                "registre administratiu",
+                "participació ambiental",
+                "protecció del medi ambient",
+                "sostenibilitat",
+                "catalunya",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods13_acció pel clima",
+                "ods15_vida d'ecosistemes terrestres"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Register of Environmental Entities"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de Entidades de Medio Ambiente"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Adreça postal"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ygq5-mccp",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Registre-d-Entitats-de-Medi-Ambient/ygq5-mccp",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 11,
+  "timings" : { "serviceMillis" : 180, "searchMillis" : [ 3, 8 ] },
+  "warnings" : []
+}
