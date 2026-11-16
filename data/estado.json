@@ -27,13 +27,6 @@
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
- "cgpj": {
-  "estat": "ok",
-  "intent": "2026-11-16T15:08:34Z",
-  "ok": "2026-11-16T15:08:34Z",
-  "durada": 166,
-  "resum": "n forzosa medidas proteccion menores | Expedientes de dominio | Expedientes relativos a patria potestad (Ejercicio inadecuado/desacuerdo) | Extraccion de organos de donantes vivos | Guarda, Custodia o Alimentos de hijos no matrimoniales menores o con discapacidad con medidas de apoyo de progenitores,  no consensuada | Guarda, Custodia o Alimentos de hijos no matrimoniales menores o con discapacidad con medidas de apoyo de progenitores, consensuadas | INCIDENTES EN PROCESOS FAMILIA, INFANCIA Y CAPACIDAD. TOTAL | INCIDENTES TOTAL CIVIL | INTERNAMIENTOS | INTERNAMIENTOS DE LARGA DURACION SUJETOS A SEGUIMIENTO Y CONTROL | Incidentes Concursales (Civil) | Incidentes del Art. 241.1 LOPJ (Civil) | Incidentes del Art. 241.1 LO\nOUJII021 (llancaments): años 2013-2025, partidos de Girona 9, procedimientos 4: Consecuencia proc. Ejecucion hipotecaria | Consecuencia proc. Ley Arrendamientos Urbanos | Otros | TOTAL LANZAMIENTOS PRACTICADOS\nOUJII012 (impagament): años 2021-2025, partidos de Girona 9, procedimientos 5: Decreto final por archivo para ejecucion (art. 440.3 pf.5 LEC) | Decreto final por enervacion (art. 22.4 LEC) | Decreto final por entrega de posesion (art.440.3 pf.6 LEC) | Decreto final por otras causas (arts. 22.1 y 242.1 LEC) | Total\nOUJII009 (concursos): años 2016-2025, partidos de Girona 9, procedimientos 1: Numero\nOUSCN002 (scn): años 2012-2025, partidos de Girona 7, procedimientos 4: DILIGENCIAS EN COMISION. TOTAL | EMBARGOS | LANZAMIENTOS | OTRAS DILIGENCIAS EN COMISION"
- },
  "conjuntura": {
   "estat": "ok",
   "intent": "2026-11-16T14:00:18Z",
@@ -97,12 +90,12 @@
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
- "interior": {
+ "llistes_espera": {
   "estat": "ok",
-  "intent": "2026-11-16T15:11:20Z",
-  "ok": "2026-11-16T15:11:20Z",
-  "durada": 51,
-  "resum": "2019T4: 3 tablas\n2020T4: 3 tablas\n2021T4: 3 tablas\n2022T4: 3 tablas\n2023T4: 3 tablas\n2024T4: 3 tablas\n2025T4: 3 tablas\n2026T2: 3 tablas\nmunicipios de Girona: Banyoles, Blanes, Figueres, Girona, Lloret de Mar, Olot, Palafrugell, Roses, Salt, Sant Feliu de Guíxols; años 2018-2026; último periodo: 2026T2"
+  "intent": "2026-11-16T14:41:17Z",
+  "ok": "2026-11-16T14:41:17Z",
+  "durada": 137,
+  "resum": "quirurgiques: 93 mesos baixats, últim 2026-09\nexternes: 93 mesos baixats, últim 2026-09\ndiagnostiques: 93 mesos baixats, últim 2026-09"
  },
  "mitma": {
   "estat": "ok",
@@ -127,10 +120,10 @@
  },
  "policia": {
   "estat": "ok",
-  "intent": "2026-11-16T15:12:11Z",
-  "ok": "2026-11-16T15:12:11Z",
-  "durada": 56,
-  "resum": "relación municipio-ABP: 956 filas, columnas ['OBJECTID', 'CODI_MUNICIPI', 'CODI_ABP_MOSSOS', 'CODI_DISTRICTE', 'NOM_DISTRICTE']\npoblación ABP (año 2026): total 8,202,978\n11 ABP en la provincia (de 60): Alt Empordà-Figueres, Alt Empordà-Roses, Baix Empordà-la Bisbal, Baix Empordà-Sant Feliu, Garrotxa, Gironès-Pla de l'Estany, Ripollès, Selva Interior, Selva Litoral, Cerdanya, Osona\nseries mensuales: 10 regiones, 14 tipos, hasta 2026-10; 12 meses por ABP: 62 ABP\nhechos penales: años completos [2023, 2024, 2025], 62 ABP; ABP de Girona sin datos: []"
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
  "pressupostos": {
   "estat": "ok",
@@ -155,10 +148,10 @@
  },
  "salut": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-16T14:36:06Z",
+  "ok": "2026-11-16T14:36:06Z",
+  "durada": 310,
+  "resum": "39 ABS en la provincia (de 377)\nmortalidad [2021, 2022, 2023, 2024, 2025]: 39 ABS; RME Girona 104.7\natención primaria 2022-12: 21 indicadores, 39 ABS\nreceptes: 1128 files (fins 2025-10), 175 grups ATC\ninfeccions: setmanes fins 2026-11-02, 39 ABS\ncentres sanitaris: 202 ({'cap': 133, 'continuada': 24, 'mental': 16, 'sociosanitari': 12, 'hospital': 11, 'drogues': 6})"
  },
  "territorio": {
   "estat": "ok",
@@ -180,6 +173,13 @@
   "ok": "2026-11-16T12:19:03Z",
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "vehicles": {
+  "estat": "ok",
+  "intent": "2026-11-16T15:05:26Z",
+  "ok": "2026-11-16T15:05:26Z",
+  "durada": 32,
+  "resum": "2020: 221 municipios, parque Girona 702143, Cataluña 5651996, España 36656957\n2021: 221 municipios, parque Girona 707007, Cataluña 5624611, España 37046864\n2022: 221 municipios, parque Girona 714688, Cataluña 5626952, España 37510944\n2023: 221 municipios, parque Girona 719969, Cataluña 5643692, España 37890861\n2024: 221 municipios, parque Girona 716524, Cataluña 5597285, España 37862492\n2025: 221 municipios, parque Girona 729603, Cataluña 5698722, España 38641163\n2026: HTTPError: 404 Client Error: Not Found for url: https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/dg"
  },
  "xifra": {
   "estat": "ok",

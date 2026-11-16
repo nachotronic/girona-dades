@@ -304,11 +304,13 @@ clima_y_otros:
     frecuencia: anual
     estado: por_confirmar
   - id: dgt_vehiculos
-    nombre: Parque de vehículos
+    nombre: Parque de vehículos (tipo, carburante, etiqueta, antigüedad, conductores)
     organismo: "DGT"
+    url: https://www.dgt.es/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/?categorias=/Tema/Informacion-municipal/
     nivel: [municipio]
-    frecuencia: mensual
-    estado: por_confirmar
+    frecuencia: anual
+    estado: comprobada
+    notas: "DatosMunicipalesGeneral_<año>.xlsx desde 2020, todos los municipios de España (fuentes/vehicles.py)."
   - id: educacio_centres
     nombre: Centros y alumnado
     organismo: "Departament d'Educació"

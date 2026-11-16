@@ -125,6 +125,14 @@ h2 { font: 500 clamp(30px, 3.6vw, 42px)/1.1 var(--serif); letter-spacing: -0.02e
 .xip:focus-visible, .segment button:focus-visible, .idiomes button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .segment { display: inline-flex; padding: 3px; background: var(--fons-2); border-radius: 0; flex: none; }
 .segment-panell { align-self: flex-start; }
+.llegenda-centres { position: absolute; left: 12px; bottom: 12px; z-index: 3; display: flex; align-items: center; gap: 6px;
+  font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .03em; color: var(--text); background: var(--paper);
+  border: 1px solid var(--vora-2); padding: 6px 9px; cursor: pointer; }
+.llegenda-centres[hidden] { display: none; }
+.llegenda-centres input { margin: 0 4px 0 0; accent-color: var(--tinta); }
+.llegenda-centres i { display: inline-block; border-radius: 50%; border: 1px solid var(--paper); }
+.llegenda-centres .lc-h { width: 11px; height: 11px; background: #e3001b; }
+.llegenda-centres .lc-cap { width: 7px; height: 7px; background: var(--tinta); margin-left: 6px; }
 .cerca-mapa { position: absolute; left: 12px; top: 12px; z-index: 3; width: min(280px, calc(100% - 72px)); }
 .cerca-mapa svg { position: absolute; left: 12px; top: 13px; color: var(--text-3); pointer-events: none; }
 .cerca-mapa input {
@@ -917,3 +925,5 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .tb td.tb-r::before { content: attr(data-l); display: block; font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); margin-bottom: 4px; }
   .tb td.tb-marge { grid-column: 1 / -1; margin-top: 10px; text-align: left; min-width: 0; }
 }
+
+.pb-n { font: 400 11px var(--mono); color: var(--text-3); white-space: nowrap; }

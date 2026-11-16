@@ -83,6 +83,7 @@
     { id: "jus", ca: "Justícia", es: "Justicia" },
     { id: "eme", ca: "Emergències", es: "Emergencias" },
     { id: "ter", ca: "Territori", es: "Territorio" },
+    { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
@@ -108,6 +109,25 @@
   const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
   const NOTA_SEPE = { ca: "SEPE, atur registrat el darrer dia del mes. Les xifres d'1 a 4 no es publiquen.", es: "SEPE, paro registrado el último día del mes. Las cifras de 1 a 4 no se publican." };
   const NOTA_CONTR = { ca: "SEPE, contractes registrats al mes al municipi del centre de treball.", es: "SEPE, contratos registrados en el mes en el municipio del centro de trabajo." };
+
+  // Parque de vehículos (DGT, anual): m.veh = {clave: {año: valor}}, D.veh_ref = {clave: {año: {gi, cat, esp}}}
+  const VH = (k) => (m, a) => (a != null && m.veh && m.veh[k] && m.veh[k][a] != null ? m.veh[k][a] : null);
+  const VHR = (k, z) => (a) => { const r = D.veh_ref && D.veh_ref[k] && D.veh_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_VEH = { ca: "DGT, dades municipals: vehicles segons el domicili del titular, amb les empreses de lloguer i flotes incloses on tenen la seu.", es: "DGT, datos municipales: vehículos según el domicilio del titular, con las empresas de alquiler y flotas incluidas donde tienen la sede." };
+  const VEH = [
+    ["total_h", ["Vehicles per habitant", "Parc de vehicles per 1.000 habitants"], ["Vehículos por habitante", "Parque de vehículos por 1.000 habitantes"], N0],
+    ["n", ["Parc de vehicles", "Vehicles registrats al municipi"], ["Parque de vehículos", "Vehículos registrados en el municipio"], N0],
+    ["tur_h", ["Cotxes per habitant", "Turismes per 1.000 habitants"], ["Coches por habitante", "Turismos por 1.000 habitantes"], N0],
+    ["moto_h", ["Motos per habitant", "Motocicletes i ciclomotors per 1.000 habitants"], ["Motos por habitante", "Motocicletas y ciclomotores por 1.000 habitantes"], N0],
+    ["furg_h", ["Furgonetes i camions", "Furgonetes i camions per 1.000 habitants"], ["Furgonetas y camiones", "Furgonetas y camiones por 1.000 habitantes"], N0],
+    ["elec_p", ["Elèctrics i híbrids endollables", "Vehicles electrificats (% del parc)"], ["Eléctricos e híbridos enchufables", "Vehículos electrificados (% del parque)"], { f: (v) => pct(v, 2), c: (v) => pct(v, 1) }],
+    ["diesel_p", ["Dièsel", "Vehicles dièsel (% del parc)"], ["Diésel", "Vehículos diésel (% del parque)"], P1],
+    ["eco_p", ["Etiqueta ECO o 0", "Vehicles amb etiqueta ambiental ECO o 0 emissions (% del parc)"], ["Etiqueta ECO o 0", "Vehículos con etiqueta ambiental ECO o 0 emisiones (% del parque)"], P1],
+    ["sense_p", ["Sense etiqueta", "Vehicles sense etiqueta ambiental de la DGT (% del parc)"], ["Sin etiqueta", "Vehículos sin etiqueta ambiental de la DGT (% del parque)"], P1],
+    ["tur4_p", ["Cotxes de menys de 4 anys", "Turismes de menys de 4 anys (% dels turismes)"], ["Coches de menos de 4 años", "Turismos de menos de 4 años (% de los turismos)"], P1],
+    ["antig_tur", ["Edat dels cotxes", "Antiguitat mitjana dels turismes (anys)"], ["Edad de los coches", "Antigüedad media de los turismos (años)"], N1],
+    ["cond_h", ["Conductors", "Persones amb permís de conduir per cada 100 habitants"], ["Conductores", "Personas con permiso de conducir por cada 100 habitantes"], N1],
+  ];
 
   // Impuestos municipales (m.trib: {clave: {año: valor}})
   const TV = (k) => (m, a) => (a != null && m.trib && m.trib[k] && m.trib[k][a] != null ? m.trib[k][a] : null);
@@ -293,7 +313,6 @@
     { id: "llocs", tema: "tre", ca: ["Llocs de treball", "Llocs de treball per 100 habitants"], es: ["Puestos de trabajo", "Puestos de trabajo por 100 habitantes"], v: X("llocs"), ...N0 },
     { id: "autonoms", tema: "tre", ca: ["Autònoms", "Autònoms per 100 habitants"], es: ["Autónomos", "Autónomos por 100 habitantes"], v: X("autonoms"), ...N1 },
     { id: "empreses", tema: "tre", ca: ["Empreses", "Empreses per 1.000 habitants"], es: ["Empresas", "Empresas por 1.000 habitantes"], v: X("empreses"), ...N1 },
-    { id: "cotxes", tema: "tre", ca: ["Cotxes", "Turismes per 1.000 habitants"], es: ["Coches", "Turismos por 1.000 habitantes"], a: "cotxes", v: X("cotxes"), ...N0 },
     { id: "ocupats", tema: "tre", ca: ["Afiliats", "Afiliats a la Seguretat Social per 100 habitants (per residència)"], es: ["Afiliados", "Afiliados a la Seguridad Social por 100 habitantes (por residencia)"], v: X("ocupats"), ...N1 },
     { id: "ocupats_dones", tema: "tre", ca: ["Afiliades dones", "Dones entre els afiliats a la Seguretat Social (%)"], es: ["Afiliadas mujeres", "Mujeres entre los afiliados a la Seguridad Social (%)"], v: X("ocupats_dones"), ...P1 },
     { id: "atur_var", sumable: false, tema: "tre", ca: ["Variació de l'atur", "Variació interanual de l'atur registrat (%)"], es: ["Variación del paro", "Variación interanual del paro registrado (%)"], a: "atur_var", v: X("atur_var"), ...P1 },
@@ -320,6 +339,14 @@
     { id: "presencials", tema: "sal", ca: ["Visites presencials", "Visites presencials a l'atenció primària (%)"], es: ["Visitas presenciales", "Visitas presenciales en atención primaria (%)"], a: "presencials", abs: A("presencials"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
     { id: "econsulta", tema: "sal", ca: ["eConsulta", "Pacients que fan servir l'eConsulta (%)"], es: ["eConsulta", "Pacientes que usan la eConsulta (%)"], a: "econsulta", abs: A("econsulta"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
     { id: "antibio", tema: "sal", ca: ["Antibiòtics inadequats", "Antibiòtics en faringitis d'adults, ús inadequat (%)"], es: ["Antibióticos inadecuados", "Antibióticos en faringitis de adultos, uso inadecuado (%)"], a: "antibio", abs: A("antibio"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "pob_abs", tema: "sal", ca: ["Població assignada", "Persones assignades a l'àrea bàsica de salut"], es: ["Población asignada", "Personas asignadas al área básica de salud"], a: "pob_abs", abs: A("pob_abs"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Registre central de població).", es: "Datos por área básica de salud (CatSalut, Registre central de població)." }, ...N0 },
+    { id: "abs_pct_65", tema: "sal", ca: ["Pacients de 65 anys o més", "Població assignada de 65 anys o més (%)"], es: ["Pacientes de 65 años o más", "Población asignada de 65 años o más (%)"], a: "abs_pct_65", abs: A("abs_pct_65"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Registre central de població).", es: "Datos por área básica de salud (CatSalut, Registre central de població)." }, ...P1 },
+    { id: "abs_pct_80", tema: "sal", ca: ["Pacients de 80 anys o més", "Població assignada de 80 anys o més (%)"], es: ["Pacientes de 80 años o más", "Población asignada de 80 años o más (%)"], a: "abs_pct_80", abs: A("abs_pct_80"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Registre central de població).", es: "Datos por área básica de salud (CatSalut, Registre central de població)." }, ...P1 },
+    { id: "cap_n", sumable: false, tema: "sal", ca: ["CAP i atenció continuada", "Centres d'atenció primària a l'àrea"], es: ["CAP y atención continuada", "Centros de atención primaria en el área"], a: "cap_n", abs: A("cap_n"), nota: { ca: "Centres d'atenció primària i d'atenció continuada (Equipaments de Catalunya). Els punts del mapa marquen els CAP i els hospitals.", es: "Centros de atención primaria y de atención continuada (Equipaments de Catalunya). Los puntos del mapa marcan los CAP y los hospitales." }, ...N0 },
+    { id: "inf_resp", tema: "sal", ca: ["Infeccions respiratòries", "Infeccions respiratòries ateses al CAP, últimes 4 setmanes, per 1.000 habitants"], es: ["Infecciones respiratorias", "Infecciones respiratorias atendidas en el CAP, últimas 4 semanas, por 1.000 habitantes"], a: "inf_resp", abs: A("inf_resp"), nota: { ca: "Casos diagnosticats a l'atenció primària les últimes 4 setmanes publicades (Departament de Salut, SIVIC), sobre la població assignada a l'ABS.", es: "Casos diagnosticados en atención primaria en las últimas 4 semanas publicadas (Departament de Salut, SIVIC), sobre la población asignada al ABS." }, ...N1 },
+    { id: "inf_grip", tema: "sal", ca: ["Grip", "Casos de grip, últimes 4 setmanes, per 100.000 habitants"], es: ["Gripe", "Casos de gripe, últimas 4 semanas, por 100.000 habitantes"], a: "inf_grip", abs: A("inf_grip"), nota: { ca: "Casos diagnosticats a l'atenció primària les últimes 4 setmanes publicades (Departament de Salut, SIVIC), sobre la població assignada a l'ABS.", es: "Casos diagnosticados en atención primaria en las últimas 4 semanas publicadas (Departament de Salut, SIVIC), sobre la población asignada al ABS." }, ...N0 },
+    { id: "inf_covid", tema: "sal", ca: ["COVID-19", "Casos de COVID-19, últimes 4 setmanes, per 100.000 habitants"], es: ["COVID-19", "Casos de COVID-19, últimas 4 semanas, por 100.000 habitantes"], a: "inf_covid", abs: A("inf_covid"), nota: { ca: "Casos diagnosticats a l'atenció primària les últimes 4 setmanes publicades (Departament de Salut, SIVIC), sobre la població assignada a l'ABS.", es: "Casos diagnosticados en atención primaria en las últimas 4 semanas publicadas (Departament de Salut, SIVIC), sobre la población asignada al ABS." }, ...N0 },
+    { id: "domicili", tema: "sal", ca: ["Atenció a domicili", "Població atesa al programa d'atenció domiciliària (%)"], es: ["Atención a domicilio", "Población atendida en el programa de atención domiciliaria (%)"], a: "domicili", abs: A("domicili"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P1 },
     // Seguridad (áreas básicas policiales)
     { id: "fets", tema: "seg", ca: ["Delictes", "Fets penals coneguts per 1.000 habitants"], es: ["Delitos", "Hechos penales conocidos por 1.000 habitantes"], a: "fets", abp: A("fets"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
     { id: "patrimoni", tema: "seg", ca: ["Furts i robatoris", "Delictes contra el patrimoni per 1.000 habitants"], es: ["Hurtos y robos", "Delitos contra el patrimonio por 1.000 habitantes"], a: "patrimoni", abp: A("patrimoni"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
@@ -353,6 +380,9 @@
     { id: "autoconsum", tema: "ene", ca: ["Autoconsum", "Instal·lacions d'autoconsum per 1.000 habitants"], es: ["Autoconsumo", "Instalaciones de autoconsumo por 1.000 habitantes"], v: X("autoconsum"), ...N1 },
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
+    // Parque de vehículos (DGT)
+    ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
+      ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
@@ -434,6 +464,8 @@
   ];
   NOUS.forEach((n) => { let k = -1; IND.forEach((i, j) => { if (i.tema === n.tema) k = j; }); IND.splice(k + 1, 0, n); });
   // Los indicadores de coyuntura muestran el último periodo con datos
+  // Las matriculaciones mensuales también en el tema Vehicles, después del parque
+  { const m = IND.find((i) => i.id === "cj_mat"), p = IND.findIndex((i) => i.id === "veh_tur_h"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: "veh_mat", tema: "veh" }); }
   IND.forEach((i) => { if (i.per) i.v = (m) => (D.cj ? i.t(m, anysDe(i).slice(-1)[0]) : null); });
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
@@ -468,6 +500,7 @@
     if (!cacheAnys[i.id]) {
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini", "renda_bruta", "renda_bruta_llar", "renda_mediana"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
     }
     return cacheAnys[i.id];
@@ -608,7 +641,34 @@
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
-    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat);
+    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres();
+  }
+
+  // CAP y hospitales: capa de puntos encima de los indicadores de salud (se puede ocultar)
+  let promCentres = null, ambCentres = true;
+  const CAPES_C = ["centres-cap", "centres-h"];
+  function capaCentres() {
+    const vis = ind && ind.tema === "sal" && !ind.cat;
+    const ll = document.getElementById("llegenda-centres");
+    if (ll) ll.hidden = !vis;
+    if (vis && !promCentres) {
+      promCentres = fetch("datos/centres.geojson").then((r) => r.json()).then((g) => {
+        mapa.addSource("centres", { type: "geojson", data: g });
+        const r = (a, b) => ["interpolate", ["linear"], ["zoom"], 7, a, 12, b];
+        mapa.addLayer({ id: "centres-cap", type: "circle", source: "centres", filter: ["in", ["get", "t"], ["literal", ["cap", "continuada"]]],
+          paint: { "circle-radius": r(2.2, 5), "circle-color": css("--tinta") || "#111", "circle-stroke-color": css("--paper") || "#fff", "circle-stroke-width": 1 } });
+        mapa.addLayer({ id: "centres-h", type: "circle", source: "centres", filter: ["==", ["get", "t"], "hospital"],
+          paint: { "circle-radius": r(4.5, 8), "circle-color": "#e3001b", "circle-stroke-color": css("--paper") || "#fff", "circle-stroke-width": 1.5 } });
+        capaCentres();
+      }).catch(() => {});
+      return;
+    }
+    CAPES_C.forEach((l) => { if (mapa.getLayer(l)) mapa.setLayoutProperty(l, "visibility", vis && ambCentres ? "visible" : "none"); });
+  }
+  const NOM_TIPUS_C = { cap: ["CAP", "CAP"], continuada: ["Atenció continuada", "Atención continuada"], hospital: ["Hospital", "Hospital"] };
+  function centreSota(e) {
+    if (!ambCentres || !mapa.getLayer("centres-h") || mapa.getLayoutProperty("centres-h", "visibility") === "none") return null;
+    return mapa.queryRenderedFeatures(e.point, { layers: CAPES_C })[0] || null;
   }
 
   // Indicadores por categorías (partido del alcalde): un color por bloque
@@ -1078,6 +1138,13 @@
       if (f) mapa.setFeatureState({ source: "zones", id: hoverId }, { hover: true });
     };
     mapa.on("mousemove", "zones-fill", (e) => {
+      const c = centreSota(e);
+      if (c) {
+        const t_ = NOM_TIPUS_C[c.properties.t];
+        mapa.getCanvas().style.cursor = "default";
+        mostraTip(`<b>${c.properties.nom}</b><br>${t_ ? t_[LANG === "ca" ? 0 : 1] : ""} · ${c.properties.mun}`, e.originalEvent.clientX, e.originalEvent.clientY);
+        return;
+      }
       const f = e.features[0];
       marca(f);
       mapa.getCanvas().style.cursor = "pointer";
@@ -1095,6 +1162,8 @@
     });
 
     document.querySelectorAll(".segment button").forEach((b) => b.addEventListener("click", () => canviaNivell(b.dataset.nivell)));
+    const chk = document.getElementById("mostra-centres");
+    if (chk) chk.addEventListener("change", () => { ambCentres = chk.checked; capaCentres(); });
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { colorsBase(); pinta(); });
     let amplePrev = innerWidth;
     addEventListener("resize", () => { if (Math.abs(innerWidth - amplePrev) > 40) { amplePrev = innerWidth; llegenda(); } });
