@@ -363,7 +363,7 @@
     { id: "sector_const", tema: "tre", ca: ["Construcció", "Llocs de treball a la construcció (%)"], es: ["Construcción", "Puestos de trabajo en la construcción (%)"], v: X("sector_const"), ...P0 },
     { id: "sector_agri", tema: "tre", ca: ["Agricultura", "Llocs de treball a l'agricultura (%)"], es: ["Agricultura", "Puestos de trabajo en la agricultura (%)"], v: X("sector_agri"), ...P1 },
     { id: "pib_hab", tema: "tre", ca: ["PIB per habitant", "Producte interior brut per habitant (€)"], es: ["PIB por habitante", "Producto interior bruto por habitante (€)"], a: "pib_hab", v: X("pib_hab"), ...EU },
-    { id: "places_tur", tema: "tur", ca: ["Places turístiques", "Places d'hotel, càmping i turisme rural per 1.000 habitants"], es: ["Plazas turísticas", "Plazas de hotel, camping y turismo rural por 1.000 habitantes"], a: "places_tur", v: X("places_tur"), ...N0 },
+    { id: "places_tur", tema: "tur", ca: ["Hotel, càmping i rural", "Places d'hotel, càmping i turisme rural per 1.000 habitants"], es: ["Hotel, camping y rural", "Plazas de hotel, camping y turismo rural por 1.000 habitantes"], a: "places_tur", v: X("places_tur"), ...N0 },
     // Salud y servicios sociales
     { id: "pensions", tema: "sal", ca: ["Pensionistes", "Pensions contributives per 100 habitants"], es: ["Pensionistas", "Pensiones contributivas por 100 habitantes"], v: X("pensions"), ...N1 },
     { id: "pnc", tema: "sal", ca: ["Pensions no contributives", "Pensions no contributives per 1.000 habitants"], es: ["Pensiones no contributivas", "Pensiones no contributivas por 1.000 habitantes"], a: "pnc", v: X("pnc"), ...N1 },

@@ -228,7 +228,7 @@
     h_t_ext: (g, a) => `<b>El ${g}</b> de les nits d'hotel són de turistes estrangers (${a}).`,
     t_personal: ["Feina als allotjaments", "Persones ocupades, mitjana de l'any"],
     h_t_personal: (h, c, a) => `Els hotels de la província donen feina a <b>${h} persones</b> de mitjana (${a}); els càmpings, a ${c}.`,
-    t_punts: ["Destinacions", "Pernoctacions hoteleres per punt turístic (milions)"],
+    t_punts: ["Destinacions", "Nits en hotels i càmpings per punt turístic (milions)"],
     h_t_punts: (p, v, a) => `<b>${p}</b> és el primer destí hoteler de la província: ${v} milions de nits el ${a}.`,
     t_orig_ext: ["D'on vénen els estrangers", "Turistes estrangers per país (%, telefonia mòbil)"],
     h_t_orig_ext: (p, v, n, a) => `<b>${p}</b>: el ${v} dels ${n} milions de visites de turistes estrangers del ${a}.`,
@@ -278,7 +278,7 @@
     h_t_ext: (g, a) => `<b>El ${g}</b> de las noches de hotel son de turistas extranjeros (${a}).`,
     t_personal: ["Empleo en los alojamientos", "Personas ocupadas, media del año"],
     h_t_personal: (h, c, a) => `Los hoteles de la provincia dan empleo a <b>${h} personas</b> de media (${a}); los campings, a ${c}.`,
-    t_punts: ["Destinos", "Pernoctaciones hoteleras por punto turístico (millones)"],
+    t_punts: ["Destinos", "Noches en hoteles y campings por punto turístico (millones)"],
     h_t_punts: (p, v, a) => `<b>${p}</b> es el primer destino hotelero de la provincia: ${v} millones de noches en ${a}.`,
     t_orig_ext: ["De dónde vienen los extranjeros", "Turistas extranjeros por país (%, telefonía móvil)"],
     h_t_orig_ext: (p, v, n, a) => `<b>${p}</b>: el ${v} de los ${n} millones de visitas de turistas extranjeros de ${a}.`,
@@ -415,7 +415,7 @@
     const ks = sp.claus || ["gi", "esp"];
     const mx = Math.max(...gs.flatMap((g) => ks.map((k) => Math.abs(g[k])))) || 1;
     const fv = (v) => (sp.u === "%" ? pct(v, 1) : fmt(v, sp.dec));
-    const b = (v, k) => `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
+    const b = (v, k) => v == null ? "" : `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
     cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp("pac")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
@@ -469,7 +469,7 @@
     if (id === "t_estada" && g) return tp("h_t_estada", fmt(g[2], 1), g[1], e ? fmt(e[2], 1) : "–");
     if (id === "t_ext" && g) return tp("h_t_ext", pct(g[2], 0), g[1]);
     if (id === "t_personal" && g) return tp("h_t_personal", d0(g[2]), c ? d0(c[2]) : "–", g[1]);
-    if (id === "t_punts" && gs.length) return tp("h_t_punts", gs[0].g, fmt(gs[0].gi, 1), sp.any);
+    if (id === "t_punts" && gs.length) { const g = [...gs].sort((a, b) => (b.gi || 0) - (a.gi || 0))[0]; return tp("h_t_punts", g.g, fmt(g.gi, 1), sp.any); }
     if (id === "t_orig_ext" && gs.length) return tp("h_t_orig_ext", nomGrup(gs[0].g, gs[0].c), pct(gs[0].gi, 0), fmt(sp.total / 1e6, 1), sp.any);
     if (id === "t_orig_nac" && gs.length) return tp("h_t_orig_nac", nomGrup(gs[0].g, gs[0].c), pct(gs[0].gi, 0), sp.any);
     if (id === "t_mov_mes" && g) return tp("h_t_mov_mes", d0(g[2]), etiqueta(g[1]));

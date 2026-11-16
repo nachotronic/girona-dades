@@ -327,6 +327,10 @@ def prov_series(d, mov_prov, ieet_com, reg_tot, aena, noms=None, noms_orig=None)
         nom_i = {i: n for n, i in noms_orig.items()}
         grups = [{"g": nom_i.get(i, i), "gi": r(ph.get(i, {}).get(a, 0) / 1e6, 2), "cat": r(pc.get(i, {}).get(a, 0) / 1e6, 2)} for i in set(ph) | set(pc)]
         grups = sorted([g for g in grups if g["gi"] or g["cat"]], key=lambda x: -(x["gi"] + x["cat"]))
+        for g in grups:
+            for k in ("gi", "cat"):
+                if not g[k]:
+                    g[k] = None  # sin barra vacía con «0,00»
         res["t_punts"] = {"tipus": "barres", "u": "M", "dec": 2, "claus": ["gi", "cat"], "noms": "pt", "any": a, "grups": grups}
     # 10. Origen de los turistas (telefonía móvil, último año completo)
     if mov_prov:

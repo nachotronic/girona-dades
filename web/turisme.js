@@ -6,6 +6,7 @@
       tit: "Turisme", sub: "Places d'allotjament d'avui, pisos turístics per any i turistes segons la telefonia mòbil.",
       k_places: "Places turístiques", n_places: (v) => `${v} per cada 100 habitants`,
       k_hut: "Pisos turístics", n_hut: (v) => `${v} per cada 100 habitatges`,
+      k_vte: (a) => `Pisos a Airbnb i Booking ${a}`, n_vte: (v) => `${v} dels habitatges`,
       k_hotels: "Places d'hotel", n_hotels: (n) => `${n} hotels i hostals`,
       k_camp: "Places de càmping", n_camp: (n) => `${n} càmpings`,
       k_ext: (a) => `Turistes estrangers ${a}`, n_ext: (v) => `${v} per habitant`,
@@ -28,6 +29,7 @@
       tit: "Turismo", sub: "Plazas de alojamiento de hoy, pisos turísticos por año y turistas según la telefonía móvil.",
       k_places: "Plazas turísticas", n_places: (v) => `${v} por cada 100 habitantes`,
       k_hut: "Pisos turísticos", n_hut: (v) => `${v} por cada 100 viviendas`,
+      k_vte: (a) => `Pisos en Airbnb y Booking ${a}`, n_vte: (v) => `${v} de las viviendas`,
       k_hotels: "Plazas de hotel", n_hotels: (n) => `${n} hoteles y hostales`,
       k_camp: "Plazas de camping", n_camp: (n) => `${n} campings`,
       k_ext: (a) => `Turistas extranjeros ${a}`, n_ext: (v) => `${v} por habitante`,
@@ -76,16 +78,18 @@
     if (f.pl != null) tiles.push(tile(tx("k_places"), fmt(f.pl), v("pl_h") != null ? tx("n_places", fmt(v("pl_h"), 1)) : ""));
     const ah = ultA(tu.hut_n);
     if (ah) tiles.push(tile(`${tx("k_hut")} ${ah}`, fmt(tu.hut_n[ah]), tu.hut_viv && tu.hut_viv[ah] != null ? tx("n_hut", fmt(tu.hut_viv[ah], 1)) : ""));
+    const av = ultA(tu.vte_viv);
+    if (av) tiles.push(tile(tx("k_vte", av), fmt(tu.vte_viv[av]), tu.vte_pct && tu.vte_pct[av] != null ? tx("n_vte", pct(tu.vte_pct[av], 1)) : ""));
     if (reg.hotel_pl) tiles.push(tile(tx("k_hotels"), fmt(reg.hotel_pl), tx("n_hotels", fmt(reg.hotel_n))));
     if (reg.camp_pl) tiles.push(tile(tx("k_camp"), fmt(reg.camp_pl), tx("n_camp", fmt(reg.camp_n))));
+    const ap = ultA(tu.pern);
+    if (ap) tiles.push(tile(tx("k_pern", ap), fmt(tu.pern[ap]), tu.ocup && tu.ocup[ap] ? tx("n_pern", pct(tu.ocup[ap], 0)) : ""));
     const am = ultA(tu.mov_rec);
     if (am) tiles.push(tile(tx("k_ext", am), fmt(tu.mov_rec[am]), tu.mov_rec_h ? tx("n_ext", fmt(tu.mov_rec_h[am], 1)) : ""));
     const an = ultA(tu.mov_int);
     if (an) tiles.push(tile(tx("k_nac", an), fmt(tu.mov_int[an]), tu.mov_int_h ? tx("n_ext", fmt(tu.mov_int_h[an], 1)) : ""));
     const ai = ultA(tu.ieet);
     if (ai) tiles.push(tile(tx("k_ieet", ai), `${fmt(tu.ieet[ai] / 1e3)} <small>mil €</small>`, tu.ieet_h ? tx("n_ieet", fmt(tu.ieet_h[ai], 1)) : ""));
-    const ap = ultA(tu.pern);
-    if (ap) tiles.push(tile(tx("k_pern", ap), fmt(tu.pern[ap]), tu.ocup && tu.ocup[ap] ? tx("n_pern", pct(tu.ocup[ap], 0)) : ""));
     if (!tiles.length) { cont.innerHTML = ""; return; }
     const frases = [];
     const afr = ultA(tu.mov_fr); if (afr && tu.mov_fr[afr] >= 1) frases.push(tx("fr", pct(tu.mov_fr[afr], 0)));
@@ -102,7 +106,7 @@
         <p class="tu-lleg"><span><i class="tu-rec"></i>${tx("estr")}</span><span><i class="tu-int"></i>${tx("nac")}</span></p></figure>`;
     }
     cont.innerHTML = `<section class="tu"><h3 class="ajt-tit">${tx("tit")}</h3><p class="tb-sub">${tx("sub")} ${frases.join(" ")}</p>
-      <div class="xifres">${tiles.slice(0, 6).join("")}</div>
+      <div class="xifres">${tiles.slice(0, 9).join("")}</div>
       <div class="dos tu-dos">
         ${tu.mov_rec ? `<figure class="grafic"><figcaption><span>${tx("g_mov")}</span></figcaption><div class="g-tmov"></div></figure>` : ""}
         ${mesos}

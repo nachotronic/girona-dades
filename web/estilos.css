@@ -585,7 +585,7 @@ tbody tr:hover td:first-child { background: var(--fons-2); }
 }
 /* Gráficos de La província y ficha: márgenes en tablet */
 @media (min-width: 641px) and (max-width: 980px) { .fitxa h2 { font-size: 44px; } }
-@media (max-width: 760px) { .menu a { white-space: nowrap; font-size: 10.5px; letter-spacing: .02em; } }
+@media (max-width: 760px) { .menu { overflow-x: auto; scrollbar-width: none; } .menu::-webkit-scrollbar { display: none; } .menu a { flex: 1 0 auto; padding-left: 9px; padding-right: 9px; white-space: nowrap; font-size: 10.5px; letter-spacing: .02em; } }
 @media (max-width: 640px) {
   .pg-fig figcaption { display: block; }
   .pg-fig figcaption .unitat { display: block; text-align: left; margin-top: 4px; }
