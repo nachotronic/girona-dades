@@ -24,6 +24,52 @@
   const suma = (o, anys) => anys.reduce((s, a) => s + (o && o[a] != null ? o[a] : NaN), 0);
   const ANYS5 = ["2021", "2022", "2023", "2024", "2025"];
 
+  // Seguridad y justicia: Mossos por tipo de hecho, Interior (municipios > 20.000 hab.) y CGPJ por partido judicial
+  const MOSSOS = [
+    ["furts", ["Furts", "Furts"], ["Hurtos", "Hurtos"], 1],
+    ["robatori_forca", ["Robatoris amb força", "Robatoris amb força (domicilis, comerços…)"], ["Robos con fuerza", "Robos con fuerza (domicilios, comercios…)"], 1],
+    ["robatori_vehicle", ["Robatoris en vehicles", "Robatoris a l'interior de vehicles"], ["Robos en vehículos", "Robos en el interior de vehículos"], 1],
+    ["robatori_violencia", ["Robatoris amb violència", "Robatoris amb violència o intimidació"], ["Robos con violencia", "Robos con violencia o intimidación"], 2],
+    ["estafes", ["Estafes", "Estafes"], ["Estafas", "Estafas"], 1],
+    ["danys", ["Danys", "Danys"], ["Daños", "Daños"], 1],
+    ["lesions", ["Lesions", "Lesions"], ["Lesiones", "Lesiones"], 1],
+    ["amenaces", ["Amenaces i coaccions", "Amenaces i coaccions"], ["Amenazas y coacciones", "Amenazas y coacciones"], 2],
+    ["ocupacio", ["Ocupacions", "Ocupacions d'immobles i usurpacions"], ["Ocupaciones", "Ocupaciones de inmuebles y usurpaciones"], 2],
+    ["drogues", ["Tràfic de drogues", "Delictes contra la salut pública (drogues)"], ["Tráfico de drogas", "Delitos contra la salud pública (drogas)"], 2],
+    ["agressions_sexuals", ["Agressions sexuals", "Agressions i abusos sexuals"], ["Agresiones sexuales", "Agresiones y abusos sexuales"], 2],
+    ["alcohol", ["Alcohol i drogues al volant", "Conducció sota els efectes de l'alcohol o les drogues"], ["Alcohol y drogas al volante", "Conducción bajo los efectos del alcohol o las drogas"], 2],
+    ["trencament", ["Trencaments de condemna", "Trencaments de condemna (ordres d'allunyament…)"], ["Quebrantamientos de condena", "Quebrantamientos de condena (órdenes de alejamiento…)"], 2],
+  ];
+  const NOTA_MO = { ca: "Mossos d'Esquadra, fets coneguts dels últims 12 mesos publicats per àrea bàsica policial. Taxa sobre la població resident: a la costa, l'estiu la infla.", es: "Mossos d'Esquadra, hechos conocidos de los últimos 12 meses publicados por área básica policial. Tasa sobre la población residente: en la costa, el verano la infla." };
+  const INTERIOR = [
+    ["total", ["Criminalitat (Interior)", "Infraccions penals"], ["Criminalidad (Interior)", "Infracciones penales"]],
+    ["conv", ["Criminalitat convencional", "Criminalitat convencional (sense ciberdelictes)"], ["Criminalidad convencional", "Criminalidad convencional (sin ciberdelitos)"]],
+    ["ciber", ["Cibercriminalitat", "Ciberdelictes (estafes informàtiques i altres)"], ["Cibercriminalidad", "Ciberdelitos (estafas informáticas y otros)"]],
+    ["domicilis", ["Robatoris a domicilis", "Robatoris amb força a domicilis"], ["Robos en domicilios", "Robos con fuerza en domicilios"]],
+    ["violencia", ["Robatoris violents", "Robatoris amb violència o intimidació"], ["Robos violentos", "Robos con violencia o intimidación"]],
+    ["sexual", ["Delictes sexuals (Interior)", "Delictes contra la llibertat sexual"], ["Delitos sexuales (Interior)", "Delitos contra la libertad sexual"]],
+    ["drogues", ["Tràfic de drogues (Interior)", "Tràfic de drogues"], ["Tráfico de drogas (Interior)", "Tráfico de drogas"]],
+  ];
+  const NOTA_INT = { ca: "Ministeri de l'Interior, Balanç de Criminalitat (any complet). Només municipis de més de 20.000 habitants; inclou fets coneguts per totes les policies.", es: "Ministerio del Interior, Balance de Criminalidad (año completo). Solo municipios de más de 20.000 habitantes; incluye hechos conocidos por todas las policías." };
+  const NOTA_PJ = { ca: "CGPJ, jutjats de primera instància i instrucció de cada partit judicial (any complet). Taxa sobre la població dels municipis del partit.", es: "CGPJ, juzgados de primera instancia e instrucción de cada partido judicial (año completo). Tasa sobre la población de los municipios del partido." };
+  const NOTA_VDG = { ca: "CGPJ, Observatori contra la Violència Domèstica i de Gènere: jutjats de violència sobre la dona de cada partit judicial, últims quatre trimestres. Taxa per 10.000 habitants.", es: "CGPJ, Observatorio contra la Violencia Doméstica y de Género: juzgados de violencia sobre la mujer de cada partido judicial, últimos cuatro trimestres. Tasa por 10.000 habitantes." };
+  const JUSTICIA = [
+    ["penal", ["Assumptes penals", "Assumptes penals ingressats per 1.000 habitants"], ["Asuntos penales", "Asuntos penales ingresados por 1.000 habitantes"], {}],
+    ["civil", ["Assumptes civils", "Assumptes civils ingressats per 1.000 habitants"], ["Asuntos civiles", "Asuntos civiles ingresados por 1.000 habitantes"], {}],
+    ["llanc", ["Desnonaments", "Llançaments practicats per 10.000 habitants"], ["Desahucios", "Lanzamientos practicados por 10.000 habitantes"], { nota: { ca: "CGPJ, llançaments (desnonaments) practicats pels jutjats del partit judicial, per impagament de lloguer, execució hipotecària o altres causes. No inclou els que executen els serveis comuns, per això el total provincial és una mica inferior al de l'informe trimestral del CGPJ.", es: "CGPJ, lanzamientos (desahucios) practicados por los juzgados del partido judicial, por impago de alquiler, ejecución hipotecaria u otras causas. No incluye los que ejecutan los servicios comunes, por eso el total provincial es algo inferior al del informe trimestral del CGPJ." } }],
+    ["llanc_lau", ["Desnonaments de lloguer", "Llançaments per la Llei d'arrendaments urbans per 10.000 habitants"], ["Desahucios de alquiler", "Lanzamientos por la Ley de arrendamientos urbanos por 10.000 habitantes"], {}],
+    ["llanc_hipo", ["Desnonaments hipotecaris", "Llançaments per execució hipotecària per 10.000 habitants"], ["Desahucios hipotecarios", "Lanzamientos por ejecución hipotecaria por 10.000 habitantes"], { ...N2 }],
+    ["verbals_lloguer", ["Demandes de desnonament", "Judicis verbals d'arrendament ingressats per 10.000 habitants"], ["Demandas de desahucio", "Juicios verbales arrendaticios ingresados por 10.000 habitantes"], {}],
+    ["ocupa", ["Demandes per ocupació", "Judicis verbals per ocupació il·legal d'habitatges per 10.000 habitants"], ["Demandas por ocupación", "Juicios verbales por ocupación ilegal de viviendas por 10.000 habitantes"], { ...N2 }],
+    ["monitoris", ["Reclamacions de deutes", "Procediments monitoris ingressats per 1.000 habitants"], ["Reclamaciones de deudas", "Procedimientos monitorios ingresados por 1.000 habitantes"], {}],
+    ["resolucio", ["Taxa de resolució", "Assumptes resolts per cada 100 d'ingressats"], ["Tasa de resolución", "Asuntos resueltos por cada 100 ingresados"], { sumable: false, ...P0 }],
+    ["pendents", ["Assumptes pendents", "Assumptes pendents a final d'any per cada 100 de resolts"], ["Asuntos pendientes", "Asuntos pendientes a final de año por cada 100 resueltos"], { sumable: false, ...P0 }],
+    ["vdg_den", ["Violència de gènere: denúncies", "Denúncies per violència de gènere per 10.000 habitants"], ["Violencia de género: denuncias", "Denuncias por violencia de género por 10.000 habitantes"], { nota: NOTA_VDG }],
+    ["vdg_vict", ["Violència de gènere: víctimes", "Dones víctimes de violència de gènere per 10.000 habitants"], ["Violencia de género: víctimas", "Mujeres víctimas de violencia de género por 10.000 habitantes"], { nota: NOTA_VDG }],
+    ["vdg_ord", ["Ordres de protecció", "Ordres de protecció i mesures cautelars per 10.000 habitants"], ["Órdenes de protección", "Órdenes de protección y medidas cautelares por 10.000 habitantes"], { nota: NOTA_VDG, ...N2 }],
+    ["vdg_ren", ["Renúncies de les víctimes", "Víctimes que s'acullen a la dispensa de declarar (% de les denúncies)"], ["Renuncias de las víctimas", "Víctimas que se acogen a la dispensa de declarar (% de las denuncias)"], { nota: NOTA_VDG, sumable: false, ...P1 }],
+  ];
+
   // Temas del selector
   const TEMES = [
     { id: "con", ca: "Conjuntura", es: "Coyuntura" },
@@ -34,6 +80,7 @@
     { id: "tre", ca: "Treball", es: "Trabajo" },
     { id: "sal", ca: "Salut", es: "Salud" },
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
+    { id: "jus", ca: "Justícia", es: "Justicia" },
     { id: "eme", ca: "Emergències", es: "Emergencias" },
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
@@ -307,6 +354,12 @@
     { id: "sexual", tema: "seg", ca: ["Delictes sexuals", "Delictes contra la llibertat sexual per 1.000 habitants"], es: ["Delitos sexuales", "Delitos contra la libertad sexual por 1.000 habitantes"], a: "sexual", abp: A("sexual"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N2 },
     { id: "resolts", tema: "seg", ca: ["Delictes resolts", "Fets penals resolts (% dels coneguts)"], es: ["Delitos resueltos", "Hechos penales resueltos (% de los conocidos)"], a: "resolts", abp: A("resolts"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...P0 },
     { id: "detencions", tema: "seg", ca: ["Detencions", "Detencions per 1.000 habitants"], es: ["Detenciones", "Detenciones por 1.000 habitantes"], a: "detencions", abp: A("detencions"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
+    // Mossos: tipos de hecho de los últimos 12 meses por ABP
+    ...MOSSOS.map(([k, ca, es, dec]) => ({ id: "mo_" + k, tema: "seg", ca: [ca[0], ca[1] + " per 1.000 habitants"], es: [es[0], es[1] + " por 1.000 habitantes"], a: "mo_" + k, abp: A("mo_" + k), nota: NOTA_MO, ...(dec === 2 ? N2 : N1) })),
+    // Ministerio del Interior: municipios de más de 20.000 habitantes
+    ...INTERIOR.map(([k, ca, es]) => ({ id: "int_" + k, tema: "seg", ca: [ca[0], ca[1] + " per 1.000 habitants"], es: [es[0], es[1] + " por 1.000 habitantes"], a: "int_" + k, v: X("int_" + k), nota: NOTA_INT, ...(k === "total" || k === "conv" ? N1 : N2) })),
+    // CGPJ: juzgados de cada partido judicial
+    ...JUSTICIA.map(([k, ca, es, ext]) => ({ id: "pj_" + k, tema: "jus", ca, es, a: "pj_" + k, pj: A("pj_" + k), nota: ext.nota || NOTA_PJ, ...N1, ...ext })),
     // Emergencias: divisiones territoriales de Agents Rurals y Bombers (Idescat), Bombers e incendios forestales
     { id: "aar", tema: "eme", cat: true, ca: ["Àrea d'Agents Rurals", "Àrea bàsica dels Agents Rurals de cada municipi"], es: ["Área de Agents Rurals", "Área básica de los Agents Rurals de cada municipio"], v: X("aar"), f: (v) => v, c: (v) => v, color: (v) => colorArea(v),
       infoCat: (m, v, k) => (m && m.x && v ? `<p class="rel">${t("aar_info", m.x.arr, k)}</p><p class="rel">${t("reb_info", m.x.reb)}</p>` : `<p class="rel">${t("sense_dades")}</p>`), nota: { ca: "Idescat, codis territorials (novetat de novembre de 2026). A Girona les àrees bàsiques coincideixen amb les comarques, excepte la Cerdanya (àrea regional de l'Alt Pirineu) i Espinelves, Vidrà i Viladrau, que van amb Osona - Lluçanès.", es: "Idescat, códigos territoriales (novedad de noviembre de 2026). En Girona las áreas básicas coinciden con las comarcas, salvo la Cerdanya (área regional del Alt Pirineu) y Espinelves, Vidrà y Viladrau, que van con Osona - Lluçanès." }, notaCat: { ca: "Nombre de municipis de la província a cada àrea.", es: "Número de municipios de la provincia en cada área." } },
@@ -429,8 +482,8 @@
 
   let mapa = null, geoMun = null, geoSec = null, SEC = {}, nivell = "mun", ind = null, llindars = [];
   // Niveles por áreas (salud y policía): geometría y datos por código de área
-  const NIVELLS = ["mun", "sec", "abs", "abp", "aar"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} } };
-  const esArea = (n) => n === "abs" || n === "abp" || n === "aar";
+  const NIVELLS = ["mun", "sec", "abs", "abp", "aar", "pj"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} }, pj: { geo: null, d: {} } };
+  const esArea = (n) => n === "abs" || n === "abp" || n === "aar" || n === "pj";
   // Colores fijos para las áreas básicas de Agents Rurals (por orden de la lista de Idescat)
   const AREES_AAR = ["Alt Empordà", "Baix Empordà", "Garrotxa", "Gironès", "Pla de l'Estany", "Ripollès", "Selva", "Cerdanya", "Osona - Lluçanès"];
   const colorArea = (v) => { const i = AREES_AAR.indexOf(v); return i >= 0 ? PAIS_COLORS[i] : "#a5abb5"; };
@@ -990,10 +1043,12 @@
   window.fitxaIndicadors = async (m) => {
     if (!geoMun) return "";
     const [abs, abp] = await Promise.all([areaDe("abs", m), areaDe("abp", m)]);
+    const pj = m.x && m.x.pj ? { id: m.x.pj, nom: m.x.pj_nom } : null, AR = D.arees || {};
     const valorM = (i) => {
       if (i.v) return i.v(m);
       if (i.abs && abs) return i.abs(ZONA.abs.d[abs.id]);
       if (i.abp && abp) return i.abp(ZONA.abp.d[abp.id]);
+      if (i.pj && pj) return i.pj((AR.pj || {})[pj.id]);
       return null;
     };
     const cap = `<div class="fi-fila fi-cap"><span></span><span class="fi-strip-cap"></span><span>${m.nom}</span><span>${t("ref_gi_curt")}</span><span>${t("ref_cat")}</span><span>${t("ref_esp")}</span></div>`;
@@ -1004,13 +1059,14 @@
         const r = (D.ref || {})[i.id] || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
-        const tots = i.v ? D.municipios.map((x) => i.v(x)) : Object.values(ZONA[i.abs ? "abs" : "abp"].d).map((x) => (i.abs || i.abp)(x));
+        const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
+        const tots = i.v ? D.municipios.map((x) => i.v(x)) : Object.values(AR[zk] || {}).map((x) => i[zk](x));
         const vs = tots.filter((x) => x != null && isFinite(x)).sort((a, b) => a - b);
         const mn = Math.min(vs[0], ...[gi, cat, esp].filter((x) => x != null)), mx = Math.max(vs[vs.length - 1], ...[gi, cat, esp].filter((x) => x != null));
         const X = (x) => (mx > mn ? 3 + ((x - mn) / (mx - mn)) * 94 : 50);
         const pos = vs.length - vs.filter((x) => x <= v).length + 1;
         const marca = (x, cls, tit) => (x != null && isFinite(x) ? `<i class="${cls}" style="left:${X(x).toFixed(1)}%" title="${tit}: ${i.f(x)}"></i>` : "");
-        const area = !i.v ? `<span class="fi-area">${(i.abs ? abs : abp).nom}</span>` : "";
+        const area = !i.v ? `<span class="fi-area">${(i.abs ? abs : i.abp ? abp : pj).nom}</span>` : "";
         return `<div class="fi-fila"><span class="fi-nom">${nomInd(i, true)}<small>${i[LANG][1]}${area ? " · " : ""}${area}</small></span>
           <span class="fi-strip" aria-hidden="true"><b></b>${marca(esp, "m-esp", t("ref_esp"))}${marca(cat, "m-cat", t("ref_cat"))}${marca(gi, "m-gi", t("ref_gi"))}${marca(v, "m-mun", m.nom)}</span>
           <span class="fi-v">${i.f(v)}${i.v && !i.cat ? `<small>${t("posicio_curt", pos, vs.length)}</small>` : ""}</span>
