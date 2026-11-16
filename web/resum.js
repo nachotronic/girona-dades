@@ -19,7 +19,7 @@
       gent: (e, g) => `El ${e} dels veïns té nacionalitat estrangera i el ${g} té 65 anys o més.`,
       hut: (v) => `Hi ha ${v} habitatges d'ús turístic per cada 100 habitatges.`,
       atur: (v, p, pv) => `L'atur registrat equival al ${v} de la població de 15 a 64 anys (${p}), davant del ${pv} a la província.`,
-      h_pob: "Població", h_pob_sub: (a0, a1) => `Habitants a 1 de gener, ${a0}-${a1}. Font: INE, padró municipal.`, estrangers: "Nacionalitat estrangera",
+      h_pob: "Població", h_pob_sub: (a0, a1) => `Habitants a 1 de gener, ${a0}-${a1}. Font: INE, padró municipal.`, estrangers: "Nacionalitat estrangera (fins al 2022)",
       h_irpf: "Renda declarada a Hisenda", h_irpf_sub: (a, d) => `IRPF ${a}: ${d} declaracions. Font: Agència Tributària.`,
       bruta: "Renda bruta mitjana", disp: "Renda disponible mitjana", tipus: "Tipus efectiu (quota / renda bruta)",
       comp: "D'on surt la renda declarada", treball: "Treball i pensions", activitats: "Activitats econòmiques", capital: "Capital mobiliari", immobles: "Lloguers i immobles", guanys: "Guanys patrimonials", altres: "Altres",
@@ -40,7 +40,7 @@
       gent: (e, g) => `El ${e} de los vecinos tiene nacionalidad extranjera y el ${g} tiene 65 años o más.`,
       hut: (v) => `Hay ${v} viviendas de uso turístico por cada 100 viviendas.`,
       atur: (v, p, pv) => `El paro registrado equivale al ${v} de la población de 15 a 64 años (${p}), frente al ${pv} en la provincia.`,
-      h_pob: "Población", h_pob_sub: (a0, a1) => `Habitantes a 1 de enero, ${a0}-${a1}. Fuente: INE, padrón municipal.`, estrangers: "Nacionalidad extranjera",
+      h_pob: "Población", h_pob_sub: (a0, a1) => `Habitantes a 1 de enero, ${a0}-${a1}. Fuente: INE, padrón municipal.`, estrangers: "Nacionalidad extranjera (hasta 2022)",
       h_irpf: "Renta declarada a Hacienda", h_irpf_sub: (a, d) => `IRPF ${a}: ${d} declaraciones. Fuente: Agencia Tributaria.`,
       bruta: "Renta bruta media", disp: "Renta disponible media", tipus: "Tipo efectivo (cuota / renta bruta)",
       comp: "De dónde sale la renta declarada", treball: "Trabajo y pensiones", activitats: "Actividades económicas", capital: "Capital mobiliario", immobles: "Alquileres e inmuebles", guanys: "Ganancias patrimoniales", altres: "Otras",
@@ -73,7 +73,7 @@
     const l = vals(i), v = i.v(m);
     if (v == null || !isFinite(v)) return null;
     const alts = l.filter(([, x]) => x > v).length, baixos = l.filter(([, x]) => x < v).length;
-    return { alt: alts + 1, baix: baixos + 1, n: l.length };
+    return { alt: alts + 1, baix: baixos + 1, n: l.length, iguals: l.length - alts - baixos };
   }
   function anyDe(i) {
     const IM = window.indMapa;
@@ -125,7 +125,7 @@
     IM.IND.forEach((i) => {
       if (!i.v || i.cat || i.per || FORA.has(i.id) || i.tema === "pol" || /^(nac_|vot_|cj_)/.test(i.id)) return;
       const p = posicio(i, m);
-      if (!p || p.n < 120) return;
+      if (!p || p.n < 120 || p.iguals > 3) return;
       const [k, dir] = p.alt <= p.baix ? [p.alt, "alt"] : [p.baix, "baix"];
       if (k > Math.max(5, Math.round(p.n * 0.04))) return;
       cand.push({ i, k, dir, n: p.n, v: i.v(m), pv: IM.valorProvincia(i), r: k / p.n });
@@ -145,8 +145,8 @@
     const IM = window.indMapa;
     const files = CLAU.map((id) => IM.IND.find((x) => x.id === id)).filter((i) => i && i.v && i.v(m) != null && isFinite(i.v(m))).map((i) => {
       const v = i.v(m), pv = IM.valorProvincia(i), p = posicio(i, m), f = FONTS[i.id];
-      return `<tr><th scope="row">${i[LANG][0]}<small>${i[LANG][1]}</small></th><td class="rt-v">${i.f(v)}</td><td>${pv != null && i.id !== "pob" ? i.f(pv) : "–"}</td>
-        <td>${p ? `${ord(p.alt)} <span>${tx("de", p.n)}</span>` : "–"}</td><td>${anyDe(i)}</td><td class="rt-f">${f ? f[LANG] : ""}</td></tr>`;
+      return `<tr><th scope="row">${i[LANG][0]}<small>${i[LANG][1]}</small></th><td class="rt-v">${i.f(v)}</td><td data-l="${tx("c_prov")}">${pv != null && i.id !== "pob" ? i.f(pv) : "–"}</td>
+        <td data-l="${tx("c_pos")}">${p ? `${ord(p.alt)} <span>${tx("de", p.n)}</span>` : "–"}</td><td data-l="${tx("c_any")}">${anyDe(i) || "–"}</td><td class="rt-f" data-l="${tx("c_font")}">${f ? f[LANG] : ""}</td></tr>`;
     }).join("");
     return `<div class="rt-caixa"><table class="rt"><caption>${tx("taula")}</caption>
       <thead><tr><th scope="col">${tx("c_ind")}</th><th scope="col">${tx("c_val")}</th><th scope="col">${tx("c_prov")}</th><th scope="col">${tx("c_pos")}</th><th scope="col">${tx("c_any")}</th><th scope="col">${tx("c_font")}</th></tr></thead>

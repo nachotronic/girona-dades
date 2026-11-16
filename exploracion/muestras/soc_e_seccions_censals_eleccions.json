@@ -1,0 +1,486 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Resultats electorals de la Segona República a Catalunya. Resultats per secció censal",
+            "id" : "4pc8-nu2t",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les diferents convocatòries electorals celebrades durant la 2a República a Catalunya, per secció censal.\n\nPer qüestions de robustesa d’estructura, aquestes dades són un resum de les taules originals que es poden trobar enllaçades en aquesta mateixa pàgina.\n\n<p>Recerca efectuada pel Dr. Pau Vall Prat (<a href=\"http://www.pauvallprat.com/\">www.pauvallprat.com</a>),&nbsp;<a href=\"https://sira.ub.edu/fitxes/Dret.html?id=pau.vall.ub.edu&amp;lang=ca\">Professor Lector de la UB</a>, i pel Dr. Francesc Amat,&nbsp;<a href=\"https://sira.ub.edu/static/fitxes/EconomiaIEmpresa.html?id=francesc.amat.ub.edu&amp;lang=ca\">Investigador Ram&oacute;n y Cajal a la UB</a>.</p>",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-20T14:57:33.000Z",
+            "createdAt" : "2026-05-20T14:52:39.000Z",
+            "metadata_updated_at" : "2026-05-20T14:57:33.000Z",
+            "data_updated_at" : "2026-05-20T14:57:23.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 29,
+                "page_views_last_month" : 52,
+                "page_views_total" : 118,
+                "page_views_last_week_log" : 4.906890595608519,
+                "page_views_last_month_log" : 5.7279204545632,
+                "page_views_total_log" : 6.894817763307944
+              },
+            "columns_name" :
+              [
+                "Eleccions parcials",
+                "Municipi",
+                "Circumscripció",
+                "Vots altres candidats",
+                "Vots en contra",
+                "Vots nuls",
+                "Vots blancs",
+                "Vots totals a candidats",
+                "Cens",
+                "Votants",
+                "Eleccions",
+                "Participació",
+                "Any",
+                "Vots a favor",
+                "Data",
+                "Districte",
+                "Secció",
+                "Font",
+                "Identificador municipal"
+              ],
+            "columns_field_name" :
+              [
+                "eleccions_parcials",
+                "municipi",
+                "circumscripcio",
+                "vots_altres_candidats",
+                "vots_en_contra",
+                "vots_nuls",
+                "vots_blancs",
+                "vots_totals_candidats",
+                "cens",
+                "votants",
+                "eleccions",
+                "participacio",
+                "any",
+                "vots_a_favor",
+                "data",
+                "districte",
+                "seccio",
+                "font",
+                "identificador_municipal"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Classificació de les eleccions, segons si són ordinàries o no. Variable categòrica, on: 0 = eleccions ordinàries 1 = segones voltes 2 = eleccions parcials 3 = segones voltes d’eleccions parcials",
+                "Nom del municipi",
+                "Unitat bàsica de recompte de vots (també pot ser anomenat districte electoral)",
+                "Nombre total de vots a individus que no es postulaven com a candidats en aquella circumscripció",
+                "Nombre total de vots en contra de l’Estatut de Catalunya (només per Referèndum Estatut)",
+                "Vots nuls emesos en aquella secció censal",
+                "Vots blancs emesos en aquella secció censal",
+                "Nombre total de vots emesos a favor de candidats/es",
+                "Nombre absolut de persones amb dret a vot en aquella secció censal",
+                "Nombre absolut de persones que van exercir el seu dret a vot en aquella secció censal",
+                "Classificació de les eleccions, segons l'objecte de la convocatòria (\"Corts\", \"Parlament\", \"Compromissaris\" o \"Referèndum Estatut\")",
+                "Càlcul del percentatge de participació electoral (en %) en aquella secció censal: Participació (%) = (Votants / Cens) × 100",
+                "Any en el qual té lloc la convocatòria electoral",
+                "Nombre total de vots a favor de l’Estatut de Catalunya (només per Referèndum Estatut)",
+                "Data en la qual té lloc la convocatòria electoral (format dd/mm/aaaa)",
+                "Divisió administrativa dins dels municipis",
+                "Secció censal dins de cada Districte municipal",
+                "Font de les dades",
+                "Identificador únic per a cada municipi de Catalunya"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 22,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-05-20T14:57:33.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "vot",
+                "segona república",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Electoral results of the Second Republic in Catalonia. Results by census section"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resultados electorales de la Segunda República en Cataluña. Resultados por sección censal"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/4pc8-nu2t",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-electorals-de-la-Segona-República-a-Cata/4pc8-nu2t",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Resultats electorals de la Segona República a Catalunya. Resultats per secció censal i candidats",
+            "id" : "fih7-37h6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats de les diferents convocatòries electorals celebrades durant la 2a República a Catalunya, per secció censal i candidats.\n<p>Recerca efectuada pel Dr. Pau Vall Prat (<a href=\"http://www.pauvallprat.com/\">www.pauvallprat.com</a>),&nbsp;<a href=\"https://sira.ub.edu/fitxes/Dret.html?id=pau.vall.ub.edu&amp;lang=ca\">Professor Lector de la UB</a>, i pel Dr. Francesc Amat,&nbsp;<a href=\"https://sira.ub.edu/static/fitxes/EconomiaIEmpresa.html?id=francesc.amat.ub.edu&amp;lang=ca\">Investigador Ram&oacute;n y Cajal a la UB</a>.</p>",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-05-21T09:59:03.000Z",
+            "createdAt" : "2026-05-21T09:46:58.000Z",
+            "metadata_updated_at" : "2026-05-21T09:59:03.000Z",
+            "data_updated_at" : "2026-05-21T09:58:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 34,
+                "page_views_total" : 90,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.129283016944966,
+                "page_views_total_log" : 6.507794640198696
+              },
+            "columns_name" :
+              [
+                "Data",
+                "Eleccions parcials",
+                "Font",
+                "Secció",
+                "Votants",
+                "Eleccions",
+                "Electe",
+                "Sexe",
+                "Vots a cada candidat",
+                "Circumscripció",
+                "Districte",
+                "Sigles opció política",
+                "Nom opció política",
+                "Vots blancs",
+                "Vots altres candidats",
+                "Nom coalició",
+                "Identificador candidat",
+                "Vots nuls",
+                "Participació",
+                "Nom complet del candidat",
+                "Partit",
+                "Vots totals a candidats",
+                "Municipi",
+                "Cens",
+                "Sigles coalició",
+                "Identificador municipal",
+                "Any"
+              ],
+            "columns_field_name" :
+              [
+                "data",
+                "eleccions_parcials",
+                "font",
+                "seccio",
+                "votants",
+                "eleccions",
+                "electe",
+                "sexe",
+                "vots_candidat",
+                "circumscripcio",
+                "districte",
+                "sigles_opcio_politica",
+                "nom_opcio_politica",
+                "vots_blancs",
+                "vots_altres_candidats",
+                "nom_coalicio",
+                "identificador_candidat",
+                "vots_nuls",
+                "participacio",
+                "nom_complet_candidat",
+                "partit",
+                "vots_totals_candidats",
+                "municipi",
+                "cens",
+                "sigles_coalicio",
+                "identificador_municipal",
+                "any"
+              ],
+            "columns_datatype" :
+              [
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Data en la qual té lloc la convocatòria electoral (format dd/mm/aaaa)",
+                "Classificació de les eleccions, segons si són ordinàries o no. Variable categòrica, on: 0 = eleccions ordinàries 1 = segones voltes 2 = eleccions parcials 3 = segones voltes d’eleccions parcials",
+                "Font de les dades",
+                "Secció censal dins de cada Districte municipal",
+                "Nombre absolut de persones que van exercir el seu dret a vot en aquella secció censal",
+                "Classificació de les eleccions, segons l'objecte de la convocatòria (\"Corts\", \"Parlament\", \"Compromissaris\" o \"Referèndum Estatut\")",
+                "Indica si el candidat va ser elegit o no. Variable dicotòmica, on: 1 indica que el candidat/a va ser elegit 0 indica que el candidat/a no va ser elegit",
+                "Sexe del candidat. Variable dicotòmica: 1 indica que el/la candidat/a era una dona 2 indica que el/la candidat/a era un home",
+                "Nombre total de vots rebuts per cada candidat/a en cada secció censal i per tipus d'elecció",
+                "Unitat bàsica de recompte de vots (també pot ser anomenat districte electoral)",
+                "Divisió administrativa dins dels municipis",
+                "Sigles de l’opció política",
+                "Nom de l'opció política",
+                "Vots blancs emesos en aquella secció censal",
+                "Nombre total de vots a individus que no es postulaven com a candidats en aquella circumscripció",
+                "Nom complet de la coalició ",
+                "Identificador únic per a cadascun dels individus que es van presentar a eleccions durant la Segona República",
+                "Vots nuls emesos en aquella secció censal",
+                "Càlcul del percentatge de participació electoral (en %) en aquella secció censal Participació (%) = (Votants / Cens) × 100",
+                "Nom complet del candidat/a",
+                "Partit polític al qual pertanyia el/la candidat/a en cada elecció",
+                "Nombre total de vots emesos a favor de candidats/es",
+                "Nom del municipi",
+                "Nombre absolut de persones amb dret a vot en aquella secció censal",
+                "Sigles de la coalició en el marc de la qual es va presentar a les eleccions el/la candidat/a",
+                "Identificador únic per a cada municipi de Catalunya",
+                "Any en el qual té lloc la convocatòria electoral"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 6,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-05-21T09:59:03.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "vot",
+                "segona república",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Electoral results of the Second Republic in Catalonia. Results by census section and candidates"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Resultados electorales de la Segunda República en Cataluña. Resultados por sección censal y candidatos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/fih7-37h6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-electorals-de-la-Segona-República-a-Cata/fih7-37h6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 2,
+  "timings" : { "serviceMillis" : 22, "searchMillis" : [ 2, 8 ] },
+  "warnings" : []
+}

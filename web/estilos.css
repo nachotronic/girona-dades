@@ -840,8 +840,23 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .fitxa-extra, .fx-dues { grid-template-columns: 1fr; gap: 32px; }
   .rs-text p { font-size: 16.5px; }
   .rs-text p:first-child { font-size: 18.5px; }
-  .fx-nb li { grid-template-columns: minmax(0, 9em) minmax(0, 1fr) 6.5em; }
+  .fx-nb li { grid-template-columns: minmax(0, 1fr) 6.5em; row-gap: 4px; }
+  .fx-nb .nb-nom { grid-column: 1 / -1; white-space: normal; }
   .fx-tres b { font-size: 22px; }
-  .rt { font-size: 13px; }
-  .rt thead th:nth-child(5), .rt td:nth-child(5), .rt thead th:nth-child(6), .rt td:nth-child(6) { display: none; }
 }
+@media (max-width: 640px) {
+  .rt-caixa { overflow: visible; }
+  .rt thead { display: none; }
+  .rt caption { display: block; width: 100%; }
+  .rt, .rt tbody { display: block; }
+  .rt tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--vora); }
+  .rt th, .rt td { border: 0; padding: 0; text-align: left; }
+  .rt th[scope="row"] { grid-column: 1 / 3; }
+  .rt td.rt-v { grid-column: 3; text-align: right; font-size: 15px; }
+  .rt td[data-l] { margin-top: 8px; font-size: 12.5px; white-space: normal; }
+  .rt td[data-l]::before { content: attr(data-l); display: block; font: 500 10px/1.2 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-3); margin-bottom: 2px; }
+  .rt td.rt-f { grid-column: 1 / -1; min-width: 0; display: flex; gap: 6px; align-items: baseline; }
+  .rt td.rt-f::before { display: inline; margin: 0; }
+}
+.fx-nb .nb-v small { display: block; margin: 2px 0 0; }
+.fx-pres .grafic { max-width: 820px; }

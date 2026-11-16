@@ -1,0 +1,711 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Processos electorals - Participació",
+            "id" : "irrv-2mfc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de participació en els processos electorals celebrats a Catalunya (cens, nombre de votants, vots nuls, vots en blanc, vots vàlids,...)",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-09-22T09:47:36.000Z",
+            "createdAt" : "2019-11-06T09:57:22.000Z",
+            "metadata_updated_at" : "2025-09-22T09:47:36.000Z",
+            "data_updated_at" : "2025-06-20T08:51:03.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 100,
+                "page_views_last_month" : 365,
+                "page_views_total" : 7544,
+                "page_views_last_week_log" : 6.6582114827517955,
+                "page_views_last_month_log" : 8.515699838284043,
+                "page_views_total_log" : 12.881305185414046
+              },
+            "columns_name" :
+              [
+                "HORA_SEGON_AVAN",
+                "ID_ELECCIO",
+                "ESCONS",
+                "NOM_ELECCIO",
+                "VOTS_PRIMER_AVAN",
+                "TERRITORI_CODI",
+                "INDEX_AUTONUMERIC",
+                "NOMBRE_MESES",
+                "NOM_NIVELL_TERRITORIAL",
+                "VOTS_SEGON_AVAN",
+                "VOTS_CANDIDATURES",
+                "VOTS_BLANCS",
+                "ID_NIVELL_TERRITORIAL",
+                "VOTS_VALIDS",
+                "HORA_PRIMER_AVAN",
+                "ABSTENCIO",
+                "SECCIO",
+                "VOTS_NULS",
+                "VOTANTS",
+                "CENS_ELECTORAL",
+                "MESA",
+                "PADRO",
+                "TERRITORI_NOM",
+                "DISTRICTE"
+              ],
+            "columns_field_name" :
+              [
+                "hora_segon_avan",
+                "id_eleccio",
+                "escons",
+                "nom_eleccio",
+                "vots_primer_avan",
+                "territori_codi",
+                "index_autonumeric",
+                "nombre_meses",
+                "nom_nivell_territorial",
+                "vots_segon_avan",
+                "vots_candidatures",
+                "vots_blancs",
+                "id_nivell_territorial",
+                "vots_valids",
+                "hora_primer_avan",
+                "abstencio",
+                "seccio",
+                "vots_nuls",
+                "votants",
+                "cens_electoral",
+                "mesa",
+                "padro",
+                "territori_nom",
+                "districte"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Hora del segon avanç de participació",
+                "Identificador de l'elecció (Tipus+Any+Seqüencial)",
+                "Escons a escollir a la circumscripció",
+                "Nom del procés electoral",
+                "Votants al primer avanç de participació",
+                "Codi del territori",
+                "Índex autonumèric del dataset",
+                "Nombre de meses electorals ",
+                "Nom del nivell territorial del registre (Municipi, Comarca...)",
+                "Votants al segon avanç de participació",
+                "Vots a candidatures",
+                "Vots en blanc",
+                "Identificador del nivell territorial (Municipi, Vegueria, Comarca...)",
+                "Vots vàlids (a candidatures + en blanc)",
+                "Hora del primer avanç de participació",
+                "Nombre de persones que s'han abstingut",
+                "Secció electoral",
+                "Vots nuls",
+                "Nombre de votants",
+                "Cens del territori",
+                "Mesa electoral",
+                "Padró d'habitants del territori",
+                "Nom del territori",
+                "Districte electoral"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                { "noCommas" : "true" },
+                {},
+                { "noCommas" : "true" },
+                {},
+                {}
+              ],
+            "download_count" : 1451,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-04-01T09:19:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "eleccions",
+                "procés electoral",
+                "participació",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Evolució de la taxa de participació en els processos electorals celebrats a Catalunya"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://eleccions.gencat.cat/ca/resultats-i-eleccions-anteriors/estadistiques/Estadistiques-de-participacio-electoral/"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Elections - Participation"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Procesos electorales - Participación"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/irrv-2mfc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Processos-electorals-Participació/irrv-2mfc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Processos electorals - Referèndums",
+            "id" : "dbhr-spf3",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Resultats dels referèndums celebrats a Catalunya.",
+            "attribution" : "Subdirecció General de Processos Electorals i Democràcia Directa",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-29T07:55:36.000Z",
+            "createdAt" : "2019-11-06T10:00:09.000Z",
+            "metadata_updated_at" : "2026-07-29T07:55:36.000Z",
+            "data_updated_at" : "2023-02-23T12:34:20.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 56,
+                "page_views_total" : 2607,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.832890014164742,
+                "page_views_total_log" : 11.348728154231079
+              },
+            "columns_name" :
+              [
+                "DISTRICTE",
+                "MESA",
+                "VOTS_SI",
+                "VOTS_NO",
+                "VOTS_VALIDS",
+                "VOTS_NULS",
+                "ABSTENCIO",
+                "NOM_NIVELL_TERRITORIAL",
+                "NOMBRE_MESES",
+                "CENS_ELECTORAL",
+                "PADRÓ",
+                "ID_NIVELL_TERRITORIAL",
+                "INDEX_AUTONUMERIC",
+                "TERRITORI_NOM",
+                "TERRITORI_CODI",
+                "VOTS_BLANCS",
+                "VOTANTS",
+                "NOM_ELECCIO",
+                "SECCIO",
+                "ID_ELECCIO",
+                "HORA_SEGON_AVAN",
+                "VOTS_PRIMER_AVAN",
+                "HORA_PRIMER_AVAN",
+                "VOTS_SEGON_AVAN",
+                "HORA_TERCER_AVAN"
+              ],
+            "columns_field_name" :
+              [
+                "districte",
+                "mesa",
+                "vots_si",
+                "vots_no",
+                "vots_valids",
+                "vots_nuls",
+                "abstencio",
+                "nom_nivell_territorial",
+                "nombre_meses",
+                "cens_electoral",
+                "padr_",
+                "id_nivell_territorial",
+                "index_autonumeric",
+                "territori_nom",
+                "territori_codi",
+                "vots_blancs",
+                "votants",
+                "nom_eleccio",
+                "seccio",
+                "id_eleccio",
+                "hora_segon_avan",
+                "vots_primer_avan",
+                "hora_primer_avan",
+                "vots_segon_avan",
+                "hora_tercer_avan"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Districte electoral",
+                "Mesa electoral",
+                "Vots afirmatius",
+                "Vots negatius",
+                "Vots vàlids (a candidatures + en blanc)",
+                "Vots nuls",
+                "Nombre de persones que s'han abstingut",
+                "Nom del nivell territorial del registre (Municipi, Comarca...)",
+                "Nombre de meses electorals ",
+                "Cens del territori",
+                "Padró d'habitants del territori",
+                "Identificador del nivell territorial (Municipi, Vegueria, Comarca...)",
+                "Índex autonumèric del dataset",
+                "Nom del territori",
+                "Codi del territori",
+                "Vots en blanc",
+                "Nombre de votants",
+                "Nom del procés electoral",
+                "Secció electoral",
+                "Identificador de l'elecció (Tipus+Any+Seqüencial)",
+                "Hora del segon avanç de participació",
+                "Votants al primer avanç de participació",
+                "Hora del primer avanç de participació",
+                "Votants al segon avanç de participació",
+                "Hora del tercer avanç de participació"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 953,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-02-23T12:34:41.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "procés electoral",
+                "referèndums",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Elections - Referendum"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Procesos electorales - Referéndum"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/dbhr-spf3",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Processos-electorals-Referèndums/dbhr-spf3",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Centres de votació 12M 2024",
+            "id" : "f7hf-52sc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat dels centres de votació de les eleccions al Parlament de Catalunya del 12 de maig de 2024.\n\nNOTA: La informació dels locals s’ha obtingut a partir de la informació publicada per l'INE als diferents butlletins oficials provincials. Per ubicar els locals s’ha realitzat un procés automàtic a partir de les adreces postals i és possible que en alguns casos aquesta no sigui prou acurada.\n\n(Voleu ajudar a millorar-ho? Contacteu amb el propietari del dataset fent referencia al local i el municipi i indicant la ubicació o coordenades correctes, si les coneixeu.)",
+            "attribution" : "Direcció General de Relacions Institucionals i amb el Parlament",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:35:45.000Z",
+            "createdAt" : "2024-05-06T10:37:16.000Z",
+            "metadata_updated_at" : "2025-04-07T10:35:45.000Z",
+            "data_updated_at" : "2024-05-15T12:37:50.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 28,
+                "page_views_last_month" : 62,
+                "page_views_total" : 984,
+                "page_views_last_week_log" : 4.857980995127573,
+                "page_views_last_month_log" : 5.977279923499917,
+                "page_views_total_log" : 9.943979914343739
+              },
+            "columns_name" :
+              [
+                "Adreça 2",
+                "Prov",
+                "Geolocalització",
+                "Nom prov",
+                "Nom local",
+                "Cens",
+                "Longitud",
+                "Latitud",
+                "Codi postal",
+                "Adreça 3",
+                "Adreça 1",
+                "Informació addicional",
+                "Municipi",
+                "Nom municipi",
+                "Codi local",
+                "Meses"
+              ],
+            "columns_field_name" :
+              [
+                "direcci_n_ocurrencia_2",
+                "provincia",
+                "geolocalitzaci",
+                "nombre",
+                "nombre_local",
+                "cens_del_local",
+                "longitud",
+                "latitud",
+                "c_digo_postal",
+                "direcci_n_ocurrencia_3",
+                "direcci_n_ocurrencia_1",
+                "informaci_n_adicional",
+                "municipio",
+                "nombre00",
+                "c_digo_local",
+                "meses_del_local"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Adreça del local 2",
+                "Codi identificatiu de la província",
+                "Punt de localització",
+                "Nom de la província",
+                "Nom del local de votació",
+                "Cens d'electors assignats al local",
+                "Longitud",
+                "Latitud",
+                "Codi postal",
+                "Adreça del local 3",
+                "Adreça del local 1",
+                "Informació addicional del local",
+                "Codi identificatiu del municipi (INE)",
+                "Nom del municipi",
+                "Codi identificatiu de local de votació",
+                "Nombre de meses del local"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "precision" : "0" }
+              ],
+            "download_count" : 478,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-05-06T10:53:53.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "col·legi electoral",
+                "locals electorals",
+                "meses",
+                "cens",
+                "ods16_pau justícies i institucions sòlides",
+                "eleccions",
+                "12m",
+                "parlament2024",
+                "eleccions2024",
+                "parlament12m2024"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Polling stations 2024 may 12th"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Locales de votación 12M 2024"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Justícia i Qualitat Democràtica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/f7hf-52sc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Centres-de-votació-12M-2024/f7hf-52sc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 3,
+  "timings" : { "serviceMillis" : 24, "searchMillis" : [ 3, 9 ] },
+  "warnings" : []
+}

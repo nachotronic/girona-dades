@@ -921,8 +921,9 @@ def complements_indicadores(pob):
                 x["aeat_bruta"] = r(o["bruta"])
             if o["disp"]:
                 x["aeat_disp"] = r(o["disp"])
-            if o["decl"] and pob.get(ine):
-                x["aeat_decl"] = r(o["decl"] / pob[ine] * 100, 1)
+            hab = o["hab"] or pob.get(ine)
+            if o["decl"] and hab:
+                x["aeat_decl"] = r(o["decl"] / hab * 100, 1)
             if o["rb"] and o["quota"]:
                 x["aeat_tipus"] = r(o["quota"] / o["rb"] * 100, 1)
             if o["rb"] and o["capital"] is not None and o["immobles"] is not None:
@@ -951,6 +952,74 @@ def complements_indicadores(pob):
                 continue
             o[k] = {int(a): int(v) for a, v in zip(g["any"], g["valor"]) if v == v}
     return res, refs, anys, fitxa
+
+
+def pressupostos(pob):
+    """Liquidación de presupuestos municipales (Generalitat): por municipio, el último año con datos
+    en €/habitante por capítulos, programas e ingresos tributarios, y la serie de ingresos y gastos."""
+    f = P / "pressupostos" / "liquidacio.csv.gz"
+    if not f.exists():
+        return {}, {}, {}, {}, {}
+    d = pd.read_csv(f, dtype=str)
+    d["eh"] = pd.to_numeric(d["euros_habitant"], errors="coerce")
+    d["imp"] = pd.to_numeric(d["import"], errors="coerce")
+    d["any"] = d["any"].astype(int)
+    doc = {"INGRESSOS": "ing", "DESPESES": "desp", "CLASSIFICACIÓ PER PROGRAMES": "prog", "PRINCIPALS INGRESSOS TRIBUTARIS": "trib"}
+    d["k"] = d["nom_document"].map(doc)
+    d = d.dropna(subset=["k", "eh"])
+    noms = {k: dict(zip(g["codi_estructura"], g["desc_estructura"])) for k, g in d.sort_values("any").groupby("k")}
+    fitxa, x, anys = {}, {}, {}
+    for ine, g in d.groupby("ine"):
+        tot = g[g["k"].isin(["ing", "desp"])].groupby(["any", "k"])["eh"].sum().unstack()
+        tot = tot[(tot.get("ing", 0) > 0) & (tot.get("desp", 0) > 0)]
+        if tot.empty:
+            continue
+        a = int(tot.index.max())
+        u = g[g["any"] == a]
+        o = {"any": a}
+        for k in ("ing", "desp", "prog", "trib"):
+            uu = u[u["k"] == k]
+            o[k] = {c: r(v, 1) for c, v in zip(uu["codi_estructura"], uu["eh"])}
+        o["serie"] = {"ing": {int(i): r(v) for i, v in tot["ing"].items()}, "desp": {int(i): r(v) for i, v in tot["desp"].items()}}
+        fitxa[ine] = {"pres": o}
+        ing, desp = sum(o["ing"].values()), sum(o["desp"].values())
+        xx = x.setdefault(ine, {})
+        xx["pres_ing"], xx["pres_desp"] = r(ing), r(desp)
+        xx["pres_saldo"] = r(ing - desp)
+        xx["pres_inv"] = r(o["desp"].get("6", 0))
+        xx["pres_personal"] = r(o["desp"].get("1", 0) / desp * 100, 1) if desp else None
+        xx["pres_transf"] = r((o["ing"].get("4", 0) + o["ing"].get("7", 0)) / ing * 100, 1) if ing else None
+        xx["pres_social"] = r(o["prog"].get("2", 0))
+        xx["pres_ibi"] = r(o["trib"].get("1102")) if o["trib"].get("1102") is not None else None
+        xx["pres_taxes"] = r(o["trib"].get("3000")) if o["trib"].get("3000") is not None else None
+        xx["pres_any"] = a
+    a_max = int(d["any"].max())
+    for k in ("pres_ing", "pres_desp", "pres_saldo", "pres_inv", "pres_personal", "pres_transf", "pres_social", "pres_ibi", "pres_taxes"):
+        anys[k] = a_max
+    # Media provincial ponderada (importes / habitantes) del último año
+    u = d[d["any"] == a_max].copy()
+    u["hab"] = u["imp"] / u["eh"].where(u["eh"] > 0)
+    hab = u.dropna(subset=["hab"]).groupby("ine")["hab"].median().sum()
+    prov = {"any": a_max}
+    for k in ("ing", "desp", "prog", "trib"):
+        uu = u[u["k"] == k]
+        prov[k] = {c: r(v / hab, 1) for c, v in uu.groupby("codi_estructura")["imp"].sum().items()} if hab else {}
+    for ine in list(x):
+        x[ine] = {k: v for k, v in x[ine].items() if v is not None}
+    return x, anys, fitxa, prov, noms
+
+
+def esperanca_series():
+    f = P / "padro" / "esperanca.json"
+    if not f.exists():
+        return {}
+    d = json.loads(f.read_text(encoding="utf-8"))
+    ser = {}
+    for s_ in d.get("77117", []):
+        z = "gi" if "Ambos" in s_["nom"] else "esp" if "Varones" in s_["nom"] else "cat" if "Mujeres" in s_["nom"] else None
+        if z:
+            ser[z] = sorted([[int(a), str(a), v] for a, v in s_["d"] if v is not None])
+    return {"esperanca": {"tipus": "linia", "u": "anys", "dec": 1, "noms": "esperanca", "series": ser}} if ser.get("gi") else {}
 
 
 # ---------------------------------------------------------------------------
@@ -1453,6 +1522,12 @@ def main():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_cm)
     refs_ed.update(refs_cm)
+    px, anys_px, fitxa_px, prov_pres, noms_pres = pressupostos(pob)
+    for ine, x in px.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    for ine, x in fitxa_px.items():
+        fitxa_cm.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_px)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1515,7 +1590,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac}, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series()}, "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": anys_extra,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
@@ -1524,6 +1599,7 @@ def main():
             "viviendas": sum(m["viviendas"] or 0 for m in municipios),
             "viv_antes_1980": sum(m["viv_antes_1980"] or 0 for m in municipios),
             **({"aeat": fitxa_cm["_prov"]["aeat"]} if "_prov" in fitxa_cm else {}),
+            **({"pres": prov_pres} if prov_pres else {}),
         },
         "municipios": municipios,
     }

@@ -799,6 +799,151 @@
       {
         "resource" :
           {
+            "name" : "Relació d’alts càrrecs dels departaments de la Generalitat de Catalunya i les seves retribucions",
+            "id" : "x9au-abcn",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació d’òrgans superiors, alts càrrecs i personal directiu assimilats a efectes de la Llei 13/2005, corresponent als departaments de l’Administració de la Generalitat.\n\nEl personal directiu del sector públic instrumental s’exclou d’aquest conjunt de dades ja que queda recollit al conjunt de dades Relació del personal directiu de les entitats del sector públic i les seves retribucions anuals previstes. Per això, entre d'altres, no s'inclouen les entitats autònomes administratives.",
+            "attribution" : "Secretaria d'Administració i Funció Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-29T11:35:02.000Z",
+            "createdAt" : "2021-04-23T09:16:59.000Z",
+            "metadata_updated_at" : "2026-09-29T11:35:02.000Z",
+            "data_updated_at" : "2026-09-29T11:35:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 496,
+                "page_views_last_month" : 1658,
+                "page_views_total" : 79072,
+                "page_views_last_week_log" : 8.957102041562287,
+                "page_views_last_month_log" : 10.696098170955864,
+                "page_views_total_log" : 16.2708975405473
+              },
+            "columns_name" :
+              [
+                "Denominació del lloc",
+                "Cognoms i nom",
+                "Departament",
+                "Sexe",
+                "Retribució anual"
+              ],
+            "columns_field_name" :
+              [
+                "denominacio_lloc",
+                "cognoms_nom",
+                "departament",
+                "sexe",
+                "retribucio_anual_prevista"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Denominació del lloc de treball d’adscripció de l’alt càrrec",
+                "Nom i cognom de l’alt càrrec",
+                "Departament de la Generalitat de Catalunya",
+                "Sexe de l’alt càrrec",
+                "Retribució anual prevista, d’acord amb la informació de les taules retributives"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "false",
+                  "groupSeparator" : ".",
+                  "align" : "right"
+                }
+              ],
+            "download_count" : 6525,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-06-25T13:00:42.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "administració pública",
+                "administració de la generalitat alts càrrecs",
+                "personal assimilat a alt càrrec del dexi retribucions",
+                "ods16_pau justícies i institucions sòlides",
+                "funció pública",
+                "treballadors públics"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "List of senior officials of the departments of the Generalitat of Catalonia and their salaries"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Relación de altos cargos de los departamentos de la Generalidad de Cataluña y sus retribuciones"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/x9au-abcn",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Relació-d-alts-càrrecs-dels-departaments-de-la-Gen/x9au-abcn",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
             "name" : "Estadístiques dels fluxos del mercat de treball",
             "id" : "y269-nwn5",
             "resource_name" : null,
@@ -1201,288 +1346,6 @@
       {
         "resource" :
           {
-            "name" : "Relació d’alts càrrecs dels departaments de la Generalitat de Catalunya i les seves retribucions",
-            "id" : "x9au-abcn",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Relació d’òrgans superiors, alts càrrecs i personal directiu assimilats a efectes de la Llei 13/2005, corresponent als departaments de l’Administració de la Generalitat.\n\nEl personal directiu del sector públic instrumental s’exclou d’aquest conjunt de dades ja que queda recollit al conjunt de dades Relació del personal directiu de les entitats del sector públic i les seves retribucions anuals previstes. Per això, entre d'altres, no s'inclouen les entitats autònomes administratives.",
-            "attribution" : "Secretaria d'Administració i Funció Pública",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-09-29T11:35:02.000Z",
-            "createdAt" : "2021-04-23T09:16:59.000Z",
-            "metadata_updated_at" : "2026-09-29T11:35:02.000Z",
-            "data_updated_at" : "2026-09-29T11:35:02.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 496,
-                "page_views_last_month" : 1658,
-                "page_views_total" : 79072,
-                "page_views_last_week_log" : 8.957102041562287,
-                "page_views_last_month_log" : 10.696098170955864,
-                "page_views_total_log" : 16.2708975405473
-              },
-            "columns_name" :
-              [
-                "Denominació del lloc",
-                "Cognoms i nom",
-                "Departament",
-                "Sexe",
-                "Retribució anual"
-              ],
-            "columns_field_name" :
-              [
-                "denominacio_lloc",
-                "cognoms_nom",
-                "departament",
-                "sexe",
-                "retribucio_anual_prevista"
-              ],
-            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
-            "columns_description" :
-              [
-                "Denominació del lloc de treball d’adscripció de l’alt càrrec",
-                "Nom i cognom de l’alt càrrec",
-                "Departament de la Generalitat de Catalunya",
-                "Sexe de l’alt càrrec",
-                "Retribució anual prevista, d’acord amb la informació de les taules retributives"
-              ],
-            "columns_format" :
-              [
-                {},
-                {},
-                {},
-                {},
-                {
-                  "decimalSeparator" : ",",
-                  "noCommas" : "false",
-                  "groupSeparator" : ".",
-                  "align" : "right"
-                }
-              ],
-            "download_count" : 6525,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2026-06-25T13:00:42.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Sector Públic",
-            "domain_tags" :
-              [
-                "administració pública",
-                "administració de la generalitat alts càrrecs",
-                "personal assimilat a alt càrrec del dexi retribucions",
-                "ods16_pau justícies i institucions sòlides",
-                "funció pública",
-                "treballadors públics"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Dades-d'Alt-Valor_Categoria",
-                  "value" : "No són dades d’alt valor"
-                },
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "Sí"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "List of senior officials of the departments of the Generalitat of Catalonia and their salaries"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Relación de altos cargos de los departamentos de la Generalidad de Cataluña y sus retribuciones"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Sense informació geogràfica"
-                },
-                { "key" : "Actors_Departament", "value" : "Presidència" },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Mensual"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/x9au-abcn",
-        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Relació-d-alts-càrrecs-dels-departaments-de-la-Gen/x9au-abcn",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Ajuts extraordinaris per al manteniment de l’activitat econòmica de persones autònomes i microempreses enfront la COVID-19 (2021)",
-            "id" : "t3q7-a7tm",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Relació de les persones beneficiàries dels ajuts extraordinaris per al manteniment de l’activitat econòmica de persones autònomes i microempreses enfront la COVID-19  en la convocatòria de 2021.\nAquest ajut extraordinari consisteix en una prestació econòmica de pagament únic per un import de 2.000 euros per a les persones treballadores autònomes que van presentar el formulari d'inscripció prèvia que preveu l'Ordre TSF/32/2021, de 5 de febrer i que compleixin els requisits.",
-            "attribution" : "Departament d'Empresa i Treball",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2025-05-06T08:43:31.000Z",
-            "createdAt" : "2021-03-24T09:32:45.000Z",
-            "metadata_updated_at" : "2025-05-06T08:43:31.000Z",
-            "data_updated_at" : "2021-05-28T12:18:09.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 35,
-                "page_views_last_month" : 88,
-                "page_views_total" : 88540,
-                "page_views_last_week_log" : 5.169925001442312,
-                "page_views_last_month_log" : 6.475733430966398,
-                "page_views_total_log" : 16.43405804716745
-              },
-            "columns_name" : [
-                               "Nom sol·licitant",
-                               "Estat",
-                               "NIF sol·licitant"
-                             ],
-            "columns_field_name" :
-              [ "nom_sol_licitant", "estat", "nif_sol_licitant" ],
-            "columns_datatype" : [ "Text", "Text", "Text" ],
-            "columns_description" :
-              [
-                "Nom sol·licitant (inicials: nom i cognoms)",
-                "Estat",
-                "NIF sol·licitant"
-              ],
-            "columns_format" : [ {}, {}, {} ],
-            "download_count" : 3861,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2021-03-24T09:36:10.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Treball",
-            "domain_tags" :
-              [
-                "covid-19",
-                "coronavirus",
-                "prestació",
-                "ajut",
-                "autònom",
-                "microempresa",
-                "empresa",
-                "cooperativa",
-                "manteniment activitat econòmica",
-                "subvenció",
-                "inscripció prèvia",
-                "registre",
-                "2000",
-                "ods8_treball decent i creixement econòmic"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Enllaços-relacionats_Nom",
-                  "value" : "Ajuts extraordinaris per al manteniment de l'activitat econòmica de persones autònomes o que formin part d'una microempresa enfront la COVID-19 (febrer 2021)"
-                },
-                {
-                  "key" : "Enllaços-relacionats_URL",
-                  "value" : "https://treball.gencat.cat/ca/inici/ci/informaciocovid/ajuts-covid/autonoms2021"
-                },
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Extra helps for the maintenance of the economic activity of freelancers and microcompanies due to the COVID-19 (2021)"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Ayudas extraordinarias para el mantenimiento de la actividad económica de personas autónomas y microempresas frente la COVID-19 (2021)"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Sense informació geogràfica"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Empresa i Treball"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Dades estàtiques"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/t3q7-a7tm",
-        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Ajuts-extraordinaris-per-al-manteniment-de-l-activ/t3q7-a7tm",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
             "name" : "Resultats de les ofertes de treball de caràcter temporal dels departaments de l’Administració de la Generalitat",
             "id" : "qjpp-rv5g",
             "resource_name" : null,
@@ -1639,6 +1502,143 @@
           },
         "permalink" : "https://analisi.transparenciacatalunya.cat/d/qjpp-rv5g",
         "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Resultats-de-les-ofertes-de-treball-de-caràcter-te/qjpp-rv5g",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Ajuts extraordinaris per al manteniment de l’activitat econòmica de persones autònomes i microempreses enfront la COVID-19 (2021)",
+            "id" : "t3q7-a7tm",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Relació de les persones beneficiàries dels ajuts extraordinaris per al manteniment de l’activitat econòmica de persones autònomes i microempreses enfront la COVID-19  en la convocatòria de 2021.\nAquest ajut extraordinari consisteix en una prestació econòmica de pagament únic per un import de 2.000 euros per a les persones treballadores autònomes que van presentar el formulari d'inscripció prèvia que preveu l'Ordre TSF/32/2021, de 5 de febrer i que compleixin els requisits.",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-05-06T08:43:31.000Z",
+            "createdAt" : "2021-03-24T09:32:45.000Z",
+            "metadata_updated_at" : "2025-05-06T08:43:31.000Z",
+            "data_updated_at" : "2021-05-28T12:18:09.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 35,
+                "page_views_last_month" : 88,
+                "page_views_total" : 88540,
+                "page_views_last_week_log" : 5.169925001442312,
+                "page_views_last_month_log" : 6.475733430966398,
+                "page_views_total_log" : 16.43405804716745
+              },
+            "columns_name" : [
+                               "Nom sol·licitant",
+                               "Estat",
+                               "NIF sol·licitant"
+                             ],
+            "columns_field_name" :
+              [ "nom_sol_licitant", "estat", "nif_sol_licitant" ],
+            "columns_datatype" : [ "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nom sol·licitant (inicials: nom i cognoms)",
+                "Estat",
+                "NIF sol·licitant"
+              ],
+            "columns_format" : [ {}, {}, {} ],
+            "download_count" : 3861,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-03-24T09:36:10.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "covid-19",
+                "coronavirus",
+                "prestació",
+                "ajut",
+                "autònom",
+                "microempresa",
+                "empresa",
+                "cooperativa",
+                "manteniment activitat econòmica",
+                "subvenció",
+                "inscripció prèvia",
+                "registre",
+                "2000",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Ajuts extraordinaris per al manteniment de l'activitat econòmica de persones autònomes o que formin part d'una microempresa enfront la COVID-19 (febrer 2021)"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://treball.gencat.cat/ca/inici/ci/informaciocovid/ajuts-covid/autonoms2021"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Extra helps for the maintenance of the economic activity of freelancers and microcompanies due to the COVID-19 (2021)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Ayudas extraordinarias para el mantenimiento de la actividad económica de personas autónomas y microempresas frente la COVID-19 (2021)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/t3q7-a7tm",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Ajuts-extraordinaris-per-al-manteniment-de-l-activ/t3q7-a7tm",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -2287,6 +2287,119 @@
       {
         "resource" :
           {
+            "name" : "Tipus contracte laboral",
+            "id" : "72e7-rgfh",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Tipus d'acord entre l'empresari i el treballador pel qual aquest s'obliga a prestar determinats serveis per compte de l'empresari i sota la seva direcció, a canvi d'una retribució.",
+            "attribution" : "Catàleg Tècnic de Dades. Observatori del Treball i Model Productiu. Secretaria de Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:07:37.000Z",
+            "createdAt" : "2023-01-23T15:57:59.000Z",
+            "metadata_updated_at" : "2026-09-17T07:07:37.000Z",
+            "data_updated_at" : "2023-01-24T15:27:22.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 38,
+                "page_views_total" : 1013,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.285402218862249,
+                "page_views_total_log" : 9.985841937003341
+              },
+            "columns_name" : [ "Codi", "Descripció", "Nom" ],
+            "columns_field_name" : [ "codi", "descripci", "nom" ],
+            "columns_datatype" : [ "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador únic de tipus de contracte laboral. No és un codi oficial, és propi del catàleg tècnic de dades.  Els registres que tenen un codi començat per 9 són registres que s’afegeixen per donar valor de completesa a l’entitat",
+                "Definició i característiques principals del tipus de contracte laboral.",
+                "Nom que rep el tipus de contracte laboral"
+              ],
+            "columns_format" :
+              [ { "decimalSeparator" : ",", "groupSeparator" : "." }, {}, {} ],
+            "download_count" : 556,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-01-23T16:05:49.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "ods9_indústria innovació i infraestructures"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Type of employment contract"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tipo contrato laboral"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/72e7-rgfh",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Tipus-contracte-laboral/72e7-rgfh",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
             "name" : "Taules retributives dels alts càrrecs de la Generalitat de Catalunya",
             "id" : "3b6m-hrxk",
             "resource_name" : null,
@@ -2480,119 +2593,6 @@
       {
         "resource" :
           {
-            "name" : "Tipus contracte laboral",
-            "id" : "72e7-rgfh",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Tipus d'acord entre l'empresari i el treballador pel qual aquest s'obliga a prestar determinats serveis per compte de l'empresari i sota la seva direcció, a canvi d'una retribució.",
-            "attribution" : "Catàleg Tècnic de Dades. Observatori del Treball i Model Productiu. Secretaria de Treball",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-09-17T07:07:37.000Z",
-            "createdAt" : "2023-01-23T15:57:59.000Z",
-            "metadata_updated_at" : "2026-09-17T07:07:37.000Z",
-            "data_updated_at" : "2023-01-24T15:27:22.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 31,
-                "page_views_last_month" : 38,
-                "page_views_total" : 1013,
-                "page_views_last_week_log" : 5.0,
-                "page_views_last_month_log" : 5.285402218862249,
-                "page_views_total_log" : 9.985841937003341
-              },
-            "columns_name" : [ "Codi", "Descripció", "Nom" ],
-            "columns_field_name" : [ "codi", "descripci", "nom" ],
-            "columns_datatype" : [ "Text", "Text", "Text" ],
-            "columns_description" :
-              [
-                "Identificador únic de tipus de contracte laboral. No és un codi oficial, és propi del catàleg tècnic de dades.  Els registres que tenen un codi començat per 9 són registres que s’afegeixen per donar valor de completesa a l’entitat",
-                "Definició i característiques principals del tipus de contracte laboral.",
-                "Nom que rep el tipus de contracte laboral"
-              ],
-            "columns_format" :
-              [ { "decimalSeparator" : ",", "groupSeparator" : "." }, {}, {} ],
-            "download_count" : 556,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2023-01-23T16:05:49.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Treball",
-            "domain_tags" :
-              [
-                "dades_de_referència",
-                "ods9_indústria innovació i infraestructures"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Type of employment contract"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Tipo contrato laboral"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Sense informació geogràfica"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Empresa i Treball"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/72e7-rgfh",
-        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Tipus-contracte-laboral/72e7-rgfh",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
             "name" : "Enunciats dels exàmens de les convocatòries per a l’accés a la funció pública de la Generalitat de Catalunya",
             "id" : "6p3u-9s8y",
             "resource_name" : null,
@@ -2769,197 +2769,6 @@
           },
         "permalink" : "https://analisi.transparenciacatalunya.cat/d/6p3u-9s8y",
         "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Enunciats-dels-exàmens-de-les-convocatòries-per-a-/6p3u-9s8y",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Registre de Centres Especials de Treball a Catalunya",
-            "id" : "pr46-nkms",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Els centres especials de treball són empreses que asseguren un treball remunerat a les persones amb discapacitat i garanteixen la seva integració laboral.\nLa seva plantilla ha de comptar amb un mínim del 70% de persones treballadores amb discapacitat no computant a aquests efectes el personal no discapacitat destinat a tasques d'ajustament personal i social.\nL'objectiu principal dels CET és fer un treball productiu, participant regularment en les operacions de mercat, tenen com a finalitat assegurar una feina remunerada i la prestació de serveis d'ajustament personal i social, que necessiti el personal amb discapacitat.",
-            "attribution" : "Departament d'Empresa i Treball",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-07-13T06:53:36.000Z",
-            "createdAt" : "2022-11-03T07:02:57.000Z",
-            "metadata_updated_at" : "2026-07-13T06:53:36.000Z",
-            "data_updated_at" : "2026-07-13T06:53:36.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 97,
-                "page_views_last_month" : 561,
-                "page_views_total" : 19933,
-                "page_views_last_week_log" : 6.614709844115209,
-                "page_views_last_month_log" : 9.134426320220927,
-                "page_views_total_log" : 14.282943613115089
-              },
-            "columns_name" :
-              [
-                "Denominació del CET",
-                "NIF",
-                "Municipi",
-                "Data alta al registre",
-                "Comarca",
-                "Codi Postal",
-                "Telèfon",
-                "Codi comarca",
-                "Demarcació territorial",
-                "Provincia",
-                "Domicili Social",
-                "Productes i serveis",
-                "Número registre",
-                "Codi Municipi"
-              ],
-            "columns_field_name" :
-              [
-                "denominaci_del_cet",
-                "nif",
-                "municipi",
-                "data_alta_registre",
-                "comarca",
-                "cp",
-                "telefon",
-                "codi_comarca",
-                "demarcaci_territorial",
-                "provincia",
-                "adre_a",
-                "productes_i_serveis",
-                "numero_registre",
-                "codi_municipi"
-              ],
-            "columns_datatype" :
-              [
-                "Text",
-                "Text",
-                "Text",
-                "Calendar date",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text"
-              ],
-            "columns_description" :
-              [
-                "Nom de l’entitat de figura al registre",
-                "Codi d’Identificació fiscal",
-                "Municipi de la seu social de l’entitat",
-                "Data d’alta al registre",
-                "Comarca on  està situada la seu social de l’entitat",
-                "Codi postal del municipi on està ubicada la seu social de l’entitat",
-                "Telèfon de contacte de l’entitat",
-                "Codi comarcal  o de l’entitat territorial singular de l’Aran de 2 dígits, definit per l’Institut Estadístic de Catalunya (IDESCAT)",
-                "Demarcació territorial on està situafa la seu social de l'entitat",
-                "Província on  està situada la seu social de l’entitat",
-                "Adreça de la seu social de l’entitat",
-                "Activitats que desenvolupa l’entitat",
-                "Número de registre",
-                "Codi municipal de 6 dígits oficial a Catalunya, definit per l’Institut Estadístic de Catalunya (IDESCAT)"
-              ],
-            "columns_format" :
-              [
-                {},
-                {},
-                {},
-                { "view" : "date_dmy" },
-                {},
-                { "decimalSeparator" : ".", "groupSeparator" : "," },
-                { "decimalSeparator" : ".", "groupSeparator" : "," },
-                { "decimalSeparator" : ".", "groupSeparator" : "," },
-                {},
-                {},
-                {},
-                {},
-                {},
-                { "decimalSeparator" : ".", "groupSeparator" : "," }
-              ],
-            "download_count" : 5054,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2026-01-21T14:46:41.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Treball",
-            "domain_tags" :
-              [
-                "discapacitat",
-                "centres especials de treball",
-                "diversitat",
-                "ocupació",
-                "inclusió laboral",
-                "ods8_treball decent i creixement econòmic"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Registry of Special Work Centers in Catalonia"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Registro de Centros Especiales de Trabajo en Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Adreça postal"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Empresa i Treball"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Anual"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/pr46-nkms",
-        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Registre-de-Centres-Especials-de-Treball-a-Catalun/pr46-nkms",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -3284,6 +3093,366 @@
       {
         "resource" :
           {
+            "name" : "Registre de Centres Especials de Treball a Catalunya",
+            "id" : "pr46-nkms",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Els centres especials de treball són empreses que asseguren un treball remunerat a les persones amb discapacitat i garanteixen la seva integració laboral.\nLa seva plantilla ha de comptar amb un mínim del 70% de persones treballadores amb discapacitat no computant a aquests efectes el personal no discapacitat destinat a tasques d'ajustament personal i social.\nL'objectiu principal dels CET és fer un treball productiu, participant regularment en les operacions de mercat, tenen com a finalitat assegurar una feina remunerada i la prestació de serveis d'ajustament personal i social, que necessiti el personal amb discapacitat.",
+            "attribution" : "Departament d'Empresa i Treball",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-07-13T06:53:36.000Z",
+            "createdAt" : "2022-11-03T07:02:57.000Z",
+            "metadata_updated_at" : "2026-07-13T06:53:36.000Z",
+            "data_updated_at" : "2026-07-13T06:53:36.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 97,
+                "page_views_last_month" : 561,
+                "page_views_total" : 19933,
+                "page_views_last_week_log" : 6.614709844115209,
+                "page_views_last_month_log" : 9.134426320220927,
+                "page_views_total_log" : 14.282943613115089
+              },
+            "columns_name" :
+              [
+                "Denominació del CET",
+                "NIF",
+                "Municipi",
+                "Data alta al registre",
+                "Comarca",
+                "Codi Postal",
+                "Telèfon",
+                "Codi comarca",
+                "Demarcació territorial",
+                "Provincia",
+                "Domicili Social",
+                "Productes i serveis",
+                "Número registre",
+                "Codi Municipi"
+              ],
+            "columns_field_name" :
+              [
+                "denominaci_del_cet",
+                "nif",
+                "municipi",
+                "data_alta_registre",
+                "comarca",
+                "cp",
+                "telefon",
+                "codi_comarca",
+                "demarcaci_territorial",
+                "provincia",
+                "adre_a",
+                "productes_i_serveis",
+                "numero_registre",
+                "codi_municipi"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Nom de l’entitat de figura al registre",
+                "Codi d’Identificació fiscal",
+                "Municipi de la seu social de l’entitat",
+                "Data d’alta al registre",
+                "Comarca on  està situada la seu social de l’entitat",
+                "Codi postal del municipi on està ubicada la seu social de l’entitat",
+                "Telèfon de contacte de l’entitat",
+                "Codi comarcal  o de l’entitat territorial singular de l’Aran de 2 dígits, definit per l’Institut Estadístic de Catalunya (IDESCAT)",
+                "Demarcació territorial on està situafa la seu social de l'entitat",
+                "Província on  està situada la seu social de l’entitat",
+                "Adreça de la seu social de l’entitat",
+                "Activitats que desenvolupa l’entitat",
+                "Número de registre",
+                "Codi municipal de 6 dígits oficial a Catalunya, definit per l’Institut Estadístic de Catalunya (IDESCAT)"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," }
+              ],
+            "download_count" : 5054,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-01-21T14:46:41.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Treball",
+            "domain_tags" :
+              [
+                "discapacitat",
+                "centres especials de treball",
+                "diversitat",
+                "ocupació",
+                "inclusió laboral",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Registry of Special Work Centers in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de Centros Especiales de Trabajo en Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Adreça postal"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/pr46-nkms",
+        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Registre-de-Centres-Especials-de-Treball-a-Catalun/pr46-nkms",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Ofertes de treball de caràcter temporal dels departaments de l’Administració de la Generalitat",
+            "id" : "qwjc-9xp7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Recull les ofertes de treball temporals publicades pels departaments de la Generalitat. Inclou informació del departament que fa l’oferta, el lloc de treball, l’àmbit territorial, la categoria professional i les dates de publicació. També permet accedir al detall de cada oferta.",
+            "attribution" : "Direcció General de Funció Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T00:00:05.000Z",
+            "createdAt" : "2025-10-29T08:40:54.000Z",
+            "metadata_updated_at" : "2026-11-16T00:00:05.000Z",
+            "data_updated_at" : "2026-11-16T00:00:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 398,
+                "page_views_last_month" : 1498,
+                "page_views_total" : 4173,
+                "page_views_last_week_log" : 8.640244936222347,
+                "page_views_last_month_log" : 10.54978466794786,
+                "page_views_total_log" : 12.027214885159836
+              },
+            "columns_name" :
+              [
+                "Oferta",
+                "Àmbit territorial",
+                "Departament",
+                "Categoria",
+                "Data inici publicació",
+                "Descripció del lloc",
+                "Data fi publicació",
+                "Organisme",
+                "Codi"
+              ],
+            "columns_field_name" :
+              [
+                "oferta",
+                "ambit_territorial",
+                "departament",
+                "categoria",
+                "data_inici_publicacio",
+                "descripcio_lloc",
+                "data_fi_publicacio",
+                "organisme",
+                "codi"
+              ],
+            "columns_datatype" :
+              [
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "URL al document amb la informació completa de l’oferta de treball.",
+                "Zona geogràfica on s’ofereix el lloc de treball.",
+                "Nom del departament de la Generalitat que ofereix la feina.",
+                "Tipus d’entitat que convoca la oferta de feina (administració o sector públic).",
+                "Data en què l’oferta es fa pública.",
+                "Nom o funció del lloc de treball ofert.",
+                "Data en què l’oferta deixa d’estar publicada.",
+                "Organisme que publica l’oferta.",
+                "Identificador de l’oferta de treball."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {}
+              ],
+            "download_count" : 2942,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-10-29T08:59:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "treball temporal",
+                "treballadors públics",
+                "ocupació pública",
+                "selecció de personal",
+                "llocs de treball",
+                "funció pública",
+                "ods8_treball decent i creixement econòmic",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Temporary job offers from the departments of the Government of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Ofertas de trabajo de carácter temporal de los departamentos de la Administración de la Generalitat"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Presidència" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Horària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qwjc-9xp7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Ofertes-de-treball-de-caràcter-temporal-dels-depar/qwjc-9xp7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
             "name" : "Tipus jornada laboral",
             "id" : "uj49-ucav",
             "resource_name" : null,
@@ -3363,175 +3532,4 @@
                 {
                   "key" : "Actors_Tipus-actor",
                   "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/uj49-ucav",
-        "link" : "https://analisi.transparenciacatalunya.cat/Treball/Tipus-jornada-laboral/uj49-ucav",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Ofertes de treball de caràcter temporal dels departaments de l’Administració de la Generalitat",
-            "id" : "qwjc-9xp7",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Recull les ofertes de treball temporals publicades pels departaments de la Generalitat. Inclou informació del departament que fa l’oferta, el lloc de treball, l’àmbit territorial, la categoria professional i les dates de publicació. També permet accedir al detall de cada oferta.",
-            "attribution" : "Direcció General de Funció Pública",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-11-16T12:00:05.000Z",
-            "createdAt" : "2025-10-29T08:40:54.000Z",
-            "metadata_updated_at" : "2026-11-16T12:00:05.000Z",
-            "data_updated_at" : "2026-11-16T00:00:05.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 398,
-                "page_views_last_month" : 1498,
-                "page_views_total" : 4173,
-                "page_views_last_week_log" : 8.640244936222347,
-                "page_views_last_month_log" : 10.54978466794786,
-                "page_views_total_log" : 12.027214885159836
-              },
-            "columns_name" :
-              [
-                "Departament",
-                "Àmbit territorial",
-                "Codi",
-                "Categoria",
-                "Descripció del lloc",
-                "Organisme",
-                "Data inici publicació",
-                "Data fi publicació",
-                "Oferta"
-              ],
-            "columns_field_name" :
-              [
-                "departament",
-                "ambit_territorial",
-                "codi",
-                "categoria",
-                "descripcio_lloc",
-                "organisme",
-                "data_inici_publicacio",
-                "data_fi_publicacio",
-                "oferta"
-              ],
-            "columns_datatype" :
-              [
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Calendar date",
-                "Calendar date",
-                "Url"
-              ],
-            "columns_description" :
-              [
-                "Nom del departament de la Generalitat que ofereix la feina.",
-                "Zona geogràfica on s’ofereix el lloc de treball.",
-                "Identificador de l’oferta de treball.",
-                "Tipus d’entitat que convoca la oferta de feina (administració o sector públic).",
-                "Nom o funció del lloc de treball ofert.",
-                "Organisme que publica l’oferta.",
-                "Data en què l’oferta es fa pública.",
-                "Data en què l’oferta deixa d’estar publicada.",
-                "URL al document amb la informació completa de l’oferta de treball."
-              ],
-            "columns_format" :
-              [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                { "view" : "date_dmy" },
-                { "view" : "date_dmy" },
-                {}
-              ],
-            "download_count" : 2942,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2025-10-29T08:59:56.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Sector Públic",
-            "domain_tags" :
-              [
-                "treball temporal",
-                "treballadors públics",
-                "ocupació pública",
-                "selecció de personal",
-                "llocs de treball",
-                "funció pública",
-                "ods8_treball decent i creixement econòmic",
-                "ods16_pau justícies i institucions sòlides"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Dades-d'Alt-Valor_Categoria",
-                  "value" : "No són dades d’alt valor"
-                },
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Temporary job offers from the departments of the Government of Catalonia"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Ofertas de trabajo de carácter temporal de los departamentos de la Administración de la Generalitat"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Nom d'element"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                { "key" : "Actors_Departament", "value" : "Presidència" },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
         

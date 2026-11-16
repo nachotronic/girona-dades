@@ -651,124 +651,6 @@
       {
         "resource" :
           {
-            "name" : "Efectius dels Agents Rurals per sexe",
-            "id" : "e3sk-uy4e",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Nombre total d’efectius que formen part del cos d’Agents Rurals de la Generalitat de Catalunya, classificats per sexe",
-            "attribution" : "Departament d'Interior i Seguretat Pública",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-09-16T14:46:17.000Z",
-            "createdAt" : "2022-08-09T09:35:31.000Z",
-            "metadata_updated_at" : "2026-09-16T14:46:17.000Z",
-            "data_updated_at" : "2026-09-02T12:15:39.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 21,
-                "page_views_last_month" : 33,
-                "page_views_total" : 1035,
-                "page_views_last_week_log" : 4.459431618637297,
-                "page_views_last_month_log" : 5.08746284125034,
-                "page_views_total_log" : 10.016808287686555
-              },
-            "columns_name" : [ "Sexe", "Nombre", "Any" ],
-            "columns_field_name" : [ "sexe", "nombre", "any" ],
-            "columns_datatype" : [ "Text", "Number", "Number" ],
-            "columns_description" :
-              [
-                "Sexe dels efectius que formen part del cos d’Agents Rurals",
-                "Nombre total d’efectius que formen part del cos d’Agents Rurals",
-                "Any de la informació"
-              ],
-            "columns_format" : [ {}, {}, { "noCommas" : "true" } ],
-            "download_count" : 407,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2022-08-09T09:39:21.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Seguretat",
-            "domain_tags" :
-              [
-                "agents rurals",
-                "efectius",
-                "plantilla",
-                "sexe",
-                "memòria",
-                "memòria interior",
-                "ods13_acció pel clima",
-                "ods15_vida d'ecosistemes terrestres"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "Sí"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Number of Rural Agents by sex"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Efectivos de los Agentes Rurales por sexo"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Sense informació geogràfica"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Interior i Seguretat Pública"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/e3sk-uy4e",
-        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Efectius-dels-Agents-Rurals-per-sexe/e3sk-uy4e",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
             "name" : "Nombre d’inspeccions i denúncies dels Agents Rurals per àmbit",
             "id" : "pyw3-bjsg",
             "resource_name" : null,
@@ -879,6 +761,124 @@
           },
         "permalink" : "https://analisi.transparenciacatalunya.cat/d/pyw3-bjsg",
         "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Nombre-d-inspeccions-i-denúncies-dels-Agents-Rural/pyw3-bjsg",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Efectius dels Agents Rurals per sexe",
+            "id" : "e3sk-uy4e",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre total d’efectius que formen part del cos d’Agents Rurals de la Generalitat de Catalunya, classificats per sexe",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:17.000Z",
+            "createdAt" : "2022-08-09T09:35:31.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:17.000Z",
+            "data_updated_at" : "2026-09-02T12:15:39.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 21,
+                "page_views_last_month" : 33,
+                "page_views_total" : 1035,
+                "page_views_last_week_log" : 4.459431618637297,
+                "page_views_last_month_log" : 5.08746284125034,
+                "page_views_total_log" : 10.016808287686555
+              },
+            "columns_name" : [ "Sexe", "Nombre", "Any" ],
+            "columns_field_name" : [ "sexe", "nombre", "any" ],
+            "columns_datatype" : [ "Text", "Number", "Number" ],
+            "columns_description" :
+              [
+                "Sexe dels efectius que formen part del cos d’Agents Rurals",
+                "Nombre total d’efectius que formen part del cos d’Agents Rurals",
+                "Any de la informació"
+              ],
+            "columns_format" : [ {}, {}, { "noCommas" : "true" } ],
+            "download_count" : 407,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-08-09T09:39:21.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "agents rurals",
+                "efectius",
+                "plantilla",
+                "sexe",
+                "memòria",
+                "memòria interior",
+                "ods13_acció pel clima",
+                "ods15_vida d'ecosistemes terrestres"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Number of Rural Agents by sex"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Efectivos de los Agentes Rurales por sexo"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/e3sk-uy4e",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Efectius-dels-Agents-Rurals-per-sexe/e3sk-uy4e",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -1956,207 +1956,6 @@
       {
         "resource" :
           {
-            "name" : "Dependències de la Policia de la Generalitat – Mossos d’Esquadra",
-            "id" : "8jxf-yu8c",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Localització de les diferents dependències de la Policia de la Generalitat-Mossos d'Esquadra.\nEn l'àmbit territorial, la PG-ME s'estructura territorialment en 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre).\nDe les regions policials, llevat de la Metropolitana Barcelona, depenen, entre d’altres, les àrees bàsiques policials i l'Àrea Regional de Trànsit.\nCada Regió policial és l’agrupació de diverses àrees bàsiques policials i d’altres òrgans.\nLa comissaria de districte és cadascun dels territoris en què es divideix una ABP. El districte exerceix les funcions que són descentralitzades des de l'ABP.\nTambé pot haver-hi altres dependències on hi ha situades diversos serveis: Oficina d’Atenció ciutadana, Oficina policial, Altres dependències",
-            "attribution" : "Departament d'Interior i Seguretat Pública",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-09-16T14:45:17.000Z",
-            "createdAt" : "2021-07-23T11:00:26.000Z",
-            "metadata_updated_at" : "2026-09-16T14:45:17.000Z",
-            "data_updated_at" : "2023-03-14T10:33:58.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 41,
-                "page_views_last_month" : 136,
-                "page_views_total" : 3196,
-                "page_views_last_week_log" : 5.392317422778761,
-                "page_views_last_month_log" : 7.098032082960527,
-                "page_views_total_log" : 11.64250302878052
-              },
-            "columns_name" :
-              [
-                "Any",
-                "Nom",
-                "LIMADM_MUNICIPI",
-                "Adreça",
-                "Municipi",
-                "CP",
-                "Comarca",
-                "Latitud",
-                "Longitud",
-                "Tipus",
-                "Horari",
-                "codi_ine",
-                "Georeferencia",
-                "LIMADM COMARCA",
-                "Denúncies"
-              ],
-            "columns_field_name" :
-              [
-                "any",
-                "nom",
-                ":@computed_region_bh64_c7uy",
-                "adre_a",
-                "municipi",
-                "cp",
-                "comarca",
-                "latitud",
-                "longitud",
-                "tipus",
-                "horari",
-                "codi_ine",
-                "georeferencia",
-                ":@computed_region_wvic_k925",
-                "den_ncies"
-              ],
-            "columns_datatype" :
-              [
-                "Number",
-                "Text",
-                "Number",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Number",
-                "Number",
-                "Text",
-                "Text",
-                "Text",
-                "Point",
-                "Number",
-                "Text"
-              ],
-            "columns_description" :
-              [
-                "Any",
-                "Nom de la dependència policial",
-                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
-                "Adreça postal",
-                "Municipi",
-                "Codi postal",
-                "Comarca",
-                " Coordenades de la latitud ",
-                " Coordenades de la longitud",
-                "Tipus de dependència policial (Àrea Bàsica Policial,  Comissaria de Districte, Regió policial, Àrea Regional de Trànsit, Oficina d’Atenció ciutadana, Oficina policial, Altres dependències)",
-                "Horari d’atenció",
-                "Codi del Municipi",
-                "Georeferencia",
-                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
-                "Accepta presentació de denúncies"
-              ],
-            "columns_format" :
-              [
-                { "noCommas" : "true" },
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                { "decimalSeparator" : ",", "groupSeparator" : "." },
-                { "decimalSeparator" : ",", "groupSeparator" : "." },
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-              ],
-            "download_count" : 2452,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2021-10-20T12:43:16.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Seguretat",
-            "domain_tags" :
-              [
-                "àrea bàsica policial",
-                "comissaria",
-                "regió policial",
-                "policia",
-                "edifici",
-                "coordenades",
-                "comissaria de districte",
-                "oficina d'atenció ciutadana",
-                "smartcatalonia",
-                "mossos d'esquadra",
-                "ods16_pau justícies i institucions sòlides"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Autonomous Police - Mossos d'Esquadra Police stations"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Dependencias de la Policia de la Generalitat – Mossos d’Esquadra"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Coordenades"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Interior i Seguretat Pública"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8jxf-yu8c",
-        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Dependències-de-la-Policia-de-la-Generalitat-Mosso/8jxf-yu8c",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          }
-      },
-      {
-        "resource" :
-          {
             "name" : "Sectors sanitaris",
             "id" : "x6cr-7awp",
             "resource_name" : null,
@@ -2451,6 +2250,207 @@
           },
         "permalink" : "https://analisi.transparenciacatalunya.cat/d/gq53-2fng",
         "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Comissaries-de-districte-de-les-diferents-àrees-bà/gq53-2fng",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Dependències de la Policia de la Generalitat – Mossos d’Esquadra",
+            "id" : "8jxf-yu8c",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Localització de les diferents dependències de la Policia de la Generalitat-Mossos d'Esquadra.\nEn l'àmbit territorial, la PG-ME s'estructura territorialment en 9 regions (Girona, Ponent, Pirineu Occidental, Central, Metropolitana Nord, Barcelona, Metropolitana Sud, Camp de Tarragona i Terres de l'Ebre).\nDe les regions policials, llevat de la Metropolitana Barcelona, depenen, entre d’altres, les àrees bàsiques policials i l'Àrea Regional de Trànsit.\nCada Regió policial és l’agrupació de diverses àrees bàsiques policials i d’altres òrgans.\nLa comissaria de districte és cadascun dels territoris en què es divideix una ABP. El districte exerceix les funcions que són descentralitzades des de l'ABP.\nTambé pot haver-hi altres dependències on hi ha situades diversos serveis: Oficina d’Atenció ciutadana, Oficina policial, Altres dependències",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:17.000Z",
+            "createdAt" : "2021-07-23T11:00:26.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:17.000Z",
+            "data_updated_at" : "2023-03-14T10:33:58.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 41,
+                "page_views_last_month" : 136,
+                "page_views_total" : 3196,
+                "page_views_last_week_log" : 5.392317422778761,
+                "page_views_last_month_log" : 7.098032082960527,
+                "page_views_total_log" : 11.64250302878052
+              },
+            "columns_name" :
+              [
+                "Any",
+                "Nom",
+                "LIMADM_MUNICIPI",
+                "Adreça",
+                "Municipi",
+                "CP",
+                "Comarca",
+                "Latitud",
+                "Longitud",
+                "Tipus",
+                "Horari",
+                "codi_ine",
+                "Georeferencia",
+                "LIMADM COMARCA",
+                "Denúncies"
+              ],
+            "columns_field_name" :
+              [
+                "any",
+                "nom",
+                ":@computed_region_bh64_c7uy",
+                "adre_a",
+                "municipi",
+                "cp",
+                "comarca",
+                "latitud",
+                "longitud",
+                "tipus",
+                "horari",
+                "codi_ine",
+                "georeferencia",
+                ":@computed_region_wvic_k925",
+                "den_ncies"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Number",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Any",
+                "Nom de la dependència policial",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Adreça postal",
+                "Municipi",
+                "Codi postal",
+                "Comarca",
+                " Coordenades de la latitud ",
+                " Coordenades de la longitud",
+                "Tipus de dependència policial (Àrea Bàsica Policial,  Comissaria de Districte, Regió policial, Àrea Regional de Trànsit, Oficina d’Atenció ciutadana, Oficina policial, Altres dependències)",
+                "Horari d’atenció",
+                "Codi del Municipi",
+                "Georeferencia",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Accepta presentació de denúncies"
+              ],
+            "columns_format" :
+              [
+                { "noCommas" : "true" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2452,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-10-20T12:43:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "àrea bàsica policial",
+                "comissaria",
+                "regió policial",
+                "policia",
+                "edifici",
+                "coordenades",
+                "comissaria de districte",
+                "oficina d'atenció ciutadana",
+                "smartcatalonia",
+                "mossos d'esquadra",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Autonomous Police - Mossos d'Esquadra Police stations"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Dependencias de la Policia de la Generalitat – Mossos d’Esquadra"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8jxf-yu8c",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Dependències-de-la-Policia-de-la-Generalitat-Mosso/8jxf-yu8c",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -3149,83 +3149,99 @@
       {
         "resource" :
           {
-            "name" : "Mutilació genital femenina",
-            "id" : "fpc3-4niz",
+            "name" : "Personal operatiu PG-ME - Dades demogràfiques i categoria",
+            "id" : "ufsa-f9r7",
             "resource_name" : null,
             "parent_fxf" : [],
-            "description" : "Nombre de nenes ateses per mutilació genital femenina.\n\nLa Mutilació genital femenina és la violació dels drets fonamentals de les nenes i de les dones que consisteix en un procediment que es realitza a una dona o una nena amb l’objecte d’alterar o lesionar els seus òrgans genitals sense que hi hagi raons mèdiques que ho justifiquin.\n\nViolència masclista en l'àmbit social o comunitari: violència sexual: Comprèn qualsevol acte que atempti contra la llibertat sexual i la dignitat personal de la dona creant unes condicions o aprofitant-se d'un context que, directament o indirectament, imposin una pràctica sexual sense tenir el consentiment ni la voluntat de la dona, amb independència del vincle que hi hagi entre la dona i l’agressor o agressors. Inclou l'accés corporal, la mutilació genital o el risc de patir-ne, els matrimonis forçats, el tràfic de dones amb finalitat d’explotació sexual, l'assetjament sexual i per raó de sexe, l'amenaça sexual, l'exhibició, l'observació i la imposició de qualsevol pràctica sexual, entre altres conductes.\n\nL’any 2019 es va canviar la informació recollida sobre la mutilació genital femenina. A més de la informació que ja es tenia, s’hi va afegir l’edat de la nena en el moment de l’atestat, la via de coneixement i si el fet s’havia consumat o no.",
+            "description" : "Nombre d'efectius que formen part de la Policia de la Generalitat- Mossos d’Esquadra (PG-ME), segons la categoria, distribuïts per àmbit territorial, edat i sexe.\n\nActualització de les dades:\nL’actualització de les dades en el portal pot variar en funció del termini d’introducció de la informació en els sistemes policials i del procés de generació dels diferents fitxers que s’han de publicar en el web, els quals han de complir amb unes característiques determinades per ser considerades dades obertes.\n\nEn general el termini d’actualització estimat és d’un o dos mesos a partir de la finalització del termini d’introducció de dades en els sistemes d’informació policial (mensual, trimestral o anual); aquests terminis poden augmentar en aquells conjunts de dades que requereixen de la intervenció de serveis externs a la Direcció General de la Policia.\n\nNormativa aplicable:\nCal tenir en compte que la modificació de la normativa vigent o la variació dels indicadors poden produir diferències en la presentació o la classificació de les dades al llarg de diferents períodes.",
             "attribution" : "Departament d'Interior i Seguretat Pública",
             "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
             "contact_email" : null,
             "type" : "dataset",
-            "updatedAt" : "2026-10-15T08:34:19.000Z",
-            "createdAt" : "2021-06-30T09:02:11.000Z",
-            "metadata_updated_at" : "2026-10-15T08:34:19.000Z",
-            "data_updated_at" : "2026-10-15T08:34:19.000Z",
+            "updatedAt" : "2026-09-16T14:46:29.000Z",
+            "createdAt" : "2021-06-30T10:11:11.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:29.000Z",
+            "data_updated_at" : "2025-03-11T11:48:11.000Z",
             "page_views" :
               {
-                "page_views_last_week" : 40,
-                "page_views_last_month" : 73,
-                "page_views_total" : 2632,
-                "page_views_last_week_log" : 5.357552004618084,
-                "page_views_last_month_log" : 6.209453365628951,
-                "page_views_total_log" : 11.362491806046064
+                "page_views_last_week" : 37,
+                "page_views_last_month" : 51,
+                "page_views_total" : 2127,
+                "page_views_last_week_log" : 5.247927513443585,
+                "page_views_last_month_log" : 5.700439718141093,
+                "page_views_total_log" : 11.05528243550119
               },
             "columns_name" :
               [
-                "Tipologia",
-                "Àmbit",
-                "Mes",
-                "Edat",
-                "Regió Policial (RP)",
-                "Via coneixement",
-                "Nenes ateses",
-                "Consumat",
+                "Major",
                 "Any",
-                "Nom mes"
+                "Intendent/a",
+                "Comissari/ària",
+                "Àmbit territorial",
+                "Mosso/a",
+                "Sergent/a",
+                "Sotsinspector/a",
+                "Caporal/a",
+                "Inspector/a",
+                "Sexe"
               ],
             "columns_field_name" :
               [
-                "tipologia",
-                "mbit",
-                "mes",
-                "edat",
-                "regi_policial_rp",
-                "via_coneixement",
-                "nenes_ateses",
-                "consumat",
+                "major",
                 "any",
-                "nom_mes"
+                "intendent_a",
+                "comissari_ria",
+                "mbit_territorial",
+                "mosso_a",
+                "sergent_a",
+                "sotsinspector_a",
+                "caporal_a",
+                "inspector_a",
+                "sexe"
               ],
             "columns_datatype" :
               [
-                "Text",
-                "Text",
+                "Number",
+                "Number",
                 "Number",
                 "Number",
                 "Text",
-                "Text",
                 "Number",
-                "Text",
+                "Number",
+                "Number",
+                "Number",
                 "Number",
                 "Text"
               ],
             "columns_description" :
               [
-                "Tipus de violència que pateixen les víctimes",
-                "Àmbit on s’ha produït la violència masclista (parella, familiar o social/comunitari – violència sexual)",
-                "Número del mes en què s’ha fet l’atestat",
-                "Edat de la víctima en el moment de fer l’atestat",
-                "Regió policial de la PG-ME a la qual està destinada la persona  (Regió Policial és l’agrupació de diverses àrees bàsiques policials. Les àrees bàsiques policials són la unitat mínima, geogràfica i poblacional, dotada d’uns serveix bàsics per a l’atenció primària de les demandes de prevenció, seguretat ciutadana, control de trànsit i investigació de primer nivell – Llei 4/2003, de 7 d’abril, d’ordenació del sistema de seguretat pública de Catalunya)",
-                "Via per la qual s’ha conegut el fet (PG-ME és Policia de la Generalitat – Mossos d’Esquadra)",
-                "Nombre de nenes ateses en relació amb la mutilació genital femenina",
-                "Si el fet s’ha consumat o no (Sí, No)",
-                "Any en què s’ha fet l’atestat",
-                "Nom del mes en què s’ha fet l’atestat"
+                "Nombre de policies de la categoria major",
+                "Any ",
+                "Nombre de policies de la categoria intendent/a",
+                "Nombre de policies de la categoria comissari/ària",
+                "Regió policial de la la PG-ME a la qual està destinada la persona (Regió policial és l’agrupació de diverses àrees bàsiques policials. Les àrees bàsiques policials són la unitat mínima, geogràfica i poblacional, dotada d’uns serveis bàsica per a l’atenció primària de les demandes de prevenció, seguretat ciutadana, control de trànsit i investigació de primer nivell –Llei 4/2003, de 7 d’abril, d’ordenació del sistema de seguretat pública de Catalunya).",
+                "Nombre de policies de la categoria mosso/a",
+                "Nombre de policies de la categoria sergent/a",
+                "Nombre de policies de la categoria sots-inspector/a",
+                "Nombre de policies de la categoria caporal/a",
+                "Nombre de policies de la categoria inspector/a",
+                "Home o dona"
               ],
             "columns_format" :
-              [ {}, {}, {}, {}, {}, {}, {}, {}, { "noCommas" : "true" }, {} ],
-            "download_count" : 986,
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 1270,
             "provenance" : "official",
             "lens_view_type" : "tabular",
             "lens_display_type" : "table",
@@ -3233,7 +3249,7 @@
             "backend" : "nbe",
             "blob_mime_type" : null,
             "hide_from_data_json" : false,
-            "publication_date" : "2024-06-17T14:56:50.000Z"
+            "publication_date" : "2021-06-30T10:14:00.000Z"
           },
         "classification" :
           {
@@ -3242,23 +3258,20 @@
             "domain_category" : "Seguretat",
             "domain_tags" :
               [
-                "violència masclista",
-                "fets delinqüencials",
-                "denúncies",
-                "víctimes",
-                "menors",
-                "gent gran",
-                "víctimes mortals",
-                "família",
-                "agressions sexuals",
-                "assetjament sexual",
-                "llibertat sexual",
-                "mutilació genital femenina",
-                "matrimoni forçat",
+                "personal operatiu",
                 "policia",
+                "efectius policials",
+                "dades organitzatives",
+                "sexe",
+                "categoria",
+                "caporal/a",
+                "sergent/a",
+                "sots-inspector/a",
+                "inspector/a",
+                "intendent/a",
+                "comissari/ària",
+                "major",
                 "mossos d'esquadra",
-                "ods5_igualtat de gènere",
-                "ods10_reducció de les desigualtats",
                 "ods16_pau justícies i institucions sòlides"
               ],
             "domain_metadata" :
@@ -3270,11 +3283,11 @@
                 { "key" : "Idioma_Idioma", "value" : "Català" },
                 {
                   "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Female genital mutilation"
+                  "value" : "Autonomous Police - Mossos d'Esquadra police officers – Demographic data and rank"
                 },
                 {
                   "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Mutilación genital femenina"
+                  "value" : "Personal operativo de la Policia de la Generalitat- Mossos d’Esquadra (PG-ME) - Datos demográficos y categoría"
                 },
                 {
                   "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
@@ -3282,7 +3295,7 @@
                 },
                 {
                   "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Nom d'element"
+                  "value" : "Altres"
                 },
                 {
                   "key" : "Actors_Departament",
@@ -3294,7 +3307,7 @@
                 },
                 {
                   "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Trimestral"
+                  "value" : "Anual"
                 }
               ]
           },
@@ -3303,8 +3316,8 @@
             "domain" : "analisi.transparenciacatalunya.cat",
             "license" : "See Terms of Use"
           },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/fpc3-4niz",
-        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Mutilació-genital-femenina/fpc3-4niz",
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ufsa-f9r7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Personal-operatiu-PG-ME-Dades-demogràfiques-i-cate/ufsa-f9r7",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -3321,8 +3334,5 @@
       {
         "resource" :
           {
-            "name" : "Personal operatiu PG-ME - Dades demogràfiques i categoria",
-            "id" : "ufsa-f9r7",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "Nombre d'efectius que formen part de la Policia de la Generalitat- Mossos d’Esquadra (PG-ME), segons la categoria, distribuïts per àmbit territorial, edat i sexe.\n\nActualització de les dades:\nL’actualització de les dades en el por
+            "name" : "Acords, pactes i convenis de personal",
+            "id" : "j98

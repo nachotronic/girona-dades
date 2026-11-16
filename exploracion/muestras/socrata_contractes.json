@@ -1749,6 +1749,204 @@
       {
         "resource" :
           {
+            "name" : "Contractació pública tramitada d'emergència durant la pandèmia de la COVID-19",
+            "id" : "5fq6-4v39",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contractes tramitats per emergència de la Generalitat de Catalunya i el seu sector públic durant la pandèmia de la COVID-19. \nLes dades fan referència a contractes tramitats d'emergència que s'han fet a partir del 12 de març de 2020, data de la publicació del Reial Decret-Llei 7/2020, pel que s'adopten mesures urgents per respondre a l'impacte econòmic de la COVID-19.\nLes dades del visor provenen de la Plataforma de Serveis de Contractació Pública (PSCP), tenen caràcter provisional i varien constantment a mesura que els òrgans van incorporant més contractes tramitats d'emergència a la PSCP.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:44:53.000Z",
+            "createdAt" : "2020-05-25T11:20:56.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:53.000Z",
+            "data_updated_at" : "2020-12-16T22:15:39.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 50,
+                "page_views_total" : 4406,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.672425341971496,
+                "page_views_total_log" : 12.105581181277435
+              },
+            "columns_name" :
+              [
+                "Enllaç a la publicació",
+                "Òrgan de contractació",
+                "Tipus de contracte",
+                "Codi d'expedient",
+                "Codi CPV",
+                "Data d'adjudicació",
+                "Import d'adjudicació (sense IVA)",
+                "Empresa adjudicatària",
+                "Data de publicació",
+                "Valor estimat del contracte",
+                "Pressupost de licitació (sense IVA)",
+                "Descripció de la prestació",
+                "Àmbit subjectiu",
+                "Objecte del contracte",
+                "Tipus d'expedient"
+              ],
+            "columns_field_name" :
+              [
+                "enlla_a_la_publicaci",
+                "rgan_de_contractaci",
+                "tipus_de_contracte",
+                "codi_d_expedient",
+                "codi_cpv",
+                "data_d_adjudicaci",
+                "import_d_adjudicaci_sense",
+                "empresa_adjudicat_ria",
+                "data_de_publicaci",
+                "valor_estimat_del_contracte",
+                "pressupost_de_licitaci_sense",
+                "descripci_de_la_prestaci",
+                "mbit_subjectiu",
+                "objecte_del_contracte",
+                "tipus_d_expedient"
+              ],
+            "columns_datatype" :
+              [
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Enllaç a la publicació a la PSCP",
+                "Òrgan que ha contractat aquell lot",
+                "Tipologia del contracte",
+                "Codi d’expedient informat pels òrgans de contractació",
+                "Codi CPV informat segons la descripció del contracte",
+                "Data en la que s’adjudica el contracte",
+                "Import final adjudicat sense IVA en euros",
+                "Empresa adjudicatària del contracte",
+                "Data en la que es publica el contracte",
+                "Valor estimat del contracte en euros",
+                "Pressupost de licitació sense IVA en euros",
+                "Descripció informada per l’òrgan de contractació on s’expliquen els detalls del contracte",
+                "Àmbit subjectiu al qual pertany l’òrgan de contractació ",
+                "Descripció de l’objecte del lot en concret",
+                "Forma de tramitació de l’expedient"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2214,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-27T07:23:43.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "emergència",
+                "contractes",
+                "direcció general de contractació pública",
+                "pscp",
+                "covid",
+                "coronavirus",
+                "covid-19",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement processed emergency during the COVID-19 pandemic"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación pública tramitada de emergencia durante la pandemia del COVID-19"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5fq6-4v39",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-tramitada-d-emergència-durant/5fq6-4v39",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
             "name" : "Ajut extraordinari per a persones treballadores afectades per un ERTO i persones amb contracte fix discontinu beneficiàries de la prestació extraordinària 2021 (segona convocatòria)",
             "id" : "6vni-k5nd",
             "resource_name" : null,
@@ -2264,119 +2462,55 @@
       {
         "resource" :
           {
-            "name" : "Contractació pública tramitada d'emergència durant la pandèmia de la COVID-19",
-            "id" : "5fq6-4v39",
+            "name" : "Categoria del Vocabulari Comú de Contractes Públics (CPV)",
+            "id" : "nup8-zuaj",
             "resource_name" : null,
             "parent_fxf" : [],
-            "description" : "Contractes tramitats per emergència de la Generalitat de Catalunya i el seu sector públic durant la pandèmia de la COVID-19. \nLes dades fan referència a contractes tramitats d'emergència que s'han fet a partir del 12 de març de 2020, data de la publicació del Reial Decret-Llei 7/2020, pel que s'adopten mesures urgents per respondre a l'impacte econòmic de la COVID-19.\nLes dades del visor provenen de la Plataforma de Serveis de Contractació Pública (PSCP), tenen caràcter provisional i varien constantment a mesura que els òrgans van incorporant més contractes tramitats d'emergència a la PSCP.",
-            "attribution" : "Departament d'Economia i Finances",
+            "description" : "La nomenclatura CPV (Common Procurement Vocabulary) estableix un sistema de classificació únic per a la contractació pública destinat a estandarditzar les referències utilitzades per descriure l'objecte dels contractes. És un sistema d'identificació i categorització de totes les activitats econòmiques susceptibles de ser contractades mitjançant licitació o concurs públic a la Unió Europea. El seu ús és obligatori a la Unió Europea des de l'1 de febrer de 2006.\n\nEs troba el llistat de codis del nivell de Categoria de CPV. És l’últim nivell del CPV. Aquest 4t. nivell és el més detallat dins del Codi CPV.\n\nLa categoria correspon als 5 primers dígits del codi XXXXX000-Y (Cada un dels 3 últims dígits aporta un major grau de precisió dins de la categoria i el dígit \"Y\" representa la validació dels dígits precedents).",
+            "attribution" : "Catàleg Tècnic de Dades. Estàndard UE. D. G. de Contractació Pública/Departament d'Economia i Finances",
             "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
             "contact_email" : null,
             "type" : "dataset",
-            "updatedAt" : "2026-09-16T14:44:53.000Z",
-            "createdAt" : "2020-05-25T11:20:56.000Z",
-            "metadata_updated_at" : "2026-09-16T14:44:53.000Z",
-            "data_updated_at" : "2020-12-16T22:15:39.000Z",
+            "updatedAt" : "2026-09-17T07:08:28.000Z",
+            "createdAt" : "2025-11-20T08:44:11.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:28.000Z",
+            "data_updated_at" : "2025-11-25T12:44:41.000Z",
             "page_views" :
               {
-                "page_views_last_week" : 31,
-                "page_views_last_month" : 50,
-                "page_views_total" : 4406,
-                "page_views_last_week_log" : 5.0,
-                "page_views_last_month_log" : 5.672425341971496,
-                "page_views_total_log" : 12.105581181277435
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 54,
+                "page_views_total" : 342,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.78135971352466,
+                "page_views_total_log" : 8.422064766172811
               },
             "columns_name" :
               [
-                "Enllaç a la publicació",
-                "Òrgan de contractació",
-                "Tipus de contracte",
-                "Codi d'expedient",
-                "Codi CPV",
-                "Data d'adjudicació",
-                "Import d'adjudicació (sense IVA)",
-                "Empresa adjudicatària",
-                "Data de publicació",
-                "Valor estimat del contracte",
-                "Pressupost de licitació (sense IVA)",
-                "Descripció de la prestació",
-                "Àmbit subjectiu",
-                "Objecte del contracte",
-                "Tipus d'expedient"
+                "Identificador divisió CPV",
+                "Identificador categoria CPV",
+                "Descripció categoria CPV",
+                "Identificador grup CPV",
+                "Identificador classe CPV"
               ],
             "columns_field_name" :
               [
-                "enlla_a_la_publicaci",
-                "rgan_de_contractaci",
-                "tipus_de_contracte",
-                "codi_d_expedient",
-                "codi_cpv",
-                "data_d_adjudicaci",
-                "import_d_adjudicaci_sense",
-                "empresa_adjudicat_ria",
-                "data_de_publicaci",
-                "valor_estimat_del_contracte",
-                "pressupost_de_licitaci_sense",
-                "descripci_de_la_prestaci",
-                "mbit_subjectiu",
-                "objecte_del_contracte",
-                "tipus_d_expedient"
+                "ide_divisio_cpv",
+                "ide_categoria_cpv",
+                "des_categoria_cpv",
+                "ide_grup_cpv",
+                "ide_classe_cpv"
               ],
-            "columns_datatype" :
-              [
-                "URL",
-                "Text",
-                "Text",
-                "Text",
-                "Text",
-                "Calendar date",
-                "Number",
-                "Text",
-                "Calendar date",
-                "Number",
-                "Number",
-                "Text",
-                "Text",
-                "Text",
-                "Text"
-              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
             "columns_description" :
               [
-                "Enllaç a la publicació a la PSCP",
-                "Òrgan que ha contractat aquell lot",
-                "Tipologia del contracte",
-                "Codi d’expedient informat pels òrgans de contractació",
-                "Codi CPV informat segons la descripció del contracte",
-                "Data en la que s’adjudica el contracte",
-                "Import final adjudicat sense IVA en euros",
-                "Empresa adjudicatària del contracte",
-                "Data en la que es publica el contracte",
-                "Valor estimat del contracte en euros",
-                "Pressupost de licitació sense IVA en euros",
-                "Descripció informada per l’òrgan de contractació on s’expliquen els detalls del contracte",
-                "Àmbit subjectiu al qual pertany l’òrgan de contractació ",
-                "Descripció de l’objecte del lot en concret",
-                "Forma de tramitació de l’expedient"
+                "Identificador de la divisió a la qual pertany el grup CPV, correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el nivell més general del CPV",
+                "Identificador únic de la categoria CPV, correspon als 5 primers dígits del codi XXXXX000-Y (Cada un dels 3 últims dígits aporta un major grau de precisió dins de la categoria i el dígit \"Y\" representa la validació dels dígits precedents). És l’últim nivell del CPV",
+                "Descripció del nivell categoria del CPV",
+                "Identificador del grup al qual pertany la classe CPV, correspon als 3 primers dígits del codi XXX00000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el segon nivell més general del CPV",
+                "Identificador de la classe a la qual pertany la categoria CPV, correspon als 4 primers dígits del codi XXXX0000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el tercer nivell del CPV"
               ],
-            "columns_format" :
-              [
-                {},
-                {},
-                {},
-                {},
-                {},
-                { "view" : "date_dmy" },
-                { "decimalSeparator" : ",", "groupSeparator" : "." },
-                {},
-                { "view" : "date_dmy" },
-                { "decimalSeparator" : ",", "groupSeparator" : "." },
-                { "decimalSeparator" : ",", "groupSeparator" : "." },
-                {},
-                {},
-                {},
-                {}
-              ],
-            "download_count" : 2214,
+            "columns_format" : [ {}, {}, {}, {}, {} ],
+            "download_count" : 177,
             "provenance" : "official",
             "lens_view_type" : "tabular",
             "lens_display_type" : "table",
@@ -2384,26 +2518,20 @@
             "backend" : "nbe",
             "blob_mime_type" : null,
             "hide_from_data_json" : false,
-            "publication_date" : "2020-05-27T07:23:43.000Z"
+            "publication_date" : "2025-11-25T12:44:51.000Z"
           },
         "classification" :
           {
             "categories" : [],
             "tags" : [],
-            "domain_category" : "Economia",
-            "domain_tags" :
-              [
-                "emergència",
-                "contractes",
-                "direcció general de contractació pública",
-                "pscp",
-                "covid",
-                "coronavirus",
-                "covid-19",
-                "ods16_pau justícies i institucions sòlides"
-              ],
+            "domain_category" : "Sector Públic",
+            "domain_tags" : [ "dades_de_referència" ],
             "domain_metadata" :
               [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
                 {
                   "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
                   "value" : "No aplicable"
@@ -2411,11 +2539,11 @@
                 { "key" : "Idioma_Idioma", "value" : "Català" },
                 {
                   "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Public procurement processed emergency during the COVID-19 pandemic"
+                  "value" : "Category of the Common Vocabulary of Public Agreements (CPV)"
                 },
                 {
                   "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Contratación pública tramitada de emergencia durante la pandemia del COVID-19"
+                  "value" : "Categoría del Vocabulario Común de Contratos Públicos (CPV)"
                 },
                 {
                   "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
@@ -2435,7 +2563,7 @@
                 },
                 {
                   "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Dades estàtiques"
+                  "value" : "Variable"
                 }
               ]
           },
@@ -2444,8 +2572,8 @@
             "domain" : "analisi.transparenciacatalunya.cat",
             "license" : "See Terms of Use"
           },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5fq6-4v39",
-        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-tramitada-d-emergència-durant/5fq6-4v39",
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nup8-zuaj",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Categoria-del-Vocabulari-Comú-de-Contractes-Públic/nup8-zuaj",
         "owner" :
           {
             "id" : "a4b5-gx6v",
@@ -2892,134 +3020,6 @@
             "id" : "vgep-ey3i",
             "user_type" : "interactive",
             "display_name" : "dtrepat@gencat.cat"
-          }
-      },
-      {
-        "resource" :
-          {
-            "name" : "Categoria del Vocabulari Comú de Contractes Públics (CPV)",
-            "id" : "nup8-zuaj",
-            "resource_name" : null,
-            "parent_fxf" : [],
-            "description" : "La nomenclatura CPV (Common Procurement Vocabulary) estableix un sistema de classificació únic per a la contractació pública destinat a estandarditzar les referències utilitzades per descriure l'objecte dels contractes. És un sistema d'identificació i categorització de totes les activitats econòmiques susceptibles de ser contractades mitjançant licitació o concurs públic a la Unió Europea. El seu ús és obligatori a la Unió Europea des de l'1 de febrer de 2006.\n\nEs troba el llistat de codis del nivell de Categoria de CPV. És l’últim nivell del CPV. Aquest 4t. nivell és el més detallat dins del Codi CPV.\n\nLa categoria correspon als 5 primers dígits del codi XXXXX000-Y (Cada un dels 3 últims dígits aporta un major grau de precisió dins de la categoria i el dígit \"Y\" representa la validació dels dígits precedents).",
-            "attribution" : "Catàleg Tècnic de Dades. Estàndard UE. D. G. de Contractació Pública/Departament d'Economia i Finances",
-            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
-            "contact_email" : null,
-            "type" : "dataset",
-            "updatedAt" : "2026-09-17T07:08:28.000Z",
-            "createdAt" : "2025-11-20T08:44:11.000Z",
-            "metadata_updated_at" : "2026-09-17T07:08:28.000Z",
-            "data_updated_at" : "2025-11-25T12:44:41.000Z",
-            "page_views" :
-              {
-                "page_views_last_week" : 25,
-                "page_views_last_month" : 54,
-                "page_views_total" : 342,
-                "page_views_last_week_log" : 4.700439718141093,
-                "page_views_last_month_log" : 5.78135971352466,
-                "page_views_total_log" : 8.422064766172811
-              },
-            "columns_name" :
-              [
-                "Identificador divisió CPV",
-                "Identificador categoria CPV",
-                "Descripció categoria CPV",
-                "Identificador grup CPV",
-                "Identificador classe CPV"
-              ],
-            "columns_field_name" :
-              [
-                "ide_divisio_cpv",
-                "ide_categoria_cpv",
-                "des_categoria_cpv",
-                "ide_grup_cpv",
-                "ide_classe_cpv"
-              ],
-            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
-            "columns_description" :
-              [
-                "Identificador de la divisió a la qual pertany el grup CPV, correspon als 2 primers dígits del codi XX000000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el nivell més general del CPV",
-                "Identificador únic de la categoria CPV, correspon als 5 primers dígits del codi XXXXX000-Y (Cada un dels 3 últims dígits aporta un major grau de precisió dins de la categoria i el dígit \"Y\" representa la validació dels dígits precedents). És l’últim nivell del CPV",
-                "Descripció del nivell categoria del CPV",
-                "Identificador del grup al qual pertany la classe CPV, correspon als 3 primers dígits del codi XXX00000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el segon nivell més general del CPV",
-                "Identificador de la classe a la qual pertany la categoria CPV, correspon als 4 primers dígits del codi XXXX0000-Y (El dígit \"Y\" representa la validació dels dígits precedents). És el tercer nivell del CPV"
-              ],
-            "columns_format" : [ {}, {}, {}, {}, {} ],
-            "download_count" : 177,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2025-11-25T12:44:51.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Sector Públic",
-            "domain_tags" : [ "dades_de_referència" ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Dades-d'Alt-Valor_Categoria",
-                  "value" : "No són dades d’alt valor"
-                },
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Category of the Common Vocabulary of Public Agreements (CPV)"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Categoría del Vocabulario Común de Contratos Públicos (CPV)"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
-                  "value" : "Sense informació geogràfica"
-                },
-                {
-                  "key" : "Actors_Departament",
-                  "value" : "Economia i Finances"
-                },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Generalitat de Catalunya"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Variable"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
-          },
-        "permalink" : "https://analisi.transparenciacatalunya.cat/d/nup8-zuaj",
-        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Categoria-del-Vocabulari-Comú-de-Contractes-Públic/nup8-zuaj",
-        "owner" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
-          },
-        "creator" :
-          {
-            "id" : "a4b5-gx6v",
-            "user_type" : "interactive",
-            "display_name" : "Dades Obertes Catalunya"
           }
       },
       {
