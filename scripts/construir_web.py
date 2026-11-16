@@ -1776,7 +1776,8 @@ def solar():
     a = a.dropna(subset=["data"])
     a["any"] = a["data"].dt.year
     a["kw"] = pd.to_numeric(a["Potència"], errors="coerce").fillna(0)
-    a["ine"] = a["Codi IDESCAT municipi"].str[:5]
+    a["ine"] = a["Codi IDESCAT municipi"].str.zfill(6).str[:5]
+    a = a[a["ine"].str[:2] == "17"]
     if a.empty:
         return {}, {}, None, None, {}
     ult_mes = a["data"].max().strftime("%Y-%m")

@@ -105,7 +105,11 @@ def ejecutar() -> str:
     for ident, nombre in CONJUNTOS.items():
         try:
             df = descarga_conjunto(ident)
-            filtrado, como = _filtra_girona(df)
+            if ident == "2b4s-skfm" and "Codi IDESCAT municipi" in df.columns:
+                # Por código: el nombre falla con municipios renombrados (Palamós i Sant Joan)
+                filtrado, como = df[df["Codi IDESCAT municipi"].astype(str).str.zfill(6).str[:2] == "17"], "filtrado por Codi IDESCAT municipi (17)"
+            else:
+                filtrado, como = _filtra_girona(df)
             filtrado = filtrado.drop(columns=[c for c in filtrado.columns if c.upper() in NO_GUARDAR])
             filtrado.to_csv(salida / f"{ident}_{slug(nombre, 50)}.csv", index=False)
             lineas.append(f"{ident}: {len(filtrado)}/{len(df)} filas, {como}")
