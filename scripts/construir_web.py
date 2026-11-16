@@ -914,10 +914,8 @@ def complements_indicadores(pob):
         if any_:
             anys[clave] = any_
 
-    # Servicios y comercio (Xifra)
+    # Servicios (Xifra). El comercio viene del CECC (comerc())
     pon("bancs", _xifra("030516", [5]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2026)
-    pon("comerc", _xifra("030505", [2]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2023)
-    pon("comerc_m2", _xifra("030505", [3]), lambda i, v: per(v[0], pob.get(i), 1), 2, 2023)
     pon("biblio", _xifra("03030201", [7]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2024)
     pon("museus", _xifra("03030203", [3]), lambda i, v: v[0], 0, 2025)
     # Agricultura (censo agrario 2020)
@@ -1772,6 +1770,101 @@ def vehicles():
     return mun, refs, max(int(f.stem.split("_")[-1]) for f in fs)
 
 
+# ---------------------------------------------------------------------------
+# Comercio: Cens d'establiments comercials de Catalunya (CECC), Mapa del Comerç Català 2022
+# (locales vacíos) y registro de licencias comerciales (grandes establecimientos).
+
+SECTORS_COM = {"alim": "quotidi_alimentari_exc_vending", "qna": "quotidi_no_alimentari", "pers": "equipament_persona",
+               "llar": "equipament_llar", "lleure": "lleure_i_cultura", "auto": "automoci_i_carburants",
+               "mixt": "comer_mixt", "altres": "altres"}
+
+
+def comerc():
+    """Devuelve ({ine: {clave: {any: valor}}}, {clave: {any: {gi, cat}}}, último año,
+    {ine: indicadores sueltos para m.x}, {ine: datos para la ficha}, {clave: {cat}}, puntos GeoJSON)."""
+    d = P / "comerc"
+    if not (d / "cecc.csv").exists():
+        return {}, {}, None, {}, {}, {}, None
+    df = pd.read_csv(d / "cecc.csv", dtype={"ine": str, "any": int})
+    num_cols = ["poblaci", "establiments", "superf_cie_de_venda_m2"] + list(SECTORS_COM.values())
+    for c in num_cols:
+        df[c] = pd.to_numeric(df[c], errors="coerce")
+    df = df.drop_duplicates(["municipi", "any"])
+
+    def calc(x):
+        pob, n, sup = x.get("poblaci"), x.get("establiments"), x.get("superf_cie_de_venda_m2")
+        q = lambda a, b, f=1: (a / b * f) if a is not None and a == a and b else None  # noqa: E731
+        o = {"n": n, "sup": sup, "est_h": q(n, pob, 1000), "sup_h": q(sup, pob), "sup_mitj": q(sup, n)}
+        for k, c in SECTORS_COM.items():
+            o["s_" + k] = q(x.get(c), pob, 1000)
+        o["p_quot"] = q((x.get(SECTORS_COM["alim"]) or 0) + (x.get(SECTORS_COM["qna"]) or 0), n, 100)
+        return o
+
+    dec = {"n": 0, "sup": 0, "est_h": 1, "sup_h": 2, "sup_mitj": 0, "p_quot": 1, **{"s_" + k: 2 for k in SECTORS_COM}}
+    arr = lambda v, k: None if v is None or (isinstance(v, float) and not math.isfinite(v)) else (round(v, dec[k]) if dec[k] else int(round(v)))  # noqa: E731
+    mun, refs, fitxa, x_mun = {}, {}, {}, {}
+    gi = df[df["ine"].notna()]
+    for x in gi.to_dict("records"):
+        for k, v in calc(x).items():
+            v = arr(v, k)
+            if v is not None:
+                mun.setdefault(x["ine"], {}).setdefault(k, {})[int(x["any"])] = v
+    for ambit, g in (("gi", gi), ("cat", df)):
+        for a, ga in g.groupby("any"):
+            s = {c: ga[c].sum() for c in num_cols}
+            for k, v in calc(s).items():
+                v = arr(v, k)
+                if v is not None:
+                    refs.setdefault(k, {}).setdefault(int(a), {})[ambit] = v
+    anys = sorted(df["any"].unique())
+    a0, a1 = int(anys[0]), int(anys[-1])
+    refs_x = {}
+    for ine, o in mun.items():
+        n = o.get("n", {})
+        if n.get(a0, 0) >= 10 and a1 in n:
+            x_mun.setdefault(ine, {})["com_var"] = round((n[a1] / n[a0] - 1) * 100, 1)
+    for ambit, g in (("gi", gi), ("cat", df)):
+        t0, t1 = g[g["any"] == a0]["establiments"].sum(), g[g["any"] == a1]["establiments"].sum()
+        refs_x.setdefault("com_var", {})[ambit] = round((t1 / t0 - 1) * 100, 1)
+    # Locales vacíos (Mapa del Comerç Català 2022): ciudades de más de 20.000 habitantes y capitales
+    f = d / "mapa_comerc_2022.csv"
+    if f.exists():
+        mc = pd.read_csv(f, dtype={"codi": str})
+        for c in ("localb", "total", "actius", "actius_comercials", "naub", "host", "serv"):
+            mc[c] = pd.to_numeric(mc.get(c), errors="coerce")
+        mc["ine"] = mc["codi"].str.zfill(6).str[:5]
+        for x in mc[mc["ine"].str.startswith("17")].to_dict("records"):
+            if x["total"]:
+                x_mun.setdefault(x["ine"], {})["com_buits"] = round(x["localb"] / x["total"] * 100, 1)
+                fitxa.setdefault(x["ine"], {})["buits"] = {"any": 2022, "buits": int(x["localb"]), "total": int(x["total"]),
+                                                           "actius": int(x["actius"] or 0), "comercials": int(x["actius_comercials"] or 0)}
+        mg = mc[mc["ine"].str.startswith("17")]
+        refs_x["com_buits"] = {"cat": round(mc["localb"].sum() / mc["total"].sum() * 100, 1),
+                               "gi": round(mg["localb"].sum() / mg["total"].sum() * 100, 1)}
+    # Grandes establecimientos con licencia comercial favorable
+    punts = None
+    f = d / "llicencies.csv"
+    if f.exists():
+        ll = pd.read_csv(f, dtype=str)
+        ll = ll[ll["sentit_resoluci_ferma"].str.lower().str.startswith("favorable", na=False)]
+        feats = []
+        for x in ll.to_dict("records"):
+            g = re.match(r"POINT \(([-\d.]+) ([-\d.]+)\)", str(x.get("georefer_ncia", "")))
+            sup = pd.to_numeric(x.get("sup_venda_m2"), errors="coerce")
+            ine = str(x.get("codi_municipi", ""))[:5]
+            data = str(x.get("data_resoluci_ferma") or x.get("data_entrada_dgc") or "")[:4]
+            e = {"nom": str(x.get("sol_licitant", "")).strip(), "f": x.get("format_de_l_establiment"), "s": None if pd.isna(sup) else int(round(sup)), "a": data}
+            fitxa.setdefault(ine, {}).setdefault("grans", []).append(e)
+            if g:
+                feats.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": [round(float(g.group(1)), 5), round(float(g.group(2)), 5)]},
+                              "properties": {**e, "ine": ine}})
+        for o in fitxa.values():
+            if "grans" in o:
+                o["grans"].sort(key=lambda e: -(e["s"] or 0))
+        punts = {"type": "FeatureCollection", "features": feats}
+    return mun, refs, a1, x_mun, fitxa, refs_x, punts
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -1820,6 +1913,11 @@ def main():
     refs_ed.update(refs_emx)
     trib, refs_trib, any_trib = tributs()
     veh, refs_veh, any_veh = vehicles()
+    com, refs_com, any_com, x_com, fitxa_com, refs_xcom, punts_com = comerc()
+    for ine, x in x_com.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    if any_com:
+        anys_extra.update({"com_buits": 2022, "com_var": any_com})
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1863,6 +1961,8 @@ def main():
             "pol": pol.get(ine, {}),
             **({"trib": trib[ine]} if ine in trib else {}),
             **({"veh": veh[ine]} if ine in veh else {}),
+            **({"com": com[ine]} if ine in com else {}),
+            **({"com_f": fitxa_com[ine]} if ine in fitxa_com else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **fitxa_cm.get(ine, {}),
         })
@@ -1902,6 +2002,8 @@ def main():
         refs.setdefault(k, {}).update(v)
     for k, v in jw["refs"].items():
         refs.setdefault(k, {}).update(v)
+    for k, v in refs_xcom.items():
+        refs.setdefault(k, {}).update(v)
     for cl, per_any in refs_trib.items():
         refs["trib_" + cl] = per_any[max(per_any)]
     if prov_alq:
@@ -1909,8 +2011,8 @@ def main():
     datos = {
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh,
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"com": any_com} if any_com else {})},
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "com_ref": refs_com,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
@@ -1954,6 +2056,9 @@ def main():
         cj["pob_cat"] = {"p1564": int(cat("f27").iloc[0]), "pob": int(cat("f321").iloc[0])}
     (SALIDA.parent / "conjuntura.json").write_text(json.dumps(cj, ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     print(f"conjuntura.json: {(SALIDA.parent / 'conjuntura.json').stat().st_size // 1024} KB, {len(cj['per']['m'])} meses, {len(cj['per']['t'])} trimestres")
+    if punts_com:
+        (SALIDA.parent / "comerc_grans.geojson").write_text(json.dumps(punts_com, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        print(f"comerc_grans.geojson: {len(punts_com['features'])} grans establiments")
     import shutil
     for nombre in ("municipis.geojson", "seccions.geojson"):
         origen = P / "geo" / nombre

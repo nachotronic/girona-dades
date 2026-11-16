@@ -42,7 +42,9 @@ def _municipis():
     return {normaliza(n): c for n, c in zip(m["nom"], m["codi_ine"])}, set(m["codi_idescat"])
 
 
-ALIES = {  # noms del CECC que no coincideixen amb l'Idescat
+ALIES = {  # noms del CECC que no coincideixen amb l'Idescat (municipis que han canviat de nom)
+    "Calonge": "Calonge i Sant Antoni", "Castell-Platja d'Aro": "Castell d'Aro, Platja d'Aro i s'Agaró",
+    "Brunyola": "Brunyola i Sant Martí Sapresa", "Palamós": "Palamós i Sant Joan", "Masarac": "Masarac i Vilarnadal",
 }
 
 
