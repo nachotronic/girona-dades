@@ -1,0 +1,829 @@
+{
+  "id" : "qnyt-emjc",
+  "name" : "Fets penals coneguts, fets coneguts resolts i detencions",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Interior i Seguretat Pública",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Seguretat",
+  "createdAt" : 1627467553,
+  "description" : "Fets penals coneguts, resolts i detencions realitzades per la Policia de Catalunya.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 7914,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2127978,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1627468883,
+  "publicationGroup" : 1447031,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1794827098,
+  "rowsUpdatedBy" : "7i4k-xfx8",
+  "tableId" : 1447031,
+  "totalTimesRated" : 0,
+  "viewCount" : 17004,
+  "viewLastModified" : 1794827098,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1669374365,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1262702,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1669374365,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1669374366,
+      "failureCount" : 0,
+      "startedAt" : 1669374365,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "78xb-8hcs",
+      "displayName" : "alejandra.mota@gencat.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 19826482,
+    "name" : "Mes",
+    "dataTypeName" : "number",
+    "description" : "Número del mes de les dades",
+    "fieldName" : "mes",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13187736,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "12",
+      "null" : "0",
+      "top" : [ {
+        "item" : "7",
+        "count" : "29310"
+      }, {
+        "item" : "6",
+        "count" : "29227"
+      }, {
+        "item" : "5",
+        "count" : "29164"
+      }, {
+        "item" : "3",
+        "count" : "29148"
+      }, {
+        "item" : "10",
+        "count" : "28894"
+      }, {
+        "item" : "9",
+        "count" : "28737"
+      }, {
+        "item" : "8",
+        "count" : "28576"
+      }, {
+        "item" : "2",
+        "count" : "28537"
+      }, {
+        "item" : "4",
+        "count" : "28385"
+      }, {
+        "item" : "1",
+        "count" : "27677"
+      }, {
+        "item" : "11",
+        "count" : "26629"
+      }, {
+        "item" : "12",
+        "count" : "25860"
+      } ],
+      "smallest" : "1",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : { }
+  }, {
+    "id" : 19826481,
+    "name" : "Nom mes",
+    "dataTypeName" : "text",
+    "description" : "Nom del mes de les dades",
+    "fieldName" : "nom_mes",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13187735,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "setembre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "juliol",
+        "count" : "29310"
+      }, {
+        "item" : "juny",
+        "count" : "29227"
+      }, {
+        "item" : "maig",
+        "count" : "29164"
+      }, {
+        "item" : "març",
+        "count" : "29148"
+      }, {
+        "item" : "octubre",
+        "count" : "28894"
+      }, {
+        "item" : "setembre",
+        "count" : "28737"
+      }, {
+        "item" : "agost",
+        "count" : "28576"
+      }, {
+        "item" : "febrer",
+        "count" : "28537"
+      }, {
+        "item" : "abril",
+        "count" : "28385"
+      }, {
+        "item" : "gener",
+        "count" : "27677"
+      }, {
+        "item" : "novembre",
+        "count" : "26629"
+      }, {
+        "item" : "desembre",
+        "count" : "25860"
+      } ],
+      "smallest" : "abril",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : { }
+  }, {
+    "id" : 19826473,
+    "name" : "Any",
+    "dataTypeName" : "number",
+    "description" : "Número de l’any de les dades",
+    "fieldName" : "any",
+    "position" : 3,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13187727,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "22463"
+      }, {
+        "item" : "2011",
+        "count" : "22282"
+      }, {
+        "item" : "2024",
+        "count" : "22249"
+      }, {
+        "item" : "2012",
+        "count" : "22154"
+      }, {
+        "item" : "2014",
+        "count" : "22062"
+      }, {
+        "item" : "2013",
+        "count" : "22006"
+      }, {
+        "item" : "2023",
+        "count" : "21963"
+      }, {
+        "item" : "2015",
+        "count" : "21388"
+      }, {
+        "item" : "2022",
+        "count" : "20879"
+      }, {
+        "item" : "2021",
+        "count" : "20861"
+      }, {
+        "item" : "2016",
+        "count" : "20839"
+      }, {
+        "item" : "2017",
+        "count" : "20782"
+      }, {
+        "item" : "2018",
+        "count" : "20669"
+      }, {
+        "item" : "2019",
+        "count" : "20602"
+      }, {
+        "item" : "2020",
+        "count" : "19989"
+      }, {
+        "item" : "2026",
+        "count" : "18956"
+      } ],
+      "smallest" : "2011",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 19826480,
+    "name" : "Regió Policial (RP)",
+    "dataTypeName" : "text",
+    "description" : "Nom de la Regió policial on s’han produït els fets",
+    "fieldName" : "regi_policial_rp",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13187734,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "RP Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "RP  Metropolitana Nord",
+        "count" : "71548"
+      }, {
+        "item" : "RP Metropolitana Barcelona",
+        "count" : "65308"
+      }, {
+        "item" : "RP Metropolitana Sud",
+        "count" : "57198"
+      }, {
+        "item" : "RP Girona",
+        "count" : "47600"
+      }, {
+        "item" : "RP Camp de Tarragona",
+        "count" : "26530"
+      }, {
+        "item" : "RP Central",
+        "count" : "23287"
+      }, {
+        "item" : "RP Ponent",
+        "count" : "19794"
+      }, {
+        "item" : "RP Terres de l'Ebre",
+        "count" : "14249"
+      }, {
+        "item" : "RP Alt Pirineu i Aran",
+        "count" : "11341"
+      }, {
+        "item" : "Regió Virtual",
+        "count" : "3289"
+      } ],
+      "smallest" : "Regió Virtual",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : { }
+  }, {
+    "id" : 19826479,
+    "name" : "Àrea Bàsica Policial (ABP)",
+    "dataTypeName" : "text",
+    "description" : "Nom de l'Àrea Bàsica Policial",
+    "fieldName" : "rea_b_sica_policial_abp",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13187733,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "ABP Virtual",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ABP Tarragonès",
+        "count" : "7916"
+      }, {
+        "item" : "ABP Granollers",
+        "count" : "7567"
+      }, {
+        "item" : "ABP Eixample",
+        "count" : "7384"
+      }, {
+        "item" : "ABP Badalona",
+        "count" : "7318"
+      }, {
+        "item" : "ABP Sabadell",
+        "count" : "7299"
+      }, {
+        "item" : "ABP Ciutat Vella",
+        "count" : "7148"
+      }, {
+        "item" : "ABP Baix Camp - Priorat",
+        "count" : "7134"
+      }, {
+        "item" : "ABP Segrià",
+        "count" : "7095"
+      }, {
+        "item" : "ABP Gironès - Pla de l'Estany",
+        "count" : "7053"
+      }, {
+        "item" : "ABP Sants-Montjuïc",
+        "count" : "7042"
+      }, {
+        "item" : "ABP l'Hospitalet de Llobregat",
+        "count" : "6996"
+      }, {
+        "item" : "ABP Sant Martí",
+        "count" : "6839"
+      }, {
+        "item" : "ABP Terrassa",
+        "count" : "6802"
+      }, {
+        "item" : "ABP Arenys de Mar",
+        "count" : "6602"
+      }, {
+        "item" : "ABP Cerdanyola",
+        "count" : "6457"
+      }, {
+        "item" : "ABP Rubí",
+        "count" : "6383"
+      }, {
+        "item" : "ABP Baix Penedès",
+        "count" : "6369"
+      }, {
+        "item" : "ABP Garraf",
+        "count" : "6334"
+      }, {
+        "item" : "ABP Mataró",
+        "count" : "6325"
+      }, {
+        "item" : "ABP Alt Empordà - Figueres",
+        "count" : "6262"
+      } ],
+      "smallest" : "ABP Alt Camp - C. de Barberà",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : { }
+  }, {
+    "id" : 19826478,
+    "name" : "Títol Codi Penal",
+    "dataTypeName" : "text",
+    "description" : "Classificació del fet en base al nom del títol del codi penal",
+    "fieldName" : "t_tol_codi_penal",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13187732,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "Faltes contra l'ordre públic",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Delictes contra el patrimoni i contra l’ordre socioeconòmic",
+        "count" : "117319"
+      }, {
+        "item" : "Delictes contra la seguretat viària",
+        "count" : "40815"
+      }, {
+        "item" : "Delictes contra la llibertat",
+        "count" : "25001"
+      }, {
+        "item" : "De les falsedats",
+        "count" : "21895"
+      }, {
+        "item" : "Delictes contra l'Administració de justícia",
+        "count" : "19351"
+      }, {
+        "item" : "Delictes contra l'ordre públic",
+        "count" : "16518"
+      }, {
+        "item" : "Delictes contra la llibertat i la indemnitat sexuals",
+        "count" : "15467"
+      }, {
+        "item" : "Delictes contra la intimitat, el dret a la pròpia imatge i la inviolabilitat del domicili",
+        "count" : "12930"
+      }, {
+        "item" : "Dels delictes contra la seguretat col·lectiva",
+        "count" : "12195"
+      }, {
+        "item" : "De les lesions",
+        "count" : "11520"
+      }, {
+        "item" : "De les tortures i altres delictes contra la integritat moral",
+        "count" : "9094"
+      }, {
+        "item" : "Delictes contra les relacions familiars",
+        "count" : "8467"
+      }, {
+        "item" : "De l’homicidi i les seves formes",
+        "count" : "5897"
+      }, {
+        "item" : "Faltes contra el patrimoni",
+        "count" : "3826"
+      }, {
+        "item" : "Faltes contra les persones",
+        "count" : "3411"
+      }, {
+        "item" : "Dels delictes relatius a l’ordenació del territori i l’urbanisme, la protecció del patrimoni històric i el medi ambient",
+        "count" : "3249"
+      }, {
+        "item" : "Delictes contra l’honor",
+        "count" : "2793"
+      }, {
+        "item" : "Faltes contra l'ordre públic",
+        "count" : "2739"
+      }, {
+        "item" : "Delictes contra la Constitució",
+        "count" : "2250"
+      }, {
+        "item" : "Faltes contra els interessos generals",
+        "count" : "1970"
+      } ],
+      "smallest" : "De l’avortament",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : { }
+  }, {
+    "id" : 19826477,
+    "name" : "Tipus de fet",
+    "dataTypeName" : "text",
+    "description" : "Detall del tipus de fet segons el codi penal",
+    "fieldName" : "tipus_de_fet",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13187731,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "Violació de secrets",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Danys",
+        "count" : "11700"
+      }, {
+        "item" : "Furt",
+        "count" : "11586"
+      }, {
+        "item" : "Lesions",
+        "count" : "11520"
+      }, {
+        "item" : "Robatori amb força",
+        "count" : "11473"
+      }, {
+        "item" : "Estafes",
+        "count" : "11430"
+      }, {
+        "item" : "Amenaces",
+        "count" : "11411"
+      }, {
+        "item" : "Conduir sota els efectes d'alcohol i drogues",
+        "count" : "11291"
+      }, {
+        "item" : "Conduir sense permís",
+        "count" : "11014"
+      }, {
+        "item" : "Robatori amb força interior vehicle",
+        "count" : "10782"
+      }, {
+        "item" : "Robatori amb violència i/o intimidació",
+        "count" : "10478"
+      }, {
+        "item" : "Apropiació indeguda",
+        "count" : "10400"
+      }, {
+        "item" : "Altres delictes contra l'ordre públic",
+        "count" : "10308"
+      }, {
+        "item" : "Trencament de condemna",
+        "count" : "10268"
+      }, {
+        "item" : "Robatori i furt d'us de vehicle",
+        "count" : "10204"
+      }, {
+        "item" : "Agressions sexuals i Abusos sexuals",
+        "count" : "9847"
+      }, {
+        "item" : "Contra la salut pública",
+        "count" : "9726"
+      }, {
+        "item" : "Coaccions",
+        "count" : "9630"
+      }, {
+        "item" : "Ocupació immobles",
+        "count" : "9499"
+      }, {
+        "item" : "Falsedats documentals",
+        "count" : "9235"
+      }, {
+        "item" : "Tracte degradant / vexatori",
+        "count" : "9075"
+      } ],
+      "smallest" : "Abandó de destí i omissió deure perseguir delictes",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : { }
+  }, {
+    "id" : 19826476,
+    "name" : "Coneguts",
+    "dataTypeName" : "number",
+    "description" : "Nombre de fets coneguts",
+    "fieldName" : "coneguts",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13187730,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "9214",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "86851"
+      }, {
+        "item" : "2",
+        "count" : "38558"
+      }, {
+        "item" : "3",
+        "count" : "23927"
+      }, {
+        "item" : "0",
+        "count" : "18553"
+      }, {
+        "item" : "4",
+        "count" : "17102"
+      }, {
+        "item" : "5",
+        "count" : "12969"
+      }, {
+        "item" : "6",
+        "count" : "10503"
+      }, {
+        "item" : "7",
+        "count" : "8698"
+      }, {
+        "item" : "8",
+        "count" : "7311"
+      }, {
+        "item" : "9",
+        "count" : "6356"
+      }, {
+        "item" : "10",
+        "count" : "5546"
+      }, {
+        "item" : "11",
+        "count" : "4932"
+      }, {
+        "item" : "12",
+        "count" : "4555"
+      }, {
+        "item" : "13",
+        "count" : "4146"
+      }, {
+        "item" : "14",
+        "count" : "3853"
+      }, {
+        "item" : "15",
+        "count" : "3409"
+      }, {
+        "item" : "16",
+        "count" : "3250"
+      }, {
+        "item" : "17",
+        "count" : "2839"
+      }, {
+        "item" : "18",
+        "count" : "2776"
+      }, {
+        "item" : "19",
+        "count" : "2611"
+      } ],
+      "smallest" : "0",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 19826475,
+    "name" : "Resolts",
+    "dataTypeName" : "number",
+    "description" : "Nombre de fets resolts",
+    "fieldName" : "resolts",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13187729,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "1159",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "85999"
+      }, {
+        "item" : "0",
+        "count" : "45592"
+      }, {
+        "item" : "2",
+        "count" : "40328"
+      }, {
+        "item" : "3",
+        "count" : "25740"
+      }, {
+        "item" : "4",
+        "count" : "19306"
+      }, {
+        "item" : "5",
+        "count" : "15186"
+      }, {
+        "item" : "6",
+        "count" : "12391"
+      }, {
+        "item" : "7",
+        "count" : "10426"
+      }, {
+        "item" : "8",
+        "count" : "8661"
+      }, {
+        "item" : "9",
+        "count" : "7588"
+      }, {
+        "item" : "10",
+        "count" : "6590"
+      }, {
+        "item" : "11",
+        "count" : "5530"
+      }, {
+        "item" : "12",
+        "count" : "4888"
+      }, {
+        "item" : "13",
+        "count" : "4324"
+      }, {
+        "item" : "14",
+        "count" : "3854"
+      }, {
+        "item" : "15",
+        "count" : "3416"
+      }, {
+        "item" : "16",
+        "count" : "3134"
+      }, {
+        "item" : "17",
+        "count" : "2931"
+      }, {
+        "item" : "18",
+        "count" : "2587"
+      }, {
+        "item" : "19",
+        "count" : "2308"
+      } ],
+      "smallest" : "0",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 19826474,
+    "name" : "Detencions",
+    "dataTypeName" : "number",
+    "description" : "Nombre de detencions realitzades",
+    "fieldName" : "detencions",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13187728,
+    "cachedContents" : {
+      "non_null" : "340144",
+      "largest" : "342",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "186360"
+      }, {
+        "item" : "1",
+        "count" : "55094"
+      }, {
+        "item" : "2",
+        "count" : "25284"
+      }, {
+        "item" : "3",
+        "count" : "15680"
+      }, {
+        "item" : "4",
+        "count" : "10887"
+      }, {
+        "item" : "5",
+        "count" : "8354"
+      }, {
+        "item" : "6",
+        "count" : "6160"
+      }, {
+        "item" : "7",
+        "count" : "4928"
+      }, {
+        "item" : "8",
+        "count" : "3953"
+      }, {
+        "item" : "9",
+        "count" : "3331"
+      }, {
+        "item" : "10",
+        "count" : "2679"
+      }, {
+        "item" : "11",
+        "count" : "2248"
+      }, {
+        "item" : "12",
+        "count" : "1827"
+      }, {
+        "item" : "13",
+        "count" : "1545"
+      }, {
+        "item" : "14",
+        "count" : "1320"
+      }, {
+        "item" : "15",
+        "count" : "1209"
+      }, {
+        "item" : "16",
+        "count" : "1009"
+      }, {
+        "item" : "17",
+        "count" : "814"
+      }, {
+        "item" : "18",
+        "count" : "762"
+      }, {
+        "item" : "19",
+        "count" : "669"
+      } ],
+      "smallest" : "0",
+      "count" : "340144",
+      "cardinality" : "340144"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Mensual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Criminal offences (known), known offences solved and arrests",
+        "Nombre del conjunto de datos (ES)" : "Hechos penales conocidos, resueltos y detenciones "
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No"
+      },
+      "Actors" : {
+        "Departament" : "Interior i Seguretat Pública",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Nom d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "activitat delinqüencial", "denúncia", "denúncies", "policia", "mossos d'esquadra", "incidents", "falta", "faltes", "delictes", "robatoris", "patrimoni", "persones", "alcohol", "furts", "assassinats", "homicidis", "detencions", "fets resolts", "fets coneguts", "policia local", "policies locals", "ods16_pau justícies i institucions sòlides" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

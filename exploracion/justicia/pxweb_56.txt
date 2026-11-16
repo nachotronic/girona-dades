@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+
+</title><link href="../../../Resources/Styles/PxWeb.css" rel="stylesheet" type="text/css" media="screen" /></head>
+<body>
+    <form method="post" action="../../../ErrorGeneral.aspx?errcode=500" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTAwMjI3NTMzMQ9kFgICAw9kFgYCAw8PFgIeBFRleHQFNVNlIGhhIHByb2R1Y2lkbyB1biBlcnJvci4gRWwgZXJyb3IgaGEgc2lkbyByZWdpc3RyYWRvZGQCBQ8PFgQfAAVaU3UgcmVjdXBlcmFjacOzbiBndWFyZGFkYSBubyBzZSBwdWVkZSBlbmNvbnRyYXIuIExhIHRhYmxhIHB1ZWRlIGhhYmVyc2UgbW92aWRvIG8gZWxpbWluYWRvHgdWaXNpYmxlaGRkAgcPDxYCHwAFHVZvbHZlciBhIGxhIHDDoWdpbmEgZGUgaW5pY2lvZGRkPACJYs+IOqkYe7vLGCMHqLcXw8BeWW1B+ecjlRGpXh8=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A64A978E" />
+</div>
+        <div id="wrap"> 
+            <div id="header" class="header">
+                <div class="headerleft">
+                        <img src="../../../Resources/Images/CGPJACRMINI.JPG" id="imgSiteLogo" alt="PX-Web" class="imgSiteLogo" />
+                        <span class="siteLogoText">PX-Web</span>
+                </div>
+                <div class="headerright">
+                </div>
+                <div style="clear: both;"> </div>
+            </div>
+            <div id="content"> 
+                <div id="place-holder">
+                    <span id="lblErrorMessage">Se ha producido un error. El error ha sido registrado</span>
+                    
+                    <br /><br />
+                    <a id="lnkStart" href="../../../Default.aspx">Volver a la página de inicio</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
