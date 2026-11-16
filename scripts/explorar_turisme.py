@@ -1,8 +1,8 @@
-"""Exploración de fuentes de turismo (temporal). Guarda listados en exploracion/turisme/."""
-import json, pathlib, re, time
+"""Exploración de fuentes de turismo, ronda 2 (temporal). Guarda en exploracion/turisme2/."""
+import json, pathlib, re, sys, time
 import requests
-
-S = pathlib.Path("exploracion/turisme"); S.mkdir(parents=True, exist_ok=True)
+sys.path.insert(0, ".")
+S = pathlib.Path("exploracion/turisme2"); S.mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "girona-dades/0.1 (+https://github.com/nachotronic/girona-dades)"}
 INE = "https://servicios.ine.es/wstempus/js/ES"
 log = []
@@ -10,77 +10,72 @@ log = []
 def get(u, **k):
     for i in range(3):
         try:
-            r = requests.get(u, headers=UA, timeout=180, **k); return r
+            return requests.get(u, headers=UA, timeout=300, **k)
         except Exception as e:
             log.append(f"{u} intento {i}: {e}"); time.sleep(3)
 
-def guarda(nom, r, maxb=3_000_000):
-    if r is None: log.append(f"{nom}: sin respuesta"); return
+def guarda(nom, r, maxb=2_000_000):
+    if r is None: log.append(f"{nom}: sin respuesta"); return None
     log.append(f"{nom}: {r.status_code} {r.headers.get('content-type')} {len(r.content)}")
-    (S / nom).write_bytes(r.content[:maxb])
+    (S / nom).write_bytes(r.content[:maxb]); return r
 
-r = get(f"{INE}/OPERACIONES_DISPONIBLES"); guarda("ine_ops.json", r)
-ops = r.json() if r is not None and r.ok else []
-pat = re.compile(r"turis|hotel|camping|apartamento|alojamiento|frontur|egatur|gasto|viajer|rentabilidad|albergue", re.I)
-sel = [o for o in ops if pat.search(o.get("Nombre", ""))]
-(S / "ine_ops_tur.json").write_text(json.dumps(sel, ensure_ascii=False, indent=1))
-tabs = {}
-for o in sel:
-    cod = o.get("Codigo") or o.get("Id")
-    rr = get(f"{INE}/TABLAS_OPERACION/{cod}")
-    try: tabs[cod] = {"op": o.get("Nombre"), "tablas": [(t["Id"], t["Nombre"]) for t in rr.json()]}
-    except Exception as e: tabs[cod] = {"op": o.get("Nombre"), "error": str(e)}
-    time.sleep(0.3)
-(S / "ine_tablas_tur.json").write_text(json.dumps(tabs, ensure_ascii=False, indent=1))
-# Muestra de series de cada tabla (nombres, para ver la geografía)
-mues = {}
-for cod, v in tabs.items():
-    for tid, tn in v.get("tablas", [])[:80]:
-        rr = get(f"{INE}/SERIES_TABLA/{tid}?det=0")
-        try:
-            ss = [s["Nombre"] for s in rr.json()]
-            gi = [s for s in ss if re.search(r"Girona|Gerona|17\d{3}|Costa Brava|Pirineu", s)]
-            mues[tid] = {"t": tn, "n": len(ss), "ej": ss[:4], "gi": gi[:60]}
-        except Exception as e:
-            mues[tid] = {"t": tn, "error": str(e)[:100]}
-        time.sleep(0.2)
-(S / "ine_series_muestra.json").write_text(json.dumps(mues, ensure_ascii=False, indent=1))
-
-PAG = {
- "ine_mov_interno.htm": "https://www.ine.es/experimental/turismo_moviles/experimental_turismo_moviles_interno.htm",
- "ine_mov.htm": "https://www.ine.es/experimental/turismo_moviles/experimental_turismo_moviles.htm",
- "ine_mov_receptor.htm": "https://www.ine.es/experimental/turismo_moviles/experimental_turismo_moviles_receptor.htm",
- "ine_mov_anual.htm": "https://www.ine.es/experimental/turismo_moviles/experimental_turismo_moviles_infoanual.htm",
- "ine_tarj_anual.htm": "https://www.ine.es/experimental/gasto_tarjetas/anual.htm",
- "ine_tarj_trim.htm": "https://www.ine.es/experimental/gasto_tarjetas/trimestral.htm",
- "idescat_taules.json": "https://api.idescat.cat/taules/v2?lang=ca",
- "idescat_turis.htm": "https://www.idescat.cat/tema/turis",
-}
-for k, u in PAG.items(): guarda(k, get(u))
-# Idescat: estadísticas de turismo en la API de taules
-try:
-    d = json.loads((S / "idescat_taules.json").read_text())
-    txt = json.dumps(d, ensure_ascii=False)
-    ids = sorted(set(re.findall(r'taules/v2/(tur[a-z]*)', txt)))
-    log.append(f"idescat tur: {ids}")
-    for i in ids:
-        guarda(f"idescat_{i}.json", get(f"https://api.idescat.cat/taules/v2/{i}?lang=ca"))
-        try:
-            dd = json.loads((S / f"idescat_{i}.json").read_text())
-            for n in re.findall(r'taules/v2/' + i + r'/(\d+)', json.dumps(dd))[:6]:
-                guarda(f"idescat_{i}_{n}.json", get(f"https://api.idescat.cat/taules/v2/{i}/{n}?lang=ca"))
-        except Exception as e: log.append(f"{i}: {e}")
-except Exception as e: log.append(f"idescat: {e}")
-# Socrata Generalitat
-for q in ("turisme", "turístic", "creuers", "ports", "museus visitants", "bandera blava", "platges", "allotjament"):
-    r = get("https://analisi.transparenciacatalunya.cat/api/catalog/v1", params={"q": q, "limit": 60})
+# 1. Tablas municipales de telefonía móvil: grupos y valores
+for t in ("52048", "53464", "53465", "53001"):
+    r = guarda(f"grupos_{t}.json", get(f"{INE}/GRUPOS_TABLA/{t}"))
     try:
-        res = [(x["resource"]["id"], x["resource"]["name"], x["resource"].get("data_updated_at")) for x in r.json()["results"]]
-        (S / f"socrata_{q.replace(' ', '_')}.json").write_text(json.dumps(res, ensure_ascii=False, indent=1))
-    except Exception as e: log.append(f"socrata {q}: {e}")
-# Datos.gob.es / Ports de la Generalitat / Aena
-for k, u in {"ports_gencat.htm": "https://portsgeneralitat.gencat.cat/ca/dades-i-estadistiques/",
-             "ports_estad.htm": "https://ports.gencat.cat/ca/ports/estadistiques/",
-             "ine_mov_api.json": f"{INE}/TABLAS_OPERACION/MOVTUR"}.items():
-    guarda(k, get(u))
+        gs = r.json()
+    except Exception:
+        continue
+    vals = {}
+    for g in gs:
+        rv = get(f"{INE}/VALORES_GRUPOSTABLA/{t}/{g['Id']}")
+        try:
+            v = rv.json(); vals[g["Id"]] = {"nom": g.get("Nombre"), "n": len(v), "ej": v[:5],
+                "gi": [x for x in v if re.match(r"^17\d{3}$", str(x.get("Codigo", ""))) or "Girona" in str(x.get("Nombre", ""))][:300]}
+        except Exception as e:
+            vals[g["Id"]] = {"error": str(e)[:200], "txt": rv.text[:300] if rv is not None else None}
+    (S / f"valores_{t}.json").write_text(json.dumps(vals, ensure_ascii=False, indent=1))
+    # Prueba de filtro: Girona (municipio) con tv=<variable>:<valor>
+    for gid, info in vals.items():
+        gi = [x for x in info.get("gi", []) if str(x.get("Codigo")) == "17079"]
+        if gi:
+            x = gi[0]
+            u = f"{INE}/DATOS_TABLA/{t}?tv={x['FK_Variable']}:{x['Id']}&nult=3"
+            guarda(f"prueba_{t}.json", get(u))
+            u2 = f"{INE}/DATOS_TABLA/{t}?tv={x['FK_Variable']}:{x['Id']}&nult=1&det=1"
+            guarda(f"prueba_{t}_det.json", get(u2))
+            break
+
+# 2. Índices de INEbase: gasto con tarjetas y telefonía móvil
+for k, u in {"tarjetas_7459.htm": "https://www.ine.es/dynt3/inebase/index.htm?padre=7459",
+             "moviles_8578.htm": "https://www.ine.es/dynt3/inebase/es/index.htm?padre=8578&capsel=8579",
+             "moviles_8581.htm": "https://www.ine.es/dynt3/inebase/es/index.htm?padre=8578&capsel=8581"}.items():
+    r = guarda(k, get(u))
+    if r is not None:
+        ids = sorted(set(re.findall(r"[?&]t=(\d+)", r.text)))
+        log.append(f"{k}: tablas {ids}")
+        for t in ids[:30]:
+            rr = get(f"{INE}/SERIES_TABLA/{t}?det=0")
+            try:
+                ss = [s["Nombre"] for s in rr.json()]
+                gi = [s for s in ss if "Girona" in s or "Gerona" in s or "Cataluña" in s]
+                (S / f"series_{t}.json").write_text(json.dumps({"n": len(ss), "ej": ss[:6], "gi": gi[:40]}, ensure_ascii=False, indent=1))
+            except Exception as e:
+                log.append(f"series {t}: {e}")
+
+# 3. Socrata: muestras
+SOC = "https://analisi.transparenciacatalunya.cat"
+for d in ("83qv-sib8", "2nmt-74sj", "rn32-up9n", "8gmd-gz7i", "9qmy-ujbd", "jrvb-e5fa", "6yx4-i5rd"):
+    guarda(f"soc_{d}_meta.json", get(f"{SOC}/api/views/{d}.json"), 300_000)
+    guarda(f"soc_{d}.json", get(f"{SOC}/resource/{d}.json?$limit=40"), 300_000)
+guarda("soc_8gmd_museus.json", get(f"{SOC}/resource/8gmd-gz7i.json", params={"$limit": 50, "$q": "museu Girona"}), 300_000)
+
+# 4. Xifra con todos los años
+try:
+    from fuentes import turisme
+    x, l = turisme.xifra()
+    log += l
+    x.to_csv(S / "xifra_oferta.csv", index=False)
+except Exception as e:
+    log.append(f"xifra: ERROR {e}")
 (S / "log.txt").write_text("\n".join(log))
