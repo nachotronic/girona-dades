@@ -15,6 +15,7 @@ Genera, por convocatoria, en data/processed/eleccions/:
 """
 from __future__ import annotations
 
+import datetime as dt
 import io
 
 import pandas as pd
@@ -22,7 +23,10 @@ import pandas as pd
 from .comun import carpeta, get
 
 DOMINIO = "https://analisi.transparenciacatalunya.cat/resource"
-# Convocatorias que se publican en la web: Parlament (A), Congrés (G), municipals (M) y europees (E)
+# Convocatorias que se publican en la web: Parlament (A), Congrés (G), municipals (M) y europees (E).
+# Las celebradas después de estas se añaden solas a partir de la tabla de convocatorias (tgns-3xuy).
+TIPUS = "AGME"
+DES_DE = 2010
 CONVOCATORIES = [
     "A20101", "M20111", "G20111", "A20121", "E20141",
     "M20151", "A20151", "G20151", "G20161", "A20171",
@@ -62,7 +66,19 @@ def ejecutar() -> str:
     conv = pd.read_csv(io.BytesIO(get(f"{DOMINIO}/tgns-3xuy.csv", params={"$limit": 5000}).content), dtype=str)
     conv.to_csv(salida / "convocatories.csv", index=False)
     lineas = []
-    for ident in CONVOCATORIES:
+    avui = dt.date.today()
+    dates = {i: str(d)[:10] for i, d in zip(conv["id_eleccio"], conv["data_eleccio"]) if isinstance(d, str)}
+    noves = [i for i, d in zip(conv["id_eleccio"], conv["data_eleccio"].fillna(""))
+             if isinstance(i, str) and i[:1] in TIPUS and i[1:5].isdigit() and int(i[1:5]) >= DES_DE
+             and d[:10] and d[:10] <= avui.isoformat() and i not in CONVOCATORIES]
+    if noves:
+        lineas.append(f"convocatorias nuevas: {', '.join(sorted(noves))}")
+    for ident in CONVOCATORIES + sorted(noves):
+        data = dates.get(ident, "")
+        tancada = len(data) == 10 and (avui - dt.date.fromisoformat(data)).days > 180
+        if tancada and (salida / f"vots_{ident}.csv.gz").exists() and (salida / f"part_{ident}.csv.gz").exists():
+            lineas.append(f"{ident}: ya guardada (resultados definitivos)")
+            continue
         try:
             v = _consulta("ntc4-rnwr", _where(ident),
                           "id_nivell_territorial,territori_codi,districte,secci_,candidatura_codi,candidatura_denominacio,"
@@ -76,6 +92,9 @@ def ejecutar() -> str:
                                   "candidatura_color": "color"})
             p = p.rename(columns={"id_nivell_territorial": "nivell", "cens_electoral": "cens", "vots_nuls": "nuls",
                                   "vots_blancs": "blancs", "vots_candidatures": "candidatures"})
+            if v.empty or p.empty:
+                lineas.append(f"{ident}: todavía sin resultados publicados")
+                continue
             for df in (v, p):
                 df["ine"] = _ine(df.pop("territori_codi"))
             v.to_csv(salida / f"vots_{ident}.csv.gz", index=False)

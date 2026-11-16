@@ -1,0 +1,177 @@
+{
+ "aeat": {
+  "estat": "ok",
+  "intent": "2026-11-16T14:02:17Z",
+  "ok": "2026-11-16T14:02:17Z",
+  "durada": 164,
+  "resum": "2022: 94 municipios\n2023: ya guardado\n2024: 95 municipios\n285 filas, 238 columnas"
+ },
+ "aena": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:11:55Z",
+  "ok": "2026-11-16T12:11:55Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "afiliacio": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:11:55Z",
+  "ok": "2026-11-16T12:11:55Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "catastro": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "conjuntura": {
+  "estat": "ok",
+  "intent": "2026-11-16T14:00:18Z",
+  "ok": "2026-11-16T14:00:18Z",
+  "durada": 7,
+  "resum": "paro 2019: ya guardado\nparo 2020: ya guardado\nparo 2021: ya guardado\nparo 2022: ya guardado\nparo 2023: ya guardado\nparo 2024: ya guardado\nparo 2025: ya guardado\nparo 2026: 2210 filas de Girona, meses 202601-202610\ncontratos 2020: ya guardado\ncontratos 2021: ya guardado\ncontratos 2022: ya guardado\ncontratos 2023: ya guardado\ncontratos 2024: ya guardado\ncontratos 2025: ya guardado\ncontratos 2026: 2210 filas de Girona, meses 202601-202610\ndtes 2019: ya guardado\ndtes 2020: ya guardado\ndtes 2021: ya guardado\ndtes 2022: ya guardado\ndtes 2023: ya guardado\ndtes 2024: ya guardado\ndtes 2025: ya guardado\ndtes 2026: 2210 filas de Girona, meses 202601-202610"
+ },
+ "dgt": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:11:55Z",
+  "ok": "2026-11-16T12:11:55Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "educacio": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "eleccions": {
+  "estat": "ok",
+  "intent": "2026-11-16T14:00:15Z",
+  "ok": "2026-11-16T14:00:15Z",
+  "durada": 2,
+  "resum": "A20101: ya guardada (resultados definitivos)\nM20111: ya guardada (resultados definitivos)\nG20111: ya guardada (resultados definitivos)\nA20121: ya guardada (resultados definitivos)\nE20141: ya guardada (resultados definitivos)\nM20151: ya guardada (resultados definitivos)\nA20151: ya guardada (resultados definitivos)\nG20151: ya guardada (resultados definitivos)\nG20161: ya guardada (resultados definitivos)\nA20171: ya guardada (resultados definitivos)\nG20191: ya guardada (resultados definitivos)\nM20191: ya guardada (resultados definitivos)\nE20191: ya guardada (resultados definitivos)\nG20192: ya guardada (resultados definitivos)\nA20211: ya guardada (resultados definitivos)\nM20231: ya guardada (resultados definitivos)\nG20231: ya guardada (resultados definitivos)\nA20241: ya guardada (resultados definitivos)\nE20241: ya guardada (resultados definitivos)"
+ },
+ "emergencies": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "emex": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "generalitat": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "geometria": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "ine": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "mitma": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "nacionalitat": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "padro": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:09:19Z",
+  "ok": "2026-11-16T12:09:19Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "policia": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "pressupostos": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:09:19Z",
+  "ok": "2026-11-16T12:09:19Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "provincia": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "referencies": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "salut": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "territorio": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "tributs": {
+  "estat": "ok",
+  "intent": "2026-11-16T13:08:39Z",
+  "ok": "2026-11-16T13:08:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "universitaris": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:19:03Z",
+  "ok": "2026-11-16T12:19:03Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ },
+ "xifra": {
+  "estat": "ok",
+  "intent": "2026-11-16T12:42:39Z",
+  "ok": "2026-11-16T12:42:39Z",
+  "durada": null,
+  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+ }
+}

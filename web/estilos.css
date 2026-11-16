@@ -282,6 +282,8 @@ td.buit { color: var(--text-3); }
 .fonts { list-style: none; padding: 0; margin: 0 0 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 14px 40px; font-size: 14px; }
 .fonts li { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.14); }
 .fonts li span { opacity: .75; font-size: 13px; }
+.fonts li .font-act { opacity: .55; font-size: 11px; letter-spacing: .04em; margin-top: 2px; }
+.fonts li .font-act.avis { opacity: 1; color: #ff5a5f; }
 .peu-meta { font-size: 13px; margin: 0; opacity: .85; }
 
 /* ---------- Política ---------- */
@@ -345,7 +347,7 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); line-height: 1; }
 
 /* Antetítulos y etiquetas en monoespaciada */
 .sobre, .meta, .xifra .etiqueta, .xifra .nota, .comptador, .ranquing h4, .llegenda-mapa .ticks, .llegenda-mapa .nd,
-.xips .grup, .xip-tema, thead th, .grafic .unitat, .vreg, .cat-n, .info .lloc, .info .rel, .alcalde .etiqueta, .peu h2, .peu-meta, .fonts li span {
+.xips .grup, .xip-tema, thead th, .grafic .unitat, .vreg, .cat-n, .info .lloc, .info .rel, .alcalde .etiqueta, .peu h2, .peu-meta, .fonts li span, .fonts li .font-act {
   font-family: var(--mono);
 }
 .sobre { color: var(--accent); font-size: 12px; letter-spacing: .08em; font-weight: 500; }
