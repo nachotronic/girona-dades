@@ -78,6 +78,18 @@
       h_rec_euros: (g, a, c) => `<b>${g} €</b> en medicaments receptats per habitant el ${a}, davant dels ${c} € de Catalunya.`,
       h_rec_grups: (g, v, c) => `El que més es recepta són <b>${g.charAt(0).toLowerCase() + g.slice(1)}</b>: ${v} receptes per cada 100 habitants en un any (Catalunya, ${c}).`,
       h_inf: (v, d, c) => `La ${d}, <b>${v} casos</b> per 100.000 habitants a la regió de Girona. A Catalunya, ${c}.`,
+      esca_salut: ["Com diuen que estan", "Enquesta de salut: adults de 15 anys o més (%)"],
+      esca_habits: ["Hàbits", "Enquesta de salut: adults de 15 anys o més (%)"],
+      esca_serveis: ["Ús de la sanitat", "Enquesta de salut: tota la població (%)"],
+      esca_infants: ["Infants", "Enquesta de salut: menors de 15 anys (%)"],
+      esca_evol: ["Catalunya, des del 1994", "Enquesta de salut: adults (%)"],
+      evol_noms: { gi: "Fumadors", cat: "Obesitat", esp: "Pressió alta" },
+      sig_mes: "més que Catalunya", davant: "davant del", sig_menys: "menys que Catalunya",
+      h_esca: (n, p, c) => `<b>${n}</b> de cada 100 adults de la regió de Girona diuen que la seva salut és bona, molt bona o excel·lent (${p}). A Catalunya, ${c}.`,
+      h_esca_dif: (k, p) => `Diferències clares amb Catalunya: ${k} (${p}).`,
+      h_esca_infants: (v, c) => `Un <b>${v}</b> dels infants de 6 a 12 anys té excés de pes; a Catalunya, un ${c}.`,
+      h_esca_evol: (a, t, t0, o, o0) => `El ${a}, el ${t} dels adults catalans fumaven (el ${t0} el 1994), i el ${o} tenien obesitat (el ${o0} el 2006).`,
+      font_esca: "Font: Departament de Salut, Enquesta de salut de Catalunya (ESCA). Girona: regió sanitària, mitjana 2023-2024; Catalunya: 2024. Mostra a Girona: unes 500 persones (marge d'error d'uns 4-5 punts).",
       font_le: "Font: CatSalut, llistes d'espera", font_rec: "Font: CatSalut, receptes facturades", font_inf: "Font: Departament de Salut, SIVIC",
       menys_q: (v) => `un ${v} menys`, mes_q: (v) => `un ${v} més`,
     },
@@ -158,6 +170,18 @@
       h_rec_euros: (g, a, c) => `<b>${g} €</b> en medicamentos recetados por habitante en ${a}, frente a los ${c} € de Cataluña.`,
       h_rec_grups: (g, v, c) => `Lo que más se receta son <b>${g.charAt(0).toLowerCase() + g.slice(1)}</b>: ${v} recetas por cada 100 habitantes en un año (Cataluña, ${c}).`,
       h_inf: (v, d, c) => `La ${d}, <b>${v} casos</b> por 100.000 habitantes en la región de Girona. En Cataluña, ${c}.`,
+      esca_salut: ["Cómo dicen que están", "Encuesta de salud: adultos de 15 años o más (%)"],
+      esca_habits: ["Hábitos", "Encuesta de salud: adultos de 15 años o más (%)"],
+      esca_serveis: ["Uso de la sanidad", "Encuesta de salud: toda la población (%)"],
+      esca_infants: ["Niños", "Encuesta de salud: menores de 15 años (%)"],
+      esca_evol: ["Cataluña, desde 1994", "Encuesta de salud: adultos (%)"],
+      evol_noms: { gi: "Fumadores", cat: "Obesidad", esp: "Tensión alta" },
+      sig_mes: "más que Cataluña", davant: "frente al", sig_menys: "menos que Cataluña",
+      h_esca: (n, p, c) => `<b>${n}</b> de cada 100 adultos de la región de Girona dicen que su salud es buena, muy buena o excelente (${p}). En Cataluña, ${c}.`,
+      h_esca_dif: (k, p) => `Diferencias claras con Cataluña: ${k} (${p}).`,
+      h_esca_infants: (v, c) => `Un <b>${v}</b> de los niños de 6 a 12 años tiene exceso de peso; en Cataluña, un ${c}.`,
+      h_esca_evol: (a, t, t0, o, o0) => `En ${a}, el ${t} de los adultos catalanes fumaba (el ${t0} en 1994), y el ${o} tenía obesidad (el ${o0} en 2006).`,
+      font_esca: "Fuente: Departament de Salut, Encuesta de salud de Cataluña (ESCA). Girona: región sanitaria, media 2023-2024; Cataluña: 2024. Muestra en Girona: unas 500 personas (margen de error de unos 4-5 puntos).",
       font_le: "Fuente: CatSalut, listas de espera", font_rec: "Fuente: CatSalut, recetas facturadas", font_inf: "Fuente: Departament de Salut, SIVIC",
       menys_q: (v) => `un ${v} menos`, mes_q: (v) => `un ${v} más`,
     },
@@ -355,9 +379,24 @@
     colesterol: ["Per al colesterol", "Para el colesterol"], antidiabetics: ["Per a la diabetis", "Para la diabetes"],
     tensio: ["Per a la tensió i el cor", "Para la tensión y el corazón"], respiratoris: ["Inhaladors (asma, MPOC)", "Inhaladores (asma, EPOC)"],
   };
+  const ESCA = {
+    percepcio: ["Salut bona o molt bona", "Salud buena o muy buena"], pressio: ["Pressió alta", "Tensión alta"], diabetis: ["Diabetis", "Diabetes"],
+    exces_pes: ["Excés de pes", "Exceso de peso"], obesitat: ["Obesitat", "Obesidad"], cronica: ["Malaltia crònica", "Enfermedad crónica"],
+    dolor: ["Dolor", "Dolor"], benestar: ["Baix benestar emocional", "Bajo bienestar emocional"], depressio: ["Depressió moderada o greu", "Depresión moderada o grave"],
+    discapacitat: ["Alguna discapacitat", "Alguna discapacidad"], dependencia: ["Dependència", "Dependencia"],
+    tabac: ["Fumen", "Fuman"], activitat: ["Activitat física saludable", "Actividad física saludable"], dormir: ["Dormen les hores recomanades", "Duermen las horas recomendadas"],
+    mediterrania: ["Dieta mediterrània", "Dieta mediterránea"], fruita: ["5 racions de fruita o verdura al dia", "5 raciones de fruta o verdura al día"],
+    ensucrades: ["Begudes ensucrades cada dia", "Bebidas azucaradas cada día"], a_peu: ["Es mouen a peu o en bici", "Se mueven a pie o en bici"],
+    transport: ["Es mouen en transport públic", "Se mueven en transporte público"],
+    visita: ["Han anat al metge (12 mesos)", "Han ido al médico (12 meses)"], medicaments: ["Prenen medicaments receptats", "Toman medicamentos recetados"],
+    urgencies: ["Han anat a urgències (12 mesos)", "Han ido a urgencias (12 meses)"], hospital: ["Ingressats a l'hospital (12 mesos)", "Ingresados en el hospital (12 meses)"],
+    doble: ["Tenen mútua privada", "Tienen mutua privada"], satisfaccio: ["Satisfets amb la sanitat pública", "Satisfechos con la sanidad pública"],
+    mental: ["Probable problema de salut mental", "Probable problema de salud mental"], oci_actiu: ["Oci actiu", "Ocio activo"], oci_sed: ["Oci sedentari", "Ocio sedentario"],
+    hipercalorics: ["Menjar hipercalòric sovint", "Comida hipercalórica a menudo"], dents: ["Es renten les dents 2 cops al dia", "Se lavan los dientes 2 veces al día"],
+  };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : "");
   const etiqueta = (e) => {
@@ -422,7 +461,7 @@
     const mx = Math.max(...gs.flatMap((g) => ks.map((k) => Math.abs(g[k])))) || 1;
     const fv = (v) => (sp.u === "%" ? pct(v, 1) : fmt(v, sp.dec));
     const b = (v, k) => v == null ? "" : `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
-    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp("pac")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
+    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp("pac")}</small>` : ""}${g.s ? ` <small class="pb-n pb-s${g.s > 0 ? "m" : "n"}">${g.s > 0 ? "▲ " + tp("sig_mes") : "▼ " + tp("sig_menys")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
@@ -460,6 +499,10 @@
     if (id === "rec_grups") { const g = sp.grups[0]; return g ? tp("h_rec_grups", nomGrup(g.g, g.c), fmt(g.gi, 1), fmt(g.cat, 1)) : ""; }
     if (id === "inf_setm" || id === "grip_setm") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_inf", fmt(g[2]), tp("setmana", etiqueta(g[1])), fmt(c && c[2])) : ""; }
     if (/^t_/.test(id)) return titularTur(id, sp);
+    if (id === "esca_salut") { const g = sp.grups.find((x) => x.g === "percepcio"); return g ? tp("h_esca", fmt(g.gi, 0), sp.any, fmt(g.cat, 0)) : ""; }
+    if (id === "esca_habits" || id === "esca_serveis") { const d = sp.grups.filter((x) => x.s); return d.length ? tp("h_esca_dif", d.map((x) => `${nomGrup(x.g, x.c).charAt(0).toLowerCase() + nomGrup(x.g, x.c).slice(1)}, ${pct(x.gi, 0)} ${tp("davant")} ${pct(x.cat, 0)}`).join("; "), sp.any) : ""; }
+    if (id === "esca_infants") { const g = sp.grups.find((x) => x.g === "exces_pes"); return g ? tp("h_esca_infants", pct(g.gi, 0), pct(g.cat, 0)) : ""; }
+    if (id === "esca_evol") { const t_ = sp.series.gi, o = sp.series.cat; if (!t_ || !o || !t_.length || !o.length) return ""; const u = t_[t_.length - 1]; return tp("h_esca_evol", u[1], pct(u[2], 0), pct(t_[0][2], 0), pct(o[o.length - 1][2], 0), pct(o[0][2], 0)); }
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
     return "";
   }
@@ -527,7 +570,7 @@
     if (!S || !Object.keys(S).length) { if (sec) sec.hidden = true; return; }
     ["le_quir_hosp", "le_ext_hosp", "le_diag_hosp"].forEach((k) => { if (S[k]) S[k].noms = "hosp"; });
     if (S.le_pacients) S.le_pacients.noms = "rgi";
-    const ids = ["le_quir", "le_quir_hosp", "le_quir_proc", "le_pacients", "le_ext", "le_ext_hosp", "le_ext_proc", "le_diag", "le_diag_hosp", "le_diag_proc", "rec_hab", "rec_euros", "rec_grups", "inf_setm", "grip_setm"];
-    pintaGrafics(document.getElementById("salut-grafics"), S, ids, (id) => (/^le_/.test(id) ? "font_le" : /^rec_/.test(id) ? "font_rec" : "font_inf"));
+    const ids = ["le_quir", "le_quir_hosp", "le_quir_proc", "le_pacients", "le_ext", "le_ext_hosp", "le_ext_proc", "le_diag", "le_diag_hosp", "le_diag_proc", "rec_hab", "rec_euros", "rec_grups", "inf_setm", "grip_setm", "esca_salut", "esca_habits", "esca_serveis", "esca_infants", "esca_evol"];
+    pintaGrafics(document.getElementById("salut-grafics"), S, ids, (id) => (/^le_/.test(id) ? "font_le" : /^rec_/.test(id) ? "font_rec" : /^esca_/.test(id) ? "font_esca" : "font_inf"));
   };
 })();

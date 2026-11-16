@@ -6,7 +6,7 @@ const T = {
     locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals", f_eleccions: "resultats per secció censal: Parlament, Congrés, municipals i europees (2010-2024)",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
     nav_tur: "Turisme", h_tur: "Qui ve, on dorm i quant gasta", lead_tur: "Places, pernoctacions, ocupació, preus dels hotels, d'on vénen els turistes i quant gasten. Província de Girona davant Catalunya i Espanya. Al mapa, el tema «Turisme» ho baixa a cada municipi.", f_turisme: "ocupació, preus dels hotels, despesa i turistes per municipi segons la telefonia mòbil", f_xifra_tur: "hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any", f_ieet: "impost sobre les estades en establiments turístics",
-    nav_salut: "Salut", h_salut: "Llistes d'espera, receptes i infeccions", lead_salut: "Quant s'espera per operar-se o per veure l'especialista a cada hospital, quants medicaments es receten i com circulen la grip i les infeccions respiratòries. Regió sanitària de Girona davant Catalunya.",
+    nav_salut: "Salut", h_salut: "Llistes d'espera, receptes, infeccions i hàbits", lead_salut: "Quant s'espera per operar-se o per veure l'especialista a cada hospital, quants medicaments es receten, com circulen la grip i les infeccions respiratòries, i què diu la gent de la seva salut i dels seus hàbits. Regió sanitària de Girona davant Catalunya.",
     nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
@@ -66,7 +66,7 @@ const T = {
     f_aeat: "declarants de l'IRPF per municipi", f_padro: "població oficial de cada municipi i empreses", f_nac: "població per nacionalitat", f_pres: "liquidació dels pressupostos municipals",
     f_edu: "alumnes, centres, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
     f_dgt: "matriculacions de vehicles per municipi, cada mes", f_aena: "passatgers de l'aeroport de Girona, cada mes",
-    font_act: "Descarregat", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
+    font_act: "Descarregat", font_manual: "Càrrega manual anual", f_esca: "enquesta de salut per regió sanitària i sèrie de Catalunya", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
     f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
@@ -98,7 +98,7 @@ const T = {
     locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales", f_eleccions: "resultados por sección censal: Parlament, Congreso, municipales y europeas (2010-2024)",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
     nav_tur: "Turismo", h_tur: "Quién viene, dónde duerme y cuánto gasta", lead_tur: "Plazas, pernoctaciones, ocupación, precios de los hoteles, de dónde vienen los turistas y cuánto gastan. Provincia de Girona frente a Cataluña y España. En el mapa, el tema «Turismo» lo baja a cada municipio.", f_turisme: "ocupación, precios de los hoteles, gasto y turistas por municipio según la telefonía móvil", f_xifra_tur: "hoteles, campings, turismo rural y viviendas de uso turístico por municipio y año", f_ieet: "impuesto sobre las estancias en establecimientos turísticos",
-    nav_salut: "Salud", h_salut: "Listas de espera, recetas e infecciones", lead_salut: "Cuánto se espera para operarse o para ver al especialista en cada hospital, cuántos medicamentos se recetan y cómo circulan la gripe y las infecciones respiratorias. Región sanitaria de Girona frente a Cataluña.",
+    nav_salut: "Salud", h_salut: "Listas de espera, recetas, infecciones y hábitos", lead_salut: "Cuánto se espera para operarse o para ver al especialista en cada hospital, cuántos medicamentos se recetan, cómo circulan la gripe y las infecciones respiratorias, y qué dice la gente de su salud y de sus hábitos. Región sanitaria de Girona frente a Cataluña.",
     nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
@@ -158,7 +158,7 @@ const T = {
     f_aeat: "declarantes del IRPF por municipio", f_padro: "población oficial de cada municipio y empresas", f_nac: "población por nacionalidad", f_pres: "liquidación de los presupuestos municipales",
     f_edu: "alumnos, centros, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
     f_dgt: "matriculaciones de vehículos por municipio, cada mes", f_aena: "pasajeros del aeropuerto de Girona, cada mes",
-    font_act: "Descargado", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
+    font_act: "Descargado", font_manual: "Carga manual anual", f_esca: "encuesta de salud por región sanitaria y serie de Cataluña", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
     f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
@@ -608,9 +608,9 @@ function pintaFonts() {
     if (!f || !f.ok) { if (el) el.remove(); return; }
     if (!el) { el = document.createElement("span"); el.className = "font-act"; li.appendChild(el); }
     const dia = new Date(f.ok).toLocaleDateString(loc(), { day: "numeric", month: "short", year: "numeric" });
-    const avis = f.estat !== "ok";
+    const avis = f.estat !== "ok" && f.estat !== "manual";
     el.classList.toggle("avis", avis);
-    el.textContent = `${t(avis ? "font_avis" : "font_act")}: ${dia}`;
+    el.textContent = f.estat === "manual" ? `${t("font_manual")}: ${dia}` : `${t(avis ? "font_avis" : "font_act")}: ${dia}`;
     if (avis) el.title = t("font_avis_t"); else el.removeAttribute("title");
   });
 }
