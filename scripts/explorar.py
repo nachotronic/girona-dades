@@ -25,34 +25,26 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-B = "https://api.idescat.cat/taules/v2/censph/6000/20200"
-CANDIDATAS["idc_6000_node"] = f"{B}?lang=ca"
-CANDIDATAS["idc_6000_mun"] = f"{B}/mun?lang=ca"
-CANDIDATAS["idc_6000_data_girona"] = f"{B}/mun/data?lang=ca&MUN=170792"
-CANDIDATAS["idc_6000_data"] = f"{B}/mun/data?lang=ca"
-CANDIDATAS["idc_pmh_9145"] = "https://api.idescat.cat/taules/v2/pmh/9145?lang=ca"
-# Divisiones territoriales de Agents Rurals y Bombers (novedad Idescat 13/11/2026)
-for n in (86, 87, 88):
-    CANDIDATAS[f"codis_{n}"] = f"https://www.idescat.cat/codis/?id=50&n={n}&f=ssv"
-for q in ("bombers", "agents rurals", "incendis forestals", "incendis", "emergències", "actuacions bombers",
-          "regions emergència", "àrees bàsiques agents rurals", "denúncies agents rurals", "superfície forestal"):
-    CANDIDATAS["soc_" + q.replace(" ", "_").replace("à", "a").replace("è", "e").replace("ú", "u")] = (
-        f"{SOCRATA}?q={urllib.parse.quote(q)}&limit=40&only=dataset")
-# Coyuntura: paro, contratos y demandantes por municipio (SEPE, mensual)
-SEPE = "https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/"
-for a in (2025, 2026):
-    CANDIDATAS[f"sepe_paro_{a}"] = f"{SEPE}Paro_por_municipios_{a}_csv.csv"
-    CANDIDATAS[f"sepe_contratos_{a}"] = f"{SEPE}Contratos_por_municipios_{a}_csv.csv"
-    CANDIDATAS[f"sepe_dtes_{a}"] = f"{SEPE}Dtes_empleo_por_municipios_{a}_csv.csv"
-CANDIDATAS["sepe_portal"] = "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-estadisticos/municipios.html"
-CANDIDATAS["sepe_datos_abiertos"] = "https://datos.gob.es/apidata/catalog/dataset/publisher/EA0021470?_pageSize=50"
-# Afiliación a la Seguridad Social por municipio
-CANDIDATAS["ss_afil_mun"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/2341/2342/2343"
-CANDIDATAS["ss_datosgob"] = "https://datos.gob.es/apidata/catalog/dataset/title/afiliados?_pageSize=50"
-# Idescat: índice de estadísticas de la API de tablas
-CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
-for t in ("atur registrat", "afiliats", "contractes", "habitatges iniciats", "pernoctacions", "ocupacio hotelera", "matriculacio", "fiances", "atur", "treballadors"):
-    CANDIDATAS[f"socrata_{t.replace(' ', '_')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
+# Coyuntura, segunda ronda
+IDC = "https://api.idescat.cat/taules/v2"
+CANDIDATAS["idescat_index"] = f"{IDC}?lang=ca"
+CANDIDATAS["idescat_afi"] = f"{IDC}/afi?lang=ca"
+INE = "https://servicios.ine.es/wstempus/js/ES"
+CANDIDATAS["ine_operaciones"] = f"{INE}/OPERACIONES_DISPONIBLES"
+for op in ("EPC", "SM", "ETR", "IPV", "EOAC", "EOAP", "EOTR", "ICM", "IASS", "MNP", "ETDP"):
+    CANDIDATAS[f"ine_tablas_{op}"] = f"{INE}/TABLAS_OPERACION/{op}"
+BOL = "https://apps.fomento.gob.es/BoletinOnline2/sedal/{}.XLS"
+for c in ("35101000", "35103500", "35102000", "35103000"):
+    CANDIDATAS[f"mitma_{c}"] = BOL.format(c)
+CANDIDATAS["mitma_valor_tasado"] = "https://apps.fomento.gob.es/BoletinOnline2/?nivel=2&orden=35000000"
+CANDIDATAS["dgt_mat_202609"] = "https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip"
+CANDIDATAS["dgt_portal"] = "https://www.dgt.es/menusecundario/dgt-en-cifras/matraba-listados/matriculaciones-automoviles-mensual.html"
+CANDIDATAS["aena_estadisticas"] = "https://www.aena.es/es/estadisticas/inicio.html"
+CANDIDATAS["girona_opendata"] = "https://www.girona.cat/opendata/"
+CANDIDATAS["girona_ckan"] = "https://www.girona.cat/opendata/api/3/action/package_list"
+CANDIDATAS["ss_afil_prov"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10"
+for t in ("aeroport", "autonoms", "afiliacio", "empreses", "aigua", "vehicles", "parc de vehicles", "turisme", "creacio d'empreses", "ocupacio"):
+    CANDIDATAS[f"socrata_{t.replace(' ', '_').replace(chr(39), '')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
@@ -68,7 +60,7 @@ def main() -> None:
     for clave, url in CANDIDATAS.items():
         try:
             r = requests.get(url, headers=UA, timeout=120, stream=True)
-            contenido = r.raw.read(LIMITE * 20 if clave.startswith("ine_ops_") else LIMITE, decode_content=True)
+            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_")) else LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
             (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(contenido)
             filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {r.headers.get('content-length', len(contenido))} | {r.url} |")
