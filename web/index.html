@@ -15,6 +15,8 @@
 <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="insercio.css">
+<script>if(/[?&]embed=/.test(location.search)){var d=document.documentElement;d.className+=" emb";d.setAttribute("data-theme",/[?&]tema=fosc/.test(location.search)?"dark":"light");var r=document.createElement("meta");r.name="robots";r.content="noindex";document.head.appendChild(r)}</script>
 </head>
 <body>
 <header class="cap">
@@ -90,6 +92,7 @@
           <button type="button" data-nivell="pj" aria-pressed="false" data-t="nivell_pj" hidden>Partits judicials</button>
         </div>
         <h3 id="ind-titol" class="ind-titol"></h3>
+        <button type="button" class="emb-btn emb-btn-mapa" id="emb-btn-mapa"></button>
         <p class="ind-desc" id="mapa-desc"></p>
         <div id="anys-ctl" class="anys-ctl" hidden></div>
         <div id="llegenda" class="llegenda-mapa"></div>
@@ -173,7 +176,7 @@
       <li data-font="catastro"><a href="https://www.catastro.hacienda.gob.es/INSPIRE/buildings/17/ES.SDGC.BU.atom_17.xml">Catastro</a><span data-t="f_cat">habitatges i any de construcció</span></li>
       <li data-font="geometria"><a href="https://www.ine.es/ss/Satellite?L=es_ES&amp;c=Page&amp;cid=1259952026632&amp;p=1259952026632&amp;pagename=ProductosYServicios%2FPYSLayout">INE, seccionat censal 2024</a><span data-t="f_geo">límits de municipis i seccions</span></li>
       <li data-font="xifra"><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra">població, treball, ajuntaments, energia</span></li>
-      <li data-font="generalitat"><a href="https://analisi.transparenciacatalunya.cat/">Dades obertes de la Generalitat</a><span data-t="f_gen">renda garantida, autoconsum, residus</span></li>
+      <li data-font="generalitat"><a href="https://analisi.transparenciacatalunya.cat/">Dades obertes de la Generalitat</a><span data-t="f_gen">renda garantida, plaques solars d'autoconsum, residus</span></li>
       <li data-font="salut"><a href="https://analisi.transparenciacatalunya.cat/d/3cre-fa8v">CatSalut i Observatori del Sistema de Salut</a><span data-t="f_salut">població, defuncions, atenció primària, infeccions, receptes i centres sanitaris</span></li>
       <li data-font="llistes_espera"><a href="https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/">CatSalut, llistes d'espera</a><span data-t="f_llistes">llistes d'espera per hospital</span></li>
       <li data-font="conjuntura"><a href="https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-estadisticos/municipios.html">SEPE</a><span data-t="f_sepe">atur registrat i contractes per municipi, cada mes</span></li>
@@ -197,6 +200,7 @@
       <li data-font="universitaris"><a href="https://www.idescat.cat/pub/?id=emouniv">Idescat, mobilitat universitària</a><span data-t="f_univ">on estudien els universitaris de cada municipi</span></li>
       <li data-font="afiliacio"><a href="https://www.idescat.cat/indicadors/?id=aec&amp;n=15266">Idescat, afiliació a la Seguretat Social</a><span data-t="f_afil">afiliats i autònoms per municipi de residència, cada mes</span></li>
       <li data-font="dgt"><a href="https://www.dgt.es/menusecundario/dgt-en-cifras/matraba-listados/">DGT</a><span data-t="f_dgt">matriculacions de vehicles per municipi, cada mes</span></li>
+      <li data-font="comerc"><a href="https://censcomerc.empresa.gencat.cat/#/territori">Generalitat, Cens d'establiments comercials</a><span data-t="f_comerc">comerços i superfície de venda per sector i municipi, locals buits (Mapa del Comerç Català 2022) i llicències de grans establiments</span></li>
       <li data-font="aena"><a href="https://www.aena.es/es/estadisticas/informes-mensuales.html">Aena</a><span data-t="f_aena">passatgers de l'aeroport de Girona, cada mes</span></li>
       <li data-font="turisme"><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INE, turisme</a><span data-t="f_turisme">ocupació, preus dels hotels, despesa i turistes per municipi segons la telefonia mòbil</span></li>
       <li data-font="turisme"><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra_tur">hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any</span></li>
@@ -215,5 +219,6 @@
 <script src="resum.js"></script>
 <script src="tributs.js"></script>
 <script src="turisme.js"></script>
+<script src="insercio.js"></script>
 </body>
 </html>

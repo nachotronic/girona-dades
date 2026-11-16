@@ -722,6 +722,9 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .ub-lleg li { display: flex; align-items: center; gap: 8px; font-size: 14px; padding: 5px 0; border-bottom: 1px solid var(--graella); }
 .ub-lleg li i { width: 12px; height: 12px; flex: none; }
 .ub-lleg li span { margin-left: auto; font: 500 13px var(--mono); }
+.cat-fila[hidden] { display: none; }
+.cat-mes { margin: 10px 0 0; padding: 0; background: none; border: 0; border-bottom: 1px solid currentColor; color: var(--tinta); font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .04em; cursor: pointer; }
+.cat-mes:hover { color: var(--accent); }
 .cat-nota { font-size: 12px; color: var(--text-3); margin: 8px 0 0; }
 @media (max-width: 820px) {
   .fitxa-blocs { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
@@ -942,3 +945,11 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .tu-mes i { font: 400 11px/1 var(--mono); color: var(--text-3); margin-top: 6px; font-style: normal; }
 .tu-lleg { display: flex; gap: 16px; font: 400 12px/1.2 var(--mono); color: var(--text-2); margin: 10px 0 0; }
 .tu-lleg i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
+
+/* Fitxa: comerç */
+.fx-com { grid-column: 1 / -1; }
+.fx-grans { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--tinta); }
+.fx-grans li { display: grid; grid-template-columns: minmax(0, 1fr) 13em 6em; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--vora); font-size: 14px; }
+.fx-grans li span:nth-child(2) { color: var(--text-2); font-size: 13px; }
+.fx-grans li span:nth-child(3) { font: 500 13px var(--mono); text-align: right; }
+@media (max-width: 640px) { .fx-grans li { grid-template-columns: minmax(0, 1fr) 5.5em; } .fx-grans li span:nth-child(2) { grid-row: 2; grid-column: 1; } }

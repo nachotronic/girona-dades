@@ -10,7 +10,7 @@ const T = {
     nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 200 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, emergències, vehicles, ajuntaments, impostos locals, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Més de 200 indicadors de conjuntura, habitatge, renda, població, treball, comerç, salut, seguretat, emergències, vehicles, ajuntaments, impostos locals, energia, eleccions i alcaldies. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -18,12 +18,12 @@ const T = {
     x_antics: "Abans de 1980", x_nous: "Des del 2000", x_estacional: "Població estacional", x_pob: "Habitants",
     pista: "Passa per sobre d'una zona del mapa, o toca-la, per veure'n el detall.",
     posicio: (i, n) => `${i}a de ${n}`, mediana: (v) => `mediana ${v}`,
-    r_alts: "Més alts", r_baixos: "Més baixos", obrir_fitxa: "Obre la fitxa del municipi",
+    r_alts: "Més alts", r_baixos: "Més baixos", obrir_fitxa: "Obre la fitxa del municipi", cat_mes: (n) => `Mostra'n ${n} més`, cat_menys: "Mostra només les 5 primeres",
     h_mapa: "Tota la província, en un mapa",
     nac_info: (n, p, e) => `${n} persones, el ${p} dels ${e} estrangers del municipi`, nac_k: (k, p) => `Primera nacionalitat a ${k} municipis: ${p}`,
     h_nac: "D'on són els estrangers", h_nac_sub: (a, e, p) => `${e} residents de nacionalitat estrangera (${p} de la població), ${a}. Principals països:`, altres_paisos: "Altres països", n_estr: "estrangers", f_nac: "Idescat, Cens anual de població", f_nac_ine: "INE, padró continu. L'INE només detalla les principals nacionalitats; la resta (Hondures, Gàmbia, Índia…) són a «altres països»", font_c: "Font",
     h_univ: "On estudien els universitaris", h_univ_sub: (n, c) => `${n} universitaris residents, curs ${c}.`, u_mateix: "Al mateix municipi", u_comarca: "A la resta de la comarca", u_fora: "Fora de la comarca", f_univ: "Idescat, mobilitat per estudis universitaris",
-    ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals", nivell_abs: "Àrees de salut", lc_hosp: "Hospitals", lc_cap: "CAP", f_llistes: "llistes d'espera per hospital", nivell_abp: "Àrees policials", area_abs: "Àrea bàsica de salut", area_abp: "Àrea bàsica policial", nivell_aar: "Àrees d'Agents Rurals", nivell_pj: "Partits judicials", area_pj: "Partit judicial", f_cgpj: "violència de gènere, desnonaments i assumptes dels jutjats per partit judicial", f_interior: "Balanç de Criminalitat, municipis de més de 20.000 habitants", area_aar: "Àrea bàsica dels Agents Rurals", aar_info: (r, k) => `Àrea regional ${r}${k ? ` · ${k} municipis de la província` : ""}`, reb_info: (b) => `Regió de Bombers: ${b}`, reb_k: (k) => `${k} municipis de la província en aquesta regió`, f_idescat_codis: "divisions territorials dels Agents Rurals i dels Bombers (municipis de cada àrea)", f_bombers: "actuacions per municipi", f_incendis: "incendis forestals per municipi d'inici", ref_titol: "Comparació", ref_gi_curt: "Província", tots_ind: "Tots els indicadors", posicio_curt: (a, b) => `${a}a de ${b}`, fi_nota: "Barra: del valor més baix al més alt de la província.", any_ctl: "Any", reprodueix: "Reprodueix l'evolució", atura: "Atura", evolucio: "Evolució", prov_curt: "Província", f_salut: "població, defuncions, atenció primària, infeccions, receptes i centres sanitaris", f_mossos: "fets penals per àrea bàsica policial, regió i mes", f_emex: "valors de referència de Catalunya", ref_gi: "Província de Girona", ref_cat: "Catalunya", ref_esp: "Espanya",
+    ctl_indicador: "Indicador", ctl_nivell: "Detall", nivell_mun: "Municipis", nivell_sec: "Seccions censals", nivell_abs: "Àrees de salut", lc_hosp: "Hospitals", lc_cap: "CAP", lc_grans: "Grans establiments comercials", f_comerc: "comerços i superfície de venda per sector i municipi, locals buits (Mapa del Comerç Català 2022) i llicències de grans establiments", f_llistes: "llistes d'espera per hospital", nivell_abp: "Àrees policials", area_abs: "Àrea bàsica de salut", area_abp: "Àrea bàsica policial", nivell_aar: "Àrees d'Agents Rurals", nivell_pj: "Partits judicials", area_pj: "Partit judicial", f_cgpj: "violència de gènere, desnonaments i assumptes dels jutjats per partit judicial", f_interior: "Balanç de Criminalitat, municipis de més de 20.000 habitants", area_aar: "Àrea bàsica dels Agents Rurals", aar_info: (r, k) => `Àrea regional ${r}${k ? ` · ${k} municipis de la província` : ""}`, reb_info: (b) => `Regió de Bombers: ${b}`, reb_k: (k) => `${k} municipis de la província en aquesta regió`, f_idescat_codis: "divisions territorials dels Agents Rurals i dels Bombers (municipis de cada àrea)", f_bombers: "actuacions per municipi", f_incendis: "incendis forestals per municipi d'inici", ref_titol: "Comparació", ref_gi_curt: "Província", tots_ind: "Tots els indicadors", posicio_curt: (a, b) => `${a}a de ${b}`, fi_nota: "Barra: del valor més baix al més alt de la província.", any_ctl: "Any", reprodueix: "Reprodueix l'evolució", atura: "Atura", evolucio: "Evolució", prov_curt: "Província", f_salut: "població, defuncions, atenció primària, infeccions, receptes i centres sanitaris", f_mossos: "fets penals per àrea bàsica policial, regió i mes", f_emex: "valors de referència de Catalunya", ref_gi: "Província de Girona", ref_cat: "Catalunya", ref_esp: "Espanya",
     mapa_aria: "Mapa de la província de Girona",
     ajuda_mapa: "Passa per sobre d'un municipi o secció per veure'n el valor; toca'l per obrir-ne la fitxa.",
     f_geo: "límits de municipis i seccions", f_base: "mapa base",
@@ -43,6 +43,11 @@ const T = {
     h_evol: "Com ha evolucionat",
     g_lloguer: "Lloguer mitjà mensual",
     g_compra: "Compravendes d'habitatges",
+    sol_tit: "Plaques solars", sol_sub: (n, kw, a, mx) => `${n} instal·lacions fotovoltaiques d'autoconsum i ${kw} kW de potència a finals del ${a}.${mx ? ` L'any amb més instal·lacions noves va ser el ${mx}.` : ""}`,
+    sol_k_h: "Instal·lacions per 1.000 habitants", sol_k_w: "Potència per habitant", sol_k_viv: "Instal·lacions per 100 habitatges",
+    sol_ref: (g, c) => `Província ${g}${c !== "–" ? ` · Catalunya ${c}` : ""}`, sol_n_viv: "Habitatges segons el Cadastre",
+    sol_g_nn: "Instal·lacions noves cada any", sol_g_w: "Potència per habitant", u_install: "instal·lacions",
+    sol_font: (d) => `Font: Generalitat, Registre d'autoconsum de Catalunya (RAC), dades fins al ${d}. Població: padró. Sense dades per secció censal: el registre no dona l'adreça.`,
     g_renda: "Renda neta mitjana per persona",
     u_operacions: "operacions per any",
     u_euros_any: "€/any",
@@ -62,7 +67,7 @@ const T = {
     f_edu: "alumnes, centres, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
     f_dgt: "matriculacions de vehicles per municipi, cada mes", f_aena: "passatgers de l'aeroport de Girona, cada mes",
     font_act: "Descarregat", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
-    f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, autoconsum, residus",
+    f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
     k_lloguer: "Lloguer mitjà",
@@ -97,7 +102,7 @@ const T = {
     nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 200 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, emergencias, vehículos, ayuntamientos, impuestos locales, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Más de 200 indicadores de coyuntura, vivienda, renta, población, trabajo, comercio, salud, seguridad, emergencias, vehículos, ayuntamientos, impuestos locales, energía, elecciones y alcaldías. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -105,12 +110,12 @@ const T = {
     x_antics: "Antes de 1980", x_nous: "Desde 2000", x_estacional: "Población estacional", x_pob: "Habitantes",
     pista: "Pasa por encima de una zona del mapa, o tócala, para ver el detalle.",
     posicio: (i, n) => `${i}.º de ${n}`, mediana: (v) => `mediana ${v}`,
-    r_alts: "Más altos", r_baixos: "Más bajos", obrir_fitxa: "Abrir la ficha del municipio",
+    r_alts: "Más altos", r_baixos: "Más bajos", obrir_fitxa: "Abrir la ficha del municipio", cat_mes: (n) => `Mostrar ${n} más`, cat_menys: "Mostrar solo las 5 primeras",
     h_mapa: "Toda la provincia, en un mapa",
     nac_info: (n, p, e) => `${n} personas, el ${p} de los ${e} extranjeros del municipio`, nac_k: (k, p) => `Primera nacionalidad en ${k} municipios: ${p}`,
     h_nac: "De dónde son los extranjeros", h_nac_sub: (a, e, p) => `${e} residentes de nacionalidad extranjera (${p} de la población), ${a}. Principales países:`, altres_paisos: "Otros países", n_estr: "extranjeros", f_nac: "Idescat, Censo anual de población", f_nac_ine: "INE, padrón continuo. El INE solo detalla las principales nacionalidades; el resto (Honduras, Gambia, India…) está en «otros países»", font_c: "Fuente",
     h_univ: "Dónde estudian los universitarios", h_univ_sub: (n, c) => `${n} universitarios residentes, curso ${c}.`, u_mateix: "En el mismo municipio", u_comarca: "En el resto de la comarca", u_fora: "Fuera de la comarca", f_univ: "Idescat, movilidad por estudios universitarios",
-    ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales", nivell_abs: "Áreas de salud", lc_hosp: "Hospitales", lc_cap: "CAP", f_llistes: "listas de espera por hospital", nivell_abp: "Áreas policiales", area_abs: "Área básica de salud", area_abp: "Área básica policial", nivell_aar: "Áreas de Agents Rurals", nivell_pj: "Partidos judiciales", area_pj: "Partido judicial", f_cgpj: "violencia de género, desahucios y asuntos de los juzgados por partido judicial", f_interior: "Balance de Criminalidad, municipios de más de 20.000 habitantes", area_aar: "Área básica de los Agents Rurals", aar_info: (r, k) => `Área regional ${r}${k ? ` · ${k} municipios de la provincia` : ""}`, reb_info: (b) => `Región de Bombers: ${b}`, reb_k: (k) => `${k} municipios de la provincia en esta región`, f_idescat_codis: "divisiones territoriales de los Agents Rurals y de los Bombers (municipios de cada área)", f_bombers: "actuaciones por municipio", f_incendis: "incendios forestales por municipio de inicio", ref_titol: "Comparación", ref_gi_curt: "Provincia", tots_ind: "Todos los indicadores", posicio_curt: (a, b) => `${a}.º de ${b}`, fi_nota: "Barra: del valor más bajo al más alto de la provincia.", any_ctl: "Año", reprodueix: "Reproduce la evolución", atura: "Detener", evolucio: "Evolución", prov_curt: "Provincia", f_salut: "población, defunciones, atención primaria, infecciones, recetas y centros sanitarios", f_mossos: "hechos penales por área básica policial, región y mes", f_emex: "valores de referencia de Cataluña", ref_gi: "Provincia de Girona", ref_cat: "Cataluña", ref_esp: "España",
+    ctl_indicador: "Indicador", ctl_nivell: "Detalle", nivell_mun: "Municipios", nivell_sec: "Secciones censales", nivell_abs: "Áreas de salud", lc_hosp: "Hospitales", lc_cap: "CAP", lc_grans: "Grandes establecimientos comerciales", f_comerc: "comercios y superficie de venta por sector y municipio, locales vacíos (Mapa del Comerç Català 2022) y licencias de grandes establecimientos", f_llistes: "listas de espera por hospital", nivell_abp: "Áreas policiales", area_abs: "Área básica de salud", area_abp: "Área básica policial", nivell_aar: "Áreas de Agents Rurals", nivell_pj: "Partidos judiciales", area_pj: "Partido judicial", f_cgpj: "violencia de género, desahucios y asuntos de los juzgados por partido judicial", f_interior: "Balance de Criminalidad, municipios de más de 20.000 habitantes", area_aar: "Área básica de los Agents Rurals", aar_info: (r, k) => `Área regional ${r}${k ? ` · ${k} municipios de la provincia` : ""}`, reb_info: (b) => `Región de Bombers: ${b}`, reb_k: (k) => `${k} municipios de la provincia en esta región`, f_idescat_codis: "divisiones territoriales de los Agents Rurals y de los Bombers (municipios de cada área)", f_bombers: "actuaciones por municipio", f_incendis: "incendios forestales por municipio de inicio", ref_titol: "Comparación", ref_gi_curt: "Provincia", tots_ind: "Todos los indicadores", posicio_curt: (a, b) => `${a}.º de ${b}`, fi_nota: "Barra: del valor más bajo al más alto de la provincia.", any_ctl: "Año", reprodueix: "Reproduce la evolución", atura: "Detener", evolucio: "Evolución", prov_curt: "Provincia", f_salut: "población, defunciones, atención primaria, infecciones, recetas y centros sanitarios", f_mossos: "hechos penales por área básica policial, región y mes", f_emex: "valores de referencia de Cataluña", ref_gi: "Provincia de Girona", ref_cat: "Cataluña", ref_esp: "España",
     mapa_aria: "Mapa de la provincia de Girona",
     ajuda_mapa: "Pasa por encima de un municipio o sección para ver su valor; tócalo para abrir su ficha.",
     f_geo: "límites de municipios y secciones", f_base: "mapa base",
@@ -130,6 +135,11 @@ const T = {
     h_evol: "Cómo ha evolucionado",
     g_lloguer: "Alquiler medio mensual",
     g_compra: "Compraventas de viviendas",
+    sol_tit: "Placas solares", sol_sub: (n, kw, a, mx) => `${n} instalaciones fotovoltaicas de autoconsumo y ${kw} kW de potencia a finales de ${a}.${mx ? ` El año con más instalaciones nuevas fue ${mx}.` : ""}`,
+    sol_k_h: "Instalaciones por 1.000 habitantes", sol_k_w: "Potencia por habitante", sol_k_viv: "Instalaciones por 100 viviendas",
+    sol_ref: (g, c) => `Provincia ${g}${c !== "–" ? ` · Cataluña ${c}` : ""}`, sol_n_viv: "Viviendas según el Catastro",
+    sol_g_nn: "Instalaciones nuevas cada año", sol_g_w: "Potencia por habitante", u_install: "instalaciones",
+    sol_font: (d) => `Fuente: Generalitat, Registro de autoconsumo de Cataluña (RAC), datos hasta el ${d}. Población: padrón. Sin datos por sección censal: el registro no da la dirección.`,
     g_renda: "Renta neta media por persona",
     u_operacions: "operaciones por año",
     u_euros_any: "€/año",
@@ -149,7 +159,7 @@ const T = {
     f_edu: "alumnos, centros, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
     f_dgt: "matriculaciones de vehículos por municipio, cada mes", f_aena: "pasajeros del aeropuerto de Girona, cada mes",
     font_act: "Descargado", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
-    f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, autoconsumo, residuos",
+    f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
     k_lloguer: "Alquiler medio",
@@ -202,7 +212,7 @@ function blocNacionalitats(m) {
   const mx = n.p[0][1];
   const files = n.p.map(([c, k]) => `<li><span class="nb-nom">${nomPais(c)}</span><span class="nb-barra"><b style="width:${(k / mx) * 100}%"></b></span><span class="nb-v">${fmt(k)}<small>${pct((100 * k) / n.ex, 0)}</small></span></li>`).join("");
   const resta = n.ex - n.p.reduce((s, x) => s + x[1], 0);
-  return `<section class="fitxa-bloc"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
+  return `<section class="fitxa-bloc fx-nac"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
     <ol class="nb">${files}${resta > 0 ? `<li class="nb-resta"><span class="nb-nom">${t("altres_paisos")}</span><span class="nb-barra"></span><span class="nb-v">${fmt(resta)}<small>${pct((100 * resta) / n.ex, 0)}</small></span></li>` : ""}</ol>
     <p class="fb-font">${t("font_c")}: ${t(n.font === "ine" ? "f_nac_ine" : "f_nac")}</p></section>`;
 }
@@ -211,7 +221,7 @@ function blocUniversitaris(m) {
   const u = m.x && m.x.univ_split;
   if (!u) return "";
   const tot = u[0] + u[1] + u[2] || 1, noms = ["u_mateix", "u_comarca", "u_fora"];
-  return `<section class="fitxa-bloc"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
+  return `<section class="fitxa-bloc fx-univ"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
     <div class="ub">${u.map((v, i) => (v ? `<b class="ub-${i}" style="width:${(100 * v) / tot}%"></b>` : "")).join("")}</div>
     <ul class="ub-lleg">${u.map((v, i) => `<li><i class="ub-${i}"></i>${t(noms[i])}<span>${fmt(v)} · ${pct((100 * v) / tot, 0)}</span></li>`).join("")}</ul>
     <p class="fb-font">${t("font_c")}: ${t("f_univ")}</p></section>`;
@@ -469,7 +479,7 @@ function obreFitxa(ine, desplaca) {
   const m = D.municipios.find((x) => x.ine === ine);
   if (!m) return;
   seleccionat = ine;
-  try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
+  if (!window.EMB) try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
   const f = document.getElementById("fitxa");
   const [aR, vR] = ultim(m.renta_persona);
   const esf = esforc(m);
@@ -504,6 +514,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-extra"></div>
     <div class="fitxa-tur"></div>
     <div class="fitxa-trib"></div>
+    <div class="fitxa-sol"></div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
@@ -521,8 +532,37 @@ function obreFitxa(ine, desplaca) {
   if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
   if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
   if (window.fitxaTurisme) window.fitxaTurisme(f.querySelector(".fitxa-tur"), m);
+  fitxaSolar(f.querySelector(".fitxa-sol"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// ---------- Plaques solars d'autoconsum (RAC) ----------
+function fitxaSolar(cont, m) {
+  const a = D.anys && D.anys.sol, s = m.sol;
+  if (!cont || !a || !s || !s.n) { if (cont) cont.innerHTML = ""; return; }
+  const v = (k) => (s[k] && s[k][a] != null ? s[k][a] : null);
+  const ref = (k, z) => { const r = D.sol_ref && D.sol_ref[k] && D.sol_ref[k][a]; return r ? r[z] : null; };
+  const serie = (k, z) => { const o = {}; Object.entries((D.sol_ref && D.sol_ref[k]) || {}).forEach(([y, r]) => { if (r[z] != null) o[y] = r[z]; }); return o; };
+  const nn = s.nn || {}, max = Object.entries(nn).sort((x, y) => y[1] - x[1])[0];
+  cont.innerHTML = `<section class="tb"><h3 class="ajt-tit">${t("sol_tit")}</h3>
+    <p class="tb-sub">${t("sol_sub", fmt(v("n")), fmt(v("kw")), a, max && max[1] ? max[0] : null)}</p>
+    <div class="xifres">
+      ${tile(t("sol_k_h"), fmt(v("h"), 1), t("sol_ref", fmt(ref("h", "gi"), 1), fmt(ref("h", "cat"), 1)))}
+      ${tile(t("sol_k_w"), v("w") != null ? `${fmt(v("w"))} <small>W</small>` : "–", t("sol_ref", fmt(ref("w", "gi")), fmt(ref("w", "cat"))))}
+      ${tile(t("sol_k_viv"), fmt(v("viv"), 1), t("sol_n_viv"))}
+    </div>
+    <div class="dos">
+      <figure class="grafic"><figcaption><span>${t("sol_g_nn")}</span><span class="unitat">${t("u_install")}</span></figcaption><div class="g-solnn"></div></figure>
+      <figure class="grafic"><figcaption><span>${t("sol_g_w")}</span><span class="unitat">W</span></figcaption><div class="g-solw"></div></figure>
+    </div>
+    <p class="fb-font">${t("sol_font", D.sol_mes ? D.sol_mes.split("-").reverse().join("/") : a)}</p></section>`;
+  grafBarres(cont.querySelector(".g-solnn"), Object.fromEntries(Object.entries(nn).filter(([y]) => +y >= 2019)));
+  grafLinia(cont.querySelector(".g-solw"), [
+    { nom: m.nom, color: "var(--serie-1)", dades: Object.fromEntries(Object.entries(s.w || {}).filter(([y]) => +y >= 2019)) },
+    { nom: t("provincia"), color: "var(--serie-2)", dades: Object.fromEntries(Object.entries(serie("w", "gi")).filter(([y]) => +y >= 2019)) },
+    { nom: "Catalunya", color: "var(--text-3)", dades: Object.fromEntries(Object.entries(serie("w", "cat")).filter(([y]) => +y >= 2019)) },
+  ], (x) => `${fmt(x)} W`);
 }
 
 // ---------- Ayuntamiento: alcaldía, resultados y pleno ----------
@@ -616,9 +656,13 @@ Promise.all([
     Object.entries(cj.per).forEach(([k, l]) => { cj.idx[k] = {}; l.forEach((a, i) => { cj.idx[k][a] = i; }); });
     D.cj = cj;
   }
-  if (window.iniciaMapa) window.iniciaMapa();
+  // Inserción (iframe): solo se carga el mapa si la pieza lo necesita, y la ficha sin desplazar la página
+  const E = window.EMB;
+  const pMapa = window.iniciaMapa && (!E || E.ambMapa) ? window.iniciaMapa() : null;
   const h = location.hash.slice(1);
-  if (/^\d{5}$/.test(h)) seleccionat = h;
+  if (E) seleccionat = E.ine || null;
+  else if (/^\d{5}$/.test(h)) seleccionat = h;
   pintaTot();
-  if (seleccionat) obreFitxa(seleccionat, true);
+  if (E) E.inicia(pMapa);
+  else if (seleccionat) obreFitxa(seleccionat, true);
 });

@@ -1,11 +1,11 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 16:16 UTC
+Última ejecución: 2026-11-16 16:02 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
 | territorio — Municipis i comarques (Idescat) | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | fix |
-| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | mensual/trimestral |
+| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 15:29 | 2026-11-16 15:29 | mensual/trimestral |
 | ine — INE, Atlas de distribució de renda | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | mitma — Ministerio de Transportes y Vivienda, Boletín Online | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | trimestral |
 | xifra — Xifra, Diputació de Girona | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
@@ -33,59 +33,12 @@
 | llistes_espera — CatSalut, llistes d'espera per hospital | ok | 2026-11-16 14:41 | 2026-11-16 14:41 | mensual |
 | cgpj — CGPJ, estadística judicial per partit judicial | — | — | — | trimestral |
 | interior — Ministerio del Interior, Balance de Criminalidad | — | — | — | trimestral |
-| turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 15:49 | mensual |
+| comerc — Generalitat, cens d'establiments comercials i ocupació comercial | avís | 2026-11-16 15:31 | 2026-11-16 15:53 | anual |
 
 ## Detalle de la última ejecución
 
-### turisme: avís (1621 s)
+### comerc: avís (589 s)
 
 ```
-INE 2074 Hoteles: viajeros y pernoctaciones por CCAA y provincias: 18 series
-INE 2066 Hoteles: establecimientos, plazas, ocupación y personal por CCAA y provincias: 21 series
-INE 2065 Hoteles: estancia media por CCAA y provincias: 3 series
-INE 2069 Hoteles: procedencia de los viajeros por provincia: 280 series
-INE 2039 Hoteles: viajeros y pernoctaciones por zonas turísticas: 8 series
-INE 2013 Hoteles: plazas y ocupación por zonas turísticas: 14 series
-INE 2040 Hoteles: estancia media por zonas turísticas: 2 series
-INE 2078 Hoteles: viajeros y pernoctaciones por puntos turísticos: 8 series
-INE 75197 Hoteles: viajeros y pernoctaciones por puntos turísticos (base nueva): 8 series
-INE 2076 Hoteles: plazas y ocupación por puntos turísticos: 14 series
-INE 75198 Hoteles: plazas y ocupación por puntos turísticos (base nueva): 14 series
-INE 2077 Hoteles: estancia media por puntos turísticos: 2 series
-INE 2059 ADR por CCAA y provincias: 6 series
-INE 2057 RevPAR por CCAA y provincias: 6 series
-INE 46297 ADR por zonas turísticas: 4 series
-INE 46300 RevPAR por zonas turísticas: 4 series
-INE 46298 ADR por puntos turísticos: 2 series
-INE 46301 RevPAR por puntos turísticos: 2 series
-INE 2062 Campings: viajeros y pernoctaciones por provincias: 4 series
-INE 2064 Campings: parcelas, ocupación y personal por provincias: 7 series
-INE 2068 Campings: estancia media por provincias: 1 series
-INE 2047 Campings: viajeros y pernoctaciones por zonas turísticas: 8 series
-INE 2084 Campings: viajeros y pernoctaciones por puntos turísticos: 36 series
-INE 75194 Campings: viajeros y pernoctaciones por puntos turísticos (base nueva): 36 series
-INE 2085 Campings: plazas y ocupación por puntos turísticos: 63 series
-INE 75196 Campings: plazas y ocupación por puntos turísticos (base nueva): 63 series
-INE 2063 Apartamentos: viajeros y pernoctaciones por provincias: 4 series
-INE 2072 Apartamentos: plazas, ocupación y personal por provincias: 6 series
-INE 2061 Apartamentos: estancia media por provincias: 1 series
-INE 2073 Turismo rural: viajeros y pernoctaciones por provincias: 4 series
-INE 2070 Turismo rural: plazas, ocupación y personal por provincias: 6 series
-INE 2067 Turismo rural: estancia media por provincias: 1 series
-INE 48427 Pernoctaciones en alojamientos turísticos y de corta estancia por provincias (mensual): 6 series
-INE 48440 Ocupación en alojamientos turísticos y de corta estancia (anual): 9 series
-INE 23998 EGATUR: gasto de los turistas internacionales por CCAA de destino: 16 series
-INE 24745 EGATUR: partidas de gasto por CCAA: 32 series
-INE 52047 Turistas extranjeros por provincia de destino y país (telefonía móvil): 1266 series
-INE 52997 Turistas residentes por provincia de destino y provincia de origen (telefonía móvil): 1251 series
-Xifra hotels: 23 anys (2003–2025)
-Xifra campings: 23 anys (2003–2025)
-Xifra rural: 23 anys (2003–2025)
-Xifra oficines: 32 anys (1994–2025)
-Xifra hut: 11 anys (2015–2025)
-Xifra apart: 11 anys (2015–2025)
-Telefonía móvil rec (52048): ERROR TypeError: string indices must be integers, not 'str'
-Telefonía móvil int (53464): 221 municipios
-2nmt-74sj → ieet_comarques.csv: 790 files
-83qv-sib8 → platges.csv: 271 files
+CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 1075 consultes, 1075 municipi-any; ERROR en 30 consultes; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc
 ```

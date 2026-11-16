@@ -80,16 +80,44 @@ def descarga_conjunto(ident: str) -> pd.DataFrame:
     return pd.read_csv(io.BytesIO(r.content), dtype=str, low_memory=False)
 
 
+def _agregats_autoconsum(df: pd.DataFrame, salida) -> str:
+    """Instal·lacions fotovoltaiques noves per mes (posada en servei) a Catalunya i a Girona,
+    amb el conjunt complet abans de filtrar: serveix de referència per al mapa."""
+    d = df[df["Tecnologia"].astype(str).str.upper().str.contains("FOTOVOLT", na=False)].copy()
+    d["mes"] = pd.to_datetime(d["Data de posada en servei"], dayfirst=True, errors="coerce").dt.strftime("%Y-%m")
+    d["kw"] = pd.to_numeric(d["Potència"], errors="coerce")
+    d["prov"] = d["Codi IDESCAT municipi"].astype(str).str[:2]
+    d = d.dropna(subset=["mes"])
+    files = []
+    for ambit, g in (("cat", d), ("gi", d[d["prov"] == "17"])):
+        a = g.groupby("mes").agg(n=("kw", "size"), kw=("kw", "sum")).reset_index()
+        a["ambit"] = ambit
+        files.append(a)
+    out = pd.concat(files)[["ambit", "mes", "n", "kw"]]
+    out["kw"] = out["kw"].round(3)
+    out.to_csv(salida / "autoconsum_agregats.csv", index=False)
+    return f"agregats autoconsum: {len(d)} fotovoltaiques a Catalunya, fins a {d['mes'].max()}"
+
+
 def ejecutar() -> str:
     salida = carpeta("generalitat")
     lineas = []
     for ident, nombre in CONJUNTOS.items():
         try:
             df = descarga_conjunto(ident)
-            filtrado, como = _filtra_girona(df)
+            if ident == "2b4s-skfm" and "Codi IDESCAT municipi" in df.columns:
+                # Por código: el nombre falla con municipios renombrados (Palamós i Sant Joan)
+                filtrado, como = df[df["Codi IDESCAT municipi"].astype(str).str.zfill(6).str[:2] == "17"], "filtrado por Codi IDESCAT municipi (17)"
+            else:
+                filtrado, como = _filtra_girona(df)
             filtrado = filtrado.drop(columns=[c for c in filtrado.columns if c.upper() in NO_GUARDAR])
             filtrado.to_csv(salida / f"{ident}_{slug(nombre, 50)}.csv", index=False)
             lineas.append(f"{ident}: {len(filtrado)}/{len(df)} filas, {como}")
+            if ident == "2b4s-skfm":
+                try:
+                    lineas.append(_agregats_autoconsum(df, salida))
+                except Exception as e:  # noqa: BLE001
+                    lineas.append(f"agregats autoconsum: ERROR {type(e).__name__}: {str(e)[:120]}")
         except Exception as e:  # noqa: BLE001
             lineas.append(f"{ident}: ERROR {type(e).__name__}: {str(e)[:120]}")
     return "\n".join(lineas)

@@ -302,7 +302,7 @@ MESOS = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost",
 
 
 def generalitat_indicadores(pob):
-    """Renta garantizada, autoconsumo y recogida selectiva por municipio."""
+    """Renta garantizada y recogida selectiva por municipio (el autoconsumo va en solar())."""
     res, anys = {}, {}
     def pon(ine, clave, v, dec=1):
         if v is not None and not (isinstance(v, float) and math.isnan(v)):
@@ -321,15 +321,6 @@ def generalitat_indicadores(pob):
         anys["rgc"] = int(g["any"].max())
     except Exception as e:  # noqa: BLE001
         print("AVISO renda garantida:", e)
-    try:
-        a = pd.read_csv(uno("generalitat/2b4s-skfm_*"), dtype=str)
-        a["kw"] = pd.to_numeric(a["Potència"], errors="coerce") / 1000
-        a["ine"] = a["Codi IDESCAT municipi"].str[:5]
-        for ine, grp in a.groupby("ine"):
-            if pob.get(ine):
-                pon(ine, "autoconsum", len(grp) / pob[ine] * 1000)
-    except Exception as e:  # noqa: BLE001
-        print("AVISO autoconsum:", e)
     try:
         w = pd.read_csv(uno("generalitat/69zu-w48s_*"), dtype=str)
         w["any"] = pd.to_numeric(w["Any"], errors="coerce")
@@ -914,10 +905,8 @@ def complements_indicadores(pob):
         if any_:
             anys[clave] = any_
 
-    # Servicios y comercio (Xifra)
+    # Servicios (Xifra). El comercio viene del CECC (comerc())
     pon("bancs", _xifra("030516", [5]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2026)
-    pon("comerc", _xifra("030505", [2]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2023)
-    pon("comerc_m2", _xifra("030505", [3]), lambda i, v: per(v[0], pob.get(i), 1), 2, 2023)
     pon("biblio", _xifra("03030201", [7]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2024)
     pon("museus", _xifra("03030203", [3]), lambda i, v: v[0], 0, 2025)
     # Agricultura (censo agrario 2020)
@@ -1772,6 +1761,223 @@ def vehicles():
     return mun, refs, max(int(f.stem.split("_")[-1]) for f in fs)
 
 
+# ---------------------------------------------------------------------------
+# Comercio: Cens d'establiments comercials de Catalunya (CECC), Mapa del Comerç Català 2022
+# (locales vacíos) y registro de licencias comerciales (grandes establecimientos).
+
+SECTORS_COM = {"alim": "quotidi_alimentari_exc_vending", "qna": "quotidi_no_alimentari", "pers": "equipament_persona",
+               "llar": "equipament_llar", "lleure": "lleure_i_cultura", "auto": "automoci_i_carburants",
+               "mixt": "comer_mixt", "altres": "altres"}
+
+
+def comerc():
+    """Devuelve ({ine: {clave: {any: valor}}}, {clave: {any: {gi, cat}}}, último año,
+    {ine: indicadores sueltos para m.x}, {ine: datos para la ficha}, {clave: {cat}}, puntos GeoJSON)."""
+    d = P / "comerc"
+    if not (d / "cecc.csv").exists():
+        return {}, {}, None, {}, {}, {}, None
+    df = pd.read_csv(d / "cecc.csv", dtype={"ine": str, "any": int})
+    num_cols = ["poblaci", "establiments", "superf_cie_de_venda_m2"] + list(SECTORS_COM.values())
+    for c in num_cols:
+        df[c] = pd.to_numeric(df[c], errors="coerce")
+    df = df.drop_duplicates(["municipi", "any"])
+    # Las dades obertes solo traen los sectores de los municipios grandes: el resto sale de la API
+    # de la aplicación del censo (un sector que no aparece = 0 establecimientos)
+    fs = d / "sectors_municipis.csv"
+    if fs.exists():
+        NOMS_API = {"Altres": "altres", "Automoció i carburants": "automoci_i_carburants", "Comerç mixt": "comer_mixt",
+                    "Equipament llar": "equipament_llar", "Equipament persona": "equipament_persona", "Lleure i cultura": "lleure_i_cultura",
+                    "Quotidià alimentari": "quotidi_alimentari_exc_vending", "Quotidià no alimentari": "quotidi_no_alimentari"}
+        sa = pd.read_csv(fs, dtype={"ine": str, "any": int})
+        sa["col"] = sa["sector"].map(NOMS_API)
+        sa = sa[sa["col"].notna()]
+        pv = sa.pivot_table(index=["ine", "any"], columns="col", values="establiments", aggfunc="sum")
+        for (ine, a), fila in pv.iterrows():
+            sel = (df["ine"] == ine) & (df["any"] == a)
+            # Antes de 2021 la API devuelve todos los sectores vacíos en los municipios pequeños: no es un 0
+            if fila.fillna(0).sum() == 0 and (df.loc[sel, "establiments"].fillna(0) > 0).any():
+                continue
+            if sel.any() and df.loc[sel, SECTORS_COM["alim"]].isna().all():
+                for c in SECTORS_COM.values():
+                    df.loc[sel, c] = fila.get(c, 0) if fila.get(c, 0) == fila.get(c, 0) else 0
+
+    def calc(x):
+        pob, n, sup = x.get("poblaci"), x.get("establiments"), x.get("superf_cie_de_venda_m2")
+        q = lambda a, b, f=1: (a / b * f) if a is not None and a == a and b else None  # noqa: E731
+        o = {"n": n, "sup": sup, "est_h": q(n, pob, 1000), "sup_h": q(sup, pob), "sup_mitj": q(sup, n)}
+        for k, c in SECTORS_COM.items():
+            o["s_" + k] = q(x.get(c), pob, 1000)
+        o["p_quot"] = q((x.get(SECTORS_COM["alim"]) or 0) + (x.get(SECTORS_COM["qna"]) or 0), n, 100)
+        return o
+
+    dec = {"n": 0, "sup": 0, "est_h": 1, "sup_h": 2, "sup_mitj": 0, "p_quot": 1, **{"s_" + k: 2 for k in SECTORS_COM}}
+    arr = lambda v, k: None if v is None or (isinstance(v, float) and not math.isfinite(v)) else (round(v, dec[k]) if dec[k] else int(round(v)))  # noqa: E731
+    mun, refs, fitxa, x_mun = {}, {}, {}, {}
+    gi = df[df["ine"].notna()]
+    for x in gi.to_dict("records"):
+        for k, v in calc(x).items():
+            v = arr(v, k)
+            if v is not None:
+                mun.setdefault(x["ine"], {}).setdefault(k, {})[int(x["any"])] = v
+    for ambit, g in (("gi", gi), ("cat", df)):
+        for a, ga in g.groupby("any"):
+            s = {c: ga[c].sum() for c in num_cols}
+            o = calc(s)
+            # Sectores: solo con los municipios que los tienen (en Cataluña, los ~120 grandes)
+            gs = ga[ga[SECTORS_COM["alim"]].notna()]
+            if len(gs) < len(ga):
+                os_ = calc({c: gs[c].sum() for c in num_cols})
+                o.update({k: v for k, v in os_.items() if k.startswith("s_") or k == "p_quot"})
+            for k, v in o.items():
+                v = arr(v, k)
+                if v is not None:
+                    refs.setdefault(k, {}).setdefault(int(a), {})[ambit] = v
+    anys = sorted(df["any"].unique())
+    a0, a1 = int(anys[0]), int(anys[-1])
+    refs_x = {}
+    for ine, o in mun.items():
+        n = o.get("n", {})
+        if n.get(a0, 0) >= 10 and a1 in n:
+            x_mun.setdefault(ine, {})["com_var"] = round((n[a1] / n[a0] - 1) * 100, 1)
+    for ambit, g in (("gi", gi), ("cat", df)):
+        t0, t1 = g[g["any"] == a0]["establiments"].sum(), g[g["any"] == a1]["establiments"].sum()
+        refs_x.setdefault("com_var", {})[ambit] = round((t1 / t0 - 1) * 100, 1)
+    # Locales vacíos (Mapa del Comerç Català 2022): ciudades de más de 20.000 habitantes y capitales
+    f = d / "mapa_comerc_2022.csv"
+    if f.exists():
+        mc = pd.read_csv(f, dtype={"codi": str})
+        for c in ("localb", "total", "actius", "actius_comercials", "naub", "host", "serv"):
+            mc[c] = pd.to_numeric(mc.get(c), errors="coerce")
+        mc["ine"] = mc["codi"].str.zfill(6).str[:5]
+        for x in mc[mc["ine"].str.startswith("17")].to_dict("records"):
+            if x["total"]:
+                x_mun.setdefault(x["ine"], {})["com_buits"] = round(x["localb"] / x["total"] * 100, 1)
+                fitxa.setdefault(x["ine"], {})["buits"] = {"any": 2022, "buits": int(x["localb"]), "total": int(x["total"]),
+                                                           "actius": int(x["actius"] or 0), "comercials": int(x["actius_comercials"] or 0)}
+        mg = mc[mc["ine"].str.startswith("17")]
+        refs_x["com_buits"] = {"cat": round(mc["localb"].sum() / mc["total"].sum() * 100, 1),
+                               "gi": round(mg["localb"].sum() / mg["total"].sum() * 100, 1)}
+    # Grandes establecimientos con licencia comercial favorable
+    punts = None
+    f = d / "llicencies.csv"
+    if f.exists():
+        ll = pd.read_csv(f, dtype=str)
+        ll = ll[ll["sentit_resoluci_ferma"].str.lower().str.startswith("favorable", na=False)]
+        feats = []
+        for x in ll.to_dict("records"):
+            g = re.match(r"POINT \(([-\d.]+) ([-\d.]+)\)", str(x.get("georefer_ncia", "")))
+            sup = pd.to_numeric(x.get("sup_venda_m2"), errors="coerce")
+            ine = str(x.get("codi_municipi", ""))[:5]
+            data = str(x.get("data_resoluci_ferma") or x.get("data_entrada_dgc") or "")[:4]
+            e = {"nom": str(x.get("sol_licitant", "")).strip(), "f": x.get("format_de_l_establiment"), "s": None if pd.isna(sup) else int(round(sup)), "a": data}
+            fitxa.setdefault(ine, {}).setdefault("grans", []).append(e)
+            if g:
+                feats.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": [round(float(g.group(1)), 5), round(float(g.group(2)), 5)]},
+                              "properties": {**e, "ine": ine}})
+        for o in fitxa.values():
+            if "grans" in o:
+                o["grans"].sort(key=lambda e: -(e["s"] or 0))
+        punts = {"type": "FeatureCollection", "features": feats}
+    return mun, refs, a1, x_mun, fitxa, refs_x, punts
+def solar():
+    """Autoconsumo fotovoltaico (RAC de la Generalitat) por municipio y año, acumulado a 31 de
+    diciembre según la fecha de puesta en servicio. Devuelve {ine: {clave: {año: valor}}},
+    {clave: {año: {gi, cat}}}, el último año, el último mes y la serie mensual de la provincia."""
+    fs = glob.glob(str(P / "generalitat" / "2b4s-skfm_*"))
+    if not fs:
+        return {}, {}, None, None, {}
+    a = pd.read_csv(fs[0], dtype=str)
+    a = a[a["Tecnologia"].astype(str).str.upper().str.contains("FOTOVOLT", na=False)].copy()
+    a["data"] = pd.to_datetime(a["Data de posada en servei"], dayfirst=True, errors="coerce")
+    a = a.dropna(subset=["data"])
+    a["any"] = a["data"].dt.year
+    a["kw"] = pd.to_numeric(a["Potència"], errors="coerce").fillna(0)
+    a["ine"] = a["Codi IDESCAT municipi"].str.zfill(6).str[:5]
+    a = a[a["ine"].str[:2] == "17"]
+    if a.empty:
+        return {}, {}, None, None, {}
+    ult_mes = a["data"].max().strftime("%Y-%m")
+    ult = int(a["any"].max())
+    ANYS = list(range(2018, ult + 1))
+    # Población por año (padrón) y viviendas (Catastro)
+    pobs = {}
+    fp = P / "padro" / "poblacio_municipis.csv.gz"
+    if fp.exists():
+        d = pd.read_csv(fp, dtype={"ine": str})
+        for x in d.itertuples():
+            pobs.setdefault(x.ine, {})[int(x.any)] = float(x.valor)
+    pob_any = lambda ine, y: (lambda s: s.get(y) or (s[min(s, key=lambda k: abs(k - y))] if s else None))(pobs.get(ine, {}))  # noqa: E731
+    viv = {}
+    try:
+        viv = catastro()["viviendas"].to_dict()
+    except Exception as e:  # noqa: BLE001
+        print("AVISO solar viviendas:", e)
+    q = lambda x, y, f=1: (x / y * f) if y else None  # noqa: E731
+    mun = {}
+    for ine in pobs:
+        g = a[a["ine"] == ine]
+        o = {}
+        for y in ANYS:
+            h = g[g["any"] <= y]
+            n, kw, nn = len(h), float(h["kw"].sum()), int((g["any"] == y).sum())
+            pb = pob_any(ine, y)
+            vals = {"n": n, "kw": round(kw, 1), "h": q(n, pb, 1000), "w": q(kw * 1000, pb), "viv": q(n, viv.get(ine), 100),
+                    "nn": nn, "nou": q(nn, pb, 1000), "mida": q(kw, n) if n else None,
+                    "gran": q(float(h.loc[h["kw"] >= 100, "kw"].sum()), kw, 100) if kw else None}
+            for k, v in vals.items():
+                if v is not None and not (isinstance(v, float) and math.isnan(v)):
+                    o.setdefault(k, {})[y] = round(v, 2 if k in ("h", "viv", "nou", "mida") else 1) if isinstance(v, float) else v
+        mun[ine] = o
+    # Referencias: provincia (suma de municipios) y Cataluña (agregados mensuales del conjunto completo)
+    pob_gi = {y: sum(pob_any(i, y) or 0 for i in pobs) for y in ANYS}
+    pob_cat = {}
+    fv = P / "vehicles" / "agregats.csv"
+    if fv.exists():
+        for x in pd.read_csv(fv).to_dict("records"):
+            if x["ambit"] == "cat" and x.get("pob") == x.get("pob"):
+                pob_cat[int(x["any"])] = float(x["pob"])
+    pc = lambda y: pob_cat.get(y) or (pob_cat[min(pob_cat, key=lambda k: abs(k - y))] if pob_cat else None)  # noqa: E731
+    ag = {}
+    fa = P / "generalitat" / "autoconsum_agregats.csv"
+    if fa.exists():
+        for x in pd.read_csv(fa).to_dict("records"):
+            ag.setdefault(x["ambit"], {})[x["mes"]] = (int(x["n"]), float(x["kw"]))
+    mens_gi = a.groupby(a["data"].dt.strftime("%Y-%m")).agg(n=("kw", "size"), kw=("kw", "sum"))
+    ag["gi"] = {m: (int(r_.n), float(r_.kw)) for m, r_ in mens_gi.iterrows()}
+    refs = {}
+    for amb, pobf in (("gi", lambda y: pob_gi.get(y)), ("cat", pc)):
+        if amb not in ag:
+            continue
+        for y in ANYS:
+            n = sum(v[0] for m, v in ag[amb].items() if int(m[:4]) <= y)
+            kw = sum(v[1] for m, v in ag[amb].items() if int(m[:4]) <= y)
+            nn = sum(v[0] for m, v in ag[amb].items() if int(m[:4]) == y)
+            pb = pobf(y)
+            vals = {"h": q(n, pb, 1000), "w": q(kw * 1000, pb), "nou": q(nn, pb, 1000), "mida": q(kw, n) if n else None}
+            if amb == "gi":
+                tv = sum(viv.get(i) or 0 for i in pobs)
+                vals.update({"n": n, "kw": round(kw, 1), "nn": nn, "viv": q(n, tv, 100),
+                             "gran": q(float(a.loc[(a["any"] <= y) & (a["kw"] >= 100), "kw"].sum()), kw, 100) if kw else None})
+            for k, v in vals.items():
+                if v is not None:
+                    refs.setdefault(k, {}).setdefault(y, {})[amb] = round(v, 2) if isinstance(v, float) else v
+    # Serie mensual: vatios fotovoltaicos de autoconsumo por habitante (acumulado)
+    ser = {}
+    for amb, pobf in (("gi", lambda y: pob_gi.get(y)), ("cat", pc)):
+        if amb not in ag:
+            continue
+        acc, pts = 0.0, []
+        for m in sorted(ag[amb]):
+            acc += ag[amb][m][1]
+            y, mm = int(m[:4]), int(m[5:7])
+            if y >= 2019 and pobf(y):
+                pts.append([round(y + (mm - 1) / 12, 4), m, round(acc * 1000 / pobf(y), 1)])
+        ser[amb] = pts
+    prov = {"solar": {"tipus": "linia", "u": "W", "dec": 0, "series": ser,
+                      "abs": {"n": refs.get("n", {}).get(ult, {}).get("gi"), "kw": refs.get("kw", {}).get(ult, {}).get("gi"), "mes": ult_mes}}} if ser.get("gi") else {}
+    return mun, refs, ult, ult_mes, prov
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -1820,6 +2026,12 @@ def main():
     refs_ed.update(refs_emx)
     trib, refs_trib, any_trib = tributs()
     veh, refs_veh, any_veh = vehicles()
+    com, refs_com, any_com, x_com, fitxa_com, refs_xcom, punts_com = comerc()
+    for ine, x in x_com.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    if any_com:
+        anys_extra.update({"com_buits": 2022, "com_var": any_com})
+    sol, refs_sol, any_sol, mes_sol, prov_sol = solar()
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1863,6 +2075,9 @@ def main():
             "pol": pol.get(ine, {}),
             **({"trib": trib[ine]} if ine in trib else {}),
             **({"veh": veh[ine]} if ine in veh else {}),
+            **({"com": com[ine]} if ine in com else {}),
+            **({"com_f": fitxa_com[ine]} if ine in fitxa_com else {}),
+            **({"sol": sol[ine]} if ine in sol else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **fitxa_cm.get(ine, {}),
         })
@@ -1911,15 +2126,17 @@ def main():
         refs.setdefault(k, {}).update(v)
     for k, v in jw["refs"].items():
         refs.setdefault(k, {}).update(v)
+    for k, v in refs_xcom.items():
+        refs.setdefault(k, {}).update(v)
     for cl, per_any in refs_trib.items():
         refs["trib_" + cl] = per_any[max(per_any)]
     if prov_alq:
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh, "tur": tw["prov"], "tur_ref": tw["refs"],
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {})},
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"],
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
@@ -1963,6 +2180,9 @@ def main():
         cj["pob_cat"] = {"p1564": int(cat("f27").iloc[0]), "pob": int(cat("f321").iloc[0])}
     (SALIDA.parent / "conjuntura.json").write_text(json.dumps(cj, ensure_ascii=False, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     print(f"conjuntura.json: {(SALIDA.parent / 'conjuntura.json').stat().st_size // 1024} KB, {len(cj['per']['m'])} meses, {len(cj['per']['t'])} trimestres")
+    if punts_com:
+        (SALIDA.parent / "comerc_grans.geojson").write_text(json.dumps(punts_com, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        print(f"comerc_grans.geojson: {len(punts_com['features'])} grans establiments")
     import shutil
     for nombre in ("municipis.geojson", "seccions.geojson"):
         origen = P / "geo" / nombre

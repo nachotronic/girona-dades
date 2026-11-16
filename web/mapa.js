@@ -79,6 +79,7 @@
     { id: "pob", ca: "Població", es: "Población" },
     { id: "edu", ca: "Educació", es: "Educación" },
     { id: "tre", ca: "Treball", es: "Trabajo" },
+    { id: "com", ca: "Comerç", es: "Comercio" },
     { id: "sal", ca: "Salut", es: "Salud" },
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
     { id: "jus", ca: "Justícia", es: "Justicia" },
@@ -167,6 +168,41 @@
     ["tur4_p", ["Cotxes de menys de 4 anys", "Turismes de menys de 4 anys (% dels turismes)"], ["Coches de menos de 4 años", "Turismos de menos de 4 años (% de los turismos)"], P1],
     ["antig_tur", ["Edat dels cotxes", "Antiguitat mitjana dels turismes (anys)"], ["Edad de los coches", "Antigüedad media de los turismos (años)"], N1],
     ["cond_h", ["Conductors", "Persones amb permís de conduir per cada 100 habitants"], ["Conductores", "Personas con permiso de conducir por cada 100 habitantes"], N1],
+  ];
+
+  // Comercio (CECC, anual): m.com = {clave: {año: valor}}, D.com_ref = {clave: {año: {gi, cat}}}
+  const CM = (k) => (m, a) => (a != null && m.com && m.com[k] && m.com[k][a] != null ? m.com[k][a] : null);
+  const CMR = (k, z) => (a) => { const r = D.com_ref && D.com_ref[k] && D.com_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_COM = { ca: "Cens d'establiments comercials de Catalunya (Generalitat i Cambres de Comerç): comerç al detall amb establiment, sense bars ni restaurants ni serveis. No hi ha cens del 2020 ni del 2022, i el desglossament per sectors dels municipis petits només existeix des del 2021.", es: "Censo de establecimientos comerciales de Cataluña (Generalitat y Cámaras de Comercio): comercio minorista con establecimiento, sin bares ni restaurantes ni servicios. No hay censo de 2020 ni de 2022, y el desglose por sectores de los municipios pequeños solo existe desde 2021." };
+  const COM = [
+    ["est_h", ["Comerços per habitant", "Establiments comercials per 1.000 habitants"], ["Comercios por habitante", "Establecimientos comerciales por 1.000 habitantes"], N1],
+    ["n", ["Establiments comercials", "Comerços al detall amb establiment"], ["Establecimientos comerciales", "Comercios minoristas con establecimiento"], N0],
+    ["sup_h", ["Superfície comercial", "Superfície de venda per habitant (m²)"], ["Superficie comercial", "Superficie de venta por habitante (m²)"], N2],
+    ["sup_mitj", ["Mida de les botigues", "Superfície de venda mitjana per establiment (m²)"], ["Tamaño de las tiendas", "Superficie de venta media por establecimiento (m²)"], { sumable: false, ...N0 }],
+    ["s_alim", ["Alimentació", "Botigues d'alimentació per 1.000 habitants"], ["Alimentación", "Tiendas de alimentación por 1.000 habitantes"], N2],
+    ["s_qna", ["Farmàcies, drogueries i estancs", "Comerç quotidià no alimentari per 1.000 habitants"], ["Farmacias, droguerías y estancos", "Comercio cotidiano no alimentario por 1.000 habitantes"], N2],
+    ["s_pers", ["Roba, calçat i complements", "Equipament de la persona per 1.000 habitants"], ["Ropa, calzado y complementos", "Equipamiento de la persona por 1.000 habitantes"], N2],
+    ["s_llar", ["Equipament de la llar", "Mobles, electrodomèstics, ferreteria… per 1.000 habitants"], ["Equipamiento del hogar", "Muebles, electrodomésticos, ferretería… por 1.000 habitantes"], N2],
+    ["s_lleure", ["Lleure i cultura", "Llibreries, esports, joguines… per 1.000 habitants"], ["Ocio y cultura", "Librerías, deportes, juguetes… por 1.000 habitantes"], N2],
+    ["s_auto", ["Automoció i carburants", "Concessionaris, recanvis i benzineres per 1.000 habitants"], ["Automoción y carburantes", "Concesionarios, recambios y gasolineras por 1.000 habitantes"], N2],
+    ["s_mixt", ["Supermercats i grans magatzems", "Comerç mixt per 1.000 habitants"], ["Supermercados y grandes almacenes", "Comercio mixto por 1.000 habitantes"], N2],
+    ["p_quot", ["Pes del comerç quotidià", "Alimentació i quotidià no alimentari (% dels establiments)"], ["Peso del comercio cotidiano", "Alimentación y cotidiano no alimentario (% de los establecimientos)"], { sumable: false, ...P1 }],
+  ];
+
+  // Plaques solars d'autoconsum (RAC, Generalitat): m.sol = {clave: {año: valor}} acumulado a 31 de diciembre
+  const SV = (k) => (m, a) => (a != null && m.sol && m.sol[k] && m.sol[k][a] != null ? m.sol[k][a] : null);
+  const SVR = (k, z) => (a) => { const r = D.sol_ref && D.sol_ref[k] && D.sol_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_SOL = { ca: "Registre d'autoconsum de Catalunya (RAC, Generalitat): instal·lacions fotovoltaiques inscrites, acumulades segons la data de posada en servei. No inclou les plantes que només venen a la xarxa. El registre no dona l'adreça, per això no hi ha dades per secció censal.", es: "Registro de autoconsumo de Cataluña (RAC, Generalitat): instalaciones fotovoltaicas inscritas, acumuladas según la fecha de puesta en servicio. No incluye las plantas que solo venden a la red. El registro no da la dirección, por eso no hay datos por sección censal." };
+  const SOL = [
+    ["h", ["Plaques solars", "Instal·lacions fotovoltaiques d'autoconsum per 1.000 habitants"], ["Placas solares", "Instalaciones fotovoltaicas de autoconsumo por 1.000 habitantes"], N1],
+    ["n", ["Instal·lacions solars", "Instal·lacions fotovoltaiques d'autoconsum"], ["Instalaciones solares", "Instalaciones fotovoltaicas de autoconsumo"], N0],
+    ["kw", ["Potència solar", "Potència fotovoltaica d'autoconsum instal·lada (kW)"], ["Potencia solar", "Potencia fotovoltaica de autoconsumo instalada (kW)"], N0],
+    ["w", ["Potència per habitant", "Potència fotovoltaica d'autoconsum per habitant (W)"], ["Potencia por habitante", "Potencia fotovoltaica de autoconsumo por habitante (W)"], N0],
+    ["viv", ["Plaques per habitatge", "Instal·lacions fotovoltaiques per cada 100 habitatges"], ["Placas por vivienda", "Instalaciones fotovoltaicas por cada 100 viviendas"], N1],
+    ["nou", ["Plaques noves", "Instal·lacions posades en servei l'any, per 1.000 habitants"], ["Placas nuevas", "Instalaciones puestas en servicio en el año, por 1.000 habitantes"], N1],
+    ["nn", ["Plaques noves (nombre)", "Instal·lacions fotovoltaiques posades en servei l'any"], ["Placas nuevas (número)", "Instalaciones fotovoltaicas puestas en servicio en el año"], N0],
+    ["mida", ["Mida de la instal·lació", "Potència mitjana per instal·lació (kW)"], ["Tamaño de la instalación", "Potencia media por instalación (kW)"], N1],
+    ["gran", ["Instal·lacions grans", "Potència en instal·lacions de 100 kW o més (% del total)"], ["Instalaciones grandes", "Potencia en instalaciones de 100 kW o más (% del total)"], P0],
   ];
 
   // Impuestos municipales (m.trib: {clave: {año: valor}})
@@ -313,7 +349,7 @@
     { id: "menors18", tema: "pob", ca: ["Menys de 18 anys", "Població menor de 18 anys (%)"], es: ["Menos de 18 años", "Población menor de 18 años (%)"], a: "menors18", v: X("menors18"), s: S("menors18"), ...P0 },
     { id: "estrangers", tema: "pob", ca: ["Estrangers", "Població de nacionalitat estrangera (%)"], es: ["Extranjeros", "Población de nacionalidad extranjera (%)"], a: "estrangers", v: X("estrangers"), s: S("estrangers"), ...P0 },
     // Nacionalidades (censo anual Idescat)
-    { id: "nac_top", tema: "pob", cat: true, ca: ["Principal nacionalitat", "Primera nacionalitat estrangera de cada municipi"], es: ["Principal nacionalidad", "Primera nacionalidad extranjera de cada municipio"], a: "nac", v: (m) => (m.x && m.x.nac_top) || null, f: (v) => nomPais(v), c: (v) => nomPais(v), color: (v) => colorPais(v),
+    { id: "nac_top", tema: "pob", cat: true, ca: ["Principal nacionalitat", "Primera nacionalitat estrangera de cada municipi"], es: ["Principal nacionalidad", "Primera nacionalidad extranjera de cada municipio"], a: "nac", maxCat: 5, v: (m) => (m.x && m.x.nac_top) || null, f: (v) => nomPais(v), c: (v) => nomPais(v), color: (v) => colorPais(v),
       infoCat: (m, v, k) => (m && m.x && v ? `<p class="rel">${t("nac_info", fmt(m.x.nac_top_n), pct(m.x.nac_top_pct, 0), fmt(m.x.nac_ex))}</p><p class="rel">${t("nac_k", k, nomPais(v))}</p>` : `<p class="rel">${t("sense_dades")}</p>`), nota: { ca: "INE, padró continu. Nacionalitat, no lloc de naixement. L'INE només detalla les principals nacionalitats: països com Hondures o Gàmbia queden agrupats. Només municipis amb 20 estrangers o més.", es: "INE, padrón continuo. Nacionalidad, no lugar de nacimiento. El INE solo detalla las principales nacionalidades: países como Honduras o Gambia quedan agrupados. Solo municipios con 20 extranjeros o más." }, notaCat: { ca: "Nombre de municipis on és la primera nacionalitat estrangera.", es: "Número de municipios donde es la primera nacionalidad extranjera." } },
     { id: "nac_top_pct", sumable: false, tema: "pob", ca: ["Pes de la primera nacionalitat", "Primera nacionalitat estrangera (% dels estrangers del municipi)"], es: ["Peso de la primera nacionalidad", "Primera nacionalidad extranjera (% de los extranjeros del municipio)"], a: "nac", v: X("nac_top_pct"), nota: { ca: "INE, padró continu. Nacionalitat, no lloc de naixement. L'INE només detalla les principals nacionalitats: països com Hondures o Gàmbia queden agrupats. Només municipis amb 20 estrangers o més.", es: "INE, padrón continuo. Nacionalidad, no lugar de nacimiento. El INE solo detalla las principales nacionalidades: países como Honduras o Gambia quedan agrupados. Solo municipios con 20 extranjeros o más." }, ...P0 },
     { id: "nac_MA", sumable: false, tema: "pob", ca: ["Nacionalitat: Marroc", "Residents amb nacionalitat de Marroc (% de la població)"], es: ["Nacionalidad: Marruecos", "Residentes con nacionalidad de Marruecos (% de la población)"], a: "nac_MA", v: X("nac_MA"), nota: { ca: "INE, padró continu.", es: "INE, padrón continuo." }, ...P1 },
@@ -417,7 +453,9 @@
     { id: "pmp", tema: "ajt", ca: ["Pagament a proveïdors", "Període mitjà de pagament a proveïdors (dies)"], es: ["Pago a proveedores", "Periodo medio de pago a proveedores (días)"], v: X("pmp"), ...N0 },
     // Energía y residuos
     { id: "kwh", tema: "ene", ca: ["Consum elèctric domèstic", "Consum elèctric domèstic per habitant (kWh)"], es: ["Consumo eléctrico doméstico", "Consumo eléctrico doméstico por habitante (kWh)"], a: "kwh_dom", v: X("kwh_dom"), ...N0 },
-    { id: "autoconsum", tema: "ene", ca: ["Autoconsum", "Instal·lacions d'autoconsum per 1.000 habitants"], es: ["Autoconsumo", "Instalaciones de autoconsumo por 1.000 habitantes"], v: X("autoconsum"), ...N1 },
+    // Plaques solars: autoconsum fotovoltaic (RAC)
+    ...SOL.map(([k, ca, es, fmtk]) => ({ id: "sol_" + k, tema: "ene", ca, es, a: "sol", sumable: ["n", "kw", "nn"].includes(k), v: (m) => SV(k)(m, D.anys && D.anys.sol), t: SV(k), pv: SVR(k, "gi"),
+      ref: () => { const a = D.anys && D.anys.sol; return { cat: SVR(k, "cat")(a) }; }, nota: NOTA_SOL, ...fmtk })),
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
     // Parque de vehículos (DGT)
@@ -425,6 +463,13 @@
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
     ...TURI.map(([k, ca, es, nota, ext]) => ({ id: "tur_" + k, tema: "tur", ca, es, a: "tur_" + k, v: (m) => TU(k)(m, D.anys && D.anys["tur_" + k]), t: TU(k), pv: TUR(k), nota, ...ext })),
+    // Comercio (CECC)
+    ...COM.map(([k, ca, es, fmtk]) => ({ id: "com_" + k, tema: "com", ca, es, a: "com", sumable: k === "n", v: (m) => CM(k)(m, D.anys && D.anys.com), t: CM(k), pv: CMR(k, "gi"),
+      ref: () => { const a = D.anys && D.anys.com; return { cat: CMR(k, "cat")(a) }; }, nota: NOTA_COM, ...fmtk })),
+    { id: "com_var", sumable: false, tema: "com", ca: ["Comerços guanyats o perduts", "Variació dels establiments comercials des del 2017 (%)"], es: ["Comercios ganados o perdidos", "Variación de los establecimientos comerciales desde 2017 (%)"], a: "com_var", v: X("com_var"),
+      nota: { ca: "Cens d'establiments comercials de Catalunya, 2017 i darrer cens. Només municipis amb 10 comerços o més el 2017.", es: "Censo de establecimientos comerciales de Cataluña, 2017 y último censo. Solo municipios con 10 comercios o más en 2017." }, f: (v) => pct(v, 1, true), c: (v) => pct(v, 0, true) },
+    { id: "com_buits", sumable: false, tema: "com", ca: ["Locals buits", "Locals comercials tancats o buits (% dels locals en planta baixa)"], es: ["Locales vacíos", "Locales comerciales cerrados o vacíos (% de los locales en planta baja)"], a: "com_buits", v: X("com_buits"),
+      nota: { ca: "Mapa del Comerç Català 2022 (Generalitat): inspecció directa dels locals de les ciutats de més de 20.000 habitants i de les capitals de comarca. A la resta de municipis no s'ha fet.", es: "Mapa del Comerç Català 2022 (Generalitat): inspección directa de los locales de las ciudades de más de 20.000 habitantes y de las capitales de comarca. En el resto de municipios no se ha hecho." }, ...P1 },
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
@@ -497,8 +542,6 @@
     { id: "co2_residencial", tema: "ene", ca: ["CO₂ de les llars", "Emissions de CO₂ dels habitatges per habitant (tones/any)"], es: ["CO₂ de los hogares", "Emisiones de CO₂ de las viviendas por habitante (toneladas/año)"], a: "co2", v: X("co2_residencial"), nota: NX, ...N2 },
     { id: "gas", tema: "ene", ca: ["Consum de gas", "Consum de gas natural per habitant (kWh)"], es: ["Consumo de gas", "Consumo de gas natural por habitante (kWh)"], a: "gas", v: X("gas"), nota: { ca: "Xifra. Només municipis amb xarxa de gas i dades publicades.", es: "Xifra. Solo municipios con red de gas y datos publicados." }, ...N0 },
     { id: "bancs", tema: "ter", ca: ["Oficines bancàries", "Oficines de bancs i caixes per 10.000 habitants"], es: ["Oficinas bancarias", "Oficinas de bancos y cajas por 10.000 habitantes"], a: "bancs", v: X("bancs"), nota: { ca: "Banc d'Espanya, via Xifra.", es: "Banco de España, vía Xifra." }, ...N1 },
-    { id: "comerc", tema: "ter", ca: ["Comerços", "Establiments comercials per 1.000 habitants"], es: ["Comercios", "Establecimientos comerciales por 1.000 habitantes"], a: "comerc", v: X("comerc"), nota: { ca: "Cens d'establiments comercials, via Xifra.", es: "Censo de establecimientos comerciales, vía Xifra." }, ...N1 },
-    { id: "comerc_m2", tema: "ter", ca: ["Superfície comercial", "Superfície de venda per habitant (m²)"], es: ["Superficie comercial", "Superficie de venta por habitante (m²)"], a: "comerc", v: X("comerc_m2"), nota: NX, ...N2 },
     { id: "biblio", tema: "ter", ca: ["Biblioteques", "Biblioteques per 10.000 habitants"], es: ["Bibliotecas", "Bibliotecas por 10.000 habitantes"], a: "biblio", v: X("biblio"), nota: NX, ...N1 },
     { id: "museus", sumable: false, tema: "ter", ca: ["Museus", "Museus i col·leccions"], es: ["Museos", "Museos y colecciones"], a: "museus", v: X("museus"), nota: NX, ...N0 },
     { id: "explotacions", tema: "ter", ca: ["Explotacions agràries", "Explotacions agràries per 1.000 habitants"], es: ["Explotaciones agrarias", "Explotaciones agrarias por 1.000 habitantes"], a: "explotacions", v: X("explotacions"), nota: { ca: "Cens agrari 2020 (INE), via Xifra.", es: "Censo agrario 2020 (INE), vía Xifra." }, ...N1 },
@@ -546,6 +589,8 @@
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
     return cacheAnys[i.id];
@@ -729,8 +774,18 @@
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : t("nomes_mun");
     const max = recompte.length ? recompte[0][1] : 1;
-    document.getElementById("llegenda").innerHTML = `<div class="cat-llista">${recompte.map(([b, k]) =>
-      `<div class="cat-fila"><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`).join("")}</div>${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
+    // Con muchas categorías (nacionalidades) solo se ven las primeras; el resto, desplegable
+    const N = ind.maxCat && recompte.length > ind.maxCat + 1 ? ind.maxCat : 0;
+    const fila = ([b, k], i) => `<div class="cat-fila"${N && i >= N ? " hidden" : ""}><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`;
+    const ll = document.getElementById("llegenda");
+    ll.innerHTML = `<div class="cat-llista">${recompte.map(fila).join("")}</div>${N ? `<button type="button" class="cat-mes" aria-expanded="false">${t("cat_mes", recompte.length - N)}</button>` : ""}${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
+    const bm = ll.querySelector(".cat-mes");
+    if (bm) bm.addEventListener("click", () => {
+      const obert = bm.getAttribute("aria-expanded") !== "true";
+      ll.querySelectorAll(".cat-fila").forEach((f, i) => { f.hidden = !obert && i >= N; });
+      bm.setAttribute("aria-expanded", String(obert));
+      bm.textContent = obert ? t("cat_menys") : t("cat_mes", recompte.length - N);
+    });
     document.getElementById("ranquing").innerHTML = "";
     controlAnys(); referencies(); info(fixat);
   }
@@ -1091,7 +1146,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (D.ref || {})[i.id] || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "veh") ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
@@ -1123,6 +1178,16 @@
     document.getElementById("s-mapa").scrollIntoView({ behavior: "smooth", block: "start" });
   };
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
+  // Inserción (iframe): estado actual del mapa y arranque con un indicador, nivel y año dados
+  window.mapaEstat = () => (ind ? { id: ind.id, nivell, any: anySel, nom: nomInd(ind) } : null);
+  let llest; window.mapaLlest = new Promise((r) => { llest = r; });
+  window.mapaEmbed = async ({ id, nivell: n, any }) => {
+    await window.mapaLlest;
+    const i = IND.find((x) => x.id === id);
+    if (i) await tria(i);
+    if (n && n !== nivell) await canviaNivell(n);
+    if (any && anysDe(ind).includes(any)) { anySel = any; pinta(); }
+  };
 
   function colorsBase() {
     if (!mapa || !mapa.getLayer("zones-line")) return;
@@ -1146,7 +1211,7 @@
     const encaixaProv = () => mapa.fitBounds([[1.72, 41.64], [3.33, 42.5]], { padding: innerWidth < 640 ? { top: 56, bottom: 10, left: 10, right: 14 } : { top: 64, bottom: 24, left: 24, right: 24 }, duration: 0 });
     mapa = new maplibregl.Map({
       container: "mapa", style: estil, center: [2.6, 42.05], zoom: 8,
-      minZoom: 6, maxZoom: 14, cooperativeGestures: matchMedia("(pointer: coarse)").matches,
+      minZoom: 6, maxZoom: 14, cooperativeGestures: !!window.EMB || matchMedia("(pointer: coarse)").matches,
       attributionControl: false, dragRotate: false, pitchWithRotate: false,
     });
     mapa.touchZoomRotate.disableRotation();
@@ -1164,6 +1229,7 @@
       colorsBase();
       pinta();
       encaixaProv();
+      llest();
       // Si cambia el tamaño del contenedor (giro del móvil, barra lateral) y nadie ha movido el mapa, se vuelve a encuadrar
       let mogut = false;
       mapa.on("dragstart", () => { mogut = true; }); mapa.on("zoomstart", (e) => { if (e.originalEvent) mogut = true; });
