@@ -33,7 +33,16 @@ python scripts/actualizar.py            # todas las fuentes
 python scripts/actualizar.py xifra ine  # solo algunas
 ```
 
-Fuentes disponibles: `territorio`, `generalitat`, `ine`, `mitma`, `xifra`, `catastro`.
+Fuentes disponibles: `territorio`, `generalitat`, `ine`, `mitma`, `xifra`, `catastro`, `conjuntura` y el resto de módulos de `fuentes/`.
+
+### Coyuntura
+
+La sección **Conjuntura** y el tema del mismo nombre del mapa usan series mensuales y trimestrales:
+paro registrado y contratos por municipio (SEPE, `fuentes/conjuntura.py`), alquiler trimestral (Incasòl),
+compraventas trimestrales (Ministerio), viviendas iniciadas (Secretaria d'Habitatge) y, para la provincia,
+compraventas, hipotecas, IPC y pernoctaciones del INE. `scripts/conjuntura_web.py` genera
+`web/datos/conjuntura.json`. Además del lunes, la Action se ejecuta los días 2 a 8 de cada mes solo con
+`conjuntura provincia`, para recoger el dato del mes en cuanto se publica.
 
 ## Ver la web en local
 

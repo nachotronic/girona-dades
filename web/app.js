@@ -5,10 +5,10 @@ const T = {
   ca: {
     locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
-    nav_mapa: "Mapa", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
+    nav_mapa: "Mapa", nav_conj: "Conjuntura", h_conj: "Com va la província, mes a mes", lead_conj: "L'últim mes o trimestre publicat d'atur, contractes, habitatge, hipoteques, preus i turisme, comparat amb el mateix període de l'any anterior.", f_sepe: "atur registrat i contractes per municipi, cada mes", f_ine_mes: "compravendes, hipoteques, IPC i ocupació hotelera de la província", f_iniciats: "habitatges iniciats i acabats per municipi, cada trimestre", nav_prov: "La província", h_prov2: "Girona davant Catalunya i Espanya", lead_prov: "Preus, feina, habitatge, turisme i empreses: les grans xifres de la província, comparades amb Catalunya i Espanya.", nav_evol: "Evolució", nav_mun: "Municipis", nav_fonts: "Fonts",
     sobre_hero: "Dades obertes · Província de Girona",
     meta_mun: "221 municipis · 536 seccions censals",
-    lead_mapa: "Més de 110 indicadors d'habitatge, renda, població, treball, salut, seguretat, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
+    lead_mapa: "Més de 140 indicadors de conjuntura, habitatge, renda, població, treball, salut, seguretat, ajuntaments, energia i política. Tria un tema i un indicador, i baixa fins a la secció censal on la font ho permet.",
     lead_evol: "El conjunt de la província, any a any.",
     g_ren: "Renda", g_hab: "Lloguer i mercat", g_parc: "Parc d'habitatges", g_pob: "Població",
     x_renda: "Renda per persona", x_renda_llar: "Renda per llar", x_gini: "Desigualtat", x_lloguer: "Lloguer",
@@ -85,10 +85,10 @@ const T = {
   es: {
     locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
-    nav_mapa: "Mapa", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
+    nav_mapa: "Mapa", nav_conj: "Coyuntura", h_conj: "Cómo va la provincia, mes a mes", lead_conj: "El último mes o trimestre publicado de paro, contratos, vivienda, hipotecas, precios y turismo, comparado con el mismo periodo del año anterior.", f_sepe: "paro registrado y contratos por municipio, cada mes", f_ine_mes: "compraventas, hipotecas, IPC y ocupación hotelera de la provincia", f_iniciats: "viviendas iniciadas y acabadas por municipio, cada trimestre", nav_prov: "La provincia", h_prov2: "Girona frente a Cataluña y España", lead_prov: "Precios, empleo, vivienda, turismo y empresas: las grandes cifras de la provincia, comparadas con Cataluña y España.", nav_evol: "Evolución", nav_mun: "Municipios", nav_fonts: "Fuentes",
     sobre_hero: "Datos abiertos · Provincia de Girona",
     meta_mun: "221 municipios · 536 secciones censales",
-    lead_mapa: "Más de 110 indicadores de vivienda, renta, población, trabajo, salud, seguridad, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
+    lead_mapa: "Más de 140 indicadores de coyuntura, vivienda, renta, población, trabajo, salud, seguridad, ayuntamientos, energía y política. Elige un tema y un indicador, y baja hasta la sección censal donde la fuente lo permite.",
     lead_evol: "El conjunto de la provincia, año a año.",
     g_ren: "Renta", g_hab: "Alquiler y mercado", g_parc: "Parque de viviendas", g_pob: "Población",
     x_renda: "Renta por persona", x_renda_llar: "Renta por hogar", x_gini: "Desigualdad", x_lloguer: "Alquiler",
@@ -209,6 +209,8 @@ const fmt = (v, d = 0) => (v == null || isNaN(v) ? "–" : v.toLocaleString(loc(
 const pct = (v, d = 1, signe = false) => (v == null || isNaN(v) ? "–" : (signe && v > 0 ? "+" : "") + fmt(v, d) + " %");
 const ultim = (o) => { const k = Object.keys(o || {}).sort(); return k.length ? [k[k.length - 1], o[k[k.length - 1]]] : [null, null]; };
 const val = (o, a) => (o && o[a] != null ? o[a] : null);
+// Etiqueta de un periodo: "2026-10" -> "oct. 2026", "2026T2" -> "2T 2026"
+const etPer = (e) => { const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${t("mesos_curt")[+m[2] - 1]} ${m[1]}`; const q = /^(\d{4})T(\d)$/.exec(e); return q ? `${q[2]}T ${q[1]}` : e; };
 
 // ---------- Estado ----------
 let D = null;
@@ -481,6 +483,7 @@ function obreFitxa(ine, desplaca) {
       <figure class="grafic"><figcaption><span>${t("g_renda")}</span><span class="unitat">${t("u_euros_any")}</span></figcaption><div class="g-re"></div></figure>
       <figure class="grafic"><figcaption><span>${t("g_compra")}</span><span class="unitat">${t("u_operacions")}</span></figcaption><div class="g-cv"></div></figure>
     </div>
+    <div class="fitxa-conj"></div>
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
@@ -495,6 +498,7 @@ function obreFitxa(ine, desplaca) {
     { nom: t("provincia"), color: "var(--serie-2)", dades: D.provincia.renta_persona },
   ], (v) => `${fmt(v)} €`);
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
+  if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -537,6 +541,7 @@ function blocDe(sigles, e) {
 function pintaTot() {
   aplicaIdioma();
   pintaProvincia();
+  if (window.pintaConjuntura) window.pintaConjuntura();
   if (window.pintaSeccioProv) window.pintaSeccioProv();
   pintaTaula();
   const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
@@ -556,13 +561,22 @@ addEventListener("resize", () => {
   if (!D || Math.abs(innerWidth - ampleAnterior) < 40) return;
   ampleAnterior = innerWidth;
   pintaProvincia();
+  if (window.pintaConjuntura) window.pintaConjuntura();
   if (window.pintaSeccioProv) window.pintaSeccioProv();
   if (seleccionat) obreFitxa(seleccionat, false);
 });
 
 aplicaIdioma();
-fetch("datos/municipios.json").then((r) => r.json()).then((d) => {
+Promise.all([
+  fetch("datos/municipios.json").then((r) => r.json()),
+  fetch("datos/conjuntura.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+]).then(([d, cj]) => {
   D = d;
+  if (cj) {
+    cj.idx = {};
+    Object.entries(cj.per).forEach(([k, l]) => { cj.idx[k] = {}; l.forEach((a, i) => { cj.idx[k][a] = i; }); });
+    D.cj = cj;
+  }
   if (window.iniciaMapa) window.iniciaMapa();
   const h = location.hash.slice(1);
   if (/^\d{5}$/.test(h)) seleccionat = h;

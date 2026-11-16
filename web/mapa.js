@@ -26,6 +26,7 @@
 
   // Temas del selector
   const TEMES = [
+    { id: "con", ca: "Conjuntura", es: "Coyuntura" },
     { id: "hab", ca: "Habitatge", es: "Vivienda" },
     { id: "ren", ca: "Renda", es: "Renta" },
     { id: "pob", ca: "Població", es: "Población" },
@@ -38,8 +39,51 @@
     { id: "ene", ca: "Energia", es: "Energía" },
     { id: "pol", ca: "Política", es: "Política" },
   ];
+  // Coyuntura (conjuntura.json): series mensuales (m) y trimestrales (t) alineadas con D.cj.per
+  const CJ = (k, per) => (m, a) => { const c = D.cj && D.cj.mun[m.ine], s = c && c[k], i = s ? D.cj.idx[per][a] : null; return i == null ? null : s[i]; };
+  const CJP = (k, per, z = "gi") => (a) => { const s = D.cj && D.cj.prov[k] && D.cj.prov[k][z], i = s ? D.cj.idx[per][a] : null; return i == null ? null : s[i]; };
+  const antPer = (per, a, n) => { const l = D.cj ? D.cj.per[per] : [], i = l.indexOf(a); return i >= n ? l[i - n] : null; };
+  const variacio = (f, per, n, minim) => (x, a) => { const b = antPer(per, a, n), va = f(x, a), vb = b ? f(x, b) : null; return va != null && vb != null && vb >= minim ? (va / vb - 1) * 100 : null; };
+  const suma4 = (f) => (x, a) => { let s = 0; for (let k = 0; k < 4; k++) { const b = k ? antPer("t", a, k) : a, v = b ? f(x, b) : null; if (v == null) return null; s += v; } return s; };
+  const p1564 = (m) => (D.cj && D.cj.pob1564[m.ine]) || null;
+  const sumaP1564 = () => (D.cj ? Object.values(D.cj.pob1564).reduce((s, v) => s + v, 0) : 0);
+  const sumaPob = () => D.municipios.reduce((s, m) => s + (m.poblacion || 0), 0);
+  const atur = CJ("atur", "m"), contr = CJ("contr", "m"), indef = CJ("indef", "m"), llq = CJ("llq", "t"), cvq = CJ("cvq", "t"), ini = CJ("ini", "t");
+  const aturP = CJP("atur", "m"), cvqP = CJP("cvq", "t"), cvq4 = suma4(cvq), cvq4P = suma4((_, a) => cvqP(a));
+  const refCJ = (k, per, fn) => () => { const a = D.cj && D.cj.per[per].slice(-1)[0]; return a ? { cat: fn("cat", a), esp: fn("esp", a) } : {}; };
+  const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
+  const NOTA_SEPE = { ca: "SEPE, atur registrat el darrer dia del mes. Les xifres d'1 a 4 no es publiquen.", es: "SEPE, paro registrado el último día del mes. Las cifras de 1 a 4 no se publican." };
+  const NOTA_CONTR = { ca: "SEPE, contractes registrats al mes al municipi del centre de treball.", es: "SEPE, contratos registrados en el mes en el municipio del centro de trabajo." };
+
   // Indicadores: v(m) municipio, s(x) sección; ca/es = [etiqueta corta, título completo]; a = año (o clave de D.anys)
   const IND = [
+    // Coyuntura
+    { id: "cj_atur", per: "m", tema: "con", ca: ["Atur registrat", "Persones a l'atur registrat (% de la població de 15 a 64 anys)"], es: ["Paro registrado", "Personas en paro registrado (% de la población de 15 a 64 años)"],
+      t: (m, a) => { const v = atur(m, a), p = p1564(m); return v != null && p ? (v / p) * 100 : null; }, pv: (a) => { const v = aturP(a); return v != null ? (v / sumaP1564()) * 100 : null; },
+      ref: refCJ("atur", "m", (z, a) => (z === "cat" && D.cj.pob_cat && CJP("atur", "m", "cat")(a) != null ? (CJP("atur", "m", "cat")(a) / D.cj.pob_cat.p1564) * 100 : null)), nota: NOTA_SEPE, f: (v) => pct(v, 1), c: (v) => pct(v, v < 10 && v % 1 ? 1 : 0) },
+    { id: "cj_atur_var", per: "m", sumable: false, tema: "con", ca: ["Atur: variació anual", "Variació de l'atur registrat respecte al mateix mes de l'any anterior (%)"], es: ["Paro: variación anual", "Variación del paro registrado respecto al mismo mes del año anterior (%)"],
+      t: variacio(atur, "m", 12, 20), pv: (a) => varZ("atur", "m", 12)("gi", a), ref: refCJ("atur", "m", (z, a) => varZ("atur", "m", 12)(z, a)),
+      nota: { ca: "Només municipis amb almenys 20 aturats fa un any. SEPE.", es: "Solo municipios con al menos 20 parados hace un año. SEPE." }, f: (v) => pct(v, 1, true), c: (v) => pct(v, 0, true) },
+    { id: "cj_atur_n", per: "m", tema: "con", ca: ["Aturats", "Persones a l'atur registrat"], es: ["Parados", "Personas en paro registrado"], t: atur, pv: aturP, nota: NOTA_SEPE, ...N0 },
+    { id: "cj_contr", per: "m", tema: "con", ca: ["Contractes", "Contractes signats al mes per 1.000 habitants"], es: ["Contratos", "Contratos firmados en el mes por 1.000 habitantes"],
+      t: (m, a) => { const v = contr(m, a); return v != null && m.poblacion ? (v / m.poblacion) * 1000 : null; }, pv: (a) => { const v = CJP("contr", "m")(a); return v != null ? (v / sumaPob()) * 1000 : null; },
+      ref: refCJ("contr", "m", (z, a) => (z === "cat" && D.cj.pob_cat && CJP("contr", "m", "cat")(a) != null ? (CJP("contr", "m", "cat")(a) / D.cj.pob_cat.pob) * 1000 : null)), nota: NOTA_CONTR, ...N1 },
+    { id: "cj_indef", per: "m", cob: 0.15, sumable: false, tema: "con", ca: ["Contractes indefinits", "Contractes indefinits o convertits en indefinits (% del total)"], es: ["Contratos indefinidos", "Contratos indefinidos o convertidos en indefinidos (% del total)"],
+      t: (m, a) => { const i = indef(m, a), c = contr(m, a); return i != null && c ? Math.min(100, (i / c) * 100) : null; }, pv: CJP("indef", "m"), ref: refCJ("indef", "m", (z, a) => CJP("indef", "m", z)(a)),
+      nota: { ca: "Només municipis amb almenys 20 contractes al mes. SEPE.", es: "Solo municipios con al menos 20 contratos en el mes. SEPE." }, ...P0 },
+    { id: "cj_llq", per: "t", cob: 0.2, tema: "con", ca: ["Lloguer del trimestre", "Lloguer mitjà dels contractes nous del trimestre (€/mes)"], es: ["Alquiler del trimestre", "Alquiler medio de los contratos nuevos del trimestre (€/mes)"],
+      t: llq, pv: CJP("llq", "t"), nota: { ca: "Incasòl, fiances dipositades. Només municipis amb prou contractes.", es: "Incasòl, fianzas depositadas. Solo municipios con suficientes contratos." }, ...EU },
+    { id: "cj_llq_var", per: "t", cob: 0.2, sumable: false, tema: "con", ca: ["Lloguer: variació anual", "Variació del lloguer mitjà respecte al mateix trimestre de l'any anterior (%)"], es: ["Alquiler: variación anual", "Variación del alquiler medio respecto al mismo trimestre del año anterior (%)"],
+      t: variacio(llq, "t", 4, 1), pv: (a) => varZ("llq", "t", 4)("gi", a), nota: { ca: "Incasòl, fiances dipositades.", es: "Incasòl, fianzas depositadas." }, f: (v) => pct(v, 1, true), c: (v) => pct(v, 0, true) },
+    { id: "cj_cvq", per: "t", tema: "con", ca: ["Compravendes del trimestre", "Compravendes d'habitatges al trimestre per 1.000 habitants"], es: ["Compraventas del trimestre", "Compraventas de viviendas en el trimestre por 1.000 habitantes"],
+      t: (m, a) => { const v = cvq(m, a); return v != null && m.poblacion ? (v / m.poblacion) * 1000 : null; }, pv: (a) => { const v = cvqP(a); return v != null ? (v / sumaPob()) * 1000 : null; },
+      nota: { ca: "Ministeri d'Habitatge, a partir dels notaris.", es: "Ministerio de Vivienda, a partir de los notarios." }, ...N1 },
+    { id: "cj_cvq_var", per: "t", sumable: false, tema: "con", ca: ["Compravendes: variació anual", "Compravendes dels últims 12 mesos respecte als 12 anteriors (%)"], es: ["Compraventas: variación anual", "Compraventas de los últimos 12 meses respecto a los 12 anteriores (%)"],
+      t: variacio(cvq4, "t", 4, 10), pv: (a) => { const b = antPer("t", a, 4), va = cvq4P(null, a), vb = b ? cvq4P(null, b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; },
+      nota: { ca: "Suma de quatre trimestres. Només municipis amb almenys 10 compravendes l'any anterior.", es: "Suma de cuatro trimestres. Solo municipios con al menos 10 compraventas el año anterior." }, f: (v) => pct(v, 1, true), c: (v) => pct(v, 0, true) },
+    { id: "cj_ini", per: "t", tema: "con", ca: ["Habitatges iniciats", "Habitatges iniciats al trimestre per 1.000 habitants"], es: ["Viviendas iniciadas", "Viviendas iniciadas en el trimestre por 1.000 habitantes"],
+      t: (m, a) => { const v = ini(m, a); return v != null && m.poblacion ? (v / m.poblacion) * 1000 : null; }, pv: (a) => { const v = CJP("ini", "t")(a); return v != null ? (v / sumaPob()) * 1000 : null; },
+      nota: { ca: "Secretaria d'Habitatge, a partir dels visats dels aparelladors.", es: "Secretaria d'Habitatge, a partir de los visados de los aparejadores." }, ...N1 },
     // Vivienda
     { id: "lloguer", tema: "hab", ca: ["Lloguer", "Lloguer mitjà (€/mes)"], es: ["Alquiler", "Alquiler medio (€/mes)"], a: 2025, v: (m) => val(m.alquiler, "2025"), t: (m, a) => val(m.alquiler, a), ...EU },
     { id: "var5", sumable: false, tema: "hab", ca: ["Pujada del lloguer", "Variació del lloguer 2020-2025"], es: ["Subida del alquiler", "Variación del alquiler 2020-2025"], v: (m) => { const a = val(m.alquiler, "2025"), b = val(m.alquiler, "2020"); return a && b ? (a / b - 1) * 100 : null; }, f: (v) => pct(v, 0, true), c: (v) => pct(v, 0, true) },
@@ -184,11 +228,14 @@
     { id: "esports", tema: "ter", ca: ["Espais esportius", "Espais esportius per 1.000 habitants"], es: ["Espacios deportivos", "Espacios deportivos por 1.000 habitantes"], a: "esports", v: X("esports"), ...N1 },
     { id: "motos", tema: "ter", ca: ["Motos", "Motocicletes per 1.000 habitants"], es: ["Motos", "Motocicletas por 1.000 habitantes"], a: "motos", v: X("motos"), ...N0 },
   ];
+  // Los indicadores de coyuntura muestran el último periodo con datos
+  IND.forEach((i) => { if (i.per) i.v = (m) => (D.cj ? i.t(m, anysDe(i).slice(-1)[0]) : null); });
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
     if (curt) return txt;
     const a = i === ind && anyActiu() ? anyActiu() : typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
-    return a ? `${txt} · ${a}` : txt;
+    const ap = i.per && !a && D.cj ? anysDe(i).slice(-1)[0] : a;
+    return ap ? `${txt} · ${etPer(String(ap))}` : txt;
   };
   let tema = "ren";
   // Municipios que se rotulan en el mapa (capitales de comarca y grandes poblaciones)
@@ -204,6 +251,11 @@
   const cacheAnys = {};
   function anysDe(i) {
     if (!i.t) return [];
+    if (i.per) {
+      if (!D.cj) return [];
+      if (!cacheAnys[i.id]) cacheAnys[i.id] = D.cj.per[i.per].filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob || 0.3));
+      return cacheAnys[i.id];
+    }
     if (!cacheAnys[i.id]) {
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
@@ -214,6 +266,7 @@
   const anyActiu = () => (ambSerie() ? anySel || anysDe(ind)[anysDe(ind).length - 1] : null);
   function serieProv(i) {
     if (i.id === "lloguer" && D.provincia && D.provincia.alquiler) return D.provincia.alquiler;
+    if (i.pv) { const r = {}; anysDe(i).forEach((a) => { const v = i.pv(a); if (v != null && isFinite(v)) r[a] = v; }); return r; }
     const res = {};
     anysDe(i).forEach((a) => {
       let s = 0, w = 0;
@@ -242,7 +295,7 @@
       const ult = anys.filter((a) => x.d[a] != null).pop();
       if (ult) svg += `<circle cx="${X(ult)}" cy="${Y(x.d[ult])}" r="3" class="mini-p ${x.cls}"/>`;
     });
-    svg += `<text x="${mg.l}" y="${H - 4}" class="mini-a">${anys[0]}</text><text x="${W - mg.r}" y="${H - 4}" text-anchor="end" class="mini-a">${anys[anys.length - 1]}</text></svg>`;
+    svg += `<text x="${mg.l}" y="${H - 4}" class="mini-a">${etPer(anys[0])}</text><text x="${W - mg.r}" y="${H - 4}" text-anchor="end" class="mini-a">${etPer(anys[anys.length - 1])}</text></svg>`;
     const lleg = series.map((x) => `<span class="${x.cls}"><i></i>${x.nom}</span>`).join("");
     return `<div class="mini-caixa"><p class="mini-tit">${t("evolucio")}</p>${svg}<div class="mini-lleg">${lleg}</div></div>`;
   }
@@ -255,7 +308,7 @@
     el.hidden = false;
     el.innerHTML = `<button type="button" class="play" aria-label="${reproduint ? t("atura") : t("reprodueix")}" title="${reproduint ? t("atura") : t("reprodueix")}">${reproduint ? "❚❚" : "▶"}</button>
       <input type="range" min="0" max="${anys.length - 1}" step="1" value="${idx}" aria-label="${t("any_ctl")}">
-      <span class="any-act">${act}</span>`;
+      <span class="any-act">${etPer(String(act))}</span>`;
     const r = el.querySelector("input");
     r.addEventListener("input", () => { para(); anySel = anys[+r.value]; pinta(); });
     el.querySelector(".play").addEventListener("click", () => {
@@ -264,7 +317,7 @@
       reproduint = setInterval(() => {
         k++; anySel = anys[k]; pinta();
         if (k >= anys.length - 1) { para(); controlAnys(); }
-      }, 900);
+      }, ind.per === "m" ? 200 : ind.per === "t" ? 450 : 900);
       controlAnys();
     });
   }
@@ -372,6 +425,7 @@
 
   // Comparación con la provincia, Cataluña y España
   function valorProvincia(i = ind) {
+    if (i.pv) { const u = anysDe(i).slice(-1)[0]; return u ? i.pv(u) : null; }
     const r = (D.ref || {})[i.id];
     if (r && r.gi != null) return r.gi;
     if (!i.v || i.cat || i.sumable === false) return null;
@@ -382,7 +436,7 @@
   function referencies() {
     const el = document.getElementById("referencies");
     if (!el) return;
-    const r = (D.ref || {})[ind.id] || {};
+    const r = (ind.ref ? ind.ref() : (D.ref || {})[ind.id]) || {};
     const files = [[t("ref_gi"), valorProvincia(), "gi"], [t("ref_cat"), r.cat, "cat"], [t("ref_esp"), r.esp, "esp"]]
       .filter((x) => x[1] != null && isFinite(x[1]));
     const ult = anysDe(ind).slice(-1)[0];
@@ -641,6 +695,14 @@
       <p class="fi-lleg"><span><i class="m-mun"></i>${m.nom}</span><span><i class="m-gi"></i>${t("ref_gi")}</span><span><i class="m-cat"></i>${t("ref_cat")}</span><span><i class="m-esp"></i>${t("ref_esp")}</span><span class="fi-nota">${t("fi_nota")}</span></p></div>${blocs}</div>`;
   };
 
+  // Selecciona un indicador desde otra sección y lleva al mapa
+  window.mapaIndicador = (id) => {
+    const i = IND.find((x) => x.id === id);
+    if (!i || !mapa) return;
+    consulta = ""; const c = document.getElementById("cerca-ind"); if (c) c.value = "";
+    tria(i);
+    document.getElementById("s-mapa").scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
 
   function colorsBase() {
