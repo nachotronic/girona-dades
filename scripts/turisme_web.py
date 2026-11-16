@@ -212,7 +212,38 @@ def _mesos(ser, desde="2016-01"):
 ZONES = {"gi": "Girona", "cat": "Cataluña", "esp": "Nacional"}
 
 
-def prov_series(d, mov_prov, ieet_com, reg_tot, aena):
+def _punts_anuals(d, taules, noms):
+    """{ine: {any: pernoctaciones}} de los puntos turísticos de Girona (residentes en España + extranjero)."""
+    for t_ in taules:
+        agg, vist = {}, set()
+        for s_ in _series(d, t_, "Pernoctaciones"):
+            ine = _ine_punt(s_["nom"], noms)
+            if not ine:
+                continue
+            k = (ine, "esp" if "España" in s_["nom"] else "ext")
+            if k in vist:
+                continue
+            vist.add(k)
+            for a, v in _anual(_mensual(s_), minim=6).items():
+                agg.setdefault(ine, {}).setdefault(a, 0)
+                agg[ine][a] += v
+        if agg:
+            return agg
+    return {}
+
+
+def _ine_punt(nom, noms):
+    """Código INE del punto turístico: por el código «17xxx-» o por el nombre al principio."""
+    m = re.search(r"\b(17\d{3})-", nom)
+    if m:
+        return m.group(1)
+    p = nom.split(".")[0].strip()
+    if p in ("Nacional", "Total Nacional", "Cabanes"):
+        return None
+    return noms.get(normaliza(p))
+
+
+def prov_series(d, mov_prov, ieet_com, reg_tot, aena, noms=None, noms_orig=None):
     res = {}
     any_max = ANY_ACTUAL  # años completos: hasta el anterior al actual si el actual no tiene 12 meses
     # 1. Pernoctaciones hoteleras: índice 2019 = 100
@@ -260,8 +291,8 @@ def prov_series(d, mov_prov, ieet_com, reg_tot, aena):
     if oc["gi"]:
         res["t_ocup"] = {"tipus": "linia", "u": "%", "dec": 1, "series": {z: _linia(v, 2005, 1) for z, v in oc.items() if v}}
     # 5. ADR y RevPAR (media anual de los datos mensuales)
-    for k, t_, c in (("t_adr", "2059", "Tarifa media diaria"), ("t_revpar", "2057", "Ingresos por habitación disponible")):
-        sr = {z: _anual(_una(d, t_, c, "Dato", zona=n), op="mitjana") for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Nacional"))}
+    for k, t_ in (("t_adr", "2059"), ("t_revpar", "2057")):
+        sr = {z: _anual(_una(d, t_, "Dato", zona=n, excl=("Tasa",)), op="mitjana") for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Nacional"))}
         if sr["gi"]:
             res[k] = {"tipus": "linia", "u": "€", "dec": 0, "series": {z: _linia(v, 2008, 1) for z, v in sr.items() if v}}
     # 6. Estancia media en hoteles
@@ -284,23 +315,19 @@ def prov_series(d, mov_prov, ieet_com, reg_tot, aena):
         res["t_personal"] = {"tipus": "linia", "u": "", "dec": 0, "noms": "tt",
                              "series": {"gi": _linia(pers["hotel"], 2005, 0), "cat": _linia(pers["camp"], 2005, 0),
                                         "esp": _linia({a: pers["apt"].get(a, 0) + pers["rural"].get(a, 0) for a in pers["apt"]}, 2005, 0)}}
-    # 9. Puntos turísticos: pernoctaciones hoteleras del último año completo
-    punts = {}
-    for t_ in ("75197", "2078"):
-        for s_ in _series(d, t_, "Pernoctaciones"):
-            nom = _punt(s_["nom"])
-            if not nom:
-                continue
-            for a, v in _anual(_mensual(s_), minim=6).items():
-                punts.setdefault(nom, {}).setdefault(a, {})[s_["nom"]] = v
-        if punts:
-            break
-    pt = {n: {a: sum(x.values()) for a, x in v.items()} for n, v in punts.items()}
-    if pt:
-        a = max(max(v) for v in pt.values() if v)
-        a = a if sum(1 for v in pt.values() if a in v) >= 3 else a - 1
-        grups = sorted([{"g": n, "gi": r(v[a] / 1e6, 2)} for n, v in pt.items() if a in v], key=lambda x: -x["gi"])
-        res["t_punts"] = {"tipus": "barres", "u": "M", "dec": 2, "claus": ["gi"], "any": a, "grups": grups}
+    # 9. Puntos turísticos: pernoctaciones en hoteles y campings del último año completo
+    ph = _punts_anuals(d, ("75197", "2078"), noms)
+    pc = _punts_anuals(d, ("75194", "2084"), noms)
+    if ph or pc:
+        anys_ = [a for v in list(ph.values()) + list(pc.values()) for a in v]
+        a = max(anys_)
+        if sum(1 for v in list(ph.values()) + list(pc.values()) if a in v) < 3:
+            a -= 1
+        a = min(a, ANY_ACTUAL - 1)  # el año en curso aún no está completo
+        nom_i = {i: n for n, i in noms_orig.items()}
+        grups = [{"g": nom_i.get(i, i), "gi": r(ph.get(i, {}).get(a, 0) / 1e6, 2), "cat": r(pc.get(i, {}).get(a, 0) / 1e6, 2)} for i in set(ph) | set(pc)]
+        grups = sorted([g for g in grups if g["gi"] or g["cat"]], key=lambda x: -(x["gi"] + x["cat"]))
+        res["t_punts"] = {"tipus": "barres", "u": "M", "dec": 2, "claus": ["gi", "cat"], "noms": "pt", "any": a, "grups": grups}
     # 10. Origen de los turistas (telefonía móvil, último año completo)
     if mov_prov:
         for k, grups in mov_prov.items():
@@ -490,8 +517,7 @@ def punts_municipis(d, noms):
             for s_ in _series(d, t_, *filtre):
                 if "fin de semana" in s_["nom"]:
                     continue
-                nom = _punt(s_["nom"])
-                ine = noms.get(normaliza(nom or ""))
+                ine = _ine_punt(s_["nom"], noms)
                 if not ine:
                     continue
                 k = (ine, "esp" if "España" in s_["nom"] else "ext" if "xtranjero" in s_["nom"] else "")
@@ -504,6 +530,8 @@ def punts_municipis(d, noms):
                 for a, l in per.items():
                     res.setdefault(ine, {}).setdefault(clau, {})[a] = r(sum(l) * escala, 1) if op == "suma" else r(sum(l) / len(l), 1)
     afegeix("pern", ("75197", "2078"), ("Pernoctaciones",), "suma", 12)
+    afegeix("pern_camp", ("75194", "2084"), ("Pernoctaciones",), "suma", 6)
+    afegeix("ocup_camp", ("75196", "2085"), ("Grado de ocupación por parcelas",), "mitjana", 4)
     afegeix("ocup", ("75198", "2076"), ("Grado de ocupación por plazas",), "mitjana", 6)
     afegeix("adr", ("46298",), ("Tarifa media diaria", "Dato"), "mitjana", 6)
     return res
@@ -600,11 +628,25 @@ def construir(municipios):
     for ine, o in punts_municipis(d, noms).items():
         for k, ser in o.items():
             for a, v in ser.items():
-                if k == "pern" and pob.get(ine):
-                    posa(ine, "pern_h", a, r(v / pob[ine], 1))
-                    posa(ine, "pern", a, v)
+                if k in ("pern", "pern_camp") and pob.get(ine):
+                    posa(ine, k + "_h", a, r(v / pob[ine], 1))
+                    posa(ine, k, a, v)
                 elif k != "pern":
                     posa(ine, k, a, v)
+    # Viviendas turísticas del INE (VTE): último semestre de cada año
+    fv = P / "turisme" / "viviendas_turisticas.csv"
+    if fv.exists():
+        dv = pd.read_csv(fv, dtype={"ine": str})
+        dv["ago"] = (dv["mes"] == 8).astype(int)  # preferimos agosto (temporada alta); si no, el último periodo
+        dv = dv.sort_values(["ago", "mes"]).groupby(["ine", "clau", "any"]).tail(1)
+        for row in dv.itertuples():
+            if row.clau == "pct":
+                posa(row.ine, "vte_pct", row.any, r(row.valor, 2))
+            elif row.clau == "viv":
+                posa(row.ine, "vte_viv", row.any, int(row.valor))
+            elif row.clau == "places" and pob.get(row.ine):
+                posa(row.ine, "vte_pl_h", row.any, r(row.valor / pob[row.ine] * 100, 1))
+                posa(row.ine, "vte_pl", row.any, int(row.valor))
     # Playas
     for ine, n in platges().items():
         posa(ine, "platges", any_reg, n)
@@ -615,7 +657,7 @@ def construir(municipios):
             anys[k] = max(anys.get(k, 0), max(ser))
     # Referencias de la provincia: suma o media ponderada según la clave
     refs = {}
-    sumes = {"hotels", "rural_n", "hut_n", "ieet", "mov_rec", "mov_int", "pern", "platges"}
+    sumes = {"hotels", "rural_n", "hut_n", "vte_viv", "vte_pl", "ieet", "mov_rec", "mov_int", "pern", "pern_camp", "platges"}
     for k in anys:
         for a in sorted({a for o in mun.values() for a in o.get(k, {})}):
             vals = [(o[k][a], pob.get(ine) or 0) for ine, o in mun.items() if a in o.get(k, {})]
@@ -623,7 +665,7 @@ def construir(municipios):
                 refs.setdefault(k, {})[a] = {"gi": r(sum(v for v, _ in vals), 1)}
             elif k.endswith("_h") and k[:-2] in sumes:
                 tot = sum(o.get(k[:-2], {}).get(a, 0) for o in mun.values())
-                refs.setdefault(k, {})[a] = {"gi": r(tot / pob_prov, 1)} if k not in ("ieet_h", "pern_h") else {}
+                refs.setdefault(k, {})[a] = {"gi": r(tot / pob_prov, 1)} if k not in ("ieet_h", "pern_h", "pern_camp_h") else {}
             elif k in ("pl_h", "pl_hotel_h", "pl_camp_h", "pl_rural_h", "pl_hut_h", "hut_pl_h"):
                 if k == "hut_pl_h" or (k == "pl_camp_h" and a != any_reg):
                     tot = sum(v * p / 100 for v, p in vals)
@@ -632,12 +674,19 @@ def construir(municipios):
                     tp_ = k[3:-2] if k != "pl_h" else None
                     tot = reg_tot and (sum(reg_tot.get(f"{x}_pl", 0) for x in ("hotel", "camp", "rural", "hut", "apt", "llar", "auto")) if not tp_ else reg_tot.get(f"{tp_}_pl", 0))
                     refs.setdefault(k, {})[a] = {"gi": r(tot / pob_prov * 100, 1)} if tot else {}
+            elif k == "vte_pct":
+                tot_v = sum(o.get("vte_viv", {}).get(a, 0) for o in mun.values())
+                tot_viv = sum(v or 0 for v in viv.values())
+                refs.setdefault(k, {})[a] = {"gi": r(tot_v / tot_viv * 100, 2)} if tot_viv else {}
+            elif k == "vte_pl_h":
+                tot_p = sum(o.get("vte_pl", {}).get(a, 0) for o in mun.values())
+                refs.setdefault(k, {})[a] = {"gi": r(tot_p / pob_prov * 100, 1)}
             elif k == "hut_viv":
                 tot_hut = sum(o.get("hut_n", {}).get(a, 0) for o in mun.values())
                 tot_viv = sum(v or 0 for v in viv.values())
                 refs.setdefault(k, {})[a] = {"gi": r(tot_hut / tot_viv * 100, 1)} if tot_viv else {}
     # Catalunya (EMEX) para las plazas: hotel, càmping, rural por 100 habitantes
-    prov = prov_series(d, mov_provincia(d_mov, pob_prov), ieet_comarques(), reg_tot, aena_anual())
+    prov = prov_series(d, mov_provincia(d_mov, pob_prov), ieet_comarques(), reg_tot, aena_anual(), noms, dict(zip(t["nom"], t["codi_ine"])))
     prov["t_resum"] = {
         "places": sum(reg_tot.get(f"{x}_pl", 0) for x in ("hotel", "camp", "rural", "hut", "apt", "llar", "auto")) if reg_tot else None,
         "hut": reg_tot.get("hut_n") if reg_tot else None, "pob": pob_prov,
