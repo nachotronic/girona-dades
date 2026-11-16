@@ -145,7 +145,7 @@ def _taula_noms(df: pd.DataFrame, cols: dict[str, str]) -> dict[str, dict[str, f
 
 VDG_COLS = {
     "Denuncias-Renuncias": {"victimes": r"^Mujeres v[ií]ctimas de violencia de g[eé]nero$", "denuncies": r"^Denuncias recibidas",
-                            "renuncies": r"se acoge a"},
+                            "renuncies": r"se acoge a", "poblacio": r"^poblaci[oó]n total$"},
     "Órdenes y Medidas": {"ordres": r"^N[ºo] Total$|^N[ºo] Total[^*]*$"},
     "Delitos": {"delictes": r"^Total$", "lesions153": r"Art\. 153", "lesions173": r"Art\. 173", "llibertat": r"^Contra la libertad$",
                 "sexual": r"indemnidad sexual", "trencaments": r"Quebrantamientos de Pen", "trencaments_m": r"Quebrantamientos\s+de Med"},
@@ -218,7 +218,8 @@ def vdg(lineas: list[str]) -> None:
     if nous:
         nou = pd.concat(nous)
         claus = set(map(tuple, nou[["any", "trimestre", "nivell"]].drop_duplicates().values))
-        prev = prev[[tuple(x) not in claus for x in prev[["any", "trimestre", "nivell"]].values]]
+        if len(prev):
+            prev = prev.loc[[tuple(x) not in claus for x in prev[["any", "trimestre", "nivell"]].values]]
         tot = pd.concat([prev, nou[prev.columns]]).sort_values(["any", "trimestre", "nivell", "zona", "var"])
         tot.to_csv(f, index=False)
     else:

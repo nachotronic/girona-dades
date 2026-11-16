@@ -28,7 +28,11 @@ def _taules(path: str) -> list[tuple[str, str, str]]:
 
 def _csv(carpeta_px: str, fitxer: str) -> pd.DataFrame:
     r = get(f"{MIR}/sec/jaxiPx/files/_px/es/csv_bdsc/{carpeta_px}/l0/{fitxer}.csv_bdsc?nocab=1", timeout=300)
-    txt = r.content.decode("iso-8859-15").lstrip("﻿")
+    try:
+        txt = r.content.decode("utf-8")
+    except UnicodeDecodeError:
+        txt = r.content.decode("iso-8859-15")
+    txt = txt.lstrip("\ufeff")
     d = pd.read_csv(io.StringIO(txt), sep=";", dtype=str)
     d.columns = ["zona", "tipologia", "periode", "valor"][: len(d.columns)]
     return d

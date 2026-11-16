@@ -1617,6 +1617,15 @@ def main():
     zones["aar"] = zona_emx
     zona_aar(zona_emx)
     anys_extra.update(anys_arees)
+    # Seguridad y justicia: Mossos por región, mes y tipo; Interior; CGPJ por partido judicial
+    import justicia_web
+    jw = justicia_web.construir(municipios, SALIDA.parent)
+    zones["pj"] = jw["pj"]
+    for c, o in jw["abp"].items():
+        zones["abp"].setdefault(c, {}).update(o)
+    for m in municipios:
+        m["x"].update(jw["x"].get(m["ine"], {}))
+    anys_extra.update(jw["anys"])
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -1624,13 +1633,15 @@ def main():
         refs.setdefault(k, {}).update(v)
     for k, v in refs_arees.items():
         refs.setdefault(k, {}).update(v)
+    for k, v in jw["refs"].items():
+        refs.setdefault(k, {}).update(v)
     for cl, per_any in refs_trib.items():
         refs["trib_" + cl] = per_any[max(per_any)]
     if prov_alq:
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series()}, "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"]}, "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {})},
         "trib_ref": refs_trib,
         "provincia": {
