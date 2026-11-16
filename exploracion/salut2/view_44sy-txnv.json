@@ -1,0 +1,1142 @@
+{
+  "id" : "44sy-txnv",
+  "name" : "Vigilància sindròmica d'infeccions a Atenció Primària",
+  "assetType" : "dataset",
+  "attribution" : "Departament de Salut",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1654775073,
+  "description" : "Les dades publicades en aquest conjunt provenen del nou Sistema de Vigilància d’Infeccions de Catalunya (SIVIC), del Departament de Salut, que integra les funcions de vigilància epidemiològica de la grip, de la COVID-19 i d’altres virus respiratoris, amb l'objectiu de monitorar aquests virus, recollir els canvis de tendència i millorar la caracterització microbiològica dels virus circulants.\n\nAquesta publicació s'actualitzarà setmanalment i és complementària de la presentació que de les mateixes dades es fa en el nou portal SIVIC (https://sivic.salut.gencat.cat/).\n\nCatalunya va ser pionera a implantar un sistema de vigilància de la grip a la temporada 1988-89 i, posteriorment, va evolucionar cap al Pla d’informació de les infeccions respiratòries agudes a Catalunya (PIDIRAC), que va iniciar el seu funcionament durant la temporada 1999-2000 i que ha seguit en marxa fins a dia d’avui. DadesCovid.cat (https://dadescovid.cat/) també ha estat un portal capdavanter en transparentar l'evolució de la pandèmia. El nou web de SIVIC l'acabarà substuint ja que hi integrarà la informació adequada per a aquest moment actual.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2351,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2330034,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1654776522,
+  "publicationGroup" : 1583874,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1794318475,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1583874,
+  "totalTimesRated" : 0,
+  "viewCount" : 5440,
+  "viewLastModified" : 1794316518,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1655812591,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1158028,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1655812591,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1655812591,
+      "failureCount" : 0,
+      "startedAt" : 1655812591,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "76mf-34jr",
+      "displayName" : "Álex Artigas"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 21497980,
+    "name" : "setmana_epidemiologica",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "setmana_epidemiologica",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180609,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "9",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5",
+        "count" : "424804"
+      }, {
+        "item" : "6",
+        "count" : "423024"
+      }, {
+        "item" : "7",
+        "count" : "421125"
+      }, {
+        "item" : "4",
+        "count" : "420051"
+      }, {
+        "item" : "3",
+        "count" : "416033"
+      }, {
+        "item" : "8",
+        "count" : "411301"
+      }, {
+        "item" : "2",
+        "count" : "409583"
+      }, {
+        "item" : "51",
+        "count" : "406849"
+      }, {
+        "item" : "9",
+        "count" : "398461"
+      }, {
+        "item" : "50",
+        "count" : "395467"
+      }, {
+        "item" : "1",
+        "count" : "393978"
+      }, {
+        "item" : "10",
+        "count" : "391884"
+      }, {
+        "item" : "11",
+        "count" : "383312"
+      }, {
+        "item" : "52",
+        "count" : "381166"
+      }, {
+        "item" : "45",
+        "count" : "374497"
+      }, {
+        "item" : "48",
+        "count" : "369276"
+      }, {
+        "item" : "12",
+        "count" : "365003"
+      }, {
+        "item" : "49",
+        "count" : "361449"
+      }, {
+        "item" : "47",
+        "count" : "360996"
+      }, {
+        "item" : "40",
+        "count" : "360488"
+      } ],
+      "smallest" : "1",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497979,
+    "name" : "any",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "any",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180608,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022",
+        "count" : "1485765"
+      }, {
+        "item" : "2023",
+        "count" : "1427506"
+      }, {
+        "item" : "2024",
+        "count" : "1394344"
+      }, {
+        "item" : "2025",
+        "count" : "1365701"
+      }, {
+        "item" : "2021",
+        "count" : "1167820"
+      }, {
+        "item" : "2018",
+        "count" : "1140553"
+      }, {
+        "item" : "2019",
+        "count" : "1140110"
+      }, {
+        "item" : "2016",
+        "count" : "1119741"
+      }, {
+        "item" : "2015",
+        "count" : "1111483"
+      }, {
+        "item" : "2017",
+        "count" : "1110612"
+      }, {
+        "item" : "2020",
+        "count" : "1061791"
+      }, {
+        "item" : "2026",
+        "count" : "1055561"
+      }, {
+        "item" : "2014",
+        "count" : "1032943"
+      }, {
+        "item" : "2013",
+        "count" : "948998"
+      }, {
+        "item" : "2012",
+        "count" : "818378"
+      }, {
+        "item" : "2011",
+        "count" : "209214"
+      } ],
+      "smallest" : "2011",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497982,
+    "name" : "data_inici",
+    "dataTypeName" : "calendar_date",
+    "description" : "",
+    "fieldName" : "data_inici",
+    "position" : 3,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 14180611,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "2026-11-02T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022-12-12T00:00:00.000",
+        "count" : "37472"
+      }, {
+        "item" : "2023-12-18T00:00:00.000",
+        "count" : "37269"
+      }, {
+        "item" : "2022-11-28T00:00:00.000",
+        "count" : "36541"
+      }, {
+        "item" : "2022-12-19T00:00:00.000",
+        "count" : "35900"
+      }, {
+        "item" : "2023-12-11T00:00:00.000",
+        "count" : "35867"
+      }, {
+        "item" : "2025-01-20T00:00:00.000",
+        "count" : "35812"
+      }, {
+        "item" : "2024-01-01T00:00:00.000",
+        "count" : "35603"
+      }, {
+        "item" : "2024-01-08T00:00:00.000",
+        "count" : "35524"
+      }, {
+        "item" : "2022-11-21T00:00:00.000",
+        "count" : "35430"
+      }, {
+        "item" : "2023-12-25T00:00:00.000",
+        "count" : "35375"
+      }, {
+        "item" : "2025-12-15T00:00:00.000",
+        "count" : "35342"
+      }, {
+        "item" : "2025-12-08T00:00:00.000",
+        "count" : "35079"
+      }, {
+        "item" : "2025-12-01T00:00:00.000",
+        "count" : "34780"
+      }, {
+        "item" : "2025-01-27T00:00:00.000",
+        "count" : "34746"
+      }, {
+        "item" : "2025-01-13T00:00:00.000",
+        "count" : "34489"
+      }, {
+        "item" : "2022-11-14T00:00:00.000",
+        "count" : "34284"
+      }, {
+        "item" : "2025-01-06T00:00:00.000",
+        "count" : "34098"
+      }, {
+        "item" : "2022-12-05T00:00:00.000",
+        "count" : "33990"
+      }, {
+        "item" : "2024-01-15T00:00:00.000",
+        "count" : "33802"
+      }, {
+        "item" : "2025-02-03T00:00:00.000",
+        "count" : "33791"
+      } ],
+      "smallest" : "2011-10-03T00:00:00.000",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 21497992,
+    "name" : "data_final",
+    "dataTypeName" : "calendar_date",
+    "description" : "",
+    "fieldName" : "data_final",
+    "position" : 4,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 14180621,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "2026-11-08T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022-12-18T00:00:00.000",
+        "count" : "37472"
+      }, {
+        "item" : "2023-12-24T00:00:00.000",
+        "count" : "37269"
+      }, {
+        "item" : "2022-12-04T00:00:00.000",
+        "count" : "36541"
+      }, {
+        "item" : "2022-12-25T00:00:00.000",
+        "count" : "35900"
+      }, {
+        "item" : "2023-12-17T00:00:00.000",
+        "count" : "35867"
+      }, {
+        "item" : "2025-01-26T00:00:00.000",
+        "count" : "35812"
+      }, {
+        "item" : "2024-01-07T00:00:00.000",
+        "count" : "35603"
+      }, {
+        "item" : "2024-01-14T00:00:00.000",
+        "count" : "35524"
+      }, {
+        "item" : "2022-11-27T00:00:00.000",
+        "count" : "35430"
+      }, {
+        "item" : "2023-12-31T00:00:00.000",
+        "count" : "35375"
+      }, {
+        "item" : "2025-12-21T00:00:00.000",
+        "count" : "35342"
+      }, {
+        "item" : "2025-12-14T00:00:00.000",
+        "count" : "35079"
+      }, {
+        "item" : "2025-12-07T00:00:00.000",
+        "count" : "34780"
+      }, {
+        "item" : "2025-02-02T00:00:00.000",
+        "count" : "34746"
+      }, {
+        "item" : "2025-01-19T00:00:00.000",
+        "count" : "34489"
+      }, {
+        "item" : "2022-11-20T00:00:00.000",
+        "count" : "34284"
+      }, {
+        "item" : "2025-01-12T00:00:00.000",
+        "count" : "34098"
+      }, {
+        "item" : "2022-12-11T00:00:00.000",
+        "count" : "33990"
+      }, {
+        "item" : "2024-01-21T00:00:00.000",
+        "count" : "33802"
+      }, {
+        "item" : "2025-02-09T00:00:00.000",
+        "count" : "33791"
+      } ],
+      "smallest" : "2011-10-09T00:00:00.000",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 21497978,
+    "name" : "codi_regio",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "codi_regio",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180607,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "79",
+      "null" : "0",
+      "top" : [ {
+        "item" : "76",
+        "count" : "4585624"
+      }, {
+        "item" : "79",
+        "count" : "3251977"
+      }, {
+        "item" : "75",
+        "count" : "2564688"
+      }, {
+        "item" : "64",
+        "count" : "1883591"
+      }, {
+        "item" : "62",
+        "count" : "1315995"
+      }, {
+        "item" : "67",
+        "count" : "1156044"
+      }, {
+        "item" : "70",
+        "count" : "1062249"
+      }, {
+        "item" : "61",
+        "count" : "990094"
+      }, {
+        "item" : "63",
+        "count" : "493045"
+      }, {
+        "item" : "71",
+        "count" : "208014"
+      }, {
+        "item" : "00",
+        "count" : "79199"
+      } ],
+      "smallest" : "00",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497984,
+    "name" : "nom_regio",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "nom_regio",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180613,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona Metropolitana Nord",
+        "count" : "4585624"
+      }, {
+        "item" : "Barcelona Ciutat",
+        "count" : "3251977"
+      }, {
+        "item" : "Barcelona Metropolitana Sud",
+        "count" : "2564688"
+      }, {
+        "item" : "Girona",
+        "count" : "1883591"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "1315995"
+      }, {
+        "item" : "Catalunya Central",
+        "count" : "1156044"
+      }, {
+        "item" : "Penedès",
+        "count" : "1062249"
+      }, {
+        "item" : "Lleida",
+        "count" : "990094"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "493045"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "208014"
+      }, {
+        "item" : "No disponible",
+        "count" : "79199"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497990,
+    "name" : "codi_ambit",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "codi_ambit",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180619,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "79",
+      "null" : "0",
+      "top" : [ {
+        "item" : "76",
+        "count" : "4585624"
+      }, {
+        "item" : "79",
+        "count" : "3251977"
+      }, {
+        "item" : "75",
+        "count" : "2564688"
+      }, {
+        "item" : "64",
+        "count" : "1883591"
+      }, {
+        "item" : "62",
+        "count" : "1315995"
+      }, {
+        "item" : "67",
+        "count" : "1156044"
+      }, {
+        "item" : "70",
+        "count" : "1062249"
+      }, {
+        "item" : "61",
+        "count" : "990094"
+      }, {
+        "item" : "63",
+        "count" : "493045"
+      }, {
+        "item" : "71",
+        "count" : "208014"
+      }, {
+        "item" : "00",
+        "count" : "79199"
+      } ],
+      "smallest" : "00",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497985,
+    "name" : "nom_ambit",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "nom_ambit",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180614,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona Metropolitana Nord",
+        "count" : "4585624"
+      }, {
+        "item" : "Barcelona Ciutat",
+        "count" : "3251977"
+      }, {
+        "item" : "Barcelona Metropolitana Sud",
+        "count" : "2564688"
+      }, {
+        "item" : "Girona",
+        "count" : "1883591"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "1315995"
+      }, {
+        "item" : "Catalunya Central",
+        "count" : "1156044"
+      }, {
+        "item" : "Penedès",
+        "count" : "1062249"
+      }, {
+        "item" : "Lleida",
+        "count" : "990094"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "493045"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "208014"
+      }, {
+        "item" : "No disponible",
+        "count" : "79199"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497991,
+    "name" : "codi_abs",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "codi_abs",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180620,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "412",
+      "null" : "0",
+      "top" : [ {
+        "item" : "000",
+        "count" : "79199"
+      }, {
+        "item" : "119",
+        "count" : "72372"
+      }, {
+        "item" : "199",
+        "count" : "71434"
+      }, {
+        "item" : "202",
+        "count" : "70453"
+      }, {
+        "item" : "091",
+        "count" : "69003"
+      }, {
+        "item" : "085",
+        "count" : "68823"
+      }, {
+        "item" : "161",
+        "count" : "67314"
+      }, {
+        "item" : "186",
+        "count" : "66986"
+      }, {
+        "item" : "365",
+        "count" : "66938"
+      }, {
+        "item" : "189",
+        "count" : "66811"
+      }, {
+        "item" : "320",
+        "count" : "66454"
+      }, {
+        "item" : "359",
+        "count" : "65977"
+      }, {
+        "item" : "325",
+        "count" : "65542"
+      }, {
+        "item" : "315",
+        "count" : "65381"
+      }, {
+        "item" : "208",
+        "count" : "65096"
+      }, {
+        "item" : "126",
+        "count" : "65046"
+      }, {
+        "item" : "302",
+        "count" : "64935"
+      }, {
+        "item" : "207",
+        "count" : "64150"
+      }, {
+        "item" : "360",
+        "count" : "63964"
+      }, {
+        "item" : "015",
+        "count" : "63773"
+      } ],
+      "smallest" : "000",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497986,
+    "name" : "nom_abs",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "nom_abs",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180615,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "Vilassar de Mar",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No disponible",
+        "count" : "79199"
+      }, {
+        "item" : "Figueres",
+        "count" : "72372"
+      }, {
+        "item" : "Salt",
+        "count" : "71434"
+      }, {
+        "item" : "Sant Boi de Llobregat - 1",
+        "count" : "70453"
+      }, {
+        "item" : "Cambrils",
+        "count" : "69003"
+      }, {
+        "item" : "Blanes",
+        "count" : "68823"
+      }, {
+        "item" : "Pla d'Urgell",
+        "count" : "67314"
+      }, {
+        "item" : "Premià de Mar",
+        "count" : "66986"
+      }, {
+        "item" : "Castelldefels - 1",
+        "count" : "66938"
+      }, {
+        "item" : "Roses",
+        "count" : "66811"
+      }, {
+        "item" : "Barberà del Vallès",
+        "count" : "66454"
+      }, {
+        "item" : "Cubelles - Cunit",
+        "count" : "65977"
+      }, {
+        "item" : "Pineda de Mar",
+        "count" : "65542"
+      }, {
+        "item" : "Vall del Tenes",
+        "count" : "65381"
+      }, {
+        "item" : "Sant Feliu de Guíxols",
+        "count" : "65096"
+      }, {
+        "item" : "Girona - 3",
+        "count" : "65046"
+      }, {
+        "item" : "Montcada i Reixac",
+        "count" : "64935"
+      }, {
+        "item" : "Sant Celoni",
+        "count" : "64150"
+      }, {
+        "item" : "Martorell rural",
+        "count" : "63964"
+      }, {
+        "item" : "Banyoles",
+        "count" : "63773"
+      } ],
+      "smallest" : "Abrera",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497987,
+    "name" : "diagnostic",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "diagnostic",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180616,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "Pneumònia",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Altres IRA",
+        "count" : "8096685"
+      }, {
+        "item" : "Faringoamigdalitis",
+        "count" : "4262614"
+      }, {
+        "item" : "COVID-19",
+        "count" : "1394202"
+      }, {
+        "item" : "Grip",
+        "count" : "1213901"
+      }, {
+        "item" : "Faringoamigdalitis estreptocòccica",
+        "count" : "1032891"
+      }, {
+        "item" : "Pneumònia",
+        "count" : "741051"
+      }, {
+        "item" : "Impetigen",
+        "count" : "515293"
+      }, {
+        "item" : "Bronquiolitis",
+        "count" : "234196"
+      }, {
+        "item" : "Escarlatina",
+        "count" : "99687"
+      } ],
+      "smallest" : "Altres IRA",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497988,
+    "name" : "sexe",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "sexe",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180617,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "Home",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Dona",
+        "count" : "9296155"
+      }, {
+        "item" : "Home",
+        "count" : "8294365"
+      } ],
+      "smallest" : "Dona",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497989,
+    "name" : "grup_edat",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "grup_edat",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180618,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "No disponible",
+      "null" : "0",
+      "top" : [ {
+        "item" : "5 a 9",
+        "count" : "1431995"
+      }, {
+        "item" : "10 a 14",
+        "count" : "1139915"
+      }, {
+        "item" : "35 a 39",
+        "count" : "1106896"
+      }, {
+        "item" : "40 a 44",
+        "count" : "1056220"
+      }, {
+        "item" : "3 i 4",
+        "count" : "1056158"
+      }, {
+        "item" : "30 a 34",
+        "count" : "1050236"
+      }, {
+        "item" : "15 a 19",
+        "count" : "1043047"
+      }, {
+        "item" : "1 i 2",
+        "count" : "1025367"
+      }, {
+        "item" : "20 a 24",
+        "count" : "1016516"
+      }, {
+        "item" : "25 a 29",
+        "count" : "998162"
+      }, {
+        "item" : "45 a 49",
+        "count" : "938439"
+      }, {
+        "item" : "50 a 54",
+        "count" : "840686"
+      }, {
+        "item" : "55 a 59",
+        "count" : "787899"
+      }, {
+        "item" : "80 o més",
+        "count" : "781542"
+      }, {
+        "item" : "60 a 64",
+        "count" : "749068"
+      }, {
+        "item" : "65 a 69",
+        "count" : "694403"
+      }, {
+        "item" : "0",
+        "count" : "657344"
+      }, {
+        "item" : "70 a 74",
+        "count" : "638132"
+      }, {
+        "item" : "75 a 79",
+        "count" : "578344"
+      }, {
+        "item" : "No disponible",
+        "count" : "151"
+      } ],
+      "smallest" : "0",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497983,
+    "name" : "index_socioeconomic",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "index_socioeconomic",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14180612,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "4",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3",
+        "count" : "8979602"
+      }, {
+        "item" : "4",
+        "count" : "4028294"
+      }, {
+        "item" : "2",
+        "count" : "3486034"
+      }, {
+        "item" : "1",
+        "count" : "746185"
+      }, {
+        "item" : "-1",
+        "count" : "350405"
+      } ],
+      "smallest" : "1",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : { }
+  }, {
+    "id" : 21497977,
+    "name" : "casos",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "casos",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 14180606,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "117",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "9242696"
+      }, {
+        "item" : "2",
+        "count" : "3735326"
+      }, {
+        "item" : "3",
+        "count" : "1918129"
+      }, {
+        "item" : "4",
+        "count" : "1064244"
+      }, {
+        "item" : "5",
+        "count" : "614501"
+      }, {
+        "item" : "6",
+        "count" : "365751"
+      }, {
+        "item" : "7",
+        "count" : "222868"
+      }, {
+        "item" : "8",
+        "count" : "137648"
+      }, {
+        "item" : "9",
+        "count" : "87607"
+      }, {
+        "item" : "10",
+        "count" : "57017"
+      }, {
+        "item" : "11",
+        "count" : "37370"
+      }, {
+        "item" : "12",
+        "count" : "25221"
+      }, {
+        "item" : "13",
+        "count" : "17591"
+      }, {
+        "item" : "14",
+        "count" : "12560"
+      }, {
+        "item" : "15",
+        "count" : "9160"
+      }, {
+        "item" : "16",
+        "count" : "6841"
+      }, {
+        "item" : "17",
+        "count" : "5391"
+      }, {
+        "item" : "18",
+        "count" : "4161"
+      }, {
+        "item" : "19",
+        "count" : "3348"
+      }, {
+        "item" : "20",
+        "count" : "2777"
+      } ],
+      "smallest" : "1",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 21497981,
+    "name" : "poblacio",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "poblacio",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 14180610,
+    "cachedContents" : {
+      "non_null" : "17590520",
+      "largest" : "3021",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "119301"
+      }, {
+        "item" : "564",
+        "count" : "23710"
+      }, {
+        "item" : "542",
+        "count" : "23599"
+      }, {
+        "item" : "444",
+        "count" : "22935"
+      }, {
+        "item" : "579",
+        "count" : "22610"
+      }, {
+        "item" : "549",
+        "count" : "22607"
+      }, {
+        "item" : "581",
+        "count" : "22590"
+      }, {
+        "item" : "541",
+        "count" : "22467"
+      }, {
+        "item" : "577",
+        "count" : "22451"
+      }, {
+        "item" : "519",
+        "count" : "22309"
+      }, {
+        "item" : "606",
+        "count" : "22248"
+      }, {
+        "item" : "525",
+        "count" : "22061"
+      }, {
+        "item" : "562",
+        "count" : "21965"
+      }, {
+        "item" : "592",
+        "count" : "21956"
+      }, {
+        "item" : "573",
+        "count" : "21825"
+      }, {
+        "item" : "543",
+        "count" : "21773"
+      }, {
+        "item" : "536",
+        "count" : "21738"
+      }, {
+        "item" : "625",
+        "count" : "21682"
+      }, {
+        "item" : "438",
+        "count" : "21624"
+      }, {
+        "item" : "570",
+        "count" : "21546"
+      } ],
+      "smallest" : "0",
+      "count" : "17590520",
+      "cardinality" : "17590520"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "precision" : "0"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Setmanal"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Syndromic surveillance of infections in Primary Care",
+        "Nombre del conjunto de datos (ES)" : "Vigilancia sindrómica de infecciones en Atención Primaria"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "sivic", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

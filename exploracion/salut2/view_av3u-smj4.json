@@ -1,0 +1,414 @@
+{
+  "id" : "av3u-smj4",
+  "name" : "Mapa sanitari operatiu de Catalunya",
+  "assetType" : "map",
+  "attribution" : "Catàleg Tècnic de Dades. Departament de Salut",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1707988133,
+  "description" : "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.\n\nEls següents conjunts de dades descriuen la divisió territorial sanitaria operativa a Catalunya a diferents nivells:<br>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye\">Regions sanitàries</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp\">Sectors sanitaris</a>\n-- <a href=\"https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e\">Àrees bàsiques salut</a>\n\nLa divisió territorial sanitària oficial de Catalunya s’estableix per decrets del Govern i per ordres del Departament de Salut que es publiquen al Diari Oficial de la Generalitat de Catalunya (DOGC), i està descrita en la següent pàgina web del Departament de Salut: \n<a href=\"https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia\">https://salutweb.gencat.cat/ca/detalls/Articles/Cataleg-de-descarrega-de-cartografia</a>.\n\n-- Les àrees bàsiques de salut (ABS) són les unitats territorials bàsiques del sistema sanitari a Catalunya, en les quals es presta l'atenció primària i comunitària de salut d'accés directe de la població, i estan regulades a la Llei 15/1990, de 9 de juliol, d'ordenació sanitària de Catalunya i a les diverses ordres del Departament de Salut per les quals se n'actualitza periòdicament la seva denominació i delimitació.\n<br>\n-- Les regions i els sectors sanitaris són les demarcacions territorials amb què s'estructura el Servei Català de la Salut, es regulen per decrets del Govern, i com a àrees geogràfiques es defineixen: els sectors sanitaris, com a agrupació d'àrees bàsiques de salut, i les regions sanitàries, com a agrupació de sectors sanitaris.\n<br>\nLes ordres del Departament de Salut relatives a les ABS poden modificar la seva denominació i delimitació i crear-ne de noves, i quan es tracta de la creació de noves ABS, les pròpies ordres preveuen la possibilitat que l'efectivitat de la nova delimitació no sigui immediata, per la necessària reordenació prèvia dels recursos i de l'activitat assistencial per adaptar-los al canvi. Durant el temps necessari per a aquesta reordenació, l'activitat assistencial continua prenent com a referència la divisió territorial prèviament vigent, a la qual continuen referides totes les dades relatives a la demanda, els recursos i l'activitat del sistema de salut.\n<br>\nEn aquesta versió operativa del mapa sanitari de Catalunya, la informació publicada és l'efectiva en cada moment i, per la raó explicada en el paràgraf anterior, temporalment pot no coincidir amb la delimitació aprovada per la normativa vigent de referència, eventualitat que la pròpia normativa preveu.",
+  "diciBackend" : false,
+  "displayType" : "visualization_canvas_map",
+  "downloadCount" : 12,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "modifyingViewUid" : "tqzv-uu8e",
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 3191568,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1794470051,
+  "publicationGroup" : 1562090,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1766135113,
+  "rowsUpdatedBy" : "vdnf-89vw",
+  "tableId" : 2035745,
+  "totalTimesRated" : 0,
+  "viewCount" : 19752,
+  "viewLastModified" : 1794470051,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1707988463,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1582975,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1707988463,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1707988463,
+      "failureCount" : 0,
+      "startedAt" : 1707988463,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "i82a-eakh",
+      "displayName" : "Dades Obertes de Salut"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "displayFormat" : {
+    "visualizationCanvasMetadata" : {
+      "vifs" : [ {
+        "configuration" : {
+          "viewSourceDataLink" : true,
+          "mapCenterAndZoom" : {
+            "center" : {
+              "lng" : 1.4286201018110205,
+              "lat" : 41.69915306701907
+            },
+            "zoom" : 6.72476848926468
+          },
+          "showDataTableControl" : false,
+          "basemapOptions" : {
+            "searchBoundaryLowerRightLongitude" : 3.33248929238704,
+            "searchBoundaryUpperLeftLongitude" : 0.1590808160336397,
+            "searchBoundaryUpperLeftLatitude" : 42.8614503147133,
+            "navigationControl" : true,
+            "basemapStyle" : "mapbox://styles/mapbox/streets-v12",
+            "geoCoderControl" : true,
+            "geoLocateControl" : true,
+            "searchBoundaryLowerRightLatitude" : 40.52292433336921
+          },
+          "mapPitchAndBearing" : {
+            "bearing" : 0,
+            "pitch" : 0
+          },
+          "datasetMetadata" : false,
+          "panAndZoom" : true,
+          "showMultiplePointsSymbolInLegend" : true,
+          "locateUser" : false
+        },
+        "series" : [ {
+          "visible" : true,
+          "color" : {
+            "primary" : "#eb6900"
+          },
+          "mapOptions" : {
+            "shapeOutlineColor" : "#887766",
+            "simplificationLevel" : "1",
+            "shapeFillOpacity" : 0,
+            "mapType" : "boundaryMap",
+            "shapeOutlineWidth" : 1,
+            "additionalFlyoutColumns" : [ "nom", "codi", "nom_sector_sanitari", "codi_sector_sanitari", "nom_regio_sanitaria", "codi_regio_sanitaria" ]
+          },
+          "showLegend" : true,
+          "type" : "map",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "count"
+            },
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "name" : "àrees bàsiques de salut",
+            "filters" : [ {
+              "dataTypeName" : "text",
+              "columns" : [ {
+                "fieldName" : "nom",
+                "datasetUid" : "tqzv-uu8e"
+              } ],
+              "function" : "noop",
+              "orderBy" : {
+                "parameter" : "alphabetical",
+                "sort" : "asc"
+              },
+              "isDrilldown" : false,
+              "reactKey" : "1",
+              "isHidden" : false
+            }, {
+              "dataTypeName" : "text",
+              "columns" : [ {
+                "fieldName" : "codi",
+                "datasetUid" : "tqzv-uu8e"
+              } ],
+              "function" : "noop",
+              "orderBy" : {
+                "parameter" : "alphabetical",
+                "sort" : "asc"
+              },
+              "isDrilldown" : false,
+              "reactKey" : "2",
+              "isHidden" : false
+            }, {
+              "dataTypeName" : "text",
+              "columns" : [ {
+                "fieldName" : "nom_sector_sanitari",
+                "datasetUid" : "tqzv-uu8e"
+              } ],
+              "function" : "noop",
+              "orderBy" : {
+                "parameter" : "alphabetical",
+                "sort" : "asc"
+              },
+              "isDrilldown" : false,
+              "reactKey" : "3",
+              "isHidden" : false
+            }, {
+              "dataTypeName" : "text",
+              "columns" : [ {
+                "fieldName" : "codi_sector_sanitari",
+                "datasetUid" : "tqzv-uu8e"
+              } ],
+              "function" : "noop",
+              "orderBy" : {
+                "parameter" : "alphabetical",
+                "sort" : "asc"
+              },
+              "isDrilldown" : false,
+              "reactKey" : "4",
+              "isHidden" : false
+            }, {
+              "dataTypeName" : "text",
+              "columns" : [ {
+                "fieldName" : "nom_regio_sanitaria",
+                "datasetUid" : "tqzv-uu8e"
+              } ],
+              "function" : "noop",
+              "orderBy" : {
+                "parameter" : "alphabetical",
+                "sort" : "asc"
+              },
+              "isDrilldown" : false,
+              "reactKey" : "5",
+              "isHidden" : false
+            }, {
+              "dataTypeName" : "text",
+              "columns" : [ {
+                "fieldName" : "codi_regio_sanitaria",
+                "datasetUid" : "tqzv-uu8e"
+              } ],
+              "function" : "noop",
+              "orderBy" : {
+                "parameter" : "alphabetical",
+                "sort" : "asc"
+              },
+              "isDrilldown" : false,
+              "reactKey" : "6",
+              "isHidden" : false
+            } ],
+            "type" : "socrata.soql",
+            "datasetUid" : "tqzv-uu8e",
+            "dimension" : {
+              "columnName" : "geometry"
+            }
+          },
+          "primary" : true
+        }, {
+          "visible" : true,
+          "color" : {
+            "primary" : "#eb6900"
+          },
+          "mapOptions" : {
+            "shapeOutlineColor" : "#2244dd",
+            "simplificationLevel" : "1",
+            "shapeFillOpacity" : 0,
+            "mapType" : "boundaryMap",
+            "shapeOutlineWidth" : 1,
+            "additionalFlyoutColumns" : [ "nom", "codi" ]
+          },
+          "showLegend" : true,
+          "type" : "map",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "count"
+            },
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "name" : "sectors sanitaris",
+            "type" : "socrata.soql",
+            "datasetUid" : "x6cr-7awp",
+            "dimension" : {
+              "columnName" : "geometry"
+            }
+          },
+          "primary" : false
+        }, {
+          "visible" : true,
+          "color" : {
+            "primary" : "#eb6900"
+          },
+          "mapOptions" : {
+            "shapeOutlineColor" : "#554433",
+            "simplificationLevel" : "1",
+            "shapeFillOpacity" : 0,
+            "mapType" : "boundaryMap",
+            "shapeOutlineWidth" : 1.5,
+            "additionalFlyoutColumns" : [ "nom", "codi" ]
+          },
+          "showLegend" : true,
+          "type" : "map",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "count"
+            },
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "name" : "regions sanitàries",
+            "type" : "socrata.soql",
+            "datasetUid" : "q2jd-tqye",
+            "dimension" : {
+              "columnName" : "geometry"
+            }
+          },
+          "primary" : false
+        } ],
+        "format" : {
+          "type" : "visualization_interchange_format",
+          "version" : 10
+        },
+        "description" : "",
+        "id" : "b52ca59b-03a7-4225-a1a2-76b422039592",
+        "title" : "",
+        "currentMapLayerIndex" : 2
+      } ],
+      "filters" : [ {
+        "dataTypeName" : "text",
+        "columns" : [ {
+          "fieldName" : "nom",
+          "datasetUid" : "tqzv-uu8e"
+        } ],
+        "function" : "noop",
+        "orderBy" : {
+          "parameter" : "alphabetical",
+          "sort" : "asc"
+        },
+        "isDrilldown" : false,
+        "reactKey" : "1",
+        "isHidden" : false
+      }, {
+        "dataTypeName" : "text",
+        "columns" : [ {
+          "fieldName" : "codi",
+          "datasetUid" : "tqzv-uu8e"
+        } ],
+        "function" : "noop",
+        "orderBy" : {
+          "parameter" : "alphabetical",
+          "sort" : "asc"
+        },
+        "isDrilldown" : false,
+        "reactKey" : "2",
+        "isHidden" : false
+      }, {
+        "dataTypeName" : "text",
+        "columns" : [ {
+          "fieldName" : "nom_sector_sanitari",
+          "datasetUid" : "tqzv-uu8e"
+        } ],
+        "function" : "noop",
+        "orderBy" : {
+          "parameter" : "alphabetical",
+          "sort" : "asc"
+        },
+        "isDrilldown" : false,
+        "reactKey" : "3",
+        "isHidden" : false
+      }, {
+        "dataTypeName" : "text",
+        "columns" : [ {
+          "fieldName" : "codi_sector_sanitari",
+          "datasetUid" : "tqzv-uu8e"
+        } ],
+        "function" : "noop",
+        "orderBy" : {
+          "parameter" : "alphabetical",
+          "sort" : "asc"
+        },
+        "isDrilldown" : false,
+        "reactKey" : "4",
+        "isHidden" : false
+      }, {
+        "dataTypeName" : "text",
+        "columns" : [ {
+          "fieldName" : "nom_regio_sanitaria",
+          "datasetUid" : "tqzv-uu8e"
+        } ],
+        "function" : "noop",
+        "orderBy" : {
+          "parameter" : "alphabetical",
+          "sort" : "asc"
+        },
+        "isDrilldown" : false,
+        "reactKey" : "5",
+        "isHidden" : false
+      }, {
+        "dataTypeName" : "text",
+        "columns" : [ {
+          "fieldName" : "codi_regio_sanitaria",
+          "datasetUid" : "tqzv-uu8e"
+        } ],
+        "function" : "noop",
+        "orderBy" : {
+          "parameter" : "alphabetical",
+          "sort" : "asc"
+        },
+        "isDrilldown" : false,
+        "reactKey" : "6",
+        "isHidden" : false
+      } ],
+      "version" : 1
+    }
+  },
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Basic health areas",
+        "Nombre del conjunto de datos (ES)" : "Áreas básicas salud"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Salut",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Nom d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "visualization" ]
+  },
+  "owner" : {
+    "id" : "76mf-34jr",
+    "displayName" : "Álex Artigas",
+    "screenName" : "Álex Artigas",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "flags" : [ "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,629 @@
+{
+  "id" : "7dt9-azyt",
+  "name" : "Mortalitat per tot tipus de causa a Catalunya",
+  "assetType" : "dataset",
+  "attribution" : "Instituto de Salud Carlos III (ISCIII)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1587997647,
+  "description" : "MoMo és un sistema per a la Vigilància de la mortalitat diària per totes les causes a Espanya. Té com a objectiu identificar patrons inusuals de mortalitat i estimar l'impacte en la mortalitat de la població de qualsevol esdeveniment d'importància per a guiar l'acció en Salut Pública.\n\nEstà gestionat pel CNE i utilitza dades procedents de diverses administracions públiques.\n\nEn aquest dataset, s'obtenen les dades del sistema MoMo i es filtren per mostrar les dades corresponents a Catalunya.\n\nMés informació:\nhttps://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2273,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2304556,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1652107370,
+  "publicationGroup" : 1148023,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1794816156,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1567369,
+  "totalTimesRated" : 0,
+  "viewCount" : 8729,
+  "viewLastModified" : 1794816023,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1589363314,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1131671,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1589363314,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1589363314,
+      "failureCount" : 0,
+      "startedAt" : 1589363314,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 21339786,
+    "name" : "Sexe",
+    "dataTypeName" : "text",
+    "description" : "Classificació per sexe",
+    "fieldName" : "sexe",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9360712,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "tots",
+      "null" : "0",
+      "top" : [ {
+        "item" : "dones",
+        "count" : "34696"
+      }, {
+        "item" : "homes",
+        "count" : "34696"
+      }, {
+        "item" : "tots",
+        "count" : "34696"
+      } ],
+      "smallest" : "dones",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : { }
+  }, {
+    "id" : 21339787,
+    "name" : "Edat",
+    "dataTypeName" : "text",
+    "description" : "Grup d'edats",
+    "fieldName" : "edad",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 9360714,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "tots",
+      "null" : "0",
+      "top" : [ {
+        "item" : "edat 0-14",
+        "count" : "13011"
+      }, {
+        "item" : "edat 15-44",
+        "count" : "13011"
+      }, {
+        "item" : "edat 45-64",
+        "count" : "13011"
+      }, {
+        "item" : "edat >= 65",
+        "count" : "13011"
+      }, {
+        "item" : "edat 65-74",
+        "count" : "13011"
+      }, {
+        "item" : "edat 75-84",
+        "count" : "13011"
+      }, {
+        "item" : "edat >= 85",
+        "count" : "13011"
+      }, {
+        "item" : "tots",
+        "count" : "13011"
+      } ],
+      "smallest" : "edat 0-14",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : { }
+  }, {
+    "id" : 21339788,
+    "name" : "Data",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data a la que fan referència les dades",
+    "fieldName" : "data",
+    "position" : 9,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 9360715,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "2026-11-15T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2017-12-29T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2021-09-11T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-11-19T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2015-12-24T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-03-02T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2024-11-14T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2025-04-10T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2017-02-01T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2021-10-15T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2021-03-08T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2017-05-22T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2022-11-08T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-05-10T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2021-11-06T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2026-07-15T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2024-11-22T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2023-10-26T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2022-01-10T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2016-07-02T00:00:00.000",
+        "count" : "24"
+      }, {
+        "item" : "2021-12-15T00:00:00.000",
+        "count" : "24"
+      } ],
+      "smallest" : "2015-01-01T00:00:00.000",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 21339789,
+    "name" : "Defuncions observades",
+    "dataTypeName" : "number",
+    "description" : "Defuncions observades (es poden incloure correccions per retràs)",
+    "fieldName" : "defuncions_observades",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9360701,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "658.16",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10019"
+      }, {
+        "item" : "1.01",
+        "count" : "3741"
+      }, {
+        "item" : "1.02",
+        "count" : "2535"
+      }, {
+        "item" : "2.04",
+        "count" : "1372"
+      }, {
+        "item" : "2.01",
+        "count" : "1265"
+      }, {
+        "item" : "3.02",
+        "count" : "1126"
+      }, {
+        "item" : "3.06",
+        "count" : "881"
+      }, {
+        "item" : "2.02",
+        "count" : "774"
+      }, {
+        "item" : "4.03",
+        "count" : "655"
+      }, {
+        "item" : "6.04",
+        "count" : "617"
+      }, {
+        "item" : "4.08",
+        "count" : "540"
+      }, {
+        "item" : "5.03",
+        "count" : "540"
+      }, {
+        "item" : "7.05",
+        "count" : "482"
+      }, {
+        "item" : "9.06",
+        "count" : "473"
+      }, {
+        "item" : "18.12",
+        "count" : "430"
+      }, {
+        "item" : "1",
+        "count" : "413"
+      }, {
+        "item" : "13.09",
+        "count" : "402"
+      }, {
+        "item" : "10.07",
+        "count" : "395"
+      }, {
+        "item" : "8.05",
+        "count" : "390"
+      }, {
+        "item" : "12.08",
+        "count" : "389"
+      } ],
+      "smallest" : "0",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 21339792,
+    "name" : "Defuncions esperades",
+    "dataTypeName" : "number",
+    "description" : "Defuncions esperades resultants del model",
+    "fieldName" : "defuncions_esperades",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9360703,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "233.54",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.3",
+        "count" : "757"
+      }, {
+        "item" : "0.29",
+        "count" : "705"
+      }, {
+        "item" : "0.28",
+        "count" : "674"
+      }, {
+        "item" : "0.27",
+        "count" : "647"
+      }, {
+        "item" : "0.37",
+        "count" : "593"
+      }, {
+        "item" : "0.47",
+        "count" : "550"
+      }, {
+        "item" : "0.31",
+        "count" : "491"
+      }, {
+        "item" : "0.75",
+        "count" : "472"
+      }, {
+        "item" : "0.43",
+        "count" : "449"
+      }, {
+        "item" : "1.19",
+        "count" : "442"
+      }, {
+        "item" : "0.32",
+        "count" : "435"
+      }, {
+        "item" : "0.39",
+        "count" : "432"
+      }, {
+        "item" : "0.67",
+        "count" : "386"
+      }, {
+        "item" : "0.38",
+        "count" : "363"
+      }, {
+        "item" : "1.12",
+        "count" : "353"
+      }, {
+        "item" : "1.2",
+        "count" : "342"
+      }, {
+        "item" : "0.4",
+        "count" : "336"
+      }, {
+        "item" : "0.76",
+        "count" : "331"
+      }, {
+        "item" : "0.34",
+        "count" : "327"
+      }, {
+        "item" : "1.18",
+        "count" : "326"
+      } ],
+      "smallest" : "0.26",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 21339793,
+    "name" : "Defuncions esperades (Límit inferior)",
+    "dataTypeName" : "number",
+    "description" : "Límit inferior de l'interval de confiança de les defuncions esperades, corresponent al percentil 1 de la distribució",
+    "fieldName" : "defuncions_esperades_inf",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9360706,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "199",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "26022"
+      }, {
+        "item" : "2",
+        "count" : "4411"
+      }, {
+        "item" : "10",
+        "count" : "3617"
+      }, {
+        "item" : "6",
+        "count" : "3160"
+      }, {
+        "item" : "13",
+        "count" : "2574"
+      }, {
+        "item" : "11",
+        "count" : "2488"
+      }, {
+        "item" : "1",
+        "count" : "2395"
+      }, {
+        "item" : "12",
+        "count" : "1993"
+      }, {
+        "item" : "8",
+        "count" : "1915"
+      }, {
+        "item" : "9",
+        "count" : "1892"
+      }, {
+        "item" : "5",
+        "count" : "1869"
+      }, {
+        "item" : "7",
+        "count" : "1862"
+      }, {
+        "item" : "14",
+        "count" : "1754"
+      }, {
+        "item" : "3",
+        "count" : "1671"
+      }, {
+        "item" : "16",
+        "count" : "1187"
+      }, {
+        "item" : "17",
+        "count" : "1035"
+      }, {
+        "item" : "15",
+        "count" : "1016"
+      }, {
+        "item" : "62",
+        "count" : "943"
+      }, {
+        "item" : "64",
+        "count" : "933"
+      }, {
+        "item" : "61",
+        "count" : "916"
+      } ],
+      "smallest" : "0",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 21339794,
+    "name" : "Defuncions esperades (Límit superior)",
+    "dataTypeName" : "number",
+    "description" : "Límit superior de l'interval de confiança de les defuncions esperades, corresponent al percentil 99 de la distribució",
+    "fieldName" : "defuncions_esperades_sup",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9360705,
+    "cachedContents" : {
+      "non_null" : "104088",
+      "largest" : "270",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2",
+        "count" : "7223"
+      }, {
+        "item" : "3",
+        "count" : "5788"
+      }, {
+        "item" : "4",
+        "count" : "3839"
+      }, {
+        "item" : "9",
+        "count" : "3211"
+      }, {
+        "item" : "13",
+        "count" : "3065"
+      }, {
+        "item" : "7",
+        "count" : "2948"
+      }, {
+        "item" : "31",
+        "count" : "2440"
+      }, {
+        "item" : "14",
+        "count" : "2438"
+      }, {
+        "item" : "22",
+        "count" : "2076"
+      }, {
+        "item" : "30",
+        "count" : "1778"
+      }, {
+        "item" : "36",
+        "count" : "1536"
+      }, {
+        "item" : "35",
+        "count" : "1521"
+      }, {
+        "item" : "23",
+        "count" : "1492"
+      }, {
+        "item" : "32",
+        "count" : "1416"
+      }, {
+        "item" : "6",
+        "count" : "1389"
+      }, {
+        "item" : "29",
+        "count" : "1310"
+      }, {
+        "item" : "24",
+        "count" : "1273"
+      }, {
+        "item" : "33",
+        "count" : "1271"
+      }, {
+        "item" : "34",
+        "count" : "1198"
+      }, {
+        "item" : "8",
+        "count" : "1126"
+      } ],
+      "smallest" : "2",
+      "count" : "104088",
+      "cardinality" : "104088"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "data",
+        "ascending" : false
+      }, {
+        "columnFieldName" : "sexe",
+        "ascending" : false
+      }, {
+        "columnFieldName" : "edad",
+        "ascending" : false
+      } ]
+    },
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Diària"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Mortality for all kinds of causes in Catalonia",
+        "Nombre del conjunto de datos (ES)" : "Mortalidad por todo tipo de causa en Cataluña"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Tipus actor" : "Universitats públiques"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Sense informació geogràfica",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 21339788,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 21339786,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 21339787,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "momo", "defuncions", "mortalitat", "estadística", "model", "relacionat covid" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
