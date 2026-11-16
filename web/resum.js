@@ -26,6 +26,11 @@
       h_pres: "Pressupost de l'ajuntament", h_pres_sub: (a) => `Liquidació del ${a}, euros per habitant. Font: Generalitat de Catalunya, liquidació dels pressupostos dels ens locals.`,
       ingressos: "Ingressos", despeses: "Despeses", saldo: "Saldo", per_hab: "€ per habitant", prov_mitjana: "mitjana provincial",
       evol_pres: "Ingressos i despeses per habitant",
+      h_com: "Comerç", h_com_sub: (a, n, s) => `Cens d'establiments comercials ${a}: ${n} establiments i ${s} m² de superfície de venda. Font: Generalitat de Catalunya.`,
+      com_sect: "Establiments per 1.000 habitants, per sector", com_evol: "Establiments per 1.000 habitants", cat: "Catalunya",
+      com_buits: (b, tot, p, pc) => `Locals buits (2022): <b>${b} de ${tot}</b> locals en planta baixa, el ${p}. Mitjana de les ciutats catalanes: ${pc}.`,
+      com_grans: "Grans establiments amb llicència comercial", m2: "m²",
+      sect: { alim: "Alimentació", qna: "Quotidià no alimentari", pers: "Roba i complements", llar: "Equipament de la llar", lleure: "Lleure i cultura", auto: "Automoció i carburants", mixt: "Comerç mixt", altres: "Altres" },
     },
     es: {
       resum: "En resumen", destaca: "Lo que lo hace distinto", taula: "Datos clave",
@@ -47,6 +52,11 @@
       h_pres: "Presupuesto del ayuntamiento", h_pres_sub: (a) => `Liquidación de ${a}, euros por habitante. Fuente: Generalitat de Catalunya, liquidación de los presupuestos de los entes locales.`,
       ingressos: "Ingresos", despeses: "Gastos", saldo: "Saldo", per_hab: "€ por habitante", prov_mitjana: "media provincial",
       evol_pres: "Ingresos y gastos por habitante",
+      h_com: "Comercio", h_com_sub: (a, n, s) => `Censo de establecimientos comerciales ${a}: ${n} establecimientos y ${s} m² de superficie de venta. Fuente: Generalitat de Catalunya.`,
+      com_sect: "Establecimientos por 1.000 habitantes, por sector", com_evol: "Establecimientos por 1.000 habitantes", cat: "Cataluña",
+      com_buits: (b, tot, p, pc) => `Locales vacíos (2022): <b>${b} de ${tot}</b> locales en planta baja, el ${p}. Media de las ciudades catalanas: ${pc}.`,
+      com_grans: "Grandes establecimientos con licencia comercial", m2: "m²",
+      sect: { alim: "Alimentación", qna: "Cotidiano no alimentario", pers: "Ropa y complementos", llar: "Equipamiento del hogar", lleure: "Ocio y cultura", auto: "Automoción y carburantes", mixt: "Comercio mixto", altres: "Otros" },
     },
   };
   const tx = (k, ...a) => { const v = TX[LANG][k]; return typeof v === "function" ? v(...a) : v; };
@@ -202,6 +212,24 @@
       <p class="fb-font">${LANG === "ca" ? "Barra: municipi. Marca i xifra petita: mitjana de la província (ponderada per població)." : "Barra: municipio. Marca y cifra pequeña: media de la provincia (ponderada por población)."}</p></section>`;
   }
 
+  function blocComerc(m) {
+    const c = m.com, a = D.anys && D.anys.com;
+    if (!c || !a || !c.n || c.n[a] == null) return "";
+    const R = D.com_ref || {}, ref = (k, z) => (R[k] && R[k][a] ? R[k][a][z] : null);
+    const ks = Object.keys(TX[LANG].sect).filter((k) => c["s_" + k] && c["s_" + k][a] != null);
+    const mx = Math.max(...ks.map((k) => Math.max(c["s_" + k][a], ref("s_" + k, "gi") || 0)), 0.1);
+    const files = ks.map((k) => { const v = c["s_" + k][a], pv = ref("s_" + k, "gi");
+      return `<li><span class="nb-nom">${TX[LANG].sect[k]}</span><span class="nb-barra"><b style="width:${(100 * v) / mx}%"></b>${pv != null ? `<i class="fx-ref" style="left:${(100 * pv) / mx}%"></i>` : ""}</span><span class="nb-v">${fmt(v, 1)}<small>${pv != null ? fmt(pv, 1) : ""}</small></span></li>`; }).join("");
+    const b = m.com_f && m.com_f.buits, rb = (D.ref || {}).com_buits || {};
+    const g = ((m.com_f && m.com_f.grans) || []).slice(0, 6);
+    return `<section class="fitxa-bloc fx-com"><h3>${tx("h_com")}</h3><p class="fb-sub">${tx("h_com_sub", a, fmt(c.n[a]), fmt(c.sup && c.sup[a]))}</p>
+      <div class="fx-dues"><div><p class="fx-sub2">${tx("com_sect")}</p><ul class="nb fx-nb">${files}</ul></div>
+      <div><figure class="grafic"><figcaption><span>${tx("com_evol")}</span></figcaption><div class="g-com"></div></figure></div></div>
+      ${b ? `<p class="fx-dada">${tx("com_buits", fmt(b.buits), fmt(b.total), pct((100 * b.buits) / b.total, 1), pct(rb.cat, 1))}</p>` : ""}
+      ${g.length ? `<p class="fx-sub2">${tx("com_grans")}</p><ul class="fx-grans">${g.map((e) => `<li><span>${e.nom}</span><span>${e.f || ""}</span><span>${e.s ? `${fmt(e.s)} ${tx("m2")}` : ""}</span></li>`).join("")}</ul>` : ""}
+      <p class="fb-font">${LANG === "ca" ? "Barra: municipi. Marca i xifra petita: província. Sense cens el 2020 ni el 2022." : "Barra: municipio. Marca y cifra pequeña: provincia. Sin censo en 2020 ni en 2022."}</p></section>`;
+  }
+
   window.fitxaResum = (cont, extra, m) => {
     if (!window.indMapa || !cont) return;
     const ds = destaca(m);
@@ -212,7 +240,16 @@
       ${dsHtml ? `<div class="rs-dest"><h4>${tx("destaca")}</h4><ol>${dsHtml}</ol><p class="rt-nota">${LANG === "ca" ? `Posició entre els ${D.municipios.length} municipis.` : `Posición entre los ${D.municipios.length} municipios.`}</p></div>` : ""}</div>
       ${taula(m)}</section>`;
     if (!extra) return;
-    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}`;
+    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}`;
+    const gc = extra.querySelector(".g-com");
+    if (gc) {
+      const R = (D.com_ref || {}).est_h || {}, z = (k) => Object.fromEntries(Object.entries(R).map(([a, o]) => [a, o[k]]).filter(([, v]) => v != null));
+      grafLinia(gc, [
+        { nom: m.nom, color: "var(--serie-1)", dades: m.com.est_h || {} },
+        { nom: LANG === "ca" ? "Província" : "Provincia", color: "var(--accent)", dades: z("gi") },
+        { nom: tx("cat"), color: "var(--text-3)", dades: z("cat") },
+      ], (v) => fmt(v, 1));
+    }
     const gp = extra.querySelector(".g-pob");
     if (gp) {
       const d = { ...(m.pob_s || {}) };
