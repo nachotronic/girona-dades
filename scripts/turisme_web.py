@@ -212,8 +212,10 @@ def _mesos(ser, desde="2016-01"):
 ZONES = {"gi": "Girona", "cat": "Cataluña", "esp": "Nacional"}
 
 
-def _punts_anuals(d, taules, noms):
-    """{ine: {any: pernoctaciones}} de los puntos turísticos de Girona (residentes en España + extranjero)."""
+def _punts_anuals(d, taules, noms, minim=12):
+    """{ine: {any: pernoctaciones}} de los puntos turísticos de Girona (residentes en España + extranjero).
+    Las tablas van en orden de preferencia (base nueva primero); cada año sale de la primera que lo tiene completo."""
+    res = {}
     for t_ in taules:
         agg, vist = {}, set()
         for s_ in _series(d, t_, "Pernoctaciones"):
@@ -224,12 +226,14 @@ def _punts_anuals(d, taules, noms):
             if k in vist:
                 continue
             vist.add(k)
-            for a, v in _anual(_mensual(s_), minim=6).items():
-                agg.setdefault(ine, {}).setdefault(a, 0)
-                agg[ine][a] += v
-        if agg:
-            return agg
-    return {}
+            for a, v in _anual(_mensual(s_), minim=minim).items():
+                if a < ANY_ACTUAL:
+                    agg.setdefault(ine, {}).setdefault(a, 0)
+                    agg[ine][a] += v
+        for ine, per in agg.items():
+            for a, v in per.items():
+                res.setdefault(ine, {}).setdefault(a, v)
+    return res
 
 
 def _ine_punt(nom, noms):
@@ -316,8 +320,8 @@ def prov_series(d, mov_prov, ieet_com, reg_tot, aena, noms=None, noms_orig=None)
                              "series": {"gi": _linia(pers["hotel"], 2005, 0), "cat": _linia(pers["camp"], 2005, 0),
                                         "esp": _linia({a: pers["apt"].get(a, 0) + pers["rural"].get(a, 0) for a in pers["apt"]}, 2005, 0)}}
     # 9. Puntos turísticos: pernoctaciones en hoteles y campings del último año completo
-    ph = _punts_anuals(d, ("75197", "2078"), noms)
-    pc = _punts_anuals(d, ("75194", "2084"), noms)
+    ph = _punts_anuals(d, ("75197", "2078"), noms, minim=8)
+    pc = _punts_anuals(d, ("75194", "2084"), noms, minim=6)
     if ph or pc:
         anys_ = [a for v in list(ph.values()) + list(pc.values()) for a in v]
         a = max(anys_)
@@ -515,9 +519,9 @@ def aena_anual():
 def punts_municipis(d, noms):
     res = {}
     def afegeix(clau, taules, filtre, op, minim, escala=1.0):
-        vist = set()
+        # Cada año sale de la primera tabla (base nueva) que lo tiene; el año en curso no, porque está incompleto
         for t_ in taules:
-            agg = {}
+            agg, vist = {}, set()
             for s_ in _series(d, t_, *filtre):
                 if "fin de semana" in s_["nom"]:
                     continue
@@ -529,15 +533,16 @@ def punts_municipis(d, noms):
                     continue
                 vist.add(k)
                 for a, v in _anual(_mensual(s_), minim=minim, op=op).items():
-                    agg.setdefault(ine, {}).setdefault(a, []).append(v)
+                    if a < ANY_ACTUAL:
+                        agg.setdefault(ine, {}).setdefault(a, []).append(v)
             for ine, per in agg.items():
                 for a, l in per.items():
-                    res.setdefault(ine, {}).setdefault(clau, {})[a] = r(sum(l) * escala, 1) if op == "suma" else r(sum(l) / len(l), 1)
-    afegeix("pern", ("75197", "2078"), ("Pernoctaciones",), "suma", 12)
+                    res.setdefault(ine, {}).setdefault(clau, {}).setdefault(a, r(sum(l) * escala, 1) if op == "suma" else r(sum(l) / len(l), 1))
+    afegeix("pern", ("75197", "2078"), ("Pernoctaciones",), "suma", 8)
     afegeix("pern_camp", ("75194", "2084"), ("Pernoctaciones",), "suma", 6)
     afegeix("ocup_camp", ("75196", "2085"), ("Grado de ocupación por parcelas",), "mitjana", 4)
-    afegeix("ocup", ("75198", "2076"), ("Grado de ocupación por plazas",), "mitjana", 6)
-    afegeix("adr", ("46298",), ("Tarifa media diaria", "Dato"), "mitjana", 6)
+    afegeix("ocup", ("75198", "2076"), ("Grado de ocupación por plazas",), "mitjana", 8)
+    afegeix("adr", ("46298",), ("Tarifa media diaria", "Dato"), "mitjana", 8)
     return res
 
 
@@ -641,8 +646,9 @@ def construir(municipios):
     fv = P / "turisme" / "viviendas_turisticas.csv"
     if fv.exists():
         dv = pd.read_csv(fv, dtype={"ine": str})
-        dv["ago"] = (dv["mes"] == 8).astype(int)  # preferimos agosto (temporada alta); si no, el último periodo
-        dv = dv.sort_values(["ago", "mes"]).groupby(["ine", "clau", "any"]).tail(1)
+        # Último periodo publicado de cada año (agosto hasta 2023, noviembre desde 2024); el año en curso, cuando ya hay noviembre
+        dv = dv[(dv["any"] < ANY_ACTUAL) | (dv["mes"] >= 11)]
+        dv = dv.sort_values("mes").groupby(["ine", "clau", "any"]).tail(1)
         for row in dv.itertuples():
             if row.clau == "pct":
                 posa(row.ine, "vte_pct", row.any, r(row.valor, 2))
@@ -667,6 +673,9 @@ def construir(municipios):
             vals = [(o[k][a], pob.get(ine) or 0) for ine, o in mun.items() if a in o.get(k, {})]
             if k in sumes:
                 refs.setdefault(k, {})[a] = {"gi": r(sum(v for v, _ in vals), 1)}
+            elif k == "vte_pl_h":
+                tot_p = sum(o.get("vte_pl", {}).get(a, 0) for o in mun.values())
+                refs.setdefault(k, {})[a] = {"gi": r(tot_p / pob_prov * 100, 1)}
             elif k.endswith("_h") and k[:-2] in sumes:
                 tot = sum(o.get(k[:-2], {}).get(a, 0) for o in mun.values())
                 refs.setdefault(k, {})[a] = {"gi": r(tot / pob_prov, 1)} if k not in ("ieet_h", "pern_h", "pern_camp_h") else {}
@@ -682,9 +691,6 @@ def construir(municipios):
                 tot_v = sum(o.get("vte_viv", {}).get(a, 0) for o in mun.values())
                 tot_viv = sum(v or 0 for v in viv.values())
                 refs.setdefault(k, {})[a] = {"gi": r(tot_v / tot_viv * 100, 2)} if tot_viv else {}
-            elif k == "vte_pl_h":
-                tot_p = sum(o.get("vte_pl", {}).get(a, 0) for o in mun.values())
-                refs.setdefault(k, {})[a] = {"gi": r(tot_p / pob_prov * 100, 1)}
             elif k == "hut_viv":
                 tot_hut = sum(o.get("hut_n", {}).get(a, 0) for o in mun.values())
                 tot_viv = sum(v or 0 for v in viv.values())
