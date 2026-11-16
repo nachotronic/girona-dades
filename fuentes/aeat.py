@@ -42,8 +42,16 @@ def _inicios() -> tuple[dict[str, str], list[str]]:
             continue
         home = f"{BASE}{a}/home.html"
         try:
-            s = _sopa(home)
-            u = _enlace(s, home, r"Datos municipales por ámbito territorial.*")
+            # portada -> «Detalle de los municipios con más de 1.000 habitantes» (home_parcial…) -> datos
+            u, cola, vistas = None, [home], set()
+            while cola and not u and len(vistas) < 6:
+                pag = cola.pop(0)
+                vistas.add(pag)
+                s = _sopa(pag)
+                u = _enlace(s, pag, r"Datos municipales por ámbito territorial.*")
+                cola += [urljoin(pag, x["href"]) for x in s.find_all("a", href=True)
+                         if "home_parcial" in x["href"] and x.get_text(" ", strip=True).startswith("Detalle")
+                         and urljoin(pag, x["href"]) not in vistas]
             if u:
                 inicios[str(a)] = u
             else:
