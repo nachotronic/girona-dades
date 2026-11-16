@@ -185,14 +185,28 @@ def _valors_municipis(taula: str) -> list[dict]:
     for intent in range(4):
         try:
             grups = get(f"{INE}/GRUPOS_TABLA/{taula}").json()
+            if not isinstance(grups, list):
+                _ERR_INE[taula] = "GRUPOS_TABLA " + str(grups)[:150]
             gm = next(g for g in grups if "unicipio" in g["Nombre"])
             vals = get(f"{INE}/VALORES_GRUPOSTABLA/{taula}/{gm['Id']}").json()
-            return [v for v in vals if re.match(r"^17\d{3}$", str(v.get("Codigo", "")))]
+            if not isinstance(vals, list):
+                _ERR_INE[taula] = "VALORES_GRUPOSTABLA " + str(vals)[:150]
+            res = [v for v in vals if re.match(r"^17\d{3}$", str(v.get("Codigo", "")))]
+            _VALS[taula] = res
+            return res
         except Exception:  # noqa: BLE001
             if intent == 3:
+                # Las dos tablas de móviles comparten la variable «municipios»: se reutilizan sus valores
+                germana = {"52048": "53464", "53464": "52048"}.get(taula)
+                if germana in _VALS:
+                    return _VALS[germana]
                 raise
             time.sleep(10 * (intent + 1))
     return []
+
+
+_ERR_INE: dict = {}
+_VALS: dict = {}
 
 
 def _per_municipi(taula: str, nult: int):
@@ -201,7 +215,15 @@ def _per_municipi(taula: str, nult: int):
     res, errors = [], 0
     for v in vals:
         try:
-            res.append((v, get(f"{INE}/DATOS_TABLA/{taula}?tv={v['FK_Variable']}:{v['Id']}&nult={nult}", timeout=300, pausa=0.2).json()))
+            # Si la respuesta no es una lista (el INE devuelve un objeto de error cuando la consulta es grande), menos periodos
+            for n_ in (nult, nult // 2, 24):
+                d = get(f"{INE}/DATOS_TABLA/{taula}?tv={v['FK_Variable']}:{v['Id']}&nult={n_}", timeout=300, pausa=0.2).json()
+                if isinstance(d, list):
+                    res.append((v, d))
+                    break
+                _ERR_INE.setdefault(taula, str(d)[:150])
+            else:
+                errors += 1
         except Exception:  # noqa: BLE001
             errors += 1
     return res, errors, len(vals)
@@ -209,7 +231,7 @@ def _per_municipi(taula: str, nult: int):
 
 def movils() -> tuple[pd.DataFrame, list[str]]:
     files, lin = [], []
-    for clau, (taula, _) in MOVILS.items():
+    for clau, (taula, _) in sorted(MOVILS.items(), key=lambda kv: kv[0] != "int"):
         try:
             dades, errors, n = _per_municipi(taula, 120)
             for v, d in dades:
@@ -221,9 +243,9 @@ def movils() -> tuple[pd.DataFrame, list[str]]:
                     for p in s.get("Data", []):
                         if p.get("Valor") is not None and 1 <= p.get("FK_Periodo", 0) <= 12:
                             files.append({"t": clau, "ine": v["Codigo"], "orig": orig, "mes": f"{p['Anyo']}-{p['FK_Periodo']:02d}", "turistes": p["Valor"]})
-            lin.append(f"Telefonía móvil {clau} ({taula}): {n} municipios" + (f", ERROR en {errors}" if errors else ""))
+            lin.append(f"Telefonía móvil {clau} ({taula}): {n} municipios" + (f", ERROR en {errors}" if errors else "") + (f" (INE: {_ERR_INE[taula]})" if taula in _ERR_INE else ""))
         except Exception as e:  # noqa: BLE001
-            lin.append(f"Telefonía móvil {clau} ({taula}): ERROR {type(e).__name__}: {str(e)[:120]}")
+            lin.append(f"Telefonía móvil {clau} ({taula}): ERROR {type(e).__name__}: {str(e)[:120]}" + (f" (INE: {_ERR_INE[taula]})" if taula in _ERR_INE else ""))
     return pd.DataFrame(files), lin
 
 

@@ -15,7 +15,22 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: python scripts/actualizar.py turisme
+      - run: |
+          mkdir -p exploracion/turisme
+          python - <<'PY' > exploracion/turisme/movils.txt 2>&1
+          import pandas as pd
+          from fuentes import turisme as t
+          m, l = t.movils()
+          print("\n".join(l))
+          f = __import__("pathlib").Path("data/processed/turisme/moviles.csv.gz")
+          if len(m):
+              if f.exists() and set(m["t"]) != set(t.MOVILS):
+                  ant = pd.read_csv(f, dtype={"ine": str})
+                  m = pd.concat([ant[~ant["t"].isin(set(m["t"]))], m])
+              m.to_csv(f, index=False)
+          print(m.groupby("t").size().to_dict() if len(m) else "buit")
+          PY
+          cat exploracion/turisme/movils.txt
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
