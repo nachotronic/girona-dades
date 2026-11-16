@@ -20,6 +20,9 @@
       h_societats: (n, a, d, c, e) => `<b>${n}</b> societats noves el ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
       menys: (v) => `un ${v} menys`, mes: (v) => `un ${v} més`,
       esperanca: ["Esperança de vida", "Anys de vida en néixer"],
+      solar: ["Plaques solars", "Potència fotovoltaica d'autoconsum per habitant (W), acumulada mes a mes"],
+      h_solar: (g, c, n, kw, m) => `La província suma <b>${n} instal·lacions</b> d'autoconsum fotovoltaic i ${kw} MW (${m}): <b>${g} W per habitant</b>, davant dels ${c} de Catalunya.`,
+      font_sol: "Font: Generalitat, Registre d'autoconsum de Catalunya (RAC)",
       esperanca_noms: { gi: "Total", cat: "Dones", esp: "Homes" },
       h_esperanca: (g, a, d, h) => `Qui neix avui a la província pot esperar viure <b>${g} anys</b> (${a}): ${d} les dones i ${h} els homes.`,
       hipoteques: ["Hipoteques sobre habitatges", "Nombre anual. Índex, 2007 = 100"],
@@ -97,6 +100,9 @@
       h_societats: (n, a, d, c, e) => `<b>${n}</b> sociedades nuevas en ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
       menys: (v) => `un ${v} menos`, mes: (v) => `un ${v} más`,
       esperanca: ["Esperanza de vida", "Años de vida al nacer"],
+      solar: ["Placas solares", "Potencia fotovoltaica de autoconsumo por habitante (W), acumulada mes a mes"],
+      h_solar: (g, c, n, kw, m) => `La provincia suma <b>${n} instalaciones</b> de autoconsumo fotovoltaico y ${kw} MW (${m}): <b>${g} W por habitante</b>, frente a los ${c} de Cataluña.`,
+      font_sol: "Fuente: Generalitat, Registro de autoconsumo de Cataluña (RAC)",
       esperanca_noms: { gi: "Total", cat: "Mujeres", esp: "Hombres" },
       h_esperanca: (g, a, d, h) => `Quien nace hoy en la provincia puede esperar vivir <b>${g} años</b> (${a}): ${d} las mujeres y ${h} los hombres.`,
       hipoteques: ["Hipotecas sobre viviendas", "Número anual. Índice, 2007 = 100"],
@@ -190,7 +196,7 @@
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
   const nomGrup = (g, c) => (c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
-  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : "");
+  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : "");
   const etiqueta = (e) => {
     const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${tp("mesos")[+m[2] - 1]} ${m[1]}`;
     const q = /^(\d{4})T(\d)$/.exec(e); if (q) return `${q[2]}T ${q[1]}`;
@@ -274,6 +280,7 @@
     if (id === "edu_publica_prov") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_publica", pct(g[2], 0), pct(c && c[2], 0), g[1], fmt(sp.abs && sp.abs.n)) : ""; }
     if (id === "univ_fora_prov") { const g = ult(sp, "gi"); const g0 = sp.series.gi[0]; return g && sp.abs ? tp("h_univ", pct(g[2], 0), fmt(sp.abs.fora), fmt(sp.abs.residents), sp.abs.curs, pct(g0[2], 0), g0[1]) : ""; }
     if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
+    if (id === "solar") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g && sp.abs ? tp("h_solar", fmt(g[2]), fmt(c && c[2]), fmt(sp.abs.n), fmt(sp.abs.kw / 1000, 0), etiqueta(sp.abs.mes)) : ""; }
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
     if (/^le_(quir|ext|diag)$/.test(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp(`h_${id}`, fmt(g[2]), fmt(c && c[2]), etiqueta(g[1]), fmt(sp.abs.pacients)) : ""; }
     if (id === "le_pacients") { const s_ = sp.series.gi, g = s_[s_.length - 1], a = s_.find((p) => p[1] === `${+g[1].slice(0, 4) - 1}${g[1].slice(4)}`); if (!g) return ""; const d = a ? (g[2] / a[2] - 1) * 100 : null; return tp("h_le_pacients", fmt(g[2]), etiqueta(g[1]), d == null ? "" : d < 0 ? tp("menys_q", pct(-d, 0)) : tp("mes_q", pct(d, 0))); }
@@ -306,8 +313,8 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"];
-    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "solar", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"];
+    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
   window.pintaSeccioSalut = () => {
