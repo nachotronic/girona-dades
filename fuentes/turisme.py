@@ -82,11 +82,165 @@ def xifra() -> tuple[pd.DataFrame, list[str]]:
     return (pd.concat(parts) if parts else pd.DataFrame()), lin
 
 
+# ---------------------------------------------------------------------------
+# INE: tablas de turismo. Se guardan solo las series de Girona, Cataluña, España, las zonas
+# turísticas de la provincia (Costa Brava, Pirineus) y sus puntos turísticos.
+INE = "https://servicios.ine.es/wstempus/js/ES"
+TAULES_INE = {
+    # Hoteles (EOH)
+    "2074": "Hoteles: viajeros y pernoctaciones por CCAA y provincias",
+    "2066": "Hoteles: establecimientos, plazas, ocupación y personal por CCAA y provincias",
+    "2065": "Hoteles: estancia media por CCAA y provincias",
+    "2069": "Hoteles: procedencia de los viajeros por provincia",
+    "2039": "Hoteles: viajeros y pernoctaciones por zonas turísticas",
+    "2013": "Hoteles: plazas y ocupación por zonas turísticas",
+    "2040": "Hoteles: estancia media por zonas turísticas",
+    "2078": "Hoteles: viajeros y pernoctaciones por puntos turísticos",
+    "75197": "Hoteles: viajeros y pernoctaciones por puntos turísticos (base nueva)",
+    "2076": "Hoteles: plazas y ocupación por puntos turísticos",
+    "75198": "Hoteles: plazas y ocupación por puntos turísticos (base nueva)",
+    "2077": "Hoteles: estancia media por puntos turísticos",
+    # Rentabilidad hotelera (IRSH)
+    "2059": "ADR por CCAA y provincias", "2057": "RevPAR por CCAA y provincias",
+    "46297": "ADR por zonas turísticas", "46300": "RevPAR por zonas turísticas",
+    "46298": "ADR por puntos turísticos", "46301": "RevPAR por puntos turísticos",
+    # Campings (EOAC)
+    "2062": "Campings: viajeros y pernoctaciones por provincias",
+    "2064": "Campings: parcelas, ocupación y personal por provincias",
+    "2068": "Campings: estancia media por provincias",
+    "2047": "Campings: viajeros y pernoctaciones por zonas turísticas",
+    "2084": "Campings: viajeros y pernoctaciones por puntos turísticos",
+    "75194": "Campings: viajeros y pernoctaciones por puntos turísticos (base nueva)",
+    "2085": "Campings: plazas y ocupación por puntos turísticos",
+    "75196": "Campings: plazas y ocupación por puntos turísticos (base nueva)",
+    # Apartamentos (EOAP) y turismo rural (EOTR)
+    "2063": "Apartamentos: viajeros y pernoctaciones por provincias",
+    "2072": "Apartamentos: plazas, ocupación y personal por provincias",
+    "2061": "Apartamentos: estancia media por provincias",
+    "2073": "Turismo rural: viajeros y pernoctaciones por provincias",
+    "2070": "Turismo rural: plazas, ocupación y personal por provincias",
+    "2067": "Turismo rural: estancia media por provincias",
+    # Alojamientos de corta estancia de plataformas (OAT)
+    "48427": "Pernoctaciones en alojamientos turísticos y de corta estancia por provincias (mensual)",
+    "48440": "Ocupación en alojamientos turísticos y de corta estancia (anual)",
+    # Gasto de los turistas internacionales (EGATUR) por CCAA
+    "23998": "EGATUR: gasto de los turistas internacionales por CCAA de destino",
+    "24745": "EGATUR: partidas de gasto por CCAA",
+    # Telefonía móvil (experimental): turistas por provincia de destino
+    "52047": "Turistas extranjeros por provincia de destino y país (telefonía móvil)",
+    "52997": "Turistas residentes por provincia de destino y provincia de origen (telefonía móvil)",
+}
+# Tablas por zonas y puntos turísticos: solo las zonas y los municipios de Girona
+PUNTS_INE = {"2039", "2013", "2040", "2078", "75197", "2076", "75198", "2077", "46297", "46300", "46298", "46301", "2047", "2084", "75194", "2085", "75196"}
+ZONES_INE = ("Girona", "Gerona", "Cataluña", "Catalunya", "Total Nacional", "Nacional", "Total nacional", "Costa Brava", "Pirineus")
+
+
+def _puntos_girona() -> re.Pattern:
+    from .territorio import municipios
+    noms = [re.escape(n) for n in municipios()["nom"].tolist() if len(n) > 3]
+    return re.compile(r"\b17\d{3}-|Costa Brava|Pirineus|Platja d'Aro|Castell-Platja|^(?:" + "|".join(noms) + r")\.", re.I)
+
+
+def _taula_ine(ident: str, pat: re.Pattern, nult: int = 400) -> list[dict]:
+    d = get(f"{INE}/DATOS_TABLA/{ident}?nult={nult}", timeout=900).json()
+    res = []
+    for s in d:
+        nom = s.get("Nombre", "")
+        if not pat.search(nom):
+            continue
+        # Los puntos turísticos de otras provincias con nombre parecido (Castellón, Castelldefels…)
+        if re.search(r"Castell[oó]n|Castelldefels|Girona\b.*Castell[oó]n", nom):
+            continue
+        res.append({"nom": nom, "d": [[p.get("Anyo"), p.get("FK_Periodo"), p.get("Valor")] for p in s.get("Data", [])]})
+    return res
+
+
+def ine() -> tuple[dict, list[str]]:
+    pat_p = _puntos_girona()
+    zones = re.compile("|".join(re.escape(z) for z in ZONES_INE))
+    tot, lin = {}, []
+    for ident, nom in TAULES_INE.items():
+        try:
+            s = _taula_ine(ident, pat_p if ident in PUNTS_INE else zones)
+            tot[ident] = {"nom": nom, "series": s}
+            lin.append(f"INE {ident} {nom}: {len(s)} series")
+        except Exception as e:  # noqa: BLE001
+            lin.append(f"INE {ident} {nom}: ERROR {type(e).__name__}: {str(e)[:120]}")
+        time.sleep(0.3)
+    return tot, lin
+
+
+# ---------------------------------------------------------------------------
+# INE experimental: turistas por municipio de destino según la posición de los teléfonos móviles.
+# La tabla nacional es enorme: se pide municipio a municipio con el filtro tv=variable:valor.
+MOVILS = {"rec": ("52048", "País de residencia"), "int": ("53464", "CCAA y provincia de origen")}
+ORIGENS = {"Total", "Total Nacional", "Francia", "Alemania", "Reino Unido", "Países Bajos", "Bélgica", "Suiza", "Italia",
+           "Estados Unidos de América", "Irlanda", "Cataluña", "Madrid, Comunidad de", "Comunitat Valenciana", "Aragón", "Andalucía"}
+
+
+def movils() -> tuple[pd.DataFrame, list[str]]:
+    files, lin = [], []
+    for clau, (taula, _) in MOVILS.items():
+        try:
+            grups = get(f"{INE}/GRUPOS_TABLA/{taula}").json()
+            gm = next(g for g in grups if "unicipio" in g["Nombre"])
+            vals = [v for v in get(f"{INE}/VALORES_GRUPOSTABLA/{taula}/{gm['Id']}").json() if re.match(r"^17\d{3}$", str(v.get("Codigo", "")))]
+            errors = 0
+            for v in vals:
+                try:
+                    d = get(f"{INE}/DATOS_TABLA/{taula}?tv={v['FK_Variable']}:{v['Id']}&nult=120", timeout=300, pausa=0.2).json()
+                except Exception:  # noqa: BLE001
+                    errors += 1
+                    continue
+                for s in d:
+                    parts = [x.strip() for x in s["Nombre"].split(".") if x.strip()]
+                    orig = next((x for x in parts if x not in ("Turistas", "Dato base", v["Nombre"])), None)
+                    if orig not in ORIGENS:
+                        continue
+                    for p in s.get("Data", []):
+                        if p.get("Valor") is not None and 1 <= p.get("FK_Periodo", 0) <= 12:
+                            files.append({"t": clau, "ine": v["Codigo"], "orig": orig, "mes": f"{p['Anyo']}-{p['FK_Periodo']:02d}", "turistes": p["Valor"]})
+            lin.append(f"Telefonía móvil {clau} ({taula}): {len(vals)} municipios" + (f", ERROR en {errors}" if errors else ""))
+        except Exception as e:  # noqa: BLE001
+            lin.append(f"Telefonía móvil {clau} ({taula}): ERROR {type(e).__name__}: {str(e)[:120]}")
+    return pd.DataFrame(files), lin
+
+
+# ---------------------------------------------------------------------------
+# Generalitat (Socrata): impuesto turístico por comarca y catálogo de playas
+SOC = "https://analisi.transparenciacatalunya.cat/resource"
+COMARQUES_GI = {"Alt Empordà", "Baix Empordà", "Cerdanya", "Garrotxa", "Gironès", "Pla de l'Estany", "Ripollès", "Selva"}
+
+
+def socrata() -> list[str]:
+    import io
+    sal, lin = carpeta("turisme"), []
+    for ident, fitxer in (("2nmt-74sj", "ieet_comarques.csv"), ("83qv-sib8", "platges.csv")):
+        try:
+            d = pd.read_csv(io.BytesIO(get(f"{SOC}/{ident}.csv?$limit=50000").content), dtype=str)
+            if "ide_municipi" in d.columns:
+                d = d[d["ide_municipi"].str.startswith("17")]
+            d.to_csv(sal / fitxer, index=False)
+            lin.append(f"{ident} → {fitxer}: {len(d)} files")
+        except Exception as e:  # noqa: BLE001
+            lin.append(f"{ident}: ERROR {type(e).__name__}: {str(e)[:120]}")
+    return lin
+
+
 def ejecutar() -> str:
     sal = carpeta("turisme")
     lineas = []
+    t, l = ine()
+    lineas += l
+    if t:
+        (sal / "ine_turisme.json").write_text(json.dumps(t, ensure_ascii=False), encoding="utf-8")
     x, l = xifra()
     lineas += l
     if len(x):
         x.to_csv(sal / "xifra_oferta.csv", index=False)
+    m, l = movils()
+    lineas += l
+    if len(m):
+        m.to_csv(sal / "moviles.csv.gz", index=False)
+    lineas += socrata()
     return "\n".join(lineas)

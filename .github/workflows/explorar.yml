@@ -16,10 +16,11 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: python scripts/explorar_turisme.py
+      - run: python scripts/actualizar.py turisme
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exploracion
+          git add exploracion data
           git commit -m "Exploración de fuentes" || echo "Sin cambios"
           git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME"
