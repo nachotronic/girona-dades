@@ -15,6 +15,8 @@
 <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="insercio.css">
+<script>if(/[?&]embed=/.test(location.search)){var d=document.documentElement;d.className+=" emb";d.setAttribute("data-theme",/[?&]tema=fosc/.test(location.search)?"dark":"light");var r=document.createElement("meta");r.name="robots";r.content="noindex";document.head.appendChild(r)}</script>
 </head>
 <body>
 <header class="cap">
@@ -89,6 +91,7 @@
           <button type="button" data-nivell="pj" aria-pressed="false" data-t="nivell_pj" hidden>Partits judicials</button>
         </div>
         <h3 id="ind-titol" class="ind-titol"></h3>
+        <button type="button" class="emb-btn emb-btn-mapa" id="emb-btn-mapa"></button>
         <p class="ind-desc" id="mapa-desc"></p>
         <div id="anys-ctl" class="anys-ctl" hidden></div>
         <div id="llegenda" class="llegenda-mapa"></div>
@@ -200,5 +203,6 @@
 <script src="provincia.js"></script>
 <script src="resum.js"></script>
 <script src="tributs.js"></script>
+<script src="insercio.js"></script>
 </body>
 </html>
