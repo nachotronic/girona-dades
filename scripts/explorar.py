@@ -50,15 +50,52 @@ for d in ("ntc4-rnwr", "irrv-2mfc", "tgns-3xuy"):
     CANDIDATAS_E[f"pe_{d}_mostra"] = f"{SOC}/resource/{d}.json?$limit=30"
 CANDIDATAS_E["pe_tgns_tot"] = f"{SOC}/resource/tgns-3xuy.json?$limit=5000"
 
-# AEAT, IRPF por municipios: cómo llegar a la página de inicio de cada año (el hash cambia)
-AEAT_S = "https://sede.agenciatributaria.gob.es"
-AEAT_P = AEAT_S + "/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/"
-CANDIDATAS_E = {
-    "aeat_2023_inici": AEAT_P + "2023/jrubik56c8a4941ca3d442b24b56b4ceb716f086a75f33.html",
-    "aeat_2022_inici": AEAT_P + "2022/jrubik1198fe8ede3dc662d7abca172447262a03941a02.html",
-    "aeat_2024_home": AEAT_P + "2024/home.html",
-    "aeat_2023_home": AEAT_P + "2023/home.html",
-}
+# Parque de vehículos por municipio (DGT): explora_parque() recorre las categorías de
+# «DGT en cifras», entra en las fichas de parque/municipios y prueba sus descargas
+DGT = "https://www.dgt.es"
+DGTR = DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/"
+CANDIDATAS_E = {}
+INICI_DGT = [DGTR + f"?categorias=/Tema/{t}/" + (f"&pagina={n}" if n > 1 else "") for t in ("Informacion-municipal", "Vehiculos") for n in (1, 2, 3)]
+
+
+def explora_parque(filas: list) -> None:
+    import re
+    vistos, fitxers = set(), []
+    pendientes = [(f"dgt_cat{k}", u) for k, u in enumerate(INICI_DGT)]
+    n = 0
+    while pendientes and n < 60:
+        clave, url = pendientes.pop(0)
+        if url in vistos:
+            continue
+        vistos.add(url)
+        try:
+            r = requests.get(url, headers=UA, timeout=180)
+            n += 1
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| {clave} | error | {type(e).__name__} | | {url} |")
+            continue
+        tipo = r.headers.get("content-type", "")
+        filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {len(r.content)} | {r.url} |")
+        if "html" not in tipo:
+            ext = url.rsplit(".", 1)[-1][:5].lower()
+            (MUESTRAS / f"{clave}.{ext}").write_bytes(r.content[:8_000_000])
+            continue
+        (MUESTRAS / f"{clave}.html").write_bytes(r.content[:400_000])
+        for href in sorted(set(re.findall(r'href="([^"#]+)"', r.text))):
+            absu = urllib.parse.urljoin(r.url, href.replace("&amp;", "&"))
+            low = absu.lower()
+            if "dgt.es" not in low or absu in vistos:
+                continue
+            clau = ("parque", "municip", "censo", "matraba", "microdato")
+            if "dgt-en-cifras-detalle" in low and any(k in low for k in clau):
+                pendientes.insert(0, (f"dgt_d{len(vistos):02d}", absu))
+            elif low.endswith((".xlsx", ".xls", ".zip", ".csv")) and any(k in low for k in clau + ("parq", "vehic")):
+                fitxers.append(absu)
+                if sum(1 for f in fitxers if f.rsplit(".", 1)[-1] == absu.rsplit(".", 1)[-1]) <= 6:
+                    pendientes.append((f"dgt_f{len(fitxers):02d}", absu))
+        time.sleep(1)
+    (MUESTRAS / "dgt_enllacos.txt").write_text("\n".join(sorted(vistos)) + "\n\n--- fitxers ---\n" + "\n".join(fitxers), encoding="utf-8")
+
 
 def explora_zips(filas: list) -> None:
     import io, zipfile
@@ -108,13 +145,14 @@ def main() -> None:
                 filas.append(f"| {clave} | {r.status_code} | zip | {len(r.content)} | {url} |")
                 continue
             r = requests.get(url, headers=UA, timeout=120, stream=True)
-            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_", "aena_")) else LIMITE, decode_content=True)
+            contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_", "aena_", "dgt_")) else LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
             (MUESTRAS / f"{clave}.{extension(tipo)}").write_bytes(contenido)
             filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {r.headers.get('content-length', len(contenido))} | {r.url} |")
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
+    explora_parque(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
