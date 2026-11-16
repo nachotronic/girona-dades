@@ -50,31 +50,26 @@ for d in ("ntc4-rnwr", "irrv-2mfc", "tgns-3xuy"):
     CANDIDATAS_E[f"pe_{d}_mostra"] = f"{SOC}/resource/{d}.json?$limit=30"
 CANDIDATAS_E["pe_tgns_tot"] = f"{SOC}/resource/tgns-3xuy.json?$limit=5000"
 
-# Parque de vehículos por municipio (DGT): páginas índice; explora_parque() sigue los enlaces
+# Parque de vehículos por municipio (DGT): explora_parque() recorre las categorías de
+# «DGT en cifras», entra en las fichas de parque/municipios y prueba sus descargas
 DGT = "https://www.dgt.es"
-CANDIDATAS_E = {
-    "dgt_cifras": DGT + "/menusecundario/dgt-en-cifras/",
-    "dgt_listados": DGT + "/menusecundario/dgt-en-cifras/matraba-listados/",
-    "dgt_resultados": DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/",
-    "dgt_iest": "https://sedeapl.dgt.gob.es/WEB_IEST_CONSULTA/",
-    "socrata_parc": SOCRATA + "?q=parc%20vehicles%20municipi&limit=20",
-    "socrata_vehicles_tipus": SOCRATA + "?q=vehicles%20carburant&limit=20",
-}
+DGTR = DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/"
+CANDIDATAS_E = {}
+INICI_DGT = [DGTR + f"?categorias=/Tema/{t}/" + (f"&pagina={n}" if n > 1 else "") for t in ("Informacion-municipal", "Vehiculos") for n in (1, 2, 3)]
 
 
 def explora_parque(filas: list) -> None:
-    """Sigue los enlaces de las páginas de la DGT que hablan de parque y guarda lo que encuentre."""
     import re
-    vistos = set()
-    pendientes = [(k, u) for k, u in CANDIDATAS_E.items() if k.startswith("dgt_") and "sedeapl" not in u]
+    vistos, fitxers = set(), []
+    pendientes = [(f"dgt_cat{k}", u) for k, u in enumerate(INICI_DGT)]
     n = 0
-    while pendientes and n < 40:
+    while pendientes and n < 60:
         clave, url = pendientes.pop(0)
         if url in vistos:
             continue
         vistos.add(url)
         try:
-            r = requests.get(url, headers=UA, timeout=120)
+            r = requests.get(url, headers=UA, timeout=180)
             n += 1
         except Exception as e:  # noqa: BLE001
             filas.append(f"| {clave} | error | {type(e).__name__} | | {url} |")
@@ -82,19 +77,24 @@ def explora_parque(filas: list) -> None:
         tipo = r.headers.get("content-type", "")
         filas.append(f"| {clave} | {r.status_code} | {tipo.split(';')[0]} | {len(r.content)} | {r.url} |")
         if "html" not in tipo:
-            (MUESTRAS / f"{clave}.{'zip' if 'zip' in tipo else extension(tipo)}").write_bytes(r.content[:3_000_000])
+            ext = url.rsplit(".", 1)[-1][:5].lower()
+            (MUESTRAS / f"{clave}.{ext}").write_bytes(r.content[:8_000_000])
             continue
-        (MUESTRAS / f"{clave}.html").write_bytes(r.content[:600_000])
+        (MUESTRAS / f"{clave}.html").write_bytes(r.content[:400_000])
         for href in sorted(set(re.findall(r'href="([^"#]+)"', r.text))):
-            low = href.lower()
-            if not any(k in low for k in ("parque", "parc", "censo", "tablas-estadisticas", "series-historicas", "anuario")):
+            absu = urllib.parse.urljoin(r.url, href.replace("&amp;", "&"))
+            low = absu.lower()
+            if "dgt.es" not in low or absu in vistos:
                 continue
-            absu = urllib.parse.urljoin(r.url, href)
-            if "dgt.es" not in absu or absu in vistos:
-                continue
-            pendientes.append((f"dgt_l{len(vistos) + len(pendientes):02d}", absu))
+            clau = ("parque", "municip", "censo", "matraba", "microdato")
+            if "dgt-en-cifras-detalle" in low and any(k in low for k in clau):
+                pendientes.insert(0, (f"dgt_d{len(vistos):02d}", absu))
+            elif low.endswith((".xlsx", ".xls", ".zip", ".csv")) and any(k in low for k in clau + ("parq", "vehic")):
+                fitxers.append(absu)
+                if sum(1 for f in fitxers if f.rsplit(".", 1)[-1] == absu.rsplit(".", 1)[-1]) <= 6:
+                    pendientes.append((f"dgt_f{len(fitxers):02d}", absu))
         time.sleep(1)
-    (MUESTRAS / "dgt_enllacos.txt").write_text("\n".join(sorted(vistos)), encoding="utf-8")
+    (MUESTRAS / "dgt_enllacos.txt").write_text("\n".join(sorted(vistos)) + "\n\n--- fitxers ---\n" + "\n".join(fitxers), encoding="utf-8")
 
 
 def explora_zips(filas: list) -> None:
