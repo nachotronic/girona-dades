@@ -766,6 +766,8 @@
     const z = ZONA[n].geo.features.find((x) => dinsPoligon(pt, x.geometry));
     return z ? z.properties : null;
   }
+  // Para el resumen de la ficha (resum.js)
+  window.indMapa = { IND, valorProvincia, anysDe };
   window.fitxaIndicadors = async (m) => {
     if (!geoMun) return "";
     const [abs, abp] = await Promise.all([areaDe("abs", m), areaDe("abp", m)]);

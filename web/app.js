@@ -470,6 +470,7 @@ function obreFitxa(ine, desplaca) {
       </div>
       <button type="button" class="tanca">${t("tanca")} ✕</button>
     </div>
+    <div class="fitxa-resum"></div>
     <div class="xifres">
       ${tile(`${t("k_lloguer")} 2025`, val(m.alquiler, "2025") ? `${fmt(val(m.alquiler, "2025"))} <small>€/mes</small>` : "–", variacio(m.alquiler, "2025", "2024", true))}
       ${tile(`${t("k_compra")} 2025`, fmt(val(m.compraventas, "2025")), variacio(m.compraventas, "2025", "2024"))}
@@ -485,6 +486,7 @@ function obreFitxa(ine, desplaca) {
     </div>
     <div class="fitxa-conj"></div>
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
+    <div class="fitxa-extra"></div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
@@ -499,6 +501,7 @@ function obreFitxa(ine, desplaca) {
   ], (v) => `${fmt(v)} €`);
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
   if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
+  if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
 }
