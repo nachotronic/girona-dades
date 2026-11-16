@@ -1,6 +1,4 @@
 CODI_ESTACIO,NOM_ESTACIO,CODI_TIPUS,LATITUD,LONGITUD,Georeferència,EMPLACAMENT,ALTITUD,CODI_MUNICIPI,NOM_MUNICIPI,CODI_COMARCA,NOM_COMARCA,CODI_PROVINCIA,NOM_PROVINCIA,CODI_XARXA,NOM_XARXA,CODI_ESTAT,NOM_ESTAT,DATA_ALTA,DATA_BAIXA
-W2,Torroella de Fluvià,A,42.18259,3.05783,POINT (3.05783 42.18259),Camp de Pla d'Avall - Camp de la Creu,7,171984,Torroella de Fluvià,2,Alt Empordà,17,Girona,1,XEMA,1,Desmantellada,14/03/2000,08/04/2014
-UD,Serra de Daró,A,42.02895,3.06227,POINT (3.06227 42.02895),Camí de la Barceloneta - St. Iscle d'Empordà,12,171910,Serra de Daró,10,Baix Empordà,17,Girona,1,XEMA,1,Desmantellada,09/06/1999,01/06/2013
 D6,Portbou - coll dels Belitres,A,42.43514,3.16619,POINT (3.16619 42.43514),Punta de l'Aucell  (zona fronterera),198,171387,Portbou,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,25/03/1998,
 DG,Núria (1.971 m),A,42.39848,2.15517,POINT (2.15517 42.39848),Santuari de Núria,1971,170433,Queralbs,31,Ripollès,17,Girona,1,XEMA,2,Operativa,15/05/1998,
 CB,les Llosses,A,42.15085,2.19914,POINT (2.19914 42.15085),Abocador comarcal,700,170963,Les Llosses,31,Ripollès,17,Girona,1,XEMA,1,Desmantellada,30/11/1995,02/06/2003
@@ -20,6 +18,7 @@ DJ,Banyoles,A,42.11655,2.78971,POINT (2.78971 42.11655),Abocador comarcal de Pui
 WF,Vilablareix,A,41.95425,2.77578,POINT (2.77578 41.95425),Mas Saüch,108,172155,Vilablareix,20,Gironès,17,Girona,1,XEMA,1,Desmantellada,11/04/2001,01/10/2015
 YA,Puigcerdà,A,42.44013,1.93482,POINT (1.93482 42.44013),Poliesportiu municipal,1214,171411,Puigcerdà,15,Cerdanya,17,Girona,1,XEMA,2,Operativa,22/03/2016,
 UC,Monells,A,41.97726,2.99705,POINT (2.99705 41.97726),Finca Camps i Armet - Escola Capacitació Agrària,60,179011,"Cruïlles, Monells i Sant Sadurní de l'Heura",10,Baix Empordà,17,Girona,1,XEMA,1,Desmantellada,04/03/1998,15/06/2021
+W2,Torroella de Fluvià,A,42.18259,3.05783,POINT (3.05783 42.18259),Camp de Pla d'Avall - Camp de la Creu,7,171984,Torroella de Fluvià,2,Alt Empordà,17,Girona,1,XEMA,1,Desmantellada,14/03/2000,08/04/2014
 ZD,la Tosa d'Alp (2.478 m),A,42.32213,1.89716,POINT (1.89716 42.32213),Tosa d'Alp,2478,170062,Alp,15,Cerdanya,17,Girona,1,XEMA,2,Operativa,04/09/2014,
 VZ,Espolla,A,42.38443,3.00739,POINT (3.00739 42.38443),"Llaurants. Ref. Cadastral: Pol. 5, parc.195",84,170643,Espolla,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,07/06/2000,
 D4,Roses,A,42.27068,3.18147,POINT (3.18147 42.27068),Poliesportiu Municipal,23,171523,Roses,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,07/02/1996,
@@ -29,6 +28,7 @@ CS,Viladrau - centre,A,41.84502,2.3881,POINT (2.3881 41.84502),Mas del Torrent,7
 J5,Pantà de Darnius - Boadella,A,42.34214,2.83425,POINT (2.83425 42.34214),Presa del Pantà de Darnius - Boadella,159,170600,Darnius,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,05/01/1996,
 XJ,Girona,A,41.98215,2.80552,POINT (2.80552 41.98215),Horts de Santa Eugènia,72,170792,Girona,20,Gironès,17,Girona,1,XEMA,2,Operativa,15/09/2010,
 CF,Lloret de Mar,A,41.72346,2.84282,POINT (2.84282 41.72346),Abocador municipal,63.3,170950,Lloret de Mar,34,Selva,17,Girona,1,XEMA,1,Desmantellada,05/02/1996,16/06/2003
+UD,Serra de Daró,A,42.02895,3.06227,POINT (3.06227 42.02895),Camí de la Barceloneta - St. Iscle d'Empordà,12,171910,Serra de Daró,10,Baix Empordà,17,Girona,1,XEMA,1,Desmantellada,09/06/1999,01/06/2013
 Y5,Navata,A,42.22792,2.86242,POINT (2.86242 42.22792),Can Tries,152,171117,Navata,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,26/08/2014,
 DN,Anglès,A,41.96093,2.6311,POINT (2.6311 41.96093),Poliesportiu municipal,151,170084,Anglès,34,Selva,17,Girona,1,XEMA,2,Operativa,10/05/2001,
 U2,Sant Pere Pescador,A,42.17716,3.0968,POINT (3.0968 42.17716),"Mas Blanc, Mas Fages 17",3,171788,Sant Pere Pescador,2,Alt Empordà,17,Girona,1,XEMA,2,Operativa,01/05/1989,
