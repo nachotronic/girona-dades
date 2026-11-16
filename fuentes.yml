@@ -298,11 +298,19 @@ clima_y_otros:
     frecuencia: anual
     estado: por_confirmar
   - id: icaen_energia
-    nombre: Consumo eléctrico, autoconsumo, recarga
+    nombre: Consumo eléctrico, recarga
     organismo: "ICAEN"
     nivel: [municipio]
     frecuencia: anual
     estado: por_confirmar
+  - id: rac_autoconsum
+    nombre: Instalaciones de autoconsumo fotovoltaico (Registre d'autoconsum de Catalunya)
+    organismo: "Generalitat (Departament d'Empresa)"
+    url: https://analisi.transparenciacatalunya.cat/d/2b4s-skfm
+    nivel: [municipio]
+    frecuencia: mensual
+    estado: comprobada
+    notas: "Sin dirección: no hay sección censal. fuentes/generalitat.py guarda también agregados mensuales de Cataluña."
   - id: dgt_vehiculos
     nombre: Parque de vehículos (tipo, carburante, etiqueta, antigüedad, conductores)
     organismo: "DGT"
