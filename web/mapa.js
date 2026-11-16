@@ -732,6 +732,7 @@
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
     controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres();
+    avisa("pinta");
   }
 
   // CAP y hospitales: capa de puntos encima de los indicadores de salud (se puede ocultar)
@@ -903,6 +904,8 @@
     el.querySelector("button").addEventListener("click", () => obreFitxa(props.ine, true));
   }
 
+  // Avisos para mapamobil.js (vista de pantalla completa en móvil y estado en la URL)
+  const avisa = (tipus, detail) => document.dispatchEvent(new CustomEvent(`mapa:${tipus}`, { detail }));
   const normal = (s) => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let consulta = "";
 
@@ -939,6 +942,7 @@
     const compacte = matchMedia("(max-width: 1099px)");
     const obert = () => btn.getAttribute("aria-expanded") === "true";
     function obre() {
+      if (document.body.classList.contains("mm-ple")) { btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert"); avisa("menu-obert"); return; }
       // Deja el mapa justo bajo la barra y la hoja ocupa el resto de la pantalla
       const cap = document.querySelector(".cap");
       const dalt = (cap && getComputedStyle(cap).position === "sticky" ? cap.offsetHeight : 0) + btn.offsetHeight;
@@ -947,9 +951,9 @@
       window.scrollTo({ top: y, behavior: "instant" });
       const lliure = innerHeight - dalt - caixa.offsetHeight;
       full.style.setProperty("--alt-full", `${Math.round(Math.max(lliure, innerHeight * (innerWidth > 640 ? 0.36 : 0.42)))}px`);
-      btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert");
+      btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert"); avisa("menu-obert");
     }
-    function tanca() { btn.setAttribute("aria-expanded", "false"); document.body.classList.remove("menu-ind-obert"); }
+    function tanca() { if (!obert()) return; btn.setAttribute("aria-expanded", "false"); document.body.classList.remove("menu-ind-obert"); avisa("menu-tancat"); }
     btn.addEventListener("click", () => (obert() ? tanca() : obre()));
     $("menu-ind-tanca").addEventListener("click", tanca);
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && obert()) { tanca(); btn.focus(); } });
@@ -960,6 +964,7 @@
     const altCap = () => document.documentElement.style.setProperty("--cap-h", `${cap && getComputedStyle(cap).position === "sticky" ? cap.offsetHeight : 0}px`);
     if (cap) { new ResizeObserver(altCap).observe(cap); addEventListener("resize", altCap); altCap(); }
     return {
+      obre, tanca, obert,
       etiqueta() {
         const tm = TEMES.find((x) => x.id === (ind && ind.tema));
         $("menu-ind-tema").textContent = tm ? tm[LANG] : "";
@@ -970,6 +975,7 @@
       },
     };
   })();
+  window.mapaMenuInd = menuInd;
 
   // Selecciona un indicador; si no existe al nivel actual, cambia de nivel
   async function tria(i) {
@@ -1094,7 +1100,7 @@
       inp.value = m.nom; tanca(); inp.blur();
       const f = geoMun.features.find((x) => x.properties.ine === ine);
       if (nivell === "mun" && f) { fixat = f.properties; info(fixat); }
-      encaixa(ine);
+      encaixa(ine); avisa("zona", { ine });
     };
     inp.addEventListener("input", () => {
       const q = normal(inp.value.trim());
@@ -1176,6 +1182,19 @@
     consulta = ""; const c = document.getElementById("cerca-ind"); if (c) c.value = "";
     tria(i);
     document.getElementById("s-mapa").scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  // Para mapamobil.js
+  window.mapaApi = {
+    IND, TEMES, nomInd,
+    ok: (i) => NIVELLS.some((n) => disponible(i, n)) && !absent(i),
+    llegenda: () => { if (ind) llegenda(); },
+    get ind() { return ind; }, get nivell() { return nivell; }, get any() { return anySel; }, get fixat() { return fixat; }, get mapa() { return mapa; },
+    tria(id) { const i = IND.find((x) => x.id === id); if (!i) return; consulta = ""; const c = document.getElementById("cerca-ind"); if (c) c.value = ""; return tria(i); },
+    selecciona(ine) {
+      if (nivell !== "mun") return;
+      const f = geoMun.features.find((x) => x.properties.ine === ine); if (!f) return;
+      fixat = (geoNivell().features.find((x) => x.properties.ine === ine) || f).properties; info(fixat); encaixa(ine);
+    },
   };
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
   // Inserción (iframe): estado actual del mapa y arranque con un indicador, nivel y año dados
@@ -1270,6 +1289,7 @@
       const fm = esArea(nivell) ? ZONA[nivell].geo.features[f.id] : geoMun.features.find((x) => x.properties.ine === p.ine);
       if (fm) mapa.getSource("seleccio").setData({ type: "FeatureCollection", features: [fm] });
       if (matchMedia("(pointer: coarse)").matches) amagaTip();
+      avisa("zona", { punt: e.point });
     });
 
     document.querySelectorAll(".segment button").forEach((b) => b.addEventListener("click", () => canviaNivell(b.dataset.nivell)));

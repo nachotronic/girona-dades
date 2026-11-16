@@ -1,0 +1,114 @@
+/* ---------- Mapa en el móvil (2026-11-16): vista previa en la página + pantalla completa con hoja inferior ---------- */
+/* Fuera del móvil nada de esto se ve: el escritorio (menú | mapa | panel) y la tablet no cambian */
+.mm-obre, .mm-vel, .mm-tanca, .mm-xips, .mm-asa { display: none; }
+
+@media (max-width: 760px), (max-height: 520px) and (orientation: landscape) and (pointer: coarse) {
+  /* ----- Vista previa en la página: el mapa no atrapa el dedo; tocarlo lo abre ----- */
+  body:not(.mm-ple) .mm-vel { display: block; position: absolute; inset: 0; z-index: 4; cursor: pointer; }
+  body:not(.mm-ple) .mm-obre {
+    display: inline-flex; align-items: center; gap: 10px; position: absolute; left: 50%; bottom: 16px; z-index: 5; transform: translateX(-50%);
+    min-height: 48px; padding: 0 18px; border: 0; background: var(--tinta); color: var(--fons); cursor: pointer; white-space: nowrap;
+    font: 800 17px/1 var(--sans); font-stretch: 72%; letter-spacing: .01em; text-transform: uppercase;
+  }
+  body:not(.mm-ple) .mm-obre:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  body:not(.mm-ple) .cerca-mapa, body:not(.mm-ple) .maplibregl-ctrl-top-right, body:not(.mm-ple) .llegenda-centres { display: none; }
+  /* Debajo, solo la leyenda */
+  body:not(.mm-ple) .mapa-panell { display: block; padding: 12px 16px 16px; }
+  body:not(.mm-ple) .mapa-panell > :not(#llegenda) { display: none; }
+  body:not(.mm-ple) .mapa-menu { position: relative; top: 0; }
+  @media (orientation: landscape) { body:not(.mm-ple) #mapa { height: 70svh; } }
+
+  /* ----- Pantalla completa ----- */
+  body.mm-ple { overflow: hidden; }
+  body.mm-ple .cap { visibility: hidden; }
+  .mm-ple .mapa-graella {
+    position: fixed; inset: 0; z-index: 200; margin: 0; width: auto; height: 100vh; height: 100dvh;
+    display: flex; flex-direction: column; border: 0; background: var(--fons); overflow: hidden;
+  }
+  .mm-ple .mapa-menu {
+    position: relative; top: 0; z-index: 30; flex: none; margin: 0; background: var(--fons);
+    display: grid; grid-template-columns: 52px minmax(0, 1fr); padding-top: env(safe-area-inset-top);
+  }
+  .mm-ple .mm-tanca {
+    display: flex; align-items: center; justify-content: center; border: 0; border-right: 1px solid var(--vora); border-bottom: 1px solid var(--tinta);
+    background: var(--fons); color: var(--tinta); cursor: pointer; padding: 0;
+  }
+  .mm-ple .mm-tanca:active { background: var(--fons-2); }
+  .mm-ple .menu-ind-btn { padding-left: 12px; padding-right: 12px; min-height: 56px; }
+  .mm-ple .mm-xips {
+    grid-column: 1 / -1; display: flex; gap: 6px; overflow-x: auto; padding: 8px 12px; border-bottom: 1px solid var(--tinta);
+    scrollbar-width: none; overscroll-behavior-x: contain; scroll-padding: 0 12px;
+  }
+  .mm-ple .mm-xips::-webkit-scrollbar { display: none; }
+  .mm-xip {
+    flex: none; min-height: 38px; padding: 0 12px; border: 1px solid var(--vora-2); background: var(--fons); color: var(--tinta);
+    font: 500 13.5px/1 var(--sans); white-space: nowrap; cursor: pointer;
+  }
+  .mm-xip[aria-checked="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .mm-xip:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+  .mm-ple .mapa-caixa { flex: 1; min-height: 0; position: relative; margin-bottom: var(--mm-peek, 120px); }
+  .mm-ple .mapa-caixa .segment-panell {
+    position: absolute; left: 10px; top: 62px; z-index: 3; display: flex; max-width: calc(100% - 20px); overflow-x: auto; scrollbar-width: none;
+    background: var(--fons);
+  }
+  .mm-ple .mapa-caixa .segment-panell::-webkit-scrollbar { display: none; }
+  .mm-ple .mapa-caixa .segment-panell button { flex: 0 0 auto; min-height: 38px; white-space: nowrap; padding: 0 12px; }
+  .mm-ple .mapa-graella #mapa { height: 100% !important; min-height: 0; max-height: none; }
+  .mm-ple .maplibregl-ctrl-top-right { display: none; }
+  .mm-ple .cerca-mapa { left: 10px; right: 10px; top: 10px; width: auto; }
+  .mm-ple .cerca-mapa input { min-height: 44px; font-size: 16px; }
+  .mm-ple .cerca-mapa li { padding: 12px 10px; }
+  .mm-ple .llegenda-centres { top: 110px; bottom: auto; left: 10px; }
+
+  /* Selector de indicadores: ocupa toda la pantalla */
+  .mm-ple .mapa-eines { top: 0; height: 100vh; height: 100dvh; max-height: none; z-index: 300; border-top: 0; padding-top: env(safe-area-inset-top); }
+  .mm-ple .menu-ind-cap { min-height: 52px; border-bottom: 1px solid var(--tinta); }
+  .mm-ple .menu-ind-tanca { min-height: 40px; padding: 0 16px; }
+  .mm-ple .mapa-eines .cerca-ind input { min-height: 44px; font-size: 16px; }
+  .mm-ple .mapa-menu .xip { min-height: 40px; font-size: 14px; }
+  .mm-ple .mapa-menu .tema, .mm-ple .mapa-menu .tema:first-child { min-height: 44px; }
+
+  /* Hoja inferior: asa, nivel, leyenda y años siempre a la vista; al tocar un municipio sube a media pantalla */
+  .mm-ple .mapa-panell {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 20; height: 160px; max-height: none;
+    display: flex; flex-direction: column; gap: 10px; padding: 0 16px calc(20px + env(safe-area-inset-bottom));
+    background: var(--fons); border: 0; border-top: 3px solid var(--tinta); overflow-y: auto; overscroll-behavior: contain;
+  }
+  .mm-ple .mapa-panell.mm-anim { transition: height .24s cubic-bezier(.2, .7, .2, 1); }
+  .mm-ple .mapa-panell > * { flex-shrink: 0; grid-column: auto; }
+  .mm-ple .mapa-panell[data-estat="peek"] { overflow: hidden; }
+  .mm-ple .mm-asa {
+    order: 1; display: flex; align-items: center; justify-content: center; position: sticky; top: 0; z-index: 3;
+    width: calc(100% + 32px); height: 30px; margin: 0 -16px -6px; padding: 0; border: 0; background: var(--fons);
+    cursor: grab; touch-action: none;
+  }
+  .mm-asa i { display: block; width: 44px; height: 4px; background: var(--tinta); }
+  .mm-asa:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .mm-ple #llegenda { order: 3; }
+  .mm-ple #anys-ctl { order: 4; }
+  .mm-ple .llegenda-mapa .nd { margin-top: 2px; }
+  .mm-ple #info { order: 5; min-height: 0; padding-top: 14px; }
+  .mm-ple #ind-titol { order: 6; border-top: 1px solid var(--vora); padding-top: 14px; }
+  .mm-ple #mapa-desc { order: 7; }
+  .mm-ple #referencies { order: 8; }
+  .mm-ple #ranquing { order: 9; }
+  .mm-ple #emb-btn-mapa { order: 10; align-self: flex-start; }
+  .mm-ple .info button { min-height: 44px; }
+  .mm-ple .ranquing li { min-height: 40px; align-items: center; }
+  .mm-ple .anys-ctl .play { min-width: 40px; min-height: 40px; }
+
+  /* En horizontal: barra en una sola línea y el panel a la derecha, sin hoja */
+  @media (orientation: landscape) {
+    .mm-ple .mapa-graella { display: grid; grid-template-columns: minmax(0, 1fr) min(340px, 42vw); grid-template-rows: auto minmax(0, 1fr); }
+    .mm-ple .mapa-menu { grid-column: 1 / -1; grid-template-columns: 52px minmax(0, 0.8fr) minmax(0, 1.2fr); padding-left: env(safe-area-inset-left); }
+    .mm-ple .menu-ind-btn { min-height: 52px; padding-top: 6px; padding-bottom: 6px; border-right: 1px solid var(--vora); }
+    .mm-ple .menu-ind-nom { font-size: 17px; }
+    .mm-ple .mm-xips { grid-column: auto; align-items: center; }
+    .mm-ple .mapa-caixa { grid-row: 2; grid-column: 1; margin-bottom: 0; }
+    .mm-ple .cerca-mapa { right: auto; width: min(260px, calc(100% - 20px)); }
+    .mm-ple .mapa-caixa .segment-panell { top: auto; bottom: 10px; }
+    .mm-ple .mapa-panell { position: static; grid-row: 2; grid-column: 2; height: auto !important; border-top: 0; border-left: 1px solid var(--tinta); padding-top: 14px; padding-right: calc(16px + env(safe-area-inset-right)); }
+    .mm-ple .mm-asa { display: none; }
+  }
+}
