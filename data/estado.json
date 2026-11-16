@@ -1,10 +1,10 @@
 {
  "aeat": {
-  "estat": "avís",
-  "intent": "2026-11-16T14:00:13Z",
-  "ok": "2026-11-16T12:05:14Z",
-  "durada": 3,
-  "resum": "2022: ERROR sin enlace a los datos municipales en https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2022/home.html\n2024: ERROR sin enlace a los datos municipales en https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2024/home.html\n2023: ya guardado"
+  "estat": "ok",
+  "intent": "2026-11-16T14:02:17Z",
+  "ok": "2026-11-16T14:02:17Z",
+  "durada": 164,
+  "resum": "2022: 94 municipios\n2023: ya guardado\n2024: 95 municipios\n285 filas, 238 columnas"
  },
  "aena": {
   "estat": "ok",

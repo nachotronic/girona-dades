@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 14:00 UTC
+Última ejecución: 2026-11-16 14:05 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -25,69 +25,18 @@
 | dgt — DGT, matriculacions | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | aena — Aena, passatgers de l'aeroport | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | eleccions — Generalitat, processos electorals | ok | 2026-11-16 14:00 | 2026-11-16 14:00 | per elecció |
-| aeat — Agencia Tributaria, IRPF per municipis | avís | 2026-11-16 12:05 | 2026-11-16 14:00 | anual |
+| aeat — Agencia Tributaria, IRPF per municipis | ok | 2026-11-16 14:02 | 2026-11-16 14:02 | anual |
 | padro — INE, padró i empreses (DIRCE) | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | pressupostos — Generalitat, liquidació dels pressupostos municipals | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | tributs — Ministerio de Hacienda, tipus impositius municipals | ok | 2026-11-16 13:08 | 2026-11-16 13:08 | anual |
 
 ## Detalle de la última ejecución
 
-### aeat: avís (3 s)
+### aeat: ok (164 s)
 
 ```
-2022: ERROR sin enlace a los datos municipales en https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2022/home.html
-2024: ERROR sin enlace a los datos municipales en https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/2024/home.html
+2022: 94 municipios
 2023: ya guardado
-```
-
-### eleccions: ok (2 s)
-
-```
-A20101: ya guardada (resultados definitivos)
-M20111: ya guardada (resultados definitivos)
-G20111: ya guardada (resultados definitivos)
-A20121: ya guardada (resultados definitivos)
-E20141: ya guardada (resultados definitivos)
-M20151: ya guardada (resultados definitivos)
-A20151: ya guardada (resultados definitivos)
-G20151: ya guardada (resultados definitivos)
-G20161: ya guardada (resultados definitivos)
-A20171: ya guardada (resultados definitivos)
-G20191: ya guardada (resultados definitivos)
-M20191: ya guardada (resultados definitivos)
-E20191: ya guardada (resultados definitivos)
-G20192: ya guardada (resultados definitivos)
-A20211: ya guardada (resultados definitivos)
-M20231: ya guardada (resultados definitivos)
-G20231: ya guardada (resultados definitivos)
-A20241: ya guardada (resultados definitivos)
-E20241: ya guardada (resultados definitivos)
-```
-
-### conjuntura: ok (7 s)
-
-```
-paro 2019: ya guardado
-paro 2020: ya guardado
-paro 2021: ya guardado
-paro 2022: ya guardado
-paro 2023: ya guardado
-paro 2024: ya guardado
-paro 2025: ya guardado
-paro 2026: 2210 filas de Girona, meses 202601-202610
-contratos 2020: ya guardado
-contratos 2021: ya guardado
-contratos 2022: ya guardado
-contratos 2023: ya guardado
-contratos 2024: ya guardado
-contratos 2025: ya guardado
-contratos 2026: 2210 filas de Girona, meses 202601-202610
-dtes 2019: ya guardado
-dtes 2020: ya guardado
-dtes 2021: ya guardado
-dtes 2022: ya guardado
-dtes 2023: ya guardado
-dtes 2024: ya guardado
-dtes 2025: ya guardado
-dtes 2026: 2210 filas de Girona, meses 202601-202610
+2024: 95 municipios
+285 filas, 238 columnas
 ```
