@@ -479,7 +479,7 @@ function obreFitxa(ine, desplaca) {
   const m = D.municipios.find((x) => x.ine === ine);
   if (!m) return;
   seleccionat = ine;
-  if (!window.EMB) try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
+  if (!window.EMB) try { history.replaceState(history.state, "", `#${ine}`); } catch (e) { /* */ }
   const f = document.getElementById("fitxa");
   const [aR, vR] = ultim(m.renta_persona);
   const esf = esforc(m);
@@ -518,7 +518,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
-  f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* */ } });
+  f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(history.state, "", location.pathname + location.search); } catch (e) { /* */ } });
   grafLinia(f.querySelector(".g-ll"), [
     { nom: m.nom, color: "var(--serie-1)", dades: m.alquiler },
     { nom: t("provincia"), color: "var(--serie-2)", dades: D.provincia.alquiler },
