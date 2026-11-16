@@ -33,6 +33,8 @@ COLS = {
     "dtes": ["total", "h_25", "h_25_45", "h_45", "d_25", "d_25_45", "d_45", "agri", "ind", "cons", "serv", "sense"],
 }
 DESDE = 2019
+# El SEPE publica el fichero de contratos de 2019 vacío: empieza en 2020
+DESDE_TIPUS = {"contratos": 2020}
 
 
 def _llegeix(contingut: bytes, tipus: str) -> pd.DataFrame:
@@ -74,7 +76,7 @@ def ejecutar() -> str:
     avui = dt.date.today()
     lineas = []
     for tipus, fichero in TIPUS.items():
-        for any_ in range(DESDE, avui.year + 1):
+        for any_ in range(DESDE_TIPUS.get(tipus, DESDE), avui.year + 1):
             desti = sal / f"sepe_{tipus}_{any_}.csv"
             tancat = any_ < avui.year - (1 if avui.month <= 2 else 0)
             if tancat and desti.exists() and (sal / f"sepe_totals_{tipus}_{any_}.csv").exists():

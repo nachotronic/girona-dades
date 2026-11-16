@@ -50,6 +50,17 @@ for d in ("ntc4-rnwr", "irrv-2mfc", "tgns-3xuy"):
     CANDIDATAS_E[f"pe_{d}_mostra"] = f"{SOC}/resource/{d}.json?$limit=30"
 CANDIDATAS_E["pe_tgns_tot"] = f"{SOC}/resource/tgns-3xuy.json?$limit=5000"
 
+# AEAT, IRPF por municipios: cómo llegar a la página de inicio de cada año (el hash cambia)
+AEAT_S = "https://sede.agenciatributaria.gob.es"
+AEAT_P = AEAT_S + "/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfmunicipios/"
+CANDIDATAS_E = {
+    "aeat_cataleg": f"{AEAT_S}/Sede/datosabiertos/catalogo/hacienda/Estadistica_de_los_declarantes_del_IRPF_por_municipios.shtml",
+    "aeat_2023_inici": AEAT_P + "2023/jrubik56c8a4941ca3d442b24b56b4ceb716f086a75f33.html",
+    "aeat_2022_inici": AEAT_P + "2022/jrubik1198fe8ede3dc662d7abca172447262a03941a02.html",
+    "aeat_hisenda": "https://www.hacienda.gob.es/es-ES/CDI/paginas/impuestos/irpf/estadistica-declarantes-irpf-municipios.aspx",
+    "aeat_estadistiques": f"{AEAT_S}/Sede/estadisticas/estadisticas-territoriales.html",
+}
+
 def explora_zips(filas: list) -> None:
     import io, zipfile
     for clave, url in ZIPS.items():
