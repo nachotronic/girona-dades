@@ -54,6 +54,42 @@ CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
 for t in ("atur registrat", "afiliats", "contractes", "habitatges iniciats", "pernoctacions", "ocupacio hotelera", "matriculacio", "fiances", "atur", "treballadors"):
     CANDIDATAS[f"socrata_{t.replace(' ', '_')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
 
+# Eleccions: resultats per mesa (Interior) i Parlament (Generalitat)
+INTERIOR = "https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/"
+ZIPS = {f"int_{t}{f}": f"{INTERIOR}{t}{f}_MESA.zip" for t, f in (
+    ("02", "202307"), ("02", "201911"), ("04", "202305"), ("07", "202406"))}
+CANDIDATAS_E = {}
+CANDIDATAS_E["int_descargas"] = "https://infoelectoral.interior.gob.es/es/elecciones-celebradas/area-de-descargas/"
+for q in ("eleccions parlament", "resultats electorals", "eleccions mesa", "eleccions generals", "eleccions europees",
+          "eleccions", "meses electorals", "seccions censals eleccions", "participació electoral"):
+    CANDIDATAS_E["soc_e_" + q.replace(" ", "_").replace("ó", "o").replace("·", "")] = (
+        f"{SOCRATA}?q={urllib.parse.quote(q)}&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset")
+CANDIDATAS_E["gencat_eleccions"] = "https://eleccions.gencat.cat/ca/resultats-electorals/"
+CANDIDATAS_E["gencat_arxiu"] = "https://eleccions.gencat.cat/ca/resultats-electorals/#/"
+CANDIDATAS_E["datosgob_elecciones"] = "https://datos.gob.es/apidata/catalog/dataset/title/elecciones?_pageSize=50"
+
+
+def explora_zips(filas: list) -> None:
+    import io, zipfile
+    for clave, url in ZIPS.items():
+        try:
+            r = requests.get(url, headers=UA, timeout=300)
+            filas.append(f"| {clave} | {r.status_code} | {r.headers.get('content-type','')} | {len(r.content)} | {r.url} |")
+            if r.status_code != 200:
+                continue
+            z = zipfile.ZipFile(io.BytesIO(r.content))
+            info = []
+            for n in z.namelist():
+                datos = z.read(n)
+                info.append(f"{n}\t{len(datos)}")
+                lineas = datos.decode("latin-1").splitlines()
+                gir = [l for l in lineas if "17" in l[9:20]][:300]
+                (MUESTRAS / f"{clave}_{n}.txt").write_text("\n".join(lineas[:40] + ["--- 17 ---"] + gir), encoding="utf-8")
+            (MUESTRAS / f"{clave}_LISTA.txt").write_text("\n".join(info), encoding="utf-8")
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
+
+
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
     for clave, ext in (("excel", "xls"), ("json", "json"), ("xml", "xml"), ("html", "html"), ("csv", "csv")):
@@ -65,7 +101,8 @@ def extension(tipo: str) -> str:
 def main() -> None:
     MUESTRAS.mkdir(parents=True, exist_ok=True)
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
-    for clave, url in CANDIDATAS.items():
+    explora_zips(filas)
+    for clave, url in CANDIDATAS_E.items():
         try:
             r = requests.get(url, headers=UA, timeout=120, stream=True)
             contenido = r.raw.read(LIMITE * 20 if clave.startswith("ine_ops_") else LIMITE, decode_content=True)
