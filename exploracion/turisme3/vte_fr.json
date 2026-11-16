@@ -1,0 +1,2736 @@
+{
+ "39364": {
+  "op": "VTE",
+  "nom": "Viviendas turísticas, plazas y plazas por vivienda turística. Total nacional, comunidades autónomas y provincias",
+  "grups": [
+   {
+    "id": 105539,
+    "nom": "Comunidades Autónomas y Provincias",
+    "n": 72,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 5,
+      "FK_Variable": 115,
+      "Nombre": "Almería",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       8997
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 18,
+      "FK_Variable": 115,
+      "Nombre": "Girona",
+      "Codigo": "17",
+      "FK_JerarquiaPadres": [
+       9005
+      ]
+     }
+    ],
+    "n_gi": 3
+   },
+   {
+    "id": 105540,
+    "nom": "Viviendas y plazas",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 382508,
+      "FK_Variable": 433,
+      "Nombre": "Viviendas turísticas",
+      "Codigo": ""
+     },
+     {
+      "Id": 382510,
+      "FK_Variable": 433,
+      "Nombre": "Plazas",
+      "Codigo": ""
+     },
+     {
+      "Id": 382509,
+      "FK_Variable": 433,
+      "Nombre": "Plazas por vivienda turística",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ],
+  "prueba": {
+   "filtro": "Girona",
+   "n": 3,
+   "ej": [
+    [
+     "Girona. Viviendas turísticas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 20821.0,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 17754.0,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Plazas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 116320.0,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 97336.0,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Plazas por vivienda turística. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 5.59,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 5.48,
+       "Secreto": false
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "46141": {
+  "op": "VTE",
+  "nom": "Viviendas turísticas, plazas, plazas por vivienda turística y porcentaje de viviendas turísticas sobre el total de viviendas censadas en 2011. Total nacional, comunidades autónomas y provincias",
+  "grups": [
+   {
+    "id": 105993,
+    "nom": "Comunidades Autónomas y Provincias",
+    "n": 72,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 5,
+      "FK_Variable": 115,
+      "Nombre": "Almería",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       8997
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 18,
+      "FK_Variable": 115,
+      "Nombre": "Girona",
+      "Codigo": "17",
+      "FK_JerarquiaPadres": [
+       9005
+      ]
+     }
+    ],
+    "n_gi": 3
+   },
+   {
+    "id": 105994,
+    "nom": "Viviendas y plazas",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 382508,
+      "FK_Variable": 433,
+      "Nombre": "Viviendas turísticas",
+      "Codigo": ""
+     },
+     {
+      "Id": 382510,
+      "FK_Variable": 433,
+      "Nombre": "Plazas",
+      "Codigo": ""
+     },
+     {
+      "Id": 382509,
+      "FK_Variable": 433,
+      "Nombre": "Plazas por vivienda turística",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ],
+  "prueba": {
+   "filtro": "Girona",
+   "n": 4,
+   "ej": [
+    [
+     "Girona. Viviendas turísticas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 20821.0,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 17754.0,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Plazas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 116320.0,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 97336.0,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Plazas por vivienda turística. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 5.59,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 5.48,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Porcentaje de viviendas turísticas sobre el total de viviendas censadas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 4.1,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 3.5,
+       "Secreto": false
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "39363": {
+  "op": "VTE",
+  "nom": "Viviendas turísticas, plazas y plazas por vivienda turística. Municipios",
+  "grups": [
+   {
+    "id": 105534,
+    "nom": "Municipios",
+    "n": 8207,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 5,
+      "FK_Variable": 115,
+      "Nombre": "Almería",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       8997
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 18,
+      "FK_Variable": 115,
+      "Nombre": "Girona",
+      "Codigo": "17",
+      "FK_JerarquiaPadres": [
+       9005
+      ]
+     },
+     {
+      "Id": 4503,
+      "FK_Variable": 19,
+      "Nombre": "Agullana",
+      "Codigo": "17001",
+      "FK_JerarquiaPadres": [
+       18,
+       392278
+      ]
+     },
+     {
+      "Id": 4504,
+      "FK_Variable": 19,
+      "Nombre": "Aiguaviva",
+      "Codigo": "17002",
+      "FK_JerarquiaPadres": [
+       18,
+       392279
+      ]
+     }
+    ],
+    "n_gi": 224
+   },
+   {
+    "id": 105535,
+    "nom": "Viviendas y plazas",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 382508,
+      "FK_Variable": 433,
+      "Nombre": "Viviendas turísticas",
+      "Codigo": ""
+     },
+     {
+      "Id": 382510,
+      "FK_Variable": 433,
+      "Nombre": "Plazas",
+      "Codigo": ""
+     },
+     {
+      "Id": 382509,
+      "FK_Variable": 433,
+      "Nombre": "Plazas por vivienda turística",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ],
+  "prueba": {
+   "filtro": "Girona",
+   "n": 3,
+   "ej": [
+    [
+     "Girona. Viviendas turísticas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 20821.0,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 17754.0,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Plazas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 116320.0,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 97336.0,
+       "Secreto": false
+      }
+     ]
+    ],
+    [
+     "Girona. Plazas por vivienda turística. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 5.59,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 5.48,
+       "Secreto": false
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "39365": {
+  "op": "VTE",
+  "nom": "Porcentaje de viviendas turísticas sobre el total de viviendas censadas. Total nacional, comunidades autónomas y provincias",
+  "grups": [
+   {
+    "id": 105542,
+    "nom": "Comunidades Autónomas y Provincias",
+    "n": 72,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 5,
+      "FK_Variable": 115,
+      "Nombre": "Almería",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       8997
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 18,
+      "FK_Variable": 115,
+      "Nombre": "Girona",
+      "Codigo": "17",
+      "FK_JerarquiaPadres": [
+       9005
+      ]
+     }
+    ],
+    "n_gi": 3
+   }
+  ],
+  "prueba": {
+   "filtro": "Girona",
+   "n": 1,
+   "ej": [
+    [
+     "Girona. Porcentaje de viviendas turísticas sobre el total de viviendas censadas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 4.1,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 3.5,
+       "Secreto": false
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "39366": {
+  "op": "VTE",
+  "nom": "Porcentaje de viviendas turísticas sobre el total de viviendas censadas. Municipios",
+  "grups": [
+   {
+    "id": 105545,
+    "nom": "Municipios",
+    "n": 8207,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 5,
+      "FK_Variable": 115,
+      "Nombre": "Almería",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       8997
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 18,
+      "FK_Variable": 115,
+      "Nombre": "Girona",
+      "Codigo": "17",
+      "FK_JerarquiaPadres": [
+       9005
+      ]
+     },
+     {
+      "Id": 4503,
+      "FK_Variable": 19,
+      "Nombre": "Agullana",
+      "Codigo": "17001",
+      "FK_JerarquiaPadres": [
+       18,
+       392278
+      ]
+     },
+     {
+      "Id": 4504,
+      "FK_Variable": 19,
+      "Nombre": "Aiguaviva",
+      "Codigo": "17002",
+      "FK_JerarquiaPadres": [
+       18,
+       392279
+      ]
+     }
+    ],
+    "n_gi": 224
+   }
+  ],
+  "prueba": {
+   "filtro": "Girona",
+   "n": 1,
+   "ej": [
+    [
+     "Girona. Porcentaje de viviendas turísticas sobre el total de viviendas censadas. Dato base. ",
+     [
+      {
+       "Fecha": 1777586400000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 5,
+       "Anyo": 2026,
+       "Valor": 4.1,
+       "Secreto": false
+      },
+      {
+       "Fecha": 1761951600000,
+       "FK_TipoDato": 1,
+       "FK_Periodo": 11,
+       "Anyo": 2025,
+       "Valor": 3.5,
+       "Secreto": false
+      }
+     ]
+    ]
+   ]
+  }
+ },
+ "10821": {
+  "op": "FR",
+  "nom": "Número de visitantes según tipología",
+  "grups": [
+   {
+    "id": 72112,
+    "nom": "Tipo de visitante",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 298455,
+      "FK_Variable": 613,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298009,
+      "FK_Variable": 613,
+      "Nombre": "Turista",
+      "Codigo": ""
+     },
+     {
+      "Id": 298010,
+      "FK_Variable": 613,
+      "Nombre": "Excursionista",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298455,
+      "FK_Variable": 613,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 72931,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "10823": {
+  "op": "FR",
+  "nom": "Número de turistas según comunidad autónoma de destino principal",
+  "grups": [
+   {
+    "id": 72077,
+    "nom": "Comunidades autónomas",
+    "n": 8,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 9000,
+      "FK_Variable": 70,
+      "Nombre": "Balears, Illes",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       274508
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "n_gi": 2
+   },
+   {
+    "id": 72935,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23981": {
+  "op": "FR",
+  "nom": "Número de visitantes según tipología",
+  "grups": [
+   {
+    "id": 81657,
+    "nom": "Tipo de visitante",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 298455,
+      "FK_Variable": 613,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298009,
+      "FK_Variable": 613,
+      "Nombre": "Turista",
+      "Codigo": ""
+     },
+     {
+      "Id": 298010,
+      "FK_Variable": 613,
+      "Nombre": "Excursionista",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298455,
+      "FK_Variable": 613,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 81659,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23988": {
+  "op": "FR",
+  "nom": "Número de turistas según comunidad autónoma de destino principal",
+  "grups": [
+   {
+    "id": 81684,
+    "nom": "Comunidades autónomas",
+    "n": 20,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 8998,
+      "FK_Variable": 70,
+      "Nombre": "Aragón",
+      "Codigo": "02",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "n_gi": 2
+   },
+   {
+    "id": 81686,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "75719": {
+  "op": "FR",
+  "nom": "Número de turistas según país de residencia",
+  "grups": [
+   {
+    "id": 155342,
+    "nom": "País de residencia",
+    "n": 16,
+    "ej": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 9978,
+      "FK_Variable": 96,
+      "Nombre": "Alemania",
+      "Codigo": "126",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     },
+     {
+      "Id": 9980,
+      "FK_Variable": 96,
+      "Nombre": "Bélgica",
+      "Codigo": "103",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155345,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "10835": {
+  "op": "FR",
+  "nom": "Número de turistas según vía de acceso",
+  "grups": [
+   {
+    "id": 72100,
+    "nom": "Via de acceso",
+    "n": 5,
+    "ej": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298016,
+      "FK_Variable": 478,
+      "Nombre": "Aeropuerto",
+      "Codigo": ""
+     },
+     {
+      "Id": 298018,
+      "FK_Variable": 478,
+      "Nombre": "Carretera",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 72932,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23982": {
+  "op": "FR",
+  "nom": "Número de turistas según vía de acceso",
+  "grups": [
+   {
+    "id": 81662,
+    "nom": "Via de acceso",
+    "n": 5,
+    "ej": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298016,
+      "FK_Variable": 478,
+      "Nombre": "Aeropuerto",
+      "Codigo": ""
+     },
+     {
+      "Id": 298018,
+      "FK_Variable": 478,
+      "Nombre": "Carretera",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 81663,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "75720": {
+  "op": "FR",
+  "nom": "Número de turistas según comunidad autónoma de destino principal",
+  "grups": [
+   {
+    "id": 155346,
+    "nom": "Comunidades autónomas",
+    "n": 8,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 9000,
+      "FK_Variable": 70,
+      "Nombre": "Balears, Illes",
+      "Codigo": "04",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       274508
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "n_gi": 2
+   },
+   {
+    "id": 155348,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "10826": {
+  "op": "FR",
+  "nom": "Número de turistas según tipo de alojamiento principal",
+  "grups": [
+   {
+    "id": 72089,
+    "nom": "Tipo de alojamiento",
+    "n": 9,
+    "ej": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298457,
+      "FK_Variable": 565,
+      "Nombre": "De mercado",
+      "Codigo": ""
+     },
+     {
+      "Id": 292966,
+      "FK_Variable": 565,
+      "Nombre": "Hotelero",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       298457
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 72933,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23983": {
+  "op": "FR",
+  "nom": "Número de turistas según tipo de alojamiento principal",
+  "grups": [
+   {
+    "id": 81665,
+    "nom": "Tipo de alojamiento",
+    "n": 9,
+    "ej": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298457,
+      "FK_Variable": 565,
+      "Nombre": "De mercado",
+      "Codigo": ""
+     },
+     {
+      "Id": 292966,
+      "FK_Variable": 565,
+      "Nombre": "Hotelero",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       298457
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 81667,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "75721": {
+  "op": "FR",
+  "nom": "Número de turistas según motivo principal del viaje",
+  "grups": [
+   {
+    "id": 155350,
+    "nom": "Motivo del viaje",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291887,
+      "FK_Variable": 580,
+      "Nombre": "Ocio, recreo y vacaciones",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     },
+     {
+      "Id": 292706,
+      "FK_Variable": 580,
+      "Nombre": "Negocio, motivos profesionales",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155352,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "10822": {
+  "op": "FR",
+  "nom": "Número de turistas según país de residencia",
+  "grups": [
+   {
+    "id": 72075,
+    "nom": "País de residencia",
+    "n": 16,
+    "ej": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 9978,
+      "FK_Variable": 96,
+      "Nombre": "Alemania",
+      "Codigo": "126",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     },
+     {
+      "Id": 9980,
+      "FK_Variable": 96,
+      "Nombre": "Bélgica",
+      "Codigo": "103",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 72934,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "13884": {
+  "op": "FR",
+  "nom": "Resultados detallados mensuales",
+  "grups": [
+   {
+    "id": 78579,
+    "nom": "Vía de acceso",
+    "n": 5,
+    "ej": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298016,
+      "FK_Variable": 478,
+      "Nombre": "Aeropuerto",
+      "Codigo": ""
+     },
+     {
+      "Id": 298018,
+      "FK_Variable": 478,
+      "Nombre": "Carretera",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 78580,
+    "nom": "Comunidad autónoma de destino",
+    "n": 18,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 8998,
+      "FK_Variable": 70,
+      "Nombre": "Aragón",
+      "Codigo": "02",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "n_gi": 2
+   },
+   {
+    "id": 78581,
+    "nom": "País de residencia",
+    "n": 37,
+    "ej": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 9978,
+      "FK_Variable": 96,
+      "Nombre": "Alemania",
+      "Codigo": "126",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     },
+     {
+      "Id": 9979,
+      "FK_Variable": 96,
+      "Nombre": "Austria",
+      "Codigo": "102",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 78582,
+    "nom": "Motivo del viaje",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291885,
+      "FK_Variable": 580,
+      "Nombre": "Negocios y otros motivos profesionales",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     },
+     {
+      "Id": 291887,
+      "FK_Variable": 580,
+      "Nombre": "Ocio, recreo y vacaciones",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 78583,
+    "nom": "Tipo de alojamiento",
+    "n": 9,
+    "ej": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298457,
+      "FK_Variable": 565,
+      "Nombre": "De mercado",
+      "Codigo": ""
+     },
+     {
+      "Id": 292966,
+      "FK_Variable": 565,
+      "Nombre": "Hotelero",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       298457
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 78584,
+    "nom": "Forma de organización del viaje",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291962,
+      "FK_Variable": 101,
+      "Nombre": "Con paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     },
+     {
+      "Id": 298013,
+      "FK_Variable": 101,
+      "Nombre": "Sin paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 79040,
+    "nom": "Duración del viaje",
+    "n": 6,
+    "ej": [
+     {
+      "Id": 291945,
+      "FK_Variable": 588,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 299054,
+      "FK_Variable": 588,
+      "Nombre": "1 noche",
+      "Codigo": ""
+     },
+     {
+      "Id": 299055,
+      "FK_Variable": 588,
+      "Nombre": "De 2 a 3 noches",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291945,
+      "FK_Variable": 588,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   }
+  ]
+ },
+ "23984": {
+  "op": "FR",
+  "nom": "Número de turistas según país de residencia",
+  "grups": [
+   {
+    "id": 81668,
+    "nom": "País de residencia",
+    "n": 31,
+    "ej": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 9978,
+      "FK_Variable": 96,
+      "Nombre": "Alemania",
+      "Codigo": "126",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     },
+     {
+      "Id": 9980,
+      "FK_Variable": 96,
+      "Nombre": "Bélgica",
+      "Codigo": "103",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 81671,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "75722": {
+  "op": "FR",
+  "nom": "Número de visitantes según tipología",
+  "grups": [
+   {
+    "id": 155353,
+    "nom": "Tipo de visitante",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 298455,
+      "FK_Variable": 613,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298009,
+      "FK_Variable": 613,
+      "Nombre": "Turista",
+      "Codigo": ""
+     },
+     {
+      "Id": 298010,
+      "FK_Variable": 613,
+      "Nombre": "Excursionista",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298455,
+      "FK_Variable": 613,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155355,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "13864": {
+  "op": "FR",
+  "nom": "Número de turistas según motivo principal del viaje",
+  "grups": [
+   {
+    "id": 78457,
+    "nom": "Motivo del viaje",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291887,
+      "FK_Variable": 580,
+      "Nombre": "Ocio, recreo y vacaciones",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     },
+     {
+      "Id": 292706,
+      "FK_Variable": 580,
+      "Nombre": "Negocio, motivos profesionales",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 78459,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23985": {
+  "op": "FR",
+  "nom": "Número de turistas según motivo principal del viaje",
+  "grups": [
+   {
+    "id": 81673,
+    "nom": "Motivo del viaje",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291887,
+      "FK_Variable": 580,
+      "Nombre": "Ocio, recreo y vacaciones",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     },
+     {
+      "Id": 292706,
+      "FK_Variable": 580,
+      "Nombre": "Negocio, motivos profesionales",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 81675,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "75723": {
+  "op": "FR",
+  "nom": "Resultados detallados mensuales",
+  "grups": [
+   {
+    "id": 155357,
+    "nom": "Vía de acceso",
+    "n": 5,
+    "ej": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298016,
+      "FK_Variable": 478,
+      "Nombre": "Aeropuerto",
+      "Codigo": ""
+     },
+     {
+      "Id": 298018,
+      "FK_Variable": 478,
+      "Nombre": "Carretera",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 298456,
+      "FK_Variable": 478,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155358,
+    "nom": "Comunidad autónoma de destino",
+    "n": 18,
+    "ej": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 8997,
+      "FK_Variable": 70,
+      "Nombre": "Andalucía",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     },
+     {
+      "Id": 8998,
+      "FK_Variable": 70,
+      "Nombre": "Aragón",
+      "Codigo": "02",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16473,
+      "FK_Variable": 349,
+      "Nombre": "Total Nacional",
+      "Codigo": "00"
+     },
+     {
+      "Id": 9005,
+      "FK_Variable": 70,
+      "Nombre": "Cataluña",
+      "Codigo": "09",
+      "FK_JerarquiaPadres": [
+       16473,
+       274511,
+       457344,
+       274508
+      ]
+     }
+    ],
+    "n_gi": 2
+   },
+   {
+    "id": 155359,
+    "nom": "País de residencia",
+    "n": 37,
+    "ej": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 9978,
+      "FK_Variable": 96,
+      "Nombre": "Alemania",
+      "Codigo": "126",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     },
+     {
+      "Id": 9979,
+      "FK_Variable": 96,
+      "Nombre": "Austria",
+      "Codigo": "102",
+      "FK_JerarquiaPadres": [
+       9975,
+       16439
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 16420,
+      "FK_Variable": 96,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155360,
+    "nom": "Motivo del viaje",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291885,
+      "FK_Variable": 580,
+      "Nombre": "Negocios y otros motivos profesionales",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     },
+     {
+      "Id": 291887,
+      "FK_Variable": 580,
+      "Nombre": "Ocio, recreo y vacaciones",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291884
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291884,
+      "FK_Variable": 580,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155361,
+    "nom": "Tipo de alojamiento",
+    "n": 9,
+    "ej": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298457,
+      "FK_Variable": 565,
+      "Nombre": "De mercado",
+      "Codigo": ""
+     },
+     {
+      "Id": 292966,
+      "FK_Variable": 565,
+      "Nombre": "Hotelero",
+      "Codigo": "01",
+      "FK_JerarquiaPadres": [
+       298457
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 292961,
+      "FK_Variable": 565,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155362,
+    "nom": "Forma de organización del viaje",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 291962,
+      "FK_Variable": 101,
+      "Nombre": "Con paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     },
+     {
+      "Id": 298013,
+      "FK_Variable": 101,
+      "Nombre": "Sin paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 155364,
+    "nom": "Duración del viaje",
+    "n": 6,
+    "ej": [
+     {
+      "Id": 291945,
+      "FK_Variable": 588,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 299054,
+      "FK_Variable": 588,
+      "Nombre": "1 noche",
+      "Codigo": ""
+     },
+     {
+      "Id": 299055,
+      "FK_Variable": 588,
+      "Nombre": "De 2 a 3 noches",
+      "Codigo": ""
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291945,
+      "FK_Variable": 588,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   }
+  ]
+ },
+ "13865": {
+  "op": "FR",
+  "nom": "Número de turistas según forma de organización del viaje",
+  "grups": [
+   {
+    "id": 78461,
+    "nom": "Forma de organización del viaje",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298013,
+      "FK_Variable": 101,
+      "Nombre": "Sin paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     },
+     {
+      "Id": 291962,
+      "FK_Variable": 101,
+      "Nombre": "Con paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 78463,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23986": {
+  "op": "FR",
+  "nom": "Número de turistas según forma de organización del viaje",
+  "grups": [
+   {
+    "id": 81677,
+    "nom": "Forma de organización del viaje",
+    "n": 3,
+    "ej": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     },
+     {
+      "Id": 298013,
+      "FK_Variable": 101,
+      "Nombre": "Sin paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     },
+     {
+      "Id": 291962,
+      "FK_Variable": 101,
+      "Nombre": "Con paquete turístico",
+      "Codigo": "",
+      "FK_JerarquiaPadres": [
+       291960
+      ]
+     }
+    ],
+    "gi": [
+     {
+      "Id": 291960,
+      "FK_Variable": 101,
+      "Nombre": "Total",
+      "Codigo": ""
+     }
+    ],
+    "n_gi": 1
+   },
+   {
+    "id": 81679,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "14290": {
+  "op": "FR",
+  "nom": "Número de visitantes según duración de la estancia",
+  "grups": [
+   {
+    "id": 78992,
+    "nom": "Duración del viaje",
+    "n": 6,
+    "ej": [
+     {
+      "Id": 299056,
+      "FK_Variable": 588,
+      "Nombre": "Ninguna noche",
+      "Codigo": ""
+     },
+     {
+      "Id": 299054,
+      "FK_Variable": 588,
+      "Nombre": "1 noche",
+      "Codigo": ""
+     },
+     {
+      "Id": 299055,
+      "FK_Variable": 588,
+      "Nombre": "De 2 a 3 noches",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   },
+   {
+    "id": 78991,
+    "nom": "Tipo de dato",
+    "n": 4,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     },
+     {
+      "Id": 298086,
+      "FK_Variable": 3,
+      "Nombre": "Acumulado en lo que va de año",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ },
+ "23987": {
+  "op": "FR",
+  "nom": "Número de visitantes según duración de la estancia",
+  "grups": [
+   {
+    "id": 81682,
+    "nom": "Duración del viaje",
+    "n": 6,
+    "ej": [
+     {
+      "Id": 299056,
+      "FK_Variable": 588,
+      "Nombre": "Ninguna noche",
+      "Codigo": ""
+     },
+     {
+      "Id": 299054,
+      "FK_Variable": 588,
+      "Nombre": "1 noche",
+      "Codigo": ""
+     },
+     {
+      "Id": 299055,
+      "FK_Variable": 588,
+      "Nombre": "De 2 a 3 noches",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   },
+   {
+    "id": 81683,
+    "nom": "Tipo de dato",
+    "n": 2,
+    "ej": [
+     {
+      "Id": 72,
+      "FK_Variable": 3,
+      "Nombre": "Dato base",
+      "Codigo": ""
+     },
+     {
+      "Id": 81,
+      "FK_Variable": 3,
+      "Nombre": "Tasa de variación anual",
+      "Codigo": ""
+     }
+    ],
+    "gi": [],
+    "n_gi": 0
+   }
+  ]
+ }
+}
