@@ -302,7 +302,7 @@ MESOS = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost",
 
 
 def generalitat_indicadores(pob):
-    """Renta garantizada, autoconsumo y recogida selectiva por municipio."""
+    """Renta garantizada y recogida selectiva por municipio (el autoconsumo va en solar())."""
     res, anys = {}, {}
     def pon(ine, clave, v, dec=1):
         if v is not None and not (isinstance(v, float) and math.isnan(v)):
@@ -321,15 +321,6 @@ def generalitat_indicadores(pob):
         anys["rgc"] = int(g["any"].max())
     except Exception as e:  # noqa: BLE001
         print("AVISO renda garantida:", e)
-    try:
-        a = pd.read_csv(uno("generalitat/2b4s-skfm_*"), dtype=str)
-        a["kw"] = pd.to_numeric(a["Potència"], errors="coerce") / 1000
-        a["ine"] = a["Codi IDESCAT municipi"].str[:5]
-        for ine, grp in a.groupby("ine"):
-            if pob.get(ine):
-                pon(ine, "autoconsum", len(grp) / pob[ine] * 1000)
-    except Exception as e:  # noqa: BLE001
-        print("AVISO autoconsum:", e)
     try:
         w = pd.read_csv(uno("generalitat/69zu-w48s_*"), dtype=str)
         w["any"] = pd.to_numeric(w["Any"], errors="coerce")
@@ -1863,6 +1854,103 @@ def comerc():
                 o["grans"].sort(key=lambda e: -(e["s"] or 0))
         punts = {"type": "FeatureCollection", "features": feats}
     return mun, refs, a1, x_mun, fitxa, refs_x, punts
+def solar():
+    """Autoconsumo fotovoltaico (RAC de la Generalitat) por municipio y año, acumulado a 31 de
+    diciembre según la fecha de puesta en servicio. Devuelve {ine: {clave: {año: valor}}},
+    {clave: {año: {gi, cat}}}, el último año, el último mes y la serie mensual de la provincia."""
+    fs = glob.glob(str(P / "generalitat" / "2b4s-skfm_*"))
+    if not fs:
+        return {}, {}, None, None, {}
+    a = pd.read_csv(fs[0], dtype=str)
+    a = a[a["Tecnologia"].astype(str).str.upper().str.contains("FOTOVOLT", na=False)].copy()
+    a["data"] = pd.to_datetime(a["Data de posada en servei"], dayfirst=True, errors="coerce")
+    a = a.dropna(subset=["data"])
+    a["any"] = a["data"].dt.year
+    a["kw"] = pd.to_numeric(a["Potència"], errors="coerce").fillna(0)
+    a["ine"] = a["Codi IDESCAT municipi"].str.zfill(6).str[:5]
+    a = a[a["ine"].str[:2] == "17"]
+    if a.empty:
+        return {}, {}, None, None, {}
+    ult_mes = a["data"].max().strftime("%Y-%m")
+    ult = int(a["any"].max())
+    ANYS = list(range(2018, ult + 1))
+    # Población por año (padrón) y viviendas (Catastro)
+    pobs = {}
+    fp = P / "padro" / "poblacio_municipis.csv.gz"
+    if fp.exists():
+        d = pd.read_csv(fp, dtype={"ine": str})
+        for x in d.itertuples():
+            pobs.setdefault(x.ine, {})[int(x.any)] = float(x.valor)
+    pob_any = lambda ine, y: (lambda s: s.get(y) or (s[min(s, key=lambda k: abs(k - y))] if s else None))(pobs.get(ine, {}))  # noqa: E731
+    viv = {}
+    try:
+        viv = catastro()["viviendas"].to_dict()
+    except Exception as e:  # noqa: BLE001
+        print("AVISO solar viviendas:", e)
+    q = lambda x, y, f=1: (x / y * f) if y else None  # noqa: E731
+    mun = {}
+    for ine in pobs:
+        g = a[a["ine"] == ine]
+        o = {}
+        for y in ANYS:
+            h = g[g["any"] <= y]
+            n, kw, nn = len(h), float(h["kw"].sum()), int((g["any"] == y).sum())
+            pb = pob_any(ine, y)
+            vals = {"n": n, "kw": round(kw, 1), "h": q(n, pb, 1000), "w": q(kw * 1000, pb), "viv": q(n, viv.get(ine), 100),
+                    "nn": nn, "nou": q(nn, pb, 1000), "mida": q(kw, n) if n else None,
+                    "gran": q(float(h.loc[h["kw"] >= 100, "kw"].sum()), kw, 100) if kw else None}
+            for k, v in vals.items():
+                if v is not None and not (isinstance(v, float) and math.isnan(v)):
+                    o.setdefault(k, {})[y] = round(v, 2 if k in ("h", "viv", "nou", "mida") else 1) if isinstance(v, float) else v
+        mun[ine] = o
+    # Referencias: provincia (suma de municipios) y Cataluña (agregados mensuales del conjunto completo)
+    pob_gi = {y: sum(pob_any(i, y) or 0 for i in pobs) for y in ANYS}
+    pob_cat = {}
+    fv = P / "vehicles" / "agregats.csv"
+    if fv.exists():
+        for x in pd.read_csv(fv).to_dict("records"):
+            if x["ambit"] == "cat" and x.get("pob") == x.get("pob"):
+                pob_cat[int(x["any"])] = float(x["pob"])
+    pc = lambda y: pob_cat.get(y) or (pob_cat[min(pob_cat, key=lambda k: abs(k - y))] if pob_cat else None)  # noqa: E731
+    ag = {}
+    fa = P / "generalitat" / "autoconsum_agregats.csv"
+    if fa.exists():
+        for x in pd.read_csv(fa).to_dict("records"):
+            ag.setdefault(x["ambit"], {})[x["mes"]] = (int(x["n"]), float(x["kw"]))
+    mens_gi = a.groupby(a["data"].dt.strftime("%Y-%m")).agg(n=("kw", "size"), kw=("kw", "sum"))
+    ag["gi"] = {m: (int(r_.n), float(r_.kw)) for m, r_ in mens_gi.iterrows()}
+    refs = {}
+    for amb, pobf in (("gi", lambda y: pob_gi.get(y)), ("cat", pc)):
+        if amb not in ag:
+            continue
+        for y in ANYS:
+            n = sum(v[0] for m, v in ag[amb].items() if int(m[:4]) <= y)
+            kw = sum(v[1] for m, v in ag[amb].items() if int(m[:4]) <= y)
+            nn = sum(v[0] for m, v in ag[amb].items() if int(m[:4]) == y)
+            pb = pobf(y)
+            vals = {"h": q(n, pb, 1000), "w": q(kw * 1000, pb), "nou": q(nn, pb, 1000), "mida": q(kw, n) if n else None}
+            if amb == "gi":
+                tv = sum(viv.get(i) or 0 for i in pobs)
+                vals.update({"n": n, "kw": round(kw, 1), "nn": nn, "viv": q(n, tv, 100),
+                             "gran": q(float(a.loc[(a["any"] <= y) & (a["kw"] >= 100), "kw"].sum()), kw, 100) if kw else None})
+            for k, v in vals.items():
+                if v is not None:
+                    refs.setdefault(k, {}).setdefault(y, {})[amb] = round(v, 2) if isinstance(v, float) else v
+    # Serie mensual: vatios fotovoltaicos de autoconsumo por habitante (acumulado)
+    ser = {}
+    for amb, pobf in (("gi", lambda y: pob_gi.get(y)), ("cat", pc)):
+        if amb not in ag:
+            continue
+        acc, pts = 0.0, []
+        for m in sorted(ag[amb]):
+            acc += ag[amb][m][1]
+            y, mm = int(m[:4]), int(m[5:7])
+            if y >= 2019 and pobf(y):
+                pts.append([round(y + (mm - 1) / 12, 4), m, round(acc * 1000 / pobf(y), 1)])
+        ser[amb] = pts
+    prov = {"solar": {"tipus": "linia", "u": "W", "dec": 0, "series": ser,
+                      "abs": {"n": refs.get("n", {}).get(ult, {}).get("gi"), "kw": refs.get("kw", {}).get(ult, {}).get("gi"), "mes": ult_mes}}} if ser.get("gi") else {}
+    return mun, refs, ult, ult_mes, prov
 
 
 def main():
@@ -1918,6 +2006,7 @@ def main():
         extra_mun.setdefault(ine, {}).update(x)
     if any_com:
         anys_extra.update({"com_buits": 2022, "com_var": any_com})
+    sol, refs_sol, any_sol, mes_sol, prov_sol = solar()
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1963,6 +2052,7 @@ def main():
             **({"veh": veh[ine]} if ine in veh else {}),
             **({"com": com[ine]} if ine in com else {}),
             **({"com_f": fitxa_com[ine]} if ine in fitxa_com else {}),
+            **({"sol": sol[ine]} if ine in sol else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **fitxa_cm.get(ine, {}),
         })
@@ -2010,9 +2100,9 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"com": any_com} if any_com else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh, "com_ref": refs_com,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {})},
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "com_ref": refs_com, "sol_mes": mes_sol,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

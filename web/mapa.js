@@ -149,6 +149,22 @@
     ["p_quot", ["Pes del comerç quotidià", "Alimentació i quotidià no alimentari (% dels establiments)"], ["Peso del comercio cotidiano", "Alimentación y cotidiano no alimentario (% de los establecimientos)"], { sumable: false, ...P1 }],
   ];
 
+  // Plaques solars d'autoconsum (RAC, Generalitat): m.sol = {clave: {año: valor}} acumulado a 31 de diciembre
+  const SV = (k) => (m, a) => (a != null && m.sol && m.sol[k] && m.sol[k][a] != null ? m.sol[k][a] : null);
+  const SVR = (k, z) => (a) => { const r = D.sol_ref && D.sol_ref[k] && D.sol_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_SOL = { ca: "Registre d'autoconsum de Catalunya (RAC, Generalitat): instal·lacions fotovoltaiques inscrites, acumulades segons la data de posada en servei. No inclou les plantes que només venen a la xarxa. El registre no dona l'adreça, per això no hi ha dades per secció censal.", es: "Registro de autoconsumo de Cataluña (RAC, Generalitat): instalaciones fotovoltaicas inscritas, acumuladas según la fecha de puesta en servicio. No incluye las plantas que solo venden a la red. El registro no da la dirección, por eso no hay datos por sección censal." };
+  const SOL = [
+    ["h", ["Plaques solars", "Instal·lacions fotovoltaiques d'autoconsum per 1.000 habitants"], ["Placas solares", "Instalaciones fotovoltaicas de autoconsumo por 1.000 habitantes"], N1],
+    ["n", ["Instal·lacions solars", "Instal·lacions fotovoltaiques d'autoconsum"], ["Instalaciones solares", "Instalaciones fotovoltaicas de autoconsumo"], N0],
+    ["kw", ["Potència solar", "Potència fotovoltaica d'autoconsum instal·lada (kW)"], ["Potencia solar", "Potencia fotovoltaica de autoconsumo instalada (kW)"], N0],
+    ["w", ["Potència per habitant", "Potència fotovoltaica d'autoconsum per habitant (W)"], ["Potencia por habitante", "Potencia fotovoltaica de autoconsumo por habitante (W)"], N0],
+    ["viv", ["Plaques per habitatge", "Instal·lacions fotovoltaiques per cada 100 habitatges"], ["Placas por vivienda", "Instalaciones fotovoltaicas por cada 100 viviendas"], N1],
+    ["nou", ["Plaques noves", "Instal·lacions posades en servei l'any, per 1.000 habitants"], ["Placas nuevas", "Instalaciones puestas en servicio en el año, por 1.000 habitantes"], N1],
+    ["nn", ["Plaques noves (nombre)", "Instal·lacions fotovoltaiques posades en servei l'any"], ["Placas nuevas (número)", "Instalaciones fotovoltaicas puestas en servicio en el año"], N0],
+    ["mida", ["Mida de la instal·lació", "Potència mitjana per instal·lació (kW)"], ["Tamaño de la instalación", "Potencia media por instalación (kW)"], N1],
+    ["gran", ["Instal·lacions grans", "Potència en instal·lacions de 100 kW o més (% del total)"], ["Instalaciones grandes", "Potencia en instalaciones de 100 kW o más (% del total)"], P0],
+  ];
+
   // Impuestos municipales (m.trib: {clave: {año: valor}})
   const TV = (k) => (m, a) => (a != null && m.trib && m.trib[k] && m.trib[k][a] != null ? m.trib[k][a] : null);
   const NOTA_TRIB = { ca: "Ministeri d'Hisenda, consulta de tipus impositius municipals (ordenances fiscals que envien els ajuntaments). Les referències són mitjanes ponderades per població; Espanya sense el País Basc ni Navarra.", es: "Ministerio de Hacienda, consulta de tipos impositivos municipales (ordenanzas fiscales que envían los ayuntamientos). Las referencias son medias ponderadas por población; España sin el País Vasco ni Navarra." };
@@ -397,7 +413,9 @@
     { id: "pmp", tema: "ajt", ca: ["Pagament a proveïdors", "Període mitjà de pagament a proveïdors (dies)"], es: ["Pago a proveedores", "Periodo medio de pago a proveedores (días)"], v: X("pmp"), ...N0 },
     // Energía y residuos
     { id: "kwh", tema: "ene", ca: ["Consum elèctric domèstic", "Consum elèctric domèstic per habitant (kWh)"], es: ["Consumo eléctrico doméstico", "Consumo eléctrico doméstico por habitante (kWh)"], a: "kwh_dom", v: X("kwh_dom"), ...N0 },
-    { id: "autoconsum", tema: "ene", ca: ["Autoconsum", "Instal·lacions d'autoconsum per 1.000 habitants"], es: ["Autoconsumo", "Instalaciones de autoconsumo por 1.000 habitantes"], v: X("autoconsum"), ...N1 },
+    // Plaques solars: autoconsum fotovoltaic (RAC)
+    ...SOL.map(([k, ca, es, fmtk]) => ({ id: "sol_" + k, tema: "ene", ca, es, a: "sol", sumable: ["n", "kw", "nn"].includes(k), v: (m) => SV(k)(m, D.anys && D.anys.sol), t: SV(k), pv: SVR(k, "gi"),
+      ref: () => { const a = D.anys && D.anys.sol; return { cat: SVR(k, "cat")(a) }; }, nota: NOTA_SOL, ...fmtk })),
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
     // Parque de vehículos (DGT)
@@ -527,6 +545,7 @@
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * 0.3);
     }
     return cacheAnys[i.id];
@@ -1104,7 +1123,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (D.ref || {})[i.id] || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "veh") ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
@@ -1136,6 +1155,16 @@
     document.getElementById("s-mapa").scrollIntoView({ behavior: "smooth", block: "start" });
   };
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
+  // Inserción (iframe): estado actual del mapa y arranque con un indicador, nivel y año dados
+  window.mapaEstat = () => (ind ? { id: ind.id, nivell, any: anySel, nom: nomInd(ind) } : null);
+  let llest; window.mapaLlest = new Promise((r) => { llest = r; });
+  window.mapaEmbed = async ({ id, nivell: n, any }) => {
+    await window.mapaLlest;
+    const i = IND.find((x) => x.id === id);
+    if (i) await tria(i);
+    if (n && n !== nivell) await canviaNivell(n);
+    if (any && anysDe(ind).includes(any)) { anySel = any; pinta(); }
+  };
 
   function colorsBase() {
     if (!mapa || !mapa.getLayer("zones-line")) return;
@@ -1159,7 +1188,7 @@
     const encaixaProv = () => mapa.fitBounds([[1.72, 41.64], [3.33, 42.5]], { padding: innerWidth < 640 ? { top: 56, bottom: 10, left: 10, right: 14 } : { top: 64, bottom: 24, left: 24, right: 24 }, duration: 0 });
     mapa = new maplibregl.Map({
       container: "mapa", style: estil, center: [2.6, 42.05], zoom: 8,
-      minZoom: 6, maxZoom: 14, cooperativeGestures: matchMedia("(pointer: coarse)").matches,
+      minZoom: 6, maxZoom: 14, cooperativeGestures: !!window.EMB || matchMedia("(pointer: coarse)").matches,
       attributionControl: false, dragRotate: false, pitchWithRotate: false,
     });
     mapa.touchZoomRotate.disableRotation();
@@ -1177,6 +1206,7 @@
       colorsBase();
       pinta();
       encaixaProv();
+      llest();
       // Si cambia el tamaño del contenedor (giro del móvil, barra lateral) y nadie ha movido el mapa, se vuelve a encuadrar
       let mogut = false;
       mapa.on("dragstart", () => { mogut = true; }); mapa.on("zoomstart", (e) => { if (e.originalEvent) mogut = true; });

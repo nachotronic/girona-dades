@@ -48,6 +48,11 @@ La sección **Conjuntura** y el tema del mismo nombre del mapa usan series mensu
   hoteleras y extrahoteleras del INE, pasajeros del aeropuerto de Girona (Aena, `fuentes/aena.py`) y
   valor tasado trimestral (Ministerio, tabla 35101000).
 
+En el tema **Energia**, las placas solares salen del Registre d'autoconsum de Catalunya (Generalitat,
+conjunto `2b4s-skfm`): instalaciones fotovoltaicas, potencia, por habitante y por vivienda, y altas de cada
+año, acumuladas por fecha de puesta en servicio desde 2018, con Catalunya de referencia
+(`data/processed/generalitat/autoconsum_agregats.csv`). El registro no tiene dirección: solo municipio.
+
 El tema **Vehicles** del mapa usa el parque de vehículos anual de la DGT por municipio (tipo, carburante,
 etiqueta ambiental, antigüedad y conductores, desde 2020; `fuentes/vehicles.py`), con Catalunya y España
 de referencia, y las matriculaciones mensuales.

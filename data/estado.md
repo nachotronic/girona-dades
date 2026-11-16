@@ -1,11 +1,11 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 15:31 UTC
+Última ejecución: 2026-11-16 15:29 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
 | territorio — Municipis i comarques (Idescat) | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | fix |
-| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | mensual/trimestral |
+| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 15:29 | 2026-11-16 15:29 | mensual/trimestral |
 | ine — INE, Atlas de distribució de renda | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | mitma — Ministerio de Transportes y Vivienda, Boletín Online | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | trimestral |
 | xifra — Xifra, Diputació de Girona | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
@@ -31,14 +31,27 @@
 | pressupostos — Generalitat, liquidació dels pressupostos municipals | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | tributs — Ministerio de Hacienda, tipus impositius municipals | ok | 2026-11-16 13:08 | 2026-11-16 13:08 | anual |
 | llistes_espera — CatSalut, llistes d'espera per hospital | ok | 2026-11-16 14:41 | 2026-11-16 14:41 | mensual |
-| cgpj — CGPJ, estadística judicial per partit judicial | — | — | — | trimestral |
-| interior — Ministerio del Interior, Balance de Criminalidad | — | — | — | trimestral |
-| comerc — Generalitat, cens d'establiments comercials i ocupació comercial | ok | 2026-11-16 15:31 | 2026-11-16 15:31 | anual |
 
 ## Detalle de la última ejecución
 
-### comerc: ok (3 s)
+### generalitat: ok (46 s)
 
 ```
-CECC 4735 files, anys 2017,2018,2019,2021,2023, 217 municipis de Girona; sense codi: Bellver de Cerdanya, Brunyola, Calonge, Calonge de Segarra, Castell-Platja d'Aro, Fogars de la Selva, Lles de Cerdanya, Masarac, Montellà i Martinet, Palamós, Prats i Sansor, Prullans, Riu de Cerdanya; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc
+qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)
+t2h3-cgys: 47806/112696 filas, filtrado por Codi Municipi (IDESCAT) (codigo)
+q4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)
+u5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)
+69zu-w48s: 5525/23687 filas, filtrado por Codi municipi (codigo)
+8idm-becu: 12803/54611 filas, filtrado por CDMUN (codigo)
+2b4s-skfm: 23591/138769 filas, filtrado por Codi IDESCAT municipi (17)
+agregats autoconsum: 138701 fotovoltaiques a Catalunya, fins a 2025-12
+8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)
+yqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)
+qnyt-emjc: 47600/340144 filas, filtrado por Regió Policial (RP)=Girona
+j8h8-vxug: 5746/24622 filas, filtrado por Codi IDESCAT (codigo)
+nm3n-3vbj: 1963/10591 filas, filtrado por CODI_10 (codigo)
+vevv-8fvw: 221/947 filas, filtrado por CODI_ENS (codigo)
+2v2p-vu4h: 2729/11873 filas, filtrado por CODI_10 (codigo)
+vq27-2ky2: 7125/36748 filas, filtrado por CODI_ENS (codigo)
+ques-gd6z: 2649/11368 filas, filtrado por CODI_ENS (codigo)
 ```

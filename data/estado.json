@@ -78,10 +78,10 @@
  },
  "generalitat": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-16T15:29:03Z",
+  "ok": "2026-11-16T15:29:03Z",
+  "durada": 46,
+  "resum": "qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)\nt2h3-cgys: 47806/112696 filas, filtrado por Codi Municipi (IDESCAT) (codigo)\nq4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)\nu5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)\n69zu-w48s: 5525/23687 filas, filtrado por Codi municipi (codigo)\n8idm-becu: 12803/54611 filas, filtrado por CDMUN (codigo)\n2b4s-skfm: 23591/138769 filas, filtrado por Codi IDESCAT municipi (17)\nagregats autoconsum: 138701 fotovoltaiques a Catalunya, fins a 2025-12\n8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)\nyqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)\nqnyt-emjc: 47600/340144 filas, filtrado por Regió Policial (RP)=Girona\nj8h8-vxug: 5746/24622 filas, filtrado por Codi IDESCAT (codigo)\nnm3n-3vbj: 1963/10591 filas, filtrado por CODI_10 (codigo)\nvevv-8fvw: 221/947 filas, filtrado por CODI_ENS (codigo)\n2v2p-vu4h: 2729/11873 filas, filtrado por CODI_10 (codigo)\nvq27-2ky2: 7125/36748 filas, filtrado por CODI_ENS (codigo)\nques-gd6z: 2649/11368 filas, filtrado por CODI_ENS (codigo)"
  },
  "geometria": {
   "estat": "ok",

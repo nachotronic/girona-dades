@@ -42,6 +42,11 @@ const T = {
     h_evol: "Com ha evolucionat",
     g_lloguer: "Lloguer mitjà mensual",
     g_compra: "Compravendes d'habitatges",
+    sol_tit: "Plaques solars", sol_sub: (n, kw, a, mx) => `${n} instal·lacions fotovoltaiques d'autoconsum i ${kw} kW de potència a finals del ${a}.${mx ? ` L'any amb més instal·lacions noves va ser el ${mx}.` : ""}`,
+    sol_k_h: "Instal·lacions per 1.000 habitants", sol_k_w: "Potència per habitant", sol_k_viv: "Instal·lacions per 100 habitatges",
+    sol_ref: (g, c) => `Província ${g}${c !== "–" ? ` · Catalunya ${c}` : ""}`, sol_n_viv: "Habitatges segons el Cadastre",
+    sol_g_nn: "Instal·lacions noves cada any", sol_g_w: "Potència per habitant", u_install: "instal·lacions",
+    sol_font: (d) => `Font: Generalitat, Registre d'autoconsum de Catalunya (RAC), dades fins al ${d}. Població: padró. Sense dades per secció censal: el registre no dona l'adreça.`,
     g_renda: "Renda neta mitjana per persona",
     u_operacions: "operacions per any",
     u_euros_any: "€/any",
@@ -61,7 +66,7 @@ const T = {
     f_edu: "alumnes, centres, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
     f_dgt: "matriculacions de vehicles per municipi, cada mes", f_aena: "passatgers de l'aeroport de Girona, cada mes",
     font_act: "Descarregat", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
-    f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, autoconsum, residus",
+    f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub",
     k_lloguer: "Lloguer mitjà",
@@ -128,6 +133,11 @@ const T = {
     h_evol: "Cómo ha evolucionado",
     g_lloguer: "Alquiler medio mensual",
     g_compra: "Compraventas de viviendas",
+    sol_tit: "Placas solares", sol_sub: (n, kw, a, mx) => `${n} instalaciones fotovoltaicas de autoconsumo y ${kw} kW de potencia a finales de ${a}.${mx ? ` El año con más instalaciones nuevas fue ${mx}.` : ""}`,
+    sol_k_h: "Instalaciones por 1.000 habitantes", sol_k_w: "Potencia por habitante", sol_k_viv: "Instalaciones por 100 viviendas",
+    sol_ref: (g, c) => `Provincia ${g}${c !== "–" ? ` · Cataluña ${c}` : ""}`, sol_n_viv: "Viviendas según el Catastro",
+    sol_g_nn: "Instalaciones nuevas cada año", sol_g_w: "Potencia por habitante", u_install: "instalaciones",
+    sol_font: (d) => `Fuente: Generalitat, Registro de autoconsumo de Cataluña (RAC), datos hasta el ${d}. Población: padrón. Sin datos por sección censal: el registro no da la dirección.`,
     g_renda: "Renta neta media por persona",
     u_operacions: "operaciones por año",
     u_euros_any: "€/año",
@@ -147,7 +157,7 @@ const T = {
     f_edu: "alumnos, centros, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
     f_dgt: "matriculaciones de vehículos por municipio, cada mes", f_aena: "pasajeros del aeropuerto de Girona, cada mes",
     font_act: "Descargado", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
-    f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, autoconsumo, residuos",
+    f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub",
     k_lloguer: "Alquiler medio",
@@ -200,7 +210,7 @@ function blocNacionalitats(m) {
   const mx = n.p[0][1];
   const files = n.p.map(([c, k]) => `<li><span class="nb-nom">${nomPais(c)}</span><span class="nb-barra"><b style="width:${(k / mx) * 100}%"></b></span><span class="nb-v">${fmt(k)}<small>${pct((100 * k) / n.ex, 0)}</small></span></li>`).join("");
   const resta = n.ex - n.p.reduce((s, x) => s + x[1], 0);
-  return `<section class="fitxa-bloc"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
+  return `<section class="fitxa-bloc fx-nac"><h3>${t("h_nac")}</h3><p class="fb-sub">${t("h_nac_sub", n.any, fmt(n.ex), pct(m.poblacion ? (100 * n.ex) / m.poblacion : null, 1))}</p>
     <ol class="nb">${files}${resta > 0 ? `<li class="nb-resta"><span class="nb-nom">${t("altres_paisos")}</span><span class="nb-barra"></span><span class="nb-v">${fmt(resta)}<small>${pct((100 * resta) / n.ex, 0)}</small></span></li>` : ""}</ol>
     <p class="fb-font">${t("font_c")}: ${t(n.font === "ine" ? "f_nac_ine" : "f_nac")}</p></section>`;
 }
@@ -209,7 +219,7 @@ function blocUniversitaris(m) {
   const u = m.x && m.x.univ_split;
   if (!u) return "";
   const tot = u[0] + u[1] + u[2] || 1, noms = ["u_mateix", "u_comarca", "u_fora"];
-  return `<section class="fitxa-bloc"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
+  return `<section class="fitxa-bloc fx-univ"><h3>${t("h_univ")}</h3><p class="fb-sub">${t("h_univ_sub", fmt(m.x.univ_n), (D.anys && D.anys.edu_univ_fora) ? `${D.anys.edu_univ_fora}/${String(D.anys.edu_univ_fora + 1).slice(2)}` : "")}</p>
     <div class="ub">${u.map((v, i) => (v ? `<b class="ub-${i}" style="width:${(100 * v) / tot}%"></b>` : "")).join("")}</div>
     <ul class="ub-lleg">${u.map((v, i) => `<li><i class="ub-${i}"></i>${t(noms[i])}<span>${fmt(v)} · ${pct((100 * v) / tot, 0)}</span></li>`).join("")}</ul>
     <p class="fb-font">${t("font_c")}: ${t("f_univ")}</p></section>`;
@@ -467,7 +477,7 @@ function obreFitxa(ine, desplaca) {
   const m = D.municipios.find((x) => x.ine === ine);
   if (!m) return;
   seleccionat = ine;
-  try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
+  if (!window.EMB) try { history.replaceState(null, "", `#${ine}`); } catch (e) { /* */ }
   const f = document.getElementById("fitxa");
   const [aR, vR] = ultim(m.renta_persona);
   const esf = esforc(m);
@@ -501,6 +511,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-extra"></div>
     <div class="fitxa-trib"></div>
+    <div class="fitxa-sol"></div>
     <div class="fitxa-ind"></div>
     ${ajuntament(m)}`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
@@ -517,8 +528,37 @@ function obreFitxa(ine, desplaca) {
   if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
   if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
   if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
+  fitxaSolar(f.querySelector(".fitxa-sol"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// ---------- Plaques solars d'autoconsum (RAC) ----------
+function fitxaSolar(cont, m) {
+  const a = D.anys && D.anys.sol, s = m.sol;
+  if (!cont || !a || !s || !s.n) { if (cont) cont.innerHTML = ""; return; }
+  const v = (k) => (s[k] && s[k][a] != null ? s[k][a] : null);
+  const ref = (k, z) => { const r = D.sol_ref && D.sol_ref[k] && D.sol_ref[k][a]; return r ? r[z] : null; };
+  const serie = (k, z) => { const o = {}; Object.entries((D.sol_ref && D.sol_ref[k]) || {}).forEach(([y, r]) => { if (r[z] != null) o[y] = r[z]; }); return o; };
+  const nn = s.nn || {}, max = Object.entries(nn).sort((x, y) => y[1] - x[1])[0];
+  cont.innerHTML = `<section class="tb"><h3 class="ajt-tit">${t("sol_tit")}</h3>
+    <p class="tb-sub">${t("sol_sub", fmt(v("n")), fmt(v("kw")), a, max && max[1] ? max[0] : null)}</p>
+    <div class="xifres">
+      ${tile(t("sol_k_h"), fmt(v("h"), 1), t("sol_ref", fmt(ref("h", "gi"), 1), fmt(ref("h", "cat"), 1)))}
+      ${tile(t("sol_k_w"), v("w") != null ? `${fmt(v("w"))} <small>W</small>` : "–", t("sol_ref", fmt(ref("w", "gi")), fmt(ref("w", "cat"))))}
+      ${tile(t("sol_k_viv"), fmt(v("viv"), 1), t("sol_n_viv"))}
+    </div>
+    <div class="dos">
+      <figure class="grafic"><figcaption><span>${t("sol_g_nn")}</span><span class="unitat">${t("u_install")}</span></figcaption><div class="g-solnn"></div></figure>
+      <figure class="grafic"><figcaption><span>${t("sol_g_w")}</span><span class="unitat">W</span></figcaption><div class="g-solw"></div></figure>
+    </div>
+    <p class="fb-font">${t("sol_font", D.sol_mes ? D.sol_mes.split("-").reverse().join("/") : a)}</p></section>`;
+  grafBarres(cont.querySelector(".g-solnn"), Object.fromEntries(Object.entries(nn).filter(([y]) => +y >= 2019)));
+  grafLinia(cont.querySelector(".g-solw"), [
+    { nom: m.nom, color: "var(--serie-1)", dades: Object.fromEntries(Object.entries(s.w || {}).filter(([y]) => +y >= 2019)) },
+    { nom: t("provincia"), color: "var(--serie-2)", dades: Object.fromEntries(Object.entries(serie("w", "gi")).filter(([y]) => +y >= 2019)) },
+    { nom: "Catalunya", color: "var(--text-3)", dades: Object.fromEntries(Object.entries(serie("w", "cat")).filter(([y]) => +y >= 2019)) },
+  ], (x) => `${fmt(x)} W`);
 }
 
 // ---------- Ayuntamiento: alcaldía, resultados y pleno ----------
@@ -612,9 +652,13 @@ Promise.all([
     Object.entries(cj.per).forEach(([k, l]) => { cj.idx[k] = {}; l.forEach((a, i) => { cj.idx[k][a] = i; }); });
     D.cj = cj;
   }
-  if (window.iniciaMapa) window.iniciaMapa();
+  // Inserción (iframe): solo se carga el mapa si la pieza lo necesita, y la ficha sin desplazar la página
+  const E = window.EMB;
+  const pMapa = window.iniciaMapa && (!E || E.ambMapa) ? window.iniciaMapa() : null;
   const h = location.hash.slice(1);
-  if (/^\d{5}$/.test(h)) seleccionat = h;
+  if (E) seleccionat = E.ine || null;
+  else if (/^\d{5}$/.test(h)) seleccionat = h;
   pintaTot();
-  if (seleccionat) obreFitxa(seleccionat, true);
+  if (E) E.inicia(pMapa);
+  else if (seleccionat) obreFitxa(seleccionat, true);
 });
