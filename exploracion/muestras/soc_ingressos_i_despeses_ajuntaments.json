@@ -3232,146 +3232,126 @@
       {
         "resource" :
           {
-            "name" : "Pressupost pels principals ingressos tributaris",
-            "id" : "un23-6wnz",
+            "name" : "Concerts educatius: Unitat, alumnes, dotació de plantilla i despesa",
+            "id" : "8spq-9nx7",
             "resource_name" : null,
             "parent_fxf" : [],
-            "description" : "Conjunt de dades que mostra els principals ingressos tributaris del pressupost: impostos, taxes i preus públics.",
-            "attribution" : "Consorci Administració Oberta de Catalunya (AOC)",
+            "description" : "Informació detallada dels concerts educatius, centre a centre: Unitats concertades, alumnes matriculats per nivell educatiu, dotació de plantilla concertada, retribucions (nòmina i seguretat social) i l’import de les despeses de funcionament",
+            "attribution" : "Departament d'Educació i Formació Professional",
             "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
             "contact_email" : null,
             "type" : "dataset",
-            "updatedAt" : "2026-11-15T03:35:02.000Z",
-            "createdAt" : "2019-12-09T11:22:52.000Z",
-            "metadata_updated_at" : "2026-11-15T03:35:02.000Z",
-            "data_updated_at" : "2026-11-06T03:35:18.000Z",
+            "updatedAt" : "2026-09-21T06:41:40.000Z",
+            "createdAt" : "2022-05-11T10:47:57.000Z",
+            "metadata_updated_at" : "2026-09-21T06:41:40.000Z",
+            "data_updated_at" : "2026-05-28T09:26:56.000Z",
             "page_views" :
               {
-                "page_views_last_week" : 29,
-                "page_views_last_month" : 73,
-                "page_views_total" : 3247,
-                "page_views_last_week_log" : 4.906890595608519,
-                "page_views_last_month_log" : 6.209453365628951,
-                "page_views_total_log" : 11.665335917185175
+                "page_views_last_week" : 95,
+                "page_views_last_month" : 370,
+                "page_views_total" : 8517,
+                "page_views_last_week_log" : 6.584962500721156,
+                "page_views_last_month_log" : 8.535275376620802,
+                "page_views_total_log" : 13.056299014550337
               },
             "columns_name" :
               [
-                "NOM_ENS",
-                "EUROS_HABITANT",
-                "CODI_ESTRUCTURA",
-                "NOM_DOCUMENT",
-                "DESC_ESTRUCTURA",
-                "ANY",
-                "CODI_ENS",
-                "IMPORT",
-                "CODI_DOCUMENT"
+                "Nom_centre",
+                "Seg.Social",
+                "Curs escolar",
+                "Unitats concertades - PRI",
+                "Alumnes - CFPM",
+                "Unitats concertades - EdE",
+                "Unitats concertades - CFPM",
+                "Unitats concertades - ESO",
+                "Unitats concertades - EINF",
+                "Titularitat",
+                "Municipi",
+                "Alumnes - EdE",
+                "Unitats concertades - BATX",
+                "Alumnes - EINF",
+                "Alumnes - PRI",
+                "Alumnes - ESO",
+                "Unitats concertades -CFPS",
+                "Dotació plantilla",
+                "Alumnes - BATX",
+                "Despeses de funcionament",
+                "Nòmina del personal del centre",
+                "Alumnes - CFPS",
+                "Codi_centre"
               ],
             "columns_field_name" :
               [
-                "nom_ens",
-                "euros_habitant",
-                "codi_estructura",
-                "nom_document",
-                "desc_estructura",
-                "any",
-                "codi_ens",
-                "import",
-                "codi_document"
+                "nom_centre",
+                "seg_social",
+                "curs_escolar",
+                "unitats_concertades_pri",
+                "alumnes_cfpm",
+                "unitats_concertades_ede",
+                "unitats_concertades_cfpm",
+                "unitats_concertades_eso",
+                "unitats_concertades_einf",
+                "titularitat",
+                "municipi",
+                "alumnes_ede",
+                "unitats_concertades_batx",
+                "alumnes_einf",
+                "alumnes_pri",
+                "alumnes_eso",
+                "unitats_concertades_cfps",
+                "dotaci_plantilla",
+                "alumnes_batx",
+                "despeses_de_funcionament",
+                "brut",
+                "alumnes_cfps",
+                "codi_centre"
               ],
             "columns_datatype" :
               [
                 "Text",
                 "Number",
                 "Text",
-                "Text",
-                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
                 "Text",
                 "Text",
                 "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
                 "Text"
               ],
-            "columns_description" : [ "", "", "", "", "", "", "", "", "" ],
-            "columns_format" :
+            "columns_description" :
               [
-                {},
-                {
-                  "decimalSeparator" : ",",
-                  "noCommas" : "true",
-                  "groupSeparator" : "."
-                },
-                {},
-                {},
-                {},
-                {},
-                {},
-                {
-                  "decimalSeparator" : ",",
-                  "noCommas" : "true",
-                  "precision" : "2",
-                  "groupSeparator" : "."
-                },
-                {}
-              ],
-            "download_count" : 1533,
-            "provenance" : "official",
-            "lens_view_type" : "tabular",
-            "lens_display_type" : "table",
-            "locked" : false,
-            "backend" : "nbe",
-            "blob_mime_type" : null,
-            "hide_from_data_json" : false,
-            "publication_date" : "2019-12-09T11:29:35.000Z"
-          },
-        "classification" :
-          {
-            "categories" : [],
-            "tags" : [],
-            "domain_category" : "Sector Públic",
-            "domain_tags" :
-              [
-                "pressupost",
-                "taxa",
-                "tributs",
-                "impostos",
-                "consorci aoc",
-                "ods16_pau justícies i institucions sòlides"
-              ],
-            "domain_metadata" :
-              [
-                {
-                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
-                  "value" : "No aplicable"
-                },
-                { "key" : "Idioma_Idioma", "value" : "Català" },
-                {
-                  "key" : "Idioma_Dataset-name-(EN)",
-                  "value" : "Budget for the main tributary income"
-                },
-                {
-                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
-                  "value" : "Presupuesto para los principales ingresos tributarios"
-                },
-                {
-                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
-                  "value" : "Catalunya"
-                },
-                { "key" : "Actors_Departament", "value" : "Presidència" },
-                {
-                  "key" : "Actors_Tipus-actor",
-                  "value" : "Administració local"
-                },
-                {
-                  "key" : "Actors_Organisme-o-institució",
-                  "value" : "Consorci AOC"
-                },
-                {
-                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
-                  "value" : "Setmanal"
-                }
-              ]
-          },
-        "metadata" :
-          {
-            "domain" : "analisi.transparenciacatalunya.cat",
-            "license" : "See Terms of Use"
- 
+                "Nom del centre educatiu",
+                "Despesa en Seguretat Social",
+                "Curs escolar de referència",
+                "Nombre d’unitats concertades d’educació primària",
+                "Alumnes de cicles formatius de grau mitjà",
+                "Nombre d’unitats concertades d’educació especial",
+                "Nombre d’unitats concertades de cicles formatius de grau mitjà",
+                "Nombre d’unitats concertades d’ESO",
+                "Nombre d’unitats concertades d’educació infantil",
+                "Titularitat del centre educatiu",
+                "Municipi on s’ubica el centre educatiu",
+                "Alumnes en educació especial",
+                "Nombre d’unitats concertades de batxillerat",
+                "Alumnes en educació infantil",
+                "Alumnes en educació primària",
+                "Alumnes d’ESO",
+                "Nombre d’unitats concertades de cicles formatius de grau superior",
+                "Dotació de plantilla",
+                "Alumnes de batxillerat",
+                "Despeses de funcionament (per despeses corrents)",
+             
