@@ -48,6 +48,35 @@
       font_edu: "Font: Departament d'Educació",
       font_causes: "Font: INE, Estadística de defuncions segons la causa de mort",
       font: "Font: INE",
+      le_quir: ["Esperar una operació", "Temps mitjà d'espera dels pacients pendents d'intervenció (dies)"],
+      le_ext: ["Esperar l'especialista", "Temps mitjà d'espera per a una primera visita a l'hospital (dies)"],
+      le_diag: ["Esperar una prova", "Temps mitjà d'espera per a una prova diagnòstica (dies)"],
+      le_pacients: ["Llista d'espera quirúrgica", "Pacients pendents d'operar-se a la regió sanitària de Girona"],
+      le_quir_hosp: ["Operacions, hospital per hospital", "Temps mitjà d'espera per a una intervenció, últim mes (dies)"],
+      le_ext_hosp: ["Especialistes, hospital per hospital", "Temps mitjà d'espera per a una primera visita, últim mes (dies)"],
+      le_diag_hosp: ["Proves, hospital per hospital", "Temps mitjà d'espera per a una prova diagnòstica, últim mes (dies)"],
+      le_quir_proc: ["Quines operacions", "Intervencions amb més pacients en espera: dies d'espera"],
+      le_ext_proc: ["Quines especialitats", "Especialitats amb més pacients en espera: dies d'espera"],
+      le_diag_proc: ["Quines proves", "Proves amb més pacients en espera: dies d'espera"],
+      rec_hab: ["Receptes per habitant", "Receptes facturades al CatSalut per habitant i any"],
+      rec_euros: ["Despesa en medicaments", "Import de les receptes per habitant i any (€)"],
+      rec_grups: ["Què es recepta", "Receptes per cada 100 habitants en els últims 12 mesos"],
+      inf_setm: ["Infeccions respiratòries", "Casos atesos a l'atenció primària per 100.000 habitants, setmana a setmana"],
+      grip_setm: ["Grip", "Casos de grip diagnosticats a l'atenció primària per 100.000 habitants, setmana a setmana"],
+      hosp_noms: { gi: "Temps mitjà d'espera" }, rgi_noms: { gi: "Regió sanitària de Girona" },
+      pac: "pacients", dies: "dies", setmana: (d) => `setmana del ${d}`,
+      h_le_quir: (g, c, m, n) => `Qui espera una operació a la regió de Girona hi porta <b>${g} dies</b> de mitjana (${m}); a Catalunya, ${c}. Hi ha <b>${n}</b> persones a la llista.`,
+      h_le_ext: (g, c, m, n) => `Per a una primera visita a l'especialista, l'espera mitjana és de <b>${g} dies</b> (${m}); a Catalunya, ${c}. ${n} persones esperen.`,
+      h_le_diag: (g, c, m, n) => `Per a una prova diagnòstica, l'espera mitjana és de <b>${g} dies</b> (${m}); a Catalunya, ${c}. ${n} persones esperen.`,
+      h_le_pacients: (n, m, d) => `<b>${n}</b> persones esperaven una operació el ${m}, ${d} que un any abans.`,
+      h_le_hosp: (h, v, h2, v2) => `On més s'espera és a <b>${h}</b> (${v} dies de mitjana); on menys, a ${h2} (${v2}).`,
+      h_le_proc: (p, n, g, c) => `La llista més llarga és la de <b>${p.toLowerCase()}</b>: ${n} pacients, que esperen ${g} dies de mitjana (Catalunya, ${c}).`,
+      h_rec_hab: (g, a, c) => `Cada habitant de la regió de Girona va rebre <b>${g} receptes</b> el ${a}. A Catalunya, ${c}.`,
+      h_rec_euros: (g, a, c) => `<b>${g} €</b> en medicaments receptats per habitant el ${a}, davant dels ${c} € de Catalunya.`,
+      h_rec_grups: (g, v, c) => `El que més es recepta són <b>${g.toLowerCase()}</b>: ${v} receptes per cada 100 habitants en un any (Catalunya, ${c}).`,
+      h_inf: (v, d, c) => `La ${d}, <b>${v} casos</b> per 100.000 habitants a la regió de Girona. A Catalunya, ${c}.`,
+      font_le: "Font: CatSalut, llistes d'espera", font_rec: "Font: CatSalut, receptes facturades", font_inf: "Font: Departament de Salut, SIVIC",
+      menys_q: (v) => `un ${v} menys`, mes_q: (v) => `un ${v} més`,
     },
     es: {
       gi: "Girona", cat: "Cataluña", esp: "España",
@@ -96,6 +125,35 @@
       font_edu: "Fuente: Departament d'Educació",
       font_causes: "Fuente: INE, Estadística de defunciones según la causa de muerte",
       font: "Fuente: INE",
+      le_quir: ["Esperar una operación", "Tiempo medio de espera de los pacientes pendientes de intervención (días)"],
+      le_ext: ["Esperar al especialista", "Tiempo medio de espera para una primera visita en el hospital (días)"],
+      le_diag: ["Esperar una prueba", "Tiempo medio de espera para una prueba diagnóstica (días)"],
+      le_pacients: ["Lista de espera quirúrgica", "Pacientes pendientes de operarse en la región sanitaria de Girona"],
+      le_quir_hosp: ["Operaciones, hospital por hospital", "Tiempo medio de espera para una intervención, último mes (días)"],
+      le_ext_hosp: ["Especialistas, hospital por hospital", "Tiempo medio de espera para una primera visita, último mes (días)"],
+      le_diag_hosp: ["Pruebas, hospital por hospital", "Tiempo medio de espera para una prueba diagnóstica, último mes (días)"],
+      le_quir_proc: ["Qué operaciones", "Intervenciones con más pacientes en espera: días de espera"],
+      le_ext_proc: ["Qué especialidades", "Especialidades con más pacientes en espera: días de espera"],
+      le_diag_proc: ["Qué pruebas", "Pruebas con más pacientes en espera: días de espera"],
+      rec_hab: ["Recetas por habitante", "Recetas facturadas al CatSalut por habitante y año"],
+      rec_euros: ["Gasto en medicamentos", "Importe de las recetas por habitante y año (€)"],
+      rec_grups: ["Qué se receta", "Recetas por cada 100 habitantes en los últimos 12 meses"],
+      inf_setm: ["Infecciones respiratorias", "Casos atendidos en atención primaria por 100.000 habitantes, semana a semana"],
+      grip_setm: ["Gripe", "Casos de gripe diagnosticados en atención primaria por 100.000 habitantes, semana a semana"],
+      hosp_noms: { gi: "Tiempo medio de espera" }, rgi_noms: { gi: "Región sanitaria de Girona" },
+      pac: "pacientes", dies: "días", setmana: (d) => `semana del ${d}`,
+      h_le_quir: (g, c, m, n) => `Quien espera una operación en la región de Girona lleva <b>${g} días</b> de media (${m}); en Cataluña, ${c}. Hay <b>${n}</b> personas en la lista.`,
+      h_le_ext: (g, c, m, n) => `Para una primera visita al especialista, la espera media es de <b>${g} días</b> (${m}); en Cataluña, ${c}. ${n} personas esperan.`,
+      h_le_diag: (g, c, m, n) => `Para una prueba diagnóstica, la espera media es de <b>${g} días</b> (${m}); en Cataluña, ${c}. ${n} personas esperan.`,
+      h_le_pacients: (n, m, d) => `<b>${n}</b> personas esperaban una operación en ${m}, ${d} que un año antes.`,
+      h_le_hosp: (h, v, h2, v2) => `Donde más se espera es en <b>${h}</b> (${v} días de media); donde menos, en ${h2} (${v2}).`,
+      h_le_proc: (p, n, g, c) => `La lista más larga es la de <b>${p.toLowerCase()}</b>: ${n} pacientes, que esperan ${g} días de media (Cataluña, ${c}).`,
+      h_rec_hab: (g, a, c) => `Cada habitante de la región de Girona recibió <b>${g} recetas</b> en ${a}. En Cataluña, ${c}.`,
+      h_rec_euros: (g, a, c) => `<b>${g} €</b> en medicamentos recetados por habitante en ${a}, frente a los ${c} € de Cataluña.`,
+      h_rec_grups: (g, v, c) => `Lo que más se receta son <b>${g.toLowerCase()}</b>: ${v} recetas por cada 100 habitantes en un año (Cataluña, ${c}).`,
+      h_inf: (v, d, c) => `La ${d}, <b>${v} casos</b> por 100.000 habitantes en la región de Girona. En Cataluña, ${c}.`,
+      font_le: "Fuente: CatSalut, listas de espera", font_rec: "Fuente: CatSalut, recetas facturadas", font_inf: "Fuente: Departament de Salut, SIVIC",
+      menys_q: (v) => `un ${v} menos`, mes_q: (v) => `un ${v} más`,
     },
   };
   const GRUPS_CA = {
@@ -121,14 +179,22 @@
     XIV: ["Sistema genitourinari", "Sistema genitourinario"], XVIII: ["Causes mal definides", "Causas mal definidas"],
     XX: ["Causes externes (accidents, suïcidis)", "Causas externas (accidentes, suicidios)"],
   };
+  const ATC = {
+    antidepressius: ["Antidepressius", "Antidepresivos"], ansiolitics: ["Ansiolítics", "Ansiolíticos"], hipnotics: ["Somnífers i sedants", "Somníferos y sedantes"],
+    opioides: ["Opioides", "Opioides"], analgesics: ["Analgèsics (paracetamol, metamizole…)", "Analgésicos (paracetamol, metamizol…)"],
+    antibiotics: ["Antibiòtics", "Antibióticos"], antiulcerosos: ["Protectors d'estómac", "Protectores de estómago"],
+    colesterol: ["Per al colesterol", "Para el colesterol"], antidiabetics: ["Per a la diabetis", "Para la diabetes"],
+    tensio: ["Per a la tensió i el cor", "Para la tensión y el corazón"], respiratoris: ["Inhaladors (asma, MPOC)", "Inhaladores (asma, EPOC)"],
+  };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
-  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : "");
+  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : "");
   const etiqueta = (e) => {
     const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${tp("mesos")[+m[2] - 1]} ${m[1]}`;
     const q = /^(\d{4})T(\d)$/.exec(e); if (q) return `${q[2]}T ${q[1]}`;
+    const d = /^(\d{4})-(\d{2})-(\d{2})$/.exec(e); if (d) return `${+d[3]} ${tp("mesos")[+d[2] - 1].slice(0, 3)}. ${d[1]}`;
     return e;
   };
   const NS = "http://www.w3.org/2000/svg";
@@ -187,7 +253,7 @@
     const mx = Math.max(...gs.flatMap((g) => ks.map((k) => Math.abs(g[k])))) || 1;
     const fv = (v) => (sp.u === "%" ? pct(v, 1) : fmt(v, sp.dec));
     const b = (v, k) => `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
-    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
+    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp("pac")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
@@ -209,15 +275,20 @@
     if (id === "univ_fora_prov") { const g = ult(sp, "gi"); const g0 = sp.series.gi[0]; return g && sp.abs ? tp("h_univ", pct(g[2], 0), fmt(sp.abs.fora), fmt(sp.abs.residents), sp.abs.curs, pct(g0[2], 0), g0[1]) : ""; }
     if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
+    if (/^le_(quir|ext|diag)$/.test(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp(`h_${id}`, fmt(g[2]), fmt(c && c[2]), etiqueta(g[1]), fmt(sp.abs.pacients)) : ""; }
+    if (id === "le_pacients") { const s_ = sp.series.gi, g = s_[s_.length - 1], a = s_.find((p) => p[1] === `${+g[1].slice(0, 4) - 1}${g[1].slice(4)}`); if (!g) return ""; const d = a ? (g[2] / a[2] - 1) * 100 : null; return tp("h_le_pacients", fmt(g[2]), etiqueta(g[1]), d == null ? "" : d < 0 ? tp("menys_q", pct(-d, 0)) : tp("mes_q", pct(d, 0))); }
+    if (/_hosp$/.test(id)) { const gs = sp.grups; return gs.length > 1 ? tp("h_le_hosp", gs[0].g, fmt(gs[0].gi), gs[gs.length - 1].g, fmt(gs[gs.length - 1].gi)) : ""; }
+    if (/^le_.*_proc$/.test(id)) { const g = sp.grups[0]; return g ? tp("h_le_proc", g.g, fmt(g.n), fmt(g.gi), fmt(g.cat)) : ""; }
+    if (id === "rec_hab" || id === "rec_euros") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp(`h_${id}`, fmt(g[2], id === "rec_hab" ? 1 : 0), g[1], fmt(c && c[2], id === "rec_hab" ? 1 : 0)) : ""; }
+    if (id === "rec_grups") { const g = sp.grups[0]; return g ? tp("h_rec_grups", nomGrup(g.g, g.c), fmt(g.gi, 1), fmt(g.cat, 1)) : ""; }
+    if (id === "inf_setm" || id === "grip_setm") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_inf", fmt(g[2]), tp("setmana", etiqueta(g[1])), fmt(c && c[2])) : ""; }
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
     return "";
   }
 
-  window.pintaSeccioProv = () => {
-    const cont = document.getElementById("prov-grafics");
-    if (!cont || !D.prov) return;
-    const P = D.prov;
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"].filter((k) => P[k]);
+  function pintaGrafics(cont, P, ids, font) {
+    if (!cont || !P) return;
+    ids = ids.filter((k) => P[k] && (P[k].tipus === "barres" ? P[k].grups && P[k].grups.length : P[k].series && Object.values(P[k].series).some((x) => x && x.length)));
     cont.innerHTML = ids.map((id) => {
       const sp = P[id];
       const claus = sp.tipus === "barres" ? sp.claus || ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
@@ -226,11 +297,26 @@
         <p class="pg-h">${titular(id, sp, P)}</p>
         <p class="pg-lleg">${claus.map((k) => `<span><i class="pg-dot pg-${k}"></i>${nomSerie(sp, k)}</span>`).join("")}</p>
         <div class="pg-c"></div>
-        <p class="pg-font">${tp(id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font")}</p></figure>`;
+        <p class="pg-font">${tp(font(id))}</p></figure>`;
     }).join("");
     cont.querySelectorAll(".pg-fig").forEach((f) => {
       const sp = P[f.dataset.id], c = f.querySelector(".pg-c");
       if (sp.tipus === "barres") barres(c, sp); else linia(c, sp);
     });
+  }
+
+  window.pintaSeccioProv = () => {
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"];
+    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+  };
+
+  window.pintaSeccioSalut = () => {
+    const S = D.salut;
+    const sec = document.getElementById("s-salut");
+    if (!S || !Object.keys(S).length) { if (sec) sec.hidden = true; return; }
+    ["le_quir_hosp", "le_ext_hosp", "le_diag_hosp"].forEach((k) => { if (S[k]) S[k].noms = "hosp"; });
+    if (S.le_pacients) S.le_pacients.noms = "rgi";
+    const ids = ["le_quir", "le_quir_hosp", "le_quir_proc", "le_pacients", "le_ext", "le_ext_hosp", "le_ext_proc", "le_diag", "le_diag_hosp", "le_diag_proc", "rec_hab", "rec_euros", "rec_grups", "inf_setm", "grip_setm"];
+    pintaGrafics(document.getElementById("salut-grafics"), S, ids, (id) => (/^le_/.test(id) ? "font_le" : /^rec_/.test(id) ? "font_rec" : "font_inf"));
   };
 })();
