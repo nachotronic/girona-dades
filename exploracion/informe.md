@@ -2,42 +2,20 @@
 
 | id | estado | tipo | tamaño | url final |
 | --- | --- | --- | --- | --- |
-| sepe_paro_2025 | 200 | text/csv | 10105446 | https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Paro_por_municipios_2025_csv.csv |
-| sepe_contratos_2025 | 200 | text/csv | 9637971 | https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Contratos_por_municipios_2025_csv.csv |
-| sepe_dtes_2025 | 200 | text/csv | 10244659 | https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Dtes_empleo_por_municipios_2025_csv.csv |
-| sepe_paro_2026 | 200 | text/csv | 8374873 | https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Paro_por_municipios_2026_csv.csv |
-| sepe_contratos_2026 | 200 | text/csv | 7999269 | https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Contratos_por_municipios_2026_csv.csv |
-| sepe_dtes_2026 | 200 | text/csv | 8495843 | https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/Dtes_empleo_por_municipios_2026_csv.csv |
-| sepe_portal | 200 | text/html | 14267 | https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-estadisticos/municipios.html |
-| sepe_datos_abiertos | 200 | application/json | 933 | https://datos.gob.es/apidata/catalog/dataset/publisher/EA0021470?_pageSize=50 |
-| ss_afil_mun | 200 | text/html | 13935 | https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/2341/2342/2343 |
-| ss_datosgob | 200 | application/json | 150000 | https://datos.gob.es/apidata/catalog/dataset/title/afiliados?_pageSize=50 |
-| idescat_taules | 200 | application/json | 948 | https://api.idescat.cat/taules/v2?lang=ca |
-| socrata_atur_registrat | 200 | application/json | 129 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=atur%20registrat&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_afiliats | 200 | application/json | 41006 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=afiliats&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_contractes | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=contractes&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_habitatges_iniciats | 200 | application/json | 36664 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=habitatges%20iniciats&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_pernoctacions | 200 | application/json | 15018 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=pernoctacions&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_ocupacio_hotelera | 200 | application/json | 5084 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=ocupacio%20hotelera&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_matriculacio | 200 | application/json | 32110 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=matriculacio&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_fiances | 200 | application/json | 14855 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=fiances&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_atur | 200 | application/json | 20626 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=atur&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| socrata_treballadors | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=treballadors&domains=analisi.transparenciacatalunya.cat&limit=40 |
-| idc_6000_node | 200 | application/json | 325 | https://api.idescat.cat/taules/v2/censph/6000/20200?lang=ca |
-| idc_6000_mun | 200 | application/json | 12828 | https://api.idescat.cat/taules/v2/censph/6000/20200/mun?lang=ca |
-| idc_6000_data_girona | 200 | application/json | 18467 | https://api.idescat.cat/taules/v2/censph/6000/20200/mun/data?lang=ca&MUN=170792 |
-| idc_6000_data | 416 | application/json | 115 | https://api.idescat.cat/taules/v2/censph/6000/20200/mun/data?lang=ca |
-| idc_pmh_9145 | 200 | application/json | 217 | https://api.idescat.cat/taules/v2/pmh/9145?lang=ca |
-| codis_86 | 200 | text/csv | 9792 | https://www.idescat.cat/codis/?id=50&n=86&f=ssv |
-| codis_87 | 200 | text/csv | 9798 | https://www.idescat.cat/codis/?id=50&n=87&f=ssv |
-| codis_88 | 200 | text/csv | 9309 | https://www.idescat.cat/codis/?id=50&n=88&f=ssv |
-| soc_bombers | 200 | application/json | 147015 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=bombers&limit=40&only=dataset |
-| soc_agents_rurals | 200 | application/json | 85967 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=agents%20rurals&limit=40&only=dataset |
-| soc_incendis_forestals | 200 | application/json | 40821 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=incendis%20forestals&limit=40&only=dataset |
-| soc_incendis | 200 | application/json | 94670 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=incendis&limit=40&only=dataset |
-| soc_emergencies | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=emerg%C3%A8ncies&limit=40&only=dataset |
-| soc_actuacions_bombers | 200 | application/json | 32307 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=actuacions%20bombers&limit=40&only=dataset |
-| soc_regions_emergencia | 200 | application/json | 34131 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=regions%20emerg%C3%A8ncia&limit=40&only=dataset |
-| soc_arees_basiques_agents_rurals | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=%C3%A0rees%20b%C3%A0siques%20agents%20rurals&limit=40&only=dataset |
-| soc_denuncies_agents_rurals | 200 | application/json | 5310 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=den%C3%BAncies%20agents%20rurals&limit=40&only=dataset |
-| soc_superfície_forestal | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=superf%C3%ADcie%20forestal&limit=40&only=dataset |
+| int_02202307 | 403 | text/html; charset=UTF-8 | 5727 | https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/02202307_MESA.zip |
+| int_02201911 | 403 | text/html; charset=UTF-8 | 5727 | https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/02201911_MESA.zip |
+| int_04202305 | 403 | text/html; charset=UTF-8 | 5727 | https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/04202305_MESA.zip |
+| int_07202406 | 403 | text/html; charset=UTF-8 | 5727 | https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/07202406_MESA.zip |
+| int_descargas | 403 | text/html | 5730 | https://infoelectoral.interior.gob.es/es/elecciones-celebradas/area-de-descargas/ |
+| soc_e_eleccions_parlament | 200 | application/json | 119939 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=eleccions%20parlament&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_resultats_electorals | 200 | application/json | 135930 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=resultats%20electorals&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_eleccions_mesa | 200 | application/json | 32026 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=eleccions%20mesa&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_eleccions_generals | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=eleccions%20generals&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_eleccions_europees | 200 | application/json | 129 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=eleccions%20europees&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_eleccions | 200 | application/json | 150000 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=eleccions&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_meses_electorals | 200 | application/json | 25346 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=meses%20electorals&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_seccions_censals_eleccions | 200 | application/json | 21354 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=seccions%20censals%20eleccions&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| soc_e_participacio_electoral | 200 | application/json | 119768 | https://analisi.transparenciacatalunya.cat/api/catalog/v1?q=participaci%C3%B3%20electoral&domains=analisi.transparenciacatalunya.cat&limit=60&only=dataset |
+| gencat_eleccions | 404 | text/html | 9369 | https://eleccions.gencat.cat/ca/resultats-electorals |
+| gencat_arxiu | 404 | text/html | 9369 | https://eleccions.gencat.cat/ca/resultats-electorals#/ |
+| datosgob_elecciones | 200 | application/json | 150000 | https://datos.gob.es/apidata/catalog/dataset/title/elecciones?_pageSize=50 |
