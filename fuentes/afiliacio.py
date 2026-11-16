@@ -9,6 +9,7 @@ from __future__ import annotations
 import pandas as pd
 
 from .comun import carpeta, get
+from .ambito import AMBITO
 from .nacionalitat import _jsonstat
 from .territorio import municipios
 
@@ -32,7 +33,7 @@ def ejecutar() -> str:
         except Exception:  # noqa: BLE001
             errors += 1
     linies = []
-    for nivell, filtre, ambit in (("prov", "&PROV=17", "gi"), ("cat", "", "cat")):
+    for nivell, filtre, ambit in [*(("prov", f"&PROV={p}", "gi" if AMBITO == ["17"] else p) for p in AMBITO), ("cat", "", "cat")]:
         try:
             parts.append(_taula(get(f"{NODE}/{nivell}/data?lang=ca{filtre}").json(), ambit))
         except Exception as e:  # noqa: BLE001

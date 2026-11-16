@@ -29,6 +29,7 @@ import pandas as pd
 import requests
 
 from .comun import UA, carpeta
+from .ambito import AMBITO
 
 URL = "https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/listado_municipiosm.aspx"
 PRE = "ctl00$MainContentPlaceHolder$"
@@ -221,16 +222,19 @@ def ejecutar() -> str:
             clas.append(cla_prev[cla_prev["any"] == a])
             continue
         try:
-            fm.postback("lbAno", lbAno=str(a), lbProvincias="17")
-            fm.postback("lbProvincias", lbAno=str(a), lbProvincias="17")
-            g = lee_tabla(fm.postback("linkExcelMunicipio", lbAno=str(a), lbProvincias="17").content)
-            g = g[g["prov"] == "17"]
+            trozos = []
+            for prov in AMBITO:
+                fm.postback("lbAno", lbAno=str(a), lbProvincias=prov)
+                fm.postback("lbProvincias", lbAno=str(a), lbProvincias=prov)
+                t_p = lee_tabla(fm.postback("linkExcelMunicipio", lbAno=str(a), lbProvincias=prov).content)
+                trozos.append(t_p[t_p["prov"].astype(str).str.zfill(2) == prov])
+            g = pd.concat(trozos, ignore_index=True)
             g.insert(0, "any", str(a))
             girs.append(g.astype(str))
             kg = claves(g)
             ag = {"gi": agrega(kg)}
             try:
-                t = lee_tabla(fm.postback("linkExcelTodo", lbAno=str(a), lbProvincias="17").content)
+                t = lee_tabla(fm.postback("linkExcelTodo", lbAno=str(a), lbProvincias=AMBITO[-1]).content)
                 kt = claves(t)
                 ag["cat"], ag["esp"] = agrega(kt[kt["ccaa"] == "09"]), agrega(kt)
                 ag["n_esp"] = int(len(kt))

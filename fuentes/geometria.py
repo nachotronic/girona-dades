@@ -13,6 +13,7 @@ import geopandas as gpd
 import pandas as pd
 
 from .comun import PROC, RAW, carpeta, descargar
+from .ambito import en_ambito
 
 URL = "https://www.ine.es/prodyser/cartografia/seccionado_2024.zip"
 
@@ -33,7 +34,7 @@ def _lee_secciones() -> gpd.GeoDataFrame:
     shp = sorted(destino.rglob("*.shp"), key=lambda p: p.stat().st_size, reverse=True)[0]
     gdf = gpd.read_file(shp)
     cpro = _columna(gdf, "CPRO")
-    gdf = gdf[gdf[cpro].astype(str).str.zfill(2) == "17"].copy()
+    gdf = gdf[en_ambito(gdf[cpro].astype(str).str.zfill(2))].copy()
     gdf["cusec"] = gdf[_columna(gdf, "CUSEC")].astype(str).str.zfill(10)
     gdf["ine"] = gdf[_columna(gdf, "CUMUN")].astype(str).str.zfill(5)
     return gdf[["cusec", "ine", "geometry"]]

@@ -18,6 +18,7 @@ import json
 import pandas as pd
 
 from .comun import carpeta, get
+from .ambito import en_ambito
 from .salut import DOMINIO, soql
 
 CENSO = "https://www.ine.es/censos2021/C2021_Indicadores.csv"
@@ -35,11 +36,11 @@ def _censo(sal) -> str:
     num = df[[c for c in df.columns if c.startswith("t")]].apply(pd.to_numeric, errors="coerce")
     pes = num["t1_1"] * (1 - num["t4_1"])
     refs = {}
-    for zona, mask in (("esp", pd.Series(True, index=df.index)), ("cat", df["ccaa"] == "09"), ("gi", df["cpro"] == "17")):
+    for zona, mask in (("esp", pd.Series(True, index=df.index)), ("cat", df["ccaa"] == "09"), ("gi", en_ambito(df["cpro"]))):
         w = pes[mask]
         refs[zona] = {c: round(float((num.loc[mask, c] * w).sum() / w.sum()), 4) for c in ("t7_1", "t8_1", "t9_1", "t10_1", "t5_1", "t6_1")}
     (sal / "censo2021_refs.json").write_text(json.dumps(refs, indent=1), encoding="utf-8")
-    df = df[df["cpro"] == "17"].copy()
+    df = df[en_ambito(df["cpro"])].copy()
     df["seccion"] = df["cpro"] + df["cmun"] + df["dist"] + df["secc"]
     df["ine"] = df["cpro"] + df["cmun"]
     cols = ["seccion", "ine"] + [c for c in df.columns if c.startswith("t")]
@@ -61,12 +62,12 @@ def _matricula(sal) -> str:
         "$select": f"{curs} as curs, codi_municipi_5, nom_ensenyament, nom_naturalesa, "
                    "sum(matr_cules_total) as alumnes, sum(unitats) as grups",
         "$group": f"{curs}, codi_municipi_5, nom_ensenyament, nom_naturalesa"})
-    hist["gi"] = hist["codi_municipi_5"].astype(str).str.startswith("17")
+    hist["gi"] = en_ambito(hist["codi_municipi_5"].astype(str).str.zfill(5))
     for c in ("alumnes", "grups"):
         hist[c] = pd.to_numeric(hist[c], errors="coerce")
     hist = hist.groupby(["curs", "gi", "nom_ensenyament", "nom_naturalesa"], dropna=False)[["alumnes", "grups"]].sum().reset_index()
     hist.to_csv(sal / "matricula_historic.csv", index=False)
-    gi = df[df["codi_municipi_5"].astype(str).str.startswith("17")]
+    gi = df[en_ambito(df["codi_municipi_5"].astype(str).str.zfill(5))]
     return f"matrícula {ult}: {len(df)} filas ({len(gi)} de Girona); histórico {len(hist)} filas"
 
 
@@ -76,7 +77,7 @@ def _centres(sal) -> str:
     ult = soql("kvmv-ahh4", **{"$select": f"max({curs}) as c"})["c"].iloc[0]
     df = soql("kvmv-ahh4", **{"$where": f"{curs}='{ult}'"})
     mun = next(c for c in ("codi_municipi_5", "codi_municipi") if c in df.columns)
-    df = df[df[mun].astype(str).str[:2] == "17"]
+    df = df[en_ambito(df[mun].astype(str).str.zfill(5))]
     fora = [c for c in df.columns if c.startswith(":@") or c in ("e_mail_centre", "fax", "telefon", "tel_fon")]
     df.drop(columns=fora).to_csv(sal / "centres.csv", index=False)
     return f"centros {ult}: {len(df)} en Girona"
@@ -126,7 +127,7 @@ def _ssv(url: str) -> pd.DataFrame:
 def _universitaris(sal) -> str:
     """Movilidad por estudios universitarios (Idescat, emouniv): dónde estudian los residentes."""
     mun = _ssv(EMOUNIV.format(n=8816) + "&geo=mun")
-    mun = mun[mun["Codi"].str.startswith("17")]
+    mun = mun[en_ambito(mun["Codi"])]
     mun.to_csv(sal / "univ_municipis.csv", index=False)
     com = _ssv(EMOUNIV.format(n=8816) + "&geo=com")
     com.to_csv(sal / "univ_comarques.csv", index=False)

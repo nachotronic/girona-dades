@@ -16,6 +16,7 @@ from collections import Counter
 import pandas as pd
 
 from .comun import carpeta, get
+from .ambito import AMBITO, PROVINCIAS, es_del_ambito
 
 URL = "https://www.dgt.es/microdatos/salida/{a}/{m}/vehiculos/matriculaciones/export_mensual_mat_{a}{m:02d}.zip"
 DESDE = (2019, 1)
@@ -33,6 +34,10 @@ def _tipus(c: str) -> str:
     return "altres"
 
 
+# Código de provincia de la DGT (matrícula) -> código INE
+DGT_PROV = {PROVINCIAS[p]["dgt"].ljust(2): p for p in AMBITO}
+
+
 def _mes(a: int, m: int) -> pd.DataFrame:
     r = get(URL.format(a=a, m=m), timeout=600)
     z = zipfile.ZipFile(io.BytesIO(r.content))
@@ -40,10 +45,10 @@ def _mes(a: int, m: int) -> pd.DataFrame:
     for nom in z.namelist():
         with z.open(nom) as f:
             for linia in io.TextIOWrapper(f, encoding="latin-1"):
-                if len(linia) < 200 or linia[PROV] != "GI":
+                if len(linia) < 200 or linia[PROV] not in DGT_PROV:
                     continue
                 ine = linia[MUN]
-                ine = ine if ine.startswith("17") else "17000"
+                ine = ine if es_del_ambito(ine) else DGT_PROV[linia[PROV]] + "000"
                 comptes[(ine, _tipus(linia[TIPUS]), linia[NOU] == "N", linia[PROP] == "2")] += 1
     return pd.DataFrame([(*k, n) for k, n in comptes.items()], columns=["ine", "tipus", "nou", "electric", "n"])
 

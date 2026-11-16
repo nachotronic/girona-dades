@@ -19,6 +19,7 @@ import io
 import pandas as pd
 
 from .comun import carpeta, get
+from .ambito import en_ambito
 
 URL = "https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/{fichero}_{any}_csv.csv"
 TIPUS = {
@@ -64,7 +65,7 @@ def _totals(df: pd.DataFrame, tipus: str) -> pd.DataFrame:
     num = df[COLS[tipus]].apply(_numeric)
     num["mes"] = df["mes"]
     parts = []
-    for ambit, mask in (("gi", df["prov"] == "17"), ("cat", df["ca"].astype(str).str.strip().isin(["9", "09"])), ("esp", slice(None))):
+    for ambit, mask in (("gi", en_ambito(df["prov"])), ("cat", df["ca"].astype(str).str.strip().isin(["9", "09"])), ("esp", slice(None))):
         g = num[mask].groupby("mes").sum(numeric_only=True).round(0).reset_index()
         g.insert(1, "ambit", ambit)
         parts.append(g)
@@ -85,7 +86,7 @@ def ejecutar() -> str:
             try:
                 r = get(URL.format(fichero=fichero, any=any_), timeout=600)
                 df = _llegeix(r.content, tipus)
-                gi = df[df["prov"] == "17"].drop(columns=["ca", "ca_nom", "prov", "prov_nom", "mes_nom"])
+                gi = df[en_ambito(df["prov"])].drop(columns=["ca", "ca_nom", "prov", "prov_nom", "mes_nom"])
                 gi.to_csv(desti, index=False)
                 _totals(df, tipus).to_csv(sal / f"sepe_totals_{tipus}_{any_}.csv", index=False)
                 meses = sorted(df["mes"].unique())

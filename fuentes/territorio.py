@@ -6,6 +6,7 @@ import io
 import pandas as pd
 
 from .comun import PROC, carpeta, get, normaliza
+from .ambito import en_ambito
 
 URL_CODIS = "https://www.idescat.cat/codis/?id=50&n=9&f=ssv"
 SALIDA = PROC / "territorio" / "municipios.csv"
@@ -17,7 +18,7 @@ def parsea_codis(texto: str) -> pd.DataFrame:
     df = pd.read_csv(io.StringIO("\n".join(lineas[inicio:])), sep=";", dtype=str)
     df = df.loc[:, ~df.columns.str.startswith("Unnamed")]
     df.columns = ["codi_idescat", "nom", "codi_comarca", "nom_comarca"]
-    df = df[df["codi_idescat"].str.startswith("17")].copy()
+    df = df[en_ambito(df["codi_idescat"])].copy()
     df["codi_ine"] = df["codi_idescat"].str[:5]
     df["nom_normalitzat"] = df["nom"].map(normaliza)
     return df[["codi_ine", "codi_idescat", "nom", "codi_comarca", "nom_comarca", "nom_normalitzat"]].sort_values("codi_ine")

@@ -21,6 +21,7 @@ import io
 import pandas as pd
 
 from .comun import carpeta, get
+from .ambito import socrata_prefijos
 
 DOMINIO = "https://analisi.transparenciacatalunya.cat/resource"
 # Convocatorias que se publican en la web: Parlament (A), Congrés (G), municipals (M) y europees (E).
@@ -54,7 +55,7 @@ def _where(ident: str) -> str:
     """Municipios y secciones de Girona, y el total de Cataluña (nivel CA) como referencia."""
     niv = ",".join(f"'{n}'" for n in NIVELLS)
     return (f"id_eleccio='{ident}' AND ((id_nivell_territorial in({niv}) "
-            f"AND starts_with(territori_codi, '17')) OR id_nivell_territorial='CA')")
+            f"AND {socrata_prefijos('territori_codi')}) OR id_nivell_territorial='CA')")
 
 
 def _ine(codi: pd.Series) -> pd.Series:

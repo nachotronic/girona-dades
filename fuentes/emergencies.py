@@ -19,6 +19,7 @@ import urllib.parse
 import pandas as pd
 
 from .comun import PROC, carpeta, get
+from .ambito import en_ambito
 
 DOMINIO = "https://analisi.transparenciacatalunya.cat"
 CODIS = "https://www.idescat.cat/codis/?id=50&n={n}&f=ssv"
@@ -79,7 +80,7 @@ def ejecutar() -> str:
     lineas = []
     rel = relacio()
     rel.to_csv(sal / "municipis_arees.csv", index=False)
-    gi = rel[rel["ine"].str.startswith("17")]
+    gi = rel[en_ambito(rel["ine"])]
     lineas.append(f"relación Idescat: {len(rel)} municipios ({len(gi)} con código 17); "
                   f"regiones Bombers en Girona: {gi.groupby('reb_nom').size().to_dict()}; "
                   f"áreas regionales AR: {gi.groupby('arr_nom').size().to_dict()}")

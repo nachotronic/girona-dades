@@ -11,6 +11,7 @@ import io
 import pandas as pd
 
 from .comun import carpeta, get
+from .ambito import socrata_prefijos
 
 URL = "https://analisi.transparenciacatalunya.cat/resource/ytva-5kp3.csv"
 COLS = "any,nom_document,codi_estructura,desc_estructura,import,euros_habitant,codi_ens,nom_ens"
@@ -21,7 +22,7 @@ def ejecutar() -> str:
     sal = carpeta("pressupostos")
     parts, off = [], 0
     while True:
-        r = get(URL, params={"$select": COLS, "$where": "starts_with(codi_ens,'17') AND starts_with(nom_ens,'Ajuntament')",
+        r = get(URL, params={"$select": COLS, "$where": socrata_prefijos("codi_ens") + " AND starts_with(nom_ens,'Ajuntament')",
                              "$order": "codi_ens,any,nom_document,codi_estructura", "$limit": PAGINA, "$offset": off}, timeout=600)
         df = pd.read_csv(io.BytesIO(r.content), dtype=str)
         parts.append(df)
