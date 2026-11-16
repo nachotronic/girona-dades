@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 16:16 UTC
+Última ejecución: 2026-11-16 16:42 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -33,11 +33,11 @@
 | llistes_espera — CatSalut, llistes d'espera per hospital | ok | 2026-11-16 14:41 | 2026-11-16 14:41 | mensual |
 | cgpj — CGPJ, estadística judicial per partit judicial | — | — | — | trimestral |
 | interior — Ministerio del Interior, Balance de Criminalidad | — | — | — | trimestral |
-| turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 15:49 | mensual |
+| turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 16:19 | mensual |
 
 ## Detalle de la última ejecución
 
-### turisme: avís (1621 s)
+### turisme: avís (1403 s)
 
 ```
 INE 2074 Hoteles: viajeros y pernoctaciones por CCAA y provincias: 18 series
@@ -76,6 +76,7 @@ INE 48427 Pernoctaciones en alojamientos turísticos y de corta estancia por pro
 INE 48440 Ocupación en alojamientos turísticos y de corta estancia (anual): 9 series
 INE 23998 EGATUR: gasto de los turistas internacionales por CCAA de destino: 16 series
 INE 24745 EGATUR: partidas de gasto por CCAA: 32 series
+INE 23988 FRONTUR: turistas internacionales por CCAA de destino: 4 series
 INE 52047 Turistas extranjeros por provincia de destino y país (telefonía móvil): 1266 series
 INE 52997 Turistas residentes por provincia de destino y provincia de origen (telefonía móvil): 1251 series
 Xifra hotels: 23 anys (2003–2025)
@@ -86,6 +87,8 @@ Xifra hut: 11 anys (2015–2025)
 Xifra apart: 11 anys (2015–2025)
 Telefonía móvil rec (52048): ERROR TypeError: string indices must be integers, not 'str'
 Telefonía móvil int (53464): 221 municipios
+Viviendas turísticas INE 39363 (viviendas y plazas): 221 municipios
+Viviendas turísticas INE 39366 (porcentaje sobre las viviendas): 221 municipios
 2nmt-74sj → ieet_comarques.csv: 790 files
 83qv-sib8 → platges.csv: 271 files
 ```
