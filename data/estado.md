@@ -1,11 +1,11 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 15:05 UTC
+Última ejecución: 2026-11-16 15:29 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
 | territorio — Municipis i comarques (Idescat) | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | fix |
-| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | mensual/trimestral |
+| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 15:29 | 2026-11-16 15:29 | mensual/trimestral |
 | ine — INE, Atlas de distribució de renda | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | mitma — Ministerio de Transportes y Vivienda, Boletín Online | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | trimestral |
 | xifra — Xifra, Diputació de Girona | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
@@ -25,7 +25,7 @@
 | dgt — DGT, matriculacions | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | aena — Aena, passatgers de l'aeroport | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | eleccions — Generalitat, processos electorals | ok | 2026-11-16 14:00 | 2026-11-16 14:00 | per elecció |
-| vehicles — vehicles | ok | 2026-11-16 15:05 | 2026-11-16 15:05 |  |
+| vehicles — DGT, parc de vehicles per municipi | ok | 2026-11-16 15:05 | 2026-11-16 15:05 | anual |
 | aeat — Agencia Tributaria, IRPF per municipis | ok | 2026-11-16 14:02 | 2026-11-16 14:02 | anual |
 | padro — INE, padró i empreses (DIRCE) | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | pressupostos — Generalitat, liquidació dels pressupostos municipals | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
@@ -34,14 +34,24 @@
 
 ## Detalle de la última ejecución
 
-### vehicles: ok (32 s)
+### generalitat: ok (46 s)
 
 ```
-2020: 221 municipios, parque Girona 702143, Cataluña 5651996, España 36656957
-2021: 221 municipios, parque Girona 707007, Cataluña 5624611, España 37046864
-2022: 221 municipios, parque Girona 714688, Cataluña 5626952, España 37510944
-2023: 221 municipios, parque Girona 719969, Cataluña 5643692, España 37890861
-2024: 221 municipios, parque Girona 716524, Cataluña 5597285, España 37862492
-2025: 221 municipios, parque Girona 729603, Cataluña 5698722, España 38641163
-2026: HTTPError: 404 Client Error: Not Found for url: https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/dg
+qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)
+t2h3-cgys: 47806/112696 filas, filtrado por Codi Municipi (IDESCAT) (codigo)
+q4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)
+u5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)
+69zu-w48s: 5525/23687 filas, filtrado por Codi municipi (codigo)
+8idm-becu: 12803/54611 filas, filtrado por CDMUN (codigo)
+2b4s-skfm: 23591/138769 filas, filtrado por Codi IDESCAT municipi (17)
+agregats autoconsum: 138701 fotovoltaiques a Catalunya, fins a 2025-12
+8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)
+yqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)
+qnyt-emjc: 47600/340144 filas, filtrado por Regió Policial (RP)=Girona
+j8h8-vxug: 5746/24622 filas, filtrado por Codi IDESCAT (codigo)
+nm3n-3vbj: 1963/10591 filas, filtrado por CODI_10 (codigo)
+vevv-8fvw: 221/947 filas, filtrado por CODI_ENS (codigo)
+2v2p-vu4h: 2729/11873 filas, filtrado por CODI_10 (codigo)
+vq27-2ky2: 7125/36748 filas, filtrado por CODI_ENS (codigo)
+ques-gd6z: 2649/11368 filas, filtrado por CODI_ENS (codigo)
 ```
