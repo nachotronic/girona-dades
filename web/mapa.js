@@ -461,7 +461,51 @@
       tria(prim);
     }));
     cont.querySelectorAll(".xip").forEach((b) => b.addEventListener("click", () => tria(IND.find((i) => i.id === b.dataset.id))));
+    menuInd.etiqueta();
   }
+
+  // ---------- Menú de indicadores junto al mapa ----------
+  // Escritorio: columna fija a la izquierda del mapa. Tablet y móvil: barra fija sobre el mapa que abre una hoja inferior.
+  const menuInd = (() => {
+    const TXT = { ca: { canvia: "Canvia", tanca: "Fet", titol: "Tria un indicador" }, es: { canvia: "Cambia", tanca: "Hecho", titol: "Elige un indicador" } };
+    const tx = (k) => (TXT[LANG] || TXT.ca)[k];
+    const $ = (id) => document.getElementById(id);
+    const btn = $("menu-ind-btn"), full = $("mapa-eines");
+    if (!btn || !full) return { etiqueta() {} };
+    const compacte = matchMedia("(max-width: 1099px)");
+    const obert = () => btn.getAttribute("aria-expanded") === "true";
+    function obre() {
+      // Deja el mapa justo bajo la barra y la hoja ocupa el resto de la pantalla
+      const cap = document.querySelector(".cap");
+      const dalt = (cap && getComputedStyle(cap).position === "sticky" ? cap.offsetHeight : 0) + btn.offsetHeight;
+      const caixa = document.querySelector(".mapa-caixa");
+      const y = caixa.getBoundingClientRect().top + scrollY - dalt;
+      window.scrollTo({ top: y, behavior: "instant" });
+      const lliure = innerHeight - dalt - caixa.offsetHeight;
+      full.style.setProperty("--alt-full", `${Math.round(Math.max(lliure, innerHeight * (innerWidth > 640 ? 0.36 : 0.42)))}px`);
+      btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert");
+    }
+    function tanca() { btn.setAttribute("aria-expanded", "false"); document.body.classList.remove("menu-ind-obert"); }
+    btn.addEventListener("click", () => (obert() ? tanca() : obre()));
+    $("menu-ind-tanca").addEventListener("click", tanca);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && obert()) { tanca(); btn.focus(); } });
+    document.addEventListener("pointerdown", (e) => { if (obert() && !full.contains(e.target) && !btn.contains(e.target)) tanca(); });
+    compacte.addEventListener("change", () => { if (!compacte.matches) tanca(); });
+    // Altura de la cabecera fija, para que la barra del indicador quede justo debajo
+    const cap = document.querySelector(".cap");
+    const altCap = () => document.documentElement.style.setProperty("--cap-h", `${cap && getComputedStyle(cap).position === "sticky" ? cap.offsetHeight : 0}px`);
+    if (cap) { new ResizeObserver(altCap).observe(cap); addEventListener("resize", altCap); altCap(); }
+    return {
+      etiqueta() {
+        const tm = TEMES.find((x) => x.id === (ind && ind.tema));
+        $("menu-ind-tema").textContent = tm ? tm[LANG] : "";
+        $("menu-ind-nom").textContent = ind ? nomInd(ind, true) : "";
+        $("menu-ind-canvia").textContent = tx("canvia");
+        $("menu-ind-titol").textContent = tx("titol");
+        $("menu-ind-tanca").textContent = tx("tanca");
+      },
+    };
+  })();
 
   // Selecciona un indicador; si no existe al nivel actual, cambia de nivel
   async function tria(i) {
