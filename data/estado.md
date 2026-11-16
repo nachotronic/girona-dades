@@ -1,11 +1,11 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-16 15:29 UTC
+Última ejecución: 2026-11-16 16:22 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
 | territorio — Municipis i comarques (Idescat) | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | fix |
-| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 15:29 | 2026-11-16 15:29 | mensual/trimestral |
+| generalitat — Dades obertes de la Generalitat: lloguer, turisme, habitatges iniciats, ens locals… | ok | 2026-11-16 16:21 | 2026-11-16 16:21 | mensual/trimestral |
 | ine — INE, Atlas de distribució de renda | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | mitma — Ministerio de Transportes y Vivienda, Boletín Online | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | trimestral |
 | xifra — Xifra, Diputació de Girona | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
@@ -34,7 +34,7 @@
 
 ## Detalle de la última ejecución
 
-### generalitat: ok (46 s)
+### generalitat: ok (54 s)
 
 ```
 qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)
@@ -43,7 +43,7 @@ q4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)
 u5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)
 69zu-w48s: 5525/23687 filas, filtrado por Codi municipi (codigo)
 8idm-becu: 12803/54611 filas, filtrado por CDMUN (codigo)
-2b4s-skfm: 23591/138769 filas, filtrado por Codi IDESCAT municipi (17)
+2b4s-skfm: 23007/138769 filas, filtrado por Municipi (nombre)
 agregats autoconsum: 138701 fotovoltaiques a Catalunya, fins a 2025-12
 8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)
 yqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)
