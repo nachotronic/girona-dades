@@ -54,6 +54,22 @@ CANDIDATAS["idescat_taules"] = "https://api.idescat.cat/taules/v2?lang=ca"
 for t in ("atur registrat", "afiliats", "contractes", "habitatges iniciats", "pernoctacions", "ocupacio hotelera", "matriculacio", "fiances", "atur", "treballadors"):
     CANDIDATAS[f"socrata_{t.replace(' ', '_')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
 
+# Presupuestos municipales liquidados (Hacienda, CONPREL) y municipales de la Generalitat
+for ds in ("e05250001-presupuestos-y-liquidaciones-de-las-entidades-locales-datos-individuales",
+           "e05250001-presupuestos-y-liquidaciones-de-las-entidades-locales-datos-agregados"):
+    CANDIDATAS["dgob_" + ds[-12:]] = f"https://datos.gob.es/apidata/catalog/dataset/{ds}.json"
+CANDIDATAS["conprel_web"] = "https://serviciostelematicosext.hacienda.gob.es/SGFAL/CONPREL"
+for q in ("pressupostos ens locals", "liquidació pressupost", "pressupost municipal", "ingressos i despeses ajuntaments"):
+    CANDIDATAS["soc_" + q.replace(" ", "_").replace("ó", "o")] = f"{SOCRATA}?q={urllib.parse.quote(q)}&domains=analisi.transparenciacatalunya.cat&limit=40&only=dataset"
+# Valor tasado de vivienda (MIVAU, municipios de más de 25.000 habitantes)
+for c in ("35103500", "35103600", "35104000", "35101500"):
+    CANDIDATAS[f"mivau_{c}"] = f"https://apps.fomento.gob.es/BoletinOnline2/sedal/{c}.XLS"
+# INE: listas de tablas de DIRCE (empresas por municipio) e indicadores de mortalidad (esperanza de vida)
+INE = "https://servicios.ine.es/wstempus/js/ES"
+for op in ("DIRCE", "IDB", "MNP", "39"):
+    CANDIDATAS[f"ine_ops_{op}"] = f"{INE}/TABLAS_OPERACION/{op}"
+
+
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
     for clave, ext in (("excel", "xls"), ("json", "json"), ("xml", "xml"), ("html", "html"), ("csv", "csv")):
