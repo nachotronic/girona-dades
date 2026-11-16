@@ -128,9 +128,6 @@ def _pcaxis(pj, pp, refs, anys):
     civ_p, _ = total("civil", "Pendientes al finalizar")
     print(f"PC-Axis {a}: bloques penales {bl_p}; civiles {bl_c}")
     ll = val("llancaments", "total", "")
-    # En los partidos con servicio común, los lanzamientos los practica el servicio (cumplimiento positivo)
-    for k, v in val("scn", "lanzamientos", "devueltos. con cumplim").items():
-        ll[k] = ll.get(k, 0) + v
     ll_lau = val("llancaments", ".*arrendamientos", "")
     ll_hip = val("llancaments", ".*hipotecaria", "")
     verb = val("civil", "verbales arrendaticios", "ingresados")
