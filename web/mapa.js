@@ -38,7 +38,8 @@
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "ene", ca: "Energia", es: "Energía" },
-    { id: "pol", ca: "Política", es: "Política" },
+    { id: "ele", ca: "Eleccions", es: "Elecciones" },
+    { id: "pol", ca: "Alcaldies", es: "Alcaldías" },
   ];
   // Coyuntura (conjuntura.json): series mensuales (m) y trimestrales (t) alineadas con D.cj.per
   const CJ = (k, per) => (m, a) => { const c = D.cj && D.cj.mun[m.ine], s = c && c[k], i = s ? D.cj.idx[per][a] : null; return i == null ? null : s[i]; };
@@ -59,6 +60,46 @@
   const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
   const NOTA_SEPE = { ca: "SEPE, atur registrat el darrer dia del mes. Les xifres d'1 a 4 no es publiquen.", es: "SEPE, paro registrado el último día del mes. Las cifras de 1 a 4 no se publican." };
   const NOTA_CONTR = { ca: "SEPE, contractes registrats al mes al municipi del centre de treball.", es: "SEPE, contratos registrados en el mes en el municipio del centro de trabajo." };
+
+  // ---------- Eleccions (eleccions.json + un fichero por convocatoria) ----------
+  // Zona: [cens, votants, nuls, blancs, [i, vots, ...]] (índices de EL_D.c) o, en los totales, {bloc: vots}
+  let EL = null, elConv = null;
+  const EL_D = {};
+  const elDades = () => (elConv && EL_D[elConv]) || null;
+  const elInfo = (id = elConv) => (EL ? EL.conv.find((c) => c.id === id) : null);
+  const elValids = (z) => (z ? z[1] - z[2] : 0);
+  const elCands = (z) => {
+    const d = elDades(); if (!z || !d) return [];
+    if (!Array.isArray(z[4])) return Object.entries(z[4]).map(([b, v]) => ({ s: b, b, v })).sort((a, b) => b.v - a.v);
+    const r = []; for (let k = 0; k < z[4].length; k += 2) { const c = d.c[z[4][k]]; r.push({ s: c[0], b: c[1], nom: c[2], v: z[4][k + 1] }); }
+    return r;
+  };
+  const elBloc = (z, b) => { const v = elValids(z); if (!z || !v) return null; return (elCands(z).filter((c) => c.b === b).reduce((s, c) => s + c.v, 0) / v) * 100; };
+  const elPart = (z) => (z && z[0] ? (z[1] / z[0]) * 100 : null);
+  const elGuany = (z) => { const c = elCands(z); return c.length ? c[0].b : null; };
+  const elMarge = (z) => { const c = elCands(z), v = elValids(z); return c.length > 1 && v ? ((c[0].v - c[1].v) / v) * 100 : null; };
+  const TXT_EL = {
+    ca: { font: "Generalitat de Catalunya, resultats per secció censal.", pctv: "Percentatges sobre els vots vàlids (candidatures i en blanc).", seccions: "Les seccions són les del 2024: les que s'han creat després de l'elecció surten sense dades.",
+      part: "Votants sobre el cens electoral (sense el vot exterior).", marge: "Diferència entre la primera i la segona candidatura, en punts sobre els vots vàlids.", guany: "Cada zona té el color del bloc polític de la candidatura més votada.",
+      participacio: "Participació", vots: "vots", cens: "cens", punts: "punts", tipus: "Elecció", any: "Any", cap: "Aquesta candidatura no es va presentar en aquesta elecció.", altres_c: "Altres" },
+    es: { font: "Generalitat de Catalunya, resultados por sección censal.", pctv: "Porcentajes sobre los votos válidos (candidaturas y en blanco).", seccions: "Las secciones son las de 2024: las creadas después de la elección aparecen sin datos.",
+      part: "Votantes sobre el censo electoral (sin el voto exterior).", marge: "Diferencia entre la primera y la segunda candidatura, en puntos sobre los votos válidos.", guany: "Cada zona tiene el color del bloque político de la candidatura más votada.",
+      participacio: "Participación", vots: "votos", cens: "censo", punts: "puntos", tipus: "Elección", any: "Año", cap: "Esta candidatura no se presentó en esta elección.", altres_c: "Otras" },
+  };
+  const tel = (k) => (TXT_EL[LANG] || TXT_EL.ca)[k];
+  const COMPOSICIO = {
+    Junts: { ca: "Inclou CiU, CDC, Democràcia i Llibertat, JxCat i Junts (i Compromís Municipal a les municipals). El 2015 al Parlament va anar dins de Junts pel Sí.", es: "Incluye CiU, CDC, Democràcia i Llibertat, JxCat y Junts (y Compromís Municipal en las municipales). En 2015 en el Parlament fue dentro de Junts pel Sí." },
+    ERC: { ca: "Inclou les coalicions d'ERC (Catalunya Sí, Sobiranistes, Ara Repúbliques) i Acord Municipal.", es: "Incluye las coaliciones de ERC (Catalunya Sí, Sobiranistes, Ara Repúbliques) y Acord Municipal." },
+    PSC: { ca: "Inclou PSC-Candidatura de Progrés i PSC-Progrés Municipal.", es: "Incluye PSC-Candidatura de Progrés y PSC-Progrés Municipal." },
+    CUP: { ca: "Inclou les llistes municipals de la CUP i Amunt.", es: "Incluye las listas municipales de la CUP y Amunt." },
+    Comuns: { ca: "ICV-EUiA, Catalunya Sí que es Pot, En Comú Podem, Sumar i les llistes d'En Comú a les municipals.", es: "ICV-EUiA, Catalunya Sí que es Pot, En Comú Podem, Sumar y las listas de En Comú en las municipales." },
+    "JxSí": { ca: "Coalició de CDC i ERC a les eleccions al Parlament del 2015.", es: "Coalición de CDC y ERC en las elecciones al Parlament de 2015." },
+    Locals: { ca: "Candidatures municipals que no pertanyen a cap dels blocs anteriors.", es: "Candidaturas municipales que no pertenecen a ninguno de los bloques anteriores." },
+  };
+  const elNota = (extra, pctv) => ({ ca: [extra && extra.ca, pctv && TXT_EL.ca.pctv, TXT_EL.ca.font].filter(Boolean).join(" "), es: [extra && extra.es, pctv && TXT_EL.es.pctv, TXT_EL.es.font].filter(Boolean).join(" ") });
+  const elRef = (f) => () => { const d = elDades(); return d ? { cat: d.cat ? f(d.cat) : null } : {}; };
+  const indBloc = (b, ca, es) => ({ id: "el_" + b.toLowerCase().replace("ç", "c").replace("í", "i"), el: true, bloc: b, tema: "ele", ca: [`Vot a ${ca}`, `Vot a ${ca} (% dels vots vàlids)`], es: [`Voto a ${es}`, `Voto a ${es} (% de los votos válidos)`],
+    ez: (z) => elBloc(z, b), ref: elRef((z) => elBloc(z, b)), nota: elNota(COMPOSICIO[b], true), ...P1, c: (v) => pct(v, 0) });
 
   // Indicadores: v(m) municipio, s(x) sección; ca/es = [etiqueta corta, título completo]; a = año (o clave de D.anys)
   const IND = [
@@ -240,18 +281,21 @@
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
     // Política
     { id: "alcalde", tema: "pol", cat: true, ca: ["Partit de l'alcalde", "Partit de l'alcalde o alcaldessa"], es: ["Partido del alcalde", "Partido del alcalde o alcaldesa"], v: (m) => (m.pol && m.pol.alcalde ? m.pol.alcalde.bloc : null), f: (v) => nomBloc(v), c: (v) => nomBloc(v) },
-    { id: "participacio", tema: "pol", ca: ["Participació", "Participació a les municipals (%)"], es: ["Participación", "Participación en las municipales (%)"], a: "eleccions", v: X("participacio"), ...P0 },
-    { id: "vot_junts", tema: "pol", ca: ["Vot a Junts", "Vot a Junts a les municipals (% dels vots)"], es: ["Voto a Junts", "Voto a Junts en las municipales (% de los votos)"], a: "eleccions", v: X("vot_junts"), ...P0 },
-    { id: "vot_erc", tema: "pol", ca: ["Vot a ERC", "Vot a ERC a les municipals (% dels vots)"], es: ["Voto a ERC", "Voto a ERC en las municipales (% de los votos)"], a: "eleccions", v: X("vot_erc"), ...P0 },
-    { id: "vot_psc", tema: "pol", ca: ["Vot a PSC", "Vot a PSC a les municipals (% dels vots)"], es: ["Voto a PSC", "Voto a PSC en las municipales (% de los votos)"], a: "eleccions", v: X("vot_psc"), ...P0 },
-    { id: "vot_cup", tema: "pol", ca: ["Vot a CUP", "Vot a CUP a les municipals (% dels vots)"], es: ["Voto a CUP", "Voto a CUP en las municipales (% de los votos)"], a: "eleccions", v: X("vot_cup"), ...P0 },
-    { id: "vot_vox", tema: "pol", ca: ["Vot a Vox", "Vot a Vox a les municipals (% dels vots)"], es: ["Voto a Vox", "Voto a Vox en las municipales (% de los votos)"], a: "eleccions", v: X("vot_vox"), ...P0 },
-    { id: "vot_pp", tema: "pol", ca: ["Vot a PP", "Vot a PP a les municipals (% dels vots)"], es: ["Voto a PP", "Voto a PP en las municipales (% de los votos)"], a: "eleccions", v: X("vot_pp"), ...P0 },
-    { id: "vot_alianca", tema: "pol", ca: ["Vot a Aliança Catalana", "Vot a Aliança Catalana a les municipals (% dels vots)"], es: ["Voto a Aliança Catalana", "Voto a Aliança Catalana en las municipales (% de los votos)"], a: "eleccions", v: X("vot_alianca"), ...P0 },
-    { id: "vot_comuns", tema: "pol", ca: ["Vot a Comuns", "Vot a Comuns a les municipals (% dels vots)"], es: ["Voto a Comuns", "Voto a Comuns en las municipales (% de los votos)"], a: "eleccions", v: X("vot_comuns"), ...P0 },
-    { id: "vot_locals", tema: "pol", ca: ["Vot a les llistes locals", "Vot a les llistes locals a les municipals (% dels vots)"], es: ["Voto a las listas locales", "Voto a las listas locales en las municipales (% de los votos)"], a: "eleccions", v: X("vot_locals"), ...P0 },
-    { id: "part_parlament", tema: "pol", ca: ["Participació al Parlament", "Participació a les eleccions al Parlament (%)"], es: ["Participación al Parlament", "Participación en las elecciones al Parlament (%)"], a: "part_parlament", v: X("part_parlament"), ...P0 },
-    { id: "part_congres", tema: "pol", ca: ["Participació al Congrés", "Participació a les eleccions al Congrés (%)"], es: ["Participación al Congreso", "Participación en las elecciones al Congreso (%)"], a: "part_congres", v: X("part_congres"), ...P0 },
+    // Eleccions: valores de la convocatoria elegida, por municipio y sección
+    { id: "el_guany", el: true, cat: true, tema: "ele", ca: ["Guanyador", "Candidatura més votada"], es: ["Ganador", "Candidatura más votada"], ez: elGuany, f: (v) => nomBloc(v), c: (v) => nomBloc(v), nota: elNota({ ca: TXT_EL.ca.guany, es: TXT_EL.es.guany }), notaCat: { ca: "Nombre de zones on cada bloc va ser el més votat.", es: "Número de zonas donde cada bloque fue el más votado." } },
+    { id: "el_part", el: true, tema: "ele", ca: ["Participació", "Participació (% del cens)"], es: ["Participación", "Participación (% del censo)"], ez: elPart, ref: elRef(elPart), nota: elNota({ ca: TXT_EL.ca.part, es: TXT_EL.es.part }), ...P1, c: (v) => pct(v, 0) },
+    { id: "el_marge", el: true, sumable: false, tema: "ele", ca: ["Avantatge del guanyador", "Avantatge de la primera candidatura sobre la segona (punts)"], es: ["Ventaja del ganador", "Ventaja de la primera candidatura sobre la segunda (puntos)"], ez: elMarge, ref: elRef(elMarge), nota: elNota({ ca: TXT_EL.ca.marge, es: TXT_EL.es.marge }, false), f: (v) => fmt(v, 1), c: (v) => fmt(v, 0) },
+    indBloc("Junts", "Junts (CiU)", "Junts (CiU)"),
+    indBloc("ERC", "ERC", "ERC"),
+    indBloc("PSC", "PSC", "PSC"),
+    indBloc("CUP", "la CUP", "la CUP"),
+    indBloc("Comuns", "Comuns", "Comuns"),
+    indBloc("PP", "PP", "PP"),
+    indBloc("Vox", "Vox", "Vox"),
+    indBloc("Cs", "Ciutadans", "Ciudadanos"),
+    indBloc("Aliança", "Aliança Catalana", "Aliança Catalana"),
+    indBloc("JxSí", "Junts pel Sí", "Junts pel Sí"),
+    indBloc("Locals", "llistes locals", "listas locales"),
     { id: "densitat", sumable: false, tema: "ter", ca: ["Densitat", "Habitants per km²"], es: ["Densidad", "Habitantes por km²"], a: "densitat", v: X("densitat"), ...N0 },
     { id: "sau", sumable: false, tema: "ter", ca: ["Superfície agrícola", "Superfície agrícola utilitzada (% del terme)"], es: ["Superficie agrícola", "Superficie agrícola utilizada (% del término)"], a: "sau", v: X("sau"), ...P0 },
     { id: "esports", tema: "ter", ca: ["Espais esportius", "Espais esportius per 1.000 habitants"], es: ["Espacios deportivos", "Espacios deportivos por 1.000 habitantes"], a: "esports", v: X("esports"), ...N1 },
@@ -262,6 +306,7 @@
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
     if (curt) return txt;
+    if (i.el) { const c = elInfo(); return c ? `${txt}\u00a0· ${c.n[LANG]}` : txt; }
     const a = i === ind && anyActiu() ? anyActiu() : typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
     const ap = i.per && !a && D.cj ? anysDe(i).slice(-1)[0] : a;
     return ap ? `${txt} · ${etPer(String(ap))}` : txt;
@@ -335,6 +380,8 @@
   let reproduint = null;
   function controlAnys() {
     const el = document.getElementById("anys-ctl");
+    if (ind.el && EL) return controlEl(el);
+    el.classList.remove("el-ctl");
     if (!ambSerie()) { el.hidden = true; el.innerHTML = ""; return; }
     const anys = anysDe(ind), act = anyActiu(), idx = anys.indexOf(act);
     el.hidden = false;
@@ -353,11 +400,27 @@
       controlAnys();
     });
   }
+  // Selector de convocatoria: tipo de elección y año
+  function controlEl(el) {
+    const act = elInfo() || EL.conv[0];
+    const tipus = ["A", "G", "M", "E"].filter((tp) => EL.conv.some((c) => c.t === tp));
+    const nomT = (tp) => EL.conv.find((c) => c.t === tp).n[LANG].replace(/ \d{4}.*$/, "");
+    const etAny = (c) => (c.t === "G" && c.any === 2019 ? `${c.data.slice(5, 7) === "04" ? (LANG === "es" ? "Abr" : "Abr") : "Nov"} 19` : String(c.any));
+    el.hidden = false; el.classList.add("el-ctl");
+    el.innerHTML = `<div class="el-fila" role="group" aria-label="${tel("tipus")}">${tipus.map((tp) => `<button type="button" data-t="${tp}" aria-pressed="${tp === act.t}">${nomT(tp)}</button>`).join("")}</div>
+      <div class="el-fila el-anys" role="group" aria-label="${tel("any")}">${EL.conv.filter((c) => c.t === act.t).map((c) => `<button type="button" data-id="${c.id}" aria-pressed="${c.id === act.id}" title="${c.n[LANG]} · ${c.data.split("-").reverse().join("/")}">${etAny(c)}</button>`).join("")}</div>`;
+    const canvia = async (id) => { await carregaConv(id); if (absent(ind)) ind = IND.find((i) => i.id === "el_guany"); omplirSelector(); pinta(); };
+    el.querySelectorAll("[data-t]").forEach((b) => b.addEventListener("click", () => { const l = EL.conv.filter((c) => c.t === b.dataset.t); canvia(l[l.length - 1].id); }));
+    el.querySelectorAll("[data-id]").forEach((b) => b.addEventListener("click", () => canvia(b.dataset.id)));
+  }
   function para() { if (reproduint) { clearInterval(reproduint); reproduint = null; } }
 
   let hoverId = null, munPerIne = {}, valorsActuals = [], fixat = null;
 
-  const disponible = (i, n) => (n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
+  const disponible = (i, n) => (i.el ? n === "mun" || n === "sec" : n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
+  const zonaEl = (props) => { const d = elDades(); return !d ? null : nivell === "mun" ? d.mun[props.ine] : d.sec[props.cusec]; };
+  // Una candidatura o bloque que no se presentó en la convocatoria elegida
+  const absent = (i) => i.bloc && elInfo() && !elInfo().b.includes(i.bloc);
 
   // Cortes por cuantiles, redondeados a una cifra "limpia" para que la leyenda se lea bien
   function quantils(valors) {
@@ -379,6 +442,7 @@
   const classe = (v) => { if (v == null || !isFinite(v)) return -1; let i = 0; while (i < llindars.length && v >= llindars[i]) i++; return i; };
 
   function valorDe(props) {
+    if (ind.el) return absent(ind) ? null : ind.ez(zonaEl(props));
     if (nivell === "mun") { const m = munPerIne[props.ine]; return !m ? null : ambSerie() ? ind.t(m, anyActiu()) : ind.v(m); }
     if (esArea(nivell)) { const x = ZONA[nivell].d[props.id]; return x ? ind[nivell](x) : null; }
     const x = SEC[props.cusec]; return x ? ind.s(x) : null;
@@ -410,7 +474,7 @@
     src.setData(geo);
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
     controlAnys(); llegenda(); referencies(); ranquing(); info(fixat);
   }
 
@@ -423,9 +487,9 @@
     const n = {}; valorsActuals.forEach((x) => { n[x.v] = (n[x.v] || 0) + 1; });
     recompte = Object.entries(n).sort((a, b) => b[1] - a[1]);
     mapa.getSource("zones").setData(geo);
-    mapa.setLayoutProperty("limits-mun", "visibility", "none");
+    mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] : t("nomes_mun");
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : t("nomes_mun");
     const max = recompte.length ? recompte[0][1] : 1;
     document.getElementById("llegenda").innerHTML = `<div class="cat-llista">${recompte.map(([b, k]) =>
       `<div class="cat-fila"><i style="background:${colCat(b)}"></i><span class="cat-nom">${ind.c(b)}</span><span class="cat-barra"><b style="width:${(k / max) * 100}%;background:${colCat(b)}"></b></span><span class="cat-n">${k}</span></div>`).join("")}</div>${ind.notaCat ? `<p class="cat-nota">${ind.notaCat[LANG]}</p>` : ""}`;
@@ -457,6 +521,7 @@
 
   // Comparación con la provincia, Cataluña y España
   function valorProvincia(i = ind) {
+    if (i.el) { const d = elDades(); return d && d.prov && !i.cat && !absent(i) ? i.ez(d.prov) : null; }
     if (i.pv) { const u = anysDe(i).slice(-1)[0]; return u ? i.pv(u) : null; }
     const r = (D.ref || {})[i.id];
     if (r && r.gi != null) return r.gi;
@@ -468,7 +533,7 @@
   function referencies() {
     const el = document.getElementById("referencies");
     if (!el) return;
-    const r = (ind.ref ? ind.ref() : (D.ref || {})[ind.id]) || {};
+    const r = (ind.ref && !absent(ind) ? ind.ref() : (D.ref || {})[ind.id]) || {};
     const files = [[t("ref_gi"), valorProvincia(), "gi"], [t("ref_cat"), r.cat, "cat"], [t("ref_esp"), r.esp, "esp"]]
       .filter((x) => x[1] != null && isFinite(x[1]));
     const ult = anysDe(ind).slice(-1)[0];
@@ -494,6 +559,7 @@
       { nom: t("prov_curt"), cls: "s-prov", d: serieProv(ind) },
     ]) : "");
     if (!props) { el.innerHTML = `<p class="pista">${t("pista")}</p>${mini(null)}`; return; }
+    if (ind.el) return infoEl(el, props);
     const z = nomZona(props), v = valorDe(props);
     if (ind.cat && ind.infoCat) {
       const k = (recompte.find((x) => x[0] === v) || [0, 0])[1];
@@ -525,6 +591,25 @@
     const b = el.querySelector("button"); if (b) b.addEventListener("click", () => obreFitxa(props.ine, true));
   }
 
+  // Ficha de la zona en una elección: participación y resultados de cada candidatura
+  function infoEl(el, props) {
+    const z = nomZona(props), d = zonaEl(props), v = valorDe(props);
+    if (!d) { el.innerHTML = `<p class="nom">${z.nom}</p><p class="lloc">${z.lloc}</p><p class="rel">${t("sense_dades")}</p>`; return; }
+    const cs = elCands(d), vv = elValids(d), N = 7;
+    const files = cs.slice(0, N), resta = cs.slice(N).reduce((s, c) => s + c.v, 0);
+    const max = files.length ? files[0].v : 1;
+    const fila = (s, b, n, tit) => `<li title="${tit || s}"><span class="sigla"><i style="background:${colorBloc(b)}"></i>${s}</span><span class="vbarra"><b style="width:${(n / max) * 100}%;background:${colorBloc(b)}"></b></span><span class="vpct">${pct((n / vv) * 100, 1)}</span></li>`;
+    const gran = ind.cat ? `<i class="punt-bloc" style="background:${colorBloc(v)}"></i>${cs[0].s}` : v == null ? "–" : ind.f(v);
+    const pos = !ind.cat && v != null ? valorsActuals.findIndex((x) => x.v <= v) : -1;
+    el.innerHTML = `<p class="nom">${z.nom}</p><p class="lloc">${z.lloc}</p>
+      <p class="gran${ind.cat ? " el-guany" : ""}">${gran}</p>
+      <p class="rel">${absent(ind) ? tel("cap") : pos >= 0 ? t("posicio", pos + 1, valorsActuals.length) : `${cs[0].s === cs[0].b ? "" : nomBloc(cs[0].b) + " · "}${pct((cs[0].v / vv) * 100, 1)}`}</p>
+      <p class="rel">${tel("participacio")} ${pct(elPart(d), 1)} · ${fmt(d[1])} ${tel("vots")} · ${tel("cens")} ${fmt(d[0])}</p>
+      <ol class="vots el-vots">${files.map((c) => fila(c.s, c.b, c.v, c.nom)).join("")}${resta ? fila(tel("altres_c"), "Altres", resta) : ""}</ol>
+      ${nivell === "mun" ? `<button type="button">${t("obrir_fitxa")} →</button>` : `<button type="button">${t("obrir_fitxa")}: ${z.nom} →</button>`}`;
+    el.querySelector("button").addEventListener("click", () => obreFitxa(props.ine, true));
+  }
+
   const normal = (s) => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let consulta = "";
 
@@ -536,7 +621,7 @@
       ? IND.filter((i) => normal([...i.ca, ...i.es].join(" ")).includes(q))
       : IND.filter((i) => i.tema === tema);
     const xips = llista.map((i) => {
-      const ok = NIVELLS.some((n) => disponible(i, n));
+      const ok = NIVELLS.some((n) => disponible(i, n)) && !absent(i);
       const pref = q ? `<span class="xip-tema">${TEMES.find((tm) => tm.id === i.tema)[LANG]}</span>` : "";
       return `<button type="button" class="xip" role="radio" data-id="${i.id}" aria-checked="${i.id === ind.id}" ${ok ? "" : "disabled"} title="${nomInd(i)}">${pref}${nomInd(i, true)}</button>`;
     }).join("");
@@ -599,7 +684,20 @@
     ind = i; tema = i.tema;
     if (!disponible(i, nivell)) { nivell = NIVELLS.find((n) => disponible(i, n)); fixat = null; }
     await carregaNivell(nivell);
+    if (i.el) await carregaConv(elConv);
     omplirSelector(); botonsNivell(); pinta();
+  }
+
+  // Índice de convocatorias y resultados de cada una (bajo demanda)
+  async function carregaConv(id) {
+    if (!EL) EL = await fetch("datos/eleccions.json").then((r) => r.json());
+    if (!id) { const a = EL.conv.filter((c) => c.t === "A"); id = (a.length ? a : EL.conv)[(a.length ? a : EL.conv).length - 1].id; }
+    if (!EL_D[id]) {
+      document.getElementById("mapa").classList.add("carregant");
+      EL_D[id] = await fetch(`datos/eleccions/${id}.json`).then((r) => r.json());
+      document.getElementById("mapa").classList.remove("carregant");
+    }
+    elConv = id;
   }
 
   function botonsNivell() {
@@ -650,6 +748,7 @@
 
   function tipHtml(props) {
     const z = nomZona(props), v = props.v;
+    if (ind.el && ind.cat) { const d = zonaEl(props), c = elCands(d)[0]; return `<b>${z.nom}</b> <span class="t-sub">${z.lloc}</span><br>${c ? `<b>${c.s}</b> · ${pct((c.v / elValids(d)) * 100, 1)}` : t("sense_dades")}`; }
     return `<b>${z.nom}</b> <span class="t-sub">${z.lloc}</span><br>${v == null ? t("sense_dades") : `<b>${ind.f(v)}</b>`}`;
   }
 
@@ -747,7 +846,7 @@
     };
     const cap = `<div class="fi-fila fi-cap"><span></span><span class="fi-strip-cap"></span><span>${m.nom}</span><span>${t("ref_gi_curt")}</span><span>${t("ref_cat")}</span><span>${t("ref_esp")}</span></div>`;
     const blocs = TEMES.map((tm) => {
-      const files = IND.filter((i) => i.tema === tm.id && !i.cat).map((i) => {
+      const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
         const r = (D.ref || {})[i.id] || {};

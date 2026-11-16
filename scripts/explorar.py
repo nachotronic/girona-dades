@@ -39,6 +39,38 @@ for t in ("52048", "53463", "53464", "52047", "59060"):
     CANDIDATAS[f"inecsv_{t}"] = CSV.format(t)
 CANDIDATAS["aena_2026"] = "https://www.aena.es/es/estadisticas/informes-mensuales.html?anio=2026"
 
+# Eleccions: resultats per mesa (Interior) i Parlament (Generalitat)
+INTERIOR = "https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/"
+ZIPS = {f"int_{t}{f}": f"{INTERIOR}{t}{f}_MESA.zip" for t, f in (
+    ("02", "202307"), ("02", "201911"), ("04", "202305"), ("07", "202406"))}
+CANDIDATAS_E = {}
+SOC = "https://analisi.transparenciacatalunya.cat"
+for d in ("ntc4-rnwr", "irrv-2mfc", "tgns-3xuy"):
+    CANDIDATAS_E[f"pe_{d}_meta"] = f"{SOC}/api/views/{d}.json"
+    CANDIDATAS_E[f"pe_{d}_mostra"] = f"{SOC}/resource/{d}.json?$limit=30"
+CANDIDATAS_E["pe_tgns_tot"] = f"{SOC}/resource/tgns-3xuy.json?$limit=5000"
+
+def explora_zips(filas: list) -> None:
+    import io, zipfile
+    for clave, url in ZIPS.items():
+        try:
+            r = requests.get(url, headers=UA, timeout=300)
+            filas.append(f"| {clave} | {r.status_code} | {r.headers.get('content-type','')} | {len(r.content)} | {r.url} |")
+            if r.status_code != 200:
+                continue
+            z = zipfile.ZipFile(io.BytesIO(r.content))
+            info = []
+            for n in z.namelist():
+                datos = z.read(n)
+                info.append(f"{n}\t{len(datos)}")
+                lineas = datos.decode("latin-1").splitlines()
+                gir = [l for l in lineas if "17" in l[9:20]][:300]
+                (MUESTRAS / f"{clave}_{n}.txt").write_text("\n".join(lineas[:40] + ["--- 17 ---"] + gir), encoding="utf-8")
+            (MUESTRAS / f"{clave}_LISTA.txt").write_text("\n".join(info), encoding="utf-8")
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
+
+
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
     for clave, ext in (("excel", "xls"), ("json", "json"), ("xml", "xml"), ("html", "html"), ("csv", "csv")):
@@ -50,7 +82,7 @@ def extension(tipo: str) -> str:
 def main() -> None:
     MUESTRAS.mkdir(parents=True, exist_ok=True)
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
-    for clave, url in CANDIDATAS.items():
+    for clave, url in CANDIDATAS_E.items():
         try:
             if url.endswith(".zip"):
                 import io, zipfile
