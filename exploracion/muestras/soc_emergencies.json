@@ -1,0 +1,3694 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Actuacions en emergències veterinàries dels Bombers",
+            "id" : "u554-wviy",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre total d’actuacions del Grup d’Emergències Veterinàries (GEV) dels Bombers de la Generalitat de Catalunya.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:44.000Z",
+            "createdAt" : "2022-08-09T09:41:47.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:44.000Z",
+            "data_updated_at" : "2022-08-09T09:45:53.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 22,
+                "page_views_last_month" : 32,
+                "page_views_total" : 959,
+                "page_views_last_week_log" : 4.523561956057013,
+                "page_views_last_month_log" : 5.044394119358453,
+                "page_views_total_log" : 9.90689059560852
+              },
+            "columns_name" : [ "Tipus", "Nombre", "Any" ],
+            "columns_field_name" : [ "tipus", "nombre", "any" ],
+            "columns_datatype" : [ "Text", "Number", "Number" ],
+            "columns_description" :
+              [
+                "Tipus d’actuació realitzada pel GEV",
+                "Nombre total d’actuacions dutes a terme pel GEV",
+                "Any de la informació"
+              ],
+            "columns_format" :
+              [
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "0",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "0",
+                  "groupSeparator" : "."
+                }
+              ],
+            "download_count" : 513,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-08-09T09:46:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "gev",
+                "bombers",
+                "emergències veterinàries",
+                "memòria",
+                "memòria interior",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Actions in veterinary emergencies by the Firefighters"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Actuaciones en emergencias veterinarias de los Bomberos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/u554-wviy",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Actuacions-en-emergències-veterinàries-dels-Bomber/u554-wviy",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Personal tècnic de les entitats col·laboradores de l'Administració en l'àmbit de la prevenció i la seguretat en matèria d'incendis",
+            "id" : "6bf2-ta4d",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llista del personal tècnic de les entitats col·laboradores de l'Administració en l'àmbit de la prevenció i la seguretat en matèria d'incendis. A més de les dades de nom de l'entitat i del tècnic, s'indica el codi d'habilitació i el nivell d'habilitació (bàsic o avançat).",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-12T13:30:52.000Z",
+            "createdAt" : "2017-02-16T11:11:50.000Z",
+            "metadata_updated_at" : "2026-11-12T13:30:51.000Z",
+            "data_updated_at" : "2026-11-12T13:30:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 40,
+                "page_views_last_month" : 87,
+                "page_views_total" : 22881,
+                "page_views_last_week_log" : 5.357552004618084,
+                "page_views_last_month_log" : 6.459431618637298,
+                "page_views_total_log" : 14.481925535860658
+              },
+            "columns_name" :
+              [
+                "HABILITACIO_TCN",
+                "CODI_HABILITACIO_TCN",
+                "NOM_ECA",
+                "NOM_TCN",
+                "CODI_ECA"
+              ],
+            "columns_field_name" :
+              [
+                "habilitacio_tcn",
+                "codi_habilitacio_tcn",
+                "nom_eca",
+                "nom_tcn",
+                "codi_eca"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nivell d’habilitació del tècnic ",
+                "Codi d'habilitació del tècnic ",
+                "Nom de l'entitat col·laboradora de l’Administració en l'àmbit de la prevenció i la seguretat en matèria d'incendis",
+                "Nom i cognoms del tècnic habilitat ",
+                "Codi d’autorització de l'entitat col·laboradora de l’Administració en l'àmbit de la prevenció i la seguretat en matèria d'incendis"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {} ],
+            "download_count" : 1810,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-10-20T12:03:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "adreces i telèfons",
+                "emergències",
+                "empresa",
+                "seguretat",
+                "entitats col·laboradores",
+                "prevenció d'incendis",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Technical staff of the collaborating entities of the Administration in the field of fire prevention and safety"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Personal técnico de las entidades colaboradoras de la Administración en el ámbito de la prevención y seguridad en materia de incendios"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/6bf2-ta4d",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Personal-tècnic-de-les-entitats-col-laboradores-de/6bf2-ta4d",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Plans de protecció civil en fase de prealerta, alerta o emergència",
+            "id" : "wj9c-j6vf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació sobre l’estat dels plans d’emergència de Protecció Civil amb el nom del pla, l'especificació de la fase d'activació (prealerta, alerta o emergència) i la descripció del fenomen. En alguns casos també s’hi inclouen els comunicats oficials del Centre de Coordinació Operativa de Catalunya (CECAT), que és el centre superior de coordinació i informació de l'estructura de la Protecció Civil de Catalunya, ja que poden contenir consells d’autoprotecció, comarques afectades o restriccions per a la població. Quan no hi ha cap pla d’emergència activat, el conjunt de dades és buit, presenta 0 files.\n\nLes fases són les següents:\n\nPREALERTA: La prealerta es produeix, en general, davant de les situacions següents:\n·\tQuan és previsible un fenomen que pot produir situacions de risc per a la població a mitjà termini.\n·\tTambé es pot produir com a conseqüència del seguiment de maniobres o incidències a determinades instal·lacions, manca de serveis bàsics o essencials, i en la finalització d’emergències fins al retorn a la normalitat.\nLa prealerta no implica l’activació del pla.\n\nALERTA: El pla s'activa en fase d’alerta, en general, davant de les situacions següents:\n·\tQuan hi ha paràmetres objectius que fan preveure una situació d’emergència important per a la població a curt termini.\n·\tDavant d’afectacions per riscos naturals que no afectin ni puguin afectar de forma greu o generalitzada persones, béns o vies de comunicació.\n·\tEn emergències a determinades instal·lacions o infraestructures que no puguin produir danys a l’exterior però que puguin produir alarma en la població.\n\nEMERGÈNCIA: El pla s'activa en fase d’emergència, en general, davant de les situacions següents:\n·\tQuan s’informa de l’activació en fase d’emergència d’un pla especial de la Generalitat per afectació a la zona on es troba el municipi, la comarca o el territori.\n·\tDavant d’emergències que poden comportar o comporten, per la seva evolució, un greu risc per a la població, o el municipi o la comarca.",
+            "attribution" : "Direcció General de Protecció Civil",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T08:54:04.000Z",
+            "createdAt" : "2024-07-08T06:46:19.000Z",
+            "metadata_updated_at" : "2025-09-22T10:06:25.000Z",
+            "data_updated_at" : "2026-11-16T08:54:04.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 486,
+                "page_views_last_month" : 2424,
+                "page_views_total" : 29938,
+                "page_views_last_week_log" : 8.927777962082342,
+                "page_views_last_month_log" : 11.243769031961854,
+                "page_views_total_log" : 14.86973841393394
+              },
+            "columns_name" :
+              [
+                "Descripcio",
+                "PlaActivat",
+                "PlaFase",
+                "ComunicatPDF",
+                "PlaIcona",
+                "PlaAcronim",
+                "FaseDataHora",
+                "PlaNom"
+              ],
+            "columns_field_name" :
+              [
+                "descripcio",
+                "plaactivat",
+                "plafase",
+                "comunicatpdf",
+                "plaicona",
+                "plaacronim",
+                "fasedatahora",
+                "planom"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Text", "URL", "URL", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Descripció addicional (opcional)",
+                "Indica si el Pla està activat o no. (Si/No)",
+                "Fase actual del Pla",
+                "Comunicat del Centre de Coordinació Operativa de Catalunya (CECAT) (URL a Documents Oberts)",
+                "Icona representativa del pla  (URL a icona corresponent de DocumentsOberts) (veure Icones només per a ús i identificació dels plans de Protecció Civil)",
+                "Acrònim Pla (ex: PLASEQTA)",
+                "Data/hora de l’inici de la fase",
+                "Nom complet del Pla (ex: Pla especial d’emergència exterior del sector químic de Tarragona)"
+              ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 43188,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-07-12T07:36:01.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "emergències",
+                "seguretat",
+                "plans",
+                "protecció civil",
+                "cecat",
+                "ods3_salut i benestar",
+                "ods11_ciutats i comunitats sostenibles",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Enllaços-relacionats_Nom",
+                  "value" : "Nombre d’avisos i activacions dels plans de Protecció Civil de la Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://analisi.transparenciacatalunya.cat/Seguretat/Nombre-d-avisos-i-activacions-dels-plans-de-Protec/wfei-fjk5/about_data"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Civil protection plans currently in the pre-alert, alert or emergency phase"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Planes de protección civil en fase de prealerta, alerta o emergència"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/wj9c-j6vf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Plans-de-protecció-civil-en-fase-de-prealerta-aler/wj9c-j6vf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Establiments afectats per la normativa d’accidents greus a Catalunya",
+            "id" : "aqri-5sbe",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d’establiments afectats pel Reial decret 840/2015, de 21 de setembre, pel qual s’aproven mesures de control dels riscos inherents als accidents greus en els quals intervinguin substàncies perilloses. S’inclouen els establiments de nivell inferior i de nivell superior.",
+            "attribution" : "Direcció General de Protecció Civil",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-26T06:36:07.000Z",
+            "createdAt" : "2023-05-03T14:39:05.000Z",
+            "metadata_updated_at" : "2026-08-26T06:36:02.000Z",
+            "data_updated_at" : "2026-08-26T06:36:07.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 64,
+                "page_views_last_month" : 207,
+                "page_views_total" : 7807,
+                "page_views_last_week_log" : 6.022367813028454,
+                "page_views_last_month_log" : 7.700439718141093,
+                "page_views_total_log" : 12.930737337562887
+              },
+            "columns_name" :
+              [
+                "CODI_PROV",
+                "PROVINCIA",
+                "Georeferència",
+                "CODI_MUNI",
+                "LIMADM COMARCA 2",
+                "Y",
+                "TIPUS",
+                "DOCUMENT",
+                "CODI_DEM",
+                "LIMADM_MUNICIPI 2",
+                "COMARCA",
+                "NOM_EMPRES",
+                "CODI_COM",
+                "LATITUD",
+                "DEMARCACIO",
+                "MUNICIPI",
+                "X",
+                "LONGITUD"
+              ],
+            "columns_field_name" :
+              [
+                "codi_prov",
+                "provincia",
+                "georefer_ncia",
+                "codi_muni",
+                ":@computed_region_wvic_k925",
+                "y",
+                "tipus",
+                "document",
+                "codi_dem",
+                ":@computed_region_bh64_c7uy",
+                "comarca",
+                "nom_empres",
+                "codi_com",
+                "latitud",
+                "demarcacio",
+                "municipi",
+                "x",
+                "longitud"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "URL",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Codi de la província on s’ubica l’establiment",
+                "Província on s’ubica l’establiment",
+                "",
+                "Codi del municipi on s’ubica l’establiment",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Coordenada y expressada en metres. Sistema de referència ETRS89 del fus 31N",
+                "Indica el nivell d’afectació de l’establiment. Pot assolir els valors de superior o inferior",
+                "Enllaç per accedir al document informatiu particular de cada establiment en format pdf",
+                "Codi de la demarcació territorial on s’ubica l’establiment",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Comarca on s’ubica l’establiment",
+                "Nom oficial de la raó social",
+                "Codi de la comarca on s’ubica l’establiment",
+                "Latitud expressa en graus decimals. Sistema de referència WGS84",
+                "Demarcació territorial on s’ubica l’establiment",
+                "Municipi on s’ubica l’establiment",
+                "Coordenada x expressada en metres. Sistema de referència ETRS89 del fus 31N",
+                "Longitud expressa en graus decimals. Sistema de referència WGS84"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 1775,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-02-02T15:08:06.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "emergències",
+                "seguretat",
+                "establiments seveso",
+                "risc químic",
+                "anàlisi de risc",
+                "protecció civil",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Establishments affected by the serious accident regulations in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Establecimientos afectados por la normativa de accidentes graves en Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/aqri-5sbe",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Establiments-afectats-per-la-normativa-d-accidents/aqri-5sbe",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Vehicles dels Bombers de la Generalitat",
+            "id" : "kzdr-xdy5",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Tipologia dels vehicles de què disposen els parcs de bombers de la Generalitat de Catalunya.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:45:17.000Z",
+            "createdAt" : "2019-05-06T08:08:38.000Z",
+            "metadata_updated_at" : "2026-09-16T14:45:17.000Z",
+            "data_updated_at" : "2021-10-19T10:28:08.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 64,
+                "page_views_last_month" : 205,
+                "page_views_total" : 13906,
+                "page_views_last_week_log" : 6.022367813028454,
+                "page_views_last_month_log" : 7.6865005271832185,
+                "page_views_total_log" : 13.763523616689591
+              },
+            "columns_name" : [ "Tipus de vehicle", "Nombre" ],
+            "columns_field_name" : [ "tipus_de_vehicle", "nombre" ],
+            "columns_datatype" : [ "Text", "Number" ],
+            "columns_description" :
+              [
+                "Tipologia de vehicle",
+                "Quantitat de vehicles d'aquesta tipologia"
+              ],
+            "columns_format" : [ {}, {} ],
+            "download_count" : 2265,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-05-06T08:58:33.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "emergències",
+                "bombers",
+                "vehicles",
+                "ods13_acció pel clima",
+                "ods15_vida d'ecosistemes terrestres"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Catalan Firefighters vehicles"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Vehículos de los Bomberos de la Generalitat"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/kzdr-xdy5",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Vehicles-dels-Bombers-de-la-Generalitat/kzdr-xdy5",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Regions d'Emergències de Bombers",
+            "id" : "55ge-4jcz",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Regions d'Emergències dels Bombers de Catalunya, amb tots els municipis que inclou cadascuna.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:05.000Z",
+            "createdAt" : "2018-12-19T16:33:30.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:05.000Z",
+            "data_updated_at" : "2023-01-10T15:14:37.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 45,
+                "page_views_last_month" : 106,
+                "page_views_total" : 6373,
+                "page_views_last_week_log" : 5.523561956057013,
+                "page_views_last_month_log" : 6.7414669864011465,
+                "page_views_total_log" : 12.637983303777853
+              },
+            "columns_name" :
+              [
+                "shape_leng",
+                "shape_area",
+                "Regió",
+                "Codi regió",
+                "the_geom"
+              ],
+            "columns_field_name" :
+              [
+                "shape_leng",
+                "shape_area",
+                "regi_",
+                "codi_regi_",
+                "the_geom"
+              ],
+            "columns_datatype" :
+              [ "Number", "Number", "Text", "Text", "MultiPolygon" ],
+            "columns_description" :
+              [
+                "Perímetre de la regió d'emergències de bombers",
+                "Àrea de la regió d'emergències de bombers",
+                "Nom de la regió d'emergències de bombers",
+                "Codi de la regió d'emergències de bombers",
+                "Polígon en format MULTIPOLYGON ()"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1933,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-01-10T15:14:46.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [ "bombers", "emergències", "ods13_acció pel clima" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Firefighters regions"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Regiones de Emergencias de Bomberos"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/55ge-4jcz",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-d-Emergències-de-Bombers/55ge-4jcz",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Punts de cobertura 112",
+            "id" : "u4c3-bcwc",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "*Descarrega el Shapefile (SHP) original a l'apartat de fitxers adjunts.\n\nSenyalització de punts on es pot trobar senyal de cobertura per al 112 i des d'on, per tant, es pot trucar a emergències des d'un telèfon mòbil. Aquests senyals instal·lats inclouen informació d'identificació del Parc i del CAT112, un número de matrícula unívoc per tal que el ciutadà que necessiti contactar els serveis d'emergència no hagi d'indicar la seva posició. D'aquesta manera indicant la matrícula que figura en el pal de senyalització els cossos d'emergència ja sabran on es troben. Amb la instal·lació de punts de cobertura 112 es pretén, d'una banda, conscienciar als visitants que existeixen zones sense cobertura on no es pot trucar al telèfon d'emergències 112 i, de l'altra, donar una referència de punts amb cobertura als indrets més visitats. L'objectiu final és instal·lar senyals a totes les vies de senderisme de gran afluència, com ara els senders de gran recorregut (GR) que creuen Catalunya, ubicats en la major part en Parcs Naturals.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:45.000Z",
+            "createdAt" : "2020-04-02T07:34:07.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:45.000Z",
+            "data_updated_at" : "2020-04-02T07:37:53.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 38,
+                "page_views_last_month" : 77,
+                "page_views_total" : 4247,
+                "page_views_last_week_log" : 5.285402218862249,
+                "page_views_last_month_log" : 6.285402218862249,
+                "page_views_total_log" : 12.052568050804155
+              },
+            "columns_name" :
+              [
+                "LIMADM_MUNICIPI",
+                "UTM_Y",
+                "Ressenya",
+                "the_geom",
+                "UTM_X",
+                "Matricula",
+                "LIMADM COMARCA"
+              ],
+            "columns_field_name" :
+              [
+                ":@computed_region_bh64_c7uy",
+                "utm_y",
+                "ressenya",
+                "the_geom",
+                "utm_x",
+                "matricula",
+                ":@computed_region_wvic_k925"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Text",
+                "Point",
+                "Number",
+                "Text",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "Coordenada UTM Y expressada en metres. Sistema de referència ETRS89",
+                "Ressenya de localització",
+                "",
+                "Coordenada UTM X expressada en metres. Sistema de referència ETRS89",
+                "Número de matrícula",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {}
+              ],
+            "download_count" : 1942,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-04-02T07:37:59.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "incident",
+                "accident",
+                "emergències",
+                "cartografia",
+                "mapes",
+                "smartcatalonia",
+                "ods3_salut i benestar",
+                "ods9_indústria innovació i infraestructures",
+                "112"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Coverage points 112"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Puntos de cobertura 112"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/u4c3-bcwc",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Punts-de-cobertura-112/u4c3-bcwc",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre de desfibril·ladors instal·lats a Catalunya fora de l’àmbit sanitari",
+            "id" : "wpud-ukyg",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Desfibril·ladors externs automàtics (DEA) o semiautomàtics (DESA) instal·lats a Catalunya fora de l’àmbit sanitari.\nLes dades són declarades al Departament de Salut per la persona física o jurídica identificada en el camp “Titular”, que és la responsable de l’aparell i de la comunicació de les seves característiques, aquí descrites.\nEl Decret 151/2012, de 20 de novembre, estableix els requisits per a la installació i l’ús de desibril·ladors externs fora de l’àmbit sanitari i per a l’autorització d’entitats formadores en aquest ús.\nEls camps “Dia n” (dia de la setmana), “Hora inici n” i “Hora tancament n” (on n és ún nombre d'1 a 14) indiquen l’horari d’obertura del centre o instal·lació on és ubicat l’aparell. I cal interpretar-los de la següent manera: \n--  Si un o més camps corresponents al dia estan informats, per a cadascun d’aquests:\n    ·  si estan informades les hores d’inici i tancament: durant aquell dia de la setmana el lloc és accessible entre les hores indicades. \n    ·  si les hores d’inici i tancament estan en blanc: durant aquell dia de la setmana el lloc és accessible les 24 hores.\n--  Si tots els camps corresponents al dia estan en blanc:\n    ·  si les hores d’inici i tancament també estan totes en blanc: el lloc és accessible les 24 hores de tots els dies.\n    ·  si hi ha hores d’inici i tancament informades: el lloc és accessible tots els dies en l’horari indicat",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-11T03:15:25.000Z",
+            "createdAt" : "2024-11-14T15:11:49.000Z",
+            "metadata_updated_at" : "2026-11-11T03:15:10.000Z",
+            "data_updated_at" : "2026-11-11T03:15:25.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 70,
+                "page_views_last_month" : 198,
+                "page_views_total" : 2381,
+                "page_views_last_week_log" : 6.149747119504682,
+                "page_views_last_month_log" : 7.636624620543649,
+                "page_views_total_log" : 11.217957697864113
+              },
+            "columns_name" :
+              [
+                "Portal",
+                "Hora inici 5",
+                "Dia 7",
+                "Dia 3",
+                "Dia 6",
+                "Dia 9",
+                "Marca i model",
+                "Hora inici 4",
+                "Codi comarca",
+                "Escala",
+                "Hora inici 14",
+                "LIMADM_MUNICIPI",
+                "Dia 13",
+                "Hora inici 1",
+                "Hora tancament 12",
+                "Hora inici 3",
+                "Dia 2",
+                "Hora tancament 7",
+                "Codi municipi",
+                "Tipus Via",
+                "Georeferencia",
+                "Espai fisic",
+                "Número via",
+                "Hora tancament 6",
+                "Hora inici 7",
+                "Hora tancament 3",
+                "Hora tancament 9",
+                "Municipi",
+                "Nom centre",
+                "Fabricant",
+                "Hora tancament 8",
+                "Hora tancament 5",
+                "Hora tancament 1",
+                "Hora inici 2",
+                "Hora inici 12",
+                "Hora tancament 14",
+                "Número sèrie",
+                "Codi postal",
+                "Dia 4",
+                "Hora inici 9",
+                "Bloc",
+                "Titular",
+                "Nom via",
+                "Dia 8",
+                "Longitud",
+                "Comarca",
+                "Vehicle",
+                "Latitud",
+                "Porta",
+                "Hora inici 6",
+                "Hora tancament 2",
+                "Dia 5",
+                "Província",
+                "Dia 12",
+                "Hora inici 11",
+                "Hora inici 8",
+                "Número inscripció",
+                "Pis",
+                "Codi província",
+                "Dia 10",
+                "Hora tancament 10",
+                "Dia 14",
+                "Hora tancament 11",
+                "Hora tancament 4",
+                "Hora tancament 13",
+                "Hora inici 13",
+                "Dia 11",
+                "Dia 1",
+                "Hora inici 10"
+              ],
+            "columns_field_name" :
+              [
+                "portal",
+                "hora_inici_05",
+                "dia_07",
+                "dia_03",
+                "dia_06",
+                "dia_09",
+                "marca_model",
+                "hora_inici_04",
+                "codi_comarca",
+                "escala",
+                "hora_inici_14",
+                ":@computed_region_bh64_c7uy",
+                "dia_13",
+                "hora_inici_01",
+                "hora_fi_12",
+                "hora_inici_03",
+                "dia_02",
+                "hora_fi_07",
+                "codi_municipi",
+                "tipus_via",
+                "georeferencia",
+                "espai_fisic",
+                "numero_via",
+                "hora_fi_06",
+                "hora_inici_07",
+                "hora_fi_03",
+                "hora_fi_09",
+                "municipi",
+                "nom_centre",
+                "fabricant",
+                "hora_fi_08",
+                "hora_fi_05",
+                "hora_fi_01",
+                "hora_inici_02",
+                "hora_inici_12",
+                "hora_fi_14",
+                "numero_serie",
+                "codi_postal",
+                "dia_04",
+                "hora_inici_09",
+                "bloc",
+                "titular",
+                "nom_via",
+                "dia_08",
+                "longitud",
+                "comarca",
+                "vehicle",
+                "latitud",
+                "porta",
+                "hora_inici_06",
+                "hora_fi_02",
+                "dia_05",
+                "provincia",
+                "dia_12",
+                "hora_inici_11",
+                "hora_inici_08",
+                "numero_inscripcio",
+                "pis",
+                "codi_provincia",
+                "dia_10",
+                "hora_fi_10",
+                "dia_14",
+                "hora_fi_11",
+                "hora_fi_04",
+                "hora_fi_13",
+                "hora_inici_13",
+                "dia_11",
+                "dia_01",
+                "hora_inici_10"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Component de l'adreça postal del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Marca i model de l'aparell.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Codi de la comarca del centre.",
+                "Component de l'adreça postal del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georeferencia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Codi del municipi del centre.",
+                "Component de l'adreça postal del centre.",
+                "Coordenades geogràfiques del lloc on és instal·lat l'aparell. El valor només és present en el cas de les ubicaciones fixes.",
+                "Detall de l'espai físic on és instal·lat l'aparell.",
+                "Component de l'adreça postal del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Municipi del centre.",
+                "Nom del centre o instal·lació on és l'aparell. En els casos en què el lloc d'instal·lació és un vehicle, el camp identifica el vehicle o el centre on té la base el vehicle.",
+                "Fabricant de l'aparell.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Número de sèrie de l'aparell.",
+                "Component de l'adreça postal del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Component de l'adreça postal del centre.",
+                "Persona física o jurídica responsable de l'aparell i de la comunicació de les seves característiques, aquí descrites.",
+                "Component de l'adreça postal del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Coordenada geogràfica del lloc on és instal·lat l'aparell. El valor només és present en el cas de les ubicaciones fixes.",
+                "Comarca del centre.",
+                "Indica si l’aparell és instal·lat en un vehicle.",
+                "Coordenada geogràfica del lloc on és instal·lat l'aparell. El valor només és present en el cas de les ubicaciones fixes.",
+                "Component de l'adreça postal del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Província del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Número d'inscripció de l'aparell al Registre.",
+                "Component de l'adreça postal del centre.",
+                "Codi de la província del centre.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local.",
+                "Detall de la disponibilitat horària de l'aparell, en hora local."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2101,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-11-14T15:29:27.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "dea",
+                "desfibril·lador",
+                "salut",
+                "emergències",
+                "ods3_salut i benestar",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Registry of defibrillators installed in Catalonia outside health facilities and centers"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de desfibriladores instalados en Cataluña fuera del ámbito sanitario"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Setmanal"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/wpud-ukyg",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-desfibril-ladors-instal-lats-a-Catalun/wpud-ukyg",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Cremes_prescrites_bombers_catalunya_1998_2015",
+            "id" : "metd-yv3q",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació geogràfica i descriptiva sobre les parcel·les de cremes prescrites executades pel cos de Bombers de la Generalitat de Catalunya des del 1998 fins a l'actualitat.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T06:46:49.000Z",
+            "createdAt" : "2017-02-16T10:53:34.000Z",
+            "metadata_updated_at" : "2026-09-17T06:46:49.000Z",
+            "data_updated_at" : "2017-02-16T10:53:38.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 24,
+                "page_views_last_month" : 60,
+                "page_views_total" : 1278,
+                "page_views_last_week_log" : 4.643856189774724,
+                "page_views_last_month_log" : 5.930737337562887,
+                "page_views_total_log" : 10.320800548881637
+              },
+            "columns_name" :
+              [
+                "TEV",
+                "OBJECTIUS",
+                "HECTARES",
+                "the_geom",
+                "ID_PLA",
+                "DATA_CREMA",
+                "NOM_CREMES",
+                "ID_CREMA",
+                "PERIMETER",
+                "PARCELA"
+              ],
+            "columns_field_name" :
+              [
+                "tev",
+                "objectius",
+                "hectares",
+                "the_geom",
+                "id_pla",
+                "data_crema",
+                "nom_cremes",
+                "id_crema",
+                "perimeter",
+                "parcela"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "MultiPolygon",
+                "Text",
+                "Date",
+                "Text",
+                "Text",
+                "Number",
+                "Text"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ],
+            "download_count" : 610,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-02-16T10:53:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Ambient",
+            "domain_tags" :
+              [
+                "agricultura",
+                "cartografia",
+                "mapes",
+                "emergències",
+                "medi ambient",
+                "seguretat",
+                "paisatge",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Prescribed burns of the Firemen of Catalonia 1998-2015"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Quemas Prescritas Bomberos Catalunya 1998-2015"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/metd-yv3q",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Cremes_prescrites_bombers_catalunya_1998_2015/metd-yv3q",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "2017 - Cities Disclosing to CDP",
+            "id" : "hnrg-55tm",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "We’re delighted to announce that in 2017 we’ve seen a ten-fold increase in the number of cities disclosing their activity from six years ago, with a 20-fold increase in the number of climate actions underway.  A tipping point is emerging, as cities increasingly recognize sustainability investments as essential to creating jobs and making their cities more attractive places to live and work.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2018-09-20T15:01:02.000Z",
+            "createdAt" : "2017-09-11T13:53:20.000Z",
+            "metadata_updated_at" : "2018-09-20T15:01:02.000Z",
+            "data_updated_at" : "2017-09-20T10:28:51.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 21,
+                "page_views_last_month" : 61,
+                "page_views_total" : 5133,
+                "page_views_last_week_log" : 4.459431618637297,
+                "page_views_last_month_log" : 5.954196310386876,
+                "page_views_total_log" : 12.32586758057542
+              },
+            "columns_name" :
+              [
+                "Country Location (city)",
+                "City Location (state)",
+                "Country Location (state)",
+                "Country Location (zip)",
+                "City name",
+                "Organization",
+                "C40",
+                "City Location (zip)",
+                "Access",
+                "First time discloser",
+                "Population year",
+                "Country Location (address)",
+                "Country Location",
+                "City Location",
+                "City Location (address)",
+                "Population",
+                "Region",
+                "Country",
+                "City Location (city)",
+                "Account Number"
+              ],
+            "columns_field_name" :
+              [
+                "country_location_city",
+                "city_location_state",
+                "country_location_state",
+                "country_location_zip",
+                "city_name",
+                "organization",
+                "c40",
+                "city_location_zip",
+                "access",
+                "first_time_discloser",
+                "population_year",
+                "country_location_address",
+                "country_location",
+                "city_location",
+                "city_location_address",
+                "population",
+                "region",
+                "country",
+                "city_location_city",
+                "account_number_company"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Point",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "false",
+                  "align" : "left"
+                },
+                {},
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" }
+              ],
+            "download_count" : 677,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-09-20T10:28:53.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Cities",
+            "domain_tags" : [ "2017", "cities" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "License-Type_License-Type",
+                  "value" : "CDP Open Database License"
+                }
+              ]
+          },
+        "metadata" : { "domain" : "data.cdp.net" },
+        "permalink" : "https://data.cdp.net/d/hnrg-55tm",
+        "link" : "https://data.cdp.net/Cities/2017-Cities-Disclosing-to-CDP/hnrg-55tm",
+        "owner" :
+          {
+            "id" : "78ce-h9fr",
+            "user_type" : "interactive",
+            "display_name" : "Simeran"
+          },
+        "creator" :
+          {
+            "id" : "78ce-h9fr",
+            "user_type" : "interactive",
+            "display_name" : "Simeran"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Community Heat Resources",
+            "id" : "ey3u-tyf4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "This dataset shows the locations of Cool Spaces and free drinking water fountains in Camden.\n \nCool Spaces are free places where you can stay cool and take a break from the heat. They are open to everyone from June 1 to September 30, 2025. Each Cool Space has its own opening hours and facilities, just hover over the icons to see the details!\n \nPlease note that Cool Spaces are not for emergencies. If you think you might have heatstroke or are unsure, please visit https://www.nhs.uk/conditions/heat-exhaustion-heatstroke for information on how to recognise the symptoms of heat exhaustion and heatstroke.\n \nIf you would like to join and become a Cool Space or support in any way (spread the news on tips to beat the heat, contributing to drinking water machines, donation for water or spray bottles / hats/ sunscreen), please find the expression of interest form on https://www.camden.gov.uk/preparing-for-heatwaves.",
+            "attribution" : "London Borough of Camden Council",
+            "attribution_link" : "https://www.camden.gov.uk",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-08-11T07:45:20.000Z",
+            "createdAt" : "2025-05-20T09:25:09.000Z",
+            "metadata_updated_at" : "2026-08-11T07:45:20.000Z",
+            "data_updated_at" : "2026-08-11T07:45:20.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 6,
+                "page_views_last_month" : 51,
+                "page_views_total" : 972,
+                "page_views_last_week_log" : 2.807354922057604,
+                "page_views_last_month_log" : 5.700439718141093,
+                "page_views_total_log" : 9.926295994781112
+              },
+            "columns_name" :
+              [
+                "Location",
+                "Name",
+                "Address",
+                "Facilities",
+                "Opening Hours",
+                "Latest Info",
+                "Last Uploaded",
+                "Function"
+              ],
+            "columns_field_name" :
+              [
+                "location",
+                "name",
+                "address",
+                "facilities",
+                "opening_hours",
+                "latest_info",
+                "last_uploaded",
+                "function"
+              ],
+            "columns_datatype" :
+              [
+                "Point",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text"
+              ],
+            "columns_description" : [ "", "", "", "", "", "", "", "" ],
+            "columns_format" :
+              [ {}, {}, {}, {}, {}, {}, { "view" : "date_dmy_time" }, {} ],
+            "download_count" : 1367,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-06-22T13:26:02.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Your Council",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Publication_Dataset-Language",
+                  "value" : "English"
+                },
+                {
+                  "key" : "Publication_Frequency-of-Update",
+                  "value" : "As Needed"
+                },
+                {
+                  "key" : "Publication_Spatial-Reference-System",
+                  "value" : "EPSG:4326"
+                },
+                {
+                  "key" : "Point-of-Contact_Directorate",
+                  "value" : "Supporting People"
+                },
+                {
+                  "key" : "Point-of-Contact_Organisation-Name",
+                  "value" : "London Borough of Camden"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.camden.gov.uk",
+            "license" : "UK Open Government Licence v3"
+          },
+        "permalink" : "https://opendata.camden.gov.uk/d/ey3u-tyf4",
+        "link" : "https://opendata.camden.gov.uk/Your-Council/Community-Heat-Resources/ey3u-tyf4",
+        "owner" :
+          {
+            "id" : "6jeh-p2ix",
+            "user_type" : "interactive",
+            "display_name" : "Open Data Camden"
+          },
+        "creator" :
+          {
+            "id" : "6jeh-p2ix",
+            "user_type" : "interactive",
+            "display_name" : "Open Data Camden"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Parcs de bombers per regió d’emergències",
+            "id" : "8ymu-ma9b",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre total de parcs dels Bombers de la Generalitat classificats per regió d’emergències. \n(La ciutat de Barcelona té un cos de bombers propi; els Pompièrs d'Aran depenen directament del Consell General d'Aran).",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:14.000Z",
+            "createdAt" : "2022-08-09T07:29:43.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:14.000Z",
+            "data_updated_at" : "2023-08-14T11:20:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 43,
+                "page_views_last_month" : 69,
+                "page_views_total" : 2119,
+                "page_views_last_week_log" : 5.459431618637297,
+                "page_views_last_month_log" : 6.129283016944967,
+                "page_views_total_log" : 11.049848549450562
+              },
+            "columns_name" :
+              [ "Any", "Codi regió", "Funcionaris", "Voluntaris", "Regió" ],
+            "columns_field_name" :
+              [ "any", "codi_regi_", "funcionaris", "voluntaris", "regi" ],
+            "columns_datatype" :
+              [ "Number", "Text", "Number", "Number", "Text" ],
+            "columns_description" :
+              [
+                "Any de la informació",
+                "Codi de la regió d’emergències",
+                "Nombre de parcs de bombers funcionaris",
+                "Nombre de parcs de bombers voluntaris",
+                "Nom de la regió d’emergències"
+              ],
+            "columns_format" :
+              [
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "0",
+                  "groupSeparator" : "."
+                },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "0",
+                  "groupSeparator" : "."
+                },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "0",
+                  "groupSeparator" : "."
+                },
+                {}
+              ],
+            "download_count" : 2083,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-08-12T08:56:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "parcs de bombers",
+                "bombers",
+                "regió d'emergències",
+                "memòria",
+                "memòria interior",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Fire stations by emergency region"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Parques de bomberos por región de emergencias"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/8ymu-ma9b",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Parcs-de-bombers-per-regió-d-emergències/8ymu-ma9b",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Street Works Register Camden",
+            "id" : "hb3v-f3s2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "This dataset contains street works that are happening in the London Borough of Camden. Attribution includes the organisation that is carrying out the work, the proposed start and end dates of the work and the street on which the works are taking place.\r\n\r\nThe location of the works is represented as point, however the actual extent of the works may be an area or line on the stated road.",
+            "attribution" : "London Borough of Camden",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-16T09:52:32.000Z",
+            "createdAt" : "2015-06-29T09:47:25.000Z",
+            "metadata_updated_at" : "2026-11-16T09:52:32.000Z",
+            "data_updated_at" : "2026-11-16T09:52:32.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 33,
+                "page_views_last_month" : 286,
+                "page_views_total" : 12492,
+                "page_views_last_week_log" : 5.08746284125034,
+                "page_views_last_month_log" : 8.16490692667569,
+                "page_views_total_log" : 13.608832338914842
+              },
+            "columns_name" :
+              [
+                "Longitude",
+                "Location Of Works",
+                "Description Of Works",
+                "Local Authority Reference",
+                "Street",
+                "End Date",
+                "Category Of Works",
+                "Locality",
+                "Ward Code",
+                "Emergency Contact Telephone Number",
+                "Last Uploaded",
+                "Ward Name",
+                "Works Status",
+                "Responsible Company",
+                "Latitude",
+                "Reference",
+                "Works Type",
+                "Spatial Accuracy",
+                "Contact Telephone Number",
+                "Easting",
+                "Location",
+                "Ward 2",
+                "Start Date",
+                "Organisation URI",
+                "Northing",
+                "Lower Layer Super Output Area (LSOA) 2"
+              ],
+            "columns_field_name" :
+              [
+                "longitude",
+                "location_of_works",
+                "description_of_works",
+                "local_authority_reference",
+                "street",
+                "end_date",
+                "category_of_works",
+                "locality",
+                "ward_code",
+                "emergency_contact_telephone_number",
+                "last_uploaded",
+                "ward_name",
+                "works_status",
+                "responsible_company",
+                "latitude",
+                "reference",
+                "works_type",
+                "spatial_accuracy",
+                "contact_telephone_number",
+                "easting",
+                "location",
+                ":@computed_region_hxwp_gyfc",
+                "start_date",
+                "organisation_uri",
+                "northing",
+                ":@computed_region_6i9a_26nj"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Point",
+                "Number",
+                "Calendar date",
+                "URL",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "This column was automatically created in order to record in what polygon from the dataset 'Ward' (hxwp-gyfc) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "",
+                "",
+                "",
+                "This column was automatically created in order to record in what polygon from the dataset 'Lower Layer Super Output Area (LSOA)' (6i9a-26nj) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy_time", "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                { "displayStyle" : "plain", "align" : "left" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy", "align" : "left" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 17326,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-10-16T14:37:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Transport",
+            "domain_tags" : [ "closure", "footpath", "pavement", "road" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Publication_Dataset-Language",
+                  "value" : "English"
+                },
+                {
+                  "key" : "Publication_Frequency-of-Update",
+                  "value" : "Daily"
+                },
+                {
+                  "key" : "Publication_Spatial-Reference-System",
+                  "value" : "EPSG:27700"
+                },
+                {
+                  "key" : "Point-of-Contact_Role-Name",
+                  "value" : "Open Data Administrator"
+                },
+                {
+                  "key" : "Point-of-Contact_Organisation-Name",
+                  "value" : "London Borough of Camden"
+                },
+                {
+                  "key" : "Point-of-Contact_Address",
+                  "value" : "The Crowndale Centre, 218 Eversholt Street"
+                },
+                {
+                  "key" : "Point-of-Contact_Directorate",
+                  "value" : "Culture and Environment"
+                },
+                { "key" : "Point-of-Contact_Postcode", "value" : "NW1 1BD" },
+                {
+                  "key" : "Point-of-Contact_Telephone",
+                  "value" : "020 7974 4444"
+                },
+                { "key" : "Point-of-Contact_City/Town", "value" : "London" }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "opendata.camden.gov.uk",
+            "license" : "UK Open Government Licence v3"
+          },
+        "permalink" : "https://opendata.camden.gov.uk/d/hb3v-f3s2",
+        "link" : "https://opendata.camden.gov.uk/Transport/Street-Works-Register-Camden/hb3v-f3s2",
+        "owner" :
+          {
+            "id" : "6jeh-p2ix",
+            "user_type" : "interactive",
+            "display_name" : "Open Data Camden"
+          },
+        "creator" :
+          {
+            "id" : "6jeh-p2ix",
+            "user_type" : "interactive",
+            "display_name" : "Open Data Camden"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "EU Solidarity Fund (cases 2002 to 2021)",
+            "id" : "7a49-av34",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "WHAT IS EUSF? The European Union Solidarity Fund (EUSF) was set up to respond to major natural disasters and express European solidarity to disaster-stricken regions within Europe. The Fund was created as a reaction to the severe floods in Central Europe in the summer of 2002. Since then, it has been used for disasters covering a range of different catastrophic events including floods, forest fires, earthquakes, storms and drought. \n\nThe dataset presents financial and other information on the applications submitted for EUSF support between  002 and 2020.  \n\nFor more information:  https://ec.europa.eu/regional_policy/en/funding/solidarity-fund/",
+            "attribution" : "EC-SOLIDARITY-FUND@ec.europa.eu",
+            "attribution_link" : "https://cohesiondata.ec.europa.eu/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-12-03T15:22:51.000Z",
+            "createdAt" : "2019-12-18T10:31:37.000Z",
+            "metadata_updated_at" : "2025-12-03T15:22:51.000Z",
+            "data_updated_at" : "2025-12-03T15:22:27.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 8,
+                "page_views_last_month" : 44,
+                "page_views_total" : 2334,
+                "page_views_last_week_log" : 3.1699250014423126,
+                "page_views_last_month_log" : 5.491853096329675,
+                "page_views_total_log" : 11.189206834597025
+              },
+            "columns_name" :
+              [
+                "Year of occurance",
+                "Public damage (EUR million)",
+                "Disaster Type",
+                "Major/ regional/\nneighbouring disaster?",
+                "Applicant Country",
+                "Name of disaster",
+                "Potential_aid_amount (EUR m)",
+                "CCI number",
+                "Status",
+                "First damage date",
+                "Days from disaster to application",
+                "Date of initial application",
+                "Total direct damage accepted by COM (EUR m)*",
+                "Public / total damage (%)",
+                "Eligible cost/ total damage (%)",
+                "Cost of eligible emergency operations (EUR million)*",
+                "EU support paid (EUR m) ",
+                "EU Advanced payment (post-2015) (EUR m) "
+              ],
+            "columns_field_name" :
+              [
+                "year_of_occurance",
+                "public_damage_eur_million",
+                "disaster_type",
+                "major_regional_neighbouring",
+                "applicant_country",
+                "name_of_disaster",
+                "potential_aid_amount_eur_m_",
+                "cci_number",
+                "status",
+                "first_damage_date",
+                "days_from_disaster_to",
+                "date_of_initial_application",
+                "total_direct_damage_accepted",
+                "public_total_damage",
+                "eligible_cost_total_damage",
+                "cost_of_eligible_emergency",
+                "paid",
+                "advanced_payment_post_2015"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Year of occurance of the disaster",
+                "",
+                "Nature of the Disaster (type)",
+                "Type of disaster as defined under the EU regulation",
+                "",
+                "Name of disaster",
+                "",
+                "Unique Reference number linked to EU support",
+                "Did the application meet the conditions for EU support ",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                { "precisionStyle" : "percentage", "percentScale" : "1" },
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 1534,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-12-13T11:41:07.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Other",
+            "domain_tags" :
+              [
+                "eusf",
+                "solidarity",
+                "disaster support",
+                "earthquakes",
+                "floods",
+                "storms",
+                "eu solidarity fund",
+                "fires",
+                "drought"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Stories-Categories_High-Level-Themes",
+                  "value" : "6. Funds and specific initiatives"
+                },
+                {
+                  "key" : "Stories-Categories_EU-programme-period",
+                  "value" : "Not related to periods"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "cohesiondata.ec.europa.eu",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://cohesiondata.ec.europa.eu/d/7a49-av34",
+        "link" : "https://cohesiondata.ec.europa.eu/Other/EU-Solidarity-Fund-cases-2002-to-2021-/7a49-av34",
+        "owner" :
+          {
+            "id" : "p5rd-ygin",
+            "user_type" : "interactive",
+            "display_name" : "John W"
+          },
+        "creator" :
+          {
+            "id" : "p5rd-ygin",
+            "user_type" : "interactive",
+            "display_name" : "John W"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Cremes prescrites pels Bombers per regió d'emergències",
+            "id" : "2yqw-5cec",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre total de cremes prescrites per regió d’emergències en campanya d’hivern (a l’estiu no es realitzen cremes) per part del Grup de Reforç d’Actuacions Forestals (GRAF) dels Bombers de la Generalitat.",
+            "attribution" : "Departament d'Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:46:09.000Z",
+            "createdAt" : "2022-08-09T09:45:22.000Z",
+            "metadata_updated_at" : "2026-09-16T14:46:09.000Z",
+            "data_updated_at" : "2023-08-14T07:45:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 39,
+                "page_views_total" : 993,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 5.321928094887363,
+                "page_views_total_log" : 9.957102041562287
+              },
+            "columns_name" : [
+                               "Codi regió",
+                               "Superfície (ha)",
+                               "Regió",
+                               "Any"
+                             ],
+            "columns_field_name" :
+              [ "codi_regi_", "superf_cie_ha", "regi", "any" ],
+            "columns_datatype" : [ "Text", "Number", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Codi de la regió d’emergències",
+                "Superfície total cremada, en hectàrees",
+                "Nom de la regió d’emergències",
+                "Any de la informació"
+              ],
+            "columns_format" :
+              [
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "precision" : "2"
+                },
+                {},
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 429,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-08-12T08:55:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "cremes",
+                "bombers",
+                "graf",
+                "memòria",
+                "memòria interior",
+                "ods13_acció pel clima"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Prescribed fires by the Fire Department by emergency region"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Quemas prescritas por los Bomberos por región de emergencias"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/2yqw-5cec",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Cremes-prescrites-pels-Bombers-per-regió-d-emergèn/2yqw-5cec",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Regions d’emergències",
+            "id" : "i5uz-s4g6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de les regions d’emergència (RE) en què s’articula la implantació territorial del cos de Bombers de la Generalitat.",
+            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:08:41.000Z",
+            "createdAt" : "2025-01-21T12:26:29.000Z",
+            "metadata_updated_at" : "2026-09-17T07:08:41.000Z",
+            "data_updated_at" : "2026-07-03T07:38:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 33,
+                "page_views_last_month" : 54,
+                "page_views_total" : 727,
+                "page_views_last_week_log" : 5.08746284125034,
+                "page_views_last_month_log" : 5.78135971352466,
+                "page_views_total_log" : 9.507794640198696
+              },
+            "columns_name" :
+              [
+                "NOM_RE_BOMBERS",
+                "GEOMETRIA_RE_BOMBERS",
+                "CODI_RE_BOMBERS",
+                "ACRON_RE_BOMBERS",
+                "OBJECTID"
+              ],
+            "columns_field_name" :
+              [
+                "nom_re_bombers",
+                "geometria_re_bombers",
+                "codi_re_bombers",
+                "acron_re_bombers",
+                "objectid"
+              ],
+            "columns_datatype" :
+              [ "Text", "MultiPolygon", "Text", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Nom de la regió d’emergències",
+                "Informació geogràfica que defineix la zona que delimita la regió d’emergències.",
+                "Identificador únic de la regió d’emergències.  No és un codi oficial. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’.",
+                "Acrònim d’ús intern que identifica la regió d’emergències.  El registres que comencen per N s’afegeixen per donar valor de completesa a l’entitat.",
+                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat i evitar els duplicats."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "noCommas" : "true" }
+              ],
+            "download_count" : 418,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:38:21.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Emergency regions"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Regiones de emergencias"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/i5uz-s4g6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Regions-d-emergències/i5uz-s4g6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Relació de municipis i regions d’emergències",
+            "id" : "kh9v-aqnk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat de codis de municipi de Catalunya amb l’identificador de la regió d’emergències a la qual pertany cada municipi.",
+            "attribution" : "Catàleg Tècnic de Dades. Gabinet Tècnic. Departament d’Interior i Seguretat Pública",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-17T07:07:21.000Z",
+            "createdAt" : "2025-01-21T12:01:13.000Z",
+            "metadata_updated_at" : "2026-09-17T07:07:21.000Z",
+            "data_updated_at" : "2026-07-03T07:43:33.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 30,
+                "page_views_last_month" : 38,
+                "page_views_total" : 621,
+                "page_views_last_week_log" : 4.954196310386876,
+                "page_views_last_month_log" : 5.285402218862249,
+                "page_views_total_log" : 9.280770770130603
+              },
+            "columns_name" :
+              [
+                "CODI_MUNICIPI",
+                "GEOMETRIA_MUNICIPI",
+                "OBJECTID",
+                "CODI_RE_BOMBERS"
+              ],
+            "columns_field_name" :
+              [
+                "codi_municipi",
+                "geometria_municipi",
+                "objectid",
+                "codi_re_bombers"
+              ],
+            "columns_datatype" : [ "Text", "MultiPolygon", "Number", "Text" ],
+            "columns_description" :
+              [
+                "Codi que identifica de forma unívoca el municipi de Catalunya. És un codi oficial. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’.",
+                "Informació geogràfica que defineix la zona que delimita el municipi.",
+                "Clau primària per identificar de manera única cada registre de l'entitat, per garantir la unicitat i evitar els duplicats.",
+                "Identificador únic de la regió d’emergències a la qual pertany el municipi. No és un codi oficial. Els codis que comencen per 9 són genèrics i representen els valors ‘No consta’ i ‘Altres/Diversos’."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 343,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-07-03T07:43:44.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Relationship of municipalities and emergency regions"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Relación de municipios y regiones de emergencias"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/kh9v-aqnk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Relació-de-municipis-i-regions-d-emergències/kh9v-aqnk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Contractació pública tramitada d'emergència durant la pandèmia de la COVID-19",
+            "id" : "5fq6-4v39",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Contractes tramitats per emergència de la Generalitat de Catalunya i el seu sector públic durant la pandèmia de la COVID-19. \nLes dades fan referència a contractes tramitats d'emergència que s'han fet a partir del 12 de març de 2020, data de la publicació del Reial Decret-Llei 7/2020, pel que s'adopten mesures urgents per respondre a l'impacte econòmic de la COVID-19.\nLes dades del visor provenen de la Plataforma de Serveis de Contractació Pública (PSCP), tenen caràcter provisional i varien constantment a mesura que els òrgans van incorporant més contractes tramitats d'emergència a la PSCP.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:44:53.000Z",
+            "createdAt" : "2020-05-25T11:20:56.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:53.000Z",
+            "data_updated_at" : "2020-12-16T22:15:39.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 50,
+                "page_views_total" : 4406,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.672425341971496,
+                "page_views_total_log" : 12.105581181277435
+              },
+            "columns_name" :
+              [
+                "Enllaç a la publicació",
+                "Òrgan de contractació",
+                "Tipus de contracte",
+                "Codi d'expedient",
+                "Codi CPV",
+                "Data d'adjudicació",
+                "Import d'adjudicació (sense IVA)",
+                "Empresa adjudicatària",
+                "Data de publicació",
+                "Valor estimat del contracte",
+                "Pressupost de licitació (sense IVA)",
+                "Descripció de la prestació",
+                "Àmbit subjectiu",
+                "Objecte del contracte",
+                "Tipus d'expedient"
+              ],
+            "columns_field_name" :
+              [
+                "enlla_a_la_publicaci",
+                "rgan_de_contractaci",
+                "tipus_de_contracte",
+                "codi_d_expedient",
+                "codi_cpv",
+                "data_d_adjudicaci",
+                "import_d_adjudicaci_sense",
+                "empresa_adjudicat_ria",
+                "data_de_publicaci",
+                "valor_estimat_del_contracte",
+                "pressupost_de_licitaci_sense",
+                "descripci_de_la_prestaci",
+                "mbit_subjectiu",
+                "objecte_del_contracte",
+                "tipus_d_expedient"
+              ],
+            "columns_datatype" :
+              [
+                "URL",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Enllaç a la publicació a la PSCP",
+                "Òrgan que ha contractat aquell lot",
+                "Tipologia del contracte",
+                "Codi d’expedient informat pels òrgans de contractació",
+                "Codi CPV informat segons la descripció del contracte",
+                "Data en la que s’adjudica el contracte",
+                "Import final adjudicat sense IVA en euros",
+                "Empresa adjudicatària del contracte",
+                "Data en la que es publica el contracte",
+                "Valor estimat del contracte en euros",
+                "Pressupost de licitació sense IVA en euros",
+                "Descripció informada per l’òrgan de contractació on s’expliquen els detalls del contracte",
+                "Àmbit subjectiu al qual pertany l’òrgan de contractació ",
+                "Descripció de l’objecte del lot en concret",
+                "Forma de tramitació de l’expedient"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 2214,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-27T07:23:43.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "emergència",
+                "contractes",
+                "direcció general de contractació pública",
+                "pscp",
+                "covid",
+                "coronavirus",
+                "covid-19",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Public procurement processed emergency during the COVID-19 pandemic"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contratación pública tramitada de emergencia durante la pandemia del COVID-19"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5fq6-4v39",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Contractació-pública-tramitada-d-emergència-durant/5fq6-4v39",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Servei d'acolliment residencial d'urgència",
+            "id" : "7pu3-b5vd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "NOMBRE DE PERSONES ATESES\nPer a situacions puntuals de causa major; a centres d'acolliment residencial (pisos d'emergència o altres) i en altres recursos d'acolliment residencial (pensions o similars).\n\nNOMBRE D'ESTADES/PERNOCTES\nPer a situacions puntuals de causa major.\n\nNOMBRE D'ESTADES/PERNOCTES A CENTRES\nCentres d'acolliment residencial (pisos d'emergència o altres).\n\nNOMBRE D'ESTADES/PERNOCTES EN D'ALTRES\nAltres recursos d'acolliment residencial (pensions i similars).\n\nLes dades corresponen a la informació facilitada per part de les Àrees Bàsiques de Serveis Socials.\n* L’abast temporal de les dades va del 01/01/2018 al 31/12/2024.\n** Les dades referents des de 2022 de la Mancomunitat de la Plana estan incloses a les dades de la Comarca d'Osona.\nLa cel·la buida equival a dada no informada.",
+            "attribution" : "Departament de Drets Socials i Inclusió",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:42:29.000Z",
+            "createdAt" : "2019-09-19T10:08:58.000Z",
+            "metadata_updated_at" : "2026-09-16T14:42:29.000Z",
+            "data_updated_at" : "2026-03-06T13:53:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 63,
+                "page_views_last_month" : 113,
+                "page_views_total" : 3981,
+                "page_views_last_week_log" : 6.0,
+                "page_views_last_month_log" : 6.832890014164742,
+                "page_views_total_log" : 11.959277505720502
+              },
+            "columns_name" :
+              [
+                "Homes atesos en altres recursos \n(pensions o similars)",
+                "Dones ateses en altres recursos \n(pensions o similars)",
+                "No-binaris atesos en centres (pisos d’emergència o altres)",
+                "Any",
+                "Estades/Nits en altres recursos",
+                "Nom ens local",
+                "Homes atesos en centres (pisos d'emergència o altres)",
+                "Estades/nits en centres",
+                "Codi IDESCAT EACAT",
+                "Dones ateses en centres (pisos d'emergència o altres)",
+                "No-binaris atesos en altres recursos ( pensions o similars)"
+              ],
+            "columns_field_name" :
+              [
+                "homes_atesos_en_altres",
+                "dones_ateses_en_altres",
+                "no_binaris_atesos_en_centres_pisos_d_emerg_ncia_o_altres_",
+                "any",
+                "estades_nits_en_altres",
+                "nom_ens_local",
+                "homes_atesos_en_centres_pisos",
+                "estades_nits_en_centres",
+                "codi_idescat_eacat",
+                "dones_ateses_en_centres_pisos",
+                "no_binaris_atesos_en_altres_recursos_pensions_o_similars_"
+              ],
+            "columns_datatype" :
+              [
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Nombre d'homes atesos en altres recursos d'acolliment residencial (pensions o similars)",
+                "Nombre de dones ateses en altres recursos d'acolliment residencial (pensions o similars)",
+                "Nombre de NO-BINARIS ateses a centres d'acolliment residencial (pisos d'emergència o altres)",
+                "període temporal d'un any",
+                "Nombre d’estades/pernoctes en altres recursos d'acolliment residencial (pensions o similars)",
+                "Municipals, Comarcals i altres",
+                "Nombre d'homes atesos a centres d'acolliment residencial (pisos d'emergència o altres)",
+                "Nombre d’estades/pernoctes a centres d'acolliment residencial (pisos d'emergència o altres)",
+                "Codis d’identificació de les corporacions locals de les entitats locals territorials de Catalunya",
+                "Nombre de dones ateses a centres d'acolliment residencial (pisos d'emergència o altres)",
+                "Nombre de NO-BINARIS ateses en altres recursos d'acolliment residencial (pensions o similars)"
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "noCommas" : "true" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 1626,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-10-31T10:12:18.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "acolliment residencial urgent",
+                "serveis socials",
+                "ssbs",
+                "serveis socials bàsics",
+                "lsocial",
+                "ods3_salut i benestar",
+                "ods10_reducció de les desigualtats",
+                "ods1_fi de la pobresa"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Emergency residential service"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Servicio de acogida residencial de urgencia"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Drets Socials i Inclusió"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7pu3-b5vd",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Servei-d-acolliment-residencial-d-urgència/7pu3-b5vd",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Intervencions del Servei d’Intervenció en Crisi (SIC)",
+            "id" : "kn22-9c67",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Intervencions del SIC. Aquest  és un servei d’assistència psicològica que ofereix suport i atenció a les víctimes amb un alt impacte a causa de situacions de violències masclistes viscudes, en el lloc on s’ha produït el fet, o on més convingui a la víctima, i amb la màxima immediatesa possible. La intervenció la realitzen psicòlogues especialitzades en atenció a les violències masclistes i intervenció en situacions de crisis.",
+            "attribution" : "Departament d'Igualtat i Feminisme",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T14:38:33.000Z",
+            "createdAt" : "2026-03-31T10:06:47.000Z",
+            "metadata_updated_at" : "2026-09-16T14:38:33.000Z",
+            "data_updated_at" : "2026-03-31T10:15:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 36,
+                "page_views_last_month" : 81,
+                "page_views_total" : 228,
+                "page_views_last_week_log" : 5.20945336562895,
+                "page_views_last_month_log" : 6.357552004618085,
+                "page_views_total_log" : 7.8392037880969445
+              },
+            "columns_name" :
+              [
+                "Tipus d'intervenció",
+                "Relació amb la víctima",
+                "Forma principal",
+                "Any",
+                "Canal d'intervenció",
+                "Vegueria",
+                "Àmbit principal",
+                "Servei sol·licitant"
+              ],
+            "columns_field_name" :
+              [
+                "tipus_intervencio",
+                "relaci_victima",
+                "forma_principal",
+                "any",
+                "canal_intervencio",
+                "vegueria",
+                "ambit_principal",
+                "servei_sollicitant"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Intervenció individual o grupal.",
+                "Si es tracta de la pròpia víctima qui és atesa o bé una altra persona, i en aquest cas, quina relació hi té o hi tenia. Es pot classificar en les següents categories: víctima, testimoni dels fets, amistat, germans o germanes, progenitors o progenitores, fills o filles, professionals d’atenció, família extensa, entorn laboral, companys/es d’escola, i altres.",
+                "Forma principal de la violència per la qual s’ha sol·licitat l’activació del servei. Es pot classificar en les següents categories: violència física, violència psicològica, feminicidi consumat, violència sexual, feminicidi en grau de temptativa, violència vicària, violència psicològica  (ambiental), violència econòmica, violència de segon ordre, i altres formes.",
+                "Any en que s’ha produït la intervenció. ",
+                "Classifica la intervenció segons si és telefònica, presencial o online.",
+                "Vegueria on es realitza la intervenció.",
+                "Àmbit principal de la violència per la qual s’ha sol·licitat l’activació del servei. Es pot classificar en les següents categories: àmbit sociocomunitari, àmbit de la parella, àmbit familiar, àmbit laboral, i àmbit institucional.",
+                "Servei que sol·licita l’activació del Servei d’Intervenció en Crisi (SIC). Es pot classificar en les següents categories: Policia de la Generalitat - Mossos d'Esquadra; Direcció General per a l’Erradicació de les Violències Masclistes (DGEVM) (només en cas que no hi hagi cap altre servei intermediari); Línia 900 900 120, Serveis Socials, serveis especialitzats en Violències Masclistes (Servei d’Informació i Atenció a les Dones (SIAD), Servei d’Intervenció en Crisi (SIE), Servei d’Atenció i Recuperació (SAR), Servei Substitutori de la Llar (SSLL), Servei d’Atenció i Acolliment d’Urgència (SAAU)); Policia local, altres serveis d'emergències (Centre d'Urgències i Emergències Socials de Barcelona (CUESB), Organisme Autònom de Salut Pública de la Diputació de Girona (DIPSALUT)); Salut, SEM o altres professionals de salut acordats en el Protocol de Salut, i Oficina d'Atenció a la Víctima del Delicte (OAVD)."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 46,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-03-31T10:15:45.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Societat-benestar",
+            "domain_tags" :
+              [
+                "violències masclistes",
+                "dones",
+                "atenció",
+                "servei",
+                "sic",
+                "ods3_salut i benestar",
+                "ods5_igualtat de gènere",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Interventions of the Crisis Intervention Service (SIC)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Intervenciones del Servicio de Intervención en Crisis (SIC)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Igualtat i Feminisme"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/kn22-9c67",
+        "link" : "https://analisi.transparenciacatalunya.cat/Societat-benestar/Intervencions-del-Servei-d-Intervenció-en-Crisi-SI/kn22-9c67",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Projectes finançats pel Fons Europeu de Desenvolupament Regional (FEDER). Dades Generals i identificatives",
+            "id" : "itpr-8cw9",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Dades de l’aplicació informàtica amb que es gestiona la informació i els tràmits de procediment en els expedients de finançament europeu del Fons Europeus de Desenvolupament Regional (FEDER), incloent les fases de selecció, justificació de la despesa i control dels projectes.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-14T06:28:02.000Z",
+            "createdAt" : "2019-12-18T08:52:10.000Z",
+            "metadata_updated_at" : "2026-10-14T06:27:51.000Z",
+            "data_updated_at" : "2026-10-14T06:28:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 38,
+                "page_views_last_month" : 86,
+                "page_views_total" : 7000,
+                "page_views_last_week_log" : 5.285402218862249,
+                "page_views_last_month_log" : 6.442943495848729,
+                "page_views_total_log" : 12.773345291291271
+              },
+            "columns_name" :
+              [
+                "Línia actuació",
+                "DataIniReal",
+                "GeneraCostosIndirectes",
+                "ImportMàximCostosTerrenys",
+                "Operació Municipi",
+                "Descripció",
+                "AfectacióXarxaNatura",
+                "CostTotal",
+                "GranProjecte",
+                "Programa Operatiu",
+                "ÀmbitSectorialPrinc",
+                "ivaRecuperable",
+                "NumProjecte",
+                "TecnologiaFacilitadoraAltres",
+                "OperacióGeneraIngressos",
+                "AjudaDECA",
+                "InformarMotiu",
+                "NomCastellà",
+                "ÀmbitTerritorial",
+                "Estat operació",
+                "DataSolicitudCompraTerrenys",
+                "MotiuNovaVersió",
+                "CostNetSubv",
+                "TecnologiaFacilitadora",
+                "CodiOperació",
+                "CodiMunicipiDocumentació",
+                "NomAnglès",
+                "EconomiaCircularDesc",
+                "ÀmbitTerritorialDesc",
+                "CostosSimplificats",
+                "ComplementFSEDesc",
+                "DescripcioCastellà",
+                "Conveni",
+                "GeneraIngressos61",
+                "ÀmbitSectorialSecund",
+                "DataFi",
+                "ImportMàximCostosIndirectes",
+                "DataFiReal",
+                "DataResolucioAprovació",
+                "Ajuda",
+                "CodiConveniF2020",
+                "Eix prioritari",
+                "GeneraIngressos65",
+                "RègimAjudes",
+                "EstructuraPublicoPrivada",
+                "BonaPràctica",
+                "CompraTerrenys",
+                "TaxaCofinanciació",
+                "Nom",
+                "Versió",
+                "SubjecteContractacioPublica",
+                "Objectiu Específic",
+                "ComplementFSE",
+                "TipusProjecteInnov",
+                "FEDER",
+                "Objectiu Temàtic",
+                "CostPublicTotalSubv",
+                "CostPrivatSubv",
+                "CostTotalSubv",
+                "EconomiaCircular",
+                "AjudaEstat",
+                "DataDeca",
+                "Agent Facilitador",
+                "Prioritat inversió",
+                "DescripcioAnglès",
+                "Sol·licitud",
+                "Beneficiari",
+                "DescripcióMunicipiDoc",
+                "ProjecteIndivColab",
+                "DataComunicacióExempció",
+                "DataInici",
+                "ActivitatEmergent",
+                "ComplementHoritzóDesc",
+                "ComplementHoritzó",
+                "PlaAccióConjunt",
+                "CodiRegimAjudesF2020",
+                "DataPresentació",
+                "OperacióDusi",
+                "DataCreació"
+              ],
+            "columns_field_name" :
+              [
+                "l_nia_actuaci",
+                "datainireal",
+                "generacostosindirectes",
+                "importmaximcostosterrenys",
+                "operaci_municipi",
+                "descripcio",
+                "afectacioxarxanatura",
+                "costtotal",
+                "granprojecte",
+                "programa_operatiu",
+                "ambitsectorialprinc",
+                "ivarecuperable",
+                "numprojecte",
+                "tecnologiafacilitadoraaltres",
+                "operaciogeneraingressos",
+                "ajudadeca",
+                "informarmotiu",
+                "nomcastella",
+                "ambitterritorial",
+                "estat_operaci",
+                "datasolicitudcompraterrenys",
+                "motiunovaversio",
+                "costnetsubv",
+                "tecnologiafacilitadora",
+                "codioperacio",
+                "codimunicipidocumentacio",
+                "nomangles",
+                "economiacirculardesc",
+                "ambitterritorialdesc",
+                "costossimplificats",
+                "complementfsedesc",
+                "descripciocastella",
+                "conveni",
+                "generaingressos61",
+                "ambitsectorialsecund",
+                "datafi",
+                "importmaximcostosindirectes",
+                "datafireal",
+                "dataresolucioaprovacio",
+                "ajuda",
+                "codiconvenif2020",
+                "eix_prioritari",
+                "generaingressos65",
+                "regimajudes",
+                "estructurapublicoprivada",
+                "bonapractica",
+                "compraterrenys",
+                "taxacofinanciacio",
+                "nom",
+                "versio",
+                "subjectecontractaciopublica",
+                "objectiu_espec_fic",
+                "complementfse",
+                "tipusprojecteinnov",
+                "feder",
+                "objectiu_tem_tic",
+                "costpublictotalsubv",
+                "costprivatsubv",
+                "costtotalsubv",
+                "economiacircular",
+                "ajudaestat",
+                "datadeca",
+                "agent_facilitador",
+                "prioritat_inversi",
+                "descripcioangles",
+                "sol_licitud",
+                "beneficiari",
+                "descripciomunicipidoc",
+                "projecteindivcolab",
+                "datacomunicacioexempcio",
+                "datainici",
+                "activitatemergent",
+                "complementhoritzodesc",
+                "complementhoritzo",
+                "plaaccioconjunt",
+                "codiregimajudesf2020",
+                "datapresentacio",
+                "operaciodusi",
+                "datacreacio"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Calendar date",
+                "Text",
+                "Number",
+                "Text",
+ 

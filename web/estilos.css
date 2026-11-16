@@ -464,6 +464,8 @@ tbody tr:hover { background: var(--fons-2); }
 .fi-nota { color: var(--text-3); font-size: 11.5px; }
 .fi-tema { margin: 0 0 28px; }
 .fi-tema h4 { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; margin: 0; padding: 10px 0 8px; border-bottom: 1px solid var(--tinta); }
+.fi-zones { margin: 0; padding: 8px 0; font-size: 13.5px; color: var(--text-2, inherit); border-bottom: 1px solid var(--vora); }
+.fi-zones b { font-weight: 600; color: var(--tinta); }
 .fi-fila { display: grid; grid-template-columns: minmax(180px, 1.6fr) minmax(120px, 1fr) 96px 78px 78px 78px; gap: 14px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--vora); font-size: 13.5px; }
 .fi-cap { font: 500 10.5px/1.2 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-3); padding: 8px 0 6px; }
 .fi-cap span:nth-child(n+3) { text-align: right; }
@@ -602,6 +604,91 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .mapa-panell .ind-desc:empty { display: none; }
 }
 .pg-bg-cat { background: var(--tinta); }
+
+/* ---------- Menú de indicadores junto al mapa (2026-11-16) ---------- */
+/* El selector vive dentro de la rejilla del mapa: columna fija en escritorio, barra fija + hoja inferior en tablet y móvil */
+.mapa-graella { overflow: visible; }
+.mapa-menu { min-width: 0; }
+.mapa-eines { margin: 0; align-items: stretch; justify-content: flex-start; }
+.mapa-eines .xips { gap: 0; }
+.menu-ind-cap { display: none; }
+.menu-ind-btn { display: none; }
+
+@media (min-width: 1100px) {
+  .mapa-graella {
+    --alt-mapa: clamp(560px, calc(100svh - 92px), 860px);
+    width: min(1640px, calc(100vw - 48px)); margin-left: calc((100% - min(1640px, calc(100vw - 48px))) / 2);
+    grid-template-columns: 264px minmax(0, 1fr) 360px; scroll-margin-top: 80px;
+  }
+  .mapa-menu { height: var(--alt-mapa); border-right: 1px solid var(--tinta); display: flex; flex-direction: column; }
+  .mapa-eines { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+  .mapa-eines .cerca-ind { position: relative; top: 0; right: auto; width: auto; margin: 14px 16px 12px; flex: none; }
+  .mapa-eines .xips { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .mapa-menu .temes { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; margin: 0 16px; border: 0; border-top: 1px solid var(--tinta); flex: none; }
+  .mapa-menu .tema, .mapa-menu .tema:first-child { font-size: 14px; padding: 8px 8px 7px; text-align: left; border-bottom: 1px solid var(--vora); }
+  .mapa-menu .tema:nth-child(odd) { border-right: 1px solid var(--vora); }
+  .mapa-menu .tema[aria-pressed="true"] { padding-left: 8px; }
+  .mapa-menu .xips-fila {
+    flex: 1; min-height: 0; overflow-y: auto; display: block; margin: 12px 16px 0; padding: 0 0 16px;
+    scrollbar-width: thin; scrollbar-color: var(--vora-2) transparent; overscroll-behavior: contain;
+    border-top: 3px solid var(--tinta);
+  }
+  .mapa-menu .xip {
+    display: block; width: 100%; text-align: left; white-space: normal; line-height: 1.25;
+    font-size: 13.5px; padding: 8px 8px; min-height: 0; border: 0; border-bottom: 1px solid var(--vora);
+  }
+  .mapa-menu .xip:hover:not(:disabled):not([aria-checked="true"]) { color: var(--accent); background: transparent; }
+  .mapa-menu .xip[aria-checked="true"] { background: var(--accent); color: #fff; }
+  .mapa-menu .xip:disabled { border-style: solid; }
+  .mapa-menu .xip-tema { display: block; margin: 0 0 3px; font: 500 10px/1 var(--mono); }
+  .mapa-menu .cap-ind { padding-top: 8px; }
+  .mapa-graella #mapa, .mapa-graella .mapa-panell { height: var(--alt-mapa); }
+  .mapa-graella .ranquing { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+/* Tablet y móvil: barra con el indicador actual, fija bajo la cabecera mientras se ve el mapa */
+@media (max-width: 1099px) {
+  .mapa-graella { --alt-mapa: clamp(480px, 70vh, 680px); }
+  .mapa-menu { grid-column: 1 / -1; position: sticky; top: var(--cap-h, 60px); z-index: 15; background: var(--fons); }
+  .menu-ind-btn {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto; align-items: center; column-gap: 12px;
+    width: 100%; text-align: left; cursor: pointer; padding: 9px 12px 10px; border: 0; border-bottom: 1px solid var(--tinta);
+    background: var(--fons); color: var(--tinta);
+  }
+  .menu-ind-tema { font: 500 10.5px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .menu-ind-nom { grid-row: 2; font: 800 19px/1.1 var(--sans); font-stretch: 72%; letter-spacing: -0.005em; text-transform: uppercase; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .menu-ind-canvia {
+    grid-row: 1 / 3; grid-column: 2; font: 500 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase;
+    background: var(--tinta); color: var(--fons); padding: 10px 12px;
+  }
+  .menu-ind-canvia::after { content: " ▾"; }
+  .menu-ind-btn[aria-expanded="true"] .menu-ind-canvia { background: var(--accent); }
+  .menu-ind-btn[aria-expanded="true"] .menu-ind-canvia::after { content: " ▴"; }
+  .menu-ind-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .mapa-eines {
+    display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; height: var(--alt-full, 50svh); max-height: 80svh;
+    background: var(--fons); border-top: 3px solid var(--tinta); flex-direction: column; padding-bottom: env(safe-area-inset-bottom);
+  }
+  .menu-ind-obert .mapa-eines { display: flex; }
+  .menu-ind-cap { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px; border-bottom: 1px solid var(--vora); flex: none; }
+  .menu-ind-cap span { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+  .menu-ind-tanca { font: 500 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 9px 12px; border: 1px solid var(--tinta); background: var(--tinta); color: var(--fons); cursor: pointer; }
+  .mapa-eines .cerca-ind { position: relative; top: 0; right: auto; width: auto; margin: 10px 16px; flex: none; }
+  .mapa-eines .xips { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 16px 16px; display: block; }
+  .mapa-menu .temes { display: flex; flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; gap: 0; border: 0; border-top: 1px solid var(--tinta); }
+  .mapa-menu .tema, .mapa-menu .tema:first-child { flex: 1 1 auto; font-size: 14px; padding: 10px 9px 9px; border: 0; border-bottom: 1px solid var(--vora); text-align: center; }
+  .mapa-menu .tema[aria-pressed="true"] { padding-left: 9px; }
+  .mapa-menu .xips-fila { display: flex; flex-wrap: wrap; overflow: visible; margin: 12px 0 0; padding: 0; gap: 6px; }
+  .mapa-menu .xip { font-size: 13px; padding: 8px 10px; min-height: 36px; }
+}
+@media (min-width: 641px) and (max-width: 1099px) {
+  .mapa-menu .tema, .mapa-menu .tema:first-child { flex: 0 0 auto; padding-left: 12px; padding-right: 12px; }
+  .mapa-menu .tema[aria-pressed="true"] { padding-left: 12px; }
+}
+@media (max-width: 640px) {
+  .mapa-menu { margin: 0; }
+  .menu-ind-btn { padding-left: 16px; padding-right: 16px; }
+}
 
 /* Fitxa: nacionalitats i universitaris */
 .fitxa-blocs { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; margin-top: 48px; }

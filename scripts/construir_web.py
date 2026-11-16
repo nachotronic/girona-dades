@@ -1104,6 +1104,137 @@ def nacionalitat_indicadores(pob):
     return res, nac, paisos, ordre, refs, anys, prov
 
 
+# ---------------------------------------------------------------------------
+# Emergències: divisiones de Agents Rurals y Bombers (Idescat), actuaciones de Bombers e incendios forestales
+
+GRUPS_URGENTS = ("incendi urbà", "incendi vegetació", "salvaments", "assistència tècnica", "fuites perilloses",
+                 "mobilitat", "altres urgents", "suport tècnic")
+
+
+def emergencies_indicadores(pob):
+    """Devuelve (x por municipio, refs, anys, datos por área básica de Agents Rurals)."""
+    d = P / "emergencies"
+    if not (d / "municipis_arees.csv").exists():
+        return {}, {}, {}, {}
+    res, refs, anys, zona = {}, {}, {}, {}
+    rel = pd.read_csv(d / "municipis_arees.csv", dtype=str)
+    rel = rel[rel["ine"].str.startswith("17")]
+    for _, f in rel.iterrows():
+        x = res.setdefault(f["ine"], {})
+        x["aar"], x["arr"] = f["aar_nom"], f["arr_nom"]
+        x["reb"] = f"{f['reb_nom']} ({f['reb_acron']})" if isinstance(f.get("reb_acron"), str) else f["reb_nom"]
+    aar_de = dict(zip(rel["ine"], rel["aar_codi"]))
+    sup = pd.read_csv(d / "superficie_municipis.csv", dtype={"ine": str}).set_index("ine")["ha"]
+    # Cataluña: población y superficie (Idescat EMEX)
+    cat_ha = None
+    ef = P / "referencies" / "emex_catalunya.json"
+    if ef.exists():
+        e = {x["id"]: x for x in json.loads(ef.read_text(encoding="utf-8"))}
+        try:
+            cat_ha = float(e["f271"]["cat"]) * 100  # km² -> ha
+        except (KeyError, TypeError, ValueError):
+            pass
+    pob_aar = {}
+    for ine, c in aar_de.items():
+        pob_aar[c] = pob_aar.get(c, 0) + (pob.get(ine) or 0)
+    sup_aar = {}
+    for ine, c in aar_de.items():
+        sup_aar[c] = sup_aar.get(c, 0) + float(sup.get(ine, 0))
+
+    def poner(k, por_ine, por_aar, cat, any_, dec=1):
+        for ine, v in por_ine.items():
+            if ine in res and v is not None and math.isfinite(v):
+                res[ine][k] = round(float(v), dec)
+        for c, v in por_aar.items():
+            if v is not None and math.isfinite(v):
+                zona.setdefault(c, {})[k] = round(float(v), dec)
+        tot_gi = None
+        if k in GI_TOT:
+            tot_gi = GI_TOT[k]
+        if cat is not None or tot_gi is not None:
+            refs[k] = {kk: round(float(vv), dec) for kk, vv in (("cat", cat), ("gi", tot_gi)) if vv is not None}
+        anys[k] = any_
+
+    GI_TOT = {}
+    # Actuaciones de Bombers: último año completo
+    fa = d / "actuacions_bombers.csv.gz"
+    if fa.exists():
+        a = pd.read_csv(fa, dtype={"codi_ine": str})
+        a["n"] = pd.to_numeric(a["n"], errors="coerce").fillna(0)
+        a["any"] = pd.to_numeric(a["any"], errors="coerce")
+        lim = pd.read_csv(d / "actuacions_bombers_anys.csv")
+        complets = lim[lim["fi"].astype(str).str[5:10] >= "12-15"]["any"]
+        ult = int(complets.max())
+        a = a[(a["any"] == ult) & a["codi_ine"].notna()]
+        a["ine"] = a["codi_ine"].str.zfill(5).str[:5]
+        a = a[a["tga_nom_grupo"].isin(GRUPS_URGENTS)]
+        defs = {"bombers": GRUPS_URGENTS, "bomb_inc_urba": ("incendi urbà",), "bomb_inc_veg": ("incendi vegetació",),
+                "bomb_salvaments": ("salvaments",), "bomb_mobilitat": ("mobilitat",)}
+        gi_pob = sum(v or 0 for k_, v in pob.items() if k_.startswith("17"))
+        for k, grups in defs.items():
+            x = a[a["tga_nom_grupo"].isin(grups)]
+            n = x.groupby("ine")["n"].sum()
+            por_ine = {ine: n.get(ine, 0) / p * 1000 for ine, p in pob.items() if ine in res and p}
+            n_aar = {}
+            for ine, v in n.items():
+                if ine in aar_de:
+                    n_aar[aar_de[ine]] = n_aar.get(aar_de[ine], 0) + v
+            por_aar = {c: n_aar.get(c, 0) / p * 1000 for c, p in pob_aar.items() if p}
+            GI_TOT[k] = n[n.index.str.startswith("17")].sum() / gi_pob * 1000 if gi_pob else None
+            # Sin referencia de Cataluña: la ciudad de Barcelona tiene su propio cuerpo de bomberos
+            poner(k, por_ine, por_aar, None, ult, 2 if k != "bombers" else 1)
+
+    # Incendios forestales (municipio de inicio)
+    fi = d / "incendis_forestals.csv.gz"
+    if fi.exists():
+        inc = pd.read_csv(fi, dtype={"codi_municipi": str})
+        inc["ine"] = inc["codi_municipi"].str.zfill(6).str[:5]
+        inc["ha"] = pd.to_numeric(inc["haforestal"], errors="coerce").fillna(0) + pd.to_numeric(inc["hanoforest"], errors="coerce").fillna(0)
+        a0, a1 = int(inc["any"].min()), int(inc["any"].max())
+        per = f"{a0}-{a1}"
+        n = inc.groupby("ine").size()
+        ha = inc.groupby("ine")["ha"].sum()
+        gi = [ine for ine in res]
+        n_aar, ha_aar = {}, {}
+        for ine in gi:
+            c = aar_de.get(ine)
+            n_aar[c] = n_aar.get(c, 0) + int(n.get(ine, 0))
+            ha_aar[c] = ha_aar.get(c, 0) + float(ha.get(ine, 0))
+        anys_n = a1 - a0 + 1
+        # Incendios por año y 10.000 ha de término (para comparar municipios de tamaño distinto)
+        GI_TOT["inc_forestals"] = sum(int(n.get(i, 0)) for i in gi) / anys_n / (sum(float(sup.get(i, 0)) for i in gi) / 10_000)
+        poner("inc_forestals", {i: n.get(i, 0) / anys_n / (sup[i] / 10_000) for i in gi if sup.get(i)},
+              {c: n_aar[c] / anys_n / (sup_aar[c] / 10_000) for c in n_aar if sup_aar.get(c)},
+              len(inc) / anys_n / (cat_ha / 10_000) if cat_ha else None, per, 2)
+        GI_TOT["ha_cremades"] = sum(float(ha.get(i, 0)) for i in gi) / sum(float(sup.get(i, 0)) for i in gi) * 100
+        poner("ha_cremades", {i: ha.get(i, 0) / sup[i] * 100 for i in gi if sup.get(i)},
+              {c: ha_aar[c] / sup_aar[c] * 100 for c in ha_aar if sup_aar.get(c)},
+              inc["ha"].sum() / cat_ha * 100 if cat_ha else None, per, 2)
+        for i in gi:
+            res[i]["inc_n"] = int(n.get(i, 0))
+            res[i]["inc_ha"] = round(float(ha.get(i, 0)), 1)
+        GI_TOT.pop("inc_forestals"); GI_TOT.pop("ha_cremades", None)
+    return res, refs, anys, zona
+
+
+def zona_aar(zona):
+    """Copia las áreas básicas de Agents Rurals a web/datos con nombre y municipios."""
+    g_ = P / "emergencies" / "aar.geojson"
+    if not g_.exists():
+        return
+    g = json.loads(g_.read_text(encoding="utf-8"))
+    rel = pd.read_csv(P / "emergencies" / "municipis_arees.csv", dtype=str)
+    rel = rel[rel["ine"].str.startswith("17")]
+    t = territorio()
+    nom_ine = dict(zip(t["codi_ine"], t["nom"]))
+    for f in g["features"]:
+        p = f["properties"]
+        ms = sorted(nom_ine.get(i, i) for i in rel[rel["aar_codi"] == p["aar_codi"]]["ine"])
+        f["properties"] = {"id": p["aar_codi"], "nom": p["aar_nom"],
+                           "munis": f"{len(ms)} municipis · àrea regional {p['arr_nom']}: " + ", ".join(ms[:12]) + ("…" if len(ms) > 12 else "")}
+    (SALIDA.parent / "aar.geojson").write_text(json.dumps(g, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
 def main():
     t = territorio()
     pob, etca = poblacion()
@@ -1145,6 +1276,11 @@ def main():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_nac)
     refs_ed.update(refs_nac)
+    emx, refs_emx, anys_emx, zona_emx = emergencies_indicadores(pob)
+    for ine, x in emx.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_emx)
+    refs_ed.update(refs_emx)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1192,6 +1328,8 @@ def main():
         prov_renta[a] = r(sum(v * p for v, p in pares) / sum(p for _, p in pares))
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
     zones, refs_arees, anys_arees = arees()
+    zones["aar"] = zona_emx
+    zona_aar(zona_emx)
     anys_extra.update(anys_arees)
     refs = referencias()
     for k, v in refs_emex.items():

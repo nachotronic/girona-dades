@@ -25,6 +25,19 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
+B = "https://api.idescat.cat/taules/v2/censph/6000/20200"
+CANDIDATAS["idc_6000_node"] = f"{B}?lang=ca"
+CANDIDATAS["idc_6000_mun"] = f"{B}/mun?lang=ca"
+CANDIDATAS["idc_6000_data_girona"] = f"{B}/mun/data?lang=ca&MUN=170792"
+CANDIDATAS["idc_6000_data"] = f"{B}/mun/data?lang=ca"
+CANDIDATAS["idc_pmh_9145"] = "https://api.idescat.cat/taules/v2/pmh/9145?lang=ca"
+# Divisiones territoriales de Agents Rurals y Bombers (novedad Idescat 13/11/2026)
+for n in (86, 87, 88):
+    CANDIDATAS[f"codis_{n}"] = f"https://www.idescat.cat/codis/?id=50&n={n}&f=ssv"
+for q in ("bombers", "agents rurals", "incendis forestals", "incendis", "emergències", "actuacions bombers",
+          "regions emergència", "àrees bàsiques agents rurals", "denúncies agents rurals", "superfície forestal"):
+    CANDIDATAS["soc_" + q.replace(" ", "_").replace("à", "a").replace("è", "e").replace("ú", "u")] = (
+        f"{SOCRATA}?q={urllib.parse.quote(q)}&limit=40&only=dataset")
 # Coyuntura: paro, contratos y demandantes por municipio (SEPE, mensual)
 SEPE = "https://sede.sepe.gob.es/es/portaltrabaja/resources/sede/datos_abiertos/datos/"
 for a in (2025, 2026):

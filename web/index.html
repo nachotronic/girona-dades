@@ -48,14 +48,22 @@
       <h2 id="h-mapa" data-t="h_mapa">On és més car viure</h2>
       <p class="lead" data-t="lead_mapa">Tria un indicador i compara els municipis, o baixa fins a la secció censal on la font ho permet.</p>
     </header>
-    <div class="mapa-eines">
-      <div class="xips" id="indicadors" role="radiogroup" data-ta="ctl_indicador" aria-label="Indicador"></div>
-      <label class="cerca-ind"><span class="sr" data-t="cerca_ind">Busca un indicador</span>
-        <svg aria-hidden="true" viewBox="0 0 20 20" width="14" height="14"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <input type="search" id="cerca-ind" autocomplete="off" data-tp="cerca_ind_ph" placeholder="Busca entre els indicadors">
-      </label>
-    </div>
     <div class="mapa-graella">
+      <div class="mapa-menu" id="mapa-menu">
+        <button type="button" class="menu-ind-btn" id="menu-ind-btn" aria-expanded="false" aria-controls="mapa-eines">
+          <span class="menu-ind-tema" id="menu-ind-tema"></span>
+          <span class="menu-ind-nom" id="menu-ind-nom"></span>
+          <span class="menu-ind-canvia" id="menu-ind-canvia" aria-hidden="true"></span>
+        </button>
+        <div class="mapa-eines" id="mapa-eines">
+          <div class="menu-ind-cap"><span id="menu-ind-titol"></span><button type="button" class="menu-ind-tanca" id="menu-ind-tanca"></button></div>
+          <label class="cerca-ind"><span class="sr" data-t="cerca_ind">Busca un indicador</span>
+            <svg aria-hidden="true" viewBox="0 0 20 20" width="14" height="14"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <input type="search" id="cerca-ind" autocomplete="off" data-tp="cerca_ind_ph" placeholder="Busca entre els indicadors">
+          </label>
+          <div class="xips" id="indicadors" role="radiogroup" data-ta="ctl_indicador" aria-label="Indicador"></div>
+        </div>
+      </div>
       <div class="mapa-caixa">
         <div id="mapa" role="region" data-ta="mapa_aria" aria-label="Mapa"></div>
         <div class="cerca-mapa" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="cerca-mapa-llista">
@@ -70,6 +78,7 @@
           <button type="button" data-nivell="sec" aria-pressed="false" data-t="nivell_sec">Seccions censals</button>
           <button type="button" data-nivell="abs" aria-pressed="false" data-t="nivell_abs" hidden>Àrees de salut</button>
           <button type="button" data-nivell="abp" aria-pressed="false" data-t="nivell_abp" hidden>Àrees policials</button>
+          <button type="button" data-nivell="aar" aria-pressed="false" data-t="nivell_aar" hidden>Àrees d'Agents Rurals</button>
         </div>
         <h3 id="ind-titol" class="ind-titol"></h3>
         <p class="ind-desc" id="mapa-desc"></p>
@@ -142,6 +151,9 @@
       <li><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INE, estadístiques mensuals</a><span data-t="f_ine_mes">compravendes, hipoteques, IPC i ocupació hotelera de la província</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/j8h8-vxug">Secretaria d'Habitatge</a><span data-t="f_iniciats">habitatges iniciats i acabats per municipi, cada trimestre</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/qnyt-emjc">Mossos d'Esquadra</a><span data-t="f_mossos">fets penals per àrea bàsica policial</span></li>
+      <li><a href="https://www.idescat.cat/codis/?id=50&amp;n=87">Idescat, codis territorials</a><span data-t="f_idescat_codis">divisions territorials dels Agents Rurals i dels Bombers (municipis de cada àrea)</span></li>
+      <li><a href="https://analisi.transparenciacatalunya.cat/d/g2ay-3vnj">Bombers de la Generalitat</a><span data-t="f_bombers">actuacions per municipi</span></li>
+      <li><a href="https://analisi.transparenciacatalunya.cat/d/bks7-dkfd">Departament d'Agricultura</a><span data-t="f_incendis">incendis forestals per municipi d'inici</span></li>
       <li><a href="https://www.idescat.cat/emex/">Idescat, El municipi en xifres</a><span data-t="f_emex">valors de referència de Catalunya</span></li>
       <li><a href="https://analisi.transparenciacatalunya.cat/d/nm3n-3vbj">Generalitat, ens locals i eleccions municipals</a><span data-t="f_pol">alcaldes, plens i resultats electorals</span></li>
     </ul>
