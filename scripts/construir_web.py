@@ -125,6 +125,8 @@ def secciones():
     rh = atlas_secciones("31016.csv.gz", "Renta neta media por hogar")
     gi = atlas_secciones("37697.csv.gz", "Índice de Gini")
     p8 = atlas_secciones("37697.csv.gz", "Distribución de la renta P80/P20")
+    rb = atlas_secciones("31016.csv.gz", "Renta bruta media por persona")
+    md = atlas_secciones("31016.csv.gz", "Mediana de la renta por unidad de consumo")
     cat = {}
     ruta = P / "catastro" / "edificios_seccion.csv"
     if ruta.exists():
@@ -136,6 +138,7 @@ def secciones():
         res[cusec] = {
             "renta_persona": r(rp.get(cusec)), "renta_hogar": r(rh.get(cusec)),
             "gini": r(gi.get(cusec), 1), "p80p20": r(p8.get(cusec), 1),
+            "renta_bruta": r(rb.get(cusec)), "renta_mediana": r(md.get(cusec)),
             "viviendas": r(float(f["viviendas"])) if f is not None else None,
             "viv_antes_1980": r(float(f["viv_antes_1980"])) if f is not None else None,
             "viv_post_2000": r(float(f["viv_post_2000"])) if f is not None else None,
@@ -787,6 +790,170 @@ def emex_indicadores():
 
 
 # ---------------------------------------------------------------------------
+# Indicadores complementarios (inventario de espanaendatos.es reconstruido con las fuentes
+# originales): Xifra (Diputació), EMEX (Idescat), AEAT, INE.
+
+def complements_indicadores(pob):
+    """Devuelve (x por municipio, refs, años, extra por municipio para la ficha)."""
+    per = lambda v, p, k=100: None if v is None or not p else v / p * k  # noqa: E731
+    res, anys, refs, fitxa = {}, {}, {}, {}
+
+    def pon(clave, dades, f, dec=1, any_=None):
+        for ine, vs in dades.items():
+            try:
+                v = f(ine, vs)
+            except (TypeError, ZeroDivisionError, IndexError):
+                v = None
+            if v is not None and math.isfinite(v):
+                res.setdefault(ine, {})[clave] = r(v, dec)
+        if any_:
+            anys[clave] = any_
+
+    # Servicios y comercio (Xifra)
+    pon("bancs", _xifra("030516", [5]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2026)
+    pon("comerc", _xifra("030505", [2]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2023)
+    pon("comerc_m2", _xifra("030505", [3]), lambda i, v: per(v[0], pob.get(i), 1), 2, 2023)
+    pon("biblio", _xifra("03030201", [7]), lambda i, v: per(v[0], pob.get(i), 10000), 1, 2024)
+    pon("museus", _xifra("03030203", [3]), lambda i, v: v[0], 0, 2025)
+    # Agricultura (censo agrario 2020)
+    pon("explotacions", _xifra("03050801", [6]), lambda i, v: per(v[0], pob.get(i), 1000), 1, 2020)
+    # Vivienda: certificados energéticos y políticas de vivienda
+    ce = _xifra("03031202", [2, 3, 4, 5, 6, 7, 8, 9])
+    pon("cert_ab", ce, lambda i, v: per((v[0] or 0) + (v[1] or 0), v[7]) if v[7] and v[7] >= 20 else None, 1, 2026)
+    pon("cert_eg", ce, lambda i, v: per((v[4] or 0) + (v[5] or 0) + (v[6] or 0), v[7]) if v[7] and v[7] >= 20 else None, 0, 2026)
+    hp = _xifra("030511", [2, 6])
+    pon("hpo_sol", hp, lambda i, v: per(v[0], pob.get(i), 1000), 1, 2025)
+    pon("ajuts_lloguer", hp, lambda i, v: per(v[1], pob.get(i), 1000), 1, 2025)
+    # Emisiones de CO2 (2019): residencial, servicios, residuos, transporte e industria
+    em = {k: _xifra(k, [-1]) for k in ("03030601", "03030602", "03030603", "03030604", "03030605")}
+    tot = {}
+    for k, d in em.items():
+        for ine, v in d.items():
+            if v and v[0] is not None:
+                tot[ine] = tot.get(ine, 0) + v[0]
+    pon("co2", {i: [v] for i, v in tot.items()}, lambda i, v: per(v[0], pob.get(i), 1), 1, 2019)
+    pon("co2_transport", em["03030604"], lambda i, v: per(v[0], pob.get(i), 1), 1, 2019)
+    pon("co2_residencial", em["03030601"], lambda i, v: per(v[0], pob.get(i), 1), 2, 2019)
+    pon("gas", _xifra("03030501", [-1]), lambda i, v: per(v[0], pob.get(i), 1), 0, 2023)
+    # Población: proyección a 2044 y residentes en el extranjero
+    pon("proj2044", _xifra("030206", [5]), lambda i, v: (v[0] / pob[i] - 1) * 100 if pob.get(i) and v[0] else None, 1, 2044)
+    pon("proj_65", _xifra("030206", [4, 5]), lambda i, v: per(v[0], v[1]), 0, 2044)
+    # Hacienda municipal (Xifra)
+    ibi = _xifra("03070504", [2, 3])
+    pon("ibi_tipus", ibi, lambda i, v: v[1], 2, 2026)
+    pon("ibi_revisio", ibi, lambda i, v: v[0], 0)
+    pte = _xifra("03070507", [2, 7])
+    pon("pte_hab", pte, lambda i, v: per(v[1], pob.get(i), 1), 0, 2024)
+    pon("esforc_fiscal", pte, lambda i, v: v[0], 2, 2022)
+    # EMEX (Idescat): IRPF 2024, mercado de trabajo del censo 2024, tamaño de empresa, migraciones
+    f = P / "emex" / "emex_municipis.csv.gz"
+    if f.exists():
+        e = pd.read_csv(f, dtype={"ine": str, "id": str, "any": str})
+        for c in ("mun", "cat"):
+            e[c] = pd.to_numeric(e[c].astype(str).str.replace("_", ""), errors="coerce")
+        e = e.drop_duplicates(["ine", "id"])
+        mun = e.pivot(index="ine", columns="id", values="mun")
+        cat = e.drop_duplicates("id").set_index("id")["cat"]
+        anys_id = e.drop_duplicates("id").set_index("id")["any"].astype(str).str.extract(r"(\d{4})")[0]
+        col = lambda d, k: d[k] if k in d else None  # noqa: E731
+        defs = {
+            "irpf_quota": (lambda d: col(d, "f11"), "f11", 0),
+            "taxa_atur": (lambda d: col(d, "f222") / col(d, "f223") * 100, "f222", 1),
+            "taxa_activitat": (lambda d: col(d, "f223") / col(d, "f224") * 100, "f223", 1),
+            "micro": (lambda d: col(d, "f225") / (col(d, "f225") + col(d, "f284") + col(d, "f390") + col(d, "f227")) * 100, "f225", 0),
+            "gran_empresa": (lambda d: col(d, "f227") / (col(d, "f225") + col(d, "f284") + col(d, "f390") + col(d, "f227")) * 100, "f227", 1),
+            "cera": (lambda d: col(d, "f336") / col(d, "f321") * 100, "f336", 1),
+            "saldo_intern": (lambda d: col(d, "f324") / col(d, "f321") * 1000, "f324", 1),
+            "ibi_rebut": (lambda d: col(d, "f200") / col(d, "f198"), "f200", 0),
+            "furgonetes": (lambda d: col(d, "f272") / col(d, "f321") * 1000, "f272", 0),
+            "piscines": (lambda d: col(d, "f301"), "f301", 0),
+        }
+        catdf = pd.DataFrame([cat.to_dict()])
+        for k, (fn, rid, dec) in defs.items():
+            try:
+                s_, c_ = fn(mun), fn(catdf)
+            except Exception as ex:  # noqa: BLE001
+                print("AVISO complements", k, ex)
+                continue
+            if s_ is None:
+                continue
+            for ine, v in s_.items():
+                if v == v and v is not None and math.isfinite(v):
+                    res.setdefault(ine, {})[k] = round(float(v), dec)
+            if c_ is not None and len(c_) and c_.iloc[0] == c_.iloc[0] and k not in ("piscines",):
+                refs[k] = {"cat": round(float(c_.iloc[0]), dec)}
+            a = anys_id.get(rid)
+            if isinstance(a, str):
+                anys[k] = int(a)
+    # Renta bruta y mediana (INE, Atlas de distribución de renta)
+    for k, ind in (("renda_bruta", "Renta bruta media por persona"), ("renda_bruta_llar", "Renta bruta media por hogar"),
+                   ("renda_mediana", "Mediana de la renta por unidad de consumo"), ("renda_uc", "Media de la renta por unidad de consumo")):
+        s_ = atlas("31016.csv.gz", ind)
+        for ine, d in s_.items():
+            fitxa.setdefault(ine, {})[k] = {a: r(v) for a, v in d.items()}
+    # IRPF por municipio (AEAT, municipios de más de 1.000 habitantes)
+    fa = P / "aeat" / "irpf_municipios.csv"
+    if fa.exists():
+        a = pd.read_csv(fa, dtype={"ine": str, "any": str})
+        def c_(row, *noms):
+            for n in noms:
+                v = row.get(f"t0|{n}|1")
+                if v == v and v is not None:
+                    return float(v)
+            return None
+        for _, row in a.iterrows():
+            ine = row["ine"]
+            o = {
+                "decl": c_(row, "NÚMERO DE DECLARACIONES"), "hab": c_(row, "NÚMERO DE HABITANTES"),
+                "bruta": c_(row, "RENTA BRUTA MEDIA"), "disp": c_(row, "RENTA DISPONIBLE MEDIA"),
+                "treball": c_(row, "RENTAS DEL TRABAJO"), "capital": c_(row, "RENTAS DEL CAPITAL MOBILIARIO"),
+                "immobles": c_(row, "RENTAS DE BIENES INMUEBLES NO AFECTOS A ACTIV. ECONÓMICAS"),
+                "activitats": c_(row, "RENTAS DE ACTIVIDADES ECONÓMICAS"), "guanys": c_(row, "GANANCIAS PATRIMONIALES NETAS"),
+                "rb": c_(row, "RENTA BRUTA"), "quota": c_(row, "CUOTA RESULTANTE DE LA AUTOLIQUIDACIÓN"),
+                "any": int(row["any"]),
+            }
+            if ine == "17":
+                fitxa.setdefault("_prov", {})["aeat"] = o
+                continue
+            fitxa.setdefault(ine, {})["aeat"] = {k: (r(v) if isinstance(v, float) else v) for k, v in o.items() if v is not None}
+            x = res.setdefault(ine, {})
+            if o["bruta"]:
+                x["aeat_bruta"] = r(o["bruta"])
+            if o["disp"]:
+                x["aeat_disp"] = r(o["disp"])
+            if o["decl"] and pob.get(ine):
+                x["aeat_decl"] = r(o["decl"] / pob[ine] * 100, 1)
+            if o["rb"] and o["quota"]:
+                x["aeat_tipus"] = r(o["quota"] / o["rb"] * 100, 1)
+            if o["rb"] and o["capital"] is not None and o["immobles"] is not None:
+                x["aeat_capital"] = r((o["capital"] + o["immobles"] + (o["guanys"] or 0)) / o["rb"] * 100, 1)
+            if o["rb"] and o["activitats"] is not None:
+                x["aeat_activitats"] = r(o["activitats"] / o["rb"] * 100, 1)
+        for k in ("aeat_bruta", "aeat_disp", "aeat_decl", "aeat_tipus", "aeat_capital", "aeat_activitats"):
+            anys[k] = int(a["any"].max())
+    # Serie de población (INE padrón: cifras oficiales; si no, Estadística del Padrón continuo)
+    fp = P / "padro" / "poblacio_municipis.csv.gz"
+    fn = P / "nacionalitat" / "edat_nacionalitat.csv.gz"
+    if fp.exists():
+        d = pd.read_csv(fp, dtype={"ine": str, "any": str})
+        for ine, g in d.groupby("ine"):
+            fitxa.setdefault(ine, {})["pob_s"] = {int(a): int(v) for a, v in zip(g["any"], g["valor"])}
+    if fn.exists():
+        d = pd.read_csv(fn, dtype=str)
+        d = d[d["Edad (grandes grupos)"] == "Todas las edades"]
+        d["valor"] = pd.to_numeric(d["valor"], errors="coerce")
+        for (ine, nac), g in d.groupby(["ine", "Nacionalidad"]):
+            k = {"Total": "pob_s", "Extranjera": "estr_s"}.get(nac)
+            if not k:
+                continue
+            o = fitxa.setdefault(ine, {})
+            if k == "pob_s" and "pob_s" in o:
+                continue
+            o[k] = {int(a): int(v) for a, v in zip(g["any"], g["valor"]) if v == v}
+    return res, refs, anys, fitxa
+
+
+# ---------------------------------------------------------------------------
 # Educació: Departament d'Educació (matrícula, centros, preinscripción) y Censo 2021 (INE)
 
 def _curs_ini(c):
@@ -1281,6 +1448,11 @@ def main():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_emx)
     refs_ed.update(refs_emx)
+    cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
+    for ine, x in cm.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_cm)
+    refs_ed.update(refs_cm)
     pol, anys_pol = politica()
     for ine, x in indicadores_politica(pol).items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -1312,6 +1484,7 @@ def main():
             "x": extra_mun.get(ine, {}),
             "pol": pol.get(ine, {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
+            **fitxa_cm.get(ine, {}),
         })
 
     # Provincia: alquiler medio ponderado por contratos, compraventas sumadas, renta ponderada por población
@@ -1350,6 +1523,7 @@ def main():
             "hut": sum(m["hut"] for m in municipios),
             "viviendas": sum(m["viviendas"] or 0 for m in municipios),
             "viv_antes_1980": sum(m["viv_antes_1980"] or 0 for m in municipios),
+            **({"aeat": fitxa_cm["_prov"]["aeat"]} if "_prov" in fitxa_cm else {}),
         },
         "municipios": municipios,
     }

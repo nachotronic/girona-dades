@@ -62,9 +62,31 @@ def _dirce(sal, lineas) -> None:
             lineas.append(f"DIRCE {t['Id']}: ERROR {type(e).__name__} {str(e)[:120]}")
 
 
+def _esperanca(sal, lineas) -> None:
+    """Esperanza de vida al nacer por municipio (INE, IDB 30687) y por provincia (77117)."""
+    from .territorio import municipios
+    noms = set(municipios()["nom"]) | {"Girona", "Gerona", "Cataluña", "Total Nacional", "Total"}
+    res = {}
+    for ident in ("30687", "77117"):
+        try:
+            d = get(f"{API}/DATOS_TABLA/{ident}?nult=15", timeout=600).json()
+            series = []
+            for x in d:
+                nom = x.get("Nombre", "")
+                cap = nom.split(".")[0].strip()
+                if cap in noms or "Girona" in nom or "Cataluña" in nom or "Nacional" in nom:
+                    series.append({"nom": nom, "d": [[p.get("Anyo"), p.get("Valor")] for p in x.get("Data", [])]})
+            res[ident] = series
+            lineas.append(f"esperanza {ident}: {len(series)} series de {len(d)}; ej.: " + "; ".join(s_["nom"] for s_ in series[:4]))
+        except Exception as e:  # noqa: BLE001
+            lineas.append(f"esperanza {ident}: ERROR {type(e).__name__} {str(e)[:120]}")
+    (sal / "esperanca.json").write_text(json.dumps(res, ensure_ascii=False), encoding="utf-8")
+
+
 def ejecutar() -> str:
     sal = carpeta("padro")
     lineas = []
+    _esperanca(sal, lineas)
     _dirce(sal, lineas)
     ident = _busca(lineas)
     if not ident:
