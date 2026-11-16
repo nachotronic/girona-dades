@@ -273,6 +273,14 @@
     { id: "presencials", tema: "sal", ca: ["Visites presencials", "Visites presencials a l'atenció primària (%)"], es: ["Visitas presenciales", "Visitas presenciales en atención primaria (%)"], a: "presencials", abs: A("presencials"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
     { id: "econsulta", tema: "sal", ca: ["eConsulta", "Pacients que fan servir l'eConsulta (%)"], es: ["eConsulta", "Pacientes que usan la eConsulta (%)"], a: "econsulta", abs: A("econsulta"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
     { id: "antibio", tema: "sal", ca: ["Antibiòtics inadequats", "Antibiòtics en faringitis d'adults, ús inadequat (%)"], es: ["Antibióticos inadecuados", "Antibióticos en faringitis de adultos, uso inadecuado (%)"], a: "antibio", abs: A("antibio"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P0 },
+    { id: "pob_abs", tema: "sal", ca: ["Població assignada", "Persones assignades a l'àrea bàsica de salut"], es: ["Población asignada", "Personas asignadas al área básica de salud"], a: "pob_abs", abs: A("pob_abs"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Registre central de població).", es: "Datos por área básica de salud (CatSalut, Registre central de població)." }, ...N0 },
+    { id: "abs_pct_65", tema: "sal", ca: ["Pacients de 65 anys o més", "Població assignada de 65 anys o més (%)"], es: ["Pacientes de 65 años o más", "Población asignada de 65 años o más (%)"], a: "abs_pct_65", abs: A("abs_pct_65"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Registre central de població).", es: "Datos por área básica de salud (CatSalut, Registre central de població)." }, ...P1 },
+    { id: "abs_pct_80", tema: "sal", ca: ["Pacients de 80 anys o més", "Població assignada de 80 anys o més (%)"], es: ["Pacientes de 80 años o más", "Población asignada de 80 años o más (%)"], a: "abs_pct_80", abs: A("abs_pct_80"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Registre central de població).", es: "Datos por área básica de salud (CatSalut, Registre central de població)." }, ...P1 },
+    { id: "cap_n", sumable: false, tema: "sal", ca: ["CAP i atenció continuada", "Centres d'atenció primària a l'àrea"], es: ["CAP y atención continuada", "Centros de atención primaria en el área"], a: "cap_n", abs: A("cap_n"), nota: { ca: "Centres d'atenció primària i d'atenció continuada (Equipaments de Catalunya). Els punts del mapa marquen els CAP i els hospitals.", es: "Centros de atención primaria y de atención continuada (Equipaments de Catalunya). Los puntos del mapa marcan los CAP y los hospitales." }, ...N0 },
+    { id: "inf_resp", tema: "sal", ca: ["Infeccions respiratòries", "Infeccions respiratòries ateses al CAP, últimes 4 setmanes, per 1.000 habitants"], es: ["Infecciones respiratorias", "Infecciones respiratorias atendidas en el CAP, últimas 4 semanas, por 1.000 habitantes"], a: "inf_resp", abs: A("inf_resp"), nota: { ca: "Casos diagnosticats a l'atenció primària les últimes 4 setmanes publicades (Departament de Salut, SIVIC), sobre la població assignada a l'ABS.", es: "Casos diagnosticados en atención primaria en las últimas 4 semanas publicadas (Departament de Salut, SIVIC), sobre la población asignada al ABS." }, ...N1 },
+    { id: "inf_grip", tema: "sal", ca: ["Grip", "Casos de grip, últimes 4 setmanes, per 100.000 habitants"], es: ["Gripe", "Casos de gripe, últimas 4 semanas, por 100.000 habitantes"], a: "inf_grip", abs: A("inf_grip"), nota: { ca: "Casos diagnosticats a l'atenció primària les últimes 4 setmanes publicades (Departament de Salut, SIVIC), sobre la població assignada a l'ABS.", es: "Casos diagnosticados en atención primaria en las últimas 4 semanas publicadas (Departament de Salut, SIVIC), sobre la población asignada al ABS." }, ...N0 },
+    { id: "inf_covid", tema: "sal", ca: ["COVID-19", "Casos de COVID-19, últimes 4 setmanes, per 100.000 habitants"], es: ["COVID-19", "Casos de COVID-19, últimas 4 semanas, por 100.000 habitantes"], a: "inf_covid", abs: A("inf_covid"), nota: { ca: "Casos diagnosticats a l'atenció primària les últimes 4 setmanes publicades (Departament de Salut, SIVIC), sobre la població assignada a l'ABS.", es: "Casos diagnosticados en atención primaria en las últimas 4 semanas publicadas (Departament de Salut, SIVIC), sobre la población asignada al ABS." }, ...N0 },
+    { id: "domicili", tema: "sal", ca: ["Atenció a domicili", "Població atesa al programa d'atenció domiciliària (%)"], es: ["Atención a domicilio", "Población atendida en el programa de atención domiciliaria (%)"], a: "domicili", abs: A("domicili"), nota: { ca: "Dades per àrea bàsica de salut (CatSalut, Central de Resultats).", es: "Datos por área básica de salud (CatSalut, Central de Resultats)." }, ...P1 },
     // Seguridad (áreas básicas policiales)
     { id: "fets", tema: "seg", ca: ["Delictes", "Fets penals coneguts per 1.000 habitants"], es: ["Delitos", "Hechos penales conocidos por 1.000 habitantes"], a: "fets", abp: A("fets"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
     { id: "patrimoni", tema: "seg", ca: ["Furts i robatoris", "Delictes contra el patrimoni per 1.000 habitants"], es: ["Hurtos y robos", "Delitos contra el patrimonio por 1.000 habitantes"], a: "patrimoni", abp: A("patrimoni"), nota: { ca: "Dades per àrea bàsica policial (Mossos d'Esquadra). Les taxes es calculen sobre la població resident: a la costa, l'estiu les infla.", es: "Datos por área básica policial (Mossos d'Esquadra). Las tasas se calculan sobre la población residente: en la costa, el verano las infla." }, ...N1 },
@@ -555,7 +563,34 @@
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
     document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
-    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat);
+    controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres();
+  }
+
+  // CAP y hospitales: capa de puntos encima de los indicadores de salud (se puede ocultar)
+  let promCentres = null, ambCentres = true;
+  const CAPES_C = ["centres-cap", "centres-h"];
+  function capaCentres() {
+    const vis = ind && ind.tema === "sal" && !ind.cat;
+    const ll = document.getElementById("llegenda-centres");
+    if (ll) ll.hidden = !vis;
+    if (vis && !promCentres) {
+      promCentres = fetch("datos/centres.geojson").then((r) => r.json()).then((g) => {
+        mapa.addSource("centres", { type: "geojson", data: g });
+        const r = (a, b) => ["interpolate", ["linear"], ["zoom"], 7, a, 12, b];
+        mapa.addLayer({ id: "centres-cap", type: "circle", source: "centres", filter: ["in", ["get", "t"], ["literal", ["cap", "continuada"]]],
+          paint: { "circle-radius": r(2.2, 5), "circle-color": css("--tinta") || "#111", "circle-stroke-color": css("--paper") || "#fff", "circle-stroke-width": 1 } });
+        mapa.addLayer({ id: "centres-h", type: "circle", source: "centres", filter: ["==", ["get", "t"], "hospital"],
+          paint: { "circle-radius": r(4.5, 8), "circle-color": "#e3001b", "circle-stroke-color": css("--paper") || "#fff", "circle-stroke-width": 1.5 } });
+        capaCentres();
+      }).catch(() => {});
+      return;
+    }
+    CAPES_C.forEach((l) => { if (mapa.getLayer(l)) mapa.setLayoutProperty(l, "visibility", vis && ambCentres ? "visible" : "none"); });
+  }
+  const NOM_TIPUS_C = { cap: ["CAP", "CAP"], continuada: ["Atenció continuada", "Atención continuada"], hospital: ["Hospital", "Hospital"] };
+  function centreSota(e) {
+    if (!ambCentres || !mapa.getLayer("centres-h") || mapa.getLayoutProperty("centres-h", "visibility") === "none") return null;
+    return mapa.queryRenderedFeatures(e.point, { layers: CAPES_C })[0] || null;
   }
 
   // Indicadores por categorías (partido del alcalde): un color por bloque
@@ -1022,6 +1057,13 @@
       if (f) mapa.setFeatureState({ source: "zones", id: hoverId }, { hover: true });
     };
     mapa.on("mousemove", "zones-fill", (e) => {
+      const c = centreSota(e);
+      if (c) {
+        const t_ = NOM_TIPUS_C[c.properties.t];
+        mapa.getCanvas().style.cursor = "default";
+        mostraTip(`<b>${c.properties.nom}</b><br>${t_ ? t_[LANG === "ca" ? 0 : 1] : ""} · ${c.properties.mun}`, e.originalEvent.clientX, e.originalEvent.clientY);
+        return;
+      }
       const f = e.features[0];
       marca(f);
       mapa.getCanvas().style.cursor = "pointer";
@@ -1039,6 +1081,8 @@
     });
 
     document.querySelectorAll(".segment button").forEach((b) => b.addEventListener("click", () => canviaNivell(b.dataset.nivell)));
+    const chk = document.getElementById("mostra-centres");
+    if (chk) chk.addEventListener("change", () => { ambCentres = chk.checked; capaCentres(); });
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { colorsBase(); pinta(); });
     let amplePrev = innerWidth;
     addEventListener("resize", () => { if (Math.abs(innerWidth - amplePrev) > 40) { amplePrev = innerWidth; llegenda(); } });

@@ -458,6 +458,37 @@ TITOLS = {
 }
 
 
+def _dins(x, y, geom):
+    """Punto dentro de un (Multi)Polygon GeoJSON, por paridad de cruces."""
+    polis = geom["coordinates"] if geom["type"] == "MultiPolygon" else [geom["coordinates"]]
+    for poli in polis:
+        dins = False
+        for anell in poli:
+            for (x1, y1), (x2, y2) in zip(anell, anell[1:] + anell[:1]):
+                if (y1 > y) != (y2 > y) and x < (x2 - x1) * (y - y1) / (y2 - y1) + x1:
+                    dins = not dins
+        if dins:
+            return True
+    return False
+
+
+def _codis_abs(sal):
+    f = sal / "abs.geojson"
+    if not f.exists():
+        return []
+    return [str(x["properties"]["codi"]) for x in json.loads(f.read_text(encoding="utf-8"))["features"]]
+
+
+def _pob_rs(sal):
+    """Población oficial del último año por región sanitaria."""
+    f = sal / "poblacio_rs.csv"
+    if not f.exists():
+        return {}
+    p = pd.read_csv(f, dtype={"rs_codi": str})
+    p = p[p["any"] == p["any"].max()]
+    return {str(k): float(v) for k, v in zip(p["rs_codi"], p["p"]) if v == v}
+
+
 def arees():
     """Devuelve ({'abs': {...}, 'abp': {...}}, refs, anys) y copia las geometrías a web/datos."""
     import shutil
@@ -493,6 +524,71 @@ def arees():
                 else:
                     res["abs"].setdefault(codi_abs, {})[k] = v
             anys[k] = int(pr["any"].iloc[0])
+    # Población asignada y estructura por edad (Registre central de població del CatSalut)
+    pob_abs = {}
+    if (sal / "poblacio_abs.csv").exists():
+        pa = pd.read_csv(sal / "poblacio_abs.csv", dtype={"codi_abs": str})
+        pob_abs = dict(zip(pa["codi_abs"], pa["poblacio"]))
+        gi = pa[pa["codi_abs"].isin(set(res["abs"]) | set(_codis_abs(sal)))]
+        for _, f in gi.iterrows():
+            o = res["abs"].setdefault(f["codi_abs"], {})
+            o["pob_abs"] = int(f["poblacio"])
+            for k in ("pct_65", "pct_80", "pct_0_14"):
+                if k in f and f[k] == f[k]:
+                    o["abs_" + k] = r(f[k], 1)
+        if "pct_65" in pa:
+            for z, x in (("gi", gi), ("cat", pa)):
+                tot = x["poblacio"].sum()
+                for k in ("pct_65", "pct_80", "pct_0_14"):
+                    refs.setdefault("abs_" + k, {})[z] = r((x[k] * x["poblacio"]).sum() / tot, 1)
+            refs["pob_abs"] = {"gi": int(gi["poblacio"].sum())}
+            anys.update({k: int(pa["any"].iloc[0]) for k in ("pob_abs", "abs_pct_65", "abs_pct_80", "abs_pct_0_14")})
+    # Infecciones atendidas en primaria: últimas 4 semanas, por 1.000 habitantes de la ABS
+    fi = sal / "infeccions_abs.csv"
+    if fi.exists() and pob_abs:
+        inf = pd.read_csv(fi, dtype={"codi_abs": str})
+        setm = sorted(inf["data_inici"].unique())[-4:]
+        inf = inf[inf["data_inici"].isin(setm)]
+        grups = {"inf_resp": None, "inf_grip": ["Grip"], "inf_covid": ["COVID-19"]}
+        resp = ["Altres IRA", "Bronquiolitis", "COVID-19", "Grip", "Pneumònia"]
+        for k, dg in grups.items():
+            x = inf[inf["diagnostic"].isin(dg or resp)].groupby("codi_abs")["casos"].sum()
+            mult = 1000 if k == "inf_resp" else 100000
+            for c_, v in x.items():
+                if pob_abs.get(c_):
+                    res["abs"].setdefault(c_, {})[k] = r(v / pob_abs[c_] * mult, 1 if mult == 1000 else 0)
+            tot = sum(pob_abs.get(c_, 0) for c_ in x.index)
+            if tot:
+                refs.setdefault(k, {})["gi"] = r(x.sum() / tot * mult, 1 if mult == 1000 else 0)
+            d0, d1 = pd.Timestamp(setm[0]), pd.Timestamp(setm[-1]) + pd.Timedelta(days=6)
+            anys[k] = f"{d0.day}/{d0.month}–{d1.day}/{d1.month}/{d1.year}"
+        fr = sal / "infeccions_rs.csv"
+        if fr.exists():
+            rs = pd.read_csv(fr, dtype={"rs": str})
+            rs = rs[rs["data_inici"].isin(setm)]
+            pr = _pob_rs(sal)
+            ptot = sum(pr.values())
+            for k, dg in grups.items():
+                mult = 1000 if k == "inf_resp" else 100000
+                v = rs[rs["diagnostic"].isin(dg or resp)]["casos"].sum()
+                if ptot:
+                    refs.setdefault(k, {})["cat"] = r(v / ptot * mult, 1 if mult == 1000 else 0)
+    if (sal / "centres.geojson").exists():
+        import shutil
+        shutil.copy(sal / "centres.geojson", SALIDA.parent / "centres.geojson")
+        cg = json.loads((sal / "centres.geojson").read_text(encoding="utf-8"))
+        per_abs = {}
+        # Asignación de cada centro a su ABS por contención del punto (sin dependencias geográficas)
+        ga = json.loads((sal / "abs.geojson").read_text(encoding="utf-8")) if (sal / "abs.geojson").exists() else {"features": []}
+        for f in cg["features"]:
+            x, y = f["geometry"]["coordinates"]
+            c_ = next((str(a["properties"]["codi"]) for a in ga["features"] if _dins(x, y, a["geometry"])), None)
+            if c_:
+                per_abs.setdefault(c_, {}).setdefault(f["properties"]["t"], 0)
+                per_abs[c_][f["properties"]["t"]] += 1
+        for c_, d in per_abs.items():
+            if c_ in res["abs"]:
+                res["abs"][c_]["cap_n"] = d.get("cap", 0) + d.get("continuada", 0)
     if (sal / "abs.geojson").exists():
         g = json.loads((sal / "abs.geojson").read_text(encoding="utf-8"))
         for f in g["features"]:
@@ -1029,6 +1125,130 @@ def esperanca_series():
         if z:
             ser[z] = sorted([[int(a), str(a), v] for a, v in s_["d"] if v is not None])
     return {"esperanca": {"tipus": "linia", "u": "anys", "dec": 1, "noms": "esperanca", "series": ser}} if ser.get("gi") else {}
+
+
+# ---------------------------------------------------------------------------
+# Salut a la província: llistes d'espera (CatSalut), receptes i infeccions per regió sanitària
+
+GRUPS_ATC = [  # (clau, prefijos ATC)
+    ("antidepressius", ["N06A"]), ("ansiolitics", ["N05B"]), ("hipnotics", ["N05C"]), ("opioides", ["N02A"]),
+    ("analgesics", ["N02B"]), ("antibiotics", ["J01"]), ("antiulcerosos", ["A02B"]), ("colesterol", ["C10A"]),
+    ("antidiabetics", ["A10"]), ("tensio", ["C09", "C07", "C08", "C03"]), ("respiratoris", ["R03"]),
+]
+
+
+def _mes_x(m):
+    a, mm = int(m[:4]), int(m[5:7])
+    return round(a + (mm - 1) / 12, 4)
+
+
+NOMS_HOSP = {
+    "Hospital U de Girona Doctor Josep Trueta": "Hospital Josep Trueta (Girona)",
+    "Hosp. d'Olot i Comarcal de la Garrotxa": "Hospital d'Olot",
+    "HC Sant Jaume Calella i HC de Blanes": "Hospital de Blanes i Calella",
+    "Hospital Santa Caterina": "Hospital Santa Caterina (Salt)",
+}
+
+
+def salut_series():
+    sal = P / "salut"
+    out = {}
+    # Listas de espera: tiempo medio (días) ponderado por pacientes, región de Girona frente a Cataluña
+    fr, fc = sal / "llistes_espera_regions.csv.gz", sal / "llistes_espera_centres.csv.gz"
+    if fr.exists():
+        rg = pd.read_csv(fr)
+        for c_ in ("pacients", "pond", "activitat"):
+            rg[c_] = pd.to_numeric(rg[c_], errors="coerce")
+        for tipus, k in (("quirurgiques", "le_quir"), ("externes", "le_ext"), ("diagnostiques", "le_diag")):
+            x = rg[rg["tipus"] == tipus]
+            if x.empty:
+                continue
+            ser = {}
+            for z, filt in (("gi", x["regio"] == "Girona"), ("cat", pd.Series(True, index=x.index))):
+                g = x[filt].groupby("mes")[["pacients", "pond"]].sum()
+                ser[z] = [[_mes_x(m), m, round(float(v.pond / v.pacients), 0)] for m, v in g.iterrows() if v.pacients]
+            g = x[x["regio"] == "Girona"].groupby("mes")["pacients"].sum()
+            ult = x["mes"].max()
+            out[k] = {"tipus": "linia", "u": "dies", "dec": 0, "series": ser, "abs": {"pacients": int(g.get(ult, 0)), "mes": ult}}
+            if tipus == "quirurgiques":
+                out["le_pacients"] = {"tipus": "linia", "u": "n", "dec": 0, "series": {"gi": [[_mes_x(m), m, int(v)] for m, v in g.items()]}}
+            # Procedimientos con más pacientes en Girona: días de espera Girona vs Cataluña
+            u = x[x["mes"] == ult]
+            gi = u[u["regio"] == "Girona"].groupby("grup")[["pacients", "pond"]].sum()
+            ca = u.groupby("grup")[["pacients", "pond"]].sum()
+            gi = gi[~gi.index.astype(str).str.startswith("Resta")]
+            top = gi.sort_values("pacients", ascending=False).head(10 if tipus != "quirurgiques" else 12)
+            grups = [{"g": nom, "c": "", "gi": round(float(v.pond / v.pacients), 0), "cat": round(float(ca.loc[nom, "pond"] / ca.loc[nom, "pacients"]), 0),
+                      "n": int(v.pacients)} for nom, v in top.iterrows() if v.pacients and ca.loc[nom, "pacients"]]
+            out[k + "_proc"] = {"tipus": "barres", "u": "dies", "dec": 0, "claus": ["gi", "cat"], "any": ult, "grups": grups}
+    if fc.exists():
+        ce = pd.read_csv(fc)
+        for c_ in ("pacients", "dies", "activitat"):
+            ce[c_] = pd.to_numeric(ce[c_], errors="coerce")
+        for tipus, k in (("quirurgiques", "le_quir_hosp"), ("externes", "le_ext_hosp"), ("diagnostiques", "le_diag_hosp")):
+            x = ce[ce["tipus"] == tipus]
+            if x.empty:
+                continue
+            ult = x["mes"].max()
+            u = x[x["mes"] == ult].assign(pond=lambda d: d["pacients"] * d["dies"])
+            h = u.groupby("centre")[["pacients", "pond"]].sum()
+            h = h[h["pacients"] >= 20]
+            h["dies"] = h["pond"] / h["pacients"]
+            h = h.sort_values("dies", ascending=False)
+            out[k] = {"tipus": "barres", "u": "dies", "dec": 0, "claus": ["gi"], "any": ult,
+                      "grups": [{"g": NOMS_HOSP.get(nom, nom), "c": "", "gi": round(float(v.dies), 0), "n": int(v.pacients)} for nom, v in h.iterrows()]}
+    # Recetas: por habitante y año (años completos), y grupos terapéuticos en los últimos 12 meses
+    pr = sal / "poblacio_rs.csv"
+    fm = sal / "receptes_mes.csv"
+    if fm.exists() and pr.exists():
+        rm = pd.read_csv(fm, dtype={"rs": str})
+        po = pd.read_csv(pr, dtype={"rs_codi": str})
+        pob = {(int(a), str(c_)): float(v) for a, c_, v in zip(po["any"], po["rs_codi"], po["p"]) if v == v}
+        anys_p = sorted({a for a, _ in pob})
+        def pob_any(a, rs=None):
+            a2 = a if a in anys_p else min(anys_p, key=lambda y: abs(y - a))
+            return sum(v for (y, c_), v in pob.items() if y == a2 and (rs is None or c_ == rs))
+        compl = rm.groupby("any")["mes"].nunique()
+        anys_c = [int(a) for a, n in compl.items() if n == 12]
+        for k, col, dec in (("rec_hab", "receptes", 1), ("rec_euros", "import", 0)):
+            ser = {}
+            for z, rs in (("gi", "64"), ("cat", None)):
+                x = rm if rs is None else rm[rm["rs"] == rs]
+                g = x.groupby("any")[col].sum()
+                ser[z] = [[a, str(a), round(float(g[a]) / pob_any(a, rs), dec)] for a in anys_c if a in g and pob_any(a, rs)]
+            out[k] = {"tipus": "linia", "u": "€" if col == "import" else "n", "dec": dec, "series": ser}
+        fa = sal / "receptes_atc.csv.gz"
+        if fa.exists():
+            ra = pd.read_csv(fa, dtype={"rs": str, "atc": str})
+            ra["m"] = ra["any"].astype(int) * 100 + ra["mes"].astype(int)
+            ms = sorted(ra["m"].unique())[-12:]
+            ra = ra[ra["m"].isin(ms)]
+            a_ult = int(str(ms[-1])[:4])
+            pg, pc = pob_any(a_ult, "64"), pob_any(a_ult)
+            grups = []
+            for clau, pref in GRUPS_ATC:
+                m_ = ra["atc"].astype(str).str.startswith(tuple(pref))
+                vg = ra.loc[m_ & (ra["rs"] == "64"), "receptes"].sum() / pg * 100
+                vc = ra.loc[m_, "receptes"].sum() / pc * 100
+                grups.append({"g": clau, "c": "atc:" + clau, "gi": round(float(vg), 1), "cat": round(float(vc), 1)})
+            grups.sort(key=lambda g: -g["gi"])
+            per = f"{str(ms[0])[:4]}-{str(ms[0])[4:]}/{str(ms[-1])[:4]}-{str(ms[-1])[4:]}"
+            out["rec_grups"] = {"tipus": "barres", "u": "n", "dec": 1, "claus": ["gi", "cat"], "any": per, "grups": grups}
+    # Infecciones respiratorias atendidas en primaria, semanal, por 100.000 habitantes
+    fi = sal / "infeccions_rs.csv"
+    if fi.exists() and pr.exists():
+        iv = pd.read_csv(fi, dtype={"rs": str})
+        resp = ["Altres IRA", "Bronquiolitis", "COVID-19", "Grip", "Pneumònia"]
+        pr_ = _pob_rs(sal)
+        for k, dg in (("inf_setm", resp), ("grip_setm", ["Grip"])):
+            x = iv[iv["diagnostic"].isin(dg)]
+            ser = {}
+            for z, filt, p_ in (("gi", x["rs"] == "64", pr_.get("64")), ("cat", pd.Series(True, index=x.index), sum(pr_.values()))):
+                g = x[filt].groupby("data_inici")["casos"].sum().sort_index()
+                if p_:
+                    ser[z] = [[round(pd.Timestamp(d).year + (pd.Timestamp(d).dayofyear - 1) / 365.25, 4), d, round(float(v) / p_ * 1e5, 0)] for d, v in g.items()]
+            out[k] = {"tipus": "linia", "u": "n", "dec": 0, "series": ser}
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -1630,7 +1850,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series()}, "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series()}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {})},
         "trib_ref": refs_trib,
         "provincia": {

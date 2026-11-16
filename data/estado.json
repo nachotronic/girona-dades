@@ -90,6 +90,13 @@
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
+ "llistes_espera": {
+  "estat": "ok",
+  "intent": "2026-11-16T14:41:17Z",
+  "ok": "2026-11-16T14:41:17Z",
+  "durada": 137,
+  "resum": "quirurgiques: 93 mesos baixats, últim 2026-09\nexternes: 93 mesos baixats, últim 2026-09\ndiagnostiques: 93 mesos baixats, últim 2026-09"
+ },
  "mitma": {
   "estat": "ok",
   "intent": "2026-11-16T12:19:03Z",
@@ -141,10 +148,10 @@
  },
  "salut": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-16T14:36:06Z",
+  "ok": "2026-11-16T14:36:06Z",
+  "durada": 310,
+  "resum": "39 ABS en la provincia (de 377)\nmortalidad [2021, 2022, 2023, 2024, 2025]: 39 ABS; RME Girona 104.7\natención primaria 2022-12: 21 indicadores, 39 ABS\nreceptes: 1128 files (fins 2025-10), 175 grups ATC\ninfeccions: setmanes fins 2026-11-02, 39 ABS\ncentres sanitaris: 202 ({'cap': 133, 'continuada': 24, 'mental': 16, 'sociosanitari': 12, 'hospital': 11, 'drogues': 6})"
  },
  "territorio": {
   "estat": "ok",
