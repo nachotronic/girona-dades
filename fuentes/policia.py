@@ -27,6 +27,46 @@ def clau_abp(nom: str) -> str:
     return normaliza(str(nom).replace("ABP", " ").replace("Àrea Bàsica Policial", " "))
 
 
+# Tipos de hecho que se guardan aparte (el resto va solo en los totales por título del Código Penal)
+TIPUS = {
+    "furts": ("Furt",), "robatori_forca": ("Robatori amb força",), "robatori_vehicle": ("Robatori amb força interior vehicle",),
+    "robatori_violencia": ("Robatori amb violència i/o intimidació",), "estafes": ("Estafes",), "danys": ("Danys",),
+    "lesions": ("Lesions",), "amenaces": ("Amenaces", "Coaccions"), "ocupacio": ("Ocupació immobles", "Usurpació"),
+    "drogues": ("Contra la salut pública",), "agressions_sexuals": ("Agressions sexuals i Abusos sexuals",),
+    "alcohol": ("Conduir sota els efectes d'alcohol i drogues",), "trencament": ("Trencament de condemna",),
+}
+
+
+def mensuals(f: pd.DataFrame, sal) -> str:
+    """Series mensuales por región policial (total y tipos) y tipos por ABP de los últimos 12 meses."""
+    tip = f["Tipus de fet"].astype(str).str.strip()
+    f = f.assign(tipus="")
+    for k, noms in TIPUS.items():
+        f.loc[tip.isin(noms), "tipus"] = k
+    rp = "Regió Policial (RP)"
+    tot = f.groupby(["Any", "Mes", rp])[["Coneguts", "Resolts", "Detencions"]].sum().reset_index().assign(tipus="total")
+    per = f[f["tipus"] != ""].groupby(["Any", "Mes", rp, "tipus"])[["Coneguts", "Resolts", "Detencions"]].sum().reset_index()
+    m = pd.concat([tot, per])
+    m.columns = ["any", "mes", "rp", "coneguts", "resolts", "detencions", "tipus"]
+    m = m.dropna(subset=["any", "mes"])
+    m[["any", "mes"]] = m[["any", "mes"]].astype(int)
+    m.to_csv(sal / "fets_mensuals_rp.csv.gz", index=False)
+    # Últimos 12 meses por ABP y tipo
+    f["ym"] = f["Any"] * 12 + f["Mes"] - 1
+    u = int(f["ym"].max())
+    d = f[f["ym"] > u - 12]
+    abp = "Àrea Bàsica Policial (ABP)"
+    a = pd.concat([d.groupby([abp, rp])[["Coneguts", "Resolts", "Detencions"]].sum().reset_index().assign(tipus="total"),
+                   d[d["tipus"] != ""].groupby([abp, rp, "tipus"])[["Coneguts", "Resolts", "Detencions"]].sum().reset_index()])
+    a.columns = ["abp", "rp", "coneguts", "resolts", "detencions", "tipus"]
+    a["clau"] = a["abp"].map(clau_abp)
+    a["fins"] = f"{u // 12}-{u % 12 + 1:02d}"
+    a.to_csv(sal / "fets_12m_abp.csv", index=False)
+    sense = sorted(set(TIPUS) - set(m["tipus"]))
+    return (f"series mensuales: {m['rp'].nunique()} regiones, {m['tipus'].nunique()} tipos, hasta {u // 12}-{u % 12 + 1:02d}; "
+            f"12 meses por ABP: {a['abp'].nunique()} ABP" + (f"; ERROR tipos sin casar: {sense}" if sense else ""))
+
+
 def ejecutar() -> str:
     import geopandas as gpd
     from shapely import wkt
@@ -86,6 +126,7 @@ def ejecutar() -> str:
     f["Detencions"] = pd.to_numeric(f["Detencions"], errors="coerce").fillna(0)
     f["Any"] = pd.to_numeric(f["Any"], errors="coerce")
     f["Mes"] = pd.to_numeric(f["Mes"], errors="coerce")
+    lineas.append(mensuals(f, sal))
     meses = f.groupby("Any")["Mes"].nunique()
     f = f[f["Any"].isin(meses[meses == 12].index)]
     agg = (f.groupby(["Àrea Bàsica Policial (ABP)", "Regió Policial (RP)", "Any", "Títol Codi Penal"])

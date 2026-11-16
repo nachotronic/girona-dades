@@ -156,6 +156,62 @@
       menys_q: (v) => `un ${v} menos`, mes_q: (v) => `un ${v} más`,
     },
   };
+  // Seguridad y justicia (Mossos, Interior, CGPJ)
+  Object.assign(TP.ca, {
+    mossos_mes: ["Delictes, mes a mes", "Fets penals coneguts en 12 mesos per 1.000 habitants"],
+    mmes_noms: { gi: "Regió Policial Girona", cat: "Catalunya" },
+    h_mossos_mes: (n, d, v) => `<b>${n}</b> fets penals coneguts a la Regió Policial Girona en els últims 12 mesos (fins ${d}), ${v} que els 12 anteriors.`,
+    rp_fets: ["Regions policials", "Fets penals coneguts per 1.000 habitants, últims 12 mesos"],
+    rp_noms: { gi: "Fets per 1.000 habitants" },
+    h_rp_fets: (p, v, c) => `La Regió Policial Girona és la <b>${p}</b> de nou en delictes per habitant (${v} per 1.000), davant de ${c} a tot Catalunya.`,
+    rp_tipus: ["Quins delictes", "Fets coneguts per 1.000 habitants, últims 12 mesos"],
+    rpt_noms: { gi: "Regió Policial Girona", cat: "Catalunya" },
+    h_rp_tipus: (t, v, c) => `El delicte més freqüent són els <b>${t.toLowerCase()}</b>: ${v} per 1.000 habitants a la regió, ${c} a Catalunya.`,
+    int_munis: ["Ciutats de més de 20.000 habitants", "Infraccions penals per 1.000 habitants"],
+    intm_noms: { gi: "Infraccions per 1.000 habitants" },
+    h_int_munis: (m, v, a, g) => `<b>${m}</b> és la ciutat de la província amb més infraccions penals per habitant el ${a} (${v} per 1.000). La província, ${g}.`,
+    llancaments: ["Desnonaments", "Llançaments practicats per 10.000 habitants"],
+    h_llancaments: (n, d, v) => `<b>${n}</b> desnonaments practicats a la província en els últims quatre trimestres (fins ${d}), ${v} que un any abans.`,
+    llanc_tipus: ["Per què es desnona", "Llançaments practicats a la província per trimestre"],
+    llanc_tipus_noms: { gi: "Lloguer (LAU)", cat: "Hipoteca", esp: "Altres (ocupacions, precari…)" },
+    h_llanc_tipus: (l, t, d) => `<b>${l}</b> dels ${t} desnonaments del ${d} van ser per impagament del lloguer.`,
+    vdg: ["Violència de gènere", "Denúncies als jutjats per 10.000 habitants"],
+    h_vdg: (n, p, g, e) => `<b>${n}</b> denúncies per violència de gènere als jutjats de la província el ${p}. En un any, ${g} per 10.000 habitants (Espanya, ${e}).`,
+    z_gi: "Província de Girona", z_cat: "Catalunya", z_esp: "Espanya",
+    font_mossos: "Font: Mossos d'Esquadra, fets penals coneguts", font_interior: "Font: Ministeri de l'Interior, Balanç de Criminalitat",
+    font_cgpj: "Font: Consell General del Poder Judicial",
+  });
+  Object.assign(TP.es, {
+    mossos_mes: ["Delitos, mes a mes", "Hechos penales conocidos en 12 meses por 1.000 habitantes"],
+    mmes_noms: { gi: "Región Policial Girona", cat: "Cataluña" },
+    h_mossos_mes: (n, d, v) => `<b>${n}</b> hechos penales conocidos en la Región Policial Girona en los últimos 12 meses (hasta ${d}), ${v} que los 12 anteriores.`,
+    rp_fets: ["Regiones policiales", "Hechos penales conocidos por 1.000 habitantes, últimos 12 meses"],
+    rp_noms: { gi: "Hechos por 1.000 habitantes" },
+    h_rp_fets: (p, v, c) => `La Región Policial Girona es la <b>${p}</b> de nueve en delitos por habitante (${v} por 1.000), frente a ${c} en toda Cataluña.`,
+    rp_tipus: ["Qué delitos", "Hechos conocidos por 1.000 habitantes, últimos 12 meses"],
+    rpt_noms: { gi: "Región Policial Girona", cat: "Cataluña" },
+    h_rp_tipus: (t, v, c) => `El delito más frecuente son los <b>${t.toLowerCase()}</b>: ${v} por 1.000 habitantes en la región, ${c} en Cataluña.`,
+    int_munis: ["Ciudades de más de 20.000 habitantes", "Infracciones penales por 1.000 habitantes"],
+    intm_noms: { gi: "Infracciones por 1.000 habitantes" },
+    h_int_munis: (m, v, a, g) => `<b>${m}</b> es la ciudad de la provincia con más infracciones penales por habitante en ${a} (${v} por 1.000). La provincia, ${g}.`,
+    llancaments: ["Desahucios", "Lanzamientos practicados por 10.000 habitantes"],
+    h_llancaments: (n, d, v) => `<b>${n}</b> desahucios practicados en la provincia en los últimos cuatro trimestres (hasta ${d}), ${v} que un año antes.`,
+    llanc_tipus: ["Por qué se desahucia", "Lanzamientos practicados en la provincia por trimestre"],
+    llanc_tipus_noms: { gi: "Alquiler (LAU)", cat: "Hipoteca", esp: "Otros (ocupaciones, precario…)" },
+    h_llanc_tipus: (l, t, d) => `<b>${l}</b> de los ${t} desahucios del ${d} fueron por impago del alquiler.`,
+    vdg: ["Violencia de género", "Denuncias en los juzgados por 10.000 habitantes"],
+    h_vdg: (n, p, g, e) => `<b>${n}</b> denuncias por violencia de género en los juzgados de la provincia en el ${p}. En un año, ${g} por 10.000 habitantes (España, ${e}).`,
+    z_gi: "Provincia de Girona", z_cat: "Cataluña", z_esp: "España",
+    font_mossos: "Fuente: Mossos d'Esquadra, hechos penales conocidos", font_interior: "Fuente: Ministerio del Interior, Balance de Criminalidad",
+    font_cgpj: "Fuente: Consejo General del Poder Judicial",
+  });
+  const MO = {
+    furts: ["Furts", "Hurtos"], robatori_forca: ["Robatoris amb força", "Robos con fuerza"], robatori_vehicle: ["Robatoris en vehicles", "Robos en vehículos"],
+    robatori_violencia: ["Robatoris amb violència", "Robos con violencia"], estafes: ["Estafes", "Estafas"], danys: ["Danys", "Daños"], lesions: ["Lesions", "Lesiones"],
+    amenaces: ["Amenaces i coaccions", "Amenazas y coacciones"], ocupacio: ["Ocupacions d'immobles", "Ocupaciones de inmuebles"], drogues: ["Tràfic de drogues", "Tráfico de drogas"],
+    agressions_sexuals: ["Agressions sexuals", "Agresiones sexuales"], alcohol: ["Alcohol o drogues al volant", "Alcohol o drogas al volante"],
+    trencament: ["Trencaments de condemna", "Quebrantamientos de condena"],
+  };
   const GRUPS_CA = {
     "Alimentos y bebidas no alcohólicas": "Aliments i begudes no alcohòliques", "Bebidas alcohólicas, tabaco y estupefacientes": "Begudes alcohòliques i tabac",
     "Vestido y calzado": "Vestit i calçat", "Vivienda, agua, electricidad, gas y otros combustibles": "Habitatge, aigua, electricitat i gas",
@@ -188,7 +244,7 @@
   };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : "");
   const etiqueta = (e) => {
@@ -275,6 +331,13 @@
     if (id === "univ_fora_prov") { const g = ult(sp, "gi"); const g0 = sp.series.gi[0]; return g && sp.abs ? tp("h_univ", pct(g[2], 0), fmt(sp.abs.fora), fmt(sp.abs.residents), sp.abs.curs, pct(g0[2], 0), g0[1]) : ""; }
     if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
+    if (id === "mossos_mes") { const g = ult(sp, "gi"); const a = sp.abs || {}; return g && a.n12 ? tp("h_mossos_mes", fmt(a.n12), etiqueta(g[1]), a.n12_ant ? delta((a.n12 / a.n12_ant) * 100) : "") : ""; }
+    if (id === "rp_fets") { const i = sp.grups.findIndex((x) => x.g === "Girona"); const ords = LANG === "ca" ? ["primera", "segona", "tercera", "quarta", "cinquena", "sisena", "setena", "vuitena", "novena"] : ["primera", "segunda", "tercera", "cuarta", "quinta", "sexta", "séptima", "octava", "novena"]; return i >= 0 ? tp("h_rp_fets", ords[i] || i + 1, fmt(sp.grups[i].gi, 1), fmt(sp.abs.cat, 1)) : ""; }
+    if (id === "rp_tipus") { const g = sp.grups[0]; return g ? tp("h_rp_tipus", nomGrup(g.g, g.c), fmt(g.gi, 1), fmt(g.cat, 1)) : ""; }
+    if (id === "int_munis") { const g = sp.grups[0], p = sp.grups.find((x) => x.c === "z:gi"); return g && !g.c ? tp("h_int_munis", g.g, fmt(g.gi, 1), sp.abs.any, p ? fmt(p.gi, 1) : "–") : ""; }
+    if (id === "llancaments") { const a = sp.abs || {}; return a.n4 ? tp("h_llancaments", fmt(a.n4), a.fins, a.n4_ant ? delta((a.n4 / a.n4_ant) * 100) : "") : ""; }
+    if (id === "llanc_tipus") { const l = ult(sp, "gi"), h = ult(sp, "cat"), o = ult(sp, "esp"); return l ? tp("h_llanc_tipus", fmt(l[2]), fmt(l[2] + (h ? h[2] : 0) + (o ? o[2] : 0)), etiqueta(l[1])) : ""; }
+    if (id === "vdg") { const g = ult(sp, "gi"), e = ult(sp, "esp"), a = sp.abs || {}; return g ? tp("h_vdg", fmt(a.n), a.per, fmt(g[2], 1), fmt(e && e[2], 1)) : ""; }
     if (/^le_(quir|ext|diag)$/.test(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp(`h_${id}`, fmt(g[2]), fmt(c && c[2]), etiqueta(g[1]), fmt(sp.abs.pacients)) : ""; }
     if (id === "le_pacients") { const s_ = sp.series.gi, g = s_[s_.length - 1], a = s_.find((p) => p[1] === `${+g[1].slice(0, 4) - 1}${g[1].slice(4)}`); if (!g) return ""; const d = a ? (g[2] / a[2] - 1) * 100 : null; return tp("h_le_pacients", fmt(g[2]), etiqueta(g[1]), d == null ? "" : d < 0 ? tp("menys_q", pct(-d, 0)) : tp("mes_q", pct(d, 0))); }
     if (/_hosp$/.test(id)) { const gs = sp.grups; return gs.length > 1 ? tp("h_le_hosp", gs[0].g, fmt(gs[0].gi), gs[gs.length - 1].g, fmt(gs[gs.length - 1].gi)) : ""; }
@@ -306,8 +369,8 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov"];
-    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "turisme", "destins", "societats", "execucions", "causes", "esperanca", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
+    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
   window.pintaSeccioSalut = () => {
