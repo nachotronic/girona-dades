@@ -25,7 +25,13 @@ def estat_fonts() -> dict:
         e = json.loads((RAIZ / "data" / "estado.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return {}
-    return {k: {"estat": v.get("estat"), "ok": v.get("ok")} for k, v in e.items()}
+    res = {k: {"estat": v.get("estat"), "ok": v.get("ok")} for k, v in e.items()}
+    # Fuentes que se cargan a mano (no las ejecuta scripts/actualizar.py): fecha de la última carga
+    fm = P / "esca" / "esca_meta.json"
+    if fm.exists():
+        m = json.loads(fm.read_text(encoding="utf-8"))
+        res["esca"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("edicio")}
+    return res
 
 
 def num(s):
@@ -1139,6 +1145,55 @@ NOMS_HOSP = {
 }
 
 
+ESCA_GRUPS = {  # gráfico -> [(clave, texto que identifica el indicador en la tabla)]
+    "esca_salut": [("percepcio", "Percepció positiva de l'estat de salut"), ("pressio", "pressió alta"), ("diabetis", "diabetis"),
+                   ("exces_pes", "excés de pes"), ("obesitat", "Tenir obesitat"), ("cronica", "malaltia o problema de salut crònic"),
+                   ("dolor", "Tenir dolor"), ("benestar", "baix benestar emocional"), ("depressio", "depressió moderada"),
+                   ("discapacitat", "alguna discapacitat"), ("dependencia", "dependència")],
+    "esca_habits": [("tabac", "Consum de tabac"), ("activitat", "Activitat física saludable"), ("dormir", "Dormir les hores"),
+                    ("mediterrania", "dieta mediterrània"), ("fruita", "5 racions"), ("ensucrades", "begudes ensucrades"),
+                    ("a_peu", "a peu, en bicicleta"), ("transport", "transport públic")],
+    "esca_serveis": [("visita", "Visita a un professional"), ("medicaments", "medicaments preescrits"), ("urgencies", "servei d'urgències"),
+                     ("hospital", "Hospitalització"), ("doble", "doble cobertura"), ("satisfaccio", "Satisfacció")],
+    "esca_infants": [("percepcio", "Percepció positiva de l'estat de salut"), ("exces_pes", "excés de pes"), ("obesitat", "Tenir obesitat"),
+                     ("mental", "problema de salut mental"), ("oci_actiu", "oci actiu"), ("oci_sed", "oci sedentari"),
+                     ("fruita", "5 racions"), ("hipercalorics", "hipercalòrics"), ("dents", "Raspallar-se")],
+}
+ESCA_EVOL = [("gi", "Consum de tabac"), ("cat", "Obesitat"), ("esp", "Pressió alta")]
+
+
+def esca_series():
+    """Encuesta de Salud de Cataluña (carga manual anual, scripts/esca_manual.py)."""
+    d = P / "esca"
+    out = {}
+    if not (d / "esca_regio.csv").exists():
+        return out
+    meta = json.loads((d / "esca_meta.json").read_text(encoding="utf-8")) if (d / "esca_meta.json").exists() else {}
+    r = pd.read_csv(d / "esca_regio.csv")
+    r = r[r["sexe"] == "total"]
+    for graf, inds in ESCA_GRUPS.items():
+        x = r[r["bloc"] == ("infants" if graf == "esca_infants" else "adults")]
+        grups = []
+        for clau, txt in inds:
+            f = x[x["indicador"].str.contains(txt, case=False, regex=False)]
+            if f.empty or f["gi"].isna().iloc[0]:
+                continue
+            f = f.iloc[0]
+            grups.append({"g": clau, "c": "esca:" + clau, "gi": round(float(f["gi"]) * 100, 1), "cat": round(float(f["cat"]) * 100, 1),
+                          "s": int(f["sig"])})
+        if grups:
+            out[graf] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["gi", "cat"], "any": meta.get("periode_regio", ""), "grups": grups}
+    fe = d / "esca_evolucio.csv"
+    if fe.exists():
+        e = pd.read_csv(fe)
+        ser = {}
+        for z, txt in ESCA_EVOL:
+            g = e[e["indicador"].str.startswith(txt)].sort_values("any")
+            ser[z] = [[int(a), str(int(a)), round(float(v) * 100, 1)] for a, v in zip(g["any"], g["cat"])]
+        out["esca_evol"] = {"tipus": "linia", "u": "%", "dec": 1, "noms": "evol", "series": ser}
+    return out
+
+
 def salut_series():
     sal = P / "salut"
     out = {}
@@ -1223,6 +1278,7 @@ def salut_series():
             grups.sort(key=lambda g: -g["gi"])
             per = f"{str(ms[0])[:4]}-{str(ms[0])[4:]}/{str(ms[-1])[:4]}-{str(ms[-1])[4:]}"
             out["rec_grups"] = {"tipus": "barres", "u": "n", "dec": 1, "claus": ["gi", "cat"], "any": per, "grups": grups}
+    out.update(esca_series())
     # Infecciones respiratorias atendidas en primaria, semanal, por 100.000 habitantes
     fi = sal / "infeccions_rs.csv"
     if fi.exists() and pr.exists():

@@ -953,3 +953,4 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .fx-grans li span:nth-child(2) { color: var(--text-2); font-size: 13px; }
 .fx-grans li span:nth-child(3) { font: 500 13px var(--mono); text-align: right; }
 @media (max-width: 640px) { .fx-grans li { grid-template-columns: minmax(0, 1fr) 5.5em; } .fx-grans li span:nth-child(2) { grid-row: 2; grid-column: 1; } }
+.pb-n.pb-sm, .pb-n.pb-sn { color: var(--text); font-weight: 600; }

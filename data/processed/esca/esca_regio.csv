@@ -1,0 +1,173 @@
+num,indicador,poblacio,cat,gi,gi_ic,sig,bloc,sexe
+1,Percepció positiva de l'estat de salut,≥15 anys,0.7857794011825205,0.816132084288745,"(78,2-85,0)",0,adults,total
+2,Percepció positiva de la salut bucodental,≥15 anys,0.7122871405720781,0.6692579604827693,"(62,8-71,1)",0,adults,total
+3,Tenir pressió alta,≥15 anys,0.2705086836599767,0.2709523393675386,"(23,2-31,0)",0,adults,total
+4,Tenir diabetis,≥15 anys,0.08731409857443467,0.08117035307594607,"(5,7-10,5)",0,adults,total
+5,Tenir excés de pes (sobrepès+obesitat),18-74 anys,0.524579035065278,0.5397551438931133,"(48,8-59,1)",0,adults,total
+6,Tenir sobrepès,18-74 anys,0.36130217668727943,0.3637231223477525,"(31,4-41,3)",0,adults,total
+7,Tenir obesitat,18-74 anys,0.16327684992697045,0.17603202154536077,"(13,7-21,5)",0,adults,total
+8,Tenir baix benestar emocional,≥15 anys,0.10093435812363834,0.10120845921450151,"(7,3-12,9)",0,adults,total
+9,Tenir depressió moderada o greu,≥15 anys,0.05794715061486744,0.05747607575003029,"(3,6-7,9)",0,adults,total
+10,Tenir ansietat moderada o greu,≥15 anys,0.07455887736310986,,,0,adults,total
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,0.6610864587796751,0.6861996879584195,"(64,4-72,8)",0,adults,total
+12,Tenir dolor,≥15 anys,0.3062872169163601,0.31077217739096147,"(27,0-35,2)",0,adults,total
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,0.41994038952489293,0.3968533191990034,"(35,4-44,0)",0,adults,total
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,0.20788705805500501,0.15623029805991953,"(12,4-18,8)",-1,adults,total
+15,Tenir alguna discapacitat,≥15 anys,0.17199934476721437,0.1054262255833932,"(7,8-13,3)",-1,adults,total
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,0.09574074071344764,0.05565505914872504,"(3,5-7,6)",-1,adults,total
+17,Tenir suport social baix,≥15 anys,0.046454916441226256,0.03963190899731284,"(2,2-5,8)",0,adults,total
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,0.22877685620688903,0.2655397350248555,"(21,7-31,4)",0,adults,total
+19,Tenir privació material greu,≥15 anys,0.05339074203634825,0.016104746669245575,"(0,5-2,8)",-1,adults,total
+20,Consum de tabac (diari+ocasional),≥15 anys,0.21353569512902504,0.21586089064818087,"(17,9-25,3)",0,adults,total
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,0.0782071763303951,0.0757241810995067,"(4,9-10,2)",0,adults,total
+22,Dormir les hores recomanades,≥15 anys,0.690753484165857,0.7461893524115153,"(70,8-78,5)",1,adults,total
+23,Activitat física saludable (2023: només disponible de 15-69 anys),15-69,0.882,0.8588332703013551,"(82,3-89,5)",0,adults,total
+24,"Desplaçar-se habitualment a peu, en bicicleta o patinet no elèctric (2023: sense patinet no elèctric)",≥15 anys,0.3500958023176862,0.364307106736703,"(32,1-40,8)",0,adults,total
+25,Desplaçar-se habitualment en transport públic,≥15 anys,0.21038763998970836,0.05177691577764632,"(3,2-7,2)",-1,adults,total
+26,Adherència a la dieta mediterrània,≥15 anys,0.5499247973336114,0.4592438574865221,"(41,4-50,4)",-1,adults,total
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,0.09894513868806463,0.07569146394885172,"(5,2-10,0)",0,adults,total
+28,Consum diari de begudes ensucrades,≥15 anys,0.1685967670407291,0.08503494541474604,"(6,0-11,0)",-1,adults,total
+29,Seguiment d'una dieta ovo-lactovegetariana o vegana,≥15 anys,0.012154475486190842,,,0,adults,total
+30,Prova de sang oculta en femta periòdicament,50-69 anys,0.5962567214246953,0.6091925786519661,"(53,3-68,5)",0,adults,total
+31,Citologia vaginal o prova del VPH periòdicament,♀ 25-65 anys,0.6254153642509108,,,0,adults,total
+32,Prova de PSA periòdicament,♂ ≥40 anys,0.3122664333878557,,,0,adults,total
+33,Tenir doble cobertura sanitària,0+,0.33940026540244056,0.29935048533965064,"(26,4-33,4)",0,adults,total
+34,Consum de medicaments preescrits en els darrers 15 dies,≥15 anys,0.5538597856199502,0.5531055196862793,"(50,9-59,7)",0,adults,total
+35,Visita a un professional de la salut en els darrers 12 mesos,0+,0.9589260288867463,0.9430090622863438,"(92,5-96,1)",0,adults,total
+36,Hospitalització en els darrers 12 mesos,0+,0.07111327692375848,0.06709945870149325,"(4,8-8,6)",0,adults,total
+37,Visita a un servei d'urgències en els darrers 12 mesos,0+,0.38051250708394574,0.39160856671297245,"(35,4-42,9)",0,adults,total
+38,Satisfacció amb els serveis públics utilitzats en els darrers 12 mesos,0+,0.8498871856230401,0.8833166546194833,"(85,4-91,2)",0,adults,total
+39,Percepció positiva de l'estat de salut,0-14 anys,0.9701495210276818,0.9571932632497908,"(92,7-98,8)",0,infants,total
+40,Percepció positiva de la salut bucodental,0-14 anys,0.8679696873843495,0.8279582408788331,"(77,1-88,5)",0,infants,total
+41,Tenir excés de pes (sobrepès+obesitat),6-12 anys,0.3217093039874232,0.3319486715472567,"(22,0-44,4)",0,infants,total
+42,Tenir sobrepès,6-12 anys,0.20905344085818112,0.17249321378629595,"(8,3-26,2)",0,infants,total
+43,Tenir obesitat,6-12 anys,0.11265518698100241,0.15945545776096076,"(7,2-24,6)",0,infants,total
+44,Tenir bona qualitat de vida relacionada amb la salut,8-14 anys,0.8360136262084912,0.8455878050207736,"(76,6-92,5)",0,infants,total
+45,Probabilitat de tenir un problema de salut mental,4-14 anys,0.05720858317305879,0.05949314880161313,"(2,1-9,8)",0,infants,total
+46,Tenir alguna malaltia o problema de salut crònic,0-14 anys,0.1257733233793481,0.09687909705488132,"(5,2-14,2)",0,infants,total
+47,Tenir alguna limitació a causa d'un problema de salut,0-14 anys,0.04871093053091355,0.037335855370848645,"(0,9-6,6)",0,infants,total
+48,Tenir alguna discapacitat,0-14 anys,0.03306053162455089,0.027662831320447938,"(0,3-5,2)",0,infants,total
+49,Exposició al fum ambiental del tabac a casa,0-14 anys,0.0635575717771193,0.03994761922083591,"(1,0-6,9)",0,infants,total
+50,Dormir les hores recomanades,3-14 anys,0.7755162558550094,0.8210909781510864,"(76,0-88,3)",0,infants,total
+51,Realitzar oci actiu,3-14 anys,0.35729120166656037,0.4460472022237185,"(36,6-52,6)",0,infants,total
+52,Realitzar oci sedentari,3-14 anys,0.3956475990051655,0.4309527714712407,"(35,1-51,0)",0,infants,total
+53,"Anar al centre educatiu habitualment a peu, en bicicleta o patinet elèctric (2023: sense patinet no elèctric)",3-14 anys,0.6481938832177008,0.6348874750735922,"(55,8-71,2)",0,infants,total
+54,Anar al centre educatiu habitualment en transport públic,3-14 anys,0.08605129331157473,0.06726461270189311,"(2,7-10,7)",0,infants,total
+55,Consum diari de 5 racions de fruita i/o verdura,3-14 anys,0.08206221941922574,0.02070942067143757,"(0,0-4,4)",-1,infants,total
+56,Consum diari de begudes ensucrades,3-14 anys,0.0541342243965871,0.062386699124669806,"(2,4-10,1)",0,infants,total
+57,Consum freqüent de productes hipercalòrics,3-14 anys,0.326615199409897,0.22584404485458517,"(15,9-29,3)",-1,infants,total
+58,Raspallar-se les dents com a mínim 2 vegades al dia,5-14 anys,0.6951217557190721,0.6188948914034859,"(53,6-70,2)",0,infants,total
+1,Percepció positiva de l'estat de salut,≥15 anys,0.8238728401421952,0.8737875833073567,"(83,2-91,6)",0,adults,homes
+2,Percepció positiva de la salut bucodental,≥15 anys,0.6865613419153501,0.6773586898557595,"(61,8-73,6)",0,adults,homes
+3,Tenir pressió alta,≥15 anys,0.2724058310058838,0.2662666711320526,"(21,0-32,2)",0,adults,homes
+4,Tenir diabetis,≥15 anys,0.09205867537223067,0.10644020290026818,"(6,8-14,5)",0,adults,homes
+5,Tenir excés de pes (sobrepès+obesitat),18-74 anys,0.5826317283535555,0.6061675932919006,"(53,5-67,7)",0,adults,homes
+6,Tenir sobrepès,18-74 anys,0.42379154545007836,0.4442371796621686,"(37,2-51,6)",0,adults,homes
+7,Tenir obesitat,18-74 anys,0.15884016810654095,0.16193041362973207,"(10,9-21,5)",0,adults,homes
+8,Tenir baix benestar emocional,≥15 anys,0.0689543233739557,0.07745815799081493,"(4,2-11,3)",0,adults,homes
+9,Tenir depressió moderada o greu,≥15 anys,0.03986531625603694,0.05115179450557774,"(2,2-8,0)",0,adults,homes
+10,Tenir ansietat moderada o greu,≥15 anys,0.04377210509155336,,,0,adults,homes
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,0.6782114032265045,0.6863207356969471,"(62,7-74,6)",0,adults,homes
+12,Tenir dolor,≥15 anys,0.25586239546479184,0.25327497417375333,"(19,8-30,8)",0,adults,homes
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,0.38477169069715905,0.3704939317980993,"(31,0-43,1)",0,adults,homes
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,0.17780999135547534,0.11181154697285475,"(7,2-15,2)",-1,adults,homes
+15,Tenir alguna discapacitat,≥15 anys,0.1526833974674313,0.0807066988517947,"(4,6-11,5)",-1,adults,homes
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,0.06152095897334635,0.03997643885728458,"(1,5-6,5)",0,adults,homes
+17,Tenir suport social baix,≥15 anys,0.04105015503890902,0.028203259953008212,"(0,6-5,0)",0,adults,homes
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,0.17567704373068124,0.21044377943257475,"(14,6-27,5)",0,adults,homes
+19,Tenir privació material greu,≥15 anys,0.050716714761655055,0.0040624320208831844,"(0,0-1,2)",-1,adults,homes
+20,Consum de tabac (diari+ocasional),≥15 anys,0.2607542953769967,0.2445066016225675,"(18,9-30,0)",0,adults,homes
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,0.08234669838826301,0.044940725208055726,"(1,5-7,5)",0,adults,homes
+22,Dormir les hores recomanades,≥15 anys,0.7272567799562928,0.7692429410772881,"(71,6-82,3)",0,adults,homes
+23,Activitat física saludable (2023: només disponible de 15-69 anys),15-69,0.902,0.8775841414629791,"(82,9-92,6)",0,adults,homes
+24,"Desplaçar-se habitualment a peu, en bicicleta o patinet no elèctric (2023: sense patinet no elèctric)",≥15 anys,0.3002945010963025,0.2871137765193092,"(22,9-34,5)",0,adults,homes
+25,Desplaçar-se habitualment en transport públic,≥15 anys,0.16978830582462423,0.0360413385722391,"(1,2-6,0)",-1,adults,homes
+26,Adherència a la dieta mediterrània,≥15 anys,0.4851013595280646,0.4146924546857385,"(35,1-47,9)",0,adults,homes
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,0.07657058696719425,0.0598999414071303,"(2,9-9,1)",0,adults,homes
+28,Consum diari de begudes ensucrades,≥15 anys,0.22335012659863612,0.09514845736374507,"(5,7-13,3)",-1,adults,homes
+29,Seguiment d'una dieta ovo-lactovegetariana o vegana,≥15 anys,0.007546128828357371,,,0,adults,homes
+30,Prova de sang oculta en femta periòdicament,50-69 anys,0.5661189309595349,0.6284525721817208,"(52,1-73,6)",0,adults,homes
+32,Prova de PSA periòdicament,♂ ≥40 anys,0.3122664333878557,,,0,adults,homes
+33,Tenir doble cobertura sanitària,0+,0.3190057063887784,0.3163738127100506,"(26,6-36,7)",0,adults,homes
+34,Consum de medicaments preescrits en els darrers 15 dies,≥15 anys,0.511469359386143,0.5274788688490382,"(46,4-59,1)",0,adults,homes
+35,Visita a un professional de la salut en els darrers 12 mesos,0+,0.9428257653342759,0.9195171070010331,"(89,0-94,9)",0,adults,homes
+36,Hospitalització en els darrers 12 mesos,0+,0.06427827783484508,0.05775710630358879,"(3,2-8,3)",0,adults,homes
+37,Visita a un servei d'urgències en els darrers 12 mesos,0+,0.34125951817891415,0.4033625533435916,"(35,0-45,7)",0,adults,homes
+38,Satisfacció amb els serveis públics utilitzats en els darrers 12 mesos,0+,0.8645217823538719,0.8949770842797851,"(85,6-93,4)",0,adults,homes
+39,Percepció positiva de l'estat de salut,0-14 anys,0.961504291692528,0.9487027049980891,"(90,2-99,6)",0,infants,homes
+40,Percepció positiva de la salut bucodental,0-14 anys,0.8626025938224422,0.8435885458688975,"(76,6-92,1)",0,infants,homes
+41,Tenir excés de pes (sobrepès+obesitat),6-12 anys,0.37854209404206784,0.40484678911503225,"(23,5-57,5)",0,infants,homes
+42,Tenir sobrepès,6-12 anys,0.23868307781593073,0.22081321359267114,"(7,7-36,5)",0,infants,homes
+43,Tenir obesitat,6-12 anys,0.13985749060953395,0.1840335755223611,"(5,0-31,8)",0,infants,homes
+44,Tenir bona qualitat de vida relacionada amb la salut,8-14 anys,0.8249662524661658,0.8347713894040804,"(71,8-95,1)",0,infants,homes
+45,Probabilitat de tenir un problema de salut mental,4-14 anys,0.06746556636987608,0.05737400858490399,"(0,4-11,1)",0,infants,homes
+46,Tenir alguna malaltia o problema de salut crònic,0-14 anys,0.1503257632004952,0.14508754794966525,"(7,0-22,0)",0,infants,homes
+47,Tenir alguna limitació a causa d'un problema de salut,0-14 anys,0.06031152821742829,0.05234475632369386,"(0,5-10,0)",0,infants,homes
+48,Tenir alguna discapacitat,0-14 anys,0.038366351828952795,0.010021656970571996,"(0,0-3,1)",0,infants,homes
+49,Exposició al fum ambiental del tabac a casa,0-14 anys,0.058193855499399316,0.006468781406146051,"(0,0-2,4)",-1,infants,homes
+50,Dormir les hores recomanades,3-14 anys,0.7888232771006067,0.8217682753548086,"(73,5-90,8)",0,infants,homes
+51,Realitzar oci actiu,3-14 anys,0.40597710435467005,0.4679293224787282,"(35,5-58,1)",0,infants,homes
+52,Realitzar oci sedentari,3-14 anys,0.4256557824205753,0.4837183644812945,"(37,1-59,7)",0,infants,homes
+53,"Anar al centre educatiu habitualment a peu, en bicicleta o patinet no elèctric (2023: sense patinet no elèctric)",3-14 anys,0.6645021870552171,0.6901255411979071,"(58,5-79,5)",0,infants,homes
+54,Anar al centre educatiu habitualment en transport públic,3-14 anys,0.08222243987421568,0.05237291252235837,"(0,2-10,3)",0,infants,homes
+55,Consum diari de 5 racions de fruita i/o verdura,3-14 anys,0.08668385972300693,0.04010297387205162,"(0,0-8,5)",0,infants,homes
+56,Consum diari de begudes ensucrades,3-14 anys,0.05967682779431009,0.07859984621042426,"(1,8-14,0)",0,infants,homes
+57,Consum freqüent de productes hipercalòrics,3-14 anys,0.32969760371102824,0.19466408117550693,"(10,5-28,4)",-1,infants,homes
+58,Raspallar-se les dents com a mínim 2 vegades al dia,5-14 anys,0.6505599212502479,0.5913004606324465,"(47,4-70,9)",0,infants,homes
+1,Percepció positiva de l'estat de salut,≥15 anys,0.749455157534673,0.759171404865286,"(70,6-81,2)",0,adults,dones
+2,Percepció positiva de la salut bucodental,≥15 anys,0.736820585941133,0.6612548548507785,"(60,2-72,0)",0,adults,dones
+3,Tenir pressió alta,≥15 anys,0.26869537603139265,0.2756100496541622,"(22,0-33,1)",0,adults,dones
+4,Tenir diabetis,≥15 anys,0.08276446846210832,0.05605107285256632,"(2,7-8,5)",0,adults,dones
+5,Tenir excés de pes (sobrepès+obesitat),18-74 anys,0.4662018090601172,0.4708719232898777,"(39,8-54,4)",0,adults,dones
+6,Tenir sobrepès,18-74 anys,0.2984634750315272,0.28021656515830273,"(21,5-34,6)",0,adults,dones
+7,Tenir obesitat,18-74 anys,0.16773833402859,0.19065535813157497,"(13,3-24,8)",0,adults,dones
+8,Tenir baix benestar emocional,≥15 anys,0.13107566755435915,0.12468389463516286,"(8,2-16,7)",0,adults,dones
+9,Tenir depressió moderada o greu,≥15 anys,0.07506526133680709,0.06373933123663893,"(3,3-9,5)",0,adults,dones
+10,Tenir ansietat moderada o greu,≥15 anys,0.1037962829280016,,,0,adults,dones
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,0.6447113468441301,0.6860789187961146,"(62,7-74,5)",0,adults,dones
+12,Tenir dolor,≥15 anys,0.35437492135786497,0.3675764686718961,"(30,8-42,7)",0,adults,dones
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,0.45350504837734124,0.42289504359821434,"(36,2-48,4)",0,adults,dones
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,0.23657196500665192,0.20019173450889702,"(15,0-25,0)",0,adults,dones
+15,Tenir alguna discapacitat,≥15 anys,0.19044883790777192,0.1298453065109721,"(8,8-17,2)",-1,adults,dones
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,0.128374485424895,0.07110352094394079,"(3,9-10,3)",-1,adults,dones
+17,Tenir suport social baix,≥15 anys,0.0515605399988839,0.05092754920946591,"(2,3-7,9)",0,adults,dones
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,0.2762626118497511,0.3173838059685201,"(24,6-38,9)",0,adults,dones
+19,Tenir privació material greu,≥15 anys,0.055975634446273424,0.027862569079104532,"(0,7-4,9)",0,adults,dones
+20,Consum de tabac (diari+ocasional),≥15 anys,0.16843198584129607,0.18730907860940524,"(13,8-23,7)",0,adults,dones
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,0.07460502386906115,0.10424549068148611,"(6,2-14,6)",0,adults,dones
+22,Dormir les hores recomanades,≥15 anys,0.655942062953443,0.7235700142018702,"(66,8-77,9)",0,adults,dones
+23,Activitat física saludable (2023: només disponible de 15-69 anys),15-69,0.861,0.8396746483748152,"(78,6-89,3)",0,adults,dones
+24,"Desplaçar-se habitualment a peu, en bicicleta o patinet no elèctric (2023: sense patinet no elèctric)",≥15 anys,0.3976280008403088,0.441245253402884,"(37,8-50,4)",0,adults,dones
+25,Desplaçar-se habitualment en transport públic,≥15 anys,0.2491371417917308,0.06746047475219923,"(3,6-9,9)",-1,adults,dones
+26,Adherència a la dieta mediterrània,≥15 anys,0.6114062157174578,0.5034167662012324,"(44,0-56,7)",-1,adults,dones
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,0.12030709369367136,0.09143086663777522,"(5,5-12,8)",0,adults,dones
+28,Consum diari de begudes ensucrades,≥15 anys,0.11638114592784186,0.0749548130688004,"(4,2-10,8)",0,adults,dones
+29,Seguiment d'una dieta ovo-lactovegetariana o vegana,≥15 anys,0.01656765080676803,,,0,adults,dones
+30,Prova de sang oculta en femta periòdicament,50-69 anys,0.623504591430332,0.5895080697441424,"(48,2-69,7)",0,adults,dones
+31,Citologia vaginal o prova del VPH periòdicament,♀ 25-65 anys,0.6254153642509108,,,0,adults,dones
+33,Tenir doble cobertura sanitària,0+,0.359147043146007,0.28235816181364937,"(23,4-33,1)",-1,adults,dones
+34,Consum de medicaments preescrits en els darrers 15 dies,≥15 anys,0.5942854773566798,0.5784233378976142,"(51,7-64,0)",0,adults,dones
+35,Visita a un professional de la salut en els darrers 12 mesos,0+,0.9745149125472633,0.9664552308609266,"(94,7-98,6)",0,adults,dones
+36,Hospitalització en els darrers 12 mesos,0+,0.0777335113734814,0.07642142723519406,"(4,8-10,5)",0,adults,dones
+37,Visita a un servei d'urgències en els darrers 12 mesos,0+,0.418558528798586,0.3798796643130294,"(32,8-43,2)",0,adults,dones
+38,Satisfacció amb els serveis públics utilitzats en els darrers 12 mesos,0+,0.8363516893529961,0.8714155458592436,"(82,9-91,4)",0,adults,dones
+39,Percepció positiva de l'estat de salut,0-14 anys,0.9793310376025924,0.9661866842294335,"(92,8-100,0)",0,infants,dones
+40,Percepció positiva de la salut bucodental,0-14 anys,0.8736661279150312,0.8114297688899533,"(72,8-89,5)",0,infants,dones
+41,Tenir excés de pes (sobrepès+obesitat),6-12 anys,0.25977169009939693,0.2709206996864256,"(12,6-41,6)",0,infants,dones
+42,Tenir sobrepès,6-12 anys,0.17676228626143636,0.13204125580868187,"(2,1-24,3)",0,infants,dones
+43,Tenir obesitat,6-12 anys,0.08300940383796059,0.13887944387774379,"(2,6-25,2)",0,infants,dones
+44,Tenir bona qualitat de vida relacionada amb la salut,8-14 anys,0.8481916310232862,0.8585093406946139,"(75,2-96,5)",0,infants,dones
+45,Probabilitat de tenir un problema de salut mental,4-14 anys,0.04605376159395397,0.0617606157011411,"(0,5-11,8)",0,infants,dones
+46,Tenir alguna malaltia o problema de salut crònic,0-14 anys,0.09965784460596644,0.045170984927826605,"(0,1-9,0)",0,infants,dones
+47,Tenir alguna limitació a causa d'un problema de salut,0-14 anys,0.036425962058520035,0.021464495270027542,"(0,0-5,2)",0,infants,dones
+48,Tenir alguna discapacitat,0-14 anys,0.027424949792650165,0.04657762938230384,"(0,2-9,2)",0,infants,dones
+49,Exposició al fum ambiental del tabac a casa,0-14 anys,0.069261460070478,0.07536522572147049,"(1,9-13,1)",0,infants,dones
+50,Dormir les hores recomanades,3-14 anys,0.761640920982642,0.82036772581221,"(73,3-90,8)",0,infants,dones
+51,Realitzar oci actiu,3-14 anys,0.3065259208760861,0.42268832559800074,"(31,0-53,5)",0,infants,dones
+52,Realitzar oci sedentari,3-14 anys,0.36435776410461274,0.3746050447169711,"(26,4-48,5)",0,infants,dones
+53,"Anar al centre educatiu habitualment a peu, en bicicleta o patinet no elèctric (2023: sense patinet no elèctric)",3-14 anys,0.631118209747242,0.5759014637629418,"(46,3-68,9)",0,infants,dones
+54,Anar al centre educatiu habitualment en transport públic,3-14 anys,0.09006030931434157,0.08316672616922528,"(2,0-14,6)",0,infants,dones
+55,Consum diari de 5 racions de fruita i/o verdura,3-14 anys,0.07723292965337551,0.0,"(0,0-0,0)",0,infants,dones
+56,Consum diari de begudes ensucrades,3-14 anys,0.048331249713638655,0.045073188147090326,"(0,0-9,2)",0,infants,dones
+57,Consum freqüent de productes hipercalòrics,3-14 anys,0.3233970802602093,0.2591395930024991,"(15,9-35,9)",0,infants,dones
+58,Raspallar-se les dents com a mínim 2 vegades al dia,5-14 anys,0.7426539173161122,0.6482761475104507,"(53,2-76,4)",0,infants,dones

@@ -1,0 +1,465 @@
+num,indicador,poblacio,any,cat
+1,Percepció positiva de l'estat de salut,≥15 anys,1994,0.721
+1,Percepció positiva de l'estat de salut,≥15 anys,2002,0.752
+1,Percepció positiva de l'estat de salut,≥15 anys,2006,0.755
+1,Percepció positiva de l'estat de salut,≥15 anys,2010,0.763
+1,Percepció positiva de l'estat de salut,≥15 anys,2011,0.771
+1,Percepció positiva de l'estat de salut,≥15 anys,2012,0.803
+1,Percepció positiva de l'estat de salut,≥15 anys,2013,0.784
+1,Percepció positiva de l'estat de salut,≥15 anys,2014,0.807
+1,Percepció positiva de l'estat de salut,≥15 anys,2015,0.807
+1,Percepció positiva de l'estat de salut,≥15 anys,2016,0.807
+1,Percepció positiva de l'estat de salut,≥15 anys,2017,0.78
+1,Percepció positiva de l'estat de salut,≥15 anys,2018,0.7729255347596309
+1,Percepció positiva de l'estat de salut,≥15 anys,2019,0.7949080100168048
+1,Percepció positiva de l'estat de salut,≥15 anys,2020,0.802766779509692
+1,Percepció positiva de l'estat de salut,≥15 anys,2021,0.7897546555290201
+1,Percepció positiva de l'estat de salut,≥15 anys,2022,0.761
+1,Percepció positiva de l'estat de salut,≥15 anys,2023,0.7853247858521474
+1,Percepció positiva de l'estat de salut,≥15 anys,2024,0.7857794011825205
+2,Percepció positiva de la salut bucodental,≥15 anys,2019,0.6597511956536635
+2,Percepció positiva de la salut bucodental,≥15 anys,2020,0.6632208234194734
+2,Percepció positiva de la salut bucodental,≥15 anys,2021,0.6753455737649396
+2,Percepció positiva de la salut bucodental,≥15 anys,2022,0.6572468237958895
+2,Percepció positiva de la salut bucodental,≥15 anys,2023,0.6753679054040385
+2,Percepció positiva de la salut bucodental,≥15 anys,2024,0.7122871405720781
+3,Pressió alta,≥15 anys,1994,0.164
+3,Pressió alta,≥15 anys,2002,0.16
+3,Pressió alta,≥15 anys,2006,0.197
+3,Pressió alta,≥15 anys,2010,0.223
+3,Pressió alta,≥15 anys,2011,0.252
+3,Pressió alta,≥15 anys,2012,0.24
+3,Pressió alta,≥15 anys,2013,0.258
+3,Pressió alta,≥15 anys,2014,0.236
+3,Pressió alta,≥15 anys,2015,0.236
+3,Pressió alta,≥15 anys,2016,0.242
+3,Pressió alta,≥15 anys,2017,0.2395500778864412
+3,Pressió alta,≥15 anys,2018,0.23164146698689123
+3,Pressió alta,≥15 anys,2019,0.25687573183413775
+3,Pressió alta,≥15 anys,2020,0.24728637490826125
+3,Pressió alta,≥15 anys,2021,0.23407060969148044
+3,Pressió alta,≥15 anys,2022,0.2641475507975768
+3,Pressió alta,≥15 anys,2023,0.25834333949983695
+3,Pressió alta,≥15 anys,2024,0.2705086836599767
+4,Diabetis,≥15 anys,1994,0.048
+4,Diabetis,≥15 anys,2002,0.059
+4,Diabetis,≥15 anys,2006,0.059
+4,Diabetis,≥15 anys,2010,0.057
+4,Diabetis,≥15 anys,2011,0.08
+4,Diabetis,≥15 anys,2012,0.078
+4,Diabetis,≥15 anys,2013,0.083
+4,Diabetis,≥15 anys,2014,0.074
+4,Diabetis,≥15 anys,2015,0.084
+4,Diabetis,≥15 anys,2016,0.081
+4,Diabetis,≥15 anys,2017,0.08489214576742259
+4,Diabetis,≥15 anys,2018,0.07764728741116644
+4,Diabetis,≥15 anys,2019,0.08119339142253419
+4,Diabetis,≥15 anys,2020,0.07885172886399403
+4,Diabetis,≥15 anys,2021,0.07795636005248885
+4,Diabetis,≥15 anys,2022,0.09039608289785298
+4,Diabetis,≥15 anys,2023,0.09145191142548717
+4,Diabetis,≥15 anys,2024,0.08731409857443467
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2006,0.487
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2010,0.465
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2011,0.495
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2012,0.49
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2013,0.485
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2014,0.481
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2015,0.498
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2016,0.49889289350766897
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2017,0.49343953512717287
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2018,0.5123150611550539
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2019,0.5213602591780665
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2020,0.5064008735305466
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2021,0.501507880876592
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2022,0.4999219509874161
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2023,0.521205127416703
+5,Excés de pes (sobrepès+obesitat),18-74 anys,2024,0.524579035065278
+6,Sobrepès,18-74 anys,2006,0.36
+6,Sobrepès,18-74 anys,2010,0.347
+6,Sobrepès,18-74 anys,2011,0.358
+6,Sobrepès,18-74 anys,2012,0.352
+6,Sobrepès,18-74 anys,2013,0.343
+6,Sobrepès,18-74 anys,2014,0.331
+6,Sobrepès,18-74 anys,2015,0.346
+6,Sobrepès,18-74 anys,2016,0.35293275269889024
+6,Sobrepès,18-74 anys,2017,0.34460210836427607
+6,Sobrepès,18-74 anys,2018,0.3634447797535008
+6,Sobrepès,18-74 anys,2019,0.3541669018652714
+6,Sobrepès,18-74 anys,2020,0.3365444277307636
+6,Sobrepès,18-74 anys,2021,0.3533463542708942
+6,Sobrepès,18-74 anys,2022,0.346753554524052
+6,Sobrepès,18-74 anys,2023,0.34893475092820075
+6,Sobrepès,18-74 anys,2024,0.36130217668727943
+7,Obesitat,18-74 anys,2006,0.127
+7,Obesitat,18-74 anys,2010,0.118
+7,Obesitat,18-74 anys,2011,0.137
+7,Obesitat,18-74 anys,2012,0.138
+7,Obesitat,18-74 anys,2013,0.142
+7,Obesitat,18-74 anys,2014,0.15
+7,Obesitat,18-74 anys,2015,0.147
+7,Obesitat,18-74 anys,2016,0.14596014039265742
+7,Obesitat,18-74 anys,2017,0.14883742676289674
+7,Obesitat,18-74 anys,2018,0.14887037249065313
+7,Obesitat,18-74 anys,2019,0.167193542387107
+7,Obesitat,18-74 anys,2020,0.16985644579978307
+7,Obesitat,18-74 anys,2021,0.14816143536916468
+7,Obesitat,18-74 anys,2022,0.1531682134645069
+7,Obesitat,18-74 anys,2023,0.17227047843193716
+7,Obesitat,18-74 anys,2024,0.16327684992697045
+8,Baix benestar emocional,≥15 anys,2022,0.127
+8,Baix benestar emocional,≥15 anys,2023,0.106
+8,Baix benestar emocional,≥15 anys,2024,0.10093435812363834
+9,Tenir depressió moderada o greu,≥15 anys,2017,0.06218733439474635
+9,Tenir depressió moderada o greu,≥15 anys,2018,0.0763709320941141
+9,Tenir depressió moderada o greu,≥15 anys,2019,0.07226519376424331
+9,Tenir depressió moderada o greu,≥15 anys,2020,0.10599605598453127
+9,Tenir depressió moderada o greu,≥15 anys,2021,0.0900465434577378
+9,Tenir depressió moderada o greu,≥15 anys,2022,0.10885331507765297
+9,Tenir depressió moderada o greu,≥15 anys,2023,0.09189156534866404
+9,Tenir depressió moderada o greu,≥15 anys,2024,0.05794715061486744
+10,Tenir ansietat moderada o greu,≥15 anys,2024,0.07455887736310986
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2011,0.66
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2012,0.7
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2013,0.657
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2014,0.68
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2015,0.718
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2016,0.714
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2019,0.7360500377668184
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2020,0.7310354517586969
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2021,0.7301954520186936
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2022,0.7002380596457725
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2023,0.6814455221342403
+11,Tenir bona qualitat de vida relacionada amb la salut,≥18 anys,2024,0.6610864587796751
+12,Tenir dolor o malestar,≥15 anys,1994,0.266
+12,Tenir dolor o malestar,≥15 anys,2002,0.321
+12,Tenir dolor o malestar,≥15 anys,2006,0.333
+12,Tenir dolor o malestar,≥15 anys,2011,0.317
+12,Tenir dolor o malestar,≥15 anys,2012,0.279
+12,Tenir dolor o malestar,≥15 anys,2013,0.3
+12,Tenir dolor o malestar,≥15 anys,2014,0.31
+12,Tenir dolor o malestar,≥15 anys,2015,0.28
+12,Tenir dolor o malestar,≥15 anys,2016,0.28
+12,Tenir dolor o malestar,≥15 anys,2019,0.2545791010365828
+12,Tenir dolor o malestar,≥15 anys,2020,0.2490857823060106
+12,Tenir dolor o malestar,≥15 anys,2021,0.2482938535793623
+12,Tenir dolor o malestar,≥15 anys,2022,0.26322239603194514
+12,Tenir dolor o malestar,≥15 anys,2023,0.28987509521803523
+12,Tenir dolor o malestar,≥15 anys,2024,0.3062872169163601
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2010,0.347
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2011,0.389
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2012,0.414
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2013,0.426
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2014,0.424
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2015,0.384
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2016,0.3926709657428238
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2017,0.37676708481628624
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2018,0.3840592563874187
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2019,0.4125046815859694
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2020,0.3782454159258906
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2021,0.379400244566349
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2022,0.4193959519043162
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2023,0.4147166020338971
+13,Tenir alguna malaltia o problema de salut crònic,≥15 anys,2024,0.41994038952489293
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2010,0.164
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2011,0.155
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2012,0.136
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2013,0.152
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2014,0.127
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2015,0.126
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2016,0.127
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2017,0.15246949119961042
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2018,0.14133810636362024
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2019,0.15188599303435432
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2020,0.16806167977184824
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2021,0.16950021430828385
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2022,0.18543111717953092
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2023,0.17671057847734253
+14,Tenir alguna limitació a causa d'un problema de salut,≥15 anys,2024,0.20788705805500501
+15,Tenir alguna discapacitat,≥15 anys,1994,0.138
+15,Tenir alguna discapacitat,≥15 anys,2002,0.142
+15,Tenir alguna discapacitat,≥15 anys,2006,0.179
+15,Tenir alguna discapacitat,≥15 anys,2010,0.176
+15,Tenir alguna discapacitat,≥15 anys,2011,0.164
+15,Tenir alguna discapacitat,≥15 anys,2012,0.148
+15,Tenir alguna discapacitat,≥15 anys,2013,0.157
+15,Tenir alguna discapacitat,≥15 anys,2014,0.146
+15,Tenir alguna discapacitat,≥15 anys,2015,0.157
+15,Tenir alguna discapacitat,≥15 anys,2016,0.14220182470962264
+15,Tenir alguna discapacitat,≥15 anys,2017,0.1449675855516605
+15,Tenir alguna discapacitat,≥15 anys,2018,0.13905969631226917
+15,Tenir alguna discapacitat,≥15 anys,2019,0.14715745155156604
+15,Tenir alguna discapacitat,≥15 anys,2020,0.17403066629289626
+15,Tenir alguna discapacitat,≥15 anys,2021,0.16012559463031406
+15,Tenir alguna discapacitat,≥15 anys,2022,0.16058010580151091
+15,Tenir alguna discapacitat,≥15 anys,2023,0.14570626043501997
+15,Tenir alguna discapacitat,≥15 anys,2024,0.17199934476721437
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2010,0.101
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2011,0.106
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2012,0.093
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2013,0.092
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2014,0.099
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2015,0.106
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2016,0.0978006099228664
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2017,0.09710696436854498
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2018,0.08814523562125234
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2019,0.08146118067309983
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2020,0.08491358809627664
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2021,0.08835340028336577
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2022,0.09350142444632732
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2023,0.08572361847782627
+16,Tenir manca d'autonomia personal (dependència),≥15 anys,2024,0.09574074071344764
+17,Tenir suport social baix,≥15 anys,2017,0.05377506239566013
+17,Tenir suport social baix,≥15 anys,2018,0.08119098780035416
+17,Tenir suport social baix,≥15 anys,2019,0.1571866040100665
+17,Tenir suport social baix,≥15 anys,2020,0.09410270833841668
+17,Tenir suport social baix,≥15 anys,2021,0.07594632064567083
+17,Tenir suport social baix,≥15 anys,2022,0.05871880234840354
+17,Tenir suport social baix,≥15 anys,2023,0.05724978081676281
+17,Tenir suport social baix,≥15 anys,2024,0.046454916441226256
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,2019,0.23574400791103733
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,2020,0.2617756433371762
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,2021,0.21723285865794073
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,2022,0.24237289919850827
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,2023,0.2760334409210042
+18,Tenir dificultats per recordar o concentrar-se,≥45 anys,2024,0.22877685620688903
+19,Tenir privació material greu,≥15 anys,2015,0.063
+19,Tenir privació material greu,≥15 anys,2016,0.048
+19,Tenir privació material greu,≥15 anys,2017,0.054
+19,Tenir privació material greu,≥15 anys,2018,0.036
+19,Tenir privació material greu,≥15 anys,2019,0.029
+19,Tenir privació material greu,≥15 anys,2020,0.044325757731640575
+19,Tenir privació material greu,≥15 anys,2021,0.03762025026430504
+19,Tenir privació material greu,≥15 anys,2022,0.05246836506504305
+19,Tenir privació material greu,≥15 anys,2023,0.05106468287728684
+19,Tenir privació material greu,≥15 anys,2024,0.05339074203634825
+20,Consum de tabac (diari+ocasional),≥15 anys,1994,0.308
+20,Consum de tabac (diari+ocasional),≥15 anys,2002,0.321
+20,Consum de tabac (diari+ocasional),≥15 anys,2006,0.294
+20,Consum de tabac (diari+ocasional),≥15 anys,2010,0.294
+20,Consum de tabac (diari+ocasional),≥15 anys,2011,0.295
+20,Consum de tabac (diari+ocasional),≥15 anys,2012,0.285
+20,Consum de tabac (diari+ocasional),≥15 anys,2013,0.265
+20,Consum de tabac (diari+ocasional),≥15 anys,2014,0.259
+20,Consum de tabac (diari+ocasional),≥15 anys,2015,0.257
+20,Consum de tabac (diari+ocasional),≥15 anys,2016,0.2468884514162928
+20,Consum de tabac (diari+ocasional),≥15 anys,2017,0.23988517150243155
+20,Consum de tabac (diari+ocasional),≥15 anys,2018,0.25584222330028894
+20,Consum de tabac (diari+ocasional),≥15 anys,2019,0.23903571126295473
+20,Consum de tabac (diari+ocasional),≥15 anys,2020,0.246232260528898
+20,Consum de tabac (diari+ocasional),≥15 anys,2021,0.22621878823661354
+20,Consum de tabac (diari+ocasional),≥15 anys,2022,0.24121648862947076
+20,Consum de tabac (diari+ocasional),≥15 anys,2023,0.22600779469215915
+20,Consum de tabac (diari+ocasional),≥15 anys,2024,0.21353569512902504
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2006,0.217
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2010,0.181
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2011,0.188
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2012,0.132
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2013,0.147
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2014,0.134
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2015,0.123
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2016,0.11143754404011005
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2017,0.09732603112408106
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2018,0.08977178634944077
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2019,0.08336434716439435
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2020,0.07739662607018512
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2021,0.06402176309983752
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2022,0.06919139946052123
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2023,0.07492912188446012
+21,Exposició al fum ambiental del tabac a casa,≥15 anys,2024,0.0782071763303951
+22,Dormir les hores recomanades,≥15 anys,1994,0.6806672882084331
+22,Dormir les hores recomanades,≥15 anys,2002,0.7055101682331241
+22,Dormir les hores recomanades,≥15 anys,2006,0.6644957943968857
+22,Dormir les hores recomanades,≥15 anys,2013,0.6899568194363429
+22,Dormir les hores recomanades,≥15 anys,2014,0.7097947529034735
+22,Dormir les hores recomanades,≥15 anys,2015,0.6982107490242955
+22,Dormir les hores recomanades,≥15 anys,2016,0.684145189194441
+22,Dormir les hores recomanades,≥15 anys,2017,0.6944397181215766
+22,Dormir les hores recomanades,≥15 anys,2018,0.6825495373791671
+22,Dormir les hores recomanades,≥15 anys,2019,0.6707532058898648
+22,Dormir les hores recomanades,≥15 anys,2020,0.6440769218424404
+22,Dormir les hores recomanades,≥15 anys,2021,0.7023236592957522
+22,Dormir les hores recomanades,≥15 anys,2022,0.6981847758645496
+22,Dormir les hores recomanades,≥15 anys,2023,0.7040502525917968
+22,Dormir les hores recomanades,≥15 anys,2024,0.690753484165857
+23,Activitat física saludable,≥15 anys,2010,0.722
+23,Activitat física saludable,≥15 anys,2011,0.716
+23,Activitat física saludable,≥15 anys,2012,0.705
+23,Activitat física saludable,≥15 anys,2013,0.686
+23,Activitat física saludable,≥15 anys,2014,0.678
+23,Activitat física saludable,≥15 anys,2015,0.742
+23,Activitat física saludable,≥15 anys,2016,0.809291075268921
+23,Activitat física saludable,≥15 anys,2017,0.8069104813196175
+23,Activitat física saludable,≥15 anys,2018,0.8281789418081092
+23,Activitat física saludable,≥15 anys,2019,0.8213547741741423
+23,Activitat física saludable,≥15 anys,2020,0.8318393969099716
+23,Activitat física saludable,≥15 anys,2021,0.8369363380958775
+23,Activitat física saludable,≥15 anys,2022,0.8229532478918241
+23,Activitat física saludable,≥15 anys,2023,0.8396764500557055
+23,Activitat física saludable,≥15 anys,2024,0.8551234013723427
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2015,0.34894816710575344
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2016,0.38410133265853885
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2017,0.35235851763521586
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2018,0.30835599809462344
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2019,0.3322408116442948
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2020,0.3389449404823587
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2021,0.3661274883106122
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2022,0.3709979182878609
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2023,0.34663132507758543
+24,"Desplaçar-se habitualment a peu, en bicicleta o amb patinet no elèctric",≥15 anys,2024,0.3500958023176862
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2015,0.21793408403483125
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2016,0.1838365066322803
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2017,0.20135564057404415
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2018,0.20627303051969897
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2019,0.1862272311246906
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2020,0.186785243871993
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2021,0.17126253279933715
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2022,0.177752461910988
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2023,0.20153939267296794
+25,Desplaçar-se habitualment en transport públic,≥15 anys,2024,0.21038763998970836
+26,Adherència a la dieta mediterrània,≥15 anys,2015,0.708
+26,Adherència a la dieta mediterrània,≥15 anys,2016,0.7236660585377814
+26,Adherència a la dieta mediterrània,≥15 anys,2017,0.6106611334190223
+26,Adherència a la dieta mediterrània,≥15 anys,2018,0.6255674191797149
+26,Adherència a la dieta mediterrània,≥15 anys,2019,0.545572015419618
+26,Adherència a la dieta mediterrània,≥15 anys,2020,0.5746534756467527
+26,Adherència a la dieta mediterrània,≥15 anys,2021,0.5664336290816572
+26,Adherència a la dieta mediterrània,≥15 anys,2022,0.5674103083529421
+26,Adherència a la dieta mediterrània,≥15 anys,2023,0.5632778465441557
+26,Adherència a la dieta mediterrània,≥15 anys,2024,0.5499247973336114
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2010,0.156
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2011,0.119
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2012,0.129
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2013,0.121
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2014,0.115
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2015,0.182
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2016,0.161
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2017,0.135
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2018,0.133
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2019,0.12
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2020,0.112
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2021,0.11319917128244089
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2022,0.11501461319449785
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2023,0.11044875100401731
+27,Consum diari de 5 racions de fruita i/o verdura,≥15 anys,2024,0.09894513868806463
+28,Consum diari de begudes ensucrades,≥15 anys,2015,0.278
+28,Consum diari de begudes ensucrades,≥15 anys,2016,0.219
+28,Consum diari de begudes ensucrades,≥15 anys,2017,0.203
+28,Consum diari de begudes ensucrades,≥15 anys,2018,0.202
+28,Consum diari de begudes ensucrades,≥15 anys,2019,0.193
+28,Consum diari de begudes ensucrades,≥15 anys,2020,0.194
+28,Consum diari de begudes ensucrades,≥15 anys,2021,0.16778596332421564
+28,Consum diari de begudes ensucrades,≥15 anys,2022,0.15065682378513182
+28,Consum diari de begudes ensucrades,≥15 anys,2023,0.146053304964102
+28,Consum diari de begudes ensucrades,≥15 anys,2024,0.1685967670407291
+29,Seguir una dieta ovo-lactovegetariana o vegana,≥15 anys,2024,0.012154475486190842
+30,Prova de sang oculta en femta periòdica,50-69 anys,2012,0.151
+30,Prova de sang oculta en femta periòdica,50-69 anys,2013,0.163
+30,Prova de sang oculta en femta periòdica,50-69 anys,2014,0.129
+30,Prova de sang oculta en femta periòdica,50-69 anys,2015,0.162
+30,Prova de sang oculta en femta periòdica,50-69 anys,2016,0.293
+30,Prova de sang oculta en femta periòdica,50-69 anys,2017,0.41
+30,Prova de sang oculta en femta periòdica,50-69 anys,2018,0.499
+30,Prova de sang oculta en femta periòdica,50-69 anys,2019,0.567
+30,Prova de sang oculta en femta periòdica,50-69 anys,2020,0.55
+30,Prova de sang oculta en femta periòdica,50-69 anys,2021,0.55
+30,Prova de sang oculta en femta periòdica,50-69 anys,2022,0.602
+30,Prova de sang oculta en femta periòdica,50-69 anys,2023,0.637
+30,Prova de sang oculta en femta periòdica,50-69 anys,2024,0.5962567214246953
+31,Citologia vaginal o prova del VPH periòdica,♀ 25-65 anys,2024,0.6254153642509108
+32,Prova de PSA periòdica,♂ ≥40 anys,2024,0.3122664333878557
+33,Tenir doble cobertura sanitària,0+,1994,0.206
+33,Tenir doble cobertura sanitària,0+,2002,0.247
+33,Tenir doble cobertura sanitària,0+,2006,0.262
+33,Tenir doble cobertura sanitària,0+,2010,0.271
+33,Tenir doble cobertura sanitària,0+,2011,0.262
+33,Tenir doble cobertura sanitària,0+,2012,0.256
+33,Tenir doble cobertura sanitària,0+,2013,0.241
+33,Tenir doble cobertura sanitària,0+,2014,0.248
+33,Tenir doble cobertura sanitària,0+,2015,0.25
+33,Tenir doble cobertura sanitària,0+,2016,0.2655722289427814
+33,Tenir doble cobertura sanitària,0+,2017,0.2798315447731882
+33,Tenir doble cobertura sanitària,0+,2018,0.2796174672211311
+33,Tenir doble cobertura sanitària,0+,2019,0.28784351740331926
+33,Tenir doble cobertura sanitària,0+,2020,0.32298503362924846
+33,Tenir doble cobertura sanitària,0+,2021,0.28653917122390227
+33,Tenir doble cobertura sanitària,0+,2022,0.31588431152902824
+33,Tenir doble cobertura sanitària,0+,2023,0.3245955177619455
+33,Tenir doble cobertura sanitària,0+,2024,0.33940026540244056
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2018,0.5390407818962376
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2019,0.5469000752110347
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2020,0.529481879871943
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2021,0.5294958433709984
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2022,0.5531216155789872
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2023,0.5591033686840826
+34,Consum de medicaments prescrits en els darrers 15 dies,≥15 anys,2024,0.5538597856199502
+35,Visita a un professional de la salut els darrers 12 mesos,0+,1994,0.878
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2002,0.89
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2006,0.886
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2010,0.926
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2011,0.927
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2012,0.918
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2013,0.905
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2014,0.908
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2015,0.925
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2016,0.9155169093244022
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2017,0.9339605522855499
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2018,0.9457776313125098
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2019,0.9518482802618848
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2020,0.9403037073740065
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2021,0.9318044557410926
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2022,0.9586126474586655
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2023,0.9605141331961778
+35,Visita a un professional de la salut els darrers 12 mesos,0+,2024,0.9589260288867463
+36,Hospitalització els darrers 12 mesos,0+,1994,0.08
+36,Hospitalització els darrers 12 mesos,0+,2002,0.091
+36,Hospitalització els darrers 12 mesos,0+,2006,0.083
+36,Hospitalització els darrers 12 mesos,0+,2010,0.083
+36,Hospitalització els darrers 12 mesos,0+,2011,0.078
+36,Hospitalització els darrers 12 mesos,0+,2012,0.073
+36,Hospitalització els darrers 12 mesos,0+,2013,0.083
+36,Hospitalització els darrers 12 mesos,0+,2014,0.074
+36,Hospitalització els darrers 12 mesos,0+,2015,0.071
+36,Hospitalització els darrers 12 mesos,0+,2016,0.06889060969570755
+36,Hospitalització els darrers 12 mesos,0+,2017,0.08212710469366678
+36,Hospitalització els darrers 12 mesos,0+,2018,0.08274153865293422
+36,Hospitalització els darrers 12 mesos,0+,2019,0.07949813587120637
+36,Hospitalització els darrers 12 mesos,0+,2020,0.08740886414025818
+36,Hospitalització els darrers 12 mesos,0+,2021,0.07067386390410177
+36,Hospitalització els darrers 12 mesos,0+,2022,0.0819414320754333
+36,Hospitalització els darrers 12 mesos,0+,2023,0.07647216983462775
+36,Hospitalització els darrers 12 mesos,0+,2024,0.07111327692375848
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2006,0.327
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2010,0.329
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2011,0.356
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2012,0.317
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2013,0.318
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2014,0.298
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2015,0.31
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2016,0.3228349036581391
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2017,0.3395149061286677
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2018,0.38164709651072976
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2019,0.419883485505708
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2020,0.380304356010339
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2021,0.34044946002866483
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2022,0.3830992565833764
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2023,0.4244014912146488
+37,Visita a un servei d'urgències els darrers 12 mesos,0+,2024,0.38051250708394574
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,1994,0.857
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2002,0.803
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2006,0.797
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2010,0.847
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2011,0.87
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2012,0.894
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2013,0.896
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2014,0.901
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2015,0.891
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2016,0.8873448302041145
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2017,0.8996444396230049
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2018,0.8956501215938835
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2019,0.8643333435476577
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2020,0.8789643312456065
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2021,0.8638791156915705
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2022,0.8293446806758225
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2023,0.8333559215216886
+38,Satisfacció amb els serveis sanitaris públics utilitzats els darrers 12 mesos,0+,2024,0.8498871856230401
