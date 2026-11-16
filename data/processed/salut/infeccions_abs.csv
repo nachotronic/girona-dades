@@ -1,0 +1,2268 @@
+data_inici,codi_abs,diagnostic,casos
+2026-09-28,127,COVID-19,8
+2026-09-28,142,Escarlatina,1
+2026-10-26,199,Grip,11
+2026-10-19,346,Faringoamigdalitis estreptocòccica,2
+2026-10-05,114,Faringoamigdalitis estreptocòccica,12
+2026-10-19,217,Altres IRA,28
+2026-11-02,124,COVID-19,3
+2026-09-14,85,Faringoamigdalitis,31
+2026-10-26,127,Impetigen,3
+2026-11-02,92,Bronquiolitis,1
+2026-10-26,238,Impetigen,6
+2026-10-19,142,Pneumònia,1
+2026-09-14,189,COVID-19,5
+2026-09-21,84,Faringoamigdalitis,29
+2026-09-14,189,Faringoamigdalitis estreptocòccica,18
+2026-09-14,234,Faringoamigdalitis,20
+2026-10-26,199,Faringoamigdalitis,40
+2026-09-21,114,Impetigen,3
+2026-09-21,84,Bronquiolitis,2
+2026-10-19,92,Altres IRA,10
+2026-10-19,199,Bronquiolitis,1
+2026-09-14,114,Faringoamigdalitis estreptocòccica,12
+2026-09-28,267,Altres IRA,45
+2026-09-21,208,Faringoamigdalitis,27
+2026-09-28,330,Altres IRA,74
+2026-09-28,238,COVID-19,8
+2026-09-28,346,Faringoamigdalitis estreptocòccica,2
+2026-09-21,142,Faringoamigdalitis estreptocòccica,15
+2026-09-28,84,COVID-19,7
+2026-09-14,171,Escarlatina,1
+2026-10-05,114,Grip,3
+2026-09-21,173,Pneumònia,2
+2026-11-02,125,Faringoamigdalitis estreptocòccica,13
+2026-10-26,258,Faringoamigdalitis,23
+2026-09-14,101,Impetigen,8
+2026-10-12,92,Faringoamigdalitis estreptocòccica,6
+2026-10-19,171,Bronquiolitis,2
+2026-11-02,346,Impetigen,2
+2026-10-26,15,Faringoamigdalitis,47
+2026-10-19,173,Impetigen,5
+2026-10-26,343,Faringoamigdalitis estreptocòccica,3
+2026-10-12,142,Impetigen,20
+2026-09-14,217,Altres IRA,13
+2026-09-28,231,Bronquiolitis,2
+2026-10-05,199,Pneumònia,4
+2026-09-21,187,Grip,3
+2026-09-28,208,Faringoamigdalitis,20
+2026-10-26,187,Altres IRA,70
+2026-11-02,346,Faringoamigdalitis,2
+2026-10-19,127,Altres IRA,75
+2026-10-12,199,Altres IRA,193
+2026-09-21,126,Grip,21
+2026-10-12,346,Altres IRA,6
+2026-10-19,217,Faringoamigdalitis estreptocòccica,2
+2026-10-19,80,Faringoamigdalitis estreptocòccica,2
+2026-09-14,83,Faringoamigdalitis,8
+2026-09-28,231,Impetigen,4
+2026-09-28,187,Faringoamigdalitis,11
+2026-09-21,119,Altres IRA,214
+2026-10-12,124,Impetigen,2
+2026-09-28,103,Grip,19
+2026-10-05,172,COVID-19,7
+2026-09-14,114,Bronquiolitis,1
+2026-10-19,177,Faringoamigdalitis,3
+2026-10-19,221,COVID-19,2
+2026-09-21,171,COVID-19,17
+2026-10-05,100,Altres IRA,135
+2026-09-14,133,COVID-19,1
+2026-09-14,142,Pneumònia,7
+2026-10-12,125,Faringoamigdalitis estreptocòccica,5
+2026-09-28,231,Faringoamigdalitis,6
+2026-10-26,125,Pneumònia,5
+2026-10-26,343,Faringoamigdalitis,6
+2026-09-28,171,Faringoamigdalitis estreptocòccica,15
+2026-10-05,5,Altres IRA,48
+2026-10-05,114,Faringoamigdalitis,20
+2026-10-19,177,Bronquiolitis,1
+2026-10-05,346,Grip,1
+2026-10-19,126,COVID-19,5
+2026-10-19,347,Grip,1
+2026-10-19,330,Faringoamigdalitis,22
+2026-09-14,119,Impetigen,5
+2026-10-26,217,COVID-19,1
+2026-10-12,101,Altres IRA,58
+2026-09-28,126,Altres IRA,143
+2026-11-02,343,Altres IRA,21
+2026-09-14,343,Faringoamigdalitis estreptocòccica,1
+2026-09-14,199,Impetigen,13
+2026-10-12,85,Faringoamigdalitis estreptocòccica,9
+2026-10-12,114,Faringoamigdalitis,19
+2026-09-14,347,Altres IRA,10
+2026-09-14,100,Altres IRA,103
+2026-10-12,346,COVID-19,1
+2026-10-26,133,Altres IRA,44
+2026-10-19,124,Altres IRA,81
+2026-10-05,347,COVID-19,2
+2026-11-02,189,Impetigen,19
+2026-10-19,119,Faringoamigdalitis estreptocòccica,12
+2026-10-26,199,Escarlatina,3
+2026-09-21,8,Impetigen,5
+2026-11-02,189,Altres IRA,151
+2026-10-26,199,COVID-19,4
+2026-09-21,208,Faringoamigdalitis estreptocòccica,9
+2026-09-21,347,Altres IRA,15
+2026-10-12,142,Bronquiolitis,1
+2026-11-02,208,Pneumònia,6
+2026-10-26,101,Grip,5
+2026-10-05,234,Faringoamigdalitis estreptocòccica,8
+2026-10-12,346,Impetigen,2
+2026-09-14,221,Grip,5
+2026-10-19,126,Faringoamigdalitis,24
+2026-09-21,330,COVID-19,1
+2026-09-28,92,Pneumònia,1
+2026-10-26,187,Impetigen,3
+2026-10-12,177,Impetigen,5
+2026-09-21,343,Altres IRA,28
+2026-10-19,267,COVID-19,2
+2026-10-19,80,Grip,1
+2026-10-26,171,Faringoamigdalitis,37
+2026-09-28,100,Grip,20
+2026-10-26,15,Bronquiolitis,1
+2026-10-26,5,Faringoamigdalitis,12
+2026-10-12,208,Pneumònia,8
+2026-09-28,231,Altres IRA,67
+2026-10-26,258,Grip,2
+2026-10-26,267,Faringoamigdalitis estreptocòccica,3
+2026-10-05,217,COVID-19,8
+2026-10-19,126,Grip,21
+2026-10-26,5,Pneumònia,3
+2026-09-21,142,Bronquiolitis,1
+2026-10-12,125,Altres IRA,140
+2026-10-05,85,Faringoamigdalitis estreptocòccica,5
+2026-10-05,346,Bronquiolitis,1
+2026-10-12,100,Faringoamigdalitis estreptocòccica,12
+2026-09-21,171,Faringoamigdalitis,37
+2026-10-19,15,Bronquiolitis,1
+2026-09-28,85,Faringoamigdalitis,25
+2026-09-21,5,Impetigen,6
+2026-10-19,119,Bronquiolitis,2
+2026-10-26,119,Grip,46
+2026-09-28,189,Faringoamigdalitis,31
+2026-11-02,142,Altres IRA,304
+2026-10-05,85,Grip,33
+2026-10-12,101,Impetigen,2
+2026-10-26,208,Altres IRA,140
+2026-10-12,80,Grip,1
+2026-09-14,125,Altres IRA,133
+2026-11-02,142,Grip,23
+2026-10-26,133,Faringoamigdalitis,16
+2026-10-05,343,Faringoamigdalitis estreptocòccica,3
+2026-09-21,177,COVID-19,12
+2026-10-12,234,Escarlatina,1
+2026-10-05,84,Faringoamigdalitis,27
+2026-11-02,173,Faringoamigdalitis,27
+2026-10-19,199,Altres IRA,209
+2026-09-28,119,Altres IRA,176
+2026-09-28,114,Faringoamigdalitis estreptocòccica,4
+2026-09-21,258,Faringoamigdalitis,22
+2026-09-14,101,Altres IRA,44
+2026-11-02,346,Altres IRA,18
+2026-09-14,142,Grip,27
+2026-10-05,125,Impetigen,7
+2026-11-02,231,Pneumònia,1
+2026-11-02,125,Altres IRA,173
+2026-09-14,124,Altres IRA,78
+2026-10-19,80,Impetigen,3
+2026-09-14,347,Faringoamigdalitis estreptocòccica,1
+2026-09-14,100,Impetigen,8
+2026-09-21,347,Faringoamigdalitis estreptocòccica,1
+2026-10-12,100,Bronquiolitis,1
+2026-10-26,142,Altres IRA,243
+2026-09-14,221,Impetigen,10
+2026-11-02,208,Impetigen,6
+2026-09-28,189,Faringoamigdalitis estreptocòccica,12
+2026-09-28,119,Faringoamigdalitis estreptocòccica,11
+2026-11-02,133,Faringoamigdalitis,11
+2026-10-05,231,Altres IRA,66
+2026-10-05,267,Faringoamigdalitis estreptocòccica,2
+2026-10-19,221,Impetigen,8
+2026-09-21,92,Faringoamigdalitis estreptocòccica,5
+2026-09-14,330,Faringoamigdalitis,17
+2026-11-02,83,Altres IRA,27
+2026-10-05,124,Faringoamigdalitis,10
+2026-09-28,171,COVID-19,8
+2026-10-26,85,Grip,57
+2026-09-14,234,Faringoamigdalitis estreptocòccica,4
+2026-09-28,125,Faringoamigdalitis estreptocòccica,4
+2026-10-12,171,Faringoamigdalitis estreptocòccica,10
+2026-10-05,15,Impetigen,8
+2026-11-02,125,Grip,26
+2026-10-19,124,Faringoamigdalitis estreptocòccica,5
+2026-09-28,234,COVID-19,12
+2026-10-05,126,Grip,15
+2026-10-12,258,COVID-19,3
+2026-09-14,119,Grip,30
+2026-09-28,124,Impetigen,4
+2026-11-02,133,Pneumònia,2
+2026-09-14,234,Pneumònia,2
+2026-09-21,189,Altres IRA,129
+2026-10-05,217,Pneumònia,3
+2026-10-26,85,Impetigen,13
+2026-10-26,100,Grip,15
+2026-09-21,267,COVID-19,2
+2026-10-26,100,Impetigen,5
+2026-10-19,119,Grip,35
+2026-09-14,15,Grip,7
+2026-10-05,208,Impetigen,15
+2026-09-21,199,Pneumònia,3
+2026-10-19,217,Impetigen,1
+2026-10-05,124,COVID-19,5
+2026-10-26,103,Impetigen,2
+2026-10-19,171,Pneumònia,6
+2026-09-21,85,Altres IRA,228
+2026-09-14,177,Faringoamigdalitis estreptocòccica,1
+2026-10-19,187,Pneumònia,1
+2026-09-28,267,Faringoamigdalitis,18
+2026-10-26,126,Grip,26
+2026-10-19,171,Grip,11
+2026-09-14,142,Bronquiolitis,1
+2026-09-14,234,Altres IRA,87
+2026-09-28,238,Faringoamigdalitis estreptocòccica,8
+2026-09-14,221,Faringoamigdalitis estreptocòccica,7
+2026-09-21,114,Faringoamigdalitis,19
+2026-10-26,125,Faringoamigdalitis,12
+2026-09-14,267,Faringoamigdalitis estreptocòccica,9
+2026-10-05,126,Impetigen,12
+2026-09-21,171,Impetigen,17
+2026-11-02,234,Escarlatina,3
+2026-09-14,187,Impetigen,6
+2026-11-02,330,Impetigen,2
+2026-09-21,114,COVID-19,5
+2026-09-28,83,Pneumònia,1
+2026-11-02,85,Faringoamigdalitis,39
+2026-09-21,171,Altres IRA,245
+2026-10-12,84,Impetigen,3
+2026-10-19,126,Impetigen,12
+2026-09-21,330,Faringoamigdalitis,17
+2026-10-26,199,Altres IRA,187
+2026-10-05,187,Grip,1
+2026-11-02,231,Impetigen,3
+2026-10-05,177,Grip,2
+2026-09-14,172,Impetigen,10
+2026-10-19,231,Bronquiolitis,3
+2026-11-02,177,COVID-19,4
+2026-09-14,119,Pneumònia,4
+2026-10-05,267,Pneumònia,3
+2026-10-26,234,Bronquiolitis,2
+2026-10-26,100,COVID-19,4
+2026-09-14,134,Altres IRA,30
+2026-09-21,83,Faringoamigdalitis estreptocòccica,1
+2026-09-28,80,Altres IRA,20
+2026-10-12,177,Grip,2
+2026-10-26,173,Grip,6
+2026-10-12,134,Faringoamigdalitis,10
+2026-09-21,119,COVID-19,7
+2026-10-19,346,Grip,3
+2026-09-21,258,Impetigen,8
+2026-10-26,100,Bronquiolitis,4
+2026-10-19,5,Escarlatina,2
+2026-09-28,258,Faringoamigdalitis estreptocòccica,4
+2026-09-14,5,Grip,9
+2026-09-28,126,Impetigen,12
+2026-10-05,103,COVID-19,7
+2026-10-19,15,Impetigen,16
+2026-10-26,83,Faringoamigdalitis estreptocòccica,2
+2026-10-05,119,Bronquiolitis,2
+2026-10-26,347,Faringoamigdalitis,10
+2026-11-02,92,Grip,2
+2026-10-12,199,Impetigen,8
+2026-10-19,189,Grip,15
+2026-10-19,234,Faringoamigdalitis estreptocòccica,19
+2026-09-14,92,Impetigen,2
+2026-10-12,5,Faringoamigdalitis,15
+2026-09-14,5,Altres IRA,48
+2026-10-26,85,COVID-19,4
+2026-10-05,127,Grip,12
+2026-10-12,208,Faringoamigdalitis estreptocòccica,11
+2026-09-14,124,Impetigen,8
+2026-09-14,142,Faringoamigdalitis,43
+2026-09-14,85,Altres IRA,177
+2026-10-26,330,Grip,14
+2026-09-14,15,Faringoamigdalitis estreptocòccica,12
+2026-09-14,208,Impetigen,6
+2026-09-21,8,Grip,24
+2026-10-19,114,Faringoamigdalitis estreptocòccica,7
+2026-10-12,221,Impetigen,8
+2026-09-14,267,Pneumònia,4
+2026-11-02,343,Faringoamigdalitis estreptocòccica,3
+2026-10-12,187,COVID-19,3
+2026-10-05,125,Bronquiolitis,1
+2026-10-26,103,Pneumònia,2
+2026-10-26,171,Impetigen,12
+2026-09-28,221,Altres IRA,107
+2026-11-02,85,Grip,52
+2026-10-12,101,Pneumònia,1
+2026-09-14,126,Impetigen,8
+2026-10-05,208,Escarlatina,1
+2026-09-28,199,Faringoamigdalitis,52
+2026-10-19,8,Pneumònia,5
+2026-10-05,173,Escarlatina,1
+2026-09-14,8,Impetigen,7
+2026-10-26,80,Faringoamigdalitis,4
+2026-10-26,101,Pneumònia,2
+2026-10-12,84,Bronquiolitis,2
+2026-09-28,5,Grip,14
+2026-10-26,231,Faringoamigdalitis,12
+2026-10-12,126,Faringoamigdalitis,23
+2026-10-12,119,Grip,32
+2026-11-02,171,Grip,25
+2026-10-12,126,Pneumònia,4
+2026-10-26,84,Pneumònia,4
+2026-10-26,171,Altres IRA,182
+2026-10-12,208,Bronquiolitis,2
+2026-10-19,5,Faringoamigdalitis estreptocòccica,5
+2026-10-19,177,Altres IRA,29
+2026-09-21,199,Altres IRA,206
+2026-10-26,119,Pneumònia,7
+2026-09-21,346,Grip,2
+2026-10-26,346,COVID-19,2
+2026-09-14,125,Faringoamigdalitis,20
+2026-10-05,126,COVID-19,9
+2026-11-02,103,Faringoamigdalitis estreptocòccica,5
+2026-10-05,103,Grip,15
+2026-10-26,80,Pneumònia,1
+2026-09-21,199,Faringoamigdalitis estreptocòccica,15
+2026-09-28,133,Faringoamigdalitis,8
+2026-10-05,172,Altres IRA,122
+2026-09-21,258,Escarlatina,1
+2026-10-12,217,Faringoamigdalitis,1
+2026-10-19,100,Faringoamigdalitis,27
+2026-10-12,80,Altres IRA,5
+2026-10-19,267,Impetigen,7
+2026-09-21,258,Grip,2
+2026-09-28,125,Altres IRA,114
+2026-09-21,126,Impetigen,11
+2026-10-26,189,Grip,24
+2026-10-05,199,COVID-19,9
+2026-11-02,199,Impetigen,9
+2026-09-14,114,COVID-19,3
+2026-10-12,127,Pneumònia,3
+2026-09-28,100,Bronquiolitis,1
+2026-09-21,172,Pneumònia,5
+2026-10-19,92,Grip,1
+2026-11-02,80,Grip,1
+2026-11-02,171,Impetigen,8
+2026-10-19,133,Faringoamigdalitis estreptocòccica,3
+2026-10-12,124,Pneumònia,3
+2026-09-28,124,Faringoamigdalitis,14
+2026-10-05,100,Pneumònia,4
+2026-10-12,189,Faringoamigdalitis estreptocòccica,16
+2026-09-21,231,Altres IRA,67
+2026-09-28,238,Altres IRA,57
+2026-11-02,258,Impetigen,3
+2026-10-05,133,Faringoamigdalitis,7
+2026-09-28,134,Grip,1
+2026-11-02,187,Altres IRA,62
+2026-09-28,221,Grip,14
+2026-10-05,142,Faringoamigdalitis,39
+2026-09-28,15,Faringoamigdalitis estreptocòccica,11
+2026-10-12,238,Bronquiolitis,3
+2026-09-21,231,COVID-19,4
+2026-10-05,221,Grip,14
+2026-10-19,126,Pneumònia,6
+2026-09-21,234,Faringoamigdalitis,26
+2026-11-02,125,Pneumònia,9
+2026-09-28,177,Altres IRA,35
+2026-10-12,177,Faringoamigdalitis,6
+2026-10-12,171,Grip,24
+2026-09-28,172,Impetigen,9
+2026-10-12,125,Pneumònia,2
+2026-11-02,119,Grip,48
+2026-10-12,187,Faringoamigdalitis,12
+2026-09-28,125,Pneumònia,2
+2026-10-12,238,Grip,5
+2026-10-19,208,Bronquiolitis,3
+2026-10-26,142,Escarlatina,2
+2026-10-05,231,Escarlatina,1
+2026-11-02,347,Grip,3
+2026-10-05,189,Impetigen,22
+2026-10-26,84,Altres IRA,76
+2026-10-05,199,Impetigen,10
+2026-10-12,8,Altres IRA,59
+2026-10-12,124,Grip,10
+2026-10-12,189,Bronquiolitis,1
+2026-11-02,258,COVID-19,3
+2026-10-26,8,Impetigen,1
+2026-09-14,217,Faringoamigdalitis estreptocòccica,2
+2026-10-05,101,Impetigen,4
+2026-10-19,103,COVID-19,4
+2026-10-26,189,Altres IRA,135
+2026-11-02,125,COVID-19,6
+2026-09-14,103,Grip,1
+2026-09-28,172,Grip,11
+2026-09-14,8,Faringoamigdalitis estreptocòccica,4
+2026-09-21,125,Impetigen,7
+2026-10-05,258,Grip,3
+2026-09-28,221,Faringoamigdalitis estreptocòccica,18
+2026-10-05,84,COVID-19,3
+2026-09-21,84,Pneumònia,5
+2026-11-02,5,Grip,11
+2026-11-02,177,Pneumònia,1
+2026-09-28,92,Impetigen,2
+2026-11-02,127,COVID-19,2
+2026-10-26,330,COVID-19,1
+2026-11-02,126,Bronquiolitis,1
+2026-09-21,114,Altres IRA,40
+2026-10-19,114,Faringoamigdalitis,17
+2026-10-26,347,COVID-19,3
+2026-09-21,83,Altres IRA,26
+2026-10-26,134,Impetigen,1
+2026-10-26,15,Grip,5
+2026-10-19,346,COVID-19,1
+2026-10-05,330,Bronquiolitis,1
+2026-09-14,208,COVID-19,13
+2026-10-05,133,Pneumònia,1
+2026-10-19,221,Faringoamigdalitis estreptocòccica,6
+2026-10-05,8,Grip,21
+2026-11-02,172,Faringoamigdalitis,36
+2026-11-02,119,Altres IRA,258
+2026-11-02,100,Faringoamigdalitis estreptocòccica,13
+2026-09-14,171,COVID-19,15
+2026-10-12,221,Pneumònia,5
+2026-09-21,101,Altres IRA,53
+2026-10-12,133,Faringoamigdalitis,8
+2026-09-28,103,Bronquiolitis,1
+2026-10-12,258,Grip,5
+2026-09-14,187,Altres IRA,41
+2026-10-26,231,Impetigen,4
+2026-11-02,103,Impetigen,3
+2026-10-05,84,Grip,4
+2026-10-05,330,Faringoamigdalitis estreptocòccica,7
+2026-10-05,142,COVID-19,7
+2026-10-26,80,Impetigen,1
+2026-10-05,92,Pneumònia,1
+2026-09-21,134,Faringoamigdalitis,20
+2026-10-26,217,Altres IRA,25
+2026-09-28,125,Grip,18
+2026-10-19,189,Pneumònia,9
+2026-10-12,231,Faringoamigdalitis estreptocòccica,7
+2026-10-05,83,Faringoamigdalitis estreptocòccica,1
+2026-10-12,114,Impetigen,4
+2026-10-26,125,Faringoamigdalitis estreptocòccica,7
+2026-10-05,347,Faringoamigdalitis,1
+2026-09-14,80,Faringoamigdalitis,5
+2026-09-28,330,Bronquiolitis,1
+2026-09-14,85,Pneumònia,6
+2026-10-12,85,Bronquiolitis,1
+2026-11-02,217,Grip,4
+2026-10-12,85,Pneumònia,5
+2026-09-21,127,COVID-19,6
+2026-10-26,221,Impetigen,3
+2026-10-05,208,Altres IRA,125
+2026-10-05,83,Faringoamigdalitis,1
+2026-10-19,101,Pneumònia,1
+2026-10-05,330,Pneumònia,3
+2026-09-14,134,Faringoamigdalitis estreptocòccica,5
+2026-09-21,177,Faringoamigdalitis,10
+2026-10-05,258,Impetigen,3
+2026-11-02,172,Grip,9
+2026-09-14,187,Faringoamigdalitis,8
+2026-09-21,142,Altres IRA,206
+2026-09-28,92,Faringoamigdalitis,7
+2026-09-28,114,Bronquiolitis,3
+2026-10-26,126,Faringoamigdalitis estreptocòccica,15
+2026-11-02,267,Grip,8
+2026-11-02,8,Bronquiolitis,1
+2026-09-14,238,Altres IRA,58
+2026-09-14,125,Impetigen,7
+2026-11-02,238,Pneumònia,1
+2026-11-02,114,Impetigen,2
+2026-10-19,208,Altres IRA,157
+2026-10-26,343,COVID-19,3
+2026-09-28,231,Grip,7
+2026-09-21,125,Pneumònia,5
+2026-09-28,267,COVID-19,5
+2026-11-02,5,Altres IRA,60
+2026-10-12,5,Faringoamigdalitis estreptocòccica,8
+2026-10-26,103,Faringoamigdalitis,20
+2026-10-19,124,Bronquiolitis,1
+2026-09-21,103,Faringoamigdalitis,21
+2026-11-02,187,Pneumònia,3
+2026-10-05,347,Impetigen,2
+2026-10-05,267,COVID-19,3
+2026-11-02,347,COVID-19,1
+2026-10-19,85,Faringoamigdalitis,34
+2026-10-12,177,Pneumònia,2
+2026-10-26,83,Impetigen,5
+2026-11-02,172,Altres IRA,124
+2026-10-19,187,Faringoamigdalitis estreptocòccica,8
+2026-09-28,171,Grip,21
+2026-10-05,177,Bronquiolitis,1
+2026-09-14,114,Faringoamigdalitis,14
+2026-10-05,101,COVID-19,1
+2026-11-02,234,COVID-19,3
+2026-09-21,114,Pneumònia,2
+2026-09-28,114,COVID-19,6
+2026-10-12,125,Grip,13
+2026-11-02,80,Impetigen,3
+2026-09-21,231,Faringoamigdalitis,7
+2026-09-14,171,Grip,15
+2026-09-28,85,COVID-19,5
+2026-10-12,267,Faringoamigdalitis,11
+2026-09-21,84,Faringoamigdalitis estreptocòccica,11
+2026-10-26,187,Faringoamigdalitis,10
+2026-11-02,343,COVID-19,3
+2026-11-02,142,COVID-19,7
+2026-10-19,238,Altres IRA,72
+2026-11-02,267,Escarlatina,1
+2026-09-14,103,Impetigen,3
+2026-10-05,125,Altres IRA,118
+2026-09-21,126,Faringoamigdalitis estreptocòccica,5
+2026-10-05,127,Pneumònia,4
+2026-09-28,127,Faringoamigdalitis estreptocòccica,4
+2026-10-05,84,Altres IRA,62
+2026-10-26,103,Altres IRA,72
+2026-09-28,171,Impetigen,14
+2026-10-05,125,Pneumònia,4
+2026-09-28,80,COVID-19,3
+2026-09-21,346,Faringoamigdalitis estreptocòccica,1
+2026-10-19,172,Altres IRA,148
+2026-09-14,234,COVID-19,11
+2026-10-19,114,Impetigen,6
+2026-10-12,119,COVID-19,6
+2026-10-12,103,Impetigen,5
+2026-09-14,119,Altres IRA,138
+2026-09-21,127,Grip,8
+2026-10-26,134,COVID-19,2
+2026-11-02,347,Faringoamigdalitis,5
+2026-10-19,15,COVID-19,7
+2026-09-14,127,Grip,3
+2026-09-14,231,COVID-19,2
+2026-10-19,238,Grip,7
+2026-09-21,80,Grip,2
+2026-09-28,5,Pneumònia,1
+2026-11-02,85,Altres IRA,215
+2026-10-12,101,Faringoamigdalitis,8
+2026-09-28,347,Grip,5
+2026-09-28,208,Faringoamigdalitis estreptocòccica,6
+2026-10-05,101,Altres IRA,60
+2026-09-14,173,Grip,11
+2026-10-12,172,COVID-19,7
+2026-09-14,8,Faringoamigdalitis,9
+2026-10-19,208,COVID-19,8
+2026-09-14,330,COVID-19,2
+2026-09-28,124,COVID-19,5
+2026-09-21,119,Pneumònia,5
+2026-11-02,100,Impetigen,12
+2026-10-19,142,Faringoamigdalitis estreptocòccica,12
+2026-10-19,119,Pneumònia,5
+2026-09-28,15,Escarlatina,1
+2026-11-02,125,Escarlatina,1
+2026-10-12,234,COVID-19,8
+2026-09-21,100,Pneumònia,3
+2026-10-05,173,COVID-19,6
+2026-09-14,133,Faringoamigdalitis estreptocòccica,1
+2026-10-05,80,Pneumònia,1
+2026-11-02,127,Grip,13
+2026-10-26,330,Pneumònia,5
+2026-09-14,103,Pneumònia,3
+2026-09-28,85,Impetigen,9
+2026-10-12,231,Faringoamigdalitis,17
+2026-09-28,217,Pneumònia,2
+2026-10-05,80,COVID-19,2
+2026-09-21,221,Faringoamigdalitis estreptocòccica,7
+2026-11-02,5,Pneumònia,4
+2026-10-19,343,Pneumònia,1
+2026-09-28,83,Grip,2
+2026-10-26,258,Pneumònia,5
+2026-10-26,221,Grip,10
+2026-09-21,238,Pneumònia,3
+2026-09-21,83,Pneumònia,4
+2026-10-05,267,Grip,3
+2026-10-05,8,Altres IRA,66
+2026-10-26,84,Impetigen,4
+2026-10-26,133,Impetigen,2
+2026-09-28,177,Faringoamigdalitis,2
+2026-09-21,119,Impetigen,9
+2026-10-05,238,Impetigen,8
+2026-11-02,330,Faringoamigdalitis,13
+2026-09-21,173,COVID-19,7
+2026-09-28,83,Faringoamigdalitis,2
+2026-09-21,124,Faringoamigdalitis estreptocòccica,8
+2026-10-05,238,Faringoamigdalitis estreptocòccica,3
+2026-10-26,15,COVID-19,10
+2026-10-26,15,Impetigen,11
+2026-10-26,171,Bronquiolitis,3
+2026-09-28,238,Impetigen,2
+2026-10-26,124,Pneumònia,1
+2026-09-21,234,COVID-19,7
+2026-09-21,126,Altres IRA,163
+2026-10-12,187,Altres IRA,52
+2026-10-12,171,Impetigen,19
+2026-10-26,221,Pneumònia,2
+2026-09-21,84,Altres IRA,75
+2026-10-12,8,Pneumònia,4
+2026-10-12,119,Altres IRA,153
+2026-09-14,142,COVID-19,7
+2026-11-02,84,Grip,1
+2026-09-21,15,COVID-19,20
+2026-10-05,114,Bronquiolitis,3
+2026-09-21,5,Escarlatina,1
+2026-10-26,217,Faringoamigdalitis,3
+2026-10-05,267,Impetigen,8
+2026-11-02,258,Altres IRA,70
+2026-11-02,134,Faringoamigdalitis,13
+2026-10-12,173,Faringoamigdalitis estreptocòccica,7
+2026-09-14,127,Faringoamigdalitis estreptocòccica,4
+2026-10-19,189,Altres IRA,158
+2026-10-05,173,Grip,9
+2026-11-02,119,COVID-19,4
+2026-09-21,217,Grip,1
+2026-09-21,330,Faringoamigdalitis estreptocòccica,6
+2026-10-05,15,Faringoamigdalitis,19
+2026-10-05,114,Pneumònia,5
+2026-10-12,199,Bronquiolitis,1
+2026-09-14,15,Pneumònia,5
+2026-09-28,173,Faringoamigdalitis,14
+2026-09-21,187,Faringoamigdalitis,17
+2026-09-14,330,Grip,4
+2026-09-14,172,Pneumònia,1
+2026-10-26,103,Bronquiolitis,1
+2026-09-28,119,Grip,41
+2026-10-19,142,Faringoamigdalitis,41
+2026-09-14,258,Altres IRA,44
+2026-10-26,208,Bronquiolitis,1
+2026-10-05,171,Faringoamigdalitis estreptocòccica,24
+2026-10-12,234,Faringoamigdalitis estreptocòccica,14
+2026-10-12,15,Impetigen,8
+2026-09-28,258,Pneumònia,5
+2026-10-26,177,Pneumònia,1
+2026-10-05,199,Bronquiolitis,1
+2026-10-26,142,Faringoamigdalitis estreptocòccica,12
+2026-10-26,234,Escarlatina,2
+2026-09-28,172,Pneumònia,3
+2026-10-19,125,Impetigen,8
+2026-10-26,134,Faringoamigdalitis,16
+2026-09-28,343,Impetigen,1
+2026-10-12,125,COVID-19,5
+2026-09-14,347,Impetigen,1
+2026-10-26,83,Altres IRA,21
+2026-09-28,171,Bronquiolitis,2
+2026-09-14,5,Pneumònia,2
+2026-11-02,119,Pneumònia,8
+2026-11-02,238,Grip,14
+2026-09-28,100,Impetigen,7
+2026-10-26,119,Faringoamigdalitis estreptocòccica,24
+2026-09-14,221,Faringoamigdalitis,17
+2026-10-12,346,Grip,2
+2026-09-28,172,Escarlatina,1
+2026-09-21,125,Bronquiolitis,1
+2026-10-05,189,Grip,15
+2026-11-02,177,Altres IRA,39
+2026-10-26,142,Faringoamigdalitis,48
+2026-09-21,83,Faringoamigdalitis,7
+2026-09-21,199,Escarlatina,1
+2026-09-28,142,Grip,15
+2026-09-21,258,Faringoamigdalitis estreptocòccica,7
+2026-10-26,142,Grip,16
+2026-10-26,187,Grip,4
+2026-10-12,208,Grip,14
+2026-09-28,173,Pneumònia,4
+2026-10-05,84,Bronquiolitis,1
+2026-11-02,267,Impetigen,7
+2026-09-14,199,Pneumònia,3
+2026-11-02,173,Grip,11
+2026-10-12,238,Impetigen,4
+2026-09-21,267,Faringoamigdalitis estreptocòccica,2
+2026-10-12,5,Impetigen,6
+2026-10-26,101,Faringoamigdalitis,11
+2026-10-12,100,COVID-19,6
+2026-09-28,346,Grip,6
+2026-10-05,189,Pneumònia,6
+2026-09-21,101,Faringoamigdalitis,10
+2026-09-21,126,Pneumònia,1
+2026-10-19,80,Pneumònia,1
+2026-10-05,100,Bronquiolitis,3
+2026-09-14,125,COVID-19,8
+2026-10-12,8,Grip,16
+2026-09-21,125,Grip,20
+2026-10-05,83,Grip,2
+2026-09-28,347,Faringoamigdalitis,3
+2026-11-02,84,Bronquiolitis,2
+2026-10-19,231,Faringoamigdalitis,4
+2026-10-26,238,Grip,9
+2026-10-05,231,Impetigen,6
+2026-09-28,101,Pneumònia,3
+2026-09-28,234,Faringoamigdalitis estreptocòccica,12
+2026-10-12,85,COVID-19,2
+2026-10-26,84,COVID-19,3
+2026-10-26,92,Altres IRA,14
+2026-09-21,126,COVID-19,11
+2026-10-26,234,Pneumònia,2
+2026-10-12,119,Pneumònia,4
+2026-10-12,119,Impetigen,7
+2026-11-02,142,Impetigen,14
+2026-09-28,114,Impetigen,6
+2026-10-26,267,COVID-19,3
+2026-09-28,142,COVID-19,7
+2026-11-02,84,COVID-19,1
+2026-10-19,238,Pneumònia,2
+2026-09-14,267,COVID-19,3
+2026-10-12,189,COVID-19,6
+2026-09-21,101,Impetigen,3
+2026-10-12,343,Grip,1
+2026-10-05,119,Faringoamigdalitis,40
+2026-11-02,103,Grip,7
+2026-09-28,80,Pneumònia,1
+2026-09-21,83,Impetigen,1
+2026-10-05,231,Grip,12
+2026-10-05,187,Pneumònia,1
+2026-11-02,127,Impetigen,5
+2026-10-19,177,Faringoamigdalitis estreptocòccica,1
+2026-09-21,103,Faringoamigdalitis estreptocòccica,6
+2026-10-26,85,Bronquiolitis,1
+2026-10-19,231,Impetigen,5
+2026-10-26,5,Altres IRA,46
+2026-11-02,126,Faringoamigdalitis,43
+2026-09-28,119,COVID-19,14
+2026-11-02,133,Grip,8
+2026-10-19,119,Faringoamigdalitis,24
+2026-09-14,125,Faringoamigdalitis estreptocòccica,4
+2026-10-12,84,Altres IRA,67
+2026-09-21,134,Escarlatina,1
+2026-10-19,124,Pneumònia,1
+2026-11-02,85,Pneumònia,7
+2026-10-12,330,Faringoamigdalitis estreptocòccica,10
+2026-11-02,114,Faringoamigdalitis,25
+2026-09-14,126,Faringoamigdalitis estreptocòccica,16
+2026-10-26,330,Faringoamigdalitis,14
+2026-10-26,217,Grip,3
+2026-09-28,103,Impetigen,5
+2026-10-05,83,Impetigen,2
+2026-10-26,173,Bronquiolitis,2
+2026-10-12,267,Bronquiolitis,2
+2026-11-02,177,Faringoamigdalitis estreptocòccica,4
+2026-09-21,172,Bronquiolitis,1
+2026-10-12,127,COVID-19,3
+2026-09-21,346,COVID-19,3
+2026-10-19,173,Grip,19
+2026-09-21,125,COVID-19,11
+2026-09-28,258,COVID-19,3
+2026-09-28,171,Pneumònia,5
+2026-10-05,119,Faringoamigdalitis estreptocòccica,18
+2026-09-28,343,COVID-19,1
+2026-09-28,101,Faringoamigdalitis estreptocòccica,2
+2026-09-28,84,Bronquiolitis,1
+2026-11-02,134,Impetigen,4
+2026-09-28,199,Bronquiolitis,5
+2026-10-26,172,Faringoamigdalitis estreptocòccica,9
+2026-11-02,8,Grip,17
+2026-10-19,124,Grip,18
+2026-09-21,83,COVID-19,2
+2026-09-14,126,Faringoamigdalitis,28
+2026-10-12,114,COVID-19,2
+2026-09-28,172,COVID-19,12
+2026-10-19,171,Faringoamigdalitis estreptocòccica,15
+2026-09-21,83,Grip,1
+2026-10-19,83,COVID-19,2
+2026-09-14,8,COVID-19,1
+2026-09-21,267,Grip,3
+2026-10-12,85,Grip,52
+2026-10-19,125,Altres IRA,178
+2026-09-28,84,Faringoamigdalitis,18
+2026-09-14,234,Grip,34
+2026-10-26,330,Faringoamigdalitis estreptocòccica,7
+2026-10-26,103,COVID-19,3
+2026-09-14,133,Faringoamigdalitis,16
+2026-10-19,114,Grip,1
+2026-11-02,5,Impetigen,4
+2026-10-26,221,COVID-19,1
+2026-09-28,103,COVID-19,6
+2026-09-28,330,COVID-19,2
+2026-10-19,85,Faringoamigdalitis estreptocòccica,19
+2026-10-12,134,Faringoamigdalitis estreptocòccica,4
+2026-10-12,8,COVID-19,6
+2026-11-02,100,Bronquiolitis,3
+2026-11-02,199,Altres IRA,211
+2026-09-28,199,Altres IRA,184
+2026-11-02,231,Escarlatina,4
+2026-09-14,101,Faringoamigdalitis,9
+2026-09-28,199,Escarlatina,1
+2026-09-28,84,Faringoamigdalitis estreptocòccica,5
+2026-11-02,231,Altres IRA,81
+2026-09-28,80,Faringoamigdalitis estreptocòccica,1
+2026-09-21,187,Bronquiolitis,1
+2026-10-12,173,Impetigen,4
+2026-10-12,15,COVID-19,6
+2026-10-05,124,Faringoamigdalitis estreptocòccica,7
+2026-09-28,208,Grip,16
+2026-10-26,85,Pneumònia,8
+2026-09-21,217,Altres IRA,20
+2026-09-14,83,Grip,1
+2026-09-28,173,Bronquiolitis,2
+2026-11-02,258,Grip,5
+2026-09-14,8,Pneumònia,2
+2026-09-21,101,COVID-19,2
+2026-10-19,142,Altres IRA,267
+2026-10-19,343,Altres IRA,22
+2026-10-19,100,COVID-19,3
+2026-10-19,238,Impetigen,3
+2026-09-28,124,Altres IRA,71
+2026-11-02,134,Pneumònia,1
+2026-09-14,238,Grip,5
+2026-10-05,103,Faringoamigdalitis,25
+2026-10-12,199,Faringoamigdalitis estreptocòccica,21
+2026-11-02,103,Faringoamigdalitis,18
+2026-09-14,187,Faringoamigdalitis estreptocòccica,2
+2026-10-05,114,Impetigen,6
+2026-09-28,8,Faringoamigdalitis,22
+2026-10-26,238,Faringoamigdalitis,17
+2026-10-26,172,Bronquiolitis,4
+2026-10-19,221,Grip,8
+2026-10-19,258,Altres IRA,64
+2026-10-26,114,Bronquiolitis,2
+2026-10-26,119,Impetigen,10
+2026-09-14,208,Faringoamigdalitis estreptocòccica,10
+2026-09-21,15,Pneumònia,1
+2026-10-19,15,Faringoamigdalitis estreptocòccica,11
+2026-10-05,127,COVID-19,3
+2026-09-14,119,Faringoamigdalitis,28
+2026-10-05,234,COVID-19,10
+2026-11-02,199,COVID-19,3
+2026-10-05,347,Altres IRA,13
+2026-10-12,172,Altres IRA,107
+2026-09-21,343,Grip,1
+2026-10-26,189,Faringoamigdalitis estreptocòccica,23
+2026-09-14,127,COVID-19,4
+2026-10-12,173,Faringoamigdalitis,16
+2026-09-21,133,Faringoamigdalitis estreptocòccica,3
+2026-09-28,133,Impetigen,3
+2026-10-05,103,Pneumònia,4
+2026-10-12,127,Impetigen,4
+2026-10-19,234,Impetigen,10
+2026-11-02,8,Altres IRA,73
+2026-09-28,173,Impetigen,6
+2026-11-02,187,Grip,8
+2026-09-28,133,Grip,4
+2026-10-12,258,Faringoamigdalitis estreptocòccica,10
+2026-11-02,125,Impetigen,6
+2026-10-19,187,Grip,5
+2026-09-21,208,Impetigen,9
+2026-09-21,119,Grip,43
+2026-09-14,83,Faringoamigdalitis estreptocòccica,5
+2026-10-12,189,Impetigen,17
+2026-10-05,133,Impetigen,4
+2026-09-14,238,Faringoamigdalitis,11
+2026-11-02,217,COVID-19,6
+2026-10-05,142,Altres IRA,190
+2026-09-21,127,Faringoamigdalitis estreptocòccica,3
+2026-10-26,173,Pneumònia,4
+2026-09-21,221,Pneumònia,2
+2026-10-05,231,Faringoamigdalitis estreptocòccica,11
+2026-10-12,173,Altres IRA,65
+2026-10-19,133,Bronquiolitis,1
+2026-10-12,189,Altres IRA,120
+2026-09-28,5,Impetigen,3
+2026-11-02,221,Grip,6
+2026-09-21,173,Grip,15
+2026-10-26,92,COVID-19,2
+2026-09-28,125,Escarlatina,1
+2026-09-21,103,Impetigen,2
+2026-10-19,208,Grip,15
+2026-10-05,199,Grip,17
+2026-09-21,231,Faringoamigdalitis estreptocòccica,2
+2026-09-14,346,Faringoamigdalitis,3
+2026-11-02,172,Impetigen,8
+2026-10-26,134,Grip,4
+2026-10-05,8,Faringoamigdalitis,17
+2026-09-28,187,Grip,5
+2026-11-02,83,Impetigen,2
+2026-09-14,133,Grip,8
+2026-10-26,127,COVID-19,4
+2026-10-19,343,Faringoamigdalitis,3
+2026-10-26,126,Bronquiolitis,2
+2026-10-19,347,Impetigen,3
+2026-09-14,80,Altres IRA,15
+2026-09-14,199,Altres IRA,152
+2026-09-28,119,Faringoamigdalitis,32
+2026-09-14,171,Pneumònia,3
+2026-11-02,124,Altres IRA,126
+2026-09-21,177,Grip,4
+2026-10-12,85,Faringoamigdalitis,44
+2026-10-19,343,COVID-19,2
+2026-09-28,234,Altres IRA,101
+2026-10-19,8,Bronquiolitis,2
+2026-10-26,101,Escarlatina,1
+2026-11-02,126,COVID-19,2
+2026-10-12,234,Pneumònia,2
+2026-09-21,125,Altres IRA,156
+2026-10-12,347,Altres IRA,12
+2026-09-14,343,Faringoamigdalitis,2
+2026-11-02,103,COVID-19,3
+2026-11-02,114,Faringoamigdalitis estreptocòccica,15
+2026-09-14,92,Faringoamigdalitis estreptocòccica,6
+2026-10-26,171,Grip,17
+2026-10-12,171,Altres IRA,139
+2026-09-14,343,Impetigen,1
+2026-10-05,221,Faringoamigdalitis,24
+2026-09-14,177,Pneumònia,1
+2026-10-05,80,Faringoamigdalitis,4
+2026-10-05,142,Grip,17
+2026-10-19,189,COVID-19,3
+2026-09-21,114,Faringoamigdalitis estreptocòccica,8
+2026-10-19,189,Faringoamigdalitis,40
+2026-09-21,85,Faringoamigdalitis estreptocòccica,10
+2026-09-21,84,COVID-19,5
+2026-09-21,172,Grip,10
+2026-10-05,208,Pneumònia,6
+2026-10-26,187,COVID-19,1
+2026-09-28,134,Impetigen,1
+2026-10-26,177,Impetigen,2
+2026-09-14,83,COVID-19,1
+2026-09-21,234,Grip,19
+2026-10-19,238,Bronquiolitis,2
+2026-10-12,238,COVID-19,7
+2026-10-12,208,Impetigen,6
+2026-10-05,258,Faringoamigdalitis estreptocòccica,5
+2026-11-02,126,Grip,30
+2026-11-02,15,Faringoamigdalitis,37
+2026-09-28,126,Grip,19
+2026-09-28,172,Altres IRA,111
+2026-10-05,258,Bronquiolitis,1
+2026-09-28,187,Faringoamigdalitis estreptocòccica,7
+2026-09-14,84,Faringoamigdalitis estreptocòccica,7
+2026-10-12,126,COVID-19,9
+2026-09-14,199,Faringoamigdalitis,32
+2026-10-12,100,Altres IRA,123
+2026-10-26,15,Escarlatina,2
+2026-09-28,347,Altres IRA,17
+2026-11-02,258,Faringoamigdalitis,23
+2026-09-21,258,Altres IRA,72
+2026-10-05,100,Faringoamigdalitis,31
+2026-10-12,8,Faringoamigdalitis estreptocòccica,9
+2026-10-26,83,COVID-19,1
+2026-10-12,103,Faringoamigdalitis estreptocòccica,9
+2026-10-26,330,Impetigen,4
+2026-10-12,124,Faringoamigdalitis,13
+2026-10-12,84,Faringoamigdalitis,27
+2026-09-14,177,COVID-19,5
+2026-09-14,258,Pneumònia,5
+2026-10-05,15,COVID-19,9
+2026-09-21,5,Faringoamigdalitis estreptocòccica,4
+2026-09-28,85,Faringoamigdalitis estreptocòccica,8
+2026-09-21,187,Faringoamigdalitis estreptocòccica,7
+2026-09-14,238,COVID-19,4
+2026-09-14,173,Faringoamigdalitis estreptocòccica,9
+2026-10-19,100,Pneumònia,2
+2026-09-28,189,COVID-19,7
+2026-10-19,85,Impetigen,13
+2026-10-19,5,Grip,8
+2026-10-05,127,Bronquiolitis,1
+2026-10-26,346,Faringoamigdalitis,1
+2026-10-19,101,Altres IRA,55
+2026-10-12,8,Faringoamigdalitis,15
+2026-10-05,133,Altres IRA,47
+2026-10-12,15,Pneumònia,2
+2026-10-12,119,Faringoamigdalitis,38
+2026-09-21,199,Impetigen,11
+2026-10-12,127,Grip,11
+2026-10-12,234,Faringoamigdalitis,31
+2026-09-14,173,Pneumònia,3
+2026-09-21,173,Faringoamigdalitis estreptocòccica,2
+2026-10-26,343,Pneumònia,2
+2026-10-05,330,Altres IRA,70
+2026-09-14,173,COVID-19,4
+2026-11-02,234,Faringoamigdalitis estreptocòccica,17
+2026-11-02,114,Grip,6
+2026-09-21,238,Faringoamigdalitis,11
+2026-11-02,346,Faringoamigdalitis estreptocòccica,1
+2026-10-26,85,Faringoamigdalitis,34
+2026-10-19,101,Impetigen,3
+2026-10-19,267,Grip,6
+2026-10-26,172,Altres IRA,118
+2026-10-12,347,Faringoamigdalitis,3
+2026-09-21,208,Bronquiolitis,1
+2026-09-14,119,Faringoamigdalitis estreptocòccica,9
+2026-10-12,101,Bronquiolitis,1
+2026-10-19,100,Grip,19
+2026-10-12,125,Impetigen,4
+2026-09-14,15,Bronquiolitis,1
+2026-10-19,134,Altres IRA,42
+2026-10-19,103,Faringoamigdalitis estreptocòccica,7
+2026-09-14,124,Faringoamigdalitis,12
+2026-10-12,127,Altres IRA,60
+2026-10-05,171,COVID-19,13
+2026-09-21,234,Altres IRA,110
+2026-09-14,83,Altres IRA,18
+2026-10-05,347,Pneumònia,1
+2026-09-21,172,Faringoamigdalitis estreptocòccica,9
+2026-09-14,134,Impetigen,1
+2026-10-19,238,COVID-19,1
+2026-09-21,258,Pneumònia,2
+2026-09-14,84,Altres IRA,56
+2026-10-05,346,Impetigen,1
+2026-10-26,126,COVID-19,5
+2026-10-26,173,Escarlatina,1
+2026-10-05,267,Bronquiolitis,1
+2026-11-02,173,COVID-19,6
+2026-09-28,126,Faringoamigdalitis estreptocòccica,17
+2026-10-19,330,Faringoamigdalitis estreptocòccica,5
+2026-10-19,330,Bronquiolitis,1
+2026-10-19,187,Altres IRA,52
+2026-11-02,189,Faringoamigdalitis,34
+2026-10-26,80,COVID-19,1
+2026-09-14,172,COVID-19,2
+2026-10-12,124,COVID-19,4
+2026-10-26,231,Grip,8
+2026-09-21,208,COVID-19,7
+2026-11-02,92,Faringoamigdalitis,10
+2026-10-12,199,Grip,15
+2026-09-14,199,Escarlatina,1
+2026-09-28,15,Altres IRA,145
+2026-10-26,221,Faringoamigdalitis estreptocòccica,9
+2026-09-28,83,COVID-19,4
+2026-10-05,199,Faringoamigdalitis,45
+2026-09-28,103,Altres IRA,77
+2026-10-05,119,Altres IRA,211
+2026-11-02,119,Impetigen,4
+2026-09-14,238,Pneumònia,3
+2026-09-28,346,Impetigen,3
+2026-10-05,119,Grip,27
+2026-10-05,221,Faringoamigdalitis estreptocòccica,11
+2026-10-26,92,Faringoamigdalitis,8
+2026-09-14,84,Pneumònia,6
+2026-10-12,124,Faringoamigdalitis estreptocòccica,6
+2026-09-21,217,Faringoamigdalitis,2
+2026-10-26,347,Pneumònia,1
+2026-10-26,172,Pneumònia,5
+2026-09-21,346,Faringoamigdalitis,2
+2026-10-12,217,Altres IRA,22
+2026-10-19,119,Impetigen,20
+2026-10-19,258,Bronquiolitis,1
+2026-10-19,267,Pneumònia,2
+2026-10-19,172,Grip,8
+2026-09-28,125,Faringoamigdalitis,11
+2026-09-14,114,Grip,2
+2026-10-12,83,Impetigen,6
+2026-10-12,172,Faringoamigdalitis,37
+2026-09-28,134,COVID-19,2
+2026-09-21,189,Impetigen,13
+2026-09-28,84,Impetigen,6
+2026-11-02,267,Faringoamigdalitis,14
+2026-11-02,187,Escarlatina,1
+2026-09-14,231,Faringoamigdalitis estreptocòccica,5
+2026-09-14,189,Altres IRA,106
+2026-10-05,171,Pneumònia,8
+2026-10-26,172,Grip,14
+2026-09-14,15,Altres IRA,118
+2026-09-14,101,Grip,5
+2026-09-28,8,Bronquiolitis,2
+2026-09-14,133,Pneumònia,1
+2026-09-14,346,Pneumònia,1
+2026-10-19,199,COVID-19,12
+2026-09-14,172,Altres IRA,95
+2026-11-02,100,Altres IRA,145
+2026-10-19,80,Faringoamigdalitis,5
+2026-11-02,187,COVID-19,3
+2026-10-19,330,Grip,17
+2026-10-26,85,Faringoamigdalitis estreptocòccica,16
+2026-10-12,231,Pneumònia,2
+2026-11-02,267,COVID-19,4
+2026-09-28,238,Grip,12
+2026-10-12,133,Faringoamigdalitis estreptocòccica,4
+2026-09-28,217,Faringoamigdalitis,3
+2026-10-19,173,Pneumònia,4
+2026-10-12,217,COVID-19,2
+2026-09-14,171,Faringoamigdalitis estreptocòccica,8
+2026-10-12,172,Grip,6
+2026-10-19,347,Faringoamigdalitis,3
+2026-10-19,238,Faringoamigdalitis estreptocòccica,7
+2026-11-02,125,Faringoamigdalitis,30
+2026-10-12,134,Altres IRA,32
+2026-10-19,127,Pneumònia,4
+2026-10-26,172,Impetigen,9
+2026-09-21,267,Impetigen,5
+2026-10-19,187,Faringoamigdalitis,18
+2026-09-28,199,COVID-19,13
+2026-10-26,114,Grip,3
+2026-10-19,8,COVID-19,2
+2026-11-02,330,Faringoamigdalitis estreptocòccica,6
+2026-11-02,8,Impetigen,3
+2026-09-28,177,Grip,1
+2026-10-12,258,Bronquiolitis,2
+2026-09-21,258,Bronquiolitis,1
+2026-10-19,125,COVID-19,3
+2026-09-21,133,Faringoamigdalitis,20
+2026-10-19,330,Altres IRA,81
+2026-09-28,189,Grip,9
+2026-10-05,133,Faringoamigdalitis estreptocòccica,2
+2026-11-02,5,Faringoamigdalitis,13
+2026-10-26,221,Faringoamigdalitis,16
+2026-09-14,133,Altres IRA,39
+2026-11-02,172,Bronquiolitis,2
+2026-09-14,343,COVID-19,2
+2026-11-02,231,Faringoamigdalitis estreptocòccica,10
+2026-09-28,8,Altres IRA,62
+2026-10-26,346,Impetigen,2
+2026-10-19,124,COVID-19,2
+2026-10-19,83,Faringoamigdalitis estreptocòccica,1
+2026-11-02,114,Altres IRA,72
+2026-10-05,187,Faringoamigdalitis estreptocòccica,5
+2026-10-26,346,Grip,1
+2026-09-28,101,Grip,7
+2026-10-12,133,COVID-19,1
+2026-11-02,142,Faringoamigdalitis estreptocòccica,13
+2026-11-02,208,Altres IRA,165
+2026-09-14,199,COVID-19,11
+2026-10-19,134,COVID-19,1
+2026-09-14,85,Faringoamigdalitis estreptocòccica,12
+2026-11-02,234,Pneumònia,3
+2026-10-26,114,Impetigen,6
+2026-10-26,114,COVID-19,6
+2026-09-21,80,Impetigen,4
+2026-10-05,103,Impetigen,7
+2026-09-21,15,Altres IRA,159
+2026-10-05,126,Pneumònia,4
+2026-10-12,330,Impetigen,4
+2026-10-19,15,Grip,4
+2026-09-14,8,Grip,15
+2026-09-28,258,Altres IRA,70
+2026-10-05,5,Faringoamigdalitis,8
+2026-09-14,83,Impetigen,1
+2026-10-05,221,COVID-19,4
+2026-10-26,267,Grip,7
+2026-10-19,231,Pneumònia,1
+2026-09-14,134,Faringoamigdalitis,16
+2026-10-12,171,Pneumònia,7
+2026-11-02,84,Faringoamigdalitis estreptocòccica,15
+2026-10-05,85,Pneumònia,2
+2026-09-28,171,Altres IRA,216
+2026-09-28,85,Bronquiolitis,1
+2026-09-14,5,Faringoamigdalitis estreptocòccica,3
+2026-09-14,189,Bronquiolitis,1
+2026-09-21,172,COVID-19,8
+2026-10-05,80,Impetigen,1
+2026-09-28,347,Impetigen,1
+2026-11-02,238,Altres IRA,88
+2026-09-28,199,Grip,23
+2026-11-02,173,Altres IRA,100
+2026-09-28,101,Altres IRA,68
+2026-10-26,119,COVID-19,7
+2026-10-05,171,Faringoamigdalitis,41
+2026-09-21,92,Grip,1
+2026-11-02,127,Bronquiolitis,1
+2026-09-14,127,Impetigen,8
+2026-09-28,208,Impetigen,5
+2026-09-28,172,Faringoamigdalitis estreptocòccica,8
+2026-11-02,231,COVID-19,1
+2026-10-12,238,Faringoamigdalitis estreptocòccica,6
+2026-11-02,84,Pneumònia,3
+2026-10-05,125,Faringoamigdalitis estreptocòccica,5
+2026-09-21,330,Pneumònia,1
+2026-11-02,103,Altres IRA,100
+2026-10-05,142,Faringoamigdalitis estreptocòccica,17
+2026-09-14,172,Faringoamigdalitis,33
+2026-10-26,5,COVID-19,2
+2026-09-28,5,COVID-19,1
+2026-11-02,92,Faringoamigdalitis estreptocòccica,6
+2026-11-02,134,Altres IRA,53
+2026-10-26,231,Pneumònia,3
+2026-10-12,100,Pneumònia,5
+2026-10-26,101,Faringoamigdalitis estreptocòccica,2
+2026-09-14,172,Bronquiolitis,2
+2026-10-05,80,Altres IRA,18
+2026-10-05,234,Altres IRA,99
+2026-09-28,142,Faringoamigdalitis,46
+2026-11-02,114,COVID-19,2
+2026-10-19,101,Escarlatina,1
+2026-10-05,267,Faringoamigdalitis,8
+2026-09-14,208,Escarlatina,1
+2026-09-14,231,Impetigen,9
+2026-10-19,84,Grip,2
+2026-11-02,15,Bronquiolitis,2
+2026-09-21,8,Altres IRA,89
+2026-11-02,15,Impetigen,13
+2026-11-02,187,Faringoamigdalitis,11
+2026-10-19,126,Altres IRA,133
+2026-09-14,142,Altres IRA,174
+2026-09-21,80,Pneumònia,2
+2026-10-12,231,Grip,7
+2026-10-12,267,Grip,4
+2026-10-26,347,Faringoamigdalitis estreptocòccica,5
+2026-09-14,258,Grip,2
+2026-11-02,347,Altres IRA,26
+2026-10-12,217,Grip,2
+2026-09-14,187,COVID-19,6
+2026-10-12,199,Pneumònia,5
+2026-10-05,187,Impetigen,5
+2026-10-19,142,Impetigen,5
+2026-11-02,267,Pneumònia,5
+2026-09-28,142,Impetigen,17
+2026-10-19,330,Pneumònia,2
+2026-11-02,134,Grip,4
+2026-10-12,208,Faringoamigdalitis,26
+2026-09-14,103,Faringoamigdalitis estreptocòccica,3
+2026-10-05,100,Grip,13
+2026-10-12,187,Impetigen,3
+2026-09-28,258,Faringoamigdalitis,18
+2026-10-19,103,Faringoamigdalitis,24
+2026-09-28,267,Impetigen,4
+2026-09-21,127,Altres IRA,67
+2026-10-05,125,COVID-19,9
+2026-10-05,80,Grip,2
+2026-10-05,171,Bronquiolitis,3
+2026-10-12,171,Bronquiolitis,4
+2026-09-21,231,Grip,5
+2026-10-05,267,Altres IRA,54
+2026-11-02,221,Faringoamigdalitis,20
+2026-09-14,114,Altres IRA,45
+2026-10-19,258,Escarlatina,1
+2026-10-05,347,Grip,2
+2026-10-12,126,Altres IRA,122
+2026-10-12,221,Faringoamigdalitis estreptocòccica,8
+2026-10-19,134,Grip,9
+2026-10-19,124,Faringoamigdalitis,10
+2026-10-12,267,Faringoamigdalitis estreptocòccica,6
+2026-10-19,84,COVID-19,1
+2026-11-02,85,Faringoamigdalitis estreptocòccica,19
+2026-10-19,127,Bronquiolitis,2
+2026-11-02,343,Faringoamigdalitis,6
+2026-09-21,142,Faringoamigdalitis,46
+2026-10-26,142,COVID-19,3
+2026-09-14,343,Grip,1
+2026-10-26,173,COVID-19,8
+2026-11-02,100,Pneumònia,4
+2026-10-26,126,Pneumònia,5
+2026-10-05,208,Faringoamigdalitis estreptocòccica,14
+2026-10-26,208,Impetigen,7
+2026-10-12,114,Altres IRA,63
+2026-11-02,103,Pneumònia,2
+2026-11-02,101,Impetigen,8
+2026-10-12,234,Altres IRA,107
+2026-09-28,134,Altres IRA,41
+2026-09-21,172,Altres IRA,100
+2026-11-02,231,Grip,9
+2026-10-05,208,Faringoamigdalitis,30
+2026-10-05,126,Bronquiolitis,2
+2026-09-28,267,Pneumònia,1
+2026-09-28,217,Grip,2
+2026-11-02,231,Bronquiolitis,2
+2026-10-19,171,Impetigen,8
+2026-11-02,133,Bronquiolitis,2
+2026-10-19,114,Bronquiolitis,1
+2026-10-19,85,Altres IRA,188
+2026-09-21,134,Grip,14
+2026-09-14,142,Impetigen,15
+2026-11-02,119,Bronquiolitis,2
+2026-09-14,85,COVID-19,4
+2026-10-05,238,Grip,5
+2026-10-26,80,Grip,3
+2026-10-12,134,Impetigen,1
+2026-10-12,124,Bronquiolitis,1
+2026-09-28,199,Faringoamigdalitis estreptocòccica,23
+2026-10-12,217,Pneumònia,1
+2026-09-14,258,Faringoamigdalitis,14
+2026-09-28,124,Escarlatina,1
+2026-10-19,125,Grip,23
+2026-09-28,124,Grip,20
+2026-09-14,189,Faringoamigdalitis,36
+2026-10-12,177,Altres IRA,39
+2026-10-05,258,Altres IRA,59
+2026-10-05,84,Faringoamigdalitis estreptocòccica,13
+2026-09-21,142,Grip,30
+2026-10-26,100,Altres IRA,121
+2026-10-05,85,Impetigen,11
+2026-09-14,231,Altres IRA,42
+2026-10-26,83,Faringoamigdalitis,4
+2026-10-19,208,Pneumònia,2
+2026-10-26,126,Impetigen,9
+2026-10-19,83,Altres IRA,27
+2026-09-21,173,Faringoamigdalitis,17
+2026-10-12,84,Grip,2
+2026-10-05,101,Faringoamigdalitis,15
+2026-09-28,238,Pneumònia,1
+2026-10-12,114,Pneumònia,1
+2026-10-19,127,Impetigen,2
+2026-10-19,187,COVID-19,3
+2026-09-21,134,Impetigen,1
+2026-09-28,330,Impetigen,4
+2026-11-02,267,Faringoamigdalitis estreptocòccica,2
+2026-10-19,346,Altres IRA,11
+2026-09-14,92,Altres IRA,27
+2026-11-02,127,Altres IRA,91
+2026-10-05,124,Impetigen,4
+2026-10-26,258,Impetigen,6
+2026-11-02,221,Faringoamigdalitis estreptocòccica,11
+2026-09-21,133,Impetigen,4
+2026-10-19,347,COVID-19,1
+2026-10-12,221,Faringoamigdalitis,22
+2026-10-12,142,COVID-19,5
+2026-10-05,119,COVID-19,12
+2026-10-05,80,Faringoamigdalitis estreptocòccica,3
+2026-10-12,330,Altres IRA,76
+2026-10-26,189,COVID-19,2
+2026-10-05,258,Faringoamigdalitis,12
+2026-09-14,101,Pneumònia,1
+2026-10-26,177,Altres IRA,53
+2026-10-12,258,Impetigen,7
+2026-11-02,234,Grip,29
+2026-11-02,83,Pneumònia,3
+2026-10-26,221,Bronquiolitis,2
+2026-10-26,346,Altres IRA,17
+2026-09-21,100,Impetigen,8
+2026-09-28,15,Grip,1
+2026-10-05,208,Bronquiolitis,3
+2026-09-28,258,Impetigen,9
+2026-10-19,208,Faringoamigdalitis estreptocòccica,17
+2026-10-05,126,Faringoamigdalitis estreptocòccica,13
+2026-10-12,238,Faringoamigdalitis,15
+2026-10-12,125,Faringoamigdalitis,25
+2026-10-26,100,Faringoamigdalitis estreptocòccica,10
+2026-10-12,267,Altres IRA,37
+2026-10-05,142,Bronquiolitis,1
+2026-10-26,173,Faringoamigdalitis,25
+2026-09-28,85,Pneumònia,5
+2026-09-21,199,Faringoamigdalitis,42
+2026-10-26,83,Pneumònia,2
+2026-09-21,221,Altres IRA,66
+2026-10-26,127,Grip,13
+2026-09-28,8,Pneumònia,1
+2026-09-28,119,Pneumònia,5
+2026-10-12,231,Altres IRA,58
+2026-10-12,15,Faringoamigdalitis estreptocòccica,10
+2026-10-05,124,Pneumònia,3
+2026-11-02,177,Impetigen,1
+2026-10-12,199,Escarlatina,1
+2026-11-02,100,Grip,26
+2026-10-19,231,COVID-19,4
+2026-09-21,100,Faringoamigdalitis estreptocòccica,12
+2026-09-28,15,Pneumònia,8
+2026-11-02,189,Faringoamigdalitis estreptocòccica,20
+2026-10-12,189,Pneumònia,6
+2026-10-05,208,COVID-19,4
+2026-10-19,172,COVID-19,4
+2026-10-19,119,Altres IRA,213
+2026-11-02,119,Faringoamigdalitis estreptocòccica,24
+2026-09-21,343,Impetigen,1
+2026-09-14,134,COVID-19,1
+2026-09-21,84,Impetigen,3
+2026-09-14,124,Faringoamigdalitis estreptocòccica,2
+2026-10-05,119,Impetigen,19
+2026-09-14,267,Faringoamigdalitis,12
+2026-10-05,172,Pneumònia,2
+2026-09-28,124,Faringoamigdalitis estreptocòccica,5
+2026-10-12,189,Grip,18
+2026-10-12,172,Faringoamigdalitis estreptocòccica,17
+2026-10-19,347,Faringoamigdalitis estreptocòccica,2
+2026-10-12,124,Escarlatina,2
+2026-11-02,199,Grip,52
+2026-10-26,171,COVID-19,2
+2026-09-28,189,Bronquiolitis,3
+2026-10-19,258,COVID-19,1
+2026-10-19,221,Altres IRA,95
+2026-10-05,221,Impetigen,5
+2026-10-26,84,Grip,2
+2026-11-02,15,Altres IRA,137
+2026-10-05,231,Bronquiolitis,2
+2026-10-12,208,COVID-19,9
+2026-10-26,177,Grip,5
+2026-10-26,208,Grip,11
+2026-09-21,124,Altres IRA,114
+2026-09-28,238,Faringoamigdalitis,13
+2026-09-28,15,Bronquiolitis,2
+2026-10-19,5,Faringoamigdalitis,17
+2026-09-14,101,COVID-19,6
+2026-10-19,103,Impetigen,3
+2026-10-05,5,Grip,6
+2026-09-21,231,Pneumònia,8
+2026-10-05,171,Impetigen,8
+2026-09-21,173,Altres IRA,81
+2026-11-02,171,Escarlatina,1
+2026-10-19,330,COVID-19,1
+2026-09-14,208,Grip,9
+2026-10-19,199,Faringoamigdalitis estreptocòccica,22
+2026-10-12,114,Faringoamigdalitis estreptocòccica,7
+2026-10-26,126,Altres IRA,117
+2026-10-26,15,Altres IRA,125
+2026-10-26,173,Impetigen,10
+2026-11-02,101,Faringoamigdalitis estreptocòccica,1
+2026-11-02,172,COVID-19,11
+2026-09-14,133,Impetigen,3
+2026-09-21,85,Faringoamigdalitis,29
+2026-10-12,173,Grip,10
+2026-09-28,80,Impetigen,2
+2026-09-28,221,Impetigen,13
+2026-11-02,189,Grip,15
+2026-09-21,142,COVID-19,3
+2026-09-21,187,COVID-19,6
+2026-09-28,127,Faringoamigdalitis,16
+2026-11-02,199,Bronquiolitis,2
+2026-09-28,126,Pneumònia,5
+2026-09-14,189,Pneumònia,4
+2026-10-26,133,Pneumònia,3
+2026-11-02,171,Altres IRA,217
+2026-10-26,124,Faringoamigdalitis,7
+2026-09-28,134,Faringoamigdalitis,20
+2026-09-14,346,Faringoamigdalitis estreptocòccica,1
+2026-09-28,126,Faringoamigdalitis,29
+2026-09-28,189,Pneumònia,4
+2026-10-19,172,Pneumònia,2
+2026-10-05,173,Altres IRA,62
+2026-10-05,5,Impetigen,2
+2026-10-12,127,Faringoamigdalitis,13
+2026-10-19,83,Grip,5
+2026-09-14,231,Bronquiolitis,1
+2026-10-19,114,COVID-19,2
+2026-09-21,173,Impetigen,4
+2026-09-28,127,Altres IRA,55
+2026-09-14,267,Bronquiolitis,1
+2026-10-26,343,Altres IRA,17
+2026-09-28,127,Impetigen,5
+2026-10-05,92,Altres IRA,13
+2026-10-12,103,Faringoamigdalitis,31
+2026-09-14,171,Impetigen,8
+2026-10-05,238,Faringoamigdalitis,8
+2026-09-21,103,Pneumònia,6
+2026-11-02,171,Bronquiolitis,7
+2026-10-05,217,Impetigen,1
+2026-11-02,234,Faringoamigdalitis,40
+2026-09-14,134,Grip,1
+2026-10-12,134,Grip,4
+2026-10-12,133,Pneumònia,3
+2026-10-26,234,Faringoamigdalitis,35
+2026-10-05,173,Pneumònia,6
+2026-10-19,172,Faringoamigdalitis estreptocòccica,6
+2026-09-14,92,COVID-19,2
+2026-10-05,134,Altres IRA,44
+2026-10-26,199,Impetigen,6
+2026-11-02,127,Faringoamigdalitis,15
+2026-09-14,238,Faringoamigdalitis estreptocòccica,3
+2026-10-26,125,COVID-19,4
+2026-09-14,208,Pneumònia,4
+2026-11-02,126,Faringoamigdalitis estreptocòccica,22
+2026-10-05,114,COVID-19,6
+2026-09-21,172,Faringoamigdalitis,33
+2026-09-21,84,Grip,1
+2026-09-14,15,COVID-19,12
+2026-10-05,92,Faringoamigdalitis estreptocòccica,5
+2026-10-26,124,Grip,12
+2026-10-19,85,Bronquiolitis,2
+2026-11-02,238,Bronquiolitis,4
+2026-10-12,142,Faringoamigdalitis estreptocòccica,12
+2026-10-12,347,Faringoamigdalitis estreptocòccica,1
+2026-10-19,133,Faringoamigdalitis,6
+2026-10-12,231,Impetigen,3
+2026-09-14,92,Faringoamigdalitis,7
+2026-09-14,127,Faringoamigdalitis,10
+2026-10-19,8,Escarlatina,1
+2026-10-26,258,Faringoamigdalitis estreptocòccica,8
+2026-10-26,231,COVID-19,3
+2026-10-05,189,COVID-19,5
+2026-09-28,231,Pneumònia,2
+2026-09-14,124,Bronquiolitis,1
+2026-10-05,238,Altres IRA,63
+2026-10-05,330,Faringoamigdalitis,16
+2026-09-21,15,Faringoamigdalitis estreptocòccica,16
+2026-10-26,199,Faringoamigdalitis estreptocòccica,19
+2026-10-12,208,Altres IRA,118
+2026-10-26,330,Altres IRA,64
+2026-09-21,5,Faringoamigdalitis,10
+2026-09-14,171,Altres IRA,171
+2026-09-14,173,Altres IRA,55
+2026-11-02,217,Impetigen,1
+2026-09-14,126,Grip,18
+2026-09-21,142,Pneumònia,6
+2026-10-12,347,Grip,1
+2026-10-19,127,Grip,7
+2026-10-26,101,Altres IRA,53
+2026-10-12,133,Altres IRA,32
+2026-10-19,199,Pneumònia,2
+2026-10-19,142,COVID-19,5
+2026-11-02,8,COVID-19,2
+2026-10-05,238,Bronquiolitis,2
+2026-10-05,177,Faringoamigdalitis estreptocòccica,2
+2026-09-28,15,Impetigen,9
+2026-09-14,126,Altres IRA,127
+2026-10-05,119,Escarlatina,1
+2026-11-02,258,Pneumònia,3
+2026-11-02,217,Faringoamigdalitis estreptocòccica,2
+2026-10-05,100,COVID-19,3
+2026-09-28,103,Faringoamigdalitis,28
+2026-09-21,189,COVID-19,7
+2026-11-02,189,Bronquiolitis,4
+2026-11-02,127,Faringoamigdalitis estreptocòccica,5
+2026-10-05,92,COVID-19,1
+2026-10-05,85,Faringoamigdalitis,31
+2026-11-02,171,Faringoamigdalitis,39
+2026-09-14,189,Impetigen,19
+2026-11-02,231,Faringoamigdalitis,21
+2026-10-26,238,Bronquiolitis,4
+2026-09-21,92,Altres IRA,21
+2026-09-21,124,Grip,18
+2026-11-02,234,Impetigen,2
+2026-10-12,84,Pneumònia,4
+2026-10-19,8,Faringoamigdalitis,18
+2026-09-21,258,COVID-19,1
+2026-10-05,343,COVID-19,1
+2026-10-19,199,Escarlatina,1
+2026-10-26,172,Escarlatina,1
+2026-10-19,92,Faringoamigdalitis estreptocòccica,4
+2026-10-05,189,Faringoamigdalitis estreptocòccica,10
+2026-09-14,267,Altres IRA,30
+2026-09-21,133,Grip,10
+2026-10-19,83,Bronquiolitis,1
+2026-10-05,134,COVID-19,1
+2026-10-12,217,Faringoamigdalitis estreptocòccica,2
+2026-09-21,5,Pneumònia,3
+2026-10-05,172,Faringoamigdalitis estreptocòccica,4
+2026-10-05,85,COVID-19,3
+2026-10-12,343,Faringoamigdalitis,5
+2026-10-26,127,Altres IRA,57
+2026-09-21,189,Faringoamigdalitis,32
+2026-10-26,127,Faringoamigdalitis,12
+2026-10-05,234,Escarlatina,1
+2026-10-19,80,COVID-19,2
+2026-09-28,177,Impetigen,2
+2026-10-05,171,Altres IRA,219
+2026-09-28,234,Escarlatina,1
+2026-09-14,119,Bronquiolitis,1
+2026-10-19,258,Faringoamigdalitis estreptocòccica,5
+2026-10-05,343,Impetigen,2
+2026-10-26,172,COVID-19,12
+2026-10-05,177,COVID-19,6
+2026-09-21,103,Grip,14
+2026-09-21,343,Escarlatina,1
+2026-10-12,127,Faringoamigdalitis estreptocòccica,2
+2026-09-21,189,Bronquiolitis,1
+2026-10-05,172,Grip,5
+2026-09-21,8,Bronquiolitis,1
+2026-09-28,83,Altres IRA,25
+2026-10-05,238,COVID-19,5
+2026-09-21,92,COVID-19,1
+2026-09-28,8,Grip,15
+2026-09-28,5,Faringoamigdalitis estreptocòccica,4
+2026-09-21,85,Impetigen,8
+2026-09-14,221,Altres IRA,52
+2026-09-21,231,Impetigen,6
+2026-11-02,267,Altres IRA,66
+2026-11-02,134,Bronquiolitis,1
+2026-10-12,267,COVID-19,2
+2026-11-02,100,COVID-19,5
+2026-10-26,258,COVID-19,2
+2026-10-05,172,Bronquiolitis,4
+2026-10-26,103,Faringoamigdalitis estreptocòccica,6
+2026-09-28,172,Faringoamigdalitis,35
+2026-10-19,134,Impetigen,1
+2026-09-21,177,Altres IRA,33
+2026-11-02,5,Faringoamigdalitis estreptocòccica,5
+2026-09-21,238,Bronquiolitis,1
+2026-09-14,347,Bronquiolitis,2
+2026-10-12,231,COVID-19,3
+2026-10-12,177,Faringoamigdalitis estreptocòccica,2
+2026-10-12,83,Faringoamigdalitis,4
+2026-11-02,101,Pneumònia,1
+2026-10-12,15,Grip,5
+2026-09-14,217,Grip,3
+2026-09-14,103,COVID-19,5
+2026-10-12,5,Grip,4
+2026-10-12,15,Altres IRA,102
+2026-09-21,217,Faringoamigdalitis estreptocòccica,2
+2026-09-14,267,Impetigen,4
+2026-11-02,217,Altres IRA,30
+2026-11-02,171,Faringoamigdalitis estreptocòccica,18
+2026-10-19,84,Pneumònia,5
+2026-10-19,100,Bronquiolitis,5
+2026-09-21,80,Altres IRA,11
+2026-10-19,238,Faringoamigdalitis,11
+2026-09-21,103,COVID-19,8
+2026-09-28,171,Faringoamigdalitis,32
+2026-11-02,221,Pneumònia,1
+2026-10-26,234,Impetigen,10
+2026-09-28,330,Faringoamigdalitis,19
+2026-10-12,119,Bronquiolitis,2
+2026-09-28,15,Faringoamigdalitis,30
+2026-11-02,100,Escarlatina,1
+2026-10-19,103,Altres IRA,94
+2026-11-02,258,Bronquiolitis,1
+2026-09-28,114,Grip,3
+2026-09-28,92,COVID-19,2
+2026-10-05,172,Faringoamigdalitis,27
+2026-11-02,221,Impetigen,8
+2026-09-21,125,Faringoamigdalitis estreptocòccica,6
+2026-10-26,127,Faringoamigdalitis estreptocòccica,6
+2026-10-19,171,COVID-19,5
+2026-10-12,258,Altres IRA,63
+2026-10-19,267,Faringoamigdalitis estreptocòccica,6
+2026-10-19,173,Bronquiolitis,1
+2026-10-12,258,Faringoamigdalitis,25
+2026-11-02,126,Altres IRA,160
+2026-09-28,343,Pneumònia,2
+2026-10-05,199,Faringoamigdalitis estreptocòccica,14
+2026-11-02,133,Altres IRA,44
+2026-09-21,119,Faringoamigdalitis,34
+2026-09-14,125,Grip,20
+2026-11-02,124,Pneumònia,2
+2026-10-12,133,Grip,3
+2026-09-14,8,Altres IRA,54
+2026-11-02,238,Impetigen,2
+2026-10-19,133,Impetigen,1
+2026-10-19,85,Pneumònia,10
+2026-10-05,8,Escarlatina,1
+2026-09-21,171,Pneumònia,10
+2026-10-26,267,Impetigen,4
+2026-09-28,5,Bronquiolitis,2
+2026-09-21,124,COVID-19,8
+2026-10-26,234,Faringoamigdalitis estreptocòccica,14
+2026-09-21,343,COVID-19,1
+2026-09-21,187,Altres IRA,68
+2026-11-02,83,Faringoamigdalitis,2
+2026-11-02,8,Pneumònia,1
+2026-10-26,134,Bronquiolitis,1
+2026-10-05,15,Bronquiolitis,1
+2026-11-02,124,Faringoamigdalitis,21
+2026-10-05,134,Faringoamigdalitis estreptocòccica,7
+2026-10-05,234,Grip,24
+2026-10-26,343,Impetigen,1
+2026-09-21,172,Impetigen,14
+2026-09-14,177,Impetigen,5
+2026-09-28,8,Faringoamigdalitis estreptocòccica,10
+2026-10-19,114,Escarlatina,1
+2026-09-14,134,Pneumònia,2
+2026-10-05,119,Pneumònia,7
+2026-11-02,133,Faringoamigdalitis estreptocòccica,8
+2026-11-02,15,Grip,17
+2026-10-05,171,Escarlatina,1
+2026-10-26,199,Pneumònia,3
+2026-10-19,258,Pneumònia,1
+2026-10-12,126,Grip,9
+2026-09-28,119,Impetigen,11
+2026-10-19,83,Faringoamigdalitis,5
+2026-09-14,187,Grip,2
+2026-10-19,172,Impetigen,10
+2026-10-12,142,Grip,14
+2026-10-19,84,Faringoamigdalitis,30
+2026-10-19,142,Grip,18
+2026-09-28,267,Faringoamigdalitis estreptocòccica,11
+2026-11-02,85,Impetigen,4
+2026-09-14,208,Altres IRA,80
+2026-10-05,234,Faringoamigdalitis,21
+2026-09-14,258,Impetigen,8
+2026-09-21,103,Escarlatina,1
+2026-10-26,134,Altres IRA,30
+2026-11-02,101,Grip,12
+2026-10-05,126,Altres IRA,115
+2026-09-21,330,Impetigen,10
+2026-09-14,199,Faringoamigdalitis estreptocòccica,8
+2026-09-14,100,Pneumònia,3
+2026-10-12,187,Pneumònia,2
+2026-10-12,5,COVID-19,2
+2026-09-28,208,Pneumònia,2
+2026-09-28,142,Bronquiolitis,3
+2026-10-26,124,Faringoamigdalitis estreptocòccica,4
+2026-09-14,217,Faringoamigdalitis,3
+2026-09-28,92,Altres IRA,32
+2026-10-05,173,Faringoamigdalitis,16
+2026-11-02,134,COVID-19,1
+2026-11-02,124,Impetigen,6
+2026-10-05,330,Grip,5
+2026-10-19,234,Pneumònia,4
+2026-10-12,221,Altres IRA,86
+2026-09-14,100,Faringoamigdalitis,30
+2026-10-26,142,Pneumònia,1
+2026-10-19,103,Escarlatina,1
+2026-10-26,119,Altres IRA,193
+2026-10-12,119,Faringoamigdalitis estreptocòccica,19
+2026-09-14,103,Altres IRA,59
+2026-09-21,5,Altres IRA,66
+2026-09-14,114,Impetigen,4
+2026-09-21,238,Altres IRA,53
+2026-10-05,5,Pneumònia,1
+2026-10-19,100,Faringoamigdalitis estreptocòccica,10
+2026-09-28,85,Grip,26
+2026-10-12,92,Faringoamigdalitis,7
+2026-10-19,343,Faringoamigdalitis estreptocòccica,1
+2026-11-02,142,Faringoamigdalitis,50
+2026-09-28,125,Impetigen,7
+2026-09-14,134,Bronquiolitis,1
+2026-10-19,208,Impetigen,11
+2026-10-12,133,Impetigen,2
+2026-11-02,238,Faringoamigdalitis,16
+2026-09-21,101,Pneumònia,1
+2026-10-26,114,Faringoamigdalitis estreptocòccica,9
+2026-11-02,238,Escarlatina,1
+2026-10-12,5,Pneumònia,2
+2026-09-28,103,Pneumònia,5
+2026-09-14,142,Faringoamigdalitis estreptocòccica,11
+2026-09-14,83,Pneumònia,2
+2026-09-21,238,Impetigen,6
+2026-09-21,15,Grip,3
+2026-09-14,126,Pneumònia,5
+2026-10-26,187,Bronquiolitis,1
+2026-11-02,330,Pneumònia,3
+2026-10-26,189,Pneumònia,12
+2026-09-14,330,Altres IRA,46
+2026-09-14,217,Pneumònia,2
+2026-10-19,8,Altres IRA,58
+2026-09-14,171,Faringoamigdalitis,20
+2026-09-14,126,COVID-19,11
+2026-10-19,101,Faringoamigdalitis,8
+2026-09-14,177,Altres IRA,36
+2026-10-19,85,Grip,33
+2026-09-14,124,Pneumònia,3
+2026-09-21,8,COVID-19,9
+2026-10-12,258,Pneumònia,4
+2026-09-21,100,COVID-19,4
+2026-09-21,238,Grip,6
+2026-10-12,172,Bronquiolitis,1
+2026-09-28,114,Altres IRA,54
+2026-09-14,127,Altres IRA,51
+2026-09-28,142,Altres IRA,170
+2026-10-26,127,Pneumònia,6
+2026-10-26,234,COVID-19,4
+2026-10-26,8,Pneumònia,3
+2026-09-21,346,Altres IRA,18
+2026-10-05,114,Altres IRA,41
+2026-10-05,84,Impetigen,6
+2026-10-05,101,Faringoamigdalitis estreptocòccica,5
+2026-09-14,126,Bronquiolitis,2
+2026-10-19,171,Escarlatina,1
+2026-10-19,199,Grip,28
+2026-09-21,92,Bronquiolitis,1
+2026-10-19,100,Impetigen,4
+2026-10-19,15,Pneumònia,5
+2026-10-12,83,Altres IRA,20
+2026-10-19,173,Faringoamigdalitis estreptocòccica,5
+2026-10-26,100,Pneumònia,5
+2026-11-02,83,Faringoamigdalitis estreptocòccica,1
+2026-09-14,101,Faringoamigdalitis estreptocòccica,3
+2026-10-05,231,Pneumònia,2
+2026-10-05,189,Bronquiolitis,3
+2026-09-28,5,Faringoamigdalitis,14
+2026-10-26,238,Pneumònia,3
+2026-10-05,124,Altres IRA,79
+2026-09-28,208,COVID-19,6
+2026-10-26,177,Faringoamigdalitis estreptocòccica,2
+2026-09-28,101,Faringoamigdalitis,14
+2026-10-26,221,Altres IRA,76
+2026-10-26,84,Bronquiolitis,1
+2026-09-28,100,Altres IRA,120
+2026-10-26,100,Faringoamigdalitis,22
+2026-10-12,85,Impetigen,8
+2026-10-26,133,Grip,14
+2026-10-05,8,Faringoamigdalitis estreptocòccica,8
+2026-10-19,187,Bronquiolitis,1
+2026-10-26,208,Faringoamigdalitis,26
+2026-09-28,187,Pneumònia,1
+2026-09-21,114,Grip,1
+2026-09-28,346,Faringoamigdalitis,4
+2026-10-12,85,Altres IRA,209
+2026-09-28,347,COVID-19,3
+2026-09-21,133,COVID-19,1
+2026-10-26,126,Faringoamigdalitis,25
+2026-10-05,199,Escarlatina,2
+2026-10-12,172,Pneumònia,5
+2026-09-14,172,Faringoamigdalitis estreptocòccica,7
+2026-09-14,347,Grip,1
+2026-09-14,177,Faringoamigdalitis,4
+2026-09-14,330,Pneumònia,2
+2026-09-21,124,Faringoamigdalitis,20
+2026-10-26,231,Faringoamigdalitis estreptocòccica,6
+2026-09-28,92,Grip,1
+2026-10-19,267,Altres IRA,51
+2026-09-14,119,COVID-19,7
+2026-09-14,85,Grip,33
+2026-10-19,80,Altres IRA,22
+2026-10-26,171,Pneumònia,8
+2026-10-19,101,COVID-19,2
+2026-09-28,134,Faringoamigdalitis estreptocòccica,9
+2026-10-12,103,Grip,13
+2026-10-19,134,Faringoamigdalitis estreptocòccica,13
+2026-10-26,85,Altres IRA,225
+2026-09-14,173,Faringoamigdalitis,18
+2026-11-02,101,COVID-19,2
+2026-10-19,126,Bronquiolitis,2
+2026-09-14,100,Grip,7
+2026-09-21,15,Faringoamigdalitis,36
+2026-09-21,134,COVID-19,2
+2026-09-14,258,COVID-19,3
+2026-09-14,84,Faringoamigdalitis,18
+2026-09-21,330,Altres IRA,59
+2026-11-02,347,Impetigen,4
+2026-10-12,347,Pneumònia,1
+2026-10-05,83,Altres IRA,25
+2026-10-05,199,Altres IRA,187
+2026-10-26,114,Altres IRA,61
+2026-09-28,221,Faringoamigdalitis,35
+2026-10-05,124,Bronquiolitis,2
+2026-10-12,126,Faringoamigdalitis estreptocòccica,11
+2026-10-19,101,Grip,6
+2026-11-02,84,Impetigen,5
+2026-10-05,208,Grip,20
+2026-11-02,199,Pneumònia,8
+2026-09-28,127,Grip,10
+2026-09-14,5,COVID-19,3
+2026-09-21,119,Faringoamigdalitis estreptocòccica,8
+2026-10-12,92,COVID-19,4
+2026-09-21,8,Faringoamigdalitis,15
+2026-10-05,187,Faringoamigdalitis,13
+2026-10-12,100,Faringoamigdalitis,26
+2026-09-28,187,COVID-19,7
+2026-10-26,189,Bronquiolitis,1
+2026-10-05,124,Grip,13
+2026-09-21,125,Faringoamigdalitis,13
+2026-10-19,127,Faringoamigdalitis,8
+2026-11-02,172,Pneumònia,2
+2026-09-21,8,Faringoamigdalitis estreptocòccica,4
+2026-10-19,189,Impetigen,15
+2026-09-28,5,Altres IRA,57
+2026-10-19,234,Altres IRA,106
+2026-09-21,101,Faringoamigdalitis estreptocòccica,1
+2026-09-21,234,Pneumònia,3
+2026-09-14,238,Impetigen,3
+2026-10-05,343,Grip,1
+2026-11-02,189,Pneumònia,9
+2026-09-21,5,COVID-19,1
+2026-10-12,172,Impetigen,10
+2026-10-19,126,Faringoamigdalitis estreptocòccica,12
+2026-10-12,92,Grip,1
+2026-10-19,101,Faringoamigdalitis estreptocòccica,4
+2026-11-02,208,Bronquiolitis,1
+2026-10-05,217,Faringoamigdalitis,3
+2026-09-28,346,Altres IRA,12
+2026-09-14,258,Faringoamigdalitis estreptocòccica,8
+2026-09-21,343,Faringoamigdalitis,5
+2026-11-02,84,Faringoamigdalitis,35
+2026-11-02,119,Faringoamigdalitis,50
+2026-10-26,133,Faringoamigdalitis estreptocòccica,7
+2026-10-26,347,Altres IRA,24
+2026-09-21,346,Impetigen,2
+2026-10-12,343,Faringoamigdalitis estreptocòccica,3
+2026-09-14,172,Grip,5
+2026-10-26,5,Faringoamigdalitis estreptocòccica,5
+2026-10-05,15,Pneumònia,4
+2026-09-28,330,Faringoamigdalitis estreptocòccica,10
+2026-10-12,238,Altres IRA,70
+2026-10-05,85,Altres IRA,166
+2026-09-28,173,Altres IRA,77
+2026-11-02,221,Bronquiolitis,1
+2026-09-14,84,Grip,2
+2026-10-19,258,Impetigen,4
+2026-11-02,173,Impetigen,4
+2026-10-05,127,Faringoamigdalitis,11
+2026-11-02,208,Grip,15
+2026-10-05,258,Pneumònia,3
+2026-09-28,221,COVID-19,4
+2026-09-28,100,Pneumònia,7
+2026-11-02,101,Faringoamigdalitis,6
+2026-11-02,100,Faringoamigdalitis,35
+2026-09-14,124,Grip,10
+2026-10-05,100,Impetigen,9
+2026-10-26,267,Faringoamigdalitis,11
+2026-10-26,208,Faringoamigdalitis estreptocòccica,11
+2026-10-19,173,Altres IRA,74
+2026-10-19,125,Faringoamigdalitis estreptocòccica,4
+2026-09-28,8,Impetigen,3
+2026-09-14,221,COVID-19,7
+2026-09-21,177,Impetigen,4
+2026-09-28,80,Grip,1
+2026-10-26,8,Grip,14
+2026-10-19,346,Impetigen,2
+2026-09-21,171,Faringoamigdalitis estreptocòccica,18
+2026-09-14,80,COVID-19,1
+2026-10-12,126,Bronquiolitis,2
+2026-10-26,84,Faringoamigdalitis,29
+2026-10-19,125,Bronquiolitis,4
+2026-11-02,173,Bronquiolitis,1
+2026-10-19,231,Altres IRA,68
+2026-10-12,142,Faringoamigdalitis,52
+2026-09-21,221,COVID-19,6
+2026-09-28,346,COVID-19,3
+2026-09-28,234,Bronquiolitis,2
+2026-09-14,15,Faringoamigdalitis,38
+2026-10-19,221,Faringoamigdalitis,14
+2026-10-19,92,Faringoamigdalitis,7
+2026-10-12,101,Faringoamigdalitis estreptocòccica,5
+2026-09-21,100,Altres IRA,123
+2026-10-19,84,Faringoamigdalitis estreptocòccica,7
+2026-10-26,208,Pneumònia,6
+2026-10-19,124,Impetigen,7
+2026-09-28,343,Faringoamigdalitis estreptocòccica,4
+2026-10-12,8,Impetigen,3
+2026-09-28,103,Faringoamigdalitis estreptocòccica,10
+2026-11-02,85,COVID-19,2
+2026-09-28,142,Faringoamigdalitis estreptocòccica,14
+2026-10-26,177,COVID-19,1
+2026-10-12,92,Altres IRA,18
+2026-10-26,80,Faringoamigdalitis estreptocòccica,1
+2026-10-12,234,Grip,28
+2026-09-21,238,COVID-19,4
+2026-10-26,125,Altres IRA,117
+2026-11-02,92,Altres IRA,20
+2026-10-19,234,Faringoamigdalitis,36
+2026-10-12,330,Pneumònia,2
+2026-10-05,346,COVID-19,4
+2026-09-14,208,Faringoamigdalitis,20
+2026-09-21,124,Pneumònia,3
+2026-10-05,221,Altres IRA,96
+2026-11-02,330,Grip,8
+2026-09-14,119,Escarlatina,1
+2026-09-14,100,Faringoamigdalitis estreptocòccica,13
+2026-10-26,103,Grip,8
+2026-10-26,134,Faringoamigdalitis estreptocòccica,12
+2026-10-19,15,Altres IRA,113
+2026-10-05,177,Impetigen,1
+2026-10-26,114,Pneumònia,1
+2026-11-02,142,Bronquiolitis,1
+2026-09-21,173,Bronquiolitis,1
+2026-10-05,100,Faringoamigdalitis estreptocòccica,5
+2026-10-19,231,Grip,5
+2026-11-02,234,Altres IRA,105
+2026-10-12,15,Bronquiolitis,1
+2026-10-19,173,Faringoamigdalitis,15
+2026-10-19,84,Altres IRA,76
+2026-09-21,103,Altres IRA,96
+2026-10-05,15,Grip,3
+2026-10-12,134,Pneumònia,1
+2026-10-19,5,Impetigen,5
+2026-10-12,187,Grip,3
+2026-10-05,172,Impetigen,20
+2026-09-28,101,COVID-19,5
+2026-10-26,119,Faringoamigdalitis,46
+2026-09-28,330,Grip,14
+2026-09-21,134,Faringoamigdalitis estreptocòccica,8
+2026-11-02,330,Bronquiolitis,1
+2026-09-21,171,Grip,13
+2026-10-05,221,Bronquiolitis,2
+2026-10-12,101,COVID-19,1
+2026-10-26,238,Altres IRA,79
+2026-11-02,101,Altres IRA,53
+2026-09-21,80,Faringoamigdalitis,1
+2026-11-02,217,Pneumònia,1
+2026-09-21,330,Grip,8
+2026-09-21,127,Impetigen,2
+2026-09-28,100,COVID-19,6
+2026-10-26,187,Pneumònia,1
+2026-10-26,208,COVID-19,7
+2026-10-05,127,Faringoamigdalitis estreptocòccica,4
+2026-10-05,85,Bronquiolitis,1
+2026-10-12,330,Bronquiolitis,1
+2026-10-05,330,Impetigen,5
+2026-11-02,83,Grip,2
+2026-09-28,208,Bronquiolitis,1
+2026-10-26,124,COVID-19,3
+2026-09-21,100,Grip,12
+2026-09-14,347,Faringoamigdalitis,2
+2026-10-26,172,Faringoamigdalitis,28
+2026-10-12,100,Grip,12
+2026-09-21,171,Bronquiolitis,6
+2026-09-28,187,Altres IRA,52
+2026-10-19,347,Altres IRA,17
+2026-09-21,15,Escarlatina,4
+2026-10-19,267,Faringoamigdalitis,14
+2026-10-12,189,Faringoamigdalitis,33
+2026-10-26,125,Grip,12
+2026-09-21,92,Faringoamigdalitis,10
+2026-09-28,80,Faringoamigdalitis,2
+2026-10-05,142,Impetigen,15
+2026-11-02,267,Bronquiolitis,1
+2026-11-02,114,Bronquiolitis,1
+2026-10-05,101,Grip,1
+2026-11-02,238,Faringoamigdalitis estreptocòccica,8
+2026-09-21,267,Altres IRA,67
+2026-11-02,217,Faringoamigdalitis,7
+2026-11-02,199,Faringoamigdalitis,48
+2026-11-02,172,Faringoamigdalitis estreptocòccica,15
+2026-09-14,100,COVID-19,7
+2026-09-21,234,Impetigen,8
+2026-09-28,125,COVID-19,7
+2026-10-26,347,Grip,2
+2026-09-28,267,Grip,7
+2026-11-02,142,Pneumònia,9
+2026-10-05,343,Faringoamigdalitis,10
+2026-09-21,189,Faringoamigdalitis estreptocòccica,16
+2026-10-26,92,Faringoamigdalitis estreptocòccica,6
+2026-09-21,124,Bronquiolitis,1
+2026-09-28,127,Pneumònia,4
+2026-09-28,119,Bronquiolitis,2
+2026-10-26,83,Grip,4
+2026-10-19,234,Escarlatina,2
+2026-10-26,173,Faringoamigdalitis estreptocòccica,5
+2026-10-26,8,Faringoamigdalitis estreptocòccica,2
+2026-10-05,346,Faringoamigdalitis,4
+2026-11-02,173,Faringoamigdalitis estreptocòccica,9
+2026-09-21,100,Faringoamigdalitis,30
+2026-09-21,208,Altres IRA,122
+2026-09-28,173,COVID-19,9
+2026-10-26,5,Impetigen,1
+2026-10-12,15,Faringoamigdalitis,25
+2026-10-12,330,Faringoamigdalitis,20
+2026-10-05,103,Faringoamigdalitis estreptocòccica,8
+2026-09-14,15,Impetigen,10
+2026-10-12,83,Faringoamigdalitis estreptocòccica,1
+2026-11-02,134,Faringoamigdalitis estreptocòccica,7
+2026-11-02,187,Faringoamigdalitis estreptocòccica,6
+2026-09-21,15,Impetigen,10
+2026-10-26,346,Bronquiolitis,1
+2026-11-02,238,COVID-19,3
+2026-10-05,173,Faringoamigdalitis estreptocòccica,5
+2026-09-28,142,Pneumònia,3
+2026-10-19,103,Pneumònia,5
+2026-10-26,101,COVID-19,1
+2026-10-26,267,Altres IRA,57
+2026-09-14,267,Grip,1
+2026-09-14,346,COVID-19,8
+2026-09-21,208,Pneumònia,4
+2026-09-28,187,Impetigen,3
+2026-10-26,189,Impetigen,7
+2026-09-14,189,Grip,13
+2026-09-21,189,Grip,14
+2026-10-19,5,Pneumònia,3
+2026-10-12,5,Altres IRA,53
+2026-09-14,187,Pneumònia,4
+2026-10-26,125,Impetigen,5
+2026-11-02,187,Impetigen,4
+2026-10-12,343,Altres IRA,19
+2026-09-14,80,Faringoamigdalitis estreptocòccica,2
+2026-10-05,234,Pneumònia,5
+2026-10-19,5,COVID-19,2
+2026-09-28,85,Altres IRA,215
+2026-10-19,125,Faringoamigdalitis,15
+2026-09-14,231,Grip,10
+2026-09-21,126,Faringoamigdalitis,18
+2026-10-12,171,Faringoamigdalitis,27
+2026-09-21,347,Faringoamigdalitis,1
+2026-10-05,171,Grip,19
+2026-10-19,119,COVID-19,4
+2026-10-12,171,COVID-19,9
+2026-10-26,101,Impetigen,2
+2026-09-28,231,COVID-19,1
+2026-10-05,177,Faringoamigdalitis,4
+2026-09-28,234,Grip,29
+2026-10-05,134,Grip,4
+2026-10-05,126,Faringoamigdalitis,28
+2026-10-05,234,Impetigen,12
+2026-10-05,217,Altres IRA,16
+2026-10-26,258,Altres IRA,71
+2026-09-21,238,Faringoamigdalitis estreptocòccica,1
+2026-10-19,8,Faringoamigdalitis estreptocòccica,9
+2026-10-26,124,Impetigen,3
+2026-10-12,199,Faringoamigdalitis,44
+2026-10-19,100,Altres IRA,150
+2026-09-28,189,Altres IRA,119
+2026-10-19,199,Faringoamigdalitis,37
+2026-09-21,85,COVID-19,8
+2026-10-19,234,Grip,23
+2026-10-12,124,Altres IRA,92
+2026-10-05,15,Altres IRA,125
+2026-11-02,199,Faringoamigdalitis estreptocòccica,19
+2026-09-28,173,Faringoamigdalitis estreptocòccica,3
+2026-10-19,15,Faringoamigdalitis,24
+2026-10-19,267,Bronquiolitis,5
+2026-10-19,100,Escarlatina,1
+2026-11-02,189,COVID-19,6
+2026-11-02,126,Impetigen,4
+2026-11-02,80,Altres IRA,25
+2026-10-05,189,Faringoamigdalitis,21
+2026-10-12,187,Faringoamigdalitis estreptocòccica,7
+2026-09-14,347,COVID-19,1
+2026-10-05,8,COVID-19,1
+2026-10-19,134,Faringoamigdalitis,18
+2026-11-02,208,Faringoamigdalitis,35
+2026-10-05,125,Grip,18
+2026-09-28,126,COVID-19,17
+2026-09-21,5,Grip,10
+2026-10-19,189,Bronquiolitis,4
+2026-10-26,199,Bronquiolitis,3
+2026-09-14,125,Pneumònia,2
+2026-09-14,124,COVID-19,7
+2026-10-05,15,Faringoamigdalitis estreptocòccica,10
+2026-09-28,199,Pneumònia,7
+2026-10-26,5,Grip,6
+2026-10-26,234,Grip,21
+2026-10-05,5,Faringoamigdalitis estreptocòccica,4
+2026-09-21,234,Faringoamigdalitis estreptocòccica,7
+2026-11-02,84,Altres IRA,86
+2026-10-19,173,COVID-19,13
+2026-09-28,234,Impetigen,14
+2026-10-26,142,Impetigen,12
+2026-10-19,187,Impetigen,2
+2026-09-14,343,Altres IRA,10
+2026-09-28,83,Faringoamigdalitis estreptocòccica,1
+2026-10-19,142,Escarlatina,1
+2026-09-21,199,Grip,22
+2026-09-14,234,Impetigen,7
+2026-10-26,127,Bronquiolitis,1
+2026-11-02,125,Bronquiolitis,2
+2026-09-21,208,Grip,16
+2026-10-26,84,Faringoamigdalitis estreptocòccica,14
+2026-10-12,142,Altres IRA,214
+2026-10-19,5,Altres IRA,62
+2026-10-12,187,Bronquiolitis,1
+2026-10-19,127,COVID-19,2
+2026-09-28,84,Pneumònia,4
+2026-09-14,217,COVID-19,1
+2026-09-21,85,Grip,38
+2026-10-05,343,Altres IRA,21
+2026-10-12,101,Grip,8
+2026-10-19,133,Altres IRA,33
+2026-10-26,189,Faringoamigdalitis,42
+2026-09-28,101,Impetigen,3
+2026-10-19,199,Impetigen,14
+2026-10-05,173,Impetigen,8
+2026-09-28,217,Altres IRA,26
+2026-09-28,83,Impetigen,2
+2026-10-19,189,Faringoamigdalitis estreptocòccica,19
+2026-10-19,346,Pneumònia,1
+2026-10-12,126,Impetigen,10
+2026-11-02,124,Grip,24
+2026-09-28,133,Altres IRA,27
+2026-10-12,173,COVID-19,12
+2026-10-19,103,Grip,13
+2026-10-05,231,Faringoamigdalitis,16
+2026-10-19,347,Bronquiolitis,2
+2026-11-02,15,Faringoamigdalitis estreptocòccica,20
+2026-09-28,343,Faringoamigdalitis,6
+2026-10-12,221,Grip,20
+2026-10-26,15,Faringoamigdalitis estreptocòccica,22
+2026-10-05,125,Faringoamigdalitis,19
+2026-10-12,80,Bronquiolitis,1
+2026-09-14,177,Grip,1
+2026-10-12,83,COVID-19,2
+2026-10-19,258,Grip,1
+2026-10-26,80,Altres IRA,15
+2026-09-21,347,COVID-19,5
+2026-10-26,5,Escarlatina,1
+2026-09-21,85,Pneumònia,5
+2026-09-28,100,Faringoamigdalitis,23
+2026-10-26,258,Bronquiolitis,2
+2026-10-12,84,Faringoamigdalitis estreptocòccica,11
+2026-10-12,80,COVID-19,7
+2026-10-19,8,Grip,11
+2026-10-26,171,Faringoamigdalitis estreptocòccica,19
+2026-10-12,100,Impetigen,5
+2026-10-05,346,Altres IRA,13
+2026-09-21,127,Faringoamigdalitis,13
+2026-10-19,346,Faringoamigdalitis,2
+2026-10-19,114,Altres IRA,56
+2026-09-21,133,Altres IRA,45
+2026-09-14,330,Impetigen,4
+2026-11-02,177,Grip,3
+2026-10-26,346,Faringoamigdalitis estreptocòccica,1
+2026-10-05,133,Grip,4
+2026-10-19,171,Altres IRA,175
+2026-09-28,84,Altres IRA,65
+2026-10-05,177,Altres IRA,42
+2026-10-05,127,Altres IRA,67
+2026-09-21,343,Faringoamigdalitis estreptocòccica,4
+2026-10-05,8,Pneumònia,1
+2026-11-02,171,Pneumònia,5
+2026-10-19,217,Faringoamigdalitis,4
+2026-09-28,343,Altres IRA,25
+2026-09-21,134,Altres IRA,39
+2026-10-19,217,Grip,1
+2026-09-28,125,Bronquiolitis,2
+2026-09-14,231,Faringoamigdalitis,10
+2026-10-12,177,COVID-19,2
+2026-11-02,343,Grip,1
+2026-10-12,173,Pneumònia,1
+2026-09-21,347,Impetigen,1
+2026-10-05,127,Impetigen,1
+2026-09-14,330,Faringoamigdalitis estreptocòccica,8
+2026-10-05,8,Impetigen,6
+2026-10-19,217,COVID-19,1
+2026-09-28,15,COVID-19,13
+2026-11-02,124,Faringoamigdalitis estreptocòccica,11
+2026-10-26,8,COVID-19,5
+2026-10-19,85,COVID-19,6
+2026-09-14,84,Impetigen,8
+2026-11-02,258,Faringoamigdalitis estreptocòccica,15
+2026-11-02,221,Altres IRA,89
+2026-09-28,199,Impetigen,13
+2026-10-12,234,Impetigen,14
+2026-10-05,134,Faringoamigdalitis,14
+2026-09-28,114,Faringoamigdalitis,17
+2026-10-26,8,Altres IRA,82
+2026-10-26,114,Faringoamigdalitis,19
+2026-10-19,171,Faringoamigdalitis,35
+2026-10-26,234,Altres IRA,111
+2026-09-21,221,Impetigen,7
+2026-10-19,80,Bronquiolitis,1
+2026-09-14,85,Impetigen,11
+2026-09-28,208,Altres IRA,113
+2026-11-02,126,Pneumònia,5
+2026-10-05,92,Bronquiolitis,1
+2026-10-12,103,Altres IRA,69
+2026-10-05,258,COVID-19,4
+2026-09-14,5,Faringoamigdalitis,11
+2026-10-12,103,COVID-19,3
+2026-09-28,133,Faringoamigdalitis estreptocòccica,3
+2026-09-21,221,Faringoamigdalitis,14
+2026-11-02,8,Faringoamigdalitis estreptocòccica,4
+2026-10-26,231,Altres IRA,43
+2026-10-05,346,Faringoamigdalitis estreptocòccica,1
+2026-10-19,231,Faringoamigdalitis estreptocòccica,2
+2026-10-19,330,Impetigen,8
+2026-10-26,125,Bronquiolitis,3
+2026-10-05,187,Altres IRA,70
+2026-11-02,80,Faringoamigdalitis estreptocòccica,1
+2026-11-02,8,Faringoamigdalitis,17
+2026-10-19,258,Faringoamigdalitis,16
+2026-10-26,173,Altres IRA,99
+2026-10-26,238,COVID-19,4
+2026-10-12,330,Grip,11
+2026-09-14,80,Impetigen,2
+2026-10-26,330,Bronquiolitis,1
+2026-09-21,189,Pneumònia,4
+2026-09-28,330,Pneumònia,3
+2026-10-12,267,Impetigen,5
+2026-09-28,84,Grip,3
+2026-10-19,84,Impetigen,3
+2026-10-05,103,Altres IRA,82
+2026-10-26,238,Faringoamigdalitis estreptocòccica,8
+2026-10-19,208,Faringoamigdalitis,33
+2026-11-02,208,Faringoamigdalitis estreptocòccica,13
+2026-09-21,267,Faringoamigdalitis,13
+2026-10-26,187,Faringoamigdalitis estreptocòccica,4
+2026-10-19,172,Faringoamigdalitis,17
+2026-10-12,84,COVID-19,3
+2026-09-28,234,Faringoamigdalitis,25
+2026-10-26,8,Faringoamigdalitis,19
+2026-09-21,177,Faringoamigdalitis estreptocòccica,5
+2026-10-19,343,Impetigen,1
+2026-09-21,142,Impetigen,12
+2026-09-28,189,Impetigen,15
+2026-09-14,346,Altres IRA,13
+2026-09-28,177,Pneumònia,3
+2026-10-12,114,Grip,2
+2026-10-05,92,Faringoamigdalitis,6
+2026-11-02,208,Escarlatina,1
+2026-11-02,171,COVID-19,8
+2026-09-14,103,Faringoamigdalitis,17
+2026-09-21,187,Impetigen,8
+2026-10-19,133,Grip,2
+2026-10-19,172,Bronquiolitis,3
+2026-11-02,15,Pneumònia,6
+2026-09-21,101,Grip,5
+2026-11-02,127,Pneumònia,2
+2026-09-21,221,Grip,6
+2026-10-05,346,Pneumònia,1
+2026-10-05,133,COVID-19,2
+2026-10-26,100,Escarlatina,1
+2026-11-02,330,Altres IRA,83
+2026-09-28,234,Pneumònia,2
+2026-09-28,84,Escarlatina,3
+2026-09-28,100,Faringoamigdalitis estreptocòccica,8
+2026-10-05,84,Pneumònia,4
+2026-10-12,199,COVID-19,12
+2026-09-28,177,COVID-19,8
+2026-11-02,80,Faringoamigdalitis,3
+2026-11-02,208,COVID-19,1
+2026-10-26,177,Faringoamigdalitis,6
+2026-09-21,199,COVID-19,14
+2026-10-26,124,Altres IRA,63
+2026-09-28,217,COVID-19,1
+2026-09-28,173,Grip,12
+2026-11-02,177,Faringoamigdalitis,5
+2026-10-19,127,Faringoamigdalitis estreptocòccica,1
+2026-10-12,221,COVID-19,1
+2026-09-28,231,Faringoamigdalitis estreptocòccica,3
+2026-09-14,173,Impetigen,11
+2026-11-02,15,COVID-19,9
+2026-09-21,126,Bronquiolitis,1
+2026-09-28,8,COVID-19,9
+2026-09-21,124,Impetigen,8
+2026-10-19,8,Impetigen,9
+2026-09-14,199,Grip,19
+2026-10-05,189,Altres IRA,128
