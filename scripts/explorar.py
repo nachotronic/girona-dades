@@ -25,26 +25,17 @@ TERMINOS_SOCRATA = [
 ]
 
 CANDIDATAS = {}
-# Coyuntura, segunda ronda
+# Coyuntura, segunda ronda (2): niveles de Idescat, transporte, DGT
 IDC = "https://api.idescat.cat/taules/v2"
-CANDIDATAS["idescat_index"] = f"{IDC}?lang=ca"
-CANDIDATAS["idescat_afi"] = f"{IDC}/afi?lang=ca"
+for ruta in ("afi/8602", "afi/8603", "afic", "e03", "ee", "e01"):
+    CANDIDATAS["idescat_" + ruta.replace("/", "_")] = f"{IDC}/{ruta}?lang=ca"
 INE = "https://servicios.ine.es/wstempus/js/ES"
-CANDIDATAS["ine_operaciones"] = f"{INE}/OPERACIONES_DISPONIBLES"
-for op in ("EPC", "SM", "ETR", "IPV", "EOAC", "EOAP", "EOTR", "ICM", "IASS", "MNP", "ETDP"):
+for op in ("TV", "TMOV_R", "TMOV_I", "IRAV", "IPVA"):
     CANDIDATAS[f"ine_tablas_{op}"] = f"{INE}/TABLAS_OPERACION/{op}"
-BOL = "https://apps.fomento.gob.es/BoletinOnline2/sedal/{}.XLS"
-for c in ("35101000", "35103500", "35102000", "35103000"):
-    CANDIDATAS[f"mitma_{c}"] = BOL.format(c)
-CANDIDATAS["mitma_valor_tasado"] = "https://apps.fomento.gob.es/BoletinOnline2/?nivel=2&orden=35000000"
+CANDIDATAS["ine_49259"] = f"{INE}/DATOS_TABLA/49259?nult=3"
+CANDIDATAS["ine_6295"] = f"{INE}/DATOS_TABLA/6295?nult=3"
+CANDIDATAS["aena_mensuales"] = "https://www.aena.es/es/estadisticas/informes-mensuales.html"
 CANDIDATAS["dgt_mat_202609"] = "https://www.dgt.es/microdatos/salida/2026/9/vehiculos/matriculaciones/export_mensual_mat_202609.zip"
-CANDIDATAS["dgt_portal"] = "https://www.dgt.es/menusecundario/dgt-en-cifras/matraba-listados/matriculaciones-automoviles-mensual.html"
-CANDIDATAS["aena_estadisticas"] = "https://www.aena.es/es/estadisticas/inicio.html"
-CANDIDATAS["girona_opendata"] = "https://www.girona.cat/opendata/"
-CANDIDATAS["girona_ckan"] = "https://www.girona.cat/opendata/api/3/action/package_list"
-CANDIDATAS["ss_afil_prov"] = "https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/EST8/EST10"
-for t in ("aeroport", "autonoms", "afiliacio", "empreses", "aigua", "vehicles", "parc de vehicles", "turisme", "creacio d'empreses", "ocupacio"):
-    CANDIDATAS[f"socrata_{t.replace(' ', '_').replace(chr(39), '')}"] = f"{SOCRATA}?q={urllib.parse.quote(t)}&domains=analisi.transparenciacatalunya.cat&limit=40"
 
 def extension(tipo: str) -> str:
     tipo = tipo.lower()
@@ -59,6 +50,19 @@ def main() -> None:
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
     for clave, url in CANDIDATAS.items():
         try:
+            if url.endswith(".zip"):
+                import io, zipfile
+                r = requests.get(url, headers=UA, timeout=300)
+                z = zipfile.ZipFile(io.BytesIO(r.content))
+                txt = []
+                for n in z.namelist():
+                    with z.open(n) as fz:
+                        txt.append(f"== {n} ({z.getinfo(n).file_size} bytes)")
+                        for _ in range(25):
+                            txt.append(fz.readline().decode("latin-1").rstrip("\r\n"))
+                (MUESTRAS / f"{clave}.txt").write_text("\n".join(txt), encoding="utf-8")
+                filas.append(f"| {clave} | {r.status_code} | zip | {len(r.content)} | {url} |")
+                continue
             r = requests.get(url, headers=UA, timeout=120, stream=True)
             contenido = r.raw.read(LIMITE * 20 if clave.startswith(("ine_", "idescat_", "socrata_")) else LIMITE, decode_content=True)
             tipo = r.headers.get("content-type", "")
