@@ -26,6 +26,7 @@
       h_pres: "Pressupost de l'ajuntament", h_pres_sub: (a) => `Liquidació del ${a}, euros per habitant. Font: Generalitat de Catalunya, liquidació dels pressupostos dels ens locals.`,
       ingressos: "Ingressos", despeses: "Despeses", saldo: "Saldo", per_hab: "€ per habitant", prov_mitjana: "mitjana provincial",
       evol_pres: "Ingressos i despeses per habitant",
+      evol_irpf: "Renda bruta mitjana per declaració", esp: "Espanya", h_irpf_var: (a, v, p) => `Des del 2013, la renda declarada mitjana ha crescut un <b>${v}</b> (província: ${p}).`,
       h_com: "Comerç", h_com_sub: (a, n, s) => `Cens d'establiments comercials ${a}: ${n} establiments i ${s} m² de superfície de venda. Font: Generalitat de Catalunya.`,
       com_sect: "Establiments per 1.000 habitants, per sector", com_evol: "Establiments per 1.000 habitants", cat: "Catalunya",
       com_buits: (b, tot, p, pc) => `Locals buits (2022): <b>${b} de ${tot}</b> locals en planta baixa, el ${p}. Mitjana de les ciutats catalanes: ${pc}.`,
@@ -52,6 +53,7 @@
       h_pres: "Presupuesto del ayuntamiento", h_pres_sub: (a) => `Liquidación de ${a}, euros por habitante. Fuente: Generalitat de Catalunya, liquidación de los presupuestos de los entes locales.`,
       ingressos: "Ingresos", despeses: "Gastos", saldo: "Saldo", per_hab: "€ por habitante", prov_mitjana: "media provincial",
       evol_pres: "Ingresos y gastos por habitante",
+      evol_irpf: "Renta bruta media por declaración", esp: "España", h_irpf_var: (a, v, p) => `Desde 2013, la renta declarada media ha crecido un <b>${v}</b> (provincia: ${p}).`,
       h_com: "Comercio", h_com_sub: (a, n, s) => `Censo de establecimientos comerciales ${a}: ${n} establecimientos y ${s} m² de superficie de venta. Fuente: Generalitat de Catalunya.`,
       com_sect: "Establecimientos por 1.000 habitantes, por sector", com_evol: "Establecimientos por 1.000 habitantes", cat: "Cataluña",
       com_buits: (b, tot, p, pc) => `Locales vacíos (2022): <b>${b} de ${tot}</b> locales en planta baja, el ${p}. Media de las ciudades catalanas: ${pc}.`,
@@ -185,11 +187,18 @@
     const suma = parts.reduce((s, x) => s + x[1], 0);
     const ub = parts.map(([k, v, c]) => `<b class="${c}" style="width:${(100 * v) / suma}%" title="${tx(k)}"></b>`).join("");
     const lleg = parts.map(([k, v, c]) => `<li><i class="${c}"></i>${tx(k)}<span>${pct((100 * v) / suma, 0)}</span></li>`).join("");
+    const sb = (m.irpf && m.irpf.bruta) || {}, ab = Object.keys(sb).sort(), Rb = (D.irpf_ref || {}).bruta || {};
+    let evol = "";
+    if (ab.length > 2) {
+      const a0 = ab[0], a1 = ab[ab.length - 1], v = (sb[a1] / sb[a0] - 1) * 100, pv = Rb[a0] && Rb[a1] ? (Rb[a1].gi / Rb[a0].gi - 1) * 100 : null;
+      evol = `<figure class="grafic"><figcaption><span>${tx("evol_irpf")}</span><span class="unitat">€</span></figcaption>${a0 === "2013" ? `<p class="fx-dada">${tx("h_irpf_var", a0, pct(v, 0), pv == null ? "–" : pct(pv, 0))}</p>` : ""}<div class="g-irpf"></div></figure>`;
+    }
     const tipus = a.quota && a.rb ? (100 * a.quota) / a.rb : null, tipusP = p.quota && p.rb ? (100 * p.quota) / p.rb : null;
     return `<section class="fitxa-bloc fx-irpf"><h3>${tx("h_irpf")}</h3><p class="fb-sub">${tx("h_irpf_sub", a.any, fmt(a.decl))}</p>
       <ul class="nb fx-nb">${barra(tx("bruta"), a.bruta, p.bruta)}${barra(tx("disp"), a.disp, p.disp)}</ul>
       ${tipus ? `<p class="fx-dada">${tx("tipus")}: <b>${pct(tipus, 1)}</b>${tipusP ? ` · ${tx("prov_mitjana")} ${pct(tipusP, 1)}` : ""}</p>` : ""}
       <p class="fx-sub2">${tx("comp")}</p><div class="ub">${ub}</div><ul class="ub-lleg">${lleg}</ul>
+      ${evol}
       <p class="fb-font">${LANG === "ca" ? "Barra: municipi. Marca i xifra petita: mitjana de la província." : "Barra: municipio. Marca y cifra pequeña: media de la provincia."}</p></section>`;
   }
 
@@ -255,6 +264,16 @@
       const series = [{ nom: m.nom, color: "var(--serie-1)", dades: d }];
       if (m.estr_s && Object.keys(m.estr_s).length > 2) series.push({ nom: tx("estrangers"), color: "var(--accent)", dades: m.estr_s });
       grafLinia(gp, series, (v) => fmt(v));
+    }
+    const gi = extra.querySelector(".g-irpf");
+    if (gi) {
+      const R = (D.irpf_ref || {}).bruta || {}, z = (k) => Object.fromEntries(Object.entries(R).map(([a, o]) => [a, o[k]]).filter(([, v]) => v != null));
+      grafLinia(gi, [
+        { nom: m.nom, color: "var(--serie-1)", dades: m.irpf.bruta },
+        { nom: LANG === "ca" ? "Província" : "Provincia", color: "var(--accent)", dades: z("gi") },
+        { nom: tx("cat"), color: "var(--text-3)", dades: z("cat") },
+        { nom: tx("esp"), color: "var(--text-2)", dades: z("esp") },
+      ], (v) => `${fmt(v)} €`);
     }
     const gr = extra.querySelector(".g-pres");
     if (gr && m.pres.serie) {
