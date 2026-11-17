@@ -73,6 +73,12 @@ const T = {
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub", ref_pagines: "Dades per municipi en text, CSV i JSON",
     l_qui: "Qui som", l_avis: "Avís legal", l_priv: "Privacitat i galetes", l_llic: "Reutilització: CC BY 4.0",
+    l_proposa: "Proposa una dada", pr_sobre: "Bústia", pr_titol: "Et falta alguna dada?", pr_lead: "Fes-nos saber quina dada t'agradaria trobar aquí, de quin municipi o tema, i d'on es podria treure si ho saps. Llegim totes les propostes.",
+    pr_dada: "Quina dada et falta", pr_dada_ph: "Per exemple: preu del lloguer per barris de Figueres", pr_lloc: "Municipi o tema", pr_lloc_ph: "Opcional", pr_font: "Font, si la coneixes", pr_font_ph: "Opcional: organisme o enllaç",
+    pr_email: "El teu correu", pr_email_ph: "Opcional, només si vols resposta", pr_envia: "Envia la proposta", pr_assumpte: "Proposta de dada · Girona en xifres",
+    pr_avis: "El missatge s'envia per correu a la redacció a través de FormSubmit. Detalls a ", pr_avis_l: "Privacitat",
+    pr_enviant: "Enviant…", pr_ok: "<b>Gràcies.</b> Hem rebut la proposta.", pr_error: (u, c) => `No s'ha pogut enviar. <a href="${u}">Envia-la per correu</a> a ${c}.`,
+    pr_fitxa: (n) => `Et falta alguna dada de ${n}? Fes-nos-ho saber`,
     k_lloguer: "Lloguer mitjà",
     k_hab: "Habitants", n_hab: (v) => `${v} nascuts a l'estranger`, k_atur: "Atur (EPA)", n_atur: (p, e) => `${p} · Espanya, ${e}`,
     k_ipc: "Inflació", n_ipc: (p, e) => `interanual, ${p} · Espanya, ${e}`, k_tur: "Nits d'hotel", n_tur: (v) => `${v} de turistes estrangers`,
@@ -168,6 +174,12 @@ const T = {
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub", ref_pagines: "Datos por municipio en texto, CSV y JSON",
     l_qui: "Quiénes somos", l_avis: "Aviso legal", l_priv: "Privacidad y cookies", l_llic: "Reutilización: CC BY 4.0",
+    l_proposa: "Propón un dato", pr_sobre: "Buzón", pr_titol: "¿Te falta algún dato?", pr_lead: "Dinos qué dato te gustaría encontrar aquí, de qué municipio o tema, y de dónde podría sacarse si lo sabes. Leemos todas las propuestas.",
+    pr_dada: "Qué dato te falta", pr_dada_ph: "Por ejemplo: precio del alquiler por barrios de Figueres", pr_lloc: "Municipio o tema", pr_lloc_ph: "Opcional", pr_font: "Fuente, si la conoces", pr_font_ph: "Opcional: organismo o enlace",
+    pr_email: "Tu correo", pr_email_ph: "Opcional, solo si quieres respuesta", pr_envia: "Enviar la propuesta", pr_assumpte: "Propuesta de dato · Girona en xifres",
+    pr_avis: "El mensaje se envía por correo a la redacción a través de FormSubmit. Detalles en ", pr_avis_l: "Privacidad",
+    pr_enviant: "Enviando…", pr_ok: "<b>Gracias.</b> Hemos recibido la propuesta.", pr_error: (u, c) => `No se ha podido enviar. <a href="${u}">Envíala por correo</a> a ${c}.`,
+    pr_fitxa: (n) => `¿Te falta algún dato de ${n}? Háznoslo saber`,
     k_lloguer: "Alquiler medio",
     k_hab: "Habitantes", n_hab: (v) => `${v} nacidos en el extranjero`, k_atur: "Paro (EPA)", n_atur: (p, e) => `${p} · España, ${e}`,
     k_ipc: "Inflación", n_ipc: (p, e) => `interanual, ${p} · España, ${e}`, k_tur: "Noches de hotel", n_tur: (v) => `${v} de turistas extranjeros`,
@@ -274,6 +286,7 @@ function aplicaIdioma() {
   document.querySelectorAll(".idiomes button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === LANG)));
   const llic = document.getElementById("l-llic");
   if (llic) llic.href = `qui-som.html#${LANG}-llic`;
+  document.querySelectorAll("a[data-t=pr_avis_l]").forEach((a) => { a.href = `privacitat.html#${LANG}-contacte`; });
   document.querySelectorAll("a[data-t=ref_pagines]").forEach((a) => { a.href = `${LANG}/`; a.hreflang = LANG; });
 }
 
@@ -528,7 +541,8 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-trib"></div>
     <div class="fitxa-sol"></div>
     <div class="fitxa-ind"></div>
-    ${ajuntament(m)}`;
+    ${ajuntament(m)}
+    <div class="fitxa-proposa"></div>`;
   f.querySelector(".a-seccions").addEventListener("click", () => { if (window.mapaMunicipi) window.mapaMunicipi(m.ine); });
   f.querySelector(".tanca").addEventListener("click", () => { f.hidden = true; seleccionat = null; try { history.replaceState(history.state, "", location.pathname + location.search); } catch (e) { /* */ } });
   grafLinia(f.querySelector(".g-ll"), [
@@ -548,6 +562,7 @@ function obreFitxa(ine, desplaca) {
   if (window.fitxaTurisme) window.fitxaTurisme(f.querySelector(".fitxa-tur"), m);
   if (window.fitxaMobilitat) window.fitxaMobilitat(f.querySelector(".fitxa-mob"), m);
   fitxaSolar(f.querySelector(".fitxa-sol"), m);
+  if (window.fitxaProposa) window.fitxaProposa(f.querySelector(".fitxa-proposa"), m);
   if (window.fitxaIndicadors) window.fitxaIndicadors(m).then((html) => { if (seleccionat === m.ine) f.querySelector(".fitxa-ind").innerHTML = html; });
   if (desplaca) f.scrollIntoView({ behavior: "smooth", block: "start" });
 }
