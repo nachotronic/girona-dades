@@ -37,6 +37,15 @@ MESOS = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6
          "septiembre": 9, "setiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12}
 RE_ZIP = re.compile(r'href="([^"]*/(territoriales_anuales|territoriales_mens)/[^"]*?tr(\d\d)(an|[a-z]{2})(\d\d)\.zip)"', re.I)
 RE_PAG = re.compile(r'href="(/Sede/estadisticas/estadisticas-comercio-exterior/[^"#?]+\.html)"')
+INE_2852 = "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2852?nult=4"
+PROVS = {"01": "Araba/Álava", "02": "Albacete", "03": "Alicante/Alacant", "04": "Almería", "05": "Ávila", "06": "Badajoz",
+         "07": "Balears, Illes", "08": "Barcelona", "09": "Burgos", "10": "Cáceres", "11": "Cádiz", "12": "Castellón/Castelló",
+         "13": "Ciudad Real", "14": "Córdoba", "15": "Coruña, A", "16": "Cuenca", "17": "Girona", "18": "Granada", "19": "Guadalajara",
+         "20": "Gipuzkoa", "21": "Huelva", "22": "Huesca", "23": "Jaén", "24": "León", "25": "Lleida", "26": "Rioja, La", "27": "Lugo",
+         "28": "Madrid", "29": "Málaga", "30": "Murcia", "31": "Navarra", "32": "Ourense", "33": "Asturias", "34": "Palencia",
+         "35": "Palmas, Las", "36": "Pontevedra", "37": "Salamanca", "38": "Santa Cruz de Tenerife", "39": "Cantabria", "40": "Segovia",
+         "41": "Sevilla", "42": "Soria", "43": "Tarragona", "44": "Teruel", "45": "Toledo", "46": "Valencia/València", "47": "Valladolid",
+         "48": "Bizkaia", "49": "Zamora", "50": "Zaragoza", "51": "Ceuta", "52": "Melilla"}
 COLS = ["per", "flux", "nivell", "zona", "clau", "valor", "pes"]
 
 
@@ -108,6 +117,24 @@ def _processa(urls: list[str], mides: dict) -> pd.DataFrame:
     return pd.DataFrame(files, columns=COLS[1:])
 
 
+def _poblacio(sal) -> str:
+    """Población por provincia (INE 2852, padrón) para las exportaciones por habitante."""
+    nom2cod = {v: k for k, v in PROVS.items()}
+    files = []
+    for se in get(INE_2852).json():
+        parts = [x.strip() for x in se.get("Nombre", "").split(".")]
+        if len(parts) < 2 or parts[1] != "Total":
+            continue
+        cod = "esp" if "nacional" in parts[0].lower() else nom2cod.get(parts[0])
+        if cod:
+            files += [(cod, d.get("Anyo"), d.get("Valor")) for d in se.get("Data", []) if d.get("Valor")]
+    p = pd.DataFrame(files, columns=["prov", "any", "poblacio"]).drop_duplicates(["prov", "any"])
+    if p["prov"].nunique() < 50:
+        return f"ERROR población INE 2852: solo {p['prov'].nunique()} provincias"
+    p.sort_values(["prov", "any"]).to_csv(sal / "poblacio.csv", index=False)
+    return f"población INE 2852: {p['prov'].nunique()} zonas, años {p['any'].min()}-{p['any'].max()}"
+
+
 def ejecutar() -> str:
     sal = carpeta("exportacions")
     fa, fm = sal / "agregats.csv.gz", sal / "manifest.json"
@@ -150,6 +177,10 @@ def ejecutar() -> str:
         # Guarda a cada periodo para no perder trabajo si la Action se corta
         agr.sort_values(["per", "flux", "nivell", "zona", "clau"]).to_csv(fa, index=False, compression="gzip", float_format="%.2f")
         fm.write_text(json.dumps(man, indent=0, sort_keys=True))
+    try:
+        linies.append(_poblacio(sal))
+    except Exception as e:  # noqa: BLE001
+        linies.append(f"ERROR población: {type(e).__name__}: {str(e)[:100]}")
     if not nous:
         linies.append(f"Sin cambios ({len(enl)} periodos publicados, último {max(enl)})")
     return "\n".join(linies) + (f"\n{errors} periodos con ERROR" if errors else "")
