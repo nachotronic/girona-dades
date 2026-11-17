@@ -15,8 +15,10 @@ Genera en data/processed/cadastre/:
 from __future__ import annotations
 
 import datetime as dt
+import io
 import json
 import re
+import zipfile
 
 import pandas as pd
 
@@ -24,7 +26,16 @@ from .comun import RAW, carpeta, descargar, get
 
 C = "https://www.catastro.hacienda.gob.es/documentos/estadisticas/"
 FICHEROS = ("URBANA", "PARCELAS", "RUSTICA")
-HST = {"inm": "hst_inm_distritos.csv", "vm": "hst_vm_distritos.csv"}
+HST = {"inm": "hst_inm_distritos.csv", "vm": "hst_vm_distritos.csv", "sm": "hst_supm_distritos.csv"}
+# Información económico-financiera del IBI por municipio (2008-): recibos, bases, cuotas, tipos y recargo
+ECO = C + "economicofinanciera/serie_eco_fin.csv"
+ECO_SUMA = ["RECIBOS_URBANA", "BINTEGRA_NO_EXENTA_URBANA", "BLIQ_NO_EXENTA_URBANA", "CINTEGRA_URBANA", "CLIQUIDA_URBANA",
+            "RECIBOS_RUSTICA", "CLIQUIDA_RUSTICA", "RECIBOS_BICES", "CLIQUIDA_BICES"]
+ECO_COLS = ["TIPO_GENERAL_U", "TIPOS_DIFERENCIADOS", "TIPO_GENERAL_R", "RECARGO_DESOCUPADOS", "EXEN_URB", "EXEN_RUS"]
+# Series históricas por municipio del paquete PC-Axis completo (desde los años noventa)
+PXZIP = C + "px.zip"
+HISTORICS = {"urbana": "px/datoshistoricos/urbana/H1M117.px", "rustica": "px/datoshistoricos/rustica/H1M217.px",
+             "ibi": "px/datoshistoricos/IBI/H1M317.px"}
 # Las cabeceras cambian un poco con los años
 SINONIMOS = {"REVISION": "ULT_REVISION", "C_INE": "COD_INE_MUNI", "COD_INE": "COD_INE_MUNI", "INE": "COD_INE_MUNI",
              "SUPER_SOLAR": "SUP_SOLAR", "SUPER_CONST": "SUP_CONST",
@@ -121,9 +132,47 @@ def _districtes(res: list[str]) -> pd.DataFrame | None:
         for c in d.columns[2:]:
             d[c] = pd.to_numeric(d[c], errors="coerce")
         parts.append(d.set_index(["districte", "any"]))
-    t = parts[0].join(parts[1], how="outer").reset_index()
+    t = parts[0]
+    for p in parts[1:]:
+        t = t.join(p, how="outer")
+    t = t.reset_index()
     res.append(f"distritos censales: {t['districte'].nunique()} distritos, años {t['any'].min()}-{t['any'].max()}")
     return t
+
+
+def _eco_fin(res: list[str]) -> tuple[pd.DataFrame, dict]:
+    r = get(ECO, timeout=300)
+    d = pd.read_csv(io.BytesIO(r.content), sep=";", quotechar="'", decimal=",", dtype={"CODINE": str, "CPROV": str, "CCAA": str}, encoding="latin-1", low_memory=False)
+    d["CODINE"] = d["CODINE"].str.zfill(5)
+    for c in ECO_SUMA + [c for c in ECO_COLS if c != "TIPOS_DIFERENCIADOS"]:
+        d[c] = pd.to_numeric(d[c], errors="coerce")
+    refs = {}
+    for z, filtre in (("esp", d["CODINE"].str.len() == 5), ("cat", d["CODINE"].str[:2].isin(["08", "17", "25", "43"])), ("gi", d["CODINE"].str[:2] == "17")):
+        g = d[filtre].groupby("EJERCICIO")[ECO_SUMA].sum(min_count=1)
+        refs[z] = {str(a): {k: (None if pd.isna(v) else round(float(v), 2)) for k, v in fila.items()} for a, fila in g.iterrows()}
+        # Municipios que aplican el recargo a los inmuebles desocupados
+        rec = d[filtre].groupby("EJERCICIO")["RECARGO_DESOCUPADOS"].apply(lambda x: int((x > 0).sum()))
+        for a, n in rec.items():
+            refs[z].setdefault(str(a), {})["N_RECARGO"] = n
+        n = d[filtre].groupby("EJERCICIO")["CODINE"].nunique()
+        for a, v in n.items():
+            refs[z].setdefault(str(a), {})["N_MUNICIPIOS"] = int(v)
+    gi = d[d["CODINE"].str[:2] == "17"][["EJERCICIO", "CODINE", *ECO_SUMA, *ECO_COLS]].rename(columns={"EJERCICIO": "any", "CODINE": "codi_ine"})
+    res.append(f"IBI económico-financiero: {gi['codi_ine'].nunique()} municipios, años {gi['any'].min()}-{gi['any'].max()}")
+    return gi, refs
+
+
+def _historics(out, res: list[str]) -> None:
+    """Guarda las series históricas de Girona (PC-Axis) del paquete completo."""
+    ruta = RAW / "cadastre" / "px.zip"
+    descargar(PXZIP, ruta, timeout=900)
+    with zipfile.ZipFile(ruta) as z:
+        for k, n in HISTORICS.items():
+            try:
+                (out / f"historic_{k}.px").write_bytes(z.read(n))
+                res.append(f"histórico {k}: {n}")
+            except KeyError:
+                res.append(f"ERROR histórico {k}: no está {n}")
 
 
 def ejecutar() -> str:
@@ -142,4 +191,14 @@ def ejecutar() -> str:
         res.append(f"ERROR distritos censales: {e}")
     if dis is not None:
         dis.to_csv(out / "districtes.csv.gz", index=False)
+    try:
+        eco, refs_eco = _eco_fin(res)
+        eco.to_csv(out / "ibi_municipis.csv.gz", index=False)
+        (out / "ibi_referencies.json").write_text(json.dumps(refs_eco, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    except Exception as e:  # noqa: BLE001
+        res.append(f"ERROR IBI económico-financiero: {e}")
+    try:
+        _historics(out, res)
+    except Exception as e:  # noqa: BLE001
+        res.append(f"ERROR series históricas: {e}")
     return "\n".join(res)
