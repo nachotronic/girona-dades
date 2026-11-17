@@ -74,6 +74,7 @@
   const TEMES = [
     { id: "con", ca: "Conjuntura", es: "Coyuntura" },
     { id: "tur", ca: "Turisme", es: "Turismo" },
+    { id: "mob", ca: "Mobilitat", es: "Movilidad" },
     { id: "hab", ca: "Habitatge", es: "Vivienda" },
     { id: "ren", ca: "Renda", es: "Renta" },
     { id: "pob", ca: "Població", es: "Población" },
@@ -129,6 +130,35 @@
     camping: { ca: "INE, Enquesta d'ocupació en càmpings: només els punts turístics que publica l'INE (Torroella, Castelló d'Empúries, Blanes, Sant Pere Pescador…).", es: "INE, Encuesta de ocupación en campings: solo los puntos turísticos que publica el INE (Torroella, Castelló d'Empúries, Blanes, Sant Pere Pescador…)." },
     punts: { ca: "INE, Enquesta d'ocupació hotelera: només els punts turístics que l'INE publica (Lloret, Girona, Roses, Platja d'Aro…).", es: "INE, Encuesta de ocupación hotelera: solo los puntos turísticos que publica el INE (Lloret, Girona, Roses, Platja d'Aro…)." },
   };
+  // Movilidad: Enquesta de Mobilitat Quotidiana 2024-2025 (ATM Girona). m.mob = {clave: valor}, D.mob.ref = ámbito de la encuesta,
+  // D.arees.com = comarcas. Solo municipios con al menos D.mob.min_n personas entrevistadas (la atracción no depende de la muestra).
+  const MIN = { f: (v) => `${fmt(v)} min`, c: (v) => fmt(v) };
+  const D2 = { f: (v) => fmt(v, 2), c: (v) => fmt(v, 2) };
+  const NOTA_MOB = { ca: "ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025: 13.894 entrevistes (novembre del 2024 a l'abril del 2025) a residents de 4 anys o més de l'Alt Empordà, el Baix Empordà, la Garrotxa, el Gironès, el Pla de l'Estany, el Ripollès i la Selva (la Cerdanya no hi és). Dia feiner, segons el municipi de residència. Els municipis amb menys de 30 persones entrevistades no tenen dada: mireu-ho per comarques. «Província» vol dir les set comarques.", es: "ATM Àrea de Girona, Encuesta de Movilidad Cotidiana 2024-2025: 13.894 entrevistas (noviembre de 2024 a abril de 2025) a residentes de 4 años o más del Alt Empordà, el Baix Empordà, la Garrotxa, el Gironès, el Pla de l'Estany, el Ripollès y la Selva (la Cerdanya no está). Día laborable, según el municipio de residencia. Los municipios con menos de 30 personas entrevistadas no tienen dato: miradlo por comarcas. «Provincia» quiere decir las siete comarcas." };
+  const NOTA_ATRAU = { ca: "ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025: desplaçaments en dia feiner que acaben al municipi i comencen en un altre, fets per residents de les set comarques de l'enquesta, dividits per la població del municipi. Mesura com n'és de pol d'atracció (feina, comerç, escoles, serveis).", es: "ATM Àrea de Girona, Encuesta de Movilidad Cotidiana 2024-2025: desplazamientos en día laborable que terminan en el municipio y empiezan en otro, hechos por residentes de las siete comarcas de la encuesta, divididos por la población del municipio. Mide cuánto atrae (trabajo, comercio, escuelas, servicios)." };
+  const MOB = [
+    ["dpp", ["Desplaçaments per persona", "Desplaçaments per persona en un dia feiner"], ["Desplazamientos por persona", "Desplazamientos por persona en un día laborable"], D2],
+    ["mou", ["Gent que surt de casa", "Persones que es desplacen en un dia feiner (%)"], ["Gente que sale de casa", "Personas que se desplazan en un día laborable (%)"], P0],
+    ["priv", ["Vehicle privat", "Desplaçaments en cotxe, moto o furgoneta (%)"], ["Vehículo privado", "Desplazamientos en coche, moto o furgoneta (%)"], P0],
+    ["pub", ["Transport públic", "Desplaçaments en autobús, tren o taxi (%)"], ["Transporte público", "Desplazamientos en autobús, tren o taxi (%)"], P1],
+    ["act", ["A peu o en bici", "Desplaçaments a peu, en bicicleta o en patinet (%)"], ["A pie o en bici", "Desplazamientos a pie, en bicicleta o en patinete (%)"], P0],
+    ["cotxe", ["Cotxe", "Desplaçaments en cotxe, conduint o d'acompanyant (%)"], ["Coche", "Desplazamientos en coche, conduciendo o de acompañante (%)"], P0],
+    ["peu", ["A peu", "Desplaçaments caminant (%)"], ["A pie", "Desplazamientos caminando (%)"], P0],
+    ["bici", ["Bici i patinet", "Desplaçaments en bicicleta o patinet (%)"], ["Bici y patinete", "Desplazamientos en bicicleta o patinete (%)"], P1],
+    ["bus", ["Autobús", "Desplaçaments en autobús urbà, interurbà, escolar o d'empresa (%)"], ["Autobús", "Desplazamientos en autobús urbano, interurbano, escolar o de empresa (%)"], P1],
+    ["tren", ["Tren", "Desplaçaments en tren (Rodalies, regionals, AVE) o metro (%)"], ["Tren", "Desplazamientos en tren (Rodalies, regionales, AVE) o metro (%)"], P1],
+    ["dur", ["Durada del desplaçament", "Durada mitjana d'un desplaçament (minuts)"], ["Duración del desplazamiento", "Duración media de un desplazamiento (minutos)"], MIN],
+    ["intra", ["Sense sortir del poble", "Desplaçaments que comencen i acaben dins del municipi (%)"], ["Sin salir del pueblo", "Desplazamientos que empiezan y terminan dentro del municipio (%)"], P0],
+    ["fora", ["Fora de la comarca", "Desplaçaments que surten de la comarca de residència (%)"], ["Fuera de la comarca", "Desplazamientos que salen de la comarca de residencia (%)"], P0],
+    ["ocup", ["Per feina o estudis", "Desplaçaments per anar a treballar o a estudiar (% sense la tornada a casa)"], ["Por trabajo o estudios", "Desplazamientos para ir a trabajar o a estudiar (% sin la vuelta a casa)"], P0],
+    ["atrau", ["Pol d'atracció", "Desplaçaments diaris que arriben d'altres municipis, per habitant"], ["Polo de atracción", "Desplazamientos diarios que llegan de otros municipios, por habitante"], N2],
+    ["cs_dpp", ["Desplaçaments el cap de setmana", "Desplaçaments per persona en un dia de cap de setmana"], ["Desplazamientos el fin de semana", "Desplazamientos por persona en un día de fin de semana"], D2],
+    ["cs_priv", ["Cotxe el cap de setmana", "Desplaçaments en vehicle privat el cap de setmana (%)"], ["Coche el fin de semana", "Desplazamientos en vehículo privado el fin de semana (%)"], P0],
+    ["sense_veh", ["Sense cotxe ni moto", "Persones de llars sense cap cotxe ni moto (%)"], ["Sin coche ni moto", "Personas de hogares sin ningún coche ni moto (%)"], P0],
+    ["sense_pl", ["Sense plaça d'aparcament", "Persones sense plaça d'aparcament a casa (%)"], ["Sin plaza de aparcamiento", "Personas sin plaza de aparcamiento en casa (%)"], P0],
+    ["telet", ["Teletreball", "Persones que treballen i fan teletreball, almenys alguns dies (%)"], ["Teletrabajo", "Personas que trabajan y teletrabajan, al menos algunos días (%)"], P0],
+  ];
+  const MV = (k) => (m) => (m.mob && m.mob[k] != null ? m.mob[k] : null);
   const TURI = [
     ["pl_h", ["Places turístiques", "Places en allotjaments turístics per 100 habitants"], ["Plazas turísticas", "Plazas en alojamientos turísticos por 100 habitantes"], NT.reg, N1],
     ["pl_hotel_h", ["Places d'hotel", "Places d'hotel per 100 habitants"], ["Plazas de hotel", "Plazas de hotel por 100 habitantes"], NT.reg, N1],
@@ -515,6 +545,9 @@
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
     ...TURI.map(([k, ca, es, nota, ext]) => ({ id: "tur_" + k, tema: "tur", ca, es, a: "tur_" + k, v: (m) => TU(k)(m, D.anys && D.anys["tur_" + k]), t: TU(k), pv: TUR(k), nota, ...ext })),
+    // Movilidad (EMQ 2024-2025)
+    ...MOB.map(([k, ca, es, ext]) => ({ id: "mob_" + k, tema: "mob", ca, es, a: "mob", sumable: false, v: MV(k), ...(k === "atrau" ? {} : { com: (x) => (x && x[k] != null ? x[k] : null) }),
+      ref: () => ({ gi: D.mob && D.mob.ref ? D.mob.ref[k] : null }), nota: k === "atrau" ? NOTA_ATRAU : NOTA_MOB, ...ext })),
     // Comercio (CECC)
     ...COM.map(([k, ca, es, fmtk]) => ({ id: "com_" + k, tema: "com", ca, es, a: "com", sumable: k === "n", v: (m) => CM(k)(m, D.anys && D.anys.com), t: CM(k), pv: CMR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.com; return { cat: CMR(k, "cat")(a) }; }, nota: NOTA_COM, ...fmtk })),
@@ -643,8 +676,8 @@
 
   let mapa = null, geoMun = null, geoSec = null, SEC = {}, nivell = "mun", ind = null, llindars = [];
   // Niveles por áreas (salud y policía): geometría y datos por código de área
-  const NIVELLS = ["mun", "sec", "abs", "abp", "aar", "pj"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} }, pj: { geo: null, d: {} } };
-  const esArea = (n) => n === "abs" || n === "abp" || n === "aar" || n === "pj";
+  const NIVELLS = ["mun", "sec", "abs", "abp", "aar", "pj", "com"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} }, pj: { geo: null, d: {} }, com: { geo: null, d: {} } };
+  const esArea = (n) => n === "abs" || n === "abp" || n === "aar" || n === "pj" || n === "com";
   // Colores fijos para las áreas básicas de Agents Rurals (por orden de la lista de Idescat)
   const AREES_AAR = ["Alt Empordà", "Baix Empordà", "Garrotxa", "Gironès", "Pla de l'Estany", "Ripollès", "Selva", "Cerdanya", "Osona - Lluçanès"];
   const colorArea = (v) => { const i = AREES_AAR.indexOf(v); return i >= 0 ? PAIS_COLORS[i] : "#a5abb5"; };

@@ -139,11 +139,10 @@ def _descodifica(ds: dict, descriptor: list, ordre: list[str]) -> list[list]:
 
 
 ORIG, ORIG_NOM, ORIG_COM = "ORIGEN ENCUESTADO", "ORIGEN ENCUESTADO_NOM", "ORIGEN ENCUESTADO_COM_NOM"
-KPI_LV = ["Despl_pp", "Durada media", "Pct Intram", "Pct Intracomarcals", "Ratio Privado/Publico", "Ratio Ocupacional_Personal"]
 KPI_SD = ["Despl_pp_cap", "Durada media (cap)", "Ratio Privado/Publico (cap)"]
 PERS_TXT = ["P7_1 (text)", "P7_4 (text)", "P7_6 (text)", "P7_13A_Text", "P7_10_nom", "P7_11_nom", "P1_5_2_CAT",
             "P6_1B_text", "P6_1C_text", "P5_5_1 (text)", "P5_5_2 (text)", "P5_5_3 (text)", "P5_5_4 (text)", "Edat_text", "SEXE_text",
-            "P7_5_1_bin", "P7_2_1_bin", "P7_8A_DADES"]
+            "P7_5_1_bin", "P7_2_1_bin"]
 PERS_NUM = ["P7_2_1", "P7_2_2", "P7_2_3", "P7_2_4", "P7_2_5", "P7_3_1 (nº coche benzina)", "P7_3_2 (nºcoche diesel)",
             "P7_3_4 (nºcoche hibrido)", "P7_3_5 (nº coche electrico)", "P7_5_1", "P7_5_2", "P7_5_3", "P7_5_4", "P7_5_5", "P7_7_1", "P7_6"]
 
@@ -155,9 +154,6 @@ CONSULTES = {
     "lv_mun_intra": (LV, [ORIG, "INTRAMUN_TXT"], [("sum", "FACTORLV")]),
     "lv_mun_tipus": (LV, [ORIG, "Tipologia_final_2.0"], [("sum", "FACTORLV")]),
     "lv_mun_hora": (LV, [ORIG, "DPLV_HOR_TXTO"], [("sum", "FACTORLV")]),
-    "lv_mun_kpi": (LV, [ORIG], [("m", "Despl_pp_mun"), ("m", "Durada media mun"), ("m", "Indice Autocontencion")] + [("m", k) for k in KPI_LV]),
-    "lv_com_kpi": (LV, [ORIG_COM], [("m", k) for k in KPI_LV] + [("m", "Indice Autocontencion_ COM"), ("sum", "FACTORLV"), ("count", "REGISTRE")]),
-    "lv_tot_kpi": (LV, [], [("m", k) for k in KPI_LV] + [("sum", "FACTORLV"), ("count", "REGISTRE")]),
     "lv_com_mode": (LV, [ORIG_COM, "ModoCAT"], [("sum", "FACTORLV")]),
     "lv_com_motiu": (LV, [ORIG_COM, "MotivoCAT"], [("sum", "FACTORLV")]),
     "lv_mode_motiu": (LV, ["ModoCAT", "MotivoCAT"], [("sum", "FACTORLV")]),
