@@ -1,0 +1,23 @@
+ 
+ 
+ 
+ 
+ 
+Descarga de datos anuales territoriales en euros 
+(céntimos) 
+ 
+ Ofrece para cada año, flujo de Importación y Exportación, provincia de la 
+aduana, provincia origen/destino, y código de la Nomenclatura Combinada, los 
+siguientes datos tanto para la Importación/Introducción como para la 
+Exportación/Expedición: 
+  
+o Peso en Kg 
+o Valor estadístico en céntimos de euro 
+o Unidades suplementarias 
+ 
+La información suministrada de Comercio Exterior tiene el siguiente formato: 
+ 
+ 
+Año Flujo Aduana Provincia País Posición estadística Modo transporte Peso en Kg Unidades Valor céntimos euro Domicilio fiscal
+2 1 2 2 2 8 1 12 12 12 2
+Longitud del campo en caracteres
