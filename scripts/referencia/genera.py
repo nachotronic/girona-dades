@@ -817,6 +817,12 @@ def sitemap(paths):
                      f'<xhtml:link rel="alternate" hreflang="ca" href="{BASE + pca}"/><xhtml:link rel="alternate" hreflang="es" href="{BASE + pes}"/></url>')
     f.append(f'<url><loc>{BASE}</loc><lastmod>{GENERAT}</lastmod><priority>1.0</priority></url>')
     f.append(f'<url><loc>{BASE}dades/</loc><lastmod>{GENERAT}</lastmod><priority>0.5</priority></url>')
+    # Otras páginas sueltas de web/ (quiénes somos, aviso legal…), salvo las de prueba o marcadas noindex
+    for h in sorted(WEB.glob("*.html")):
+        txt = h.read_text(encoding="utf-8", errors="ignore")
+        if h.name == "index.html" or h.name.startswith("prova") or re.search(r'name="robots"[^>]*noindex', txt):
+            continue
+        f.append(f'<url><loc>{BASE}{h.name}</loc><lastmod>{GENERAT}</lastmod><priority>0.4</priority></url>')
     f.append("</urlset>")
     (WEB / "sitemap.xml").write_text("\n".join(f) + "\n", encoding="utf-8")
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai", "PerplexityBot", "Perplexity-User",
