@@ -1,0 +1,597 @@
+{
+  "id" : "w8kv-kmwv",
+  "name" : "Impost sobre els habitatges buits (IHB) per municipi i exercici de meritació",
+  "assetType" : "dataset",
+  "attribution" : "Agència Tributària de Catalunya (ATC)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Hisenda",
+  "createdAt" : 1704295319,
+  "description" : "Nombre d’habitatges buits declarats pels tenidors subjectes a l’impost i la suma de la seva superfície, distribuïts per municipi i per exercici de meritació, des del 2018 fins al darer exercici meritat: 2025 .\nL’impost sobre els habitatges buits és un tribut propi de la Generalitat de Catalunya, de naturalesa directa, que grava l’incompliment de la funció social de la propietat dels habitatges pel fet de romandre desocupats de manera permanent. És aplicable en l’àmbit territorial de Catalunya.\nÚnicament afecta les persones jurídiques, fons de titulització i persones físiques que tenen la condició de grans tenidors amb habitatges buits sense causa justificada durant més de dos anys.\nConstitueix el fet imposable d'aquest impost la desocupació permanent d’un habitatge durant més de dos anys sense causa justificada, per tal com aquesta desocupació afecta la funció social de la propietat de l’habitatge.\nCal tenir present que el criteri per definir un habitatge buit emprat per la Llei 14/2015, del 21 de juliol, de l'impost sobre els habitatges buits no coincideix exactament amb el criteri emprat per altres organismes.\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, les dades es donen de forma agregada.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 590,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 3018017,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1742917736,
+  "publicationGroup" : 1912735,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790593763,
+  "rowsUpdatedBy" : "8pnz-5xij",
+  "tableId" : 2023339,
+  "totalTimesRated" : 0,
+  "viewCount" : 5228,
+  "viewLastModified" : 1790593763,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1704961557,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1497476,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1704961557,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1704961557,
+      "failureCount" : 0,
+      "startedAt" : 1704961557,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "8pnz-5xij",
+      "displayName" : "claudi.cervello@atc.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 26725399,
+    "name" : "Any",
+    "dataTypeName" : "text",
+    "description" : "Període anual en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació).",
+    "fieldName" : "any",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15575357,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2024",
+        "count" : "824"
+      }, {
+        "item" : "2020",
+        "count" : "775"
+      }, {
+        "item" : "2019",
+        "count" : "763"
+      }, {
+        "item" : "2022",
+        "count" : "761"
+      }, {
+        "item" : "2021",
+        "count" : "757"
+      }, {
+        "item" : "2018",
+        "count" : "737"
+      }, {
+        "item" : "2023",
+        "count" : "726"
+      }, {
+        "item" : "2025",
+        "count" : "700"
+      } ],
+      "smallest" : "2018",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26725400,
+    "name" : "Codi",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi ",
+    "fieldName" : "codi",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15575348,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "89058",
+      "null" : "0",
+      "top" : [ {
+        "item" : "250404",
+        "count" : "16"
+      }, {
+        "item" : "431554",
+        "count" : "16"
+      }, {
+        "item" : "171175",
+        "count" : "16"
+      }, {
+        "item" : "170950",
+        "count" : "16"
+      }, {
+        "item" : "251207",
+        "count" : "16"
+      }, {
+        "item" : "430167",
+        "count" : "16"
+      }, {
+        "item" : "171609",
+        "count" : "16"
+      }, {
+        "item" : "431711",
+        "count" : "16"
+      }, {
+        "item" : "431613",
+        "count" : "16"
+      }, {
+        "item" : "430379",
+        "count" : "16"
+      }, {
+        "item" : "170157",
+        "count" : "16"
+      }, {
+        "item" : "439057",
+        "count" : "16"
+      }, {
+        "item" : "171143",
+        "count" : "16"
+      }, {
+        "item" : "170340",
+        "count" : "16"
+      }, {
+        "item" : "170470",
+        "count" : "16"
+      }, {
+        "item" : "171181",
+        "count" : "16"
+      }, {
+        "item" : "170221",
+        "count" : "16"
+      }, {
+        "item" : "171557",
+        "count" : "16"
+      }, {
+        "item" : "430477",
+        "count" : "16"
+      }, {
+        "item" : "430141",
+        "count" : "16"
+      } ],
+      "smallest" : "080018",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 26725401,
+    "name" : "Municipi",
+    "dataTypeName" : "text",
+    "description" : "Municipi on estan radicats els habitatges buits",
+    "fieldName" : "municipi",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15575344,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Sabadell",
+        "count" : "17"
+      }, {
+        "item" : "Sant Pere de Ribes",
+        "count" : "17"
+      }, {
+        "item" : "Badalona",
+        "count" : "17"
+      }, {
+        "item" : "Barcelona",
+        "count" : "17"
+      }, {
+        "item" : "Santa Coloma de Gramenet",
+        "count" : "17"
+      }, {
+        "item" : "Cornellà de Llobregat",
+        "count" : "17"
+      }, {
+        "item" : "Terrassa",
+        "count" : "17"
+      }, {
+        "item" : "Hospitalet de Llobregat, l'",
+        "count" : "17"
+      }, {
+        "item" : "Martorell",
+        "count" : "16"
+      }, {
+        "item" : "Malgrat de Mar",
+        "count" : "16"
+      }, {
+        "item" : "Granollers",
+        "count" : "16"
+      }, {
+        "item" : "Calafell",
+        "count" : "16"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "16"
+      }, {
+        "item" : "Esparreguera",
+        "count" : "16"
+      }, {
+        "item" : "Franqueses del Vallès, les",
+        "count" : "16"
+      }, {
+        "item" : "Manlleu",
+        "count" : "16"
+      }, {
+        "item" : "Tarragona",
+        "count" : "16"
+      }, {
+        "item" : "Bisbal d'Empordà, la",
+        "count" : "16"
+      }, {
+        "item" : "Alcarràs",
+        "count" : "16"
+      }, {
+        "item" : "Borges Blanques, les",
+        "count" : "16"
+      } ],
+      "smallest" : "Abrera",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : { }
+  }, {
+    "id" : 26725402,
+    "name" : "Exempt",
+    "dataTypeName" : "text",
+    "description" : "Nombre d’habitatges buits que resten exempts de l’impost per alguna de les circumstàncies previstes legalment (sí), i nombre d’habitatges que no estan exempts i han de tributar (no).",
+    "fieldName" : "exempt",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15575343,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "Sí",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Sí",
+        "count" : "4119"
+      }, {
+        "item" : "No",
+        "count" : "1924"
+      } ],
+      "smallest" : "No",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : { }
+  }, {
+    "id" : 26725403,
+    "name" : "Habitatges",
+    "dataTypeName" : "number",
+    "description" : "Sumatori del nombre d’habitatges declarats",
+    "fieldName" : "habitatges",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15575345,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "658",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "1408"
+      }, {
+        "item" : "2",
+        "count" : "683"
+      }, {
+        "item" : "3",
+        "count" : "442"
+      }, {
+        "item" : "4",
+        "count" : "353"
+      }, {
+        "item" : "5",
+        "count" : "245"
+      }, {
+        "item" : "6",
+        "count" : "225"
+      }, {
+        "item" : "7",
+        "count" : "182"
+      }, {
+        "item" : "8",
+        "count" : "164"
+      }, {
+        "item" : "9",
+        "count" : "138"
+      }, {
+        "item" : "10",
+        "count" : "121"
+      }, {
+        "item" : "11",
+        "count" : "119"
+      }, {
+        "item" : "13",
+        "count" : "103"
+      }, {
+        "item" : "14",
+        "count" : "99"
+      }, {
+        "item" : "15",
+        "count" : "92"
+      }, {
+        "item" : "16",
+        "count" : "84"
+      }, {
+        "item" : "12",
+        "count" : "82"
+      }, {
+        "item" : "18",
+        "count" : "69"
+      }, {
+        "item" : "17",
+        "count" : "65"
+      }, {
+        "item" : "20",
+        "count" : "60"
+      }, {
+        "item" : "25",
+        "count" : "57"
+      } ],
+      "smallest" : "1",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26725404,
+    "name" : "Tenidor",
+    "dataTypeName" : "number",
+    "description" : "Sumatori de persones obligades (tenidors a declarar l’impost).",
+    "fieldName" : "tenidors",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15575346,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "56",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "1878"
+      }, {
+        "item" : "2",
+        "count" : "1121"
+      }, {
+        "item" : "3",
+        "count" : "748"
+      }, {
+        "item" : "4",
+        "count" : "551"
+      }, {
+        "item" : "5",
+        "count" : "411"
+      }, {
+        "item" : "6",
+        "count" : "326"
+      }, {
+        "item" : "7",
+        "count" : "225"
+      }, {
+        "item" : "8",
+        "count" : "193"
+      }, {
+        "item" : "9",
+        "count" : "116"
+      }, {
+        "item" : "10",
+        "count" : "92"
+      }, {
+        "item" : "11",
+        "count" : "64"
+      }, {
+        "item" : "13",
+        "count" : "56"
+      }, {
+        "item" : "12",
+        "count" : "40"
+      }, {
+        "item" : "14",
+        "count" : "39"
+      }, {
+        "item" : "15",
+        "count" : "27"
+      }, {
+        "item" : "16",
+        "count" : "21"
+      }, {
+        "item" : "17",
+        "count" : "21"
+      }, {
+        "item" : "19",
+        "count" : "16"
+      }, {
+        "item" : "18",
+        "count" : "13"
+      }, {
+        "item" : "20",
+        "count" : "11"
+      } ],
+      "smallest" : "1",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26725405,
+    "name" : "Superfície útil",
+    "dataTypeName" : "number",
+    "description" : "Sumatori de la superfície dels habitatges, en m2.",
+    "fieldName" : "superficie_util",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15575347,
+    "cachedContents" : {
+      "non_null" : "6043",
+      "largest" : "58759.49",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "20"
+      }, {
+        "item" : "100.00",
+        "count" : "16"
+      }, {
+        "item" : "90.00",
+        "count" : "12"
+      }, {
+        "item" : "250.00",
+        "count" : "12"
+      }, {
+        "item" : "88.00",
+        "count" : "11"
+      }, {
+        "item" : "160.00",
+        "count" : "9"
+      }, {
+        "item" : "225.00",
+        "count" : "9"
+      }, {
+        "item" : "87.00",
+        "count" : "9"
+      }, {
+        "item" : "199.00",
+        "count" : "9"
+      }, {
+        "item" : "155.00",
+        "count" : "9"
+      }, {
+        "item" : "150.00",
+        "count" : "9"
+      }, {
+        "item" : "65.00",
+        "count" : "8"
+      }, {
+        "item" : "120.00",
+        "count" : "8"
+      }, {
+        "item" : "63.00",
+        "count" : "8"
+      }, {
+        "item" : "56.00",
+        "count" : "8"
+      }, {
+        "item" : "222.00",
+        "count" : "8"
+      }, {
+        "item" : "145.00",
+        "count" : "8"
+      }, {
+        "item" : "191.00",
+        "count" : "8"
+      }, {
+        "item" : "198.00",
+        "count" : "8"
+      }, {
+        "item" : "60.00",
+        "count" : "7"
+      } ],
+      "smallest" : "0.00",
+      "count" : "6043",
+      "cardinality" : "6043"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "precision" : "2",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Tax on empty homes by municipality and accrual exercise.",
+        "Nombre del conjunto de datos (ES)" : "Impuesto sobre las viviendas vacías por municipio y ejercicio de devengo."
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Nom d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "impost", "tribut", "pisos buits", "habitatge", "agència tributària de catalunya", "ods10_reducció de les desigualtats" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

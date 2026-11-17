@@ -1,0 +1,294 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Impost sobre els habitatges buits (IHB) per municipi i exercici de meritació",
+            "id" : "w8kv-kmwv",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Nombre d’habitatges buits declarats pels tenidors subjectes a l’impost i la suma de la seva superfície, distribuïts per municipi i per exercici de meritació, des del 2018 fins al darer exercici meritat: 2025 .\nL’impost sobre els habitatges buits és un tribut propi de la Generalitat de Catalunya, de naturalesa directa, que grava l’incompliment de la funció social de la propietat dels habitatges pel fet de romandre desocupats de manera permanent. És aplicable en l’àmbit territorial de Catalunya.\nÚnicament afecta les persones jurídiques, fons de titulització i persones físiques que tenen la condició de grans tenidors amb habitatges buits sense causa justificada durant més de dos anys.\nConstitueix el fet imposable d'aquest impost la desocupació permanent d’un habitatge durant més de dos anys sense causa justificada, per tal com aquesta desocupació afecta la funció social de la propietat de l’habitatge.\nCal tenir present que el criteri per definir un habitatge buit emprat per la Llei 14/2015, del 21 de juliol, de l'impost sobre els habitatges buits no coincideix exactament amb el criteri emprat per altres organismes.\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, les dades es donen de forma agregada.",
+            "attribution" : "Agència Tributària de Catalunya (ATC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-28T11:09:23.000Z",
+            "createdAt" : "2024-01-03T15:21:59.000Z",
+            "metadata_updated_at" : "2026-09-28T11:09:23.000Z",
+            "data_updated_at" : "2026-09-28T11:09:23.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 115,
+                "page_views_last_month" : 379,
+                "page_views_total" : 5228,
+                "page_views_last_week_log" : 6.857980995127572,
+                "page_views_last_month_log" : 8.569855608330949,
+                "page_views_total_log" : 12.352319354846841
+              },
+            "columns_name" :
+              [
+                "Municipi",
+                "Codi",
+                "Superfície útil",
+                "Tenidor",
+                "Exempt",
+                "Any",
+                "Habitatges"
+              ],
+            "columns_field_name" :
+              [
+                "municipi",
+                "codi",
+                "superficie_util",
+                "tenidors",
+                "exempt",
+                "any",
+                "habitatges"
+              ],
+            "columns_datatype" :
+              [ "Text", "Text", "Number", "Number", "Text", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Municipi on estan radicats els habitatges buits",
+                "Codi del municipi ",
+                "Sumatori de la superfície dels habitatges, en m2.",
+                "Sumatori de persones obligades (tenidors a declarar l’impost).",
+                "Nombre d’habitatges buits que resten exempts de l’impost per alguna de les circumstàncies previstes legalment (sí), i nombre d’habitatges que no estan exempts i han de tributar (no).",
+                "Període anual en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació).",
+                "Sumatori del nombre d’habitatges declarats"
+              ],
+            "columns_format" :
+              [
+                {},
+                { "noCommas" : "true" },
+                {
+                  "decimalSeparator" : ",",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "true",
+                  "groupSeparator" : "."
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 590,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-03-25T15:48:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Hisenda",
+            "domain_tags" :
+              [
+                "impost",
+                "tribut",
+                "pisos buits",
+                "habitatge",
+                "agència tributària de catalunya",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Tax on empty homes by municipality and accrual exercise."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Impuesto sobre las viviendas vacías por municipio y ejercicio de devengo."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/w8kv-kmwv",
+        "link" : "https://analisi.transparenciacatalunya.cat/Hisenda/Impost-sobre-els-habitatges-buits-IHB-per-municipi/w8kv-kmwv",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Impost sobre els habitatges buits (IHB) per import ingressat pels tenidors i exercici de meritació",
+            "id" : "2pwz-wwxf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Import ingressat pels tenidors subjectes a l’IHB, des de 2018 fins al darrer exercici meritat: 2025.\nL’impost sobre els habitatges buits és un tribut propi de la Generalitat de Catalunya, de naturalesa directa, que grava l’incompliment de la funció social de la propietat dels habitatges pel fet de romandre desocupats de manera permanent. És aplicable en l’àmbit territorial de Catalunya.\nÚnicament afecta les persones jurídiques, fons de titulització i persones físiques que tenen la condició de grans tenidors amb habitatges buits sense causa justificada durant més de dos anys.\nConstitueix el fet imposable d'aquest impost la desocupació permanent d’un habitatge durant més de dos anys sense causa justificada, per tal com aquesta desocupació afecta la funció social de la propietat de l’habitatge.\nCal tenir present que el criteri per definir un habitatge buit emprat per la Llei 14/2015, del 21 de juliol, de l'impost sobre els habitatges buits no coincideix exactament amb el criteri emprat per altres organismes.\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, les dades es faciliten anonimitzades i, en determinats casos, de forma agregada per evitar el risc de reidentificació.",
+            "attribution" : "Agència Tributària de Catalunya (ATC)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-28T10:53:56.000Z",
+            "createdAt" : "2024-01-03T14:50:27.000Z",
+            "metadata_updated_at" : "2026-09-28T10:53:55.000Z",
+            "data_updated_at" : "2026-09-28T10:53:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 26,
+                "page_views_last_month" : 71,
+                "page_views_total" : 1863,
+                "page_views_last_week_log" : 4.754887502163469,
+                "page_views_last_month_log" : 6.169925001442312,
+                "page_views_total_log" : 10.86418614465428
+              },
+            "columns_name" : [ "Any", "Tenidor", "Import ingressat" ],
+            "columns_field_name" : [ "any", "tenidor", "import_ingressat" ],
+            "columns_datatype" : [ "Text", "Text", "Number" ],
+            "columns_description" :
+              [
+                "Període anual en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació).",
+                "Identificador anonimitzat de les persones obligades a satisfer l’impost.",
+                "Import total ingressat, en unitats d’euro."
+              ],
+            "columns_format" :
+              [
+                {
+                  "view" : "date_y",
+                  "decimalSeparator" : ".",
+                  "noCommas" : "true"
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "decimalSeparator" : ",",
+                  "noCommas" : "false",
+                  "precision" : "2",
+                  "groupSeparator" : "."
+                }
+              ],
+            "download_count" : 490,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2024-01-03T15:17:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Hisenda",
+            "domain_tags" :
+              [
+                "impost",
+                "tribut",
+                "pisos buits",
+                "habitatge",
+                "agència tributària de catalunya",
+                "ods10_reducció de les desigualtats"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Tax on empty homes by municipality by amount paid by holders and accrual exercise."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Impuesto sobre las viviendas vacías por importe ingresado por los tenedores y ejercicio de devengo."
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/2pwz-wwxf",
+        "link" : "https://analisi.transparenciacatalunya.cat/Hisenda/Impost-sobre-els-habitatges-buits-IHB-per-import-i/2pwz-wwxf",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 2,
+  "timings" : { "serviceMillis" : 21, "searchMillis" : [ 2, 5 ] },
+  "warnings" : []
+}

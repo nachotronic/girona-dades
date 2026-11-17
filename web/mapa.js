@@ -190,6 +190,43 @@
     ["p_quot", ["Pes del comerç quotidià", "Alimentació i quotidià no alimentari (% dels establiments)"], ["Peso del comercio cotidiano", "Alimentación y cotidiano no alimentario (% de los establecimientos)"], { sumable: false, ...P1 }],
   ];
 
+  // Vivienda y urbanismo de la Generalitat: m.hb = {clave: {año: valor}}, m.hbf = {clave: valor}, D.hb_ref = {clave: {año: {gi, cat}}}
+  const HB = (k) => (m, a) => (a != null && m.hb && m.hb[k] && m.hb[k][a] != null ? m.hb[k][a] : null);
+  const HBR = (k, z) => (a) => { const r = D.hb_ref && D.hb_ref[k] && D.hb_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NHB = {
+    cons: { ca: "Departament de Territori, Habitatge i Transició Ecològica, a partir dels visats (iniciats) i els certificats de final d'obra (acabats) dels col·legis d'aparelladors. Sèrie anual des del 1990. La Generalitat no publica dades d'Espanya.", es: "Departament de Territori, Habitatge i Transició Ecològica, a partir de los visados (iniciadas) y los certificados de final de obra (acabadas) de los colegios de aparejadores. Serie anual desde 1990. La Generalitat no publica datos de España." },
+    hpo: { ca: "Departament de Territori: habitatges amb protecció oficial acabats (qualificació definitiva) sobre el total d'habitatges acabats, en els cinc anys fins al triat. Només municipis amb 20 habitatges acabats o més en el període.", es: "Departament de Territori: viviendas con protección oficial acabadas (calificación definitiva) sobre el total de viviendas acabadas, en los cinco años hasta el elegido. Solo municipios con 20 viviendas acabadas o más en el periodo." },
+    ced: { ca: "Departament de Territori, cèdules d'habitabilitat concedides per 1.000 habitatges (immobles residencials del Cadastre). Cal una cèdula per vendre, llogar o contractar subministraments, així que mesura el moviment del parc d'habitatges. A les seccions censals, mitjana anual del 2021 al 2025 (seccions amb 50 habitatges o més).", es: "Departament de Territori, cédulas de habitabilidad concedidas por 1.000 viviendas (inmuebles residenciales del Catastro). Hace falta una cédula para vender, alquilar o contratar suministros, así que mide el movimiento del parque de viviendas. En las secciones censales, media anual de 2021 a 2025 (secciones con 50 viviendas o más)." },
+    m2: { ca: "Departament de Territori: superfície útil mitjana dels habitatges que han obtingut cèdula d'habitabilitat (útil, no construïda: sense parets). A les seccions, 2021-2025. Mínim de 10 cèdules.", es: "Departament de Territori: superficie útil media de las viviendas que han obtenido cédula de habitabilidad (útil, no construida: sin paredes). En las secciones, 2021-2025. Mínimo de 10 cédulas." },
+    ihb: { ca: "Agència Tributària de Catalunya, impost sobre els habitatges buits: pisos buits més de dos anys sense causa justificada de persones jurídiques (bancs, fons, empreses) declarats a l'impost, no exempts, per 1.000 habitatges. No inclou els pisos buits de particulars.", es: "Agència Tributària de Catalunya, impuesto sobre las viviendas vacías: pisos vacíos más de dos años sin causa justificada de personas jurídicas (bancos, fondos, empresas) declarados al impuesto, no exentos, por 1.000 viviendas. No incluye los pisos vacíos de particulares." },
+    plan: { ca: "Mapa urbanístic de Catalunya, sectors de desenvolupament residencials i mixtos (plans parcials i de millora urbana): habitatges que el planejament preveu i que encara no s'han construït, per 100 habitatges existents (Cadastre).", es: "Mapa urbanístico de Cataluña, sectores de desarrollo residenciales y mixtos (planes parciales y de mejora urbana): viviendas que el planeamiento prevé y que aún no se han construido, por 100 viviendas existentes (Catastro)." },
+    urb: { ca: "Mapa urbanístic de Catalunya (Departament de Territori): classificació del sòl segons el planejament general vigent de cada municipi.", es: "Mapa urbanístico de Cataluña (Departament de Territori): clasificación del suelo según el planeamiento general vigente de cada municipio." },
+    urb_s: { ca: "Mapa urbanístic de Catalunya (Departament de Territori): classificació del sòl segons el planejament general vigent. A les seccions censals, polígons del servei WFS del Mapa urbanístic creuats amb el seccionat de l'INE.", es: "Mapa urbanístico de Cataluña (Departament de Territori): clasificación del suelo según el planeamiento general vigente. En las secciones censales, polígonos del servicio WFS del Mapa urbanístico cruzados con el seccionado del INE." },
+  };
+  const HBI = [
+    ["ini", ["Habitatges iniciats", "Habitatges iniciats per 1.000 habitants"], ["Viviendas iniciadas", "Viviendas iniciadas por 1.000 habitantes"], { nota: NHB.cons, ...N1 }],
+    ["aca", ["Habitatges acabats", "Habitatges acabats per 1.000 habitants"], ["Viviendas acabadas", "Viviendas acabadas por 1.000 habitantes"], { any: "ini", nota: NHB.cons, ...N1 }],
+    ["hpo", ["Habitatge protegit construït", "Habitatges protegits sobre el total d'acabats, últims 5 anys (%)"], ["Vivienda protegida construida", "Viviendas protegidas sobre el total de acabadas, últimos 5 años (%)"], { nota: NHB.hpo, ...P1 }],
+    ["ced", ["Moviment d'habitatges", "Cèdules d'habitabilitat per 1.000 habitatges"], ["Movimiento de viviendas", "Cédulas de habitabilidad por 1.000 viviendas"], { s: S("hb_ced"), nota: NHB.ced, ...N1 }],
+    ["m2", ["Superfície útil", "Superfície útil mitjana dels habitatges amb cèdula (m²)"], ["Superficie útil", "Superficie útil media de las viviendas con cédula (m²)"], { k: "ced_m2", any: "ced", s: S("hb_m2"), nota: NHB.m2, f: (v) => `${fmt(v)} m²`, c: (v) => fmt(v) }],
+    ["ihb", ["Pisos buits de bancs i empreses", "Habitatges buits de persones jurídiques (impost) per 1.000 habitatges"], ["Pisos vacíos de bancos y empresas", "Viviendas vacías de personas jurídicas (impuesto) por 1.000 viviendas"], { nota: NHB.ihb, ...N2 }],
+  ];
+  const HBF = [
+    ["pend_viv", ["Habitatges per construir", "Habitatges previstos pel planejament i no construïts, per 100 habitatges"], ["Viviendas por construir", "Viviendas previstas por el planeamiento y no construidas, por 100 viviendas"], { ref: () => { const p = (D.hb_ref && D.hb_ref.plan) || {}; return { gi: p.gi && p.gi.pend_viv, cat: p.cat && p.cat.pend_viv }; }, nota: NHB.plan, ...N1 }],
+  ];
+  const HBU = [
+    ["su", ["Sòl urbà", "Sòl urbà (% de la superfície del municipi)"], ["Suelo urbano", "Suelo urbano (% de la superficie del municipio)"], { s: S("hb_su"), ...P1 }],
+    ["surb", ["Sòl urbanitzable", "Sòl urbanitzable (% de la superfície del municipi)"], ["Suelo urbanizable", "Suelo urbanizable (% de la superficie del municipio)"], { s: S("hb_surb"), f: (v) => pct(v, 1), c: (v) => pct(v, 1) }],
+    ["snu", ["Sòl no urbanitzable", "Sòl no urbanitzable (% de la superfície del municipi)"], ["Suelo no urbanizable", "Suelo no urbanizable (% de la superficie del municipio)"], { s: S("hb_snu"), ...P0 }],
+    ["su_hab", ["Sòl urbà per habitant", "Sòl urbà per habitant (m²)"], ["Suelo urbano por habitante", "Suelo urbano por habitante (m²)"], { f: (v) => `${fmt(v)} m²`, c: (v) => fmt(v) }],
+    ["snc", ["Sòl urbà per desenvolupar", "Sòl urbà no consolidat (% del sòl urbà)"], ["Suelo urbano por desarrollar", "Suelo urbano no consolidado (% del suelo urbano)"], P1],
+    ["res_suc", ["Sòl urbà residencial", "Zones residencials (% del sòl urbà consolidat)"], ["Suelo urbano residencial", "Zonas residenciales (% del suelo urbano consolidado)"], P0],
+  ];
+  const NOM_ZMRT = { "ZMRT 1": ["Primera declaració (2024)", "Primera declaración (2024)"], "ZMRT 2": ["Segona declaració (2025)", "Segunda declaración (2025)"], no: ["No tensionada", "No tensionada"] };
+  const COL_ZMRT = { "ZMRT 1": "#e3001b", "ZMRT 2": "#f08a8f", no: "#d5d9dd" };
+  const NOM_PTSH = { "ADFA 1": ["Demanda forta i acreditada (1)", "Demanda fuerte y acreditada (1)"], "ADFA 2": ["Demanda forta i acreditada (2)", "Demanda fuerte y acreditada (2)"], Preferent: ["Preferent", "Preferente"], "No preferent": ["No preferent", "No preferente"], Rural: ["Rural", "Rural"] };
+  const COL_PTSH = { "ADFA 1": "#00423f", "ADFA 2": "#2f8a82", Preferent: "#8fc7be", "No preferent": "#e4f2ef", Rural: "#d5d9dd" };
+
   // Cadastre (Direcció General del Cadastre, «Datos municipios»): m.cad = {clave: {año: valor}}
   const CV = (k) => (m, a) => (a != null && m.cad && m.cad[k] && m.cad[k][a] != null ? m.cad[k][a] : null);
   const CADK = (k) => (k === "vm2" || k === "sm2" ? "cad_vm2" : k.startsWith("ibi_") ? "cad_ibi" : "cad");
@@ -377,7 +414,16 @@
     { id: "lloguer_pct", tema: "hab", ca: ["Llars de lloguer", "Habitatges principals de lloguer (%)"], es: ["Hogares de alquiler", "Viviendas principales de alquiler (%)"], a: "lloguer_pct", v: X("lloguer_pct"), ...P0 },
     { id: "petits", tema: "hab", ca: ["Pisos petits", "Habitatges principals de 60 m² o menys (%)"], es: ["Pisos pequeños", "Viviendas principales de 60 m² o menos (%)"], a: "petits", v: X("petits"), ...P0 },
     { id: "grans", tema: "hab", ca: ["Cases grans", "Habitatges principals de més de 120 m² (%)"], es: ["Casas grandes", "Viviendas principales de más de 120 m² (%)"], a: "grans", v: X("grans"), ...P0 },
-    { id: "iniciats", tema: "hab", ca: ["Habitatges iniciats", "Habitatges iniciats per 1.000 habitants"], es: ["Viviendas iniciadas", "Viviendas iniciadas por 1.000 habitantes"], a: "iniciats", v: X("iniciats"), ...N1 },
+    ...HBI.map(([k, ca, es, ext]) => ({ id: k === "ini" ? "iniciats" : "hb_" + k, tema: "hab", ca, es, a: "hb_" + (ext.any || k), sumable: false,
+      v: (m) => HB(ext.k || k)(m, D.anys && D.anys["hb_" + (ext.any || k)]), t: HB(ext.k || k), pv: HBR(ext.k || k, "gi"),
+      ref: () => ({ cat: HBR(ext.k || k, "cat")(anyActiu() || (D.anys && D.anys["hb_" + (ext.any || k)])) }), ...ext })),
+    ...HBF.map(([k, ca, es, ext]) => ({ id: "hb_" + k, tema: "hab", ca, es, a: "hb_urb", sumable: false, v: (m) => (m.hbf && m.hbf[k] != null ? m.hbf[k] : null), ...ext })),
+    { id: "hb_zmrt", tema: "hab", cat: true, ca: ["Zona tensionada", "Municipis declarats zona de mercat residencial tensionat"], es: ["Zona tensionada", "Municipios declarados zona de mercado residencial tensionado"],
+      v: (m) => (m.hbf && m.hbf.zmrt) || null, f: (v) => NOM_ZMRT[v][LANG === "ca" ? 0 : 1], c: (v) => NOM_ZMRT[v][LANG === "ca" ? 0 : 1], color: (v) => COL_ZMRT[v] || "#a5abb5",
+      nota: { ca: "Departament de Territori, Habitatge i Transició Ecològica, àrees de referència en matèria d'habitatge. Als municipis declarats tensionats s'hi pot limitar el preu del lloguer (llei estatal de l'habitatge del 2023). La primera declaració, del març del 2024, la segona, del 2025.", es: "Departament de Territori, Habitatge i Transició Ecològica, áreas de referencia en materia de vivienda. En los municipios declarados tensionados se puede limitar el precio del alquiler (ley estatal de vivienda de 2023). La primera declaración, de marzo de 2024; la segunda, de 2025." } },
+    { id: "hb_ptsh", tema: "hab", cat: true, ca: ["Demanda d'habitatge (pla sectorial)", "Àrees del Pla territorial sectorial d'habitatge"], es: ["Demanda de vivienda (plan sectorial)", "Áreas del Plan territorial sectorial de vivienda"],
+      v: (m) => (m.hbf && m.hbf.ptsh) || null, f: (v) => (NOM_PTSH[v] || [v, v])[LANG === "ca" ? 0 : 1], c: (v) => (NOM_PTSH[v] || [v, v])[LANG === "ca" ? 0 : 1], color: (v) => COL_PTSH[v] || "#a5abb5",
+      nota: { ca: "Pla territorial sectorial d'habitatge de Catalunya (2019): classifica els municipis segons la demanda d'habitatge. Les àrees de demanda forta i acreditada (ADFA) són on s'ha de concentrar l'habitatge protegit.", es: "Plan territorial sectorial de vivienda de Cataluña (2019): clasifica los municipios según la demanda de vivienda. Las áreas de demanda fuerte y acreditada (ADFA) son donde se debe concentrar la vivienda protegida." } },
     // Renta y pobreza
     { id: "renda", tema: "ren", ca: ["Renda per persona", "Renda neta per persona (€)"], es: ["Renta por persona", "Renta neta por persona (€)"], a: 2024, v: (m) => val(m.renta_persona, "2024"), t: (m, a) => val(m.renta_persona, a), s: S("renta_persona"), ...EU },
     { id: "renda_llar", tema: "ren", ca: ["Renda per llar", "Renda neta per llar (€)"], es: ["Renta por hogar", "Renta neta por hogar (€)"], a: 2024, v: (m) => val(m.renta_hogar, "2024"), t: (m, a) => val(m.renta_hogar, a), s: S("renta_hogar"), ...EU },
@@ -523,6 +569,9 @@
     { id: "com_buits", sumable: false, tema: "com", ca: ["Locals buits", "Locals comercials tancats o buits (% dels locals en planta baixa)"], es: ["Locales vacíos", "Locales comerciales cerrados o vacíos (% de los locales en planta baja)"], a: "com_buits", v: X("com_buits"),
       nota: { ca: "Mapa del Comerç Català 2022 (Generalitat): inspecció directa dels locals de les ciutats de més de 20.000 habitants i de les capitals de comarca. A la resta de municipis no s'ha fet.", es: "Mapa del Comerç Català 2022 (Generalitat): inspección directa de los locales de las ciudades de más de 20.000 habitantes y de las capitales de comarca. En el resto de municipios no se ha hecho." }, ...P1 },
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
+    // Mapa urbanístic de Catalunya: sèrie anual per municipi
+    ...HBU.map(([k, ca, es, fmtk]) => ({ id: "u_" + k, tema: "ter", ca, es, a: "hb_urb", sumable: false, v: (m) => HB("u_" + k)(m, D.anys && D.anys.hb_urb), t: HB("u_" + k), pv: HBR("u_" + k, "gi"),
+      ref: () => ({ cat: HBR("u_" + k, "cat")(anyActiu() || (D.anys && D.anys.hb_urb)) }), nota: fmtk.s ? NHB.urb_s : NHB.urb, ...fmtk })),
     // Cadastre: sèrie anual per municipi
     ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: CADK(k), sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
       ...(k === "n" || k === "hos" || k === "rev" || k === "ibi_desoc" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
@@ -667,6 +716,7 @@
       if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "irpf") D.municipios.forEach((m) => Object.values(m.irpf || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (/^hb_/.test(i.a || "")) D.municipios.forEach((m) => Object.values(m.hb || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
     return cacheAnys[i.id];
@@ -1233,7 +1283,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || /^hb/.test(i.a || "") || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";

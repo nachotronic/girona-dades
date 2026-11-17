@@ -1,0 +1,5865 @@
+{
+  "id" : "epsm-zskb",
+  "name" : "Dades del mapa urbanístic de Catalunya",
+  "assetType" : "dataset",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1523020602,
+  "description" : "Dades de superfície i percentatge de les classificacions del sòl i qualificacions del sòl urbà consolidat agrupades pels municipis de Catalunya.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 7340,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locale" : "en_US",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2614202,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1679308736,
+  "publicationGroup" : 410270,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1779796122,
+  "rowsUpdatedBy" : "ntmt-apg4",
+  "tableId" : 1765864,
+  "totalTimesRated" : 0,
+  "viewCount" : 82275,
+  "viewLastModified" : 1779796100,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1531737839,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1306489,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1531737839,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 23776814,
+    "name" : "Any",
+    "dataTypeName" : "number",
+    "description" : "Any de les dades",
+    "fieldName" : "any",
+    "position" : 1,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318799,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2021",
+        "count" : "948"
+      }, {
+        "item" : "2022",
+        "count" : "948"
+      }, {
+        "item" : "2018",
+        "count" : "948"
+      }, {
+        "item" : "2012",
+        "count" : "948"
+      }, {
+        "item" : "2016",
+        "count" : "948"
+      }, {
+        "item" : "2015",
+        "count" : "948"
+      }, {
+        "item" : "2025",
+        "count" : "948"
+      }, {
+        "item" : "2024",
+        "count" : "948"
+      }, {
+        "item" : "2019",
+        "count" : "948"
+      }, {
+        "item" : "2023",
+        "count" : "948"
+      }, {
+        "item" : "2014",
+        "count" : "948"
+      }, {
+        "item" : "2013",
+        "count" : "948"
+      }, {
+        "item" : "2017",
+        "count" : "948"
+      }, {
+        "item" : "2020",
+        "count" : "948"
+      } ],
+      "smallest" : "2012",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 23776884,
+    "name" : "Codi_ine_5_txt",
+    "dataTypeName" : "text",
+    "description" : "Codi identificatiu de cada municipi segons institut nacional d'estadística",
+    "fieldName" : "codi_ine_5_txt",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14959882,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "43907",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08199",
+        "count" : "14"
+      }, {
+        "item" : "43115",
+        "count" : "14"
+      }, {
+        "item" : "25123",
+        "count" : "14"
+      }, {
+        "item" : "17901",
+        "count" : "14"
+      }, {
+        "item" : "25122",
+        "count" : "14"
+      }, {
+        "item" : "25248",
+        "count" : "14"
+      }, {
+        "item" : "08270",
+        "count" : "14"
+      }, {
+        "item" : "08099",
+        "count" : "14"
+      }, {
+        "item" : "43089",
+        "count" : "14"
+      }, {
+        "item" : "08201",
+        "count" : "14"
+      }, {
+        "item" : "43124",
+        "count" : "14"
+      }, {
+        "item" : "25058",
+        "count" : "14"
+      }, {
+        "item" : "17015",
+        "count" : "14"
+      }, {
+        "item" : "25247",
+        "count" : "14"
+      }, {
+        "item" : "17023",
+        "count" : "14"
+      }, {
+        "item" : "08306",
+        "count" : "14"
+      }, {
+        "item" : "43146",
+        "count" : "14"
+      }, {
+        "item" : "43075",
+        "count" : "14"
+      }, {
+        "item" : "43054",
+        "count" : "14"
+      }, {
+        "item" : "25226",
+        "count" : "14"
+      } ],
+      "smallest" : "08001",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "noCommas" : "true",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776883,
+    "name" : "Codi_ine_6_txt",
+    "dataTypeName" : "text",
+    "description" : "Codi identificatiu de cada municipi segons institut nacional d'estadística",
+    "fieldName" : "codi_ine_6_txt",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 14959881,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "439076",
+      "null" : "0",
+      "top" : [ {
+        "item" : "431074",
+        "count" : "14"
+      }, {
+        "item" : "430056",
+        "count" : "14"
+      }, {
+        "item" : "081094",
+        "count" : "14"
+      }, {
+        "item" : "171463",
+        "count" : "14"
+      }, {
+        "item" : "082129",
+        "count" : "14"
+      }, {
+        "item" : "430688",
+        "count" : "14"
+      }, {
+        "item" : "082652",
+        "count" : "14"
+      }, {
+        "item" : "080569",
+        "count" : "14"
+      }, {
+        "item" : "439039",
+        "count" : "14"
+      }, {
+        "item" : "259031",
+        "count" : "14"
+      }, {
+        "item" : "430691",
+        "count" : "14"
+      }, {
+        "item" : "250019",
+        "count" : "14"
+      }, {
+        "item" : "431690",
+        "count" : "14"
+      }, {
+        "item" : "080497",
+        "count" : "14"
+      }, {
+        "item" : "081189",
+        "count" : "14"
+      }, {
+        "item" : "250479",
+        "count" : "14"
+      }, {
+        "item" : "171024",
+        "count" : "14"
+      }, {
+        "item" : "431397",
+        "count" : "14"
+      }, {
+        "item" : "430043",
+        "count" : "14"
+      }, {
+        "item" : "431286",
+        "count" : "14"
+      } ],
+      "smallest" : "080018",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776817,
+    "name" : "NomMun",
+    "dataTypeName" : "text",
+    "description" : "Nom del municipi",
+    "fieldName" : "nommun",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3318802,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Cervelló",
+        "count" : "14"
+      }, {
+        "item" : "Vallgorguina",
+        "count" : "14"
+      }, {
+        "item" : "Parets del Vallès",
+        "count" : "14"
+      }, {
+        "item" : "Jafre",
+        "count" : "14"
+      }, {
+        "item" : "la Pobla de Montornès",
+        "count" : "14"
+      }, {
+        "item" : "Oliana",
+        "count" : "14"
+      }, {
+        "item" : "Boadella i les Escaules",
+        "count" : "14"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "14"
+      }, {
+        "item" : "Benissanet",
+        "count" : "14"
+      }, {
+        "item" : "Artés",
+        "count" : "14"
+      }, {
+        "item" : "Gelida",
+        "count" : "14"
+      }, {
+        "item" : "les Masies de Roda",
+        "count" : "14"
+      }, {
+        "item" : "Peralada",
+        "count" : "14"
+      }, {
+        "item" : "Fígols",
+        "count" : "14"
+      }, {
+        "item" : "Cerdanyola del Vallès",
+        "count" : "14"
+      }, {
+        "item" : "Garrigàs",
+        "count" : "14"
+      }, {
+        "item" : "Bellprat",
+        "count" : "14"
+      }, {
+        "item" : "el Pont de Suert",
+        "count" : "14"
+      }, {
+        "item" : "Gimenells i el Pla de la Font",
+        "count" : "14"
+      }, {
+        "item" : "el Catllar",
+        "count" : "14"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776818,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Nom comarcal",
+    "fieldName" : "comarca",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3318803,
+    "width" : 184,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "Vallès Oriental",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Alt Empordà",
+        "count" : "952"
+      }, {
+        "item" : "Osona",
+        "count" : "602"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "532"
+      }, {
+        "item" : "Segrià",
+        "count" : "532"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "504"
+      }, {
+        "item" : "Anoia",
+        "count" : "462"
+      }, {
+        "item" : "Berguedà",
+        "count" : "434"
+      }, {
+        "item" : "Noguera",
+        "count" : "420"
+      }, {
+        "item" : "Maresme",
+        "count" : "420"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "420"
+      }, {
+        "item" : "Bages",
+        "count" : "406"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "392"
+      }, {
+        "item" : "Gironès",
+        "count" : "392"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "378"
+      }, {
+        "item" : "Selva",
+        "count" : "364"
+      }, {
+        "item" : "Garrigues",
+        "count" : "336"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "322"
+      }, {
+        "item" : "Priorat",
+        "count" : "322"
+      }, {
+        "item" : "Alt Camp",
+        "count" : "322"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "308"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776819,
+    "name" : "AFT",
+    "dataTypeName" : "text",
+    "description" : "Nom dels àmbits funcionals territorials, 8 en total",
+    "fieldName" : "aft",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3318804,
+    "width" : 136,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "TE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "CG",
+        "count" : "2926"
+      }, {
+        "item" : "PO",
+        "count" : "2058"
+      }, {
+        "item" : "CC",
+        "count" : "2058"
+      }, {
+        "item" : "MB",
+        "count" : "1764"
+      }, {
+        "item" : "CT",
+        "count" : "1652"
+      }, {
+        "item" : "APiA",
+        "count" : "1078"
+      }, {
+        "item" : "PE",
+        "count" : "1008"
+      }, {
+        "item" : "TE",
+        "count" : "728"
+      } ],
+      "smallest" : "APiA",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776820,
+    "name" : "Costa",
+    "dataTypeName" : "number",
+    "description" : "Indica si és un municipi de costa",
+    "fieldName" : "costa",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318805,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12292"
+      }, {
+        "item" : "1",
+        "count" : "980"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776821,
+    "name" : "Muntanya",
+    "dataTypeName" : "text",
+    "description" : "Indica si és un municipi de muntanya",
+    "fieldName" : "muntanya",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3318806,
+    "width" : 196,
+    "cachedContents" : {
+      "non_null" : "4200",
+      "largest" : "Zona de muntanya",
+      "null" : "9072",
+      "top" : [ {
+        "item" : "Zona de muntanya",
+        "count" : "4200"
+      } ],
+      "smallest" : "Zona de muntanya",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776822,
+    "name" : "Poblacio_padro",
+    "dataTypeName" : "number",
+    "description" : "Població anual segons el padró continu",
+    "fieldName" : "poblacio_padro",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318807,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1713247",
+      "null" : "0",
+      "top" : [ {
+        "item" : "162",
+        "count" : "30"
+      }, {
+        "item" : "167",
+        "count" : "28"
+      }, {
+        "item" : "188",
+        "count" : "26"
+      }, {
+        "item" : "176",
+        "count" : "25"
+      }, {
+        "item" : "159",
+        "count" : "24"
+      }, {
+        "item" : "202",
+        "count" : "24"
+      }, {
+        "item" : "163",
+        "count" : "23"
+      }, {
+        "item" : "170",
+        "count" : "23"
+      }, {
+        "item" : "178",
+        "count" : "23"
+      }, {
+        "item" : "173",
+        "count" : "23"
+      }, {
+        "item" : "164",
+        "count" : "23"
+      }, {
+        "item" : "158",
+        "count" : "23"
+      }, {
+        "item" : "187",
+        "count" : "22"
+      }, {
+        "item" : "157",
+        "count" : "22"
+      }, {
+        "item" : "206",
+        "count" : "22"
+      }, {
+        "item" : "185",
+        "count" : "22"
+      }, {
+        "item" : "155",
+        "count" : "21"
+      }, {
+        "item" : "200",
+        "count" : "21"
+      }, {
+        "item" : "174",
+        "count" : "21"
+      }, {
+        "item" : "175",
+        "count" : "20"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "groupSeparator" : ".",
+      "align" : "right"
+    }
+  }, {
+    "id" : 23776823,
+    "name" : "Superficie_ha",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del municipi mesurat en hectàrees",
+    "fieldName" : "superficie_ha",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318808,
+    "width" : 256,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "30278.24104963",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "16"
+      }, {
+        "item" : "1908.44884493506",
+        "count" : "9"
+      }, {
+        "item" : "3584.25635172894",
+        "count" : "9"
+      }, {
+        "item" : "2945.17014574742",
+        "count" : "9"
+      }, {
+        "item" : "9352.42515440839",
+        "count" : "9"
+      }, {
+        "item" : "1262.24300271603",
+        "count" : "9"
+      }, {
+        "item" : "843.815314093182",
+        "count" : "9"
+      }, {
+        "item" : "1390.50684613894",
+        "count" : "9"
+      }, {
+        "item" : "2053.53979440214",
+        "count" : "9"
+      }, {
+        "item" : "6428.40222820959",
+        "count" : "9"
+      }, {
+        "item" : "1551.60552126359",
+        "count" : "9"
+      }, {
+        "item" : "6185.82220141381",
+        "count" : "9"
+      }, {
+        "item" : "3276.60677838369",
+        "count" : "9"
+      }, {
+        "item" : "1657.85635882372",
+        "count" : "9"
+      }, {
+        "item" : "9343.9214736643",
+        "count" : "9"
+      }, {
+        "item" : "1100.32552877007",
+        "count" : "9"
+      }, {
+        "item" : "21948.6065778978",
+        "count" : "9"
+      }, {
+        "item" : "1234.25040336304",
+        "count" : "9"
+      }, {
+        "item" : "3493.97475008472",
+        "count" : "9"
+      }, {
+        "item" : "1300.76505509919",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "right"
+    }
+  }, {
+    "id" : 23776824,
+    "name" : "05_SU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl urbà (sòl urbà consolidat + sòl no consolidat)",
+    "fieldName" : "_05_su",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318809,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "8514.61901087152",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "137"
+      }, {
+        "item" : "9.82215988585218",
+        "count" : "10"
+      }, {
+        "item" : "10.2746071616448",
+        "count" : "9"
+      }, {
+        "item" : "6.30033151450644",
+        "count" : "9"
+      }, {
+        "item" : "10.8934157638747",
+        "count" : "9"
+      }, {
+        "item" : "11.0651266777389",
+        "count" : "9"
+      }, {
+        "item" : "16.8462524015287",
+        "count" : "9"
+      }, {
+        "item" : "26.7906789649703",
+        "count" : "9"
+      }, {
+        "item" : "10.7594979202753",
+        "count" : "9"
+      }, {
+        "item" : "42.6741616723508",
+        "count" : "9"
+      }, {
+        "item" : "8.16559424752891",
+        "count" : "9"
+      }, {
+        "item" : "10.3229048150199",
+        "count" : "9"
+      }, {
+        "item" : "10.5234898157585",
+        "count" : "9"
+      }, {
+        "item" : "9.59830846559796",
+        "count" : "9"
+      }, {
+        "item" : "3.92523277076677",
+        "count" : "9"
+      }, {
+        "item" : "8.05837006015726",
+        "count" : "9"
+      }, {
+        "item" : "12.5676143429077",
+        "count" : "9"
+      }, {
+        "item" : "48.341682514615",
+        "count" : "9"
+      }, {
+        "item" : "2.18969627880864",
+        "count" : "9"
+      }, {
+        "item" : "5.93780079115508",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776825,
+    "name" : "05_perce_SU",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbà respecte el total del municipi",
+    "fieldName" : "_05_perce_su",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318810,
+    "width" : 232,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "90.2971336282659",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "137"
+      }, {
+        "item" : "0.621914491416925",
+        "count" : "9"
+      }, {
+        "item" : "0.340340061994354",
+        "count" : "9"
+      }, {
+        "item" : "0.781231248359989",
+        "count" : "9"
+      }, {
+        "item" : "0.635387309946738",
+        "count" : "9"
+      }, {
+        "item" : "0.425137491039991",
+        "count" : "9"
+      }, {
+        "item" : "0.490155968940976",
+        "count" : "9"
+      }, {
+        "item" : "0.20103182541793",
+        "count" : "9"
+      }, {
+        "item" : "0.126748248090684",
+        "count" : "9"
+      }, {
+        "item" : "2.37178507759614",
+        "count" : "9"
+      }, {
+        "item" : "0.594884884836591",
+        "count" : "9"
+      }, {
+        "item" : "0.226978461916948",
+        "count" : "9"
+      }, {
+        "item" : "1.44252491056627",
+        "count" : "9"
+      }, {
+        "item" : "0.140733134763117",
+        "count" : "9"
+      }, {
+        "item" : "2.07807814529227",
+        "count" : "9"
+      }, {
+        "item" : "0.300072492730123",
+        "count" : "9"
+      }, {
+        "item" : "0.624224590721958",
+        "count" : "9"
+      }, {
+        "item" : "0.44171981035047",
+        "count" : "9"
+      }, {
+        "item" : "0.229638964530355",
+        "count" : "9"
+      }, {
+        "item" : "0.406034222808191",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776826,
+    "name" : "05_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl urbà consolidat ",
+    "fieldName" : "_05_suc",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318811,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "8502.97504815011",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "151"
+      }, {
+        "item" : "9.82215988585218",
+        "count" : "10"
+      }, {
+        "item" : "6.94058701711231",
+        "count" : "9"
+      }, {
+        "item" : "11.0651266777389",
+        "count" : "9"
+      }, {
+        "item" : "7.63751782721056",
+        "count" : "9"
+      }, {
+        "item" : "5.93780079115508",
+        "count" : "9"
+      }, {
+        "item" : "12.5676143429077",
+        "count" : "9"
+      }, {
+        "item" : "8.16559424752891",
+        "count" : "9"
+      }, {
+        "item" : "29.7365155967647",
+        "count" : "9"
+      }, {
+        "item" : "16.3741392621296",
+        "count" : "9"
+      }, {
+        "item" : "26.7906789649703",
+        "count" : "9"
+      }, {
+        "item" : "34.1349613349192",
+        "count" : "9"
+      }, {
+        "item" : "3.92523277076677",
+        "count" : "9"
+      }, {
+        "item" : "31.7936318878494",
+        "count" : "9"
+      }, {
+        "item" : "42.6741616723508",
+        "count" : "9"
+      }, {
+        "item" : "9.59830846559796",
+        "count" : "9"
+      }, {
+        "item" : "2.18969627880864",
+        "count" : "9"
+      }, {
+        "item" : "41.2122863571703",
+        "count" : "9"
+      }, {
+        "item" : "8.05837006015726",
+        "count" : "9"
+      }, {
+        "item" : "29.3239366072476",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776827,
+    "name" : "05_perce_SUC",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbà consolidat respecte el total del municipi",
+    "fieldName" : "_05_perce_suc",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318812,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "90.069205513303",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "151"
+      }, {
+        "item" : "0.114643374590047",
+        "count" : "9"
+      }, {
+        "item" : "1.30939570216553",
+        "count" : "9"
+      }, {
+        "item" : "0.20103182541793",
+        "count" : "9"
+      }, {
+        "item" : "0.140733134763117",
+        "count" : "9"
+      }, {
+        "item" : "0.621914491416925",
+        "count" : "9"
+      }, {
+        "item" : "0.624224590721958",
+        "count" : "9"
+      }, {
+        "item" : "0.0905402089407867",
+        "count" : "9"
+      }, {
+        "item" : "0.531543039661392",
+        "count" : "9"
+      }, {
+        "item" : "0.490155968940976",
+        "count" : "9"
+      }, {
+        "item" : "0.635387309946738",
+        "count" : "9"
+      }, {
+        "item" : "1.44252491056627",
+        "count" : "9"
+      }, {
+        "item" : "0.425137491039991",
+        "count" : "9"
+      }, {
+        "item" : "0.33185500708862",
+        "count" : "9"
+      }, {
+        "item" : "0.594884884836591",
+        "count" : "9"
+      }, {
+        "item" : "0.44171981035047",
+        "count" : "9"
+      }, {
+        "item" : "0.226978461916948",
+        "count" : "9"
+      }, {
+        "item" : "0.300072492730123",
+        "count" : "9"
+      }, {
+        "item" : "0.229638964530355",
+        "count" : "9"
+      }, {
+        "item" : "2.07807814529227",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776828,
+    "name" : "05_SNC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl urbà subjecte a pla de millora urbana (SNC del MUC)",
+    "fieldName" : "_05_snc",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318813,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "267.209406734287",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5270"
+      }, {
+        "item" : "1.83297656395137",
+        "count" : "12"
+      }, {
+        "item" : "0.501650199332833",
+        "count" : "10"
+      }, {
+        "item" : "1.73949076085335",
+        "count" : "9"
+      }, {
+        "item" : "2.70857781097814",
+        "count" : "9"
+      }, {
+        "item" : "0.833583980511874",
+        "count" : "9"
+      }, {
+        "item" : "0.182760225152783",
+        "count" : "9"
+      }, {
+        "item" : "12.8558611063957",
+        "count" : "9"
+      }, {
+        "item" : "4.38904360341672",
+        "count" : "9"
+      }, {
+        "item" : "5.71632699832153",
+        "count" : "9"
+      }, {
+        "item" : "1.25686776040196",
+        "count" : "9"
+      }, {
+        "item" : "1.31615482580736",
+        "count" : "9"
+      }, {
+        "item" : "1.36473100250661",
+        "count" : "9"
+      }, {
+        "item" : "0.952467213883996",
+        "count" : "9"
+      }, {
+        "item" : "1.05700369862057",
+        "count" : "9"
+      }, {
+        "item" : "1.94692078680545",
+        "count" : "9"
+      }, {
+        "item" : "2.64026730008679",
+        "count" : "9"
+      }, {
+        "item" : "1.59723677585572",
+        "count" : "9"
+      }, {
+        "item" : "9.31402061242927",
+        "count" : "9"
+      }, {
+        "item" : "0.477381810932606",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776829,
+    "name" : "05_perce_SNC",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbà no consolidat respecte el total del municipi",
+    "fieldName" : "_05_perce_snc",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318814,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "19.4194727553209",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5270"
+      }, {
+        "item" : "0.00537633134323201",
+        "count" : "9"
+      }, {
+        "item" : "0.0134431672041894",
+        "count" : "9"
+      }, {
+        "item" : "0.0854230864229842",
+        "count" : "9"
+      }, {
+        "item" : "0.0124137809742447",
+        "count" : "9"
+      }, {
+        "item" : "0.209476086615017",
+        "count" : "9"
+      }, {
+        "item" : "0.240708984852727",
+        "count" : "9"
+      }, {
+        "item" : "0.089647360574367",
+        "count" : "9"
+      }, {
+        "item" : "0.179697747175419",
+        "count" : "9"
+      }, {
+        "item" : "1.33533272295593",
+        "count" : "9"
+      }, {
+        "item" : "0.117560822383728",
+        "count" : "9"
+      }, {
+        "item" : "0.0298820229095938",
+        "count" : "9"
+      }, {
+        "item" : "0.0221613555477732",
+        "count" : "9"
+      }, {
+        "item" : "0.0353200871237663",
+        "count" : "9"
+      }, {
+        "item" : "0.0744377115792935",
+        "count" : "9"
+      }, {
+        "item" : "0.0211001874278634",
+        "count" : "9"
+      }, {
+        "item" : "0.0121048735006366",
+        "count" : "9"
+      }, {
+        "item" : "0.133728281985612",
+        "count" : "9"
+      }, {
+        "item" : "0.00848505490573348",
+        "count" : "9"
+      }, {
+        "item" : "0.628901833709561",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776830,
+    "name" : "05_SURB",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del SUD (sòl urbànitzable delimitat)+ SND (sòl no delimitat)",
+    "fieldName" : "_05_surb",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318815,
+    "width" : 184,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "2691.35757808102",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2951"
+      }, {
+        "item" : "5.28726152626425",
+        "count" : "12"
+      }, {
+        "item" : "2.48730139916148",
+        "count" : "9"
+      }, {
+        "item" : "2.1721084178517",
+        "count" : "9"
+      }, {
+        "item" : "72.6850213381115",
+        "count" : "9"
+      }, {
+        "item" : "6.3422384232711",
+        "count" : "9"
+      }, {
+        "item" : "16.9002067806169",
+        "count" : "9"
+      }, {
+        "item" : "13.6241185496421",
+        "count" : "9"
+      }, {
+        "item" : "1.70443001907087",
+        "count" : "9"
+      }, {
+        "item" : "11.4368532173913",
+        "count" : "9"
+      }, {
+        "item" : "31.6630264395316",
+        "count" : "9"
+      }, {
+        "item" : "16.3192784476086",
+        "count" : "9"
+      }, {
+        "item" : "12.4719247013066",
+        "count" : "9"
+      }, {
+        "item" : "48.1518841850791",
+        "count" : "9"
+      }, {
+        "item" : "5.20607362686954",
+        "count" : "9"
+      }, {
+        "item" : "3.46975077712834",
+        "count" : "9"
+      }, {
+        "item" : "3.63069072656184",
+        "count" : "9"
+      }, {
+        "item" : "2.05610754070939",
+        "count" : "9"
+      }, {
+        "item" : "5.25362194989584",
+        "count" : "9"
+      }, {
+        "item" : "1.97005777280573",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776831,
+    "name" : "05_perce_SUR",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del SUD (sòl urbànitzable delimitat)+ SND (sòl no delimitat) respecte el total del municipi",
+    "fieldName" : "_05_perce_sur",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318816,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "98.6421153273586",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2951"
+      }, {
+        "item" : "1.65631700200219",
+        "count" : "9"
+      }, {
+        "item" : "0.111339547849285",
+        "count" : "9"
+      }, {
+        "item" : "0.26316581011567",
+        "count" : "9"
+      }, {
+        "item" : "0.224408427736833",
+        "count" : "9"
+      }, {
+        "item" : "0.122293348418387",
+        "count" : "9"
+      }, {
+        "item" : "1.55506840831437",
+        "count" : "9"
+      }, {
+        "item" : "0.0714307409463596",
+        "count" : "9"
+      }, {
+        "item" : "0.44704185621777",
+        "count" : "9"
+      }, {
+        "item" : "0.363771700318905",
+        "count" : "9"
+      }, {
+        "item" : "1.00909431241635",
+        "count" : "9"
+      }, {
+        "item" : "0.576138224121652",
+        "count" : "9"
+      }, {
+        "item" : "0.444591717490939",
+        "count" : "9"
+      }, {
+        "item" : "0.0226332190306031",
+        "count" : "9"
+      }, {
+        "item" : "0.165718278126227",
+        "count" : "9"
+      }, {
+        "item" : "0.00557859413661956",
+        "count" : "9"
+      }, {
+        "item" : "0.328145583273178",
+        "count" : "9"
+      }, {
+        "item" : "0.0292557704354592",
+        "count" : "9"
+      }, {
+        "item" : "0.109783272789957",
+        "count" : "9"
+      }, {
+        "item" : "0.146725493423044",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776832,
+    "name" : "05_SUD",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl urbanitzable delimitat",
+    "fieldName" : "_05_sud",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318817,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1433.67373913044",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3182"
+      }, {
+        "item" : "5.28726152626425",
+        "count" : "12"
+      }, {
+        "item" : "6.3422384232711",
+        "count" : "9"
+      }, {
+        "item" : "2.56943322836161",
+        "count" : "9"
+      }, {
+        "item" : "1.97005777280573",
+        "count" : "9"
+      }, {
+        "item" : "48.1518841850791",
+        "count" : "9"
+      }, {
+        "item" : "5.20607362686954",
+        "count" : "9"
+      }, {
+        "item" : "3.46975077712834",
+        "count" : "9"
+      }, {
+        "item" : "16.3192784476086",
+        "count" : "9"
+      }, {
+        "item" : "5.25362194989584",
+        "count" : "9"
+      }, {
+        "item" : "12.4719247013066",
+        "count" : "9"
+      }, {
+        "item" : "11.4368532173913",
+        "count" : "9"
+      }, {
+        "item" : "31.6630264395316",
+        "count" : "9"
+      }, {
+        "item" : "1.70443001907087",
+        "count" : "9"
+      }, {
+        "item" : "3.63069072656184",
+        "count" : "9"
+      }, {
+        "item" : "2.1721084178517",
+        "count" : "9"
+      }, {
+        "item" : "2.05610754070939",
+        "count" : "9"
+      }, {
+        "item" : "13.6241185496421",
+        "count" : "9"
+      }, {
+        "item" : "7.06192540078387",
+        "count" : "9"
+      }, {
+        "item" : "13.904166459772",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776833,
+    "name" : "05_perce_SUD",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbanitzable delimitat respecte el total del municipi",
+    "fieldName" : "_05_perce_sud",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318818,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "32.5791157987172",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3182"
+      }, {
+        "item" : "1.8755170474128",
+        "count" : "9"
+      }, {
+        "item" : "0.109783272789957",
+        "count" : "9"
+      }, {
+        "item" : "0.0226332190306031",
+        "count" : "9"
+      }, {
+        "item" : "0.0714307409463596",
+        "count" : "9"
+      }, {
+        "item" : "0.146725493423044",
+        "count" : "9"
+      }, {
+        "item" : "1.55506840831437",
+        "count" : "9"
+      }, {
+        "item" : "0.26316581011567",
+        "count" : "9"
+      }, {
+        "item" : "0.822496826402083",
+        "count" : "9"
+      }, {
+        "item" : "0.00557859413661956",
+        "count" : "9"
+      }, {
+        "item" : "0.576138224121652",
+        "count" : "9"
+      }, {
+        "item" : "0.444591717490939",
+        "count" : "9"
+      }, {
+        "item" : "0.224408427736833",
+        "count" : "9"
+      }, {
+        "item" : "0.0292557704354592",
+        "count" : "9"
+      }, {
+        "item" : "0.122293348418387",
+        "count" : "9"
+      }, {
+        "item" : "0.44704185621777",
+        "count" : "9"
+      }, {
+        "item" : "0.165718278126227",
+        "count" : "9"
+      }, {
+        "item" : "0.111339547849285",
+        "count" : "9"
+      }, {
+        "item" : "0.363771700318905",
+        "count" : "9"
+      }, {
+        "item" : "2.30957513343437",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776834,
+    "name" : "05_SND",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl urbanitzable no delimitat",
+    "fieldName" : "_05_snd",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318819,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1860.93324041377",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10011"
+      }, {
+        "item" : "10.7001189665783",
+        "count" : "9"
+      }, {
+        "item" : "6.88792539607463",
+        "count" : "9"
+      }, {
+        "item" : "46.1249162416481",
+        "count" : "9"
+      }, {
+        "item" : "3.62057504771948",
+        "count" : "9"
+      }, {
+        "item" : "34.3229530928522",
+        "count" : "9"
+      }, {
+        "item" : "1.02457353393626",
+        "count" : "9"
+      }, {
+        "item" : "4.66139226354137",
+        "count" : "9"
+      }, {
+        "item" : "5.33557820938528",
+        "count" : "9"
+      }, {
+        "item" : "3.22548199954983",
+        "count" : "9"
+      }, {
+        "item" : "25.368383372321",
+        "count" : "9"
+      }, {
+        "item" : "1.59536912999153",
+        "count" : "9"
+      }, {
+        "item" : "5.18064861724279",
+        "count" : "9"
+      }, {
+        "item" : "18.2297639197476",
+        "count" : "9"
+      }, {
+        "item" : "5.12924267482534",
+        "count" : "9"
+      }, {
+        "item" : "2.25576035810215",
+        "count" : "9"
+      }, {
+        "item" : "7.26737312083809",
+        "count" : "9"
+      }, {
+        "item" : "2.05317977465817",
+        "count" : "9"
+      }, {
+        "item" : "2.47798830788415",
+        "count" : "9"
+      }, {
+        "item" : "14.5535963157117",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776835,
+    "name" : "05_perce_SND",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbanitzable no delimitat respecte el total del municipi",
+    "fieldName" : "_05_perce_snd",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318820,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "68.2058723123279",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10011"
+      }, {
+        "item" : "0.328145583273178",
+        "count" : "9"
+      }, {
+        "item" : "0.18659748601427",
+        "count" : "9"
+      }, {
+        "item" : "0.444448693346013",
+        "count" : "9"
+      }, {
+        "item" : "1.70808465456797",
+        "count" : "8"
+      }, {
+        "item" : "0.178874944156679",
+        "count" : "8"
+      }, {
+        "item" : "0.0321333377864161",
+        "count" : "8"
+      }, {
+        "item" : "0.184054969388807",
+        "count" : "7"
+      }, {
+        "item" : "0.858518926575872",
+        "count" : "7"
+      }, {
+        "item" : "0.865147354843643",
+        "count" : "7"
+      }, {
+        "item" : "0.101229264339946",
+        "count" : "7"
+      }, {
+        "item" : "1.23152167601106",
+        "count" : "7"
+      }, {
+        "item" : "1.06933614304566",
+        "count" : "7"
+      }, {
+        "item" : "0.0584012432511807",
+        "count" : "7"
+      }, {
+        "item" : "0.142087418522626",
+        "count" : "6"
+      }, {
+        "item" : "0.0460155337035247",
+        "count" : "6"
+      }, {
+        "item" : "0.177432219856133",
+        "count" : "6"
+      }, {
+        "item" : "1.43379742763161",
+        "count" : "6"
+      }, {
+        "item" : "0.0179654735561467",
+        "count" : "6"
+      }, {
+        "item" : "0.0861820956981395",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776836,
+    "name" : "05_SNU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl no urbanitzable",
+    "fieldName" : "_05_snu",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318821,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "30089.2286212486",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "29"
+      }, {
+        "item" : "961.22707353372",
+        "count" : "9"
+      }, {
+        "item" : "5393.75809125841",
+        "count" : "9"
+      }, {
+        "item" : "14682.3663568075",
+        "count" : "9"
+      }, {
+        "item" : "9338.45436450131",
+        "count" : "9"
+      }, {
+        "item" : "1292.69039229034",
+        "count" : "9"
+      }, {
+        "item" : "3557.82752274895",
+        "count" : "9"
+      }, {
+        "item" : "3134.72604161987",
+        "count" : "9"
+      }, {
+        "item" : "1223.35845761073",
+        "count" : "9"
+      }, {
+        "item" : "966.638655399764",
+        "count" : "9"
+      }, {
+        "item" : "2285.9615715417",
+        "count" : "9"
+      }, {
+        "item" : "3262.11619646205",
+        "count" : "9"
+      }, {
+        "item" : "18299.4338676583",
+        "count" : "9"
+      }, {
+        "item" : "3691.73040122725",
+        "count" : "9"
+      }, {
+        "item" : "1897.68934701479",
+        "count" : "9"
+      }, {
+        "item" : "6179.52186989931",
+        "count" : "9"
+      }, {
+        "item" : "2124.99161079252",
+        "count" : "9"
+      }, {
+        "item" : "4429.37533098212",
+        "count" : "9"
+      }, {
+        "item" : "3553.73988917745",
+        "count" : "9"
+      }, {
+        "item" : "1202.89340846842",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776837,
+    "name" : "05_perce_SNU",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl no urbanitzable respecte el total del municipi",
+    "fieldName" : "_05_perce_snu",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318822,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "100",
+      "null" : "0",
+      "top" : [ {
+        "item" : "100",
+        "count" : "93"
+      }, {
+        "item" : "0",
+        "count" : "29"
+      }, {
+        "item" : "99.7743662522349",
+        "count" : "10"
+      }, {
+        "item" : "99.5719989326016",
+        "count" : "9"
+      }, {
+        "item" : "92.1761866573845",
+        "count" : "9"
+      }, {
+        "item" : "99.8929335159431",
+        "count" : "9"
+      }, {
+        "item" : "99.3116966988443",
+        "count" : "9"
+      }, {
+        "item" : "99.2667459607338",
+        "count" : "9"
+      }, {
+        "item" : "98.6142444328452",
+        "count" : "9"
+      }, {
+        "item" : "99.117525445191",
+        "count" : "9"
+      }, {
+        "item" : "99.5582801896495",
+        "count" : "9"
+      }, {
+        "item" : "96.5667050871314",
+        "count" : "9"
+      }, {
+        "item" : "99.9507927393326",
+        "count" : "9"
+      }, {
+        "item" : "99.4362176408956",
+        "count" : "9"
+      }, {
+        "item" : "99.21876875164",
+        "count" : "9"
+      }, {
+        "item" : "99.627217277806",
+        "count" : "9"
+      }, {
+        "item" : "98.1444466142252",
+        "count" : "9"
+      }, {
+        "item" : "99.8723780516714",
+        "count" : "9"
+      }, {
+        "item" : "99.9294218237527",
+        "count" : "9"
+      }, {
+        "item" : "98.3031698195587",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776838,
+    "name" : "06_Class_no_SNU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del SUC (sòl urbà consolidat)+ SNC (sòl urbà no consolidat) + SUD (sòl urbanitzable delimitat)+ SND (sòl urbanitzable no delimitat)",
+    "fieldName" : "_06_class_no_snu",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318823,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "8514.61901087152",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "109"
+      }, {
+        "item" : "9.82215988585218",
+        "count" : "10"
+      }, {
+        "item" : "57.2756116690964",
+        "count" : "9"
+      }, {
+        "item" : "103.438939916829",
+        "count" : "9"
+      }, {
+        "item" : "6.30033151450644",
+        "count" : "9"
+      }, {
+        "item" : "5.51810733607411",
+        "count" : "9"
+      }, {
+        "item" : "10.7594979202753",
+        "count" : "9"
+      }, {
+        "item" : "2.18969627880864",
+        "count" : "9"
+      }, {
+        "item" : "5.20607362686954",
+        "count" : "9"
+      }, {
+        "item" : "10.3229048150199",
+        "count" : "9"
+      }, {
+        "item" : "11.0651266777389",
+        "count" : "9"
+      }, {
+        "item" : "5.93780079115508",
+        "count" : "9"
+      }, {
+        "item" : "12.4806459660094",
+        "count" : "9"
+      }, {
+        "item" : "10.2746071616448",
+        "count" : "9"
+      }, {
+        "item" : "26.7906789649703",
+        "count" : "9"
+      }, {
+        "item" : "12.5676143429077",
+        "count" : "9"
+      }, {
+        "item" : "3.92523277076677",
+        "count" : "9"
+      }, {
+        "item" : "15.4607957826962",
+        "count" : "9"
+      }, {
+        "item" : "16.8462524015287",
+        "count" : "9"
+      }, {
+        "item" : "53.7734071268938",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776839,
+    "name" : "06_perce_Class_no_snu",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del SUC (sòl urbà consolidat)+ SNC (sòl urbà no consolidat) + SUD (sòl urbanitzable delimitat)+ SND (sòl urbanitzable no delimitat) respecte el total del municipi",
+    "fieldName" : "_06_perce_class_no_snu",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318824,
+    "width" : 352,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "100",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "109"
+      }, {
+        "item" : "100",
+        "count" : "13"
+      }, {
+        "item" : "0.732581404911385",
+        "count" : "9"
+      }, {
+        "item" : "0.714737915528373",
+        "count" : "9"
+      }, {
+        "item" : "1.2176369627383",
+        "count" : "9"
+      }, {
+        "item" : "0.645613177550085",
+        "count" : "9"
+      }, {
+        "item" : "0.140733134763117",
+        "count" : "9"
+      }, {
+        "item" : "0.44171981035047",
+        "count" : "9"
+      }, {
+        "item" : "0.624224590721958",
+        "count" : "9"
+      }, {
+        "item" : "1.65866514374406",
+        "count" : "9"
+      }, {
+        "item" : "3.04056593973802",
+        "count" : "9"
+      }, {
+        "item" : "0.781231248359989",
+        "count" : "9"
+      }, {
+        "item" : "0.80442436657387",
+        "count" : "9"
+      }, {
+        "item" : "0.867260859036923",
+        "count" : "9"
+      }, {
+        "item" : "0.229638964530355",
+        "count" : "9"
+      }, {
+        "item" : "0.88247455480905",
+        "count" : "9"
+      }, {
+        "item" : "0.594884884836591",
+        "count" : "9"
+      }, {
+        "item" : "0.20103182541793",
+        "count" : "9"
+      }, {
+        "item" : "0.101851157523837",
+        "count" : "9"
+      }, {
+        "item" : "0.149381467121287",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776840,
+    "name" : "07_densitat_pob_km2",
+    "dataTypeName" : "number",
+    "description" : "Densitat de població per km2 de cada municipi",
+    "fieldName" : "_07_densitat_pob_km2",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318825,
+    "width" : 328,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "23179.2441073333",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "14"
+      }, {
+        "item" : "35.9666325793068",
+        "count" : "4"
+      }, {
+        "item" : "23.6517174463006",
+        "count" : "4"
+      }, {
+        "item" : "7.5317545308492",
+        "count" : "4"
+      }, {
+        "item" : "17.5349959655501",
+        "count" : "4"
+      }, {
+        "item" : "1.41139754067581",
+        "count" : "4"
+      }, {
+        "item" : "3.37128858885725",
+        "count" : "4"
+      }, {
+        "item" : "3.37463979026869",
+        "count" : "4"
+      }, {
+        "item" : "2.4872135126233",
+        "count" : "4"
+      }, {
+        "item" : "6.2902977898395",
+        "count" : "4"
+      }, {
+        "item" : "1.17017005406988",
+        "count" : "4"
+      }, {
+        "item" : "1.42207764862573",
+        "count" : "4"
+      }, {
+        "item" : "2.37615476835737",
+        "count" : "4"
+      }, {
+        "item" : "29.8089224020502",
+        "count" : "3"
+      }, {
+        "item" : "10.0639523881996",
+        "count" : "3"
+      }, {
+        "item" : "6.1994096554881",
+        "count" : "3"
+      }, {
+        "item" : "0.740423891253719",
+        "count" : "3"
+      }, {
+        "item" : "1.3712564267396",
+        "count" : "3"
+      }, {
+        "item" : "8.02717284624187",
+        "count" : "3"
+      }, {
+        "item" : "1.57846506299144",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776841,
+    "name" : "08_densitat_pob_urba_Km2",
+    "dataTypeName" : "number",
+    "description" : "Densitat de població per km2 de sòl urbà (consolidat i no consolidat) de cada municipi",
+    "fieldName" : "_08_densitat_pob_urba_km2",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318826,
+    "width" : 388,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "28347.5988144307",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "137"
+      }, {
+        "item" : "5604.17267709784",
+        "count" : "4"
+      }, {
+        "item" : "1458.35992843499",
+        "count" : "4"
+      }, {
+        "item" : "2116.3333750678",
+        "count" : "4"
+      }, {
+        "item" : "1424.78762547382",
+        "count" : "4"
+      }, {
+        "item" : "2495.89146663035",
+        "count" : "3"
+      }, {
+        "item" : "3002.41804727908",
+        "count" : "3"
+      }, {
+        "item" : "1680.61516534886",
+        "count" : "3"
+      }, {
+        "item" : "3452.34434285285",
+        "count" : "3"
+      }, {
+        "item" : "2977.00494723161",
+        "count" : "3"
+      }, {
+        "item" : "2166.02986553543",
+        "count" : "3"
+      }, {
+        "item" : "2076.76646401304",
+        "count" : "3"
+      }, {
+        "item" : "3149.66129798368",
+        "count" : "3"
+      }, {
+        "item" : "826.735178957809",
+        "count" : "3"
+      }, {
+        "item" : "2754.89954348991",
+        "count" : "3"
+      }, {
+        "item" : "2028.41537798064",
+        "count" : "3"
+      }, {
+        "item" : "2367.3222785278",
+        "count" : "3"
+      }, {
+        "item" : "820.031412935256",
+        "count" : "3"
+      }, {
+        "item" : "1611.26569476577",
+        "count" : "3"
+      }, {
+        "item" : "2840.78268798191",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776842,
+    "name" : "09_Perce_SNC_SU",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbà no consolidat respecte el sòl urbà (sòl urbà consolidat + sòl urbà no consolidat) del municipi",
+    "fieldName" : "_09_perce_snc_su",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318827,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "100",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5270"
+      }, {
+        "item" : "100",
+        "count" : "14"
+      }, {
+        "item" : "28.8166719931873",
+        "count" : "9"
+      }, {
+        "item" : "56.3007472966024",
+        "count" : "9"
+      }, {
+        "item" : "5.47289890264178",
+        "count" : "9"
+      }, {
+        "item" : "6.11765853672207",
+        "count" : "9"
+      }, {
+        "item" : "10.2763968558824",
+        "count" : "9"
+      }, {
+        "item" : "45.0418219658148",
+        "count" : "9"
+      }, {
+        "item" : "9.52646365891727",
+        "count" : "9"
+      }, {
+        "item" : "2.19572758176198",
+        "count" : "9"
+      }, {
+        "item" : "19.7449814686297",
+        "count" : "9"
+      }, {
+        "item" : "9.55032805816454",
+        "count" : "9"
+      }, {
+        "item" : "11.0518167954923",
+        "count" : "9"
+      }, {
+        "item" : "9.41031983181976",
+        "count" : "9"
+      }, {
+        "item" : "15.1341425209613",
+        "count" : "9"
+      }, {
+        "item" : "36.6342813036457",
+        "count" : "9"
+      }, {
+        "item" : "2.49311081863594",
+        "count" : "9"
+      }, {
+        "item" : "3.38227465906374",
+        "count" : "9"
+      }, {
+        "item" : "5.33744709502775",
+        "count" : "9"
+      }, {
+        "item" : "6.67848705429551",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776843,
+    "name" : "10_Perce_SUD_SU",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbanitzable delimitat respecte el sòl urbà (sòl urbà consolidat + sòl urbà no consolidat) del municipi",
+    "fieldName" : "_10_perce_sud_su",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318828,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "2241.44536191167",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3210"
+      }, {
+        "item" : "12.6412222093073",
+        "count" : "9"
+      }, {
+        "item" : "284.32887833278",
+        "count" : "9"
+      }, {
+        "item" : "34.8583477477386",
+        "count" : "9"
+      }, {
+        "item" : "231.188253451219",
+        "count" : "9"
+      }, {
+        "item" : "24.7863813075297",
+        "count" : "9"
+      }, {
+        "item" : "20.8717852929862",
+        "count" : "9"
+      }, {
+        "item" : "11.111799257633",
+        "count" : "9"
+      }, {
+        "item" : "43.8297926503096",
+        "count" : "9"
+      }, {
+        "item" : "27.5307916781847",
+        "count" : "9"
+      }, {
+        "item" : "68.261293530458",
+        "count" : "9"
+      }, {
+        "item" : "31.4665797794101",
+        "count" : "9"
+      }, {
+        "item" : "28.9940881299135",
+        "count" : "9"
+      }, {
+        "item" : "35.497162251304",
+        "count" : "9"
+      }, {
+        "item" : "21.5122735990708",
+        "count" : "9"
+      }, {
+        "item" : "4.07876059250593",
+        "count" : "9"
+      }, {
+        "item" : "17.8568298746108",
+        "count" : "9"
+      }, {
+        "item" : "41.8838477015551",
+        "count" : "9"
+      }, {
+        "item" : "14.8049612067884",
+        "count" : "9"
+      }, {
+        "item" : "24.748101514918",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776844,
+    "name" : "11_Perce_SND_SU",
+    "dataTypeName" : "number",
+    "description" : "Percentatge del sòl urbanitzable no delimitat respecte el sòl urbà (sòl urbà consolidat + sòl urbà no consolidat) del municipi",
+    "fieldName" : "_11_perce_snd_su",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318829,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "5022.95030546669",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10011"
+      }, {
+        "item" : "15.249943174227",
+        "count" : "9"
+      }, {
+        "item" : "19.7203370879632",
+        "count" : "9"
+      }, {
+        "item" : "11.2763034052991",
+        "count" : "9"
+      }, {
+        "item" : "6.2458314126315",
+        "count" : "9"
+      }, {
+        "item" : "32.6163957635643",
+        "count" : "9"
+      }, {
+        "item" : "8.47287740602204",
+        "count" : "9"
+      }, {
+        "item" : "21.3777275382887",
+        "count" : "9"
+      }, {
+        "item" : "9.72097794622302",
+        "count" : "9"
+      }, {
+        "item" : "10.7221703189874",
+        "count" : "9"
+      }, {
+        "item" : "6.09316233538395",
+        "count" : "9"
+      }, {
+        "item" : "24.6629657332542",
+        "count" : "9"
+      }, {
+        "item" : "12.7841837252623",
+        "count" : "9"
+      }, {
+        "item" : "11.3679098456775",
+        "count" : "8"
+      }, {
+        "item" : "34.4260740333265",
+        "count" : "8"
+      }, {
+        "item" : "6.484540802103",
+        "count" : "8"
+      }, {
+        "item" : "7.97492662668405",
+        "count" : "8"
+      }, {
+        "item" : "4.24041039161623",
+        "count" : "8"
+      }, {
+        "item" : "20.3271001064606",
+        "count" : "7"
+      }, {
+        "item" : "22.330307537615",
+        "count" : "7"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776845,
+    "name" : "012_Qual_SUC_AE",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'activitat econòmica del municipi.  Suma de les qualificacions de zona d'activitat econòmica del MUC en el sòl urbà consolidat (A1, A2, A3)",
+    "fieldName" : "_012_qual_suc_ae",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318830,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "669.56566816847",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3074"
+      }, {
+        "item" : "2.05492624155432",
+        "count" : "4"
+      }, {
+        "item" : "8.47295264635542",
+        "count" : "4"
+      }, {
+        "item" : "0.0279911297366023",
+        "count" : "4"
+      }, {
+        "item" : "3.37757049637784",
+        "count" : "4"
+      }, {
+        "item" : "0.357048646724597",
+        "count" : "4"
+      }, {
+        "item" : "1.41403385355528",
+        "count" : "4"
+      }, {
+        "item" : "1.42052823036164",
+        "count" : "4"
+      }, {
+        "item" : "0.729256474867463",
+        "count" : "4"
+      }, {
+        "item" : "6.15471058771918",
+        "count" : "4"
+      }, {
+        "item" : "5.35241066846661",
+        "count" : "4"
+      }, {
+        "item" : "0.583983874745667",
+        "count" : "4"
+      }, {
+        "item" : "0.329959046928212",
+        "count" : "4"
+      }, {
+        "item" : "5.68535912722908",
+        "count" : "4"
+      }, {
+        "item" : "0.307746497298591",
+        "count" : "4"
+      }, {
+        "item" : "0.416141305039171",
+        "count" : "4"
+      }, {
+        "item" : "2.25462655254586",
+        "count" : "4"
+      }, {
+        "item" : "3.49728718735317",
+        "count" : "4"
+      }, {
+        "item" : "0.0473448571361601",
+        "count" : "4"
+      }, {
+        "item" : "0.254274042566866",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776846,
+    "name" : "12_A1_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'activitat econòmica del municipi.  Qualificació d'activitat econòmica del MUC en el sòl urbà consolidat A1: Industrial",
+    "fieldName" : "_12_a1_suc",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318831,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "669.56566816847",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "4184"
+      }, {
+        "item" : "0.671809189897776",
+        "count" : "4"
+      }, {
+        "item" : "0.416141305039171",
+        "count" : "4"
+      }, {
+        "item" : "5.35241066846661",
+        "count" : "4"
+      }, {
+        "item" : "3.37757049637784",
+        "count" : "4"
+      }, {
+        "item" : "2.05492624155432",
+        "count" : "4"
+      }, {
+        "item" : "1.41403385355528",
+        "count" : "4"
+      }, {
+        "item" : "0.0473448571361601",
+        "count" : "4"
+      }, {
+        "item" : "0.962760814283788",
+        "count" : "4"
+      }, {
+        "item" : "0.254274042566866",
+        "count" : "4"
+      }, {
+        "item" : "0.583983874745667",
+        "count" : "4"
+      }, {
+        "item" : "8.47295264635542",
+        "count" : "4"
+      }, {
+        "item" : "0.0831090034246445",
+        "count" : "4"
+      }, {
+        "item" : "5.68535912722908",
+        "count" : "4"
+      }, {
+        "item" : "0.729256474867463",
+        "count" : "4"
+      }, {
+        "item" : "11.0554903781645",
+        "count" : "4"
+      }, {
+        "item" : "0.180426975030452",
+        "count" : "4"
+      }, {
+        "item" : "1.42052823036164",
+        "count" : "4"
+      }, {
+        "item" : "6.15471058771918",
+        "count" : "4"
+      }, {
+        "item" : "1.15001327064987",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776847,
+    "name" : "12_A2_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'activitat econòmica del municipi.  Qualificació d'activitat econòmica del MUC en el sòl urbà consolidat A2: Serveis",
+    "fieldName" : "_12_a2_suc",
+    "position" : 34,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318832,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "183.602333723148",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "8468"
+      }, {
+        "item" : "0.0494834212332964",
+        "count" : "5"
+      }, {
+        "item" : "0.690600793232024",
+        "count" : "4"
+      }, {
+        "item" : "0.45038426960716",
+        "count" : "4"
+      }, {
+        "item" : "0.329959046928212",
+        "count" : "4"
+      }, {
+        "item" : "0.32108287422061",
+        "count" : "4"
+      }, {
+        "item" : "0.677782817514241",
+        "count" : "4"
+      }, {
+        "item" : "0.0444535238713026",
+        "count" : "4"
+      }, {
+        "item" : "2.54579825366871",
+        "count" : "4"
+      }, {
+        "item" : "0.0279911297366023",
+        "count" : "4"
+      }, {
+        "item" : "0.111470107957907",
+        "count" : "4"
+      }, {
+        "item" : "1.67236023488231",
+        "count" : "4"
+      }, {
+        "item" : "0.219523102021962",
+        "count" : "4"
+      }, {
+        "item" : "0.244004486035183",
+        "count" : "4"
+      }, {
+        "item" : "0.788305064383894",
+        "count" : "4"
+      }, {
+        "item" : "2.25462655254586",
+        "count" : "4"
+      }, {
+        "item" : "12.773803805172",
+        "count" : "4"
+      }, {
+        "item" : "0.307746497298591",
+        "count" : "4"
+      }, {
+        "item" : "0.170402618023753",
+        "count" : "4"
+      }, {
+        "item" : "0.783924703261256",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776848,
+    "name" : "12_A3_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'activitat econòmica del municipi.  Qualificació d'activitat econòmica del MUC en el sòl urbà consolidat A3: Logística",
+    "fieldName" : "_12_a3_suc",
+    "position" : 35,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318833,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "29.2572771746974",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12964"
+      }, {
+        "item" : "0.689541257357597",
+        "count" : "4"
+      }, {
+        "item" : "0.630277493524551",
+        "count" : "4"
+      }, {
+        "item" : "0.108810076826811",
+        "count" : "4"
+      }, {
+        "item" : "0.301563795432821",
+        "count" : "4"
+      }, {
+        "item" : "0.0250650355428457",
+        "count" : "4"
+      }, {
+        "item" : "0.301564081458002",
+        "count" : "3"
+      }, {
+        "item" : "0.587337628234178",
+        "count" : "3"
+      }, {
+        "item" : "0.539433174314722",
+        "count" : "3"
+      }, {
+        "item" : "0.108810075745941",
+        "count" : "3"
+      }, {
+        "item" : "29.2572475454412",
+        "count" : "3"
+      }, {
+        "item" : "29.2572771746974",
+        "count" : "3"
+      }, {
+        "item" : "0.353253443284612",
+        "count" : "3"
+      }, {
+        "item" : "1.47368405199535",
+        "count" : "3"
+      }, {
+        "item" : "14.9433893176329",
+        "count" : "3"
+      }, {
+        "item" : "4.24703035136471",
+        "count" : "3"
+      }, {
+        "item" : "0.0250650331590325",
+        "count" : "3"
+      }, {
+        "item" : "6.61902365483493",
+        "count" : "3"
+      }, {
+        "item" : "1.66511563881338",
+        "count" : "3"
+      }, {
+        "item" : "0.073220834878087",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776849,
+    "name" : "13_Qual_SUC_R",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial.  Suma de les qualificacions residencial del MUC en el sòl urbà consolidat (R1, R2, R3, R4, R5, R6)",
+    "fieldName" : "_13_qual_suc",
+    "position" : 36,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318834,
+    "width" : 232,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "2504.28049712428",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "152"
+      }, {
+        "item" : "5.24377897008937",
+        "count" : "4"
+      }, {
+        "item" : "12.0791225459098",
+        "count" : "3"
+      }, {
+        "item" : "13.2788325516781",
+        "count" : "3"
+      }, {
+        "item" : "26.1973885382967",
+        "count" : "3"
+      }, {
+        "item" : "12.7636647920605",
+        "count" : "3"
+      }, {
+        "item" : "12.1254573148413",
+        "count" : "3"
+      }, {
+        "item" : "19.0261739657143",
+        "count" : "3"
+      }, {
+        "item" : "4.40817138134968",
+        "count" : "3"
+      }, {
+        "item" : "14.3318347773767",
+        "count" : "3"
+      }, {
+        "item" : "86.6264736216986",
+        "count" : "3"
+      }, {
+        "item" : "20.4215236395437",
+        "count" : "3"
+      }, {
+        "item" : "8.41764433140037",
+        "count" : "3"
+      }, {
+        "item" : "7.66994298159422",
+        "count" : "3"
+      }, {
+        "item" : "3.1857094251706",
+        "count" : "3"
+      }, {
+        "item" : "18.81524485923",
+        "count" : "3"
+      }, {
+        "item" : "52.3802293850628",
+        "count" : "3"
+      }, {
+        "item" : "17.7012234020986",
+        "count" : "3"
+      }, {
+        "item" : "9.81553096677297",
+        "count" : "3"
+      }, {
+        "item" : "210.871449304248",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776850,
+    "name" : "13_R1_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial en el sòl urbà consolidat (R1: Nucli antic)",
+    "fieldName" : "_13_r1_suc",
+    "position" : 37,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318835,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "375.221751084781",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1341"
+      }, {
+        "item" : "1.77359219658524",
+        "count" : "4"
+      }, {
+        "item" : "4.40327644321034",
+        "count" : "4"
+      }, {
+        "item" : "4.49920490048351",
+        "count" : "4"
+      }, {
+        "item" : "4.85176534971746",
+        "count" : "4"
+      }, {
+        "item" : "0.515363948090188",
+        "count" : "4"
+      }, {
+        "item" : "0.0793158978931606",
+        "count" : "4"
+      }, {
+        "item" : "0.191048317793757",
+        "count" : "4"
+      }, {
+        "item" : "1.70804066445169",
+        "count" : "4"
+      }, {
+        "item" : "0.46315160992872",
+        "count" : "4"
+      }, {
+        "item" : "0.329338498785719",
+        "count" : "4"
+      }, {
+        "item" : "1.67673829560814",
+        "count" : "4"
+      }, {
+        "item" : "6.03658068917695",
+        "count" : "4"
+      }, {
+        "item" : "0.841368783320207",
+        "count" : "4"
+      }, {
+        "item" : "6.28785462018852",
+        "count" : "4"
+      }, {
+        "item" : "0.940171320421738",
+        "count" : "4"
+      }, {
+        "item" : "0.622348141599144",
+        "count" : "4"
+      }, {
+        "item" : "1.20994393586274",
+        "count" : "4"
+      }, {
+        "item" : "0.171400138589693",
+        "count" : "4"
+      }, {
+        "item" : "0.288757425186038",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776851,
+    "name" : "13_R2_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial en el sòl urbà consolidat (R2: Urbà tradicional)",
+    "fieldName" : "_13_r2_suc",
+    "position" : 38,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318836,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1150.03053052669",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2949"
+      }, {
+        "item" : "4.50128784354276",
+        "count" : "4"
+      }, {
+        "item" : "1.42192019176438",
+        "count" : "4"
+      }, {
+        "item" : "4.0580287274179",
+        "count" : "4"
+      }, {
+        "item" : "0.113701892061532",
+        "count" : "4"
+      }, {
+        "item" : "1.97449896645448",
+        "count" : "4"
+      }, {
+        "item" : "1.79461383861281",
+        "count" : "4"
+      }, {
+        "item" : "1.34834906642586",
+        "count" : "4"
+      }, {
+        "item" : "0.0526823552653194",
+        "count" : "4"
+      }, {
+        "item" : "3.26590450259292",
+        "count" : "4"
+      }, {
+        "item" : "0.183200586432777",
+        "count" : "4"
+      }, {
+        "item" : "1.73265195281664",
+        "count" : "4"
+      }, {
+        "item" : "7.18570435713063",
+        "count" : "4"
+      }, {
+        "item" : "0.159036787006259",
+        "count" : "4"
+      }, {
+        "item" : "0.371857583919168",
+        "count" : "4"
+      }, {
+        "item" : "0.143241090896726",
+        "count" : "4"
+      }, {
+        "item" : "0.470681997096317",
+        "count" : "4"
+      }, {
+        "item" : "3.98373267795071",
+        "count" : "4"
+      }, {
+        "item" : "1.23953479472038",
+        "count" : "4"
+      }, {
+        "item" : "7.50361159294803",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776852,
+    "name" : "13_R3_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial en el sòl urbà consolidat (R3: Ordenació tancada)",
+    "fieldName" : "_13_r3_suc",
+    "position" : 39,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318837,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "134.022331591223",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10436"
+      }, {
+        "item" : "0.139204736764729",
+        "count" : "4"
+      }, {
+        "item" : "3.16683517062278",
+        "count" : "4"
+      }, {
+        "item" : "0.315966556936502",
+        "count" : "4"
+      }, {
+        "item" : "2.66709303160217",
+        "count" : "4"
+      }, {
+        "item" : "1.68374316628575",
+        "count" : "4"
+      }, {
+        "item" : "0.11006030023545",
+        "count" : "4"
+      }, {
+        "item" : "0.739194168752432",
+        "count" : "4"
+      }, {
+        "item" : "9.19337064647606",
+        "count" : "3"
+      }, {
+        "item" : "0.344727294699848",
+        "count" : "3"
+      }, {
+        "item" : "7.68592009921187",
+        "count" : "3"
+      }, {
+        "item" : "24.9359076357589",
+        "count" : "3"
+      }, {
+        "item" : "5.23022466805773",
+        "count" : "3"
+      }, {
+        "item" : "1.20782290463023",
+        "count" : "3"
+      }, {
+        "item" : "0.0896897247734014",
+        "count" : "3"
+      }, {
+        "item" : "5.23022676017107",
+        "count" : "3"
+      }, {
+        "item" : "10.2377568419898",
+        "count" : "3"
+      }, {
+        "item" : "0.110103355297446",
+        "count" : "3"
+      }, {
+        "item" : "0.083983316989243",
+        "count" : "3"
+      }, {
+        "item" : "4.15670334038744",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776853,
+    "name" : "13_R4_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial en el sòl urbà consolidat (R4: Ordenació oberta)",
+    "fieldName" : "_13_r4_suc",
+    "position" : 40,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318838,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "826.430221700363",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "6043"
+      }, {
+        "item" : "0.499451384213567",
+        "count" : "4"
+      }, {
+        "item" : "0.138947786223888",
+        "count" : "4"
+      }, {
+        "item" : "0.427673778712749",
+        "count" : "4"
+      }, {
+        "item" : "0.199209823602438",
+        "count" : "4"
+      }, {
+        "item" : "0.0316096456252038",
+        "count" : "4"
+      }, {
+        "item" : "1.98295971176326",
+        "count" : "4"
+      }, {
+        "item" : "0.0844008760601282",
+        "count" : "4"
+      }, {
+        "item" : "0.0775375990190543",
+        "count" : "4"
+      }, {
+        "item" : "0.174858486077189",
+        "count" : "4"
+      }, {
+        "item" : "0.326654014873505",
+        "count" : "4"
+      }, {
+        "item" : "0.0853684072330594",
+        "count" : "4"
+      }, {
+        "item" : "0.126194405407459",
+        "count" : "4"
+      }, {
+        "item" : "0.724810792771215",
+        "count" : "4"
+      }, {
+        "item" : "0.17927905151248",
+        "count" : "4"
+      }, {
+        "item" : "0.641131108966703",
+        "count" : "4"
+      }, {
+        "item" : "0.0669940867215395",
+        "count" : "4"
+      }, {
+        "item" : "0.0667232881754637",
+        "count" : "4"
+      }, {
+        "item" : "0.0339355080157518",
+        "count" : "4"
+      }, {
+        "item" : "0.345507433598861",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776854,
+    "name" : "13_R5_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial en el sòl urbà consolidat (R5: cases agrupades)",
+    "fieldName" : "_13_r5_suc",
+    "position" : 41,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318839,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "148.088683173249",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5790"
+      }, {
+        "item" : "0.113688520219922",
+        "count" : "5"
+      }, {
+        "item" : "0.283305566973984",
+        "count" : "4"
+      }, {
+        "item" : "0.0606315527655184",
+        "count" : "4"
+      }, {
+        "item" : "2.17603283758463",
+        "count" : "4"
+      }, {
+        "item" : "0.268220063840604",
+        "count" : "4"
+      }, {
+        "item" : "1.58998584114322",
+        "count" : "4"
+      }, {
+        "item" : "0.220021205733379",
+        "count" : "4"
+      }, {
+        "item" : "0.309276261624321",
+        "count" : "4"
+      }, {
+        "item" : "0.288380059940368",
+        "count" : "4"
+      }, {
+        "item" : "0.874641491602361",
+        "count" : "4"
+      }, {
+        "item" : "0.156915587604791",
+        "count" : "4"
+      }, {
+        "item" : "0.0680508462205529",
+        "count" : "4"
+      }, {
+        "item" : "1.21952881463675",
+        "count" : "4"
+      }, {
+        "item" : "1.48651024593171",
+        "count" : "4"
+      }, {
+        "item" : "0.541853601086559",
+        "count" : "4"
+      }, {
+        "item" : "0.527750447356049",
+        "count" : "4"
+      }, {
+        "item" : "0.107803617167659",
+        "count" : "4"
+      }, {
+        "item" : "0.138347272660071",
+        "count" : "4"
+      }, {
+        "item" : "0.0880124258026481",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776855,
+    "name" : "13_R6_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha residencial en el sòl urbà consolidat (R6: cases aïllades)",
+    "fieldName" : "_13_r6_suc",
+    "position" : 42,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318840,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "621.348417254723",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1284"
+      }, {
+        "item" : "1.50211698473648",
+        "count" : "4"
+      }, {
+        "item" : "2.25946279498262",
+        "count" : "4"
+      }, {
+        "item" : "0.711429580271989",
+        "count" : "4"
+      }, {
+        "item" : "0.959540624307096",
+        "count" : "4"
+      }, {
+        "item" : "0.0743615890429355",
+        "count" : "4"
+      }, {
+        "item" : "4.08615761291813",
+        "count" : "4"
+      }, {
+        "item" : "9.52342999551863",
+        "count" : "4"
+      }, {
+        "item" : "0.554670093332138",
+        "count" : "4"
+      }, {
+        "item" : "4.12424337951275",
+        "count" : "4"
+      }, {
+        "item" : "0.406595163927786",
+        "count" : "4"
+      }, {
+        "item" : "0.0952127703106496",
+        "count" : "4"
+      }, {
+        "item" : "1.4916691408444",
+        "count" : "4"
+      }, {
+        "item" : "104.285152799538",
+        "count" : "4"
+      }, {
+        "item" : "2.29993233490586",
+        "count" : "4"
+      }, {
+        "item" : "0.066271532279253",
+        "count" : "4"
+      }, {
+        "item" : "1.18988247626652",
+        "count" : "4"
+      }, {
+        "item" : "7.56268030040336",
+        "count" : "3"
+      }, {
+        "item" : "8.19670865932835",
+        "count" : "3"
+      }, {
+        "item" : "2.4240832120544",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776856,
+    "name" : "14_Qual_SUC_Altres",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'altres.  Suma de les qualificacions del MUC en el sòl urbà consolidat (M1, M2, M3)",
+    "fieldName" : "_14_qual_suc_altres",
+    "position" : 43,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318841,
+    "width" : 316,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "207.82238000602",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5065"
+      }, {
+        "item" : "2.72201843964644",
+        "count" : "4"
+      }, {
+        "item" : "3.17943624457605",
+        "count" : "4"
+      }, {
+        "item" : "0.0324290125474334",
+        "count" : "4"
+      }, {
+        "item" : "0.0784095159366727",
+        "count" : "4"
+      }, {
+        "item" : "0.196248445818789",
+        "count" : "4"
+      }, {
+        "item" : "0.0336197020946071",
+        "count" : "4"
+      }, {
+        "item" : "0.190872950940579",
+        "count" : "4"
+      }, {
+        "item" : "1.28812039636262",
+        "count" : "4"
+      }, {
+        "item" : "0.842558765167743",
+        "count" : "4"
+      }, {
+        "item" : "0.578567706794292",
+        "count" : "4"
+      }, {
+        "item" : "0.150057105829171",
+        "count" : "4"
+      }, {
+        "item" : "1.0250620016792",
+        "count" : "4"
+      }, {
+        "item" : "2.20322288454599",
+        "count" : "4"
+      }, {
+        "item" : "0.286893979751319",
+        "count" : "4"
+      }, {
+        "item" : "0.0218716524377465",
+        "count" : "4"
+      }, {
+        "item" : "0.202224980509281",
+        "count" : "4"
+      }, {
+        "item" : "1.57772340720043",
+        "count" : "4"
+      }, {
+        "item" : "0.263465923615638",
+        "count" : "4"
+      }, {
+        "item" : "0.2977001852924",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776857,
+    "name" : "14_M1_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'altres.  Qualificació del MUC en sòl urbà consolidat (M1: Transformació)",
+    "fieldName" : "_14_m1_suc",
+    "position" : 44,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318842,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "108.451060001808",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11127"
+      }, {
+        "item" : "0.0720236196666956",
+        "count" : "4"
+      }, {
+        "item" : "0.147264097011089",
+        "count" : "4"
+      }, {
+        "item" : "0.0394006172964349",
+        "count" : "4"
+      }, {
+        "item" : "3.51530079225134",
+        "count" : "4"
+      }, {
+        "item" : "13.3177136099149",
+        "count" : "4"
+      }, {
+        "item" : "0.149833957275003",
+        "count" : "4"
+      }, {
+        "item" : "3.27120035617948",
+        "count" : "4"
+      }, {
+        "item" : "0.434830833471962",
+        "count" : "4"
+      }, {
+        "item" : "0.392008107076585",
+        "count" : "4"
+      }, {
+        "item" : "0.0145373303860426",
+        "count" : "4"
+      }, {
+        "item" : "0.0106122314017266",
+        "count" : "4"
+      }, {
+        "item" : "0.847814152217656",
+        "count" : "4"
+      }, {
+        "item" : "0.269503524312377",
+        "count" : "4"
+      }, {
+        "item" : "0.477211600024998",
+        "count" : "4"
+      }, {
+        "item" : "0.459397563320864",
+        "count" : "4"
+      }, {
+        "item" : "0.105657141515613",
+        "count" : "4"
+      }, {
+        "item" : "1.85183897791039",
+        "count" : "4"
+      }, {
+        "item" : "0.613709042709647",
+        "count" : "4"
+      }, {
+        "item" : "0.100537383336574",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776858,
+    "name" : "14_M2_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'altres.  Qualificació del MUC en sòl urbà consolidat (M2: Transformació)",
+    "fieldName" : "_14_m2_suc",
+    "position" : 45,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318843,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "101.273135340313",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5857"
+      }, {
+        "item" : "0.0784095159366727",
+        "count" : "4"
+      }, {
+        "item" : "0.0218716524377465",
+        "count" : "4"
+      }, {
+        "item" : "1.28812039636262",
+        "count" : "4"
+      }, {
+        "item" : "0.2977001852924",
+        "count" : "4"
+      }, {
+        "item" : "0.150057105829171",
+        "count" : "4"
+      }, {
+        "item" : "0.950769066107459",
+        "count" : "4"
+      }, {
+        "item" : "0.0336197020946071",
+        "count" : "4"
+      }, {
+        "item" : "0.00678408424444497",
+        "count" : "4"
+      }, {
+        "item" : "29.4113114700061",
+        "count" : "4"
+      }, {
+        "item" : "0.842558765167743",
+        "count" : "4"
+      }, {
+        "item" : "0.0324290125474334",
+        "count" : "4"
+      }, {
+        "item" : "0.0289636714354157",
+        "count" : "4"
+      }, {
+        "item" : "0.578567706794292",
+        "count" : "4"
+      }, {
+        "item" : "0.190872950940579",
+        "count" : "4"
+      }, {
+        "item" : "3.17943624457605",
+        "count" : "4"
+      }, {
+        "item" : "0.202224980509281",
+        "count" : "4"
+      }, {
+        "item" : "0.590674975792132",
+        "count" : "4"
+      }, {
+        "item" : "0.286893979751319",
+        "count" : "4"
+      }, {
+        "item" : "0.618883944633603",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776859,
+    "name" : "14_M3_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha d'altres.  Qualificació del MUC en sòl urbà consolidat (M3: Transformació)",
+    "fieldName" : "_14_m3_suc",
+    "position" : 46,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318844,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "60.3579372355314",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12267"
+      }, {
+        "item" : "0.274091482261941",
+        "count" : "4"
+      }, {
+        "item" : "0.520736369106919",
+        "count" : "4"
+      }, {
+        "item" : "24.6603181380093",
+        "count" : "4"
+      }, {
+        "item" : "0.329021788718551",
+        "count" : "4"
+      }, {
+        "item" : "1.57772340720043",
+        "count" : "4"
+      }, {
+        "item" : "0.103389492287487",
+        "count" : "4"
+      }, {
+        "item" : "1.23396165106148",
+        "count" : "4"
+      }, {
+        "item" : "0.229165056543052",
+        "count" : "4"
+      }, {
+        "item" : "1.53930313849975",
+        "count" : "4"
+      }, {
+        "item" : "4.65598279028978",
+        "count" : "4"
+      }, {
+        "item" : "5.03630152094234",
+        "count" : "3"
+      }, {
+        "item" : "3.14298959563087",
+        "count" : "3"
+      }, {
+        "item" : "0.160999249386787",
+        "count" : "3"
+      }, {
+        "item" : "0.349236523483507",
+        "count" : "3"
+      }, {
+        "item" : "2.24377208704352",
+        "count" : "3"
+      }, {
+        "item" : "1.01456923058629",
+        "count" : "3"
+      }, {
+        "item" : "1.07696990482884",
+        "count" : "3"
+      }, {
+        "item" : "6.81943568126261",
+        "count" : "3"
+      }, {
+        "item" : "1.58725627614427",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776860,
+    "name" : "15_Qual_SUC_SISTEMES",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha dels Sistemes.  Suma de les qualificacions del MUC en el sòl urbà consolidat (SX0, SX1, SX2, SF, SH, SA,SP, SS, ST, SV, SC, SD, SE)",
+    "fieldName" : "_15_qual_suc_sistemes",
+    "position" : 47,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318845,
+    "width" : 340,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "5719.42464356974",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "151"
+      }, {
+        "item" : "13.5053020127769",
+        "count" : "3"
+      }, {
+        "item" : "3.24841844964403",
+        "count" : "3"
+      }, {
+        "item" : "3.94557444837308",
+        "count" : "3"
+      }, {
+        "item" : "8.96875407762501",
+        "count" : "3"
+      }, {
+        "item" : "5.33635876959723",
+        "count" : "3"
+      }, {
+        "item" : "1.59294523784151",
+        "count" : "3"
+      }, {
+        "item" : "2.03005867268107",
+        "count" : "3"
+      }, {
+        "item" : "3.88715650469732",
+        "count" : "3"
+      }, {
+        "item" : "22.8758572594996",
+        "count" : "3"
+      }, {
+        "item" : "5.34378513972529",
+        "count" : "3"
+      }, {
+        "item" : "8.04141172520044",
+        "count" : "3"
+      }, {
+        "item" : "7.48293388123976",
+        "count" : "3"
+      }, {
+        "item" : "1.33765378439666",
+        "count" : "3"
+      }, {
+        "item" : "2.35895374342945",
+        "count" : "3"
+      }, {
+        "item" : "10.3060813143973",
+        "count" : "3"
+      }, {
+        "item" : "12.5676850553208",
+        "count" : "3"
+      }, {
+        "item" : "25.028929493913",
+        "count" : "3"
+      }, {
+        "item" : "7.57932214048195",
+        "count" : "3"
+      }, {
+        "item" : "19.2708284217487",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776861,
+    "name" : "15_SA_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SA: Aeroportuari)",
+    "fieldName" : "_15_sa_suc",
+    "position" : 48,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318846,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "72.5945319402823",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "13216"
+      }, {
+        "item" : "0.438170493254066",
+        "count" : "4"
+      }, {
+        "item" : "0.420614412945509",
+        "count" : "3"
+      }, {
+        "item" : "0.438170779078454",
+        "count" : "3"
+      }, {
+        "item" : "72.5945319402823",
+        "count" : "3"
+      }, {
+        "item" : "14.4810127030092",
+        "count" : "2"
+      }, {
+        "item" : "14.1408917989298",
+        "count" : "2"
+      }, {
+        "item" : "0.420614823642373",
+        "count" : "2"
+      }, {
+        "item" : "72.5945303800395",
+        "count" : "2"
+      }, {
+        "item" : "0.438170820997469",
+        "count" : "2"
+      }, {
+        "item" : "72.5943328651256",
+        "count" : "2"
+      }, {
+        "item" : "0.420614823633432",
+        "count" : "2"
+      }, {
+        "item" : "0.420613344620308",
+        "count" : "2"
+      }, {
+        "item" : "0.438169653168693",
+        "count" : "2"
+      }, {
+        "item" : "14.4537177655364",
+        "count" : "2"
+      }, {
+        "item" : "0.420614262218168",
+        "count" : "2"
+      }, {
+        "item" : "72.5945303796639",
+        "count" : "2"
+      }, {
+        "item" : "72.5945315227443",
+        "count" : "2"
+      }, {
+        "item" : "14.4537162913121",
+        "count" : "2"
+      }, {
+        "item" : "14.4537177656354",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776862,
+    "name" : "15_SC_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SC: Costaner)",
+    "fieldName" : "_15_sc_suc",
+    "position" : 49,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318847,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "52.4299557044952",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12945"
+      }, {
+        "item" : "0.691322803642671",
+        "count" : "3"
+      }, {
+        "item" : "1.53520324772354",
+        "count" : "3"
+      }, {
+        "item" : "0.615697655391682",
+        "count" : "3"
+      }, {
+        "item" : "4.93352848697454",
+        "count" : "3"
+      }, {
+        "item" : "2.15174943267349",
+        "count" : "3"
+      }, {
+        "item" : "2.15174743285924",
+        "count" : "3"
+      }, {
+        "item" : "0.649917857489552",
+        "count" : "3"
+      }, {
+        "item" : "12.1319626958061",
+        "count" : "3"
+      }, {
+        "item" : "4.3874454844336",
+        "count" : "3"
+      }, {
+        "item" : "0.580467911849916",
+        "count" : "3"
+      }, {
+        "item" : "1.47794692786559",
+        "count" : "3"
+      }, {
+        "item" : "9.53647722988809",
+        "count" : "3"
+      }, {
+        "item" : "4.65175424808164",
+        "count" : "2"
+      }, {
+        "item" : "4.93351584137231",
+        "count" : "2"
+      }, {
+        "item" : "4.38743403303172",
+        "count" : "2"
+      }, {
+        "item" : "0.525813220083225",
+        "count" : "2"
+      }, {
+        "item" : "2.88367984023094",
+        "count" : "2"
+      }, {
+        "item" : "34.4765930099295",
+        "count" : "2"
+      }, {
+        "item" : "9.53647761851451",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776863,
+    "name" : "15_SD_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SD: Habitatge dotacional públic)",
+    "fieldName" : "_15_sd_suc",
+    "position" : 50,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318848,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "12.2649962564295",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11423"
+      }, {
+        "item" : "0.00652945416606963",
+        "count" : "5"
+      }, {
+        "item" : "0.0183048467129469",
+        "count" : "5"
+      }, {
+        "item" : "0.00815816684663296",
+        "count" : "4"
+      }, {
+        "item" : "0.106136930349469",
+        "count" : "4"
+      }, {
+        "item" : "0.0239583012733608",
+        "count" : "4"
+      }, {
+        "item" : "0.177782527688146",
+        "count" : "4"
+      }, {
+        "item" : "0.131584470579773",
+        "count" : "4"
+      }, {
+        "item" : "0.0291967184879817",
+        "count" : "4"
+      }, {
+        "item" : "0.215212218609452",
+        "count" : "4"
+      }, {
+        "item" : "0.0622980975780636",
+        "count" : "4"
+      }, {
+        "item" : "0.0820951352834702",
+        "count" : "4"
+      }, {
+        "item" : "0.281327205857262",
+        "count" : "4"
+      }, {
+        "item" : "0.150638033753633",
+        "count" : "4"
+      }, {
+        "item" : "0.0231222813595086",
+        "count" : "4"
+      }, {
+        "item" : "0.0925236266642809",
+        "count" : "4"
+      }, {
+        "item" : "0.281151700088289",
+        "count" : "4"
+      }, {
+        "item" : "0.140823227568716",
+        "count" : "4"
+      }, {
+        "item" : "0.0739434232478961",
+        "count" : "4"
+      }, {
+        "item" : "0.113464709525183",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776864,
+    "name" : "15_SE_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SE:Equipaments)",
+    "fieldName" : "_15_se_suc",
+    "position" : 51,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318849,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1069.54884074808",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "155"
+      }, {
+        "item" : "1.31835073951904",
+        "count" : "4"
+      }, {
+        "item" : "1.93392486264594",
+        "count" : "4"
+      }, {
+        "item" : "1.83934845869755",
+        "count" : "4"
+      }, {
+        "item" : "0.463218995644897",
+        "count" : "4"
+      }, {
+        "item" : "0.455394218413584",
+        "count" : "4"
+      }, {
+        "item" : "0.870316475948691",
+        "count" : "4"
+      }, {
+        "item" : "1.35091697822255",
+        "count" : "4"
+      }, {
+        "item" : "0.183302930429252",
+        "count" : "4"
+      }, {
+        "item" : "3.63387234405186",
+        "count" : "4"
+      }, {
+        "item" : "0.221986818321794",
+        "count" : "4"
+      }, {
+        "item" : "0.155840856102202",
+        "count" : "4"
+      }, {
+        "item" : "0.130911553963739",
+        "count" : "4"
+      }, {
+        "item" : "0.301089720093878",
+        "count" : "4"
+      }, {
+        "item" : "1.71925333855422",
+        "count" : "4"
+      }, {
+        "item" : "1.1008008087373",
+        "count" : "4"
+      }, {
+        "item" : "1.22293131693128",
+        "count" : "4"
+      }, {
+        "item" : "0.614814095864072",
+        "count" : "4"
+      }, {
+        "item" : "0.0600548488112574",
+        "count" : "4"
+      }, {
+        "item" : "2.49581539310194",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776865,
+    "name" : "15_SF_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SF: Ferroviàri)",
+    "fieldName" : "_15_sf_suc",
+    "position" : 52,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318850,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "129.124413065483",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11033"
+      }, {
+        "item" : "0.368374529513717",
+        "count" : "4"
+      }, {
+        "item" : "0.102672672068328",
+        "count" : "4"
+      }, {
+        "item" : "4.64318848868921",
+        "count" : "4"
+      }, {
+        "item" : "0.925930924593285",
+        "count" : "4"
+      }, {
+        "item" : "0.0873792630761862",
+        "count" : "4"
+      }, {
+        "item" : "0.0971408231757581",
+        "count" : "4"
+      }, {
+        "item" : "0.0247005006995052",
+        "count" : "4"
+      }, {
+        "item" : "0.186660243016481",
+        "count" : "4"
+      }, {
+        "item" : "0.167904847171716",
+        "count" : "4"
+      }, {
+        "item" : "0.132269384807348",
+        "count" : "4"
+      }, {
+        "item" : "0.0545064669974148",
+        "count" : "3"
+      }, {
+        "item" : "2.23511743186489",
+        "count" : "3"
+      }, {
+        "item" : "1.24689033021703",
+        "count" : "3"
+      }, {
+        "item" : "0.963038432436809",
+        "count" : "3"
+      }, {
+        "item" : "0.333746432998031",
+        "count" : "3"
+      }, {
+        "item" : "3.41579610529747",
+        "count" : "3"
+      }, {
+        "item" : "0.658142404010659",
+        "count" : "3"
+      }, {
+        "item" : "4.40570506182644",
+        "count" : "3"
+      }, {
+        "item" : "4.75423103549079",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776866,
+    "name" : "15_SH_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SH: Hidrogràfic)",
+    "fieldName" : "_15_sh_suc",
+    "position" : 53,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318851,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "34.7483503429996",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "8597"
+      }, {
+        "item" : "0.058543450081232",
+        "count" : "4"
+      }, {
+        "item" : "0.11236931166264",
+        "count" : "4"
+      }, {
+        "item" : "0.130612836988643",
+        "count" : "4"
+      }, {
+        "item" : "0.412597947217524",
+        "count" : "4"
+      }, {
+        "item" : "0.0401598302996543",
+        "count" : "4"
+      }, {
+        "item" : "0.0162059040334774",
+        "count" : "4"
+      }, {
+        "item" : "1.14948329727813",
+        "count" : "4"
+      }, {
+        "item" : "0.483037990221323",
+        "count" : "4"
+      }, {
+        "item" : "0.220669955421798",
+        "count" : "4"
+      }, {
+        "item" : "0.0169092277958989",
+        "count" : "4"
+      }, {
+        "item" : "0.304275821861718",
+        "count" : "4"
+      }, {
+        "item" : "0.000472369975969195",
+        "count" : "4"
+      }, {
+        "item" : "0.24245621129386",
+        "count" : "4"
+      }, {
+        "item" : "0.493194365323055",
+        "count" : "4"
+      }, {
+        "item" : "0.00988276828937232",
+        "count" : "4"
+      }, {
+        "item" : "0.0839962058767676",
+        "count" : "4"
+      }, {
+        "item" : "0.483668589703646",
+        "count" : "4"
+      }, {
+        "item" : "0.0840307613879442",
+        "count" : "4"
+      }, {
+        "item" : "0.0350043340921402",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776867,
+    "name" : "15_SP_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SP: Portuari)",
+    "fieldName" : "_15_sp_suc",
+    "position" : 54,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318852,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "608.24355070773",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "13024"
+      }, {
+        "item" : "0.0031644285293296",
+        "count" : "5"
+      }, {
+        "item" : "0.0068133714735508",
+        "count" : "4"
+      }, {
+        "item" : "60.3542829150493",
+        "count" : "3"
+      }, {
+        "item" : "5.07852883975171",
+        "count" : "3"
+      }, {
+        "item" : "0.0031643699769862",
+        "count" : "3"
+      }, {
+        "item" : "1.27130724005466",
+        "count" : "3"
+      }, {
+        "item" : "0.0112146952300332",
+        "count" : "3"
+      }, {
+        "item" : "6.48314862554899",
+        "count" : "3"
+      }, {
+        "item" : "5.24972704431582",
+        "count" : "3"
+      }, {
+        "item" : "0.00681348501741886",
+        "count" : "3"
+      }, {
+        "item" : "6.48314709602483",
+        "count" : "3"
+      }, {
+        "item" : "0.127885195680335",
+        "count" : "2"
+      }, {
+        "item" : "10.8234815534641",
+        "count" : "2"
+      }, {
+        "item" : "3.87688797198236",
+        "count" : "2"
+      }, {
+        "item" : "11.9163234636646",
+        "count" : "2"
+      }, {
+        "item" : "16.2832938625077",
+        "count" : "2"
+      }, {
+        "item" : "1.47670890679276",
+        "count" : "2"
+      }, {
+        "item" : "3.87687665765138",
+        "count" : "2"
+      }, {
+        "item" : "1.27130466377093",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776868,
+    "name" : "15_SS_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SS: Protecció)",
+    "fieldName" : "_15_ss_suc",
+    "position" : 55,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318853,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "62.2327345061239",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9982"
+      }, {
+        "item" : "0.689340760783275",
+        "count" : "4"
+      }, {
+        "item" : "0.0323070168202743",
+        "count" : "4"
+      }, {
+        "item" : "0.417135326093482",
+        "count" : "4"
+      }, {
+        "item" : "0.21706787005011",
+        "count" : "4"
+      }, {
+        "item" : "0.0265850741926581",
+        "count" : "4"
+      }, {
+        "item" : "0.500487415218353",
+        "count" : "4"
+      }, {
+        "item" : "0.322058783571748",
+        "count" : "4"
+      }, {
+        "item" : "0.324770396448672",
+        "count" : "4"
+      }, {
+        "item" : "0.00321074763350189",
+        "count" : "4"
+      }, {
+        "item" : "0.00545986394584179",
+        "count" : "4"
+      }, {
+        "item" : "0.179918225777149",
+        "count" : "4"
+      }, {
+        "item" : "0.380156056009792",
+        "count" : "4"
+      }, {
+        "item" : "0.0365056148320436",
+        "count" : "4"
+      }, {
+        "item" : "0.473798398286104",
+        "count" : "4"
+      }, {
+        "item" : "0.082859169088304",
+        "count" : "4"
+      }, {
+        "item" : "0.0537710103034973",
+        "count" : "4"
+      }, {
+        "item" : "0.0294724966702255",
+        "count" : "3"
+      }, {
+        "item" : "0.0813465436857194",
+        "count" : "3"
+      }, {
+        "item" : "0.399119878858863",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776869,
+    "name" : "15_ST_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (ST: Serveis tècnics i ambientals)",
+    "fieldName" : "_15_st_suc",
+    "position" : 56,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318854,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "53.3152943934057",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3737"
+      }, {
+        "item" : "0.0118894231056795",
+        "count" : "5"
+      }, {
+        "item" : "0.0158379841782153",
+        "count" : "5"
+      }, {
+        "item" : "0.00892741491645575",
+        "count" : "5"
+      }, {
+        "item" : "0.0343130386851728",
+        "count" : "5"
+      }, {
+        "item" : "0.026696147595346",
+        "count" : "5"
+      }, {
+        "item" : "0.189288726678863",
+        "count" : "4"
+      }, {
+        "item" : "0.00300645836461335",
+        "count" : "4"
+      }, {
+        "item" : "0.0075895791195333",
+        "count" : "4"
+      }, {
+        "item" : "0.0341692031602259",
+        "count" : "4"
+      }, {
+        "item" : "0.0184636655386537",
+        "count" : "4"
+      }, {
+        "item" : "0.00405391736477613",
+        "count" : "4"
+      }, {
+        "item" : "0.503625503638107",
+        "count" : "4"
+      }, {
+        "item" : "0.101188931010303",
+        "count" : "4"
+      }, {
+        "item" : "0.0625200654583052",
+        "count" : "4"
+      }, {
+        "item" : "0.773969113318483",
+        "count" : "4"
+      }, {
+        "item" : "0.30378974690102",
+        "count" : "4"
+      }, {
+        "item" : "0.00141480503864586",
+        "count" : "4"
+      }, {
+        "item" : "0.00525049750739709",
+        "count" : "4"
+      }, {
+        "item" : "0.00569399827700108",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776870,
+    "name" : "15_SV_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SV: Espais lliures, zones verdes)",
+    "fieldName" : "_15_sv_suc",
+    "position" : 57,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318855,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1393.11682088086",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "359"
+      }, {
+        "item" : "1.88543252958261",
+        "count" : "4"
+      }, {
+        "item" : "19.6090685578397",
+        "count" : "4"
+      }, {
+        "item" : "0.163903926012851",
+        "count" : "4"
+      }, {
+        "item" : "0.571926989901252",
+        "count" : "4"
+      }, {
+        "item" : "0.517111447477539",
+        "count" : "4"
+      }, {
+        "item" : "0.0928337828889489",
+        "count" : "4"
+      }, {
+        "item" : "0.454874129641056",
+        "count" : "4"
+      }, {
+        "item" : "0.138516582885385",
+        "count" : "4"
+      }, {
+        "item" : "0.372457729790238",
+        "count" : "4"
+      }, {
+        "item" : "0.262335981294513",
+        "count" : "4"
+      }, {
+        "item" : "0.324602258649049",
+        "count" : "4"
+      }, {
+        "item" : "0.140862643405795",
+        "count" : "4"
+      }, {
+        "item" : "0.742398910719575",
+        "count" : "4"
+      }, {
+        "item" : "0.12418374985368",
+        "count" : "4"
+      }, {
+        "item" : "0.113848484676704",
+        "count" : "4"
+      }, {
+        "item" : "1.25254524189399",
+        "count" : "4"
+      }, {
+        "item" : "1.05410458474378",
+        "count" : "4"
+      }, {
+        "item" : "0.114125876429118",
+        "count" : "4"
+      }, {
+        "item" : "0.0140985759109259",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776871,
+    "name" : "15_SX0_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SX0: Eixos estructurants)",
+    "fieldName" : "_15_sx0_suc",
+    "position" : 58,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318856,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1.64577105981198",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "13154"
+      }, {
+        "item" : "0.0972420276542194",
+        "count" : "4"
+      }, {
+        "item" : "0.226226557925344",
+        "count" : "4"
+      }, {
+        "item" : "0.867874817545246",
+        "count" : "3"
+      }, {
+        "item" : "0.00311596184819937",
+        "count" : "3"
+      }, {
+        "item" : "0.0972415307579562",
+        "count" : "3"
+      }, {
+        "item" : "0.0672656687265146",
+        "count" : "3"
+      }, {
+        "item" : "0.465839208194613",
+        "count" : "3"
+      }, {
+        "item" : "0.00311597215849906",
+        "count" : "3"
+      }, {
+        "item" : "0.054794148503826",
+        "count" : "3"
+      }, {
+        "item" : "0.226226719868183",
+        "count" : "3"
+      }, {
+        "item" : "0.0547942054142943",
+        "count" : "2"
+      }, {
+        "item" : "0.0672655433757231",
+        "count" : "2"
+      }, {
+        "item" : "0.0248059864034876",
+        "count" : "2"
+      }, {
+        "item" : "0.226226011439413",
+        "count" : "2"
+      }, {
+        "item" : "0.458706557234004",
+        "count" : "2"
+      }, {
+        "item" : "0.867875044127274",
+        "count" : "2"
+      }, {
+        "item" : "0.0554100130924955",
+        "count" : "2"
+      }, {
+        "item" : "0.565273114805482",
+        "count" : "2"
+      }, {
+        "item" : "0.226223053337634",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776872,
+    "name" : "15_SX1_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SX1: Eixos estructurants)",
+    "fieldName" : "_15_sx1_suc",
+    "position" : 59,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318857,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "750.829069038772",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "260"
+      }, {
+        "item" : "0.330670335938409",
+        "count" : "4"
+      }, {
+        "item" : "0.748265310847759",
+        "count" : "4"
+      }, {
+        "item" : "2.91863012296655",
+        "count" : "4"
+      }, {
+        "item" : "0.991066550599225",
+        "count" : "4"
+      }, {
+        "item" : "0.924494081334071",
+        "count" : "4"
+      }, {
+        "item" : "1.00830440337483",
+        "count" : "4"
+      }, {
+        "item" : "1.3936232130518",
+        "count" : "4"
+      }, {
+        "item" : "0.72712028648168",
+        "count" : "4"
+      }, {
+        "item" : "0.0244425789203495",
+        "count" : "4"
+      }, {
+        "item" : "1.66699159925878",
+        "count" : "4"
+      }, {
+        "item" : "0.743369477300346",
+        "count" : "4"
+      }, {
+        "item" : "3.8123002634109",
+        "count" : "4"
+      }, {
+        "item" : "1.22964769277724",
+        "count" : "4"
+      }, {
+        "item" : "3.43234656557729",
+        "count" : "3"
+      }, {
+        "item" : "1.10537818885576",
+        "count" : "3"
+      }, {
+        "item" : "2.73814474739044",
+        "count" : "3"
+      }, {
+        "item" : "1.05302764610384",
+        "count" : "3"
+      }, {
+        "item" : "6.96149125038058",
+        "count" : "3"
+      }, {
+        "item" : "1.25132502741702",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776873,
+    "name" : "15_SX2_SUC",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha de sistema.  Qualificació del MUC en sòl urbà consolidat (SX2: Eixos SECUNDARIS)",
+    "fieldName" : "_15_sx2_suc",
+    "position" : 60,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318858,
+    "width" : 220,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1386.23505847242",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "151"
+      }, {
+        "item" : "1.60795646889344",
+        "count" : "4"
+      }, {
+        "item" : "2.50588435797881",
+        "count" : "4"
+      }, {
+        "item" : "0.550128262316523",
+        "count" : "4"
+      }, {
+        "item" : "0.509711320824118",
+        "count" : "4"
+      }, {
+        "item" : "0.961989206575975",
+        "count" : "4"
+      }, {
+        "item" : "9.33239780710443",
+        "count" : "3"
+      }, {
+        "item" : "4.31219504431468",
+        "count" : "3"
+      }, {
+        "item" : "1.77503468516182",
+        "count" : "3"
+      }, {
+        "item" : "0.858927030244097",
+        "count" : "3"
+      }, {
+        "item" : "0.188955372702517",
+        "count" : "3"
+      }, {
+        "item" : "10.2113195576294",
+        "count" : "3"
+      }, {
+        "item" : "16.499040679702",
+        "count" : "3"
+      }, {
+        "item" : "1.32435836911308",
+        "count" : "3"
+      }, {
+        "item" : "1.03349357063589",
+        "count" : "3"
+      }, {
+        "item" : "0.970352982860175",
+        "count" : "3"
+      }, {
+        "item" : "0.759691340594622",
+        "count" : "3"
+      }, {
+        "item" : "1.86860787043622",
+        "count" : "3"
+      }, {
+        "item" : "17.3637927227214",
+        "count" : "3"
+      }, {
+        "item" : "2.07393625361172",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776874,
+    "name" : "16_QUAL_snu",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl no urbanitzable.  Suma de les qualificacions del MUC de zones en el sòl no urbanitzable (N1, N2, N3, N4)",
+    "fieldName" : "_16_qual_snu",
+    "position" : 61,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318859,
+    "width" : 232,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "55430.8934495591",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "111"
+      }, {
+        "item" : "1153.65492259025",
+        "count" : "4"
+      }, {
+        "item" : "1047.41403984652",
+        "count" : "3"
+      }, {
+        "item" : "3401.80498223431",
+        "count" : "3"
+      }, {
+        "item" : "2789.77611577128",
+        "count" : "3"
+      }, {
+        "item" : "1956.27682842382",
+        "count" : "3"
+      }, {
+        "item" : "6830.20997721766",
+        "count" : "3"
+      }, {
+        "item" : "567.936433133083",
+        "count" : "3"
+      }, {
+        "item" : "2488.11385111514",
+        "count" : "3"
+      }, {
+        "item" : "2590.23626883054",
+        "count" : "3"
+      }, {
+        "item" : "1831.51014326947",
+        "count" : "3"
+      }, {
+        "item" : "2601.90107131344",
+        "count" : "3"
+      }, {
+        "item" : "10367.0589508407",
+        "count" : "3"
+      }, {
+        "item" : "751.658456885",
+        "count" : "3"
+      }, {
+        "item" : "4123.335629242",
+        "count" : "3"
+      }, {
+        "item" : "621.020498088469",
+        "count" : "3"
+      }, {
+        "item" : "1135.15506615559",
+        "count" : "3"
+      }, {
+        "item" : "485.462879665793",
+        "count" : "3"
+      }, {
+        "item" : "1437.5817225107",
+        "count" : "3"
+      }, {
+        "item" : "9176.44524521264",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776875,
+    "name" : "16_N1_SNU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N1:Rústic)",
+    "fieldName" : "_16_n1_snu",
+    "position" : 62,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318860,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "32059.4800785485",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1898"
+      }, {
+        "item" : "0.118874667996168",
+        "count" : "4"
+      }, {
+        "item" : "150.130892557562",
+        "count" : "4"
+      }, {
+        "item" : "19.0707841613118",
+        "count" : "4"
+      }, {
+        "item" : "2.02687230489701",
+        "count" : "4"
+      }, {
+        "item" : "0.413049028688669",
+        "count" : "4"
+      }, {
+        "item" : "0.815107657516748",
+        "count" : "4"
+      }, {
+        "item" : "1005.02492237782",
+        "count" : "3"
+      }, {
+        "item" : "20.9179116818126",
+        "count" : "3"
+      }, {
+        "item" : "6.35503423085333",
+        "count" : "3"
+      }, {
+        "item" : "2789.77611577128",
+        "count" : "3"
+      }, {
+        "item" : "1146.97581763818",
+        "count" : "3"
+      }, {
+        "item" : "394.780253128534",
+        "count" : "3"
+      }, {
+        "item" : "3103.27313962093",
+        "count" : "3"
+      }, {
+        "item" : "81.6012518721531",
+        "count" : "3"
+      }, {
+        "item" : "2.09879369778112",
+        "count" : "3"
+      }, {
+        "item" : "1605.89741191024",
+        "count" : "3"
+      }, {
+        "item" : "1979.6082893426",
+        "count" : "3"
+      }, {
+        "item" : "3387.60622076988",
+        "count" : "3"
+      }, {
+        "item" : "714.291892956278",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776876,
+    "name" : "16_N2_SNU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N2: Protecció)",
+    "fieldName" : "_16_n2_snu",
+    "position" : 63,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318861,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "24807.1425675308",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "2631"
+      }, {
+        "item" : "1.12950631066617",
+        "count" : "4"
+      }, {
+        "item" : "23.8461029771905",
+        "count" : "4"
+      }, {
+        "item" : "7.61007773884237",
+        "count" : "4"
+      }, {
+        "item" : "785.743477153921",
+        "count" : "3"
+      }, {
+        "item" : "2218.97562999825",
+        "count" : "3"
+      }, {
+        "item" : "1.43043519062338",
+        "count" : "3"
+      }, {
+        "item" : "0.364778438020498",
+        "count" : "3"
+      }, {
+        "item" : "2494.41249204529",
+        "count" : "3"
+      }, {
+        "item" : "112.106957224906",
+        "count" : "3"
+      }, {
+        "item" : "2855.56108368693",
+        "count" : "3"
+      }, {
+        "item" : "1240.1708878858",
+        "count" : "3"
+      }, {
+        "item" : "158.344687215302",
+        "count" : "3"
+      }, {
+        "item" : "164.785263192018",
+        "count" : "3"
+      }, {
+        "item" : "1976.06178737896",
+        "count" : "3"
+      }, {
+        "item" : "1124.34695354832",
+        "count" : "3"
+      }, {
+        "item" : "31.423283148706",
+        "count" : "3"
+      }, {
+        "item" : "9176.44524521264",
+        "count" : "3"
+      }, {
+        "item" : "2413.20220525534",
+        "count" : "3"
+      }, {
+        "item" : "1397.47877202381",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776877,
+    "name" : "16_N3_SNU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N3: Protecció sectorial)",
+    "fieldName" : "_16_n3_snu",
+    "position" : 64,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318862,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "24833.461136854",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "5947"
+      }, {
+        "item" : "19.2606538689183",
+        "count" : "4"
+      }, {
+        "item" : "2.76553057827353",
+        "count" : "4"
+      }, {
+        "item" : "18.1307246450603",
+        "count" : "4"
+      }, {
+        "item" : "1.15588864127733",
+        "count" : "4"
+      }, {
+        "item" : "0.598303591668606",
+        "count" : "4"
+      }, {
+        "item" : "3998.81059502767",
+        "count" : "4"
+      }, {
+        "item" : "4.0967118296802",
+        "count" : "4"
+      }, {
+        "item" : "5.85089704321995",
+        "count" : "4"
+      }, {
+        "item" : "2.03398197608627",
+        "count" : "4"
+      }, {
+        "item" : "3.20258806528375",
+        "count" : "4"
+      }, {
+        "item" : "529.022878431449",
+        "count" : "3"
+      }, {
+        "item" : "1725.93441975283",
+        "count" : "3"
+      }, {
+        "item" : "36.016412451554",
+        "count" : "3"
+      }, {
+        "item" : "863.456603365367",
+        "count" : "3"
+      }, {
+        "item" : "212.078149759532",
+        "count" : "3"
+      }, {
+        "item" : "1637.54493340713",
+        "count" : "3"
+      }, {
+        "item" : "96.0853755910974",
+        "count" : "3"
+      }, {
+        "item" : "1010.45884444653",
+        "count" : "3"
+      }, {
+        "item" : "67.050916837282",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776878,
+    "name" : "16_N4_SNU",
+    "dataTypeName" : "number",
+    "description" : "Superfície en Ha del sòl no urbanitzable.  Qualificació del MUC en el sòl no urbanitzable (N4: Activitat autoritzada)",
+    "fieldName" : "_16_n4_snu",
+    "position" : 65,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318863,
+    "width" : 208,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1577.06168933737",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9267"
+      }, {
+        "item" : "34.9164473346752",
+        "count" : "4"
+      }, {
+        "item" : "0.367538746332563",
+        "count" : "4"
+      }, {
+        "item" : "3.47607555922717",
+        "count" : "4"
+      }, {
+        "item" : "0.182163049115241",
+        "count" : "4"
+      }, {
+        "item" : "10.6985362261154",
+        "count" : "4"
+      }, {
+        "item" : "0.313155370392464",
+        "count" : "4"
+      }, {
+        "item" : "4.19469288189132",
+        "count" : "4"
+      }, {
+        "item" : "1.15553561046571",
+        "count" : "4"
+      }, {
+        "item" : "15.3240335361004",
+        "count" : "4"
+      }, {
+        "item" : "14.7330690050725",
+        "count" : "4"
+      }, {
+        "item" : "3.14085073568225",
+        "count" : "4"
+      }, {
+        "item" : "1.77353608154356",
+        "count" : "4"
+      }, {
+        "item" : "23.5560374067072",
+        "count" : "4"
+      }, {
+        "item" : "0.0198317008577287",
+        "count" : "4"
+      }, {
+        "item" : "2.67829023021236",
+        "count" : "4"
+      }, {
+        "item" : "6.38745665175915",
+        "count" : "4"
+      }, {
+        "item" : "7.74024449253925",
+        "count" : "3"
+      }, {
+        "item" : "7.53245423164144",
+        "count" : "3"
+      }, {
+        "item" : "3.85760306441784",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776879,
+    "name" : "17_Sol_resid_habt",
+    "dataTypeName" : "number",
+    "description" : "Superfície (en m2) de sòl residencial en sòl urbà consolidat (R1, R2, R3, R4, R5, R6) per cada habitant",
+    "fieldName" : "_17_sol_resid_habt",
+    "position" : 66,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318864,
+    "width" : 304,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "6835.60527738527",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "152"
+      }, {
+        "item" : "205.129259924475",
+        "count" : "3"
+      }, {
+        "item" : "486.392545310097",
+        "count" : "2"
+      }, {
+        "item" : "208.120858654568",
+        "count" : "2"
+      }, {
+        "item" : "246.236960529365",
+        "count" : "2"
+      }, {
+        "item" : "531.168457418539",
+        "count" : "2"
+      }, {
+        "item" : "137.915351799766",
+        "count" : "2"
+      }, {
+        "item" : "146.726886082712",
+        "count" : "2"
+      }, {
+        "item" : "161.554807329792",
+        "count" : "2"
+      }, {
+        "item" : "570.395118082133",
+        "count" : "2"
+      }, {
+        "item" : "233.611715950393",
+        "count" : "2"
+      }, {
+        "item" : "329.380888228243",
+        "count" : "2"
+      }, {
+        "item" : "317.157001677729",
+        "count" : "2"
+      }, {
+        "item" : "1055.72013440453",
+        "count" : "2"
+      }, {
+        "item" : "29.4857253636265",
+        "count" : "2"
+      }, {
+        "item" : "565.687495152121",
+        "count" : "2"
+      }, {
+        "item" : "288.06821840652",
+        "count" : "2"
+      }, {
+        "item" : "81.9480757594816",
+        "count" : "2"
+      }, {
+        "item" : "131.731123789898",
+        "count" : "2"
+      }, {
+        "item" : "390.830149711148",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776880,
+    "name" : "18_Sol_AE_habt",
+    "dataTypeName" : "number",
+    "description" : "Superfície (en m2) de sòl d'activitat econòmica en sòl urbà consolidat (A1, A2, A3) per cada habitant",
+    "fieldName" : "_18_sol_ae_habt",
+    "position" : 67,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318865,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1048.96828909618",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3074"
+      }, {
+        "item" : "37.8166095037818",
+        "count" : "3"
+      }, {
+        "item" : "20.5956309036251",
+        "count" : "2"
+      }, {
+        "item" : "2.27619505462308",
+        "count" : "2"
+      }, {
+        "item" : "12.6058237329125",
+        "count" : "2"
+      }, {
+        "item" : "20.8032336844298",
+        "count" : "2"
+      }, {
+        "item" : "37.5496047662526",
+        "count" : "2"
+      }, {
+        "item" : "41.4398297243711",
+        "count" : "2"
+      }, {
+        "item" : "150.122775333355",
+        "count" : "2"
+      }, {
+        "item" : "38.6748508989583",
+        "count" : "2"
+      }, {
+        "item" : "32.0717116379114",
+        "count" : "2"
+      }, {
+        "item" : "35.1833638482624",
+        "count" : "2"
+      }, {
+        "item" : "25.0310892971347",
+        "count" : "2"
+      }, {
+        "item" : "8.56937918846753",
+        "count" : "2"
+      }, {
+        "item" : "16.7194922418396",
+        "count" : "2"
+      }, {
+        "item" : "64.6847633872842",
+        "count" : "2"
+      }, {
+        "item" : "37.292832603015",
+        "count" : "2"
+      }, {
+        "item" : "26.4202980608476",
+        "count" : "2"
+      }, {
+        "item" : "5.9923821591605",
+        "count" : "2"
+      }, {
+        "item" : "125.938726182177",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776881,
+    "name" : "19_Zverdes_habt",
+    "dataTypeName" : "number",
+    "description" : "Superfície (en m2) de zona verda per habitant en sòl urbà consolidat",
+    "fieldName" : "_19_zverdes_habt",
+    "position" : 68,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318866,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "1208.61374486272",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "359"
+      }, {
+        "item" : "41.0723084145103",
+        "count" : "3"
+      }, {
+        "item" : "1.85044427836797",
+        "count" : "2"
+      }, {
+        "item" : "28.7186312769497",
+        "count" : "2"
+      }, {
+        "item" : "9.20003587751536",
+        "count" : "2"
+      }, {
+        "item" : "42.6191729385173",
+        "count" : "2"
+      }, {
+        "item" : "11.0532509394858",
+        "count" : "2"
+      }, {
+        "item" : "186.573249042017",
+        "count" : "2"
+      }, {
+        "item" : "4.70521783911406",
+        "count" : "2"
+      }, {
+        "item" : "34.8728278997201",
+        "count" : "2"
+      }, {
+        "item" : "104.871210172709",
+        "count" : "2"
+      }, {
+        "item" : "18.9349881672753",
+        "count" : "2"
+      }, {
+        "item" : "22.8981333356259",
+        "count" : "2"
+      }, {
+        "item" : "45.9057554563425",
+        "count" : "2"
+      }, {
+        "item" : "81.447904608748",
+        "count" : "2"
+      }, {
+        "item" : "10.9839134262516",
+        "count" : "2"
+      }, {
+        "item" : "53.2539814602396",
+        "count" : "2"
+      }, {
+        "item" : "22.1278344850571",
+        "count" : "2"
+      }, {
+        "item" : "14.8463912146875",
+        "count" : "2"
+      }, {
+        "item" : "35.3876764942374",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  }, {
+    "id" : 23776882,
+    "name" : "20_Equip_habt",
+    "dataTypeName" : "number",
+    "description" : "Superfície (en m2) de sòl d'equipament en sòl urbà consolidat per habitant",
+    "fieldName" : "_20_equip_habt",
+    "position" : 69,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3318867,
+    "width" : 256,
+    "cachedContents" : {
+      "non_null" : "13272",
+      "largest" : "2759.44109112621",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "155"
+      }, {
+        "item" : "34.7111242023124",
+        "count" : "3"
+      }, {
+        "item" : "60.9664304451852",
+        "count" : "3"
+      }, {
+        "item" : "58.3658794803863",
+        "count" : "2"
+      }, {
+        "item" : "40.4795968253594",
+        "count" : "2"
+      }, {
+        "item" : "17.2764628383744",
+        "count" : "2"
+      }, {
+        "item" : "58.3189513415528",
+        "count" : "2"
+      }, {
+        "item" : "27.0489379725459",
+        "count" : "2"
+      }, {
+        "item" : "26.0463302516276",
+        "count" : "2"
+      }, {
+        "item" : "32.0407043657886",
+        "count" : "2"
+      }, {
+        "item" : "13.4567194199225",
+        "count" : "2"
+      }, {
+        "item" : "18.8374911808734",
+        "count" : "2"
+      }, {
+        "item" : "20.2328649025469",
+        "count" : "2"
+      }, {
+        "item" : "43.7863479746049",
+        "count" : "2"
+      }, {
+        "item" : "48.9582824145994",
+        "count" : "2"
+      }, {
+        "item" : "12.50201674645",
+        "count" : "2"
+      }, {
+        "item" : "11.9946032494468",
+        "count" : "2"
+      }, {
+        "item" : "35.3076275913002",
+        "count" : "2"
+      }, {
+        "item" : "62.9922460482118",
+        "count" : "2"
+      }, {
+        "item" : "12.2322599862001",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "13272",
+      "cardinality" : "13272"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "decimalSeparator" : ",",
+      "precision" : "4",
+      "groupSeparator" : ".",
+      "align" : "left"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Data from the Urbanistic Map of Catalonia (MUC) ",
+        "Nombre del conjunto de datos (ES)" : "Datos del mapa urbanístico de Catalunya"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "muc", "classificació", "qualificació", "urbanisme", "ods11_ciutats i comunitats sostenibles", "ods9_indústria innovació i infraestructures" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

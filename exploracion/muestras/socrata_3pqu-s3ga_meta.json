@@ -1,0 +1,2679 @@
+{
+  "id" : "3pqu-s3ga",
+  "name" : "Cèdules d'habitabilitat",
+  "assetType" : "dataset",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Habitatge",
+  "createdAt" : 1623229087,
+  "description" : "La cèdula d’habitabilitat és un document administratiu que acredita que un habitatge és apte per ser destinat a residència de les persones i té les condicions tècniques d’habitabilitat, segons la normativa vigent. Aquest datataset inclou les principals dades de la mateixa.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1841,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2348639,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1656323159,
+  "publicationGroup" : 1422639,
+  "publicationStage" : "published",
+  "rowIdentifierColumnId" : 21612080,
+  "rowsUpdatedAt" : 1794898823,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1596234,
+  "totalTimesRated" : 0,
+  "viewCount" : 9846,
+  "viewLastModified" : 1794898806,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1655725057,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1162996,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1655725057,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1655725058,
+      "failureCount" : 0,
+      "startedAt" : 1655725057,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 21612080,
+    "name" : "id_cedula",
+    "dataTypeName" : "text",
+    "description" : "Identificador del registre",
+    "fieldName" : "id_cedula",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033034,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "821358175",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-1183199215",
+        "count" : "1"
+      }, {
+        "item" : "-1183199216",
+        "count" : "1"
+      }, {
+        "item" : "-1183199217",
+        "count" : "1"
+      }, {
+        "item" : "-1183199218",
+        "count" : "1"
+      }, {
+        "item" : "-1183199219",
+        "count" : "1"
+      }, {
+        "item" : "-1183199220",
+        "count" : "1"
+      }, {
+        "item" : "-1183199221",
+        "count" : "1"
+      }, {
+        "item" : "-1183199222",
+        "count" : "1"
+      }, {
+        "item" : "-1183199223",
+        "count" : "1"
+      }, {
+        "item" : "-1183199245",
+        "count" : "1"
+      }, {
+        "item" : "-1183199246",
+        "count" : "1"
+      }, {
+        "item" : "-1183199247",
+        "count" : "1"
+      }, {
+        "item" : "-1183199248",
+        "count" : "1"
+      }, {
+        "item" : "-1183199249",
+        "count" : "1"
+      }, {
+        "item" : "-1183199250",
+        "count" : "1"
+      }, {
+        "item" : "-1183199251",
+        "count" : "1"
+      }, {
+        "item" : "-1183199252",
+        "count" : "1"
+      }, {
+        "item" : "-1183199253",
+        "count" : "1"
+      }, {
+        "item" : "-1183199254",
+        "count" : "1"
+      }, {
+        "item" : "-1183199214",
+        "count" : "1"
+      } ],
+      "smallest" : "-1183199214",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612081,
+    "name" : "numero_cedula",
+    "dataTypeName" : "text",
+    "description" : "Identificador de la cèdula",
+    "fieldName" : "numero_cedula",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033058,
+    "cachedContents" : {
+      "non_null" : "3467345",
+      "largest" : "SLT8083811000",
+      "null" : "116550",
+      "top" : [ {
+        "item" : "CHB8536207001",
+        "count" : "3"
+      }, {
+        "item" : "CHL0053307002",
+        "count" : "3"
+      }, {
+        "item" : "CHB3549107001",
+        "count" : "3"
+      }, {
+        "item" : "CHB8256307001",
+        "count" : "3"
+      }, {
+        "item" : "CHG0560807001",
+        "count" : "3"
+      }, {
+        "item" : "CHL0053307001",
+        "count" : "3"
+      }, {
+        "item" : "CHB2399707001",
+        "count" : "3"
+      }, {
+        "item" : "CHB3235907001",
+        "count" : "3"
+      }, {
+        "item" : "CHB3729307001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1237607001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1450907001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1527507001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1822707001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1855507001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1041907003",
+        "count" : "3"
+      }, {
+        "item" : "CHB1412207001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1041907002",
+        "count" : "3"
+      }, {
+        "item" : "CHB1041907001",
+        "count" : "3"
+      }, {
+        "item" : "CHB1041907004",
+        "count" : "3"
+      }, {
+        "item" : "CHL0053307003",
+        "count" : "3"
+      } ],
+      "smallest" : "090908089024231",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612082,
+    "name" : "referencia_cadastral",
+    "dataTypeName" : "text",
+    "description" : "Identificador cadastral",
+    "fieldName" : "referencia_cadastral",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033057,
+    "cachedContents" : {
+      "non_null" : "3108721",
+      "largest" : " 1349729DF3814G0010W",
+      "null" : "475174",
+      "top" : [ {
+        "item" : "5049611DF2954G0059XG",
+        "count" : "1132"
+      }, {
+        "item" : "5905506DF2850F0001QT",
+        "count" : "363"
+      }, {
+        "item" : "8613516DF2881D0001FH",
+        "count" : "253"
+      }, {
+        "item" : "2950727DF3825B0004TA",
+        "count" : "205"
+      }, {
+        "item" : "9736731CF4593F0001OX",
+        "count" : "194"
+      }, {
+        "item" : "9682101CF3498S0001TO",
+        "count" : "191"
+      }, {
+        "item" : "8504103DF2880D0001QX",
+        "count" : "186"
+      }, {
+        "item" : "7398503DF2779G0001PO",
+        "count" : "176"
+      }, {
+        "item" : "8142710DF2884A0001HJ",
+        "count" : "174"
+      }, {
+        "item" : "3489104DF3838G0001TH",
+        "count" : "170"
+      }, {
+        "item" : "8425310DF2882E0001DL",
+        "count" : "158"
+      }, {
+        "item" : "0786406CF4408N0001EM",
+        "count" : "155"
+      }, {
+        "item" : "9826317DF2892F0001HO",
+        "count" : "154"
+      }, {
+        "item" : "7796507DF2779F0001RM",
+        "count" : "147"
+      }, {
+        "item" : "2161533DF3826A0001PH",
+        "count" : "144"
+      }, {
+        "item" : "5962304DG8156S0001OO",
+        "count" : "140"
+      }, {
+        "item" : "3660801CF5535N0001DQ",
+        "count" : "140"
+      }, {
+        "item" : "0045701DF3804E0001LP",
+        "count" : "137"
+      }, {
+        "item" : "0408402CF8600N0001BF",
+        "count" : "132"
+      }, {
+        "item" : "0811117DF3801B0003JE",
+        "count" : "130"
+      } ],
+      "smallest" : "-",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612083,
+    "name" : "tipusVia",
+    "dataTypeName" : "text",
+    "description" : "Tipus via",
+    "fieldName" : "tipusvia",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033056,
+    "cachedContents" : {
+      "non_null" : "3582721",
+      "largest" : "Zona",
+      "null" : "1174",
+      "top" : [ {
+        "item" : "Carrer",
+        "count" : "2691255"
+      }, {
+        "item" : "Avinguda",
+        "count" : "345398"
+      }, {
+        "item" : "Passeig",
+        "count" : "113385"
+      }, {
+        "item" : "Plaça",
+        "count" : "87237"
+      }, {
+        "item" : "Carretera",
+        "count" : "69831"
+      }, {
+        "item" : "Passatge",
+        "count" : "52517"
+      }, {
+        "item" : "Rambla",
+        "count" : "43040"
+      }, {
+        "item" : "Ronda",
+        "count" : "28631"
+      }, {
+        "item" : "Camí",
+        "count" : "22290"
+      }, {
+        "item" : "Urbanització",
+        "count" : "18974"
+      }, {
+        "item" : "Gran Via",
+        "count" : "16484"
+      }, {
+        "item" : "Sector",
+        "count" : "12926"
+      }, {
+        "item" : "Via",
+        "count" : "9468"
+      }, {
+        "item" : "Travessera",
+        "count" : "9169"
+      }, {
+        "item" : "Grup",
+        "count" : "7393"
+      }, {
+        "item" : "Travessia",
+        "count" : "5851"
+      }, {
+        "item" : "Disseminat",
+        "count" : "5461"
+      }, {
+        "item" : "Partida",
+        "count" : "4553"
+      }, {
+        "item" : "Riera",
+        "count" : "4490"
+      }, {
+        "item" : "Placeta",
+        "count" : "4111"
+      } ],
+      "smallest" : "Accés",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612084,
+    "name" : "nomVia",
+    "dataTypeName" : "text",
+    "description" : "Nom de la via",
+    "fieldName" : "nomvia",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033055,
+    "cachedContents" : {
+      "non_null" : "3582719",
+      "largest" : "zzzz",
+      "null" : "1176",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "29624"
+      }, {
+        "item" : "Catalunya",
+        "count" : "27658"
+      }, {
+        "item" : "Major",
+        "count" : "27553"
+      }, {
+        "item" : "Corts Catalanes",
+        "count" : "15808"
+      }, {
+        "item" : "València",
+        "count" : "14453"
+      }, {
+        "item" : "Girona",
+        "count" : "14143"
+      }, {
+        "item" : "Francesc Macià",
+        "count" : "13718"
+      }, {
+        "item" : "Pau Casals",
+        "count" : "13067"
+      }, {
+        "item" : "Tarragona",
+        "count" : "11222"
+      }, {
+        "item" : "Balmes",
+        "count" : "11106"
+      }, {
+        "item" : "Nou",
+        "count" : "10804"
+      }, {
+        "item" : "Sant Jordi",
+        "count" : "10772"
+      }, {
+        "item" : "Indústria",
+        "count" : "10696"
+      }, {
+        "item" : "Rosselló",
+        "count" : "10676"
+      }, {
+        "item" : "Aragó",
+        "count" : "10515"
+      }, {
+        "item" : "Sant Joan",
+        "count" : "10208"
+      }, {
+        "item" : "Lleida",
+        "count" : "9954"
+      }, {
+        "item" : "Sant Antoni",
+        "count" : "9889"
+      }, {
+        "item" : "Diputació",
+        "count" : "9846"
+      }, {
+        "item" : "Mallorca",
+        "count" : "9636"
+      } ],
+      "smallest" : "-",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612085,
+    "name" : "numInici",
+    "dataTypeName" : "number",
+    "description" : "Número inicial de l’immoble",
+    "fieldName" : "numinici",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13033054,
+    "cachedContents" : {
+      "non_null" : "3423459",
+      "largest" : "669309090",
+      "null" : "160436",
+      "top" : [ {
+        "item" : "1",
+        "count" : "138581"
+      }, {
+        "item" : "2",
+        "count" : "133664"
+      }, {
+        "item" : "3",
+        "count" : "105380"
+      }, {
+        "item" : "5",
+        "count" : "103593"
+      }, {
+        "item" : "4",
+        "count" : "102857"
+      }, {
+        "item" : "6",
+        "count" : "100901"
+      }, {
+        "item" : "7",
+        "count" : "92055"
+      }, {
+        "item" : "8",
+        "count" : "89714"
+      }, {
+        "item" : "10",
+        "count" : "82135"
+      }, {
+        "item" : "9",
+        "count" : "80915"
+      }, {
+        "item" : "11",
+        "count" : "74956"
+      }, {
+        "item" : "12",
+        "count" : "73730"
+      }, {
+        "item" : "13",
+        "count" : "65155"
+      }, {
+        "item" : "14",
+        "count" : "64367"
+      }, {
+        "item" : "16",
+        "count" : "59279"
+      }, {
+        "item" : "15",
+        "count" : "59033"
+      }, {
+        "item" : "17",
+        "count" : "54876"
+      }, {
+        "item" : "18",
+        "count" : "53226"
+      }, {
+        "item" : "20",
+        "count" : "49694"
+      }, {
+        "item" : "19",
+        "count" : "48279"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612086,
+    "name" : "numFinal",
+    "dataTypeName" : "number",
+    "description" : "Número final de l’immoble",
+    "fieldName" : "numfinal",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13033053,
+    "cachedContents" : {
+      "non_null" : "439754",
+      "largest" : "40403",
+      "null" : "3144141",
+      "top" : [ {
+        "item" : "8",
+        "count" : "12865"
+      }, {
+        "item" : "4",
+        "count" : "12253"
+      }, {
+        "item" : "3",
+        "count" : "12222"
+      }, {
+        "item" : "7",
+        "count" : "12208"
+      }, {
+        "item" : "6",
+        "count" : "10242"
+      }, {
+        "item" : "12",
+        "count" : "9916"
+      }, {
+        "item" : "11",
+        "count" : "9703"
+      }, {
+        "item" : "9",
+        "count" : "9540"
+      }, {
+        "item" : "5",
+        "count" : "9378"
+      }, {
+        "item" : "10",
+        "count" : "9111"
+      }, {
+        "item" : "16",
+        "count" : "8645"
+      }, {
+        "item" : "13",
+        "count" : "8332"
+      }, {
+        "item" : "15",
+        "count" : "8281"
+      }, {
+        "item" : "17",
+        "count" : "7861"
+      }, {
+        "item" : "14",
+        "count" : "7620"
+      }, {
+        "item" : "20",
+        "count" : "7245"
+      }, {
+        "item" : "19",
+        "count" : "7105"
+      }, {
+        "item" : "18",
+        "count" : "7081"
+      }, {
+        "item" : "21",
+        "count" : "6467"
+      }, {
+        "item" : "23",
+        "count" : "6406"
+      } ],
+      "smallest" : "1",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612087,
+    "name" : "escala",
+    "dataTypeName" : "text",
+    "description" : "Escala",
+    "fieldName" : "escala",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033049,
+    "cachedContents" : {
+      "non_null" : "696138",
+      "largest" : "Z (ESQ)",
+      "null" : "2887757",
+      "top" : [ {
+        "item" : "1",
+        "count" : "175386"
+      }, {
+        "item" : "A",
+        "count" : "133817"
+      }, {
+        "item" : "B",
+        "count" : "128333"
+      }, {
+        "item" : "C",
+        "count" : "45412"
+      }, {
+        "item" : "2",
+        "count" : "42790"
+      }, {
+        "item" : "D",
+        "count" : "25550"
+      }, {
+        "item" : "3",
+        "count" : "21174"
+      }, {
+        "item" : "4",
+        "count" : "12882"
+      }, {
+        "item" : "E",
+        "count" : "11937"
+      }, {
+        "item" : "5",
+        "count" : "8154"
+      }, {
+        "item" : "ES",
+        "count" : "7427"
+      }, {
+        "item" : "F",
+        "count" : "6716"
+      }, {
+        "item" : "6",
+        "count" : "5651"
+      }, {
+        "item" : "DR",
+        "count" : "5245"
+      }, {
+        "item" : "G",
+        "count" : "4403"
+      }, {
+        "item" : "7",
+        "count" : "4016"
+      }, {
+        "item" : "I",
+        "count" : "3208"
+      }, {
+        "item" : "8",
+        "count" : "3181"
+      }, {
+        "item" : "H",
+        "count" : "2709"
+      }, {
+        "item" : "9",
+        "count" : "2387"
+      } ],
+      "smallest" : "_",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612088,
+    "name" : "bloc",
+    "dataTypeName" : "text",
+    "description" : "Bloc",
+    "fieldName" : "bloc",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033050,
+    "cachedContents" : {
+      "non_null" : "102999",
+      "largest" : "Z-K",
+      "null" : "3480896",
+      "top" : [ {
+        "item" : "1",
+        "count" : "14918"
+      }, {
+        "item" : "B",
+        "count" : "11864"
+      }, {
+        "item" : "A",
+        "count" : "11390"
+      }, {
+        "item" : "2",
+        "count" : "8186"
+      }, {
+        "item" : "C",
+        "count" : "5366"
+      }, {
+        "item" : "3",
+        "count" : "4983"
+      }, {
+        "item" : "4",
+        "count" : "3478"
+      }, {
+        "item" : "D",
+        "count" : "3085"
+      }, {
+        "item" : "5",
+        "count" : "2290"
+      }, {
+        "item" : "E",
+        "count" : "1946"
+      }, {
+        "item" : "6",
+        "count" : "1596"
+      }, {
+        "item" : "F",
+        "count" : "1241"
+      }, {
+        "item" : "8",
+        "count" : "1086"
+      }, {
+        "item" : "7",
+        "count" : "1065"
+      }, {
+        "item" : "10",
+        "count" : "876"
+      }, {
+        "item" : "G",
+        "count" : "829"
+      }, {
+        "item" : "I",
+        "count" : "815"
+      }, {
+        "item" : "II",
+        "count" : "646"
+      }, {
+        "item" : "9",
+        "count" : "629"
+      }, {
+        "item" : "11",
+        "count" : "536"
+      } ],
+      "smallest" : "_",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612089,
+    "name" : "pis",
+    "dataTypeName" : "text",
+    "description" : "Pis",
+    "fieldName" : "pis",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033048,
+    "cachedContents" : {
+      "non_null" : "2893505",
+      "largest" : "Z",
+      "null" : "690390",
+      "top" : [ {
+        "item" : "1",
+        "count" : "705377"
+      }, {
+        "item" : "2",
+        "count" : "645211"
+      }, {
+        "item" : "3",
+        "count" : "446871"
+      }, {
+        "item" : "BA",
+        "count" : "287268"
+      }, {
+        "item" : "4",
+        "count" : "266808"
+      }, {
+        "item" : "5",
+        "count" : "131343"
+      }, {
+        "item" : "AT",
+        "count" : "81163"
+      }, {
+        "item" : "EN",
+        "count" : "68326"
+      }, {
+        "item" : "6",
+        "count" : "64123"
+      }, {
+        "item" : "UN",
+        "count" : "40624"
+      }, {
+        "item" : "PR",
+        "count" : "35525"
+      }, {
+        "item" : "7",
+        "count" : "31470"
+      }, {
+        "item" : "8",
+        "count" : "17263"
+      }, {
+        "item" : "SA",
+        "count" : "12961"
+      }, {
+        "item" : "9",
+        "count" : "10463"
+      }, {
+        "item" : "10",
+        "count" : "7240"
+      }, {
+        "item" : "11",
+        "count" : "4484"
+      }, {
+        "item" : "12",
+        "count" : "2945"
+      }, {
+        "item" : "13",
+        "count" : "2175"
+      }, {
+        "item" : "CASA",
+        "count" : "2111"
+      } ],
+      "smallest" : "_",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612090,
+    "name" : "duplicatInici",
+    "dataTypeName" : "text",
+    "description" : "Duplicat inici (p.ex: BIS)",
+    "fieldName" : "duplicatinici",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033052,
+    "cachedContents" : {
+      "non_null" : "81551",
+      "largest" : "Z2",
+      "null" : "3502344",
+      "top" : [ {
+        "item" : "B",
+        "count" : "27700"
+      }, {
+        "item" : "A",
+        "count" : "22765"
+      }, {
+        "item" : "BIS",
+        "count" : "16107"
+      }, {
+        "item" : "C",
+        "count" : "4710"
+      }, {
+        "item" : "D",
+        "count" : "2170"
+      }, {
+        "item" : "I",
+        "count" : "1579"
+      }, {
+        "item" : "AL",
+        "count" : "1357"
+      }, {
+        "item" : "E",
+        "count" : "1022"
+      }, {
+        "item" : "F",
+        "count" : "568"
+      }, {
+        "item" : "G",
+        "count" : "438"
+      }, {
+        "item" : "SN",
+        "count" : "323"
+      }, {
+        "item" : "INT",
+        "count" : "302"
+      }, {
+        "item" : "H",
+        "count" : "216"
+      }, {
+        "item" : "T",
+        "count" : "148"
+      }, {
+        "item" : "J",
+        "count" : "109"
+      }, {
+        "item" : "IN",
+        "count" : "104"
+      }, {
+        "item" : "P",
+        "count" : "76"
+      }, {
+        "item" : "N",
+        "count" : "75"
+      }, {
+        "item" : "ESC",
+        "count" : "69"
+      }, {
+        "item" : "Y",
+        "count" : "65"
+      } ],
+      "smallest" : ",",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612091,
+    "name" : "duplicatFinal",
+    "dataTypeName" : "text",
+    "description" : "Duplicat final (p.ex: BIS)",
+    "fieldName" : "duplicatfinal",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033051,
+    "cachedContents" : {
+      "non_null" : "4915",
+      "largest" : "Z",
+      "null" : "3578980",
+      "top" : [ {
+        "item" : "B",
+        "count" : "1859"
+      }, {
+        "item" : "BIS",
+        "count" : "937"
+      }, {
+        "item" : "A",
+        "count" : "669"
+      }, {
+        "item" : "C",
+        "count" : "407"
+      }, {
+        "item" : "I",
+        "count" : "277"
+      }, {
+        "item" : "D",
+        "count" : "156"
+      }, {
+        "item" : "E",
+        "count" : "119"
+      }, {
+        "item" : "F",
+        "count" : "103"
+      }, {
+        "item" : "INT",
+        "count" : "56"
+      }, {
+        "item" : "H",
+        "count" : "43"
+      }, {
+        "item" : "BI",
+        "count" : "42"
+      }, {
+        "item" : "G",
+        "count" : "20"
+      }, {
+        "item" : "M",
+        "count" : "20"
+      }, {
+        "item" : "ED",
+        "count" : "18"
+      }, {
+        "item" : "N",
+        "count" : "17"
+      }, {
+        "item" : "J",
+        "count" : "15"
+      }, {
+        "item" : "FAS",
+        "count" : "12"
+      }, {
+        "item" : "AL",
+        "count" : "11"
+      }, {
+        "item" : "P",
+        "count" : "9"
+      }, {
+        "item" : "ESC",
+        "count" : "8"
+      } ],
+      "smallest" : ",",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612092,
+    "name" : "porta",
+    "dataTypeName" : "text",
+    "description" : "Porta",
+    "fieldName" : "porta",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033033,
+    "cachedContents" : {
+      "non_null" : "2951474",
+      "largest" : "ZB-12",
+      "null" : "632421",
+      "top" : [ {
+        "item" : "1",
+        "count" : "1091596"
+      }, {
+        "item" : "2",
+        "count" : "765691"
+      }, {
+        "item" : "3",
+        "count" : "347970"
+      }, {
+        "item" : "4",
+        "count" : "222642"
+      }, {
+        "item" : "A",
+        "count" : "69527"
+      }, {
+        "item" : "B",
+        "count" : "68260"
+      }, {
+        "item" : "5",
+        "count" : "57085"
+      }, {
+        "item" : "C",
+        "count" : "38349"
+      }, {
+        "item" : "6",
+        "count" : "36191"
+      }, {
+        "item" : "D",
+        "count" : "26356"
+      }, {
+        "item" : "7",
+        "count" : "20211"
+      }, {
+        "item" : "8",
+        "count" : "15120"
+      }, {
+        "item" : "E",
+        "count" : "11062"
+      }, {
+        "item" : "9",
+        "count" : "9736"
+      }, {
+        "item" : "10",
+        "count" : "7958"
+      }, {
+        "item" : "F",
+        "count" : "7177"
+      }, {
+        "item" : "11",
+        "count" : "6051"
+      }, {
+        "item" : "12",
+        "count" : "5378"
+      }, {
+        "item" : "13",
+        "count" : "4085"
+      }, {
+        "item" : "G",
+        "count" : "4003"
+      } ],
+      "smallest" : "_",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612093,
+    "name" : "km",
+    "dataTypeName" : "number",
+    "description" : "quilòmetre",
+    "fieldName" : "km",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13033047,
+    "cachedContents" : {
+      "non_null" : "1243",
+      "largest" : "31900",
+      "null" : "3582652",
+      "top" : [ {
+        "item" : "701",
+        "count" : "188"
+      }, {
+        "item" : "15",
+        "count" : "50"
+      }, {
+        "item" : "1",
+        "count" : "48"
+      }, {
+        "item" : "665.3",
+        "count" : "44"
+      }, {
+        "item" : "649.7",
+        "count" : "38"
+      }, {
+        "item" : "3",
+        "count" : "36"
+      }, {
+        "item" : "2",
+        "count" : "31"
+      }, {
+        "item" : "154",
+        "count" : "27"
+      }, {
+        "item" : "651",
+        "count" : "26"
+      }, {
+        "item" : "14",
+        "count" : "21"
+      }, {
+        "item" : "29",
+        "count" : "19"
+      }, {
+        "item" : "165",
+        "count" : "19"
+      }, {
+        "item" : "10",
+        "count" : "18"
+      }, {
+        "item" : "12",
+        "count" : "18"
+      }, {
+        "item" : "734.6",
+        "count" : "17"
+      }, {
+        "item" : "5",
+        "count" : "14"
+      }, {
+        "item" : "10.33",
+        "count" : "14"
+      }, {
+        "item" : "5.5",
+        "count" : "13"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "6",
+        "count" : "11"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 21612094,
+    "name" : "poligon",
+    "dataTypeName" : "text",
+    "description" : "Polígon",
+    "fieldName" : "poligon",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033046,
+    "cachedContents" : {
+      "non_null" : "6534",
+      "largest" : "Y",
+      "null" : "3577361",
+      "top" : [ {
+        "item" : "2",
+        "count" : "514"
+      }, {
+        "item" : "1",
+        "count" : "476"
+      }, {
+        "item" : "3",
+        "count" : "465"
+      }, {
+        "item" : "4",
+        "count" : "409"
+      }, {
+        "item" : "5",
+        "count" : "390"
+      }, {
+        "item" : "7",
+        "count" : "279"
+      }, {
+        "item" : "6",
+        "count" : "277"
+      }, {
+        "item" : "8",
+        "count" : "260"
+      }, {
+        "item" : "10",
+        "count" : "230"
+      }, {
+        "item" : "9",
+        "count" : "206"
+      }, {
+        "item" : "11",
+        "count" : "204"
+      }, {
+        "item" : "12",
+        "count" : "158"
+      }, {
+        "item" : "15",
+        "count" : "143"
+      }, {
+        "item" : "13",
+        "count" : "135"
+      }, {
+        "item" : "14",
+        "count" : "122"
+      }, {
+        "item" : "17",
+        "count" : "119"
+      }, {
+        "item" : "16",
+        "count" : "102"
+      }, {
+        "item" : "18",
+        "count" : "85"
+      }, {
+        "item" : "20",
+        "count" : "74"
+      }, {
+        "item" : "19",
+        "count" : "64"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612095,
+    "name" : "illa",
+    "dataTypeName" : "text",
+    "description" : "Illa",
+    "fieldName" : "illa",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033045,
+    "cachedContents" : {
+      "non_null" : "780",
+      "largest" : "ZONA F",
+      "null" : "3583115",
+      "top" : [ {
+        "item" : "3",
+        "count" : "108"
+      }, {
+        "item" : "28",
+        "count" : "93"
+      }, {
+        "item" : "25",
+        "count" : "67"
+      }, {
+        "item" : "29",
+        "count" : "67"
+      }, {
+        "item" : "31",
+        "count" : "55"
+      }, {
+        "item" : "22",
+        "count" : "40"
+      }, {
+        "item" : "12",
+        "count" : "38"
+      }, {
+        "item" : "1",
+        "count" : "30"
+      }, {
+        "item" : "8",
+        "count" : "29"
+      }, {
+        "item" : "7",
+        "count" : "28"
+      }, {
+        "item" : "26",
+        "count" : "19"
+      }, {
+        "item" : "ZONA F",
+        "count" : "15"
+      }, {
+        "item" : "1B",
+        "count" : "12"
+      }, {
+        "item" : "36",
+        "count" : "12"
+      }, {
+        "item" : "34",
+        "count" : "11"
+      }, {
+        "item" : "A-9",
+        "count" : "10"
+      }, {
+        "item" : "6",
+        "count" : "8"
+      }, {
+        "item" : "B",
+        "count" : "8"
+      }, {
+        "item" : "A",
+        "count" : "7"
+      }, {
+        "item" : "M-20",
+        "count" : "7"
+      } ],
+      "smallest" : "--",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612096,
+    "name" : "sector",
+    "dataTypeName" : "text",
+    "description" : "Sector",
+    "fieldName" : "sector",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033044,
+    "cachedContents" : {
+      "non_null" : "532",
+      "largest" : "ZONA II",
+      "null" : "3583363",
+      "top" : [ {
+        "item" : "8",
+        "count" : "27"
+      }, {
+        "item" : "PP-VI-1",
+        "count" : "26"
+      }, {
+        "item" : "1",
+        "count" : "22"
+      }, {
+        "item" : "3",
+        "count" : "20"
+      }, {
+        "item" : "EH-1",
+        "count" : "19"
+      }, {
+        "item" : "F",
+        "count" : "18"
+      }, {
+        "item" : "CAN L'ANTONIET",
+        "count" : "18"
+      }, {
+        "item" : "F1.2",
+        "count" : "16"
+      }, {
+        "item" : "BLOC A",
+        "count" : "15"
+      }, {
+        "item" : "2",
+        "count" : "13"
+      }, {
+        "item" : "C",
+        "count" : "11"
+      }, {
+        "item" : "FASE 4",
+        "count" : "11"
+      }, {
+        "item" : "023",
+        "count" : "11"
+      }, {
+        "item" : "CAMP CASTELL",
+        "count" : "9"
+      }, {
+        "item" : "ZONA F",
+        "count" : "8"
+      }, {
+        "item" : "9",
+        "count" : "8"
+      }, {
+        "item" : "SUBSECTOR II",
+        "count" : "7"
+      }, {
+        "item" : "SUBSECTOR 2",
+        "count" : "6"
+      }, {
+        "item" : "I",
+        "count" : "5"
+      }, {
+        "item" : "E",
+        "count" : "5"
+      } ],
+      "smallest" : "--",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612097,
+    "name" : "parcela",
+    "dataTypeName" : "text",
+    "description" : "Parcel·la",
+    "fieldName" : "parcela",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033043,
+    "cachedContents" : {
+      "non_null" : "19840",
+      "largest" : "Z.U4",
+      "null" : "3564055",
+      "top" : [ {
+        "item" : "1",
+        "count" : "372"
+      }, {
+        "item" : "2",
+        "count" : "351"
+      }, {
+        "item" : "4",
+        "count" : "328"
+      }, {
+        "item" : "6",
+        "count" : "321"
+      }, {
+        "item" : "3",
+        "count" : "309"
+      }, {
+        "item" : "7",
+        "count" : "257"
+      }, {
+        "item" : "12",
+        "count" : "251"
+      }, {
+        "item" : "18",
+        "count" : "239"
+      }, {
+        "item" : "11",
+        "count" : "234"
+      }, {
+        "item" : "5",
+        "count" : "216"
+      }, {
+        "item" : "8",
+        "count" : "209"
+      }, {
+        "item" : "10",
+        "count" : "206"
+      }, {
+        "item" : "13",
+        "count" : "194"
+      }, {
+        "item" : "23",
+        "count" : "193"
+      }, {
+        "item" : "9",
+        "count" : "190"
+      }, {
+        "item" : "14",
+        "count" : "186"
+      }, {
+        "item" : "19",
+        "count" : "185"
+      }, {
+        "item" : "20",
+        "count" : "185"
+      }, {
+        "item" : "32",
+        "count" : "169"
+      }, {
+        "item" : "29",
+        "count" : "169"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612098,
+    "name" : "utmx",
+    "dataTypeName" : "number",
+    "description" : "coordenada x",
+    "fieldName" : "utmx",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13033032,
+    "cachedContents" : {
+      "non_null" : "3482695",
+      "largest" : "8213715",
+      "null" : "101200",
+      "top" : [ {
+        "item" : "424762.759",
+        "count" : "1385"
+      }, {
+        "item" : "432230.425",
+        "count" : "848"
+      }, {
+        "item" : "428968.15",
+        "count" : "782"
+      }, {
+        "item" : "512184.08",
+        "count" : "708"
+      }, {
+        "item" : "340275.469",
+        "count" : "707"
+      }, {
+        "item" : "510219.27",
+        "count" : "703"
+      }, {
+        "item" : "511451.59",
+        "count" : "623"
+      }, {
+        "item" : "340342.068",
+        "count" : "622"
+      }, {
+        "item" : "511696.69",
+        "count" : "572"
+      }, {
+        "item" : "435664.88",
+        "count" : "538"
+      }, {
+        "item" : "434174.94",
+        "count" : "511"
+      }, {
+        "item" : "434437.1",
+        "count" : "511"
+      }, {
+        "item" : "481895",
+        "count" : "485"
+      }, {
+        "item" : "427815.83",
+        "count" : "484"
+      }, {
+        "item" : "432880.91",
+        "count" : "448"
+      }, {
+        "item" : "519021.71",
+        "count" : "442"
+      }, {
+        "item" : "352089.19",
+        "count" : "438"
+      }, {
+        "item" : "418471.05",
+        "count" : "422"
+      }, {
+        "item" : "343912.72",
+        "count" : "421"
+      }, {
+        "item" : "418793.08",
+        "count" : "420"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "precision" : "3",
+      "groupSeparator" : ""
+    }
+  }, {
+    "id" : 21612099,
+    "name" : "utmy",
+    "dataTypeName" : "number",
+    "description" : "coordenada y",
+    "fieldName" : "utmy",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13033031,
+    "cachedContents" : {
+      "non_null" : "3482694",
+      "largest" : "4745591.35",
+      "null" : "101201",
+      "top" : [ {
+        "item" : "4594563.36",
+        "count" : "1385"
+      }, {
+        "item" : "4585203.255",
+        "count" : "848"
+      }, {
+        "item" : "4587244.96",
+        "count" : "782"
+      }, {
+        "item" : "4679038.24",
+        "count" : "708"
+      }, {
+        "item" : "4548548.908",
+        "count" : "707"
+      }, {
+        "item" : "4676313.5",
+        "count" : "703"
+      }, {
+        "item" : "4582590.05",
+        "count" : "625"
+      }, {
+        "item" : "4679554.93",
+        "count" : "623"
+      }, {
+        "item" : "4548566.386",
+        "count" : "622"
+      }, {
+        "item" : "4679717.01",
+        "count" : "572"
+      }, {
+        "item" : "4587940.2",
+        "count" : "538"
+      }, {
+        "item" : "4584391.51",
+        "count" : "511"
+      }, {
+        "item" : "4584356.37",
+        "count" : "511"
+      }, {
+        "item" : "4612330.62",
+        "count" : "485"
+      }, {
+        "item" : "4584815.44",
+        "count" : "479"
+      }, {
+        "item" : "4579573.72",
+        "count" : "471"
+      }, {
+        "item" : "4646041.8",
+        "count" : "442"
+      }, {
+        "item" : "4553385.8",
+        "count" : "438"
+      }, {
+        "item" : "4549347.2",
+        "count" : "421"
+      }, {
+        "item" : "4602725.63",
+        "count" : "420"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "precision" : "3",
+      "groupSeparator" : ""
+    }
+  }, {
+    "id" : 21612100,
+    "name" : "municipi",
+    "dataTypeName" : "text",
+    "description" : "Nom de municipi",
+    "fieldName" : "municipi",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033042,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "746424"
+      }, {
+        "item" : "Terrassa",
+        "count" : "98283"
+      }, {
+        "item" : "Hospitalet de Llobregat, l'",
+        "count" : "92260"
+      }, {
+        "item" : "Sabadell",
+        "count" : "79679"
+      }, {
+        "item" : "Badalona",
+        "count" : "75202"
+      }, {
+        "item" : "Tarragona",
+        "count" : "64851"
+      }, {
+        "item" : "Lleida",
+        "count" : "60090"
+      }, {
+        "item" : "Mataró",
+        "count" : "53781"
+      }, {
+        "item" : "Girona",
+        "count" : "53103"
+      }, {
+        "item" : "Reus",
+        "count" : "53058"
+      }, {
+        "item" : "Manresa",
+        "count" : "43757"
+      }, {
+        "item" : "Sant Cugat del Vallès",
+        "count" : "42130"
+      }, {
+        "item" : "Santa Coloma de Gramenet",
+        "count" : "35683"
+      }, {
+        "item" : "Rubí",
+        "count" : "35123"
+      }, {
+        "item" : "Vilanova i la Geltrú",
+        "count" : "32272"
+      }, {
+        "item" : "Cambrils",
+        "count" : "30955"
+      }, {
+        "item" : "Vendrell, el",
+        "count" : "30127"
+      }, {
+        "item" : "Salou",
+        "count" : "29577"
+      }, {
+        "item" : "Castelldefels",
+        "count" : "29247"
+      }, {
+        "item" : "Cornellà de Llobregat",
+        "count" : "29000"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612101,
+    "name" : "provincia",
+    "dataTypeName" : "text",
+    "description" : "Província",
+    "fieldName" : "provincia",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033041,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "Tarragona",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "2417867"
+      }, {
+        "item" : "Girona",
+        "count" : "487080"
+      }, {
+        "item" : "Tarragona",
+        "count" : "484347"
+      }, {
+        "item" : "Lleida",
+        "count" : "194601"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612102,
+    "name" : "codi_ine",
+    "dataTypeName" : "text",
+    "description" : "Codi INE del municipi",
+    "fieldName" : "codi_ine",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033030,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "43907",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08019",
+        "count" : "746424"
+      }, {
+        "item" : "08279",
+        "count" : "98283"
+      }, {
+        "item" : "08101",
+        "count" : "92260"
+      }, {
+        "item" : "08187",
+        "count" : "79679"
+      }, {
+        "item" : "08015",
+        "count" : "75202"
+      }, {
+        "item" : "43148",
+        "count" : "64851"
+      }, {
+        "item" : "25120",
+        "count" : "60090"
+      }, {
+        "item" : "08121",
+        "count" : "53781"
+      }, {
+        "item" : "17079",
+        "count" : "53103"
+      }, {
+        "item" : "43123",
+        "count" : "53058"
+      }, {
+        "item" : "08113",
+        "count" : "43757"
+      }, {
+        "item" : "08205",
+        "count" : "42130"
+      }, {
+        "item" : "08245",
+        "count" : "35683"
+      }, {
+        "item" : "08184",
+        "count" : "35123"
+      }, {
+        "item" : "08307",
+        "count" : "32272"
+      }, {
+        "item" : "43038",
+        "count" : "30955"
+      }, {
+        "item" : "43163",
+        "count" : "30127"
+      }, {
+        "item" : "43905",
+        "count" : "29577"
+      }, {
+        "item" : "08056",
+        "count" : "29247"
+      }, {
+        "item" : "08073",
+        "count" : "29000"
+      } ],
+      "smallest" : "08001",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612103,
+    "name" : "superficie_util",
+    "dataTypeName" : "number",
+    "description" : "Superfície útil que consta a la cèdula ",
+    "fieldName" : "superficie_util",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13033040,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "9999.99",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "1027486"
+      }, {
+        "item" : "60",
+        "count" : "17641"
+      }, {
+        "item" : "90",
+        "count" : "17087"
+      }, {
+        "item" : "70.0",
+        "count" : "16583"
+      }, {
+        "item" : "65.0",
+        "count" : "15028"
+      }, {
+        "item" : "50",
+        "count" : "12152"
+      }, {
+        "item" : "55.0",
+        "count" : "11866"
+      }, {
+        "item" : "75.0",
+        "count" : "11808"
+      }, {
+        "item" : "80.0",
+        "count" : "11540"
+      }, {
+        "item" : "68",
+        "count" : "9089"
+      }, {
+        "item" : "62.0",
+        "count" : "8983"
+      }, {
+        "item" : "56.0",
+        "count" : "8708"
+      }, {
+        "item" : "58.0",
+        "count" : "8594"
+      }, {
+        "item" : "72.0",
+        "count" : "8584"
+      }, {
+        "item" : "85.0",
+        "count" : "8131"
+      }, {
+        "item" : "45.0",
+        "count" : "8109"
+      }, {
+        "item" : "63.0",
+        "count" : "7803"
+      }, {
+        "item" : "64.0",
+        "count" : "7802"
+      }, {
+        "item" : "40.0",
+        "count" : "7749"
+      }, {
+        "item" : "52.0",
+        "count" : "7641"
+      } ],
+      "smallest" : "0",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 21612104,
+    "name" : "estat_cedula",
+    "dataTypeName" : "text",
+    "description" : "Estat de la cèdula  (\"Atorgada\", \"Caducada\", \"En tramitació\")",
+    "fieldName" : "estat_cedula",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 13033039,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "Revocada",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Caducada",
+        "count" : "1811025"
+      }, {
+        "item" : "Atorgada",
+        "count" : "1586071"
+      }, {
+        "item" : "Arxivada",
+        "count" : "83285"
+      }, {
+        "item" : "En tramitació",
+        "count" : "63545"
+      }, {
+        "item" : "Fora de termini",
+        "count" : "31909"
+      }, {
+        "item" : "Denegada",
+        "count" : "6806"
+      }, {
+        "item" : "Revocada",
+        "count" : "1254"
+      } ],
+      "smallest" : "Arxivada",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612105,
+    "name" : "data_resolucio",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data de resolució de la cèdula (DD/MM/YYYY)",
+    "fieldName" : "data_resolucio",
+    "position" : 26,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 13033038,
+    "cachedContents" : {
+      "non_null" : "3509805",
+      "largest" : "2026-11-16T00:00:00.000",
+      "null" : "74090",
+      "top" : [ {
+        "item" : "2022-07-29T00:00:00.000",
+        "count" : "3781"
+      }, {
+        "item" : "2023-02-28T00:00:00.000",
+        "count" : "2725"
+      }, {
+        "item" : "2023-10-18T00:00:00.000",
+        "count" : "1986"
+      }, {
+        "item" : "2022-07-07T00:00:00.000",
+        "count" : "1939"
+      }, {
+        "item" : "2005-07-26T00:00:00.000",
+        "count" : "1765"
+      }, {
+        "item" : "2022-07-08T00:00:00.000",
+        "count" : "1762"
+      }, {
+        "item" : "2022-11-26T00:00:00.000",
+        "count" : "1681"
+      }, {
+        "item" : "2022-07-09T00:00:00.000",
+        "count" : "1678"
+      }, {
+        "item" : "2015-01-13T00:00:00.000",
+        "count" : "1527"
+      }, {
+        "item" : "2022-07-06T00:00:00.000",
+        "count" : "1506"
+      }, {
+        "item" : "2022-06-21T00:00:00.000",
+        "count" : "1355"
+      }, {
+        "item" : "2007-11-06T00:00:00.000",
+        "count" : "1342"
+      }, {
+        "item" : "2012-12-20T00:00:00.000",
+        "count" : "1300"
+      }, {
+        "item" : "2012-12-04T00:00:00.000",
+        "count" : "1258"
+      }, {
+        "item" : "2022-07-10T00:00:00.000",
+        "count" : "1215"
+      }, {
+        "item" : "2007-12-11T00:00:00.000",
+        "count" : "1215"
+      }, {
+        "item" : "2008-08-08T00:00:00.000",
+        "count" : "1208"
+      }, {
+        "item" : "2014-03-17T00:00:00.000",
+        "count" : "1205"
+      }, {
+        "item" : "2022-01-21T00:00:00.000",
+        "count" : "1192"
+      }, {
+        "item" : "2017-10-10T00:00:00.000",
+        "count" : "1189"
+      } ],
+      "smallest" : "1919-11-11T00:00:00.000",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 21612106,
+    "name" : "data_fi_vigencia",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data final de vigència (DD/MM/YYYY)",
+    "fieldName" : "data_fi_vigencia",
+    "position" : 27,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 13033037,
+    "cachedContents" : {
+      "non_null" : "3469488",
+      "largest" : "2051-11-16T00:00:00.000",
+      "null" : "114407",
+      "top" : [ {
+        "item" : "2022-07-29T00:00:00.000",
+        "count" : "5629"
+      }, {
+        "item" : "2022-11-26T00:00:00.000",
+        "count" : "3040"
+      }, {
+        "item" : "2022-07-09T00:00:00.000",
+        "count" : "2740"
+      }, {
+        "item" : "2022-07-06T00:00:00.000",
+        "count" : "2563"
+      }, {
+        "item" : "2022-07-10T00:00:00.000",
+        "count" : "2475"
+      }, {
+        "item" : "2023-10-18T00:00:00.000",
+        "count" : "2418"
+      }, {
+        "item" : "2022-07-07T00:00:00.000",
+        "count" : "2284"
+      }, {
+        "item" : "2022-07-08T00:00:00.000",
+        "count" : "2138"
+      }, {
+        "item" : "2023-03-01T00:00:00.000",
+        "count" : "1889"
+      }, {
+        "item" : "2020-07-26T00:00:00.000",
+        "count" : "1761"
+      }, {
+        "item" : "2022-07-11T00:00:00.000",
+        "count" : "1760"
+      }, {
+        "item" : "2023-02-27T00:00:00.000",
+        "count" : "1709"
+      }, {
+        "item" : "2022-06-21T00:00:00.000",
+        "count" : "1510"
+      }, {
+        "item" : "2030-01-13T00:00:00.000",
+        "count" : "1447"
+      }, {
+        "item" : "2027-02-28T00:00:00.000",
+        "count" : "1397"
+      }, {
+        "item" : "2022-11-06T00:00:00.000",
+        "count" : "1376"
+      }, {
+        "item" : "2023-06-27T00:00:00.000",
+        "count" : "1328"
+      }, {
+        "item" : "2023-05-30T00:00:00.000",
+        "count" : "1299"
+      }, {
+        "item" : "2023-08-08T00:00:00.000",
+        "count" : "1293"
+      }, {
+        "item" : "2023-08-01T00:00:00.000",
+        "count" : "1246"
+      } ],
+      "smallest" : "2000-10-08T00:00:00.000",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 21612107,
+    "name" : "data_solicitud",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data sol·licitud (DD/MM/YYYY)",
+    "fieldName" : "data_solicitud",
+    "position" : 28,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 13033036,
+    "cachedContents" : {
+      "non_null" : "3583895",
+      "largest" : "2026-11-16T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-01-14T00:00:00.000",
+        "count" : "1343"
+      }, {
+        "item" : "2010-11-22T00:00:00.000",
+        "count" : "1213"
+      }, {
+        "item" : "2021-06-08T00:00:00.000",
+        "count" : "1049"
+      }, {
+        "item" : "2008-08-01T00:00:00.000",
+        "count" : "999"
+      }, {
+        "item" : "2008-07-31T00:00:00.000",
+        "count" : "933"
+      }, {
+        "item" : "2005-06-23T00:00:00.000",
+        "count" : "914"
+      }, {
+        "item" : "2008-05-21T00:00:00.000",
+        "count" : "910"
+      }, {
+        "item" : "2007-11-22T00:00:00.000",
+        "count" : "904"
+      }, {
+        "item" : "2007-05-25T00:00:00.000",
+        "count" : "899"
+      }, {
+        "item" : "2008-04-30T00:00:00.000",
+        "count" : "874"
+      }, {
+        "item" : "2008-07-03T00:00:00.000",
+        "count" : "872"
+      }, {
+        "item" : "2007-07-03T00:00:00.000",
+        "count" : "867"
+      }, {
+        "item" : "2006-07-10T00:00:00.000",
+        "count" : "862"
+      }, {
+        "item" : "2006-06-08T00:00:00.000",
+        "count" : "861"
+      }, {
+        "item" : "2007-07-27T00:00:00.000",
+        "count" : "859"
+      }, {
+        "item" : "2006-06-15T00:00:00.000",
+        "count" : "853"
+      }, {
+        "item" : "2008-06-10T00:00:00.000",
+        "count" : "837"
+      }, {
+        "item" : "2008-07-04T00:00:00.000",
+        "count" : "836"
+      }, {
+        "item" : "2004-12-03T00:00:00.000",
+        "count" : "831"
+      }, {
+        "item" : "2007-10-23T00:00:00.000",
+        "count" : "827"
+      } ],
+      "smallest" : "1982-07-24T00:00:00.000",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "view" : "date_dmy",
+      "align" : "left"
+    }
+  }, {
+    "id" : 21612108,
+    "name" : "num_persones",
+    "dataTypeName" : "number",
+    "description" : "Llindar d’ocupació",
+    "fieldName" : "num_persones",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13386535,
+    "cachedContents" : {
+      "non_null" : "1520787",
+      "largest" : "594",
+      "null" : "2063108",
+      "top" : [ {
+        "item" : "5",
+        "count" : "265667"
+      }, {
+        "item" : "4",
+        "count" : "262061"
+      }, {
+        "item" : "6",
+        "count" : "230844"
+      }, {
+        "item" : "3",
+        "count" : "172202"
+      }, {
+        "item" : "7",
+        "count" : "166028"
+      }, {
+        "item" : "2",
+        "count" : "135912"
+      }, {
+        "item" : "8",
+        "count" : "98344"
+      }, {
+        "item" : "9",
+        "count" : "67173"
+      }, {
+        "item" : "10",
+        "count" : "35770"
+      }, {
+        "item" : "11",
+        "count" : "22976"
+      }, {
+        "item" : "12",
+        "count" : "17415"
+      }, {
+        "item" : "1",
+        "count" : "15168"
+      }, {
+        "item" : "13",
+        "count" : "8106"
+      }, {
+        "item" : "14",
+        "count" : "6757"
+      }, {
+        "item" : "15",
+        "count" : "5427"
+      }, {
+        "item" : "16",
+        "count" : "2544"
+      }, {
+        "item" : "17",
+        "count" : "1986"
+      }, {
+        "item" : "18",
+        "count" : "1911"
+      }, {
+        "item" : "19",
+        "count" : "799"
+      }, {
+        "item" : "20",
+        "count" : "782"
+      } ],
+      "smallest" : "1",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612109,
+    "name" : "Latitud",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "latitud",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13362153,
+    "cachedContents" : {
+      "non_null" : "3482546",
+      "largest" : "42.840595804538175",
+      "null" : "101349",
+      "top" : [ {
+        "item" : "41.4991618948808",
+        "count" : "1385"
+      }, {
+        "item" : "41.41552543123783",
+        "count" : "848"
+      }, {
+        "item" : "41.43363247856498",
+        "count" : "782"
+      }, {
+        "item" : "42.26345203200172",
+        "count" : "708"
+      }, {
+        "item" : "41.07251936338135",
+        "count" : "707"
+      }, {
+        "item" : "42.23894055097695",
+        "count" : "703"
+      }, {
+        "item" : "42.2681165528632",
+        "count" : "623"
+      }, {
+        "item" : "41.07268979490763",
+        "count" : "622"
+      }, {
+        "item" : "42.269572643649354",
+        "count" : "572"
+      }, {
+        "item" : "41.44045871081476",
+        "count" : "538"
+      }, {
+        "item" : "41.40839731242781",
+        "count" : "511"
+      }, {
+        "item" : "41.40805938954266",
+        "count" : "511"
+      }, {
+        "item" : "41.662524216223915",
+        "count" : "485"
+      }, {
+        "item" : "41.3644380370672",
+        "count" : "471"
+      }, {
+        "item" : "41.41208708970256",
+        "count" : "448"
+      }, {
+        "item" : "41.96613567466668",
+        "count" : "442"
+      }, {
+        "item" : "41.11830389609902",
+        "count" : "438"
+      }, {
+        "item" : "41.08041275465921",
+        "count" : "421"
+      }, {
+        "item" : "41.56973225623557",
+        "count" : "420"
+      }, {
+        "item" : "41.57205653195262",
+        "count" : "420"
+      } ],
+      "smallest" : "0.00004131203300081658",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 21612110,
+    "name" : "Longitud",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "longitud",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13362151,
+    "cachedContents" : {
+      "non_null" : "3482546",
+      "largest" : "45.46858",
+      "null" : "101349",
+      "top" : [ {
+        "item" : "2.098569446646738",
+        "count" : "1385"
+      }, {
+        "item" : "2.1890825817610806",
+        "count" : "848"
+      }, {
+        "item" : "2.1498110199232006",
+        "count" : "782"
+      }, {
+        "item" : "3.1477303253621467",
+        "count" : "708"
+      }, {
+        "item" : "1.0987754417302238",
+        "count" : "707"
+      }, {
+        "item" : "3.123859308236482",
+        "count" : "703"
+      }, {
+        "item" : "3.1388592207213204",
+        "count" : "623"
+      }, {
+        "item" : "1.0995632299110534",
+        "count" : "622"
+      }, {
+        "item" : "3.1418345078861942",
+        "count" : "572"
+      }, {
+        "item" : "2.229883684409639",
+        "count" : "538"
+      }, {
+        "item" : "2.2155727693529257",
+        "count" : "511"
+      }, {
+        "item" : "2.212440262158979",
+        "count" : "511"
+      }, {
+        "item" : "2.7825324158664224",
+        "count" : "485"
+      }, {
+        "item" : "2.136934851648939",
+        "count" : "471"
+      }, {
+        "item" : "2.196908445886706",
+        "count" : "448"
+      }, {
+        "item" : "3.2295601778903458",
+        "count" : "442"
+      }, {
+        "item" : "1.2381663553158477",
+        "count" : "438"
+      }, {
+        "item" : "1.141845730109831",
+        "count" : "421"
+      }, {
+        "item" : "2.0220907871551477",
+        "count" : "420"
+      }, {
+        "item" : "2.025988288534049",
+        "count" : "420"
+      } ],
+      "smallest" : "0.2312805820806081",
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : {
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 21612111,
+    "name" : "Georeferència",
+    "dataTypeName" : "point",
+    "description" : "",
+    "fieldName" : "georefer_ncia",
+    "position" : 32,
+    "renderTypeName" : "point",
+    "tableColumnId" : 13362152,
+    "cachedContents" : {
+      "non_null" : "2959468",
+      "null" : "624427",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ 2.1498110199232006, 41.43363247856498 ],
+          "type" : "Point"
+        },
+        "count" : "585"
+      }, {
+        "item" : {
+          "coordinates" : [ 3.1477303253621467, 42.26345203200172 ],
+          "type" : "Point"
+        },
+        "count" : "575"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.229883684409639, 41.44045871081476 ],
+          "type" : "Point"
+        },
+        "count" : "535"
+      }, {
+        "item" : {
+          "coordinates" : [ 3.1418345078861942, 42.269572643649354 ],
+          "type" : "Point"
+        },
+        "count" : "526"
+      }, {
+        "item" : {
+          "coordinates" : [ 3.1395160586342508, 42.26833001424461 ],
+          "type" : "Point"
+        },
+        "count" : "523"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.212440262158979, 41.40805938954266 ],
+          "type" : "Point"
+        },
+        "count" : "507"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.2155727693529257, 41.40839731242781 ],
+          "type" : "Point"
+        },
+        "count" : "470"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.196908445886706, 41.41208708970256 ],
+          "type" : "Point"
+        },
+        "count" : "432"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.136934851648939, 41.3644380370672 ],
+          "type" : "Point"
+        },
+        "count" : "406"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.141845730109831, 41.08041275465921 ],
+          "type" : "Point"
+        },
+        "count" : "393"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.2057055327739914, 41.11827345574439 ],
+          "type" : "Point"
+        },
+        "count" : "390"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.113796886534969, 41.3718913669888 ],
+          "type" : "Point"
+        },
+        "count" : "373"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1983380072790064, 41.43856259838159 ],
+          "type" : "Point"
+        },
+        "count" : "358"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1409996254938495, 41.368393574197874 ],
+          "type" : "Point"
+        },
+        "count" : "338"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.2118660887909416, 41.121925363193995 ],
+          "type" : "Point"
+        },
+        "count" : "331"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.182247080139796, 41.079215804823704 ],
+          "type" : "Point"
+        },
+        "count" : "321"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.807274688139963, 41.97488390261221 ],
+          "type" : "Point"
+        },
+        "count" : "307"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.239016804455659, 41.43191174039336 ],
+          "type" : "Point"
+        },
+        "count" : "306"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1265370598101088, 41.52172582608117 ],
+          "type" : "Point"
+        },
+        "count" : "305"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.1981154871288764, 41.41810871942833 ],
+          "type" : "Point"
+        },
+        "count" : "301"
+      } ],
+      "count" : "3583895",
+      "cardinality" : "3583895"
+    },
+    "format" : { }
+  }, {
+    "id" : 21612112,
+    "name" : "LIMADM_MUNICIPI",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_bh64_c7uy",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13362154,
+    "computationStrategy" : {
+      "source_columns" : [ "georefer_ncia" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_bh64-c7uy",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 21612113,
+    "name" : "LIMADM COMARCA",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LIMADM COMARCA' (wvic-k925) the point in column 'georefer_ncia' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_wvic_k925",
+    "position" : 34,
+    "renderTypeName" : "number",
+    "tableColumnId" : 13362155,
+    "computationStrategy" : {
+      "source_columns" : [ "georefer_ncia" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_wvic-k925",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Mensual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Certificate of occupancy",
+        "Nombre del conjunto de datos (ES)" : "Cédula de habitabilidad"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Coordenades",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "rowIdentifier" : 21612080,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "cèdula", "cèdules", "habitabilitat", "segona ocupació", "primera ocupació", "superfície útil", "estat cèdula", "habitatge", "smartcatalonia", "ods11_ciutats i comunitats sostenibles" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

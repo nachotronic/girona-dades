@@ -1,0 +1,1195 @@
+{
+  "id" : "v8i4-fa4q",
+  "name" : "Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat",
+  "assetType" : "dataset",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Habitatge",
+  "createdAt" : 1713860805,
+  "description" : "Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 485,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2901996,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1713861535,
+  "publicationGroup" : 1942988,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1773829672,
+  "rowsUpdatedBy" : "u9f7-pzaq",
+  "tableId" : 1942988,
+  "totalTimesRated" : 0,
+  "viewCount" : 4083,
+  "viewLastModified" : 1773829667,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1714035255,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1433498,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1714035255,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1714035255,
+      "failureCount" : 0,
+      "startedAt" : 1714035255,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "u9f7-pzaq",
+      "displayName" : "ricardofontcuberta@gencat.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 25770441,
+    "name" : "Codi IDESCAT",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+    "fieldName" : "codi_idescat",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725316,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "439076",
+      "null" : "0",
+      "top" : [ {
+        "item" : "431074",
+        "count" : "24"
+      }, {
+        "item" : "430056",
+        "count" : "24"
+      }, {
+        "item" : "081094",
+        "count" : "24"
+      }, {
+        "item" : "082129",
+        "count" : "24"
+      }, {
+        "item" : "171463",
+        "count" : "24"
+      }, {
+        "item" : "430688",
+        "count" : "24"
+      }, {
+        "item" : "082652",
+        "count" : "24"
+      }, {
+        "item" : "080569",
+        "count" : "24"
+      }, {
+        "item" : "439039",
+        "count" : "24"
+      }, {
+        "item" : "259031",
+        "count" : "24"
+      }, {
+        "item" : "430691",
+        "count" : "24"
+      }, {
+        "item" : "250019",
+        "count" : "24"
+      }, {
+        "item" : "431690",
+        "count" : "24"
+      }, {
+        "item" : "080497",
+        "count" : "24"
+      }, {
+        "item" : "081189",
+        "count" : "24"
+      }, {
+        "item" : "250479",
+        "count" : "24"
+      }, {
+        "item" : "171024",
+        "count" : "24"
+      }, {
+        "item" : "431397",
+        "count" : "24"
+      }, {
+        "item" : "082270",
+        "count" : "24"
+      }, {
+        "item" : "431286",
+        "count" : "24"
+      } ],
+      "smallest" : "080018",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770440,
+    "name" : "Codi INE",
+    "dataTypeName" : "text",
+    "description" : "Codi del municipi assignat per l’Instituto Nacional de Estadística",
+    "fieldName" : "codi_ine",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725315,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "43907",
+      "null" : "0",
+      "top" : [ {
+        "item" : "25226",
+        "count" : "24"
+      }, {
+        "item" : "25123",
+        "count" : "24"
+      }, {
+        "item" : "43115",
+        "count" : "24"
+      }, {
+        "item" : "17901",
+        "count" : "24"
+      }, {
+        "item" : "25122",
+        "count" : "24"
+      }, {
+        "item" : "25248",
+        "count" : "24"
+      }, {
+        "item" : "08270",
+        "count" : "24"
+      }, {
+        "item" : "08099",
+        "count" : "24"
+      }, {
+        "item" : "43089",
+        "count" : "24"
+      }, {
+        "item" : "08201",
+        "count" : "24"
+      }, {
+        "item" : "43124",
+        "count" : "24"
+      }, {
+        "item" : "25058",
+        "count" : "24"
+      }, {
+        "item" : "17015",
+        "count" : "24"
+      }, {
+        "item" : "25247",
+        "count" : "24"
+      }, {
+        "item" : "17023",
+        "count" : "24"
+      }, {
+        "item" : "08306",
+        "count" : "24"
+      }, {
+        "item" : "43146",
+        "count" : "24"
+      }, {
+        "item" : "43075",
+        "count" : "24"
+      }, {
+        "item" : "43054",
+        "count" : "24"
+      }, {
+        "item" : "08199",
+        "count" : "24"
+      } ],
+      "smallest" : "08001",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770439,
+    "name" : "Municipi",
+    "dataTypeName" : "text",
+    "description" : "Nom del municipi",
+    "fieldName" : "municipi",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725314,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Vallgorguina",
+        "count" : "24"
+      }, {
+        "item" : "Parets del Vallès",
+        "count" : "24"
+      }, {
+        "item" : "Jafre",
+        "count" : "24"
+      }, {
+        "item" : "Oliana",
+        "count" : "24"
+      }, {
+        "item" : "Boadella i les Escaules",
+        "count" : "24"
+      }, {
+        "item" : "Quar, la",
+        "count" : "24"
+      }, {
+        "item" : "Esquirol, l'",
+        "count" : "24"
+      }, {
+        "item" : "Albagés, l'",
+        "count" : "24"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "24"
+      }, {
+        "item" : "Benissanet",
+        "count" : "24"
+      }, {
+        "item" : "Artés",
+        "count" : "24"
+      }, {
+        "item" : "Gelida",
+        "count" : "24"
+      }, {
+        "item" : "Albi, l'",
+        "count" : "24"
+      }, {
+        "item" : "Peralada",
+        "count" : "24"
+      }, {
+        "item" : "Fígols",
+        "count" : "24"
+      }, {
+        "item" : "Cerdanyola del Vallès",
+        "count" : "24"
+      }, {
+        "item" : "Garrigàs",
+        "count" : "24"
+      }, {
+        "item" : "Bellprat",
+        "count" : "24"
+      }, {
+        "item" : "Molar, el",
+        "count" : "24"
+      }, {
+        "item" : "Cervelló",
+        "count" : "24"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : { }
+  }, {
+    "id" : 25770438,
+    "name" : "Codi Comarca 2023",
+    "dataTypeName" : "text",
+    "description" : "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Lluçanès.",
+    "fieldName" : "codi_comarca_2023",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725313,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "43",
+      "null" : "0",
+      "top" : [ {
+        "item" : "02",
+        "count" : "1632"
+      }, {
+        "item" : "24",
+        "count" : "1008"
+      }, {
+        "item" : "41",
+        "count" : "936"
+      }, {
+        "item" : "33",
+        "count" : "912"
+      }, {
+        "item" : "10",
+        "count" : "864"
+      }, {
+        "item" : "06",
+        "count" : "792"
+      }, {
+        "item" : "14",
+        "count" : "744"
+      }, {
+        "item" : "23",
+        "count" : "720"
+      }, {
+        "item" : "07",
+        "count" : "720"
+      }, {
+        "item" : "11",
+        "count" : "720"
+      }, {
+        "item" : "21",
+        "count" : "720"
+      }, {
+        "item" : "08",
+        "count" : "672"
+      }, {
+        "item" : "20",
+        "count" : "648"
+      }, {
+        "item" : "03",
+        "count" : "648"
+      }, {
+        "item" : "34",
+        "count" : "624"
+      }, {
+        "item" : "18",
+        "count" : "576"
+      }, {
+        "item" : "01",
+        "count" : "552"
+      }, {
+        "item" : "40",
+        "count" : "552"
+      }, {
+        "item" : "29",
+        "count" : "552"
+      }, {
+        "item" : "36",
+        "count" : "528"
+      } ],
+      "smallest" : "01",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770437,
+    "name" : "Comarca 2023",
+    "dataTypeName" : "text",
+    "description" : "Nom de la comarca 2023. Incorporació del Lluçanès.",
+    "fieldName" : "comarca_2023",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725312,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "Vallès Oriental",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Alt Empordà",
+        "count" : "1632"
+      }, {
+        "item" : "Osona",
+        "count" : "1008"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "936"
+      }, {
+        "item" : "Segrià",
+        "count" : "912"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "864"
+      }, {
+        "item" : "Anoia",
+        "count" : "792"
+      }, {
+        "item" : "Berguedà",
+        "count" : "744"
+      }, {
+        "item" : "Noguera",
+        "count" : "720"
+      }, {
+        "item" : "Bages",
+        "count" : "720"
+      }, {
+        "item" : "Maresme",
+        "count" : "720"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "720"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "672"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "648"
+      }, {
+        "item" : "Gironès",
+        "count" : "648"
+      }, {
+        "item" : "Selva",
+        "count" : "624"
+      }, {
+        "item" : "Garrigues",
+        "count" : "576"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "552"
+      }, {
+        "item" : "Priorat",
+        "count" : "552"
+      }, {
+        "item" : "Alt Camp",
+        "count" : "552"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "528"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : { }
+  }, {
+    "id" : 25770436,
+    "name" : "Codi Província",
+    "dataTypeName" : "text",
+    "description" : "Codi de la província assignat per l’Institut d’Estadística de Catalunya.",
+    "fieldName" : "codi_prov_ncia",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725311,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "43",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08",
+        "count" : "7464"
+      }, {
+        "item" : "25",
+        "count" : "5544"
+      }, {
+        "item" : "17",
+        "count" : "5304"
+      }, {
+        "item" : "43",
+        "count" : "4416"
+      } ],
+      "smallest" : "08",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770435,
+    "name" : "Província",
+    "dataTypeName" : "text",
+    "description" : "Nom de la província",
+    "fieldName" : "prov_ncia",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725310,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "Tarragona",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "7464"
+      }, {
+        "item" : "Lleida",
+        "count" : "5544"
+      }, {
+        "item" : "Girona",
+        "count" : "5304"
+      }, {
+        "item" : "Tarragona",
+        "count" : "4416"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : { }
+  }, {
+    "id" : 25770434,
+    "name" : "Àmbit funcional",
+    "dataTypeName" : "text",
+    "description" : "Vegueria (o àmbit funcional) al que pertany el municipi",
+    "fieldName" : "mbit_funcional",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725309,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Comarques Gironines",
+        "count" : "4992"
+      }, {
+        "item" : "Ponent",
+        "count" : "3528"
+      }, {
+        "item" : "Comarques Centrals",
+        "count" : "3504"
+      }, {
+        "item" : "Metropolità",
+        "count" : "3048"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "2832"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "1848"
+      }, {
+        "item" : "Penedès",
+        "count" : "1728"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "1248"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : { }
+  }, {
+    "id" : 25770433,
+    "name" : "Any",
+    "dataTypeName" : "text",
+    "description" : "Any d’inici o acabament dels habitatges",
+    "fieldName" : "any",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15725308,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2013",
+        "count" : "947"
+      }, {
+        "item" : "2014",
+        "count" : "947"
+      }, {
+        "item" : "2016",
+        "count" : "947"
+      }, {
+        "item" : "2015",
+        "count" : "947"
+      }, {
+        "item" : "2011",
+        "count" : "947"
+      }, {
+        "item" : "2024",
+        "count" : "947"
+      }, {
+        "item" : "2007",
+        "count" : "947"
+      }, {
+        "item" : "2008",
+        "count" : "947"
+      }, {
+        "item" : "2002",
+        "count" : "947"
+      }, {
+        "item" : "2010",
+        "count" : "947"
+      }, {
+        "item" : "2019",
+        "count" : "947"
+      }, {
+        "item" : "2025",
+        "count" : "947"
+      }, {
+        "item" : "2012",
+        "count" : "947"
+      }, {
+        "item" : "2023",
+        "count" : "947"
+      }, {
+        "item" : "2022",
+        "count" : "947"
+      }, {
+        "item" : "2006",
+        "count" : "947"
+      }, {
+        "item" : "2004",
+        "count" : "947"
+      }, {
+        "item" : "2017",
+        "count" : "947"
+      }, {
+        "item" : "2018",
+        "count" : "947"
+      }, {
+        "item" : "2003",
+        "count" : "947"
+      } ],
+      "smallest" : "2002",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770432,
+    "name" : "Iniciats HPO",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’habitatges amb protecció oficial iniciats totals",
+    "fieldName" : "iniciats_hpo",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15725307,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "1964",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "21302"
+      }, {
+        "item" : "1",
+        "count" : "66"
+      }, {
+        "item" : "4",
+        "count" : "48"
+      }, {
+        "item" : "12",
+        "count" : "48"
+      }, {
+        "item" : "24",
+        "count" : "41"
+      }, {
+        "item" : "18",
+        "count" : "35"
+      }, {
+        "item" : "16",
+        "count" : "35"
+      }, {
+        "item" : "6",
+        "count" : "30"
+      }, {
+        "item" : "9",
+        "count" : "30"
+      }, {
+        "item" : "2",
+        "count" : "29"
+      }, {
+        "item" : "3",
+        "count" : "29"
+      }, {
+        "item" : "8",
+        "count" : "29"
+      }, {
+        "item" : "20",
+        "count" : "28"
+      }, {
+        "item" : "15",
+        "count" : "28"
+      }, {
+        "item" : "30",
+        "count" : "28"
+      }, {
+        "item" : "48",
+        "count" : "25"
+      }, {
+        "item" : "10",
+        "count" : "24"
+      }, {
+        "item" : "32",
+        "count" : "21"
+      }, {
+        "item" : "21",
+        "count" : "21"
+      }, {
+        "item" : "36",
+        "count" : "19"
+      } ],
+      "smallest" : "0",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770431,
+    "name" : "Acabats HPO",
+    "dataTypeName" : "number",
+    "description" : "Nombre d’habitatges amb protecció oficial acabats totals",
+    "fieldName" : "acabats_hpo",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15725306,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "1915",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "21252"
+      }, {
+        "item" : "1",
+        "count" : "214"
+      }, {
+        "item" : "2",
+        "count" : "64"
+      }, {
+        "item" : "3",
+        "count" : "50"
+      }, {
+        "item" : "4",
+        "count" : "49"
+      }, {
+        "item" : "12",
+        "count" : "41"
+      }, {
+        "item" : "6",
+        "count" : "36"
+      }, {
+        "item" : "20",
+        "count" : "33"
+      }, {
+        "item" : "8",
+        "count" : "32"
+      }, {
+        "item" : "18",
+        "count" : "31"
+      }, {
+        "item" : "24",
+        "count" : "30"
+      }, {
+        "item" : "9",
+        "count" : "24"
+      }, {
+        "item" : "30",
+        "count" : "22"
+      }, {
+        "item" : "40",
+        "count" : "22"
+      }, {
+        "item" : "15",
+        "count" : "22"
+      }, {
+        "item" : "5",
+        "count" : "21"
+      }, {
+        "item" : "11",
+        "count" : "21"
+      }, {
+        "item" : "7",
+        "count" : "21"
+      }, {
+        "item" : "16",
+        "count" : "21"
+      }, {
+        "item" : "10",
+        "count" : "20"
+      } ],
+      "smallest" : "0",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770430,
+    "name" : "Longitud Municipi",
+    "dataTypeName" : "number",
+    "description" : "Sistema de coordenades. Localització del municipi en direcció nord o sud.",
+    "fieldName" : "longitud_municipi",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15725305,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "3.275849152",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2.731325675",
+        "count" : "24"
+      }, {
+        "item" : "3.064692114",
+        "count" : "24"
+      }, {
+        "item" : "0.763893912",
+        "count" : "24"
+      }, {
+        "item" : "3.026900742",
+        "count" : "24"
+      }, {
+        "item" : "2.743365182",
+        "count" : "24"
+      }, {
+        "item" : "0.605376149",
+        "count" : "24"
+      }, {
+        "item" : "1.206824514",
+        "count" : "24"
+      }, {
+        "item" : "1.700317601",
+        "count" : "24"
+      }, {
+        "item" : "1.246309237",
+        "count" : "24"
+      }, {
+        "item" : "2.178421008",
+        "count" : "24"
+      }, {
+        "item" : "2.954141859",
+        "count" : "24"
+      }, {
+        "item" : "0.958121082",
+        "count" : "24"
+      }, {
+        "item" : "1.590910882",
+        "count" : "24"
+      }, {
+        "item" : "1.217309912",
+        "count" : "24"
+      }, {
+        "item" : "2.325763581",
+        "count" : "24"
+      }, {
+        "item" : "1.291294091",
+        "count" : "24"
+      }, {
+        "item" : "0.583741122",
+        "count" : "24"
+      }, {
+        "item" : "2.009712625",
+        "count" : "24"
+      }, {
+        "item" : "3.275849152",
+        "count" : "24"
+      }, {
+        "item" : "0.810210307",
+        "count" : "24"
+      } ],
+      "smallest" : "0.25057195",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770429,
+    "name" : "Latitud Municipi",
+    "dataTypeName" : "number",
+    "description" : "Sistema de coordenades. Localització del municipi en direcció est o oest.",
+    "fieldName" : "latitud_municipi",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15725304,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "largest" : "42.83836792",
+      "null" : "0",
+      "top" : [ {
+        "item" : "41.62939237",
+        "count" : "24"
+      }, {
+        "item" : "41.92412424",
+        "count" : "24"
+      }, {
+        "item" : "41.53238304",
+        "count" : "24"
+      }, {
+        "item" : "41.67220364",
+        "count" : "24"
+      }, {
+        "item" : "42.36821251",
+        "count" : "24"
+      }, {
+        "item" : "42.75497977",
+        "count" : "24"
+      }, {
+        "item" : "41.98028526",
+        "count" : "24"
+      }, {
+        "item" : "41.10184911",
+        "count" : "24"
+      }, {
+        "item" : "41.47753985",
+        "count" : "24"
+      }, {
+        "item" : "41.50238859",
+        "count" : "24"
+      }, {
+        "item" : "41.63550377",
+        "count" : "24"
+      }, {
+        "item" : "42.18318266",
+        "count" : "24"
+      }, {
+        "item" : "41.58011517",
+        "count" : "24"
+      }, {
+        "item" : "41.56287362",
+        "count" : "24"
+      }, {
+        "item" : "41.67921889",
+        "count" : "24"
+      }, {
+        "item" : "42.05713729",
+        "count" : "24"
+      }, {
+        "item" : "42.4128257",
+        "count" : "24"
+      }, {
+        "item" : "42.09382295",
+        "count" : "24"
+      }, {
+        "item" : "42.21106657",
+        "count" : "24"
+      }, {
+        "item" : "42.07549518",
+        "count" : "24"
+      } ],
+      "smallest" : "40.5428638",
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25770428,
+    "name" : "Georeferència Municipi",
+    "dataTypeName" : "point",
+    "description" : "Dades de georeferència. Posicionament espacial del municipi. ",
+    "fieldName" : "georefer_ncia_municipi",
+    "position" : 14,
+    "renderTypeName" : "point",
+    "tableColumnId" : 15725303,
+    "cachedContents" : {
+      "non_null" : "22728",
+      "null" : "0",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ 1.958951323, 41.39611352 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.247791638, 41.45002603 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.650071322, 41.43256244 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.15178496, 42.05877073 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.839936624, 41.93976947 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.732607845, 41.04260664 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.42358212, 41.30556557 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.859278593, 41.92105157 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.961368967, 41.79990798 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.365664211, 42.26185991 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.267313544, 41.54526095 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.639889942, 42.12416017 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.860478136, 41.62939237 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.284830772, 42.23280805 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.144805793, 41.11094923 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.590703884, 41.25340002 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.096923027, 41.81286912 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.831528354, 41.01992442 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.267448373, 42.05713729 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.288998615, 41.55405656 ],
+          "type" : "Point"
+        },
+        "count" : "24"
+      } ],
+      "count" : "22728",
+      "cardinality" : "22728"
+    },
+    "format" : { }
+  }, {
+    "id" : 25770442,
+    "name" : "LIMADM_MUNICIPI",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_bh64_c7uy",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15725317,
+    "computationStrategy" : {
+      "source_columns" : [ "georefer_ncia_municipi" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_bh64-c7uy",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Housing with official protection started and finished. Annual historical series 2002 – present",
+        "Nombre del conjunto de datos (ES)" : "Viviendas con protección oficial iniciadas y acabadas. Serie historica anual 2002 – actualidad"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Dades geogràfiques",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "habitatge", "construcció", "iniciats", "acabats", "protecció oficial", "catalunya" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

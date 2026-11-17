@@ -1,0 +1,2494 @@
+{
+  "id" : "375x-2wzk",
+  "name" : "Indicadors de dades bàsiques territorials, segons el cens de població i habitatge",
+  "assetType" : "dataset",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1720077824,
+  "description" : "Conjunt de dades calculades que permeten descriure, fer un seguiment i una avaluació de les dinàmiques territorials i urbanístiques del territori català. Aquestes, permeten comparar la situació entre diferents unitats territorials (municipis, àmbits funcionals, Catalunya...).\n\nApunts metodològics:\n\n-\tMunicipi de la Canonja: les dades de l’any 2001 tenen valors nuls, ja que aquest municipi no recupera la seva municipalitat fins l’any 2010 (Llei 8/2010, de 22 d’abril, de creació del municipi de la Canonja). \n\n-\tIndicadors d’habitatges per intensitat d’ús: L’INE i l’IDESCAT publiquen les dades per municipis a partir de 1.000 habitants. És per això que hi ha municipis amb valors nuls.\n\n-\tIndicador “evolució POR/LTL”: l’IDESCAT publica el valor de l’indicador a escala comarcal. És per això que els municipis d’una mateixa comarca tenen el mateix resultat.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 689,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2960587,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1727442929,
+  "publicationGroup" : 1958786,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1728546233,
+  "rowsUpdatedBy" : "u9f7-pzaq",
+  "tableId" : 1980136,
+  "totalTimesRated" : 0,
+  "viewCount" : 1697,
+  "viewLastModified" : 1758534921,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1720159466,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1465328,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1720159466,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1720159467,
+      "failureCount" : 0,
+      "startedAt" : 1720159466,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "u9f7-pzaq",
+      "displayName" : "ricardofontcuberta@gencat.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 26426381,
+    "name" : "Codi INE",
+    "dataTypeName" : "text",
+    "description" : "Identificador municipal numèric segons l’INE",
+    "fieldName" : "codi_ine",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820877,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "43907",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08199",
+        "count" : "8"
+      }, {
+        "item" : "25123",
+        "count" : "8"
+      }, {
+        "item" : "43115",
+        "count" : "8"
+      }, {
+        "item" : "17901",
+        "count" : "8"
+      }, {
+        "item" : "25122",
+        "count" : "8"
+      }, {
+        "item" : "25248",
+        "count" : "8"
+      }, {
+        "item" : "08099",
+        "count" : "8"
+      }, {
+        "item" : "08270",
+        "count" : "8"
+      }, {
+        "item" : "08201",
+        "count" : "8"
+      }, {
+        "item" : "43089",
+        "count" : "8"
+      }, {
+        "item" : "43124",
+        "count" : "8"
+      }, {
+        "item" : "25058",
+        "count" : "8"
+      }, {
+        "item" : "17015",
+        "count" : "8"
+      }, {
+        "item" : "25247",
+        "count" : "8"
+      }, {
+        "item" : "17023",
+        "count" : "8"
+      }, {
+        "item" : "08306",
+        "count" : "8"
+      }, {
+        "item" : "43146",
+        "count" : "8"
+      }, {
+        "item" : "43075",
+        "count" : "8"
+      }, {
+        "item" : "43054",
+        "count" : "8"
+      }, {
+        "item" : "25226",
+        "count" : "8"
+      } ],
+      "smallest" : "08001",
+      "count" : "7576",
+      "cardinality" : "947"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426382,
+    "name" : "Municipi",
+    "dataTypeName" : "text",
+    "description" : "Nom del municipi",
+    "fieldName" : "municipi",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820876,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Cervelló",
+        "count" : "8"
+      }, {
+        "item" : "Vallgorguina",
+        "count" : "8"
+      }, {
+        "item" : "Parets del Vallès",
+        "count" : "8"
+      }, {
+        "item" : "Jafre",
+        "count" : "8"
+      }, {
+        "item" : "Oliana",
+        "count" : "8"
+      }, {
+        "item" : "Boadella i les Escaules",
+        "count" : "8"
+      }, {
+        "item" : "Quar, la",
+        "count" : "8"
+      }, {
+        "item" : "Esquirol, l'",
+        "count" : "8"
+      }, {
+        "item" : "Albagés, l'",
+        "count" : "8"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "8"
+      }, {
+        "item" : "Benissanet",
+        "count" : "8"
+      }, {
+        "item" : "Artés",
+        "count" : "8"
+      }, {
+        "item" : "Gelida",
+        "count" : "8"
+      }, {
+        "item" : "Albi, l'",
+        "count" : "8"
+      }, {
+        "item" : "Fígols",
+        "count" : "8"
+      }, {
+        "item" : "Peralada",
+        "count" : "8"
+      }, {
+        "item" : "Cerdanyola del Vallès",
+        "count" : "8"
+      }, {
+        "item" : "Garrigàs",
+        "count" : "8"
+      }, {
+        "item" : "Bellprat",
+        "count" : "8"
+      }, {
+        "item" : "Molar, el",
+        "count" : "8"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "7576",
+      "cardinality" : "947"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426383,
+    "name" : "Codi Comarca",
+    "dataTypeName" : "text",
+    "description" : "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya, amb la incorporació del Lluçanès.",
+    "fieldName" : "codi_comarca",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820875,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "43",
+      "null" : "0",
+      "top" : [ {
+        "item" : "02",
+        "count" : "544"
+      }, {
+        "item" : "24",
+        "count" : "336"
+      }, {
+        "item" : "41",
+        "count" : "312"
+      }, {
+        "item" : "33",
+        "count" : "304"
+      }, {
+        "item" : "10",
+        "count" : "288"
+      }, {
+        "item" : "06",
+        "count" : "264"
+      }, {
+        "item" : "14",
+        "count" : "248"
+      }, {
+        "item" : "21",
+        "count" : "240"
+      }, {
+        "item" : "07",
+        "count" : "240"
+      }, {
+        "item" : "23",
+        "count" : "240"
+      }, {
+        "item" : "11",
+        "count" : "240"
+      }, {
+        "item" : "08",
+        "count" : "224"
+      }, {
+        "item" : "20",
+        "count" : "216"
+      }, {
+        "item" : "03",
+        "count" : "216"
+      }, {
+        "item" : "34",
+        "count" : "208"
+      }, {
+        "item" : "18",
+        "count" : "192"
+      }, {
+        "item" : "29",
+        "count" : "184"
+      }, {
+        "item" : "40",
+        "count" : "184"
+      }, {
+        "item" : "01",
+        "count" : "184"
+      }, {
+        "item" : "36",
+        "count" : "176"
+      } ],
+      "smallest" : "01",
+      "count" : "7576",
+      "cardinality" : "43"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426384,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Nom de la comarca 2023. Incorporació del Lluçanès.",
+    "fieldName" : "comarca",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820874,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Vallès Oriental",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Alt Empordà",
+        "count" : "544"
+      }, {
+        "item" : "Osona",
+        "count" : "336"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "312"
+      }, {
+        "item" : "Segrià",
+        "count" : "304"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "288"
+      }, {
+        "item" : "Anoia",
+        "count" : "264"
+      }, {
+        "item" : "Berguedà",
+        "count" : "248"
+      }, {
+        "item" : "Noguera",
+        "count" : "240"
+      }, {
+        "item" : "Bages",
+        "count" : "240"
+      }, {
+        "item" : "Maresme",
+        "count" : "240"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "240"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "224"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "216"
+      }, {
+        "item" : "Gironès",
+        "count" : "216"
+      }, {
+        "item" : "Selva",
+        "count" : "208"
+      }, {
+        "item" : "Garrigues",
+        "count" : "192"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "184"
+      }, {
+        "item" : "Alt Camp",
+        "count" : "184"
+      }, {
+        "item" : "Priorat",
+        "count" : "184"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "176"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "7576",
+      "cardinality" : "43"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426385,
+    "name" : "Província",
+    "dataTypeName" : "text",
+    "description" : "Nom de la província",
+    "fieldName" : "prov_ncia",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820873,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Tarragona",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "2488"
+      }, {
+        "item" : "Lleida",
+        "count" : "1848"
+      }, {
+        "item" : "Girona",
+        "count" : "1768"
+      }, {
+        "item" : "Tarragona",
+        "count" : "1472"
+      } ],
+      "smallest" : "Barcelona",
+      "count" : "7576",
+      "cardinality" : "4"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426386,
+    "name" : "Àmbit funcional",
+    "dataTypeName" : "text",
+    "description" : "Vegueria (o àmbit funcional) al que pertany el municipi",
+    "fieldName" : "mbit_funcional",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820872,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Terres de l'Ebre",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Comarques Gironines",
+        "count" : "1664"
+      }, {
+        "item" : "Ponent",
+        "count" : "1176"
+      }, {
+        "item" : "Comarques Centrals",
+        "count" : "1168"
+      }, {
+        "item" : "Metropolità",
+        "count" : "1016"
+      }, {
+        "item" : "Camp de Tarragona",
+        "count" : "944"
+      }, {
+        "item" : "Alt Pirineu i Aran",
+        "count" : "616"
+      }, {
+        "item" : "Penedès",
+        "count" : "576"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "416"
+      } ],
+      "smallest" : "Alt Pirineu i Aran",
+      "count" : "7576",
+      "cardinality" : "8"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426387,
+    "name" : "Longitud WGS84 [Municipi]",
+    "dataTypeName" : "number",
+    "description" : "Sistema de coordenades. Localització del municipi en direcció nord o sud.",
+    "fieldName" : "longitud_wgs84_municipi",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820871,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "3.275849152",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2.731325675",
+        "count" : "8"
+      }, {
+        "item" : "3.064692114",
+        "count" : "8"
+      }, {
+        "item" : "0.763893912",
+        "count" : "8"
+      }, {
+        "item" : "3.026900742",
+        "count" : "8"
+      }, {
+        "item" : "2.743365182",
+        "count" : "8"
+      }, {
+        "item" : "0.605376149",
+        "count" : "8"
+      }, {
+        "item" : "1.206824514",
+        "count" : "8"
+      }, {
+        "item" : "1.700317601",
+        "count" : "8"
+      }, {
+        "item" : "1.246309237",
+        "count" : "8"
+      }, {
+        "item" : "2.178421008",
+        "count" : "8"
+      }, {
+        "item" : "2.954141859",
+        "count" : "8"
+      }, {
+        "item" : "0.958121082",
+        "count" : "8"
+      }, {
+        "item" : "1.217309912",
+        "count" : "8"
+      }, {
+        "item" : "1.590910882",
+        "count" : "8"
+      }, {
+        "item" : "2.325763581",
+        "count" : "8"
+      }, {
+        "item" : "1.291294091",
+        "count" : "8"
+      }, {
+        "item" : "0.583741122",
+        "count" : "8"
+      }, {
+        "item" : "2.009712625",
+        "count" : "8"
+      }, {
+        "item" : "3.275849152",
+        "count" : "8"
+      }, {
+        "item" : "0.810210307",
+        "count" : "8"
+      } ],
+      "smallest" : "0.25057195",
+      "count" : "7576",
+      "cardinality" : "947"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "false"
+    }
+  }, {
+    "id" : 26426388,
+    "name" : "Latitud WGS84 [Municipi]",
+    "dataTypeName" : "number",
+    "description" : "Sistema de coordenades. Localització del municipi en direcció est o oest.",
+    "fieldName" : "latitud_wgs84_municipi",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820870,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "42.83836792",
+      "null" : "0",
+      "top" : [ {
+        "item" : "42.07549518",
+        "count" : "8"
+      }, {
+        "item" : "41.62939237",
+        "count" : "8"
+      }, {
+        "item" : "41.92412424",
+        "count" : "8"
+      }, {
+        "item" : "41.53238304",
+        "count" : "8"
+      }, {
+        "item" : "41.67220364",
+        "count" : "8"
+      }, {
+        "item" : "42.36821251",
+        "count" : "8"
+      }, {
+        "item" : "42.75497977",
+        "count" : "8"
+      }, {
+        "item" : "41.98028526",
+        "count" : "8"
+      }, {
+        "item" : "41.10184911",
+        "count" : "8"
+      }, {
+        "item" : "41.47753985",
+        "count" : "8"
+      }, {
+        "item" : "41.50238859",
+        "count" : "8"
+      }, {
+        "item" : "41.63550377",
+        "count" : "8"
+      }, {
+        "item" : "42.18318266",
+        "count" : "8"
+      }, {
+        "item" : "41.58011517",
+        "count" : "8"
+      }, {
+        "item" : "41.56287362",
+        "count" : "8"
+      }, {
+        "item" : "41.67921889",
+        "count" : "8"
+      }, {
+        "item" : "42.05713729",
+        "count" : "8"
+      }, {
+        "item" : "42.4128257",
+        "count" : "8"
+      }, {
+        "item" : "42.09382295",
+        "count" : "8"
+      }, {
+        "item" : "42.21106657",
+        "count" : "8"
+      } ],
+      "smallest" : "40.5428638",
+      "count" : "7576",
+      "cardinality" : "947"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "false"
+    }
+  }, {
+    "id" : 26426389,
+    "name" : "Georeferència Municipi",
+    "dataTypeName" : "point",
+    "description" : "Dades de georeferència. Posicionament espacial del municipi. ",
+    "fieldName" : "georefer_ncia_municipi",
+    "position" : 9,
+    "renderTypeName" : "point",
+    "tableColumnId" : 15820869,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "null" : "0",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ 2.53916522, 41.61094994 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.206824514, 41.24822743 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.634199238, 41.57225855 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.718763122, 41.69902461 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.597512982, 41.03813937 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.074148562, 42.02796555 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.857547428, 42.33108746 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.797909523, 42.18778054 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.634522237, 41.69445163 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.490652464, 40.90681676 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.638489583, 41.81580709 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.954141859, 42.19349642 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.888307781, 41.10005832 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.164546597, 41.68891823 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.288998615, 41.55405656 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.227449026, 41.41081942 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 1.958951323, 41.39611352 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.731325675, 41.77637139 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 2.247791638, 41.45002603 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      }, {
+        "item" : {
+          "coordinates" : [ 0.694256215, 41.6470102 ],
+          "type" : "Point"
+        },
+        "count" : "8"
+      } ],
+      "count" : "7576",
+      "cardinality" : "947"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426390,
+    "name" : "Micropobles",
+    "dataTypeName" : "text",
+    "description" : "Municipis de poca població (<500 habitants)",
+    "fieldName" : "micropobles",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820868,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Sí",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No",
+        "count" : "4952"
+      }, {
+        "item" : "Sí",
+        "count" : "2624"
+      } ],
+      "smallest" : "No",
+      "count" : "7576",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426391,
+    "name" : "Muntanya",
+    "dataTypeName" : "text",
+    "description" : "Municipis de muntanya (segons la Llei 2/1983, de 9 de març, d’alta muntanya)",
+    "fieldName" : "muntanya",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820867,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Sí",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No",
+        "count" : "5176"
+      }, {
+        "item" : "Sí",
+        "count" : "2400"
+      } ],
+      "smallest" : "No",
+      "count" : "7576",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426392,
+    "name" : "Litoral",
+    "dataTypeName" : "text",
+    "description" : "Municipis de costa",
+    "fieldName" : "litoral",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820866,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "Sí",
+      "null" : "0",
+      "top" : [ {
+        "item" : "No",
+        "count" : "7016"
+      }, {
+        "item" : "Sí",
+        "count" : "560"
+      } ],
+      "smallest" : "No",
+      "count" : "7576",
+      "cardinality" : "2"
+    },
+    "format" : { }
+  }, {
+    "id" : 26426393,
+    "name" : "Període",
+    "dataTypeName" : "text",
+    "description" : "Any o període temporal al que fan referència les dades",
+    "fieldName" : "any",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15820865,
+    "cachedContents" : {
+      "non_null" : "7576",
+      "largest" : "2022",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2022",
+        "count" : "947"
+      }, {
+        "item" : "2011",
+        "count" : "947"
+      }, {
+        "item" : "2001-2011",
+        "count" : "947"
+      }, {
+        "item" : "2011-2021",
+        "count" : "947"
+      }, {
+        "item" : "2001",
+        "count" : "947"
+      }, {
+        "item" : "2001-2021",
+        "count" : "947"
+      }, {
+        "item" : "2021",
+        "count" : "947"
+      }, {
+        "item" : "2012",
+        "count" : "947"
+      } ],
+      "smallest" : "2001",
+      "count" : "7576",
+      "cardinality" : "8"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426394,
+    "name" : "POB_CENS",
+    "dataTypeName" : "number",
+    "description" : "Cens de població, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "pob_cens",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820864,
+    "cachedContents" : {
+      "non_null" : "2841",
+      "largest" : "1627559",
+      "null" : "4735",
+      "top" : [ {
+        "item" : "142",
+        "count" : "8"
+      }, {
+        "item" : "267",
+        "count" : "8"
+      }, {
+        "item" : "519",
+        "count" : "8"
+      }, {
+        "item" : "197",
+        "count" : "8"
+      }, {
+        "item" : "154",
+        "count" : "7"
+      }, {
+        "item" : "178",
+        "count" : "7"
+      }, {
+        "item" : "185",
+        "count" : "7"
+      }, {
+        "item" : "189",
+        "count" : "7"
+      }, {
+        "item" : "224",
+        "count" : "7"
+      }, {
+        "item" : "163",
+        "count" : "7"
+      }, {
+        "item" : "186",
+        "count" : "6"
+      }, {
+        "item" : "236",
+        "count" : "6"
+      }, {
+        "item" : "166",
+        "count" : "6"
+      }, {
+        "item" : "116",
+        "count" : "6"
+      }, {
+        "item" : "177",
+        "count" : "6"
+      }, {
+        "item" : "172",
+        "count" : "6"
+      }, {
+        "item" : "237",
+        "count" : "6"
+      }, {
+        "item" : "194",
+        "count" : "6"
+      }, {
+        "item" : "159",
+        "count" : "6"
+      }, {
+        "item" : "547",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "7576",
+      "cardinality" : "1970"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426395,
+    "name" : "HAB_PR",
+    "dataTypeName" : "number",
+    "description" : "Cens d’habitatges principals, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període” ",
+    "fieldName" : "hab_pr",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15821017,
+    "cachedContents" : {
+      "non_null" : "2840",
+      "largest" : "684078",
+      "null" : "4736",
+      "top" : [ {
+        "item" : "61",
+        "count" : "15"
+      }, {
+        "item" : "55",
+        "count" : "14"
+      }, {
+        "item" : "60",
+        "count" : "14"
+      }, {
+        "item" : "70",
+        "count" : "13"
+      }, {
+        "item" : "67",
+        "count" : "13"
+      }, {
+        "item" : "80",
+        "count" : "13"
+      }, {
+        "item" : "62",
+        "count" : "13"
+      }, {
+        "item" : "71",
+        "count" : "13"
+      }, {
+        "item" : "82",
+        "count" : "12"
+      }, {
+        "item" : "49",
+        "count" : "12"
+      }, {
+        "item" : "95",
+        "count" : "12"
+      }, {
+        "item" : "92",
+        "count" : "12"
+      }, {
+        "item" : "79",
+        "count" : "12"
+      }, {
+        "item" : "58",
+        "count" : "12"
+      }, {
+        "item" : "116",
+        "count" : "11"
+      }, {
+        "item" : "54",
+        "count" : "10"
+      }, {
+        "item" : "46",
+        "count" : "10"
+      }, {
+        "item" : "47",
+        "count" : "10"
+      }, {
+        "item" : "81",
+        "count" : "10"
+      }, {
+        "item" : "69",
+        "count" : "10"
+      } ],
+      "smallest" : "7",
+      "count" : "7576",
+      "cardinality" : "1475"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426396,
+    "name" : "HAB_NOPR",
+    "dataTypeName" : "number",
+    "description" : "Cens d’habitatges no principals, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "hab_nopr",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15821016,
+    "cachedContents" : {
+      "non_null" : "2840",
+      "largest" : "163476",
+      "null" : "4736",
+      "top" : [ {
+        "item" : "109",
+        "count" : "17"
+      }, {
+        "item" : "68",
+        "count" : "16"
+      }, {
+        "item" : "40",
+        "count" : "16"
+      }, {
+        "item" : "113",
+        "count" : "15"
+      }, {
+        "item" : "42",
+        "count" : "15"
+      }, {
+        "item" : "74",
+        "count" : "15"
+      }, {
+        "item" : "44",
+        "count" : "15"
+      }, {
+        "item" : "64",
+        "count" : "15"
+      }, {
+        "item" : "37",
+        "count" : "14"
+      }, {
+        "item" : "53",
+        "count" : "14"
+      }, {
+        "item" : "93",
+        "count" : "14"
+      }, {
+        "item" : "73",
+        "count" : "14"
+      }, {
+        "item" : "105",
+        "count" : "14"
+      }, {
+        "item" : "97",
+        "count" : "13"
+      }, {
+        "item" : "76",
+        "count" : "13"
+      }, {
+        "item" : "35",
+        "count" : "12"
+      }, {
+        "item" : "80",
+        "count" : "12"
+      }, {
+        "item" : "94",
+        "count" : "12"
+      }, {
+        "item" : "60",
+        "count" : "12"
+      }, {
+        "item" : "61",
+        "count" : "12"
+      } ],
+      "smallest" : "0",
+      "count" : "7576",
+      "cardinality" : "1108"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426397,
+    "name" : "HAB_TOTALS",
+    "dataTypeName" : "number",
+    "description" : "Cens d’habitatges totals, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "hab_totals",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820861,
+    "cachedContents" : {
+      "non_null" : "2840",
+      "largest" : "811106",
+      "null" : "4736",
+      "top" : [ {
+        "item" : "116",
+        "count" : "11"
+      }, {
+        "item" : "124",
+        "count" : "10"
+      }, {
+        "item" : "122",
+        "count" : "10"
+      }, {
+        "item" : "181",
+        "count" : "9"
+      }, {
+        "item" : "162",
+        "count" : "9"
+      }, {
+        "item" : "117",
+        "count" : "9"
+      }, {
+        "item" : "128",
+        "count" : "8"
+      }, {
+        "item" : "142",
+        "count" : "8"
+      }, {
+        "item" : "119",
+        "count" : "8"
+      }, {
+        "item" : "123",
+        "count" : "8"
+      }, {
+        "item" : "114",
+        "count" : "8"
+      }, {
+        "item" : "101",
+        "count" : "8"
+      }, {
+        "item" : "185",
+        "count" : "8"
+      }, {
+        "item" : "46",
+        "count" : "7"
+      }, {
+        "item" : "102",
+        "count" : "7"
+      }, {
+        "item" : "166",
+        "count" : "7"
+      }, {
+        "item" : "103",
+        "count" : "7"
+      }, {
+        "item" : "173",
+        "count" : "7"
+      }, {
+        "item" : "132",
+        "count" : "7"
+      }, {
+        "item" : "140",
+        "count" : "7"
+      } ],
+      "smallest" : "13",
+      "count" : "7576",
+      "cardinality" : "1693"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426398,
+    "name" : "HAB_CENS_INT_BUITS",
+    "dataTypeName" : "number",
+    "description" : "Cens d’habitatges buits, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "hab_cens_int_buits",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820951,
+    "cachedContents" : {
+      "non_null" : "461",
+      "largest" : "75476",
+      "null" : "7115",
+      "top" : [ {
+        "item" : "129",
+        "count" : "7"
+      }, {
+        "item" : "238",
+        "count" : "4"
+      }, {
+        "item" : "184",
+        "count" : "3"
+      }, {
+        "item" : "369",
+        "count" : "3"
+      }, {
+        "item" : "125",
+        "count" : "3"
+      }, {
+        "item" : "202",
+        "count" : "3"
+      }, {
+        "item" : "147",
+        "count" : "3"
+      }, {
+        "item" : "151",
+        "count" : "3"
+      }, {
+        "item" : "261",
+        "count" : "3"
+      }, {
+        "item" : "244",
+        "count" : "3"
+      }, {
+        "item" : "120",
+        "count" : "3"
+      }, {
+        "item" : "127",
+        "count" : "3"
+      }, {
+        "item" : "166",
+        "count" : "3"
+      }, {
+        "item" : "232",
+        "count" : "3"
+      }, {
+        "item" : "72",
+        "count" : "3"
+      }, {
+        "item" : "296",
+        "count" : "3"
+      }, {
+        "item" : "254",
+        "count" : "3"
+      }, {
+        "item" : "290",
+        "count" : "3"
+      }, {
+        "item" : "101",
+        "count" : "3"
+      }, {
+        "item" : "64",
+        "count" : "3"
+      } ],
+      "smallest" : "16",
+      "count" : "7576",
+      "cardinality" : "341"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426399,
+    "name" : "HAB_CENS_INT_MBESP",
+    "dataTypeName" : "number",
+    "description" : "Cens d’habitatges d’ús molt baix i esporàdics, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "hab_cens_int_mbesp",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820948,
+    "cachedContents" : {
+      "non_null" : "461",
+      "largest" : "71891",
+      "null" : "7115",
+      "top" : [ {
+        "item" : "173",
+        "count" : "4"
+      }, {
+        "item" : "79",
+        "count" : "4"
+      }, {
+        "item" : "91",
+        "count" : "4"
+      }, {
+        "item" : "63",
+        "count" : "4"
+      }, {
+        "item" : "152",
+        "count" : "3"
+      }, {
+        "item" : "401",
+        "count" : "3"
+      }, {
+        "item" : "155",
+        "count" : "3"
+      }, {
+        "item" : "190",
+        "count" : "3"
+      }, {
+        "item" : "96",
+        "count" : "3"
+      }, {
+        "item" : "75",
+        "count" : "3"
+      }, {
+        "item" : "202",
+        "count" : "3"
+      }, {
+        "item" : "76",
+        "count" : "3"
+      }, {
+        "item" : "49",
+        "count" : "3"
+      }, {
+        "item" : "77",
+        "count" : "3"
+      }, {
+        "item" : "275",
+        "count" : "3"
+      }, {
+        "item" : "123",
+        "count" : "3"
+      }, {
+        "item" : "133",
+        "count" : "3"
+      }, {
+        "item" : "50",
+        "count" : "2"
+      }, {
+        "item" : "52",
+        "count" : "2"
+      }, {
+        "item" : "36",
+        "count" : "2"
+      } ],
+      "smallest" : "14",
+      "count" : "7576",
+      "cardinality" : "355"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426400,
+    "name" : "HAB_CENS_INT_TOTALS",
+    "dataTypeName" : "number",
+    "description" : "Cens d’habitatges totals segons intensitat d’ús, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "hab_cens_int_totals",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820950,
+    "cachedContents" : {
+      "non_null" : "461",
+      "largest" : "808751",
+      "null" : "7115",
+      "top" : [ {
+        "item" : "2819",
+        "count" : "2"
+      }, {
+        "item" : "766",
+        "count" : "2"
+      }, {
+        "item" : "1607",
+        "count" : "2"
+      }, {
+        "item" : "2277",
+        "count" : "2"
+      }, {
+        "item" : "1107",
+        "count" : "2"
+      }, {
+        "item" : "633",
+        "count" : "2"
+      }, {
+        "item" : "826",
+        "count" : "2"
+      }, {
+        "item" : "1172",
+        "count" : "2"
+      }, {
+        "item" : "1730",
+        "count" : "2"
+      }, {
+        "item" : "1739",
+        "count" : "2"
+      }, {
+        "item" : "565",
+        "count" : "2"
+      }, {
+        "item" : "1640",
+        "count" : "2"
+      }, {
+        "item" : "907",
+        "count" : "2"
+      }, {
+        "item" : "574",
+        "count" : "1"
+      }, {
+        "item" : "573",
+        "count" : "1"
+      }, {
+        "item" : "525",
+        "count" : "1"
+      }, {
+        "item" : "572",
+        "count" : "1"
+      }, {
+        "item" : "520",
+        "count" : "1"
+      }, {
+        "item" : "453",
+        "count" : "1"
+      }, {
+        "item" : "554",
+        "count" : "1"
+      } ],
+      "smallest" : "375",
+      "count" : "7576",
+      "cardinality" : "448"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426401,
+    "name" : "IN_HAB_PR",
+    "dataTypeName" : "number",
+    "description" : "Relació entre els habitatges principals i els habitatges totals, en percentatge. L’any de còmput de l’indicador és l’indicat a la columna “Període” [(Habitatges principals/ Habitatges totals)*100]",
+    "fieldName" : "in_hab_pr",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820857,
+    "cachedContents" : {
+      "non_null" : "2840",
+      "largest" : "100.0",
+      "null" : "4736",
+      "top" : [ {
+        "item" : "74.6",
+        "count" : "14"
+      }, {
+        "item" : "68.4",
+        "count" : "13"
+      }, {
+        "item" : "74.2",
+        "count" : "12"
+      }, {
+        "item" : "75.4",
+        "count" : "12"
+      }, {
+        "item" : "70.8",
+        "count" : "11"
+      }, {
+        "item" : "73.3",
+        "count" : "11"
+      }, {
+        "item" : "82.4",
+        "count" : "11"
+      }, {
+        "item" : "71.8",
+        "count" : "11"
+      }, {
+        "item" : "64.7",
+        "count" : "10"
+      }, {
+        "item" : "75.5",
+        "count" : "10"
+      }, {
+        "item" : "70.9",
+        "count" : "10"
+      }, {
+        "item" : "76.1",
+        "count" : "10"
+      }, {
+        "item" : "76.8",
+        "count" : "10"
+      }, {
+        "item" : "73.7",
+        "count" : "10"
+      }, {
+        "item" : "70.2",
+        "count" : "10"
+      }, {
+        "item" : "57.8",
+        "count" : "9"
+      }, {
+        "item" : "53.2",
+        "count" : "9"
+      }, {
+        "item" : "81.6",
+        "count" : "9"
+      }, {
+        "item" : "77.9",
+        "count" : "9"
+      }, {
+        "item" : "64.4",
+        "count" : "9"
+      } ],
+      "smallest" : "15.1",
+      "count" : "7576",
+      "cardinality" : "720"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "percentScale" : "1",
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426402,
+    "name" : "HAB_INTENSITAT_BUITS",
+    "dataTypeName" : "number",
+    "description" : "Habitatges buits respecte els habitatges totals. L’any de còmput de l’indicador és l’indicat a la columna “Període” [(Habitatges buits/Habitatges totals)*100]",
+    "fieldName" : "hab_intensitat_buits",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820952,
+    "cachedContents" : {
+      "non_null" : "947",
+      "largest" : "49.6",
+      "null" : "6629",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "486"
+      }, {
+        "item" : "6.0",
+        "count" : "7"
+      }, {
+        "item" : "14.0",
+        "count" : "6"
+      }, {
+        "item" : "7.0",
+        "count" : "6"
+      }, {
+        "item" : "8.2",
+        "count" : "6"
+      }, {
+        "item" : "4.3",
+        "count" : "6"
+      }, {
+        "item" : "9.4",
+        "count" : "5"
+      }, {
+        "item" : "6.7",
+        "count" : "5"
+      }, {
+        "item" : "10.4",
+        "count" : "5"
+      }, {
+        "item" : "7.4",
+        "count" : "5"
+      }, {
+        "item" : "6.8",
+        "count" : "5"
+      }, {
+        "item" : "5.1",
+        "count" : "5"
+      }, {
+        "item" : "8.4",
+        "count" : "5"
+      }, {
+        "item" : "18.2",
+        "count" : "5"
+      }, {
+        "item" : "10.2",
+        "count" : "4"
+      }, {
+        "item" : "11.1",
+        "count" : "4"
+      }, {
+        "item" : "12.3",
+        "count" : "4"
+      }, {
+        "item" : "17.4",
+        "count" : "4"
+      }, {
+        "item" : "11.4",
+        "count" : "4"
+      }, {
+        "item" : "11.0",
+        "count" : "4"
+      } ],
+      "smallest" : "0.0",
+      "count" : "7576",
+      "cardinality" : "205"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426403,
+    "name" : "HAB_INTENSITAT_MBESP",
+    "dataTypeName" : "number",
+    "description" : "Habitatges d’ús molt baix i esporàdics respecte els habitatges totals. L’any de còmput de l’indicador és l’indicat a la columna “Període” [(Habitatges d’ús molt baix + Habitatges d’ús esporàdics)/Habitatges totals*100]",
+    "fieldName" : "hab_intensitat_mbesp",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820947,
+    "cachedContents" : {
+      "non_null" : "947",
+      "largest" : "45.2",
+      "null" : "6629",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "486"
+      }, {
+        "item" : "6.7",
+        "count" : "11"
+      }, {
+        "item" : "8.8",
+        "count" : "10"
+      }, {
+        "item" : "7.5",
+        "count" : "10"
+      }, {
+        "item" : "6.3",
+        "count" : "9"
+      }, {
+        "item" : "7.2",
+        "count" : "9"
+      }, {
+        "item" : "7.9",
+        "count" : "9"
+      }, {
+        "item" : "8.0",
+        "count" : "9"
+      }, {
+        "item" : "6.5",
+        "count" : "8"
+      }, {
+        "item" : "6.2",
+        "count" : "8"
+      }, {
+        "item" : "10.1",
+        "count" : "7"
+      }, {
+        "item" : "6.4",
+        "count" : "7"
+      }, {
+        "item" : "6.8",
+        "count" : "7"
+      }, {
+        "item" : "7.7",
+        "count" : "7"
+      }, {
+        "item" : "5.7",
+        "count" : "7"
+      }, {
+        "item" : "8.6",
+        "count" : "7"
+      }, {
+        "item" : "9.5",
+        "count" : "7"
+      }, {
+        "item" : "5.8",
+        "count" : "7"
+      }, {
+        "item" : "8.1",
+        "count" : "6"
+      }, {
+        "item" : "9.3",
+        "count" : "6"
+      } ],
+      "smallest" : "0.0",
+      "count" : "7576",
+      "cardinality" : "167"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426404,
+    "name" : "POR",
+    "dataTypeName" : "number",
+    "description" : "Indicador calculat a escala comarcal. Població ocupada resident segons el cens, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "por",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820854,
+    "cachedContents" : {
+      "non_null" : "2822",
+      "largest" : "970920",
+      "null" : "4754",
+      "top" : [ {
+        "item" : "50231",
+        "count" : "68"
+      }, {
+        "item" : "42695",
+        "count" : "68"
+      }, {
+        "item" : "59125",
+        "count" : "68"
+      }, {
+        "item" : "60663",
+        "count" : "42"
+      }, {
+        "item" : "71900",
+        "count" : "42"
+      }, {
+        "item" : "58471",
+        "count" : "42"
+      }, {
+        "item" : "151935",
+        "count" : "39"
+      }, {
+        "item" : "153538",
+        "count" : "39"
+      }, {
+        "item" : "185989",
+        "count" : "39"
+      }, {
+        "item" : "72946",
+        "count" : "38"
+      }, {
+        "item" : "77216",
+        "count" : "38"
+      }, {
+        "item" : "87802",
+        "count" : "38"
+      }, {
+        "item" : "45267",
+        "count" : "36"
+      }, {
+        "item" : "47437",
+        "count" : "36"
+      }, {
+        "item" : "57477",
+        "count" : "36"
+      }, {
+        "item" : "42821",
+        "count" : "33"
+      }, {
+        "item" : "52521",
+        "count" : "33"
+      }, {
+        "item" : "43219",
+        "count" : "33"
+      }, {
+        "item" : "15840",
+        "count" : "31"
+      }, {
+        "item" : "14100",
+        "count" : "31"
+      } ],
+      "smallest" : "1534",
+      "count" : "7576",
+      "cardinality" : "127"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426405,
+    "name" : "LTL",
+    "dataTypeName" : "number",
+    "description" : "Indicador calculat a escala comarcal. Llocs de treball localitzats segons el cens, publicat per l’INE. L’any de còmput de l’indicador és l’indicat a la columna “Període”",
+    "fieldName" : "ltl",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820853,
+    "cachedContents" : {
+      "non_null" : "2822",
+      "largest" : "1341074",
+      "null" : "4754",
+      "top" : [ {
+        "item" : "42734",
+        "count" : "68"
+      }, {
+        "item" : "49654",
+        "count" : "68"
+      }, {
+        "item" : "39283",
+        "count" : "68"
+      }, {
+        "item" : "71885",
+        "count" : "42"
+      }, {
+        "item" : "56431",
+        "count" : "42"
+      }, {
+        "item" : "53063",
+        "count" : "42"
+      }, {
+        "item" : "122698",
+        "count" : "39"
+      }, {
+        "item" : "154105",
+        "count" : "39"
+      }, {
+        "item" : "141952",
+        "count" : "39"
+      }, {
+        "item" : "85673",
+        "count" : "38"
+      }, {
+        "item" : "68129",
+        "count" : "38"
+      }, {
+        "item" : "102085",
+        "count" : "38"
+      }, {
+        "item" : "38438",
+        "count" : "36"
+      }, {
+        "item" : "38603",
+        "count" : "36"
+      }, {
+        "item" : "47055",
+        "count" : "36"
+      }, {
+        "item" : "30304",
+        "count" : "33"
+      }, {
+        "item" : "36089",
+        "count" : "33"
+      }, {
+        "item" : "36920",
+        "count" : "33"
+      }, {
+        "item" : "11581",
+        "count" : "31"
+      }, {
+        "item" : "10383",
+        "count" : "31"
+      } ],
+      "smallest" : "1170",
+      "count" : "7576",
+      "cardinality" : "126"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426406,
+    "name" : "MT_PORLTL_CENS",
+    "dataTypeName" : "number",
+    "description" : "Indicador calculat a escala comarcal. Relació entre la població ocupada resident (POR) i els llocs de treballs localitzats (LTL). L’any de còmput de l’indicador és l’indicat a la columna “Període” (POR X /LTL X)",
+    "fieldName" : "mt_porltl_cens",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820852,
+    "cachedContents" : {
+      "non_null" : "2822",
+      "largest" : "1.8",
+      "null" : "4754",
+      "top" : [ {
+        "item" : "1.2",
+        "count" : "793"
+      }, {
+        "item" : "1.1",
+        "count" : "746"
+      }, {
+        "item" : "1.0",
+        "count" : "319"
+      }, {
+        "item" : "1.3",
+        "count" : "308"
+      }, {
+        "item" : "1.4",
+        "count" : "286"
+      }, {
+        "item" : "0.9",
+        "count" : "95"
+      }, {
+        "item" : "1.6",
+        "count" : "89"
+      }, {
+        "item" : "0.8",
+        "count" : "71"
+      }, {
+        "item" : "1.5",
+        "count" : "66"
+      }, {
+        "item" : "0.7",
+        "count" : "37"
+      }, {
+        "item" : "1.7",
+        "count" : "6"
+      }, {
+        "item" : "1.8",
+        "count" : "6"
+      } ],
+      "smallest" : "0.7",
+      "count" : "7576",
+      "cardinality" : "12"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "percentScale" : "1",
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426407,
+    "name" : "POB_EVO",
+    "dataTypeName" : "number",
+    "description" : "Variació del nombre d’habitants, en percentatge. El període de còmput de l’indicador és l’indicat a la columna “Període”  Variació del nombre d’habitants, en percentatge. El període de còmput de l’indicador és l’indicat a la columna “Període”  [(Població X-Població Y)/ Població Y*100]",
+    "fieldName" : "pob_evo",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820949,
+    "cachedContents" : {
+      "non_null" : "2841",
+      "largest" : "238.7",
+      "null" : "4735",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "14"
+      }, {
+        "item" : "3.0",
+        "count" : "14"
+      }, {
+        "item" : "-0.9",
+        "count" : "13"
+      }, {
+        "item" : "1.2",
+        "count" : "13"
+      }, {
+        "item" : "12.3",
+        "count" : "12"
+      }, {
+        "item" : "3.1",
+        "count" : "12"
+      }, {
+        "item" : "0.5",
+        "count" : "12"
+      }, {
+        "item" : "8.0",
+        "count" : "12"
+      }, {
+        "item" : "7.5",
+        "count" : "12"
+      }, {
+        "item" : "3.5",
+        "count" : "11"
+      }, {
+        "item" : "3.9",
+        "count" : "11"
+      }, {
+        "item" : "8.7",
+        "count" : "11"
+      }, {
+        "item" : "6.2",
+        "count" : "11"
+      }, {
+        "item" : "5.9",
+        "count" : "11"
+      }, {
+        "item" : "9.2",
+        "count" : "11"
+      }, {
+        "item" : "-1.3",
+        "count" : "10"
+      }, {
+        "item" : "2.1",
+        "count" : "10"
+      }, {
+        "item" : "2.4",
+        "count" : "10"
+      }, {
+        "item" : "-2.0",
+        "count" : "10"
+      }, {
+        "item" : "4.6",
+        "count" : "10"
+      } ],
+      "smallest" : "-48.7",
+      "count" : "7576",
+      "cardinality" : "898"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426408,
+    "name" : "HAB_EVO",
+    "dataTypeName" : "number",
+    "description" : "Evolució dels habitatges principals, en percentatge. El període de còmput de l’indicador és l’indicat a la columna “Període”  [(Habitatges principals X- Habitatges principals Y)/ Habitatges principals Y*100]",
+    "fieldName" : "hab_evo",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820953,
+    "cachedContents" : {
+      "non_null" : "2839",
+      "largest" : "400.0",
+      "null" : "4737",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "32"
+      }, {
+        "item" : "2.9",
+        "count" : "13"
+      }, {
+        "item" : "6.5",
+        "count" : "13"
+      }, {
+        "item" : "4.3",
+        "count" : "12"
+      }, {
+        "item" : "17.9",
+        "count" : "12"
+      }, {
+        "item" : "0.9",
+        "count" : "11"
+      }, {
+        "item" : "2.3",
+        "count" : "10"
+      }, {
+        "item" : "12.0",
+        "count" : "10"
+      }, {
+        "item" : "2.7",
+        "count" : "10"
+      }, {
+        "item" : "14.9",
+        "count" : "10"
+      }, {
+        "item" : "8.1",
+        "count" : "10"
+      }, {
+        "item" : "3.3",
+        "count" : "9"
+      }, {
+        "item" : "5.1",
+        "count" : "9"
+      }, {
+        "item" : "-2.1",
+        "count" : "9"
+      }, {
+        "item" : "3.5",
+        "count" : "9"
+      }, {
+        "item" : "5.4",
+        "count" : "9"
+      }, {
+        "item" : "7.1",
+        "count" : "9"
+      }, {
+        "item" : "0.7",
+        "count" : "9"
+      }, {
+        "item" : "0.4",
+        "count" : "9"
+      }, {
+        "item" : "-0.3",
+        "count" : "9"
+      } ],
+      "smallest" : "-39.3",
+      "count" : "7576",
+      "cardinality" : "952"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426409,
+    "name" : "HAB_EVO_NOPR",
+    "dataTypeName" : "number",
+    "description" : "Evolució dels habitatges no principals, en percentatge. El període de còmput de l’indicador és l’indicat a la columna “Període”  [(Habitatges no principals X- Habitatges no principals Y)/ Habitatges principals Y*100]",
+    "fieldName" : "hab_evo_nopr",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820946,
+    "cachedContents" : {
+      "non_null" : "2836",
+      "largest" : "8250.0",
+      "null" : "4740",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "26"
+      }, {
+        "item" : "20.7",
+        "count" : "9"
+      }, {
+        "item" : "100.0",
+        "count" : "9"
+      }, {
+        "item" : "4.5",
+        "count" : "8"
+      }, {
+        "item" : "-10.5",
+        "count" : "8"
+      }, {
+        "item" : "25.0",
+        "count" : "8"
+      }, {
+        "item" : "-4.4",
+        "count" : "8"
+      }, {
+        "item" : "-6.7",
+        "count" : "8"
+      }, {
+        "item" : "28.6",
+        "count" : "7"
+      }, {
+        "item" : "-13.0",
+        "count" : "7"
+      }, {
+        "item" : "5.1",
+        "count" : "7"
+      }, {
+        "item" : "-11.8",
+        "count" : "7"
+      }, {
+        "item" : "-50.0",
+        "count" : "7"
+      }, {
+        "item" : "23.5",
+        "count" : "7"
+      }, {
+        "item" : "2.4",
+        "count" : "7"
+      }, {
+        "item" : "10.0",
+        "count" : "7"
+      }, {
+        "item" : "-20.6",
+        "count" : "7"
+      }, {
+        "item" : "-3.6",
+        "count" : "7"
+      }, {
+        "item" : "20.5",
+        "count" : "7"
+      }, {
+        "item" : "-4.3",
+        "count" : "7"
+      } ],
+      "smallest" : "-100.0",
+      "count" : "7576",
+      "cardinality" : "1413"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426413,
+    "name" : "POB_DENSITAT_CENS",
+    "dataTypeName" : "number",
+    "description" : "Nombre total d'habitants d'una unitat territorial respecte la seva superfície, en habitants/Km2.\n[(Població X/ Superfície total)]\n",
+    "fieldName" : "densitat_de_la_poblaci_pob_densitat_cens_",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15938756,
+    "cachedContents" : {
+      "non_null" : "2841",
+      "largest" : "21024.60365",
+      "null" : "4735",
+      "top" : [ {
+        "item" : "1.316347943",
+        "count" : "2"
+      }, {
+        "item" : "4.729988818",
+        "count" : "2"
+      }, {
+        "item" : "38.57626199",
+        "count" : "2"
+      }, {
+        "item" : "7.020403677",
+        "count" : "2"
+      }, {
+        "item" : "10.4544671",
+        "count" : "2"
+      }, {
+        "item" : "4.728501319",
+        "count" : "2"
+      }, {
+        "item" : "1.461035801",
+        "count" : "2"
+      }, {
+        "item" : "32.95411924",
+        "count" : "2"
+      }, {
+        "item" : "41.11958362",
+        "count" : "2"
+      }, {
+        "item" : "7.286177108",
+        "count" : "2"
+      }, {
+        "item" : "12.92378172",
+        "count" : "2"
+      }, {
+        "item" : "10.94341725",
+        "count" : "2"
+      }, {
+        "item" : "1.382143726",
+        "count" : "1"
+      }, {
+        "item" : "1.334860396",
+        "count" : "1"
+      }, {
+        "item" : "1.162620345",
+        "count" : "1"
+      }, {
+        "item" : "1.320104821",
+        "count" : "1"
+      }, {
+        "item" : "1.510168994",
+        "count" : "1"
+      }, {
+        "item" : "1.148980122",
+        "count" : "1"
+      }, {
+        "item" : "0.762971249",
+        "count" : "1"
+      }, {
+        "item" : "1.508790417",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "7576",
+      "cardinality" : "2829"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 26426412,
+    "name" : "POB_TAX_DEP",
+    "dataTypeName" : "number",
+    "description" : "Proporció de població inactiva que depenen dels sectors de població econòmicament actius. L’any de còmput de l’indicador és l’indicat a la columna “Període”.\n[(Població (0-15 anys) + Població (65+)/ Població (16-64 anys))*100]\n",
+    "fieldName" : "taxa_de_depend_ncia_pob_tax_dep_",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15938755,
+    "cachedContents" : {
+      "non_null" : "2840",
+      "largest" : "152.4590164",
+      "null" : "4736",
+      "top" : [ {
+        "item" : "50",
+        "count" : "14"
+      }, {
+        "item" : "66.66666667",
+        "count" : "8"
+      }, {
+        "item" : "60",
+        "count" : "7"
+      }, {
+        "item" : "55.55555556",
+        "count" : "7"
+      }, {
+        "item" : "76.92307692",
+        "count" : "5"
+      }, {
+        "item" : "57.14285714",
+        "count" : "5"
+      }, {
+        "item" : "64.51612903",
+        "count" : "5"
+      }, {
+        "item" : "45.45454545",
+        "count" : "4"
+      }, {
+        "item" : "58.82352941",
+        "count" : "4"
+      }, {
+        "item" : "62.5",
+        "count" : "4"
+      }, {
+        "item" : "52.17391304",
+        "count" : "4"
+      }, {
+        "item" : "46.66666667",
+        "count" : "4"
+      }, {
+        "item" : "56.75675676",
+        "count" : "3"
+      }, {
+        "item" : "41.17647059",
+        "count" : "3"
+      }, {
+        "item" : "57.89473684",
+        "count" : "3"
+      }, {
+        "item" : "63.63636364",
+        "count" : "3"
+      }, {
+        "item" : "55",
+        "count" : "3"
+      }, {
+        "item" : "59.375",
+        "count" : "3"
+      }, {
+        "item" : "52.63157895",
+        "count" : "3"
+      }, {
+        "item" : "52.52525253",
+        "count" : "3"
+      } ],
+      "smallest" : "8.333333333",
+      "count" : "7576",
+      "cardinality" : "2646"
+    },
+    "format" : {
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 26426411,
+    "name" : "TOE",
+    "dataTypeName" : "number",
+    "description" : "Indicador calculat a escala comarcal. Relació percentual entre la població ocupada i la població de 16 a 64 anys. L’any de còmput de l’indicador és l’indicat a la columna “Període”.[(Població ocupada resident/ Població (16-64 anys))*100]",
+    "fieldName" : "taxa_d_ocupaci_espec_fica_toe_",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15938754,
+    "cachedContents" : {
+      "non_null" : "2794",
+      "largest" : "76.48921245",
+      "null" : "4782",
+      "top" : [ {
+        "item" : "52.80443832",
+        "count" : "68"
+      }, {
+        "item" : "61.97762706",
+        "count" : "68"
+      }, {
+        "item" : "61.23517347",
+        "count" : "68"
+      }, {
+        "item" : "65.92860374",
+        "count" : "42"
+      }, {
+        "item" : "69.78694522",
+        "count" : "42"
+      }, {
+        "item" : "57.23952776",
+        "count" : "42"
+      }, {
+        "item" : "55.99203542",
+        "count" : "39"
+      }, {
+        "item" : "66.35266235",
+        "count" : "39"
+      }, {
+        "item" : "66.94498909",
+        "count" : "39"
+      }, {
+        "item" : "62.0247859",
+        "count" : "38"
+      }, {
+        "item" : "54.00588906",
+        "count" : "38"
+      }, {
+        "item" : "64.85011202",
+        "count" : "38"
+      }, {
+        "item" : "63.37078321",
+        "count" : "36"
+      }, {
+        "item" : "63.01524327",
+        "count" : "36"
+      }, {
+        "item" : "52.80932024",
+        "count" : "36"
+      }, {
+        "item" : "54.83739992",
+        "count" : "33"
+      }, {
+        "item" : "63.83416184",
+        "count" : "33"
+      }, {
+        "item" : "67.7397412",
+        "count" : "33"
+      }, {
+        "item" : "64.41629183",
+        "count" : "31"
+      }, {
+        "item" : "62.5831325",
+        "count" : "31"
+      } ],
+      "smallest" : "46.68393404",
+      "count" : "7576",
+      "cardinality" : "124"
+    },
+    "format" : {
+      "decimalSeparator" : ","
+    }
+  }, {
+    "id" : 26426410,
+    "name" : "LIMADM_MUNICIPI",
+    "dataTypeName" : "number",
+    "description" : "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georefer_ncia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+    "fieldName" : ":@computed_region_bh64_c7uy",
+    "position" : 33,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15820878,
+    "computationStrategy" : {
+      "source_columns" : [ "georefer_ncia_municipi" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_bh64-c7uy",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Indicators of basic territorial data, according to the population and housing census.",
+        "Nombre del conjunto de datos (ES)" : "Indicadores de datos básicos territoriales, según el censo de población y vivienda."
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Dades geogràfiques",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "indicador", "territori", "població", "habitatge", "cens", "ods8_treball decent i creixement econòmic", "ods9_indústria innovació i infraestructures", "ods11_ciutats i comunitats sostenibles" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

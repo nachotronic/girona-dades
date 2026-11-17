@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-17 09:55 UTC
+Última ejecución: 2026-11-17 12:21 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -28,6 +28,7 @@
 | mapaelectoral — Mapa Electoral, resultats històrics (1933-2009) | ok | 2026-11-17 09:55 | 2026-11-17 09:55 | per elecció |
 | vehicles — DGT, parc de vehicles per municipi | ok | 2026-11-16 15:05 | 2026-11-16 15:05 | anual |
 | aeat — Agencia Tributaria, IRPF per municipis | ok | 2026-11-16 14:02 | 2026-11-16 14:02 | anual |
+| anuari_aeat — Agencia Tributaria, anuari estadístic: IRPF, salaris i pensions | — | — | — | anual |
 | padro — INE, padró i empreses (DIRCE) | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | pressupostos — Generalitat, liquidació dels pressupostos municipals | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | tributs — Ministerio de Hacienda, tipus impositius municipals | ok | 2026-11-16 13:08 | 2026-11-16 13:08 | anual |
@@ -37,36 +38,12 @@
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | avís | 2026-11-16 15:31 | 2026-11-16 15:53 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 16:19 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | — | — | — | anual |
+| habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-17 12:20 | 2026-11-17 12:20 | anual/trimestral |
 
 ## Detalle de la última ejecución
 
-### mapaelectoral: ok (16 s)
+### habitatge: ok (79 s)
 
 ```
-G20041: 4473 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}
-G20081: 5141 filas de votos, zonas {'SE': 523, 'MU': 221, 'CA': 1}
-E20041: 4375 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}
-E20091: 4917 filas de votos, zonas {'SE': 525, 'MU': 221, 'CA': 1}
-M20071: 680 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19771: 1482 filas de votos, zonas {'MU': 217, 'CA': 1}
-G19791: 1485 filas de votos, zonas {'MU': 218, 'CA': 1}
-G19821: 1643 filas de votos, zonas {'MU': 213, 'CA': 1}
-G19861: 1491 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19891: 1493 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19931: 1424 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19961: 1248 filas de votos, zonas {'MU': 221, 'CA': 1}
-G20001: 1296 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19871: 1787 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19891: 1654 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19941: 1583 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19991: 1666 filas de votos, zonas {'MU': 221, 'CA': 1}
-M19791: 422 filas de votos, zonas {'MU': 216, 'CA': 1}
-M19831: 422 filas de votos, zonas {'MU': 219, 'CA': 1}
-M19871: 416 filas de votos, zonas {'MU': 218, 'CA': 1}
-M19911: 467 filas de votos, zonas {'MU': 219, 'CA': 1}
-M19951: 530 filas de votos, zonas {'MU': 221, 'CA': 1}
-M19991: 559 filas de votos, zonas {'MU': 221, 'CA': 1}
-M20031: 587 filas de votos, zonas {'MU': 221, 'CA': 1}
-R19331: 885 filas de votos, zonas {'MU': 218, 'CA': 1}
-R19361: 445 filas de votos, zonas {'MU': 219, 'CA': 1}
+iniciats i acabats 1990-2025 (Girona 2025: 2834 iniciats, 2454 acabats); HPO 2002-2025; cèdules 1919-2026, Girona 2026: 11534; 91012 punts 2021-2026 a 536 seccions; IHB 2018-2025: 161 municipis; Girona 2025: 439 pisos; àrees de política d'habitatge: 221 municipis, 47 en zona tensionada; mapa urbanístic 2012-2025; sectors: 1616 a Girona, 113334 habitatges previstos, 88265 pendents; població de Catalunya 1996-2021; MUC per secció: 9943 polígons, columna «CODI_CLAS_MUC», classes ['SNC', 'SND', 'SNU', 'SUC', 'SUD'], 536 seccions; columnes ['id', 'ID', 'CODI_CLAS_MUC', 'DESC_CLAS_MUC', 'CODI_CLAS_AJUNT', 'DESC_CLAS_AJUNT', 'CODI_INE']
 ```
