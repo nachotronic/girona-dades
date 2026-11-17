@@ -1,0 +1,15 @@
+secciones.csv: 200 text/csv; charset=utf-8 41576577 bytes
+  cols=196 codecols=['tract_code', 'mun_code'] girona_rows=536 total_lines=36463
+municipios.csv: 200 text/csv; charset=utf-8 28135102 bytes
+  cols=679 codecols=['mun_code'] girona_rows=221 total_lines=8132
+municipios_historico.csv: 200 text/csv; charset=utf-8 26366240 bytes
+  cols=649 codecols=['mun_code'] girona_rows=221 total_lines=8132
+resultados_secciones_largo.csv: 200 text/csv; charset=utf-8 43024363 bytes
+  cols=44 codecols=['tract_code', 'mun_code'] girona_rows=4201 total_lines=287685
+secciones_municipales_europeas.csv: 200 text/csv; charset=utf-8 36507139 bytes
+  cols=172 codecols=['tract_code'] girona_rows=536 total_lines=36463
+resultados_secciones_largo_municipales_europeas.csv: 200 text/csv; charset=utf-8 37775273 bytes
+  cols=23 codecols=['tract_code', 'mun_code'] girona_rows=4736 total_lines=324005
+municipios_republica.csv: 200 text/csv; charset=utf-8 1091818 bytes
+  cols=27 codecols=['mun_code'] girona_rows=219 total_lines=7930
+LICENCIA-republica.txt: 200 text/plain; charset=utf-8 784 bytes
