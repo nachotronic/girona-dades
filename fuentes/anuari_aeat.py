@@ -71,5 +71,10 @@ def ejecutar() -> str:
             resumen.append(f"{nom}: {len(d)} filas")
         except Exception as e:  # noqa: BLE001
             resumen.append(f"{nom}: ERROR {type(e).__name__}: {str(e)[:150]}")
+    for pdf in ("AyudaCSV_AnuarioTotal.pdf", "AyudaCSV_AnuarioMunicipal.pdf"):
+        try:
+            descargar(BASE + pdf, out / pdf)
+        except Exception as e:  # noqa: BLE001
+            resumen.append(f"{pdf}: ERROR {e}")
     (out / "esquema.txt").write_text("\n".join(esquema), encoding="utf-8")
     return "; ".join(resumen)
