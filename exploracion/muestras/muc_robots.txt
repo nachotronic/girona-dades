@@ -1,0 +1,62 @@
+User-agent: *
+Disallow: /
+
+#ManifoldCF
+User-Agent: GencatCercador
+Disallow: /*?
+
+#Bot WayBackMachine
+User-Agent: ia_archiver
+Disallow:
+
+#Bot Bing
+User-agent: Bing
+Disallow: /*?
+
+#Bot Google
+User-agent: Googlebot
+Disallow: /*?
+Disallow: /*/tramits-temes/*
+
+#Bot Yahoo
+User-agent: Slurp
+Disallow: /*?
+
+#Bot Cercador Gencat
+User-agent: gsa-crawler
+Disallow: /*?
+
+#Bot Twitter
+User-agent: Twitterbot
+Disallow:
+
+#Baiduspider
+User-agent: Baiduspider
+Disallow: /
+
+#Yandex
+User-agent: Yandex
+Disallow: /
+
+#SputnikBot
+User-agent: SputnikBot
+Disallow: /
+
+#Sputnik
+User-agent: Sputnik
+Disallow: /
+
+#SputnikBot/2.3
+User-agent: SputnikBot/2.3
+Disallow: /
+
+#Algolia-Crawler-Verif: 60F379B776DDE6C7 
+User-agent: Algolia Crawler 
+Disallow: /*?
+Disallow: /*/01_departament/normativa/resultats/*
+Disallow: /*/tramits-temes/*
+
+#Bot Salesforce
+User-agent: SFbot
+Disallow: /*?
+

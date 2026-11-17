@@ -63,6 +63,7 @@ const T = {
     f_hut: "habitatges d'ús turístic",
     f_cat: "habitatges i any de construcció",
     f_cad: "immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal",
+    f_hab: "habitatges iniciats i acabats (1990-2025), habitatge protegit, cèdules d'habitabilitat per municipi i secció, àrees de política d'habitatge i Mapa urbanístic de Catalunya",
     f_trib: "tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)",
     f_aeat: "declarants de l'IRPF per municipi", f_anuari_aeat: "anuari estadístic: IRPF per municipi des del 2013, salaris i pensions", f_padro: "població oficial de cada municipi i empreses", f_nac: "població per nacionalitat", f_pres: "liquidació dels pressupostos municipals",
     f_edu: "alumnes, centres, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
@@ -157,6 +158,7 @@ const T = {
     f_hut: "viviendas de uso turístico",
     f_cat: "viviendas y año de construcción",
     f_cad: "inmuebles, valor catastral, suelo y usos por municipio (1990-2026), IBI por municipio (2008-2025) y valor y superficie de la vivienda por distrito censal",
+    f_hab: "viviendas iniciadas y acabadas (1990-2025), vivienda protegida, cédulas de habitabilidad por municipio y sección, áreas de política de vivienda y Mapa urbanístico de Cataluña",
     f_trib: "tipos del IBI, IAE, impuesto de circulación, plusvalía e ICIO de cada ayuntamiento (2000-2026)",
     f_aeat: "declarantes del IRPF por municipio", f_anuari_aeat: "anuario estadístico: IRPF por municipio desde 2013, salarios y pensiones", f_padro: "población oficial de cada municipio y empresas", f_nac: "población por nacionalidad", f_pres: "liquidación de los presupuestos municipales",
     f_edu: "alumnos, centros, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
@@ -520,6 +522,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-extra"></div>
     <div class="fitxa-tur"></div>
+    <div class="fitxa-hab"></div>
     <div class="fitxa-mob"></div>
     <div class="fitxa-cad"></div>
     <div class="fitxa-trib"></div>
@@ -539,6 +542,7 @@ function obreFitxa(ine, desplaca) {
   grafBarres(f.querySelector(".g-cv"), m.compraventas);
   if (window.fitxaConjuntura) window.fitxaConjuntura(f.querySelector(".fitxa-conj"), m);
   if (window.fitxaResum) window.fitxaResum(f.querySelector(".fitxa-resum"), f.querySelector(".fitxa-extra"), m);
+  if (window.fitxaHabitatge) window.fitxaHabitatge(f.querySelector(".fitxa-hab"), m);
   if (window.fitxaCadastre) window.fitxaCadastre(f.querySelector(".fitxa-cad"), m);
   if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
   if (window.fitxaTurisme) window.fitxaTurisme(f.querySelector(".fitxa-tur"), m);

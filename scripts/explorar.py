@@ -57,6 +57,17 @@ DGTR = DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/"
 CANDIDATAS_E = {}
 INICI_DGT = [DGTR + f"?categorias=/Tema/{t}/" + (f"&pagina={n}" if n > 1 else "") for t in ("Informacion-municipal", "Vehiculos") for n in (1, 2, 3)]
 
+# Mapa urbanístic de Catalunya: serveis web i descàrrega
+CANDIDATAS_E["muc_meta"] = f"{SOC}/api/views/magm-wuv7.json"
+CANDIDATAS_E["muc_sect_meta"] = f"{SOC}/api/views/7u3t-vi7t.json"
+CANDIDATAS_E["muc_qgtr_meta"] = f"{SOC}/api/views/qgtr-hfva.json"
+for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&request=GetCapabilities",
+             "sig_wms": "https://sig.gencat.cat/ows/PLANEJAMENT/wms?service=WMS&request=GetCapabilities",
+             "sig_wfs2": "https://sig.gencat.cat/ows/URBANISME/wfs?service=WFS&request=GetCapabilities",
+             "ptop_wfs": "https://ptop.gencat.cat/geoserver/ows?service=WFS&request=GetCapabilities",
+             "muc_robots": "https://territori.gencat.cat/robots.txt",
+             "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
+    CANDIDATAS_E[k] = u
 
 def explora_parque(filas: list) -> None:
     import re
@@ -152,7 +163,6 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_parque(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 

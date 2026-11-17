@@ -1,0 +1,331 @@
+{
+  "id" : "2pwz-wwxf",
+  "name" : "Impost sobre els habitatges buits (IHB) per import ingressat pels tenidors i exercici de meritació",
+  "assetType" : "dataset",
+  "attribution" : "Agència Tributària de Catalunya (ATC)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Hisenda",
+  "createdAt" : 1704293427,
+  "description" : "Import ingressat pels tenidors subjectes a l’IHB, des de 2018 fins al darrer exercici meritat: 2025.\nL’impost sobre els habitatges buits és un tribut propi de la Generalitat de Catalunya, de naturalesa directa, que grava l’incompliment de la funció social de la propietat dels habitatges pel fet de romandre desocupats de manera permanent. És aplicable en l’àmbit territorial de Catalunya.\nÚnicament afecta les persones jurídiques, fons de titulització i persones físiques que tenen la condició de grans tenidors amb habitatges buits sense causa justificada durant més de dos anys.\nConstitueix el fet imposable d'aquest impost la desocupació permanent d’un habitatge durant més de dos anys sense causa justificada, per tal com aquesta desocupació afecta la funció social de la propietat de l’habitatge.\nCal tenir present que el criteri per definir un habitatge buit emprat per la Llei 14/2015, del 21 de juliol, de l'impost sobre els habitatges buits no coincideix exactament amb el criteri emprat per altres organismes.\nPer tal de preservar la confidencialitat de la informació tributària que estableix l’art 95 de la Llei 58/2003 General Tributària, les dades es faciliten anonimitzades i, en determinats casos, de forma agregada per evitar el risc de reidentificació.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 490,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2856976,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1704295076,
+  "publicationGroup" : 1912734,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790592836,
+  "rowsUpdatedBy" : "8pnz-5xij",
+  "tableId" : 1912734,
+  "totalTimesRated" : 0,
+  "viewCount" : 1863,
+  "viewLastModified" : 1790592835,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1704961629,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1414755,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1704961629,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1704961629,
+      "failureCount" : 0,
+      "startedAt" : 1704961629,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "8pnz-5xij",
+      "displayName" : "claudi.cervello@atc.cat"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 25540663,
+    "name" : "Any",
+    "dataTypeName" : "text",
+    "description" : "Període anual en què s’ha produït la presentació i el pagament de l’impost per part del contribuent (meritació).",
+    "fieldName" : "any",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15575342,
+    "cachedContents" : {
+      "non_null" : "842",
+      "largest" : "2025",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2020",
+        "count" : "128"
+      }, {
+        "item" : "2022",
+        "count" : "124"
+      }, {
+        "item" : "2021",
+        "count" : "121"
+      }, {
+        "item" : "2019",
+        "count" : "116"
+      }, {
+        "item" : "2018",
+        "count" : "98"
+      }, {
+        "item" : "2023",
+        "count" : "94"
+      }, {
+        "item" : "2024",
+        "count" : "88"
+      }, {
+        "item" : "2025",
+        "count" : "73"
+      } ],
+      "smallest" : "2018",
+      "count" : "842",
+      "cardinality" : "842"
+    },
+    "format" : {
+      "view" : "date_y",
+      "decimalSeparator" : ".",
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 25540662,
+    "name" : "Tenidor",
+    "dataTypeName" : "text",
+    "description" : "Identificador anonimitzat de les persones obligades a satisfer l’impost.",
+    "fieldName" : "tenidor",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 15575341,
+    "cachedContents" : {
+      "non_null" : "842",
+      "largest" : "Agrupació 3 majors tenidors",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3038278",
+        "count" : "7"
+      }, {
+        "item" : "1565858",
+        "count" : "7"
+      }, {
+        "item" : "1460490",
+        "count" : "7"
+      }, {
+        "item" : "1400520",
+        "count" : "7"
+      }, {
+        "item" : "1569009",
+        "count" : "7"
+      }, {
+        "item" : "1460726",
+        "count" : "7"
+      }, {
+        "item" : "2980522",
+        "count" : "7"
+      }, {
+        "item" : "1464527",
+        "count" : "7"
+      }, {
+        "item" : "1557419",
+        "count" : "7"
+      }, {
+        "item" : "1477577",
+        "count" : "7"
+      }, {
+        "item" : "1469296",
+        "count" : "6"
+      }, {
+        "item" : "1462100",
+        "count" : "6"
+      }, {
+        "item" : "6543683",
+        "count" : "6"
+      }, {
+        "item" : "1460729",
+        "count" : "6"
+      }, {
+        "item" : "2249757",
+        "count" : "5"
+      }, {
+        "item" : "0791759",
+        "count" : "5"
+      }, {
+        "item" : "0801470",
+        "count" : "5"
+      }, {
+        "item" : "0791774",
+        "count" : "5"
+      }, {
+        "item" : "0798951",
+        "count" : "5"
+      }, {
+        "item" : "0615335",
+        "count" : "5"
+      } ],
+      "smallest" : "0045870",
+      "count" : "842",
+      "cardinality" : "842"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 25540661,
+    "name" : "Import ingressat",
+    "dataTypeName" : "number",
+    "description" : "Import total ingressat, en unitats d’euro.",
+    "fieldName" : "import_ingressat",
+    "position" : 3,
+    "renderTypeName" : "number",
+    "tableColumnId" : 15575340,
+    "cachedContents" : {
+      "non_null" : "842",
+      "largest" : "10662633",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "145"
+      }, {
+        "item" : "840",
+        "count" : "6"
+      }, {
+        "item" : "480",
+        "count" : "6"
+      }, {
+        "item" : "4480",
+        "count" : "5"
+      }, {
+        "item" : "1850",
+        "count" : "5"
+      }, {
+        "item" : "580",
+        "count" : "5"
+      }, {
+        "item" : "110",
+        "count" : "5"
+      }, {
+        "item" : "9060",
+        "count" : "5"
+      }, {
+        "item" : "710",
+        "count" : "5"
+      }, {
+        "item" : "670",
+        "count" : "4"
+      }, {
+        "item" : "60",
+        "count" : "4"
+      }, {
+        "item" : "5430",
+        "count" : "4"
+      }, {
+        "item" : "1460",
+        "count" : "4"
+      }, {
+        "item" : "150",
+        "count" : "4"
+      }, {
+        "item" : "4410",
+        "count" : "3"
+      }, {
+        "item" : "638.4",
+        "count" : "3"
+      }, {
+        "item" : "15135.4",
+        "count" : "3"
+      }, {
+        "item" : "3490",
+        "count" : "3"
+      }, {
+        "item" : "340",
+        "count" : "3"
+      }, {
+        "item" : "310",
+        "count" : "3"
+      } ],
+      "smallest" : "0.00",
+      "count" : "842",
+      "cardinality" : "842"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "noCommas" : "false",
+      "precision" : "2",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Tax on empty homes by municipality by amount paid by holders and accrual exercise.",
+        "Nombre del conjunto de datos (ES)" : "Impuesto sobre las viviendas vacías por importe ingresado por los tenedores y ejercicio de devengo."
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Sense informació geogràfica",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "impost", "tribut", "pisos buits", "habitatge", "agència tributària de catalunya", "ods10_reducció de les desigualtats" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

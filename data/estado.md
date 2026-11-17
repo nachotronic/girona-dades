@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-17 12:32 UTC
+Última ejecución: 2026-11-17 12:21 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -38,12 +38,12 @@
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | avís | 2026-11-16 15:31 | 2026-11-16 15:53 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 16:19 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | — | — | — | anual |
-| emq — ATM Girona, Enquesta de Mobilitat Quotidiana 2024-2025 (visor Power BI) | avís | — | 2026-11-17 12:31 | per edició |
+| habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-17 12:20 | 2026-11-17 12:20 | anual/trimestral |
 
 ## Detalle de la última ejecución
 
-### emq: avís (72 s)
+### habitatge: ok (79 s)
 
 ```
-EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…); ERROR en 4: lv_mun_kpi RuntimeError: {"data": {"timestamp": "2026-11-17T12:31:47.611Z", "rootActivityId": "7ef8874a-ca66-4606-b515-7a8a2c65e28a", "fromCache" | lv_com_kpi RuntimeError: {"data": {"timestamp": "2026-11-17T12:31:48.724Z", "rootActivityId": "b3496ebb-8c5b-4d2a-aca4-2e8a1b645323", "fromCache" | lv_tot_kpi RuntimeError: {"data": {"timestamp": "2026-11-17T12:31:49.823Z", "rootActivityId": "2ea05cff-5397-4bd5-8807-9a2ad9480edd", "fromCache" | pe_mun__P7_8A_DADES RuntimeError: {"data": {"timestamp": "2026-11-17T12:32:30.241Z", "rootActivityId": "282a720d-18a8-46ad-b64c-b28f241a1b7b", "fromCache"
+iniciats i acabats 1990-2025 (Girona 2025: 2834 iniciats, 2454 acabats); HPO 2002-2025; cèdules 1919-2026, Girona 2026: 11534; 91012 punts 2021-2026 a 536 seccions; IHB 2018-2025: 161 municipis; Girona 2025: 439 pisos; àrees de política d'habitatge: 221 municipis, 47 en zona tensionada; mapa urbanístic 2012-2025; sectors: 1616 a Girona, 113334 habitatges previstos, 88265 pendents; població de Catalunya 1996-2021; MUC per secció: 9943 polígons, columna «CODI_CLAS_MUC», classes ['SNC', 'SND', 'SNU', 'SUC', 'SUD'], 536 seccions; columnes ['id', 'ID', 'CODI_CLAS_MUC', 'DESC_CLAS_MUC', 'CODI_CLAS_AJUNT', 'DESC_CLAS_AJUNT', 'CODI_INE']
 ```

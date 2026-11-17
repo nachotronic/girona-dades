@@ -1,0 +1,1974 @@
+{
+  "id" : "tz88-gjtz",
+  "name" : "Dades de l’activitat administrativa a la DGOTU per municipis",
+  "assetType" : "dataset",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1525786392,
+  "description" : "Nombre d’expedients per municipi tramitats al llarg d’un any a la Direcció General d'Ordenació del Territori, Urbanisme i Arquitectura.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1730,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1557234693,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locale" : "en_US",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 688829,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1525786569,
+  "publicationGroup" : 442897,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowsUpdatedAt" : 1778831766,
+  "rowsUpdatedBy" : "ntmt-apg4",
+  "tableId" : 442897,
+  "totalTimesRated" : 0,
+  "viewCount" : 4187,
+  "viewLastModified" : 1778831762,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1525786569,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 304791,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1525786569,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 6204351,
+    "name" : "Codi_INE_C",
+    "dataTypeName" : "text",
+    "description" : "Codi identificatiu del municipi segons institut nacional d'estadística",
+    "fieldName" : "codi_ine_c",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3585432,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "43907",
+      "non_null" : "12325",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08130",
+        "count" : "14"
+      }, {
+        "item" : "08119",
+        "count" : "14"
+      }, {
+        "item" : "43115",
+        "count" : "13"
+      }, {
+        "item" : "17901",
+        "count" : "13"
+      }, {
+        "item" : "25122",
+        "count" : "13"
+      }, {
+        "item" : "25248",
+        "count" : "13"
+      }, {
+        "item" : "08099",
+        "count" : "13"
+      }, {
+        "item" : "08306",
+        "count" : "13"
+      }, {
+        "item" : "43089",
+        "count" : "13"
+      }, {
+        "item" : "08201",
+        "count" : "13"
+      }, {
+        "item" : "43124",
+        "count" : "13"
+      }, {
+        "item" : "25058",
+        "count" : "13"
+      }, {
+        "item" : "17015",
+        "count" : "13"
+      }, {
+        "item" : "25247",
+        "count" : "13"
+      }, {
+        "item" : "17023",
+        "count" : "13"
+      }, {
+        "item" : "08270",
+        "count" : "13"
+      }, {
+        "item" : "43146",
+        "count" : "13"
+      }, {
+        "item" : "43075",
+        "count" : "13"
+      }, {
+        "item" : "43054",
+        "count" : "13"
+      }, {
+        "item" : "25123",
+        "count" : "13"
+      } ],
+      "smallest" : "08001",
+      "count" : "12325",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 6204352,
+    "name" : "NomMun",
+    "dataTypeName" : "text",
+    "description" : "Nom del municipi",
+    "fieldName" : "nommun",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3585433,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "Xerta",
+      "non_null" : "12325",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Masquefa",
+        "count" : "14"
+      }, {
+        "item" : "Montclar",
+        "count" : "14"
+      }, {
+        "item" : "Vallgorguina",
+        "count" : "13"
+      }, {
+        "item" : "Jafre",
+        "count" : "13"
+      }, {
+        "item" : "la Pobla de Montornès",
+        "count" : "13"
+      }, {
+        "item" : "Oliana",
+        "count" : "13"
+      }, {
+        "item" : "Sant Vicenç de Castellet",
+        "count" : "13"
+      }, {
+        "item" : "Garrigàs",
+        "count" : "13"
+      }, {
+        "item" : "Benissanet",
+        "count" : "13"
+      }, {
+        "item" : "Artés",
+        "count" : "13"
+      }, {
+        "item" : "Gelida",
+        "count" : "13"
+      }, {
+        "item" : "les Masies de Roda",
+        "count" : "13"
+      }, {
+        "item" : "Peralada",
+        "count" : "13"
+      }, {
+        "item" : "Fígols",
+        "count" : "13"
+      }, {
+        "item" : "Cerdanyola del Vallès",
+        "count" : "13"
+      }, {
+        "item" : "Boadella i les Escaules",
+        "count" : "13"
+      }, {
+        "item" : "Bellprat",
+        "count" : "13"
+      }, {
+        "item" : "el Pont de Suert",
+        "count" : "13"
+      }, {
+        "item" : "Gimenells i el Pla de la Font",
+        "count" : "13"
+      }, {
+        "item" : "Parets del Vallès",
+        "count" : "13"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "12325",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 6204353,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Nom de la comarca",
+    "fieldName" : "comarca",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3585434,
+    "width" : 184,
+    "cachedContents" : {
+      "largest" : "Vallès Oriental",
+      "non_null" : "12325",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Alt Empordà",
+        "count" : "884"
+      }, {
+        "item" : "Osona",
+        "count" : "650"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "507"
+      }, {
+        "item" : "Segrià",
+        "count" : "494"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "468"
+      }, {
+        "item" : "Anoia",
+        "count" : "430"
+      }, {
+        "item" : "Berguedà",
+        "count" : "404"
+      }, {
+        "item" : "Noguera",
+        "count" : "390"
+      }, {
+        "item" : "Bages",
+        "count" : "390"
+      }, {
+        "item" : "Maresme",
+        "count" : "390"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "390"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "364"
+      }, {
+        "item" : "Gironès",
+        "count" : "363"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "351"
+      }, {
+        "item" : "Selva",
+        "count" : "338"
+      }, {
+        "item" : "Garrigues",
+        "count" : "312"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "299"
+      }, {
+        "item" : "Priorat",
+        "count" : "299"
+      }, {
+        "item" : "Alt Camp",
+        "count" : "299"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "286"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "12325",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 6204354,
+    "name" : "AFT",
+    "dataTypeName" : "text",
+    "description" : "Codi d’Àmbit funcional territorial",
+    "fieldName" : "aft",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3585435,
+    "width" : 136,
+    "cachedContents" : {
+      "largest" : "TE",
+      "non_null" : "12325",
+      "null" : "0",
+      "top" : [ {
+        "item" : "CG",
+        "count" : "2716"
+      }, {
+        "item" : "CC",
+        "count" : "2147"
+      }, {
+        "item" : "MB",
+        "count" : "2132"
+      }, {
+        "item" : "PO",
+        "count" : "1937"
+      }, {
+        "item" : "CT",
+        "count" : "1716"
+      }, {
+        "item" : "APiA",
+        "count" : "1001"
+      }, {
+        "item" : "TE",
+        "count" : "676"
+      } ],
+      "smallest" : "APiA",
+      "count" : "12325",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 6204355,
+    "name" : "any",
+    "dataTypeName" : "number",
+    "description" : "Any de les dades",
+    "fieldName" : "any",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585436,
+    "width" : 136,
+    "cachedContents" : {
+      "largest" : "2025",
+      "non_null" : "12325",
+      "average" : "2015.5",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2020",
+        "count" : "949"
+      }, {
+        "item" : "2021",
+        "count" : "948"
+      }, {
+        "item" : "2022",
+        "count" : "948"
+      }, {
+        "item" : "2019",
+        "count" : "948"
+      }, {
+        "item" : "2018",
+        "count" : "948"
+      }, {
+        "item" : "2023",
+        "count" : "948"
+      }, {
+        "item" : "2024",
+        "count" : "948"
+      }, {
+        "item" : "2014",
+        "count" : "948"
+      }, {
+        "item" : "2015",
+        "count" : "948"
+      }, {
+        "item" : "2013",
+        "count" : "948"
+      }, {
+        "item" : "2017",
+        "count" : "948"
+      }, {
+        "item" : "2025",
+        "count" : "948"
+      }, {
+        "item" : "2016",
+        "count" : "948"
+      } ],
+      "smallest" : "2013",
+      "count" : "12325",
+      "sum" : "11464164",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204356,
+    "name" : "SNU_fav",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable amb resolució  favorable",
+    "fieldName" : "snu_fav",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585437,
+    "width" : 184,
+    "cachedContents" : {
+      "largest" : "21",
+      "non_null" : "12325",
+      "average" : "1.435598948554262",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "8282"
+      }, {
+        "item" : "1",
+        "count" : "2435"
+      }, {
+        "item" : "2",
+        "count" : "864"
+      }, {
+        "item" : "3",
+        "count" : "362"
+      }, {
+        "item" : "4",
+        "count" : "185"
+      }, {
+        "item" : "5",
+        "count" : "85"
+      }, {
+        "item" : "6",
+        "count" : "45"
+      }, {
+        "item" : "7",
+        "count" : "20"
+      }, {
+        "item" : "8",
+        "count" : "13"
+      }, {
+        "item" : "9",
+        "count" : "11"
+      }, {
+        "item" : "10",
+        "count" : "6"
+      }, {
+        "item" : "12",
+        "count" : "4"
+      }, {
+        "item" : "11",
+        "count" : "3"
+      }, {
+        "item" : "13",
+        "count" : "2"
+      }, {
+        "item" : "14",
+        "count" : "2"
+      }, {
+        "item" : "21",
+        "count" : "1"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "3823",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204357,
+    "name" : "SNU_desfav",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable amb resolució desfavorable",
+    "fieldName" : "snu_desfav",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585438,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "4",
+      "non_null" : "12325",
+      "average" : "0.2009012392039054",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11651"
+      }, {
+        "item" : "1",
+        "count" : "595"
+      }, {
+        "item" : "2",
+        "count" : "63"
+      }, {
+        "item" : "3",
+        "count" : "14"
+      }, {
+        "item" : "4",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "535",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204358,
+    "name" : "SNU_tramit",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable amb actes de tràmit o no resolutius",
+    "fieldName" : "snu_tramit",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585439,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "17",
+      "non_null" : "12325",
+      "average" : "0.8141194141945175",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9293"
+      }, {
+        "item" : "1",
+        "count" : "1974"
+      }, {
+        "item" : "2",
+        "count" : "674"
+      }, {
+        "item" : "3",
+        "count" : "212"
+      }, {
+        "item" : "4",
+        "count" : "90"
+      }, {
+        "item" : "5",
+        "count" : "43"
+      }, {
+        "item" : "6",
+        "count" : "12"
+      }, {
+        "item" : "7",
+        "count" : "11"
+      }, {
+        "item" : "8",
+        "count" : "11"
+      }, {
+        "item" : "9",
+        "count" : "3"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "2168",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204359,
+    "name" : "SNU_Rustiques",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable per activitats rústiques (magatzems, granges...) que superen llindars (de mida gran)",
+    "fieldName" : "snu_rustiques",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585440,
+    "width" : 256,
+    "cachedContents" : {
+      "largest" : "24",
+      "non_null" : "12325",
+      "average" : "0.9088502269288956",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10198"
+      }, {
+        "item" : "1",
+        "count" : "1367"
+      }, {
+        "item" : "2",
+        "count" : "399"
+      }, {
+        "item" : "3",
+        "count" : "184"
+      }, {
+        "item" : "4",
+        "count" : "87"
+      }, {
+        "item" : "5",
+        "count" : "32"
+      }, {
+        "item" : "6",
+        "count" : "26"
+      }, {
+        "item" : "7",
+        "count" : "12"
+      }, {
+        "item" : "8",
+        "count" : "5"
+      }, {
+        "item" : "10",
+        "count" : "3"
+      }, {
+        "item" : "9",
+        "count" : "3"
+      }, {
+        "item" : "24",
+        "count" : "2"
+      }, {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      }, {
+        "item" : "20",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "2403",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204360,
+    "name" : "SNU_Interes_public",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable per actuacions d’interès públic",
+    "fieldName" : "snu_interes_public",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585441,
+    "width" : 316,
+    "cachedContents" : {
+      "largest" : "15",
+      "non_null" : "12325",
+      "average" : "0.6111951588502269",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9201"
+      }, {
+        "item" : "1",
+        "count" : "2109"
+      }, {
+        "item" : "2",
+        "count" : "646"
+      }, {
+        "item" : "3",
+        "count" : "216"
+      }, {
+        "item" : "4",
+        "count" : "66"
+      }, {
+        "item" : "5",
+        "count" : "50"
+      }, {
+        "item" : "6",
+        "count" : "15"
+      }, {
+        "item" : "7",
+        "count" : "7"
+      }, {
+        "item" : "9",
+        "count" : "4"
+      }, {
+        "item" : "12",
+        "count" : "3"
+      }, {
+        "item" : "8",
+        "count" : "2"
+      }, {
+        "item" : "10",
+        "count" : "2"
+      }, {
+        "item" : "13",
+        "count" : "2"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "1616",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204361,
+    "name" : "SNU_Masies",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable d’autoritzacions per a la rehabilitació de masies",
+    "fieldName" : "snu_masies",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585442,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "7",
+      "non_null" : "12325",
+      "average" : "0.4761724659606657",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10964"
+      }, {
+        "item" : "1",
+        "count" : "1012"
+      }, {
+        "item" : "2",
+        "count" : "248"
+      }, {
+        "item" : "3",
+        "count" : "62"
+      }, {
+        "item" : "4",
+        "count" : "24"
+      }, {
+        "item" : "5",
+        "count" : "8"
+      }, {
+        "item" : "6",
+        "count" : "6"
+      }, {
+        "item" : "7",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "1259",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204362,
+    "name" : "SNU_Altres",
+    "dataTypeName" : "number",
+    "description" : "Expedients en sòl no urbanitzable d’altres temes",
+    "fieldName" : "snu_altres",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585443,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "6",
+      "non_null" : "12325",
+      "average" : "0.1845688350983359",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11303"
+      }, {
+        "item" : "1",
+        "count" : "868"
+      }, {
+        "item" : "2",
+        "count" : "119"
+      }, {
+        "item" : "3",
+        "count" : "22"
+      }, {
+        "item" : "4",
+        "count" : "8"
+      }, {
+        "item" : "6",
+        "count" : "3"
+      }, {
+        "item" : "5",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "488",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204363,
+    "name" : "CTU_Bloc_1",
+    "dataTypeName" : "number",
+    "description" : "Expedients d’informes d'avaluació ambiental a les ordres del dia de les comissions d’urbanisme",
+    "fieldName" : "ctu_bloc_1",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585444,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "7",
+      "non_null" : "12325",
+      "average" : "0.2686600719424460",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10366"
+      }, {
+        "item" : "1",
+        "count" : "1466"
+      }, {
+        "item" : "2",
+        "count" : "353"
+      }, {
+        "item" : "3",
+        "count" : "105"
+      }, {
+        "item" : "4",
+        "count" : "26"
+      }, {
+        "item" : "5",
+        "count" : "8"
+      }, {
+        "item" : "7",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "1195",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204364,
+    "name" : "CTU_Bloc_2",
+    "dataTypeName" : "number",
+    "description" : "Expedients de planejament a les ordres del dia de les comissions d’urbanisme",
+    "fieldName" : "ctu_bloc_2",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585445,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "29",
+      "non_null" : "12325",
+      "average" : "1.225944244604317",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "7455"
+      }, {
+        "item" : "1",
+        "count" : "2562"
+      }, {
+        "item" : "2",
+        "count" : "1194"
+      }, {
+        "item" : "3",
+        "count" : "525"
+      }, {
+        "item" : "4",
+        "count" : "256"
+      }, {
+        "item" : "5",
+        "count" : "127"
+      }, {
+        "item" : "6",
+        "count" : "68"
+      }, {
+        "item" : "7",
+        "count" : "51"
+      }, {
+        "item" : "8",
+        "count" : "32"
+      }, {
+        "item" : "9",
+        "count" : "17"
+      }, {
+        "item" : "10",
+        "count" : "11"
+      }, {
+        "item" : "11",
+        "count" : "10"
+      }, {
+        "item" : "13",
+        "count" : "5"
+      }, {
+        "item" : "12",
+        "count" : "4"
+      }, {
+        "item" : "16",
+        "count" : "2"
+      }, {
+        "item" : "14",
+        "count" : "2"
+      }, {
+        "item" : "29",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "23",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "5453",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204365,
+    "name" : "CTU_Bloc_3",
+    "dataTypeName" : "number",
+    "description" : "Expedients de compliment d'acords de planejament anteriors a les ordres del dia de les comissions d’urbanisme",
+    "fieldName" : "ctu_bloc_3",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585446,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "15",
+      "non_null" : "12325",
+      "average" : "0.4444694244604317",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "9690"
+      }, {
+        "item" : "1",
+        "count" : "1792"
+      }, {
+        "item" : "2",
+        "count" : "557"
+      }, {
+        "item" : "3",
+        "count" : "187"
+      }, {
+        "item" : "4",
+        "count" : "62"
+      }, {
+        "item" : "5",
+        "count" : "21"
+      }, {
+        "item" : "6",
+        "count" : "7"
+      }, {
+        "item" : "8",
+        "count" : "4"
+      }, {
+        "item" : "7",
+        "count" : "3"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "9",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "1977",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204366,
+    "name" : "CTU_Bloc_7",
+    "dataTypeName" : "number",
+    "description" : "Expedients d’autoritzacions i informes en sòl no urbanitzable a les ordres del dia de les comissions d’urbanisme",
+    "fieldName" : "ctu_bloc_7",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585447,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "29",
+      "non_null" : "12325",
+      "average" : "1.508992805755396",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "7019"
+      }, {
+        "item" : "1",
+        "count" : "2461"
+      }, {
+        "item" : "2",
+        "count" : "1271"
+      }, {
+        "item" : "3",
+        "count" : "673"
+      }, {
+        "item" : "4",
+        "count" : "354"
+      }, {
+        "item" : "5",
+        "count" : "188"
+      }, {
+        "item" : "6",
+        "count" : "128"
+      }, {
+        "item" : "7",
+        "count" : "77"
+      }, {
+        "item" : "8",
+        "count" : "48"
+      }, {
+        "item" : "9",
+        "count" : "27"
+      }, {
+        "item" : "10",
+        "count" : "20"
+      }, {
+        "item" : "11",
+        "count" : "14"
+      }, {
+        "item" : "13",
+        "count" : "10"
+      }, {
+        "item" : "12",
+        "count" : "9"
+      }, {
+        "item" : "14",
+        "count" : "8"
+      }, {
+        "item" : "15",
+        "count" : "3"
+      }, {
+        "item" : "17",
+        "count" : "3"
+      }, {
+        "item" : "26",
+        "count" : "2"
+      }, {
+        "item" : "18",
+        "count" : "2"
+      }, {
+        "item" : "20",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "6712",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204367,
+    "name" : "CTU_Bloc_8",
+    "dataTypeName" : "number",
+    "description" : "Expedients d’informes de llicències provisionals a les ordres del dia de les comissions d’urbanisme",
+    "fieldName" : "ctu_bloc_8",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585448,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "25",
+      "non_null" : "12325",
+      "average" : "0.3466726618705036",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10589"
+      }, {
+        "item" : "1",
+        "count" : "1061"
+      }, {
+        "item" : "2",
+        "count" : "363"
+      }, {
+        "item" : "3",
+        "count" : "146"
+      }, {
+        "item" : "4",
+        "count" : "68"
+      }, {
+        "item" : "5",
+        "count" : "40"
+      }, {
+        "item" : "6",
+        "count" : "14"
+      }, {
+        "item" : "7",
+        "count" : "13"
+      }, {
+        "item" : "8",
+        "count" : "10"
+      }, {
+        "item" : "9",
+        "count" : "9"
+      }, {
+        "item" : "10",
+        "count" : "4"
+      }, {
+        "item" : "11",
+        "count" : "2"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "13",
+        "count" : "1"
+      }, {
+        "item" : "16",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      }, {
+        "item" : "25",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "1542",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204368,
+    "name" : "CTU_Altres",
+    "dataTypeName" : "number",
+    "description" : "Altres expedients a les ordres del dia de les comissions d’urbanisme",
+    "fieldName" : "ctu_altres",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585449,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "57",
+      "non_null" : "12325",
+      "average" : "0.2879946043165468",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11041"
+      }, {
+        "item" : "1",
+        "count" : "829"
+      }, {
+        "item" : "2",
+        "count" : "227"
+      }, {
+        "item" : "3",
+        "count" : "72"
+      }, {
+        "item" : "6",
+        "count" : "49"
+      }, {
+        "item" : "4",
+        "count" : "46"
+      }, {
+        "item" : "9",
+        "count" : "22"
+      }, {
+        "item" : "5",
+        "count" : "17"
+      }, {
+        "item" : "12",
+        "count" : "7"
+      }, {
+        "item" : "7",
+        "count" : "3"
+      }, {
+        "item" : "8",
+        "count" : "3"
+      }, {
+        "item" : "18",
+        "count" : "2"
+      }, {
+        "item" : "21",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "33",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "27",
+        "count" : "1"
+      }, {
+        "item" : "57",
+        "count" : "1"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "1281",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204369,
+    "name" : "pd_PECPP",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de pla especial de catàleg protecció del patrimoni",
+    "fieldName" : "pd_pecpp",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585450,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "2",
+      "non_null" : "12325",
+      "average" : "0.07441860465116279",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12233"
+      }, {
+        "item" : "1",
+        "count" : "89"
+      }, {
+        "item" : "2",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "48",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204370,
+    "name" : "pd_PECSNU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de pla especial de catàleg masies i cases rurals",
+    "fieldName" : "pd_pecsnu",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585451,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.3333333333333333",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12085"
+      }, {
+        "item" : "1",
+        "count" : "226"
+      }, {
+        "item" : "2",
+        "count" : "11"
+      }, {
+        "item" : "3",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "215",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204371,
+    "name" : "pd_PESNU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de pla especial en sòl no urbanitzable",
+    "fieldName" : "pd_pesnu",
+    "position" : 21,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585452,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.3829457364341085",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "11885"
+      }, {
+        "item" : "1",
+        "count" : "402"
+      }, {
+        "item" : "2",
+        "count" : "29"
+      }, {
+        "item" : "3",
+        "count" : "9"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "247",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204372,
+    "name" : "pd_PESU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de pla especial en sòl urbà",
+    "fieldName" : "pd_pesu",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585453,
+    "width" : 184,
+    "cachedContents" : {
+      "largest" : "6",
+      "non_null" : "12325",
+      "average" : "0.1813953488372093",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12077"
+      }, {
+        "item" : "1",
+        "count" : "207"
+      }, {
+        "item" : "2",
+        "count" : "31"
+      }, {
+        "item" : "3",
+        "count" : "7"
+      }, {
+        "item" : "6",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "117",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204373,
+    "name" : "pd_PMU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de pla de millora urbana",
+    "fieldName" : "pd_pmu",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585454,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "5",
+      "non_null" : "12325",
+      "average" : "0.1736434108527132",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12119"
+      }, {
+        "item" : "1",
+        "count" : "176"
+      }, {
+        "item" : "2",
+        "count" : "21"
+      }, {
+        "item" : "3",
+        "count" : "6"
+      }, {
+        "item" : "4",
+        "count" : "2"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "112",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204374,
+    "name" : "pd_PPU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de pla parcial urbanístic",
+    "fieldName" : "pd_ppu",
+    "position" : 24,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585455,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "2",
+      "non_null" : "12325",
+      "average" : "0.1224806201550388",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12186"
+      }, {
+        "item" : "1",
+        "count" : "133"
+      }, {
+        "item" : "2",
+        "count" : "6"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "79",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204375,
+    "name" : "pd_M_PECPP",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de pla especial de catàleg protecció del patrimoni",
+    "fieldName" : "pd_m_pecpp",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585456,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.06111111111111111",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12262"
+      }, {
+        "item" : "1",
+        "count" : "56"
+      }, {
+        "item" : "2",
+        "count" : "6"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "22",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204376,
+    "name" : "pd_M_PECSNU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de pla especial catàleg masies i cases rurals",
+    "fieldName" : "pd_m_pecsnu",
+    "position" : 26,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585457,
+    "width" : 232,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.1068883610451306",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12226"
+      }, {
+        "item" : "1",
+        "count" : "94"
+      }, {
+        "item" : "2",
+        "count" : "3"
+      }, {
+        "item" : "3",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "45",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204377,
+    "name" : "pd_M_PESNU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de pla especial en sòl no urbanitzable",
+    "fieldName" : "pd_m_pesnu",
+    "position" : 27,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585458,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "2",
+      "non_null" : "12325",
+      "average" : "0.1187648456057007",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12205"
+      }, {
+        "item" : "1",
+        "count" : "118"
+      }, {
+        "item" : "2",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "50",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204378,
+    "name" : "pd_M_PESU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de pla especial en sòl urbà",
+    "fieldName" : "pd_m_pesu",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585459,
+    "width" : 208,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.2137767220902613",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12175"
+      }, {
+        "item" : "1",
+        "count" : "125"
+      }, {
+        "item" : "2",
+        "count" : "22"
+      }, {
+        "item" : "3",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "90",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204379,
+    "name" : "pd_M_PMU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de pla de millora urbana",
+    "fieldName" : "pd_m_pmu",
+    "position" : 29,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585460,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.08551068883610451",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12245"
+      }, {
+        "item" : "1",
+        "count" : "67"
+      }, {
+        "item" : "2",
+        "count" : "12"
+      }, {
+        "item" : "3",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "36",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204380,
+    "name" : "pd_M_PPU",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de pla parcial",
+    "fieldName" : "pd_m_ppu",
+    "position" : 30,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585461,
+    "width" : 196,
+    "cachedContents" : {
+      "largest" : "3",
+      "non_null" : "12325",
+      "average" : "0.3800475059382423",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12080"
+      }, {
+        "item" : "1",
+        "count" : "224"
+      }, {
+        "item" : "2",
+        "count" : "17"
+      }, {
+        "item" : "3",
+        "count" : "4"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "160",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204381,
+    "name" : "pgMOD_Adeq",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de planejament general d’adequació a la realitat",
+    "fieldName" : "pgmod_adeq",
+    "position" : 31,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585462,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "14",
+      "non_null" : "12325",
+      "average" : "1.292134831460674",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10927"
+      }, {
+        "item" : "1",
+        "count" : "1158"
+      }, {
+        "item" : "2",
+        "count" : "183"
+      }, {
+        "item" : "3",
+        "count" : "45"
+      }, {
+        "item" : "4",
+        "count" : "10"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "920",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204382,
+    "name" : "pgMOD_SocioEcon",
+    "dataTypeName" : "number",
+    "description" : "Nous expedients vigents de modificació de planejament general  d’interès social o econòmic",
+    "fieldName" : "pgmod_socioecon",
+    "position" : 32,
+    "renderTypeName" : "number",
+    "tableColumnId" : 3585463,
+    "width" : 280,
+    "cachedContents" : {
+      "largest" : "12",
+      "non_null" : "12325",
+      "average" : "1.319293478260870",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "10495"
+      }, {
+        "item" : "1",
+        "count" : "1429"
+      }, {
+        "item" : "2",
+        "count" : "292"
+      }, {
+        "item" : "3",
+        "count" : "71"
+      }, {
+        "item" : "4",
+        "count" : "22"
+      }, {
+        "item" : "5",
+        "count" : "9"
+      }, {
+        "item" : "7",
+        "count" : "2"
+      }, {
+        "item" : "6",
+        "count" : "2"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      }, {
+        "item" : "8",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "sum" : "971",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 6204383,
+    "name" : "pg_pla_nou",
+    "dataTypeName" : "text",
+    "description" : "Nova figura de planejament general",
+    "fieldName" : "pg_pla_nou",
+    "position" : 33,
+    "renderTypeName" : "text",
+    "tableColumnId" : 3585464,
+    "width" : 220,
+    "cachedContents" : {
+      "largest" : "Revisió de Pla d'ordenació urbanística municipal",
+      "non_null" : "12325",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "12045"
+      }, {
+        "item" : "Pla d'ordenació urbanística municipal",
+        "count" : "188"
+      }, {
+        "item" : "Normes de planejament urbanístic",
+        "count" : "86"
+      }, {
+        "item" : "Revisió de Pla d'ordenació urbanística municipal",
+        "count" : "1"
+      }, {
+        "item" : "Revisió del Pla d'ordenació urbanística municipal",
+        "count" : "1"
+      }, {
+        "item" : "renovació Normes de planejament urbanístic",
+        "count" : "1"
+      }, {
+        "item" : "Normes subsidiàries",
+        "count" : "1"
+      }, {
+        "item" : "Aprovació pròrroga NPU",
+        "count" : "1"
+      }, {
+        "item" : "Normes de Planejament Urbanístic",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "12325",
+      "cardinality" : "12325"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Data of the administrative activity of DGOTU per municipalities",
+        "Nombre del conjunto de datos (ES)" : "Datos de la actividad administrativa de la DGOTU por municipios"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "comissions d'urbanisme", "municipis", "ordenació territorial", "ods11_ciutats i comunitats sostenibles", "ods9_indústria innovació i infraestructures" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
