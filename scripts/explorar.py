@@ -101,13 +101,13 @@ def explora_territoriales(filas: list) -> None:
             cnt = collections.Counter(); val = collections.Counter()
             g = []
             for l in lineas[1:]:
-                clave = (l[3:4], l[5:7], l[7:9], l[-2:])
+                clave = (l[3:4], l[4:9], l[-2:])
                 cnt[clave] += 1
                 try:
-                    val[clave] += int(l[56:69])
+                    val[clave] += int(l[49:62])
                 except ValueError:
                     pass
-                if (l[5:7] == "17" or l[7:9] == "17" or l[-2:] == "17") and len(g) < 80:
+                if ("17" in l[4:9] or l[-2:] == "17") and len(g) < 80:
                     g.append(l)
             out.append(f"== {n} lineas={len(lineas)} cab={cab!r}")
             out.append("ejemplo largo: " + repr(lineas[1]) + f" len={len(lineas[1])}")
