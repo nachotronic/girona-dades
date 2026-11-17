@@ -980,3 +980,25 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .fx-grans li span:nth-child(3) { font: 500 13px var(--mono); text-align: right; }
 @media (max-width: 640px) { .fx-grans li { grid-template-columns: minmax(0, 1fr) 5.5em; } .fx-grans li span:nth-child(2) { grid-row: 2; grid-column: 1; } }
 .pb-n.pb-sm, .pb-n.pb-sn { color: var(--text); font-weight: 600; }
+
+/* Mobilitat (EMQ 2024-2025): barras apiladas por modo, horas, matriz entre comarcas */
+.mb { display: grid; gap: 6px; margin-top: 4px; }
+.mb-fila { display: grid; grid-template-columns: minmax(110px, 34%) 1fr; gap: 12px; align-items: center; font-size: 12.5px; }
+.mb-nom { line-height: 1.2; }
+.mb-apil { display: flex; height: 20px; background: var(--fons-2); }
+.mb-apil b { display: flex; align-items: center; justify-content: center; height: 100%; color: #fff; font: 600 10.5px var(--mono); overflow: hidden; white-space: nowrap; }
+.mb-dot { display: inline-block; width: 10px; height: 10px; vertical-align: -1px; margin-right: 6px; }
+.mb-nota { font-size: 12.5px; color: var(--text-2); margin: 8px 0 0; }
+.mb-tres .pb-b { height: 7px; }
+.mx-taula { overflow-x: auto; }
+.mx { border-collapse: collapse; width: 100%; font: 11px var(--mono); }
+.mx th { font-weight: 500; color: var(--text-2); text-align: right; padding: 4px 5px; white-space: nowrap; }
+.mx thead th { text-align: center; border-bottom: 1px solid var(--tinta); font-size: 10.5px; }
+.mx thead th:first-child { text-align: left; color: var(--text-3); }
+.mx tbody th { text-align: left; font: 500 12px var(--sans); color: var(--text); }
+.mx td { text-align: center; padding: 6px 4px; background: color-mix(in srgb, var(--serie-1) calc(var(--a) * 85%), transparent); color: var(--text); border: 1px solid var(--fons); }
+.mx td.mx-d { outline: 1px solid var(--tinta); outline-offset: -1px; font-weight: 700; }
+.mob-f .xifres { margin-top: 10px; }
+.mob-dos { margin-top: 18px; }
+.mx td.mx-f { color: #fff; }
+.pg-fig[data-id="matriu"] { grid-column: 1 / -1; }

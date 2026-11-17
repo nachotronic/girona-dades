@@ -2408,6 +2408,17 @@ def main():
         if m["ine"] in tw["fitxa"]:
             m["turf"] = tw["fitxa"][m["ine"]]
     anys_extra.update(tw["anys"])
+    # Movilidad: Enquesta de Mobilitat Quotidiana (ATM Girona), tema «mob», nivel «com» y sección Mobilitat
+    import mobilitat_web
+    mw = mobilitat_web.construir(municipios, SALIDA.parent)
+    for m in municipios:
+        if m["ine"] in mw["mun"]:
+            m["mob"] = mw["mun"][m["ine"]]
+        if m["ine"] in mw["fitxa"]:
+            m["mobf"] = mw["fitxa"][m["ine"]]
+    if mw["any"]:
+        anys_extra["mob"] = mw["any"]
+        zones["com"] = mw["com"]
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -2427,7 +2438,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"],
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
