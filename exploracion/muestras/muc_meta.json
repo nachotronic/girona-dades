@@ -1,0 +1,129 @@
+{
+  "id" : "magm-wuv7",
+  "name" : "Mapa urbanístic de Catalunya (MUC)",
+  "assetType" : "href",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1498810450,
+  "description" : "El Mapa urbanístic de Catalunya (MUC) és un mapa sintètic del planejament general que permet fer la lectura contínua de l'ordenació urbanística del país, resolent les diferències de codificació, llenguatge i representació que tenen els diferents plans urbanístics vigents en l'actualitat.\r\nEs tracta d’una eina estratègica per l’Administració pública, ja que permet dur a terme les polítiques de planificació i ordenació del territori, i també constitueix un instrument d’utilitat per a la ciutadania, ja que dona transparència a la informació urbanística vigent.\r\nEl Mapa urbanístic de Catalunya (MUC) incorpora tots els expedients de planejament general vigents a 1 de gener de 2017 en el territori de Catalunya, i els vigents a 1 de juliol de 2016 a l’àmbit metropolità de Barcelona.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1526282318,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 249403,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1498810475,
+  "publicationGroup" : 155718,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1498810450,
+  "tableId" : 155718,
+  "totalTimesRated" : 0,
+  "viewCount" : 37505,
+  "viewLastModified" : 1789569773,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1498810475,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 304677,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1498810475,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "Accedeix a les dades" : "https://territori.gencat.cat/ca/06_territori_i_urbanisme/observatori_territori/mapa_urbanistic_de_catalunya/serveis-web-dades-obertes/"
+      }
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Semestral"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Urbanistic Map of Catalonia (MUC)",
+        "Nombre del conjunto de datos (ES)" : "Mapa urbanístico de Catalunya (MUC)"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Dades geogràfiques",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "accessPoints" : {
+      "Accedeix a les dades" : "https://territori.gencat.cat/ca/06_territori_i_urbanisme/observatori_territori/mapa_urbanistic_de_catalunya/serveis-web-dades-obertes/"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "href" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "territori", "pla urbanístic", "planejament territorial", "ordenació urbanística", "smartcatalonia", "ods11_ciutats i comunitats sostenibles", "ods9_indústria innovació i infraestructures" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}
