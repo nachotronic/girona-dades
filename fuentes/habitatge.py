@@ -169,10 +169,27 @@ def urbanisme(sal) -> str:
             f"{int(sg['num_habitg'].sum())} habitatges previstos, {int(sg['hab_vacant'].sum())} pendents")
 
 
+def poblacio_cat(sal) -> str:
+    """Población oficial de Cataluña por año (INE, cifras del padrón por comunidades, tabla 2853),
+    para las tasas de referencia."""
+    r = get("https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2853?nult=40", timeout=300)
+    files = []
+    for s_ in r.json():
+        nom = s_.get("Nombre", "")
+        if "Cataluña" in nom and "Total" in nom:
+            for d in s_.get("Data", []):
+                if d.get("Valor") is not None:
+                    files.append({"any": int(d.get("Anyo") or d.get("NombrePeriodo")), "pob": d["Valor"]})
+            break
+    t = pd.DataFrame(files).drop_duplicates("any").sort_values("any")
+    t.to_csv(sal / "poblacio_catalunya.csv", index=False)
+    return f"població de Catalunya {t['any'].min()}-{t['any'].max()}" if len(t) else "ERROR: sense població de Catalunya"
+
+
 def ejecutar() -> str:
     sal = carpeta("habitatge")
     parts = []
-    for nom, f in (("construcció", construccio), ("cèdules", cedules), ("buits", buits), ("àrees", arees), ("urbanisme", urbanisme)):
+    for nom, f in (("construcció", construccio), ("cèdules", cedules), ("buits", buits), ("àrees", arees), ("urbanisme", urbanisme), ("població", poblacio_cat)):
         try:
             parts.append(f(sal))
         except Exception as e:  # noqa: BLE001 - una parte que falla no impide las otras
