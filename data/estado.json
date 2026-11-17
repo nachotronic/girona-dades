@@ -83,6 +83,13 @@
   "durada": 72,
   "resum": "EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…); ERROR en 4: lv_mun_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:47.611Z\", \"rootActivityId\": \"7ef8874a-ca66-4606-b515-7a8a2c65e28a\", \"fromCache\" | lv_com_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:48.724Z\", \"rootActivityId\": \"b3496ebb-8c5b-4d2a-aca4-2e8a1b645323\", \"fromCache\" | lv_tot_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:49.823Z\", \"rootActivityId\": \"2ea05cff-5397-4bd5-8807-9a2ad9480edd\", \"fromCache\" | pe_mun__P7_8A_DADES RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:32:30.241Z\", \"rootActivityId\": \"282a720d-18a8-46ad-b64c-b28f241a1b7b\", \"fromCache\""
  },
+ "exportacions": {
+  "estat": "ok",
+  "intent": "2026-11-17T23:55:32Z",
+  "ok": "2026-11-17T23:55:32Z",
+  "durada": 198,
+  "resum": "2023-01: 10 ficheros, Girona exporta 596.2 M€ e importa 296.6 M€\n2024: 10 ficheros, Girona exporta 8,368.3 M€ e importa 4,164.2 M€\n2024-01: 10 ficheros, Girona exporta 656.0 M€ e importa 362.3 M€\n2025-01: 10 ficheros, Girona exporta 709.0 M€ e importa 347.3 M€\n2026-01: 10 ficheros, Girona exporta 580.0 M€ e importa 305.4 M€"
+ },
  "generalitat": {
   "estat": "ok",
   "intent": "2026-11-16T15:29:03Z",

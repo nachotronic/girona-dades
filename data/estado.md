@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-17 12:21 UTC
+Última ejecución: 2026-11-17 23:58 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -39,11 +39,17 @@
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 16:19 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | — | — | — | anual |
 | habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-17 12:20 | 2026-11-17 12:20 | anual/trimestral |
+| emq — ATM Girona, Enquesta de Mobilitat Quotidiana 2024-2025 (visor Power BI) | avís | — | 2026-11-17 12:31 | per edició |
+| exportacions — Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte | ok | 2026-11-17 23:55 | 2026-11-17 23:55 | mensual |
 
 ## Detalle de la última ejecución
 
-### habitatge: ok (79 s)
+### exportacions: ok (198 s)
 
 ```
-iniciats i acabats 1990-2025 (Girona 2025: 2834 iniciats, 2454 acabats); HPO 2002-2025; cèdules 1919-2026, Girona 2026: 11534; 91012 punts 2021-2026 a 536 seccions; IHB 2018-2025: 161 municipis; Girona 2025: 439 pisos; àrees de política d'habitatge: 221 municipis, 47 en zona tensionada; mapa urbanístic 2012-2025; sectors: 1616 a Girona, 113334 habitatges previstos, 88265 pendents; població de Catalunya 1996-2021; MUC per secció: 9943 polígons, columna «CODI_CLAS_MUC», classes ['SNC', 'SND', 'SNU', 'SUC', 'SUD'], 536 seccions; columnes ['id', 'ID', 'CODI_CLAS_MUC', 'DESC_CLAS_MUC', 'CODI_CLAS_AJUNT', 'DESC_CLAS_AJUNT', 'CODI_INE']
+2023-01: 10 ficheros, Girona exporta 596.2 M€ e importa 296.6 M€
+2024: 10 ficheros, Girona exporta 8,368.3 M€ e importa 4,164.2 M€
+2024-01: 10 ficheros, Girona exporta 656.0 M€ e importa 362.3 M€
+2025-01: 10 ficheros, Girona exporta 709.0 M€ e importa 347.3 M€
+2026-01: 10 ficheros, Girona exporta 580.0 M€ e importa 305.4 M€
 ```
