@@ -50,25 +50,32 @@ COLS = ["per", "flux", "nivell", "zona", "clau", "valor", "pes"]
 
 
 def _enlaces() -> dict[str, list[str]]:
-    """{periodo: [urls]} con los zips territoriales anuales (AAAA) y mensuales (AAAA-MM)."""
-    pags = {INDICE}
-    t = get(INDICE).text
-    pags |= {BASE + p for p in RE_PAG.findall(t) if re.search(r"/(\d{4}(-territoriales)?|historicas?[^/]*|\d{4}__)\.html$", p)}
+    """{periodo: [urls]} con los zips territoriales anuales (AAAA) y mensuales (AAAA-MM).
+    Recorre el índice, las páginas de cada año y las de cada mes (enlazadas desde la del año)."""
+    util = re.compile(r"territoriales|historicas|/\d{4}(__)?\.html$|/(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\.html$")
+    pendents, vistes = [INDICE], set()
     per = collections.defaultdict(set)
-    for p in sorted(pags):
+    while pendents and len(vistes) < 400:
+        p = pendents.pop(0)
+        if p in vistes:
+            continue
+        vistes.add(p)
         try:
-            h = t if p == INDICE else get(p).text
+            h = get(p).text
         except Exception:  # noqa: BLE001 - una página caída no para el resto
             continue
+        for q in RE_PAG.findall(h):
+            if util.search(q) and "maxima" not in q and "resumen" not in q and BASE + q not in vistes:
+                pendents.append(BASE + q)
         for url, tipo, aa, mm, _ in RE_ZIP.findall(h):
             any_ = 2000 + int(aa)
+            url = BASE + url if url.startswith("/") else url
             if tipo.lower() == "territoriales_anuales":
-                per[str(any_)].add(BASE + url if url.startswith("/") else url)
+                per[str(any_)].add(url)
             else:
-                carp = url.rstrip("/").split("/")[-2].lower()
-                mes = MESOS.get(carp)
+                mes = MESOS.get(url.rstrip("/").split("/")[-2].lower())
                 if mes and any_ >= DESDE_MES:
-                    per[f"{any_}-{mes:02d}"].add(BASE + url if url.startswith("/") else url)
+                    per[f"{any_}-{mes:02d}"].add(url)
     return {k: sorted(v) for k, v in per.items()}
 
 
