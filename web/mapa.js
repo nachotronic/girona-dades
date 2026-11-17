@@ -557,7 +557,21 @@
     { id: "motos", tema: "ter", ca: ["Motos", "Motocicletes per 1.000 habitants"], es: ["Motos", "Motocicletas por 1.000 habitantes"], a: "motos", v: X("motos"), ...N0 },
   ];
   // Indicadores añadidos a partir del inventario de España en Datos (fuentes originales: INE, AEAT, Idescat, Diputació)
-  const NA = { ca: "Agència Tributària, estadística dels declarants de l'IRPF. Només municipis de més de 1.000 habitants.", es: "Agencia Tributaria, estadística de los declarantes del IRPF. Solo municipios de más de 1.000 habitantes." };
+  const NA = { ca: "Agència Tributària, estadística dels declarants de l'IRPF per municipis (anuari estadístic, sèrie des del 2013). Només municipis de més de 1.000 habitants. Espanya: territori de règim comú, sense el País Basc ni Navarra.", es: "Agencia Tributaria, estadística de los declarantes del IRPF por municipios (anuario estadístico, serie desde 2013). Solo municipios de más de 1.000 habitantes. España: territorio de régimen común, sin el País Vasco ni Navarra." };
+  // IRPF municipal (m.irpf: {clave: {año: valor}}) y referencias D.irpf_ref: {clave: {año: {gi, cat, esp}}}
+  const IV = (k) => (m, a) => (a != null && m.irpf && m.irpf[k] && m.irpf[k][a] != null ? m.irpf[k][a] : null);
+  const IVR = (k, z) => (a) => { const r = D.irpf_ref && D.irpf_ref[k] && D.irpf_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const IRPF = [
+    ["bruta", ["Renda declarada", "Renda bruta mitjana per declaració de l'IRPF (€)"], ["Renta declarada", "Renta bruta media por declaración del IRPF (€)"], EU],
+    ["disp", ["Renda disponible declarada", "Renda disponible mitjana per declaració, després d'impostos (€)"], ["Renta disponible declarada", "Renta disponible media por declaración, después de impuestos (€)"], EU],
+    ["decl", ["Declaracions", "Declaracions de l'IRPF per 100 habitants"], ["Declaraciones", "Declaraciones del IRPF por 100 habitantes"], N0],
+    ["tipus", ["Tipus efectiu", "Quota de l'IRPF sobre la renda bruta declarada (%)"], ["Tipo efectivo", "Cuota del IRPF sobre la renta bruta declarada (%)"], P1],
+    ["treball", ["Rendes del treball", "Rendes del treball i pensions (% de la renda declarada)"], ["Rentas del trabajo", "Rentas del trabajo y pensiones (% de la renta declarada)"], P1],
+    ["capital", ["Rendes del capital", "Rendes del capital, lloguers i guanys patrimonials (% de la renda declarada)"], ["Rentas del capital", "Rentas del capital, alquileres y ganancias patrimoniales (% de la renta declarada)"], P1],
+    ["activitats", ["Rendes d'activitats", "Rendes d'activitats econòmiques: autònoms i professionals (% de la renda declarada)"], ["Rentas de actividades", "Rentas de actividades económicas: autónomos y profesionales (% de la renta declarada)"], P1],
+    ["pp", ["Plans de pensions", "Declaracions amb aportacions a plans de pensions (%)"], ["Planes de pensiones", "Declaraciones con aportaciones a planes de pensiones (%)"], P1],
+    ["fills", ["Declaracions amb fills", "Declaracions amb fills a càrrec (%)"], ["Declaraciones con hijos", "Declaraciones con hijos a cargo (%)"], P1],
+  ];
   const NX = { ca: "Xifra, Diputació de Girona.", es: "Xifra, Diputació de Girona." };
   const NP = { ca: "Generalitat de Catalunya, liquidació dels pressupostos dels ens locals. Últim any liquidat.", es: "Generalitat de Catalunya, liquidación de los presupuestos de los entes locales. Último año liquidado." };
   const NE = { ca: "Idescat, El municipi en xifres.", es: "Idescat, El municipio en cifras." };
@@ -566,12 +580,12 @@
     { id: "renda_bruta_llar", tema: "ren", ca: ["Renda bruta per llar", "Renda bruta mitjana per llar (€)"], es: ["Renta bruta por hogar", "Renta bruta media por hogar (€)"], a: 2024, v: (m) => val(m.renda_bruta_llar, "2024"), t: (m, a) => val(m.renda_bruta_llar, a), nota: { ca: "INE, Atlas de distribució de la renda de les llars.", es: "INE, Atlas de distribución de la renta de los hogares." }, ...EU },
     { id: "renda_mediana", tema: "ren", ca: ["Renda mediana", "Renda mediana per unitat de consum (€)"], es: ["Renta mediana", "Renta mediana por unidad de consumo (€)"], a: 2024, v: (m) => val(m.renda_mediana, "2024"), t: (m, a) => val(m.renda_mediana, a), s: S("renta_mediana"), nota: { ca: "INE, Atlas de distribució de la renda. La meitat de la població en té menys i l'altra meitat, més.", es: "INE, Atlas de distribución de la renta. La mitad de la población tiene menos y la otra mitad, más." }, ...EU },
     { id: "irpf_quota", tema: "ren", ca: ["Quota d'IRPF", "Quota resultant de l'IRPF per declarant (€)"], es: ["Cuota de IRPF", "Cuota resultante del IRPF por declarante (€)"], a: "irpf_quota", v: X("irpf_quota"), nota: NE, ...EU },
-    { id: "aeat_bruta", tema: "ren", ca: ["Renda declarada", "Renda bruta mitjana per declaració de l'IRPF (€)"], es: ["Renta declarada", "Renta bruta media por declaración del IRPF (€)"], a: "aeat_bruta", v: X("aeat_bruta"), nota: NA, ...EU },
-    { id: "aeat_disp", tema: "ren", ca: ["Renda disponible declarada", "Renda disponible mitjana per declaració, després d'impostos (€)"], es: ["Renta disponible declarada", "Renta disponible media por declaración, después de impuestos (€)"], a: "aeat_disp", v: X("aeat_disp"), nota: NA, ...EU },
-    { id: "aeat_decl", tema: "ren", ca: ["Declaracions", "Declaracions de l'IRPF per 100 habitants"], es: ["Declaraciones", "Declaraciones del IRPF por 100 habitantes"], a: "aeat_decl", v: X("aeat_decl"), nota: NA, ...N0 },
-    { id: "aeat_tipus", sumable: false, tema: "ren", ca: ["Tipus efectiu", "Quota de l'IRPF sobre la renda bruta declarada (%)"], es: ["Tipo efectivo", "Cuota del IRPF sobre la renta bruta declarada (%)"], a: "aeat_tipus", v: X("aeat_tipus"), nota: NA, ...P1 },
-    { id: "aeat_capital", sumable: false, tema: "ren", ca: ["Rendes del capital", "Rendes del capital, lloguers i guanys patrimonials (% de la renda declarada)"], es: ["Rentas del capital", "Rentas del capital, alquileres y ganancias patrimoniales (% de la renta declarada)"], a: "aeat_capital", v: X("aeat_capital"), nota: NA, ...P1 },
-    { id: "aeat_activitats", sumable: false, tema: "ren", ca: ["Rendes d'activitats", "Rendes d'activitats econòmiques: autònoms i professionals (% de la renda declarada)"], es: ["Rentas de actividades", "Rentas de actividades económicas: autónomos y profesionales (% de la renta declarada)"], a: "aeat_activitats", v: X("aeat_activitats"), nota: NA, ...P1 },
+    ...IRPF.map(([k, ca, es, fmtk, ext]) => ({ id: "aeat_" + k, tema: "ren", ca, es, a: "irpf", sumable: false, v: (m) => IV(k)(m, D.anys && D.anys.irpf), t: IV(k), pv: IVR(k, "gi"),
+      ref: () => { const a = anyActiu() || (D.anys && D.anys.irpf); return { cat: IVR(k, "cat")(a), esp: IVR(k, "esp")(a) }; }, nota: NA, ...fmtk, ...(ext || {}) })),
+    { id: "aeat_var", tema: "ren", sumable: false, ca: ["Com ha crescut la renda declarada", "Variació de la renda bruta mitjana per declaració des del 2013 (%)"], es: ["Cuánto ha crecido la renta declarada", "Variación de la renta bruta media por declaración desde 2013 (%)"], a: "irpf",
+      v: (m) => { const s = m.irpf && m.irpf.bruta; const u = D.anys && D.anys.irpf; return s && s[2013] && s[u] ? (s[u] / s[2013] - 1) * 100 : null; },
+      ref: () => { const R = (D.irpf_ref || {}).bruta || {}, u = D.anys && D.anys.irpf, f = (z) => (R[2013] && R[u] && R[2013][z] ? (R[u][z] / R[2013][z] - 1) * 100 : null); return { gi: f("gi"), cat: f("cat"), esp: f("esp") }; },
+      nota: NA, f: (v) => `${v > 0 ? "+" : ""}${pct(v, 1)}`, c: (v) => `${v > 0 ? "+" : ""}${pct(v, 0)}` },
     { id: "pob_var", sumable: false, tema: "pob", ca: ["Creixement des del 2003", "Variació de la població des del 2003 (%)"], es: ["Crecimiento desde 2003", "Variación de la población desde 2003 (%)"], v: (m) => { const b = m.pob_s && m.pob_s["2003"]; return b && m.poblacion ? (m.poblacion / b - 1) * 100 : null; }, nota: { ca: "INE, padró municipal.", es: "INE, padrón municipal." }, f: (v) => pct(v, 0, true), c: (v) => pct(v, 0, true) },
     { id: "proj2044", sumable: false, tema: "pob", ca: ["Població el 2044", "Projecció de població a 2044 respecte a l'actual (%)"], es: ["Población en 2044", "Proyección de población a 2044 respecto a la actual (%)"], a: "proj2044", v: X("proj2044"), nota: { ca: "Idescat, projeccions de població (escenari mitjà), via Xifra.", es: "Idescat, proyecciones de población (escenario medio), vía Xifra." }, f: (v) => pct(v, 0, true), c: (v) => pct(v, 0, true) },
     { id: "proj_65", sumable: false, tema: "pob", ca: ["Gent gran el 2044", "Població de més de 64 anys el 2044 (% projectat)"], es: ["Mayores en 2044", "Población de más de 64 años en 2044 (% proyectado)"], a: "proj2044", v: X("proj_65"), nota: NX, ...P0 },
@@ -652,6 +666,7 @@
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.a === "irpf") D.municipios.forEach((m) => Object.values(m.irpf || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
     return cacheAnys[i.id];
@@ -882,6 +897,7 @@
   function valorProvincia(i = ind) {
     if (i.el) { const d = elDades(); return d && d.prov && !i.cat && !absent(i) ? i.ez(d.prov) : null; }
     if (i.pv) { const u = anysDe(i).slice(-1)[0]; return u ? i.pv(u) : null; }
+    if (i.ref && !i.t) { const g = i.ref().gi; if (g != null) return g; }
     const r = (D.ref || {})[i.id];
     if (r && r.gi != null) return r.gi;
     if (!i.v || i.cat || i.sumable === false) return null;
@@ -1217,7 +1233,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";

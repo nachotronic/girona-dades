@@ -20,6 +20,25 @@
       h_societats: (n, a, d, c, e) => `<b>${n}</b> societats noves el ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
       menys: (v) => `un ${v} menys`, mes: (v) => `un ${v} més`,
       esperanca: ["Esperança de vida", "Anys de vida en néixer"],
+      at_renda: ["Renda declarada", "Renda bruta mitjana per declaració de l'IRPF (€)"],
+      at_salari: ["Salari mitjà", "Salari brut anual mitjà per assalariat (€)"],
+      at_bretxa: ["Bretxa salarial", "Salari mitjà de les dones (% del dels homes)"],
+      at_sectors: ["Salaris per sector", "Salari brut anual mitjà per assalariat (€)"],
+      at_qui: ["Qui cobra què", "Salari brut anual mitjà per assalariat (€)"],
+      at_pensio: ["Pensió mitjana", "Import anual mitjà per pensionista (€)"],
+      at_tipus: ["Tipus mitjà de l'IRPF", "Quota resultant sobre la base imposable (%)"],
+      at_nac: ["Renda declarada segons qui declara", "Base imposable mitjana per declaració (€)"],
+      h_at_renda: (g, a, c, e, d) => `Una declaració de l'IRPF de la província declara <b>${g} €</b> de renda bruta de mitjana (${a}), davant dels ${c} € de Catalunya i els ${e} € d'Espanya. Des del 2013, ${d}.`,
+      h_at_salari: (g, a, c, e) => `Un assalariat de la província va cobrar <b>${g} €</b> bruts de mitjana el ${a}. A Catalunya, ${c} €; a Espanya, ${e} €.`,
+      h_at_bretxa: (g, a, g0, a0) => `Les dones cobren de mitjana el <b>${g}</b> del que cobren els homes a la província (${a}). El ${a0}, el ${g0}.`,
+      h_at_sectors: (s, v, s2, v2, a) => `El ${a}, els sous més alts eren a <b>${s}</b> (${v} €) i els més baixos, a ${s2} (${v2} €).`,
+      h_at_qui: (e, n, a) => `Un assalariat estranger cobra <b>${e}</b> menys que un d'espanyol a la província (${a}).`,
+      h_at_pensio: (g, a, c, n, h, d) => `<b>${n}</b> pensionistes cobren de mitjana <b>${g} €</b> l'any a la província (${a}); a Catalunya, ${c} €. Els homes, ${h} €; les dones, ${d} €.`,
+      h_at_tipus: (g, a, c, e) => `L'IRPF s'emporta el <b>${g}</b> de la base imposable a la província (${a}), davant del ${c} a Catalunya i el ${e} a Espanya.`,
+      h_at_nac: (x, n, e, a) => `El ${x} de les declaracions de la província són d'estrangers (${a}). Declaren <b>${e} €</b> de mitjana, davant dels ${n} € dels espanyols.`,
+      ag: { agricultura: "Agricultura i pesca", energia: "Energia, aigua i mines", industria: "Indústria", construccio: "Construcció i immobiliàries", comerc: "Comerç, reparacions i transport", informacio: "Informació i comunicacions", finances: "Finances i assegurances", empreses: "Serveis a les empreses", socials: "Serveis socials", altres: "Altres serveis personals i d'oci", homes: "Homes", dones: "Dones", espanyols: "Espanyols", estrangers: "Estrangers", nacionals: "Espanyols" },
+      anys_edat: "anys", menys_p: (v) => `un ${v}`,
+      font_aeat: "Font: Agència Tributària, Anuari estadístic (models 100 i 190). Espanya: territori de règim comú, sense el País Basc ni Navarra",
       cad_viv: ["Valor cadastral de l'habitatge", "Valor cadastral mitjà dels immobles residencials (€)"],
       cad_usos: ["Immobles que no són habitatges", "Immobles urbans per ús, sense els residencials (% del total)"],
       h_cad_viv: (g, a, c, e, d) => `El valor cadastral mitjà d'un habitatge a la província és de <b>${g} €</b> (${a}), davant dels ${c} € de Catalunya i els ${e} € d'Espanya. Des del 2012, ${d}.`,
@@ -120,6 +139,25 @@
       h_societats: (n, a, d, c, e) => `<b>${n}</b> sociedades nuevas en ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
       menys: (v) => `un ${v} menos`, mes: (v) => `un ${v} más`,
       esperanca: ["Esperanza de vida", "Años de vida al nacer"],
+      at_renda: ["Renta declarada", "Renta bruta media por declaración del IRPF (€)"],
+      at_salari: ["Salario medio", "Salario bruto anual medio por asalariado (€)"],
+      at_bretxa: ["Brecha salarial", "Salario medio de las mujeres (% del de los hombres)"],
+      at_sectors: ["Salarios por sector", "Salario bruto anual medio por asalariado (€)"],
+      at_qui: ["Quién cobra qué", "Salario bruto anual medio por asalariado (€)"],
+      at_pensio: ["Pensión media", "Importe anual medio por pensionista (€)"],
+      at_tipus: ["Tipo medio del IRPF", "Cuota resultante sobre la base imponible (%)"],
+      at_nac: ["Renta declarada según quién declara", "Base imponible media por declaración (€)"],
+      h_at_renda: (g, a, c, e, d) => `Una declaración del IRPF de la provincia declara <b>${g} €</b> de renta bruta de media (${a}), frente a los ${c} € de Cataluña y los ${e} € de España. Desde 2013, ${d}.`,
+      h_at_salari: (g, a, c, e) => `Un asalariado de la provincia cobró <b>${g} €</b> brutos de media en ${a}. En Cataluña, ${c} €; en España, ${e} €.`,
+      h_at_bretxa: (g, a, g0, a0) => `Las mujeres cobran de media el <b>${g}</b> de lo que cobran los hombres en la provincia (${a}). En ${a0}, el ${g0}.`,
+      h_at_sectors: (s, v, s2, v2, a) => `En ${a}, los sueldos más altos estaban en <b>${s}</b> (${v} €) y los más bajos, en ${s2} (${v2} €).`,
+      h_at_qui: (e, n, a) => `Un asalariado extranjero cobra <b>${e}</b> menos que uno español en la provincia (${a}).`,
+      h_at_pensio: (g, a, c, n, h, d) => `<b>${n}</b> pensionistas cobran de media <b>${g} €</b> al año en la provincia (${a}); en Cataluña, ${c} €. Los hombres, ${h} €; las mujeres, ${d} €.`,
+      h_at_tipus: (g, a, c, e) => `El IRPF se lleva el <b>${g}</b> de la base imponible en la provincia (${a}), frente al ${c} en Cataluña y el ${e} en España.`,
+      h_at_nac: (x, n, e, a) => `El ${x} de las declaraciones de la provincia son de extranjeros (${a}). Declaran <b>${e} €</b> de media, frente a los ${n} € de los españoles.`,
+      ag: { agricultura: "Agricultura y pesca", energia: "Energía, agua y minas", industria: "Industria", construccio: "Construcción e inmobiliarias", comerc: "Comercio, reparaciones y transporte", informacio: "Información y comunicaciones", finances: "Finanzas y seguros", empreses: "Servicios a las empresas", socials: "Servicios sociales", altres: "Otros servicios personales y de ocio", homes: "Hombres", dones: "Mujeres", espanyols: "Españoles", estrangers: "Extranjeros", nacionals: "Españoles" },
+      anys_edat: "años", menys_p: (v) => `un ${v}`,
+      font_aeat: "Fuente: Agencia Tributaria, Anuario estadístico (modelos 100 y 190). España: territorio de régimen común, sin el País Vasco ni Navarra",
       cad_viv: ["Valor catastral de la vivienda", "Valor catastral medio de los inmuebles residenciales (€)"],
       cad_usos: ["Inmuebles que no son viviendas", "Inmuebles urbanos por uso, sin los residenciales (% del total)"],
       h_cad_viv: (g, a, c, e, d) => `El valor catastral medio de una vivienda en la provincia es de <b>${g} €</b> (${a}), frente a los ${c} € de Cataluña y los ${e} € de España. Desde 2012, ${d}.`,
@@ -412,7 +450,7 @@
   };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : "");
   const etiqueta = (e) => {
@@ -434,7 +472,7 @@
     const W = Math.max(280, cont.clientWidth || 520), H = W < 440 ? 210 : 240, m = { t: 14, r: ymax >= 1e5 ? 58 : 46, b: 24, l: ymax >= 1e5 ? 52 : ymax >= 1e3 ? 42 : 34 };
     const x0 = Math.min(...pts.map((p) => p[0])), x1 = Math.max(...pts.map((p) => p[0]));
     let y0 = Math.min(...pts.map((p) => p[2])), y1 = Math.max(...pts.map((p) => p[2]));
-    if (sp.u === "%" && y0 > 0) y0 = 0;
+    if (sp.u === "%" && y0 > 0 && sp.zero !== false) y0 = 0;
     const pas = (() => { const r = (y1 - y0) / 4, p = Math.pow(10, Math.floor(Math.log10(r || 1))); return [1, 2, 2.5, 5, 10].map((k) => k * p).find((k) => k >= r); })();
     y0 = Math.floor(y0 / pas) * pas; y1 = Math.ceil(y1 / pas) * pas;
     const X = (x) => m.l + ((x - x0) / (x1 - x0 || 1)) * (W - m.l - m.r), Y = (y) => m.t + (1 - (y - y0) / (y1 - y0 || 1)) * (H - m.t - m.b);
@@ -522,7 +560,21 @@
     if (id === "esca_habits" || id === "esca_serveis") { const d = sp.grups.filter((x) => x.s); return d.length ? tp("h_esca_dif", d.map((x) => `${nomGrup(x.g, x.c).charAt(0).toLowerCase() + nomGrup(x.g, x.c).slice(1)}, ${pct(x.gi, 0)} ${tp("davant")} ${pct(x.cat, 0)}`).join("; "), sp.any) : ""; }
     if (id === "esca_infants") { const g = sp.grups.find((x) => x.g === "exces_pes"); return g ? tp("h_esca_infants", pct(g.gi, 0), pct(g.cat, 0)) : ""; }
     if (id === "esca_evol") { const t_ = sp.series.gi, o = sp.series.cat; if (!t_ || !o || !t_.length || !o.length) return ""; const u = t_[t_.length - 1]; return tp("h_esca_evol", u[1], pct(u[2], 0), pct(t_[0][2], 0), pct(o[o.length - 1][2], 0), pct(o[0][2], 0)); }
+    if (/^at_/.test(id)) return titularAeat(id, sp);
     if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
+    return "";
+  }
+
+  function titularAeat(id, sp) {
+    const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), gs = sp.grups || [];
+    if (id === "at_renda" && g) { const g0 = sp.series.gi[0], d = (g[2] / g0[2] - 1) * 100; return tp("h_at_renda", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]), d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0))); }
+    if (id === "at_salari" && g) return tp("h_at_salari", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]));
+    if (id === "at_bretxa" && g) { const g0 = sp.series.gi[0]; return tp("h_at_bretxa", pct(g[2], 1), g[1], pct(g0[2], 1), g0[1]); }
+    if (id === "at_sectors" && gs.length > 1) { const a = gs[0], b = gs[gs.length - 1]; return tp("h_at_sectors", nomGrup(a.g, a.c).toLowerCase(), fmt(a.gi), nomGrup(b.g, b.c).toLowerCase(), fmt(b.gi), sp.any); }
+    if (id === "at_qui") { const es = gs.find((x) => x.g === "espanyols"), ex = gs.find((x) => x.g === "estrangers"); return es && ex && es.gi ? tp("h_at_qui", pct((1 - ex.gi / es.gi) * 100, 0), fmt(sp.abs && sp.abs.n), sp.any) : ""; }
+    if (id === "at_pensio" && g) { const a = sp.abs || {}; return tp("h_at_pensio", fmt(g[2]), g[1], fmt(c && c[2]), fmt(a.n), fmt(a.h_gi), fmt(a.d_gi)); }
+    if (id === "at_tipus" && g) return tp("h_at_tipus", pct(g[2], 1), g[1], pct(c && c[2], 1), pct(e && e[2], 1));
+    if (id === "at_nac") { const n = gs.find((x) => x.g === "nacionals"), x = gs.find((y) => y.g === "estrangers"); return n && x ? tp("h_at_nac", pct(sp.abs.ext, 0), fmt(n.gi), fmt(x.gi), sp.any) : ""; }
     return "";
   }
 
@@ -570,8 +622,8 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "cad_viv", "cad_ibi", "cad_usos", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
-    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "cad_viv", "cad_ibi", "cad_usos", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
+    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : /^at_/.test(id) ? "font_aeat" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
   window.pintaSeccioTurisme = () => {
