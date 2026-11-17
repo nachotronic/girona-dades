@@ -898,6 +898,49 @@ def emex_indicadores():
 # Indicadores complementarios (inventario de espanaendatos.es reconstruido con las fuentes
 # originales): Xifra (Diputació), EMEX (Idescat), AEAT, INE.
 
+def atur_detall():
+    """Paro registrado por sexo y sector (SEPE, ficheros mensuales de la coyuntura): media anual de
+    cada año completo, como el EMEX de Idescat. Los «<5» cuentan como 2,5. Solo municipios con 20
+    parados o más de media. Devuelve ({ine: {clave: {año: %}}}, {clave: {año: {gi, cat, esp}}})."""
+    import glob as _g
+    d = P / "conjuntura"
+    cols = {"atur_dones": ["d_25", "d_25_45", "d_45"], "atur_agri": ["agri"], "atur_ind": ["ind"], "atur_const": ["cons"],
+            "atur_serv": ["serv"], "atur_nou": ["sense"]}
+
+    def llegeix(patro):
+        fs = sorted(_g.glob(str(d / patro)))
+        if not fs:
+            return pd.DataFrame()
+        df = pd.concat([pd.read_csv(f, dtype=str) for f in fs])
+        df["any"] = df["mes"].str[:4]
+        # Solo años completos (o casi)
+        n = df.groupby("any")["mes"].nunique()
+        df = df[df["any"].isin(n[n >= 11].index)]  # 2020 no tiene diciembre
+        for c in ["total"] + sum(cols.values(), []):
+            df[c] = pd.to_numeric(df[c].replace("<5", "2.5"), errors="coerce")
+        return df
+
+    res, refs = {}, {}
+    m = llegeix("sepe_paro_*.csv")
+    if len(m):
+        g = m.groupby(["ine", "any"]).mean(numeric_only=True).reset_index()
+        for _, f in g.iterrows():
+            if not f["total"] or f["total"] < 20:
+                continue
+            for k, cs in cols.items():
+                v = sum(f[c] for c in cs) / f["total"] * 100
+                if v == v:
+                    res.setdefault(f["ine"], {}).setdefault(k, {})[f["any"]] = round(float(v), 1)
+    t = llegeix("sepe_totals_paro_*.csv")
+    if len(t):
+        g = t.groupby(["ambit", "any"]).mean(numeric_only=True).reset_index()
+        for _, f in g.iterrows():
+            for k, cs in cols.items():
+                if f["total"]:
+                    refs.setdefault(k, {}).setdefault(f["any"], {})[f["ambit"]] = round(float(sum(f[c] for c in cs) / f["total"] * 100), 1)
+    return res, refs
+
+
 def complements_indicadores(pob):
     """Devuelve (x por municipio, refs, años, extra por municipio para la ficha)."""
     per = lambda v, p, k=100: None if v is None or not p else v / p * k  # noqa: E731
@@ -959,6 +1002,11 @@ def complements_indicadores(pob):
         cat = e.drop_duplicates("id").set_index("id")["cat"]
         anys_id = e.drop_duplicates("id").set_index("id")["any"].astype(str).str.extract(r"(\d{4})")[0]
         col = lambda d, k: d[k] if k in d else None  # noqa: E731
+
+        def pc(a, b, mult=100, minim=0):
+            """a / b × mult, solo si el denominador llega al mínimo (evita porcentajes de 1 sobre 2)."""
+            return a / b.where(b >= max(minim, 1e-9)) * mult
+
         defs = {
             "irpf_quota": (lambda d: col(d, "f11"), "f11", 0),
             "taxa_atur": (lambda d: col(d, "f222") / col(d, "f223") * 100, "f222", 1),
@@ -970,7 +1018,67 @@ def complements_indicadores(pob):
             "ibi_rebut": (lambda d: col(d, "f200") / col(d, "f198"), "f200", 0),
             "furgonetes": (lambda d: col(d, "f272") / col(d, "f321") * 1000, "f272", 0),
             "piscines": (lambda d: col(d, "f301"), "f301", 0),
+            # Resto de la ficha EMEX (2026-11-17): lo que la web aún no tenía
+            "dones": (lambda d: pc(col(d, "f320"), col(d, "f321")), "f320", 1),
+            "majors85": (lambda d: pc(col(d, "f29"), col(d, "f171")), "f29", 1),
+            "nascuts_esp": (lambda d: pc(col(d, "f72"), col(d, "f74")), "f72", 1),
+            "nascuts_cat": (lambda d: pc(col(d, "f69"), col(d, "f74")), "f69", 1),
+            "creix_natural": (lambda d: col(d, "f54"), "f54", 1),
+            "creix_migratori": (lambda d: col(d, "f55"), "f55", 1),
+            "emigracio": (lambda d: pc(col(d, "f373"), col(d, "f321"), 1000), "f373", 1),
+            "saldo_exterior": (lambda d: pc(col(d, "f372") - col(d, "f373"), col(d, "f321"), 1000), "f372", 1),
+            "immig_ue": (lambda d: pc(col(d, "f314"), col(d, "f317"), 100, 10), "f314", 0),
+            "matrimonis": (lambda d: pc(col(d, "f179"), col(d, "f321"), 1000), "f179", 1),
+            "parelles_fills": (lambda d: pc(col(d, "f112"), col(d, "f115")), "f112", 1),
+            "parelles_sense": (lambda d: pc(col(d, "f111"), col(d, "f115")), "f111", 1),
+            "llars_5": (lambda d: pc(col(d, "f405"), col(d, "f107")), "f405", 1),
+            "llegir_cat": (lambda d: pc(col(d, "f93"), col(d, "f96")), "f93", 0),
+            "escriure_cat": (lambda d: pc(col(d, "f94"), col(d, "f96")), "f94", 0),
+            "pensionistes_dones": (lambda d: pc(col(d, "f383"), col(d, "f384"), 100, 20), "f383", 0),
+            "vab_agri": (lambda d: pc(col(d, "f194"), col(d, "f251")), "f194", 1),
+            "vab_ind": (lambda d: pc(col(d, "f195"), col(d, "f251")), "f195", 1),
+            "vab_const": (lambda d: pc(col(d, "f196"), col(d, "f251")), "f196", 1),
+            "vab_serv": (lambda d: pc(col(d, "f197"), col(d, "f251")), "f197", 1),
+            "pib": (lambda d: col(d, "f2"), "f2", 0),
+            "propietat_pct": (lambda d: pc(col(d, "f126"), col(d, "f131")), "f126", 1),
+            "cedits_pct": (lambda d: pc(col(d, "f130"), col(d, "f131")), "f130", 1),
+            "hpo_iniciats": (lambda d: col(d, "f13"), "f13", 0),
+            "altitud": (lambda d: col(d, "f258"), "f258", 0),
+            "pavellons": (lambda d: col(d, "f293"), "f293", 0),
+            "pistes_poli": (lambda d: col(d, "f294"), "f294", 0),
+            "camps_esport": (lambda d: col(d, "f295"), "f295", 0),
+            "sales_esport": (lambda d: col(d, "f296"), "f296", 0),
+            "atletisme": (lambda d: col(d, "f302"), "f302", 0),
+            "residus_ind": (lambda d: col(d, "f369"), "f369", 0),
+            "residus_ind_est": (lambda d: col(d, "f371"), "f371", 0),
+            # Censo agrario 2020: hectáreas por cultivo y cabezas de ganado
+            "agr_vinya": (lambda d: col(d, "f349"), "f349", 0),
+            "agr_olivera": (lambda d: col(d, "f348"), "f348", 0),
+            "agr_cereal": (lambda d: col(d, "f391"), "f391", 0),
+            "agr_farratge": (lambda d: col(d, "f392"), "f392", 0),
+            "agr_herbacis": (lambda d: col(d, "f393"), "f393", 0),
+            "agr_fruiters": (lambda d: col(d, "f347"), "f347", 0),
+            "agr_llenyosos": (lambda d: col(d, "f350"), "f350", 0),
+            "agr_hivernacle": (lambda d: col(d, "f394"), "f394", 1),
+            "agr_horts": (lambda d: col(d, "f395"), "f395", 1),
+            "agr_guarets": (lambda d: col(d, "f346"), "f346", 0),
+            "agr_pastures": (lambda d: col(d, "f134"), "f134", 0),
+            "agr_llaurades": (lambda d: col(d, "f351"), "f351", 0),
+            "agr_sau_ha": (lambda d: col(d, "f345"), "f345", 0),
+            "agr_expl_sau": (lambda d: col(d, "f396"), "f396", 0),
+            "agr_expl_ram": (lambda d: col(d, "f397"), "f397", 0),
+            "ram_porcs": (lambda d: col(d, "f144"), "f144", 0),
+            "ram_porcs_hab": (lambda d: pc(col(d, "f144"), col(d, "f321"), 1), "f144", 1),
+            "ram_bovins": (lambda d: col(d, "f141"), "f141", 0),
+            "ram_ovins": (lambda d: col(d, "f142"), "f142", 0),
+            "ram_cabres": (lambda d: col(d, "f252"), "f252", 0),
+            "ram_aviram": (lambda d: col(d, "f145"), "f145", 0),
+            "ram_conills": (lambda d: col(d, "f146"), "f146", 0),
+            "ram_equins": (lambda d: col(d, "f147"), "f147", 0),
         }
+        # Recuentos: el valor de Cataluña no se puede comparar con el de un municipio
+        RECOMPTES = {"piscines", "pib", "hpo_iniciats", "altitud", "pavellons", "pistes_poli", "camps_esport", "sales_esport", "atletisme",
+                     "residus_ind", "residus_ind_est"} | {k for k in defs if (k.startswith("agr_") or k.startswith("ram_")) and k != "ram_porcs_hab"}
         catdf = pd.DataFrame([cat.to_dict()])
         for k, (fn, rid, dec) in defs.items():
             try:
@@ -983,7 +1091,7 @@ def complements_indicadores(pob):
             for ine, v in s_.items():
                 if v == v and v is not None and math.isfinite(v):
                     res.setdefault(ine, {})[k] = round(float(v), dec)
-            if c_ is not None and len(c_) and c_.iloc[0] == c_.iloc[0] and k not in ("piscines",):
+            if c_ is not None and len(c_) and c_.iloc[0] == c_.iloc[0] and k not in RECOMPTES:
                 refs[k] = {"cat": round(float(c_.iloc[0]), dec)}
             a = anys_id.get(rid)
             if isinstance(a, str):
@@ -2316,6 +2424,7 @@ def main():
     aw = anuari_aeat_web.construir()
     cad, refs_cad, any_cad, usos_cad, usos_cad_ref = cadastre()
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
+    ats, refs_ats = atur_detall()
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_cm)
@@ -2360,6 +2469,7 @@ def main():
             "pol": pol.get(ine, {}),
             **({"trib": trib[ine]} if ine in trib else {}),
             **({"veh": veh[ine]} if ine in veh else {}),
+            **({"ats": ats[ine]} if ine in ats else {}),
             **({"com": com[ine]} if ine in com else {}),
             **({"com_f": fitxa_com[ine]} if ine in fitxa_com else {}),
             **({"sol": sol[ine]} if ine in sol else {}),
@@ -2436,7 +2546,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

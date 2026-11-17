@@ -52,6 +52,7 @@
     veh: ["DGT", "DGT"], ajt: ["Generalitat i Ministeri d'Hisenda", "Generalitat y Ministerio de Hacienda"], tri: ["Ministeri d'Hisenda, tipus impositius municipals", "Ministerio de Hacienda, tipos impositivos municipales"],
     ene: ["Generalitat i Xifra (Diputació de Girona)", "Generalitat y Xifra (Diputació de Girona)"], ele: ["Generalitat, resultats per secció censal", "Generalitat, resultados por sección censal"],
     pol: ["Generalitat, ens locals", "Generalitat, entes locales"],
+    agr: ["INE, cens agrari 2020, via Idescat", "INE, censo agrario 2020, vía Idescat"],
   };
   const ll = (p) => p[LANG === "ca" ? 0 : 1];
 
