@@ -1,0 +1,285 @@
+# pregunta	indicador esperat (alternatives amb |, - cap)	municipis (separats per ;)	tipus
+¿Cuál es la población asalariada de Agullana?	q_asal	Agullana	mun
+¿Cuántos asalariados hay en Agullana?	q_asal	Agullana	mun
+Quants assalariats hi ha a Agullana?	q_asal	Agullana	mun
+cuanta gente trabaja en Olot	q_afil	Olot	mun
+cuántos trabajadores hay en Figueres	q_afil|q_asal	Figueres	mun
+afiliados a la seguridad social en Blanes	q_afil|cj_afil	Blanes	mun
+tasa de afiliación en Salt	cj_afil	Salt	mun
+cuantos autonomos hay en Olot	q_reta	Olot	mun
+porcentaje de autónomos en Begur	cj_reta	Begur	mun
+autònoms a Cadaqués	cj_reta|q_reta|autonoms	Cadaqués	mun
+cuántos parados hay en Blanes	cj_atur_n	Blanes	mun
+quants aturats hi ha a Salt	cj_atur_n	Salt	mun
+paro en Salt	cj_atur	Salt	mun
+tasa de paro de Palamós	cj_atur	Palamós i Sant Joan	mun
+atur a Figueres	cj_atur	Figueres	mun
+desempleo en Lloret	cj_atur	Lloret de Mar	mun
+cómo está el empleo en Banyoles	q_afil|cj_afil|cj_atur	Banyoles	mun
+contratos en Girona	cj_contr	Girona	mun
+contratos indefinidos en Figueres	cj_indef	Figueres	mun
+cuántos habitantes tiene Figueras	pob	Figueres	mun
+población de Llançà	pob	Llançà	mun
+quanta gent viu a l'Escala	pob	Escala, l'	mun
+cuántos vecinos tiene Begur	pob	Begur	mun
+habitants de Torroella de Montgrí	pob	Torroella de Montgrí	mun
+población de Das	pob	Das	mun
+renta de Lloret	renda	Lloret de Mar	mun
+renta per cápita de Gerona	renda	Girona	mun
+renda de Sant Feliu de Guíxols	renda	Sant Feliu de Guíxols	mun
+cuánto gana la gente en Salt	renda	Salt	mun
+ingresos por hogar en Olot	renda_llar	Olot	mun
+renta por hogar en Banyoles	renda_llar	Banyoles	mun
+riesgo de pobreza en Salt	pobresa	Salt	mun
+pobreza en Figueres	pobresa	Figueres	mun
+desigualdad en Girona	gini	Girona	mun
+índice de Gini de Begur	gini	Begur	mun
+pensión media en Ripoll	pensio_mitjana	Ripoll	mun
+cuántos pensionistas hay en Olot	pensions	Olot	mun
+renta disponible en Girona	rfdb	Girona	mun
+base imponible del IRPF en Sant Gregori	irpf|aeat_bruta	Sant Gregori	mun
+renta declarada en Pals	aeat_bruta	Pals	mun
+cuánto IRPF se paga en Girona	irpf_quota|aeat_tipus	Girona	mun
+PIB per càpita de Figueres	pib_hab	Figueres	mun
+alquiler en Girona	lloguer	Girona	mun
+precio del alquiler en Sant Feliu	lloguer	Sant Feliu de Guíxols	mun
+cuánto cuesta alquilar en Platja d'Aro	lloguer	Castell d'Aro, Platja d'Aro i s'Agaró	mun
+lloguer mitjà a Olot	lloguer	Olot	mun
+precio de la vivienda en Girona	lloguer|cad_vm2	Girona	mun
+cuánto cuesta un piso en Figueres	lloguer	Figueres	mun
+cuánto ha subido el alquiler en Girona	var5|lloguer	Girona	mun|evol
+esfuerzo para pagar el alquiler en Salt	esforc	Salt	mun
+compraventas de viviendas en Roses	compra	Roses	mun
+cuántos pisos se venden en Blanes	compra	Blanes	mun
+obra nueva en Vilablareix	nova	Vilablareix	mun
+pisos turísticos en Cadaqués	hut	Cadaqués	mun
+airbnb en Begur	hut|tur_vte_pct	Begur	mun
+cuántos pisos turísticos hay en Roses	tur_hut_n	Roses	mun
+pisos vacíos en Torroella de Montgrí	buits	Torroella de Montgrí	mun
+habitatges buits a Girona	buits	Girona	mun
+segundas residencias en Llançà	segones	Llançà	mun
+hogares de alquiler en Girona	lloguer_pct	Girona	mun
+año de construcción de las viviendas de Olot	anyo	Olot	mun
+viviendas viejas en Ripoll	antics	Ripoll	mun
+valor catastral en Begur	cad_vviv|valor_cad|cad_vm	Begur	mun
+viviendas iniciadas en Salt	iniciats|cj_ini	Salt	mun
+vivienda protegida en Girona	protegida|hb_hpo	Girona	mun
+zona tensionada Girona	hb_zmrt|tensio	Girona	mun|area
+edad media de la Bisbal	edat	Bisbal d'Empordà, la	mun
+edat mitjana a Olot	edat	Olot	mun
+mayores de 65 en Portbou	majors65	Portbou	mun
+gent gran a Ripoll	majors65	Ripoll	mun
+niños en Sant Gregori	menors18	Sant Gregori	mun
+menores de edad en Salt	menors18	Salt	mun
+extranjeros en Castelló d'Empúries	estrangers	Castelló d'Empúries	mun
+estrangers a la Jonquera	estrangers	Jonquera, la	mun
+inmigrantes en Salt	estrangers	Salt	mun
+marroquíes en Salt	nac_MA	Salt	mun
+rumanos en Lloret	nac_RO	Lloret de Mar	mun
+franceses en Llívia	nac_FR	Llívia	mun
+nacidos en el extranjero en Figueres	nascuts_estr	Figueres	mun
+cuánta gente habla catalán en Salt	catala	Salt	mun
+qui parla català a Olot	catala	Olot	mun
+natalidad en Salt	natalitat	Salt	mun
+nacimientos en Girona	natalitat	Girona	mun
+mortalidad en Ripoll	mortalitat	Ripoll	mun
+gente que vive sola en Girona	unipersonals	Girona	mun
+tamaño del hogar en Salt	llar	Salt	mun
+densidad de población de Salt	densitat	Salt	mun
+crecimiento de la población de Vilablareix	pob_var|creixement	Vilablareix	mun
+población en 2044 en Girona	proj2044	Girona	mun
+estudios universitarios en Sant Cugat	-		fora
+estudios superiores en Girona	educ_sup|edu_sup21	Girona	mun
+universitarios en Olot	edu_univ|educ_sup|edu_sup21	Olot	mun
+escuela pública en Begur	edu_publica	Begur	mun
+escuelas en Ripoll	edu_centres	Ripoll	mun
+alumnos por clase en Salt	edu_ratio_pri|edu_ratio_eso	Salt	mun
+guardería en Girona	edu_0_3	Girona	mun
+puestos de trabajo en Girona	llocs	Girona	mun
+empresas en Figueres	empreses	Figueres	mun
+industria en Olot	sector_ind	Olot	mun
+turismo en Lloret	tur_mov_rec|tur_pl_h|-	Lloret de Mar	mun|tema
+cuántos turistas van a Lloret	tur_mov_rec	Lloret de Mar	mun
+quants turistes van a Roses	tur_mov_rec	Roses	mun
+plazas de hotel en Roses	tur_pl_hotel_h	Roses	mun
+campings en Torroella	tur_pl_camp_h	Torroella de Montgrí	mun
+hoteles en Girona	tur_hotels	Girona	mun
+ocupación hotelera en Lloret	tur_ocup	Lloret de Mar	mun
+precio del hotel en Girona	tur_adr	Girona	mun
+impuesto turístico en Lloret	tur_ieet_h	Lloret de Mar	mun
+turistas franceses en Figueres	tur_mov_fr	Figueres	mun
+playas en Begur	tur_platges	Begur	mun
+pensiones no contributivas en Salt	pnc	Salt	mun
+residencias de ancianos en Olot	residencies	Olot	mun
+farmacias en Banyoles	farmacies	Banyoles	mun
+diabetes en Salt	diabetis	Salt	mun|area
+vacuna de la gripe en Girona	grip	Girona	mun|area
+mortalidad prematura en Figueres	mort_prem	Figueres	mun|area
+delitos en Girona	int_total|fets	Girona	mun
+criminalidad en Figueres	int_total	Figueres	mun
+robos en Lloret	mo_robatori_forca|mo_furts|patrimoni	Lloret de Mar	mun|area
+hurtos en Girona	mo_furts	Girona	mun|area
+okupas en Salt	mo_ocupacio|pj_ocupa	Salt	mun|area
+ocupaciones de viviendas en Blanes	mo_ocupacio|pj_ocupa	Blanes	mun|area
+estafas en Girona	mo_estafes	Girona	mun|area
+agresiones sexuales en Lloret	mo_agressions_sexuals|int_sexual	Lloret de Mar	mun|area
+drogas en Salt	mo_drogues|int_drogues	Salt	mun|area
+desahucios en Girona	pj_llanc	Girona	mun|area
+desnonaments a Figueres	pj_llanc	Figueres	mun|area
+violencia de género en Figueres	pj_vdg_den|pj_vdg_vict	Figueres	mun|area
+incendios forestales en Maçanet de Cabrenys	inc_forestals|ha_cremades	Maçanet de Cabrenys	mun
+deuda del ayuntamiento de Lloret	deute	Lloret de Mar	mun
+deute de l'ajuntament de Girona	deute	Girona	mun
+presupuesto de Olot	pres_desp|pres_ing	Olot	mun
+gasto por habitante en Begur	pres_desp	Begur	mun
+gasto social en Salt	pres_social	Salt	mun
+IBI en Begur	cad_ibi_rec|ibi_rebut	Begur	mun
+cuánto se paga de IBI en Girona	cad_ibi_rec|ibi_rebut	Girona	mun
+tipo del IBI en Figueres	trib_ibi_u	Figueres	mun
+impuesto de circulación en Salt	trib_ivtm_12	Salt	mun
+plusvalía municipal en Girona	trib_iivtnu	Girona	mun
+cuánto tarda en pagar el ayuntamiento de Figueres	pmp	Figueres	mun
+consumo eléctrico en Begur	kwh	Begur	mun
+placas solares en Vilablareix	sol_h	Vilablareix	mun
+reciclaje en Sils	selectiva	Sils	mun
+basura por habitante en Lloret	residus	Lloret de Mar	mun
+emisiones de CO2 en Girona	co2	Girona	mun
+coches por habitante en Olot	veh_tur_h	Olot	mun
+coches eléctricos en Girona	veh_elec_p	Girona	mun
+motos en Roses	veh_moto_h|motos	Roses	mun
+coches diésel en Ripoll	veh_diesel_p	Ripoll	mun
+edad de los coches en Salt	veh_antig_tur	Salt	mun
+transporte público en Girona	mob_pub	Girona	mun
+cuánta gente va en coche en Figueres	mob_cotxe|mob_priv	Figueres	mun
+teletrabajo en Girona	mob_telet	Girona	mun
+gente que va a pie en Olot	mob_peu|mob_act	Olot	mun
+bicicleta en Girona	mob_bici	Girona	mun
+comercios en Olot	com_est_h|com_n	Olot	mun
+locales vacíos en Figueres	com_buits	Figueres	mun
+tiendas de ropa en Girona	com_s_pers	Girona	mun
+supermercados en Salt	com_s_mixt	Salt	mun
+suelo urbano en Begur	u_su	Begur	mun
+oficinas bancarias en Ripoll	bancs	Ripoll	mun
+bibliotecas en Olot	biblio	Olot	mun
+museos en Figueres	museus	Figueres	mun
+¿Quién es el alcalde de Banyoles?	alcalde	Banyoles	alcalde
+Qui és l'alcalde de Banyoles?	alcalde	Banyoles	alcalde
+quien gobierna en Girona	alcalde	Girona	alcalde
+alcaldesa de Figueres	alcalde	Figueres	alcalde
+de qué partido es el alcalde de Olot	alcalde	Olot	alcalde
+qué comarca es Vidrà	comarca	Vidrà	comarca
+a quina comarca és Olot	comarca	Olot	comarca
+¿Qué municipio tiene más paro?	cj_atur		rank
+Quin municipi té més atur?	cj_atur		rank
+dónde hay más paro	cj_atur		rank
+el pueblo con menos paro	cj_atur		rank
+municipios con más parados	cj_atur_n|cj_atur		rank
+el pueblo más caro	lloguer		rank
+el pueblo más barato del Baix Empordà	lloguer		rank
+on és més car el lloguer	lloguer		rank
+alquiler más barato de la provincia	lloguer		rank
+los 5 municipios con menos habitantes	pob		rank
+el pueblo más pequeño	pob		rank
+el poble més petit de la Garrotxa	pob		rank
+qué pueblo tiene más habitantes	pob		rank
+municipios más grandes de la Selva	pob		rank
+dónde vive la gente más rica	renda		rank
+el pueblo más rico de Girona	renda		rank
+el poble més pobre	renda|pobresa		rank
+el pueblo más pobre de más de 10.000 habitantes	renda|pobresa		rank
+quien gana más dinero	renda		rank
+qué pueblo tiene más extranjeros	estrangers		rank
+pueblos con más pisos turísticos	hut		rank
+Pueblos de más de 5.000 habitantes con más pisos turísticos	hut		rank
+pueblos con más coches eléctricos	veh_elec_p		rank
+municipio más seguro de más de 10.000 habitantes	int_total		rank
+el pueblo más envejecido	edat		rank
+el pueblo más joven	edat		rank
+municipios con más deuda	deute		rank
+dónde se recicla más	selectiva		rank
+dónde se paga más IBI	cad_ibi_rec|ibi_rebut		rank
+top 10 renta del Gironès	renda		rank
+ranking de alquiler en el Alt Empordà	lloguer		rank
+municipios con más turistas	tur_mov_rec		rank
+dónde hay más placas solares	sol_h		rank
+dónde se habla más catalán	catala		rank
+municipis amb més gent gran	majors65		rank
+el pueblo con más desahucios	pj_llanc		rank
+en qué municipio hay más robos	mo_robatori_forca|mo_furts|int_total		rank
+Alquiler en Olot vs Figueres	lloguer	Olot;Figueres	comp
+Lloguer a Olot vs Figueres	lloguer	Olot;Figueres	comp
+Olot vs Figueres	-	Olot;Figueres	comp
+comparar renta de Girona, Salt y Figueres	renda	Girona;Salt;Figueres	comp
+paro en Blanes y Lloret	cj_atur	Blanes;Lloret de Mar	comp
+diferencia de alquiler entre Girona y Salt	lloguer	Girona;Salt	comp
+Figueres o Olot, dónde es más caro el alquiler	lloguer	Figueres;Olot	comp
+compara la población de Girona y Figueres	pob	Girona;Figueres	comp
+¿Cómo ha cambiado el alquiler en Girona?	lloguer	Girona	evol
+Com ha canviat el lloguer a Girona?	lloguer	Girona	evol
+evolución del paro en Figueres	cj_atur	Figueres	evol
+evolución de la población de Salt	pob	Salt	evol
+evolució de la població de Figueres	pob	Figueres	evol
+cómo ha evolucionado el paro en la provincia	cj_atur		evol
+evolución de la población de la provincia	pob		evol
+cómo ha crecido la población de Vilablareix	pob	Vilablareix	evol
+historia del alquiler en Olot	lloguer	Olot	evol
+la renta de Salt desde 2015	renda	Salt	evol
+alquiler en Girona en 2015	lloguer	Girona	mun
+población de Figueres en 2005	pob	Figueres	mun
+paro en Salt en 2020	cj_atur	Salt	mun
+renta de la provincia	renda		prov
+alquiler en la provincia	lloguer		prov
+población de la provincia	pob		prov
+paro en la provincia de Girona	cj_atur		prov
+cuántos turistas vienen a la provincia	tur_mov_rec		prov
+Olot	-	Olot	resum
+Figueres	-	Figueres	resum
+háblame de Begur	-	Begur	resum
+datos de Cadaqués	-	Cadaqués	resum
+qué tal el tiempo en Roses	-	Roses	resum
+hipotecas en Girona	pj_llanc_hipo	Girona	area
+Cuál es la población asalariada de Mataró?	-		fora
+alquiler en Barcelona	-		fora
+paro en Vic	-		fora
+hola	-		no
+qué es esto	-		no
+paro y alquiler en Olot	cj_atur+lloguer	Olot	multi
+renta, paro y edad media de Salt	renda+cj_atur+edat	Salt	multi
+població i renda de Girona	pob+renda	Girona	multi
+¿Olot es más caro que la media?	lloguer	Olot	mun
+¿tiene Salt más paro que la provincia?	cj_atur	Salt	mun
+quién ganó las elecciones en Girona	el_guany	Girona	elec
+voto a ERC en Salt	el_erc	Salt	elec
+participación electoral en Figueres	el_part	Figueres	elec
+voto a Vox en Figueres	el_vox	Figueres	elec
+dónde se vota más a Junts	el_junts		rank|elec
+dónde ganó el PSC	el_guany|el_psc		rank|elec
+renta de olot	renda	Olot	mun
+paro figueres	cj_atur	Figueres	mun
+alquiler gerona	lloguer	Girona	mun
+habitantes palafrugell	pob	Palafrugell	mun
+lloret extranjeros	estrangers	Lloret de Mar	mun
+cuanto paro hay en sant feliu de guixols	cj_atur	Sant Feliu de Guíxols	mun
+q renta tiene la bisbal	renda	Bisbal d'Empordà, la	mun
+alquiler en castello d empuries	lloguer	Castelló d'Empúries	mun
+paro en sta coloma de farners	cj_atur	Santa Coloma de Farners	mun
+alquiler en Olott	lloguer	Olot	mun
+renta en Figeres	renda	Figueres	mun
+habitantes de Palafrujell	pob	Palafrugell	mun
+paro en Torroella de Montgri	cj_atur	Torroella de Montgrí	mun
+habitantes de Calonge	pob	Calonge i Sant Antoni	mun
+renta en Platja d Aro	renda	Castell d'Aro, Platja d'Aro i s'Agaró	mun
+alquiler en l'Estartit	lloguer	Torroella de Montgrí	mun
+habitantes de Empuriabrava	pob	Castelló d'Empúries	mun
+paro en Sant Joan de les Abadesses	cj_atur	Sant Joan de les Abadesses	mun
+alquiler en la Jonquera	lloguer	Jonquera, la	mun
+renta en Vall d'en Bas	renda	Vall d'en Bas, la	mun
+me das el paro de olot	cj_atur	Olot	mun
+cuántas farmacias hay en Girona	farmacies	Girona	mun
+cuántos coches hay en Figueres	veh_n|veh_tur_h	Figueres	mun
+cuántos comercios hay en Olot	com_n	Olot	mun
+cuántas empresas hay en Girona	empreses	Girona	mun
+cuántos alumnos hay en Salt	edu_alumnes	Salt	mun
+cuántos hoteles hay en Lloret	tur_hotels	Lloret de Mar	mun
+cuántas placas solares hay en Girona	sol_n	Girona	mun
+cuántas viviendas turísticas hay en Begur	tur_hut_n	Begur	mun

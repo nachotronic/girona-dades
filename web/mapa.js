@@ -1409,6 +1409,22 @@
     llegenda: () => { if (ind) llegenda(); },
     get ind() { return ind; }, get nivell() { return nivell; }, get any() { return anySel; }, get fixat() { return fixat; }, get mapa() { return mapa; },
     tria(id) { const i = IND.find((x) => x.id === id); if (!i) return; consulta = ""; const c = document.getElementById("cerca-ind"); if (c) c.value = ""; return tria(i); },
+    // Para pregunta.js: área (de salud, policial, judicial, de Agents Rurals) de un municipio y nombres de las áreas
+    async area(n, ine) {
+      const m = munPerIne[ine] || D.municipios.find((x) => x.ine === ine);
+      if (!m) return null;
+      if (n === "pj") return m.x && m.x.pj ? { id: m.x.pj, nom: m.x.pj_nom } : null;
+      if (!geoMun || !ZONA[n]) return null;
+      return areaDe(n, m);
+    },
+    async noms(n) {
+      const o = {};
+      if (n === "pj") { D.municipios.forEach((m) => { if (m.x && m.x.pj) o[m.x.pj] = m.x.pj_nom; }); return o; }
+      if (!ZONA[n]) return o;
+      await carregaZona(n);
+      ZONA[n].geo.features.forEach((f) => { o[f.properties.id] = f.properties.nom; });
+      return o;
+    },
     selecciona(ine) {
       if (nivell !== "mun") return;
       const f = geoMun.features.find((x) => x.properties.ine === ine); if (!f) return;
@@ -1416,6 +1432,8 @@
     },
   };
   window.mapaIdioma = () => { if (!mapa) return; omplirSelector(); pinta(); };
+  // Para pregunta.js: muestra una convocatoria concreta en el mapa electoral
+  window.mapaEleccio = async (id) => { if (!mapa || !id) return; await carregaConv(id); if (!ind || !ind.el) ind = IND.find((i) => i.id === "el_guany"); if (!disponible(ind, nivell)) { nivell = "mun"; fixat = null; } omplirSelector(); botonsNivell(); pinta(); };
   // Inserción (iframe): estado actual del mapa y arranque con un indicador, nivel y año dados
   window.mapaEstat = () => (ind ? { id: ind.id, nivell, any: anySel, nom: nomInd(ind) } : null);
   let llest; window.mapaLlest = new Promise((r) => { llest = r; });
