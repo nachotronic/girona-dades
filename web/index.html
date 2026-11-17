@@ -189,6 +189,32 @@
   </section>
 
   <section id="fitxa" class="amplada fitxa" hidden aria-live="polite"></section>
+
+  <section id="proposa" class="amplada sec proposa" aria-labelledby="h-proposa">
+    <div class="pr-graella">
+      <header class="pr-cap">
+        <p class="sobre" data-t="pr_sobre">Bústia</p>
+        <h2 id="h-proposa" data-t="pr_titol">Et falta alguna dada?</h2>
+        <p class="lead" data-t="pr_lead">Fes-nos saber quina dada t'agradaria trobar aquí, de quin municipi o tema, i d'on es podria treure si ho saps. Llegim totes les propostes.</p>
+      </header>
+      <form id="proposa-form" class="pr-form" novalidate>
+        <label class="pr-camp pr-ample"><span data-t="pr_dada">Quina dada et falta</span>
+          <textarea name="dada" rows="3" required maxlength="2000" data-tp="pr_dada_ph" placeholder="Per exemple: preu del lloguer per barris de Figueres"></textarea></label>
+        <label class="pr-camp"><span data-t="pr_lloc">Municipi o tema</span>
+          <input type="text" name="lloc" maxlength="120" autocomplete="off" data-tp="pr_lloc_ph" placeholder="Opcional"></label>
+        <label class="pr-camp"><span data-t="pr_font">Font, si la coneixes</span>
+          <input type="text" name="font" maxlength="300" autocomplete="off" data-tp="pr_font_ph" placeholder="Opcional: organisme o enllaç"></label>
+        <label class="pr-camp pr-ample"><span data-t="pr_email">El teu correu</span>
+          <input type="email" name="email" maxlength="200" autocomplete="email" data-tp="pr_email_ph" placeholder="Opcional, només si vols resposta"></label>
+        <input type="text" name="_honey" class="pr-mel" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="pr-peu pr-ample">
+          <button type="submit" data-t="pr_envia">Envia la proposta</button>
+          <p class="pr-avis"><span data-t="pr_avis">El missatge s'envia per correu a la redacció a través de FormSubmit. Detalls a </span><a href="privacitat.html#ca-contacte" data-t="pr_avis_l">Privacitat</a>.</p>
+        </div>
+        <p id="proposa-estat" class="pr-estat pr-ample" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="peu" id="s-fonts">
@@ -244,6 +270,7 @@
       <li><a href="avis-legal.html" data-t="l_avis">Avís legal</a></li>
       <li><a href="privacitat.html" data-t="l_priv">Privacitat i galetes</a></li>
       <li><a href="qui-som.html#ca-llic" data-t="l_llic" id="l-llic">Reutilització: CC BY 4.0</a></li>
+      <li><a href="#proposa" data-t="l_proposa">Proposa una dada</a></li>
     </ul>
     <p class="peu-meta"><span data-t="actualitzat">Actualitzat el</span> <span class="data-gen"></span> · <a href="https://github.com/nachotronic/girona-dades" data-t="codi">Codi i dades a GitHub</a> · <a href="ca/" data-t="ref_pagines" hreflang="ca">Dades per municipi en text, CSV i JSON</a></p>
   </div>
@@ -263,5 +290,6 @@
 <script src="mobilitat.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
+<script src="proposa.js"></script>
 </body>
 </html>

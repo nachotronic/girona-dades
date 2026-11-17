@@ -994,3 +994,47 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .mob-dos { margin-top: 18px; }
 .mx td.mx-f { color: #fff; }
 .pg-fig[data-id="matriu"] { grid-column: 1 / -1; }
+
+/* ---------- Bústia: «Et falta alguna dada?» ---------- */
+.proposa .pr-graella { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px 56px; border-top: 3px solid var(--tinta); padding-top: 18px; }
+.pr-cap h2 { margin: 0 0 12px; }
+.pr-cap .lead { font-size: 16px; }
+.pr-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; align-content: start; }
+.pr-ample { grid-column: 1 / -1; }
+.pr-camp { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.pr-camp > span { font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text-2); }
+.pr-camp input, .pr-camp textarea {
+  width: 100%; font: 400 15px/1.45 var(--sans); color: var(--text); background: var(--paper);
+  border: 1px solid var(--vora-2); border-radius: 0; padding: 10px 12px; margin: 0;
+}
+.pr-camp textarea { resize: vertical; min-height: 88px; }
+.pr-camp input::placeholder, .pr-camp textarea::placeholder { color: var(--text-3); opacity: 1; }
+.pr-camp input:focus, .pr-camp textarea:focus { outline: 2px solid var(--tinta); outline-offset: -1px; border-color: var(--tinta); }
+.pr-mel { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.pr-peu { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; }
+.pr-peu button {
+  font: 600 13px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: #fff; background: var(--accent);
+  border: 0; border-radius: 0; padding: 14px 20px; cursor: pointer;
+}
+.pr-peu button:hover { background: var(--tinta); color: var(--fons); }
+.pr-peu button:disabled { opacity: .5; cursor: wait; }
+.pr-avis { margin: 0; flex: 1 1 260px; font: 400 12px/1.45 var(--mono); color: var(--text-3); }
+.pr-avis a { color: inherit; }
+.pr-estat { margin: 0; padding: 12px 14px; font-size: 15px; border-left: 4px solid var(--tinta); background: var(--fons-2); }
+.pr-estat.pr-ok { border-left-color: var(--baixa); }
+.pr-estat.pr-error { border-left-color: var(--accent); }
+@media (max-width: 900px) {
+  .proposa .pr-graella { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .pr-form { grid-template-columns: 1fr; }
+  .pr-peu button { width: 100%; padding: 16px 20px; }
+}
+/* Enlace al final de la ficha */
+.fitxa-proposa { margin-top: 40px; }
+.fp-enllac { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; padding: 16px 0; border-top: 1px solid var(--tinta); border-bottom: 1px solid var(--tinta); text-decoration: none; color: var(--text); }
+.fp-sobre { font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+.fp-text { font: 600 19px/1.25 var(--serif); font-stretch: 85%; flex: 1 1 auto; }
+.fp-fletxa { font: 500 20px/1 var(--mono); color: var(--accent); }
+.fp-enllac:hover .fp-text { text-decoration: underline; text-underline-offset: 4px; }
+.emb .proposa, .emb .fitxa-proposa { display: none !important; }
