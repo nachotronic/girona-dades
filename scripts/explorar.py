@@ -70,24 +70,16 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
 
-# Exportaciones (comercio exterior): catálogos y páginas candidatas
+# Exportaciones (comercio exterior), 2.ª ronda
 CANDIDATAS_E = {}
-for q in ("exportacions", "comerç exterior", "exportadores", "internacionalització"):
-    CANDIDATAS_E["soc_" + q[:6].replace("ç", "c").replace(" ", "")] = f"{SOCRATA}?q={urllib.parse.quote(q)}&limit=40&domains=analisi.transparenciacatalunya.cat"
-CANDIDATAS_E["idescat_cat"] = f"{IDC}?lang=ca"
-CANDIDATAS_E["datacomex_home"] = "https://datacomex.comercio.es/"
-CANDIDATAS_E["datacomex_api"] = "https://datacomex.comercio.es/api"
-CANDIDATAS_E["aeat_cat_datos"] = "https://sede.agenciatributaria.gob.es/Sede/datosabiertos/catalogo.shtml"
-CANDIDATAS_E["aeat_cex"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior.html"
-CANDIDATAS_E["aeat_cex2"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/datos-estadisticos.html"
-CANDIDATAS_E["aeat_cex_desc"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/datos-estadisticos/descarga-datos.html"
-CANDIDATAS_E["mincotur_est"] = "https://comercio.gob.es/es-es/estadisticas/Paginas/default.aspx"
-CANDIDATAS_E["mincotur_inf"] = "https://comercio.gob.es/ImportacionExportacion/Informes_Estadisticas/Paginas/Informes-periodicos.aspx"
-CANDIDATAS_E["icex_emp"] = "https://www.icex.es/es/quienes-somos/que-es-icex/estadisticas"
-CANDIDATAS_E["accio_dades"] = "https://www.accio.gencat.cat/ca/serveis/banc-coneixement/estadistiques-comerc-exterior/"
-CANDIDATAS_E["idescat_cex"] = "https://www.idescat.cat/indicadors/?id=aec&n=15199"
-CANDIDATAS_E["idescat_tema_cex"] = "https://www.idescat.cat/tema/comex"
-CANDIDATAS_E["cambra_gi"] = "https://www.cambragirona.cat/"
+AE = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/"
+for k in ("2026-territoriales", "2025-territoriales", "2024-territoriales", "2025-resumenes", "2024", "2025",
+          "datos-comercio-exterior-caracteristicas-empresa", "directorios-empresas-comercio-exterior", "2026-maxima-desagregacion"):
+    CANDIDATAS_E["aeat_" + k] = AE + k + ".html"
+for k in ("18134/8", "18136/4", "22177"):
+    CANDIDATAS_E["idescat_" + k.replace("/", "_")] = f"{IDC}/comest/{k}?lang=ca"
+CANDIDATAS_E["idescat_estad_comest"] = "https://www.idescat.cat/estad/comest"
+CANDIDATAS_E["datacomex_old"] = "https://datacomex.comercio.es/Home/Index"
 PAT_ENLACES = re.compile(r'href="([^"]+)"', re.I)
 CLAVES_ENLACE = re.compile(r"export|exterior|comex|cex|provinc|descarga|\.zip|\.xls|\.csv", re.I)
 
@@ -103,6 +95,34 @@ def explora_enlaces(filas: list) -> None:
         out.append(f"== {f.name}\n" + "\n".join(enl[:200]))
     (MUESTRAS / "ENLACES.txt").write_text("\n".join(out), encoding="utf-8")
 
+
+def explora_ficheros(filas: list) -> None:
+    """Baja el primer fichero (zip/xlsx/csv) enlazado en cada página de la AEAT y guarda su cabecera."""
+    import io, zipfile
+    for f in sorted(MUESTRAS.glob("aeat_*.html")):
+        t = f.read_text("utf-8", "ignore")
+        enl = [e for e in PAT_ENLACES.findall(t) if re.search(r"\.(zip|xlsx?|csv|txt|gz)$", e, re.I)]
+        (MUESTRAS / f"{f.stem}_FICHEROS.txt").write_text("\n".join(enl), encoding="utf-8")
+        for e in enl[:2]:
+            url = urllib.parse.urljoin("https://sede.agenciatributaria.gob.es/", e)
+            try:
+                r = requests.get(url, headers=UA, timeout=300)
+                filas.append(f"| fich {f.stem} | {r.status_code} | {r.headers.get('content-type','')} | {len(r.content)} | {url} |")
+                nom = MUESTRAS / f"{f.stem}__{pathlib.Path(e).name}.txt"
+                if url.lower().endswith(".zip"):
+                    z = zipfile.ZipFile(io.BytesIO(r.content)); txt = []
+                    for n in z.namelist()[:6]:
+                        with z.open(n) as fz:
+                            txt.append(f"== {n} ({z.getinfo(n).file_size} bytes)")
+                            datos = fz.read(3_000_000).decode("latin-1").splitlines()
+                            txt += datos[:30] + ["--- 17/Girona ---"] + [l for l in datos if "Girona" in l or ";17;" in l or "|17|" in l][:60]
+                    nom.write_text("\n".join(txt), encoding="utf-8")
+                elif url.lower().endswith((".xlsx", ".xls")):
+                    (MUESTRAS / f"{f.stem}__{pathlib.Path(e).name}").write_bytes(r.content[:8_000_000])
+                else:
+                    nom.write_text(r.content[:200_000].decode("latin-1"), encoding="utf-8")
+            except Exception as ex:  # noqa: BLE001
+                filas.append(f"| fich {f.stem} | error | {str(ex)[:80]} | | {url} |")
 
 def explora_idescat(filas: list) -> None:
     """Recorre el catálogo de tablas de Idescat buscando comercio exterior."""
@@ -226,8 +246,8 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_idescat(filas)
     explora_enlaces(filas)
+    explora_ficheros(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
