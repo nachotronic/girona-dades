@@ -1,0 +1,1681 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+  
+
+
+<html>
+<head>
+  <script language="JavaScript" src="js/resize.js" type=""></script>
+  <script language="JavaScript" src="js/jaxi.js" type=""></script>
+  <script language="JavaScript" src="/inebase/js/inebase.js" type=""></script>
+  <link rel="stylesheet" href="/inebase/css/inebase_p.css">
+  <link title="0" rel="alternate stylesheet" href="./inebase/css/inebase_p.css">
+  <link title="1" rel="alternate stylesheet" href="./inebase/css/inebase_m.css">
+  <link title="2" rel="alternate stylesheet" href="./inebase/css/inebase_g.css">
+  <link rel="stylesheet" href="./css/jaxi_p.css">
+  <link title="0" rel="alternate stylesheet" href="./css/jaxi_p.css">
+  <link title="1" rel="alternate stylesheet" href="./css/jaxi_m.css">
+  <link title="2" rel="alternate stylesheet" href="./css/jaxi_g.css">
+
+  <script language="JavaScript1.2" src="./js/menu_es/HMArrays_ToolMenu.js" type="text/javascript"></script>
+  <script SRC="./js/jaxi.js" LANGUAGE="JavaScript" type="text/javascript"></script>
+  <script SRC="./js/sort.js" LANGUAGE="JavaScript" type=""></script>
+
+  <title>Dirección General del Catastro. (Directorate General for Cadastre)</title>
+</head>
+<body>
+<script language="JavaScript" src="js/menu/js/cabecera.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+
+      //Home de los estilos genericos
+      var Menu_HomeCssGen="css/";
+
+      var Menu_TipoLoading=0;
+      //1=modo kit 2=pantalla completa
+      var Menu_TipoLoadingOnLoad=1;
+
+      //ancho de la tabla
+      Menu_Table_Width="100%"
+
+      //Directorio del codigo de menu
+      setMenuDir("js/menu/");
+
+      //Refrescar Pagina
+      Menu_RefreshPage=0;
+
+      //Titulo de la cabecera
+      Menu_TxtCabecera="";
+
+      //Mostrar buscador
+      Menu_MostrarBuscador=0;
+
+      //MostrarToolbar
+      Menu_ShowToolbar=0;
+
+      //Mostrar boton idioma
+      Menu_MostrarIdioma=0;
+
+      //Establecer el idioma es en
+      Menu_idioma="es";
+
+      //Url del boton de cambio de idioma
+      
+        
+          addMenuIdioma('EN','javascript:changeLanguage(1)')
+        
+      
+        
+      
+
+      //Imagen Logo de seccion
+      //img, url,title
+      //Menu_ImgCabLogoSecc= new Array("imagenes/inscaesta.gif","","");
+
+      //Color de fondo de la barra de herramientas de cada aplicación
+      Menu_SeccBgColor="#F3F3F3"
+
+      //Color de fondo de la barra de separación
+      Menu_SeccBgColorSeparador="#0271af"
+
+      //Titulo de la seccion de barra de herramientas
+      Menu_TextoTiuloSecc="<font color='#ffffff' class='Menu_Titulo_Secc'></font>"
+
+      //Mostrar seccion
+      Menu_ShowSecc=1;
+
+
+      addToolSecc(1,'imagenes/printer.gif','imagenes/printer_over.gif','','javascript:window.print();','_self','Imprimir página');
+
+      
+
+
+      
+
+
+      //Img fondo tabla menu alineado arriba a la izquierda del fondo de la tabla
+      //no olvidar que en mozzilla es segun el fondo del documento por lo que si el menu esta centrado
+      //no se debe usar
+      Menu_ImgFondoTabla="imagenes/catastro/fondo_menusup3.jpg"
+      //Alineacion imagen de fondo tabla left right
+      Menu_ImgFondoTablaAlign="right";
+
+      //tipo de extension de fondo de tabla
+      Menu_ImgFondoTablaExt="background-repeat: repeat-x; background-attachment: fixed;"
+
+      //Url del boton de cambio de idioma
+
+
+
+      //Datos para los favoritos solo en caso de que sea distinto de la ´pagina actual
+      Menu_TituloFavoritos="INE TEMPUS 2";
+      Menu_UrlFavorito=this.location;
+      Menu_CargaJsAux();
+
+</script>
+<script language="JavaScript" type="">
+  
+    addBlanco();
+    if (getOpenWindow()!=null && getOpenWindow()=="n"){
+      addToolSecc(1,'imagenes/ventana_uni.gif','imagenes/ventana_uni.gif','','javascript:setTypeOpenWindow();','_self','Mostrar consultas en ventana emergenente única');
+    }else{
+      addToolSecc(1,'imagenes/ventana_multi.gif','imagenes/ventana_multi.gif','','javascript:setTypeOpenWindow();','_self','Mostrar consultas en multiples ventanas emergentes');
+    }
+  
+    Menu_draw();
+    setActiveStyleSheet(title);
+</script>
+<script language="JavaScript" type="">
+  function showMenuExp(evento){
+    MenuPosX=document.getElementById('toolExportar').offsetLeft;
+    MenuPosY=document.getElementById('toolExportar').offsetTop;
+
+    HM_f_PopUp( 'elMenu25',evento)
+  }
+
+  function hideMenuExp(indTab,celdas){
+    cambiaFondoTabla('tab' + indTab +'-',Menu_ColorFondo,celdas);
+    HM_f_PopDown('elMenu25')
+  }
+</script>
+
+  <!--Comienzo cuerpo central-->
+  <table width="100%" border="0" cellpadding="0px" cellspacing="0px">
+    <tr>
+      <td>
+
+
+<form method="post" name="tabla" action="tabla.do"
+    target="dataPage~jsp/procesando.jsp~dataPage:width={window.screen.width-10},
+    height={window.screen.height/2},top={window.screen.height/4},left=0,
+    location=0,scrollbars,resizable=1,directories=0,toolbar=0,menubar=0,status=0" onsubmit="return false">
+  <!-- Cabecera de página -->
+  
+
+
+<!-- Tabla de pie -->
+
+
+
+  <!-- Contenido de página -->
+  <table cellpadding="0px" cellspacing="0px" border="0" width="100%">
+    <tr>
+      <td class="title_desc">
+        
+          
+          
+            
+          
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="capitulo_desc">
+        
+          
+          
+            
+          
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="tabla_desc" valign="bottom" height="40px">
+        Girona - Superficie media por Distrito y Uso
+      </td>
+    </tr>
+    <tr>
+      <td CLASS="unidades">
+        Unidades:Distritos Censales
+      </Td>
+    </tr>
+  </table>
+  <br>
+  <table cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="principal">
+
+  <!-- Tabla principal -->
+  <table>
+    <!-- Selección de variables -->
+    <tr>
+      <td height="30px" class="textoBoldNegro" colspan="2">
+        Seleccione valores a consultar:
+      </td>
+    </tr>
+    <tr>
+    
+      
+          
+              
+              
+              <!--Variables seleccionables-->
+                        <td>
+                          
+                            
+                            
+
+
+                                    <!--Tabla Variable-->
+                                    <table class="tablaVar" cellspacing="0px" cellpadding="0px">
+                                      <!--Fila cabecera y opciones de selección de variable-->
+                                      <tr>
+                                        <td>
+                                          <table width="100%" cellpadding="3px">
+                                            <!--Fila Título Variable-->
+                                            <tr>
+                                              <td  height="20px" class="cabVar" colspan="2">
+                                                Distrito
+                                              </td>
+                                            </tr>
+                                            <!--Fila Información de selección-->
+                                            <tr>
+                                              <td class="textoPeq" nowrap>
+                                                Seleccionados <INPUT class="input_seleccionados"
+                                                                readOnly size=1 value=0 name="sel_1">
+                                              </td>
+                                              <td  class="textoPeq" align="left" nowrap>
+                                                Total 262
+                                              </td>
+                                            </tr>
+                                            <tr><td colspan="2" height="5px" nowrap></td></tr>
+                                            <!--Fila Utiidades para Selección -->
+                                            <tr>
+                                              <td nowrap>
+                                                <input size="8" type="text" class="cajaBusq" name="busc_1">
+                                                <IMG style="cursor:hand" src="imagenes/buscar2.gif" onclick="javascript:buscar('sel_1','cri1',document.forms['tabla'].busc_1.value,'start');" alt="Variables que empiezan por ..."/>
+                                                <IMG  alt="" width="2px" height="15px" src="imagenes/barra_vertical.gif"/>
+                                                <IMG style="cursor:hand" src="imagenes/buscar.gif" onclick="javascript:buscar('sel_1','cri1',document.forms['tabla'].busc_1.value,'content');" alt="Variables que contienen"/>
+                                              </td>
+                                              <td align="left" class="textoPeq" nowrap>
+                                                <IMG style="cursor:hand" onclick="javascript:todos(true,'cri1','sel_1');" alt="Seleccionar todos" src="imagenes/iconoselecciontodos.gif" border="0">
+                                                <IMG style="cursor:hand" onclick="javascript:todos(false,'cri1','sel_1');" alt="Deseleccionar todos" src="imagenes/iconoseleccionninguno.gif" border="0">
+                                                
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <!--Fila Selección de variable-->
+                                      <tr>
+                                        <td class="c2"  style="width:350px" id="tdSelect1" >
+
+                                            <select style="width:350px" size="5" name="cri1" class="cajaVar"  multiple="multiple"
+                                              onchange="javascript:cuantos('sel_1','cri1');">
+                                                
+                                                  <option value="0000">
+                                                    170011 - Agullana
+                                                  </option>
+                                                
+                                                  <option value="0001">
+                                                    170021 - Aiguaviva
+                                                  </option>
+                                                
+                                                  <option value="0002">
+                                                    170031 - Albanyà
+                                                  </option>
+                                                
+                                                  <option value="0003">
+                                                    170041 - Albons
+                                                  </option>
+                                                
+                                                  <option value="0004">
+                                                    170051 - Far d&#039;Empordà (El)
+                                                  </option>
+                                                
+                                                  <option value="0005">
+                                                    170061 - Alp
+                                                  </option>
+                                                
+                                                  <option value="0006">
+                                                    170071 - Amer
+                                                  </option>
+                                                
+                                                  <option value="0007">
+                                                    170081 - Anglès
+                                                  </option>
+                                                
+                                                  <option value="0008">
+                                                    170091 - Arbúcies
+                                                  </option>
+                                                
+                                                  <option value="0009">
+                                                    170092 - Arbúcies
+                                                  </option>
+                                                
+                                                  <option value="0010">
+                                                    170101 - Argelaguer
+                                                  </option>
+                                                
+                                                  <option value="0011">
+                                                    170111 - Armentera (L&#039;)
+                                                  </option>
+                                                
+                                                  <option value="0012">
+                                                    170121 - Avinyonet de Puigventós
+                                                  </option>
+                                                
+                                                  <option value="0013">
+                                                    170131 - Begur
+                                                  </option>
+                                                
+                                                  <option value="0014">
+                                                    170141 - Vajol (La)
+                                                  </option>
+                                                
+                                                  <option value="0015">
+                                                    170151 - Banyoles
+                                                  </option>
+                                                
+                                                  <option value="0016">
+                                                    170152 - Banyoles
+                                                  </option>
+                                                
+                                                  <option value="0017">
+                                                    170153 - Banyoles
+                                                  </option>
+                                                
+                                                  <option value="0018">
+                                                    170161 - Bàscara
+                                                  </option>
+                                                
+                                                  <option value="0019">
+                                                    170181 - Bellcaire d&#039;Empordà
+                                                  </option>
+                                                
+                                                  <option value="0020">
+                                                    170191 - Besalú
+                                                  </option>
+                                                
+                                                  <option value="0021">
+                                                    170201 - Bescanó
+                                                  </option>
+                                                
+                                                  <option value="0022">
+                                                    170211 - Beuda
+                                                  </option>
+                                                
+                                                  <option value="0023">
+                                                    170221 - Bisbal d&#039;Empordà (La)
+                                                  </option>
+                                                
+                                                  <option value="0024">
+                                                    170222 - Bisbal d&#039;Empordà (La)
+                                                  </option>
+                                                
+                                                  <option value="0025">
+                                                    170231 - Blanes
+                                                  </option>
+                                                
+                                                  <option value="0026">
+                                                    170232 - Blanes
+                                                  </option>
+                                                
+                                                  <option value="0027">
+                                                    170233 - Blanes
+                                                  </option>
+                                                
+                                                  <option value="0028">
+                                                    1702399 - Blanes
+                                                  </option>
+                                                
+                                                  <option value="0029">
+                                                    170241 - Bolvir
+                                                  </option>
+                                                
+                                                  <option value="0030">
+                                                    170251 - Bordils
+                                                  </option>
+                                                
+                                                  <option value="0031">
+                                                    170261 - Borrassà
+                                                  </option>
+                                                
+                                                  <option value="0032">
+                                                    170271 - Breda
+                                                  </option>
+                                                
+                                                  <option value="0033">
+                                                    170281 - Brunyola
+                                                  </option>
+                                                
+                                                  <option value="0034">
+                                                    170291 - Boadella i les Escaules
+                                                  </option>
+                                                
+                                                  <option value="0035">
+                                                    170301 - Cabanes
+                                                  </option>
+                                                
+                                                  <option value="0036">
+                                                    170311 - Cabanelles
+                                                  </option>
+                                                
+                                                  <option value="0037">
+                                                    170321 - Cadaqués
+                                                  </option>
+                                                
+                                                  <option value="0038">
+                                                    170331 - Caldes de Malavella
+                                                  </option>
+                                                
+                                                  <option value="0039">
+                                                    170341 - Calonge
+                                                  </option>
+                                                
+                                                  <option value="0040">
+                                                    170351 - Camós
+                                                  </option>
+                                                
+                                                  <option value="0041">
+                                                    170361 - Campdevànol
+                                                  </option>
+                                                
+                                                  <option value="0042">
+                                                    170371 - Campelles
+                                                  </option>
+                                                
+                                                  <option value="0043">
+                                                    170381 - Campllong
+                                                  </option>
+                                                
+                                                  <option value="0044">
+                                                    170391 - Camprodon
+                                                  </option>
+                                                
+                                                  <option value="0045">
+                                                    170401 - Canet d&#039;Adri
+                                                  </option>
+                                                
+                                                  <option value="0046">
+                                                    170411 - Cantallops
+                                                  </option>
+                                                
+                                                  <option value="0047">
+                                                    170421 - Capmany
+                                                  </option>
+                                                
+                                                  <option value="0048">
+                                                    170431 - Queralbs
+                                                  </option>
+                                                
+                                                  <option value="0049">
+                                                    170441 - Cassà de la Selva
+                                                  </option>
+                                                
+                                                  <option value="0050">
+                                                    170442 - Cassà de la Selva
+                                                  </option>
+                                                
+                                                  <option value="0051">
+                                                    170461 - Castellfollit de la Roca
+                                                  </option>
+                                                
+                                                  <option value="0052">
+                                                    170471 - Castelló d&#039;Empúries
+                                                  </option>
+                                                
+                                                  <option value="0053">
+                                                    170481 - Castell-Platja d&#039;Aro i s&#039;Agaro
+                                                  </option>
+                                                
+                                                  <option value="0054">
+                                                    170491 - Celrà
+                                                  </option>
+                                                
+                                                  <option value="0055">
+                                                    170501 - Cervià de Ter
+                                                  </option>
+                                                
+                                                  <option value="0056">
+                                                    170511 - Cistella
+                                                  </option>
+                                                
+                                                  <option value="0057">
+                                                    170521 - Siurana
+                                                  </option>
+                                                
+                                                  <option value="0058">
+                                                    170541 - Colera
+                                                  </option>
+                                                
+                                                  <option value="0059">
+                                                    170551 - Colomers
+                                                  </option>
+                                                
+                                                  <option value="0060">
+                                                    170561 - Cornellà del Terri
+                                                  </option>
+                                                
+                                                  <option value="0061">
+                                                    170571 - Corçà
+                                                  </option>
+                                                
+                                                  <option value="0062">
+                                                    170581 - Crespià
+                                                  </option>
+                                                
+                                                  <option value="0063">
+                                                    170601 - Darnius
+                                                  </option>
+                                                
+                                                  <option value="0064">
+                                                    170611 - Das
+                                                  </option>
+                                                
+                                                  <option value="0065">
+                                                    170621 - Escala (L&#039;)
+                                                  </option>
+                                                
+                                                  <option value="0066">
+                                                    170631 - Espinelves
+                                                  </option>
+                                                
+                                                  <option value="0067">
+                                                    170641 - Espolla
+                                                  </option>
+                                                
+                                                  <option value="0068">
+                                                    170651 - Esponellà
+                                                  </option>
+                                                
+                                                  <option value="0069">
+                                                    170661 - Figueres
+                                                  </option>
+                                                
+                                                  <option value="0070">
+                                                    170662 - Figueres
+                                                  </option>
+                                                
+                                                  <option value="0071">
+                                                    170663 - Figueres
+                                                  </option>
+                                                
+                                                  <option value="0072">
+                                                    170664 - Figueres
+                                                  </option>
+                                                
+                                                  <option value="0073">
+                                                    170671 - Flaçà
+                                                  </option>
+                                                
+                                                  <option value="0074">
+                                                    170681 - Foixà
+                                                  </option>
+                                                
+                                                  <option value="0075">
+                                                    170691 - Fontanals de Cerdanya
+                                                  </option>
+                                                
+                                                  <option value="0076">
+                                                    170701 - Fontanilles
+                                                  </option>
+                                                
+                                                  <option value="0077">
+                                                    170711 - Fontcoberta
+                                                  </option>
+                                                
+                                                  <option value="0078">
+                                                    170731 - Fornells de la Selva
+                                                  </option>
+                                                
+                                                  <option value="0079">
+                                                    170741 - Fortià
+                                                  </option>
+                                                
+                                                  <option value="0080">
+                                                    170751 - Garrigàs
+                                                  </option>
+                                                
+                                                  <option value="0081">
+                                                    170761 - Garrigoles
+                                                  </option>
+                                                
+                                                  <option value="0082">
+                                                    170771 - Garriguella
+                                                  </option>
+                                                
+                                                  <option value="0083">
+                                                    170781 - Ger
+                                                  </option>
+                                                
+                                                  <option value="0084">
+                                                    170791 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0085">
+                                                    170792 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0086">
+                                                    170793 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0087">
+                                                    170794 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0088">
+                                                    170795 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0089">
+                                                    170796 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0090">
+                                                    1707999 - Girona
+                                                  </option>
+                                                
+                                                  <option value="0091">
+                                                    170801 - Gombrèn
+                                                  </option>
+                                                
+                                                  <option value="0092">
+                                                    170811 - Gualta
+                                                  </option>
+                                                
+                                                  <option value="0093">
+                                                    170821 - Guils de Cerdanya
+                                                  </option>
+                                                
+                                                  <option value="0094">
+                                                    170831 - Hostalric
+                                                  </option>
+                                                
+                                                  <option value="0095">
+                                                    170841 - Isòvol
+                                                  </option>
+                                                
+                                                  <option value="0096">
+                                                    170851 - Jafre
+                                                  </option>
+                                                
+                                                  <option value="0097">
+                                                    170861 - Jonquera (La)
+                                                  </option>
+                                                
+                                                  <option value="0098">
+                                                    170871 - Juià
+                                                  </option>
+                                                
+                                                  <option value="0099">
+                                                    170881 - Lladó
+                                                  </option>
+                                                
+                                                  <option value="0100">
+                                                    170891 - Llagostera
+                                                  </option>
+                                                
+                                                  <option value="0101">
+                                                    170901 - Llambilles
+                                                  </option>
+                                                
+                                                  <option value="0102">
+                                                    1709099 - Llambilles
+                                                  </option>
+                                                
+                                                  <option value="0103">
+                                                    170911 - Llanars
+                                                  </option>
+                                                
+                                                  <option value="0104">
+                                                    170921 - Llançà
+                                                  </option>
+                                                
+                                                  <option value="0105">
+                                                    170931 - Llers
+                                                  </option>
+                                                
+                                                  <option value="0106">
+                                                    170941 - Llívia
+                                                  </option>
+                                                
+                                                  <option value="0107">
+                                                    170951 - Lloret de Mar
+                                                  </option>
+                                                
+                                                  <option value="0108">
+                                                    170952 - Lloret de Mar
+                                                  </option>
+                                                
+                                                  <option value="0109">
+                                                    170953 - Lloret de Mar
+                                                  </option>
+                                                
+                                                  <option value="0110">
+                                                    170954 - Lloret de Mar
+                                                  </option>
+                                                
+                                                  <option value="0111">
+                                                    170961 - Llosses (Les)
+                                                  </option>
+                                                
+                                                  <option value="0112">
+                                                    170971 - Madremanya
+                                                  </option>
+                                                
+                                                  <option value="0113">
+                                                    170981 - Maià de Montcal
+                                                  </option>
+                                                
+                                                  <option value="0114">
+                                                    170991 - Meranges
+                                                  </option>
+                                                
+                                                  <option value="0115">
+                                                    171001 - Masarac i Vilarnadal
+                                                  </option>
+                                                
+                                                  <option value="0116">
+                                                    171011 - Massanes
+                                                  </option>
+                                                
+                                                  <option value="0117">
+                                                    171021 - Maçanet de Cabrenys
+                                                  </option>
+                                                
+                                                  <option value="0118">
+                                                    171031 - Maçanet de la Selva
+                                                  </option>
+                                                
+                                                  <option value="0119">
+                                                    171051 - Mieres
+                                                  </option>
+                                                
+                                                  <option value="0120">
+                                                    171061 - Mollet de Peralada
+                                                  </option>
+                                                
+                                                  <option value="0121">
+                                                    171071 - Molló
+                                                  </option>
+                                                
+                                                  <option value="0122">
+                                                    171091 - Montagut i Oix
+                                                  </option>
+                                                
+                                                  <option value="0123">
+                                                    171101 - Mont-ras
+                                                  </option>
+                                                
+                                                  <option value="0124">
+                                                    171111 - Navata
+                                                  </option>
+                                                
+                                                  <option value="0125">
+                                                    171121 - Ogassa
+                                                  </option>
+                                                
+                                                  <option value="0126">
+                                                    171141 - Olot
+                                                  </option>
+                                                
+                                                  <option value="0127">
+                                                    171142 - Olot
+                                                  </option>
+                                                
+                                                  <option value="0128">
+                                                    171143 - Olot
+                                                  </option>
+                                                
+                                                  <option value="0129">
+                                                    171144 - Olot
+                                                  </option>
+                                                
+                                                  <option value="0130">
+                                                    171145 - Olot
+                                                  </option>
+                                                
+                                                  <option value="0131">
+                                                    171151 - Ordis
+                                                  </option>
+                                                
+                                                  <option value="0132">
+                                                    171161 - Osor
+                                                  </option>
+                                                
+                                                  <option value="0133">
+                                                    171171 - Palafrugell
+                                                  </option>
+                                                
+                                                  <option value="0134">
+                                                    171172 - Palafrugell
+                                                  </option>
+                                                
+                                                  <option value="0135">
+                                                    171173 - Palafrugell
+                                                  </option>
+                                                
+                                                  <option value="0136">
+                                                    1711799 - Palafrugell
+                                                  </option>
+                                                
+                                                  <option value="0137">
+                                                    171181 - Palamós
+                                                  </option>
+                                                
+                                                  <option value="0138">
+                                                    171182 - Palamós
+                                                  </option>
+                                                
+                                                  <option value="0139">
+                                                    171183 - Palamós
+                                                  </option>
+                                                
+                                                  <option value="0140">
+                                                    171184 - Palamós
+                                                  </option>
+                                                
+                                                  <option value="0141">
+                                                    171191 - Palau de Santa Eulàlia
+                                                  </option>
+                                                
+                                                  <option value="0142">
+                                                    171201 - Palau-saverdera
+                                                  </option>
+                                                
+                                                  <option value="0143">
+                                                    171211 - Palau-sator
+                                                  </option>
+                                                
+                                                  <option value="0144">
+                                                    171231 - Palol de Revardit
+                                                  </option>
+                                                
+                                                  <option value="0145">
+                                                    171241 - Pals
+                                                  </option>
+                                                
+                                                  <option value="0146">
+                                                    171251 - Pardines
+                                                  </option>
+                                                
+                                                  <option value="0147">
+                                                    171261 - Parlavà
+                                                  </option>
+                                                
+                                                  <option value="0148">
+                                                    171281 - Pau
+                                                  </option>
+                                                
+                                                  <option value="0149">
+                                                    171291 - Pedret i Marzà
+                                                  </option>
+                                                
+                                                  <option value="0150">
+                                                    171301 - Pera (La)
+                                                  </option>
+                                                
+                                                  <option value="0151">
+                                                    171321 - Peralada
+                                                  </option>
+                                                
+                                                  <option value="0152">
+                                                    171331 - Planes d&#039;Hostoles (Les)
+                                                  </option>
+                                                
+                                                  <option value="0153">
+                                                    171341 - Planoles
+                                                  </option>
+                                                
+                                                  <option value="0154">
+                                                    171351 - Pont de Molins
+                                                  </option>
+                                                
+                                                  <option value="0155">
+                                                    171361 - Pontós
+                                                  </option>
+                                                
+                                                  <option value="0156">
+                                                    171371 - Porqueres
+                                                  </option>
+                                                
+                                                  <option value="0157">
+                                                    171381 - Portbou
+                                                  </option>
+                                                
+                                                  <option value="0158">
+                                                    171391 - Preses (Les)
+                                                  </option>
+                                                
+                                                  <option value="0159">
+                                                    171401 - Port de la Selva (El)
+                                                  </option>
+                                                
+                                                  <option value="0160">
+                                                    171411 - Puigcerdà
+                                                  </option>
+                                                
+                                                  <option value="0161">
+                                                    171421 - Quart
+                                                  </option>
+                                                
+                                                  <option value="0162">
+                                                    171431 - Rabós
+                                                  </option>
+                                                
+                                                  <option value="0163">
+                                                    171441 - Regencós
+                                                  </option>
+                                                
+                                                  <option value="0164">
+                                                    171451 - Ribes de Freser
+                                                  </option>
+                                                
+                                                  <option value="0165">
+                                                    171461 - Riells i Viabrea
+                                                  </option>
+                                                
+                                                  <option value="0166">
+                                                    171471 - Ripoll
+                                                  </option>
+                                                
+                                                  <option value="0167">
+                                                    171472 - Ripoll
+                                                  </option>
+                                                
+                                                  <option value="0168">
+                                                    171473 - Ripoll
+                                                  </option>
+                                                
+                                                  <option value="0169">
+                                                    171474 - Ripoll
+                                                  </option>
+                                                
+                                                  <option value="0170">
+                                                    1714799 - Ripoll
+                                                  </option>
+                                                
+                                                  <option value="0171">
+                                                    171481 - Riudarenes
+                                                  </option>
+                                                
+                                                  <option value="0172">
+                                                    171491 - Riudaura
+                                                  </option>
+                                                
+                                                  <option value="0173">
+                                                    171501 - Riudellots de la Selva
+                                                  </option>
+                                                
+                                                  <option value="0174">
+                                                    171511 - Riumors
+                                                  </option>
+                                                
+                                                  <option value="0175">
+                                                    171521 - Roses
+                                                  </option>
+                                                
+                                                  <option value="0176">
+                                                    171522 - Roses
+                                                  </option>
+                                                
+                                                  <option value="0177">
+                                                    171531 - Rupià
+                                                  </option>
+                                                
+                                                  <option value="0178">
+                                                    171541 - Sales de Llierca
+                                                  </option>
+                                                
+                                                  <option value="0179">
+                                                    171551 - Salt
+                                                  </option>
+                                                
+                                                  <option value="0180">
+                                                    171552 - Salt
+                                                  </option>
+                                                
+                                                  <option value="0181">
+                                                    171571 - Sant Andreu Salou
+                                                  </option>
+                                                
+                                                  <option value="0182">
+                                                    171581 - Sant Climent Sescebes
+                                                  </option>
+                                                
+                                                  <option value="0183">
+                                                    171591 - Sant Feliu de Buixalleu
+                                                  </option>
+                                                
+                                                  <option value="0184">
+                                                    171601 - Sant Feliu de Guíxols
+                                                  </option>
+                                                
+                                                  <option value="0185">
+                                                    171602 - Sant Feliu de Guíxols
+                                                  </option>
+                                                
+                                                  <option value="0186">
+                                                    171603 - Sant Feliu de Guíxols
+                                                  </option>
+                                                
+                                                  <option value="0187">
+                                                    171604 - Sant Feliu de Guíxols
+                                                  </option>
+                                                
+                                                  <option value="0188">
+                                                    1716099 - Sant Feliu de Guíxols
+                                                  </option>
+                                                
+                                                  <option value="0189">
+                                                    171611 - Sant Feliu de Pallerols
+                                                  </option>
+                                                
+                                                  <option value="0190">
+                                                    171621 - Sant Ferriol
+                                                  </option>
+                                                
+                                                  <option value="0191">
+                                                    171631 - Sant Gregori
+                                                  </option>
+                                                
+                                                  <option value="0192">
+                                                    171641 - Sant Hilari Sacalm
+                                                  </option>
+                                                
+                                                  <option value="0193">
+                                                    171651 - Sant Jaume de Llierca
+                                                  </option>
+                                                
+                                                  <option value="0194">
+                                                    171661 - Sant Jordi Desvalls
+                                                  </option>
+                                                
+                                                  <option value="0195">
+                                                    171671 - Sant Joan de les Abadesses
+                                                  </option>
+                                                
+                                                  <option value="0196">
+                                                    171681 - Sant Joan de Mollet
+                                                  </option>
+                                                
+                                                  <option value="0197">
+                                                    171691 - Sant Julià de Ramis
+                                                  </option>
+                                                
+                                                  <option value="0198">
+                                                    171701 - Vallfogona de Ripollès
+                                                  </option>
+                                                
+                                                  <option value="0199">
+                                                    171711 - Sant Llorenç de la Muga
+                                                  </option>
+                                                
+                                                  <option value="0200">
+                                                    171721 - Sant Martí de Llémena
+                                                  </option>
+                                                
+                                                  <option value="0201">
+                                                    171731 - Sant Martí Vell
+                                                  </option>
+                                                
+                                                  <option value="0202">
+                                                    171741 - Sant Miquel de Campmajor
+                                                  </option>
+                                                
+                                                  <option value="0203">
+                                                    171751 - Sant Miquel de Fluvià
+                                                  </option>
+                                                
+                                                  <option value="0204">
+                                                    171761 - Sant Mori
+                                                  </option>
+                                                
+                                                  <option value="0205">
+                                                    171771 - Sant Pau de Segúries
+                                                  </option>
+                                                
+                                                  <option value="0206">
+                                                    171781 - Sant Pere Pescador
+                                                  </option>
+                                                
+                                                  <option value="0207">
+                                                    171801 - Santa Coloma de Farners
+                                                  </option>
+                                                
+                                                  <option value="0208">
+                                                    171811 - Santa Cristina d&#039;Aro
+                                                  </option>
+                                                
+                                                  <option value="0209">
+                                                    171821 - Santa Llogaia d&#039;Àlguema
+                                                  </option>
+                                                
+                                                  <option value="0210">
+                                                    171831 - Sant Aniol de Finestres
+                                                  </option>
+                                                
+                                                  <option value="0211">
+                                                    171841 - Santa Pau
+                                                  </option>
+                                                
+                                                  <option value="0212">
+                                                    171851 - Sant Joan les Fonts
+                                                  </option>
+                                                
+                                                  <option value="0213">
+                                                    171861 - Sarrià de Ter
+                                                  </option>
+                                                
+                                                  <option value="0214">
+                                                    171871 - Saus, Camallera i Llampaies
+                                                  </option>
+                                                
+                                                  <option value="0215">
+                                                    171881 - Selva de Mar (La)
+                                                  </option>
+                                                
+                                                  <option value="0216">
+                                                    171891 - Cellera de Ter (La)
+                                                  </option>
+                                                
+                                                  <option value="0217">
+                                                    171901 - Serinyà
+                                                  </option>
+                                                
+                                                  <option value="0218">
+                                                    171911 - Serra de Daró
+                                                  </option>
+                                                
+                                                  <option value="0219">
+                                                    171921 - Setcases
+                                                  </option>
+                                                
+                                                  <option value="0220">
+                                                    171931 - Sils
+                                                  </option>
+                                                
+                                                  <option value="0221">
+                                                    171941 - Susqueda
+                                                  </option>
+                                                
+                                                  <option value="0222">
+                                                    171951 - Tallada d&#039;Empordà (La)
+                                                  </option>
+                                                
+                                                  <option value="0223">
+                                                    171961 - Terrades
+                                                  </option>
+                                                
+                                                  <option value="0224">
+                                                    171971 - Torrent
+                                                  </option>
+                                                
+                                                  <option value="0225">
+                                                    171981 - Torroella de Fluvià
+                                                  </option>
+                                                
+                                                  <option value="0226">
+                                                    171991 - Torroella de Montgrí
+                                                  </option>
+                                                
+                                                  <option value="0227">
+                                                    172001 - Tortellà
+                                                  </option>
+                                                
+                                                  <option value="0228">
+                                                    172011 - Toses
+                                                  </option>
+                                                
+                                                  <option value="0229">
+                                                    172021 - Tossa de Mar
+                                                  </option>
+                                                
+                                                  <option value="0230">
+                                                    172031 - Ultramort
+                                                  </option>
+                                                
+                                                  <option value="0231">
+                                                    172041 - Ullà
+                                                  </option>
+                                                
+                                                  <option value="0232">
+                                                    172051 - Ullastret
+                                                  </option>
+                                                
+                                                  <option value="0233">
+                                                    172061 - Urús
+                                                  </option>
+                                                
+                                                  <option value="0234">
+                                                    172071 - Vall d&#039;en Bas (La)
+                                                  </option>
+                                                
+                                                  <option value="0235">
+                                                    172081 - Vall de Bianya (La)
+                                                  </option>
+                                                
+                                                  <option value="0236">
+                                                    172091 - Vall-llobrega
+                                                  </option>
+                                                
+                                                  <option value="0237">
+                                                    172101 - Ventalló
+                                                  </option>
+                                                
+                                                  <option value="0238">
+                                                    172111 - Verges
+                                                  </option>
+                                                
+                                                  <option value="0239">
+                                                    172121 - Vidrà
+                                                  </option>
+                                                
+                                                  <option value="0240">
+                                                    172131 - Vidreres
+                                                  </option>
+                                                
+                                                  <option value="0241">
+                                                    172141 - Vilabertran
+                                                  </option>
+                                                
+                                                  <option value="0242">
+                                                    172151 - Vilablareix
+                                                  </option>
+                                                
+                                                  <option value="0243">
+                                                    172161 - Viladasens
+                                                  </option>
+                                                
+                                                  <option value="0244">
+                                                    172171 - Viladamat
+                                                  </option>
+                                                
+                                                  <option value="0245">
+                                                    172181 - Vilademuls
+                                                  </option>
+                                                
+                                                  <option value="0246">
+                                                    172201 - Viladrau
+                                                  </option>
+                                                
+                                                  <option value="0247">
+                                                    172211 - Vilafant
+                                                  </option>
+                                                
+                                                  <option value="0248">
+                                                    172221 - Vilaür
+                                                  </option>
+                                                
+                                                  <option value="0249">
+                                                    172231 - Vilajuïga
+                                                  </option>
+                                                
+                                                  <option value="0250">
+                                                    172241 - Vilallonga de Ter
+                                                  </option>
+                                                
+                                                  <option value="0251">
+                                                    172251 - Vilamacolum
+                                                  </option>
+                                                
+                                                  <option value="0252">
+                                                    172261 - Vilamalla
+                                                  </option>
+                                                
+                                                  <option value="0253">
+                                                    172271 - Vilamaniscle
+                                                  </option>
+                                                
+                                                  <option value="0254">
+                                                    172281 - Vilanant
+                                                  </option>
+                                                
+                                                  <option value="0255">
+                                                    172301 - Vila-sacra
+                                                  </option>
+                                                
+                                                  <option value="0256">
+                                                    172321 - Vilopriu
+                                                  </option>
+                                                
+                                                  <option value="0257">
+                                                    172331 - Vilobí d&#039;Onyar
+                                                  </option>
+                                                
+                                                  <option value="0258">
+                                                    172341 - Biure
+                                                  </option>
+                                                
+                                                  <option value="0259">
+                                                    179011 - Cruïlles, Monells i Sant Sadurní de l&#039;Heura
+                                                  </option>
+                                                
+                                                  <option value="0260">
+                                                    179021 - Forallac
+                                                  </option>
+                                                
+                                                  <option value="0261">
+                                                    179031 - Sant Julià del Llor i Bonmatí
+                                                  </option>
+                                                
+                                            </select>
+                                        </td>
+
+                                      </tr>
+                                    </table>
+
+                                    <!-- Fin Tabla Variable-->
+                            
+                          
+                      </td>
+                      <td>
+                        <table cellpadding="0px" cellspacing="0px">
+                            <tr>
+                              <td style="cursor:col-resize;" onmousedown="javascript:onMouseDown('tdSelect1','cri1',event);"/><img alt="" src="imagenes/barraExpandir.gif" ></td>
+                            </tr>
+                        </table>
+                      </td>
+                      
+                        
+                        
+                          
+                        
+                      
+                      
+                
+          
+      
+          
+              
+              
+              <!--Variables seleccionables-->
+                        <td>
+                          
+                            
+                            
+
+
+                                    <!--Tabla Variable-->
+                                    <table class="tablaVar" cellspacing="0px" cellpadding="0px">
+                                      <!--Fila cabecera y opciones de selección de variable-->
+                                      <tr>
+                                        <td>
+                                          <table width="100%" cellpadding="3px">
+                                            <!--Fila Título Variable-->
+                                            <tr>
+                                              <td  height="20px" class="cabVar" colspan="2">
+                                                Uso
+                                              </td>
+                                            </tr>
+                                            <!--Fila Información de selección-->
+                                            <tr>
+                                              <td class="textoPeq" nowrap>
+                                                Seleccionados <INPUT class="input_seleccionados"
+                                                                readOnly size=1 value=0 name="sel_2">
+                                              </td>
+                                              <td  class="textoPeq" align="left" nowrap>
+                                                Total 7
+                                              </td>
+                                            </tr>
+                                            <tr><td colspan="2" height="5px" nowrap></td></tr>
+                                            <!--Fila Utiidades para Selección -->
+                                            <tr>
+                                              <td nowrap>
+                                                <input size="8" type="text" class="cajaBusq" name="busc_2">
+                                                <IMG style="cursor:hand" src="imagenes/buscar2.gif" onclick="javascript:buscar('sel_2','cri2',document.forms['tabla'].busc_2.value,'start');" alt="Variables que empiezan por ..."/>
+                                                <IMG  alt="" width="2px" height="15px" src="imagenes/barra_vertical.gif"/>
+                                                <IMG style="cursor:hand" src="imagenes/buscar.gif" onclick="javascript:buscar('sel_2','cri2',document.forms['tabla'].busc_2.value,'content');" alt="Variables que contienen"/>
+                                              </td>
+                                              <td align="left" class="textoPeq" nowrap>
+                                                <IMG style="cursor:hand" onclick="javascript:todos(true,'cri2','sel_2');" alt="Seleccionar todos" src="imagenes/iconoselecciontodos.gif" border="0">
+                                                <IMG style="cursor:hand" onclick="javascript:todos(false,'cri2','sel_2');" alt="Deseleccionar todos" src="imagenes/iconoseleccionninguno.gif" border="0">
+                                                
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <!--Fila Selección de variable-->
+                                      <tr>
+                                        <td class="c2"  style="width:350px" id="tdSelect2" >
+
+                                            <select style="width:350px" size="5" name="cri2" class="cajaVar"  multiple="multiple"
+                                              onchange="javascript:cuantos('sel_2','cri2');">
+                                                
+                                                  <option value="0000">
+                                                    Vivienda Colectiva
+                                                  </option>
+                                                
+                                                  <option value="0001">
+                                                    Vivienda Unifamiliar
+                                                  </option>
+                                                
+                                                  <option value="0002">
+                                                    Aparcamiento
+                                                  </option>
+                                                
+                                                  <option value="0003">
+                                                    Comercial
+                                                  </option>
+                                                
+                                                  <option value="0004">
+                                                    Industrial
+                                                  </option>
+                                                
+                                                  <option value="0005">
+                                                    Oficinas
+                                                  </option>
+                                                
+                                                  <option value="0006">
+                                                    Resto
+                                                  </option>
+                                                
+                                            </select>
+                                        </td>
+
+                                      </tr>
+                                    </table>
+
+                                    <!-- Fin Tabla Variable-->
+                            
+                          
+                      </td>
+                      <td>
+                        <table cellpadding="0px" cellspacing="0px">
+                            <tr>
+                              <td style="cursor:col-resize;" onmousedown="javascript:onMouseDown('tdSelect2','cri2',event);"/><img alt="" src="imagenes/barraExpandir.gif" ></td>
+                            </tr>
+                        </table>
+                      </td>
+                      
+                        
+                          </tr></table><table><tr>
+                          
+                        
+                        
+                      
+                      
+                
+          
+      
+    </tr>
+  </table>
+  <!--Tabla Avanzada-->
+  <table>
+    <tr>
+      <td height="20px" colspan="2">&nbsp;</td>
+    </tr>
+    <!-- Visualización de variables  -->
+    <tr>
+      <td height="30px" class="textoBoldNegro" colspan="2">
+        Elija cómo quiere visualizar sus datos:
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table class="tablaVar" width="600px">
+        <tr>
+          <!--Orden filas -->
+          <td valign="top">
+            <table>
+              <tr>
+                <td height="20px">&nbsp;</td>
+              </tr>
+              <tr>
+                <td valign="middle">
+                  <img style="cursor:hand" onclick="javascript:ordenarSelect('up','rows');" border="0" alt="Subir fila" src="imagenes/singleArrowUp.gif"/>
+                  <br>
+                  <img style="cursor:hand" onclick="javascript:ordenarSelect('down','rows');" border="0" alt="Bajar fila" src="imagenes/singleArrowDown.gif"/>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <!--Filas -->
+          <td width="40%">
+            <table width="100%">
+              <tr>
+                <td height="20px" class="cabVar">
+                  &nbsp;Variables en filas
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select size="4" name="rows" multiple="multiple" class="cajaVar">
+                    
+                      <option value="Distrito">
+                        Distrito
+                      </option>
+                    
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <!-- Intercambio -->
+           <td valign="top">
+            <table>
+              <tr>
+                <td height="20px">&nbsp;</td>
+              </tr>
+              <tr>
+                <td valign="middle" align="center" width="40px">
+                  <img style="cursor:hand" onclick="javascript:changeSelect('rows','columns');" border="0" alt="Pasar filas columnas" src="imagenes/singleArrowRight.gif"/>
+                  <img style="cursor:hand" onclick="javascript:change('rows','columns');" border="0" alt="Intercambiar filas por columnas" src="imagenes/fizde.gif"/>
+                  <img style="cursor:hand" onclick="javascript:changeSelect('columns','rows');" border="0" alt="Pasar columnas a filas" src="imagenes/singleArrowLeft.gif"/>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <!-- Columnas -->
+          <td width="40%">
+            <table width="100%">
+              <tr>
+                <td height="20px" class="cabVar">
+                  &nbsp;
+                  Variables en columnas
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="columns" size="4" multiple="multiple" class="cajaVar">
+                    
+                      <option value="Uso">
+                         Uso
+                      </option>
+                    
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <!-- Orden columnas -->
+           <td valign="top">
+            <table>
+              <tr>
+                <td height="20px">&nbsp;</td>
+              </tr>
+              <tr>
+                <td valign="middle">
+                  <img style="cursor:hand" onclick="javascript:ordenarSelect('up','columns');" border="0" alt="Subir columna" src="imagenes/singleArrowUp.gif"/>
+                  <br>
+                  <img style="cursor:hand" onclick="javascript:ordenarSelect('down','columns');" border="0" alt="Bajar columna" src="imagenes/singleArrowDown.gif"/>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- Nº de variables  -->
+    <tr>
+      <td height="30px" class="texto" colspan="2">
+        <INPUT type=hidden value="2" name="numCri">
+        Obtendrá como resultado de la consulta&nbsp;
+        <INPUT class="input_seleccionados" size="3" value=0 name="NumCeldas">
+        celdas
+      </td>
+    </tr>
+    <!-- Botones -->
+    <tr>
+     <td height="80px">
+        <input type="image"  src="imagenes/consultodo.gif" alt="Consultar todo" onclick="javascript:enviarTabla('all');"/>
+      </td>
+      <td height="80px">
+        <input type="image" src="imagenes/consulsele.gif" alt="Consultar selección" onclick="javascript:enviarTabla('sel');"/>
+      </td>
+    </tr>
+  </table>
+  <!--Notas-->
+  <table>
+    <tr>
+      <td class="texto">
+          
+          
+            
+              <b>Notas:</b>
+              <font class="textopeq"><br><br></font>
+            
+            1)&nbsp;
+            
+              
+                
+                   Distrito 99: Sin Especificar
+                
+              
+            
+            <br><br>
+            
+          
+
+      </td>
+    </tr>
+  </table>
+
+</td>
+</tr>
+</table>
+  <!--Información adicional-->
+  <table>
+    <tr>
+      <td class="inf" height="30px">
+        <b>Fuente:</b>
+        Área de Estadística. Dirección General del Catastro.
+      </td>
+    </tr>
+  </table>
+
+  <!-- Paso de parámetros de entrada -->
+  <input type="hidden" name="type" value="pcaxis"/>
+  <input type="hidden" name="path" value="/est2025/catastro/distrito/"/>
+  <input type="hidden" name="file" value="ANU2025_2_17.px"/>
+  <input type="hidden" name="divi" value=""/>
+  <input type="hidden" name="per" value=""/>
+  <input type="hidden" name="idtab" value=""/>
+  <input type="hidden" name="accion" value="html"/>
+</form>
+
+<!-- Pie de página -->
+
+
+
+
+ </td>
+    </tr>
+  </table>
+
+  <script language="JavaScript" src="js/menu/js/pie.js"></script>
+  <script language="JavaScript">
+  Pie_Dir="js/menu/";
+  Pie_idioma="es";
+  Pie_MostrarLinks=1;
+  Pie_CargaJsAux();
+</script>
+
+<script language="JavaScript">
+  Pie_draw();
+  //aplicamos los  estilos
+  //Muy importante para que funcione al cargar
+  setActiveStyleSheet(title);
+</script>
+
+
+
+</body>
+
+</html>
+
