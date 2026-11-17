@@ -4,3 +4,14 @@ __pycache__/
 .venv/
 .DS_Store
 web/datos/
+build/
+node_modules/
+# Generado por scripts/referencia/genera.py en la Action de publicación
+web/ca/
+web/es/
+web/dades/
+web/llms.txt
+web/llms-full*.txt
+web/sitemap.xml
+web/robots.txt
+web/CNAME
