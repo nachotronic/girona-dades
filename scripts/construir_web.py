@@ -160,6 +160,10 @@ def secciones():
             "anyo_mediano": r(float(f["anyo_mediano"])) if f is not None and not pd.isna(f["anyo_mediano"]) else None,
             "edificis": r(float(f["edificios"])) if f is not None and "edificios" in f else None,
         }
+    _, dis, _, _ = cad_districtes()
+    for cusec in list(res):
+        if cusec[:7] in dis:
+            res[cusec]["cad_vm2"] = dis[cusec[:7]]
     _, extra, _ = atlas_extra()
     for cusec, x in extra.items():
         res.setdefault(cusec, {}).update(x)
@@ -1772,6 +1776,128 @@ def tributs():
     return mun, refs, int(k["any"].max()) if len(k) else None
 
 
+USOS_CAD = ["RES", "ALMACEN", "COMERCIAL", "INDUSTRIAL", "OFICINAS", "HOSTELERIA", "SOLAR", "DEPORTIVO", "CULTURAL", "SANIDAD", "RELIGIOSO", "ESPECTACULOS", "SINGULAR"]
+CAD_DEC = {"n": 0, "vm": 0, "vviv": 0, "vhab": 0, "sol": 1, "ih": 1, "res": 1, "alm": 1, "com": 1, "ind": 1, "ofi": 2, "hos": 0,
+           "solar": 1, "suph": 0, "rha": 0, "rpar": 2, "rev": 0}
+
+
+def _cad_ind(f, pob):
+    """Indicadores catastrales de una fila (municipio o agregado) con su población."""
+    g = lambda k: (lambda v: None if v is None or (isinstance(v, float) and math.isnan(v)) else float(v))(f.get(k))  # noqa: E731
+    q = lambda a, b, k=1: (a / b * k) if a is not None and b else None  # noqa: E731
+    n = g("UURBANAS")
+    return {"n": n, "vm": q(g("V_CATASTRAL"), n), "vviv": q(g("V_CAT_RES"), g("UU_RES")), "vhab": q(g("V_CATASTRAL"), pob),
+            "sol": q(g("V_SUELO"), g("V_CATASTRAL"), 100), "ih": q(n, pob, 100), "res": q(g("UU_RES"), n, 100),
+            "alm": q(g("UU_ALMACEN"), n, 100), "com": q(g("UU_COMERCIAL"), pob, 1000), "ind": q(g("UU_INDUSTRIAL"), pob, 1000),
+            "ofi": q(g("UU_OFICINAS"), pob, 1000), "hos": g("UU_HOSTELERIA"), "solar": q(g("SOLAR_URB"), g("PARCELAS_URB"), 100),
+            "suph": q(g("SUPERF_URB"), pob), "rha": q(g("VALOR_MILES_RUS"), g("SUPERFICIE_HA_RUS"), 1000),
+            "rpar": q(g("SUPERFICIE_HA_RUS"), g("PARCELAS_RUS")), "rev": g("ULT_REVISION")}
+
+
+def cad_districtes():
+    """Valor cadastral mitjà de l'habitatge (€/m²) per districte censal (sèries del Catastro, 2013-).
+    Mitjana de l'habitatge col·lectiu i unifamiliar ponderada pel nombre d'immobles. Devuelve
+    {ine: {año: v}}, {districte: v} del último año, {año: v} de la provincia y el último año."""
+    f = P / "cadastre" / "districtes.csv.gz"
+    if not f.exists():
+        return {}, {}, {}, None
+    d = pd.read_csv(f, dtype={"districte": str})
+    d["n"] = d[["inm_vcol", "inm_vuni"]].fillna(0).sum(axis=1)
+    d["s"] = d["inm_vcol"].fillna(0) * d["vm_vm_viv_colectiva"].fillna(0) + d["inm_vuni"].fillna(0) * d["vm_vm_viv_unifamiliar"].fillna(0)
+    d = d[(d["n"] > 0) & (d["s"] > 0)]
+    d["ine"] = d["districte"].str[:5]
+    ult = int(d["any"].max())
+    mun = {}
+    for (ine, y), g in d.groupby(["ine", "any"]):
+        mun.setdefault(ine, {})[int(y)] = int(round(g["s"].sum() / g["n"].sum()))
+    u = d[(d["any"] == ult) & (d["n"] >= 20)]
+    dis = {x.districte: int(round(x.s / x.n)) for x in u.itertuples()}
+    prov = {int(y): int(round(g["s"].sum() / g["n"].sum())) for y, g in d.groupby("any")}
+    return mun, dis, prov, ult
+
+
+def cadastre():
+    """Estadísticas del Catastro por municipio y año (Datos municipios, 2012-). Devuelve
+    {ine: {clave: {año: v}}}, {clave: {año: {gi, cat, esp}}}, último año, {ine: usos} y {ámbito: usos}
+    (usos del último año: {uso: [inmuebles, valor medio]})."""
+    d = P / "cadastre"
+    fm = d / "municipis.csv.gz"
+    if not fm.exists():
+        return {}, {}, None, {}, {}
+    c = pd.read_csv(fm, dtype={"codi_ine": str})
+    pobs = {}
+    fp = P / "padro" / "poblacio_municipis.csv.gz"
+    if fp.exists():
+        for x in pd.read_csv(fp, dtype={"ine": str}).itertuples():
+            pobs.setdefault(x.ine, {})[int(x.any)] = float(x.valor)
+    prox = lambda s, y: (s.get(y) or s.get(y - 1) or (s[min(s, key=lambda k: abs(k - y))] if s else None))  # noqa: E731
+    # El año del Catastro es el padrón a 1 de enero: se usa la población del año anterior
+    pob = lambda ine, y: prox(pobs.get(ine, {}), y - 1)  # noqa: E731
+    ult = int(c["any"].max())
+    usos = lambda f: {u.lower(): [int(f["UU_" + u]) if pd.notna(f.get("UU_" + u)) else None,  # noqa: E731
+                                  round(f["V_CAT_" + u] / f["UU_" + u]) if pd.notna(f.get("V_CAT_" + u)) and f.get("UU_" + u) else None] for u in USOS_CAD}
+    mun, usos_mun = {}, {}
+    for f in c.to_dict("records"):
+        y = int(f["any"])
+        for k, v in _cad_ind(f, pob(f["codi_ine"], y)).items():
+            if v is not None:
+                mun.setdefault(f["codi_ine"], {}).setdefault(k, {})[y] = round(v, CAD_DEC[k]) if CAD_DEC[k] else int(round(v))
+        if y == ult:
+            usos_mun[f["codi_ine"]] = usos(f)
+    # Referencias: sumas del Catastro; población de Girona (padrón) y de Cataluña y España (agregados DGT/INE)
+    pz = {"gi": {}, "cat": {}, "esp": {}}
+    for ine, s in pobs.items():
+        for y, v in s.items():
+            pz["gi"][y] = pz["gi"].get(y, 0) + v
+    fv = P / "vehicles" / "agregats.csv"
+    if fv.exists():
+        for x in pd.read_csv(fv).to_dict("records"):
+            if x["ambit"] in ("cat", "esp") and x.get("pob") == x.get("pob"):
+                pz[x["ambit"]][int(x["any"])] = float(x["pob"])
+    refs, usos_ref = {}, {}
+    fr = d / "referencies.json"
+    if fr.exists():
+        for z, per_any in json.loads(fr.read_text(encoding="utf-8")).items():
+            for y, f in per_any.items():
+                y = int(y)
+                for k, v in _cad_ind(f, prox(pz.get(z, {}), y - 1)).items():
+                    if v is not None and k not in ("rev", "hos", "n"):
+                        refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
+                if y == ult:
+                    usos_ref[z] = usos(f)
+    dm, _, dprov, _ = cad_districtes()
+    for ine, serie in dm.items():
+        if ine in mun:
+            mun[ine]["vm2"] = serie
+    for y, v in dprov.items():
+        refs.setdefault("vm2", {}).setdefault(y, {})["gi"] = v
+    return mun, refs, ult, usos_mun, usos_ref
+
+
+def cadastre_prov(refs, ult, usos_ref):
+    """Gráficos de «La província»: valor catastral de la vivienda (serie) e inmuebles por uso."""
+    out = {}
+    v = refs.get("vviv", {})
+    ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
+    if ser.get("gi"):
+        out["cad_viv"] = {"tipus": "linia", "u": "€", "dec": 0, "series": ser}
+    if usos_ref.get("gi"):
+        tot = {z: sum((x[0] or 0) for x in u.values()) for z, u in usos_ref.items()}
+        grups = []
+        for k, x in usos_ref["gi"].items():
+            if not x[0] or k == "res":
+                continue
+            g = {"g": k, "c": "cu:" + k}
+            for z in ("gi", "cat", "esp"):
+                n = (usos_ref.get(z, {}).get(k) or [None])[0]
+                g[z] = round(n / tot[z] * 100, 1) if n and tot.get(z) else None
+            grups.append(g)
+        res = {z: round((usos_ref[z]["res"][0] or 0) / tot[z] * 100, 1) for z in usos_ref if tot.get(z)}
+        out["cad_usos"] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["gi", "cat", "esp"], "any": ult, "res": res,
+                           "grups": sorted([g for g in grups if (g["gi"] or 0) >= 0.3], key=lambda x: -(x["gi"] or 0))}
+    return out
+
+
 def vehicles():
     """Parque de vehículos de la DGT (anual). Devuelve {ine: {clave: {any: valor}}},
     {clave: {any: {gi, cat, esp}}} y el último año. Las claves ya son indicadores calculados."""
@@ -2088,6 +2214,7 @@ def main():
     if any_com:
         anys_extra.update({"com_buits": 2022, "com_var": any_com})
     sol, refs_sol, any_sol, mes_sol, prov_sol = solar()
+    cad, refs_cad, any_cad, usos_cad, usos_cad_ref = cadastre()
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     for ine, x in cm.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -2134,6 +2261,7 @@ def main():
             **({"com": com[ine]} if ine in com else {}),
             **({"com_f": fitxa_com[ine]} if ine in fitxa_com else {}),
             **({"sol": sol[ine]} if ine in sol else {}),
+            **({"cad": cad[ine], "cad_u": usos_cad.get(ine)} if ine in cad else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **fitxa_cm.get(ine, {}),
         })
@@ -2190,9 +2318,9 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {})},
-        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"],
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **cadastre_prov(refs_cad, any_cad, usos_cad_ref)}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3]} if any_cad else {})},
+        "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "cad_ref": refs_cad, "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"],
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

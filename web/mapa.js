@@ -87,6 +87,7 @@
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
+    { id: "cad", ca: "Cadastre", es: "Catastro" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
     { id: "ele", ca: "Eleccions", es: "Elecciones" },
@@ -137,12 +138,12 @@
     ["hut_viv", ["Pisos turístics per habitatge", "Habitatges d'ús turístic per 100 habitatges"], ["Pisos turísticos por vivienda", "Viviendas de uso turístico por 100 viviendas"], NT.xifra, N1],
     ["vte_pct", ["Pisos a les plataformes", "Habitatges turístics anunciats a Airbnb, Booking i Vrbo sobre el total d'habitatges (%)"], ["Pisos en las plataformas", "Viviendas turísticas anunciadas en Airbnb, Booking y Vrbo sobre el total de viviendas (%)"], NT.vte, { sumable: false, ...P1 }],
     ["vte_pl_h", ["Places a les plataformes", "Places en habitatges turístics anunciats per 100 habitants"], ["Plazas en las plataformas", "Plazas en viviendas turísticas anunciadas por 100 habitantes"], NT.vte, N1],
-    ["hut_n", ["Pisos turístics", "Habitatges d'ús turístic registrats"], ["Pisos turísticos", "Viviendas de uso turístico registradas"], NT.xifra, { sumable: true, ...N0 }],
-    ["hotels", ["Hotels i hostals", "Hotels, hostals i pensions"], ["Hoteles y hostales", "Hoteles, hostales y pensiones"], NT.xifra, { sumable: true, ...N0 }],
-    ["rural_n", ["Cases de turisme rural", "Establiments de turisme rural"], ["Casas de turismo rural", "Establecimientos de turismo rural"], NT.xifra, { sumable: true, ...N0 }],
+    ["hut_n", ["Pisos turístics", "Habitatges d'ús turístic registrats"], ["Pisos turísticos", "Viviendas de uso turístico registradas"], NT.xifra, N0],
+    ["hotels", ["Hotels i hostals", "Hotels, hostals i pensions"], ["Hoteles y hostales", "Hoteles, hostales y pensiones"], NT.xifra, N0],
+    ["rural_n", ["Cases de turisme rural", "Establiments de turisme rural"], ["Casas de turismo rural", "Establecimientos de turismo rural"], NT.xifra, N0],
     ["mov_rec_h", ["Turistes estrangers", "Turistes estrangers a l'any per habitant (telefonia mòbil)"], ["Turistas extranjeros", "Turistas extranjeros al año por habitante (telefonía móvil)"], NT.mov, N1],
     ["mov_int_h", ["Turistes d'altres províncies", "Turistes d'altres províncies a l'any per habitant (telefonia mòbil)"], ["Turistas de otras provincias", "Turistas de otras provincias al año por habitante (telefonía móvil)"], NT.mov, N1],
-    ["mov_rec", ["Turistes estrangers (total)", "Turistes estrangers a l'any (telefonia mòbil)"], ["Turistas extranjeros (total)", "Turistas extranjeros al año (telefonía móvil)"], NT.mov, { sumable: true, ...N0 }],
+    ["mov_rec", ["Turistes estrangers (total)", "Turistes estrangers a l'any (telefonia mòbil)"], ["Turistas extranjeros (total)", "Turistas extranjeros al año (telefonía móvil)"], NT.mov, N0],
     ["mov_ext_p", ["Pes del turisme estranger", "Turistes estrangers sobre el total (%)"], ["Peso del turismo extranjero", "Turistas extranjeros sobre el total (%)"], NT.mov, { sumable: false, ...P0 }],
     ["mov_fr", ["Turistes francesos", "Francesos sobre els turistes estrangers (%)"], ["Turistas franceses", "Franceses sobre los turistas extranjeros (%)"], NT.mov, { sumable: false, ...P0 }],
     ["estiu_p", ["Estacionalitat", "Turistes del juliol i l'agost sobre els de tot l'any (%)"], ["Estacionalidad", "Turistas de julio y agosto sobre los de todo el año (%)"], NT.mov, { sumable: false, ...P0 }],
@@ -152,7 +153,7 @@
     ["ocup_camp", ["Ocupació dels càmpings", "Grau d'ocupació per parcel·les, mitjana dels mesos oberts (%)"], ["Ocupación de los campings", "Grado de ocupación por parcelas, media de los meses abiertos (%)"], NT.camping, { cob: 0.02, sumable: false, ...P0 }],
     ["ocup", ["Ocupació hotelera", "Grau d'ocupació hotelera per places, mitjana de l'any (%)"], ["Ocupación hotelera", "Grado de ocupación hotelera por plazas, media del año (%)"], NT.punts, { cob: 0.02, sumable: false, ...P0 }],
     ["adr", ["Preu de l'hotel", "Tarifa mitjana diària per habitació, ADR (€)"], ["Precio del hotel", "Tarifa media diaria por habitación, ADR (€)"], NT.punts, { cob: 0.02, sumable: false, ...EU }],
-    ["platges", ["Platges", "Platges i trams de costa catalogats"], ["Playas", "Playas y tramos de costa catalogados"], { ca: "Generalitat, catàleg de platges de Catalunya.", es: "Generalitat, catálogo de playas de Cataluña." }, { sumable: true, ...N0 }],
+    ["platges", ["Platges", "Platges i trams de costa catalogats"], ["Playas", "Playas y tramos de costa catalogados"], { ca: "Generalitat, catàleg de platges de Catalunya.", es: "Generalitat, catálogo de playas de Cataluña." }, N0],
   ];
   const NOTA_VEH = { ca: "DGT, dades municipals: vehicles segons el domicili del titular, amb les empreses de lloguer i flotes incloses on tenen la seu.", es: "DGT, datos municipales: vehículos según el domicilio del titular, con las empresas de alquiler y flotas incluidas donde tienen la sede." };
   const VEH = [
@@ -187,6 +188,33 @@
     ["s_auto", ["Automoció i carburants", "Concessionaris, recanvis i benzineres per 1.000 habitants"], ["Automoción y carburantes", "Concesionarios, recambios y gasolineras por 1.000 habitantes"], N2],
     ["s_mixt", ["Supermercats i grans magatzems", "Comerç mixt per 1.000 habitants"], ["Supermercados y grandes almacenes", "Comercio mixto por 1.000 habitantes"], N2],
     ["p_quot", ["Pes del comerç quotidià", "Alimentació i quotidià no alimentari (% dels establiments)"], ["Peso del comercio cotidiano", "Alimentación y cotidiano no alimentario (% de los establecimientos)"], { sumable: false, ...P1 }],
+  ];
+
+  // Cadastre (Direcció General del Cadastre, «Datos municipios»): m.cad = {clave: {año: valor}}
+  const CV = (k) => (m, a) => (a != null && m.cad && m.cad[k] && m.cad[k][a] != null ? m.cad[k][a] : null);
+  const CADA = (k) => D.anys && (k === "vm2" ? D.anys.cad_vm2 : D.anys.cad);
+  const CVR = (k, z) => (a) => { const r = D.cad_ref && D.cad_ref[k] && D.cad_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_CAD = { ca: "Direcció General del Cadastre (Ministeri d'Hisenda), estadístiques per municipi. L'any és el del padró cadastral a 1 de gener. El valor cadastral el fixa la ponència de valors i sol ser molt inferior al de mercat; als municipis amb la ponència antiga ho és encara més. Espanya, sense el País Basc ni Navarra (tenen cadastre propi).", es: "Dirección General del Catastro (Ministerio de Hacienda), estadísticas por municipio. El año es el del padrón catastral a 1 de enero. El valor catastral lo fija la ponencia de valores y suele ser muy inferior al de mercado; en los municipios con la ponencia antigua lo es todavía más. España, sin el País Vasco ni Navarra (tienen catastro propio)." };
+  const NOTA_CAD_U = { ca: "Direcció General del Cadastre. Immobles urbans segons l'ús principal que hi consta al Cadastre.", es: "Dirección General del Catastro. Inmuebles urbanos según el uso principal que consta en el Catastro." };
+  const CAD = [
+    ["vm", ["Valor cadastral mitjà", "Valor cadastral mitjà per immoble urbà (€)"], ["Valor catastral medio", "Valor catastral medio por inmueble urbano (€)"], EU],
+    ["vviv", ["Valor cadastral de l'habitatge", "Valor cadastral mitjà dels immobles residencials (€)"], ["Valor catastral de la vivienda", "Valor catastral medio de los inmuebles residenciales (€)"], EU],
+    ["vhab", ["Valor cadastral per habitant", "Valor cadastral urbà per habitant (€)"], ["Valor catastral por habitante", "Valor catastral urbano por habitante (€)"], EU],
+    ["vm2", ["Valor cadastral per m²", "Valor cadastral mitjà de l'habitatge (€/m²)"], ["Valor catastral por m²", "Valor catastral medio de la vivienda (€/m²)"], { s: S("cad_vm2"), nota: { ca: "Direcció General del Cadastre, sèries per districte censal: valor cadastral mitjà per metre quadrat de l'habitatge col·lectiu i unifamiliar, ponderat pel nombre d'immobles. A la vista per seccions, cada secció mostra el valor del seu districte censal.", es: "Dirección General del Catastro, series por distrito censal: valor catastral medio por metro cuadrado de la vivienda colectiva y unifamiliar, ponderado por el número de inmuebles. En la vista por secciones, cada sección muestra el valor de su distrito censal." }, f: (v) => `${fmt(v)} €/m²`, c: (v) => fmt(v) }],
+    ["sol", ["Pes del sòl", "Valor del sòl sobre el valor cadastral urbà (%)"], ["Peso del suelo", "Valor del suelo sobre el valor catastral urbano (%)"], { sumable: false, ...P0 }],
+    ["n", ["Immobles urbans", "Immobles urbans (béns immobles)"], ["Inmuebles urbanos", "Inmuebles urbanos (bienes inmuebles)"], N0],
+    ["ih", ["Immobles per habitant", "Immobles urbans per 100 habitants"], ["Inmuebles por habitante", "Inmuebles urbanos por 100 habitantes"], N0],
+    ["res", ["Immobles residencials", "Immobles d'ús residencial (% dels urbans)"], ["Inmuebles residenciales", "Inmuebles de uso residencial (% de los urbanos)"], { sumable: false, nota: NOTA_CAD_U, ...P0 }],
+    ["alm", ["Places i trasters", "Magatzems i aparcaments (% dels immobles urbans)"], ["Plazas y trasteros", "Almacenes y aparcamientos (% de los inmuebles urbanos)"], { sumable: false, nota: NOTA_CAD_U, ...P0 }],
+    ["com", ["Locals comercials", "Immobles d'ús comercial per 1.000 habitants"], ["Locales comerciales", "Inmuebles de uso comercial por 1.000 habitantes"], { nota: NOTA_CAD_U, ...N0 }],
+    ["ind", ["Naus industrials", "Immobles d'ús industrial per 1.000 habitants"], ["Naves industriales", "Inmuebles de uso industrial por 1.000 habitantes"], { nota: NOTA_CAD_U, ...N0 }],
+    ["ofi", ["Oficines", "Immobles d'oficines per 1.000 habitants"], ["Oficinas", "Inmuebles de oficinas por 1.000 habitantes"], { nota: NOTA_CAD_U, ...N1 }],
+    ["hos", ["Hotels i restaurants (cadastre)", "Immobles d'ús hoteler i de restauració"], ["Hoteles y restaurantes (catastro)", "Inmuebles de uso hotelero y de restauración"], { nota: NOTA_CAD_U, ...N0 }],
+    ["solar", ["Solars sense edificar", "Parcel·les urbanes sense edificar (% de les parcel·les)"], ["Solares sin edificar", "Parcelas urbanas sin edificar (% de las parcelas)"], { sumable: false, ...P1 }],
+    ["suph", ["Sòl urbà per habitant", "Superfície de les parcel·les urbanes per habitant (m²)"], ["Suelo urbano por habitante", "Superficie de las parcelas urbanas por habitante (m²)"], N0],
+    ["rha", ["Valor del sòl rústic", "Valor cadastral rústic per hectàrea (€)"], ["Valor del suelo rústico", "Valor catastral rústico por hectárea (€)"], { sumable: false, ...EU }],
+    ["rpar", ["Mida de la finca rústica", "Superfície mitjana de la parcel·la rústica (ha)"], ["Tamaño de la finca rústica", "Superficie media de la parcela rústica (ha)"], { sumable: false, ...N2 }],
+    ["rev", ["Ponència de valors", "Any de l'última revisió cadastral (ponència de valors)"], ["Ponencia de valores", "Año de la última revisión catastral (ponencia de valores)"], { sumable: false, f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) }],
   ];
 
   // Plaques solars d'autoconsum (RAC, Generalitat): m.sol = {clave: {año: valor}} acumulado a 31 de diciembre
@@ -316,7 +344,7 @@
     { id: "hut", tema: "hab", ca: ["Pisos turístics", "Habitatges d'ús turístic per 100 habitatges"], es: ["Pisos turísticos", "Viviendas de uso turístico por 100 viviendas"], v: (m) => (m.viviendas ? (m.hut / m.viviendas) * 100 : null), ...N1 },
     { id: "buits", tema: "hab", ca: ["Pisos buits", "Habitatges buits registrats per 1.000 habitatges"], es: ["Pisos vacíos", "Viviendas vacías registradas por 1.000 viviendas"], a: "buits", v: X("buits"), ...N1 },
     { id: "visats", tema: "hab", ca: ["Pisos en projecte", "Habitatges visats per 1.000 habitants"], es: ["Pisos en proyecto", "Viviendas visadas por 1.000 habitantes"], a: "visats", v: X("visats"), ...N1 },
-    { id: "valor_cad", tema: "hab", ca: ["Valor cadastral", "Valor cadastral mitjà per immoble urbà (€)"], es: ["Valor catastral", "Valor catastral medio por inmueble urbano (€)"], a: "valor_cad", v: X("valor_cad"), ...EU },
+    { id: "valor_cad", tema: "hab", ca: ["Valor cadastral de l'habitatge", "Valor cadastral mitjà dels immobles residencials (€)"], es: ["Valor catastral de la vivienda", "Valor catastral medio de los inmuebles residenciales (€)"], a: "cad", sumable: false, v: (m) => CV("vviv")(m, D.anys && D.anys.cad), t: CV("vviv"), pv: CVR("vviv", "gi"), ref: () => { const a = D.anys && D.anys.cad; return { cat: CVR("vviv", "cat")(a), esp: CVR("vviv", "esp")(a) }; }, nota: NOTA_CAD, ...EU },
     { id: "antics", tema: "hab", ca: ["Abans de 1980", "Habitatges construïts abans de 1980 (%)"], es: ["Antes de 1980", "Viviendas construidas antes de 1980 (%)"], v: (m) => (m.viviendas ? (m.viv_antes_1980 / m.viviendas) * 100 : null), s: (x) => (x.viviendas ? (x.viv_antes_1980 / x.viviendas) * 100 : null), ...P0 },
     { id: "nous", tema: "hab", ca: ["Des del 2000", "Habitatges construïts des del 2000 (%)"], es: ["Desde 2000", "Viviendas construidas desde 2000 (%)"], v: null, s: (x) => (x.viviendas ? (x.viv_post_2000 / x.viviendas) * 100 : null), ...P0 },
     { id: "anyo", tema: "hab", ca: ["Any de construcció", "Any mitjà de construcció dels habitatges"], es: ["Año de construcción", "Año medio de construcción de las viviendas"], v: (m) => m.anyo_mediano, s: S("anyo_mediano"), f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) },
@@ -471,6 +499,10 @@
     { id: "com_buits", sumable: false, tema: "com", ca: ["Locals buits", "Locals comercials tancats o buits (% dels locals en planta baixa)"], es: ["Locales vacíos", "Locales comerciales cerrados o vacíos (% de los locales en planta baja)"], a: "com_buits", v: X("com_buits"),
       nota: { ca: "Mapa del Comerç Català 2022 (Generalitat): inspecció directa dels locals de les ciutats de més de 20.000 habitants i de les capitals de comarca. A la resta de municipis no s'ha fet.", es: "Mapa del Comerç Català 2022 (Generalitat): inspección directa de los locales de las ciudades de más de 20.000 habitantes y de las capitales de comarca. En el resto de municipios no se ha hecho." }, ...P1 },
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
+    // Cadastre: sèrie anual per municipi
+    ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: k === "vm2" ? "cad_vm2" : "cad", sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
+      ...(k === "n" || k === "hos" || k === "rev" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
+      nota: NOTA_CAD, ...ext })),
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
       v: (m) => tribMax(m, D.anys && D.anys.trib), t: tribMax, nota: { ca: "Quants d'aquests cinc impostos té l'ajuntament al màxim que permet la llei: IBI urbà (1,10 %, sense increments), IAE (coeficient 3,8), impost de circulació (el doble de la quota mínima), plusvàlua (30 %) i ICIO (4 %). Ministeri d'Hisenda.", es: "Cuántos de estos cinco impuestos tiene el ayuntamiento al máximo que permite la ley: IBI urbano (1,10 %, sin incrementos), IAE (coeficiente 3,8), impuesto de circulación (el doble de la cuota mínima), plusvalía (30 %) e ICIO (4 %). Ministerio de Hacienda." }, f: (v) => `${fmt(v)} / 5`, c: (v) => fmt(v) },
@@ -590,6 +622,7 @@
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.a === "cad" || i.a === "cad_vm2") D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
@@ -1152,7 +1185,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "veh") ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "veh" || i.a === "cad" || i.a === "cad_vm2") ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
