@@ -19,10 +19,35 @@ def main() -> None:
     cfg = json.loads(base64.b64decode(R + "=" * (-len(R) % 4)))
     key, tenant = cfg["k"], cfg["t"]
     log = [json.dumps(cfg)]
-    ruta = requests.get(f"https://api.powerbi.com/public/routing/cluster/{tenant}", headers=UA, timeout=60)
-    log.append(f"routing {ruta.status_code} {ruta.text[:300]}")
-    uri = ruta.json()["FixedClusterUri"].rstrip("/")
-    api = uri.replace("-redirect", "").replace("://", "://").replace(".analysis", "-api.analysis")
+    import re
+    cands = []
+    for u in (f"https://api.powerbi.com/public/routing/cluster/{tenant}", f"https://app.powerbi.com/view?r={R}"):
+        try:
+            x = requests.get(u, headers=UA, timeout=60)
+            log.append(f"{u[:60]} {x.status_code} {x.text[:300]!r}")
+            (SAL / ("routing.txt" if "routing" in u else "view.html")).write_text(x.text, encoding="utf-8")
+            cands += re.findall(r"https://[A-Za-z0-9-]+-redirect\.analysis\.windows\.net", x.text)
+        except Exception as e:  # noqa: BLE001
+            log.append(f"{u[:60]} error {e}")
+    cands += [f"https://wabi-{z}-redirect.analysis.windows.net" for z in (
+        "west-europe-d-primary", "west-europe-b-primary", "west-europe-e-primary", "north-europe-k-primary",
+        "north-europe-j-primary", "west-europe-c-primary", "west-europe-f-primary", "north-europe-h-primary")]
+    api = None
+    for c in dict.fromkeys(cands):
+        a = c.lower().replace("-redirect", "").replace(".analysis", "-api.analysis")
+        try:
+            t = requests.get(f"{a}/public/reports/{key}/modelsAndExploration?preferReadOnlySession=true",
+                             headers={**UA, "X-PowerBI-ResourceKey": key}, timeout=60)
+            log.append(f"prueba {a} {t.status_code}")
+            if t.ok:
+                api = a
+                break
+        except Exception as e:  # noqa: BLE001
+            log.append(f"prueba {a} error {e}")
+    (SAL / "resumen.md").write_text("\n".join(log), encoding="utf-8")
+    if not api:
+        print("\n".join(log))
+        return
     log.append("api " + api)
     h = {**UA, "X-PowerBI-ResourceKey": key, "Content-Type": "application/json"}
     me = requests.get(f"{api}/public/reports/{key}/modelsAndExploration?preferReadOnlySession=true", headers=h, timeout=120)
