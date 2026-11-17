@@ -833,12 +833,29 @@ def sitemap(paths):
 
 
 def cname():
-    host = urlparse(BASE).hostname or ""
+    # Solo si la web ocupa la raíz del dominio. En una ruta (enxifres.cat/girona/) el dominio lo lleva el repo de la organización
+    u = urlparse(BASE)
+    host = u.hostname or ""
     f = WEB / "CNAME"
-    if host and not host.endswith("github.io"):
+    if host and not host.endswith("github.io") and u.path in ("", "/"):
         f.write_text(host + "\n", encoding="utf-8")
     elif f.exists():
         f.unlink()
+
+
+# Direcciones anteriores de la web: si alguna página de web/ aún las lleva escritas, se cambian por BASE al publicar
+BASES_ANTIGUES = ["https://nachotronic.github.io/girona-dades/"]
+
+
+def absolutes():
+    for h in WEB.glob("*.html"):
+        s = h.read_text(encoding="utf-8")
+        s2 = s
+        for b in BASES_ANTIGUES:
+            if b != BASE:
+                s2 = s2.replace(b, BASE)
+        if s2 != s:
+            h.write_text(s2, encoding="utf-8")
 
 
 def portada():
@@ -886,6 +903,7 @@ def main():
     sitemap(paths)
     cname()
     if PUBLICA:
+        absolutes()
         portada()
     print(f"Referència: {len(paths) * 2} pàgines, {len(IND)} indicadors ({nsec} per secció), base {BASE}")
 
