@@ -1,0 +1,219 @@
+{
+  "id" : "7u3t-vi7t",
+  "name" : "Sectors de desenvolupament del Mapa Urbanístic de Catalunya",
+  "assetType" : "map",
+  "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1603433689,
+  "description" : "Dades dels sectors de desenvolupament subjectes a pla de millora urbana en sòl urbà consolidat o a pla parcial urbanístic en sòl urbanitzable segons el Mapa urbanístic de Catalunya.",
+  "diciBackend" : false,
+  "displayType" : "visualization_canvas_map",
+  "downloadCount" : 1,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "modifyingViewUid" : "6wpu-9y2e",
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2198068,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1637068156,
+  "publicationGroup" : 1268063,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1707817973,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1496670,
+  "totalTimesRated" : 0,
+  "viewCount" : 3316,
+  "viewLastModified" : 1739957371,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1603438804,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1030215,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1603438804,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1603438804,
+      "failureCount" : 0,
+      "startedAt" : 1603438804,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "displayFormat" : {
+    "visualizationCanvasMetadata" : {
+      "vifs" : [ {
+        "configuration" : {
+          "viewSourceDataLink" : true,
+          "mapCenterAndZoom" : {
+            "center" : {
+              "lng" : 1.8379594281516347,
+              "lat" : 41.46811307369154
+            },
+            "zoom" : 8.812834095781119
+          },
+          "basemapOptions" : {
+            "searchBoundaryLowerRightLongitude" : 3.297529402047657,
+            "searchBoundaryUpperLeftLongitude" : 0.2704098168646575,
+            "searchBoundaryUpperLeftLatitude" : 42.838605326639,
+            "navigationControl" : true,
+            "basemapStyle" : "mapbox://styles/mapbox/basic-v9",
+            "geoCoderControl" : true,
+            "geoLocateControl" : true,
+            "searchBoundaryLowerRightLatitude" : 40.54006899558007
+          },
+          "mapPitchAndBearing" : {
+            "bearing" : 0,
+            "pitch" : 0
+          },
+          "datasetMetadata" : false,
+          "panAndZoom" : true,
+          "showMultiplePointsSymbolInLegend" : true,
+          "locateUser" : false
+        },
+        "series" : [ {
+          "visible" : true,
+          "color" : {
+            "palette" : "custom",
+            "customPalette" : {
+              "tip_desenv" : {
+                "Activitat econòmica" : {
+                  "dashed" : false,
+                  "color" : "#894baa",
+                  "charmName" : "",
+                  "index" : 1,
+                  "id" : "Activitat econòmica",
+                  "label" : "Activitat econòmica"
+                },
+                "Residencial" : {
+                  "dashed" : false,
+                  "color" : "#f8b2b8",
+                  "charmName" : "",
+                  "index" : 0,
+                  "id" : "Residencial",
+                  "label" : "Residencial"
+                },
+                "Mixt" : {
+                  "dashed" : false,
+                  "color" : "#969696",
+                  "charmName" : "",
+                  "index" : 2,
+                  "id" : "Mixt",
+                  "label" : "Mixt"
+                },
+                "Altres desenvolupaments" : {
+                  "dashed" : false,
+                  "color" : "#6ac5a3",
+                  "charmName" : "",
+                  "index" : 3,
+                  "id" : "Altres desenvolupaments",
+                  "label" : "Altres desenvolupaments"
+                }
+              }
+            },
+            "primary" : "#eb6900"
+          },
+          "mapOptions" : {
+            "shapeOutlineColor" : "#252525",
+            "colorByQuantificationMethod" : "category",
+            "colorBoundariesBy" : "tip_desenv",
+            "mapType" : "boundaryMap",
+            "shapeOutlineWidth" : 0.5
+          },
+          "showLegend" : true,
+          "type" : "map",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "count"
+            },
+            "name" : "Dades dels sectors de desenvolupament del Mapa urbanístic de Catalunya",
+            "type" : "socrata.soql",
+            "datasetUid" : "6wpu-9y2e",
+            "dimension" : {
+              "columnName" : "the_geom"
+            }
+          },
+          "primary" : true
+        } ],
+        "format" : {
+          "type" : "visualization_interchange_format",
+          "version" : 3
+        },
+        "description" : "",
+        "id" : "2254f27e-c0f9-40f9-8245-00de2c044fa6",
+        "title" : ""
+      } ],
+      "version" : 1
+    }
+  },
+  "grants" : [ {
+    "inherited" : true,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Bienal"
+      },
+      "Idioma" : {
+        "Idioma" : "Català"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Dades geogràfiques",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "visualization" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "flags" : [ "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

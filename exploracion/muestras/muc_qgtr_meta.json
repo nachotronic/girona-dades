@@ -1,0 +1,886 @@
+{
+  "id" : "qgtr-hfva",
+  "name" : "Classificació i qualificació dels sòl de les edificacions del Referencial topogràfic territorial (RTT)",
+  "assetType" : "dataset",
+  "attribution" : "Institut Cartogràfic i Geològic de Catalunya (ICGC). Departament de Territori, Habitatge i Transició Ecològica (DGOTUA)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Urbanisme-infraestructures",
+  "createdAt" : 1533207673,
+  "description" : "Edificacions del topogràfic 1.5.000 (polígons) elaborat per  l’Institut cartogràfic i geològic de Catalunya amb l’assignació de la classificació i qualificació del sòl del Mapa urbanístic de Catalunya versió v2022/07, i amb dades de superfície de l’edificació i del municipi i comarca on pertanyen.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1649,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 3090988,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1769089692,
+  "publicationGroup" : 539234,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1778841138,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 2077741,
+  "totalTimesRated" : 0,
+  "viewCount" : 6295,
+  "viewLastModified" : 1789973026,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1534403013,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1541470,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1534403013,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 27178681,
+    "name" : "ID",
+    "dataTypeName" : "text",
+    "description" : "Identificador autonumèric",
+    "fieldName" : "id",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 10992563,
+    "cachedContents" : {
+      "non_null" : "1282466",
+      "largest" : "999999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "995721",
+        "count" : "1"
+      }, {
+        "item" : "1362679",
+        "count" : "1"
+      }, {
+        "item" : "1022775",
+        "count" : "1"
+      }, {
+        "item" : "1330518",
+        "count" : "1"
+      }, {
+        "item" : "1073008",
+        "count" : "1"
+      }, {
+        "item" : "836436",
+        "count" : "1"
+      }, {
+        "item" : "1101616",
+        "count" : "1"
+      }, {
+        "item" : "1431588",
+        "count" : "1"
+      }, {
+        "item" : "755440",
+        "count" : "1"
+      }, {
+        "item" : "738947",
+        "count" : "1"
+      }, {
+        "item" : "1364377",
+        "count" : "1"
+      }, {
+        "item" : "1579527",
+        "count" : "1"
+      }, {
+        "item" : "426734",
+        "count" : "1"
+      }, {
+        "item" : "934090",
+        "count" : "1"
+      }, {
+        "item" : "791024",
+        "count" : "1"
+      }, {
+        "item" : "956604",
+        "count" : "1"
+      }, {
+        "item" : "1573198",
+        "count" : "1"
+      }, {
+        "item" : "1302484",
+        "count" : "1"
+      }, {
+        "item" : "1482746",
+        "count" : "1"
+      }, {
+        "item" : "613357",
+        "count" : "1"
+      } ],
+      "smallest" : "1000000",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178682,
+    "name" : "Tipus edificació",
+    "dataTypeName" : "text",
+    "description" : "Tipus edificació segons RTT de l’ICGC (edi (edificació), ind ( indústria))",
+    "fieldName" : "cas",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 4299203,
+    "cachedContents" : {
+      "non_null" : "1282466",
+      "largest" : "ind",
+      "null" : "0",
+      "top" : [ {
+        "item" : "edi",
+        "count" : "1194732"
+      }, {
+        "item" : "ind",
+        "count" : "87734"
+      } ],
+      "smallest" : "edi",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178683,
+    "name" : "Estat edificació",
+    "dataTypeName" : "text",
+    "description" : "Estat de l’element segons RTT de l’ICGC\n(gen (cas genèric), rui ( en ruïnes), cns (en construcció))",
+    "fieldName" : "estat_edificacio",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16429160,
+    "cachedContents" : {
+      "non_null" : "1282466",
+      "largest" : "rui",
+      "null" : "0",
+      "top" : [ {
+        "item" : "gen",
+        "count" : "1215442"
+      }, {
+        "item" : "rui",
+        "count" : "65171"
+      }, {
+        "item" : "cns",
+        "count" : "1853"
+      } ],
+      "smallest" : "cns",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178684,
+    "name" : "Alçada",
+    "dataTypeName" : "number",
+    "description" : "Alçada de l’edificació en metres",
+    "fieldName" : "alcada",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 16429159,
+    "cachedContents" : {
+      "non_null" : "1282466",
+      "largest" : "2578.8701171875",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "8478"
+      }, {
+        "item" : "2.75",
+        "count" : "2713"
+      }, {
+        "item" : "2.940000057220459",
+        "count" : "2697"
+      }, {
+        "item" : "2.880000114440918",
+        "count" : "2688"
+      }, {
+        "item" : "3.0",
+        "count" : "2676"
+      }, {
+        "item" : "3.059999942779541",
+        "count" : "2669"
+      }, {
+        "item" : "3.130000114440918",
+        "count" : "2645"
+      }, {
+        "item" : "2.9100000858306885",
+        "count" : "2639"
+      }, {
+        "item" : "2.859999895095825",
+        "count" : "2593"
+      }, {
+        "item" : "2.690000057220459",
+        "count" : "2577"
+      }, {
+        "item" : "2.8399999141693115",
+        "count" : "2566"
+      }, {
+        "item" : "3.0199999809265137",
+        "count" : "2565"
+      }, {
+        "item" : "3.25",
+        "count" : "2556"
+      }, {
+        "item" : "2.630000114440918",
+        "count" : "2541"
+      }, {
+        "item" : "2.890000104904175",
+        "count" : "2525"
+      }, {
+        "item" : "3.0399999618530273",
+        "count" : "2515"
+      }, {
+        "item" : "2.9700000286102295",
+        "count" : "2511"
+      }, {
+        "item" : "2.7200000286102295",
+        "count" : "2507"
+      }, {
+        "item" : "2.950000047683716",
+        "count" : "2496"
+      }, {
+        "item" : "2.7699999809265137",
+        "count" : "2494"
+      } ],
+      "smallest" : "1.0",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178685,
+    "name" : "Nom edificació",
+    "dataTypeName" : "text",
+    "description" : "Nom de l’edificació en cas que el tingui assignat",
+    "fieldName" : "nom_edificacio",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16429158,
+    "cachedContents" : {
+      "non_null" : "57316",
+      "largest" : "Zona esportiva Municipal",
+      "null" : "1225150",
+      "top" : [ {
+        "item" : "Ajuntament",
+        "count" : "206"
+      }, {
+        "item" : "Santa Maria",
+        "count" : "131"
+      }, {
+        "item" : "Sant Miquel",
+        "count" : "100"
+      }, {
+        "item" : "Sant Pere",
+        "count" : "91"
+      }, {
+        "item" : "la Casanova",
+        "count" : "83"
+      }, {
+        "item" : "Sant Martí",
+        "count" : "76"
+      }, {
+        "item" : "la Caseta",
+        "count" : "74"
+      }, {
+        "item" : "el Molí",
+        "count" : "69"
+      }, {
+        "item" : "la Torre",
+        "count" : "69"
+      }, {
+        "item" : "la Rectoria",
+        "count" : "68"
+      }, {
+        "item" : "Can Serra",
+        "count" : "61"
+      }, {
+        "item" : "Sant Sebastià",
+        "count" : "52"
+      }, {
+        "item" : "Cal Sastre",
+        "count" : "49"
+      }, {
+        "item" : "Cal Ferrer",
+        "count" : "48"
+      }, {
+        "item" : "Sant Esteve",
+        "count" : "48"
+      }, {
+        "item" : "Can Bosc",
+        "count" : "48"
+      }, {
+        "item" : "Sant Jaume",
+        "count" : "47"
+      }, {
+        "item" : "Sant Joan",
+        "count" : "46"
+      }, {
+        "item" : "Can Puig",
+        "count" : "44"
+      }, {
+        "item" : "Sant Vicenç",
+        "count" : "44"
+      } ],
+      "smallest" : "Abadia del Codony",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178693,
+    "name" : "Àrea edificació",
+    "dataTypeName" : "number",
+    "description" : "Àrea de l’edificació en metres quadrats",
+    "fieldName" : "shape_area",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 16429185,
+    "cachedContents" : {
+      "non_null" : "1282466",
+      "largest" : "542327.44",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6.25",
+        "count" : "2026"
+      }, {
+        "item" : "6.26",
+        "count" : "1357"
+      }, {
+        "item" : "6.27",
+        "count" : "1289"
+      }, {
+        "item" : "6.23",
+        "count" : "1003"
+      }, {
+        "item" : "6.28",
+        "count" : "965"
+      }, {
+        "item" : "6.24",
+        "count" : "923"
+      }, {
+        "item" : "6.22",
+        "count" : "669"
+      }, {
+        "item" : "6.29",
+        "count" : "383"
+      }, {
+        "item" : "6.21",
+        "count" : "305"
+      }, {
+        "item" : "14.33",
+        "count" : "183"
+      }, {
+        "item" : "15.62",
+        "count" : "173"
+      }, {
+        "item" : "13.58",
+        "count" : "169"
+      }, {
+        "item" : "12.22",
+        "count" : "169"
+      }, {
+        "item" : "15.37",
+        "count" : "166"
+      }, {
+        "item" : "11.09",
+        "count" : "166"
+      }, {
+        "item" : "11.96",
+        "count" : "166"
+      }, {
+        "item" : "16.39",
+        "count" : "165"
+      }, {
+        "item" : "12.45",
+        "count" : "164"
+      }, {
+        "item" : "15.0",
+        "count" : "164"
+      }, {
+        "item" : "12.18",
+        "count" : "163"
+      } ],
+      "smallest" : "0.02",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178687,
+    "name" : "Àmbit funcional territorial",
+    "dataTypeName" : "text",
+    "description" : "Àmbit funcional territorial al que pertany l’edificació",
+    "fieldName" : "aft_8",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 4299196,
+    "cachedContents" : {
+      "non_null" : "1265744",
+      "largest" : "TE",
+      "null" : "16722",
+      "top" : [ {
+        "item" : "MB",
+        "count" : "338495"
+      }, {
+        "item" : "CG",
+        "count" : "227864"
+      }, {
+        "item" : "CT",
+        "count" : "148609"
+      }, {
+        "item" : "PO",
+        "count" : "140134"
+      }, {
+        "item" : "PE",
+        "count" : "131690"
+      }, {
+        "item" : "TE",
+        "count" : "123386"
+      }, {
+        "item" : "CC",
+        "count" : "112377"
+      }, {
+        "item" : "APiA",
+        "count" : "43189"
+      } ],
+      "smallest" : "APiA",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178688,
+    "name" : "Comarca",
+    "dataTypeName" : "text",
+    "description" : "Comarca a la que pertany l’edificació",
+    "fieldName" : "comarca",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 4299200,
+    "cachedContents" : {
+      "non_null" : "1265742",
+      "largest" : "Vallès Oriental",
+      "null" : "16724",
+      "top" : [ {
+        "item" : "Vallès Occidental",
+        "count" : "84563"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "81818"
+      }, {
+        "item" : "Baix Llobregat",
+        "count" : "80452"
+      }, {
+        "item" : "Maresme",
+        "count" : "63156"
+      }, {
+        "item" : "Selva",
+        "count" : "57517"
+      }, {
+        "item" : "Baix Ebre",
+        "count" : "54981"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "53882"
+      }, {
+        "item" : "Segrià",
+        "count" : "53880"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "52511"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "47628"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "44243"
+      }, {
+        "item" : "Baix Penedès",
+        "count" : "39609"
+      }, {
+        "item" : "Bages",
+        "count" : "38345"
+      }, {
+        "item" : "Anoia",
+        "count" : "37513"
+      }, {
+        "item" : "Osona",
+        "count" : "33941"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "30757"
+      }, {
+        "item" : "Montsià",
+        "count" : "30069"
+      }, {
+        "item" : "Gironès",
+        "count" : "29488"
+      }, {
+        "item" : "Noguera",
+        "count" : "27917"
+      }, {
+        "item" : "Barcelonès",
+        "count" : "27752"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178689,
+    "name" : "Nom municipi",
+    "dataTypeName" : "text",
+    "description" : "Municipi al que pertany l’edificació",
+    "fieldName" : "nom_municipi",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16429156,
+    "cachedContents" : {
+      "non_null" : "1265742",
+      "largest" : "Xerta",
+      "null" : "16724",
+      "top" : [ {
+        "item" : "Barcelona",
+        "count" : "20259"
+      }, {
+        "item" : "Tortosa",
+        "count" : "15192"
+      }, {
+        "item" : "Lleida",
+        "count" : "13832"
+      }, {
+        "item" : "Sant Cugat del Vallès",
+        "count" : "13471"
+      }, {
+        "item" : "Rubí",
+        "count" : "10188"
+      }, {
+        "item" : "Tarragona",
+        "count" : "9868"
+      }, {
+        "item" : "Piera",
+        "count" : "9102"
+      }, {
+        "item" : "Mont-roig del Camp",
+        "count" : "9017"
+      }, {
+        "item" : "Calafell",
+        "count" : "8533"
+      }, {
+        "item" : "Reus",
+        "count" : "8531"
+      }, {
+        "item" : "el Vendrell",
+        "count" : "8360"
+      }, {
+        "item" : "Terrassa",
+        "count" : "8277"
+      }, {
+        "item" : "Lloret de Mar",
+        "count" : "8186"
+      }, {
+        "item" : "Lliçà d'Amunt",
+        "count" : "8022"
+      }, {
+        "item" : "Tordera",
+        "count" : "7951"
+      }, {
+        "item" : "Vilanova i la Geltrú",
+        "count" : "7708"
+      }, {
+        "item" : "l'Ametlla de Mar",
+        "count" : "7418"
+      }, {
+        "item" : "Vallirana",
+        "count" : "6990"
+      }, {
+        "item" : "Cambrils",
+        "count" : "6830"
+      }, {
+        "item" : "Valls",
+        "count" : "6723"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178690,
+    "name" : "Codi municipi",
+    "dataTypeName" : "text",
+    "description" : "Codi identificador numèric del municipi de l’edificació",
+    "fieldName" : "codi_ine",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 16429155,
+    "cachedContents" : {
+      "non_null" : "1265742",
+      "largest" : "439076",
+      "null" : "16724",
+      "top" : [ {
+        "item" : "080193",
+        "count" : "20259"
+      }, {
+        "item" : "431554",
+        "count" : "15192"
+      }, {
+        "item" : "251207",
+        "count" : "13832"
+      }, {
+        "item" : "082055",
+        "count" : "13471"
+      }, {
+        "item" : "081846",
+        "count" : "10188"
+      }, {
+        "item" : "431482",
+        "count" : "9868"
+      }, {
+        "item" : "081614",
+        "count" : "9102"
+      }, {
+        "item" : "430923",
+        "count" : "9017"
+      }, {
+        "item" : "430379",
+        "count" : "8533"
+      }, {
+        "item" : "431233",
+        "count" : "8531"
+      }, {
+        "item" : "431634",
+        "count" : "8360"
+      }, {
+        "item" : "082798",
+        "count" : "8277"
+      }, {
+        "item" : "170950",
+        "count" : "8186"
+      }, {
+        "item" : "081075",
+        "count" : "8022"
+      }, {
+        "item" : "082845",
+        "count" : "7951"
+      }, {
+        "item" : "083073",
+        "count" : "7708"
+      }, {
+        "item" : "430136",
+        "count" : "7418"
+      }, {
+        "item" : "082956",
+        "count" : "6990"
+      }, {
+        "item" : "430385",
+        "count" : "6830"
+      }, {
+        "item" : "431613",
+        "count" : "6723"
+      } ],
+      "smallest" : "080018",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178691,
+    "name" : "Codi classificació sòl",
+    "dataTypeName" : "text",
+    "description" : "Codi de la classificació del sòl corresponent a l’edifici segons el Mapa urbanístic de Catalunya (MUC[JC)",
+    "fieldName" : "codi_class",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 4299198,
+    "cachedContents" : {
+      "non_null" : "1265721",
+      "largest" : "SUD",
+      "null" : "16745",
+      "top" : [ {
+        "item" : "SUC",
+        "count" : "663851"
+      }, {
+        "item" : "SNU",
+        "count" : "516767"
+      }, {
+        "item" : "SUD",
+        "count" : "53188"
+      }, {
+        "item" : "SNC",
+        "count" : "24639"
+      }, {
+        "item" : "SND",
+        "count" : "7276"
+      } ],
+      "smallest" : "SNC",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  }, {
+    "id" : 27178692,
+    "name" : "Codi qualificació sòl",
+    "dataTypeName" : "text",
+    "description" : "Codi de la qualificació del sòl corresponent a l’edifici segons el MUC",
+    "fieldName" : "codi_qual",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 4299197,
+    "cachedContents" : {
+      "non_null" : "1265721",
+      "largest" : "SX3",
+      "null" : "16745",
+      "top" : [ {
+        "item" : "R6",
+        "count" : "391665"
+      }, {
+        "item" : "N1",
+        "count" : "251051"
+      }, {
+        "item" : "N2",
+        "count" : "158049"
+      }, {
+        "item" : "N3",
+        "count" : "73182"
+      }, {
+        "item" : "R4",
+        "count" : "55713"
+      }, {
+        "item" : "R2",
+        "count" : "51104"
+      }, {
+        "item" : "R1",
+        "count" : "43573"
+      }, {
+        "item" : "SE",
+        "count" : "40163"
+      }, {
+        "item" : "D1",
+        "count" : "35361"
+      }, {
+        "item" : "A1",
+        "count" : "29377"
+      }, {
+        "item" : "R5",
+        "count" : "25064"
+      }, {
+        "item" : "SV",
+        "count" : "20728"
+      }, {
+        "item" : "R3",
+        "count" : "14051"
+      }, {
+        "item" : "N4",
+        "count" : "9764"
+      }, {
+        "item" : "M1",
+        "count" : "9704"
+      }, {
+        "item" : "D2",
+        "count" : "8885"
+      }, {
+        "item" : "M2",
+        "count" : "7692"
+      }, {
+        "item" : "ST",
+        "count" : "7678"
+      }, {
+        "item" : "A2",
+        "count" : "5531"
+      }, {
+        "item" : "D5",
+        "count" : "4810"
+      } ],
+      "smallest" : "A1",
+      "count" : "1282466",
+      "cardinality" : "1282466"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "attachments" : [ {
+      "filename" : "diccionari de dades.pdf",
+      "assetId" : "a47ec8b1-c0cb-4ba2-96c4-570e56565c97",
+      "name" : "diccionari de dades.pdf"
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Biennal"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Classification and qualification of the land of buildings of the Territorial Topographic Reference (RTT)",
+        "Nombre del conjunto de datos (ES)" : "Clasificación y calificación del suelo de las edificaciones del Referencial topográfico territorial (RTT)"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No aplicable"
+      },
+      "Dades d'Alt Valor" : {
+        "Categoria" : "No són dades d’alt valor"
+      },
+      "Actors" : {
+        "Departament" : "Territori, Habitatge i Transició Ecològica",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Dades geogràfiques",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "edificacions", "classificació", "qualificació", "topogràfic", "ods11_ciutats i comunitats sostenibles" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
