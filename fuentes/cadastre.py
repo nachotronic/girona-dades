@@ -26,7 +26,12 @@ C = "https://www.catastro.hacienda.gob.es/documentos/estadisticas/"
 FICHEROS = ("URBANA", "PARCELAS", "RUSTICA")
 HST = {"inm": "hst_inm_distritos.csv", "vm": "hst_vm_distritos.csv"}
 # Las cabeceras cambian un poco con los años
-SINONIMOS = {"REVISION": "ULT_REVISION", "C_INE": "COD_INE_MUNI", "COD_INE": "COD_INE_MUNI", "INE": "COD_INE_MUNI"}
+SINONIMOS = {"REVISION": "ULT_REVISION", "C_INE": "COD_INE_MUNI", "COD_INE": "COD_INE_MUNI", "INE": "COD_INE_MUNI",
+             "SUPER_SOLAR": "SUP_SOLAR", "SUPER_CONST": "SUP_CONST",
+             "NUMPARC": "PARCELAS_RUS", "PARCELAS": "PARCELAS_RUS", "SUBPARCELAS": "SUBPARCELAS_RUS", "NUMSUBP": "SUBPARCELAS_RUS"}
+# Superficie y valor rústicos: el nombre y la unidad cambian (m² o ha; euros o miles de euros)
+SUP_RUS = ("SUPERFICIE_HA_RUS", "SUPERFICIE", "SUPTOT", "TOTSUP")
+VAL_RUS = ("VALOR_MILES_RUS", "VALOR", "VALCATTOT", "TOTVALCAT")
 NO_SUMA = {"ULT_REVISION", "AREF", "COD_INE_MUNI", "COD_INE_PROV", "COD_INE_CCAA"}
 
 
@@ -51,7 +56,16 @@ def _lee(f: str, any_: int) -> pd.DataFrame | None:
     nums = [c for c in d.columns if c not in {"COD_INE_MUNI"} and not c.startswith("NOM_")]
     for c in nums:
         d[c] = pd.to_numeric(d[c], errors="coerce")
-    d = d[["COD_INE_MUNI", *[c for c in nums if c not in {"AREF", "COD_INE_PROV", "COD_INE_CCAA"}]]]
+    if f == "RUSTICA":
+        for objectiu, noms, llindar, factor in (("SUPERFICIE_HA_RUS", SUP_RUS, 200_000, 10_000), ("VALOR_MILES_RUS", VAL_RUS, 100_000, 1000)):
+            col = next((c for c in noms if c in d.columns and d[c].notna().any()), None)
+            if col is None:
+                continue
+            v = d[col]
+            d[objectiu] = v / factor if v.median() > llindar else v
+        d = d.drop(columns=[c for c in (*SUP_RUS[1:], *VAL_RUS[1:]) if c in d.columns])
+        nums = [c for c in d.columns if c in nums or c in ("SUPERFICIE_HA_RUS", "VALOR_MILES_RUS")]
+    d = d[["COD_INE_MUNI", *[c for c in dict.fromkeys(nums) if c in d.columns and c not in {"AREF", "COD_INE_PROV", "COD_INE_CCAA"}]]]
     d.insert(1, "any", any_)
     return d
 
