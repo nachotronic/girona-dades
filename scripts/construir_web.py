@@ -576,8 +576,6 @@ def arees():
                 if ptot:
                     refs.setdefault(k, {})["cat"] = r(v / ptot * mult, 1 if mult == 1000 else 0)
     if (sal / "centres.geojson").exists():
-        import shutil
-        shutil.copy(sal / "centres.geojson", SALIDA.parent / "centres.geojson")
         cg = json.loads((sal / "centres.geojson").read_text(encoding="utf-8"))
         per_abs = {}
         # Asignación de cada centro a su ABS por contención del punto (sin dependencias geográficas)
