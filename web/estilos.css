@@ -347,15 +347,15 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); line-height: 1; }
 .cap { background: var(--fons); border-bottom: 1px solid var(--tinta); border-top: 6px solid var(--tinta); }
 .marca { font-size: 22px; text-transform: uppercase; letter-spacing: .01em; gap: 0; }
 .marca-punt { width: 12px; height: 12px; border-radius: 0; background: var(--accent); margin-right: 10px; }
-/* Logotipo: G con punto rojo; colores del tema (en oscuro se invierte el cuadrado) */
+/* Logotipo: tres barras, la última roja; colores del tema (en oscuro se invierte el cuadrado) */
 .marca-icona { width: 1.45em; height: 1.45em; flex: none; margin-right: 10px; display: block; }
 .marca-icona .mi-f { fill: var(--tinta); }
-.marca-icona .mi-g { fill: var(--fons); }
+.marca-icona .mi-b { fill: var(--fons); }
 .marca-icona .mi-p { fill: var(--accent); }
 .peu-marca { display: flex; align-items: center; }
 .peu-marca .marca-icona { margin-right: 14px; }
 .peu-marca .mi-f { fill: #fff; }
-.peu-marca .mi-g { fill: var(--peu); }
+.peu-marca .mi-b { fill: var(--peu); }
 .menu a { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text); }
 .menu a:hover { color: var(--accent); }
 .idiomes { border: 1px solid var(--tinta); padding: 0; gap: 0; }
