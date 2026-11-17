@@ -176,6 +176,49 @@ def urbanisme(sal) -> str:
             f"{int(sg['num_habitg'].sum())} habitatges previstos, {int(sg['hab_vacant'].sum())} pendents")
 
 
+WFS = "https://sig.gencat.cat/ows/PLANEJAMENT/wfs"
+BBOX_GIRONA = (370000, 4570000, 535000, 4760000)  # EPSG:25831
+
+
+def muc_seccions(sal) -> str:
+    """Clasificación del suelo del Mapa urbanístico (WFS de la Generalitat) cruzada con las
+    secciones censales: hectáreas de cada clase de suelo por sección."""
+    import geopandas as gpd
+
+    trossos, inici, pas = [], 0, 5000
+    while True:
+        q = {"service": "WFS", "version": "2.0.0", "request": "GetFeature", "typeNames": "PLANEJAMENT:MUC_CLASSIFICACIONS",
+             "outputFormat": "application/json", "srsName": "EPSG:25831", "count": pas, "startIndex": inici,
+             "bbox": ",".join(map(str, BBOX_GIRONA)) + ",EPSG:25831"}
+        r = get(f"{WFS}?{urllib.parse.urlencode(q)}", timeout=900)
+        g = gpd.read_file(io.BytesIO(r.content))
+        if g.empty:
+            break
+        trossos.append(g)
+        if len(g) < pas or inici > 400_000:
+            break
+        inici += pas
+    g = pd.concat(trossos, ignore_index=True)
+    g = gpd.GeoDataFrame(g, geometry="geometry", crs=trossos[0].crs or 25831)
+    if g.crs is None or g.crs.to_epsg() != 25831:
+        g = g.set_crs(25831, allow_override=True)
+    cols = [c for c in g.columns if c != "geometry"]
+    # Columna con la clase de suelo (SUC, SNC, SUD, SND, SNU…)
+    clase = max(cols, key=lambda c: g[c].astype(str).str.upper().str.fullmatch(r"S[UN][A-Z]{0,2}").mean())
+    g["classe"] = g[clase].astype(str).str.upper().str.strip()
+    sec = gpd.read_file(PROC / "geo" / "seccions.geojson").to_crs(25831)
+    sec = sec[sec["ine"].str.startswith("17")][["cusec", "geometry"]]
+    g["geometry"] = g.buffer(0)
+    x = gpd.overlay(g[["classe", "geometry"]], sec, how="intersection", keep_geom_type=True)
+    x["ha"] = x.area / 10_000
+    t = x.groupby(["cusec", "classe"])["ha"].sum().unstack(fill_value=0).round(2).reset_index()
+    sec["ha_total"] = sec.area / 10_000
+    t = sec[["cusec", "ha_total"]].round(2).merge(t, on="cusec", how="left")
+    t.to_csv(sal / "muc_seccions.csv.gz", index=False)
+    return (f"MUC per secció: {len(g)} polígons, columna «{clase}», classes {sorted(g['classe'].unique().tolist())[:12]}, "
+            f"{t.drop(columns=['cusec', 'ha_total']).notna().any(axis=1).sum()} seccions; columnes {cols[:15]}")
+
+
 def poblacio_cat(sal) -> str:
     """Población oficial de Cataluña por año (INE, cifras del padrón por comunidades, tabla 2853),
     para las tasas de referencia."""
@@ -196,7 +239,7 @@ def poblacio_cat(sal) -> str:
 def ejecutar() -> str:
     sal = carpeta("habitatge")
     parts = []
-    for nom, f in (("construcció", construccio), ("cèdules", cedules), ("buits", buits), ("àrees", arees), ("urbanisme", urbanisme), ("població", poblacio_cat)):
+    for nom, f in (("construcció", construccio), ("cèdules", cedules), ("buits", buits), ("àrees", arees), ("urbanisme", urbanisme), ("població", poblacio_cat), ("MUC seccions", muc_seccions)):
         try:
             parts.append(f(sal))
         except Exception as e:  # noqa: BLE001 - una parte que falla no impide las otras
