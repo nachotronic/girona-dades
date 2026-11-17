@@ -1,39 +1,37 @@
-"""Exploración de las estadísticas del Catastro (temporal): guarda HTML/JS y enlaces."""
-import pathlib, re, time, urllib.parse
+"""Exploración de las estadísticas del Catastro (temporal, 2.ª ronda): descarga muestras."""
+import pathlib, re
 import requests
 
-BASE = "https://www.catastro.hacienda.gob.es/es-ES/"
-SAL = pathlib.Path("exploracion/catastro"); SAL.mkdir(parents=True, exist_ok=True)
+SAL = pathlib.Path("exploracion/catastro2"); SAL.mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "Mozilla/5.0 (girona-dades)"}
-inici = [BASE + "estadisticas.html"] + [BASE + f"estadisticas_{n}.html" for n in
-         ("1", "2", "3_1", "3_2", "4", "5", "6", "7", "9", "10", "11", "12")]
-pend, vist, log = list(inici), set(), []
-n = 0
-while pend and n < 120:
-    u = pend.pop(0)
-    if u in vist:
-        continue
-    vist.add(u); n += 1
+C = "https://www.catastro.hacienda.gob.es"
+J = C + "/jaxi/tabla.do?path=/est{a}/{p}/&file={f}.px&type=pcaxis&L=0"
+U = {}
+for t in ("URBANA", "PARCELAS", "RUSTICA"):
+    U[f"xls_{t}2026"] = f"{C}/documentos/estadisticas/{t}2026.xls"
+U["xls_URBANA2012"] = f"{C}/documentos/estadisticas/URBANA2012.xls"
+for f in ("04117", "URAO4217", "URBO4217", "04317", "04417", "04517"):
+    U[f"urb2026_{f}"] = J.format(a=2026, p="catastro/urbano", f=f)
+U["urb2012_04117"] = J.format(a=2012, p="catastro/urbano", f="04117")
+U["urb2008_URAO4217"] = J.format(a=2008, p="catastro/urbano", f="URAO4217")
+for f in ("04117", "04217"):
+    U[f"rus2026_{f}"] = J.format(a=2026, p="catastro/rustico", f=f)
+U["ibi2025_04017"] = J.format(a=2025, p="ibi", f="04017")
+U["ibi2025_U04017"] = J.format(a=2025, p="ibi", f="U04017")
+for s in ("1_17", "2_17", "3_17"):
+    U[f"dis2025_{s}"] = C + f"/jaxi/tabla.do?path=/est2025/catastro/distrito/&file=ANU2025_{s}.px&type=pcaxis&L=0"
+for n in ("hst_inm_distritos", "hst_vm_distritos"):
+    U[n] = f"{C}/documentos/estadisticas/serieshistoricas/{n}.csv"
+log = []
+for k, u in U.items():
     try:
-        r = requests.get(u, headers=UA, timeout=120)
+        r = requests.get(u, headers=UA, timeout=300)
+        ext = {"xls": "xls", "csv": "csv"}.get(u.rsplit(".", 1)[-1], "px")
+        if "html" in r.headers.get("content-type", ""):
+            ext = "html"
+        (SAL / f"{k}.{ext}").write_bytes(r.content[:8_000_000])
+        log.append(f"{r.status_code} {r.headers.get('content-type','')} {len(r.content)} {k} {u}")
     except Exception as e:
-        log.append(f"ERR {u} {e}"); continue
-    tipo = r.headers.get("content-type", "")
-    nom = re.sub(r"[^A-Za-z0-9._-]", "_", urllib.parse.urlsplit(u).path.strip("/") + "_" + (urllib.parse.urlsplit(u).query or ""))[:150]
-    log.append(f"{r.status_code} {tipo.split(';')[0]} {len(r.content)} {u}")
-    if "html" in tipo or "javascript" in tipo or "json" in tipo or u.endswith(".js"):
-        (SAL / (nom + (".js" if u.endswith(".js") else ".html"))).write_bytes(r.content)
-        txt = r.text
-        for h in re.findall(r"""(?:href|src|action|value|data-[a-z-]+)\s*=\s*["']([^"'#]+)["']""", txt) + re.findall(r"""["'](/[^"'\s]*(?:\.px|\.csv|\.xlsx?|\.zip|\.js|jaxi[^"'\s]*))["']""", txt):
-            v = urllib.parse.urljoin(u, h)
-            if "catastro" not in v:
-                continue
-            if v.endswith(".js") or re.search(r"estadisticas[^/]*\.html$", v):
-                pend.append(v)
-            elif re.search(r"\.(px|csv|xlsx?|zip)$|jaxi", v, re.I):
-                log.append(f"  LINK {v}")
-    else:
-        (SAL / (nom + ".bin")).write_bytes(r.content[:300000])
-    time.sleep(0.5)
+        log.append(f"ERR {k} {e}")
 (SAL / "informe.txt").write_text("\n".join(log), encoding="utf-8")
 print("\n".join(log))
