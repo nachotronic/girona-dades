@@ -3,7 +3,7 @@
 // ---------- Textos ----------
 const T = {
   ca: {
-    locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals", f_eleccions: "resultats per secció censal: Parlament, Congrés, municipals i europees (2010-2024)",
+    locals: "Llistes locals", n_alcaldies: (k, b) => `${k} alcaldies de ${b} a la província`, h_ajt: "Ajuntament", alcalde: "Alcaldia", ple: "Ple municipal", resultats: (a) => `Resultats de les municipals ${a}`, participacio: (p) => `Participació: ${p}`, regidors: (n) => `${n} ${n === 1 ? "regidor" : "regidors"}`, f_pol: "alcaldes, plens i resultats electorals", f_eleccions: "resultats per secció censal: Parlament, Congrés, municipals i europees (2010-2024)", f_mapaelectoral: "Congrés, municipals i europees des del 1977 i Corts del 1933 i el 1936, per municipi (i per secció el 2004-2009)",
     cerca_mapa: "Busca un municipi", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre els indicadors", cap_ind: "Cap indicador coincideix amb la cerca.", n_ind: (n) => `${n} indicadors`,
     nav_tur: "Turisme", h_tur: "Qui ve, on dorm i quant gasta", lead_tur: "Places, pernoctacions, ocupació, preus dels hotels, d'on vénen els turistes i quant gasten. Província de Girona davant Catalunya i Espanya. Al mapa, el tema «Turisme» ho baixa a cada municipi.", f_turisme: "ocupació, preus dels hotels, despesa i turistes per municipi segons la telefonia mòbil", f_xifra_tur: "hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any", f_ieet: "impost sobre les estades en establiments turístics",
     nav_salut: "Salut", h_salut: "Llistes d'espera, receptes, infeccions i hàbits", lead_salut: "Quant s'espera per operar-se o per veure l'especialista a cada hospital, quants medicaments es receten, com circulen la grip i les infeccions respiratòries, i què diu la gent de la seva salut i dels seus hàbits. Regió sanitària de Girona davant Catalunya.",
@@ -62,7 +62,7 @@ const T = {
     f_renda: "renda, pobresa, fonts d'ingressos i demografia",
     f_hut: "habitatges d'ús turístic",
     f_cat: "habitatges i any de construcció",
-    f_cad: "immobles, valor cadastral, sòl i usos per municipi (2012-2026) i valor per m² per districte censal",
+    f_cad: "immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal",
     f_trib: "tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)",
     f_aeat: "declarants de l'IRPF per municipi", f_padro: "població oficial de cada municipi i empreses", f_nac: "població per nacionalitat", f_pres: "liquidació dels pressupostos municipals",
     f_edu: "alumnes, centres, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
@@ -70,7 +70,7 @@ const T = {
     font_act: "Descarregat", font_manual: "Càrrega manual anual", f_esca: "enquesta de salut per regió sanitària i sèrie de Catalunya", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
     f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
     actualitzat: "Actualitzat el",
-    codi: "Codi i dades a GitHub",
+    codi: "Codi i dades a GitHub", ref_pagines: "Dades per municipi en text, CSV i JSON",
     l_qui: "Qui som", l_avis: "Avís legal", l_priv: "Privacitat i galetes", l_llic: "Reutilització: CC BY 4.0",
     k_lloguer: "Lloguer mitjà",
     k_hab: "Habitants", n_hab: (v) => `${v} nascuts a l'estranger`, k_atur: "Atur (EPA)", n_atur: (p, e) => `${p} · Espanya, ${e}`,
@@ -97,7 +97,7 @@ const T = {
     sub: (c, p) => `${c} · ${p} habitants`,
   },
   es: {
-    locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales", f_eleccions: "resultados por sección censal: Parlament, Congreso, municipales y europeas (2010-2024)",
+    locals: "Listas locales", n_alcaldies: (k, b) => `${k} alcaldías de ${b} en la provincia`, h_ajt: "Ayuntamiento", alcalde: "Alcaldía", ple: "Pleno municipal", resultats: (a) => `Resultados de las municipales ${a}`, participacio: (p) => `Participación: ${p}`, regidors: (n) => `${n} ${n === 1 ? "concejal" : "concejales"}`, f_pol: "alcaldes, plenos y resultados electorales", f_eleccions: "resultados por sección censal: Parlament, Congreso, municipales y europeas (2010-2024)", f_mapaelectoral: "Congreso, municipales y europeas desde 1977 y Cortes de 1933 y 1936, por municipio (y por sección en 2004-2009)",
     cerca_mapa: "Busca un municipio", cerca_ind: "Busca un indicador", cerca_ind_ph: "Busca entre los indicadores", cap_ind: "Ningún indicador coincide con la búsqueda.", n_ind: (n) => `${n} indicadores`,
     nav_tur: "Turismo", h_tur: "Quién viene, dónde duerme y cuánto gasta", lead_tur: "Plazas, pernoctaciones, ocupación, precios de los hoteles, de dónde vienen los turistas y cuánto gastan. Provincia de Girona frente a Cataluña y España. En el mapa, el tema «Turismo» lo baja a cada municipio.", f_turisme: "ocupación, precios de los hoteles, gasto y turistas por municipio según la telefonía móvil", f_xifra_tur: "hoteles, campings, turismo rural y viviendas de uso turístico por municipio y año", f_ieet: "impuesto sobre las estancias en establecimientos turísticos",
     nav_salut: "Salud", h_salut: "Listas de espera, recetas, infecciones y hábitos", lead_salut: "Cuánto se espera para operarse o para ver al especialista en cada hospital, cuántos medicamentos se recetan, cómo circulan la gripe y las infecciones respiratorias, y qué dice la gente de su salud y de sus hábitos. Región sanitaria de Girona frente a Cataluña.",
@@ -156,7 +156,7 @@ const T = {
     f_renda: "renta, pobreza, fuentes de ingresos y demografía",
     f_hut: "viviendas de uso turístico",
     f_cat: "viviendas y año de construcción",
-    f_cad: "inmuebles, valor catastral, suelo y usos por municipio (2012-2026) y valor por m² por distrito censal",
+    f_cad: "inmuebles, valor catastral, suelo y usos por municipio (1990-2026), IBI por municipio (2008-2025) y valor y superficie de la vivienda por distrito censal",
     f_trib: "tipos del IBI, IAE, impuesto de circulación, plusvalía e ICIO de cada ayuntamiento (2000-2026)",
     f_aeat: "declarantes del IRPF por municipio", f_padro: "población oficial de cada municipio y empresas", f_nac: "población por nacionalidad", f_pres: "liquidación de los presupuestos municipales",
     f_edu: "alumnos, centros, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
@@ -164,7 +164,7 @@ const T = {
     font_act: "Descargado", font_manual: "Carga manual anual", f_esca: "encuesta de salud por región sanitaria y serie de Cataluña", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
     f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
     actualitzat: "Actualizado el",
-    codi: "Código y datos en GitHub",
+    codi: "Código y datos en GitHub", ref_pagines: "Datos por municipio en texto, CSV y JSON",
     l_qui: "Quiénes somos", l_avis: "Aviso legal", l_priv: "Privacidad y cookies", l_llic: "Reutilización: CC BY 4.0",
     k_lloguer: "Alquiler medio",
     k_hab: "Habitantes", n_hab: (v) => `${v} nacidos en el extranjero`, k_atur: "Paro (EPA)", n_atur: (p, e) => `${p} · España, ${e}`,
@@ -201,9 +201,9 @@ try {
 const t = (k, ...a) => { const v = T[LANG][k]; return typeof v === "function" ? v(...a) : v; };
 
 // ---------- Bloques políticos ----------
-const BLOC_COLOR = { Junts: "#23a99c", "JxSí": "#1f6f8b", ERC: "#ef8f2a", PSC: "#d2453a", CUP: "#e9cf3a", PP: "#2f6fc0", Vox: "#62a43c", Cs: "#c2577f", "Aliança": "#3b4a63", Comuns: "#8a4fa8", Locals: "#a5abb5", Altres: "#d3d6db" };
+const BLOC_COLOR = { Junts: "#23a99c", "JxSí": "#1f6f8b", ERC: "#ef8f2a", PSC: "#d2453a", CUP: "#e9cf3a", PP: "#2f6fc0", Vox: "#62a43c", Cs: "#c2577f", "Aliança": "#3b4a63", Comuns: "#8a4fa8", Locals: "#a5abb5", Altres: "#d3d6db", UCD: "#3d8b4f", FEsq: "#9b2335", Lliga: "#1d3f6e", Dretes: "#6d6a8f", Centre: "#b8a36a" };
 const colorBloc = (b) => BLOC_COLOR[b] || BLOC_COLOR.Locals;
-const nomBloc = (b) => (b === "Locals" ? t("locals") : b === "Aliança" ? "Aliança Catalana" : b === "JxSí" ? "Junts pel Sí" : b === "Cs" ? (LANG === "es" ? "Ciudadanos" : "Ciutadans") : b === "Altres" ? (LANG === "es" ? "Otros" : "Altres") : b);
+const nomBloc = (b) => (b === "Locals" ? t("locals") : b === "Aliança" ? "Aliança Catalana" : b === "JxSí" ? "Junts pel Sí" : b === "Cs" ? (LANG === "es" ? "Ciudadanos" : "Ciutadans") : b === "Altres" ? (LANG === "es" ? "Otros" : "Altres") : b === "FEsq" ? "Front d'Esquerres" : b === "Lliga" ? "Lliga Catalana" : b === "Dretes" ? (LANG === "es" ? "Derechas" : "Dretes") : b === "Centre" ? (LANG === "es" ? "Centro" : "Centre") : b);
 
 // ---------- Países (nacionalidades) ----------
 const PAIS_COLORS = ["#106b66", "#e3001b", "#2f6fc0", "#ef8f2a", "#8a4fa8", "#62a43c", "#c2577f", "#8c6d3f", "#3b4a63", "#e9cf3a"];
@@ -272,6 +272,7 @@ function aplicaIdioma() {
   document.querySelectorAll(".idiomes button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === LANG)));
   const llic = document.getElementById("l-llic");
   if (llic) llic.href = `qui-som.html#${LANG}-llic`;
+  document.querySelectorAll("a[data-t=ref_pagines]").forEach((a) => { a.href = `${LANG}/`; a.hreflang = LANG; });
 }
 
 // ---------- Tooltip ----------

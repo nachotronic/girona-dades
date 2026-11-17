@@ -10,7 +10,21 @@
 <meta property="og:title" content="Girona en xifres">
 <meta property="og:description" content="Habitatge, renda, feina, salut, seguretat i política dels 221 municipis de la província de Girona, en mapes i fitxes.">
 <meta property="og:locale" content="ca_ES">
+<!-- ref:inici -->
+<link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<!-- ref:fi -->
 <meta name="theme-color" content="#0f1113">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://nachotronic.github.io/girona-dades/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Girona en xifres: com és cada poble de Girona">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nachotronic.github.io/girona-dades/og.png">
 <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
@@ -23,7 +37,7 @@
 <body>
 <header class="cap">
   <div class="amplada cap-dins">
-    <a class="marca" href="./"><span class="marca-punt" aria-hidden="true"></span><span data-t="marca">Girona en xifres</span></a>
+    <a class="marca" href="./"><svg class="marca-icona" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" class="mi-f"/><rect class="mi-b" x="96.0" y="266.0" width="96.0" height="150.0"/><rect class="mi-b" x="208.0" y="186.0" width="96.0" height="230.0"/><rect class="mi-p" x="320.0" y="96.0" width="96.0" height="320.0"/></svg><span data-t="marca">Girona en xifres</span></a>
     <nav class="menu" aria-label="Seccions">
       <a href="#s-mapa" data-t="nav_mapa">Mapa</a>
       <a href="#s-conj" data-t="nav_conj">Conjuntura</a>
@@ -168,7 +182,7 @@
 
 <footer class="peu" id="s-fonts">
   <div class="amplada">
-    <p class="peu-marca" data-t="marca">Girona en xifres</p>
+    <p class="peu-marca"><svg class="marca-icona" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" class="mi-f"/><rect class="mi-b" x="96.0" y="266.0" width="96.0" height="150.0"/><rect class="mi-b" x="208.0" y="186.0" width="96.0" height="230.0"/><rect class="mi-p" x="320.0" y="96.0" width="96.0" height="320.0"/></svg><span data-t="marca">Girona en xifres</span></p>
     <h2 data-t="h_fonts">Fonts</h2>
     <ul class="fonts">
       <li data-font="generalitat"><a href="https://analisi.transparenciacatalunya.cat/d/qww9-bvhh">Incasòl / Agència de l'Habitatge</a><span data-t="f_lloguer">lloguer mitjà a partir de les fiances</span></li>
@@ -191,11 +205,12 @@
       <li data-font="emergencies"><a href="https://www.idescat.cat/codis/?id=50&amp;n=87">Idescat, codis territorials</a><span data-t="f_idescat_codis">divisions territorials dels Agents Rurals i dels Bombers (municipis de cada àrea)</span></li>
       <li data-font="emergencies"><a href="https://analisi.transparenciacatalunya.cat/d/g2ay-3vnj">Bombers de la Generalitat</a><span data-t="f_bombers">actuacions per municipi</span></li>
       <li data-font="emergencies"><a href="https://analisi.transparenciacatalunya.cat/d/bks7-dkfd">Departament d'Agricultura</a><span data-t="f_incendis">incendis forestals per municipi d'inici</span></li>
-      <li data-font="cadastre"><a href="https://www.catastro.hacienda.gob.es/es-ES/estadisticas.html">Dirección General del Catastro, estadístiques</a><span data-t="f_cad">immobles, valor cadastral, sòl i usos per municipi (2012-2026) i valor per m² per districte censal</span></li>
+      <li data-font="cadastre"><a href="https://www.catastro.hacienda.gob.es/es-ES/estadisticas.html">Dirección General del Catastro, estadístiques</a><span data-t="f_cad">immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal</span></li>
       <li data-font="tributs"><a href="https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/listado_municipiosm.aspx">Ministerio de Hacienda, tipos impositivos municipales</a><span data-t="f_trib">tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)</span></li>
       <li data-font="emex"><a href="https://www.idescat.cat/emex/">Idescat, El municipi en xifres</a><span data-t="f_emex">valors de referència de Catalunya</span></li>
       <li data-font="generalitat"><a href="https://analisi.transparenciacatalunya.cat/d/nm3n-3vbj">Generalitat, ens locals i eleccions municipals</a><span data-t="f_pol">alcaldes, plens i resultats electorals</span></li>
       <li data-font="eleccions"><a href="https://analisi.transparenciacatalunya.cat/d/ntc4-rnwr">Generalitat, processos electorals</a><span data-t="f_eleccions">resultats per secció censal: Parlament, Congrés, municipals i europees (2010-2024)</span></li>
+      <li data-font="mapaelectoral"><a href="https://mapaelectoral.es/generales-2026/metodologia.html">Mapa Electoral (mapaelectoral.es)</a><span data-t="f_mapaelectoral">Congrés, municipals i europees des del 1977 i Corts del 1933 i el 1936, per municipi (i per secció el 2004-2009)</span></li>
       <li data-font="aeat"><a href="https://sede.agenciatributaria.gob.es/Sede/datosabiertos/catalogo/hacienda/Estadistica_de_los_declarantes_del_IRPF_por_municipios.shtml">Agencia Tributaria</a><span data-t="f_aeat">declarants de l'IRPF per municipi</span></li>
       <li data-font="padro"><a href="https://www.ine.es/dynt3/inebase/index.htm?padre=517">INE, padró i directori d'empreses</a><span data-t="f_padro">població oficial de cada municipi i empreses</span></li>
       <li data-font="nacionalitat"><a href="https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&amp;cid=1254736177012">INE i Idescat, padró continu</a><span data-t="f_nac">població per nacionalitat</span></li>
@@ -216,7 +231,7 @@
       <li><a href="privacitat.html" data-t="l_priv">Privacitat i galetes</a></li>
       <li><a href="qui-som.html#ca-llic" data-t="l_llic" id="l-llic">Reutilització: CC BY 4.0</a></li>
     </ul>
-    <p class="peu-meta"><span data-t="actualitzat">Actualitzat el</span> <span class="data-gen"></span> · <a href="https://github.com/nachotronic/girona-dades" data-t="codi">Codi i dades a GitHub</a></p>
+    <p class="peu-meta"><span data-t="actualitzat">Actualitzat el</span> <span class="data-gen"></span> · <a href="https://github.com/nachotronic/girona-dades" data-t="codi">Codi i dades a GitHub</a> · <a href="ca/" data-t="ref_pagines" hreflang="ca">Dades per municipi en text, CSV i JSON</a></p>
   </div>
 </footer>
 

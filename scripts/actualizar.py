@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "aena", "eleccions", "vehicles", "aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -67,6 +67,7 @@ FONTS = {
     "dgt": ("DGT, matriculacions", "mensual"),
     "aena": ("Aena, passatgers de l'aeroport", "mensual"),
     "eleccions": ("Generalitat, processos electorals", "per elecció"),
+    "mapaelectoral": ("Mapa Electoral, resultats històrics (1933-2009)", "per elecció"),
     "aeat": ("Agencia Tributaria, IRPF per municipis", "anual"),
     "padro": ("INE, padró i empreses (DIRCE)", "anual"),
     "pressupostos": ("Generalitat, liquidació dels pressupostos municipals", "anual"),

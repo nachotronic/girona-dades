@@ -67,3 +67,13 @@ dato del mes en cuanto se publica. DGT y Aena no vuelven a descargar los meses y
 python scripts/construir_web.py
 cd web && python -m http.server 8000   # http://localhost:8000
 ```
+
+## Referencia para buscadores e IAs
+
+En cada publicación (`.github/workflows/web.yml`), `scripts/referencia/extreu.mjs` calcula todos los indicadores con el propio mapa (Chromium sin pantalla) y `scripts/referencia/genera.py` escribe en `web/`:
+
+- páginas estáticas sin JavaScript en catalán (`ca/`) y castellano (`es/`): inicio, provincia, lista de municipios, una por municipio, por tema y por indicador, con valor, periodo, posición, provincia, Cataluña, España y fuente;
+- descargas en `dades/` (CSV ancho y largo, diccionario JSON, un JSON y un CSV por municipio, secciones censales y `datapackage.json`);
+- `llms.txt`, `llms-full.txt` (castellano) y `llms-full.ca.txt`, `sitemap.xml`, `robots.txt` (permite buscadores y bots de IA) y JSON-LD schema.org (Dataset, Place, WebSite).
+
+La URL base está en `lloc.yml`. Para pasar a un dominio propio se cambia `url` ahí (se genera `CNAME`) y se pone el mismo dominio en Settings → Pages.

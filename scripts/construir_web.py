@@ -160,10 +160,11 @@ def secciones():
             "anyo_mediano": r(float(f["anyo_mediano"])) if f is not None and not pd.isna(f["anyo_mediano"]) else None,
             "edificis": r(float(f["edificios"])) if f is not None and "edificios" in f else None,
         }
-    _, dis, _, _ = cad_districtes()
-    for cusec in list(res):
-        if cusec[:7] in dis:
-            res[cusec]["cad_vm2"] = dis[cusec[:7]]
+    for clau, k in (("cad_vm2", "vm"), ("cad_sm2", "sm")):
+        _, dis, _, _ = cad_districtes(k)
+        for cusec in list(res):
+            if cusec[:7] in dis:
+                res[cusec][clau] = dis[cusec[:7]]
     _, extra, _ = atlas_extra()
     for cusec, x in extra.items():
         res.setdefault(cusec, {}).update(x)
@@ -1778,7 +1779,8 @@ def tributs():
 
 USOS_CAD = ["RES", "ALMACEN", "COMERCIAL", "INDUSTRIAL", "OFICINAS", "HOSTELERIA", "SOLAR", "DEPORTIVO", "CULTURAL", "SANIDAD", "RELIGIOSO", "ESPECTACULOS", "SINGULAR"]
 CAD_DEC = {"n": 0, "vm": 0, "vviv": 0, "vhab": 0, "sol": 1, "ih": 1, "res": 1, "alm": 1, "com": 1, "ind": 1, "ofi": 2, "hos": 0,
-           "solar": 1, "suph": 0, "rha": 0, "rpar": 2, "rev": 0}
+           "solar": 1, "suph": 0, "rha": 0, "rpar": 2, "rev": 0,
+           "vm2": 0, "sm2": 0, "ibi_hab": 0, "ibi_rec": 0, "ibi_base": 0, "ibi_bon": 1, "ibi_tot": 0, "ibi_desoc": 0}
 
 
 def _cad_ind(f, pob):
@@ -1794,7 +1796,51 @@ def _cad_ind(f, pob):
             "rpar": q(g("SUPERFICIE_HA_RUS"), g("PARCELAS_RUS")), "rev": g("ULT_REVISION")}
 
 
-def cad_districtes():
+def _px(ruta):
+    """Lee un PC-Axis sencillo: devuelve ({dimensión: [valores]}, orden de dimensiones, lista de datos)."""
+    t = ruta.read_text(encoding="latin-1")
+    cap, dades = t.split("DATA=", 1)
+    dims = {m.group(1): re.findall(r'"([^"]*)"', m.group(2)) for m in re.finditer(r'VALUES\("([^"]+)"\)=(.*?);', cap, re.S)}
+    ordre = re.findall(r'"([^"]+)"', re.search(r"STUB=(.*?);", cap, re.S).group(1)) + re.findall(r'"([^"]+)"', re.search(r"HEADING=(.*?);", cap, re.S).group(1))
+    nums = [None if x.startswith('"') else float(x) for x in re.findall(r'"[^"]*"|-?\d+(?:\.\d+)?', dades.split(";")[0])]
+    return dims, ordre, nums
+
+
+def cad_historic():
+    """Catastro urbano 1990-2009 por municipio (paquete PC-Axis): {ine: {año: (inmuebles, valor en €)}}."""
+    f = P / "cadastre" / "historic_urbana.px"
+    if not f.exists():
+        return {}
+    try:
+        dims, ordre, nums = _px(f)
+        munis, anys, vars_ = dims[ordre[0]], dims[ordre[1]], dims[ordre[2]]
+        if len(nums) != len(munis) * len(anys) * len(vars_):
+            print("AVISO cad_historic: tamaño inesperado")
+            return {}
+        noms = dict(zip(territorio()["nom_normalitzat"], territorio()["codi_ine"]))
+        iI, iV = vars_.index("Bienes inmuebles"), vars_.index("Valor catastral")
+        res = {}
+        for i, nom in enumerate(munis):
+            n_ = normaliza(re.sub(r"\s*\((.*?)\)\s*$", r" \1", nom))
+            ine = noms.get(n_)
+            if not ine:
+                # Nombres antiguos o abreviados ("Calonge" -> "Calonge i Sant Antoni"): palabras contenidas
+                cand = [k for k in noms if set(n_.split()) <= set(k.split())]
+                ine = noms[cand[0]] if len(cand) == 1 else None
+            if not ine:
+                continue
+            for j, a in enumerate(anys):
+                b = (i * len(anys) + j) * len(vars_)
+                n, v = nums[b + iI], nums[b + iV]
+                if n and v:
+                    res.setdefault(ine, {})[int(a)] = (n, v * 1000)
+        return res
+    except Exception as e:  # noqa: BLE001
+        print("AVISO cad_historic:", e)
+        return {}
+
+
+def cad_districtes(k="vm"):
     """Valor cadastral mitjà de l'habitatge (€/m²) per districte censal (sèries del Catastro, 2013-).
     Mitjana de l'habitatge col·lectiu i unifamiliar ponderada pel nombre d'immobles. Devuelve
     {ine: {año: v}}, {districte: v} del último año, {año: v} de la provincia y el último año."""
@@ -1803,7 +1849,9 @@ def cad_districtes():
         return {}, {}, {}, None
     d = pd.read_csv(f, dtype={"districte": str})
     d["n"] = d[["inm_vcol", "inm_vuni"]].fillna(0).sum(axis=1)
-    d["s"] = d["inm_vcol"].fillna(0) * d["vm_vm_viv_colectiva"].fillna(0) + d["inm_vuni"].fillna(0) * d["vm_vm_viv_unifamiliar"].fillna(0)
+    if f"{k}_{k}_viv_colectiva" not in d.columns:
+        return {}, {}, {}, None
+    d["s"] = d["inm_vcol"].fillna(0) * d[f"{k}_{k}_viv_colectiva"].fillna(0) + d["inm_vuni"].fillna(0) * d[f"{k}_{k}_viv_unifamiliar"].fillna(0)
     d = d[(d["n"] > 0) & (d["s"] > 0)]
     d["ine"] = d["districte"].str[:5]
     ult = int(d["any"].max())
@@ -1865,13 +1913,60 @@ def cadastre():
                         refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
                 if y == ult:
                     usos_ref[z] = usos(f)
-    dm, _, dprov, _ = cad_districtes()
-    for ine, serie in dm.items():
-        if ine in mun:
-            mun[ine]["vm2"] = serie
-    for y, v in dprov.items():
-        refs.setdefault("vm2", {}).setdefault(y, {})["gi"] = v
+    # Serie larga (1990-2009) de inmuebles y valor medio, delante de la de 2012-
+    hist = cad_historic()
+    sum_h = {}
+    for ine, serie in hist.items():
+        primer = min(mun.get(ine, {}).get("n", {}) or [9999])
+        for y, (n, v) in sorted(serie.items()):
+            if ine in mun and y < primer:
+                mun[ine].setdefault("n", {})[y] = int(n)
+                mun[ine].setdefault("vm", {})[y] = int(round(v / n))
+                sn, sv = sum_h.get(y, (0, 0))
+                sum_h[y] = (sn + n, sv + v)
+    for y, (n, v) in sum_h.items():
+        if len([1 for s_ in hist.values() if y in s_]) >= 200:
+            refs.setdefault("vm", {}).setdefault(y, {})["gi"] = int(round(v / n))
+    for clau, k in (("vm2", "vm"), ("sm2", "sm")):
+        dm, _, dprov, _ = cad_districtes(k)
+        for ine, serie in dm.items():
+            if ine in mun:
+                mun[ine][clau] = serie
+        for y, v in dprov.items():
+            refs.setdefault(clau, {}).setdefault(y, {})["gi"] = v
+    # IBI: información económico-financiera (recibos, bases y cuotas), 2008-
+    fi = d / "ibi_municipis.csv.gz"
+    if fi.exists():
+        e = pd.read_csv(fi, dtype={"codi_ine": str})
+        for f in e.to_dict("records"):
+            y = int(f["any"])
+            for k, v in _ibi_ind(f, pob(f["codi_ine"], y)).items():
+                if v is not None:
+                    mun.setdefault(f["codi_ine"], {}).setdefault(k, {})[y] = round(v, CAD_DEC[k])
+        fr = d / "ibi_referencies.json"
+        if fr.exists():
+            for z, per_any in json.loads(fr.read_text(encoding="utf-8")).items():
+                for y, f in per_any.items():
+                    y = int(y)
+                    # Antes de 2011 a Cataluña y España les faltan recibos de municipios grandes (Barcelona en 2009)
+                    if z != "gi" and y < 2011:
+                        continue
+                    for k, v in _ibi_ind(f, prox(pz.get(z, {}), y - 1)).items():
+                        if v is not None and k != "ibi_desoc":
+                            refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
+                    if f.get("N_MUNICIPIOS"):
+                        refs.setdefault("ibi_desoc_n", {}).setdefault(y, {})[z] = [f.get("N_RECARGO") or 0, f["N_MUNICIPIOS"]]
     return mun, refs, ult, usos_mun, usos_ref
+
+
+def _ibi_ind(f, pob):
+    g = lambda k: (lambda v: None if v is None or (isinstance(v, float) and math.isnan(v)) else float(v))(f.get(k))  # noqa: E731
+    q = lambda a, b, k=1: (a / b * k) if a is not None and b else None  # noqa: E731
+    ci, cl = g("CINTEGRA_URBANA"), g("CLIQUIDA_URBANA")
+    return {"ibi_hab": q(cl, pob), "ibi_rec": q(cl, g("RECIBOS_URBANA")), "ibi_base": q(g("BLIQ_NO_EXENTA_URBANA"), g("RECIBOS_URBANA")),
+            "ibi_bon": (100 - cl / ci * 100) if ci and cl is not None and cl <= ci else None,
+            "ibi_tot": q((cl or 0) + (g("CLIQUIDA_RUSTICA") or 0) + (g("CLIQUIDA_BICES") or 0), pob) if cl is not None else None,
+            "ibi_desoc": g("RECARGO_DESOCUPADOS") or (0 if "RECARGO_DESOCUPADOS" in f else None)}
 
 
 def cadastre_prov(refs, ult, usos_ref):
@@ -1881,6 +1976,11 @@ def cadastre_prov(refs, ult, usos_ref):
     ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
     if ser.get("gi"):
         out["cad_viv"] = {"tipus": "linia", "u": "€", "dec": 0, "series": ser}
+    v = refs.get("ibi_rec", {})
+    ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
+    if ser.get("gi"):
+        ua = max(v)
+        out["cad_ibi"] = {"tipus": "linia", "u": "€", "dec": 0, "series": ser, "abs": {"desoc": (refs.get("ibi_desoc_n", {}).get(ua) or {}).get("gi")}}
     if usos_ref.get("gi"):
         tot = {z: sum((x[0] or 0) for x in u.values()) for z, u in usos_ref.items()}
         grups = []
@@ -2319,7 +2419,7 @@ def main():
     datos = {
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **cadastre_prov(refs_cad, any_cad, usos_cad_ref)}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3]} if any_cad else {})},
+        "anys": {**anys_extra, **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
         "trib_ref": refs_trib, "veh_ref": refs_veh, "sol_ref": refs_sol, "cad_ref": refs_cad, "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"],
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),

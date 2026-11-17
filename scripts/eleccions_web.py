@@ -1,6 +1,7 @@
 """Resultados electorales para la web: un índice de convocatorias y un fichero por convocatoria.
 
-Lee data/processed/eleccions/ (fuentes/eleccions.py) y escribe:
+Lee data/processed/eleccions/ (Generalitat, fuentes/eleccions.py) y data/processed/mapaelectoral/
+(Mapa Electoral, fuentes/mapaelectoral.py: convocatorias que no tiene la Generalitat) y escribe:
   web/datos/eleccions.json        convocatorias disponibles y bloques
   web/datos/eleccions/<ID>.json   resultados por municipio y sección censal
 
@@ -17,14 +18,16 @@ import pandas as pd
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 P = RAIZ / "data" / "processed" / "eleccions"
+PME = RAIZ / "data" / "processed" / "mapaelectoral"
 
 TIPUS = {
     "A": {"ca": "Parlament", "es": "Parlament"},
     "G": {"ca": "Congrés", "es": "Congreso"},
     "M": {"ca": "Municipals", "es": "Municipales"},
     "E": {"ca": "Europees", "es": "Europeas"},
+    "R": {"ca": "República", "es": "República"},
 }
-ORDRE_TIPUS = ["A", "G", "M", "E"]
+ORDRE_TIPUS = ["A", "G", "M", "E", "R"]
 
 # Bloques: misma familia política a lo largo de los años (por siglas y agrupación de candidaturas)
 BLOCS = [
@@ -37,7 +40,8 @@ BLOCS = [
     ("PP", {"PP"}),
     ("Vox", {"VOX"}),
 ]
-ORDRE_BLOCS = ["Junts", "JxSí", "ERC", "PSC", "CUP", "Comuns", "Cs", "PP", "Vox", "Aliança", "Locals", "Altres"]
+ORDRE_BLOCS = ["Junts", "JxSí", "ERC", "PSC", "CUP", "Comuns", "Cs", "PP", "Vox", "Aliança", "UCD",
+               "FEsq", "Lliga", "Dretes", "Centre", "Locals", "Altres"]
 
 
 def bloc(sigles: str, agrupacio: str, tipus: str) -> str:
@@ -77,26 +81,31 @@ def _clau(df: pd.DataFrame) -> pd.Series:
     return sec.where(df["nivell"] == "SE", df["ine"]).where(df["nivell"] != "CA", "cat")
 
 
-def convocatoria(ident: str) -> dict | None:
+def convocatoria(ident: str, P: pathlib.Path = P) -> dict | None:
     fv, fp = P / f"vots_{ident}.csv.gz", P / f"part_{ident}.csv.gz"
     if not fv.exists() or not fp.exists():
         return None
     v = pd.read_csv(fv, dtype=str)
     p = pd.read_csv(fp, dtype=str)
     for df in (v, p):
-        df["ine"] = df["ine"].astype(str).str.zfill(5)
+        df["ine"] = df["ine"].fillna("").astype(str).str.zfill(5)
+        for c in ("districte", "seccio", "denominacio"):
+            if c not in df:
+                df[c] = None
         # Fuera el voto exterior (CERA, códigos 17998 y 17999); 17901-17903 son municipios
         df.drop(df[(df["nivell"] != "CA") & (df["ine"].str[2:] >= "990")].index, inplace=True)
         df["z"] = _clau(df)
     v["vots"] = _n(v["vots"])
     v = v[v["vots"] > 0]
     tipus = ident[0]
-    v["bloc"] = [bloc(s, a, tipus) for s, a in zip(v["sigles"].fillna("?"), v["agrupacio"].fillna(""))]
+    if "bloc" not in v:  # Mapa Electoral ya trae el bloque de cada familia
+        v["bloc"] = [bloc(s, a, tipus) for s, a in zip(v["sigles"].fillna("?"), v["agrupacio"].fillna(""))]
     v["sigles"] = v["sigles"].fillna("?").str.strip()
     # Candidaturas: en las municipales, las siglas se repiten entre pueblos; se agrupan por siglas y bloque
     tot = v[v["nivell"] != "CA"].groupby(["sigles", "bloc"])["vots"].sum().sort_values(ascending=False)
     cands = list(tot.index)
     idx = {k: i for i, k in enumerate(cands)}
+    v["denominacio"] = v["denominacio"].fillna("")
     denom = v.drop_duplicates(["sigles", "bloc"]).set_index(["sigles", "bloc"])["denominacio"].to_dict()
     c = [[s, b] + ([str(denom.get((s, b)) or "")] if tipus != "M" else []) for s, b in cands]
 
@@ -134,20 +143,27 @@ def construir(salida: pathlib.Path) -> str:
     if not (P / "convocatories.csv").exists():
         return "AVISO: sin datos electorales"
     conv = pd.read_csv(P / "convocatories.csv", dtype=str).set_index("id_eleccio")
+    conv_me = pd.read_csv(PME / "convocatories.csv", dtype=str).set_index("id_eleccio") if (PME / "convocatories.csv").exists() else None
     (salida / "eleccions").mkdir(parents=True, exist_ok=True)
     index, lineas = [], []
     geo = salida / "seccions.geojson"
     cusecs = {f["properties"]["cusec"] for f in json.loads(geo.read_text())["features"]} if geo.exists() else set()
-    for f in sorted(P.glob("vots_*.csv.gz")):
+    # Generalitat primero (candidaturas una a una); Mapa Electoral solo para lo que no tiene
+    fitxers = {f.name[5:-7]: (P, "gen") for f in sorted(P.glob("vots_*.csv.gz"))}
+    for f in sorted(PME.glob("vots_*.csv.gz")) if conv_me is not None else []:
         ident = f.name[5:-7]
+        if ident not in fitxers and ident in conv_me.index:
+            fitxers[ident] = (PME, conv_me.loc[ident, "font"])
+    for ident, (carp, font) in sorted(fitxers.items()):
         if ident[0] not in TIPUS:
             continue
-        d = convocatoria(ident)
+        d = convocatoria(ident, carp)
         if not d:
             continue
-        data = str(conv["data_eleccio"].get(ident, ""))[:10]
+        data = str(conv["data_eleccio"].get(ident, "") if ident in conv.index else conv_me.loc[ident, "data_eleccio"])[:10]
         blocs = sorted({c[1] for c in d["c"]}, key=ORDRE_BLOCS.index)
-        index.append({"id": ident, "t": ident[0], "any": int(ident[1:5]), "data": data, "n": _nom(ident, data), "b": blocs})
+        index.append({"id": ident, "t": ident[0], "any": int(ident[1:5]), "data": data, "n": _nom(ident, data), "b": blocs,
+                      "f": font, "sec": bool(d["sec"])})
         (salida / "eleccions" / f"{ident}.json").write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         cob = len(cusecs & set(d["sec"])) if cusecs else 0
         lineas.append(f"{ident}: {len(d['mun'])} municipios, {len(d['sec'])} secciones ({cob}/{len(cusecs)} con geometría 2024), {len(d['c'])} candidaturas")

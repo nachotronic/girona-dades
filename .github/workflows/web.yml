@@ -3,7 +3,7 @@ name: Publicar web
 on:
   push:
     branches: [main]
-    paths: ["web/**", "scripts/construir_web.py", ".github/workflows/web.yml"]
+    paths: ["web/**", "scripts/construir_web.py", "scripts/referencia/**", "lloc.yml", ".github/workflows/web.yml"]
   workflow_run:
     workflows: ["Actualizar datos"]
     types: [completed]
@@ -31,6 +31,17 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python scripts/construir_web.py
+      # Capa de referencia para buscadores e IAs: páginas estáticas por municipio, indicador y tema, descargas CSV/JSON,
+      # llms.txt, sitemap.xml y robots.txt. Los valores se calculan con el propio mapa (web/mapa.js) en un Chromium sin pantalla.
+      # Si falla, la web interactiva se publica igual.
+      - name: Páginas de referencia
+        continue-on-error: true
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.48.2
+          npx playwright install --with-deps chromium
+          node scripts/referencia/extreu.mjs web build/referencia.json
+          VERSIO=${GITHUB_SHA::8} python scripts/referencia/genera.py build/referencia.json --publica
+          ls web/ca web/es && head -5 web/llms.txt
       # Versiona CSS y JS en cada publicación para que el navegador no mezcle un index.html nuevo con estilos viejos en caché
       - run: sed -i -E "s/(href|src)=\"([a-z]+\.(css|js))\"/\1=\"\2?v=${GITHUB_SHA::8}\"/g" web/index.html web/qui-som.html web/avis-legal.html web/privacitat.html && grep -E "estilos|mapa\.js" web/index.html
       # Igual con los datos: sin versión, el navegador puede usar 10 minutos un municipios.json viejo con un mapa.js nuevo

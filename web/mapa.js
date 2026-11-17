@@ -192,15 +192,18 @@
 
   // Cadastre (Direcció General del Cadastre, «Datos municipios»): m.cad = {clave: {año: valor}}
   const CV = (k) => (m, a) => (a != null && m.cad && m.cad[k] && m.cad[k][a] != null ? m.cad[k][a] : null);
-  const CADA = (k) => D.anys && (k === "vm2" ? D.anys.cad_vm2 : D.anys.cad);
+  const CADK = (k) => (k === "vm2" || k === "sm2" ? "cad_vm2" : k.startsWith("ibi_") ? "cad_ibi" : "cad");
+  const CADA = (k) => D.anys && D.anys[CADK(k)];
   const CVR = (k, z) => (a) => { const r = D.cad_ref && D.cad_ref[k] && D.cad_ref[k][a]; return r && r[z] != null ? r[z] : null; };
   const NOTA_CAD = { ca: "Direcció General del Cadastre (Ministeri d'Hisenda), estadístiques per municipi. L'any és el del padró cadastral a 1 de gener. El valor cadastral el fixa la ponència de valors i sol ser molt inferior al de mercat; als municipis amb la ponència antiga ho és encara més. Espanya, sense el País Basc ni Navarra (tenen cadastre propi).", es: "Dirección General del Catastro (Ministerio de Hacienda), estadísticas por municipio. El año es el del padrón catastral a 1 de enero. El valor catastral lo fija la ponencia de valores y suele ser muy inferior al de mercado; en los municipios con la ponencia antigua lo es todavía más. España, sin el País Vasco ni Navarra (tienen catastro propio)." };
+  const NOTA_IBI = { ca: "Direcció General del Cadastre, informació economicofinancera de l'IBI: rebuts, bases i quotes de cada ajuntament. Quota líquida = el que es paga després de bonificacions. Espanya, sense el País Basc ni Navarra.", es: "Dirección General del Catastro, información económico-financiera del IBI: recibos, bases y cuotas de cada ayuntamiento. Cuota líquida = lo que se paga después de bonificaciones. España, sin el País Vasco ni Navarra." };
   const NOTA_CAD_U = { ca: "Direcció General del Cadastre. Immobles urbans segons l'ús principal que hi consta al Cadastre.", es: "Dirección General del Catastro. Inmuebles urbanos según el uso principal que consta en el Catastro." };
   const CAD = [
     ["vm", ["Valor cadastral mitjà", "Valor cadastral mitjà per immoble urbà (€)"], ["Valor catastral medio", "Valor catastral medio por inmueble urbano (€)"], EU],
     ["vviv", ["Valor cadastral de l'habitatge", "Valor cadastral mitjà dels immobles residencials (€)"], ["Valor catastral de la vivienda", "Valor catastral medio de los inmuebles residenciales (€)"], EU],
     ["vhab", ["Valor cadastral per habitant", "Valor cadastral urbà per habitant (€)"], ["Valor catastral por habitante", "Valor catastral urbano por habitante (€)"], EU],
     ["vm2", ["Valor cadastral per m²", "Valor cadastral mitjà de l'habitatge (€/m²)"], ["Valor catastral por m²", "Valor catastral medio de la vivienda (€/m²)"], { s: S("cad_vm2"), nota: { ca: "Direcció General del Cadastre, sèries per districte censal: valor cadastral mitjà per metre quadrat de l'habitatge col·lectiu i unifamiliar, ponderat pel nombre d'immobles. A la vista per seccions, cada secció mostra el valor del seu districte censal.", es: "Dirección General del Catastro, series por distrito censal: valor catastral medio por metro cuadrado de la vivienda colectiva y unifamiliar, ponderado por el número de inmuebles. En la vista por secciones, cada sección muestra el valor de su distrito censal." }, f: (v) => `${fmt(v)} €/m²`, c: (v) => fmt(v) }],
+    ["sm2", ["Superfície de l'habitatge", "Superfície mitjana de l'habitatge (m²)"], ["Superficie de la vivienda", "Superficie media de la vivienda (m²)"], { s: S("cad_sm2"), nota: { ca: "Direcció General del Cadastre, sèries per districte censal: superfície construïda mitjana de l'habitatge col·lectiu i unifamiliar, ponderada pel nombre d'immobles. Inclou la part proporcional dels elements comuns. A la vista per seccions, cada secció mostra el valor del seu districte censal.", es: "Dirección General del Catastro, series por distrito censal: superficie construida media de la vivienda colectiva y unifamiliar, ponderada por el número de inmuebles. Incluye la parte proporcional de los elementos comunes. En la vista por secciones, cada sección muestra el valor de su distrito censal." }, f: (v) => `${fmt(v)} m²`, c: (v) => fmt(v) }],
     ["sol", ["Pes del sòl", "Valor del sòl sobre el valor cadastral urbà (%)"], ["Peso del suelo", "Valor del suelo sobre el valor catastral urbano (%)"], { sumable: false, ...P0 }],
     ["n", ["Immobles urbans", "Immobles urbans (béns immobles)"], ["Inmuebles urbanos", "Inmuebles urbanos (bienes inmuebles)"], N0],
     ["ih", ["Immobles per habitant", "Immobles urbans per 100 habitants"], ["Inmuebles por habitante", "Inmuebles urbanos por 100 habitantes"], N0],
@@ -214,6 +217,12 @@
     ["suph", ["Sòl urbà per habitant", "Superfície de les parcel·les urbanes per habitant (m²)"], ["Suelo urbano por habitante", "Superficie de las parcelas urbanas por habitante (m²)"], N0],
     ["rha", ["Valor del sòl rústic", "Valor cadastral rústic per hectàrea (€)"], ["Valor del suelo rústico", "Valor catastral rústico por hectárea (€)"], { sumable: false, ...EU }],
     ["rpar", ["Mida de la finca rústica", "Superfície mitjana de la parcel·la rústica (ha)"], ["Tamaño de la finca rústica", "Superficie media de la parcela rústica (ha)"], { sumable: false, ...N2 }],
+    ["ibi_rec", ["Rebut mitjà de l'IBI", "Quota líquida mitjana per rebut de l'IBI urbà (€)"], ["Recibo medio del IBI", "Cuota líquida media por recibo del IBI urbano (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_hab", ["IBI per habitant", "Quota líquida de l'IBI urbà per habitant (€)"], ["IBI por habitante", "Cuota líquida del IBI urbano por habitante (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_tot", ["Tot l'IBI per habitant", "Quota líquida de l'IBI urbà, rústic i d'equipaments especials per habitant (€)"], ["Todo el IBI por habitante", "Cuota líquida del IBI urbano, rústico y de equipamientos especiales por habitante (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_base", ["Base de l'IBI", "Base liquidable mitjana per rebut de l'IBI urbà (€)"], ["Base del IBI", "Base liquidable media por recibo del IBI urbano (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_bon", ["Bonificacions de l'IBI", "Bonificacions sobre la quota íntegra de l'IBI urbà (%)"], ["Bonificaciones del IBI", "Bonificaciones sobre la cuota íntegra del IBI urbano (%)"], { tema: "tri", nota: NOTA_IBI, ...P1 }],
+    ["ibi_desoc", ["Recàrrec a pisos buits", "Recàrrec de l'IBI als habitatges desocupats (%)"], ["Recargo a pisos vacíos", "Recargo del IBI a las viviendas desocupadas (%)"], { tema: "tri", nota: { ca: "Direcció General del Cadastre. Recàrrec (fins al 50 %) que l'ajuntament pot cobrar sobre la quota de l'IBI dels habitatges desocupats amb caràcter permanent. 0 = no l'aplica.", es: "Dirección General del Catastro. Recargo (hasta el 50 %) que el ayuntamiento puede cobrar sobre la cuota del IBI de las viviendas desocupadas con carácter permanente. 0 = no lo aplica." }, ...P0 }],
     ["rev", ["Ponència de valors", "Any de l'última revisió cadastral (ponència de valors)"], ["Ponencia de valores", "Año de la última revisión catastral (ponencia de valores)"], { sumable: false, f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) }],
   ];
 
@@ -271,10 +280,16 @@
   const elGuany = (z) => { const c = elCands(z); return c.length ? c[0].b : null; };
   const elMarge = (z) => { const c = elCands(z), v = elValids(z); return c.length > 1 && v ? ((c[0].v - c[1].v) / v) * 100 : null; };
   const TXT_EL = {
-    ca: { font: "Generalitat de Catalunya, resultats per secció censal.", pctv: "Percentatges sobre els vots vàlids (candidatures i en blanc).", seccions: "Les seccions són les del 2024: les que s'han creat després de l'elecció surten sense dades.",
+    ca: { font: "Generalitat de Catalunya, resultats per secció censal.",
+      font_me: "Mapa Electoral (mapaelectoral.es, CC BY 4.0), a partir del Ministeri de l'Interior i l'INE. Vots agrupats per famílies polítiques; als municipis, els blancs compten amb els nuls.",
+      font_rep: "Mapa Electoral (mapaelectoral.es), a partir de l'Atlas Electoral de la Segona República (Rodon, Vall-Prat i Martín Álvarez, UPF; CC BY-NC-SA 4.0). Municipis actuals; vots estimats a partir dels percentatges, sense blancs ni nuls.",
+      nomes_mun: "Aquesta elecció només té dades per municipi.", pctv: "Percentatges sobre els vots vàlids (candidatures i en blanc).", seccions: "Les seccions són les del 2024: les que s'han creat després de l'elecció surten sense dades.",
       part: "Votants sobre el cens electoral (sense el vot exterior).", marge: "Diferència entre la primera i la segona candidatura, en punts sobre els vots vàlids.", guany: "Cada zona té el color del bloc polític de la candidatura més votada.",
       participacio: "Participació", vots: "vots", cens: "cens", punts: "punts", tipus: "Elecció", any: "Any", cap: "Aquesta candidatura no es va presentar en aquesta elecció.", altres_c: "Altres" },
-    es: { font: "Generalitat de Catalunya, resultados por sección censal.", pctv: "Porcentajes sobre los votos válidos (candidaturas y en blanco).", seccions: "Las secciones son las de 2024: las creadas después de la elección aparecen sin datos.",
+    es: { font: "Generalitat de Catalunya, resultados por sección censal.",
+      font_me: "Mapa Electoral (mapaelectoral.es, CC BY 4.0), a partir del Ministerio del Interior y el INE. Votos agrupados por familias políticas; en los municipios, los blancos cuentan con los nulos.",
+      font_rep: "Mapa Electoral (mapaelectoral.es), a partir del Atlas Electoral de la Segunda República (Rodon, Vall-Prat y Martín Álvarez, UPF; CC BY-NC-SA 4.0). Municipios actuales; votos estimados a partir de los porcentajes, sin blancos ni nulos.",
+      nomes_mun: "Esta elección solo tiene datos por municipio.", pctv: "Porcentajes sobre los votos válidos (candidaturas y en blanco).", seccions: "Las secciones son las de 2024: las creadas después de la elección aparecen sin datos.",
       part: "Votantes sobre el censo electoral (sin el voto exterior).", marge: "Diferencia entre la primera y la segunda candidatura, en puntos sobre los votos válidos.", guany: "Cada zona tiene el color del bloque político de la candidatura más votada.",
       participacio: "Participación", vots: "votos", cens: "censo", punts: "puntos", tipus: "Elección", any: "Año", cap: "Esta candidatura no se presentó en esta elección.", altres_c: "Otras" },
   };
@@ -286,9 +301,18 @@
     CUP: { ca: "Inclou les llistes municipals de la CUP i Amunt.", es: "Incluye las listas municipales de la CUP y Amunt." },
     Comuns: { ca: "ICV-EUiA, Catalunya Sí que es Pot, En Comú Podem, Sumar i les llistes d'En Comú a les municipals.", es: "ICV-EUiA, Catalunya Sí que es Pot, En Comú Podem, Sumar y las listas de En Comú en las municipales." },
     "JxSí": { ca: "Coalició de CDC i ERC a les eleccions al Parlament del 2015.", es: "Coalición de CDC y ERC en las elecciones al Parlament de 2015." },
+    UCD: { ca: "Unión de Centro Democrático, el partit d'Adolfo Suárez (1977-1982).", es: "Unión de Centro Democrático, el partido de Adolfo Suárez (1977-1982)." },
+    FEsq: { ca: "Front d'Esquerres de Catalunya, la versió catalana del Front Popular a les eleccions del 1936 (ERC, socialistes, comunistes i altres).", es: "Front d'Esquerres de Catalunya, la versión catalana del Frente Popular en las elecciones de 1936 (ERC, socialistas, comunistas y otros)." },
+    Lliga: { ca: "Lliga Catalana (abans Lliga Regionalista), de Francesc Cambó. El 1936 va anar dins del Front Català d'Ordre (Dretes).", es: "Lliga Catalana (antes Lliga Regionalista), de Francesc Cambó. En 1936 fue dentro del Front Català d'Ordre (Derechas)." },
+    Dretes: { ca: "Candidatures de dretes de la Segona República; el 1936, el Front Català d'Ordre (Lliga, CEDA i altres).", es: "Candidaturas de derechas de la Segunda República; en 1936, el Front Català d'Ordre (Lliga, CEDA y otros)." },
     Locals: { ca: "Candidatures municipals que no pertanyen a cap dels blocs anteriors.", es: "Candidaturas municipales que no pertenecen a ninguno de los bloques anteriores." },
   };
-  const elNota = (extra, pctv) => ({ ca: [extra && extra.ca, pctv && TXT_EL.ca.pctv, TXT_EL.ca.font].filter(Boolean).join(" "), es: [extra && extra.es, pctv && TXT_EL.es.pctv, TXT_EL.es.font].filter(Boolean).join(" ") });
+  // La fuente depende de la convocatoria: Generalitat (gen) o Mapa Electoral (me, rep)
+  const elFont = (l) => { const f = (elInfo() || {}).f; return TXT_EL[l][f === "me" ? "font_me" : f === "rep" ? "font_rep" : "font"]; };
+  const elNota = (extra, pctv) => {
+    const txt = (l) => [extra && extra[l], pctv && TXT_EL[l].pctv, elFont(l)].filter(Boolean).join(" ");
+    return { get ca() { return txt("ca"); }, get es() { return txt("es"); } };
+  };
   const elRef = (f) => () => { const d = elDades(); return d ? { cat: d.cat ? f(d.cat) : null } : {}; };
   const indBloc = (b, ca, es) => ({ id: "el_" + b.toLowerCase().replace("ç", "c").replace("í", "i"), el: true, bloc: b, tema: "ele", ca: [`Vot a ${ca}`, `Vot a ${ca} (% dels vots vàlids)`], es: [`Voto a ${es}`, `Voto a ${es} (% de los votos válidos)`],
     ez: (z) => elBloc(z, b), ref: elRef((z) => elBloc(z, b)), nota: elNota(COMPOSICIO[b], true), ...P1, c: (v) => pct(v, 0) });
@@ -500,8 +524,8 @@
       nota: { ca: "Mapa del Comerç Català 2022 (Generalitat): inspecció directa dels locals de les ciutats de més de 20.000 habitants i de les capitals de comarca. A la resta de municipis no s'ha fet.", es: "Mapa del Comerç Català 2022 (Generalitat): inspección directa de los locales de las ciudades de más de 20.000 habitantes y de las capitales de comarca. En el resto de municipios no se ha hecho." }, ...P1 },
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     // Cadastre: sèrie anual per municipi
-    ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: k === "vm2" ? "cad_vm2" : "cad", sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
-      ...(k === "n" || k === "hos" || k === "rev" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
+    ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: CADK(k), sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
+      ...(k === "n" || k === "hos" || k === "rev" || k === "ibi_desoc" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
       nota: NOTA_CAD, ...ext })),
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
@@ -523,6 +547,10 @@
     indBloc("Aliança", "Aliança Catalana", "Aliança Catalana"),
     indBloc("JxSí", "Junts pel Sí", "Junts pel Sí"),
     indBloc("Locals", "llistes locals", "listas locales"),
+    indBloc("UCD", "UCD", "UCD"),
+    indBloc("FEsq", "el Front d'Esquerres", "el Front d'Esquerres"),
+    indBloc("Lliga", "la Lliga", "la Lliga"),
+    indBloc("Dretes", "les dretes", "las derechas"),
     { id: "densitat", sumable: false, tema: "ter", ca: ["Densitat", "Habitants per km²"], es: ["Densidad", "Habitantes por km²"], a: "densitat", v: X("densitat"), ...N0 },
     { id: "sau", sumable: false, tema: "ter", ca: ["Superfície agrícola", "Superfície agrícola utilitzada (% del terme)"], es: ["Superficie agrícola", "Superficie agrícola utilizada (% del término)"], a: "sau", v: X("sau"), ...P0 },
     { id: "esports", tema: "ter", ca: ["Espais esportius", "Espais esportius per 1.000 habitants"], es: ["Espacios deportivos", "Espacios deportivos por 1.000 habitantes"], a: "esports", v: X("esports"), ...N1 },
@@ -622,7 +650,7 @@
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
-      if (i.a === "cad" || i.a === "cad_vm2") D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
@@ -692,13 +720,17 @@
   // Selector de convocatoria: tipo de elección y año
   function controlEl(el) {
     const act = elInfo() || EL.conv[0];
-    const tipus = ["A", "G", "M", "E"].filter((tp) => EL.conv.some((c) => c.t === tp));
+    const tipus = ["A", "G", "M", "E", "R"].filter((tp) => EL.conv.some((c) => c.t === tp));
     const nomT = (tp) => EL.conv.find((c) => c.t === tp).n[LANG].replace(/ \d{4}.*$/, "");
     const etAny = (c) => (c.t === "G" && c.any === 2019 ? `${c.data.slice(5, 7) === "04" ? (LANG === "es" ? "Abr" : "Abr") : "Nov"} 19` : String(c.any));
     el.hidden = false; el.classList.add("el-ctl");
     el.innerHTML = `<div class="el-fila" role="group" aria-label="${tel("tipus")}">${tipus.map((tp) => `<button type="button" data-t="${tp}" aria-pressed="${tp === act.t}">${nomT(tp)}</button>`).join("")}</div>
       <div class="el-fila el-anys" role="group" aria-label="${tel("any")}">${EL.conv.filter((c) => c.t === act.t).map((c) => `<button type="button" data-id="${c.id}" aria-pressed="${c.id === act.id}" title="${c.n[LANG]} · ${c.data.split("-").reverse().join("/")}">${etAny(c)}</button>`).join("")}</div>`;
-    const canvia = async (id) => { await carregaConv(id); if (absent(ind)) ind = IND.find((i) => i.id === "el_guany"); omplirSelector(); pinta(); };
+    const canvia = async (id) => {
+      await carregaConv(id); if (absent(ind)) ind = IND.find((i) => i.id === "el_guany");
+      if (!disponible(ind, nivell)) { nivell = "mun"; fixat = null; }
+      omplirSelector(); botonsNivell(); pinta();
+    };
     el.querySelectorAll("[data-t]").forEach((b) => b.addEventListener("click", () => { const l = EL.conv.filter((c) => c.t === b.dataset.t); canvia(l[l.length - 1].id); }));
     el.querySelectorAll("[data-id]").forEach((b) => b.addEventListener("click", () => canvia(b.dataset.id)));
   }
@@ -706,7 +738,7 @@
 
   let hoverId = null, munPerIne = {}, valorsActuals = [], fixat = null;
 
-  const disponible = (i, n) => (i.el ? n === "mun" || n === "sec" : n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
+  const disponible = (i, n) => (i.el ? n === "mun" || (n === "sec" && (!elInfo() || elInfo().sec !== false)) : n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
   const zonaEl = (props) => { const d = elDades(); return !d ? null : nivell === "mun" ? d.mun[props.ine] : d.sec[props.cusec]; };
   // Una candidatura o bloque que no se presentó en la convocatoria elegida
   const absent = (i) => i.bloc && elInfo() && !elInfo().b.includes(i.bloc);
@@ -763,7 +795,7 @@
     src.setData(geo);
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") + (ind.el && elInfo() && elInfo().sec === false ? " " + tel("nomes_mun") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
     controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres();
     avisa("pinta");
   }
@@ -806,7 +838,7 @@
     mapa.getSource("zones").setData(geo);
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : t("nomes_mun");
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") + (ind.el && elInfo() && elInfo().sec === false ? " " + tel("nomes_mun") : "") : t("nomes_mun");
     const max = recompte.length ? recompte[0][1] : 1;
     // Con muchas categorías (nacionalidades) solo se ven las primeras; el resto, desplegable
     const N = ind.maxCat && recompte.length > ind.maxCat + 1 ? ind.maxCat : 0;
@@ -1185,7 +1217,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "veh" || i.a === "cad" || i.a === "cad_vm2") ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";

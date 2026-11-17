@@ -409,3 +409,13 @@ eleccions:
     frecuencia: por convocatoria
     estado: comprobada
     nota: Interior (infoelectoral) bloquea las descargas desde GitHub Actions (Cloudflare); la Generalitat publica las mismas convocatorias por sección.
+  - id: mapaelectoral
+    nombre: Mapa Electoral, descargas (municipios, secciones, histórico y República)
+    organismo: Mapa Electoral (mapaelectoral.es), a partir de Ministerio del Interior, INE y Atlas Electoral de la Segunda República (UPF)
+    url: https://mapaelectoral.es/generales-2026/metodologia.html
+    conjuntos: [municipios.csv, municipios_historico.csv, resultados_secciones_largo.csv, resultados_secciones_largo_municipales_europeas.csv, municipios_republica.csv]
+    nivel: [seccion, municipio]
+    frecuencia: por convocatoria
+    estado: comprobada
+    licencia: CC BY 4.0 (República, CC BY-NC-SA 4.0)
+    nota: Solo se usan las convocatorias que no publica la Generalitat (antes de 2010) y las nuevas mientras la Generalitat no las tenga. Votos agrupados por familias políticas.
