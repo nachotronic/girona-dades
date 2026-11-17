@@ -57,12 +57,17 @@ DGTR = DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/"
 CANDIDATAS_E = {}
 INICI_DGT = [DGTR + f"?categorias=/Tema/{t}/" + (f"&pagina={n}" if n > 1 else "") for t in ("Informacion-municipal", "Vehiculos") for n in (1, 2, 3)]
 
-# Habitatge i Territori: metadades i mostra de Girona dels conjunts candidats
-for d in ("v8i4-fa4q", "txkt-yjtq", "3pqu-s3ga", "w8kv-kmwv", "2pwz-wwxf", "tz88-gjtz", "epsm-zskb",
-          "6wpu-9y2e", "xsvx-ym46", "fftm-v9b6", "375x-2wzk", "b9cr-32i4"):
-    CANDIDATAS_E[f"socrata_{d}_meta"] = f"{SOC}/api/views/{d}.json"
-    CANDIDATAS_E[f"socrata_{d}_mostra"] = f"{SOC}/resource/{d}.csv?$limit=400&$q=Girona"
-    CANDIDATAS_E[f"socrata_{d}_tot"] = f"{SOC}/resource/{d}.csv?$limit=3"
+# Mapa urbanístic de Catalunya: serveis web i descàrrega
+CANDIDATAS_E["muc_meta"] = f"{SOC}/api/views/magm-wuv7.json"
+CANDIDATAS_E["muc_sect_meta"] = f"{SOC}/api/views/7u3t-vi7t.json"
+CANDIDATAS_E["muc_qgtr_meta"] = f"{SOC}/api/views/qgtr-hfva.json"
+for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&request=GetCapabilities",
+             "sig_wms": "https://sig.gencat.cat/ows/PLANEJAMENT/wms?service=WMS&request=GetCapabilities",
+             "sig_wfs2": "https://sig.gencat.cat/ows/URBANISME/wfs?service=WFS&request=GetCapabilities",
+             "ptop_wfs": "https://ptop.gencat.cat/geoserver/ows?service=WFS&request=GetCapabilities",
+             "muc_robots": "https://territori.gencat.cat/robots.txt",
+             "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
+    CANDIDATAS_E[k] = u
 
 def explora_parque(filas: list) -> None:
     import re
