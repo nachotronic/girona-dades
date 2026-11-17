@@ -33,6 +33,7 @@
       no_tinc_mun: (m, w) => `He reconegut <b>${m}</b>, però no tinc dades de «${w}» per municipi. Aquest és el seu resum:`,
       fora: (n) => `${n} no és de la província de Girona. Aquest web només cobreix els seus 221 municipis.`,
       nucli: (n, m) => `${n} forma part del municipi de <b>${m}</b>: les dades són de tot el municipi.`,
+      parcial: (w, m) => `He entès «${w}» com a ${m}, el més poblat. Volies dir un altre?`,
       rank_sobre: (asc) => `Rànquing · de ${asc ? "menys a més" : "més a menys"}`,
       rank_frase: (m, v, asc) => `El valor més ${asc ? "baix" : "alt"} és el de <b>${m}</b>: <b>${v}</b>.`,
       rank_filtre: (f) => `Només ${f}.`,
@@ -104,6 +105,7 @@
       no_tinc_mun: (m, w) => `He reconocido <b>${m}</b>, pero no tengo datos de «${w}» por municipio. Este es su resumen:`,
       fora: (n) => `${n} no es de la provincia de Girona. Esta web solo cubre sus 221 municipios.`,
       nucli: (n, m) => `${n} forma parte del municipio de <b>${m}</b>: los datos son de todo el municipio.`,
+      parcial: (w, m) => `He entendido «${w}» como ${m}, el más poblado. ¿Querías decir otro?`,
       rank_sobre: (asc) => `Ranking · de ${asc ? "menos a más" : "más a menos"}`,
       rank_frase: (m, v, asc) => `El valor más ${asc ? "bajo" : "alto"} es el de <b>${m}</b>: <b>${v}</b>.`,
       rank_filtre: (f) => `Solo ${f}.`,
@@ -325,6 +327,27 @@
     BLOC_TK.forEach((t) => t.fr.forEach((f) => f.forEach((w) => VOCAB.add(w))));
     EL_PARAULES.forEach((w) => VOCAB.add(w));
     Object.values(EL_TIPUS).forEach((s) => s.split(" ").forEach((w) => VOCAB.add(w)));
+    // Parts distintives dels noms compostos: «Feliu», «Guíxols», «Bisbal», «Caldes»… Si són de més d'un municipi, guanya el més poblat
+    const GEN = new Set("sant santa sants san de del dels d l la les el els i s sa vall castell mas mont pont port torre mar selva riu serra pla bosc vila valle".split(" "));
+    const comW = new Set(D.municipios.flatMap((m) => toks(m.comarca)));
+    const jaK = new Set(ENT.map((e) => e.k));
+    const parc = {};
+    D.municipios.forEach((m) => {
+      const tk = toks(m.nom.replace(/, (el|la|l'|els|les|s')$/, ""));
+      for (let a = 0; a < tk.length; a++) for (let b = a; b < Math.min(tk.length, a + 3); b++) {
+        if (a === 0 && b === tk.length - 1) continue;
+        const sub = tk.slice(a, b + 1);
+        if (GEN.has(sub[0]) || GEN.has(sub[sub.length - 1])) continue;
+        if (sub.length === 1 && (sub[0].length < 4 || VOCAB.has(sub[0]) || STOP.has(sub[0]) || XERRA.has(sub[0]) || comW.has(sub[0]))) continue;
+        const k = clau(sub);
+        if (k.length < 4 || jaK.has(k)) continue;
+        (parc[k] = parc[k] || { tk: sub, ms: new Set() }).ms.add(m);
+      }
+    });
+    Object.entries(parc).forEach(([k, p]) => {
+      const ms = [...p.ms].sort((x, y) => (y.poblacion || 0) - (x.poblacion || 0));
+      ENT.push({ tk: p.tk, k, tipus: "mun", m: ms[0], parcial: true, altres: ms.slice(1) });
+    });
     LISTO = true;
     return true;
   }
@@ -356,7 +379,7 @@
             sc = k.length * 2 - 4 * d;
           } else return;
           // Noms que també són paraules corrents: amb majúscula o després de «de», «en», «a»…
-          if (e.tipus === "mun" && RISC.has(sencer)) {
+          if (e.tipus === "mun" && (RISC.has(sencer) || (e.parcial && n === 1 && tk.length > 2))) {
             const r = rawTk[s] || "";
             const majus = r && r[0] === r[0].toUpperCase() && r[0] !== r[0].toLowerCase();
             if (!majus && !(s > 0 && PREP.has(tk[s - 1]))) return;
@@ -407,10 +430,10 @@
     const txt = " " + tk.join(" ") + " ";
     const has = (...w) => w.some((x) => tk.includes(x));
     const hasF = (re) => re.test(txt);
-    const muns = [], coms = [], fora = [], nuclis = [];
+    const muns = [], coms = [], fora = [], nuclis = [], parcials = [];
     let prov = false;
     res.forEach((c) => {
-      if (c.e.tipus === "mun") { if (!muns.includes(c.e.m)) muns.push(c.e.m); if (c.e.nucli) nuclis.push([c.e.nucli, c.e.m]); }
+      if (c.e.tipus === "mun") { if (!muns.includes(c.e.m)) muns.push(c.e.m); if (c.e.nucli) nuclis.push([c.e.nucli, c.e.m]); if (c.e.parcial && c.e.altres.length) parcials.push({ s: c.s, n: c.n, m: c.e.m, altres: c.e.altres }); }
       else if (c.e.tipus === "com") { if (!coms.includes(c.e.c)) coms.push(c.e.c); }
       else if (c.e.tipus === "prov") prov = true;
       else if (c.e.tipus === "fora") fora.push(c.e.nom);
@@ -531,7 +554,7 @@
     const alt = cands.filter((c) => !inds.includes(c.x.i)).slice(0, 4).map((c) => c.x.i);
     const dubte = !forcat && cands.length > 1 && ind && inds.length === 1 && cands[1].sc >= cands[0].sc * 0.85;
     const ignora = qs.filter(({ w }) => w.length >= 4 && !VOCAB.has(w) && !ADJ.some((a) => a.w.has(w)) && !/^(evoluc|cambi|canvi|pujat|subid|crecid|cresc|bajad|baixat|caid|caigut|compar|seccio|seccion|debajo|encima|sota|superior|inferior|supera|llega|arriba|habitant|vecin|veins|person|barri|censal|mitjan|medi|promed|respect|frente|davant|tant|tanto|tanta)/.test(w)).map((o) => o.w);
-    return { tk, muns, coms, fora, prov, nuclis, dir, ranqParaula, nTop, any, evol, ultAnys, compte, font, perque, seccio, resum, tema, elec, elTipus: elTipus ? elTipus[0] : null, blocs, ind, inds, conds, alt, dubte, minPob, maxPob, qs, ignora, cands };
+    return { tk, muns, coms, fora, prov, nuclis, parcials, dir, ranqParaula, nTop, any, evol, ultAnys, compte, font, perque, seccio, resum, tema, elec, elTipus: elTipus ? elTipus[0] : null, blocs, ind, inds, conds, alt, dubte, minPob, maxPob, qs, ignora, cands };
   }
 
   // ---------------------------------------------------------------- Dades d'un indicador
@@ -1014,6 +1037,9 @@
       html = noEntenc("");
     }
     if (nuclis) html = html.replace(/(<\/h3>)/, `$1${nuclis}`) || nuclis;
+    // Nom parcial de més d'un municipi («Feliu»): s'agafa el més poblat i s'ofereixen els altres
+    const parc = q.parcials.map((p) => `<div class="pq-alt pq-parcial"><p>${tx("parcial", esc(q.tk.slice(p.s, p.s + p.n).join(" ")), esc(nomMun(p.m)))}</p>${p.altres.slice(0, 5).map((m) => `<button type="button" class="pq-xip" data-q="${esc([...q.tk.slice(0, p.s), nomMun(m), ...q.tk.slice(p.s + p.n)].join(" "))}">${esc(nomMun(m))}</button>`).join("")}</div>`).join("");
+    if (parc) html = /<\/h3>/.test(html) ? html.replace(/(<\/h3>)/, `$1${parc}`) : parc + html;
     if (i && !forcat && q.ignora.length && !i.especial && !["resum", "no", "fora", "elec"].includes(tipus)) html = html.replace(/(<\/h3>)/, `$1<p class="pq-avis">${tx("no_tinc", esc(q.ignora.join(" ")))}</p>`);
     if (q.perque && i) html = html.replace(/(<\/h3>)/, `$1<p class="pq-avis">${tx("perque")}</p>`);
     if (i && !i.especial && q.alt.length && !q.altFet && !["multi", "tema", "elec", "font"].includes(tipus)) html += chips(q.alt.slice(0, q.dubte ? 4 : 3), q.dubte ? tx("semblants") : tx("altres"), q.muns.length === 1 ? q.muns[0].ine : null);

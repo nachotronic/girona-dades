@@ -1199,3 +1199,5 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .pq-t-gi { grid-column: 1 / -1; text-align: left; }
 }
 
+.pq-parcial { margin: 0 0 14px; }
+.pq-parcial p { text-transform: none; letter-spacing: 0; font: 400 14px/1.45 var(--sans); color: var(--text-2); border-left: 3px solid var(--accent); padding-left: 10px; margin-bottom: 6px; }
