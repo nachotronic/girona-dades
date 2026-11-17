@@ -65,9 +65,10 @@
       <label for="pregunta" class="pq-et" data-t="pq_et">Pregunta a les dades</label>
       <div class="pq-caixa">
         <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
-        <input type="search" id="pregunta" name="q" enterkeyhint="search" data-tp="pq_ph" placeholder="Quants assalariats hi ha a Agullana?">
+        <input type="search" id="pregunta" name="q" enterkeyhint="search" role="combobox" aria-autocomplete="list" aria-controls="pregunta-sug" aria-expanded="false" data-tp="pq_ph" placeholder="Quants assalariats hi ha a Agullana?">
         <button type="submit" data-t="pq_boto">Pregunta</button>
       </div>
+      <div id="pregunta-viu" class="pq-viu" hidden></div>
       <p class="pq-prova"><span data-t="pq_prova">Prova:</span></p>
       <div class="pq-exemples" id="pregunta-exemples"></div>
       <p class="pq-avis-ia" data-t="pq_sense_ia">Sense intel·ligència artificial: només respon amb les dades publicades en aquest web i, si no ho sap, ho diu.</p>
@@ -305,6 +306,7 @@
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>
+<script src="pregunta-dic.js"></script>
 <script src="pregunta.js"></script>
 </body>
 </html>
