@@ -100,3 +100,21 @@ quina és la renda de Salt	renda	Salt	mun
 on hi ha més atur	cj_atur		rank
 el poble més ric	renda		rank
 quants estrangers hi ha a Salt	estrangers	Salt	mun
+feliu	-	Sant Feliu de Guíxols	resum
+paro en feliu	cj_atur	Sant Feliu de Guíxols	mun
+alquiler en Guíxols	lloguer	Sant Feliu de Guíxols	mun
+renta en Pallerols	renda	Sant Feliu de Pallerols	mun
+paro en Bisbal	cj_atur	Bisbal d'Empordà, la	mun
+población de Castelló	pob	Castelló d'Empúries	mun
+alquiler en Torroella	lloguer	Torroella de Montgrí	mun
+renta de Vilobí	renda	Vilobí d'Onyar	mun
+paro en Caldes	cj_atur	Caldes de Malavella	mun
+alquiler en Malavella	lloguer	Caldes de Malavella	mun
+renta en Abadesses	renda	Sant Joan de les Abadesses	mun
+paro en Montgrí	cj_atur	Torroella de Montgrí	mun
+habitantes de Farners	pob	Santa Coloma de Farners	mun
+alquiler en Empúries	lloguer	Castelló d'Empúries	mun
+renta en Pescador	renda	Sant Pere Pescador	mun
+Guíxols	-	Sant Feliu de Guíxols	resum
+Castellfollit	-	Castellfollit de la Roca	resum
+cuántas sales hay	sales_esport		prov
