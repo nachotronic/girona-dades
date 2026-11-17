@@ -70,7 +70,7 @@ const T = {
     font_act: "Descarregat", font_manual: "Càrrega manual anual", f_esca: "enquesta de salut per regió sanitària i sèrie de Catalunya", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
     f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
     actualitzat: "Actualitzat el",
-    codi: "Codi i dades a GitHub",
+    codi: "Codi i dades a GitHub", ref_pagines: "Dades per municipi en text, CSV i JSON",
     k_lloguer: "Lloguer mitjà",
     k_hab: "Habitants", n_hab: (v) => `${v} nascuts a l'estranger`, k_atur: "Atur (EPA)", n_atur: (p, e) => `${p} · Espanya, ${e}`,
     k_ipc: "Inflació", n_ipc: (p, e) => `interanual, ${p} · Espanya, ${e}`, k_tur: "Nits d'hotel", n_tur: (v) => `${v} de turistes estrangers`,
@@ -163,7 +163,7 @@ const T = {
     font_act: "Descargado", font_manual: "Carga manual anual", f_esca: "encuesta de salud por región sanitaria y serie de Cataluña", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
     f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
     actualitzat: "Actualizado el",
-    codi: "Código y datos en GitHub",
+    codi: "Código y datos en GitHub", ref_pagines: "Datos por municipio en texto, CSV y JSON",
     k_lloguer: "Alquiler medio",
     k_hab: "Habitantes", n_hab: (v) => `${v} nacidos en el extranjero`, k_atur: "Paro (EPA)", n_atur: (p, e) => `${p} · España, ${e}`,
     k_ipc: "Inflación", n_ipc: (p, e) => `interanual, ${p} · España, ${e}`, k_tur: "Noches de hotel", n_tur: (v) => `${v} de turistas extranjeros`,
@@ -268,6 +268,7 @@ function aplicaIdioma() {
   document.querySelectorAll("[data-tp]").forEach((el) => { el.placeholder = t(el.dataset.tp); });
   document.querySelectorAll("[data-ta]").forEach((el) => { el.setAttribute("aria-label", t(el.dataset.ta)); });
   document.querySelectorAll(".idiomes button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === LANG)));
+  document.querySelectorAll("a[data-t=ref_pagines]").forEach((a) => { a.href = `${LANG}/`; a.hreflang = LANG; });
 }
 
 // ---------- Tooltip ----------
