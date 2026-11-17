@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-17 11:20 UTC
+Última ejecución: 2026-11-17 11:23 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -40,7 +40,7 @@
 
 ## Detalle de la última ejecución
 
-### anuari_aeat: ok (124 s)
+### anuari_aeat: ok (103 s)
 
 ```
 modelo100: 3008 filas; modelo190_salarios: 15040 filas; modelo190_pensiones: 1504 filas; modelo200: 10240 filas; modelo390: 5608 filas; modelo714: 448 filas; IRPFmunicipios: 35665 filas
