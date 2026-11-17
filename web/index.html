@@ -39,6 +39,7 @@
   <div class="amplada cap-dins">
     <a class="marca" href="./"><svg class="marca-icona" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" class="mi-f"/><rect class="mi-b" x="96.0" y="266.0" width="96.0" height="150.0"/><rect class="mi-b" x="208.0" y="186.0" width="96.0" height="230.0"/><rect class="mi-p" x="320.0" y="96.0" width="96.0" height="320.0"/></svg><span data-t="marca">Girona en xifres</span></a>
     <nav class="menu" aria-label="Seccions">
+      <a href="#pregunta-form" data-t="nav_pq">Pregunta</a>
       <a href="#s-mapa" data-t="nav_mapa">Mapa</a>
       <a href="#s-conj" data-t="nav_conj">Conjuntura</a>
       <a href="#s-prov" data-t="nav_prov">La província</a>
@@ -60,6 +61,18 @@
     <p class="sobre" data-t="sobre_hero">Dades obertes · Província de Girona</p>
     <h1 data-t="titol">Com és cada poble de Girona</h1>
     <p class="entradeta" data-t="entradeta">Lloguers, compravendes, pisos turístics i renda de les llars, municipi a municipi, amb dades oficials que s'actualitzen cada setmana.</p>
+    <form class="pregunta" id="pregunta-form" role="search" autocomplete="off">
+      <label for="pregunta" class="pq-et" data-t="pq_et">Pregunta a les dades</label>
+      <div class="pq-caixa">
+        <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+        <input type="search" id="pregunta" name="q" enterkeyhint="search" data-tp="pq_ph" placeholder="Quants assalariats hi ha a Agullana?">
+        <button type="submit" data-t="pq_boto">Pregunta</button>
+      </div>
+      <p class="pq-prova"><span data-t="pq_prova">Prova:</span></p>
+      <div class="pq-exemples" id="pregunta-exemples"></div>
+      <p class="pq-avis-ia" data-t="pq_sense_ia">Sense intel·ligència artificial: només respon amb les dades publicades en aquest web i, si no ho sap, ho diu.</p>
+    </form>
+    <div id="pregunta-resposta" class="pq-resposta" aria-live="polite" hidden></div>
     <p class="meta"><span data-t="meta_mun">221 municipis · 536 seccions censals</span> · <span data-t="actualitzat">Actualitzat el</span> <span class="data-gen"></span></p>
   </section>
 
@@ -87,6 +100,7 @@
             <svg aria-hidden="true" viewBox="0 0 20 20" width="14" height="14"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             <input type="search" id="cerca-ind" autocomplete="off" data-tp="cerca_ind_ph" placeholder="Busca entre els indicadors">
           </label>
+          <button type="button" class="pq-des-mapa" id="pregunta-mapa" hidden></button>
           <div class="xips" id="indicadors" role="radiogroup" data-ta="ctl_indicador" aria-label="Indicador"></div>
         </div>
       </div>
@@ -291,5 +305,6 @@
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>
+<script src="pregunta.js"></script>
 </body>
 </html>
