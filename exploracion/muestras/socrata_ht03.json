@@ -1,0 +1,627 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Àrees de referencia en matèria de política d’habitatge",
+            "id" : "fftm-v9b6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Informació sobre les àrees definides per les diferents normatives en matèria d'habitatge amb la relació dels municipis afectats. Àmbits d'aplicació:\n-\tÀrees de demanda residencial forta i acreditada\n-\tÀrees d'aplicació de l'impost d'habitatges buits\n-\tZones de mercat residencial tensat\n-\tZones geogràfiques a efectes d'aplicació de la normativa d'habitatges de protecció oficial\nPer obtenir més informació metodològica sobre les variables del dataset, consulteu el document adjunt ‘Apunts metodològics’.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-09-22T10:00:27.000Z",
+            "createdAt" : "2022-01-24T14:12:58.000Z",
+            "metadata_updated_at" : "2025-09-22T10:00:27.000Z",
+            "data_updated_at" : "2025-02-14T13:15:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 44,
+                "page_views_last_month" : 138,
+                "page_views_total" : 2597,
+                "page_views_last_week_log" : 5.491853096329675,
+                "page_views_last_month_log" : 7.118941072723508,
+                "page_views_total_log" : 11.343185715447882
+              },
+            "columns_name" :
+              [
+                "municipis_de_l_amb",
+                "Codi província",
+                "Latitud Municipi",
+                "Longitud Municipi",
+                "Codi INE",
+                "Municipi",
+                "Zona de mercat residencial tensat",
+                "Municipis segons àrea del PTSH",
+                "Municipis d'intervenció complementària i escassa demanda",
+                "Província",
+                "Codi IDESCAT",
+                "Comarca",
+                "LIMADM_MUNICIPI",
+                "Zones geogràfiques d'HPO",
+                "Àmbit funcional",
+                "Programa d’actuació concertada (PAC)",
+                "Georeferència Municipi",
+                "Codi comarca"
+              ],
+            "columns_field_name" :
+              [
+                "municipis_amb",
+                "codi_provincia",
+                "latitud_municipi",
+                "longitud_municipi",
+                "codmuni",
+                "municipi",
+                "zona_de_mercat_residencial_tensat",
+                "area_ptsh",
+                "municipis_d_intervencio",
+                "provincia",
+                "codi_idescat",
+                "comarca",
+                ":@computed_region_bh64_c7uy",
+                "hpo",
+                "ambit_funcional",
+                "programa_d_actuacio_concertada",
+                "georeferencia_municipi",
+                "codi_comarca"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Point",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Municipis que pertanyen a l’Àrea Metropolitana de Barcelona",
+                "Codi de la provincia assignat per l’Institut d’Estadística de Catalunya",
+                "Sistema de coordenades WGS84. Localització del municipi en direcció est o oest.",
+                "Sistema de coordenades WGS84. Localització del municipi en direcció nord o sud.",
+                "Codi INE del municipi",
+                "Nom del municipi",
+                "Municipis inclosos a la zona de mercat residencial tensat. La ZMRT1 inclou afecta 140 municipis i és efectiva des del 16 de març de 2024. (El 15 de març es va publicar al BOE la llista dels 140 municipis declarats zona de mercat residencial tensat de Catalunya. En aquests municipis hi ha unes dificultats especials per accedir a l’habitatge, i s’hi apliquen les mesures per limitar el preu del lloguer). La ZMRT 2 abasta 131 municipis i és efectiva des del 10 d'octubre de 2024. (El 9 d'octubre es va publicar al BOE la llista dels 131 municipis declarats zona de mercat residencial tensat de Catalunya. En aquests municipis també hi ha unes dificultats especials per accedir a l’habitatge)",
+                "Àmbits d'actuació per assolir les finalitats del Pla territorial sectorial de l'habitatge. Les àrees de demanda residencial forta i acreditada (ADFA) són les que de forma prioritària hauran de dur a terme les polítiques d'habitatge per assolir els objectius de solidaritat urbana.",
+                "Municipis inclosos en les àrees d'intervenció complementària  que defineix el PTSH a efectes de l'impost d'habitatges buit prevista en la Llei 14/2015.",
+                "Nom de la província",
+                "Codi del municipi assignat per l’Institut d’Estadística de Catalunya",
+                "Nom de la comarca",
+                "This column was automatically created in order to record in what polygon from the dataset 'LIMADM_MUNICIPI' (bh64-c7uy) the point in column 'georeferencia_municipi' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                "Zones geogràfiques d'Habitatges amb Protecció Oficial (HPO)",
+                "Vegueria (o àmbit funcional) al que pertany el municipi",
+                "Municipis de més de 50.000 habitants i tots els municipis AMB que tenen l'obligació de subscriure un programa d’actuació concertada",
+                "Dades de georeferència. Posicionament espacial del municipi.",
+                "Codi de la comarca assignat per l’Institut d’Estadística de Catalunya."
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 937,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-03-18T07:26:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Habitatge",
+            "domain_tags" :
+              [
+                "municipi",
+                "habitatge protegit",
+                "zones hpo",
+                "mercat habitatge tens",
+                "impost habitatges buits",
+                "àrees de demanda forta i acreditada",
+                "contenció renda lloguer",
+                "ods9_indústria innovació i infraestructures",
+                "ods10_reducció de les desigualtats",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Areas and reference zones in housing policy in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Áreas y zonas de referencia en materia de política de vivienda en Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/fftm-v9b6",
+        "link" : "https://analisi.transparenciacatalunya.cat/Habitatge/Àrees-de-referencia-en-matèria-de-política-d-habit/fftm-v9b6",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Noms geogràfics de Catalunya",
+            "id" : "v2fg-bcdn",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Els topònims (noms de lloc) presents en la cartografia de l'Institut Cartogràfic i Geològic de Catalunya, com ara els noms de municipis i caps de municipi, nuclis de població i edificacions aïllades, instal·lacions i equipaments, elements del relleu (orònims), xarxa hidrogràfica i hidrografia puntual (hidrònims), espais protegits i altres elements singulars del territori; amb les coordenades del punt on se situen.\nAddicionalment es distribueix segons les especificacions tècniques de Noms geogràfics de la Directiva INSPIRE i el Reglament que estableix la llista de conjunts de dades específiques d'alt valor.",
+            "attribution" : "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+            "attribution_link" : "https://www.icgc.cat",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-17T09:53:31.000Z",
+            "createdAt" : "2017-03-20T13:13:02.000Z",
+            "metadata_updated_at" : "2026-09-17T09:53:31.000Z",
+            "data_updated_at" : "2017-03-20T13:13:02.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 40,
+                "page_views_last_month" : 98,
+                "page_views_total" : 5312,
+                "page_views_last_week_log" : 5.357552004618084,
+                "page_views_last_month_log" : 6.6293566200796095,
+                "page_views_total_log" : 12.37531099747307
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-03-20T13:15:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Urbanisme-infraestructures",
+            "domain_tags" :
+              [
+                "ods11_ciutats i comunitats sostenibles",
+                "toponímia",
+                "noms geogràfics"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "Geoespacial"
+                },
+                { "key" : "Enllaços-relacionats_Nom", "value" : "Web ICGC" },
+                {
+                  "key" : "Enllaços-relacionats_URL",
+                  "value" : "https://www.icgc.cat"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Geographical names of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Nombres geográficos de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Dades geogràfiques"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                { "key" : "Actors_Organisme-o-institució", "value" : "ICGC" },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Semestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "Creative Commons Attribution 4.0 International",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "API Territorial" : "https://www.icgc.cat/ca/Eines-i-visors/Recursos-desenvolupadors/API-Territorial",
+                      "Metadada" : "https://catalegs.ide.cat/geonetwork/srv/cat/catalog.search#/search?title=Noms%20geografics&orgName=Institut%20Cartogr%C3%A0fic%20i%20Geol%C3%B2gic%20de%20Catalunya&facet.q=category%2FrccState",
+                      "Descàrrega web" : "https://www.icgc.cat/ca/Geoinformacio-i-mapes/Dades-i-productes/Geoinformacio-cartografica/Noms-geografics"
+                    },
+                  "description" : "Noms geogràfics oficials de Catalunya",
+                  "title" : "Noms geogràfics de Catalunya",
+                  "described_by" : "https://datacloud.ide.cat/especificacions/noms-geografics-v1r1-esp-01ca-20231114.pdf"
+                },
+                {
+                  "urls" :
+                    {
+                      "Descàrrega ATOM" : "https://geoserveis.ide.cat/servei/catalunya/inspire-noms-geografics/atom/inspire-noms-geografics.atom.xml",
+                      "Metadada" : "https://catalegs.ide.cat/geonetwork/srv/cat/catalog.search#/metadata/inspire-noms-geografics",
+                      "Descàrrega OGC API Features" : "https://geoserveis.ide.cat/servei/catalunya/inspire/ogc/features",
+                      "WMS" : "https://geoserveis.ide.cat/servei/catalunya/inspire-noms-geografics/wms?service=wms&request=GetCapabilities"
+                    },
+                  "description" : "Noms d’unitats administratives, elements del relleu, hidrografia, xarxes de transport, punts d’interès i altres elements geogràfics de Catalunya; segons les especificacions tècniques de Noms geogràfics de la Directiva INSPIRE i el Reglament que estableix la llista de conjunts de dades específiques d'alt valor.",
+                  "title" : "Noms geogràfics INSPIRE",
+                  "described_by" : "https://inspire.ec.europa.eu/id/document/tg/gn"
+                }
+              ],
+            "access_points" :
+              {
+                "API Territorial" : "https://www.icgc.cat/ca/Eines-i-visors/Recursos-desenvolupadors/API-Territorial",
+                "Metadada" : "https://catalegs.ide.cat/geonetwork/srv/cat/catalog.search#/search?title=Noms%20geografics&orgName=Institut%20Cartogr%C3%A0fic%20i%20Geol%C3%B2gic%20de%20Catalunya&facet.q=category%2FrccState",
+                "Descàrrega web" : "https://www.icgc.cat/ca/Geoinformacio-i-mapes/Dades-i-productes/Geoinformacio-cartografica/Noms-geografics"
+              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/v2fg-bcdn",
+        "link" : "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Noms-geogràfics-de-Catalunya/v2fg-bcdn",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Espais Naturals de protecció especial i reserves naturals de fauna salvatge",
+            "id" : "axtb-wxcs",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d'espais naturals protegits segons el Pla d'espais d'interès natural (PEIN) amb un règim de protecció addicional, i reserves naturals de fauna salvatge regulades per la Llei de protecció dels animals.",
+            "attribution" : "Catàleg Tècnic de Dades. Direcció General de Polítiques Ambientals i Medi Natural",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-09-22T09:46:23.000Z",
+            "createdAt" : "2025-06-25T06:13:10.000Z",
+            "metadata_updated_at" : "2025-09-22T09:46:23.000Z",
+            "data_updated_at" : "2025-06-25T10:55:29.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 33,
+                "page_views_last_month" : 62,
+                "page_views_total" : 660,
+                "page_views_last_week_log" : 5.08746284125034,
+                "page_views_last_month_log" : 5.977279923499917,
+                "page_views_total_log" : 9.36850646150769
+              },
+            "columns_name" :
+              [
+                "Identificador espai natural",
+                "Nom espai natural",
+                "Identificador tipus espai natural",
+                "Tipus espai natural"
+              ],
+            "columns_field_name" :
+              [
+                "ide_espai_natural",
+                "des_espai_natural",
+                "ide_tipus_espai_natural",
+                "des_tipus_espai_natural"
+              ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Identificador únic del espai natural. És una codificació ascendent relacionada amb l’identificador del tipus d’espai natural.",
+                "Denominació de l’espai natural.",
+                "Identificador del tipus d'espai natural.",
+                "Denominació del tipus de l’espai natural."
+              ],
+            "columns_format" :
+              [
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {}
+              ],
+            "download_count" : 269,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2025-06-25T10:55:40.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" : [ "dades_de_referència" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "Observació de la Terra i medi ambient"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Specially protected natural areas and wildlife nature reserves"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Espacios Naturales de protección especial y reservas naturales de fauna salvaje"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/axtb-wxcs",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Espais-Naturals-de-protecció-especial-i-reserves-n/axtb-wxcs",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Cartografia de Catalunya. Visualitzador de mapes (VISSIR)",
+            "id" : "qwzi-vvm2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Visualitzador de la cartografia de l'Institut Cartogràfic de Catalunya (VISSIR).\n\nProductes que ofereix:\n\nMapes i ortofotos en format SID:\n\nMapes topogràfics de Catalunya 1:5.000, 1:10.000, 1:25.000, 1:50.000, 1:250.000, 1:500.000 i 1:1.000.000.\nImatge satèl·lit de Catalunya 1:250.000.\nOrtofotos de Catalunya 1:1.000 vigent (cobertura parcial), 1:2.500 vigent, 1:2.500 2009, 1:2.500 2008 (cobertura parcial), 1:5.000 vigent, 1:5.000 2009, 1:5.000 2008, 1:25.000 vigent, 1:25.000 2009, 1:25.000 2008.\nOrtofotos infraroges de Catalunya 1:2.500, 1:2.500 2009, 1:2.500 2008 (cobertura parcial), 1:5.000 vigent, 1:5.000 2009, 1:5.000 2008, 1:25.000 vigent, 1:25.000 2009, 1:25.000 2008.\nOrtofoto de Catalunya del Vol americà sèrie B 1:5.000 (1956-57).\nCartografia topogràfica 1:1.000 i 1:2.000 en format DGN, DXF i SHP\n\nMapa urbà de Catalunya (MUC). Aixecaments topogràfics i cartografia topogràfica d'àmbits urbans i urbanitzables a escala 1:1.000 o més gran.\nCartografia topogràfica 1:5.000 en format DGN, DXF, SHP, MMZ i KML-KMZ\n\nBase topogràfica digital que cobreix tot el territori de Catalunya i de la qual es deriva el Mapa Topogràfic de Catalunya 1:5.000.\nBase topogràfica de Catalunya 1:50.000 en format DGN, DXF i EXP.\n\nMapa topogràfic comarcal que cobreix tot el territori de Catalunya i del qual es deriva la Base topogràfica 1:50.000 de Catalunya.\nBase topogràfica de Catalunya 1:25.000 en format DGN, DXF, SHP i MMZ.\n\nBase topogràfica digital que cobreix tot el territori de Catalunya a escala 1:25.000 i de la qual es deriva el Mapa topogràfic de Catalunya 1:25.000 d'unitats geogràfiques, espais naturals protegits i capitals comarcals.\nBase municipal de Catalunya 1:50.000 en format DGN, DXF i SHP.\n\nLímits de les demarcacions territorials en què s'estructura l'Administració de Catalunya: municipis, comarques i províncies, a escala 1:50.000.\nBase municipal 1:1.000.000 de Catalunya en format DGN, DXF i SHP.\n\nLímits de les demarcacions territorials en què s'estructura l'Administració de Catalunya: municipis, comarques i províncies, a escala 1:1.000.000.\nPolígons industrials de Catalunya en format SHP.\n\nBase de dades que recull la localització i les característiques dels polígons d'activitat econòmica de Catalunya.\n100 cims emblemàtics de Catalunya en format PDF.\n\nAltitud real dels cims més destacats de Catalunya.\nTalls de les sèries cartogràfiques de l'ICC en format SHP i PDF.\n\nTall cartogràfic dels fulls de les sèries cartogràfiques 1:2.000, 1:5.000, 1:10.000, 1:25.000 i 1:50.000.\nModel d'elevacions del terreny de 15 x 15 m en format TXT.\n\nModel digital del terreny amb un pas de malla de 15x15 m i cobertura total de Catalunya.\nMapa dels sòls de pendents > 20% en format DGN\n\nMapa de Catalunya amb la delimitació dels sòls amb un pendent superior al 20%.",
+            "attribution" : "Departament de Territori, Habitatge i Transició Ecològica",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2025-09-22T09:57:33.000Z",
+            "createdAt" : "2017-03-17T09:37:48.000Z",
+            "metadata_updated_at" : "2025-09-22T09:57:33.000Z",
+            "data_updated_at" : "2017-03-17T09:37:48.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 49,
+                "page_views_last_month" : 143,
+                "page_views_total" : 9956,
+                "page_views_last_week_log" : 5.643856189774724,
+                "page_views_last_month_log" : 7.169925001442313,
+                "page_views_total_log" : 13.281495414799457
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-03-17T09:38:26.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Medi Rural-Pesca",
+            "domain_tags" :
+              [
+                "cartografia",
+                "mapes",
+                "geografia",
+                "municipis",
+                "territori",
+                "paisatge",
+                "urbanisme",
+                "topografia",
+                "comarques",
+                "ortoimatges",
+                "smartcatalonia",
+                "ods9_indústria innovació i infraestructures",
+                "ods11_ciutats i comunitats sostenibles"
+              ],
+            "domain_metadata" :
+              [
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Cartograhpy of Catalonia. Visualization and download of maps (VISSIR)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Cartografía de Catalunya. Visualizador y descarga de mapas (VISSIR)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Servei web"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Territori, Habitatge i Transició Ecològica"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    { "accedeix" : "http://www.icc.cat/vissir3/?lang=ca_ES" }
+                }
+              ],
+            "access_points" :
+              { "accedeix" : "http://www.icc.cat/vissir3/?lang=ca_ES" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qwzi-vvm2",
+        "link" : "https://analisi.transparenciacatalunya.cat/Medi-Rural-Pesca/Cartografia-de-Catalunya-Visualitzador-de-mapes-VI/qwzi-vvm2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 4,
+  "timings" : { "serviceMillis" : 20, "searchMillis" : [ 1, 6 ] },
+  "warnings" : []
+}
