@@ -219,6 +219,14 @@ def construir(pob_mun: dict) -> dict:
                 pon(ine, "u_" + k, y, v)
             if y == ult and ine in ("gi", "cat"):
                 refs.setdefault("u_ha", {})[ine] = {"su": r(x["_05_su"]), "surb": r(x["_05_surb"]), "snu": r(x["_05_snu"])}
+    fm = D / "muc_seccions.csv.gz"
+    if fm.exists():
+        u = pd.read_csv(fm, dtype={"cusec": str}).fillna(0)
+        g = lambda x, *ks: sum(x.get(k, 0) for k in ks)  # noqa: E731
+        for x in u.to_dict("records"):
+            tot = x["ha_total"]
+            o = {"hb_su": _q(g(x, "SUC", "SNC"), tot, 100, 1), "hb_surb": _q(g(x, "SUD", "SND"), tot, 100, 1), "hb_snu": _q(g(x, "SNU"), tot, 100, 1)}
+            out["sec"].setdefault(x["cusec"].zfill(10), {}).update({k: v for k, v in o.items() if v is not None})
     fs = D / "sectors_desenvolupament.csv.gz"
     if fs.exists():
         s = pd.read_csv(fs, dtype={"ine": str})

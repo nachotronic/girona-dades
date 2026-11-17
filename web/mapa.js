@@ -201,6 +201,7 @@
     ihb: { ca: "Agència Tributària de Catalunya, impost sobre els habitatges buits: pisos buits més de dos anys sense causa justificada de persones jurídiques (bancs, fons, empreses) declarats a l'impost, no exempts, per 1.000 habitatges. No inclou els pisos buits de particulars.", es: "Agència Tributària de Catalunya, impuesto sobre las viviendas vacías: pisos vacíos más de dos años sin causa justificada de personas jurídicas (bancos, fondos, empresas) declarados al impuesto, no exentos, por 1.000 viviendas. No incluye los pisos vacíos de particulares." },
     plan: { ca: "Mapa urbanístic de Catalunya, sectors de desenvolupament residencials i mixtos (plans parcials i de millora urbana): habitatges que el planejament preveu i que encara no s'han construït, per 100 habitatges existents (Cadastre).", es: "Mapa urbanístico de Cataluña, sectores de desarrollo residenciales y mixtos (planes parciales y de mejora urbana): viviendas que el planeamiento prevé y que aún no se han construido, por 100 viviendas existentes (Catastro)." },
     urb: { ca: "Mapa urbanístic de Catalunya (Departament de Territori): classificació del sòl segons el planejament general vigent de cada municipi.", es: "Mapa urbanístico de Cataluña (Departament de Territori): clasificación del suelo según el planeamiento general vigente de cada municipio." },
+    urb_s: { ca: "Mapa urbanístic de Catalunya (Departament de Territori): classificació del sòl segons el planejament general vigent. A les seccions censals, polígons del servei WFS del Mapa urbanístic creuats amb el seccionat de l'INE.", es: "Mapa urbanístico de Cataluña (Departament de Territori): clasificación del suelo según el planeamiento general vigente. En las secciones censales, polígonos del servicio WFS del Mapa urbanístico cruzados con el seccionado del INE." },
   };
   const HBI = [
     ["ini", ["Habitatges iniciats", "Habitatges iniciats per 1.000 habitants"], ["Viviendas iniciadas", "Viviendas iniciadas por 1.000 habitantes"], { nota: NHB.cons, ...N1 }],
@@ -214,9 +215,9 @@
     ["pend_viv", ["Habitatges per construir", "Habitatges previstos pel planejament i no construïts, per 100 habitatges"], ["Viviendas por construir", "Viviendas previstas por el planeamiento y no construidas, por 100 viviendas"], { ref: () => { const p = (D.hb_ref && D.hb_ref.plan) || {}; return { gi: p.gi && p.gi.pend_viv, cat: p.cat && p.cat.pend_viv }; }, nota: NHB.plan, ...N1 }],
   ];
   const HBU = [
-    ["su", ["Sòl urbà", "Sòl urbà (% de la superfície del municipi)"], ["Suelo urbano", "Suelo urbano (% de la superficie del municipio)"], P1],
-    ["surb", ["Sòl urbanitzable", "Sòl urbanitzable (% de la superfície del municipi)"], ["Suelo urbanizable", "Suelo urbanizable (% de la superficie del municipio)"], { f: (v) => pct(v, 1), c: (v) => pct(v, 1) }],
-    ["snu", ["Sòl no urbanitzable", "Sòl no urbanitzable (% de la superfície del municipi)"], ["Suelo no urbanizable", "Suelo no urbanizable (% de la superficie del municipio)"], P0],
+    ["su", ["Sòl urbà", "Sòl urbà (% de la superfície del municipi)"], ["Suelo urbano", "Suelo urbano (% de la superficie del municipio)"], { s: S("hb_su"), ...P1 }],
+    ["surb", ["Sòl urbanitzable", "Sòl urbanitzable (% de la superfície del municipi)"], ["Suelo urbanizable", "Suelo urbanizable (% de la superficie del municipio)"], { s: S("hb_surb"), f: (v) => pct(v, 1), c: (v) => pct(v, 1) }],
+    ["snu", ["Sòl no urbanitzable", "Sòl no urbanitzable (% de la superfície del municipi)"], ["Suelo no urbanizable", "Suelo no urbanizable (% de la superficie del municipio)"], { s: S("hb_snu"), ...P0 }],
     ["su_hab", ["Sòl urbà per habitant", "Sòl urbà per habitant (m²)"], ["Suelo urbano por habitante", "Suelo urbano por habitante (m²)"], { f: (v) => `${fmt(v)} m²`, c: (v) => fmt(v) }],
     ["snc", ["Sòl urbà per desenvolupar", "Sòl urbà no consolidat (% del sòl urbà)"], ["Suelo urbano por desarrollar", "Suelo urbano no consolidado (% del suelo urbano)"], P1],
     ["res_suc", ["Sòl urbà residencial", "Zones residencials (% del sòl urbà consolidat)"], ["Suelo urbano residencial", "Zonas residenciales (% del suelo urbano consolidado)"], P0],
@@ -570,7 +571,7 @@
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     // Mapa urbanístic de Catalunya: sèrie anual per municipi
     ...HBU.map(([k, ca, es, fmtk]) => ({ id: "u_" + k, tema: "ter", ca, es, a: "hb_urb", sumable: false, v: (m) => HB("u_" + k)(m, D.anys && D.anys.hb_urb), t: HB("u_" + k), pv: HBR("u_" + k, "gi"),
-      ref: () => ({ cat: HBR("u_" + k, "cat")(anyActiu() || (D.anys && D.anys.hb_urb)) }), nota: NHB.urb, ...fmtk })),
+      ref: () => ({ cat: HBR("u_" + k, "cat")(anyActiu() || (D.anys && D.anys.hb_urb)) }), nota: fmtk.s ? NHB.urb_s : NHB.urb, ...fmtk })),
     // Cadastre: sèrie anual per municipi
     ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: CADK(k), sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
       ...(k === "n" || k === "hos" || k === "rev" || k === "ibi_desoc" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
