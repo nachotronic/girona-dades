@@ -70,16 +70,52 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
 
-# Exportaciones (comercio exterior), 2.ª ronda
+# Exportaciones (comercio exterior), 3.ª ronda: formato y columnas de los ficheros territoriales AEAT
 CANDIDATAS_E = {}
-AE = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/"
-for k in ("2026-territoriales", "2025-territoriales", "2024-territoriales", "2025-resumenes", "2024", "2025",
-          "datos-comercio-exterior-caracteristicas-empresa", "directorios-empresas-comercio-exterior", "2026-maxima-desagregacion"):
-    CANDIDATAS_E["aeat_" + k] = AE + k + ".html"
-for k in ("18134/8", "18136/4", "22177"):
-    CANDIDATAS_E["idescat_" + k.replace("/", "_")] = f"{IDC}/comest/{k}?lang=ca"
-CANDIDATAS_E["idescat_estad_comest"] = "https://www.idescat.cat/estad/comest"
-CANDIDATAS_E["datacomex_old"] = "https://datacomex.comercio.es/Home/Index"
+STF = "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/Aduanas/Comercio_exterior/"
+CANDIDATAS_E["pdf_mens"] = STF + "territoriales_mens/fich_datos_mens_territoriales.pdf"
+CANDIDATAS_E["pdf_anual"] = STF + "historicas_anuales/fich_datos_auales_territoriales.pdf"
+CANDIDATAS_E["hist_pag"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/2015.html"
+
+
+def explora_territoriales(filas: list) -> None:
+    import io, zipfile, collections
+    from pypdf import PdfReader
+    for k in ("pdf_mens", "pdf_anual"):
+        f = MUESTRAS / f"{k}.txt"
+        try:
+            r = requests.get(CANDIDATAS_E[k], headers=UA, timeout=120)
+            f.write_text("\n".join(p.extract_text() or "" for p in PdfReader(io.BytesIO(r.content)).pages), encoding="utf-8")
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| {k} pdf | error | {e} | | |")
+    out = []
+    for rango in ("24", "38", "43", "49", "67", "71", "83", "85", "92", "99"):
+        url = STF + f"historicas_anuales/territoriales_anuales/tr24an{rango}.zip"
+        try:
+            z = zipfile.ZipFile(io.BytesIO(requests.get(url, headers=UA, timeout=300).content))
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| tr24an{rango} | error | {e} | | |"); continue
+        for n in z.namelist():
+            lineas = z.read(n).decode("latin-1").splitlines()
+            cab = lineas[0]
+            cnt = collections.Counter(); val = collections.Counter()
+            g = []
+            for l in lineas[1:]:
+                clave = (l[3:4], l[5:7], l[7:9], l[-2:])
+                cnt[clave] += 1
+                try:
+                    val[clave] += int(l[56:69])
+                except ValueError:
+                    pass
+                if (l[5:7] == "17" or l[7:9] == "17" or l[-2:] == "17") and len(g) < 80:
+                    g.append(l)
+            out.append(f"== {n} lineas={len(lineas)} cab={cab!r}")
+            out.append("ejemplo largo: " + repr(lineas[1]) + f" len={len(lineas[1])}")
+            for c, v in sorted(val.items(), key=lambda x: -x[1])[:40]:
+                out.append(f"{c} n={cnt[c]} valor={v}")
+            out.append("-- con 17 --"); out += g
+    (MUESTRAS / "TERRITORIALES.txt").write_text("\n".join(out), encoding="utf-8")
+
 PAT_ENLACES = re.compile(r'href="([^"]+)"', re.I)
 CLAVES_ENLACE = re.compile(r"export|exterior|comex|cex|provinc|descarga|\.zip|\.xls|\.csv", re.I)
 
@@ -246,8 +282,7 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_enlaces(filas)
-    explora_ficheros(filas)
+    explora_territoriales(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
