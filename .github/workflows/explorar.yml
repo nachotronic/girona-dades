@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: python scripts/explorar.py
+      - run: python scripts/explorar_catastro.py
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
