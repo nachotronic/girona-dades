@@ -127,6 +127,9 @@ def extension(tipo: str) -> str:
 
 
 def main() -> None:
+    import explorar_powerbi
+    explorar_powerbi.main()
+    return
     MUESTRAS.mkdir(parents=True, exist_ok=True)
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
     for clave, url in CANDIDATAS_E.items():
