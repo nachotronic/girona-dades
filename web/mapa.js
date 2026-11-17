@@ -262,6 +262,7 @@
 
   // Cadastre (Direcció General del Cadastre, «Datos municipios»): m.cad = {clave: {año: valor}}
   const CV = (k) => (m, a) => (a != null && m.cad && m.cad[k] && m.cad[k][a] != null ? m.cad[k][a] : null);
+  const DESOC = { ca: ["Sí, el 50 % (el màxim)", "Sí, menys del 50 %", "No en cobra"], es: ["Sí, el 50 % (el máximo)", "Sí, menos del 50 %", "No cobra"] };
   const CADK = (k) => (k === "vm2" || k === "sm2" ? "cad_vm2" : k.startsWith("ibi_") ? "cad_ibi" : "cad");
   const CADA = (k) => D.anys && D.anys[CADK(k)];
   const CVR = (k, z) => (a) => { const r = D.cad_ref && D.cad_ref[k] && D.cad_ref[k][a]; return r && r[z] != null ? r[z] : null; };
@@ -292,7 +293,6 @@
     ["ibi_tot", ["Tot l'IBI per habitant", "Quota líquida de l'IBI urbà, rústic i d'equipaments especials per habitant (€)"], ["Todo el IBI por habitante", "Cuota líquida del IBI urbano, rústico y de equipamientos especiales por habitante (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
     ["ibi_base", ["Base de l'IBI", "Base liquidable mitjana per rebut de l'IBI urbà (€)"], ["Base del IBI", "Base liquidable media por recibo del IBI urbano (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
     ["ibi_bon", ["Bonificacions de l'IBI", "Bonificacions sobre la quota íntegra de l'IBI urbà (%)"], ["Bonificaciones del IBI", "Bonificaciones sobre la cuota íntegra del IBI urbano (%)"], { tema: "tri", nota: NOTA_IBI, ...P1 }],
-    ["ibi_desoc", ["Recàrrec a pisos buits", "Recàrrec de l'IBI als habitatges desocupats (%)"], ["Recargo a pisos vacíos", "Recargo del IBI a las viviendas desocupadas (%)"], { tema: "tri", nota: { ca: "Direcció General del Cadastre. Recàrrec (fins al 50 %) que l'ajuntament pot cobrar sobre la quota de l'IBI dels habitatges desocupats amb caràcter permanent. 0 = no l'aplica.", es: "Dirección General del Catastro. Recargo (hasta el 50 %) que el ayuntamiento puede cobrar sobre la cuota del IBI de las viviendas desocupadas con carácter permanente. 0 = no lo aplica." }, ...P0 }],
     ["rev", ["Ponència de valors", "Any de l'última revisió cadastral (ponència de valors)"], ["Ponencia de valores", "Año de la última revisión catastral (ponencia de valores)"], { sumable: false, f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) }],
   ];
 
@@ -610,8 +610,13 @@
       ref: () => ({ cat: HBR("u_" + k, "cat")(anyActiu() || (D.anys && D.anys.hb_urb)) }), nota: fmtk.s ? NHB.urb_s : NHB.urb, ...fmtk })),
     // Cadastre: sèrie anual per municipi
     ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: CADK(k), sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
-      ...(k === "n" || k === "hos" || k === "rev" || k === "ibi_desoc" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
+      ...(k === "n" || k === "hos" || k === "rev" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
       nota: NOTA_CAD, ...ext })),
+    // Recàrrec als pisos buits: categories (la majoria d'ajuntaments no el cobren)
+    { id: "cad_ibi_desoc", tema: "tri", cat: true, ca: ["Recàrrec a pisos buits", "Ajuntaments que cobren un recàrrec de l'IBI als habitatges desocupats"], es: ["Recargo a pisos vacíos", "Ayuntamientos que cobran un recargo del IBI a las viviendas desocupadas"],
+      v: (m) => { const v = CV("ibi_desoc")(m, CADA("ibi_desoc")); return v == null ? null : v >= 50 ? DESOC[LANG][0] : v > 0 ? DESOC[LANG][1] : DESOC[LANG][2]; },
+      f: (v) => v, c: (v) => v, color: (v) => (v === DESOC[LANG][0] ? "#0b4f4b" : v === DESOC[LANG][1] ? "#5fae9f" : "#e2e5e8"),
+      nota: { ca: "Direcció General del Cadastre. Recàrrec (fins al 50 %) que l'ajuntament pot cobrar sobre la quota de l'IBI dels habitatges desocupats amb caràcter permanent.", es: "Dirección General del Catastro. Recargo (hasta el 50 %) que el ayuntamiento puede cobrar sobre la cuota del IBI de las viviendas desocupadas con carácter permanente." }, notaCat: { ca: "Nombre de municipis de la província en cada cas (últim any amb dades).", es: "Número de municipios de la provincia en cada caso (último año con datos)." } },
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
       v: (m) => tribMax(m, D.anys && D.anys.trib), t: tribMax, nota: { ca: "Quants d'aquests cinc impostos té l'ajuntament al màxim que permet la llei: IBI urbà (1,10 %, sense increments), IAE (coeficient 3,8), impost de circulació (el doble de la quota mínima), plusvàlua (30 %) i ICIO (4 %). Ministeri d'Hisenda.", es: "Cuántos de estos cinco impuestos tiene el ayuntamiento al máximo que permite la ley: IBI urbano (1,10 %, sin incrementos), IAE (coeficiente 3,8), impuesto de circulación (el doble de la cuota mínima), plusvalía (30 %) e ICIO (4 %). Ministerio de Hacienda." }, f: (v) => `${fmt(v)} / 5`, c: (v) => fmt(v) },
