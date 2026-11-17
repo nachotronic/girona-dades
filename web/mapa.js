@@ -192,15 +192,18 @@
 
   // Cadastre (Direcció General del Cadastre, «Datos municipios»): m.cad = {clave: {año: valor}}
   const CV = (k) => (m, a) => (a != null && m.cad && m.cad[k] && m.cad[k][a] != null ? m.cad[k][a] : null);
-  const CADA = (k) => D.anys && (k === "vm2" ? D.anys.cad_vm2 : D.anys.cad);
+  const CADK = (k) => (k === "vm2" || k === "sm2" ? "cad_vm2" : k.startsWith("ibi_") ? "cad_ibi" : "cad");
+  const CADA = (k) => D.anys && D.anys[CADK(k)];
   const CVR = (k, z) => (a) => { const r = D.cad_ref && D.cad_ref[k] && D.cad_ref[k][a]; return r && r[z] != null ? r[z] : null; };
   const NOTA_CAD = { ca: "Direcció General del Cadastre (Ministeri d'Hisenda), estadístiques per municipi. L'any és el del padró cadastral a 1 de gener. El valor cadastral el fixa la ponència de valors i sol ser molt inferior al de mercat; als municipis amb la ponència antiga ho és encara més. Espanya, sense el País Basc ni Navarra (tenen cadastre propi).", es: "Dirección General del Catastro (Ministerio de Hacienda), estadísticas por municipio. El año es el del padrón catastral a 1 de enero. El valor catastral lo fija la ponencia de valores y suele ser muy inferior al de mercado; en los municipios con la ponencia antigua lo es todavía más. España, sin el País Vasco ni Navarra (tienen catastro propio)." };
+  const NOTA_IBI = { ca: "Direcció General del Cadastre, informació economicofinancera de l'IBI: rebuts, bases i quotes de cada ajuntament. Quota líquida = el que es paga després de bonificacions. Espanya, sense el País Basc ni Navarra.", es: "Dirección General del Catastro, información económico-financiera del IBI: recibos, bases y cuotas de cada ayuntamiento. Cuota líquida = lo que se paga después de bonificaciones. España, sin el País Vasco ni Navarra." };
   const NOTA_CAD_U = { ca: "Direcció General del Cadastre. Immobles urbans segons l'ús principal que hi consta al Cadastre.", es: "Dirección General del Catastro. Inmuebles urbanos según el uso principal que consta en el Catastro." };
   const CAD = [
     ["vm", ["Valor cadastral mitjà", "Valor cadastral mitjà per immoble urbà (€)"], ["Valor catastral medio", "Valor catastral medio por inmueble urbano (€)"], EU],
     ["vviv", ["Valor cadastral de l'habitatge", "Valor cadastral mitjà dels immobles residencials (€)"], ["Valor catastral de la vivienda", "Valor catastral medio de los inmuebles residenciales (€)"], EU],
     ["vhab", ["Valor cadastral per habitant", "Valor cadastral urbà per habitant (€)"], ["Valor catastral por habitante", "Valor catastral urbano por habitante (€)"], EU],
     ["vm2", ["Valor cadastral per m²", "Valor cadastral mitjà de l'habitatge (€/m²)"], ["Valor catastral por m²", "Valor catastral medio de la vivienda (€/m²)"], { s: S("cad_vm2"), nota: { ca: "Direcció General del Cadastre, sèries per districte censal: valor cadastral mitjà per metre quadrat de l'habitatge col·lectiu i unifamiliar, ponderat pel nombre d'immobles. A la vista per seccions, cada secció mostra el valor del seu districte censal.", es: "Dirección General del Catastro, series por distrito censal: valor catastral medio por metro cuadrado de la vivienda colectiva y unifamiliar, ponderado por el número de inmuebles. En la vista por secciones, cada sección muestra el valor de su distrito censal." }, f: (v) => `${fmt(v)} €/m²`, c: (v) => fmt(v) }],
+    ["sm2", ["Superfície de l'habitatge", "Superfície mitjana de l'habitatge (m²)"], ["Superficie de la vivienda", "Superficie media de la vivienda (m²)"], { s: S("cad_sm2"), nota: { ca: "Direcció General del Cadastre, sèries per districte censal: superfície construïda mitjana de l'habitatge col·lectiu i unifamiliar, ponderada pel nombre d'immobles. Inclou la part proporcional dels elements comuns. A la vista per seccions, cada secció mostra el valor del seu districte censal.", es: "Dirección General del Catastro, series por distrito censal: superficie construida media de la vivienda colectiva y unifamiliar, ponderada por el número de inmuebles. Incluye la parte proporcional de los elementos comunes. En la vista por secciones, cada sección muestra el valor de su distrito censal." }, f: (v) => `${fmt(v)} m²`, c: (v) => fmt(v) }],
     ["sol", ["Pes del sòl", "Valor del sòl sobre el valor cadastral urbà (%)"], ["Peso del suelo", "Valor del suelo sobre el valor catastral urbano (%)"], { sumable: false, ...P0 }],
     ["n", ["Immobles urbans", "Immobles urbans (béns immobles)"], ["Inmuebles urbanos", "Inmuebles urbanos (bienes inmuebles)"], N0],
     ["ih", ["Immobles per habitant", "Immobles urbans per 100 habitants"], ["Inmuebles por habitante", "Inmuebles urbanos por 100 habitantes"], N0],
@@ -214,6 +217,12 @@
     ["suph", ["Sòl urbà per habitant", "Superfície de les parcel·les urbanes per habitant (m²)"], ["Suelo urbano por habitante", "Superficie de las parcelas urbanas por habitante (m²)"], N0],
     ["rha", ["Valor del sòl rústic", "Valor cadastral rústic per hectàrea (€)"], ["Valor del suelo rústico", "Valor catastral rústico por hectárea (€)"], { sumable: false, ...EU }],
     ["rpar", ["Mida de la finca rústica", "Superfície mitjana de la parcel·la rústica (ha)"], ["Tamaño de la finca rústica", "Superficie media de la parcela rústica (ha)"], { sumable: false, ...N2 }],
+    ["ibi_rec", ["Rebut mitjà de l'IBI", "Quota líquida mitjana per rebut de l'IBI urbà (€)"], ["Recibo medio del IBI", "Cuota líquida media por recibo del IBI urbano (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_hab", ["IBI per habitant", "Quota líquida de l'IBI urbà per habitant (€)"], ["IBI por habitante", "Cuota líquida del IBI urbano por habitante (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_tot", ["Tot l'IBI per habitant", "Quota líquida de l'IBI urbà, rústic i d'equipaments especials per habitant (€)"], ["Todo el IBI por habitante", "Cuota líquida del IBI urbano, rústico y de equipamientos especiales por habitante (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_base", ["Base de l'IBI", "Base liquidable mitjana per rebut de l'IBI urbà (€)"], ["Base del IBI", "Base liquidable media por recibo del IBI urbano (€)"], { tema: "tri", nota: NOTA_IBI, ...EU }],
+    ["ibi_bon", ["Bonificacions de l'IBI", "Bonificacions sobre la quota íntegra de l'IBI urbà (%)"], ["Bonificaciones del IBI", "Bonificaciones sobre la cuota íntegra del IBI urbano (%)"], { tema: "tri", nota: NOTA_IBI, ...P1 }],
+    ["ibi_desoc", ["Recàrrec a pisos buits", "Recàrrec de l'IBI als habitatges desocupats (%)"], ["Recargo a pisos vacíos", "Recargo del IBI a las viviendas desocupadas (%)"], { tema: "tri", nota: { ca: "Direcció General del Cadastre. Recàrrec (fins al 50 %) que l'ajuntament pot cobrar sobre la quota de l'IBI dels habitatges desocupats amb caràcter permanent. 0 = no l'aplica.", es: "Dirección General del Catastro. Recargo (hasta el 50 %) que el ayuntamiento puede cobrar sobre la cuota del IBI de las viviendas desocupadas con carácter permanente. 0 = no lo aplica." }, ...P0 }],
     ["rev", ["Ponència de valors", "Any de l'última revisió cadastral (ponència de valors)"], ["Ponencia de valores", "Año de la última revisión catastral (ponencia de valores)"], { sumable: false, f: (v) => String(Math.round(v)), c: (v) => String(Math.round(v)) }],
   ];
 
@@ -515,8 +524,8 @@
       nota: { ca: "Mapa del Comerç Català 2022 (Generalitat): inspecció directa dels locals de les ciutats de més de 20.000 habitants i de les capitals de comarca. A la resta de municipis no s'ha fet.", es: "Mapa del Comerç Català 2022 (Generalitat): inspección directa de los locales de las ciudades de más de 20.000 habitantes y de las capitales de comarca. En el resto de municipios no se ha hecho." }, ...P1 },
     // Impuestos municipales: tipos de cada ayuntamiento por año (Ministerio de Hacienda, SGFAL)
     // Cadastre: sèrie anual per municipi
-    ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: k === "vm2" ? "cad_vm2" : "cad", sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
-      ...(k === "n" || k === "hos" || k === "rev" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
+    ...CAD.map(([k, ca, es, ext]) => ({ id: "cad_" + k, tema: "cad", ca, es, a: CADK(k), sumable: false, v: (m) => CV(k)(m, CADA(k)), t: CV(k),
+      ...(k === "n" || k === "hos" || k === "rev" || k === "ibi_desoc" ? {} : { pv: CVR(k, "gi"), ref: () => { const a = CADA(k); return { cat: CVR(k, "cat")(a), esp: CVR(k, "esp")(a) }; } }),
       nota: NOTA_CAD, ...ext })),
     ...TRIB.map(([k, ca, es, ext]) => ({ id: "trib_" + k, tema: "tri", ca, es, a: "trib", v: (m) => TV(k)(m, D.anys && D.anys.trib), t: TV(k), nota: ext.nota || NOTA_TRIB, ...ext })),
     { id: "trib_max", sumable: false, tema: "tri", ca: ["Impostos al màxim", "Impostos al màxim legal (dels 5 principals)"], es: ["Impuestos al máximo", "Impuestos al máximo legal (de los 5 principales)"], a: "trib",
@@ -641,7 +650,7 @@
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
-      if (i.a === "cad" || i.a === "cad_vm2") D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       cacheAnys[i.id] = [...tots].sort().filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob != null ? i.cob : 0.3));
     }
@@ -1208,7 +1217,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "veh" || i.a === "cad" || i.a === "cad_vm2") ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
