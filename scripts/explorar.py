@@ -5,6 +5,7 @@ Se ejecuta en GitHub Actions (workflow explorar.yml). Escribe:
   exploracion/muestras/<id>.*   primeros 150 KB de cada respuesta
 """
 import pathlib
+import re
 import time
 import urllib.parse
 
@@ -68,6 +69,68 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "muc_robots": "https://territori.gencat.cat/robots.txt",
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
+
+# Exportaciones (comercio exterior): catálogos y páginas candidatas
+CANDIDATAS_E = {}
+for q in ("exportacions", "comerç exterior", "exportadores", "internacionalització"):
+    CANDIDATAS_E["soc_" + q[:6].replace("ç", "c").replace(" ", "")] = f"{SOCRATA}?q={urllib.parse.quote(q)}&limit=40&domains=analisi.transparenciacatalunya.cat"
+CANDIDATAS_E["idescat_cat"] = f"{IDC}?lang=ca"
+CANDIDATAS_E["datacomex_home"] = "https://datacomex.comercio.es/"
+CANDIDATAS_E["datacomex_api"] = "https://datacomex.comercio.es/api"
+CANDIDATAS_E["aeat_cat_datos"] = "https://sede.agenciatributaria.gob.es/Sede/datosabiertos/catalogo.shtml"
+CANDIDATAS_E["aeat_cex"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior.html"
+CANDIDATAS_E["aeat_cex2"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/datos-estadisticos.html"
+CANDIDATAS_E["aeat_cex_desc"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/datos-estadisticos/descarga-datos.html"
+CANDIDATAS_E["mincotur_est"] = "https://comercio.gob.es/es-es/estadisticas/Paginas/default.aspx"
+CANDIDATAS_E["mincotur_inf"] = "https://comercio.gob.es/ImportacionExportacion/Informes_Estadisticas/Paginas/Informes-periodicos.aspx"
+CANDIDATAS_E["icex_emp"] = "https://www.icex.es/es/quienes-somos/que-es-icex/estadisticas"
+CANDIDATAS_E["accio_dades"] = "https://www.accio.gencat.cat/ca/serveis/banc-coneixement/estadistiques-comerc-exterior/"
+CANDIDATAS_E["idescat_cex"] = "https://www.idescat.cat/indicadors/?id=aec&n=15199"
+CANDIDATAS_E["idescat_tema_cex"] = "https://www.idescat.cat/tema/comex"
+CANDIDATAS_E["cambra_gi"] = "https://www.cambragirona.cat/"
+PAT_ENLACES = re.compile(r'href="([^"]+)"', re.I)
+CLAVES_ENLACE = re.compile(r"export|exterior|comex|cex|provinc|descarga|\.zip|\.xls|\.csv", re.I)
+
+
+def explora_enlaces(filas: list) -> None:
+    """Saca de cada página guardada los enlaces que parecen de comercio exterior."""
+    out = []
+    for f in sorted(MUESTRAS.glob("*")):
+        if f.suffix not in (".html", ".txt", ".json"):
+            continue
+        t = f.read_text("utf-8", "ignore")
+        enl = sorted({e for e in PAT_ENLACES.findall(t) if CLAVES_ENLACE.search(e)})
+        out.append(f"== {f.name}\n" + "\n".join(enl[:200]))
+    (MUESTRAS / "ENLACES.txt").write_text("\n".join(out), encoding="utf-8")
+
+
+def explora_idescat(filas: list) -> None:
+    """Recorre el catálogo de tablas de Idescat buscando comercio exterior."""
+    import json
+    try:
+        cat = requests.get(f"{IDC}?lang=ca", headers=UA, timeout=60).json()
+    except Exception as e:  # noqa: BLE001
+        filas.append(f"| idescat_walk | error | {e} | | |"); return
+    txt = json.dumps(cat, ensure_ascii=False)
+    ids = sorted(set(re.findall(r'taules/v2/([a-z0-9]+)\?', txt)))
+    lines = [f"stats: {ids}"]
+    for st in ids:
+        try:
+            r = requests.get(f"{IDC}/{st}?lang=ca", headers=UA, timeout=60)
+            t = r.text
+        except Exception:  # noqa: BLE001
+            continue
+        if re.search(r"xport|xterior|comer", t, re.I):
+            lines.append(f"=== {st}\n{t[:20000]}")
+            for nodo in sorted(set(re.findall(rf'taules/v2/{st}/(\d+)\?', t)))[:20]:
+                try:
+                    t2 = requests.get(f"{IDC}/{st}/{nodo}?lang=ca", headers=UA, timeout=60).text
+                    lines.append(f"--- {st}/{nodo}\n{t2[:6000]}")
+                except Exception:  # noqa: BLE001
+                    pass
+        time.sleep(0.3)
+    (MUESTRAS / "IDESCAT_WALK.txt").write_text("\n".join(lines), encoding="utf-8")
+
 
 def explora_parque(filas: list) -> None:
     import re
@@ -163,6 +226,8 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
+    explora_idescat(filas)
+    explora_enlaces(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
