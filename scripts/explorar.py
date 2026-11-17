@@ -98,21 +98,31 @@ def explora_territoriales(filas: list) -> None:
         for n in z.namelist():
             lineas = z.read(n).decode("latin-1").splitlines()
             cab = lineas[0]
-            cnt = collections.Counter(); val = collections.Counter()
-            g = []
+            cnt = collections.Counter(); val = collections.Counter(); g = []
             for l in lineas[1:]:
-                clave = (l[3:4], l[4:9], l[-2:])
-                cnt[clave] += 1
                 try:
-                    val[clave] += int(l[49:62])
+                    v = int(l[-16:-3])
                 except ValueError:
-                    pass
-                if ("17" in l[4:9] or l[-2:] == "17") and len(g) < 80:
+                    v = -1
+                clave = (l[3:4], l[5:7].strip() and "AD", l[8:10] if l[8:10].strip() else "--", l[-2:] == "17")
+                cnt[clave] += 1; val[clave] += v
+                if (l[8:10] == "17") and len(g) < 40:
                     g.append(l)
+            muestra = [lineas[i] for i in range(1, len(lineas), max(1, len(lineas) // 40))]
+            gi = collections.Counter(); gv = collections.Counter()
+            for c, v in val.items():
+                if c[2] == "17":
+                    gi[("PR17", c[0])] += v
+                if c[3]:
+                    gv[("DF17", c[0])] += v
             out.append(f"== {n} lineas={len(lineas)} cab={cab!r}")
             out.append("ejemplo largo: " + repr(lineas[1]) + f" len={len(lineas[1])}")
-            for c, v in sorted(val.items(), key=lambda x: -x[1])[:40]:
-                out.append(f"{c} n={cnt[c]} valor={v}")
+            out += ["muestra:"] + muestra
+            out.append(f"girona PR: {dict(gi)} DF: {dict(gv)}")
+            prov = collections.Counter()
+            for c, v in val.items():
+                prov[(c[0], c[2])] += v
+            out.append("por PR: " + str(sorted(prov.items(), key=lambda x: -x[1])[:25]))
             out.append("-- con 17 --"); out += g
     (MUESTRAS / "TERRITORIALES.txt").write_text("\n".join(out), encoding="utf-8")
 
