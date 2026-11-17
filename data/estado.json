@@ -104,6 +104,13 @@
   "durada": 137,
   "resum": "quirurgiques: 93 mesos baixats, últim 2026-09\nexternes: 93 mesos baixats, últim 2026-09\ndiagnostiques: 93 mesos baixats, últim 2026-09"
  },
+ "mapaelectoral": {
+  "estat": "ok",
+  "intent": "2026-11-17T09:55:11Z",
+  "ok": "2026-11-17T09:55:11Z",
+  "durada": 16,
+  "resum": "G20041: 4473 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}\nG20081: 5141 filas de votos, zonas {'SE': 523, 'MU': 221, 'CA': 1}\nE20041: 4375 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}\nE20091: 4917 filas de votos, zonas {'SE': 525, 'MU': 221, 'CA': 1}\nM20071: 680 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19771: 1482 filas de votos, zonas {'MU': 217, 'CA': 1}\nG19791: 1485 filas de votos, zonas {'MU': 218, 'CA': 1}\nG19821: 1643 filas de votos, zonas {'MU': 213, 'CA': 1}\nG19861: 1491 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19891: 1493 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19931: 1424 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19961: 1248 filas de votos, zonas {'MU': 221, 'CA': 1}\nG20001: 1296 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19871: 1787 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19891: 1654 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19941: 1583 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19991: 1666 filas de votos, zonas {'MU': 221, 'CA': 1}\nM19791: 422 filas de votos, zonas {'MU': 216, 'CA': 1}\nM19831: 422 filas de votos, zonas {'MU': 219, 'CA': 1}\nM19871: 416 filas de votos, zonas {'MU': 218, 'CA': 1}\nM19911: 467 filas de votos, zonas {'MU': 219, 'CA': 1}\nM19951: 530 filas de votos, zonas {'MU': 221, 'CA': 1}\nM19991: 559 filas de votos, zonas {'MU': 221, 'CA': 1}\nM20031: 587 filas de votos, zonas {'MU': 221, 'CA': 1}\nR19331: 885 filas de votos, zonas {'MU': 218, 'CA': 1}\nR19361: 445 filas de votos, zonas {'MU': 219, 'CA': 1}"
+ },
  "mitma": {
   "estat": "ok",
   "intent": "2026-11-16T12:19:03Z",

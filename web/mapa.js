@@ -271,10 +271,16 @@
   const elGuany = (z) => { const c = elCands(z); return c.length ? c[0].b : null; };
   const elMarge = (z) => { const c = elCands(z), v = elValids(z); return c.length > 1 && v ? ((c[0].v - c[1].v) / v) * 100 : null; };
   const TXT_EL = {
-    ca: { font: "Generalitat de Catalunya, resultats per secció censal.", pctv: "Percentatges sobre els vots vàlids (candidatures i en blanc).", seccions: "Les seccions són les del 2024: les que s'han creat després de l'elecció surten sense dades.",
+    ca: { font: "Generalitat de Catalunya, resultats per secció censal.",
+      font_me: "Mapa Electoral (mapaelectoral.es, CC BY 4.0), a partir del Ministeri de l'Interior i l'INE. Vots agrupats per famílies polítiques; als municipis, els blancs compten amb els nuls.",
+      font_rep: "Mapa Electoral (mapaelectoral.es), a partir de l'Atlas Electoral de la Segona República (Rodon, Vall-Prat i Martín Álvarez, UPF; CC BY-NC-SA 4.0). Municipis actuals; vots estimats a partir dels percentatges, sense blancs ni nuls.",
+      nomes_mun: "Aquesta elecció només té dades per municipi.", pctv: "Percentatges sobre els vots vàlids (candidatures i en blanc).", seccions: "Les seccions són les del 2024: les que s'han creat després de l'elecció surten sense dades.",
       part: "Votants sobre el cens electoral (sense el vot exterior).", marge: "Diferència entre la primera i la segona candidatura, en punts sobre els vots vàlids.", guany: "Cada zona té el color del bloc polític de la candidatura més votada.",
       participacio: "Participació", vots: "vots", cens: "cens", punts: "punts", tipus: "Elecció", any: "Any", cap: "Aquesta candidatura no es va presentar en aquesta elecció.", altres_c: "Altres" },
-    es: { font: "Generalitat de Catalunya, resultados por sección censal.", pctv: "Porcentajes sobre los votos válidos (candidaturas y en blanco).", seccions: "Las secciones son las de 2024: las creadas después de la elección aparecen sin datos.",
+    es: { font: "Generalitat de Catalunya, resultados por sección censal.",
+      font_me: "Mapa Electoral (mapaelectoral.es, CC BY 4.0), a partir del Ministerio del Interior y el INE. Votos agrupados por familias políticas; en los municipios, los blancos cuentan con los nulos.",
+      font_rep: "Mapa Electoral (mapaelectoral.es), a partir del Atlas Electoral de la Segunda República (Rodon, Vall-Prat y Martín Álvarez, UPF; CC BY-NC-SA 4.0). Municipios actuales; votos estimados a partir de los porcentajes, sin blancos ni nulos.",
+      nomes_mun: "Esta elección solo tiene datos por municipio.", pctv: "Porcentajes sobre los votos válidos (candidaturas y en blanco).", seccions: "Las secciones son las de 2024: las creadas después de la elección aparecen sin datos.",
       part: "Votantes sobre el censo electoral (sin el voto exterior).", marge: "Diferencia entre la primera y la segunda candidatura, en puntos sobre los votos válidos.", guany: "Cada zona tiene el color del bloque político de la candidatura más votada.",
       participacio: "Participación", vots: "votos", cens: "censo", punts: "puntos", tipus: "Elección", any: "Año", cap: "Esta candidatura no se presentó en esta elección.", altres_c: "Otras" },
   };
@@ -286,9 +292,18 @@
     CUP: { ca: "Inclou les llistes municipals de la CUP i Amunt.", es: "Incluye las listas municipales de la CUP y Amunt." },
     Comuns: { ca: "ICV-EUiA, Catalunya Sí que es Pot, En Comú Podem, Sumar i les llistes d'En Comú a les municipals.", es: "ICV-EUiA, Catalunya Sí que es Pot, En Comú Podem, Sumar y las listas de En Comú en las municipales." },
     "JxSí": { ca: "Coalició de CDC i ERC a les eleccions al Parlament del 2015.", es: "Coalición de CDC y ERC en las elecciones al Parlament de 2015." },
+    UCD: { ca: "Unión de Centro Democrático, el partit d'Adolfo Suárez (1977-1982).", es: "Unión de Centro Democrático, el partido de Adolfo Suárez (1977-1982)." },
+    FEsq: { ca: "Front d'Esquerres de Catalunya, la versió catalana del Front Popular a les eleccions del 1936 (ERC, socialistes, comunistes i altres).", es: "Front d'Esquerres de Catalunya, la versión catalana del Frente Popular en las elecciones de 1936 (ERC, socialistas, comunistas y otros)." },
+    Lliga: { ca: "Lliga Catalana (abans Lliga Regionalista), de Francesc Cambó. El 1936 va anar dins del Front Català d'Ordre (Dretes).", es: "Lliga Catalana (antes Lliga Regionalista), de Francesc Cambó. En 1936 fue dentro del Front Català d'Ordre (Derechas)." },
+    Dretes: { ca: "Candidatures de dretes de la Segona República; el 1936, el Front Català d'Ordre (Lliga, CEDA i altres).", es: "Candidaturas de derechas de la Segunda República; en 1936, el Front Català d'Ordre (Lliga, CEDA y otros)." },
     Locals: { ca: "Candidatures municipals que no pertanyen a cap dels blocs anteriors.", es: "Candidaturas municipales que no pertenecen a ninguno de los bloques anteriores." },
   };
-  const elNota = (extra, pctv) => ({ ca: [extra && extra.ca, pctv && TXT_EL.ca.pctv, TXT_EL.ca.font].filter(Boolean).join(" "), es: [extra && extra.es, pctv && TXT_EL.es.pctv, TXT_EL.es.font].filter(Boolean).join(" ") });
+  // La fuente depende de la convocatoria: Generalitat (gen) o Mapa Electoral (me, rep)
+  const elFont = (l) => { const f = (elInfo() || {}).f; return TXT_EL[l][f === "me" ? "font_me" : f === "rep" ? "font_rep" : "font"]; };
+  const elNota = (extra, pctv) => {
+    const txt = (l) => [extra && extra[l], pctv && TXT_EL[l].pctv, elFont(l)].filter(Boolean).join(" ");
+    return { get ca() { return txt("ca"); }, get es() { return txt("es"); } };
+  };
   const elRef = (f) => () => { const d = elDades(); return d ? { cat: d.cat ? f(d.cat) : null } : {}; };
   const indBloc = (b, ca, es) => ({ id: "el_" + b.toLowerCase().replace("ç", "c").replace("í", "i"), el: true, bloc: b, tema: "ele", ca: [`Vot a ${ca}`, `Vot a ${ca} (% dels vots vàlids)`], es: [`Voto a ${es}`, `Voto a ${es} (% de los votos válidos)`],
     ez: (z) => elBloc(z, b), ref: elRef((z) => elBloc(z, b)), nota: elNota(COMPOSICIO[b], true), ...P1, c: (v) => pct(v, 0) });
@@ -523,6 +538,10 @@
     indBloc("Aliança", "Aliança Catalana", "Aliança Catalana"),
     indBloc("JxSí", "Junts pel Sí", "Junts pel Sí"),
     indBloc("Locals", "llistes locals", "listas locales"),
+    indBloc("UCD", "UCD", "UCD"),
+    indBloc("FEsq", "el Front d'Esquerres", "el Front d'Esquerres"),
+    indBloc("Lliga", "la Lliga", "la Lliga"),
+    indBloc("Dretes", "les dretes", "las derechas"),
     { id: "densitat", sumable: false, tema: "ter", ca: ["Densitat", "Habitants per km²"], es: ["Densidad", "Habitantes por km²"], a: "densitat", v: X("densitat"), ...N0 },
     { id: "sau", sumable: false, tema: "ter", ca: ["Superfície agrícola", "Superfície agrícola utilitzada (% del terme)"], es: ["Superficie agrícola", "Superficie agrícola utilizada (% del término)"], a: "sau", v: X("sau"), ...P0 },
     { id: "esports", tema: "ter", ca: ["Espais esportius", "Espais esportius per 1.000 habitants"], es: ["Espacios deportivos", "Espacios deportivos por 1.000 habitantes"], a: "esports", v: X("esports"), ...N1 },
@@ -692,13 +711,17 @@
   // Selector de convocatoria: tipo de elección y año
   function controlEl(el) {
     const act = elInfo() || EL.conv[0];
-    const tipus = ["A", "G", "M", "E"].filter((tp) => EL.conv.some((c) => c.t === tp));
+    const tipus = ["A", "G", "M", "E", "R"].filter((tp) => EL.conv.some((c) => c.t === tp));
     const nomT = (tp) => EL.conv.find((c) => c.t === tp).n[LANG].replace(/ \d{4}.*$/, "");
     const etAny = (c) => (c.t === "G" && c.any === 2019 ? `${c.data.slice(5, 7) === "04" ? (LANG === "es" ? "Abr" : "Abr") : "Nov"} 19` : String(c.any));
     el.hidden = false; el.classList.add("el-ctl");
     el.innerHTML = `<div class="el-fila" role="group" aria-label="${tel("tipus")}">${tipus.map((tp) => `<button type="button" data-t="${tp}" aria-pressed="${tp === act.t}">${nomT(tp)}</button>`).join("")}</div>
       <div class="el-fila el-anys" role="group" aria-label="${tel("any")}">${EL.conv.filter((c) => c.t === act.t).map((c) => `<button type="button" data-id="${c.id}" aria-pressed="${c.id === act.id}" title="${c.n[LANG]} · ${c.data.split("-").reverse().join("/")}">${etAny(c)}</button>`).join("")}</div>`;
-    const canvia = async (id) => { await carregaConv(id); if (absent(ind)) ind = IND.find((i) => i.id === "el_guany"); omplirSelector(); pinta(); };
+    const canvia = async (id) => {
+      await carregaConv(id); if (absent(ind)) ind = IND.find((i) => i.id === "el_guany");
+      if (!disponible(ind, nivell)) { nivell = "mun"; fixat = null; }
+      omplirSelector(); botonsNivell(); pinta();
+    };
     el.querySelectorAll("[data-t]").forEach((b) => b.addEventListener("click", () => { const l = EL.conv.filter((c) => c.t === b.dataset.t); canvia(l[l.length - 1].id); }));
     el.querySelectorAll("[data-id]").forEach((b) => b.addEventListener("click", () => canvia(b.dataset.id)));
   }
@@ -706,7 +729,7 @@
 
   let hoverId = null, munPerIne = {}, valorsActuals = [], fixat = null;
 
-  const disponible = (i, n) => (i.el ? n === "mun" || n === "sec" : n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
+  const disponible = (i, n) => (i.el ? n === "mun" || (n === "sec" && (!elInfo() || elInfo().sec !== false)) : n === "mun" ? !!i.v : n === "sec" ? !!i.s : !!i[n]);
   const zonaEl = (props) => { const d = elDades(); return !d ? null : nivell === "mun" ? d.mun[props.ine] : d.sec[props.cusec]; };
   // Una candidatura o bloque que no se presentó en la convocatoria elegida
   const absent = (i) => i.bloc && elInfo() && !elInfo().b.includes(i.bloc);
@@ -763,7 +786,7 @@
     src.setData(geo);
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") + (ind.el && elInfo() && elInfo().sec === false ? " " + tel("nomes_mun") : "") : !disponible(ind, "sec") && !esArea(nivell) ? t("nomes_mun") : "";
     controlAnys(); llegenda(); referencies(); ranquing(); info(fixat); capaCentres();
     avisa("pinta");
   }
@@ -806,7 +829,7 @@
     mapa.getSource("zones").setData(geo);
     mapa.setLayoutProperty("limits-mun", "visibility", nivell !== "mun" ? "visible" : "none");
     document.getElementById("ind-titol").textContent = nomInd(ind);
-    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") : t("nomes_mun");
+    document.getElementById("mapa-desc").textContent = ind.nota ? ind.nota[LANG] + (ind.el && nivell === "sec" ? " " + tel("seccions") : "") + (ind.el && elInfo() && elInfo().sec === false ? " " + tel("nomes_mun") : "") : t("nomes_mun");
     const max = recompte.length ? recompte[0][1] : 1;
     // Con muchas categorías (nacionalidades) solo se ven las primeras; el resto, desplegable
     const N = ind.maxCat && recompte.length > ind.maxCat + 1 ? ind.maxCat : 0;
