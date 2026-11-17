@@ -347,6 +347,15 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); line-height: 1; }
 .cap { background: var(--fons); border-bottom: 1px solid var(--tinta); border-top: 6px solid var(--tinta); }
 .marca { font-size: 22px; text-transform: uppercase; letter-spacing: .01em; gap: 0; }
 .marca-punt { width: 12px; height: 12px; border-radius: 0; background: var(--accent); margin-right: 10px; }
+/* Logotipo: tres barras, la última roja; colores del tema (en oscuro se invierte el cuadrado) */
+.marca-icona { width: 1.45em; height: 1.45em; flex: none; margin-right: 10px; display: block; }
+.marca-icona .mi-f { fill: var(--tinta); }
+.marca-icona .mi-b { fill: var(--fons); }
+.marca-icona .mi-p { fill: var(--accent); }
+.peu-marca { display: flex; align-items: center; }
+.peu-marca .marca-icona { margin-right: 14px; }
+.peu-marca .mi-f { fill: #fff; }
+.peu-marca .mi-b { fill: var(--peu); }
 .menu a { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text); }
 .menu a:hover { color: var(--accent); }
 .idiomes { border: 1px solid var(--tinta); padding: 0; gap: 0; }
@@ -883,7 +892,9 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .el-fila button:hover { color: var(--tinta); background: var(--fons-2); }
 .el-fila button[aria-pressed="true"] { background: var(--tinta); color: var(--fons); }
 .el-fila button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.el-anys { border-color: var(--vora); }
+.el-fila:not(.el-anys) button { font-size: 10px; padding: 9px 1px; }
+.el-anys { border-color: var(--vora); grid-auto-flow: row; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 1px; background: var(--vora); }
+.el-anys button { border-right: 0; }
 .el-anys button { border-right-color: var(--vora); padding: 7px 6px; font-size: 11.5px; }
 .el-anys button[aria-pressed="true"] { background: var(--accent); color: #fff; }
 .info .el-vots { margin-top: 12px; }
