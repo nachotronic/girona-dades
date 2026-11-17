@@ -15,7 +15,6 @@ Genera en data/processed/cadastre/:
 from __future__ import annotations
 
 import datetime as dt
-import io
 import json
 import re
 
@@ -94,15 +93,20 @@ def _districtes(res: list[str]) -> pd.DataFrame | None:
         except Exception as e:  # noqa: BLE001
             res.append(f"ERROR {f}: {e}")
             return None
-        d = pd.read_csv(io.BytesIO(r.content), dtype=str, encoding="latin-1")
-        d = d[d["DISTRITO"].str.startswith("17")]
-        cols = [c for c in d.columns if c not in {"AREF", "DISTRITO", "MUNICIPIO", "CPROVNOM", "CCAANOM"}]
-        d = d.rename(columns={"AREF": "any", "DISTRITO": "districte", **{c: f"{k}_{c.lower()}" for c in cols}})
-        for c in d.columns:
-            if c.startswith(k + "_"):
-                d[c] = pd.to_numeric(d[c], errors="coerce")
-        d["any"] = d["any"].astype(int)
-        parts.append(d.drop(columns=["MUNICIPIO", "CPROVNOM", "CCAANOM"], errors="ignore").set_index(["districte", "any"]))
+        # Los nombres de municipio y comunidad pueden llevar comas sin comillas: se leen
+        # los dos primeros campos y las últimas columnas numéricas
+        linies = r.content.decode("latin-1").splitlines()
+        cap = linies[0].split(",")
+        cols = [c for c in cap if c not in {"AREF", "DISTRITO", "MUNICIPIO", "CPROVNOM", "CCAANOM"}]
+        files = []
+        for l in linies[1:]:
+            c = l.split(",")
+            if len(c) >= len(cap) and c[1].startswith("17"):
+                files.append([int(c[0]), c[1], *c[len(c) - len(cols):]])
+        d = pd.DataFrame(files, columns=["any", "districte", *[f"{k}_{c.lower()}" for c in cols]])
+        for c in d.columns[2:]:
+            d[c] = pd.to_numeric(d[c], errors="coerce")
+        parts.append(d.set_index(["districte", "any"]))
     t = parts[0].join(parts[1], how="outer").reset_index()
     res.append(f"distritos censales: {t['districte'].nunique()} distritos, años {t['any'].min()}-{t['any'].max()}")
     return t
@@ -117,7 +121,11 @@ def ejecutar() -> str:
     res.append(f"Girona: {gi['codi_ine'].nunique()} municipios, años {gi['any'].min()}-{gi['any'].max()}, {len(gi.columns)} columnas")
     if gi["codi_ine"].nunique() < 200:
         res.append("ERROR: faltan municipios de Girona")
-    dis = _districtes(res)
+    try:
+        dis = _districtes(res)
+    except Exception as e:  # noqa: BLE001
+        dis = None
+        res.append(f"ERROR distritos censales: {e}")
     if dis is not None:
         dis.to_csv(out / "districtes.csv.gz", index=False)
     return "\n".join(res)
