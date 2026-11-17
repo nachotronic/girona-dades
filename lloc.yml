@@ -2,7 +2,7 @@
 # Para pasar a un dominio propio basta con cambiar «url» (con la barra final). Si el dominio no es *.github.io,
 # el build escribe también web/CNAME; en GitHub hay que poner el mismo dominio en Settings → Pages → Custom domain.
 # La variable de entorno SITE_URL, si existe, tiene prioridad sobre este valor.
-url: https://nachotronic.github.io/girona-dades/
+url: https://girona.enxifres.cat/
 nom: Girona en xifres
 llicencia: CC-BY-4.0
 llicencia_url: https://creativecommons.org/licenses/by/4.0/

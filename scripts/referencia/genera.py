@@ -841,6 +841,21 @@ def cname():
         f.unlink()
 
 
+# Direcciones anteriores de la web: si alguna página de web/ aún las lleva escritas, se cambian por BASE al publicar
+BASES_ANTIGUES = ["https://nachotronic.github.io/girona-dades/"]
+
+
+def absolutes():
+    for h in WEB.glob("*.html"):
+        s = h.read_text(encoding="utf-8")
+        s2 = s
+        for b in BASES_ANTIGUES:
+            if b != BASE:
+                s2 = s2.replace(b, BASE)
+        if s2 != s:
+            h.write_text(s2, encoding="utf-8")
+
+
 def portada():
     """Canonical, hreflang y JSON-LD de la portada interactiva (web/index.html), entre las marcas ref:inici y ref:fi."""
     f = WEB / "index.html"
@@ -886,6 +901,7 @@ def main():
     sitemap(paths)
     cname()
     if PUBLICA:
+        absolutes()
         portada()
     print(f"Referència: {len(paths) * 2} pàgines, {len(IND)} indicadors ({nsec} per secció), base {BASE}")
 
