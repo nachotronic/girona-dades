@@ -57,6 +57,16 @@ DGTR = DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/"
 CANDIDATAS_E = {}
 INICI_DGT = [DGTR + f"?categorias=/Tema/{t}/" + (f"&pagina={n}" if n > 1 else "") for t in ("Informacion-municipal", "Vehiculos") for n in (1, 2, 3)]
 
+# Habitatge i Territori: què publica la Generalitat al portal de dades obertes
+TERMES_HT = ["habitatges iniciats", "habitatges acabats", "preu habitatge", "habitatge protegit",
+             "habitatges amb protecció oficial", "compravendes", "obra nova", "superfície habitatges",
+             "llicències d'obres", "certificats final d'obra", "planejament urbanístic", "sòl urbà",
+             "intensitat mitjana diària", "aforaments carreteres", "transport públic", "agència de l'habitatge",
+             "secretaria d'habitatge", "parc públic d'habitatge", "desnonaments", "fiances lloguer"]
+for k, t in enumerate(TERMES_HT):
+    CANDIDATAS_E[f"socrata_ht{k:02d}"] = (f"{SOCRATA}?domains=analisi.transparenciacatalunya.cat&q="
+                                         + urllib.parse.quote(t) + "&limit=40")
+
 
 def explora_parque(filas: list) -> None:
     import re
@@ -152,7 +162,6 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_parque(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
