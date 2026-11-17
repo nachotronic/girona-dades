@@ -1,5 +1,5 @@
 # Datos del sitio que usan las páginas estáticas, llms.txt, sitemap.xml, robots.txt y el JSON-LD.
-# Para pasar a un dominio propio basta con cambiar «url» (con la barra final). Si el dominio no es *.github.io,
+# Para pasar a un dominio propio basta con cambiar «url» (con la barra final). Si la web ocupa la raíz de un dominio propio,
 # el build escribe también web/CNAME; en GitHub hay que poner el mismo dominio en Settings → Pages → Custom domain.
 # La variable de entorno SITE_URL, si existe, tiene prioridad sobre este valor.
 url: https://enxifres.cat/girona/

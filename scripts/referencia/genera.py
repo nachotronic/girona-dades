@@ -833,9 +833,11 @@ def sitemap(paths):
 
 
 def cname():
-    host = urlparse(BASE).hostname or ""
+    # Solo si la web ocupa la raíz del dominio. En una ruta (enxifres.cat/girona/) el dominio lo lleva el repo de la organización
+    u = urlparse(BASE)
+    host = u.hostname or ""
     f = WEB / "CNAME"
-    if host and not host.endswith("github.io"):
+    if host and not host.endswith("github.io") and u.path in ("", "/"):
         f.write_text(host + "\n", encoding="utf-8")
     elif f.exists():
         f.unlink()
