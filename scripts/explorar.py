@@ -57,16 +57,12 @@ DGTR = DGT + "/menusecundario/dgt-en-cifras/dgt-en-cifras-resultados/"
 CANDIDATAS_E = {}
 INICI_DGT = [DGTR + f"?categorias=/Tema/{t}/" + (f"&pagina={n}" if n > 1 else "") for t in ("Informacion-municipal", "Vehiculos") for n in (1, 2, 3)]
 
-# Habitatge i Territori: què publica la Generalitat al portal de dades obertes
-TERMES_HT = ["habitatges iniciats", "habitatges acabats", "preu habitatge", "habitatge protegit",
-             "habitatges amb protecció oficial", "compravendes", "obra nova", "superfície habitatges",
-             "llicències d'obres", "certificats final d'obra", "planejament urbanístic", "sòl urbà",
-             "intensitat mitjana diària", "aforaments carreteres", "transport públic", "agència de l'habitatge",
-             "secretaria d'habitatge", "parc públic d'habitatge", "desnonaments", "fiances lloguer"]
-for k, t in enumerate(TERMES_HT):
-    CANDIDATAS_E[f"socrata_ht{k:02d}"] = (f"{SOCRATA}?domains=analisi.transparenciacatalunya.cat&q="
-                                         + urllib.parse.quote(t) + "&limit=40")
-
+# Habitatge i Territori: metadades i mostra de Girona dels conjunts candidats
+for d in ("v8i4-fa4q", "txkt-yjtq", "3pqu-s3ga", "w8kv-kmwv", "2pwz-wwxf", "tz88-gjtz", "epsm-zskb",
+          "6wpu-9y2e", "xsvx-ym46", "fftm-v9b6", "375x-2wzk", "b9cr-32i4"):
+    CANDIDATAS_E[f"socrata_{d}_meta"] = f"{SOC}/api/views/{d}.json"
+    CANDIDATAS_E[f"socrata_{d}_mostra"] = f"{SOC}/resource/{d}.csv?$limit=400&$q=Girona"
+    CANDIDATAS_E[f"socrata_{d}_tot"] = f"{SOC}/resource/{d}.csv?$limit=3"
 
 def explora_parque(filas: list) -> None:
     import re
