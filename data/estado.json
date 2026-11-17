@@ -20,6 +20,13 @@
   "durada": null,
   "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
  },
+ "anuari_aeat": {
+  "estat": "ok",
+  "intent": "2026-11-17T11:18:29Z",
+  "ok": "2026-11-17T11:18:29Z",
+  "durada": 124,
+  "resum": "modelo100: 3008 filas; modelo190_salarios: 15040 filas; modelo190_pensiones: 1504 filas; modelo200: 10240 filas; modelo390: 5608 filas; modelo714: 448 filas; IRPFmunicipios: 35665 filas"
+ },
  "catastro": {
   "estat": "ok",
   "intent": "2026-11-16T12:42:39Z",
