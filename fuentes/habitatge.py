@@ -37,6 +37,13 @@ def num(s: pd.Series) -> pd.Series:
     return pd.to_numeric(s.str.replace(",", ".", regex=False), errors="coerce")
 
 
+def enter(s: pd.Series) -> pd.Series:
+    """Recuentos: los de 1.000 o más vienen como texto con punto de miles («1.217»)."""
+    s = s.astype(str).str.strip()
+    s = s.where(~s.str.fullmatch(r"\d{1,3}(\.\d{3})+"), s.str.replace(".", "", regex=False))
+    return num(s)
+
+
 def _ine(s: pd.Series) -> pd.Series:
     """Código INE de 5 cifras a partir de un código de 5 o 6 cifras (Idescat)."""
     s = s.astype(str).str.strip().str.replace(r"\.0$", "", regex=True)
@@ -59,14 +66,14 @@ def construccio(sal) -> str:
     d["ine"] = _ine(d["codi_ine"])
     d["any"] = num(d["any"]).astype("Int64")
     for c in ("ini", "aca"):
-        d[c] = num(d[c])
+        d[c] = enter(d[c])
     t = _gi_cat(d.dropna(subset=["any"]), ["ini", "aca"])
     hpo = soql("v8i4-fa4q", **{"$select": "codi_ine,any,iniciats_hpo,acabats_hpo"})
     hpo = hpo.rename(columns={"iniciats_hpo": "ini_hpo", "acabats_hpo": "aca_hpo"})
     hpo["ine"] = _ine(hpo["codi_ine"])
     hpo["any"] = num(hpo["any"]).astype("Int64")
     for c in ("ini_hpo", "aca_hpo"):
-        hpo[c] = num(hpo[c])
+        hpo[c] = enter(hpo[c])
     th = _gi_cat(hpo.dropna(subset=["any"]), ["ini_hpo", "aca_hpo"])
     t = t.merge(th, on=["ine", "any"], how="outer").sort_values(["ine", "any"])
     t.to_csv(sal / "construccio.csv.gz", index=False)

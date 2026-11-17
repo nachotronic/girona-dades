@@ -45,6 +45,22 @@
       h_cad_usos: (r, a, g, v) => `El <b>${r}</b> dels immobles urbans de la província són habitatges (${a}). Després vénen ${g.toLowerCase()}: ${v}.`,
       cad_ibi: ["Rebut de l'IBI", "Quota líquida mitjana per rebut de l'IBI urbà (€)"],
       h_cad_ibi: (g, a, c, e, n, t) => `El rebut mitjà de l'IBI urbà a la província és de <b>${g} €</b> (${a}), davant dels ${c} € de Catalunya i els ${e} € d'Espanya.${n != null ? ` <b>${n} dels ${t} ajuntaments</b> apliquen el recàrrec als pisos buits.` : ""}`,
+      hb_ini: ["Habitatges iniciats", "Habitatges iniciats per 1.000 habitants"],
+      h_hb_ini: (g, a, n, c, mx, amx, q) => `El ${a} es van començar <b>${n} habitatges</b> a la província: ${g} per 1.000 habitants, davant d'${c} a Catalunya. Són el ${q} dels del ${amx}, en plena bombolla (${mx}).`,
+      hb_aca: ["Habitatges acabats", "Habitatges acabats per 1.000 habitants"],
+      h_hb_aca: (g, a, n, c) => `El ${a} es van acabar <b>${n} habitatges</b> a la província: ${g} per 1.000 habitants (Catalunya, ${c}).`,
+      hb_hpo: ["Habitatge protegit", "Habitatges protegits sobre el total d'acabats, últims 5 anys (%)"],
+      h_hb_hpo: (g, c, a) => `Dels habitatges acabats a la província en els cinc anys fins al ${a}, només el <b>${g}</b> són protegits, davant del ${c} a Catalunya.`,
+      hb_ced: ["Moviment d'habitatges", "Cèdules d'habitabilitat per 1.000 habitatges"],
+      h_hb_ced: (n, a, g, c) => `El ${a} es van concedir <b>${n} cèdules d'habitabilitat</b> a la província, ${g} per 1.000 habitatges (Catalunya, ${c}). Cal una cèdula per vendre o llogar un pis.`,
+      hb_m2: ["Superfície dels habitatges", "Superfície útil mitjana dels habitatges amb cèdula (m²)"],
+      h_hb_m2: (g, c, a) => `Els habitatges que es venen o es lloguen a la província tenen <b>${g} m² útils</b> de mitjana (${a}), davant dels ${c} m² de Catalunya.`,
+      hb_ihb: ["Pisos buits de bancs i empreses", "Habitatges buits declarats a l'impost per 1.000 habitatges"],
+      h_hb_ihb: (n, a, n0, a0) => `<b>${n} pisos</b> buits de bancs, fons i empreses van pagar l'impost el ${a} a la província, davant de ${n0} el ${a0}.`,
+      hb_sol: ["Classificació del sòl", "Superfície del municipi segons el planejament (%)"],
+      h_hb_sol: (su, a, p, pv) => `El sòl urbà ocupa el <b>${su}</b> de la província (${a}). El planejament encara permet construir <b>${p} habitatges</b> més en sectors pendents, ${pv} per cada 100 d'existents.`,
+      hu: { su: "Urbà", surb: "Urbanitzable", snu: "No urbanitzable" },
+      font_hab: "Font: Departament de Territori, Habitatge i Transició Ecològica, Agència Tributària de Catalunya i Mapa urbanístic de Catalunya. Taxes per habitatge: Cadastre. La Generalitat no publica dades d'Espanya",
       font_cad: "Font: Direcció General del Cadastre (Ministeri d'Hisenda). Espanya, sense el País Basc ni Navarra",
       cu: { almacen: "Magatzems i aparcaments", comercial: "Comercial", industrial: "Industrial", oficinas: "Oficines", hosteleria: "Hoteleria", solar: "Sòl vacant", deportivo: "Esportiu", cultural: "Cultural", sanidad: "Sanitat i benestar", religioso: "Religiós", espectaculos: "Espectacles", singular: "Edificis singulars" },
       solar: ["Plaques solars", "Potència fotovoltaica d'autoconsum per habitant (W), acumulada mes a mes"],
@@ -164,6 +180,22 @@
       h_cad_usos: (r, a, g, v) => `El <b>${r}</b> de los inmuebles urbanos de la provincia son viviendas (${a}). Después vienen ${g.toLowerCase()}: ${v}.`,
       cad_ibi: ["Recibo del IBI", "Cuota líquida media por recibo del IBI urbano (€)"],
       h_cad_ibi: (g, a, c, e, n, t) => `El recibo medio del IBI urbano en la provincia es de <b>${g} €</b> (${a}), frente a los ${c} € de Cataluña y los ${e} € de España.${n != null ? ` <b>${n} de los ${t} ayuntamientos</b> aplican el recargo a los pisos vacíos.` : ""}`,
+      hb_ini: ["Viviendas iniciadas", "Viviendas iniciadas por 1.000 habitantes"],
+      h_hb_ini: (g, a, n, c, mx, amx, q) => `En ${a} se empezaron <b>${n} viviendas</b> en la provincia: ${g} por 1.000 habitantes, frente a ${c} en Cataluña. Son el ${q} de las de ${amx}, en plena burbuja (${mx}).`,
+      hb_aca: ["Viviendas acabadas", "Viviendas acabadas por 1.000 habitantes"],
+      h_hb_aca: (g, a, n, c) => `En ${a} se acabaron <b>${n} viviendas</b> en la provincia: ${g} por 1.000 habitantes (Cataluña, ${c}).`,
+      hb_hpo: ["Vivienda protegida", "Viviendas protegidas sobre el total de acabadas, últimos 5 años (%)"],
+      h_hb_hpo: (g, c, a) => `De las viviendas acabadas en la provincia en los cinco años hasta ${a}, solo el <b>${g}</b> son protegidas, frente al ${c} en Cataluña.`,
+      hb_ced: ["Movimiento de viviendas", "Cédulas de habitabilidad por 1.000 viviendas"],
+      h_hb_ced: (n, a, g, c) => `En ${a} se concedieron <b>${n} cédulas de habitabilidad</b> en la provincia, ${g} por 1.000 viviendas (Cataluña, ${c}). Hace falta una cédula para vender o alquilar un piso.`,
+      hb_m2: ["Superficie de las viviendas", "Superficie útil media de las viviendas con cédula (m²)"],
+      h_hb_m2: (g, c, a) => `Las viviendas que se venden o alquilan en la provincia tienen <b>${g} m² útiles</b> de media (${a}), frente a los ${c} m² de Cataluña.`,
+      hb_ihb: ["Pisos vacíos de bancos y empresas", "Viviendas vacías declaradas al impuesto por 1.000 viviendas"],
+      h_hb_ihb: (n, a, n0, a0) => `<b>${n} pisos</b> vacíos de bancos, fondos y empresas pagaron el impuesto en ${a} en la provincia, frente a ${n0} en ${a0}.`,
+      hb_sol: ["Clasificación del suelo", "Superficie del municipio según el planeamiento (%)"],
+      h_hb_sol: (su, a, p, pv) => `El suelo urbano ocupa el <b>${su}</b> de la provincia (${a}). El planeamiento aún permite construir <b>${p} viviendas</b> más en sectores pendientes, ${pv} por cada 100 existentes.`,
+      hu: { su: "Urbano", surb: "Urbanizable", snu: "No urbanizable" },
+      font_hab: "Fuente: Departament de Territori, Habitatge i Transició Ecològica, Agència Tributària de Catalunya y Mapa urbanístico de Cataluña. Tasas por vivienda: Catastro. La Generalitat no publica datos de España",
       font_cad: "Fuente: Dirección General del Catastro (Ministerio de Hacienda). España, sin el País Vasco ni Navarra",
       cu: { almacen: "Almacenes y aparcamientos", comercial: "Comercial", industrial: "Industrial", oficinas: "Oficinas", hosteleria: "Hostelería", solar: "Suelo vacante", deportivo: "Deportivo", cultural: "Cultural", sanidad: "Sanidad y beneficencia", religioso: "Religioso", espectaculos: "Espectáculos", singular: "Edificios singulares" },
       solar: ["Placas solares", "Potencia fotovoltaica de autoconsumo por habitante (W), acumulada mes a mes"],
@@ -450,9 +482,9 @@
   };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("hu:") ? tp("hu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
-  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : "");
+  const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : sp.u === "m²" ? " m²" : "");
   const etiqueta = (e) => {
     const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${tp("mesos")[+m[2] - 1]} ${m[1]}`;
     const q = /^(\d{4})T(\d)$/.exec(e); if (q) return `${q[2]}T ${q[1]}`;
@@ -538,6 +570,13 @@
     if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
     if (id === "solar") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g && sp.abs ? tp("h_solar", fmt(g[2]), fmt(c && c[2]), fmt(sp.abs.n), fmt(sp.abs.kw / 1000, 0), etiqueta(sp.abs.mes)) : ""; }
     if (id === "cad_viv") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), g0 = sp.series.gi[0]; const d = g && g0 ? (g[2] / g0[2] - 1) * 100 : null; return g ? tp("h_cad_viv", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]), d == null ? "" : d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0))) : ""; }
+    if (id === "hb_ini") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g && sp.abs ? tp("h_hb_ini", fmt(g[2], 1), g[1], fmt(sp.abs.ini), fmt(c && c[2], 1), sp.max ? fmt(sp.max[1]) : "–", sp.max ? sp.max[0] : "–", sp.max ? pct((sp.abs.ini / sp.max[1]) * 100, 0) : "–") : ""; }
+    if (id === "hb_aca") { const g = ult(sp, "gi"), c = ult(sp, "cat"), h = P.hb_ini; return g && h && h.abs ? tp("h_hb_aca", fmt(g[2], 1), g[1], fmt(h.abs.aca), fmt(c && c[2], 1)) : ""; }
+    if (id === "hb_hpo") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_hb_hpo", pct(g[2], 1), pct(c && c[2], 1), g[1]) : ""; }
+    if (id === "hb_ced") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g && sp.abs ? tp("h_hb_ced", fmt(sp.abs.n), g[1], fmt(g[2], 1), fmt(c && c[2], 1)) : ""; }
+    if (id === "hb_m2") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_hb_m2", fmt(g[2]), fmt(c && c[2]), g[1]) : ""; }
+    if (id === "hb_ihb") { const g = ult(sp, "gi"); return g && sp.abs ? tp("h_hb_ihb", fmt(sp.abs.n), g[1], fmt(sp.abs.n0), sp.abs.a0) : ""; }
+    if (id === "hb_sol") { const g = sp.grups.find((x) => x.g === "su"), p = sp.abs && sp.abs.plan; return g && p ? tp("h_hb_sol", pct(g.gi, 1), sp.any, fmt(p.pend), fmt(p.pend_viv, 1)) : ""; }
     if (id === "cad_ibi") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), d = sp.abs && sp.abs.desoc; return g ? tp("h_cad_ibi", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]), d ? d[0] : null, d ? d[1] : null) : ""; }
     if (id === "cad_usos") { const g = sp.grups[0]; return g && sp.res ? tp("h_cad_usos", pct(sp.res.gi, 0), sp.any, nomGrup(g.g, g.c), pct(g.gi, 1)) : ""; }
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
@@ -622,8 +661,8 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "cad_viv", "cad_ibi", "cad_usos", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
-    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : /^at_/.test(id) ? "font_aeat" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "hb_ini", "hb_aca", "hb_hpo", "hb_ced", "hb_m2", "hb_ihb", "hb_sol", "cad_viv", "cad_ibi", "cad_usos", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
+    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : /^hb_/.test(id) ? "font_hab" : /^at_/.test(id) ? "font_aeat" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
   window.pintaSeccioTurisme = () => {
