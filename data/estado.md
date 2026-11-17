@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-17 09:55 UTC
+Última ejecución: 2026-11-17 12:32 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -28,6 +28,7 @@
 | mapaelectoral — Mapa Electoral, resultats històrics (1933-2009) | ok | 2026-11-17 09:55 | 2026-11-17 09:55 | per elecció |
 | vehicles — DGT, parc de vehicles per municipi | ok | 2026-11-16 15:05 | 2026-11-16 15:05 | anual |
 | aeat — Agencia Tributaria, IRPF per municipis | ok | 2026-11-16 14:02 | 2026-11-16 14:02 | anual |
+| anuari_aeat — Agencia Tributaria, anuari estadístic: IRPF, salaris i pensions | — | — | — | anual |
 | padro — INE, padró i empreses (DIRCE) | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | pressupostos — Generalitat, liquidació dels pressupostos municipals | ok | 2026-11-16 12:09 | 2026-11-16 12:09 | anual |
 | tributs — Ministerio de Hacienda, tipus impositius municipals | ok | 2026-11-16 13:08 | 2026-11-16 13:08 | anual |
@@ -37,36 +38,12 @@
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | avís | 2026-11-16 15:31 | 2026-11-16 15:53 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | avís | — | 2026-11-16 16:19 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | — | — | — | anual |
+| emq — ATM Girona, Enquesta de Mobilitat Quotidiana 2024-2025 (visor Power BI) | avís | — | 2026-11-17 12:31 | per edició |
 
 ## Detalle de la última ejecución
 
-### mapaelectoral: ok (16 s)
+### emq: avís (72 s)
 
 ```
-G20041: 4473 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}
-G20081: 5141 filas de votos, zonas {'SE': 523, 'MU': 221, 'CA': 1}
-E20041: 4375 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}
-E20091: 4917 filas de votos, zonas {'SE': 525, 'MU': 221, 'CA': 1}
-M20071: 680 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19771: 1482 filas de votos, zonas {'MU': 217, 'CA': 1}
-G19791: 1485 filas de votos, zonas {'MU': 218, 'CA': 1}
-G19821: 1643 filas de votos, zonas {'MU': 213, 'CA': 1}
-G19861: 1491 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19891: 1493 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19931: 1424 filas de votos, zonas {'MU': 221, 'CA': 1}
-G19961: 1248 filas de votos, zonas {'MU': 221, 'CA': 1}
-G20001: 1296 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19871: 1787 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19891: 1654 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19941: 1583 filas de votos, zonas {'MU': 221, 'CA': 1}
-E19991: 1666 filas de votos, zonas {'MU': 221, 'CA': 1}
-M19791: 422 filas de votos, zonas {'MU': 216, 'CA': 1}
-M19831: 422 filas de votos, zonas {'MU': 219, 'CA': 1}
-M19871: 416 filas de votos, zonas {'MU': 218, 'CA': 1}
-M19911: 467 filas de votos, zonas {'MU': 219, 'CA': 1}
-M19951: 530 filas de votos, zonas {'MU': 221, 'CA': 1}
-M19991: 559 filas de votos, zonas {'MU': 221, 'CA': 1}
-M20031: 587 filas de votos, zonas {'MU': 221, 'CA': 1}
-R19331: 885 filas de votos, zonas {'MU': 218, 'CA': 1}
-R19361: 445 filas de votos, zonas {'MU': 219, 'CA': 1}
+EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…); ERROR en 4: lv_mun_kpi RuntimeError: {"data": {"timestamp": "2026-11-17T12:31:47.611Z", "rootActivityId": "7ef8874a-ca66-4606-b515-7a8a2c65e28a", "fromCache" | lv_com_kpi RuntimeError: {"data": {"timestamp": "2026-11-17T12:31:48.724Z", "rootActivityId": "b3496ebb-8c5b-4d2a-aca4-2e8a1b645323", "fromCache" | lv_tot_kpi RuntimeError: {"data": {"timestamp": "2026-11-17T12:31:49.823Z", "rootActivityId": "2ea05cff-5397-4bd5-8807-9a2ad9480edd", "fromCache" | pe_mun__P7_8A_DADES RuntimeError: {"data": {"timestamp": "2026-11-17T12:32:30.241Z", "rootActivityId": "282a720d-18a8-46ad-b64c-b28f241a1b7b", "fromCache"
 ```
