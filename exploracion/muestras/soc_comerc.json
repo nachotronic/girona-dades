@@ -1,0 +1,703 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "NC 2026 (productes comerç exterior)",
+            "id" : "ibt9-hnw2",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Classificació de productes per al comerç amb l'estranger revisat a l’any 2026 (Nomenclatura combinada 2026, NC 2026).",
+            "attribution" : "Catàleg Tècnic de Dades. Institut d'Estadística de Catalunya (IDESCAT)",
+            "attribution_link" : "https://web.gencat.cat/ca/generalitat/dades-indicadors/dades-obertes/llicencies",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-04-28T16:04:21.000Z",
+            "createdAt" : "2022-06-17T14:04:59.000Z",
+            "metadata_updated_at" : "2026-04-28T16:04:19.000Z",
+            "data_updated_at" : "2026-04-28T16:04:21.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 32,
+                "page_views_last_month" : 64,
+                "page_views_total" : 1189,
+                "page_views_last_week_log" : 5.044394119358453,
+                "page_views_last_month_log" : 6.022367813028454,
+                "page_views_total_log" : 10.216745858195306
+              },
+            "columns_name" : [ "Tipus", "Pertany", "Codi", "Descripció" ],
+            "columns_field_name" : [ "tipus", "pertany", "codi", "descripci" ],
+            "columns_datatype" : [ "Text", "Text", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nivell de classificació a on pertany el producte: Capítol, partida, subpartida i posició.",
+                "Codi del nivell superior a on pertany el producte. Els registres de tipus Capítol, per ser el de més rang, no tenen cap valor en aquest atribut.",
+                "Identificador únic de productes per al comerç amb l'estranger revisat l'any 2023. Està estructurat en quatre nivells, d'una forma jeràrquica piramidal:  Nivell 1 ==> Capítol (codificat amb dos dígits numèrics) Nivell 2 ==> Partida (codificat amb quatre dígits numèrics) Nivell 3 ==> Subpartida (codificat amb sis dígits numèrics) Nivell 4 ==> Posició (codificat amb vuit dígits numèrics)",
+                "Descripció del producte."
+              ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 430,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-06-17T14:09:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Indústria",
+            "domain_tags" :
+              [
+                "dades_de_referència",
+                "ods9_indústria innovació i infraestructures",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "Estadística"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : " NC 2026 (foreign trade products)"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : " NC 2026 (productos de comercio exterior)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ibt9-hnw2",
+        "link" : "https://analisi.transparenciacatalunya.cat/Indústria/NC-2026-productes-comerç-exterior-/ibt9-hnw2",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Anuari estadístic de Catalunya",
+            "id" : "5tmq-pe65",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Anuari estadístic de Catalunya recull la informació bàsica de les principals estadístiques oficials produïdes pels organismes del Sistema estadístic de Catalunya, i la informació més rellevant produïda per altres organismes oficials (del país i de la resta de l'Estat), sobre Catalunya.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:06.000Z",
+            "createdAt" : "2020-10-23T11:23:10.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:06.000Z",
+            "data_updated_at" : "2020-10-23T11:23:10.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 29,
+                "page_views_last_month" : 44,
+                "page_views_total" : 2775,
+                "page_views_last_week_log" : 4.906890595608519,
+                "page_views_last_month_log" : 5.491853096329675,
+                "page_views_total_log" : 11.438791852578262
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:24:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "idescat",
+                "indicador",
+                "estadística",
+                "demografia",
+                "societat",
+                "població",
+                "cultura",
+                "llengua",
+                "educació",
+                "eleccions",
+                "justícia",
+                "seguretat",
+                "salut",
+                "treball",
+                "qualitat de vida",
+                "condicions de vida",
+                "habitatges i edificis",
+                "ingressos",
+                "consum de les llars",
+                "protecció social",
+                "economia",
+                "macromagnituds",
+                "empreses",
+                "finances",
+                "finances públiques",
+                "inversió",
+                "comerç exterior",
+                "preus",
+                "recerca",
+                "tecnologia",
+                "sectors econòmics",
+                "agricultura",
+                "ramaderia",
+                "pesca",
+                "comerç",
+                "serveis",
+                "construcció",
+                "indústria",
+                "energia",
+                "transport",
+                "turisme",
+                "medi ambient",
+                "territori",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Statistical yearbook of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Anuario estadístico de Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : {
+                             "enllaç" : "https://www.idescat.cat/pub/?id=aec"
+                           },
+                  "description" : "Accediu a l'anuari estadístic de Catalunya al web de l'IDESCAT",
+                  "title" : "Anuari estadístic de Catalunya"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/pub/?id=aec" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5tmq-pe65",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Anuari-estadístic-de-Catalunya/5tmq-pe65",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors anuals de l'IDESCAT",
+            "id" : "vaei-tfwk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Selecció d'indicadors econòmics i socials de Catalunya, amb periodicitat anual, facilitats per l'Idescat i altres agents de l'estadística oficial. Les sèries també mostren les variacions interanuals i les dades comparatives amb Espanya.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:44:49.000Z",
+            "createdAt" : "2020-10-23T11:17:35.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:49.000Z",
+            "data_updated_at" : "2020-10-23T11:17:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 21,
+                "page_views_last_month" : 45,
+                "page_views_total" : 2634,
+                "page_views_last_week_log" : 4.459431618637297,
+                "page_views_last_month_log" : 5.523561956057013,
+                "page_views_total_log" : 11.363587246524578
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:18:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "indicador",
+                "idescat",
+                "demografia",
+                "població",
+                "població estrangera",
+                "llars famílies i matrimonis",
+                "naixements i defuncions",
+                "migracions",
+                "mobilitat i població estacional",
+                "projeccions",
+                "cultura",
+                "llengua",
+                "educació",
+                "justícia",
+                "seguretat",
+                "salut",
+                "treball",
+                "qualitat de vida",
+                "condicions de vida",
+                "habitatges i edificis",
+                "ingressos i consum de les llars",
+                "protecció social",
+                "macromagnituds",
+                "empreses",
+                "finances",
+                "inversió",
+                "comerç exterior",
+                "preus",
+                "recerca",
+                "tecnologia",
+                "sectors econòmics",
+                "agricultura",
+                "ramaderia",
+                "pesca",
+                "comerç",
+                "serveis  construcció",
+                "indústria",
+                "energia",
+                "transport",
+                "turisme",
+                "medi ambient",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "IDESCAT's annual indicators"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores anuales del IDESCAT"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "enllaç" : "https://www.idescat.cat/indicadors/?id=anuals"
+                    },
+                  "description" : "Accediu als indicadors anuals al web de l'IDESCAT",
+                  "title" : "Indicadors anuals"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/indicadors/?id=anuals" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vaei-tfwk",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Indicadors-anuals-de-l-IDESCAT/vaei-tfwk",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors de conjuntura econòmica",
+            "id" : "eb5f-kqwq",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Selecció d'indicadors econòmics de Catalunya, amb periodicitat mensual o trimestral, facilitats per l'Idescat i altres agents de l'estadística oficial. Les sèries també mostren les variacions interanuals i les dades comparatives amb Espanya.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:44:44.000Z",
+            "createdAt" : "2020-10-23T11:15:21.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:44.000Z",
+            "data_updated_at" : "2020-10-23T11:15:21.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 58,
+                "page_views_total" : 2408,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 5.882643049361842,
+                "page_views_total_log" : 11.234218678238472
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:17:08.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "indicador",
+                "idescat",
+                "ingressos i consum de les llars",
+                "macromagnituds",
+                "empreses",
+                "finances",
+                "inversió i comerç exterior",
+                "preus",
+                "recerca",
+                "tecnologia",
+                "comerç",
+                "serveis",
+                "construcció",
+                "indústria",
+                "energia",
+                "transport",
+                "turisme",
+                "llengua",
+                "treball",
+                "cultura",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Indicators of economic situation"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores de conjuntura económica"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "enllaç" : "https://www.idescat.cat/indicadors/?id=conj"
+                    },
+                  "description" : "Accediu als indicadors de conjuntura econòmica al web de l'IDESCAT",
+                  "title" : "Indicadors de conjuntura econòmica"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/indicadors/?id=conj" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/eb5f-kqwq",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Indicadors-de-conjuntura-econòmica/eb5f-kqwq",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Comptabilitat trimestral",
+            "id" : "ud55-tj97",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La Comptabilitat trimestral de Catalunya és una estadística de síntesi de caràcter conjuntural que té com a principal objectiu proporcionar una descripció quantitativa coherent del comportament de l'economia catalana a curt termini. Proporciona les estimacions dels principals components del Producte interior brut (PIB) des de l'òptica de l'oferta i de la demanda per tal de presentar el resultat final de l'activitat de producció dels agents econòmics en el territori des d'una perspectiva temporal.\n\nL'Idescat elabora les actuacions estadístiques Avanç del PIB trimestral i Comptabilitat trimestral de Catalunya i les presenta integrades en una mateixa sèrie de comptabilitat trimestral, però respectant el calendari específic de disponibilitat de resultats de cadascuna.\n\n    L'Avanç del PIB trimestral és una estimació calculada amb informació conjuntural i provisional no completa del període de referència, publicada aproximadament 35 dies després del tancament del trimestre. Proporciona la taxa de creixement en volum de l'economia catalana ajustada d'estacionalitat, des de la perspectiva de l'oferta per les principals branques d'activitat (l'agricultura, la indústria, la construcció i els serveis).\n    La Comptabilitat trimestral de Catalunya és una estimació elaborada amb informació completa del període de referència, publicada aproximadament 75 dies després del tancament del trimestre. Ofereix la informació del PIB des de l'òptica de l'oferta i la demanda i presenta els resultats a preus corrents, en índexs en volum, i les corresponents variacions trimestrals i anuals. A més, proporciona les dades en termes bruts i corregits d'estacionalitat.\n        Des de l'òptica de l'oferta, s'ofereixen estimacions de les principals branques productives (agricultura, indústria, construcció i serveis). En el cas dels serveis, a més, la informació es presenta detallada en tres agrupacions de branques: Comerç, transport i hostaleria, Activitats immobiliàries, professionals i altres i Administració pública, educació, sanitat i serveis socials.\n        Des de l'òptica de la demanda, el PIB analitza l'ús final dels béns i serveis produïts en l'economia catalana, en funció de si van adreçats a consum final, inversió o comerç exterior.\n\nLes sèries de la Comptabilitat trimestral de Catalunya, en coherència amb els Comptes econòmics anuals, han estat actualitzades al març del 2020, d'acord amb la Revisió estadística 2019, seguint les recomanacions internacionals d'àmbit europeu. Aquesta revisió estadística, que substitueix l'anterior Base 2010, ha estat impulsada per Eurostat i el Banc Central Europeu i obeeix a la necessitat d'actualitzar periòdicament les fonts i els mètodes d'estimació utilitzats en la compilació dels comptes nacionals per garantir-ne l'oportunitat, precisió i puntualitat.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:14:12.000Z",
+            "createdAt" : "2020-10-26T14:57:37.000Z",
+            "metadata_updated_at" : "2026-09-21T08:14:12.000Z",
+            "data_updated_at" : "2020-10-26T14:57:37.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 22,
+                "page_views_last_month" : 44,
+                "page_views_total" : 2063,
+                "page_views_last_week_log" : 4.523561956057013,
+                "page_views_last_month_log" : 5.491853096329675,
+                "page_views_total_log" : 11.011227255423254
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:57:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "comptabilitat",
+                "trimestral",
+                "ods8_treball decent i creixement econòmic"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Quarterly Accounts"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Contabilidad trimestral"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=pibt" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=pibt"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ud55-tj97",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Comptabilitat-trimestral/ud55-tj97",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 5,
+  "timings" : { "serviceMillis" : 20, "searchMillis" : [ 2, 6 ] },
+  "warnings" : []
+}

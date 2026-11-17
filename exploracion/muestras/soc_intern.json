@@ -1,0 +1,121 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Agents de suport a la Internacionalització acreditats",
+            "id" : "2aqi-zpf7",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llistat d’agents acreditats que destinen la seva activitat a impulsar les empreses catalanes al món.",
+            "attribution" : "Agència per a la Competitivitat de l’Empresa (ACCIÓ)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-09-16T13:25:47.000Z",
+            "createdAt" : "2019-06-06T15:10:55.000Z",
+            "metadata_updated_at" : "2026-09-16T13:25:47.000Z",
+            "data_updated_at" : "2026-01-21T09:08:16.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 37,
+                "page_views_last_month" : 58,
+                "page_views_total" : 3214,
+                "page_views_last_week_log" : 5.247927513443585,
+                "page_views_last_month_log" : 5.882643049361842,
+                "page_views_total_log" : 11.65060302221531
+              },
+            "columns_name" : [ "Categories", "Entitats acreditades" ],
+            "columns_field_name" : [ "categories", "entitats_acreditades" ],
+            "columns_datatype" : [ "Text", "Text" ],
+            "columns_description" : [ "", "" ],
+            "columns_format" : [ {}, {} ],
+            "download_count" : 1359,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2019-06-06T15:12:25.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Economia",
+            "domain_tags" :
+              [
+                "agents",
+                "suport",
+                "internacionalització",
+                "entitats de promoció",
+                "entitats de formació",
+                "entitats financeres",
+                "ods8_treball decent i creixement econòmic",
+                "ods4_educació de qualitat"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No aplicable"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Accredited agents to support Internationalization"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Agentes de apoyo a la Internacionalización acreditados"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Empresa i Treball"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/2aqi-zpf7",
+        "link" : "https://analisi.transparenciacatalunya.cat/Economia/Agents-de-suport-a-la-Internacionalització-acredit/2aqi-zpf7",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 1,
+  "timings" : { "serviceMillis" : 18, "searchMillis" : [ 1, 6 ] },
+  "warnings" : []
+}
