@@ -24,6 +24,8 @@
       cad_usos: ["Immobles que no són habitatges", "Immobles urbans per ús, sense els residencials (% del total)"],
       h_cad_viv: (g, a, c, e, d) => `El valor cadastral mitjà d'un habitatge a la província és de <b>${g} €</b> (${a}), davant dels ${c} € de Catalunya i els ${e} € d'Espanya. Des del 2012, ${d}.`,
       h_cad_usos: (r, a, g, v) => `El <b>${r}</b> dels immobles urbans de la província són habitatges (${a}). Després vénen ${g.toLowerCase()}: ${v}.`,
+      cad_ibi: ["Rebut de l'IBI", "Quota líquida mitjana per rebut de l'IBI urbà (€)"],
+      h_cad_ibi: (g, a, c, e, n, t) => `El rebut mitjà de l'IBI urbà a la província és de <b>${g} €</b> (${a}), davant dels ${c} € de Catalunya i els ${e} € d'Espanya.${n != null ? ` <b>${n} dels ${t} ajuntaments</b> apliquen el recàrrec als pisos buits.` : ""}`,
       font_cad: "Font: Direcció General del Cadastre (Ministeri d'Hisenda). Espanya, sense el País Basc ni Navarra",
       cu: { almacen: "Magatzems i aparcaments", comercial: "Comercial", industrial: "Industrial", oficinas: "Oficines", hosteleria: "Hoteleria", solar: "Sòl vacant", deportivo: "Esportiu", cultural: "Cultural", sanidad: "Sanitat i benestar", religioso: "Religiós", espectaculos: "Espectacles", singular: "Edificis singulars" },
       solar: ["Plaques solars", "Potència fotovoltaica d'autoconsum per habitant (W), acumulada mes a mes"],
@@ -122,6 +124,8 @@
       cad_usos: ["Inmuebles que no son viviendas", "Inmuebles urbanos por uso, sin los residenciales (% del total)"],
       h_cad_viv: (g, a, c, e, d) => `El valor catastral medio de una vivienda en la provincia es de <b>${g} €</b> (${a}), frente a los ${c} € de Cataluña y los ${e} € de España. Desde 2012, ${d}.`,
       h_cad_usos: (r, a, g, v) => `El <b>${r}</b> de los inmuebles urbanos de la provincia son viviendas (${a}). Después vienen ${g.toLowerCase()}: ${v}.`,
+      cad_ibi: ["Recibo del IBI", "Cuota líquida media por recibo del IBI urbano (€)"],
+      h_cad_ibi: (g, a, c, e, n, t) => `El recibo medio del IBI urbano en la provincia es de <b>${g} €</b> (${a}), frente a los ${c} € de Cataluña y los ${e} € de España.${n != null ? ` <b>${n} de los ${t} ayuntamientos</b> aplican el recargo a los pisos vacíos.` : ""}`,
       font_cad: "Fuente: Dirección General del Catastro (Ministerio de Hacienda). España, sin el País Vasco ni Navarra",
       cu: { almacen: "Almacenes y aparcamientos", comercial: "Comercial", industrial: "Industrial", oficinas: "Oficinas", hosteleria: "Hostelería", solar: "Suelo vacante", deportivo: "Deportivo", cultural: "Cultural", sanidad: "Sanidad y beneficencia", religioso: "Religioso", espectaculos: "Espectáculos", singular: "Edificios singulares" },
       solar: ["Placas solares", "Potencia fotovoltaica de autoconsumo por habitante (W), acumulada mes a mes"],
@@ -496,6 +500,7 @@
     if (id === "nac_prov") { const g = sp.grups[0]; return g ? tp("h_nac_prov", fmt(sp.total), sp.any, nomPais(g.c.slice(5)), pct(g.gi, 1)) : ""; }
     if (id === "solar") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g && sp.abs ? tp("h_solar", fmt(g[2]), fmt(c && c[2]), fmt(sp.abs.n), fmt(sp.abs.kw / 1000, 0), etiqueta(sp.abs.mes)) : ""; }
     if (id === "cad_viv") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), g0 = sp.series.gi[0]; const d = g && g0 ? (g[2] / g0[2] - 1) * 100 : null; return g ? tp("h_cad_viv", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]), d == null ? "" : d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0))) : ""; }
+    if (id === "cad_ibi") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), d = sp.abs && sp.abs.desoc; return g ? tp("h_cad_ibi", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]), d ? d[0] : null, d ? d[1] : null) : ""; }
     if (id === "cad_usos") { const g = sp.grups[0]; return g && sp.res ? tp("h_cad_usos", pct(sp.res.gi, 0), sp.any, nomGrup(g.g, g.c), pct(g.gi, 1)) : ""; }
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
     if (id === "mossos_mes") { const g = ult(sp, "gi"); const a = sp.abs || {}; return g && a.n12 ? tp("h_mossos_mes", fmt(a.n12), etiqueta(g[1]), a.n12_ant ? delta((a.n12 / a.n12_ant) * 100) : "") : ""; }
@@ -565,7 +570,7 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "cad_viv", "cad_usos", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "cad_viv", "cad_ibi", "cad_usos", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
     pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
