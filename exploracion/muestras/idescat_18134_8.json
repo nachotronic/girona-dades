@@ -1,0 +1,17 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/comest/18134/8?lang=ca",
+  "label" : "Exportacions i importacions. Per països, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)",
+  "link" : {
+    "item" : [ {
+      "class" : "dataset",
+      "href" : "https://api.idescat.cat/taules/v2/comest/18134/8/cat?lang=ca",
+      "label" : "Catalunya"
+    }, {
+      "class" : "dataset",
+      "href" : "https://api.idescat.cat/taules/v2/comest/18134/8/prov?lang=ca",
+      "label" : "Per províncies"
+    } ]
+  },
+  "version" : "2.0"
+}
