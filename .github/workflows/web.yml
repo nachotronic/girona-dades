@@ -43,7 +43,7 @@ jobs:
           VERSIO=${GITHUB_SHA::8} python scripts/referencia/genera.py build/referencia.json --publica
           ls web/ca web/es && head -5 web/llms.txt
       # Versiona CSS y JS en cada publicación para que el navegador no mezcle un index.html nuevo con estilos viejos en caché
-      - run: sed -i -E "s/(href|src)=\"([a-z]+\.(css|js))\"/\1=\"\2?v=${GITHUB_SHA::8}\"/g" web/index.html && grep -E "estilos|mapa\.js" web/index.html
+      - run: sed -i -E "s/(href|src)=\"([a-z]+\.(css|js))\"/\1=\"\2?v=${GITHUB_SHA::8}\"/g" web/index.html web/qui-som.html web/avis-legal.html web/privacitat.html && grep -E "estilos|mapa\.js" web/index.html
       # Igual con los datos: sin versión, el navegador puede usar 10 minutos un municipios.json viejo con un mapa.js nuevo
       - run: sed -i -E "s/fetch\(([\"\`])(datos\/[^\"\`?]+)\1/fetch(\1\2?v=${GITHUB_SHA::8}\1/g" web/*.js && grep -c "?v=" web/app.js web/mapa.js
       - uses: actions/configure-pages@v5
