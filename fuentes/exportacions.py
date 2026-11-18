@@ -39,7 +39,8 @@ MESOS = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6
 # territoriales_mens, datos_mensuales_territoriales…): se reconoce el fichero por el nombre trAA(an|mm)CC.zip
 RE_ZIP = re.compile(r'href="([^"]*/tr(\d\d)(an|[a-z]{2})(\d\d)\.zip)"', re.I)
 RE_PAG = re.compile(r'href="(/Sede/estadisticas/estadisticas-comercio-exterior/[^"#?]+\.html)"')
-INE_2852 = "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2852?nult=4"
+# Población residente por provincia (ECP, tabla 56945; la 2852 del padrón se dejó de actualizar en 2021)
+INE_POB = ["https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/56945?nult=1", "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2852?nult=1"]
 PROVS = {"01": "Araba/Álava", "02": "Albacete", "03": "Alicante/Alacant", "04": "Almería", "05": "Ávila", "06": "Badajoz",
          "07": "Balears, Illes", "08": "Barcelona", "09": "Burgos", "10": "Cáceres", "11": "Cádiz", "12": "Castellón/Castelló",
          "13": "Ciudad Real", "14": "Córdoba", "15": "Coruña, A", "16": "Cuenca", "17": "Girona", "18": "Granada", "19": "Guadalajara",
@@ -127,21 +128,29 @@ def _processa(urls: list[str], mides: dict) -> pd.DataFrame:
 
 
 def _poblacio(sal) -> str:
-    """Población por provincia (INE 2852, padrón) para las exportaciones por habitante."""
-    nom2cod = {v: k for k, v in PROVS.items()}
-    files = []
-    for se in get(INE_2852).json():
-        parts = [x.strip() for x in se.get("Nombre", "").split(".")]
-        if len(parts) < 2 or parts[1] != "Total":
+    """Población por provincia para las exportaciones por habitante."""
+    nom2cod = {re.sub(r"\W", "", v.lower()): k for k, v in PROVS.items()}
+    for url in INE_POB:
+        files = []
+        try:
+            js = get(url, timeout=300).json()
+        except Exception:  # noqa: BLE001
             continue
-        cod = "esp" if "nacional" in parts[0].lower() else nom2cod.get(parts[0])
-        if cod:
-            files += [(cod, d.get("Anyo"), d.get("Valor")) for d in se.get("Data", []) if d.get("Valor")]
-    p = pd.DataFrame(files, columns=["prov", "any", "poblacio"]).drop_duplicates(["prov", "any"])
-    if p["prov"].nunique() < 50:
-        return f"ERROR población INE 2852: solo {p['prov'].nunique()} provincias"
-    p.sort_values(["prov", "any"]).to_csv(sal / "poblacio.csv", index=False)
-    return f"población INE 2852: {p['prov'].nunique()} zonas, años {p['any'].min()}-{p['any'].max()}"
+        for se in js:
+            parts = [x.strip() for x in se.get("Nombre", "").split(".")]
+            if len(parts) < 3 or not ("Todas las edades" in parts or parts[1] == "Total") or "Total" not in parts[1:3]:
+                continue
+            if any(x in ("Hombres", "Mujeres") for x in parts[1:3]):
+                continue
+            nom = re.sub(r"^\d+\s*", "", parts[0])
+            cod = "esp" if "nacional" in nom.lower() else nom2cod.get(re.sub(r"\W", "", nom.lower()))
+            if cod:
+                files += [(cod, d.get("Anyo"), d.get("Valor")) for d in se.get("Data", []) if d.get("Valor")]
+        p = pd.DataFrame(files, columns=["prov", "any", "poblacio"]).drop_duplicates(["prov", "any"])
+        if p["prov"].nunique() >= 50:
+            p.sort_values(["prov", "any"]).to_csv(sal / "poblacio.csv", index=False)
+            return f"población INE ({url.split('/')[-1]}): {p['prov'].nunique()} zonas, años {p['any'].min()}-{p['any'].max()}"
+    return "ERROR población INE: ninguna tabla da las provincias"
 
 
 def ejecutar() -> str:
