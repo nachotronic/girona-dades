@@ -64,10 +64,10 @@
  },
  "emergencies": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-18T09:21:37Z",
+  "ok": "2026-11-18T09:21:37Z",
+  "durada": 7,
+  "resum": "relación Idescat: 938 municipios (221 con código 17); regiones Bombers en Girona: {'Centre': 14, 'Girona': 207}; áreas regionales AR: {'Alt Pirineu': 11, 'Catalunya Central': 3, 'Girona': 207}\n9 áreas básicas de Agents Rurals en la provincia: Cerdanya, Osona - Lluçanès, Alt Empordà, Baix Empordà, Garrotxa, Gironès, Pla de l'Estany, Ripollès, Selva; municipios sin área: []\nactuaciones Bombers: 88805 filas; códigos de ejemplo ['08223', '08200', '25023']; grupos ['activitat no urgent', 'altres urgents', 'assistència tècnica', 'dispositiu preventiu', 'fuites perilloses', 'incendi urbà', 'incendi vegetació', 'mobilitat', 'pràctiques', 'salvaments', 'simulacres', 'suport tècnic']\nactuaciones Bombers mensuales (Girona): 82548 filas, último mes 2026-08\naños: 2023 2023-01-01→2023-12-26 (81796); 2024 2024-01-01→2024-12-31 (65153); 2025 2025-01-01→2025-12-29 (67948); 2026 2026-01-01→2026-08-17 (62536)\nincendios forestales: 8010 (2011-2025); códigos de ejemplo ['431299', '430483', '170545']; columnas ['data_incendi', 'codi_comarca', 'comarca', 'codi_municipi', 'termemunic', 'haarbrades', 'hanoarbrad', 'hanoforest', 'haforestal', 'font', 'any']"
  },
  "emex": {
   "estat": "ok",
@@ -155,10 +155,10 @@
  },
  "policia": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-18T09:20:59Z",
+  "ok": "2026-11-18T09:20:59Z",
+  "durada": 38,
+  "resum": "relación municipio-ABP: 956 filas, columnas ['OBJECTID', 'CODI_MUNICIPI', 'CODI_ABP_MOSSOS', 'CODI_DISTRICTE', 'NOM_DISTRICTE']\npoblación ABP (año 2026): total 8,202,978\n11 ABP en la provincia (de 60): Alt Empordà-Figueres, Alt Empordà-Roses, Baix Empordà-la Bisbal, Baix Empordà-Sant Feliu, Garrotxa, Gironès-Pla de l'Estany, Ripollès, Selva Interior, Selva Litoral, Cerdanya, Osona\nseries mensuales: 10 regiones, 14 tipos, hasta 2026-10; 12 meses por ABP: 62 ABP\n12 meses por ABP y título: 62 ABP, 2025-11 a 2026-10\nhechos penales: años completos [2023, 2024, 2025], 62 ABP; ABP de Girona sin datos: []"
  },
  "pressupostos": {
   "estat": "ok",
@@ -169,10 +169,10 @@
  },
  "provincia": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-18T09:07:29Z",
+  "ok": "2026-11-18T09:07:29Z",
+  "durada": 810,
+  "resum": "ales por naturaleza de la finca, provincias, interés del préstamo y número e importe. : 180 series\n3237 HPT: Hipotecas anuales por naturaleza de la finca (rústicas), provincias, tramos de extensión y número e importe. : 60 series\n3238 HPT: Hipotecas anuales por naturaleza de la finca (urbanas), provincias, tramos de extensión y número e importe. : 80 series\n3239 HPT: Hipotecas anuales por naturaleza de la finca, provincias, entidad que concede el préstamo y número e importe.: 180 series\n3240 HPT: Hipotecas anuales por naturaleza de la finca, provincias, duración en años y número e importe.: 180 series\n3241 HPT: Resumen anual de hipotecas por provincias, naturaleza de la finca y número e importe.: 24 series\n3242 HPT: Resumen anual de hipotecas por provincias, bienes muebles y número e importe.: 12 series\n3222 HPT: Hipotecas canceladas registralmente por provincias, naturaleza de la finca y entidad prestamista: 18 series\n73035 ECM: Defunciones por causas (capítulos) por sexo y provincia: 108 series\n2063 EOAP: Viajeros y pernoctaciones por provincias: 4 series\n2061 EOAP: Estancia media por provincias: 1 series\n2072 EOAP: Plazas, apartamentos, grados de ocupación y personal empleado por provincias: 6 series\n49380 EOTR: Viajeros y pernoctaciones por provincias: 4 series\n2073 EOTR: Viajeros y pernoctaciones por provincias: 4 series\n2067 EOTR: Estancia media por provincias: 1 series\n2070 EOTR: Establecimientos, plazas, grados de ocupación y personal empleado por provincias: 6 series"
  },
  "referencies": {
   "estat": "ok",
