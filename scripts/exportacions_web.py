@@ -36,7 +36,7 @@ def construir(salida: pathlib.Path) -> dict | None:
     # Años completos: anual definitivo, o 12 meses provisionales
     mesos_any = a[a["mes"]].groupby("any")["per"].nunique()
     prov_anys = sorted(int(y) for y, n in mesos_any.items() if n == 12 and y not in anuals)
-    anys = sorted(anuals) + prov_anys
+    anys = sorted(set(anuals) | set(prov_anys))
     if not anys:
         return None
     ult = anys[-1]

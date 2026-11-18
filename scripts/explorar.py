@@ -70,12 +70,10 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
 
-# Exportaciones, 4.ª ronda: DataComex (datos, API y empresas)
+# Exportaciones, 5.ª ronda: enlaces de años antiguos
 CANDIDATAS_E = {}
-DC = "https://datacomex.comercio.es"
-for k in ("/data", "/Data", "/Data/Index", "/Home/Api", "/Api", "/Empresas", "/Home/Empresas", "/Manual", "/swagger", "/swagger/index.html",
-          "/api/swagger/v1/swagger.json", "/swagger/v1/swagger.json"):
-    CANDIDATAS_E["dc" + k.replace("/", "_")] = DC + k
+for k in ("series-historicas-anuales/2015", "series-historicas-anuales/2019", "2021", "2023", "territoriales/2018__", "2019", "2020-territoriales", "2021-territoriales", "2022-territoriales", "2022-territoriales/marzo", "2023-territoriales/marzo", "2019-territoriales"):
+    CANDIDATAS_E["ae_" + k.replace("/", "_")] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/" + k + ".html"
 STF = "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/Aduanas/Comercio_exterior/"
 
 def explora_territoriales(filas: list) -> None:
@@ -129,6 +127,14 @@ def explora_territoriales(filas: list) -> None:
 PAT_ENLACES = re.compile(r'href="([^"]+)"', re.I)
 CLAVES_ENLACE = re.compile(r"export|exterior|comex|cex|provinc|descarga|\.zip|\.xls|\.csv", re.I)
 
+
+def explora_zipsae(filas: list) -> None:
+    out = []
+    for f in sorted(MUESTRAS.glob("ae_*.html")):
+        t = f.read_text("utf-8", "ignore")
+        enl = sorted(set(e for e in PAT_ENLACES.findall(t) if ".zip" in e or "comercio-exterior/" in e))
+        out.append(f"== {f.name}\n" + "\n".join(enl))
+    (MUESTRAS / "ZIPS_AE.txt").write_text("\n".join(out), encoding="utf-8")
 
 def explora_enlaces(filas: list) -> None:
     """Saca de cada página guardada los enlaces que parecen de comercio exterior."""
@@ -292,7 +298,7 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_enlaces(filas)
+    explora_zipsae(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
