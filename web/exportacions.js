@@ -117,7 +117,7 @@
     const mx = Math.max(...files.map((x) => Math.abs(x[1] || 0))) || 1;
     return `<div class="pb">${files.map(([n, v, nota, cls]) => `<div class="pb-fila"><span class="pb-nom">${n}${nota ? ` <small class="pb-n">${nota}</small>` : ""}</span><span class="pb-barres"><span class="pb-b"><b class="${cls || "pg-bg-gi"}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${f(v)}</em></span></span></div>`).join("")}</div>`;
   };
-  const varTxt = (v) => (v == null ? "" : `<span class="${v >= 0 ? "puja" : "baixa"}">${pct(v, 1, true)}</span>`);
+  const varTxt = (v) => (v == null ? "" : `<b class="ex-var">${pct(v, 1, true)}</b>`);
 
   let X = null, carregant = null;
   const est = { flux: "E", any: null, ind: "hab" };
@@ -273,7 +273,7 @@
     if (div) { const vs = Object.values(out).filter((v) => v != null).sort((a, b) => a - b); const mx = Math.max(Math.abs(vs[0]), Math.abs(vs[vs.length - 1])); const p = est.ind === "var" ? [-0.5, -0.25, -0.05, 0.05, 0.25, 0.5] : [-0.5, -0.2, -0.05, 0.05, 0.2, 0.5]; t = p.map((k) => { const v = k * mx; const a = Math.abs(v), r = a >= 1000 ? 100 : a >= 100 ? 10 : 1; return Math.round(v / r) * r; }); rampa = DIVERG; if (est.ind === "var") { const c = vs[Math.floor(vs.length / 2)]; t = [-10, 0, 10, 20, 30, 40].map((x) => x + Math.round(c / 10) * 10 - 20); rampa = DIVERG; } }
     const col = {}; Object.entries(out).forEach(([c, v]) => { col[c] = colorDe(v, t, rampa); });
     const f = est.ind === "var" ? (v) => pct(v, 0) : est.ind === "tot" ? fmtM : (v) => fmt(v);
-    if (!mapes.esp) mapes.esp = creaMapa("exp-esp", X.geo_prov, { bounds: [[-18.3, 27.5], [4.4, 43.9]], ressalta: "17", tip: (c) => { const { out: o } = valorsProv(); const n = (X.geo_prov.features.find((x) => x.properties.c === c) || { properties: {} }).properties.n; return `<b>${n || c}</b><br>${o[c] == null ? tx("sense") : est.ind === "var" ? pct(o[c], 1, true) : est.ind === "tot" ? `${fmtM(o[c])} M€` : `${fmt(o[c])} €`}`; } });
+    if (!mapes.esp) mapes.esp = creaMapa("exp-esp", X.geo_prov, { bounds: [[-13, 34.2], [4.4, 43.9]], ressalta: "17", tip: (c) => { const { out: o } = valorsProv(); const n = (X.geo_prov.features.find((x) => x.properties.c === c) || { properties: {} }).properties.n; return `<b>${n || c}</b><br>${o[c] == null ? tx("sense") : est.ind === "var" ? pct(o[c], 1, true) : est.ind === "tot" ? `${fmtM(o[c])} M€` : `${fmt(o[c])} €`}`; } });
     if (mapes.esp) pinta(mapes.esp, col);
     llegenda(document.getElementById("exp-esp-lleg"), t, rampa, f);
     const ord = Object.entries(out).filter(([, v]) => v != null).sort((a, b) => b[1] - a[1]);

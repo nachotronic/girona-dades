@@ -1231,3 +1231,4 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .ex-cp-0 { background: var(--serie-1); } .ex-cp-1 { background: #2f8a82; } .ex-cp-2 { background: #5aa9a0; } .ex-cp-3 { background: #8fc7be; } .ex-cp-4 { background: #bfe0da; }
 .ex-cp-l { font: 11px/1.4 var(--mono); color: var(--text-2); margin-top: 4px !important; }
 @media (max-width: 860px) { .ex-mapa-graella { grid-template-columns: 1fr; } .ex-mon { height: 260px; } .ex-esp { height: 320px; } }
+.ex-var { font-weight: 600; color: var(--tinta); }
