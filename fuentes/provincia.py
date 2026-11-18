@@ -16,6 +16,7 @@ TABLAS = {
     "76140": "IPC, variación anual por CCAA",
     "76134": "IPC, variación anual nacional",
     "76154": "IPC por provincias y grupos (anual)",
+    "76141": "IPC por provincias y grupos (mensual)",
     # EPA
     "65349": "EPA, tasas de actividad, paro y empleo por provincia",
     # Turismo

@@ -3,21 +3,23 @@
   const TP = {
     ca: {
       gi: "Girona", cat: "Catalunya", esp: "Espanya",
+      q4_fins: (t) => `en 4 trimestres (fins al ${t})`, l_any: (a) => `el ${a}`,
       mesos: ["gener", "febrer", "març", "abril", "maig", "juny", "juliol", "agost", "setembre", "octubre", "novembre", "desembre"],
       ipc: ["Inflació", "Variació anual de l'IPC (%)"],
       paro: ["Atur (EPA)", "Taxa d'atur (%)"],
       ipc_grups: ["Què s'encareix", "Variació anual dels preus per grups (%)"],
-      compra: ["Compravendes d'habitatges", "Índex, 2007 = 100"],
+      compra: ["Compravendes d'habitatges", "Suma dels últims 12 mesos, mes a mes. Índex, 2007 = 100"],
       turisme: ["Turisme estranger", "Pernoctacions hoteleres de residents a l'estranger (%)"],
       execucions: ["Execucions hipotecàries", "Habitatges amb execució iniciada. Índex, 2014 = 100"],
-      societats: ["Empreses noves", "Societats mercantils constituïdes. Índex, 2007 = 100"],
+      execucions_q: ["Execucions hipotecàries", "Habitatges amb execució iniciada, suma dels últims 4 trimestres. Índex, 2014 = 100"],
+      societats: ["Empreses noves", "Societats mercantils constituïdes, suma dels últims 12 mesos. Índex, 2008 = 100"],
       h_ipc: (g, c, e, p) => `Els preus pugen un <b>${g}</b> interanual a Girona (${p}), davant del ${c} a Catalunya i el ${e} a Espanya.`,
       h_paro: (g, e, p) => `L'atur és del <b>${g}</b> a Girona (${p}). A Espanya, del ${e}.`,
-      h_ipc_grups: (g, v, a) => `El ${a}, el que més es va encarir a Girona va ser <b>${g.toLowerCase()}</b> (${v}).`,
-      h_compra: (n, a, d, c, e) => `<b>${n}</b> compravendes d'habitatges el ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
+      h_ipc_grups: (g, v, a) => `${a}, el que més s'encareix a Girona és <b>${g.toLowerCase()}</b> (${v} en un any).`,
+      h_compra: (n, a, d, c, e) => `<b>${n}</b> compravendes d'habitatges en 12 mesos, ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
       h_turisme: (g, a, n) => `El <b>${g}</b> de les nits d'hotel són de turistes estrangers (${a}), sobre ${n} pernoctacions.`,
-      h_execucions: (n, a, d) => `<b>${n}</b> habitatges amb execució hipotecària el ${a}, ${d} que el 2014.`,
-      h_societats: (n, a, d, c, e) => `<b>${n}</b> societats noves el ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
+      h_execucions: (n, a, d) => `<b>${n}</b> habitatges amb execució hipotecària ${a}, ${d} que el 2014.`,
+      h_societats: (n, a, d, c, e) => `<b>${n}</b> societats noves en 12 mesos, ${a}: ${d} respecte al 2008. Catalunya, ${c}; Espanya, ${e}.`,
       menys: (v) => `un ${v} menys`, mes: (v) => `un ${v} més`,
       esperanca: ["Esperança de vida", "Anys de vida en néixer"],
       at_renda: ["Renda declarada", "Renda bruta mitjana per declaració de l'IRPF (€)"],
@@ -68,15 +70,15 @@
       font_sol: "Font: Generalitat, Registre d'autoconsum de Catalunya (RAC)",
       esperanca_noms: { gi: "Total", cat: "Dones", esp: "Homes" },
       h_esperanca: (g, a, d, h) => `Qui neix avui a la província pot esperar viure <b>${g} anys</b> (${a}): ${d} les dones i ${h} els homes.`,
-      hipoteques: ["Hipoteques sobre habitatges", "Nombre anual. Índex, 2007 = 100"],
-      hipoteca_mitjana: ["Hipoteca mitjana", "Import mitjà per habitatge (€)"],
+      hipoteques: ["Hipoteques sobre habitatges", "Suma dels últims 12 mesos, mes a mes. Índex, 2007 = 100"],
+      hipoteca_mitjana: ["Hipoteca mitjana", "Import mitjà per habitatge, últims 12 mesos (€)"],
       causes: ["De què es mor", "Defuncions per grup de causes (% del total)"],
-      destins: ["On dormen els turistes", "Pernoctacions hoteleres anuals (milions)"],
+      destins: ["On dormen els turistes", "Pernoctacions hoteleres dels últims 12 mesos (milions)"],
       destins_noms: { gi: "Costa Brava", cat: "Lloret de Mar", esp: "Pirineus (tot Catalunya)" },
-      h_hipoteques: (n, a, d, e) => `<b>${n}</b> hipoteques sobre habitatges el ${a}: ${d} que el 2007. A Espanya, ${e}.`,
-      h_hipoteca_mitjana: (g, e, a) => `La hipoteca mitjana a Girona és de <b>${g} €</b> (${a}), davant dels ${e} € d'Espanya.`,
+      h_hipoteques: (n, a, d, e) => `<b>${n}</b> hipoteques sobre habitatges en 12 mesos, ${a}: ${d} que el 2007. A Espanya, ${e}.`,
+      h_hipoteca_mitjana: (g, e, a) => `La hipoteca mitjana a Girona és de <b>${g} €</b> (12 mesos, ${a}), davant dels ${e} € d'Espanya.`,
       h_causes: (n, a, c, v) => `<b>${n}</b> defuncions el ${a}. La primera causa: <b>${c.toLowerCase()}</b> (${v}).`,
-      h_destins: (v, a, l) => `La Costa Brava va sumar <b>${v} milions</b> de nits d'hotel el ${a}; només Lloret de Mar, ${l} milions.`,
+      h_destins: (v, a, l) => `La Costa Brava suma <b>${v} milions</b> de nits d'hotel en 12 mesos, ${a}; només Lloret de Mar, ${l} milions.`,
       comp_4eso: ["Competències bàsiques a 4t d'ESO", "Puntuació mitjana de català, castellà, anglès i matemàtiques (0-100)"],
       comp_4eso_mat: ["4t d'ESO per matèries", "Puntuació mitjana a les proves de competències bàsiques (0-100)"],
       comp_6e: ["Competències bàsiques a 6è de primària", "Puntuació mitjana de català, castellà, anglès i matemàtiques (0-100)"],
@@ -138,21 +140,23 @@
     },
     es: {
       gi: "Girona", cat: "Cataluña", esp: "España",
+      q4_fins: (t) => `en 4 trimestres (hasta el ${t})`, l_any: (a) => `en ${a}`,
       mesos: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
       ipc: ["Inflación", "Variación anual del IPC (%)"],
       paro: ["Paro (EPA)", "Tasa de paro (%)"],
       ipc_grups: ["Qué se encarece", "Variación anual de los precios por grupos (%)"],
-      compra: ["Compraventas de viviendas", "Índice, 2007 = 100"],
+      compra: ["Compraventas de viviendas", "Suma de los últimos 12 meses, mes a mes. Índice, 2007 = 100"],
       turisme: ["Turismo extranjero", "Pernoctaciones hoteleras de residentes en el extranjero (%)"],
       execucions: ["Ejecuciones hipotecarias", "Viviendas con ejecución iniciada. Índice, 2014 = 100"],
-      societats: ["Empresas nuevas", "Sociedades mercantiles constituidas. Índice, 2007 = 100"],
+      execucions_q: ["Ejecuciones hipotecarias", "Viviendas con ejecución iniciada, suma de los últimos 4 trimestres. Índice, 2014 = 100"],
+      societats: ["Empresas nuevas", "Sociedades mercantiles constituidas, suma de los últimos 12 meses. Índice, 2008 = 100"],
       h_ipc: (g, c, e, p) => `Los precios suben un <b>${g}</b> interanual en Girona (${p}), frente al ${c} en Cataluña y el ${e} en España.`,
       h_paro: (g, e, p) => `El paro es del <b>${g}</b> en Girona (${p}). En España, del ${e}.`,
-      h_ipc_grups: (g, v, a) => `En ${a}, lo que más se encareció en Girona fue <b>${g.toLowerCase()}</b> (${v}).`,
-      h_compra: (n, a, d, c, e) => `<b>${n}</b> compraventas de viviendas en ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
+      h_ipc_grups: (g, v, a) => `${a}, lo que más se encarece en Girona es <b>${g.toLowerCase()}</b> (${v} en un año).`,
+      h_compra: (n, a, d, c, e) => `<b>${n}</b> compraventas de viviendas en 12 meses, ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
       h_turisme: (g, a, n) => `El <b>${g}</b> de las noches de hotel son de turistas extranjeros (${a}), sobre ${n} pernoctaciones.`,
-      h_execucions: (n, a, d) => `<b>${n}</b> viviendas con ejecución hipotecaria en ${a}, ${d} que en 2014.`,
-      h_societats: (n, a, d, c, e) => `<b>${n}</b> sociedades nuevas en ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
+      h_execucions: (n, a, d) => `<b>${n}</b> viviendas con ejecución hipotecaria ${a}, ${d} que en 2014.`,
+      h_societats: (n, a, d, c, e) => `<b>${n}</b> sociedades nuevas en 12 meses, ${a}: ${d} respecto a 2008. Cataluña, ${c}; España, ${e}.`,
       menys: (v) => `un ${v} menos`, mes: (v) => `un ${v} más`,
       esperanca: ["Esperanza de vida", "Años de vida al nacer"],
       at_renda: ["Renta declarada", "Renta bruta media por declaración del IRPF (€)"],
@@ -203,15 +207,15 @@
       font_sol: "Fuente: Generalitat, Registro de autoconsumo de Cataluña (RAC)",
       esperanca_noms: { gi: "Total", cat: "Mujeres", esp: "Hombres" },
       h_esperanca: (g, a, d, h) => `Quien nace hoy en la provincia puede esperar vivir <b>${g} años</b> (${a}): ${d} las mujeres y ${h} los hombres.`,
-      hipoteques: ["Hipotecas sobre viviendas", "Número anual. Índice, 2007 = 100"],
-      hipoteca_mitjana: ["Hipoteca media", "Importe medio por vivienda (€)"],
+      hipoteques: ["Hipotecas sobre viviendas", "Suma de los últimos 12 meses, mes a mes. Índice, 2007 = 100"],
+      hipoteca_mitjana: ["Hipoteca media", "Importe medio por vivienda, últimos 12 meses (€)"],
       causes: ["De qué se muere", "Defunciones por grupo de causas (% del total)"],
-      destins: ["Dónde duermen los turistas", "Pernoctaciones hoteleras anuales (millones)"],
+      destins: ["Dónde duermen los turistas", "Pernoctaciones hoteleras de los últimos 12 meses (millones)"],
       destins_noms: { gi: "Costa Brava", cat: "Lloret de Mar", esp: "Pirineos (toda Cataluña)" },
-      h_hipoteques: (n, a, d, e) => `<b>${n}</b> hipotecas sobre viviendas en ${a}: ${d} que en 2007. En España, ${e}.`,
-      h_hipoteca_mitjana: (g, e, a) => `La hipoteca media en Girona es de <b>${g} €</b> (${a}), frente a los ${e} € de España.`,
+      h_hipoteques: (n, a, d, e) => `<b>${n}</b> hipotecas sobre viviendas en 12 meses, ${a}: ${d} que en 2007. En España, ${e}.`,
+      h_hipoteca_mitjana: (g, e, a) => `La hipoteca media en Girona es de <b>${g} €</b> (12 meses, ${a}), frente a los ${e} € de España.`,
       h_causes: (n, a, c, v) => `<b>${n}</b> defunciones en ${a}. La primera causa: <b>${c.toLowerCase()}</b> (${v}).`,
-      h_destins: (v, a, l) => `La Costa Brava sumó <b>${v} millones</b> de noches de hotel en ${a}; solo Lloret de Mar, ${l} millones.`,
+      h_destins: (v, a, l) => `La Costa Brava suma <b>${v} millones</b> de noches de hotel en 12 meses, ${a}; solo Lloret de Mar, ${l} millones.`,
       comp_4eso: ["Competencias básicas en 4.º de ESO", "Puntuación media de catalán, castellano, inglés y matemáticas (0-100)"],
       comp_4eso_mat: ["4.º de ESO por materias", "Puntuación media en las pruebas de competencias básicas (0-100)"],
       comp_6e: ["Competencias básicas en 6.º de primaria", "Puntuación media de catalán, castellano, inglés y matemáticas (0-100)"],
@@ -296,6 +300,10 @@
     z_gi: "Província de Girona", z_cat: "Catalunya", z_esp: "Espanya",
     font_mossos: "Font: Mossos d'Esquadra, fets penals coneguts", font_interior: "Font: Ministeri de l'Interior, Balanç de Criminalitat",
     font_cgpj: "Font: Consell General del Poder Judicial",
+    font_bombers: "Font: Bombers de la Generalitat, actuacions urgents per municipi",
+    bomb_mes: ["Bombers, mes a mes", "Actuacions urgents a la província cada mes"],
+    bmes_noms: { gi: "Incendis", cat: "Salvaments", esp: "Accidents de trànsit" },
+    h_bomb_mes: (n, p, i, a) => `Els Bombers van fer <b>${n}</b> actuacions urgents a la província en 12 mesos, ${p}. L'últim mes, ${i} incendis i ${a} accidents de trànsit.`,
   });
   Object.assign(TP.es, {
     mossos_mes: ["Delitos, mes a mes", "Hechos penales conocidos en 12 meses por 1.000 habitantes"],
@@ -320,6 +328,10 @@
     z_gi: "Provincia de Girona", z_cat: "Cataluña", z_esp: "España",
     font_mossos: "Fuente: Mossos d'Esquadra, hechos penales conocidos", font_interior: "Fuente: Ministerio del Interior, Balance de Criminalidad",
     font_cgpj: "Fuente: Consejo General del Poder Judicial",
+    font_bombers: "Fuente: Bombers de la Generalitat, actuaciones urgentes por municipio",
+    bomb_mes: ["Bombers, mes a mes", "Actuaciones urgentes en la provincia cada mes"],
+    bmes_noms: { gi: "Incendios", cat: "Salvamentos", esp: "Accidentes de tráfico" },
+    h_bomb_mes: (n, p, i, a) => `Los Bombers hicieron <b>${n}</b> actuaciones urgentes en la provincia en 12 meses, ${p}. El último mes, ${i} incendios y ${a} accidentes de tráfico.`,
   });
   // Turismo
   Object.assign(TP.ca, {
@@ -440,7 +452,7 @@
     "Vestido y calzado": "Vestit i calçat", "Vivienda, agua, electricidad, gas y otros combustibles": "Habitatge, aigua, electricitat i gas",
     "Muebles, artículos del hogar y artículos para el mantenimiento corriente del hogar": "Mobles i articles de la llar", "Sanidad": "Sanitat",
     "Transporte": "Transport", "Información y comunicaciones": "Informació i comunicacions", "Actividades recreativas, deporte y cultura": "Oci, esport i cultura",
-    "Servicios de educación": "Educació", "Restaurantes y servicios de alojamiento": "Restaurants i allotjament", "Seguros y servicios financieros": "Assegurances i serveis financers",
+    "Servicios de educación": "Educació", "Enseñanza": "Educació", "Bebidas alcohólicas y tabaco": "Begudes alcohòliques i tabac", "Restaurantes y servicios de alojamiento": "Restaurants i allotjament", "Seguros y servicios financieros": "Assegurances i serveis financers",
     "Cuidado personal, protección social, y bienes y servicios diversos": "Cura personal i altres serveis",
   };
   const GRUPS_ES = {
@@ -550,19 +562,32 @@
     cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp("pac")}</small>` : ""}${g.s ? ` <small class="pb-n pb-s${g.s > 0 ? "m" : "n"}">${g.s > 0 ? "▲ " + tp("sig_mes") : "▼ " + tp("sig_menys")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
+  // «fins a l'agost del 2026» / «hasta agosto de 2026»
+  const fins = (e) => {
+    const m = /^(\d{4})-(\d{2})$/.exec(e || ""); if (!m) return e;
+    const n = tp("mesos")[+m[2] - 1].toLowerCase();
+    return LANG === "ca" ? `fins ${/^[aeiou]/.test(n) ? "a l'" : "al "}${n} del ${m[1]}` : `hasta ${n} de ${m[1]}`;
+  };
+  // «A l'octubre del 2026» / «En octubre de 2026» / «El 2025»
+  const quan = (e) => {
+    const m = /^(\d{4})-(\d{2})$/.exec(e || "");
+    if (!m) return LANG === "ca" ? `El ${e}` : `En ${e}`;
+    const n = tp("mesos")[+m[2] - 1].toLowerCase();
+    return LANG === "ca" ? `${/^[aeiou]/.test(n) ? "A l'" : "Al "}${n} del ${m[1]}` : `En ${n} de ${m[1]}`;
+  };
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
   const ult = (sp, k) => { const s = sp.series && sp.series[k]; return s && s.length ? s[s.length - 1] : null; };
 
   function titular(id, sp, P) {
     if (id === "ipc") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp("h_ipc", pct(g[2], 1), pct(c && c[2], 1), pct(e && e[2], 1), etiqueta(g[1])) : ""; }
     if (id === "paro") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_paro", pct(g[2], 1), pct(e && e[2], 1), etiqueta(g[1])) : ""; }
-    if (id === "ipc_grups") { const g = sp.grups[0]; return g ? tp("h_ipc_grups", nomGrup(g.g), pct(g.gi, 1), g.any) : ""; }
+    if (id === "ipc_grups") { const g = sp.grups[0]; return g ? tp("h_ipc_grups", nomGrup(g.g), pct(g.gi, 1), quan(String(g.any))) : ""; }
     if (id === "turisme") { const g = ult(sp, "gi"); return g && P.pernoct_total ? tp("h_turisme", pct(g[2], 0), g[1], fmt(P.pernoct_total.v / 1e6, 1) + " M") : ""; }
-    if (["compra", "societats"].includes(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp(`h_${id}`, fmt(sp.abs.gi), sp.any, delta(g[2]), delta(c[2]), delta(e[2])) : ""; }
-    if (id === "hipoteques") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteques", fmt(sp.abs.gi), sp.any, delta(g[2]), delta(e[2])) : ""; }
-    if (id === "hipoteca_mitjana") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteca_mitjana", fmt(g[2]), fmt(e && e[2]), g[1]) : ""; }
+    if (["compra", "societats"].includes(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp(`h_${id}`, fmt(sp.abs.gi), fins(sp.any), delta(g[2]), delta(c[2]), delta(e[2])) : ""; }
+    if (id === "hipoteques") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteques", fmt(sp.abs.gi), fins(sp.any), delta(g[2]), delta(e[2])) : ""; }
+    if (id === "hipoteca_mitjana") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteca_mitjana", fmt(g[2]), fmt(e && e[2]), fins(g[1])) : ""; }
     if (id === "causes") { const g = sp.grups[0]; return g ? tp("h_causes", fmt(sp.total), sp.any, nomGrup(g.g, g.c), pct(g.gi, 1)) : ""; }
-    if (id === "destins") { const g = ult(sp, "gi"), l = ult(sp, "cat"); return g ? tp("h_destins", fmt(g[2], 1), g[1], fmt(l && l[2], 1)) : ""; }
+    if (id === "destins") { const g = ult(sp, "gi"), l = ult(sp, "cat"); return g ? tp("h_destins", fmt(g[2], 1), fins(g[1]), fmt(l && l[2], 1)) : ""; }
     if (id === "comp_4eso" || id === "comp_6e") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_comp", fmt(g[2], 1), fmt(c && c[2], 1), g[1], tp(id === "comp_4eso" ? "n4eso" : "n6e")) : ""; }
     if (id === "comp_4eso_mat") { const g = [...sp.grups].sort((a, b) => b.gi - a.gi)[0]; return g ? tp("h_comp_mat", nomGrup(g.g, g.c), fmt(g.gi, 1), sp.any) : ""; }
     if (id === "edu_publica_prov") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_publica", pct(g[2], 0), pct(c && c[2], 0), g[1], fmt(sp.abs && sp.abs.n)) : ""; }
@@ -582,6 +607,7 @@
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
     if (id === "mossos_mes") { const g = ult(sp, "gi"); const a = sp.abs || {}; return g && a.n12 ? tp("h_mossos_mes", fmt(a.n12), etiqueta(g[1]), a.n12_ant ? delta((a.n12 / a.n12_ant) * 100) : "") : ""; }
     if (id === "rp_fets") { const i = sp.grups.findIndex((x) => x.g === "Girona"); const ords = LANG === "ca" ? ["primera", "segona", "tercera", "quarta", "cinquena", "sisena", "setena", "vuitena", "novena"] : ["primera", "segunda", "tercera", "cuarta", "quinta", "sexta", "séptima", "octava", "novena"]; return i >= 0 ? tp("h_rp_fets", ords[i] || i + 1, fmt(sp.grups[i].gi, 1), fmt(sp.abs.cat, 1)) : ""; }
+    if (id === "bomb_mes") { const i = ult(sp, "gi"), a = ult(sp, "esp"); return i ? tp("h_bomb_mes", fmt(sp.total), fins(sp.fins), fmt(i[2]), fmt(a && a[2])) : ""; }
     if (id === "rp_tipus") { const g = sp.grups[0]; return g ? tp("h_rp_tipus", nomGrup(g.g, g.c), fmt(g.gi, 1), fmt(g.cat, 1)) : ""; }
     if (id === "int_munis") { const g = sp.grups[0], p = sp.grups.find((x) => x.c === "z:gi"); return g && !g.c ? tp("h_int_munis", g.g, fmt(g.gi, 1), sp.abs.any, p ? fmt(p.gi, 1) : "–") : ""; }
     if (id === "llancaments") { const a = sp.abs || {}; return a.n4 ? tp("h_llancaments", fmt(a.n4), a.fins, a.n4_ant ? delta((a.n4 / a.n4_ant) * 100) : "") : ""; }
@@ -600,7 +626,7 @@
     if (id === "esca_infants") { const g = sp.grups.find((x) => x.g === "exces_pes"); return g ? tp("h_esca_infants", pct(g.gi, 0), pct(g.cat, 0)) : ""; }
     if (id === "esca_evol") { const t_ = sp.series.gi, o = sp.series.cat; if (!t_ || !o || !t_.length || !o.length) return ""; const u = t_[t_.length - 1]; return tp("h_esca_evol", u[1], pct(u[2], 0), pct(t_[0][2], 0), pct(o[o.length - 1][2], 0), pct(o[0][2], 0)); }
     if (/^at_/.test(id)) return titularAeat(id, sp);
-    if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.any, delta(g[2])) : ""; }
+    if (id === "execucions") { const g = ult(sp, "gi"); return g ? tp("h_execucions", fmt(sp.abs.gi), sp.q4 ? tp("q4_fins", etiqueta(sp.any)) : tp("l_any", sp.any), delta(g[2])) : ""; }
     return "";
   }
 
@@ -648,7 +674,7 @@
       const sp = P[id];
       const claus = sp.tipus === "barres" ? sp.claus || ["gi", "esp"] : ORDRE.filter((k) => sp.series[k] && sp.series[k].length).reverse();
       return `<figure class="pg-fig" data-id="${id}">
-        <figcaption><span class="pg-tit">${tp(id)[0]}</span><span class="unitat">${tp(id)[1]}</span></figcaption>
+        <figcaption><span class="pg-tit">${tp(id)[0]}</span><span class="unitat">${tp(sp.q4 && TP[LANG][id + "_q"] ? id + "_q" : id)[1]}</span></figcaption>
         <p class="pg-h">${titular(id, sp, P)}</p>
         <p class="pg-lleg">${claus.map((k) => `<span><i class="pg-dot pg-${k}"></i>${nomSerie(sp, k)}</span>`).join("")}</p>
         <div class="pg-c"></div>
@@ -661,8 +687,8 @@
   }
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "hb_ini", "hb_aca", "hb_hpo", "hb_ced", "hb_m2", "hb_ihb", "hb_sol", "cad_viv", "cad_ibi", "cad_usos", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];
-    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : /^hb_/.test(id) ? "font_hab" : /^at_/.test(id) ? "font_aeat" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "hb_ini", "hb_aca", "hb_hpo", "hb_ced", "hb_m2", "hb_ihb", "hb_sol", "cad_viv", "cad_ibi", "cad_usos", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg", "bomb_mes"];
+    pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^(mossos_mes|rp_)/.test(id) ? "font_mossos" : id === "bomb_mes" ? "font_bombers" : id === "int_munis" ? "font_interior" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : /^hb_/.test(id) ? "font_hab" : /^at_/.test(id) ? "font_aeat" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
   window.pintaSeccioTurisme = () => {

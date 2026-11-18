@@ -127,6 +127,18 @@ def ejecutar() -> str:
     f["Any"] = pd.to_numeric(f["Any"], errors="coerce")
     f["Mes"] = pd.to_numeric(f["Mes"], errors="coerce")
     lineas.append(mensuals(f, sal))
+    # Últimos 12 meses por ABP y título del Código Penal (el mapa se actualiza cada mes, sin esperar al año completo)
+    ym = f["Any"] * 12 + f["Mes"] - 1
+    u = int(ym.max())
+    d12 = f[ym > u - 12]
+    a12 = (d12.groupby(["Àrea Bàsica Policial (ABP)", "Regió Policial (RP)", "Títol Codi Penal"])
+           [["Coneguts", "Resolts", "Detencions"]].sum().reset_index())
+    a12.columns = ["abp", "rp", "titol", "coneguts", "resolts", "detencions"]
+    a12["clau"] = a12["abp"].map(clau_abp)
+    a12["desde"] = f"{(u - 11) // 12}-{(u - 11) % 12 + 1:02d}"
+    a12["fins"] = f"{u // 12}-{u % 12 + 1:02d}"
+    a12.to_csv(sal / "fets_12m_titol_abp.csv", index=False)
+    lineas.append(f"12 meses por ABP y título: {a12['abp'].nunique()} ABP, {a12['desde'].iloc[0]} a {a12['fins'].iloc[0]}")
     meses = f.groupby("Any")["Mes"].nunique()
     f = f[f["Any"].isin(meses[meses == 12].index)]
     agg = (f.groupby(["Àrea Bàsica Policial (ABP)", "Regió Policial (RP)", "Any", "Títol Codi Penal"])

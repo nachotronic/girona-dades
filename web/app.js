@@ -91,7 +91,7 @@ const T = {
     k_hut: "Habitatges d'ús turístic",
     k_antics: "Habitatges anteriors a 1980",
     k_pob: "Població",
-    n_vs: (a) => `respecte a ${a}`,
+    n_vs: (a) => `respecte a ${a}`, n_vs_ant: "respecte als 12 mesos anteriors", l_12m: (p) => `12 mesos fins ${p}`,
     n_esforc: "del que ingressa una llar mitjana",
     n_hut: (x) => `${x} per cada 100 habitatges`,
     n_antics: "segons el Cadastre",
@@ -99,7 +99,7 @@ const T = {
     c_municipi: "Municipi", c_comarca: "Comarca", c_pob: "Població",
     c_lloguer: "Lloguer 2025 (€/mes)", c_var5: "Lloguer, variació en 5 anys",
     c_renda: "Renda per persona 2024 (€)", c_esforc: "Esforç lloguer (% renda llar)",
-    c_compra: "Compravendes 2025", c_hut: "HUT per 100 habitatges",
+    c_compra: "Compravendes, últims 12 mesos", c_hut: "HUT per 100 habitatges",
     municipi: "Municipi", provincia: "Província",
     tanca: "Tanca",
     sense: "Sense dades: el municipi té massa pocs contractes o operacions per publicar-les.",
@@ -194,7 +194,7 @@ const T = {
     k_hut: "Viviendas de uso turístico",
     k_antics: "Viviendas anteriores a 1980",
     k_pob: "Población",
-    n_vs: (a) => `respecto a ${a}`,
+    n_vs: (a) => `respecto a ${a}`, n_vs_ant: "respecto a los 12 meses anteriores", l_12m: (p) => `12 meses hasta ${p}`,
     n_esforc: "de lo que ingresa un hogar medio",
     n_hut: (x) => `${x} por cada 100 viviendas`,
     n_antics: "según el Catastro",
@@ -202,7 +202,7 @@ const T = {
     c_municipi: "Municipio", c_comarca: "Comarca", c_pob: "Población",
     c_lloguer: "Alquiler 2025 (€/mes)", c_var5: "Alquiler, variación en 5 años",
     c_renda: "Renta por persona 2024 (€)", c_esforc: "Esfuerzo alquiler (% renta hogar)",
-    c_compra: "Compraventas 2025", c_hut: "VUT por 100 viviendas",
+    c_compra: "Compraventas, últimos 12 meses", c_hut: "VUT por 100 viviendas",
     municipi: "Municipio", provincia: "Provincia",
     tanca: "Cerrar",
     sense: "Sin datos: el municipio tiene demasiado pocos contratos u operaciones para publicarlas.",
@@ -271,7 +271,7 @@ const COLS = [
   { id: "var5", t: "c_var5", v: (m) => { const a = val(m.alquiler, "2025"), b = val(m.alquiler, "2020"); return a && b ? (a / b - 1) * 100 : null; }, f: (v) => pct(v, 0, true) },
   { id: "renda", t: "c_renda", v: (m) => val(m.renta_persona, "2024"), f: (v) => fmt(v), barra: true },
   { id: "esforc", t: "c_esforc", v: (m) => esforc(m), f: (v) => pct(v, 0) },
-  { id: "compra", t: "c_compra", v: (m) => val(m.compraventas, "2025"), f: (v) => fmt(v) },
+  { id: "compra", t: "c_compra", v: (m) => { const u = D.cj && D.cj.mun[m.ine] ? cjUltim(D.cj.mun[m.ine].cvq, "t", true) : null; return u ? u.v : val(m.compraventas, "2025"); }, f: (v) => fmt(v) },
   { id: "hut", t: "c_hut", v: (m) => (m.viviendas ? (m.hut / m.viviendas) * 100 : null), f: (v) => fmt(v, 1), barra: true },
 ];
 
@@ -424,6 +424,23 @@ function grafBarres(cont, dades, f = (v) => fmt(v)) {
 function tile(etiqueta, valor, nota = "") {
   return `<div class="xifra"><p class="etiqueta">${etiqueta}</p><p class="valor">${valor}</p>${nota ? `<p class="nota">${nota}</p>` : ""}</div>`;
 }
+// Último trimestre (o mes) de una serie de la coyuntura y el mismo periodo del año anterior.
+// suma4: suma de los últimos 4 trimestres frente a los 4 anteriores.
+function cjUltim(arr, per = "t", suma4 = false) {
+  const P = D.cj && D.cj.per && D.cj.per[per];
+  if (!arr || !P) return null;
+  const n = per === "t" ? 4 : 12;
+  let i = arr.length - 1; while (i >= 0 && arr[i] == null) i--;
+  if (i < 0) return null;
+  if (!suma4) return { et: etPer(P[i]), v: arr[i], ant: arr[i - n], etAnt: i - n >= 0 ? etPer(P[i - n]) : "" };
+  const sum = (a, b) => { let s = 0; for (let k = a; k <= b; k++) { if (k < 0 || arr[k] == null) return null; s += arr[k]; } return s; };
+  return { et: `${etPer(P[i - n + 1])}–${etPer(P[i])}`, v: sum(i - n + 1, i), ant: sum(i - 2 * n + 1, i - n), etAnt: null };
+}
+function variacioCj(u, colorea = false) {
+  if (!u || u.v == null || !u.ant) return "";
+  const v = (u.v / u.ant - 1) * 100;
+  return `<span class="${colorea ? (v > 0 ? "puja" : "baixa") : ""}">${pct(v, 1, true)}</span> ${u.etAnt ? t("n_vs", u.etAnt) : t("n_vs_ant")}`;
+}
 function variacio(o, a, b, colorea = false) {
   const va = val(o, a), vb = val(o, b);
   if (va == null || vb == null) return "";
@@ -434,7 +451,7 @@ function variacio(o, a, b, colorea = false) {
 
 function pintaProvincia() {
   const p = D.provincia, P = D.prov || {};
-  const ll = val(p.alquiler, "2025");
+  const ll = val(p.alquiler, "2025"), llT = D.cj && D.cj.prov.llq ? cjUltim(D.cj.prov.llq.gi) : null;
   const ultim = (sp, k) => { const s = sp && sp.series && sp.series[k]; return s && s.length ? s[s.length - 1] : null; };
   const periode = (e) => { const m = /^(\d{4})-(\d{2})$/.exec(e); if (m) return `${t("mesos_curt")[+m[2] - 1]} ${m[1]}`; const q = /^(\d{4})T(\d)$/.exec(e); return q ? `${q[2]}T ${q[1]}` : e; };
   // % de nacidos en el extranjero, ponderado por población
@@ -445,8 +462,9 @@ function pintaProvincia() {
     aG ? tile(t("k_atur"), pct(aG[2], 1), t("n_atur", periode(aG[1]), pct(aE && aE[2], 1))) : "",
     tile(`${t("k_renda")} 2024`, `${fmt(val(p.renta_persona, "2024"))} <small>€</small>`, variacio(p.renta_persona, "2024", "2023")),
     iG ? tile(t("k_ipc"), pct(iG[2], 1, true), t("n_ipc", periode(iG[1]), pct(iE && iE[2], 1, true))) : "",
-    tile(`${t("k_lloguer")} 2025`, `${fmt(ll)} <small>€/mes</small>`, variacio(p.alquiler, "2025", "2024", true)),
-    P.pernoct_total ? tile(`${t("k_tur")} ${P.pernoct_total.any}`, `${fmt(P.pernoct_total.v / 1e6, 1)} <small>M</small>`, tE ? t("n_tur", pct(tE[2], 0)) : "") : "",
+    llT ? tile(`${t("k_lloguer")} ${llT.et}`, `${fmt(llT.v)} <small>€/mes</small>`, variacioCj(llT, true))
+      : tile(`${t("k_lloguer")} 2025`, `${fmt(ll)} <small>€/mes</small>`, variacio(p.alquiler, "2025", "2024", true)),
+    P.pernoct_total ? tile(`${t("k_tur")} ${P.pernoct_total.m12 ? t("l_12m", periode(P.pernoct_total.any)) : P.pernoct_total.any}`, `${fmt(P.pernoct_total.v / 1e6, 1)} <small>M</small>`, tE ? t("n_tur", pct(tE[2], 0)) : "") : "",
   ];
   document.getElementById("xifres").innerHTML = tiles.join("");
 }
@@ -510,6 +528,8 @@ function obreFitxa(ine, desplaca) {
   const [aR, vR] = ultim(m.renta_persona);
   const esf = esforc(m);
   const [aG, vG] = ultim(m.gini);
+  const cjm = D.cj && D.cj.mun && D.cj.mun[ine];
+  const llM = cjm ? cjUltim(cjm.llq) : null, cvM = cjm ? cjUltim(cjm.cvq, "t", true) : null;
   f.hidden = false;
   f.innerHTML = `
     <div class="fitxa-cap">
@@ -523,8 +543,10 @@ function obreFitxa(ine, desplaca) {
     </div>
     <div class="fitxa-resum"></div>
     <div class="xifres">
-      ${tile(`${t("k_lloguer")} 2025`, val(m.alquiler, "2025") ? `${fmt(val(m.alquiler, "2025"))} <small>€/mes</small>` : "–", variacio(m.alquiler, "2025", "2024", true))}
-      ${tile(`${t("k_compra")} 2025`, fmt(val(m.compraventas, "2025")), variacio(m.compraventas, "2025", "2024"))}
+      ${llM ? tile(`${t("k_lloguer")} ${llM.et}`, `${fmt(llM.v)} <small>€/mes</small>`, variacioCj(llM, true))
+        : tile(`${t("k_lloguer")} 2025`, val(m.alquiler, "2025") ? `${fmt(val(m.alquiler, "2025"))} <small>€/mes</small>` : "–", variacio(m.alquiler, "2025", "2024", true))}
+      ${cvM ? tile(`${t("k_compra")} ${cvM.et}`, fmt(cvM.v), variacioCj(cvM))
+        : tile(`${t("k_compra")} 2025`, fmt(val(m.compraventas, "2025")), variacio(m.compraventas, "2025", "2024"))}
       ${tile(`${t("k_renda")} ${aR || ""}`, vR ? `${fmt(vR)} <small>€</small>` : "–", aG ? `Gini ${fmt(vG, 1)}` : "")}
       ${tile(`${t("k_esforc")} 2024`, pct(esf, 0), esf ? t("n_esforc") : "")}
       ${tile(t("k_hut"), fmt(m.hut), m.viviendas ? t("n_hut", fmt((m.hut / m.viviendas) * 100, 1)) : "")}
