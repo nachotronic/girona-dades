@@ -13,7 +13,7 @@ on:
         default: "0"
   schedule:
     - cron: "0 4 * * 1"  # lunes a las 04:00 UTC: todas las fuentes
-    - cron: "0 9 2-8 * *"  # primeros días de mes: solo coyuntura (paro del SEPE, INE mensual)
+    - cron: "0 9 2-8 * *"  # primeros días de mes: solo las fuentes mensuales y trimestrales (SEPE, INE, Mossos, Bombers…)
 
 permissions:
   contents: write
@@ -40,7 +40,7 @@ jobs:
         env:
           PROBLEMES_MD: ${{ runner.temp }}/problemes.md
           XIFRA_HISTORICO: ${{ inputs.xifra_historico || '0' }}
-          FUENTES: ${{ github.event.schedule == '0 9 2-8 * *' && 'conjuntura afiliacio dgt aena provincia mitma llistes_espera turisme demografia' || inputs.fuentes }}
+          FUENTES: ${{ github.event.schedule == '0 9 2-8 * *' && 'conjuntura afiliacio dgt aena provincia mitma llistes_espera turisme policia emergencies interior cgpj demografia' || inputs.fuentes }}
         run: python scripts/actualizar.py $FUENTES
       - name: Guardar resultados
         if: always()

@@ -63,7 +63,7 @@ FONTS = {
     "nacionalitat": ("INE i Idescat, població per nacionalitat", "anual"),
     "universitaris": ("Idescat, mobilitat universitària", "anual"),
     "conjuntura": ("SEPE, atur i contractes", "mensual"),
-    "emergencies": ("Bombers, Agents Rurals i incendis forestals", "anual"),
+    "emergencies": ("Bombers, Agents Rurals i incendis forestals", "mensual (Bombers) / anual"),
     "afiliacio": ("Idescat, afiliació a la Seguretat Social", "mensual"),
     "dgt": ("DGT, matriculacions", "mensual"),
     "aena": ("Aena, passatgers de l'aeroport", "mensual"),

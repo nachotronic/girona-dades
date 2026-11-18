@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-18 01:05 UTC
+Última ejecución: 2026-11-18 09:21 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -12,15 +12,15 @@
 | catastro — Catastro INSPIRE, edificis | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | semestral |
 | geometria — INE, seccionat censal 2024 | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | fix |
 | salut — CatSalut: àrees bàsiques de salut, receptes, infeccions i centres | ok | 2026-11-16 14:36 | 2026-11-16 14:36 | setmanal/mensual |
-| policia — Mossos d'Esquadra, fets penals | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | mensual |
+| policia — Mossos d'Esquadra, fets penals | ok | 2026-11-18 09:20 | 2026-11-18 09:20 | mensual |
 | referencies — Valors de referència de Catalunya i Espanya | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | anual |
-| provincia — INE, sèries de la província | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | mensual |
+| provincia — INE, sèries de la província | ok | 2026-11-18 09:07 | 2026-11-18 09:07 | mensual |
 | emex — Idescat, El municipi en xifres | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | educacio — Departament d'Educació i INE, cens 2021 | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | nacionalitat — INE i Idescat, població per nacionalitat | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
 | universitaris — Idescat, mobilitat universitària | ok | 2026-11-16 12:19 | 2026-11-16 12:19 | anual |
 | conjuntura — SEPE, atur i contractes | ok | 2026-11-16 14:00 | 2026-11-16 14:00 | mensual |
-| emergencies — Bombers, Agents Rurals i incendis forestals | ok | 2026-11-16 12:42 | 2026-11-16 12:42 | anual |
+| emergencies — Bombers, Agents Rurals i incendis forestals | ok | 2026-11-18 09:21 | 2026-11-18 09:21 | mensual (Bombers) / anual |
 | afiliacio — Idescat, afiliació a la Seguretat Social | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | dgt — DGT, matriculacions | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | aena — Aena, passatgers de l'aeroport | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
@@ -44,61 +44,76 @@
 
 ## Detalle de la última ejecución
 
-### exportacions: ok (2440 s)
+### provincia: ok (810 s)
 
 ```
-2015: 10 ficheros, Girona exporta 4,639.6 M€ e importa 2,301.7 M€
-2016: 10 ficheros, Girona exporta 4,728.9 M€ e importa 2,352.4 M€
-2017: 10 ficheros, Girona exporta 5,233.0 M€ e importa 2,613.9 M€
-2018: 10 ficheros, Girona exporta 5,262.3 M€ e importa 2,756.7 M€
-2019: 10 ficheros, Girona exporta 5,785.0 M€ e importa 2,854.7 M€
-2019-01: 10 ficheros, Girona exporta 423.0 M€ e importa 237.4 M€
-2019-02: 10 ficheros, Girona exporta 431.6 M€ e importa 229.0 M€
-2019-03: 10 ficheros, Girona exporta 504.3 M€ e importa 243.9 M€
-2019-04: 10 ficheros, Girona exporta 507.7 M€ e importa 242.7 M€
-2019-05: 10 ficheros, Girona exporta 516.3 M€ e importa 264.0 M€
-2019-06: 10 ficheros, Girona exporta 453.5 M€ e importa 254.2 M€
-2019-07: 10 ficheros, Girona exporta 525.4 M€ e importa 267.2 M€
-2019-08: 10 ficheros, Girona exporta 392.1 M€ e importa 190.1 M€
-2019-09: 10 ficheros, Girona exporta 459.8 M€ e importa 247.4 M€
-2019-10: 10 ficheros, Girona exporta 567.2 M€ e importa 262.3 M€
-2019-11: 10 ficheros, Girona exporta 542.0 M€ e importa 218.8 M€
-2019-12: 10 ficheros, Girona exporta 462.0 M€ e importa 197.7 M€
-2020: 10 ficheros, Girona exporta 5,832.8 M€ e importa 2,645.5 M€
-2020-01: 10 ficheros, Girona exporta 482.3 M€ e importa 229.2 M€
-2020-02: 10 ficheros, Girona exporta 495.5 M€ e importa 246.8 M€
-2020-03: 10 ficheros, Girona exporta 511.7 M€ e importa 222.2 M€
-2020-04: 10 ficheros, Girona exporta 393.7 M€ e importa 180.8 M€
-2020-05: 10 ficheros, Girona exporta 438.4 M€ e importa 200.9 M€
-2020-06: 10 ficheros, Girona exporta 478.4 M€ e importa 214.2 M€
-2020-07: 10 ficheros, Girona exporta 560.6 M€ e importa 241.6 M€
-2020-08: 10 ficheros, Girona exporta 407.6 M€ e importa 191.4 M€
-2020-09: 10 ficheros, Girona exporta 478.9 M€ e importa 220.6 M€
-2020-10: 10 ficheros, Girona exporta 533.8 M€ e importa 239.7 M€
-2020-11: 10 ficheros, Girona exporta 537.8 M€ e importa 231.0 M€
-2020-12: 10 ficheros, Girona exporta 514.3 M€ e importa 227.2 M€
-2021: 10 ficheros, Girona exporta 6,446.3 M€ e importa 3,416.1 M€
-2021-01: 10 ficheros, Girona exporta 468.9 M€ e importa 231.9 M€
-2021-06: 10 ficheros, Girona exporta 566.3 M€ e importa 304.3 M€
-2021-07: 10 ficheros, Girona exporta 554.1 M€ e importa 300.7 M€
-2021-08: 10 ficheros, Girona exporta 448.8 M€ e importa 236.6 M€
-2021-09: 10 ficheros, Girona exporta 538.8 M€ e importa 296.0 M€
-2021-10: 10 ficheros, Girona exporta 516.9 M€ e importa 298.4 M€
-2021-11: 10 ficheros, Girona exporta 561.4 M€ e importa 340.4 M€
-2021-12: 10 ficheros, Girona exporta 488.0 M€ e importa 298.9 M€
-2022: 10 ficheros, Girona exporta 7,849.9 M€ e importa 4,075.2 M€
-2022-01: 10 ficheros, Girona exporta 528.7 M€ e importa 315.8 M€
-2022-02: 10 ficheros, Girona exporta 596.6 M€ e importa 321.9 M€
-2022-03: 10 ficheros, Girona exporta 679.2 M€ e importa 360.6 M€
-2022-04: 10 ficheros, Girona exporta 629.1 M€ e importa 351.4 M€
-2022-05: 10 ficheros, Girona exporta 692.6 M€ e importa 371.0 M€
-2022-06: 10 ficheros, Girona exporta 718.4 M€ e importa 375.4 M€
-2022-07: 10 ficheros, Girona exporta 681.2 M€ e importa 349.7 M€
-2022-08: 10 ficheros, Girona exporta 575.1 M€ e importa 311.1 M€
-2022-09: 10 ficheros, Girona exporta 724.0 M€ e importa 347.4 M€
-2022-10: 10 ficheros, Girona exporta 674.4 M€ e importa 338.0 M€
-2022-11: 10 ficheros, Girona exporta 715.2 M€ e importa 333.3 M€
-2022-12: 10 ficheros, Girona exporta 635.6 M€ e importa 284.7 M€
-2023: 10 ficheros, Girona exporta 8,156.9 M€ e importa 3,890.1 M€
-población INE 2852: 53 zonas, años 2018-2021
+76143 IPC, variación anual por provincias: 6 series
+76140 IPC, variación anual por CCAA: 6 series
+76134 IPC, variación anual nacional: 3 series
+76154 IPC por provincias y grupos (anual): 56 series
+76141 IPC por provincias y grupos (mensual): 112 series
+65349 EPA, tasas de actividad, paro y empleo por provincia: 18 series
+2074 Hoteles, viajeros y pernoctaciones por CCAA y provincias: 18 series
+2062 Campings, viajeros y pernoctaciones por provincias: 4 series
+6150 ETDP compraventa de viviendas (mensual): 15 series
+6155 ETDP compraventa de viviendas (anual): 15 series
+49280 ETDP compraventa de viviendas: 15 series
+6149 ETDP viviendas transmitidas: 18 series
+10744 Viviendas con ejecución hipotecaria por provincia: 6 series
+6454 Sociedades constituidas por provincias: 36 series
+6464 Sociedades disueltas por provincias: 12 series
+6295 Sociedades constituidas por provincias (mensual): 36 series
+6305 Sociedades disueltas por provincias (mensual): 12 series
+76417 Sociedades por provincias (base nueva): 60 series
+65335 EPA, tasas de paro por sexo y CCAA: 12 series
+2078 Hoteles por puntos turísticos: 16 series
+2039 Hoteles por zonas turísticas: 12 series
+2076 Hoteles: plazas y ocupación por puntos turísticos: 28 series
+3201 HPT: Hipotecas por naturaleza de la finca, meses, provincias, capital prestado y número e importe.: 100 series
+3230 HPT: Hipotecas por naturaleza de la finca, meses, provincias, interés del préstamo y número e importe.: 100 series
+3229 HPT: Hipotecas por naturaleza de la finca (rústicas), meses, provincias, tramos de extensión y número e importe. : 40 series
+3231 HPT: Hipotecas por naturaleza de la finca (urbanas), meses, provincias, tramos de extensión y número e importe.: 60 series
+3232 HPT: Hipotecas por naturaleza de la finca, meses, provincias y número e importe.: 24 series
+76317 HPT: Hipotecas constituidas sobre el total de fincas por naturaleza de la finca. Resultados nacionales y por provincias.: 24 series
+3233 HPT: Hipotecas constituídas en fincas rústicas y urbanas por meses, provincias y número e importe.: 4 series
+3234 HPT: Hipotecas constituídas en bienes muebles por meses, provincias y número e importe.: 4 series
+3235 HPT: Hipotecas anuales por naturaleza de la finca, provincias, capital prestado y número e importe.: 180 series
+3236 HPT: Hipotecas anuales por naturaleza de la finca, provincias, interés del préstamo y número e importe. : 180 series
+3237 HPT: Hipotecas anuales por naturaleza de la finca (rústicas), provincias, tramos de extensión y número e importe. : 60 series
+3238 HPT: Hipotecas anuales por naturaleza de la finca (urbanas), provincias, tramos de extensión y número e importe. : 80 series
+3239 HPT: Hipotecas anuales por naturaleza de la finca, provincias, entidad que concede el préstamo y número e importe.: 180 series
+3240 HPT: Hipotecas anuales por naturaleza de la finca, provincias, duración en años y número e importe.: 180 series
+3241 HPT: Resumen anual de hipotecas por provincias, naturaleza de la finca y número e importe.: 24 series
+3242 HPT: Resumen anual de hipotecas por provincias, bienes muebles y número e importe.: 12 series
+3222 HPT: Hipotecas canceladas registralmente por provincias, naturaleza de la finca y entidad prestamista: 18 series
+73035 ECM: Defunciones por causas (capítulos) por sexo y provincia: 108 series
+2063 EOAP: Viajeros y pernoctaciones por provincias: 4 series
+2061 EOAP: Estancia media por provincias: 1 series
+2072 EOAP: Plazas, apartamentos, grados de ocupación y personal empleado por provincias: 6 series
+49380 EOTR: Viajeros y pernoctaciones por provincias: 4 series
+2073 EOTR: Viajeros y pernoctaciones por provincias: 4 series
+2067 EOTR: Estancia media por provincias: 1 series
+2070 EOTR: Establecimientos, plazas, grados de ocupación y personal empleado por provincias: 6 series
+```
+
+### policia: ok (38 s)
+
+```
+relación municipio-ABP: 956 filas, columnas ['OBJECTID', 'CODI_MUNICIPI', 'CODI_ABP_MOSSOS', 'CODI_DISTRICTE', 'NOM_DISTRICTE']
+población ABP (año 2026): total 8,202,978
+11 ABP en la provincia (de 60): Alt Empordà-Figueres, Alt Empordà-Roses, Baix Empordà-la Bisbal, Baix Empordà-Sant Feliu, Garrotxa, Gironès-Pla de l'Estany, Ripollès, Selva Interior, Selva Litoral, Cerdanya, Osona
+series mensuales: 10 regiones, 14 tipos, hasta 2026-10; 12 meses por ABP: 62 ABP
+12 meses por ABP y título: 62 ABP, 2025-11 a 2026-10
+hechos penales: años completos [2023, 2024, 2025], 62 ABP; ABP de Girona sin datos: []
+```
+
+### emergencies: ok (7 s)
+
+```
+relación Idescat: 938 municipios (221 con código 17); regiones Bombers en Girona: {'Centre': 14, 'Girona': 207}; áreas regionales AR: {'Alt Pirineu': 11, 'Catalunya Central': 3, 'Girona': 207}
+9 áreas básicas de Agents Rurals en la provincia: Cerdanya, Osona - Lluçanès, Alt Empordà, Baix Empordà, Garrotxa, Gironès, Pla de l'Estany, Ripollès, Selva; municipios sin área: []
+actuaciones Bombers: 88805 filas; códigos de ejemplo ['08223', '08200', '25023']; grupos ['activitat no urgent', 'altres urgents', 'assistència tècnica', 'dispositiu preventiu', 'fuites perilloses', 'incendi urbà', 'incendi vegetació', 'mobilitat', 'pràctiques', 'salvaments', 'simulacres', 'suport tècnic']
+actuaciones Bombers mensuales (Girona): 82548 filas, último mes 2026-08
+años: 2023 2023-01-01→2023-12-26 (81796); 2024 2024-01-01→2024-12-31 (65153); 2025 2025-01-01→2025-12-29 (67948); 2026 2026-01-01→2026-08-17 (62536)
+incendios forestales: 8010 (2011-2025); códigos de ejemplo ['431299', '430483', '170545']; columnas ['data_incendi', 'codi_comarca', 'comarca', 'codi_municipi', 'termemunic', 'haarbrades', 'hanoarbrad', 'hanoforest', 'haforestal', 'font', 'any']
 ```
