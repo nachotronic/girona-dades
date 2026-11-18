@@ -70,10 +70,10 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
 
-# Exportaciones, 5.ª ronda: enlaces de años antiguos
+# Población por provincia actual (INE)
 CANDIDATAS_E = {}
-for k in ("series-historicas-anuales/2015", "series-historicas-anuales/2019", "2021", "2023", "territoriales/2018__", "2019", "2020-territoriales", "2021-territoriales", "2022-territoriales", "2022-territoriales/marzo", "2023-territoriales/marzo", "2019-territoriales"):
-    CANDIDATAS_E["ae_" + k.replace("/", "_")] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/" + k + ".html"
+for k in ("TABLAS_OPERACION/ECP", "TABLAS_OPERACION/22", "DATOS_TABLA/2852?nult=1", "DATOS_TABLA/56934?nult=1"):
+    CANDIDATAS_E["ine_" + re.sub(r"\W", "_", k)] = "https://servicios.ine.es/wstempus/js/ES/" + k
 STF = "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/Aduanas/Comercio_exterior/"
 
 def explora_territoriales(filas: list) -> None:
@@ -298,7 +298,6 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_zipsae(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
