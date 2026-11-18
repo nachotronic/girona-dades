@@ -1221,7 +1221,7 @@
   }
 
   function botonsNivell() {
-    document.querySelectorAll(".segment button").forEach((b) => {
+    document.querySelectorAll(".segment button[data-nivell]").forEach((b) => {
       b.setAttribute("aria-pressed", String(b.dataset.nivell === nivell));
       b.disabled = !disponible(ind, b.dataset.nivell);
       // Los niveles por áreas solo aparecen cuando el indicador existe a ese nivel
@@ -1524,7 +1524,7 @@
       avisa("zona", { punt: e.point });
     });
 
-    document.querySelectorAll(".segment button").forEach((b) => b.addEventListener("click", () => canviaNivell(b.dataset.nivell)));
+    document.querySelectorAll(".segment button[data-nivell]").forEach((b) => b.addEventListener("click", () => canviaNivell(b.dataset.nivell)));
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { colorsBase(); pinta(); });
     let amplePrev = innerWidth;
     addEventListener("resize", () => { if (Math.abs(innerWidth - amplePrev) > 40) { amplePrev = innerWidth; llegenda(); } });

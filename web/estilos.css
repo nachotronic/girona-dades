@@ -1233,6 +1233,15 @@ th, td { padding-left: 10px; padding-right: 10px; }
 @media (max-width: 860px) { .ex-mapa-graella { grid-template-columns: 1fr; } .ex-mon { height: 260px; } .ex-esp { height: 320px; } }
 .ex-var { font-weight: 600; color: var(--tinta); }
 
+/* Cabecera de escritorio: cada enlace en una sola línea («La província» se partía en dos);
+   si no caben todos, el menú se desplaza en horizontal como en el móvil */
+@media (min-width: 761px) {
+  .menu { gap: 14px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .menu::-webkit-scrollbar { display: none; }
+  .menu a { white-space: nowrap; flex: none; letter-spacing: .03em; }
+}
+@media (min-width: 761px) and (max-width: 1279px) { .menu { gap: 6px; } .menu a { font-size: 11px; letter-spacing: 0; } }
+
 /* ---------- Néixer i morir ---------- */
 .dm-xifres { margin-bottom: 28px; }
 .dm-noms { margin-top: 8px; }
