@@ -1,0 +1,66 @@
+[
+{
+"COD": "MNP89585",
+"Nombre": "Total Nacional. Defunción. Lugar de residencia. Dato base. ",
+"FK_Unidad": 122,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 39402.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 34422.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 34618.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "MNP89563",
+"Nombre": "Girona. Defunción. Lugar de residencia. Dato base. ",
+"FK_Unidad": 122,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 616.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 553.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 471.0,
+"Secreto": false
+}
+]
+}
+]

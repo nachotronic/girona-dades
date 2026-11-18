@@ -1,0 +1,194 @@
+[
+{
+"COD": "EDES52",
+"Nombre": "Total Nacional. Total. Todas las edades. Dato base. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1793228400000,
+"FK_TipoDato": 5,
+"FK_Periodo": 72,
+"Anyo": 2026,
+"Valor": 8069.0,
+"Secreto": false
+},
+{
+"Fecha": 1792620000000,
+"FK_TipoDato": 5,
+"FK_Periodo": 71,
+"Anyo": 2026,
+"Valor": 7923.0,
+"Secreto": false
+},
+{
+"Fecha": 1792015200000,
+"FK_TipoDato": 5,
+"FK_Periodo": 70,
+"Anyo": 2026,
+"Valor": 7730.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "EDES105",
+"Nombre": "Total Nacional. Total. Todas las edades. Acumulado en lo que va de año. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1793228400000,
+"FK_TipoDato": 5,
+"FK_Periodo": 72,
+"Anyo": 2026,
+"Valor": 369488.0,
+"Secreto": false
+},
+{
+"Fecha": 1792620000000,
+"FK_TipoDato": 5,
+"FK_Periodo": 71,
+"Anyo": 2026,
+"Valor": 361419.0,
+"Secreto": false
+},
+{
+"Fecha": 1792015200000,
+"FK_TipoDato": 5,
+"FK_Periodo": 70,
+"Anyo": 2026,
+"Valor": 353496.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "EDES115",
+"Nombre": "Cataluña. Total. Todas las edades. Dato base. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1793228400000,
+"FK_TipoDato": 5,
+"FK_Periodo": 72,
+"Anyo": 2026,
+"Valor": 1209.0,
+"Secreto": false
+},
+{
+"Fecha": 1792620000000,
+"FK_TipoDato": 5,
+"FK_Periodo": 71,
+"Anyo": 2026,
+"Valor": 1252.0,
+"Secreto": false
+},
+{
+"Fecha": 1792015200000,
+"FK_TipoDato": 5,
+"FK_Periodo": 70,
+"Anyo": 2026,
+"Valor": 1238.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "EDES135",
+"Nombre": "Cataluña. Total. Todas las edades. Acumulado en lo que va de año. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1793228400000,
+"FK_TipoDato": 5,
+"FK_Periodo": 72,
+"Anyo": 2026,
+"Valor": 55907.0,
+"Secreto": false
+},
+{
+"Fecha": 1792620000000,
+"FK_TipoDato": 5,
+"FK_Periodo": 71,
+"Anyo": 2026,
+"Valor": 54698.0,
+"Secreto": false
+},
+{
+"Fecha": 1792015200000,
+"FK_TipoDato": 5,
+"FK_Periodo": 70,
+"Anyo": 2026,
+"Valor": 53446.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "EDES31",
+"Nombre": "Girona. Total. Todas las edades. Dato base. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1793228400000,
+"FK_TipoDato": 5,
+"FK_Periodo": 72,
+"Anyo": 2026,
+"Valor": 115.0,
+"Secreto": false
+},
+{
+"Fecha": 1792620000000,
+"FK_TipoDato": 5,
+"FK_Periodo": 71,
+"Anyo": 2026,
+"Valor": 122.0,
+"Secreto": false
+},
+{
+"Fecha": 1792015200000,
+"FK_TipoDato": 5,
+"FK_Periodo": 70,
+"Anyo": 2026,
+"Valor": 113.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "EDES84",
+"Nombre": "Girona. Total. Todas las edades. Acumulado en lo que va de año. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1793228400000,
+"FK_TipoDato": 5,
+"FK_Periodo": 72,
+"Anyo": 2026,
+"Valor": 5453.0,
+"Secreto": false
+},
+{
+"Fecha": 1792620000000,
+"FK_TipoDato": 5,
+"FK_Periodo": 71,
+"Anyo": 2026,
+"Valor": 5338.0,
+"Secreto": false
+},
+{
+"Fecha": 1792015200000,
+"FK_TipoDato": 5,
+"FK_Periodo": 70,
+"Anyo": 2026,
+"Valor": 5216.0,
+"Secreto": false
+}
+]
+}
+]

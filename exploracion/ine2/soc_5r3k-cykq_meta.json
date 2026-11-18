@@ -1,0 +1,460 @@
+{
+  "id" : "5r3k-cykq",
+  "name" : "Defuncions a Catalunya segons el dia de la mort i sexe",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Economia i Finances",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1586966082,
+  "description" : "S’ofereixen el nombre de defuncions de cada dia de l'any a Catalunya per als anys 2014-2019. Aquesta informació permet analitzar la incidència de situacions com ara les epidèmies o les onades de calor. També permet conèixer quantes defuncions hi va haver tal dia com avui en els anys anteriors.  \nhttps://www.idescat.cat/pub/?id=def&n=13264\n\nDades pendents d'actualitzar.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 2037,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 1694270,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1586966451,
+  "publicationGroup" : 1139560,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1635497401,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1139560,
+  "totalTimesRated" : 0,
+  "viewCount" : 4926,
+  "viewLastModified" : 1784201483,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1586966675,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 602639,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1586966675,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1586966675,
+      "failureCount" : 0,
+      "startedAt" : 1586966675,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 14548978,
+    "name" : "Data",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data",
+    "fieldName" : "data",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 9239458,
+    "cachedContents" : {
+      "non_null" : "2191",
+      "largest" : "2019-12-31T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2018-02-07T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-06-27T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2018-07-06T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-12-29T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-07-14T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-03-20T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-09-08T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-12-24T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-10-14T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-02-01T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2018-03-24T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2019-04-30T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2014-10-11T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-05-19T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-05-22T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2018-12-13T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2018-10-24T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2014-01-05T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-04-28T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2014-11-01T00:00:00.000",
+        "count" : "1"
+      } ],
+      "smallest" : "2014-01-01T00:00:00.000",
+      "count" : "2191",
+      "cardinality" : "2191"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 14548979,
+    "name" : "Homes",
+    "dataTypeName" : "number",
+    "description" : "Nombre d'homes",
+    "fieldName" : "homes",
+    "position" : 2,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9239459,
+    "cachedContents" : {
+      "non_null" : "2191",
+      "largest" : "158",
+      "null" : "0",
+      "top" : [ {
+        "item" : "79",
+        "count" : "79"
+      }, {
+        "item" : "86",
+        "count" : "76"
+      }, {
+        "item" : "89",
+        "count" : "67"
+      }, {
+        "item" : "85",
+        "count" : "66"
+      }, {
+        "item" : "82",
+        "count" : "66"
+      }, {
+        "item" : "90",
+        "count" : "58"
+      }, {
+        "item" : "81",
+        "count" : "58"
+      }, {
+        "item" : "94",
+        "count" : "57"
+      }, {
+        "item" : "93",
+        "count" : "57"
+      }, {
+        "item" : "87",
+        "count" : "56"
+      }, {
+        "item" : "77",
+        "count" : "56"
+      }, {
+        "item" : "76",
+        "count" : "54"
+      }, {
+        "item" : "91",
+        "count" : "54"
+      }, {
+        "item" : "75",
+        "count" : "51"
+      }, {
+        "item" : "84",
+        "count" : "51"
+      }, {
+        "item" : "96",
+        "count" : "51"
+      }, {
+        "item" : "83",
+        "count" : "50"
+      }, {
+        "item" : "74",
+        "count" : "49"
+      }, {
+        "item" : "88",
+        "count" : "49"
+      }, {
+        "item" : "78",
+        "count" : "48"
+      } ],
+      "smallest" : "50",
+      "count" : "2191",
+      "cardinality" : "95"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14548980,
+    "name" : "Dones",
+    "dataTypeName" : "number",
+    "description" : "Nombre de dones",
+    "fieldName" : "dones",
+    "position" : 3,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9239460,
+    "cachedContents" : {
+      "non_null" : "2191",
+      "largest" : "179",
+      "null" : "0",
+      "top" : [ {
+        "item" : "79",
+        "count" : "71"
+      }, {
+        "item" : "75",
+        "count" : "68"
+      }, {
+        "item" : "78",
+        "count" : "67"
+      }, {
+        "item" : "91",
+        "count" : "63"
+      }, {
+        "item" : "77",
+        "count" : "63"
+      }, {
+        "item" : "86",
+        "count" : "62"
+      }, {
+        "item" : "83",
+        "count" : "60"
+      }, {
+        "item" : "76",
+        "count" : "60"
+      }, {
+        "item" : "81",
+        "count" : "58"
+      }, {
+        "item" : "90",
+        "count" : "58"
+      }, {
+        "item" : "87",
+        "count" : "57"
+      }, {
+        "item" : "85",
+        "count" : "56"
+      }, {
+        "item" : "82",
+        "count" : "56"
+      }, {
+        "item" : "74",
+        "count" : "55"
+      }, {
+        "item" : "88",
+        "count" : "53"
+      }, {
+        "item" : "84",
+        "count" : "52"
+      }, {
+        "item" : "92",
+        "count" : "51"
+      }, {
+        "item" : "89",
+        "count" : "47"
+      }, {
+        "item" : "71",
+        "count" : "46"
+      }, {
+        "item" : "73",
+        "count" : "44"
+      } ],
+      "smallest" : "49",
+      "count" : "2191",
+      "cardinality" : "100"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  }, {
+    "id" : 14548981,
+    "name" : "Total",
+    "dataTypeName" : "number",
+    "description" : "Nombre total",
+    "fieldName" : "total",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 9239461,
+    "cachedContents" : {
+      "non_null" : "2191",
+      "largest" : "327",
+      "null" : "0",
+      "top" : [ {
+        "item" : "166",
+        "count" : "42"
+      }, {
+        "item" : "169",
+        "count" : "40"
+      }, {
+        "item" : "163",
+        "count" : "40"
+      }, {
+        "item" : "167",
+        "count" : "39"
+      }, {
+        "item" : "160",
+        "count" : "39"
+      }, {
+        "item" : "177",
+        "count" : "39"
+      }, {
+        "item" : "152",
+        "count" : "38"
+      }, {
+        "item" : "161",
+        "count" : "38"
+      }, {
+        "item" : "171",
+        "count" : "37"
+      }, {
+        "item" : "151",
+        "count" : "35"
+      }, {
+        "item" : "165",
+        "count" : "34"
+      }, {
+        "item" : "158",
+        "count" : "34"
+      }, {
+        "item" : "148",
+        "count" : "34"
+      }, {
+        "item" : "173",
+        "count" : "34"
+      }, {
+        "item" : "155",
+        "count" : "34"
+      }, {
+        "item" : "185",
+        "count" : "32"
+      }, {
+        "item" : "172",
+        "count" : "32"
+      }, {
+        "item" : "154",
+        "count" : "32"
+      }, {
+        "item" : "176",
+        "count" : "32"
+      }, {
+        "item" : "157",
+        "count" : "32"
+      } ],
+      "smallest" : "110",
+      "count" : "2191",
+      "cardinality" : "161"
+    },
+    "format" : {
+      "decimalSeparator" : ",",
+      "groupSeparator" : "."
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "data",
+        "ascending" : false
+      } ]
+    },
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Variable"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Deaths in Catalonia according to the day of death and sex",
+        "Nombre del conjunto de datos (ES)" : "Defunciones en Cataluña según el día de la muerte y sexo"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Organisme o institució" : "IDESCAT",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Sense informació geogràfica",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 14548978,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "morts", "defuncions", "covid", "idescat", "estadística", "relacionat covid", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

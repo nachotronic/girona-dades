@@ -1,0 +1,322 @@
+[
+{
+"COD": "IDB38611",
+"Nombre": "Fecundidad. Total Nacional. Ambas nacionalidades.",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 32.61,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 32.59,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 32.61,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB80626",
+"Nombre": "Total Nacional, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Primero",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 31.52,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 31.5,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 31.57,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB80625",
+"Nombre": "Total Nacional, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Segundo",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 33.54,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 33.51,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 33.53,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB80624",
+"Nombre": "Total Nacional, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Tercero",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 34.0,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 34.01,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 33.92,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB80623",
+"Nombre": "Total Nacional, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Cuarto y más",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 35.3,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 35.16,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 35.05,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB38409",
+"Nombre": "Fecundidad. Girona.",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 31.81,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 32.04,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 31.82,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB81742",
+"Nombre": "Girona, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Primero",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 30.38,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 30.76,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 30.67,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB81741",
+"Nombre": "Girona, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Segundo",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 32.73,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 32.78,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 32.55,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB81740",
+"Nombre": "Girona, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Tercero",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 33.36,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 33.55,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 33.37,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB81739",
+"Nombre": "Girona, Fecundidad, Edad media a la maternidad                                     , Total, Todas las edades, Anual, Dato base, Total, Cuarto y más",
+"FK_Unidad": 108,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 35.85,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 35.5,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 35.19,
+"Secreto": false
+}
+]
+}
+]

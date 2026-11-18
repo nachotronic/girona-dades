@@ -1,0 +1,126 @@
+{
+  "id" : "7q2v-xzgx",
+  "name" : "Estadística de defuncions",
+  "assetType" : "href",
+  "attribution" : "Departament d'Economia i Finances",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Demografia",
+  "createdAt" : 1603724299,
+  "description" : "L'Estadística de defuncions proporciona informació sobre les defuncions de persones residents a Catalunya segons les característiques demogràfiques i socials. Els resultats es difonen anualment amb una desagregació territorial per municipis, comarques, àmbits del Pla territorial, províncies i Catalunya.\n\nL'Idescat porta a terme aquesta operació estadística, amb la col·laboració de l'INE i del Departament de Salut de la Generalitat de Catalunya, a partir de les dades del document unificat Certificat mèdic de defunció/Butlleta estadística de defunció, amb què s'inscriu la defunció al Registre Civil.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 1885373,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1603724301,
+  "publicationGroup" : 1273338,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1603724299,
+  "tableId" : 1273338,
+  "totalTimesRated" : 0,
+  "viewCount" : 2887,
+  "viewLastModified" : 1789978396,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1608541938,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 797893,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1608541938,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1608541938,
+      "failureCount" : 0,
+      "startedAt" : 1608541938,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "ENLLAÇ" : "https://idescat.cat/pub/?id=def"
+      },
+      "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+      "title" : "Enllaç a IDESCAT"
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Death Statistics",
+        "Nombre del conjunto de datos (ES)" : "Estadística de defunciones"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "accessPoints" : {
+      "ENLLAÇ" : "https://idescat.cat/pub/?id=def"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "estadística oficial", "idescat", "defuncions", "ods17_aliances per aconseguir objectius", "ods3_salut i benestar" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

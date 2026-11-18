@@ -1,0 +1,393 @@
+{
+  "id" : "vkds-6sun",
+  "name" : "Mortalitat per totes les causes a Catalunya (observada vs esperada) Font: MoMo",
+  "assetType" : "chart",
+  "attribution" : "Instituto de Salud Carlos III (ISCIII)",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Salut",
+  "createdAt" : 1589376595,
+  "description" : "MoMo és un sistema per a la Vigilància de la mortalitat diària per totes les causes a Espanya. Té com a objectiu identificar patrons inusuals de mortalitat i estimar l'impacte en la mortalitat de la població de qualsevol esdeveniment d'importància per a guiar l'acció en Salut Pública.\n\nEstà gestionat pel CNE i utilitza dades procedents de diverses administracions públiques.\n\nEn aquest dataset, s'obtenen les dades del sistema MoMo i es filtren per mostrar les dades corresponents a Catalunya.\n\nMés informació:\nhttps://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion",
+  "diciBackend" : false,
+  "displayType" : "visualization_canvas_chart",
+  "downloadCount" : 1,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "modifyingViewUid" : "7dt9-azyt",
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2304557,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1590249365,
+  "publicationGroup" : 1148023,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1794988954,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1567369,
+  "totalTimesRated" : 0,
+  "viewCount" : 5363,
+  "viewLastModified" : 1739958420,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1589449757,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1131670,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1589449757,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1589449757,
+      "failureCount" : 0,
+      "startedAt" : 1589449757,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "displayFormat" : {
+    "visualizationCanvasMetadata" : {
+      "vifs" : [ {
+        "configuration" : {
+          "viewSourceDataLink" : true,
+          "xAxisScalingMode" : "pan",
+          "showValueLabels" : false,
+          "showLegendOpened" : true
+        },
+        "series" : [ {
+          "color" : {
+            "highlight" : "#cccccc",
+            "primary" : "#ba001e"
+          },
+          "showLegend" : true,
+          "type" : "timelineChart",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "sum",
+              "columnName" : "defuncions_observades"
+            },
+            "precision" : "day",
+            "dateDisplayFormat" : "MMM DD, YYYY",
+            "orderBy" : {
+              "parameter" : "dimension",
+              "sort" : "asc"
+            },
+            "filters" : [ {
+              "function" : "relativeDateRange",
+              "arguments" : {
+                "period" : "quarter",
+                "calendarDateFilterType" : "Relative",
+                "type" : "this_quarter",
+                "value" : 0
+              },
+              "isDrilldown" : false,
+              "columnName" : "data",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "sexe",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "edad",
+              "isHidden" : false
+            } ],
+            "type" : "socrata.soql",
+            "datasetUid" : "7dt9-azyt",
+            "dimension" : {
+              "columnName" : "data"
+            }
+          }
+        }, {
+          "color" : {
+            "secondary" : "#5b9ec9",
+            "highlight" : "#cccccc",
+            "primary" : "#3d7ec0"
+          },
+          "type" : "timelineChart",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "sum",
+              "columnName" : "defuncions_esperades"
+            },
+            "precision" : "day",
+            "dateDisplayFormat" : "MMM DD, YYYY",
+            "orderBy" : {
+              "parameter" : "dimension",
+              "sort" : "asc"
+            },
+            "filters" : [ {
+              "function" : "relativeDateRange",
+              "arguments" : {
+                "period" : "quarter",
+                "calendarDateFilterType" : "Relative",
+                "type" : "this_quarter",
+                "value" : 0
+              },
+              "isDrilldown" : false,
+              "columnName" : "data",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "sexe",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "edad",
+              "isHidden" : false
+            } ],
+            "type" : "socrata.soql",
+            "datasetUid" : "7dt9-azyt",
+            "dimension" : {
+              "columnName" : "data"
+            }
+          }
+        }, {
+          "color" : {
+            "secondary" : "#2d82af",
+            "highlight" : "#cccccc",
+            "primary" : "#bed7e8"
+          },
+          "showLegend" : true,
+          "type" : "timelineChart",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "sum",
+              "columnName" : "defuncions_esperades_inf"
+            },
+            "precision" : "day",
+            "dateDisplayFormat" : "MMM DD, YYYY",
+            "orderBy" : {
+              "parameter" : "dimension",
+              "sort" : "asc"
+            },
+            "filters" : [ {
+              "function" : "relativeDateRange",
+              "arguments" : {
+                "period" : "quarter",
+                "calendarDateFilterType" : "Relative",
+                "type" : "this_quarter",
+                "value" : 0
+              },
+              "isDrilldown" : false,
+              "columnName" : "data",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "sexe",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "edad",
+              "isHidden" : false
+            } ],
+            "type" : "socrata.soql",
+            "datasetUid" : "7dt9-azyt",
+            "dimension" : {
+              "columnName" : "data"
+            }
+          }
+        }, {
+          "color" : {
+            "secondary" : "#7eba98",
+            "highlight" : "#cccccc",
+            "primary" : "#bed7e8"
+          },
+          "showLegend" : true,
+          "type" : "timelineChart",
+          "dataSource" : {
+            "measure" : {
+              "aggregationFunction" : "sum",
+              "columnName" : "defuncions_esperades_sup"
+            },
+            "precision" : "day",
+            "dateDisplayFormat" : "MMM DD, YYYY",
+            "orderBy" : {
+              "parameter" : "dimension",
+              "sort" : "asc"
+            },
+            "filters" : [ {
+              "function" : "relativeDateRange",
+              "arguments" : {
+                "period" : "quarter",
+                "calendarDateFilterType" : "Relative",
+                "type" : "this_quarter",
+                "value" : 0
+              },
+              "isDrilldown" : false,
+              "columnName" : "data",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "sexe",
+              "isHidden" : false
+            }, {
+              "joinOn" : "OR",
+              "function" : "binaryOperator",
+              "isDrilldown" : false,
+              "arguments" : [ {
+                "operator" : "=",
+                "operand" : "tots"
+              } ],
+              "columnName" : "edad",
+              "isHidden" : false
+            } ],
+            "type" : "socrata.soql",
+            "datasetUid" : "7dt9-azyt",
+            "dimension" : {
+              "columnName" : "data"
+            }
+          }
+        } ],
+        "format" : {
+          "type" : "visualization_interchange_format",
+          "version" : 3
+        },
+        "description" : "",
+        "id" : "45de5e99-bb89-4f3b-a633-b69baeca6515",
+        "title" : ""
+      } ],
+      "filters" : [ {
+        "function" : "relativeDateRange",
+        "arguments" : {
+          "period" : "quarter",
+          "calendarDateFilterType" : "Relative",
+          "type" : "this_quarter",
+          "value" : 0
+        },
+        "isDrilldown" : false,
+        "columnName" : "data",
+        "isHidden" : false
+      }, {
+        "joinOn" : "OR",
+        "function" : "binaryOperator",
+        "isDrilldown" : false,
+        "arguments" : [ {
+          "operator" : "=",
+          "operand" : "tots"
+        } ],
+        "columnName" : "sexe",
+        "isHidden" : false
+      }, {
+        "joinOn" : "OR",
+        "function" : "binaryOperator",
+        "isDrilldown" : false,
+        "arguments" : [ {
+          "operator" : "=",
+          "operand" : "tots"
+        } ],
+        "columnName" : "edad",
+        "isHidden" : false
+      } ],
+      "version" : 1
+    }
+  },
+  "grants" : [ {
+    "inherited" : true,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Diària"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Mortality for all kinds of causes in Catalonia",
+        "Nombre del conjunto de datos (ES)" : "Mortalidad por todo tipo de causa en Cataluña"
+      },
+      "Actors" : {
+        "Tipus actor" : "Altres"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Sense informació geogràfica",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "availableDisplayTypes" : [ "visualization" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "flags" : [ "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

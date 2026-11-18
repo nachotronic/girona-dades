@@ -1,0 +1,141 @@
+{
+  "id" : "tqmi-fkum",
+  "name" : "Onomàstica de Catalunya",
+  "assetType" : "href",
+  "attribution" : "Departament d'Economia i Finances",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Sector Públic",
+  "createdAt" : 1487843149,
+  "description" : "API que dóna accés a la informació estadística dels noms i cognoms de la població de Catalunya, i dels noms dels nadons.",
+  "diciBackend" : false,
+  "displayType" : "href",
+  "downloadCount" : 0,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1551946204,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : false,
+  "numberOfComments" : 0,
+  "oid" : 136513,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1487843226,
+  "publicationGroup" : 83548,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1487843149,
+  "tableId" : 83548,
+  "totalTimesRated" : 0,
+  "viewCount" : 2532,
+  "viewLastModified" : 1789569805,
+  "viewType" : "href",
+  "approvals" : [ {
+    "reviewedAt" : 1487843226,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 304511,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1487843226,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "additionalAccessPoints" : [ {
+      "urls" : {
+        "cas" : "https://www.idescat.cat/dev/api/onomastica/?lang=es",
+        "cat" : "http://www.idescat.cat/api/onomastica/",
+        "eng" : "http://www.idescat.cat/api/onomastica/?lang=en"
+      },
+      "title" : "Descripció de l'API"
+    }, {
+      "urls" : {
+        "accedeix" : "http://www.idescat.cat/api/onomastica/giny/noms/"
+      },
+      "title" : "Giny de noms a Catalunya"
+    }, {
+      "urls" : {
+        "accedeix" : "http://www.idescat.cat/cat/poblacio/poblonomast.html"
+      },
+      "title" : "Estadístiques de noms"
+    } ],
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Anual"
+      },
+      "Idioma" : {
+        "Idioma" : "Català (ca) i altres",
+        "Dataset name (EN)" : "Onomastics of Catalonia",
+        "Nombre del conjunto de datos (ES)" : "Onomástica de Catalunya"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "Sí"
+      },
+      "Actors" : {
+        "Departament" : "Economia i Finances",
+        "Organisme o institució" : "IDESCAT",
+        "Visualitzacio" : "No",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Sense informació geogràfica",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "accessPoints" : {
+      "cas" : "https://www.idescat.cat/dev/api/onomastica/?lang=es",
+      "cat" : "http://www.idescat.cat/api/onomastica/",
+      "eng" : "http://www.idescat.cat/api/onomastica/?lang=en"
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "estadístiques", "ods16_pau justícies i institucions sòlides" ],
+  "flags" : [ "default", "ownerMayBeContacted" ]
+}

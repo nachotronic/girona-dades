@@ -1,0 +1,1730 @@
+[
+{
+"COD": "ECM452968",
+"Nombre": "I-XXII.Todas las causas. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 39402.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 34422.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 34618.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452950",
+"Nombre": "I-XXII.Todas las causas. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 20068.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 17472.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 17760.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452949",
+"Nombre": "I-XXII.Todas las causas. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 19334.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 16950.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 16858.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452967",
+"Nombre": "I.Enfermedades infecciosas y parasitarias. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 754.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 669.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 751.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452948",
+"Nombre": "I.Enfermedades infecciosas y parasitarias. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 341.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 335.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 370.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452947",
+"Nombre": "I.Enfermedades infecciosas y parasitarias. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 413.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 334.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 381.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452966",
+"Nombre": "II.Tumores. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 9958.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 9609.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 9672.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452946",
+"Nombre": "II.Tumores. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 5844.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 5650.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 5613.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452945",
+"Nombre": "II.Tumores. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 4114.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 3959.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 4059.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452965",
+"Nombre": "III.Enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan al mecanismo de la inmunidad. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 211.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 161.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 150.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452944",
+"Nombre": "III.Enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan al mecanismo de la inmunidad. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 83.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 62.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 64.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452943",
+"Nombre": "III.Enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan al mecanismo de la inmunidad. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 128.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 99.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 86.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452964",
+"Nombre": "IV.Enfermedades endocrinas, nutricionales y metabólicas. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1416.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1140.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1113.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452942",
+"Nombre": "IV.Enfermedades endocrinas, nutricionales y metabólicas. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 663.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 489.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 527.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452941",
+"Nombre": "IV.Enfermedades endocrinas, nutricionales y metabólicas. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 753.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 651.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 586.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452963",
+"Nombre": "V.Trastornos mentales y del comportamiento. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 2063.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1765.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1768.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452940",
+"Nombre": "V.Trastornos mentales y del comportamiento. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 740.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 609.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 580.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452939",
+"Nombre": "V.Trastornos mentales y del comportamiento. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1323.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1156.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1188.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452962",
+"Nombre": "VI-VIII.Enfermedades del sistema nervioso y de los órganos de los sentidos. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 2322.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1995.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 2048.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452938",
+"Nombre": "VI-VIII.Enfermedades del sistema nervioso y de los órganos de los sentidos. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1001.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 847.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 849.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452937",
+"Nombre": "VI-VIII.Enfermedades del sistema nervioso y de los órganos de los sentidos. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1321.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1148.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1199.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452961",
+"Nombre": "IX.Enfermedades del sistema circulatorio. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 10664.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 9071.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 8947.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452936",
+"Nombre": "IX.Enfermedades del sistema circulatorio. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 5199.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 4362.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 4322.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452935",
+"Nombre": "IX.Enfermedades del sistema circulatorio. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 5465.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 4709.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 4625.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452960",
+"Nombre": "X.Enfermedades del sistema respiratorio. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 4646.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 3633.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 3529.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452934",
+"Nombre": "X.Enfermedades del sistema respiratorio. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 2517.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1947.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1984.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452933",
+"Nombre": "X.Enfermedades del sistema respiratorio. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 2129.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1686.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1545.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452959",
+"Nombre": "XI.Enfermedades del sistema digestivo. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 2127.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1955.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1983.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452932",
+"Nombre": "XI.Enfermedades del sistema digestivo. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1137.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 994.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1052.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452931",
+"Nombre": "XI.Enfermedades del sistema digestivo. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 990.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 961.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 931.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452958",
+"Nombre": "XII.Enfermedades de la piel y del tejido subcutáneo. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 189.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 159.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 156.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452930",
+"Nombre": "XII.Enfermedades de la piel y del tejido subcutáneo. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 74.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 58.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 61.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452929",
+"Nombre": "XII.Enfermedades de la piel y del tejido subcutáneo. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 115.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 101.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 95.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452957",
+"Nombre": "XIII.Enfermedades del sistema osteomuscular y del tejido conjuntivo. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 502.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 423.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 412.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452928",
+"Nombre": "XIII.Enfermedades del sistema osteomuscular y del tejido conjuntivo. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 174.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 155.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 156.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452927",
+"Nombre": "XIII.Enfermedades del sistema osteomuscular y del tejido conjuntivo. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 328.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 268.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 256.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452956",
+"Nombre": "XIV.Enfermedades del sistema genitourinario. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1643.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1468.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1401.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452926",
+"Nombre": "XIV.Enfermedades del sistema genitourinario. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 693.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 631.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 664.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452925",
+"Nombre": "XIV.Enfermedades del sistema genitourinario. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 950.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 837.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 737.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452955",
+"Nombre": "XV.Embarazo, parto y puerperio. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 0.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452924",
+"Nombre": "XV.Embarazo, parto y puerperio. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 0.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 0.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 0.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452923",
+"Nombre": "XV.Embarazo, parto y puerperio. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 0.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452954",
+"Nombre": "XVI.Afecciones originadas en el periodo perinatal. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 42.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 31.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 42.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452922",
+"Nombre": "XVI.Afecciones originadas en el periodo perinatal. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 22.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 17.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 22.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452921",
+"Nombre": "XVI.Afecciones originadas en el periodo perinatal. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 20.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 14.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 20.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452953",
+"Nombre": "XVII.Malformaciones congénitas, deformidades y anomalías cromosómicas. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 87.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 93.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 78.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452920",
+"Nombre": "XVII.Malformaciones congénitas, deformidades y anomalías cromosómicas. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 41.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 35.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 40.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452919",
+"Nombre": "XVII.Malformaciones congénitas, deformidades y anomalías cromosómicas. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 46.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 58.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 38.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452952",
+"Nombre": "XVIII.Síntomas, signos y hallazgos anormales clínicos y de laboratorio, no clasificados en otra parte. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1199.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 831.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 888.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452918",
+"Nombre": "XVIII.Síntomas, signos y hallazgos anormales clínicos y de laboratorio, no clasificados en otra parte. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 548.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 363.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 406.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452917",
+"Nombre": "XVIII.Síntomas, signos y hallazgos anormales clínicos y de laboratorio, no clasificados en otra parte. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 651.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 468.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 482.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452951",
+"Nombre": "XX.Causas externas de mortalidad. Total. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 1578.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 1418.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1680.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452916",
+"Nombre": "XX.Causas externas de mortalidad. Hombres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 991.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 918.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 1050.0,
+"Secreto": false
+}
+]
+},
+{
+"COD": "ECM452915",
+"Nombre": "XX.Causas externas de mortalidad. Mujeres. Todas las edades. Total Nacional. Personas. ",
+"FK_Unidad": 3,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1733007600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 12,
+"Anyo": 2024,
+"Valor": 587.0,
+"Secreto": false
+},
+{
+"Fecha": 1730415600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 11,
+"Anyo": 2024,
+"Valor": 500.0,
+"Secreto": false
+},
+{
+"Fecha": 1727733600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 10,
+"Anyo": 2024,
+"Valor": 630.0,
+"Secreto": false
+}
+]
+}
+]

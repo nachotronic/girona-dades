@@ -1,0 +1,194 @@
+[
+{
+"COD": "IDB55717",
+"Nombre": "Mortalidad. Total Nacional. Ambos sexos.",
+"FK_Unidad": 286,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 3.04,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 2.63,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 2.6,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB55851",
+"Nombre": "Mortalidad. Total Nacional. Varones.",
+"FK_Unidad": 286,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 3.39,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 2.8,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 2.89,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB55852",
+"Nombre": "Mortalidad. Total Nacional. Mujeres.",
+"FK_Unidad": 286,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 2.68,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 2.46,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 2.28,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB53409",
+"Nombre": "Mortalidad. Girona. Ambos sexos.",
+"FK_Unidad": 286,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 4.69,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 3.94,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 4.56,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB53410",
+"Nombre": "Mortalidad. Girona. Varones.",
+"FK_Unidad": 286,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 5.07,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 3.98,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 4.99,
+"Secreto": false
+}
+]
+},
+{
+"COD": "IDB53411",
+"Nombre": "Mortalidad. Girona. Mujeres.",
+"FK_Unidad": 286,
+"FK_Escala": 1,
+"Data": [
+{
+"Fecha": 1704063600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2024,
+"Valor": 4.29,
+"Secreto": false
+},
+{
+"Fecha": 1672527600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2023,
+"Valor": 3.9,
+"Secreto": false
+},
+{
+"Fecha": 1640991600000,
+"FK_TipoDato": 1,
+"FK_Periodo": 28,
+"Anyo": 2022,
+"Valor": 4.11,
+"Secreto": false
+}
+]
+}
+]
