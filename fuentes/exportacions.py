@@ -54,7 +54,7 @@ COLS = ["per", "flux", "nivell", "zona", "clau", "valor", "pes"]
 def _enlaces() -> dict[str, list[str]]:
     """{periodo: [urls]} con los zips territoriales anuales (AAAA) y mensuales (AAAA-MM).
     Recorre el índice, las páginas de cada año y las de cada mes (enlazadas desde la del año)."""
-    util = re.compile(r"territoriales|historicas|/\d{4}(__)?\.html$|/(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\.html$")
+    util = re.compile(r"territoriales|historicas|/\d{4}(__)?\.html$|/(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)(__)?\.html$")
     pendents, vistes = [INDICE], set()
     per = collections.defaultdict(set)
     while pendents and len(vistes) < 700:
