@@ -15,11 +15,12 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: python scripts/actualizar.py demografia; cat data/estado.md | head -40 || true
+      - run: python scripts/actualizar.py demografia; grep -i -A3 demografia data/estado.md || true; python -c "import json;print(json.load(open('data/estado.json')).get('demografia'))" || true
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add exploracion data/processed/demografia
           git commit -m "Exploración de fuentes" || echo "Sin cambios"
+          git stash --include-untracked || true
           git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME"

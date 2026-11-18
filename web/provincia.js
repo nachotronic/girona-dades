@@ -482,7 +482,10 @@
   };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
-  const nomGrup = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("hu:") ? tp("hu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  // Ampliaciones de otras secciones (demografia.js): textos, nombres de grupo y titulares propios
+  const EXT = { grup: [], titular: [] };
+  const nomGrup = (g, c) => EXT.grup.reduce((r, f) => r || f(g, c), null) || nomGrup0(g, c);
+  const nomGrup0 = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("hu:") ? tp("hu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : sp.u === "m²" ? " m²" : "");
   const etiqueta = (e) => {
@@ -554,6 +557,7 @@
   const ult = (sp, k) => { const s = sp.series && sp.series[k]; return s && s.length ? s[s.length - 1] : null; };
 
   function titular(id, sp, P) {
+    for (const f of EXT.titular) { const r = f(id, sp, P); if (r != null) return r; }
     if (id === "ipc") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp("h_ipc", pct(g[2], 1), pct(c && c[2], 1), pct(e && e[2], 1), etiqueta(g[1])) : ""; }
     if (id === "paro") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_paro", pct(g[2], 1), pct(e && e[2], 1), etiqueta(g[1])) : ""; }
     if (id === "ipc_grups") { const g = sp.grups[0]; return g ? tp("h_ipc_grups", nomGrup(g.g), pct(g.gi, 1), g.any) : ""; }
@@ -659,6 +663,12 @@
       if (sp.tipus === "barres") barres(c, sp); else linia(c, sp);
     });
   }
+
+  window.PG = {
+    pintaGrafics, etiqueta,
+    textos: (ca, es) => { Object.assign(TP.ca, ca); Object.assign(TP.es, es); },
+    grup: (f) => EXT.grup.push(f), titular: (f) => EXT.titular.push(f),
+  };
 
   window.pintaSeccioProv = () => {
     const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "hb_ini", "hb_aca", "hb_hpo", "hb_ced", "hb_m2", "hb_ihb", "hb_sol", "cad_viv", "cad_ibi", "cad_usos", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "edu_publica_prov", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "llancaments", "llanc_tipus", "vdg"];

@@ -60,6 +60,7 @@
   function troba(tipus, id) {
     if (tipus === "prov") return document.querySelector(`#prov-grafics .pg-fig[data-id="${CSS.escape(id)}"]`);
     if (tipus === "salut") return document.querySelector(`#salut-grafics .pg-fig[data-id="${CSS.escape(id)}"]`);
+    if (tipus === "dem") return document.querySelector(`#dem-grafics .pg-fig[data-id="${CSS.escape(id)}"], #s-dem .dm-peca[data-id="${CSS.escape(id)}"]`);
     if (tipus === "conj") return document.querySelector(`#conj .cj-fig[data-id="${CSS.escape(id)}"]`);
     if (tipus === "mapa") return document.querySelector(".mapa-graella");
     if (tipus === "fitxa") {
@@ -87,7 +88,7 @@
         const peu = document.createElement("div"); peu.className = "emb-peu";
         main.before(cap); main.after(peu);
         const m = ine && D.municipios.find((x) => x.ine === ine);
-        const enllac = BASE + `?lang=${LANG}` + (m ? `#${m.ine}` : tipus === "mapa" ? "#s-mapa" : tipus === "conj" ? "#s-conj" : tipus === "salut" ? "#s-salut" : "#s-prov");
+        const enllac = BASE + `?lang=${LANG}` + (m ? `#${m.ine}` : tipus === "mapa" ? "#s-mapa" : tipus === "conj" ? "#s-conj" : tipus === "salut" ? "#s-salut" : tipus === "dem" ? "#s-dem" : "#s-prov");
         const pintaMarc = () => {
           cap.innerHTML = m ? `<p class="emb-sobre">${tx("municipi")}</p><p class="emb-mun">${esc(m.nom)} <span>${esc(m.comarca)}</span></p>` : "";
           let font = "";
@@ -109,6 +110,7 @@
         const repinta = () => {
           if (tipus === "prov" && window.pintaSeccioProv) window.pintaSeccioProv();
           else if (tipus === "salut" && window.pintaSeccioSalut) window.pintaSeccioSalut();
+          else if (tipus === "dem" && window.pintaSeccioDemografia) return window.pintaSeccioDemografia();
           else if (tipus === "conj" && window.pintaConjuntura) window.pintaConjuntura();
           else if (tipus === "fitxa" && m) obreFitxa(m.ine, false);
         };
@@ -117,7 +119,7 @@
         if (tipus === "mapa" && window.mapaEmbed) {
           await window.mapaEmbed({ id, nivell: Q.get("nivell"), any: Q.get("any") });
           pintaMarc();
-        } else repinta();
+        } else await repinta();
         aplica();
         if (!ok && !troba(tipus, id)) { main.hidden = true; cap.innerHTML = `<p class="emb-sobre">${LANG === "ca" ? "Aquest gràfic ja no existeix" : "Este gráfico ya no existe"}</p>`; }
         html.classList.add("emb-a");
@@ -143,6 +145,7 @@
   const PECES = [
     { sel: "#prov-grafics .pg-fig", clau: (e) => `prov:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#salut-grafics .pg-fig", clau: (e) => `salut:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#dem-grafics .pg-fig, #s-dem .dm-peca", clau: (e) => `dem:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#conj .cj-fig:not(.cj-fig-mun)", clau: (e) => `conj:${e.dataset.id}`, tit: (e) => e.querySelector(".cj-tit") },
   ];
   const urlDe = (c, extra = "") => `${BASE}?embed=${encodeURIComponent(c).replace(/%3A/g, ":")}${extra}&lang=${LANG}`;
