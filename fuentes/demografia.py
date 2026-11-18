@@ -37,8 +37,8 @@ CSV = "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/{}.csv"
 TABLAS = {
     "6524": ("Nacimientos mensuales por provincia de residencia de la madre (desde 1975)", 720, True),
     "6561": ("Defunciones mensuales por provincia de residencia (desde 1975)", 720, True),
-    "6526": ("Nacimientos por provincia de inscripción (1941-1974)", 40, True),
-    "6563": ("Defunciones por provincia de inscripción (1941-1974)", 40, True),
+    "6526": ("Nacimientos por provincia de inscripción (1941-1974)", 420, True),
+    "6563": ("Defunciones por provincia de inscripción (1941-1974)", 420, True),
     "46682": ("EMN: nacimientos mensuales y acumulados por provincia (provisional)", 150, True),
     "62278": ("EDeS: defunciones mensuales y acumuladas por provincia (provisional)", 250, True),
     "35168": ("EDeS: defunciones semanales y acumuladas por provincia (provisional)", 600, True),
@@ -75,12 +75,18 @@ def _fecha(ms):
         return None
 
 
+# Series derivadas que no hacen falta (se calculan en la web) y ocupan mucho
+FUERA = re.compile(r"Acumulado|Variación|Diferencia")
+SEMANAL = {"35168"}
+
+
 def _tabla_api(ident, nult, zonas):
     d = get(f"{INE}/DATOS_TABLA/{ident}?nult={nult}", timeout=900).json()
     if not isinstance(d, list):
         raise ValueError(str(d)[:150])
-    return [{"nom": s.get("Nombre", ""), "d": [[p.get("Anyo"), p.get("FK_Periodo"), p.get("Valor"), _fecha(p.get("Fecha"))] for p in s.get("Data", [])]}
-            for s in d if _toca(s.get("Nombre", ""), zonas)]
+    pt = (lambda p: [p.get("Anyo"), p.get("FK_Periodo"), p.get("Valor"), _fecha(p.get("Fecha"))]) if ident in SEMANAL else (lambda p: [p.get("Anyo"), p.get("FK_Periodo"), p.get("Valor")])
+    return [{"nom": s.get("Nombre", ""), "d": [pt(p) for p in s.get("Data", [])]}
+            for s in d if _toca(s.get("Nombre", ""), zonas) and not FUERA.search(s.get("Nombre", ""))]
 
 
 def _tabla_csv(ident, zonas):
@@ -90,7 +96,7 @@ def _tabla_csv(ident, zonas):
     df.columns = [c.strip() for c in df.columns]
     dims = [c for c in df.columns if c not in ("Periodo", "Total")]
     df["nom"] = df[dims].fillna("").agg(". ".join, axis=1)
-    df = df[df["nom"].map(lambda n: _toca(n, zonas))]
+    df = df[df["nom"].map(lambda n: _toca(n, zonas) and not FUERA.search(n))]
     df["v"] = pd.to_numeric(df["Total"].str.replace(".", "", regex=False).str.replace(",", ".", regex=False), errors="coerce")
     res = []
     for nom, g in df.groupby("nom", sort=False):
@@ -99,7 +105,7 @@ def _tabla_csv(ident, zonas):
             m = re.match(r"(\d{4})(?:M(\d{2})|SM(\d{2}))?", str(per))
             if not m:
                 continue
-            pts.append([int(m.group(1)), int(m.group(2) or m.group(3) or 28), None if pd.isna(v) else float(v), None])
+            pts.append([int(m.group(1)), int(m.group(2) or m.group(3) or 28), None if pd.isna(v) else float(v)])
         res.append({"nom": nom, "d": pts})
     return res
 

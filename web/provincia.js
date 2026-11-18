@@ -110,7 +110,7 @@
       inf_setm: ["Infeccions respiratòries", "Casos atesos a l'atenció primària per 100.000 habitants, setmana a setmana"],
       grip_setm: ["Grip", "Casos de grip diagnosticats a l'atenció primària per 100.000 habitants, setmana a setmana"],
       hosp_noms: { gi: "Temps mitjà d'espera" }, rgi_noms: { gi: "Regió sanitària de Girona" },
-      pac: "pacients", dies: "dies", setmana: (d) => `setmana del ${d}`,
+      pac: "pacients", def_n: "defuncions", dies: "dies", setmana: (d) => `setmana del ${d}`,
       h_le_quir: (g, c, m, n) => `Qui espera una operació a la regió de Girona hi porta <b>${g} dies</b> de mitjana (${m}); a Catalunya, ${c}. Hi ha <b>${n}</b> persones a la llista.`,
       h_le_ext: (g, c, m, n) => `Per a una primera visita a l'especialista, l'espera mitjana és de <b>${g} dies</b> (${m}); a Catalunya, ${c}. ${n} persones esperen.`,
       h_le_diag: (g, c, m, n) => `Per a una prova diagnòstica, l'espera mitjana és de <b>${g} dies</b> (${m}); a Catalunya, ${c}. ${n} persones esperen.`,
@@ -245,7 +245,7 @@
       inf_setm: ["Infecciones respiratorias", "Casos atendidos en atención primaria por 100.000 habitantes, semana a semana"],
       grip_setm: ["Gripe", "Casos de gripe diagnosticados en atención primaria por 100.000 habitantes, semana a semana"],
       hosp_noms: { gi: "Tiempo medio de espera" }, rgi_noms: { gi: "Región sanitaria de Girona" },
-      pac: "pacientes", dies: "días", setmana: (d) => `semana del ${d}`,
+      pac: "pacientes", def_n: "defunciones", dies: "días", setmana: (d) => `semana del ${d}`,
       h_le_quir: (g, c, m, n) => `Quien espera una operación en la región de Girona lleva <b>${g} días</b> de media (${m}); en Cataluña, ${c}. Hay <b>${n}</b> personas en la lista.`,
       h_le_ext: (g, c, m, n) => `Para una primera visita al especialista, la espera media es de <b>${g} días</b> (${m}); en Cataluña, ${c}. ${n} personas esperan.`,
       h_le_diag: (g, c, m, n) => `Para una prueba diagnóstica, la espera media es de <b>${g} días</b> (${m}); en Cataluña, ${c}. ${n} personas esperan.`,
@@ -550,7 +550,7 @@
     const mx = Math.max(...gs.flatMap((g) => ks.map((k) => Math.abs(g[k])))) || 1;
     const fv = (v) => (sp.u === "%" ? pct(v, 1) : fmt(v, sp.dec));
     const b = (v, k) => v == null ? "" : `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
-    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp("pac")}</small>` : ""}${g.s ? ` <small class="pb-n pb-s${g.s > 0 ? "m" : "n"}">${g.s > 0 ? "▲ " + tp("sig_mes") : "▼ " + tp("sig_menys")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
+    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp(sp.nu || "pac")}</small>` : ""}${g.s ? ` <small class="pb-n pb-s${g.s > 0 ? "m" : "n"}">${g.s > 0 ? "▲ " + tp("sig_mes") : "▼ " + tp("sig_menys")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
