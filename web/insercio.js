@@ -2,6 +2,7 @@
 // Gráficos insertables: cada gráfico, mapa o bloque de ficha se puede ver solo en un iframe
 // (index.html?embed=<pieza>) y lleva un botón «Insereix» que da el código para copiar.
 //   prov:<id> · salut:<id> · conj:<id>    gráficos de La província, Salut y Conjuntura
+//   tur:<id> · exp:<id> · mob:<id>          gráficos de Turisme, Exportacions (también sus dos mapas) y Mobilitat
 //   mapa:<indicador>[&nivell=sec&any=2023] mapa con su leyenda
 //   fitxa:<bloc>&m=<INE>                    bloque de la ficha de un municipio
 (() => {
@@ -41,6 +42,19 @@
     trib: { sel: ".fitxa-trib" },
     ind: { sel: ".fitxa-ind", font: ["Diverses fonts oficials (vegeu la llista a la web)", "Varias fuentes oficiales (ver la lista en la web)"] },
     ajt: { sel: ".ajt", font: ["Generalitat, ens locals i eleccions municipals", "Generalitat, entes locales y elecciones municipales"] },
+    // Bloques que ya llevan su propia fuente
+    com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
+    tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
+    sol: { sel: ".fitxa-sol" },
+  };
+  // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
+  const SECCIONS = {
+    prov: { sel: "#prov-grafics .pg-fig", ancla: "#s-prov", pinta: "pintaSeccioProv" },
+    salut: { sel: "#salut-grafics .pg-fig", ancla: "#s-salut", pinta: "pintaSeccioSalut" },
+    conj: { sel: "#conj .cj-fig", ancla: "#s-conj", pinta: "pintaConjuntura" },
+    tur: { sel: "#tur-grafics .pg-fig", ancla: "#s-tur", pinta: "pintaSeccioTurisme" },
+    exp: { sel: "#s-exp .pg-fig", ancla: "#s-exp", pinta: "pintaSeccioExportacions" },
+    mob: { sel: "#mob-grafics .pg-fig", ancla: "#s-mob", pinta: "pintaSeccioMobilitat" },
   };
   // Fuente corta de los mapas, por tema del indicador
   const FONT_TEMA = {
@@ -58,9 +72,7 @@
 
   // Elemento de la pieza en la página
   function troba(tipus, id) {
-    if (tipus === "prov") return document.querySelector(`#prov-grafics .pg-fig[data-id="${CSS.escape(id)}"]`);
-    if (tipus === "salut") return document.querySelector(`#salut-grafics .pg-fig[data-id="${CSS.escape(id)}"]`);
-    if (tipus === "conj") return document.querySelector(`#conj .cj-fig[data-id="${CSS.escape(id)}"]`);
+    if (SECCIONS[tipus]) return document.querySelector(`${SECCIONS[tipus].sel}[data-id="${CSS.escape(id)}"]`);
     if (tipus === "mapa") return document.querySelector(".mapa-graella");
     if (tipus === "fitxa") {
       const b = BLOCS[id]; if (!b) return null;
@@ -87,7 +99,7 @@
         const peu = document.createElement("div"); peu.className = "emb-peu";
         main.before(cap); main.after(peu);
         const m = ine && D.municipios.find((x) => x.ine === ine);
-        const enllac = BASE + `?lang=${LANG}` + (m ? `#${m.ine}` : tipus === "mapa" ? "#s-mapa" : tipus === "conj" ? "#s-conj" : tipus === "salut" ? "#s-salut" : "#s-prov");
+        const enllac = BASE + `?lang=${LANG}` + (m ? `#${m.ine}` : tipus === "mapa" ? "#s-mapa" : SECCIONS[tipus] ? SECCIONS[tipus].ancla : "#s-prov");
         const pintaMarc = () => {
           cap.innerHTML = m ? `<p class="emb-sobre">${tx("municipi")}</p><p class="emb-mun">${esc(m.nom)} <span>${esc(m.comarca)}</span></p>` : "";
           let font = "";
@@ -107,9 +119,8 @@
         };
         // Se aísla la pieza y se vuelve a dibujar con el ancho real del iframe
         const repinta = () => {
-          if (tipus === "prov" && window.pintaSeccioProv) window.pintaSeccioProv();
-          else if (tipus === "salut" && window.pintaSeccioSalut) window.pintaSeccioSalut();
-          else if (tipus === "conj" && window.pintaConjuntura) window.pintaConjuntura();
+          const sc = SECCIONS[tipus];
+          if (sc && window[sc.pinta]) window[sc.pinta]();
           else if (tipus === "fitxa" && m) obreFitxa(m.ine, false);
         };
         if (pMapa) await pMapa;
@@ -144,6 +155,9 @@
     { sel: "#prov-grafics .pg-fig", clau: (e) => `prov:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#salut-grafics .pg-fig", clau: (e) => `salut:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#conj .cj-fig:not(.cj-fig-mun)", clau: (e) => `conj:${e.dataset.id}`, tit: (e) => e.querySelector(".cj-tit") },
+    { sel: "#tur-grafics .pg-fig", clau: (e) => `tur:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#s-exp .pg-fig[data-id]", clau: (e) => `exp:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#mob-grafics .pg-fig", clau: (e) => `mob:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
   ];
   const urlDe = (c, extra = "") => `${BASE}?embed=${encodeURIComponent(c).replace(/%3A/g, ":")}${extra}&lang=${LANG}`;
   const boto = (fn) => {
