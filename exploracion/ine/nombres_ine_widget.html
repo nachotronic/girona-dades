@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Apellidos y Nombres</title>
+
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="icon" href="/menus/img/favicon.png" type="image/png">
+		<link href="/menus/img/favicon.png" rel="apple-touch-icon" />
+		<link href="/menus/img/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57" />
+		<link href="/menus/img/apple-touch-icon-60x60-precomposed.png" rel="apple-touch-icon" sizes="60x60" />
+		<link href="/menus/img/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="76x76" />  
+		<link href="/menus/img/apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon" sizes="76x76" />
+		<link href="/menus/img/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114" />
+		<link href="/menus/img/apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon" sizes="120x120" />
+		<link href="/menus/img/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon" sizes="144x144" />  
+		<link href="/menus/img/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon" sizes="152x152" />
+		<link href="/menus/img/apple-touch-icon-160x160-precomposed.png" rel="apple-touch-icon" sizes="160x160" />
+		<link href="/menus/img/apple-touch-icon-180x180-precomposed.png" rel="apple-touch-icon" sizes="180x180" />
+		<link href="/menus/img/favicon-192x192.png" rel="icon" sizes="192x192" />
+		<link href="/menus/img/favicon-160x160.png" rel="icon" sizes="160x160" />  
+		<link href="/menus/img/favicon-128x128.png" rel="icon" sizes="128x128" />    
+		<link href="/menus/img/favicon-96x96.png" rel="icon" sizes="96x96" />    
+		<link href="/menus/img/favicon-32x32.png" rel="icon" sizes="32x32" />    
+		<link href="/menus/img/favicon-16x16.png" rel="icon" sizes="16x16" />    
+		<meta name="viewport" content="width=device-width,maximum-scale=2.0,initial-scale=1.0,minimum-scale=0.9,user-scalable=yes">
+		
+		<link rel="stylesheet" href="/menus/plantillas/apellidos/css/widget.css"/>
+		<link rel="stylesheet" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/iconos.css">
+		<link rel="stylesheet" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/widgets/nombApell/nombApell.css">
+
+		<style>
+			html                        { display: table; width: 100%; height: 100%; }
+			body                        { display: table-cell; width: 100%; height: 100%; vertical-align: middle; }
+			body> div                   { margin: 0 !important; height: 100% !important; width: 100% !important; }
+			.sr-only					{ display: none; }
+			.custom .modal-content		{ max-width: 50vw; left: 50%; top: 50%; transform: translate(-50vw, -50%); }
+			.custom .modal-content p	{ text-align: left; padding: 0 5px ; }
+			.boton 						{ display: block; margin: 5px auto 0; background: var(--color1-100); color: var(--bg-color); border: 1px solid var(--color1-090); padding: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+			.boton:hover, .boton:focus	{ cursor: pointer; background: var(--color1-150); color: var(--text-color); border-color: var(--color1-100);}
+		</style>
+
+		<!-- Vincular el manifest -->
+		<link rel="manifest" href="manifest.json" />
+
+		<!-- Icono para mï¿½viles -->
+		<link rel="icon" href="logo.svg" />
+
+		<!-- Tema para la barra del navegador -->
+		<meta name="theme-color" content="#457E76"/>
+	</head>
+	<body>
+		<h1 style="display: none;">Apellidos y nombres</h1>
+		<h2 style="display: none;">Buscador de apellidos y nombres</h2>
+		<script type="text/javascript">
+			/* Script for app NombApell */
+			var thisurl = document.location.href;
+			var pos=thisurl.indexOf("?");
+
+			if(pos==-1) pos=thisurl.length; else pos++;
+
+			var query=thisurl.substring(pos, thisurl.length);
+			var posL=query.indexOf("L=");
+			var idioma=query.substring(posL+2,posL+3);
+
+			var minWidth  = 285;
+			var minHeight = 320;
+			var height = document.body.offsetHeight < minHeight  ? minHeight : Math.round(document.body.offsetHeight);
+			var width  = document.body.offsetWidth < minWidth  ? minWidth : Math.round(document.body.offsetWidth);
+
+			let scr = document.createElement("script");
+			scr.async = false;
+			scr.src = "/widgets/nombApell/nombApell.js?L=" + idioma + "&w=" + width + "px&h=" + height + "px";
+			document.head.append(scr);
+		</script>
+		<script src="/widgets/nombApell/pwa.js"></script> 
+
+		<noscript>
+			Es necesario disponer de Javascript para el correcto funcionamiento del widget.
+		</noscript>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+[
+ {
+  "Id": 16,
+  "Cod_IOE": "",
+  "Nombre": "Distribución de Nombres",
+  "Descripcion": null,
+  "Codigo": "TNOM",
+  "Url": "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177009&idp=1254735572981"
+ },
+ {
+  "Id": 23,
+  "Cod_IOE": "30417",
+  "Nombre": "Estadística de Defunciones según la Causa de Muerte",
+  "Descripcion": "La Estadística de Defunciones según la Causa de Muerte constituye una de las fuentes de información más importantes en el campo de la Sanidad.\nLas defunciones son consecuencia de un conjunto de causas de tipo biológico, económico, sanitario y social. Por ello, es preciso disponer de información, no sólo del número de fallecimientos que se producen en un país en un determinado período, sino también de todas aquellas circunstancias que rodean el acontecimiento para facilitar la actuación de las Administraciones Sanitarias y del resto de las fuerzas sociales.\nEste hecho, unido a la escasa disponibilidad de indicadores fiables y exhaustivos para evaluar el nivel de salud de la población, ha motivado que siga incrementándose la demanda de esta Estadística, cuyos principales objetivos son los siguientes:\n1. Proporcionar información sobre la mortalidad atendiendo a la causa básica de la defunción según la CIE (Clasificación Internacional de Enfermedades), su distribución por grupos de edad, sexo y otras variables de clasificación.\n2. Proporcionar información sobre causa múltiple de defunción.\n3. Conocer las muertes fetales tardías atendiendo a la causa de la defunción según la CIE.\n4. Medir la mortalidad perinatal, proporcionando la base para la obtención de indicadores que permitan evaluar la cobertura y calidad de los servicios sanitarios.\n5. Hacer posible la construcción de series históricas para estudiar la evolución de la prevalencia de determinadas causas de defunción, así como otros estudios que satisfagan las necesidades de información que las Administraciones Sanitarias tengan planteadas.\n6. Realizar comparaciones territoriales sobre el comportamiento de la mortalidad por grupos de causas de muerte.\n7. Suministrar la base para la construcción de indicadores sanitarios recomendados por los Organismos Internacionales.",
+  "Codigo": "ECM",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176780&idp=1254735573175"
+ },
+ {
+  "Id": 33,
+  "Cod_IOE": "30264",
+  "Nombre": "Indicadores Demográficos Básicos",
+  "Descripcion": "Colección de indicadores que resumen la evolución histórica del comportamiento de los fenómenos demográficos básicos en España (natalidad, fecundidad, mortalidad y nupcialidad), de los divorcios, de los movimientos migratorios y del crecimiento y estructura de la población residente en el país.",
+  "Codigo": "IDB",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177003&idp=1254735573002"
+ },
+ {
+  "Id": 147,
+  "Cod_IOE": "30414",
+  "Nombre": "Encuesta de Morbilidad Hospitalaria",
+  "Descripcion": "Los objetivos que persigue la Encuesta de Morbilidad Hospitalaria (EMH) son:\nConocer la morbilidad general atendida en los hospitales en función del diagnóstico principal asociado al alta hospitalaria.\nDeterminar la estancia media en el hospital.\nServir de base a estudios epidemiológicos sobre determinados diagnósticos.\nConocer la distribución geográfica de la morbilidad.\nProporcionar una base de información normalizada para el conjunto de los hospitales del país, tanto públicos como privados.\nServir de base para estudios comparativos nacionales e internacionales.\nTradicionalmente, la recogida de información se aseguró por la implantación de dos documentos sanitarios básicos como son el Libro de Registro de Enfermos y la Ficha de Enfermo. En los últimos años ha surgido el desarrollo del concepto de Registro de Actividad de Atención Especializada (RAE-CMBD) que constituye una evolución del actual Conjunto Mínimo Básico de Datos al alta hospitalaria del enfermo (CMBD), que representa un conjunto de variables obtenibles en el momento del alta hospitalaria del paciente y que responden a las necesidades de múltiples usuarios. De este conjunto de datos se obtienen los conceptos y definiciones de la encuesta.\nLas variables objetivo son el número de altas hospitalarias y la estancia en los hospitales.\nLas variables de clasificación utilizadas son el diagnóstico principal, el tipo de ingreso hospitalario, el motivo de alta y la provincia de hospitalización; respecto a los pacientes se recogen la edad, el sexo y el lugar de residencia.",
+  "Codigo": "EMH",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176778&idp=1254735573175"
+ },
+ {
+  "Id": 197,
+  "Cod_IOE": "30271",
+  "Nombre": "Tablas de Mortalidad",
+  "Descripcion": "Una tabla de mortalidad se compone de un conjunto de series o funciones biométricas por edad, como son el riesgo de muerte, los supervivientes y la esperanza de vida, que se calculan con el objetivo primordial de medir la incidencia de la mortalidad en una población con independencia de la estructura por edades que dicha población presente, permitiendo así analizar la evolución, en el tiempo y en el espacio, de la incidencia de este fenómeno demográfico.\nLas series biométricas se calculan para la población residente en España y en distintos ámbitos territoriales, a partir de los flujos de defunciones observados y de los efectivos poblacionales correspondientes.",
+  "Codigo": "TM",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177004&idp=1254735573002"
+ },
+ {
+  "Id": 305,
+  "Cod_IOE": "30302",
+  "Nombre": "MNP Estadística de Matrimonios",
+  "Descripcion": "La estadística de matrimonios recoge los matrimonios celebrados en España cada año.\nLos datos para la elaboración de esta estadística provienen de distintos sistemas. Los datos se obtienen de la información grabada en los Registros Civiles a través de una aplicación denominada DICIREG. Esta aplicación implantada en la totalidad de los Registros Civiles en julio de 2025 recoge todos los matrimonios inscritos en España cada año. Sin embargo, en esta publicación, se han recogido datos que provienen de la aplicación utilizada anteriormente por Registro Civil, denominada INFOREG, y de Registros Civiles sin informatizar. En dichos registros, la información se ha recogido en un documento denominado Boletín Estadístico de Matrimonios. Este documento lo han cumplimentado los cónyuges, en la parte relativa a los datos personales. El Registro Civil en el que se inscribe el matrimonio, cumplimenta los datos relativos a la inscripción.\nLa estadística de matrimonios ofrece información desagregada tanto a nivel nacional como de comunidades autónomas, provincias, capitales y municipios.",
+  "Codigo": "MNPM",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176999&idp=1254735573002"
+ },
+ {
+  "Id": 307,
+  "Cod_IOE": "30304",
+  "Nombre": "MNP Estadística de Nacimientos",
+  "Descripcion": "La estadística de nacimientos recoge la información de los nacimientos ocurridos en España cada año.\nA partir del mes de octubre del año 2015, el INE recibe los ficheros del Ministerio de Justicia con información de aquellos nacimientos inscritos por sus progenitores desde el hospital gracias al servicio ANDES. En aquellas inscripciones que se realizan de forma presencial directamente en el Registro Civil, los datos se recogen en un documento denominado Boletín Estadístico de Parto. Este documento lo cumplimentan los padres, parientes o personas obligadas por la ley a declarar el parto o, en su defecto, por el encargado del Registro Civil. El registro civil en el que se inscribe el nacimiento, cumplimenta los datos relativos a la inscripción de cada nacido.\nLa estadística de nacimientos ofrece información desagregada tanto a nivel nacional como de comunidades autónomas, provincias, capitales y municipios.",
+  "Codigo": "MNPN",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177007&idp=1254735573002"
+ },
+ {
+  "Id": 309,
+  "Cod_IOE": "30306",
+  "Nombre": "MNP Estadística de Defunciones",
+  "Descripcion": "La estadística de defunciones recoge los fallecimientos ocurridos en España cada año. Se considera defunción el fallecimiento de cualquier persona que fallezca independientemente de las horas que haya vivido.\nLos datos se recogen en un documento denominado certificado médico de defunción/boletín estadístico de defunción. Este documento lo cumplimenta el médico que certifica la defunción, en la parte relativa a los datos personales y las causas del fallecimiento. El Registro Civil en el que se inscribe la defunción, cumplimenta los datos relativos a la inscripción y el declarante o los familiares los datos relativos a la residencia o nacionalidad. También se recogen las defunciones que ocurren en circunstancias especiales y en las que interviene un juzgado.\nLa estadística de defunciones ofrece información desagregada tanto a nivel nacional como de comunidades autónomas, provincias, capitales y municipios. Se incluye la información de los fallecidos con menos de venticuatro horas de vida.",
+  "Codigo": "MNPD",
+  "Url": "/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177008&idp=1254735573002"
+ },
+ {
+  "Id": 311,
+  "Cod_IOE": "30301",
+  "Nombre": "Movimiento Natural de la Población (Resultados Provisionales)",
+  "Descripcion": null,
+  "Codigo": "MNP_RP"
+ },
+ {
+  "Id": 406,
+  "Cod_IOE": "30324",
+  "Nombre": "Estimacion del numero de defunciones semanales (EDeS)",
+  "Descripcion": "La Estadística de Estimación de Defunciones Semanales ofrece estimaciones rápidas sobre el número de defunciones ocurridas cada semana y cada mes a partir de las inscripciones registradas en los Registros Civiles.\nEsta estadística ofrece información desagregada según comunidad autónoma, provincia e isla.",
+  "Codigo": "EDES",
+  "Url": "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177074&idp=1254735573002"
+ },
+ {
+  "Id": 424,
+  "Cod_IOE": "30323",
+  "Nombre": "Estimación Mensual de Nacimientos",
+  "Descripcion": "La EMN ofrece estimaciones rápidas sobre el número de nacimientos ocurridos cada mes a partir de las inscripciones registradas en los Registros Civiles informatizados.\nEsta estadística ofrece información desagregada según comunidad autónoma y provincia.",
+  "Codigo": "EMN",
+  "Url": "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177079&idp=1254735573002"
+ }
+]

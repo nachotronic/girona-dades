@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ca">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		
+		
+		<title>Idescat. Àrea de desenvolupadors. API. Onomàstica</title>
+		
+<!-- Marcatge PIWIK PRO Gencat -->
+<script type="text/javascript">
+(function(window, document, dataLayerName, id) {
+window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
+var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+tags.async=!0,tags.src="https://gencat.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+!function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+})(window, document, 'dataLayer', 'eb50131d-1482-4c39-a0fa-835d5e4dacd6');
+</script>
+<!-- Fi Marcatge PIWIK PRO Gencat -->
+
+		<link rel="stylesheet" type="text/css" media="all" href="/estils/std.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="/estils/doc.css" />
+
+		<link rel="preload" as="font" crossorigin type="font/woff" href="/estils/fonts/opensans-regular.woff" />
+		<link rel="preload" as="font" crossorigin type="font/woff" href="/estils/fonts/opensans-semibold.woff" />
+		<link rel="preload" as="font" crossorigin type="font/woff" href="/estils/fonts/opensans-bold.woff" />
+		<link rel="preload" as="image" href="/images/gencat.svg" media="(min-width: 741px)" />
+		<link rel="preload" as="image" href="/images/mgencat.png" media="(max-width: 740px)" />
+		<link rel="preload" as="image" href="/images/mlupa.png" />
+
+		<link rel="search" type="application/opensearchdescription+xml" href="/xml/opensearch-ca.xml" title="Idescat" />
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" sizes="192x192" href="/images/favicon192.png" type="image/png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon180.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon152.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon120.png" />
+		<link rel="alternate" type="application/rss+xml" title="Idescat. Novetats" href="/novetats/?m=rss" />
+		<link rel="ard" href="/.well-known/ard.json" type="application/json" />
+
+<script src="/commonScripts/idescat.js?v=20260922"></script>
+		<script src="/commonScripts/cat/idescat.js?v=20260922"></script>
+
+
+		<script src="/commonScripts/traffic-type.js?v=20260922"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z6NJ7PL6K"></script>
+	<script>IDESCAT.analitica({"seccio":"serveis","tema":"-","estad":"-","prod":"-"});</script>
+	</head>
+	<body>
+		<div id="Contingut">
+			<a class="WAIocult" href="#Titol">Saltar al contingut principal</a>
+		    
+			<header class="ca">
+				<div class="aplec">
+					<div id="principal">
+						<div id="logo"><a href="/" title="Institut d&rsquo;Estad&iacute;stica de Catalunya (Idescat)">idescat</a></div>
+						<div class="idiomes" role="navigation" aria-label="Idioma de la pàgina">
+						<ul><li><a href="?lang=es" title="Esta p&aacute;gina est&aacute; traducida total o parcialmente al castellano" hreflang="es">es</a></li><li><a href="?lang=en" title="This page is totally or partially translated into English" hreflang="en">en</a></li></ul>
+						</div>
+						<div id="logogencat"><a href="//web.gencat.cat/ca/inici/" title="Generalitat de Catalunya">gencat</a></div>
+				  </div>
+					<div id="org"><a href="/">Institut d&rsquo;Estad&iacute;stica de Catalunya</a></div>
+					<nav>
+	<ul>
+		<li id="dades">
+			<h2><a href="/dades/" aria-haspopup="true" aria-expanded="false" aria-controls="ARIAnavdades">Dades</a></h2>
+			<div id="ARIAnavdades" class="tab">
+				<div class="aplec">
+					<div class="grup">
+						<h3>Demografia i societat</h3>
+						<ul>
+							<li><a href="/tema/xifpo">Poblaci&oacute;</a></li>
+							<li><a href="/tema/cultu">Cultura &middot; Llengua</a></li>
+							<li><a href="/tema/educa">Educaci&oacute;</a></li>
+							<li><a href="/tema/elecc">Eleccions</a></li>
+							<li><a href="/tema/justi">Just&iacute;cia &middot; Seguretat</a></li>
+							<li><a href="/tema/salut">Salut</a></li>
+							<li><a href="/tema/treba">Treball</a></li>
+						</ul>
+						<h3>Qualitat de vida</h3>
+						<ul>
+							<li><a href="/tema/cvida">Condicions de vida</a></li>
+							<li><a href="/tema/habit">Habitatges i edificis</a></li>
+							<li><a href="/tema/ingre">Ingressos i consum de les llars</a></li>
+							<li><a href="/tema/proso">Protecci&oacute; social</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>Economia</h3>
+						<ul>
+							<li><a href="/tema/macro">Macromagnituds</a></li>
+							<li><a href="/tema/empre">Empreses &middot; Finances</a></li>
+							<li><a href="/tema/finan">Finances p&uacute;bliques</a></li>
+							<li><a href="/tema/inver">Inversi&oacute; i comer&ccedil; exterior</a></li>
+							<li><a href="/tema/preus">Preus</a></li>
+							<li><a href="/tema/recer">Recerca &middot; Tecnologia</a></li>
+						</ul>
+						<h3>Sectors econ&ograve;mics</h3>
+						<ul>
+							<li><a href="/tema/agrar">Agricultura &middot; Ramaderia &middot; Pesca</a></li>
+							<li><a href="/tema/comer">Comer&ccedil; &middot; Serveis</a></li>
+							<li><a href="/tema/const">Construcci&oacute;</a></li>
+							<li><a href="/tema/indus">Ind&uacute;stria &middot; Energia</a></li>
+							<li><a href="/tema/trans">Transport</a></li>
+							<li><a href="/tema/turis">Turisme</a></li>
+						</ul>
+						<h3>Medi ambient &middot; Territori</h3>
+						<ul>
+							<li><a href="/tema/media">Medi ambient</a></li>
+							<li><a href="/tema/terri">Territori</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>Temes transversals</h3>
+						<ul>
+							<li><a href="/estad/experimental">Estad&iacute;stiques experimentals</a></li>
+							<li><a href="/estad/iig">&Iacute;ndex d'igualtat de g&egrave;nere</a></li>
+							<li><a href="/dades/ods/">Objectius de desenvolupament sostenible</a></li>
+						</ul>
+						<h3>Per &agrave;mbit geogr&agrave;fic</h3>
+						<ul>
+							<li><a href="/estad/?geo=prov">Prov&iacute;ncies</a></li>
+							<li><a href="/estad/?geo=at">&Agrave;mbits del Pla territorial</a></li>
+							<li><a href="/estad/?geo=com">Comarques i Aran</a></li>
+							<li><a href="/estad/?geo=mun">Municipis</a></li>
+							<li><a href="/estad/?geo=ac">Agrupacions censals</a></li>
+							<li><a href="/estad/?geo=ep">Entitats de població</a></li>
+							<li><a href="/estad/?geo=dis">Districtes</a></li>
+							<li><a href="/estad/?geo=sec">Seccions censals</a></li>
+						</ul>
+						<h3>Dades bàsiques</h3>
+						<ul>
+							<li><a href="/indicadors/?id=basics">Indicadors b&agrave;sics de Catalunya</a></li>
+							<li><a href="/indicadors/?id=ue">Indicadors de la Uni&oacute; Europea</a></li>
+							<li><a href="/pub/?id=inddt">Indicadors demogr&agrave;fics i de territori</a></li>
+							<li><a href="/indicadors/?id=aec">Anuari estad&iacute;stic de Catalunya</a></li>
+							<li><a href="/emex/">El municipi en xifres</a></li>
+						</ul>
+					</div>
+					<div class="peu"><a href="/estad/">Estad&iacute;stiques A&ndash;Z</a> <strong>&bull;</strong> <a href="/cal/">Calendari</a> <strong>&bull;</strong> <a href="/novetats/">Novetats</a> <strong>&bull;</strong> <a href="/dades/encurs/">Enquestes en curs</a> <strong>&bull;</strong> <a href="/dades/obertes/">Dades obertes</a> <strong>&bull;</strong> <a href="/rectificacions/">Rectificacions</a> <strong>&bull;</strong> <a href="/dades/infografies/">Infografies</a><strong>&bull;</strong> <a href="/dades/videos/">Vídeos</a></div>
+				</div>
+			</div>
+		</li>
+		<li id="serveis" class="active">
+			<h2><a href="/serveis/" aria-haspopup="true" aria-expanded="false" aria-controls="ARIAnavserveis">Serveis</a></h2>
+			<div id="ARIAnavserveis" class="tab">
+				<div class="aplec">
+					<div class="grup">
+						<h3>Informaci&oacute; estad&iacute;stica</h3>
+						<ul>
+							<li><a href="/serveis/pmf/">Preguntes més freqüents</a></li>
+							<li><a href="/serveis/consultes/">Consultes</a></li>
+							<li><a href="/serveis/cendoc/">Centre de Documentació</a></li>
+							<li><a href="/serveis/biblioteca/publicacions/">Publicacions de l'Idescat</a></li>
+							<li class="abanda"><a href="/serveis/carta/">Carta de serveis</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>Per als mitjans de comunicaci&oacute;</h3>
+						<ul>
+							<li><a href="/serveis/premsa/">Notes de premsa i consultes</a></li>
+						</ul>
+						<h3>Per al sector educatiu</h3>
+						<ul>
+							<li><a href="/serveis/educacio/visites/">Visites a l&apos;Idescat</a></li>
+							<li><a href="/serveis/educacio/sessions/">Sessions monogràfiques</a></li>
+							<li><a href="/serveis/educacio/concursos/">Concursos</a></li>
+						</ul>
+
+						<h3>Per a investigadors</h3>
+						<ul>
+							<li><a href="/serveis/dades/">Dades confidencials</a></li>
+						</ul>
+
+						<h3>Per a desenvolupadors</h3>
+						<ul>
+							<li><a href="/dev/api/">API</a></li>
+							<li><a href="/dev/visual/">Visual</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>Formaci&oacute; i activitats</h3>
+						<ul>
+							<li><a href="/formacio/">Agenda</a></li>
+							<li><a href="/serveis/trobades/">Jornades i trobades</a></li>
+						</ul>
+						<h3>Generals</h3>
+						<ul>
+							<li><a href="/serveis/lloguer/">Lloguer d&apos;espais</a></li>
+							<li><a href="/pagaments/">Pagaments</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li id="metodes">
+			<h2><a href="/metodes/" aria-haspopup="true" aria-expanded="false" aria-controls="ARIAnavmetodes">M&egrave;todes</a></h2>
+			<div id="ARIAnavmetodes" class="tab">
+				<div class="aplec">
+					<div class="grup">
+						<h3>Classificacions i codis</h3>
+						<ul>
+							<li><a href="/metodes/classificacions/">Classificacions estad&iacute;stiques</a></li>
+							<li><a href="/codis/">Codis territorials i d&apos;entitats</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>Instruments de qualitat</h3>
+						<ul>
+							<li><a href="/cal/">Calendari de difusi&oacute; de resultats</a></li>
+							<li><a href="/metodes/difusio/">Política de difusió de resultats</a></li>
+							<li><a href="/dades/encurs/">Enquestes en curs</a></li>
+							<li><a href="/rectificacions/">Rectificacions</a></li>
+							<li><a href="/metodes/bonespractiques/">Codi de bones pr&agrave;ctiques</a></li>
+							<li><a href="/metodes/siie/">Projecte Qualitas</a></li>
+							<li><a href="/serveis/carta/">Carta de serveis</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>Recerca i innovaci&oacute;</h3>
+						<ul>
+							<li><a href="/sort/">Journal SORT</a></li>
+							<li><a href="/metodes/manifestdades/">Manifest de les dades</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li id="institut">
+			<h2><a href="/institut/" aria-haspopup="true" aria-expanded="false" aria-controls="ARIAnavinstitut">L&apos;Institut</a></h2>
+			<div id="ARIAnavinstitut" class="tab">
+				<div class="aplec">
+					<div class="grup">
+						<h3>L&apos;Institut d&apos;Estad&iacute;stica de Catalunya (Idescat)</h3>
+						<ul>
+							<li><a href="/institut/idescat/">Presentaci&oacute;</a></li>
+							<li><a href="/institut/idescat/organitzacio/">Organitzaci&oacute;</a></li>
+							<li><a href="/institut/idescat/memoria/">Mem&ograve;ria anual</a></li>
+							<li><a href="/institut/idescat/convenis/">Convenis</a></li>
+							<li><a href="/institut/web/privadesa/">Protecció de dades</a></li>
+							<li><a href="/institut/idescat/transparencia/">Transpar&egrave;ncia</a></li>
+							<li><a href="/institut/idescat/contractacio/">Perfil del contractant</a></li>
+							<li><a href="/institut/idescat/ofertes/">Ofertes de treball</a></li>
+							<li class="abanda"><a href="/institut/idescat/contacte/">Contacte</a></li>
+						</ul>
+					</div>
+					<div class="grup">
+						<h3>El Sistema Estad&iacute;stic de Catalunya (SEC)</h3>
+						<ul>
+							<li><a href="/institut/sec/">Presentaci&oacute;</a></li>
+							<li><a href="/institut/sec/crsec/">Consell Rector</a></li>
+							<li><a href="/institut/sec/legislacio/">Legislaci&oacute;</a></li>
+							<li><a href="/pec/">Pla estad&iacute;stic de Catalunya</a></li>
+							<li><a href="/institut/sec/ciutadans/">Els ciutadans i l&apos;estad&iacute;stica oficial</a></li>
+							<li><a href="/institut/sec/rfe/">Registre de fitxers estad&iacute;stics</a></li>
+							<li><a href="/institut/sec/extranet/">Extranet del SEC</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li id="cercador">
+			<form method="get" action="/cercador/" accept-charset="UTF-8" role="search">
+				<label class="WAIocult" for="inputSearch">Cercar</label><input aria-label="Cercar" id="inputSearch" value="" name="q" accesskey="T" type="search" spellcheck="false" />
+			</form>
+		</li>
+	</ul>
+</nav>
+
+				</div>
+			</header>
+			<main>
+				<div id="Titular"><div class="aplec">
+
+	<ul id="BarraSituacio"><li><a href="/dev/">Àrea de desenvolupadors</a></li><li><a href="/dev/api/">API</a></li></ul>
+	<h1 id="Titol">Onomàstica. <abbr title="Interfície de programació d'aplicacions">API</abbr></h1>
+	
+	
+	</div></div>
+	<div class="aplec"><aside class="Promo">
+	<a class="Boto" id="cdu" href="/dev/api/#cdu">Condicions d'ús</a>
+</aside>
+<div class="Doc">
+	<div class="Apart Intro">
+		<div class="ApartCont">
+			<p>Aquesta <abbr title="Interfície de programació d'aplicacions">API</abbr> dona accés a informació estadística de noms i cognoms de la població i noms dels nadons. L'Idescat difon aquesta informació a la secció <a href="/cat/poblacio/poblonomast.html">Onomàstica</a>.</p>
+			<p>La utilització d'aquest servei comporta l'acceptació de les <a href="/dev/api/#cdu">condicions d'ús de les APIs de l'Idescat</a>.</p>
+		</div>
+	</div>
+
+	<div class="ApartD TaulaD">
+		<table class="ApartD">
+			<caption>Resum</caption>
+			<tbody class="fil">
+				<tr>
+					<th scope="row"><abbr title="Identificador uniforme de recurs">URI</abbr> base</th>
+					<td>https://api.idescat.cat/onomastica/v1/{subservei}/{operació}.{format}[?paràmetres]</td>
+				</tr>
+				<tr>
+					<th scope="row">Mètode HTTP</th>
+					<td>GET</td>
+				</tr>
+				<tr>
+					<th scope="row">Formats de la resposta</th>
+					<td>xml, json, php, txt</td>
+				</tr>
+				<tr>
+					<th scope="row">Versió</th>
+					<td>1.00 (06/05/2013)</td>
+				</tr>
+				<tr>
+					<th scope="row">Dreceres</th>
+					<td><a href="#a1">Petició</a>, <a href="#a2">Resposta</a></td>
+				</tr>
+				<tr>
+					<th scope="row">Operacions</th>
+					<td>dades, cerca, sug</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="Index multinivell">
+		<div class="Apart">
+			<div class="ApartContAmbVincles">
+				<ul>
+					<li><a href="#a1">1. Petició</a>
+					<ul>
+						<li><a href="#a1.1">1.1. Característiques bàsiques</a>
+							<ul>
+								<li><a href="#a1.1.1">1.1.1. Identificador del servei i versió subserveis admesos</a></li>
+								<li><a href="#a1.1.2">1.1.2. Operacions</a></li>
+							</ul>
+						</li>
+						<li><a href="#a1.2">1.2. Paràmetres específics</a>
+							<ul>
+								<li><a href="#a1.2.1">1.2.1. Operació <kbd>dades</kbd></a>
+									<ul>
+										<li><a href="#a1.2.1.1">1.2.1.1. Filtre <var>id</var></a></li>
+										<li><a href="#a1.2.1.2">1.2.1.2. Filtre <var>geo</var></a></li>
+										<li><a href="#a1.2.1.3">1.2.1.3. Filtre <var>t</var></a></li>
+										<li><a href="#a1.2.1.4">1.2.1.4. Filtre <var>nac</var></a></li>
+										<li><a href="#a1.2.1.5">1.2.1.5. Paràmetre <var>class</var></a></li>
+									</ul>
+								</li>
+								<li><a href="#a1.2.2">1.2.2. Operació <kbd>cerca</kbd></a>
+									<ul>
+										<li><a href="#a1.2.2.1">1.2.2.1. Filtre <var>q</var></a></li>
+										<li><a href="#a1.2.2.2">1.2.2.2. Filtre <var>sim</var></a></li>
+										<li><a href="#a1.2.2.3">1.2.2.3. Paràmetres <var>orderby</var> i <var>desc</var></a></li>
+										<li><a href="#a1.2.2.4">1.2.2.4. Paràmetre <var>posicio</var></a></li>
+										<li><a href="#a1.2.2.5">1.2.2.5. Filtre <var>geo</var></a></li>
+										<li><a href="#a1.2.2.6">1.2.2.6. Filtre <var>t</var></a></li>
+										<li><a href="#a1.2.2.7">1.2.2.7. Filtre <var>nac</var></a></li>
+									</ul>
+								</li>
+								<li><a href="#a1.2.3">1.2.3. Operació <kbd>sug</kbd></a>
+									<ul>
+										<li><a href="#a1.2.3.1">1.2.3.1. Filtre <var>q</var></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#a1.3">1.3. Invocació sense operació</a></li>
+					</ul>
+				</li>
+
+					<li><a href="#a2">2. Resposta</a>
+							<ul>
+									<li><a href="#a2.1">2.1. Operació <kbd>dades</kbd></a></li>
+									<li><a href="#a2.2">2.2. Operació <kbd>cerca</kbd></a></li>
+									<li><a href="#a2.3">2.3. Operació <kbd>sug</kbd></a></li>
+									<li><a href="#a2.4">2.4. Errors</a></li>
+							</ul>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="Apart">
+		<h2 id="a1">1. Petició</h2>
+		<div class="ApartCont">
+			<h3 id="a1.1">1.1. Característiques bàsiques</h3>
+			<p>Tota petició a l'API d'Onomàstica ha d'especificar obligatòriament el servei (<kbd>onomastica</kbd>), la versió, el subservei, l'operació i el format. Versió i operació i subserveis (quan n'hi ha) són característiques específiques de cada servei. A més dels formats de resposta generals de les APIs de l'Idescat, el servei d'Onomàstica suporta el format text en l'operació <kbd>sug</kbd>. Per a més informació, consulteu l'apartat Anatomia de les peticions a la <a href="/dev/api/#a1.1">documentació general de les APIs de l'Idescat</a>.</p>
+
+			<h4 id="a1.1.1">1.1.1. Identificador del servei i versió i subserveis admesos</h4>
+			<p>L'identificador d'aquest servei és <kbd>onomastica</kbd>.</p>
+			<pre class="uri">https://api.idescat.cat/<kbd>onomastica</kbd><wbr />/<kbd>v1</kbd><wbr />/{&hellip;}</pre>
+			<p>Admet tres subserveis:</p>
+			<ul>
+				<li><kbd>noms</kbd>: dades de noms de la població</li>
+				<li><kbd>cognoms</kbd>: dades de cognoms de la població</li>
+				<li><kbd>nadons</kbd>: dades de noms dels nadons</li>
+			</ul>
+			<p>És obligatori especificar un subservei.</p>
+			<pre class="uri">https://api.idescat.cat/<kbd>onomastica</kbd><wbr />/<kbd>v1</kbd><wbr />/nadons/{&hellip;}</pre>
+
+			<h4 id="a1.1.2">1.1.2. Operacions</h4>
+			<p>Aquest servei admet tres tipus d'operacions:</p>
+			<ul>
+				<li>
+					<kbd>dades</kbd>: Retorna estadístiques d'un determinat nom o cognom.
+					<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/<kbd>dades</kbd>.{&hellip;}</pre>
+				</li>
+				<li>
+					<kbd>cerca</kbd>: Retorna resultats d'una cerca pel fragment de nom de la població o dels nadons o de cognom de la població.
+					<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms/<kbd>cerca</kbd>.{&hellip;}</pre>
+				</li>
+				<li>
+					<kbd>sug</kbd>: Retorna la llista alfabètica de noms o cognoms que comencen pels caràcters especificats.
+					<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms<wbr />/<kbd>sug</kbd>.{&hellip;}</pre>
+				</li>
+			</ul>
+
+			<h3 id="a1.2">1.2. Paràmetres específics</h3>
+			<p>Aquest servei suporta els <a href="/dev/api/#a1.2">paràmetres generals</a> (idioma i codificació) de les APIs de l'Idescat.</p>
+			<p>Els paràmetres específics permeten escollir la informació que retornarà una determinada operació del servei. Es poden especificar com a paràmetres individuals o en un únic paràmetre <var>p</var> (<a href="/dev/api/#a1.3.1">forma compacta</a>).</p>
+
+			<h4 id="a1.2.1">1.2.1. Operació <kbd>dades</kbd></h4>
+			<p>L'operació <kbd>dades</kbd> retorna estadístiques d'un determinat nom o cognom.</p>
+
+			<h5 id="a1.2.1.1">1.2.1.1. Filtre <var>id</var></h5>
+			<p>Aquest paràmetre obligatori serveix per especificar el nom (en el cas dels subserveis <kbd>noms</kbd> i <kbd>nadons</kbd>) o el cognom (en el cas del subservei <kbd>cognoms</kbd>) del qual es volen recuperar estadístiques.</p>
+
+			<h6 id="e1" class="Exemple"><a href="#e1">Ex. 1</a>: Informació estadística del darrer any disponible de dones nascudes amb el nom MARIA (40683)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?<var>id</var><kbd>=40683</kbd></pre>
+
+			<h6 id="e2" class="Exemple"><a href="#e2">Ex. 2</a>: Informació estadística del darrer any disponible d'homes nascuts amb el nom MARIA (39969)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?<var>id</var><kbd>=39969</kbd></pre>
+
+			<p>Per obtenir l'identificador d'un determinat nom o cognom es pot utilitzar l'<a href="#a1.2.2">operació <kbd>cerca</kbd></a>.</p>
+
+			<p>El paràmetre <var>id</var> també permet especificar el literal del nom o cognom (sense accents) tal com consta a l'estadística d'onomàstica. Cal advertir, però, que quan s'especifica un literal en el paràmetre <var>id</var>, aquest no es pot combinar amb cap altre més paràmetre.</p>
+
+			<h6 id="e3" class="Exemple"><a href="#e3">Ex. 3</a>: Informació estadística del darrer any disponible dels nadons amb nom MARIA</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?<var>id</var><kbd>=MARIA</kbd></pre>
+
+			<p>Com MARIA pot ser nom de nen o de nena, la crida anterior contindrà les estadístiques per separat de cada sexe (40683, 39969).</p>
+
+			<h5 id="a1.2.1.2">1.2.1.2. Filtre <var>geo</var></h5>
+			<p>El filtre <var>geo</var> permet filtrar territorialment els resultats. Per seleccionar el <strong class="important">lloc de residència</strong> tots els subserveis accepten els següents prefixos:</p>
+			<ul>
+				<li><kbd>prov</kbd>: província</li>
+				<li><kbd>at</kbd>: àmbit del Pla territorial</li>
+				<li><kbd>com</kbd>: comarca</li>
+			</ul>
+
+			<h6 id="e4" class="Exemple"><a href="#e4">Ex. 4</a>: Informació estadística de les persones amb cognom GARCIA (285413) a la població de la comarca de l'Alt Camp (COM:01) del darrer any disponible</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms<wbr />/dades.xml<wbr />?id=285413<wbr />&amp;<var>geo</var><kbd>=com:01</kbd></pre>
+
+			<h6 id="e5" class="Exemple"><a href="#e5">Ex. 5</a>: Informació estadística de les dones amb nom MARIA (40683) a la població de les Comarques Gironines (AT:02) del darrer any disponible</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>geo</var><kbd>=at:02</kbd></pre>
+
+			<p>Per conèixer els codis utilitzats en els diferents àmbits geogràfics podeu utilitzar el <a href="#a1.2.1.5">paràmetre <var>class</var></a>.</p>
+
+			<h5 id="a1.2.1.3">1.2.1.3. Filtre <var>t</var></h5>
+			<p>En tots els subserveis excepte <kbd>cognoms</kbd>, es pot utilitzar el paràmetre <var>t</var> per filtrar temporalment les estadístiques. En el cas del subservei <kbd>nadons</kbd>, aquest paràmetre indica l'<strong class="important">any de naixement</strong>.</p>
+
+			<h6 id="e6" class="Exemple"><a href="#e6">Ex. 6</a>: Informació estadística de les dones nascudes el 2009 amb el nom MARIA (40683)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>t</var><kbd>=2009</kbd></pre>
+
+			<p>Per conèixer els anys disponibles en aquest subservei podeu utilitzar el <a href="#a1.2.1.5">paràmetre <var>class</var></a>. Si no s'especifica <var>t</var> o té un valor incorrecte, el subservei <kbd>nadons</kbd> retorna les estadístiques del darrer any disponible.</p>
+
+			<p>En el cas dels subserveis <kbd>noms</kbd> i <kbd>cognoms</kbd>, sempre es retornen estadístiques del darrer Registre de població de Catalunya. En el cas de <kbd>noms</kbd>, però, es pot utilitzar el paràmetre <var>t</var> per filtrar la població per <strong class="important">dècada de naixement</strong>.</p>
+
+			<h6 id="e7" class="Exemple"><a href="#e7">Ex. 7</a>: Informació estadística de les dones a la població nascudes entre 1990 i 1999 amb el nom MARIA (40683)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>t</var><kbd>=1990-1999</kbd></pre>
+
+			<p>Els subserveis que accepten el filtre <var>t</var> permeten combinar-lo amb el filtre <var>geo</var>.</p>
+
+			<h6 id="e8" class="Exemple"><a href="#e8">Ex. 8</a>: Informació estadística de les dones nascudes al Baix Llobregat (com:11) el 2005 amb el nom MARIA (40683)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>t</var><kbd>=2005</kbd><wbr />&amp;<var>geo</var><kbd>=com:11</kbd></pre>
+
+			<p>Per conèixer els valors vàlids en els subserveis <kbd>noms</kbd> i <kbd>cognoms</kbd> podeu utilitzar el <a href="#a1.2.1.5">paràmetre <var>class</var></a>. Si no s'especifica <var>t</var> o té un valor incorrecte, aquests dos subserveis retornen estadístiques de tota la població del darrer any disponible.</p>
+
+			<h5 id="a1.2.1.4">1.2.1.4. Filtre <var>nac</var></h5>
+			<p>En el subservei <kbd>noms</kbd>, es pot utilitzar el paràmetre <var>nac</var> per filtrar les estadístiques per nacionalitat. Aquest paràmetre no es pot combinar amb altres filtres.</p>
+
+			<h6 id="e9" class="Exemple"><a href="#e9">Ex. 9</a>: Informació estadística de les dones amb el nom MARIA (40683) amb nacionalitat polonesa</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>nac</var><kbd>=pl</kbd></pre>
+
+			<p>El paràmetre <var>nac</var> utilitza els codis dels països de l'estàndard <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm" target="_blank" rel="noopener" class="extern" title="Vincle extern: s'obrirà una nova finestra">ISO 3166-1 alpha-2</a>. També podeu utilitzar el <a href="#a1.2.1.5">paràmetre <var>class</var></a> per determinar els països que apareixen a l'estadística. Si no s'especifica <var>nac</var> o té un valor incorrecte, el subservei <kbd>noms</kbd> retorna estadístiques de tota la població del darrer any disponible.</p>
+
+			<h5 id="a1.2.1.5">1.2.1.5. Paràmetre <var>class</var></h5>
+			<p>El paràmetre <var>class</var> permet establir la variable d'encreuament dels resultats. Els criteris de classificació depenen de cada subservei i són:</p>
+			<ul>
+				<li><kbd>prov</kbd>: per províncies</li>
+				<li><kbd>at</kbd>: per àmbits del Pla territorial</li>
+				<li><kbd>com</kbd>: per comarques</li>
+				<li><kbd>nac</kbd>: per nacionalitat (només disponible en el subservei <kbd>noms</kbd>)</li>
+				<li><kbd>t</kbd>: en el cas de <kbd>noms</kbd>, per dècada de naixement; en el cas de <kbd>nadons</kbd>, per any de naixement. El subservei <kbd>cognoms</kbd> no suporta aquest valor.</li>
+			</ul>
+
+			<h6 id="e10" class="Exemple"><a href="#e10">Ex. 10</a>: Informació estadística de les dones amb nom MARIA (40683) en el darrer any disponible per comarques</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>class</var><kbd>=com</kbd></pre>
+
+			<h6 id="e11" class="Exemple"><a href="#e11">Ex. 11</a>: Informació estadística de les dones amb nom MARIA (40683) per any de naixement</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?id=40683<wbr />&amp;<var>class</var><kbd>=t</kbd></pre>
+
+			<p>El paràmetre <var>class</var> es pot combinar amb filtres.</p>
+
+			<h6 id="e12" class="Exemple"><a href="#e12">Ex. 12</a>: Informació estadística de les dones nascudes al Baix Llobregat (com:11) amb nom MARIA (40683) per any de naixement</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/dades.xml<wbr />?<var>id</var><kbd>=40683</kbd><wbr />&amp;<var>class</var><kbd>=t</kbd><wbr />&amp;<var>geo</var><kbd>=com:11</kbd></pre>
+
+			<p>En cas de conflicte entre la variable classificatòria i els filtres (per exemple, <em>class=t&amp;t=2005</em>), tenen prioritat els filtres i s'ignorarà <var>class</var>.</p>
+
+			<h4 id="a1.2.2">1.2.2. Operació <kbd>cerca</kbd></h4>
+
+			<p>L'operació <kbd>cerca</kbd> permet obtenir resultats ordenats d'una cerca per un fragment de nom o cognom. Si hi ha molts resultats, es retornen paginats i cal utilitzar el paràmetre <var>posicio</var> per obtenir les diferents pàgines de resultats.</p>
+
+			<h5 id="a1.2.2.1">1.2.2.1. Filtre <var>q</var></h5>
+			<p>Permet filtrar els resultats per un fragment de nom o de cognom. Si s'especifica <var>q</var>, els resultats es mostren ordenats per similitud (primer els noms o cognoms que coincideixen exactament amb la cerca; després, els noms o cognoms de més d'un mot que inclouen la paraula cercada; finalment, els noms o cognoms que contenen com a fragment el text cercat) i freqüència.</p>
+
+			<h6 id="e13" class="Exemple"><a href="#e13">Ex. 13</a>: Estadística dels primers noms que contenen MARIA ordenats per similitud i freqüència</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?<var>q</var><kbd>=maria</kbd></pre>
+
+			<p>Si no s'especifica una cadena de cerca (<var>q</var>) ni cap criteri d'ordenació (<var>orderby</var>, <var>desc</var>), es retornen els resultats ordenats ascendentment per freqüència. Quan no s'especifica <var>q</var>, a més, no s'inclouen en els resultats els noms o cognoms amb una freqüència inferior a 4 (en el cas dels cognoms, només s'inclouen si la freqüència és igual o superior a 4 tant en el primer cognom com en el segon).</p>
+
+			<h6 id="e14" class="Exemple"><a href="#e14">Ex. 14</a>: Estadística dels cognoms de menor a major freqüència</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms<wbr />/cerca.xml</pre>
+
+			<h5 id="a1.2.2.2">1.2.2.2. Filtre <var>sim</var></h5>
+			<p>Els resultats de l'operació <kbd>cerca</kbd> tenen associada una categoria de similitud amb la cadena <var>q</var> buscada. El paràmetre <var>sim</var> permet filtrar els resultats segons aquesta similitud:</p>
+
+			<ul>
+				<li><kbd>0</kbd>: Només es retornen els noms o cognoms la denominació dels quals coincideix amb l'especificada a <var>q</var>.</li>
+				<li><kbd>1</kbd>: Només es retornen els noms o cognoms que contenen la cadena <var>q</var> especificada com a paraula (o expressió) i no estan inclosos a l'apartat anterior.</li>
+				<li><kbd>2</kbd>: Només es retornen els noms o cognoms que contenen la cadena <var>q</var> especificada com a fragment i no estan inclosos als apartats anteriors.</li>
+			</ul>
+			<p>Aquests valors es poden concatenar separats per comes. Per defecte, <var>sim</var> és igual a <kbd>0, 1, 2</kbd>.</p>
+
+			<h6 id="e15" class="Exemple"><a href="#e15">Ex. 15</a>: Estadística de nadons que es diuen exactament MARIA</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?<var>q</var><kbd>=maria</kbd><wbr />&amp;<var>sim</var><kbd>=0</kbd></pre>
+
+			<h6 id="e16" class="Exemple"><a href="#e16">Ex. 16</a>: Estadística de nadons que es diuen exactament MARIA o tenen un nom compost amb aquest mot</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?<var>q</var><kbd>=maria</kbd><wbr />&amp;<var>sim</var><kbd>=0,1</kbd></pre>
+
+			<p>El paràmetre <var>sim</var> és ignorat si no s'ha especificat <var>q</var>.</p>
+
+			<h5 id="a1.2.2.3">1.2.2.3. Paràmetres <var>orderby</var> i <var>desc</var></h5>
+			<p>Si s'ha especificat <var>q</var>, els resultats es mostren ordenats per proximitat (<var>sim</var>) amb la cerca efectuada i freqüència. Els paràmetres <var>orderby</var> i <var>desc</var> permeten determinar l'ordenació dels resultats quan no s'ha especificat <var>q</var>.</p>
+			<ul>
+				<li>
+					<var>orderby</var>
+					<ul>
+						<li><kbd class="defecte">v</kbd>: Els resultats s'ordenen per freqüència d'aparició del nom o cognom, i després alfabèticament en ordre ascendent.</li>
+						<li><kbd>nom</kbd>: Els resultats s'ordenen alfabèticament segons el nom o cognom, i després de més a menys freqüència.</li>
+						<li><kbd>sex</kbd>: En el cas dels subserveis <kbd>noms</kbd> i <kbd>nadons</kbd>, els resultats s'ordenen segons gènere (homes, dones), i després de més a menys freqüència.</li>
+					</ul>
+				</li>
+				<li>
+					<var>desc</var>
+					<ul>
+						<li><kbd class="defecte">0</kbd>: Ordre ascendent del criteri principal establert per <var>orderby</var>. És el valor per defecte.</li>
+						<li><kbd>1</kbd>: Ordre descendent del criteri principal establert per <var>orderby</var>.</li>
+					</ul>
+				</li>
+			</ul>
+			<p>Es recomana passar sempre explícitament els paràmetres <var>orderby</var> i <var>desc</var>.</p>
+
+			<h6 id="e17" class="Exemple"><a href="#e17">Ex. 17</a>: Estadística de noms més freqüents dels nadons a Catalunya</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?<var>orderby</var><kbd>=v</kbd><wbr />&amp;<var>desc</var><kbd>=1</kbd></pre>
+
+			<h6 id="e18" class="Exemple"><a href="#e18">Ex. 18</a>: Estadística de noms més freqüents de les nenes nascudes a Catalunya</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?<var>orderby</var><kbd>=sex</kbd><wbr />&amp;<var>desc</var><kbd>=1</kbd></pre>
+
+			<h6 id="e19" class="Exemple"><a href="#e19">Ex. 19</a>: Estadística de cognoms en ordre alfabètic</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms<wbr />/cerca.xml<wbr />?<var>orderby</var><kbd>=nom</kbd></pre>
+
+			<p>Els paràmetres <var>orderby</var> i <var>desc</var> són ignorats si s'ha especificat <var>q</var>.</p>
+
+			<h5 id="a1.2.2.4">1.2.2.4. Paràmetre <var>posicio</var></h5>
+			<p>Com algunes cerques poden retornar un nombre molt elevat de resultats, la resposta no sempre els inclourà tots. El paràmetre <var>posicio</var> permet determinar quin és el primer resultat inclòs a la resposta. Per defecte, <var>posicio</var> és igual a zero (es retornen resultats començant pel primer).</p>
+
+			<h6 id="e20" class="Exemple"><a href="#e20">Ex. 20</a>: Estadística dels noms més freqüents de la població a partir d'aquell que ocupa la posició 26</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>posicio</var><kbd>=25</kbd></pre>
+
+			<h5 id="a1.2.2.5">1.2.2.5. Filtre <var>geo</var></h5>
+			<p>L'operació <kbd>cerca</kbd> admet el paràmetre <var>geo</var>, que té el mateix significat i restriccions que en l'operació <kbd>dades</kbd> (vegeu l'apartat <a href="#a1.2.1.2">1.2.1.2</a>).</p>
+
+			<h6 id="e21" class="Exemple"><a href="#e21">Ex. 21</a>: Estadística més recent dels noms més freqüents de la població a l'Alt Camp (com:01)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>geo</var><kbd>=com:01</kbd></pre>
+
+			<h6 id="e22" class="Exemple"><a href="#e22">Ex. 22</a>: Estadística dels nadons de l'Alt Camp (com:01) que es diuen exactament Maria</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?q=maria<wbr />&amp;sim=0<wbr />&amp;<var>geo</var><kbd>=com:01</kbd></pre>
+
+			<h6 id="e23" class="Exemple"><a href="#e23">Ex. 23</a>: Estadística dels cognoms més freqüents a l'Alt Camp (com:01)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>geo</var><kbd>=com:01</kbd></pre>
+
+			<h6 id="e24" class="Exemple"><a href="#e24">Ex. 24</a>: Estadística dels cognoms més freqüents que contenen EZ com a fragment a l'Alt Camp (com:01)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms<wbr />/cerca.xml<wbr />?q=ez<wbr />&amp;sim=2<wbr />&amp;orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>geo</var><kbd>=com:01</kbd></pre>
+
+			<h5 id="a1.2.2.6">1.2.2.6. Filtre <var>t</var></h5>
+			<p>L'operació <kbd>cerca</kbd> admet el paràmetre <var>t</var>, que té el mateix significat i restriccions que en l'operació <kbd>dades</kbd> (vegeu l'apartat <a href="#a1.2.1.3">1.2.1.3</a>).</p>
+
+			<h6 id="e25" class="Exemple"><a href="#e25">Ex. 25</a>: Estadística dels noms més freqüents de la població nascuda a la dècada dels vuitanta</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>t</var><kbd>=1980-1989</kbd></pre>
+
+			<h6 id="e26" class="Exemple"><a href="#e26">Ex. 26</a>: Estadística dels noms més freqüents de la població nascuda a la dècada dels vuitanta a l'Alt Camp (com:01)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>t</var><kbd>=1980-1989</kbd><wbr />&amp;geo=com:01</pre>
+
+			<h6 id="e27" class="Exemple"><a href="#e27">Ex. 27</a>: Estadística dels noms més freqüents dels nadons nascuts el 2010</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>t</var><kbd>=2010</kbd></pre>
+
+			<h6 id="e28" class="Exemple"><a href="#e28">Ex. 28</a>: Estadística dels noms més freqüents dels nadons nascuts el 2010 a l'Alt Camp (com:01)</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>t</var><kbd>=2010</kbd><wbr />&amp;geo=com:01</pre>
+
+			<h5 id="a1.2.2.7">1.2.2.7. Filtre <var>nac</var></h5>
+			<p>L'operació <kbd>cerca</kbd> admet el paràmetre <var>nac</var>, que té el mateix significat i restriccions que en l'operació <kbd>dades</kbd> (vegeu l'apartat <a href="#a1.2.1.4">1.2.1.4</a>).</p>
+
+			<h6 id="e29" class="Exemple"><a href="#e29">Ex. 29</a>: Estadística dels noms més freqüents de la població amb nacionalitat polonesa</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?orderby=v<wbr />&amp;desc=1<wbr />&amp;<var>nac</var><kbd>=pl</kbd></pre>
+
+			<h6 id="e30" class="Exemple"><a href="#e30">Ex. 30</a>: Estadística de la població amb nacionalitat polonesa que es diu exactament ANNA</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/cerca.xml<wbr />?q=anna<wbr />&amp;sim=0<wbr />&amp;<var>nac</var><kbd>=pl</kbd></pre>
+
+
+			<h4 id="a1.2.3">1.2.3. Operació <kbd>sug</kbd></h4>
+			<p>L'operació <kbd>sug</kbd> retorna la llista alfabètica de noms o cognoms disponibles a la base de dades que comencen pels caràcters especificats pel paràmetre requerit <var>q</var>. La seva presència a la llista no indica la seva aparició a l'estadística de l'any més recent disponible.</p>
+			<p>A més dels formats generals (XML, JSON, PHP serialitzat), aquesta operació suporta el format TXT.</p>
+
+			<h5 id="a1.2.3.1">1.2.3.1. Filtre <var>q</var></h5>
+			<p>Aquest paràmetre és obligatori i s'utilitza per especificar els primers caràcters d'un nom o cognom.</p>
+
+			<h6 id="e31" class="Exemple"><a href="#e31">Ex. 31</a>: Noms de la població que comencen per MART</h6>
+			<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/sug.txt<wbr />?<var>q</var><kbd>=mart</kbd></pre>
+
+			<p>Per limitar la grandària de la resposta, es recomana especificar a <var>q</var> una cadena d'almenys tres caràcters.</p>
+
+			<h3 id="a1.3">1.3. Invocació sense operació</h3>
+			<p>Per raons d'amigabilitat, aquesta API admet peticions amb una sintaxi que no requereix especificar operacions (vegeu, a la documentació general de les APIs de l'Idescat, l'apartat <a href="/dev/api/?#a1.4">1.4. Invocació sense operació</a>).</p>
+			<ul>
+				<li>Estadística del nom 40683 (MARIA dona) a la població de Catalunya en format XML
+				<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/40683.xml</pre>
+				</li>
+				<li>Estadística del nom MARIA a la població de Catalunya en format JSON
+				<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/noms<wbr />/maria.json</pre>
+				</li>
+				<li>Estadística del cognoms que contenen MART a la població de Catalunya en format JSON
+				<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/cognoms.json<wbr />?q=mart</pre>
+				</li>
+				<li>Noms de nadó que comencen per MART en format TXT
+				<pre class="uri">https://api.idescat.cat/onomastica<wbr />/v1<wbr />/nadons.txt<wbr />?sug=mart</pre>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="Apart">
+		<h2 id="a2">2. Resposta</h2>
+		<div class="ApartCont">
+			<p>Per conèixer els <strong class="important">codis de resposta</strong> <abbr title="HyperText Transfer Protocol">HTTP</abbr> retornats i els <strong class="important">formats suportats</strong> per qualsevol servei, consulteu l'<a href="/dev/api/#a2">apartat 2 de les APIs de l'Idescat</a>.</p>
+
+			<p>Amb caràcter general, quan un valor no es pugui oferir per raons de <strong class="important">secret estadístic</strong> s'indicarà amb <span class="noseparable">un <kbd>_</kbd></span>.</p>
+
+			<h3 id="a2.1">2.1. Operació <kbd>dades</kbd></h3>
+			<p>Cada subservei disposa del seu propi contenidor (<var>onomastica_noms</var>, <var>onomastica_cognoms</var>, <var>onomastica_nadons</var>) i dels següents elements generals comuns:</p>
+			<ul>
+				<li><var>c</var>: concepte.</li>
+				<li><var>r</var>: referència temporal.</li>
+				<li><var>geo</var>: referència geogràfica.</li>
+				<li><var>s</var>: font.</li>
+				<li><var>updated</var>: data d'actualització.</li>
+				<li><var>l</var>: enllaç amb una taula relacionada amb el lloc web de l'Idescat.</li>
+			</ul>
+
+			<h6 id="e32" class="Exemple"><a href="#e32">Ex. 32</a>: Elements generals comuns de l'operació <kbd>dades</kbd></h6>
+			<pre class="codi">&lt;<var>onomastica_noms</var> version="1.00" lang="ca" o="dades" n="47" p="id=40683;class=nac"&gt;
+   &lt;<var>c</var> sex="f"&gt;MARIA&lt;/<var>c</var>&gt;
+   &lt;<var>r</var>&gt;2012&lt;/<var>r</var>&gt;
+   &lt;<var>geo</var> id="09" scheme="ca"&gt;Catalunya&lt;/<var>geo</var>&gt;
+   &lt;<var>s</var>&gt;Idescat, a partir del Registre de població de Catalunya.&lt;/<var>s</var>&gt;
+   &lt;<var>updated</var>&gt;2012-11-13T11:00:00+00:00&lt;/<var>updated</var>&gt;
+   &lt;<var>l</var>&gt;https://www.idescat.cat/noms/?geo=4&amp;id=40683&lt;/<var>l</var>&gt;
+   &hellip;
+&lt;/<var>onomastica_noms</var>&gt;</pre>
+
+			<p>Els resultats s'inclouen en un element <var>ff</var> amb tantes fileres (<var>f</var>) com possibles valors. L'element <var>c</var> descriu la filera.</p>
+
+			<h6 id="e33" class="Exemple"><a href="#e33">Ex. 33</a>: Estadístiques de noms per nacionalitat</h6>
+			<pre class="codi">&lt;onomastica_noms version="1.00" lang="ca" o="dades" n="47" p="id=40683;class=nac"&gt;
+   &hellip;
+   &lt;<var>ff</var>&gt;
+      &lt;<var>f</var>&gt;
+         &lt;<var>c</var> id="es" scheme="nac"&gt;Espanya&lt;/<var>c</var>&gt;
+         &hellip;
+      &lt;/<var>f</var>&gt;
+      &lt;<var>f</var>&gt;
+         &lt;<var>c</var> id="ro" scheme="nac"&gt;Romania&lt;/<var>c</var>&gt;
+         &hellip;
+      &lt;/<var>f</var>&gt;
+      &lt;<var>f</var>&gt;
+         &lt;<var>c</var> id="ru" scheme="nac"&gt;Rússia&lt;/<var>c</var>&gt;
+         &hellip;
+      &lt;/<var>f</var>&gt;
+      &hellip;
+      &lt;<var>f</var>&gt;
+         &lt;c&gt;Total&lt;/<var>c</var>&gt;
+         &hellip;
+      &lt;/<var>f</var>&gt;
+   &lt;/<var>ff</var>&gt;
+&lt;/onomastica_noms&gt;</pre>
+
+			<h6 id="e34" class="Exemple"><a href="#e34">Ex. 34</a>: Estadístiques del nom MARIA</h6>
+			<pre class="codi">&lt;onomastica_noms version="1.00" lang="ca" o="dades" n="2" p="id=MARIA"&gt;
+   &lt;<var>c</var>&gt;MARIA&lt;/<var>c</var>&gt;
+   &lt;<var>r</var>&gt;2012&lt;/<var>r</var>&gt;
+   &lt;<var>geo</var> id="09" scheme="ca"&gt;Catalunya&lt;/<var>geo</var>&gt;
+   &lt;<var>s</var>&gt;Idescat, a partir del Registre de població de Catalunya.&lt;/<var>s</var>&gt;
+   &lt;<var>updated</var>&gt;2012-11-13T11:00:00+00:00&lt;/<var>updated</var>&gt;
+   &lt;<var>ff</var>&gt;
+      &lt;<var>f</var>&gt;
+         &lt;<var>c</var> id="40683" sex="f"&gt;MARIA&lt;/<var>c</var>&gt;
+         &hellip;
+      &lt;/<var>f</var>&gt;
+      &lt;<var>f</var>&gt;
+         &lt;<var>c</var> id="39969" sex="m"&gt;MARIA&lt;/<var>c</var>&gt;
+         &hellip;
+      &lt;/<var>f</var>&gt;
+   &lt;/<var>ff</var>&gt;
+&lt;/onomastica_noms&gt;</pre>
+
+			<p>Les dades s'inclouen en els següents elements:</p>
+			<ul>
+				<li><var>rank</var>:
+					<ul>
+						<li><var>total</var>: posició en el rànquing de tots els noms, sense distinció de gènere.</li>
+						<li><var>sex</var>: posició en el rànquing dels noms del mateix gènere.</li>
+					</ul>
+				</li>
+				<li><var>pos1</var>:
+					<ul>
+						<li><var>v</var>: freqüència d'aparició del nom, o del cognom com a primer cognom.</li>
+						<li><var>w</var>:
+							<ul>
+								<li><var>total</var>: pes en tant per mil sobre el total de noms o primers cognoms.</li>
+								<li><var>sex</var>: pes en tant per mil sobre el total de noms del mateix gènere.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><var>pos2</var>:
+					<ul>
+						<li><var>v</var>: freqüència d'aparició del cognom com a segon cognom.</li>
+						<li><var>w</var>:
+							<ul>
+								<li><var>total</var>: pes en tant per mil sobre el total de noms o segons cognoms.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<p>El subservei <kbd>cognoms</kbd> no inclou cap element <var>sex</var>. Els subserveis <kbd>noms</kbd> i <kbd>nadons</kbd> no inclouen l'element <var>pos2</var>.</p>
+
+			<h3 id="a2.2">2.2. Operació <kbd>cerca</kbd></h3>
+
+			<p>L'operació <kbd>cerca</kbd> utilitza per descriure els resultats l'estàndard <a href="http://www.atomenabled.org/developers/syndication/" target="_blank" rel="noopener" class="extern" title="Vincle extern: s'obrirà una nova finestra">Atom</a> enriquit amb elements de l'estàndard <a href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_response_elements" target="_blank" rel="noopener" class="extern" title="Vincle extern: s'obrirà una nova finestra">OpenSearch</a>.</p>
+			<p>Les entrades (<var>entry</var>), a més, són esteses amb l'element <var>f</var>, tal com es descriu a l'<a href="#a2.1">operació <kbd>dades</kbd></a>.</p>
+
+			<h3 id="a2.3">2.3. Operació <kbd>sug</kbd></h3>
+
+			<p>Per descriure els resultats, l'operació <kbd>sug</kbd> utilitza l'estàndard <a href="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.1" class="extern" target="_blank" rel="noopener" title="Vincle extern: s'obrirà una nova finestra">OpenSearch Suggestions</a>, que especifica una resposta en format <strong class="important">JSON</strong>. Aquesta mateixa estructura s'utilitza en la resposta en format <strong class="important">PHP serialitzat</strong>.</p>
+			<p>La resposta en format <strong class="important">XML</strong> inclou la mateixa informació estructurada d'acord amb l'estàndard <a href="http://msdn.microsoft.com/en-us/library/cc848863%28VS.85%29.aspx" class="extern" target="_blank" rel="noopener" title="Vincle extern: s'obrirà una nova finestra">XML Search Suggestions Format</a> (a vegades anomenat <a href="http://blogs.msdn.com/jonbox/archive/2010/02/28/ie8-fundamentals-of-visual-search-providers.aspx" class="extern" target="_blank" rel="noopener" title="Vincle extern: s'obrirà una nova finestra">OpenSearch SearchSuggest2</a>).</p>
+			<p>Per conveniència, també s'ofereix la resposta en format text, amb els resultats separats per salts de línia.</p>
+
+			<h3 id="a2.4">2.4. Errors</h3>
+			<p>Les APIs de l'Idescat utilitzen <a href="/dev/api/#a2.1">codis de resposta</a> normalitzats per indicar si la petició ha tingut èxit o si ha fracassat.</p>
+		</div>
+	</div>
+
+</div>
+		</div>
+	</main>
+	<footer id="Peu" role="contentinfo">
+		<div class="aplec">
+			<div id="OnSou" class="xs-visible">
+			<h2>Sou aquí:</h2>
+			<ul><li><a href="/dev/">Àrea de desenvolupadors</a></li><li><a href="/dev/api/">API</a></li><li>Onomàstica. API</li></ul>
+		</div>
+			<div id="idiomes" role="navigation" aria-label="Idioma de la pàgina">
+				<ul><li><a href="?lang=es" title="Esta p&aacute;gina est&aacute; traducida total o parcialmente al castellano" hreflang="es">es</a></li><li><a href="?lang=en" title="This page is totally or partially translated into English" hreflang="en">en</a></li></ul>
+			</div>
+			<ul id="Copyright">
+				<li><a href="/institut/web/">Av&iacute;s legal</a></li>
+				<li><a href="/institut/web/accessibilitat/">Accessibilitat</a></li>
+				<li><a href="/institut/" class="idescat">Institut d'Estad&iacute;stica de Catalunya</a></li>
+			</ul>
+		<div class="Datacio"><time datetime="2026-10-22T11:45:00Z">22/10/2026</time></div>
+			<ul id="xarxes">
+			  <li><a href="https://x.com/idescat"><img src="/images/xc.png" alt="X" title="X"></a></li>
+			  <li><a href="https://www.linkedin.com/company/idescat/"><img src="/images/linkedinc.png" alt="LinkedIn" title="LinkedIn"></a></li>
+			  <li><a href="https://www.youtube.com/user/idescat"><img src="/images/youtubec.png" alt="Youtube" title="Youtube"></a></li>
+			</ul>
+			<ul id="generalitat">
+				<li><a href="http://web.gencat.cat/ca/inici/"><img src="/images/mgencat.png" alt="www.gencat.cat"></a></li>
+				<li><a class="amunt">Torna amunt</a></li>
+			</ul>
+			<div id="pujar" class="amunt"></div>
+		</div>
+	</footer>
+</div>
+
+<script>
+IDESCAT.ini();
+
+</script>
+</body><!-- v.4 18.11.2026 08:06  --></html>

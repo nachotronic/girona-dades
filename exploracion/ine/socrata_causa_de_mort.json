@@ -1,0 +1,1167 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Registre de defuncions per COVID-19 a Catalunya per comarca i sexe",
+            "id" : "uqk7-bf9s",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen del registre RSAcovid19 del Departament de Salut i s'obtenen a partir de les declaracions de les empreses de serveis funeraris.\n\nNomés es tenen en compte les defuncions relacionades amb la COVID-19: que el motiu del certificat de defunció especifiqui que la persona ha mort a causa de la COVID-19, tingui o no un prova diagnòstica PCR o TA amb resultat positiu.\n\nLes defuncions s’imputen a la data de defunció, però apareixen per primera vegada l'endemà del dia de la notificació.\n\nLes dades es mostren per comarques per evitar la identificació de les persones difuntes i garantir-ne la confidencialitat.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:19:40.000Z",
+            "createdAt" : "2020-04-29T10:05:59.000Z",
+            "metadata_updated_at" : "2025-04-07T10:19:40.000Z",
+            "data_updated_at" : "2022-07-27T10:34:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 47,
+                "page_views_last_month" : 138,
+                "page_views_total" : 22061,
+                "page_views_last_week_log" : 5.584962500721157,
+                "page_views_last_month_log" : 7.118941072723508,
+                "page_views_total_log" : 14.429275961924453
+              },
+            "columns_name" :
+              [
+                "Nombre defuncions",
+                "Data defunció",
+                "Comarca",
+                "Codi Sexe",
+                "Sexe",
+                "Codi Comarca"
+              ],
+            "columns_field_name" :
+              [
+                "numexitus",
+                "exitusdata",
+                "comarcadescripcio",
+                "sexecodi",
+                "sexedescripcio",
+                "comarcacodi"
+              ],
+            "columns_datatype" :
+              [ "Number", "Calendar date", "Text", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nombre defuncions / Número defunciones / Deaths number",
+                "Data defunció / Fecha defunción / Death date",
+                "Comarca / Region",
+                "Codi Sexe / Código Sexo / Gender code",
+                "Sexe / Sexo / Gender",
+                "Codi Comarca / Código comarca / Region code"
+              ],
+            "columns_format" : [ {}, { "view" : "date_dmy" }, {}, {}, {}, {} ],
+            "download_count" : 30410,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-01-04T14:42:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid-19",
+                "covid19",
+                "coronavirus",
+                "morts",
+                "mortalitat",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Death records due to COVID-19 in Catalonia. Segregated by gender and region"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de defunciones por COVID-19 en Catalunya. Segregación por sexo y comarca"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/uqk7-bf9s",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-defuncions-per-COVID-19-a-Catalunya-pe/uqk7-bf9s",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Irrupció d’animals en calçada com a causa d’accident",
+            "id" : "ght6-dqp5",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Llista d’accidents en via urbana i interurbana en la qual la causa és la irrupció d’un animal en calçada.",
+            "attribution" : "Direcció General de la Policia",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-16T12:49:52.000Z",
+            "createdAt" : "2026-04-15T07:19:46.000Z",
+            "metadata_updated_at" : "2026-10-16T12:49:44.000Z",
+            "data_updated_at" : "2026-10-16T12:49:52.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 64,
+                "page_views_last_month" : 223,
+                "page_views_total" : 1397,
+                "page_views_last_week_log" : 6.022367813028454,
+                "page_views_last_month_log" : 7.807354922057604,
+                "page_views_total_log" : 10.449148645375438
+              },
+            "columns_name" :
+              [
+                "Animal Accident",
+                "Provincia Actuació",
+                "Ferits Greus",
+                "Data Inici Actuació",
+                "Morts",
+                "Número o punt quilomètric actuació",
+                "Estat Accident",
+                "Regió policial actuació",
+                "Via urbana o interurbana",
+                "Via Actuació",
+                "Codi Municipi",
+                "Hora inici actuació",
+                "Valoració Accident",
+                "Any Inici Actuació",
+                "Codi Comarca",
+                "Comarca Actuació",
+                "Municipi Actuació",
+                "Ferits Lleus",
+                "Il·lesos"
+              ],
+            "columns_field_name" :
+              [
+                "animal_accident",
+                "provincia_actuacio",
+                "ferits_greus",
+                "data_inici_actuacio",
+                "morts",
+                "numero_punt_quilometric_actuacio",
+                "estat_accident",
+                "regio_policial_actuacio",
+                "via_urbana_interurbana",
+                "via_actuacio",
+                "codi_municipi",
+                "hora_inici_actuacio",
+                "valoracio_accident",
+                "any_inici_actuacio",
+                "codi_comarca",
+                "comarca_actuacio",
+                "municipi_actuacio",
+                "ferits_lleus",
+                "ilesos"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Number",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Quin tipus d’animal ha provocat l’accident ",
+                "Província on s’ha produït l’accident",
+                "Persones que han resultat ferides greus com a conseqüència de l’accident",
+                "Data en la qual té inici l’actuació policial",
+                "Persones que han resultat mortes com a conseqüència de l’accident",
+                "Lloc de la via on s’ha produït l’accident",
+                "Resultat de l’accident",
+                "Regió Policial on s’ha produït l’accident",
+                "Tipus de via on s’ha produït l’accident",
+                "Nom de la via on s’ha produït l’accident",
+                "Codi del municipi segons Dades Obertes",
+                "Hora en la qual té inici l’actuació policial",
+                "Valoració policial de l’accident en relació a la caça o l’obligació de la via de disposar de tanca",
+                "Any en què ha passat l’accident",
+                "Codi de la Comarca segons Dades Obertes",
+                "Comarca on s’ha produït l’accident",
+                "Municipi on s’ha produït l’accident",
+                "Persones que han resultat ferides lleus com a conseqüència de l’accident",
+                "Persones que han resultat il·leses com a resultat de l’accident"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 484,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-04-15T08:43:11.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Seguretat",
+            "domain_tags" :
+              [
+                "via",
+                "accident",
+                "animal",
+                "animals",
+                "calçada",
+                "estat accident",
+                "municipi",
+                "comarca",
+                "actuació",
+                "territorial",
+                "valoració",
+                "porc senglar",
+                "cèrvids",
+                "salvatge",
+                "domèstic",
+                "pk",
+                "ods3_salut i benestar",
+                "ods9_indústria innovació i infraestructures",
+                "mossos d'esquadra",
+                "policia"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Dades-d'Alt-Valor_Categoria",
+                  "value" : "No són dades d’alt valor"
+                },
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "No"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Animal incursion into the road as a cause of accident."
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Irrupción de animales en calzada como causa de accidente. "
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Nom d'element"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Interior i Seguretat Pública"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Mensual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/ght6-dqp5",
+        "link" : "https://analisi.transparenciacatalunya.cat/Seguretat/Irrupció-d-animals-en-calçada-com-a-causa-d-accide/ght6-dqp5",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Decessi nel Comune di Brescia aggiornato al 20 marzo 2021",
+            "id" : "h5z7-phya",
+            "resource_name" : null,
+            "parent_fxf" : [ "avft-pty4" ],
+            "description" : "Il dataset mostra il numero totale dei decessi nel COMUNE DI BRESCIA dal 1979 al 20 marzo 2021 INDIPENDENTEMENTE DALLA LORO CAUSA.\r\nSulla base di questo dato e del numero di abitanti (199.579 al 31 dicembre 2019) è possibile quantificare gli effetti della pandemia del 2020 in una delle città maggiormente colpite in Italia e nel mondo.\r\nQuesti i rsultati:\r\n1.\r\nLa media annua de decessi dal 2010 al 2019 è: 2.117 decessi = 1,06% della popolazione = 6 morti al giorno.\r\n2.\r\nNel 2020 la somma totale è: 2.952 decessi = 1,47% della popolazione = 8 morti al giorno\r\n3.\r\nDal 1 gennaio al 20 marzo 2021 la somma totale è 562 decessi.\r\n4.\r\nProiezione: se l'andamento della mortalità procedesse costante come nei primi due mesi, il numero dei decessi al 31 dicembre 2021 sarebbe di ca. 2.400 decessi = 1,2% = 6/7 morti al giorno. E' verosimile tuttavia che il numero si riduca fino ad avvicinarsi alla normale media annua (2.117 decessi).",
+            "attribution" : "COMUNE DI BRESCIA",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2024-04-10T01:01:56.000Z",
+            "createdAt" : "2021-03-06T10:34:14.000Z",
+            "metadata_updated_at" : "2021-03-20T17:16:27.000Z",
+            "data_updated_at" : "2024-04-10T01:01:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 16,
+                "page_views_last_month" : 42,
+                "page_views_total" : 9015,
+                "page_views_last_week_log" : 4.08746284125034,
+                "page_views_last_month_log" : 5.426264754702098,
+                "page_views_total_log" : 13.138271800172223
+              },
+            "columns_name" :
+              [ "Anno di Morte", "Cittadinanza", "Sesso", "Occorrenze" ],
+            "columns_field_name" :
+              [ "anno_di_morte", "cittadinanza", "sesso", "occorrenze" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Number" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 6,
+            "provenance" : "community",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-03-20T16:56:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Statistica",
+            "domain_tags" :
+              [ "comune di brescia", "decessi", "morti", "pandemia" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Frequenza_di_aggiornamento_Frequenza",
+                  "value" : "Giornaliera"
+                },
+                {
+                  "key" : "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                  "value" : "20/03/2021"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/h5z7-phya",
+        "link" : "https://www.dati.lombardia.it/Statistica/Decessi-nel-Comune-di-Brescia-aggiornato-al-20-mar/h5z7-phya",
+        "owner" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          },
+        "creator" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "FILTRO ANNO DI MORTE - OCCORRENZE",
+            "id" : "i38q-j7gp",
+            "resource_name" : null,
+            "parent_fxf" : [ "avft-pty4" ],
+            "description" : "Il dataset mostra il numero totale dei decessi nel COMUNE DI BRESCIA dal 1979 al 2 marzo 2021 INDIPENDENTEMENTE DALLA LORO CAUSA.\r\nSulla base di questo dato e del numero di abitanti (199.579 al 31 dicembre 2019) è possibile quantificare gli effetti della pandemia del 2020 in una delle città maggiormente colpite in Italia e nel mondo.\r\nQuesti i rsultati:\r\n1. \r\nLa media annua de decessi dal 2010 al 2019 è: 2.117 decessi = 1,06% della popolazione = 6 morti al giorno.\r\n2. \r\nNel 2020 la somma totale è: 2.945 decessi = 1,47% della popolazione = 8 morti al giorno\r\n3. \r\nDal 1 gennaio al 24 luglio 2021 la somma totale è 1.498 decessi (214 al mese)\r\n4.\r\nProiezione ad oggi 25 luglio 2021: se l'andamento della mortalità procedesse costante (214 decessi al mese), il numero dei decessi al 31 dicembre 2021 sarebbe di ca. 2.568 decessi = 1,3% = 7 morti al giorno anziché gli 8 del 2020 e i 6 della media annua.",
+            "attribution" : "COMUNE DI BRESCIA",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2024-04-10T01:01:56.000Z",
+            "createdAt" : "2021-07-25T10:26:58.000Z",
+            "metadata_updated_at" : "2021-07-25T10:27:09.000Z",
+            "data_updated_at" : "2024-04-10T01:01:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 2,
+                "page_views_last_month" : 13,
+                "page_views_total" : 676,
+                "page_views_last_week_log" : 1.5849625007211563,
+                "page_views_last_month_log" : 3.8073549220576037,
+                "page_views_total_log" : 9.403012023574997
+              },
+            "columns_name" :
+              [ "Anno di Morte", "Cittadinanza", "Sesso", "Occorrenze" ],
+            "columns_field_name" :
+              [ "anno_di_morte", "cittadinanza", "sesso", "occorrenze" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Number" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 1,
+            "provenance" : "community",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-25T10:27:09.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Statistica",
+            "domain_tags" : [ "comune di brescia", "decessi", "morti" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Frequenza_di_aggiornamento_Frequenza",
+                  "value" : "Giornaliera"
+                },
+                {
+                  "key" : "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                  "value" : "25/07/2021"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/i38q-j7gp",
+        "link" : "https://www.dati.lombardia.it/Statistica/FILTRO-ANNO-DI-MORTE-OCCORRENZE/i38q-j7gp",
+        "owner" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          },
+        "creator" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Llista de reparació jurídica de víctimes del franquisme (1938-1978)",
+            "id" : "3bjt-k7vu",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "En aplicació de la Llei 11/2017 de reparació jurídica de víctimes del franquisme, la qual declara il·legals els tribunals de l’Auditoria de Guerra de l’Exèrcit d’Ocupació que van actuar a Catalunya de l’abril de 1938 a desembre de 1978,  l’Arxiu Nacional de Catalunya publica la relació de persones a les quals es va instruir un procediment judicial militar durant la dictadura de Franco. La relació publicada és fruit de la catalogació feta per l’ANC dels procediments judicials militars de l’Arxiu del Tribunal Militar Territorial Tercer de Barcelona entre els anys 2003 i 2013 i inclou cognoms i nom de la persona represaliada, sexe, edat, lloc de naixement i de residència, tipus de procediment, número de causa, data d’inici de la causa, data de l’aprovació de la sentència o altra resolució, pena imposada, commutació o indult demanat, persones executades i referència d’arxiu dels originals que es conserven a l’Arxiu del Tribunal Militar Territorial Tercer de Barcelona.",
+            "attribution" : "Departament de Cultura",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-10-09T06:31:37.000Z",
+            "createdAt" : "2018-04-05T15:32:49.000Z",
+            "metadata_updated_at" : "2026-10-09T06:31:19.000Z",
+            "data_updated_at" : "2026-10-09T06:31:37.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 138,
+                "page_views_last_month" : 482,
+                "page_views_total" : 18094,
+                "page_views_last_week_log" : 7.118941072723508,
+                "page_views_last_month_log" : 8.915879378835772,
+                "page_views_total_log" : 14.143303487259901
+              },
+            "columns_name" :
+              [
+                "Comunitat autònoma naixement",
+                "Municipi_Naixement_Latitud_ETRS89",
+                "Any inicial",
+                "Municipi_Residencia_Latitud_ETRS89",
+                "Nom",
+                "Data de la descripció",
+                "Tipus procediment 2",
+                "Cognoms nom",
+                "Cognoms",
+                "Municipi naixement",
+                "Pedanies/Agregats naixement",
+                "Comarca naixement",
+                "Província naixement",
+                "Pedanies/Agregats residencia",
+                "Comarca residència",
+                "Província residència",
+                "País residència",
+                "Num causa",
+                "Codi",
+                "Any aprovació sen o altra resol",
+                "Municipi_Residencia_Longitud_ETRS89",
+                "Municipi_Naixement_Longitud_ETRS89",
+                "Edat",
+                "Comunitat autònoma residència",
+                "Afusellades",
+                "Pena",
+                "Data correccio registre",
+                "Ref num arxiu",
+                "Commutació/indult (demanat)",
+                "Autoria de la descripció",
+                "Sexe",
+                "País naixement",
+                "Municipi residència",
+                "Tipus procediment 1"
+              ],
+            "columns_field_name" :
+              [
+                "comunitat_aut_noma_naixement",
+                "municipi_naixement_latitud_etrs89",
+                "any_inicial",
+                "municipi_residencia_latitud_etrs89",
+                "nom",
+                "data_de_la_descripci_",
+                "tipus_procediment_2",
+                "cognoms_nom",
+                "cognoms",
+                "municipi_naixement",
+                "pedanies_agregats_naixement",
+                "comarca_naixement",
+                "prov_ncia_naixement",
+                "pedanies_agregats_residencia",
+                "comarca_resid_ncia",
+                "prov_ncia_resid_ncia",
+                "pa_s_resid_ncia",
+                "num_causa",
+                "codi",
+                "any_aprovaci_sen_o_altra_resol",
+                "municipi_residencia_longitud_etrs89",
+                "municipi_naixement_longitud_etrs89",
+                "edat",
+                "comunitat_aut_noma_resid_ncia",
+                "afusellades",
+                "pena",
+                "data_correccio_registre",
+                "ref_num_arxiu",
+                "commutaci_indult_demanat",
+                "autoria_de_la_descripci_",
+                "sexe",
+                "pa_s_naixement",
+                "municipi_resid_ncia",
+                "tipus_procediment_1"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Calendar date",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Number",
+                "Number",
+                "Number",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text",
+                "Text"
+              ],
+            "columns_description" :
+              [
+                "Comunitat autònoma de naixement de la víctima. Consta quan fa referència a comunitats autònomes de l’estat espanyol. Per la resta de casos (lloc de naixement de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de naixement de la persona processada) hi consten dos guionets “--“.",
+                "Latitud del lloc de naixement de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de naixement de la víctima. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Any inicial del procediment seguit contra la víctima. Quan no es disposa d’aquesta dada està en blanc.",
+                "Latitud del lloc de residència de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de residència de la víctima o quan declarava viure en més d’un lloc. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Nom de pila de la víctima.",
+                "Data d’alta del registre a la llista de reparació jurídica de víctimes del franquisme.",
+                "Hi consta el tipus de procediment: sumaríssim, causa ordinària, diligències prèvies, causa acumulada, entre d’altres. En cas de no disposar d’aquesta informació hi consten dos guionets “--“.",
+                "Cognoms i nom de la víctima (apareixen persones físiques i jurídiques).",
+                "Cognoms de la víctima.",
+                "Municipi de naixement de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Pedania/Agregats de naixement de la víctima. Només està consignat aquest camp en els casos que la persona processada hagués nascut en alguna entitat local menor. En la resta de casos hi consten dos guionets “--“.",
+                "Comarca de naixement de la víctima. Consta quan fa referència a comarques de Catalunya, Catalunya Nord, Comunitat Valenciana i franja d’Aragó. Per a la resta de casos (lloc de naixement de la persona processada a qualsevol altre municipi de la resta de l’estat espanyol, fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de naixement de la persona processada) hi consten dos guionets “--“.",
+                "Província de naixement de la víctima. Consta quan fa referència a províncies de l’estat espanyol. En el cas de municipis de les Illes Balears hi consta “Illes Balears”. Per la resta de casos (lloc de naixement de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de naixement de la persona processada) hi consten dos guionets “--“.",
+                "Pedania/Agregats de residència de la víctima. Només està consignat aquest camp en els casos que la persona processada visqués en alguna entitat local menor. En la resta de casos hi consten dos guionets “--“.",
+                "Comarca de residència de la víctima. Consta quan fa referència a comarques de Catalunya, Catalunya Nord, Comunitat Valenciana i franja d’Aragó. Per a la resta de casos (lloc de residència de la persona processada a qualsevol altre municipi de la resta de l’estat espanyol, fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de residència de la persona processada) hi consten dos guionets “--“.",
+                "Província de residència de la víctima. Consta quan fa referència a províncies de l’estat espanyol. En el cas de municipis de les Illes Balears hi consta “Illes Balears”. Per la resta de casos (lloc de residència de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de residència de la persona processada) hi consten dos guionets “--“.",
+                "País de residència de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Número de causa del procediment seguit contra la víctima. Quan no es disposa d’aquesta dada hi consten dos guionets “--“.",
+                "Autonumèric que identifica unívocament cada registre.",
+                "Any d’aprovació de la sentència o altra resolució del procediment seguit contra la víctima. Quan no es disposa d’aquesta dada està en blanc.",
+                "Longitud del lloc de residència de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de residència de la víctima o quan declarava viure en més d’un lloc. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Longitud del lloc de naixement de la víctima. En format decimal i basat en el sistema geodèsic de referència WGS84 compatible amb ETRS89 i REGCAN95. En blanc quan no es disposa del lloc de naixement de la víctima. Quan només consta el país les coordenades se situen al centre del país. Quan només consta la província s’han fet constar les coordenades de la capital de la província. Quan només consta la comarca s’han fet constar les coordenades de la capital de la comarca.",
+                "Edat de la víctima, en el cas de les persones jurídiques s’indica 0. Quan no es disposa de l’edat hi consta “9999”.",
+                "Comunitat autònoma de residència de la víctima. Consta quan fa referència a comunitats autònomes de l’estat espanyol. Per la resta de casos (lloc de residència de la persona processada fora de l’estat espanyol o perquè es tracta d’una persona jurídica o no es disposa del lloc de residència de la persona processada) hi consten dos guionets “--“.",
+                "Indica els casos en què la persona processada fou condemnada a mort i executada. En la resta de casos està en blanc.",
+                "Pena imposada a la víctima. En cas de no disposar d’aquesta informació hi consten dos guionets “--“.",
+                "Data de l’esmena del registre arran de les sol·licituds d’esmena rebuts per part de les víctimes o dels seus familiars. Quan el registre no ha estat corregit aquest camp està en blanc.",
+                "Número de localització a l’arxiu del procediment. El camp es troba buit quan es tenen referències de l’expedient però no es va trobar el procediment al dipòsit de l’Arxiu del Tribunal Militar Territorial Tercer de Barcelona.",
+                "Commutació/indult demanat (a vegades no concedits). Quan no es disposa d’aquesta dada està en blanc.",
+                "Autoria de l’alta del registre a la llista de reparació jurídica de víctimes del franquisme.",
+                "Sexe de la víctima. Quan es tracta de persones jurídiques hi consten dos guionets “--“. A la resta de casos hi consta home o dona.",
+                "País de naixement de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Municipi de residència de la víctima. Quan no es disposa d’aquesta dada o no procedeix (en el cas de persones jurídiques) hi consten dos guionets “--“.",
+                "Hi consta si es tracta d’un consell de guerra o de diligències prèvies. En cas de no disposar d’aquesta informació hi consten dos guionets “--“."
+              ],
+            "columns_format" :
+              [
+                {},
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                {},
+                { "view" : "date_dmy" },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "precisionStyle" : "standard",
+                  "noCommas" : "true",
+                  "align" : "right"
+                },
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ".", "groupSeparator" : "," },
+                {},
+                {},
+                {},
+                { "view" : "date_dmy" },
+                {
+                  "noCommas" : "false",
+                  "decimalSeparator" : ",",
+                  "align" : "right",
+                  "groupSeparator" : ".",
+                  "precisionStyle" : "standard"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+            "download_count" : 3807,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2023-03-20T10:06:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Legislació-justícia",
+            "domain_tags" :
+              [
+                "repressió",
+                "consell de guerra",
+                "memòria històrica",
+                "franquisme",
+                "drets humans",
+                "arxius",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Victims of the Franco regime (1938-1978) juridical reparation list"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Lista de reparación jurídica de víctimas del Franquismo (1938-1978)"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Espanya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Coordenades"
+                },
+                { "key" : "Actors_Departament", "value" : "Cultura" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Trimestral"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/3bjt-k7vu",
+        "link" : "https://analisi.transparenciacatalunya.cat/Legislació-justícia/Llista-de-reparació-jurídica-de-víctimes-del-franq/3bjt-k7vu",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "FILTRO ANNO DI MORTE - OCCORRENZE 05-09-2021",
+            "id" : "6mr6-gh26",
+            "resource_name" : null,
+            "parent_fxf" : [ "avft-pty4" ],
+            "description" : "Il dataset mostra il numero totale dei decessi nel COMUNE DI BRESCIA dal 1979 al 5 settembre 2021 INDIPENDENTEMENTE DALLA LORO CAUSA.\r\nSulla base di questo dato e del numero di abitanti (199.579 al 31 dicembre 2019) è possibile quantificare gli effetti della pandemia del 2020 in una delle città maggiormente colpite in Italia e nel mondo.\r\nQuesti i rsultati:\r\n1.\r\nLa media annua de decessi dal 2010 al 2019 è: 2.117 decessi = 1,06% della popolazione = 6 morti al giorno.\r\n2.\r\nNel 2020 la somma totale è: 2.945 decessi = 1,47% della popolazione = 8 morti al giorno\r\n3.\r\nDal 1 gennaio al 5 settembre 2021 la somma totale è 1.541 decessi (193 al mese)\r\n4.\r\n- Proiezione ad oggi 5 settembre 2021: se l'andamento della mortalità procedesse costante (129 decessi al mese), il numero dei decessi al 31 dicembre 2021 sarebbe di ca. 2.316  (poco più di 6 morti al giorno INDIPENDENTEMENTE DALLE CAUSE. \r\n- La proiezione di questi dati per il 31 dicembre 2021 è che il numero dei decessi cali ulteriormente fino a stabilizzarsi intorno alla normale media annua (2117 decessi = 6 decessi al giorno).",
+            "attribution" : "COMUNE DI BRESCIA",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2024-04-10T01:01:56.000Z",
+            "createdAt" : "2021-09-05T11:03:37.000Z",
+            "metadata_updated_at" : "2021-09-05T12:14:15.000Z",
+            "data_updated_at" : "2024-04-10T01:01:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 11,
+                "page_views_total" : 469,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 3.5849625007211565,
+                "page_views_total_log" : 8.876516946565
+              },
+            "columns_name" :
+              [ "Anno di Morte", "Cittadinanza", "Sesso", "Occorrenze" ],
+            "columns_field_name" :
+              [ "anno_di_morte", "cittadinanza", "sesso", "occorrenze" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Number" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 1,
+            "provenance" : "community",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-09-05T12:14:15.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Statistica",
+            "domain_tags" : [ "comune di brescia", "decessi", "morti" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Frequenza_di_aggiornamento_Frequenza",
+                  "value" : "Giornaliera"
+                },
+                {
+                  "key" : "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                  "value" : "05/09/2021"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/6mr6-gh26",
+        "link" : "https://www.dati.lombardia.it/Statistica/FILTRO-ANNO-DI-MORTE-OCCORRENZE-05-09-2021/6mr6-gh26",
+        "owner" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          },
+        "creator" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Elenco Decessi Brescia aggiornato 3 maggio 2021",
+            "id" : "xxbw-tm7h",
+            "resource_name" : null,
+            "parent_fxf" : [ "avft-pty4" ],
+            "description" : "Elenco DecessiTesto sul dataset\r\nIl dataset mostra il numero totale dei decessi nel COMUNE DI BRESCIA dal 1979 al 2 marzo 2021 INDIPENDENTEMENTE DALLA LORO CAUSA.\r\nSulla base di questo dato e del numero di abitanti (199.579 al 31 dicembre 2019) è possibile quantificare gli effetti della pandemia del 2020 in una delle città maggiormente colpite in Italia e nel mondo.\r\nQuesti i rsultati:\r\n1. \r\nLa media annua de decessi dal 2010 al 2019 è: 2.117 decessi = 1,06% della popolazione = 6 morti al giorno.\r\n2. \r\nNel 2020 la somma totale è: 2.945 decessi = 1,47% della popolazione = 8 morti al giorno\r\n3. \r\nDal 1 gennaio al 2 marzo 2021 la somma totale è 412 decessi. \r\n4.\r\nProiezione: se l'andamento della mortalità procedesse costante come nei primi due messi, il numero dei decessi al 31 dicembre 2021 sarebbe di ca. 2.400 decessi = 1,2% = 6/7 morti al giorno. E' verosimile tuttavia che il numero si riduca fino ad avvicinarsi alla normale media annua (2.117 decessi).",
+            "attribution" : "COMUNE DI BRESCIA",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2024-04-10T01:01:56.000Z",
+            "createdAt" : "2021-05-03T10:25:06.000Z",
+            "metadata_updated_at" : "2021-05-03T10:53:58.000Z",
+            "data_updated_at" : "2024-04-10T01:01:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 5,
+                "page_views_last_month" : 16,
+                "page_views_total" : 383,
+                "page_views_last_week_log" : 2.584962500721156,
+                "page_views_last_month_log" : 4.08746284125034,
+                "page_views_total_log" : 8.584962500721156
+              },
+            "columns_name" :
+              [ "Anno di Morte", "Cittadinanza", "Sesso", "Occorrenze" ],
+            "columns_field_name" :
+              [ "anno_di_morte", "cittadinanza", "sesso", "occorrenze" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Number" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 0,
+            "provenance" : "community",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-05-03T10:53:58.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Statistica",
+            "domain_tags" : [ "comune di brescia", "decessi", "morti" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Frequenza_di_aggiornamento_Frequenza",
+                  "value" : "Giornaliera"
+                },
+                {
+                  "key" : "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                  "value" : "03/05/2021"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/xxbw-tm7h",
+        "link" : "https://www.dati.lombardia.it/Statistica/Elenco-Decessi-Brescia-aggiornato-3-maggio-2021/xxbw-tm7h",
+        "owner" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          },
+        "creator" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Comune di Brescia - Elenco Decessi",
+            "id" : "r8xq-hj62",
+            "resource_name" : null,
+            "parent_fxf" : [ "avft-pty4" ],
+            "description" : "Il dataset mostra il numero totale dei decessi nel COMUNE DI BRESCIA dal 1979 al 2 marzo 2021 INDIPENDENTEMENTE DALLA LORO CAUSA.\r\nSulla base di questo dato e del numero di abitanti (199.579 al 31 dicembre 2019) è possibile quantificare gli effetti della pandemia del 2020 in una delle città maggiormente colpite in Italia e nel mondo.\r\nQuesti i rsultati:\r\n1. \r\nLa media annua de decessi dal 2010 al 2019 è: 2.117 decessi = 1,06% della popolazione = 6 morti al giorno.\r\n2. \r\nNel 2020 la somma totale è: 2.945 decessi = 1,47% della popolazione = 8 morti al giorno\r\n3. \r\nDal 1 gennaio al 24 luglio 2021 la somma totale è 1.498 decessi (214 al mese)\r\n4.\r\nProiezione ad oggi 25 luglio 2021: se l'andamento della mortalità procedesse costante (214 decessi al mese), il numero dei decessi al 31 dicembre 2021 sarebbe di ca. 2.568 decessi = 1,3% = 7 morti al giorno anziché gli 8 del 2020 e i 6 della media annua.",
+            "attribution" : "COMUNE DI BRESCIA",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2024-04-10T01:01:56.000Z",
+            "createdAt" : "2021-07-25T09:15:35.000Z",
+            "metadata_updated_at" : "2021-07-25T10:24:08.000Z",
+            "data_updated_at" : "2024-04-10T01:01:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 2,
+                "page_views_last_month" : 12,
+                "page_views_total" : 392,
+                "page_views_last_week_log" : 1.5849625007211563,
+                "page_views_last_month_log" : 3.700439718141092,
+                "page_views_total_log" : 8.618385502258606
+              },
+            "columns_name" :
+              [ "Anno di Morte", "Cittadinanza", "Sesso", "Occorrenze" ],
+            "columns_field_name" :
+              [ "anno_di_morte", "cittadinanza", "sesso", "occorrenze" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Number" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 1,
+            "provenance" : "community",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-07-25T10:24:08.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Statistica",
+            "domain_tags" : [ "comune di brescia", "decessi", "morti" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Frequenza_di_aggiornamento_Frequenza",
+                  "value" : "Giornaliera"
+                },
+                {
+                  "key" : "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                  "value" : "25/07/2021"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/r8xq-hj62",
+        "link" : "https://www.dati.lombardia.it/Statistica/Comune-di-Brescia-Elenco-Decessi/r8xq-hj62",
+        "owner" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          },
+        "creator" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Elenco decessi del Comune di Brescia - 17 gennaio 2022",
+            "id" : "ut3r-a9bm",
+            "resource_name" : null,
+            "parent_fxf" : [ "avft-pty4" ],
+            "description" : "Il Comune di Brescia, NON HA PIU' AGGIORNATO I DATI dopo il 2 agosto 2021.\r\n\r\nIl dataset mostra il numero totale dei decessi nel COMUNE DI BRESCIA dal 1979 al 2 agosto 2021 INDIPENDENTEMENTE DALLA LORO CAUSA.\r\nSulla base di questo dato e del numero di abitanti (199.579 al 31 dicembre 2019) è possibile quantificare gli effetti della pandemia del 2020 in una delle città maggiormente colpite in Italia e nel mondo.\r\n\r\nQuesti i risultati:\r\n1. \r\nLa media annua de decessi dal 2010 al 2019 è: 2.117 decessi = 1,06% della popolazione = 6 morti al giorno.\r\n2. \r\nNel 2020 la somma totale è: 2.945 decessi = 1,47% della popolazione = 8 morti al giorno.\r\n3. \r\nDal 1 gennaio al 2 agosto 2021 (213 giorni - 152) la somma totale è: 1.541 decessi = 7 morti al giorno.\r\n\r\nE' dunque accertato dai dati in possesso della Regione Lombardia, ricevuti dal Comune di Brescia, che indipendentemente dalle cause della morte, la differenza fra la media annua del decennio 2010/2019 e il 2020 è di 828 decessi (0,41%).\r\n\r\nTale differenza percentuale dello 0,41%, corrisponde all'indice di letalità indicato dal Prof. Giorgio Palù, attuale presidente dell'AIFA (Agenzia Italiana del Farmaco), nell'intervista per la trasmissione «Primus inter pares», del 14/10/2020, a cura dell'emittente televisiva TV7: \"Sappiamo [...] da una serie di studi [...] che la letalità oscilla tra lo 0,3 e lo 0,6 % cioè una letalità relativamente bassa, più bassa di altre malattie infettive, sicuramente più bassa degli incidenti stradali, dei suicidi, delle malattie respiratorie per cause nanopolveri, non è la spagnola. [...] Questo ci dovrebbe rasserenare, e invece questa infodemia, questa informazione che è diventata pandemica, questa paura del contagio, paura della morte, questa sì è diventata virulenta e contagiosa, si è perso il buonsenso, la ragionevolezza, la capacità critica di valutare i dati per quello che sono”. (a partire dal min. 15:10).\r\n\r\nMantenendosi costante la media di 7 decessi al giorno, il numero totale al 31 dicembre 2021 sarebbe di ca. 2.605 decessi (e non i 2.945 del 2020). Tuttavia, tenendo conto della scarsa incidenza sulla mortalità dei mesi di agosto, settembre e ottobre, è verosimile che il numero totale dei decessi si sia avvicinato alla normale media annua (2.117 decessi, ca. 6 decessi al giorno): solo la comunicazione dei dati dal 2 agosto al 31 dicembre 2021 da parte del Comune di Brescia permetterebbe di verificare questa ipotesi.",
+            "attribution" : "COMUNE DI BRESCIA",
+            "attribution_link" : null,
+            "contact_email" : null,
+            "type" : "filter",
+            "updatedAt" : "2024-04-10T01:01:56.000Z",
+            "createdAt" : "2022-01-17T10:50:24.000Z",
+            "metadata_updated_at" : "2022-01-17T11:59:19.000Z",
+            "data_updated_at" : "2024-04-10T01:01:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 12,
+                "page_views_last_month" : 24,
+                "page_views_total" : 600,
+                "page_views_last_week_log" : 3.700439718141092,
+                "page_views_last_month_log" : 4.643856189774724,
+                "page_views_total_log" : 9.231221180711186
+              },
+            "columns_name" :
+              [ "Anno di Morte", "Cittadinanza", "Sesso", "Occorrenze" ],
+            "columns_field_name" :
+              [ "anno_di_morte", "cittadinanza", "sesso", "occorrenze" ],
+            "columns_datatype" : [ "Number", "Text", "Text", "Number" ],
+            "columns_description" : [ "", "", "", "" ],
+            "columns_format" : [ {}, {}, {}, {} ],
+            "download_count" : 10,
+            "provenance" : "community",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-01-17T11:59:19.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Statistica",
+            "domain_tags" : [ "comune di brescia", "decessi", "morti" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Frequenza_di_aggiornamento_Frequenza",
+                  "value" : "Giornaliera"
+                },
+                {
+                  "key" : "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                  "value" : "17/01/2022"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.dati.lombardia.it",
+            "license" : "Creative Commons 1.0 Universal (Public Domain Dedication)"
+          },
+        "permalink" : "https://www.dati.lombardia.it/d/ut3r-a9bm",
+        "link" : "https://www.dati.lombardia.it/Statistica/Elenco-decessi-del-Comune-di-Brescia-17-gennaio-20/ut3r-a9bm",
+        "owner" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          },
+        "creator" :
+          {
+            "id" : "k3zp-7idp",
+            "user_type" : "interactive",
+            "display_name" : "Paolo Tonini"
+          }
+      }
+    ],
+  "resultSetSize" : 9,
+  "timings" : { "serviceMillis" : 24, "searchMillis" : [ 3, 9 ] },
+  "warnings" : []
+}

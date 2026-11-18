@@ -1,0 +1,54 @@
+[{"Id":37106, "COD":"IDB37106", "FK_Operacion":33, "Nombre":"Fecundidad. Total Nacional.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37257, "COD":"IDB37257", "FK_Operacion":33, "Nombre":"Fecundidad. Albacete.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37258, "COD":"IDB37258", "FK_Operacion":33, "Nombre":"Fecundidad. Alicante/Alacant.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37259, "COD":"IDB37259", "FK_Operacion":33, "Nombre":"Fecundidad. Almería.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37256, "COD":"IDB37256", "FK_Operacion":33, "Nombre":"Fecundidad. Álava.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37288, "COD":"IDB37288", "FK_Operacion":33, "Nombre":"Fecundidad. Asturias.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37260, "COD":"IDB37260", "FK_Operacion":33, "Nombre":"Fecundidad. Ávila.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37261, "COD":"IDB37261", "FK_Operacion":33, "Nombre":"Fecundidad. Badajoz.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37262, "COD":"IDB37262", "FK_Operacion":33, "Nombre":"Fecundidad. Balears (Illes).", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37263, "COD":"IDB37263", "FK_Operacion":33, "Nombre":"Fecundidad. Barcelona.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37303, "COD":"IDB37303", "FK_Operacion":33, "Nombre":"Fecundidad. Vizcaya.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37264, "COD":"IDB37264", "FK_Operacion":33, "Nombre":"Fecundidad. Burgos.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37265, "COD":"IDB37265", "FK_Operacion":33, "Nombre":"Fecundidad. Cáceres.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37266, "COD":"IDB37266", "FK_Operacion":33, "Nombre":"Fecundidad. Cádiz.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37294, "COD":"IDB37294", "FK_Operacion":33, "Nombre":"Fecundidad. Cantabria.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37267, "COD":"IDB37267", "FK_Operacion":33, "Nombre":"Fecundidad. Castellón/Castelló.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37268, "COD":"IDB37268", "FK_Operacion":33, "Nombre":"Fecundidad. Ciudad Real.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37269, "COD":"IDB37269", "FK_Operacion":33, "Nombre":"Fecundidad. Córdoba.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37270, "COD":"IDB37270", "FK_Operacion":33, "Nombre":"Fecundidad. Coruña (A).", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37271, "COD":"IDB37271", "FK_Operacion":33, "Nombre":"Fecundidad. Cuenca.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37275, "COD":"IDB37275", "FK_Operacion":33, "Nombre":"Fecundidad. Guipúzcoa.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37272, "COD":"IDB37272", "FK_Operacion":33, "Nombre":"Fecundidad. Girona.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37273, "COD":"IDB37273", "FK_Operacion":33, "Nombre":"Fecundidad. Granada.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37274, "COD":"IDB37274", "FK_Operacion":33, "Nombre":"Fecundidad. Guadalajara.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37276, "COD":"IDB37276", "FK_Operacion":33, "Nombre":"Fecundidad. Huelva.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37277, "COD":"IDB37277", "FK_Operacion":33, "Nombre":"Fecundidad. Huesca.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37278, "COD":"IDB37278", "FK_Operacion":33, "Nombre":"Fecundidad. Jaén.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37279, "COD":"IDB37279", "FK_Operacion":33, "Nombre":"Fecundidad. León.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37280, "COD":"IDB37280", "FK_Operacion":33, "Nombre":"Fecundidad. Lleida.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37282, "COD":"IDB37282", "FK_Operacion":33, "Nombre":"Fecundidad. Lugo.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37283, "COD":"IDB37283", "FK_Operacion":33, "Nombre":"Fecundidad. Madrid.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37284, "COD":"IDB37284", "FK_Operacion":33, "Nombre":"Fecundidad. Málaga.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37285, "COD":"IDB37285", "FK_Operacion":33, "Nombre":"Fecundidad. Murcia.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37286, "COD":"IDB37286", "FK_Operacion":33, "Nombre":"Fecundidad. Navarra.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37287, "COD":"IDB37287", "FK_Operacion":33, "Nombre":"Fecundidad. Ourense.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37289, "COD":"IDB37289", "FK_Operacion":33, "Nombre":"Fecundidad. Palencia.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37290, "COD":"IDB37290", "FK_Operacion":33, "Nombre":"Fecundidad. Palmas (Las).", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37291, "COD":"IDB37291", "FK_Operacion":33, "Nombre":"Fecundidad. Pontevedra.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37281, "COD":"IDB37281", "FK_Operacion":33, "Nombre":"Fecundidad. Rioja (La).", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37292, "COD":"IDB37292", "FK_Operacion":33, "Nombre":"Fecundidad. Salamanca.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37293, "COD":"IDB37293", "FK_Operacion":33, "Nombre":"Fecundidad. Santa Cruz de Tenerife.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37295, "COD":"IDB37295", "FK_Operacion":33, "Nombre":"Fecundidad. Segovia.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37296, "COD":"IDB37296", "FK_Operacion":33, "Nombre":"Fecundidad. Sevilla.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37297, "COD":"IDB37297", "FK_Operacion":33, "Nombre":"Fecundidad. Soria.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37298, "COD":"IDB37298", "FK_Operacion":33, "Nombre":"Fecundidad. Tarragona.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37299, "COD":"IDB37299", "FK_Operacion":33, "Nombre":"Fecundidad. Teruel.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37300, "COD":"IDB37300", "FK_Operacion":33, "Nombre":"Fecundidad. Toledo.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37301, "COD":"IDB37301", "FK_Operacion":33, "Nombre":"Fecundidad. Valencia/València.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37302, "COD":"IDB37302", "FK_Operacion":33, "Nombre":"Fecundidad. Valladolid.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37304, "COD":"IDB37304", "FK_Operacion":33, "Nombre":"Fecundidad. Zamora.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37305, "COD":"IDB37305", "FK_Operacion":33, "Nombre":"Fecundidad. Zaragoza.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37306, "COD":"IDB37306", "FK_Operacion":33, "Nombre":"Fecundidad. Ceuta.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+,{"Id":37307, "COD":"IDB37307", "FK_Operacion":33, "Nombre":"Fecundidad. Melilla.", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":38, "FK_Clasificacion":null, "FK_Escala":1, "FK_Unidad":287}
+]

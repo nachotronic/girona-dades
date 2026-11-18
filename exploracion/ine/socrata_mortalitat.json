@@ -1,0 +1,976 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Mortalitat per tot tipus de causa a Catalunya",
+            "id" : "7dt9-azyt",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "MoMo és un sistema per a la Vigilància de la mortalitat diària per totes les causes a Espanya. Té com a objectiu identificar patrons inusuals de mortalitat i estimar l'impacte en la mortalitat de la població de qualsevol esdeveniment d'importància per a guiar l'acció en Salut Pública.\n\nEstà gestionat pel CNE i utilitza dades procedents de diverses administracions públiques.\n\nEn aquest dataset, s'obtenen les dades del sistema MoMo i es filtren per mostrar les dades corresponents a Catalunya.\n\nMés informació:\nhttps://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion",
+            "attribution" : "Instituto de Salud Carlos III (ISCIII)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2026-11-18T08:02:34.000Z",
+            "createdAt" : "2020-04-27T14:27:27.000Z",
+            "metadata_updated_at" : "2026-11-18T08:00:23.000Z",
+            "data_updated_at" : "2026-11-18T08:02:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 48,
+                "page_views_last_month" : 125,
+                "page_views_total" : 8730,
+                "page_views_last_week_log" : 5.614709844115208,
+                "page_views_last_month_log" : 6.977279923499917,
+                "page_views_total_log" : 13.091931186216529
+              },
+            "columns_name" :
+              [
+                "Sexe",
+                "Edat",
+                "Data",
+                "Defuncions observades",
+                "Defuncions esperades",
+                "Defuncions esperades (Límit inferior)",
+                "Defuncions esperades (Límit superior)"
+              ],
+            "columns_field_name" :
+              [
+                "sexe",
+                "edad",
+                "data",
+                "defuncions_observades",
+                "defuncions_esperades",
+                "defuncions_esperades_inf",
+                "defuncions_esperades_sup"
+              ],
+            "columns_datatype" :
+              [
+                "Text",
+                "Text",
+                "Calendar date",
+                "Number",
+                "Number",
+                "Number",
+                "Number"
+              ],
+            "columns_description" :
+              [
+                "Classificació per sexe",
+                "Grup d'edats",
+                "Data a la que fan referència les dades",
+                "Defuncions observades (es poden incloure correccions per retràs)",
+                "Defuncions esperades resultants del model",
+                "Límit inferior de l'interval de confiança de les defuncions esperades, corresponent al percentil 1 de la distribució",
+                "Límit superior de l'interval de confiança de les defuncions esperades, corresponent al percentil 99 de la distribució"
+              ],
+            "columns_format" :
+              [
+                {},
+                {},
+                { "view" : "date_dmy" },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." },
+                { "decimalSeparator" : ",", "groupSeparator" : "." }
+              ],
+            "download_count" : 2274,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2022-05-09T14:42:50.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "momo",
+                "defuncions",
+                "mortalitat",
+                "estadística",
+                "model",
+                "relacionat covid"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Mortality for all kinds of causes in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mortalidad por todo tipo de causa en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Universitats públiques"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/7dt9-azyt",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Mortalitat-per-tot-tipus-de-causa-a-Catalunya/7dt9-azyt",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Taxa de mortalitat estandarditzada per edat",
+            "id" : "whxh-x66q",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La taxa de mortalitat estandarditzada (TME) per edat correspon a la xifra de defuncions (expressades per 100.000 habitants) que es registrarien en un territori segons la taxa de mortalitat per sexe i edat pròpies i amb l'estructura per edat d'una població tipus o estàndard.\n\nAquest mètode, anomenat estandardització directa, calcula la taxa com la mitjana ponderada de les taxes de mortalitat per grup d'edat, on els coeficients de ponderació són una població de referència estàndard.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:50.000Z",
+            "createdAt" : "2020-10-26T14:59:36.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:50.000Z",
+            "data_updated_at" : "2020-10-26T14:59:36.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 17,
+                "page_views_last_month" : 35,
+                "page_views_total" : 2339,
+                "page_views_last_week_log" : 4.169925001442312,
+                "page_views_last_month_log" : 5.169925001442312,
+                "page_views_total_log" : 11.192292814470767
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:38.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "taxa mortalitat",
+                "mortalitat",
+                "ods3_salut i benestar",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Standardised death rate by age"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tasa de mortalidad estandarizada por edad"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=tmee" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=tmee"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/whxh-x66q",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Taxa-de-mortalitat-estandarditzada-per-edat/whxh-x66q",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Mortalitat per totes les causes a Catalunya (observada vs esperada) Font: MoMo",
+            "id" : "vkds-6sun",
+            "resource_name" : null,
+            "parent_fxf" : [ "7dt9-azyt" ],
+            "description" : "MoMo és un sistema per a la Vigilància de la mortalitat diària per totes les causes a Espanya. Té com a objectiu identificar patrons inusuals de mortalitat i estimar l'impacte en la mortalitat de la població de qualsevol esdeveniment d'importància per a guiar l'acció en Salut Pública.\n\nEstà gestionat pel CNE i utilitza dades procedents de diverses administracions públiques.\n\nEn aquest dataset, s'obtenen les dades del sistema MoMo i es filtren per mostrar les dades corresponents a Catalunya.\n\nMés informació:\nhttps://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion",
+            "attribution" : "Instituto de Salud Carlos III (ISCIII)",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "chart",
+            "updatedAt" : "2026-11-18T08:02:34.000Z",
+            "createdAt" : "2020-05-13T13:29:55.000Z",
+            "metadata_updated_at" : "2025-02-19T09:47:00.000Z",
+            "data_updated_at" : "2026-11-18T08:02:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 58,
+                "page_views_last_month" : 181,
+                "page_views_total" : 5363,
+                "page_views_last_week_log" : 5.882643049361842,
+                "page_views_last_month_log" : 7.507794640198696,
+                "page_views_total_log" : 12.389093521904474
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 1,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "visualization_canvas_chart",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-05-23T15:56:05.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" : [],
+            "domain_metadata" :
+              [
+                { "key" : "Actors_Tipus-actor", "value" : "Altres" },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Mortality for all kinds of causes in Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Mortalidad por todo tipo de causa en Cataluña"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Diària"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/vkds-6sun",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Mortalitat-per-totes-les-causes-a-Catalunya-observ/vkds-6sun",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Registre de defuncions per COVID-19 a Catalunya per comarca i sexe",
+            "id" : "uqk7-bf9s",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAquestes dades provenen del registre RSAcovid19 del Departament de Salut i s'obtenen a partir de les declaracions de les empreses de serveis funeraris.\n\nNomés es tenen en compte les defuncions relacionades amb la COVID-19: que el motiu del certificat de defunció especifiqui que la persona ha mort a causa de la COVID-19, tingui o no un prova diagnòstica PCR o TA amb resultat positiu.\n\nLes defuncions s’imputen a la data de defunció, però apareixen per primera vegada l'endemà del dia de la notificació.\n\nLes dades es mostren per comarques per evitar la identificació de les persones difuntes i garantir-ne la confidencialitat.",
+            "attribution" : "Departament de Salut",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "dataset",
+            "updatedAt" : "2025-04-07T10:19:40.000Z",
+            "createdAt" : "2020-04-29T10:05:59.000Z",
+            "metadata_updated_at" : "2025-04-07T10:19:40.000Z",
+            "data_updated_at" : "2022-07-27T10:34:05.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 47,
+                "page_views_last_month" : 138,
+                "page_views_total" : 22061,
+                "page_views_last_week_log" : 5.584962500721157,
+                "page_views_last_month_log" : 7.118941072723508,
+                "page_views_total_log" : 14.429275961924453
+              },
+            "columns_name" :
+              [
+                "Nombre defuncions",
+                "Data defunció",
+                "Comarca",
+                "Codi Sexe",
+                "Sexe",
+                "Codi Comarca"
+              ],
+            "columns_field_name" :
+              [
+                "numexitus",
+                "exitusdata",
+                "comarcadescripcio",
+                "sexecodi",
+                "sexedescripcio",
+                "comarcacodi"
+              ],
+            "columns_datatype" :
+              [ "Number", "Calendar date", "Text", "Number", "Text", "Text" ],
+            "columns_description" :
+              [
+                "Nombre defuncions / Número defunciones / Deaths number",
+                "Data defunció / Fecha defunción / Death date",
+                "Comarca / Region",
+                "Codi Sexe / Código Sexo / Gender code",
+                "Sexe / Sexo / Gender",
+                "Codi Comarca / Código comarca / Region code"
+              ],
+            "columns_format" : [ {}, { "view" : "date_dmy" }, {}, {}, {}, {} ],
+            "download_count" : 30410,
+            "provenance" : "official",
+            "lens_view_type" : "tabular",
+            "lens_display_type" : "table",
+            "locked" : false,
+            "backend" : "nbe",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2021-01-04T14:42:12.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Salut",
+            "domain_tags" :
+              [
+                "covid-19",
+                "covid19",
+                "coronavirus",
+                "morts",
+                "mortalitat",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Death records due to COVID-19 in Catalonia. Segregated by gender and region"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Registro de defunciones por COVID-19 en Catalunya. Segregación por sexo y comarca"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Codi d'element"
+                },
+                { "key" : "Actors_Departament", "value" : "Salut" },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Dades estàtiques"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use"
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/uqk7-bf9s",
+        "link" : "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-defuncions-per-COVID-19-a-Catalunya-pe/uqk7-bf9s",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Taula de vida",
+            "id" : "qsc9-9mbi",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "La taula de vida és el model demogràfic universalment acceptat per descriure d'una manera estructurada i completa l'experiència de mortalitat d'una població i proporcionar mesures comparatives de la longevitat esperada. El model utilitzat per construir la taula de vida assumeix que una cohort inicial de 100.000 nounats està subjecta a les mateixes taxes específiques de mortalitat per sexe i edat que coneix una població real durant un període de temps específic. Les taules de vida s'han calculat sobre mitjanes quinquennals.\n\nL'esperança de vida en néixer s'interpreta com el nombre d'anys que, de mitjana, pot esperar viure una generació de nounats si les condicions de mortalitat no varien en el futur. L'esperança de vida als 65 anys és una estimació de la mitjana d'anys de què gaudirà la població d'aquesta edat si es mantenen constants les condicions de mortalitat de l'any o període especificat.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:14:11.000Z",
+            "createdAt" : "2020-10-26T14:59:35.000Z",
+            "metadata_updated_at" : "2026-09-21T08:14:11.000Z",
+            "data_updated_at" : "2020-10-26T14:59:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 23,
+                "page_views_last_month" : 43,
+                "page_views_total" : 2604,
+                "page_views_last_week_log" : 4.584962500721157,
+                "page_views_last_month_log" : 5.459431618637297,
+                "page_views_total_log" : 11.347067657165871
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:37.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "taula",
+                "taula de vida",
+                "ods17_aliances per aconseguir objectius",
+                "ods3_salut i benestar"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                { "key" : "Idioma_Dataset-name-(EN)", "value" : "Life table" },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Tabla de vida"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=iev" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=iev" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/qsc9-9mbi",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Taula-de-vida/qsc9-9mbi",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Indicadors demogràfics i de territori",
+            "id" : "5mk8-pj7c",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Conjunt d'indicadors que descriuen la població de Catalunya i permeten analitzar-ne l'evolució temporal. S'estudien els esdeveniments demogràfics següents: fecunditat, mortalitat, nupcialitat, migració i llars i famílies, així com l'estructura per edats, que resulta de l'actuació combinada d'aquests fluxos i que en condiciona alhora l'evolució i les tendències.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:00.000Z",
+            "createdAt" : "2020-10-23T11:21:28.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:00.000Z",
+            "data_updated_at" : "2020-10-23T11:21:28.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 27,
+                "page_views_last_month" : 65,
+                "page_views_total" : 2756,
+                "page_views_last_week_log" : 4.807354922057604,
+                "page_views_last_month_log" : 6.044394119358453,
+                "page_views_total_log" : 11.428883552010191
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-23T11:22:39.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "indicador",
+                "idescat",
+                "estructura de la població",
+                "moviment natural",
+                "llars i famílies",
+                "creixement",
+                "superfície",
+                "densitat",
+                "entitats singulars",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Demographic and land indicators"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Indicadores demográficos y de territorio"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    { "enllaç" : "https://www.idescat.cat/pub/?id=inddt" },
+                  "description" : "Accediu als indicadors demogràfics i de territori al web de l'IDESCAT",
+                  "title" : "Indicadors demogràfics i de territori"
+                }
+              ],
+            "access_points" :
+              { "enllaç" : "https://www.idescat.cat/pub/?id=inddt" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/5mk8-pj7c",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Indicadors-demogràfics-i-de-territori/5mk8-pj7c",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Projeccions de població",
+            "id" : "4n2m-kipn",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'actuació estadística Projeccions de població té com a objectiu l'avaluació de les xifres futures de la població de Catalunya classificades segons el sexe, l'edat i el territori de residència. La base de les projeccions són les Estimacions postcensals de població, a les quals s'apliquen supòsits sobre l'evolució futura de la fecunditat, la mortalitat i la migració.\n\nLes Projeccions de població s'actualitzen cada cinc anys i ofereixen informació classificada per sexe i edat any a any. Territorialment, proporcionen resultats per a Catalunya, els àmbits del Pla territorial, les províncies, les comarques i el municipi de Barcelona.\n\nL'Idescat elabora quinquennalment una sèrie de productes estadístics que pertanyen a la categoria de projeccions de població, d'acord amb diferents hipòtesis de caràcter demogràfic. En primer lloc, actualitza les projeccions de població per sexe i edat i, seguidament, les projeccions de població municipals, les projeccions de llars, les projeccions de població activa i les projeccions de població en edat escolar.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:09.000Z",
+            "createdAt" : "2020-10-26T14:59:26.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:09.000Z",
+            "data_updated_at" : "2020-10-26T14:59:26.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 25,
+                "page_views_last_month" : 59,
+                "page_views_total" : 2848,
+                "page_views_last_week_log" : 4.700439718141093,
+                "page_views_last_month_log" : 5.906890595608519,
+                "page_views_total_log" : 11.476239906323851
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:28.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "projecció",
+                "població",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Population Projections"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Proyecciones de población"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=proj" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=proj"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/4n2m-kipn",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Projeccions-de-població/4n2m-kipn",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Projeccions de població municipals",
+            "id" : "njs3-mzdd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "Les Projeccions de població municipals tenen com a objectiu proporcionar informació, a curt i mitjà termini, sobre quines podrien ser les xifres futures de població dels municipis de Catalunya i la seva distribució per sexe i edat. Les Projeccions de població municipals s'elaboren a partir dels resultats comarcals ja publicats de les Projeccions de població de Catalunya per al període 2018–2033 i de l'evolució demogràfica dels municipis en el període 2013–2018. Així doncs, per a cada municipi els resultats de les Projeccions de població municipals mostren quin seria l'efecte de l'evolució recent de la fecunditat, la mortalitat i les migracions del municipi juntament amb l'evolució demogràfica projectada per a la seva comarca. En aquest sentit, s'han d'interpretar com a tendències poblacionals sota unes hipòtesis preestablertes d'evolució dels components del creixement demogràfic.\n\nLes Projeccions de població municipals ofereixen resultats per a tots els municipis de Catalunya, desagregats per sexe i tres grans grups d'edat. En els municipis de 2.000 habitants i més s'ofereixen resultats amb una desagregació per edats més detallada.\n\nPer tal de consultar els resultats d'un municipi en concret, us suggerim que primer seleccioneu el municipi dins del desplegable corresponent a l'àmbit geogràfic i després seleccioneu la taula dins de l'apartat corresponent a les taules disponibles.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-21T08:13:12.000Z",
+            "createdAt" : "2020-10-26T14:59:30.000Z",
+            "metadata_updated_at" : "2026-09-21T08:13:12.000Z",
+            "data_updated_at" : "2020-10-26T14:59:30.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 31,
+                "page_views_last_month" : 68,
+                "page_views_total" : 2942,
+                "page_views_last_week_log" : 5.0,
+                "page_views_last_month_log" : 6.10852445677817,
+                "page_views_total_log" : 11.523071826940395
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:31.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "població",
+                "població municipal",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Municipal Population Projections"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Proyecciones de población municipales"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Variable"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "ENLLAÇ" : "https://idescat.cat/pub/?id=projm" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" : {
+                                "ENLLAÇ" : "https://idescat.cat/pub/?id=projm"
+                              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/njs3-mzdd",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Projeccions-de-població-municipals/njs3-mzdd",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 8,
+  "timings" : { "serviceMillis" : 26, "searchMillis" : [ 3, 9 ] },
+  "warnings" : []
+}

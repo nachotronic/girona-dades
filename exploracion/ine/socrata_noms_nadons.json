@@ -1,0 +1,266 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Noms dels nadons",
+            "id" : "yjvj-y978",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "L'Idescat presenta la informació relativa als noms dels nadons de mares residents a Catalunya. Aquesta informació es pot obtenir per al conjunt de Catalunya, per províncies, per àmbits del Pla territorial i per comarques i Aran, així com per sexe i any de naixement.\n\nLa informació sobre els noms dels nadons prové de la butlleta estadística que han d'emplenar els progenitors en el moment d'inscriure el naixement del seu fill, en el Registre civil.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:44:23.000Z",
+            "createdAt" : "2020-10-26T14:59:15.000Z",
+            "metadata_updated_at" : "2026-09-16T14:44:23.000Z",
+            "data_updated_at" : "2020-10-26T14:59:15.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 26,
+                "page_views_last_month" : 64,
+                "page_views_total" : 2254,
+                "page_views_last_week_log" : 4.754887502163469,
+                "page_views_last_month_log" : 6.022367813028454,
+                "page_views_total_log" : 11.138911718142744
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2020-10-26T14:59:16.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Demografia",
+            "domain_tags" :
+              [
+                "estadística oficial",
+                "idescat",
+                "ods17_aliances per aconseguir objectius"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Babies' names"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Nombres de los bebés"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" : { "Enllaç" : "https://www.idescat.cat/estad/noms" },
+                  "description" : "Accediu a les dades al lloc web de l'IDESCAT",
+                  "title" : "Enllaç a IDESCAT"
+                }
+              ],
+            "access_points" :
+              { "Enllaç" : "https://www.idescat.cat/estad/noms" }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/yjvj-y978",
+        "link" : "https://analisi.transparenciacatalunya.cat/Demografia/Noms-dels-nadons/yjvj-y978",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Onomàstica de Catalunya",
+            "id" : "tqmi-fkum",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "API que dóna accés a la informació estadística dels noms i cognoms de la població de Catalunya, i dels noms dels nadons.",
+            "attribution" : "Departament d'Economia i Finances",
+            "attribution_link" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+            "contact_email" : null,
+            "type" : "href",
+            "updatedAt" : "2026-09-16T14:43:25.000Z",
+            "createdAt" : "2017-02-23T09:45:49.000Z",
+            "metadata_updated_at" : "2026-09-16T14:43:25.000Z",
+            "data_updated_at" : "2017-02-23T09:45:49.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 37,
+                "page_views_last_month" : 60,
+                "page_views_total" : 2532,
+                "page_views_last_week_log" : 5.247927513443585,
+                "page_views_last_month_log" : 5.930737337562887,
+                "page_views_total_log" : 11.306631361712501
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "href",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2017-02-23T09:47:06.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_category" : "Sector Públic",
+            "domain_tags" :
+              [
+                "estadístiques",
+                "ods16_pau justícies i institucions sòlides"
+              ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                  "value" : "Sí"
+                },
+                { "key" : "Idioma_Idioma", "value" : "Català (ca) i altres" },
+                {
+                  "key" : "Idioma_Dataset-name-(EN)",
+                  "value" : "Onomastics of Catalonia"
+                },
+                {
+                  "key" : "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                  "value" : "Onomástica de Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Àmbit-geogràfic",
+                  "value" : "Catalunya"
+                },
+                {
+                  "key" : "Àmbit-geogràfic_Informació-geogràfica",
+                  "value" : "Sense informació geogràfica"
+                },
+                { "key" : "Actors_Visualitzacio", "value" : "No" },
+                {
+                  "key" : "Actors_Organisme-o-institució",
+                  "value" : "IDESCAT"
+                },
+                {
+                  "key" : "Actors_Departament",
+                  "value" : "Economia i Finances"
+                },
+                {
+                  "key" : "Actors_Tipus-actor",
+                  "value" : "Generalitat de Catalunya"
+                },
+                {
+                  "key" : "Freqüència-d'actualització_Freqüència-d'actualització",
+                  "value" : "Anual"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "analisi.transparenciacatalunya.cat",
+            "license" : "See Terms of Use",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "cas" : "https://www.idescat.cat/dev/api/onomastica/?lang=es",
+                      "cat" : "http://www.idescat.cat/api/onomastica/",
+                      "eng" : "http://www.idescat.cat/api/onomastica/?lang=en"
+                    },
+                  "title" : "Descripció de l'API"
+                },
+                {
+                  "urls" :
+                    {
+                      "accedeix" : "http://www.idescat.cat/api/onomastica/giny/noms/"
+                    },
+                  "title" : "Giny de noms a Catalunya"
+                },
+                {
+                  "urls" :
+                    {
+                      "accedeix" : "http://www.idescat.cat/cat/poblacio/poblonomast.html"
+                    },
+                  "title" : "Estadístiques de noms"
+                }
+              ],
+            "access_points" :
+              {
+                "cas" : "https://www.idescat.cat/dev/api/onomastica/?lang=es",
+                "cat" : "http://www.idescat.cat/api/onomastica/",
+                "eng" : "http://www.idescat.cat/api/onomastica/?lang=en"
+              }
+          },
+        "permalink" : "https://analisi.transparenciacatalunya.cat/d/tqmi-fkum",
+        "link" : "https://analisi.transparenciacatalunya.cat/Sector-Públic/Onomàstica-de-Catalunya/tqmi-fkum",
+        "owner" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          },
+        "creator" :
+          {
+            "id" : "a4b5-gx6v",
+            "user_type" : "interactive",
+            "display_name" : "Dades Obertes Catalunya"
+          }
+      }
+    ],
+  "resultSetSize" : 2,
+  "timings" : { "serviceMillis" : 20, "searchMillis" : [ 3, 5 ] },
+  "warnings" : []
+}

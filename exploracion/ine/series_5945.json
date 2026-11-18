@@ -1,0 +1,4 @@
+[{"Id":341186, "COD":"IDB341186", "FK_Operacion":33, "Nombre":"Total Nacional. Indicadores de migraciones. Indicador Coyuntural de Migración Interprovincial. Total. Anual. Dato base. Total. ", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":349, "FK_Clasificacion":103, "FK_Escala":1, "FK_Unidad":251}
+,{"Id":341185, "COD":"IDB341185", "FK_Operacion":33, "Nombre":"Total Nacional. Indicadores de migraciones. Indicador Coyuntural de Migración Interprovincial. Hombres. Anual. Dato base. Total. ", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":349, "FK_Clasificacion":103, "FK_Escala":1, "FK_Unidad":251}
+,{"Id":341184, "COD":"IDB341184", "FK_Operacion":33, "Nombre":"Total Nacional. Indicadores de migraciones. Indicador Coyuntural de Migración Interprovincial. Mujeres. Anual. Dato base. Total. ", "Decimales":6, "FK_Periodicidad":12, "FK_Publicacion":349, "FK_Clasificacion":103, "FK_Escala":1, "FK_Unidad":251}
+]
