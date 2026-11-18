@@ -842,7 +842,7 @@ def provincia_series():
         grups = [{"g": nom, "c": c, "gi": round(100 * v[a] / tg, 1), "esp": round(100 * de[c][1].get(a, 0) / te, 1), "n": v[a], "any": a}
                  for c, (nom, v) in dg.items() if c != "I-XXII" and c in de and a in v]
         grups = sorted(grups, key=lambda x: -x["gi"])
-        res["causes"] = {"tipus": "barres", "u": "%", "dec": 1, "total": tg, "any": a, "grups": [g for g in grups if g["gi"] >= 1]}
+        res["causes"] = {"tipus": "barres", "u": "%", "dec": 1, "nu": "def_n", "total": tg, "any": a, "grups": [g for g in grups if g["gi"] >= 1]}
     # 10. Pernoctaciones hoteleras por destino (millones, suma de 12 meses)
     zs = {"gi": ("2039", "Costa Brava"), "cat": ("2078", "17095-Lloret de Mar"), "esp": ("2039", "Pirineus-Prepirineus")}
     dest = {}
@@ -2551,6 +2551,23 @@ def main():
         prov_renta[a] = r(sum(v * p for v, p in pares) / sum(p for _, p in pares))
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
     zones, refs_arees, anys_arees = arees()
+    # Nacimientos, defunciones y nombres: sección «Néixer i morir» (fichero aparte) y defunciones por ABS en el mapa
+    import demografia_web
+    try:
+        dw = demografia_web.construir(SALIDA.parent)
+        print("demografia:", dw.get("resum"))
+        codis_abs = set(zones.get("abs", {})) | set(_codis_abs(P / "salut"))
+        for c_, o in dw["abs"].items():
+            if c_ in codis_abs:
+                zones.setdefault("abs", {}).setdefault(c_, {}).update(o)
+        if dw["abs_meta"]:
+            de_, a_ = dw["abs_meta"]["de"], dw["abs_meta"]["a"]
+            per_ = f"{de_[5:]}/{de_[:4]}-{a_[5:]}/{a_[:4]}"
+            anys_arees.update({"def_12m": per_, "def_exces": per_})
+            for k_, v_ in dw["abs_meta"]["ref"].items():
+                refs_arees.setdefault(k_, {}).update(v_)
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin la sección
+        print("demografia: ERROR", type(e).__name__, e)
     zones["aar"] = zona_emx
     zona_aar(zona_emx)
     anys_extra.update(anys_arees)

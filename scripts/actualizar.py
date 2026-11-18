@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -77,6 +77,7 @@ FONTS = {
     "cgpj": ("CGPJ, estadística judicial per partit judicial", "trimestral"),
     "interior": ("Ministerio del Interior, Balance de Criminalidad", "trimestral"),
     "exportacions": ("Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte", "mensual"),
+    "demografia": ("Naixements, defuncions i causes de mort (INE), defuncions per ABS (CatSalut) i noms dels nadons (Idescat)", "setmanal/mensual"),
     "turisme": ("Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat", "mensual"),
     "comerc": ("Generalitat, cens d'establiments comercials i ocupació comercial", "anual"),
     "cadastre": ("Catastro, estadístiques per municipi i districte censal", "anual"),

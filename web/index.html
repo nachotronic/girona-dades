@@ -47,6 +47,7 @@
       <a href="#s-exp" data-t="nav_exp">Exportacions</a>
       <a href="#s-mob" data-t="nav_mob">Mobilitat</a>
       <a href="#s-salut" data-t="nav_salut">Salut</a>
+      <a href="#s-dem" data-t="nav_dem">Demografia</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -214,9 +215,51 @@
     <div class="pg-graella" id="salut-grafics"></div>
   </section>
 
+  <section id="s-dem" class="amplada sec" aria-labelledby="h-dem">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">08</span> <span data-t="nav_dem">Demografia</span></p>
+      <h2 id="h-dem" data-t="h_dem">Quants naixem, quants morim i de què</h2>
+      <p class="lead" data-t="lead_dem">Naixements i defuncions de cada mes i de cada setmana, fills per dona, edat de les mares, causes de mort i els noms que es posen als nadons.</p>
+    </header>
+    <div class="xifres dm-xifres" id="dem-xifres"></div>
+    <figure class="pg-fig ex-mapafig dm-peca" data-id="mapa">
+      <figcaption><span class="pg-tit" id="dem-esp-tit"></span><span class="unitat" id="dem-esp-u"></span></figcaption>
+      <div class="ex-ctl dm-ctl" id="dem-esp-ctl"></div>
+      <p class="pg-h" id="dem-esp-h"></p>
+      <div class="ex-mapa-graella">
+        <div><div class="ex-mapa ex-esp" id="dem-esp" role="region" aria-label="Mapa"></div><div class="llegenda-mapa ex-lleg" id="dem-esp-lleg"></div></div>
+        <div class="ex-rq" id="dem-esp-rq"></div>
+      </div>
+      <p class="pg-font" id="dem-esp-font"></p>
+    </figure>
+    <div class="pg-graella" id="dem-grafics"></div>
+    <figure class="pg-fig dm-peca dm-noms" data-id="noms">
+      <figcaption><span class="pg-tit" id="dem-noms-tit"></span><span class="unitat" id="dem-noms-u"></span></figcaption>
+      <div class="ex-ctl dm-ctl" id="dem-noms-ctl"></div>
+      <p class="pg-h" id="dem-noms-h"></p>
+      <div class="dm-noms-graella">
+        <div class="dm-top" id="dem-noms-top"></div>
+        <div class="dm-com">
+          <div class="ex-mapa dm-mapa-com" id="dem-com" role="region" aria-label="Mapa"></div>
+          <div class="dm-com-lleg" id="dem-com-lleg"></div>
+        </div>
+      </div>
+      <div class="dm-cerca">
+        <label class="cerca"><span class="sr" id="dem-cerca-l"></span>
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <input type="search" id="dem-cerca" autocomplete="off" list="dem-noms-llista">
+        </label>
+        <datalist id="dem-noms-llista"></datalist>
+        <p class="pg-h" id="dem-cerca-h"></p>
+        <div class="pg-c" id="dem-cerca-g"></div>
+      </div>
+      <p class="pg-font" id="dem-noms-font"></p>
+    </figure>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">08</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">09</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -311,6 +354,9 @@
       <li data-font="turisme"><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra_tur">hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any</span></li>
       <li data-font="turisme"><a href="https://analisi.transparenciacatalunya.cat/d/q4sr-68c3">Agència Tributària de Catalunya</a><span data-t="f_ieet">impost sobre les estades en establiments turístics</span></li>
       <li data-font="exportacions"><a href="https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior.html">Agència Tributària, estadístiques de comerç exterior</a><span data-t="f_exportacions">exportacions i importacions per província, país, producte i mitjà de transport, anuals i mensuals</span></li>
+      <li data-font="demografia"><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INE, moviment natural de la població i causes de mort</a><span data-t="f_dem_ine">naixements i defuncions mensuals (definitius i provisionals), defuncions setmanals, indicadors demogràfics i causes de mort per província</span></li>
+      <li data-font="demografia"><a href="https://analisi.transparenciacatalunya.cat/d/3cre-fa8v">CatSalut, registre de defuncions</a><span data-t="f_dem_salut">defuncions diàries per àrea bàsica de salut, des del 2017</span></li>
+      <li data-font="demografia"><a href="https://www.idescat.cat/nadons/">Idescat, noms dels nadons</a><span data-t="f_dem_noms">noms dels nadons per any, província i comarca</span></li>
       <li data-font="emq"><a href="https://www.atmgirona.cat/mobilitat/emq/">ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025</a><span data-t="f_emq">desplaçaments, mitjà de transport, motiu, horari, origen i destinació, vehicles i teletreball per municipi i comarca</span></li>
     </ul>
     <ul class="peu-legal">
@@ -337,6 +383,7 @@
 <script src="turisme.js"></script>
 <script src="mobilitat.js"></script>
 <script src="exportacions.js"></script>
+<script src="demografia.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>

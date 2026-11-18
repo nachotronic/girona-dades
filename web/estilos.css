@@ -1241,3 +1241,38 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .menu a { white-space: nowrap; flex: none; letter-spacing: .03em; }
 }
 @media (min-width: 761px) and (max-width: 1279px) { .menu { gap: 6px; } .menu a { font-size: 11px; letter-spacing: 0; } }
+
+/* ---------- Néixer i morir ---------- */
+.dm-xifres { margin-bottom: 28px; }
+.dm-noms { margin-top: 8px; }
+.dm-noms-graella { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px; align-items: start; }
+.dm-top .pb-fila { grid-template-columns: minmax(120px, 42%) 1fr; }
+.dm-mapa-com { height: clamp(300px, 30vw, 420px); }
+.dm-com-lleg { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font: 500 12px/1.3 var(--mono); color: var(--text-2); }
+.dm-com-tit { width: 100%; margin: 0 0 2px; font: 600 12px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--tinta); }
+.dm-cat { display: inline-flex; align-items: center; gap: 6px; }
+.dm-cat i { width: 12px; height: 12px; display: inline-block; }
+.dm-cat i.dm-sense { background: var(--sense, #e7e3da); }
+.dm-et { font: 700 12px/1 var(--sans); color: #111; background: rgba(255, 255, 255, .86); padding: 3px 5px; pointer-events: none; white-space: nowrap; }
+.dm-cerca { margin-top: 26px; border-top: 1px solid var(--vora); padding-top: 18px; }
+.dm-cerca .cerca { max-width: 420px; }
+.dm-cerca .pg-fig { border: 0; padding: 0; margin: 0; }
+.dm-cerca .pg-fig figcaption { margin-top: 6px; }
+@media (max-width: 860px) { .dm-noms-graella { grid-template-columns: 1fr; } .dm-mapa-com { height: 300px; } }
+
+/* Cabecera en escritorio: con 11 secciones, la barra usa más ancho que el contenido
+   y, si aun así no cabe, el menú baja a una segunda línea (como en móvil) */
+@media (min-width: 761px) {
+  .cap-dins.amplada { max-width: 1440px; gap: 24px; }
+  .menu { gap: clamp(14px, 1.4vw, 24px); }
+  .menu a { white-space: nowrap; }
+}
+@media (min-width: 761px) and (max-width: 1299px) {
+  html { scroll-padding-top: 120px; }
+  .cap-dins.amplada { flex-wrap: wrap; height: auto; gap: 0 16px; padding-top: 10px; }
+  .idiomes { margin-left: auto; }
+  .menu { order: 3; width: 100%; margin-left: 0; gap: 0; padding: 8px 0 0; overflow-x: auto; scrollbar-width: none; }
+  .menu::-webkit-scrollbar { display: none; }
+  .menu a { flex: 1 0 auto; text-align: center; padding: 10px 6px 11px; border-top: 1px solid var(--vora); }
+  .menu a + a { border-left: 1px solid var(--vora); }
+}

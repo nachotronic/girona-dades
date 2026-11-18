@@ -55,6 +55,7 @@
     tur: { sel: "#tur-grafics .pg-fig", ancla: "#s-tur", pinta: "pintaSeccioTurisme" },
     exp: { sel: "#s-exp .pg-fig", ancla: "#s-exp", pinta: "pintaSeccioExportacions" },
     mob: { sel: "#mob-grafics .pg-fig", ancla: "#s-mob", pinta: "pintaSeccioMobilitat" },
+    dem: { sel: "#s-dem :is(.pg-fig, .dm-peca)", ancla: "#s-dem", pinta: "pintaSeccioDemografia" },
   };
   // Fuente corta de los mapas, por tema del indicador
   const FONT_TEMA = {
@@ -120,7 +121,7 @@
         // Se aísla la pieza y se vuelve a dibujar con el ancho real del iframe
         const repinta = () => {
           const sc = SECCIONS[tipus];
-          if (sc && window[sc.pinta]) window[sc.pinta]();
+          if (sc && window[sc.pinta]) return window[sc.pinta]();
           else if (tipus === "fitxa" && m) obreFitxa(m.ine, false);
         };
         if (pMapa) await pMapa;
@@ -128,7 +129,7 @@
         if (tipus === "mapa" && window.mapaEmbed) {
           await window.mapaEmbed({ id, nivell: Q.get("nivell"), any: Q.get("any") });
           pintaMarc();
-        } else repinta();
+        } else await repinta();
         aplica();
         if (!ok && !troba(tipus, id)) { main.hidden = true; cap.innerHTML = `<p class="emb-sobre">${LANG === "ca" ? "Aquest gràfic ja no existeix" : "Este gráfico ya no existe"}</p>`; }
         html.classList.add("emb-a");
@@ -154,6 +155,7 @@
   const PECES = [
     { sel: "#prov-grafics .pg-fig", clau: (e) => `prov:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#salut-grafics .pg-fig", clau: (e) => `salut:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#dem-grafics .pg-fig, #s-dem .dm-peca", clau: (e) => `dem:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#conj .cj-fig:not(.cj-fig-mun)", clau: (e) => `conj:${e.dataset.id}`, tit: (e) => e.querySelector(".cj-tit") },
     { sel: "#tur-grafics .pg-fig", clau: (e) => `tur:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#s-exp .pg-fig[data-id]", clau: (e) => `exp:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
