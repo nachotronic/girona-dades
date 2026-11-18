@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-17 23:58 UTC
+Última ejecución: 2026-11-18 00:23 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -40,16 +40,54 @@
 | cadastre — Catastro, estadístiques per municipi i districte censal | — | — | — | anual |
 | habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-17 12:20 | 2026-11-17 12:20 | anual/trimestral |
 | emq — ATM Girona, Enquesta de Mobilitat Quotidiana 2024-2025 (visor Power BI) | avís | — | 2026-11-17 12:31 | per edició |
-| exportacions — Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte | ok | 2026-11-17 23:55 | 2026-11-17 23:55 | mensual |
+| exportacions — Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte | ok | 2026-11-17 23:59 | 2026-11-17 23:59 | mensual |
 
 ## Detalle de la última ejecución
 
-### exportacions: ok (198 s)
+### exportacions: ok (1410 s)
 
 ```
-2023-01: 10 ficheros, Girona exporta 596.2 M€ e importa 296.6 M€
-2024: 10 ficheros, Girona exporta 8,368.3 M€ e importa 4,164.2 M€
-2024-01: 10 ficheros, Girona exporta 656.0 M€ e importa 362.3 M€
-2025-01: 10 ficheros, Girona exporta 709.0 M€ e importa 347.3 M€
-2026-01: 10 ficheros, Girona exporta 580.0 M€ e importa 305.4 M€
+2022-11: 1 ficheros, Girona exporta 109.1 M€ e importa 52.9 M€
+2023-02: 10 ficheros, Girona exporta 636.7 M€ e importa 331.7 M€
+2023-03: 10 ficheros, Girona exporta 774.8 M€ e importa 355.4 M€
+2023-04: 10 ficheros, Girona exporta 602.8 M€ e importa 294.5 M€
+2023-05: 10 ficheros, Girona exporta 751.4 M€ e importa 360.7 M€
+2023-06: 10 ficheros, Girona exporta 767.4 M€ e importa 370.4 M€
+2023-07: 10 ficheros, Girona exporta 689.6 M€ e importa 336.7 M€
+2023-08: 10 ficheros, Girona exporta 578.4 M€ e importa 285.0 M€
+2023-09: 10 ficheros, Girona exporta 692.7 M€ e importa 322.9 M€
+2023-10: 10 ficheros, Girona exporta 726.6 M€ e importa 342.6 M€
+2023-11: 10 ficheros, Girona exporta 720.6 M€ e importa 309.0 M€
+2023-12: 10 ficheros, Girona exporta 619.7 M€ e importa 284.7 M€
+2024-02: 10 ficheros, Girona exporta 708.7 M€ e importa 359.8 M€
+2024-03: 10 ficheros, Girona exporta 710.0 M€ e importa 342.5 M€
+2024-04: 10 ficheros, Girona exporta 704.6 M€ e importa 364.3 M€
+2024-05: 10 ficheros, Girona exporta 744.2 M€ e importa 349.4 M€
+2024-06: 10 ficheros, Girona exporta 701.5 M€ e importa 346.0 M€
+2024-07: 10 ficheros, Girona exporta 771.7 M€ e importa 384.0 M€
+2024-08: 10 ficheros, Girona exporta 590.1 M€ e importa 265.6 M€
+2024-09: 10 ficheros, Girona exporta 650.3 M€ e importa 324.2 M€
+2024-10: 10 ficheros, Girona exporta 789.3 M€ e importa 403.5 M€
+2024-11: 10 ficheros, Girona exporta 693.4 M€ e importa 335.7 M€
+2024-12: 10 ficheros, Girona exporta 648.5 M€ e importa 326.9 M€
+2025-02: 10 ficheros, Girona exporta 690.9 M€ e importa 391.9 M€
+2025-03: 10 ficheros, Girona exporta 754.0 M€ e importa 383.5 M€
+2025-04: 10 ficheros, Girona exporta 744.3 M€ e importa 394.4 M€
+2025-05: 10 ficheros, Girona exporta 730.4 M€ e importa 405.1 M€
+2025-06: 10 ficheros, Girona exporta 672.2 M€ e importa 368.0 M€
+2025-07: 10 ficheros, Girona exporta 801.4 M€ e importa 429.7 M€
+2025-08: 10 ficheros, Girona exporta 584.6 M€ e importa 312.4 M€
+2025-09: 10 ficheros, Girona exporta 710.0 M€ e importa 359.5 M€
+2025-10: 10 ficheros, Girona exporta 790.3 M€ e importa 400.4 M€
+2025-11: 10 ficheros, Girona exporta 687.5 M€ e importa 371.2 M€
+2025-12: 10 ficheros, Girona exporta 685.2 M€ e importa 329.7 M€
+2026-02: 10 ficheros, Girona exporta 694.2 M€ e importa 367.5 M€
+2026-03: 10 ficheros, Girona exporta 766.8 M€ e importa 412.4 M€
+2026-04: 10 ficheros, Girona exporta 725.1 M€ e importa 385.4 M€
+2026-05: 10 ficheros, Girona exporta 677.0 M€ e importa 384.5 M€
+2026-06: 10 ficheros, Girona exporta 737.7 M€ e importa 403.3 M€
+2026-07: 10 ficheros, Girona exporta 764.7 M€ e importa 448.2 M€
+2026-08: 10 ficheros, Girona exporta 554.5 M€ e importa 313.8 M€
+2026-09: 10 ficheros, Girona exporta 726.1 M€ e importa 412.1 M€
+población INE 2852: 53 zonas, años 2018-2021
 ```
