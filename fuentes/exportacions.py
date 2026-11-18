@@ -35,7 +35,9 @@ DESDE_MES = 2019
 CAT = {"08", "17", "25", "43"}
 MESOS = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6, "julio": 7, "agosto": 8,
          "septiembre": 9, "setiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12}
-RE_ZIP = re.compile(r'href="([^"]*/(territoriales_anuales|territoriales_mens)/[^"]*?tr(\d\d)(an|[a-z]{2})(\d\d)\.zip)"', re.I)
+# Las rutas cambian según el año (territoriales_anuales, datos_anuales_territoriales, historicas_anuales,
+# territoriales_mens, datos_mensuales_territoriales…): se reconoce el fichero por el nombre trAA(an|mm)CC.zip
+RE_ZIP = re.compile(r'href="([^"]*/tr(\d\d)(an|[a-z]{2})(\d\d)\.zip)"', re.I)
 RE_PAG = re.compile(r'href="(/Sede/estadisticas/estadisticas-comercio-exterior/[^"#?]+\.html)"')
 INE_2852 = "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2852?nult=4"
 PROVS = {"01": "Araba/Álava", "02": "Albacete", "03": "Alicante/Alacant", "04": "Almería", "05": "Ávila", "06": "Badajoz",
@@ -55,7 +57,7 @@ def _enlaces() -> dict[str, list[str]]:
     util = re.compile(r"territoriales|historicas|/\d{4}(__)?\.html$|/(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\.html$")
     pendents, vistes = [INDICE], set()
     per = collections.defaultdict(set)
-    while pendents and len(vistes) < 400:
+    while pendents and len(vistes) < 700:
         p = pendents.pop(0)
         if p in vistes:
             continue
@@ -67,10 +69,10 @@ def _enlaces() -> dict[str, list[str]]:
         for q in RE_PAG.findall(h):
             if util.search(q) and "maxima" not in q and "resumen" not in q and BASE + q not in vistes:
                 pendents.append(BASE + q)
-        for url, tipo, aa, mm, _ in RE_ZIP.findall(h):
+        for url, aa, mm, _ in RE_ZIP.findall(h):
             any_ = 2000 + int(aa)
             url = BASE + url if url.startswith("/") else url
-            if tipo.lower() == "territoriales_anuales":
+            if mm.lower() == "an":
                 per[str(any_)].add(url)
             else:
                 mes = MESOS.get(url.rstrip("/").split("/")[-2].lower())
