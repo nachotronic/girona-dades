@@ -91,7 +91,7 @@ const T = {
     k_hut: "Habitatges d'ús turístic",
     k_antics: "Habitatges anteriors a 1980",
     k_pob: "Població",
-    n_vs: (a) => `respecte a ${a}`, n_any_ant: "l'any anterior", l_12m: (p) => `12 mesos fins ${p}`,
+    n_vs: (a) => `respecte a ${a}`, n_vs_ant: "respecte als 12 mesos anteriors", l_12m: (p) => `12 mesos fins ${p}`,
     n_esforc: "del que ingressa una llar mitjana",
     n_hut: (x) => `${x} per cada 100 habitatges`,
     n_antics: "segons el Cadastre",
@@ -194,7 +194,7 @@ const T = {
     k_hut: "Viviendas de uso turístico",
     k_antics: "Viviendas anteriores a 1980",
     k_pob: "Población",
-    n_vs: (a) => `respecto a ${a}`, n_any_ant: "el año anterior", l_12m: (p) => `12 meses hasta ${p}`,
+    n_vs: (a) => `respecto a ${a}`, n_vs_ant: "respecto a los 12 meses anteriores", l_12m: (p) => `12 meses hasta ${p}`,
     n_esforc: "de lo que ingresa un hogar medio",
     n_hut: (x) => `${x} por cada 100 viviendas`,
     n_antics: "según el Catastro",
@@ -434,12 +434,12 @@ function cjUltim(arr, per = "t", suma4 = false) {
   if (i < 0) return null;
   if (!suma4) return { et: etPer(P[i]), v: arr[i], ant: arr[i - n], etAnt: i - n >= 0 ? etPer(P[i - n]) : "" };
   const sum = (a, b) => { let s = 0; for (let k = a; k <= b; k++) { if (k < 0 || arr[k] == null) return null; s += arr[k]; } return s; };
-  return { et: `${etPer(P[i - n + 1])}–${etPer(P[i])}`, v: sum(i - n + 1, i), ant: sum(i - 2 * n + 1, i - n), etAnt: t("n_any_ant") };
+  return { et: `${etPer(P[i - n + 1])}–${etPer(P[i])}`, v: sum(i - n + 1, i), ant: sum(i - 2 * n + 1, i - n), etAnt: null };
 }
 function variacioCj(u, colorea = false) {
   if (!u || u.v == null || !u.ant) return "";
   const v = (u.v / u.ant - 1) * 100;
-  return `<span class="${colorea ? (v > 0 ? "puja" : "baixa") : ""}">${pct(v, 1, true)}</span> ${t("n_vs", u.etAnt)}`;
+  return `<span class="${colorea ? (v > 0 ? "puja" : "baixa") : ""}">${pct(v, 1, true)}</span> ${u.etAnt ? t("n_vs", u.etAnt) : t("n_vs_ant")}`;
 }
 function variacio(o, a, b, colorea = false) {
   const va = val(o, a), vb = val(o, b);
