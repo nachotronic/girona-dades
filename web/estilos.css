@@ -1250,3 +1250,20 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .dm-cerca .pg-fig { border: 0; padding: 0; margin: 0; }
 .dm-cerca .pg-fig figcaption { margin-top: 6px; }
 @media (max-width: 860px) { .dm-noms-graella { grid-template-columns: 1fr; } .dm-mapa-com { height: 300px; } }
+
+/* Cabecera en escritorio: con 11 secciones, la barra usa más ancho que el contenido
+   y, si aun así no cabe, el menú baja a una segunda línea (como en móvil) */
+@media (min-width: 761px) {
+  .cap-dins.amplada { max-width: 1440px; gap: 24px; }
+  .menu { gap: clamp(14px, 1.4vw, 24px); }
+  .menu a { white-space: nowrap; }
+}
+@media (min-width: 761px) and (max-width: 1299px) {
+  html { scroll-padding-top: 120px; }
+  .cap-dins.amplada { flex-wrap: wrap; height: auto; gap: 0 16px; padding-top: 10px; }
+  .idiomes { margin-left: auto; }
+  .menu { order: 3; width: 100%; margin-left: 0; gap: 0; padding: 8px 0 0; overflow-x: auto; scrollbar-width: none; }
+  .menu::-webkit-scrollbar { display: none; }
+  .menu a { flex: 1 0 auto; text-align: center; padding: 10px 6px 11px; border-top: 1px solid var(--vora); }
+  .menu a + a { border-left: 1px solid var(--vora); }
+}
