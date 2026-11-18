@@ -70,13 +70,13 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
 
-# Exportaciones (comercio exterior), 3.ª ronda: formato y columnas de los ficheros territoriales AEAT
+# Exportaciones, 4.ª ronda: DataComex (datos, API y empresas)
 CANDIDATAS_E = {}
+DC = "https://datacomex.comercio.es"
+for k in ("/data", "/Data", "/Data/Index", "/Home/Api", "/Api", "/Empresas", "/Home/Empresas", "/Manual", "/swagger", "/swagger/index.html",
+          "/api/swagger/v1/swagger.json", "/swagger/v1/swagger.json"):
+    CANDIDATAS_E["dc" + k.replace("/", "_")] = DC + k
 STF = "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/Aduanas/Comercio_exterior/"
-CANDIDATAS_E["pdf_mens"] = STF + "territoriales_mens/fich_datos_mens_territoriales.pdf"
-CANDIDATAS_E["pdf_anual"] = STF + "historicas_anuales/fich_datos_auales_territoriales.pdf"
-CANDIDATAS_E["hist_pag"] = "https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior/2015.html"
-
 
 def explora_territoriales(filas: list) -> None:
     import io, zipfile, collections
@@ -292,7 +292,7 @@ def main() -> None:
         except Exception as e:  # noqa: BLE001 - queremos registrar cualquier fallo
             filas.append(f"| {clave} | error | {type(e).__name__}: {str(e)[:80]} | | {url} |")
         time.sleep(1)
-    explora_territoriales(filas)
+    explora_enlaces(filas)
     (SALIDA / "informe.md").write_text("# Exploración de fuentes\n\n" + "\n".join(filas) + "\n", encoding="utf-8")
     print("\n".join(filas))
 
