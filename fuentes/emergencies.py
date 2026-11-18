@@ -94,6 +94,12 @@ def ejecutar() -> str:
     lim.to_csv(sal / "actuacions_bombers_anys.csv", index=False)
     lineas.append(f"actuaciones Bombers: {len(a)} filas; códigos de ejemplo {a['codi_ine'].dropna().head(3).tolist()}; "
                   f"grupos {sorted(a['tga_nom_grupo'].dropna().unique())}")
+    # Mensual: municipios de la provincia por mes y grupo (para los últimos 12 meses y el gráfico mes a mes)
+    am = soql("g2ay-3vnj", **{"$select": "codi_ine, any, mes, tga_nom_grupo, count(*) as n",
+                               "$where": "codi_ine like '17%'", "$group": "codi_ine, any, mes, tga_nom_grupo"})
+    am.to_csv(sal / "actuacions_bombers_mes.csv.gz", index=False)
+    lineas.append(f"actuaciones Bombers mensuales (Girona): {len(am)} filas, último mes {am['any'].max()}-{am[am['any'] == am['any'].max()]['mes'].astype(int).max():02d}"
+                  if len(am) else "ERROR actuaciones Bombers mensuales vacías")
     lineas.append("años: " + "; ".join(f"{x['any']} {str(x['ini'])[:10]}→{str(x['fi'])[:10]} ({x['n']})" for _, x in lim.tail(4).iterrows()))
 
     # Incendios forestales (histórico validado + año anterior provisional)

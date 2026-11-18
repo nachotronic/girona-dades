@@ -221,7 +221,7 @@
   fid("lloguer var5", "incasol"); fid("compra nova protegida", "mitma");
   fid("renda renda_llar gini pobresa pobresa_sev alts salari pensio prest_atur edat majors65 menors18 llar unipersonals estrangers esforc", "atlas");
   fid("hut tur_hut_c", "registre"); fid("antics anyo viv_edif", "catastro");
-  fid("pob pob_var deute atur irpf autonoms empreses llocs visats buits kwh natalitat mortalitat catala ocupats ocupats_dones atur_var atur_estr prest_atur_ben pensions pnc residencies farmacies sanitaris pmp sector_serveis sector_ind sector_const sector_agri", "xifra");
+  fid("pob pob_var deute irpf empreses llocs visats buits kwh natalitat mortalitat catala ocupats_dones atur_estr prest_atur_ben pensions pnc residencies farmacies sanitaris pmp sector_serveis sector_ind sector_const sector_agri", "xifra");
   fid("educ_sup educ_prim nascuts_estr ist rfdb pib_hab segones lloguer_pct petits grans monoparentals places_tur residus pensio_mitjana creixement immigracio densitat sau esports motos enten_cat estacional tur_estacional_c tur_segones_c", "emex");
   fid("rgc selectiva", "generalitat"); fid("iniciats", "habitatge");
   const PERIODE_FIX = { var5: "2020-2025", nova: "2021-2025", protegida: "2021-2025" };

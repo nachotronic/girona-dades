@@ -597,9 +597,15 @@ def arees():
 
     pol = P / "policia"
     if all((pol / n).exists() for n in ("fets_penals_abp.csv.gz", "abp.geojson", "poblacio_abp.csv")):
-        fp = pd.read_csv(pol / "fets_penals_abp.csv.gz")
-        ult = int(fp["any"].max())
-        fp = fp[fp["any"] == ult]
+        # Últimos 12 meses (se renueva cada mes) y, si no está, el último año completo
+        if (pol / "fets_12m_titol_abp.csv").exists():
+            fp = pd.read_csv(pol / "fets_12m_titol_abp.csv", dtype={"desde": str, "fins": str})
+            d0, d1 = fp["desde"].iloc[0], fp["fins"].iloc[0]
+            ult = f"{d0[5:7]}/{d0[:4]}–{d1[5:7]}/{d1[:4]}"
+        else:
+            fp = pd.read_csv(pol / "fets_penals_abp.csv.gz")
+            ult = int(fp["any"].max())
+            fp = fp[fp["any"] == ult]
         pa = pd.read_csv(pol / "poblacio_abp.csv")
         pob = dict(zip(pa["clau"], pa["poblacio"]))
         g = json.loads((pol / "abp.geojson").read_text(encoding="utf-8"))
@@ -739,21 +745,50 @@ def provincia_series():
         "esp": _punts(serie("65349", "Tasa de paro", "Ambos sexos", "Total Nacional", zona="Tasa de paro"), 2008)}}
     # 3. IPC por grupos, último año
     grups = []
-    for s_ in d.get("76154", {}).get("series", []):
+    tg = "76141" if any(s_["nom"].startswith("Girona.") and "Variación anual" in s_["nom"] for s_ in d.get("76141", {}).get("series", [])) else "76154"
+    for s_ in d.get(tg, {}).get("series", []):
         n = s_["nom"]
         if n.startswith("Girona.") and "Variación anual" in n and "Índice general" not in n:
             g = n.split(".")[1].strip()
-            esp = serie("76154", f" {g}.", "Variación anual", zona="Total Nacional")
+            esp = serie(tg, f" {g}.", "Variación anual", zona="Total Nacional") or serie(tg, f" {g}.", "Variación anual", zona="Nacional")
             pg, pe = _punts(s_["d"]), _punts(esp)
             if pg and pe:
                 grups.append({"g": g, "gi": pg[-1][2], "esp": pe[-1][2], "any": pg[-1][1]})
     res["ipc_grups"] = {"tipus": "barres", "u": "%", "dec": 1, "grups": sorted(grups, key=lambda x: -x["gi"])}
-    # 4. Compraventas de vivienda (índice 2007 = 100)
-    cv = {z: _punts(serie("6155", "General", "Compraventa", zona=n)) for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
-    res["compra"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: v[-1][2] for z, v in cv.items() if v},
-                     "any": cv["gi"][-1][1] if cv["gi"] else None,
-                     "series": {z: index(v, 2007) for z, v in cv.items()}}
-    # 5. Turismo: % de pernoctaciones de residentes en el extranjero (años completos)
+    # Series mensuales: suma de los últimos 12 meses, recalculada cada mes (así no hay que esperar al año completo
+    # y no se ve la estacionalidad). El índice toma como base la suma de enero a diciembre del año base.
+    def movil12(dd, minim=12, desde=None):
+        mes = {(a, fk): v for a, fk, v in dd if v is not None and a is not None and 1 <= fk <= 12}
+        if not mes:
+            return []
+        ini = min(a * 12 + fk - 1 for a, fk in mes)
+        fi = max(a * 12 + fk - 1 for a, fk in mes)
+        res = []
+        for u in range(ini + 11, fi + 1):
+            vs = [mes.get(((u - i) // 12, (u - i) % 12 + 1)) for i in range(12)]
+            if vs[0] is None or sum(v is not None for v in vs) < minim:
+                continue
+            a, m = u // 12, u % 12 + 1
+            if desde is None or a >= desde:
+                res.append([round(a + (m - 1) / 12, 4), f"{a}-{m:02d}", sum(v for v in vs if v is not None)])
+        return res
+
+    def index_m(punts, base):
+        b = next((v for _, e, v in punts if e == f"{base}-12"), None)
+        return [[x, e, round(v / b * 100, 1)] for x, e, v in punts if x >= base + 11 / 12] if b else []
+
+    def serie_m(clau, base, series, extra=None):
+        sm = {z: movil12(v) for z, v in series.items()}
+        g = sm.get("gi") or []
+        res[clau] = {"tipus": "linia", "u": "idx", "dec": 0, "base": base, "m12": True,
+                     "abs": {z: v[-1][2] for z, v in sm.items() if v}, "any": g[-1][1] if g else None,
+                     "series": {z: index_m(v, base) for z, v in sm.items()}, **(extra or {})}
+        return sm
+
+    # 4. Compraventas de vivienda (suma de 12 meses, índice 2007 = 100)
+    serie_m("compra", 2007, {z: serie("6150", "General", "Compraventa", zona=n + ".")
+                             for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))})
+    # 5. Turismo: % de pernoctaciones hoteleras de residentes en el extranjero (12 meses)
     def anual(dd, minim=12):
         tot = {}
         for a, fk, v in dd:
@@ -762,32 +797,29 @@ def provincia_series():
         return {a: t for a, (t, n) in tot.items() if n >= minim}
     tur = {}
     for z, n, tt in (("gi", "Girona", "Pernoctaciones. Total."), ("cat", "Cataluña", "Pernoctaciones. Total."), ("esp", "Nacional", "Pernoctaciones. Total categorías. Total.")):
-        tot = anual(serie("2074", tt, zona=n))
-        ext = anual(serie("2074", "Pernoctaciones", "Residentes en el extranjero", zona=n))
-        tur[z] = sorted([[a, str(a), round(ext[a] / tot[a] * 100, 1)] for a in tot if a in ext and tot[a] and a >= 2005])
+        tot = {e: v for _, e, v in movil12(serie("2074", tt, zona=n), desde=2005)}
+        ext = movil12(serie("2074", "Pernoctaciones", "Residentes en el extranjero", zona=n), desde=2005)
+        tur[z] = [[x, e, round(v / tot[e] * 100, 1)] for x, e, v in ext if tot.get(e)]
         if z == "gi" and tot:
-            res["pernoct_total"] = {"any": max(tot), "v": tot[max(tot)]}
-    res["turisme"] = {"tipus": "linia", "u": "%", "dec": 0, "series": tur}
-    # 6. Ejecuciones hipotecarias de viviendas (índice 2014 = 100)
+            u = max(tot)
+            res["pernoct_total"] = {"any": u, "v": tot[u], "m12": True}
+    res["turisme"] = {"tipus": "linia", "u": "%", "dec": 0, "m12": True, "series": tur}
+    # 6. Ejecuciones hipotecarias de viviendas (índice 2014 = 100). El INE solo las da por provincia una vez al año.
     eh = {z: _punts(serie("10744", "General", zona=n)) for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
     res["execucions"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2014, "abs": {z: v[-1][2] for z, v in eh.items() if v},
                          "any": eh["gi"][-1][1] if eh["gi"] else None, "series": {z: index(v, 2014) for z, v in eh.items()}}
-    # 7. Sociedades mercantiles constituidas (índice 2007 = 100)
-    so = {z: _punts(serie("6454", "Mercantiles", "Número de Sociedades", zona=n)) for z, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
-    res["societats"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: v[-1][2] for z, v in so.items() if v},
-                        "any": so["gi"][-1][1] if so["gi"] else None, "series": {z: index(v, 2007) for z, v in so.items()}}
-    # 8. Hipotecas sobre viviendas: número anual (índice 2007 = 100) e importe medio
-    def anys_complets(dd):
-        return {a: t for a, t in anual(dd).items()}
-    hn = {z: anys_complets(serie("76317", "Viviendas. Número de hipotecas", zona="Viviendas. Número de hipotecas. " + n)) for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
-    hi = {z: anys_complets(serie("76317", "Viviendas. Importe de hipotecas", zona="Viviendas. Importe de hipotecas. " + n)) for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
-    if hn["gi"]:
-        ser = {z: sorted([[a, str(a), v] for a, v in hn[z].items()]) for z in hn}
-        ug = max(hn["gi"])
-        res["hipoteques"] = {"tipus": "linia", "u": "idx", "dec": 0, "base": 2007, "abs": {z: hn[z].get(ug) for z in hn}, "any": ug,
-                             "series": {z: index(v, 2007) for z, v in ser.items()}}
-        res["hipoteca_mitjana"] = {"tipus": "linia", "u": "€", "dec": 0, "series": {
-            z: sorted([[a, str(a), round(hi[z][a] * 1000 / hn[z][a])] for a in hn[z] if a in hi[z] and hn[z][a]]) for z in hn}}
+    # 7. Sociedades mercantiles constituidas (suma de 12 meses, índice 2008 = 100: la serie mensual empieza en 2008)
+    serie_m("societats", 2008, {
+        "gi": serie("6295", "Mercantiles. Número de Sociedades", zona="Girona. Sociedades Constituídas"),
+        "cat": serie("6295", "Mercantiles. Número de Sociedades", zona="Cataluña. Sociedades Constituídas"),
+        "esp": serie("6295", "Total Nacional. Mercantiles", zona="Sociedades Constituídas. Número de Sociedades")})
+    # 8. Hipotecas sobre viviendas: suma de 12 meses (índice 2007 = 100) e importe medio de los 12 meses
+    hn = serie_m("hipoteques", 2007, {z: serie("76317", "Viviendas. Número de hipotecas", zona="Viviendas. Número de hipotecas. " + n)
+                                      for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))})
+    hi = {z: {e: v for _, e, v in movil12(serie("76317", "Viviendas. Importe de hipotecas", zona="Viviendas. Importe de hipotecas. " + n))}
+          for z, n in (("gi", "Girona"), ("esp", "Total Nacional"))}
+    res["hipoteca_mitjana"] = {"tipus": "linia", "u": "€", "dec": 0, "m12": True, "series": {
+        z: [[x, e, round(hi[z][e] * 1000 / v)] for x, e, v in hn[z] if e in hi[z] and v] for z in hn}}
     # 9. Defunciones por causa (capítulos CIE-10), último año: % sobre el total
     def cap(nom):
         m = re.search(r"(?:Todas las edades\. )?([IVX]+(?:-[IVX]+)?)\.([^.]+?)\. Total", nom)
@@ -811,7 +843,7 @@ def provincia_series():
                  for c, (nom, v) in dg.items() if c != "I-XXII" and c in de and a in v]
         grups = sorted(grups, key=lambda x: -x["gi"])
         res["causes"] = {"tipus": "barres", "u": "%", "dec": 1, "total": tg, "any": a, "grups": [g for g in grups if g["gi"] >= 1]}
-    # 10. Pernoctaciones hoteleras por destino (millones, años completos)
+    # 10. Pernoctaciones hoteleras por destino (millones, suma de 12 meses)
     zs = {"gi": ("2039", "Costa Brava"), "cat": ("2078", "17095-Lloret de Mar"), "esp": ("2039", "Pirineus-Prepirineus")}
     dest = {}
     for z, (t, nom) in zs.items():
@@ -819,10 +851,10 @@ def provincia_series():
         for s_ in d.get(t, {}).get("series", []):
             if nom in s_["nom"] and "Pernoctaciones" in s_["nom"]:
                 # Lloret cierra hoteles en invierno: el INE no da esos meses
-                for a, v in anual(s_["d"], 12 if z != "cat" else 7).items():
-                    tot[a] = tot.get(a, 0) + v
-        dest[z] = sorted([[a, str(a), round(v / 1e6, 2)] for a, v in tot.items() if 2005 <= a < dt.date.today().year])
-    res["destins"] = {"tipus": "linia", "u": "M", "dec": 1, "noms": "destins", "series": dest}
+                for x, et, v in movil12(s_["d"], 12 if z != "cat" else 7, desde=2005):
+                    tot[(x, et)] = tot.get((x, et), 0) + v
+        dest[z] = sorted([[x, et, round(v / 1e6, 2)] for (x, et), v in tot.items()])
+    res["destins"] = {"tipus": "linia", "u": "M", "dec": 1, "noms": "destins", "m12": True, "series": dest}
     return res
 
 
@@ -1728,6 +1760,7 @@ def nacionalitat_indicadores(pob):
 # ---------------------------------------------------------------------------
 # Emergències: divisiones de Agents Rurals y Bombers (Idescat), actuaciones de Bombers e incendios forestales
 
+BOMB_MES: dict = {}  # serie mensual de actuaciones de Bombers en la provincia (la rellena emergencies_indicadores)
 GRUPS_URGENTS = ("incendi urbà", "incendi vegetació", "salvaments", "assistència tècnica", "fuites perilloses",
                  "mobilitat", "altres urgents", "suport tècnic")
 
@@ -1788,6 +1821,29 @@ def emergencies_indicadores(pob):
         ult = int(complets.max())
         a = a[(a["any"] == ult) & a["codi_ine"].notna()]
         a["ine"] = a["codi_ine"].str.zfill(5).str[:5]
+        # Últimos 12 meses completos, si está el fichero mensual (se actualiza cada mes)
+        fm = d / "actuacions_bombers_mes.csv.gz"
+        if fm.exists():
+            am = pd.read_csv(fm, dtype={"codi_ine": str})
+            for c in ("n", "any", "mes"):
+                am[c] = pd.to_numeric(am[c], errors="coerce")
+            am = am.dropna(subset=["any", "mes", "codi_ine"])
+            am["ym"] = (am["any"] * 12 + am["mes"] - 1).astype(int)
+            fi = pd.to_datetime(lim["fi"].astype(str).str[:10], errors="coerce").max()
+            # último mes completo: el de la última actuación si es fin de mes; si no, el anterior
+            u = (fi.year * 12 + fi.month - 1 - (0 if (fi + pd.Timedelta(days=1)).month != fi.month else 1)) if pd.notna(fi) else int(am["ym"].max())
+            u = min(u, int(am["ym"].max()))
+            a = am[(am["ym"] > u - 12) & (am["ym"] <= u)].copy()
+            a["ine"] = a["codi_ine"].str.zfill(5).str[:5]
+            ult = f"{(u - 11) % 12 + 1:02d}/{(u - 11) // 12}–{u % 12 + 1:02d}/{u // 12}"
+            # Serie mensual de la provincia: incendios, salvamentos y accidentes de tráfico
+            g = am[am["tga_nom_grupo"].isin(GRUPS_URGENTS) & (am["ym"] <= u) & (am["ym"] > u - 12 * 6)]
+            def ser(grups):
+                x = g[g["tga_nom_grupo"].isin(grups)].groupby("ym")["n"].sum()
+                return [[round(k // 12 + (k % 12) / 12, 4), f"{k // 12}-{k % 12 + 1:02d}", int(v)] for k, v in sorted(x.items())]
+            BOMB_MES.update({"tipus": "linia", "u": "", "dec": 0, "noms": "bmes", "series": {
+                "gi": ser(("incendi urbà", "incendi vegetació")), "cat": ser(("salvaments",)), "esp": ser(("mobilitat",))},
+                "total": int(g[g["ym"] > u - 12]["n"].sum()), "fins": f"{u // 12}-{u % 12 + 1:02d}"})
         a = a[a["tga_nom_grupo"].isin(GRUPS_URGENTS)]
         defs = {"bombers": GRUPS_URGENTS, "bomb_inc_urba": ("incendi urbà",), "bomb_inc_veg": ("incendi vegetació",),
                 "bomb_salvaments": ("salvaments",), "bomb_mobilitat": ("mobilitat",)}
@@ -2550,7 +2606,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
         "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
