@@ -15,7 +15,7 @@
       societats: ["Empreses noves", "Societats mercantils constituïdes, suma dels últims 12 mesos. Índex, 2008 = 100"],
       h_ipc: (g, c, e, p) => `Els preus pugen un <b>${g}</b> interanual a Girona (${p}), davant del ${c} a Catalunya i el ${e} a Espanya.`,
       h_paro: (g, e, p) => `L'atur és del <b>${g}</b> a Girona (${p}). A Espanya, del ${e}.`,
-      h_ipc_grups: (g, v, a) => `${/^\d{4}$/.test(a) ? "El " + a : "A " + a}, el que més s'encareix a Girona és <b>${g.toLowerCase()}</b> (${v} en un any).`,
+      h_ipc_grups: (g, v, a) => `${a}, el que més s'encareix a Girona és <b>${g.toLowerCase()}</b> (${v} en un any).`,
       h_compra: (n, a, d, c, e) => `<b>${n}</b> compravendes d'habitatges en 12 mesos, ${a}: ${d} respecte al 2007. Catalunya, ${c}; Espanya, ${e}.`,
       h_turisme: (g, a, n) => `El <b>${g}</b> de les nits d'hotel són de turistes estrangers (${a}), sobre ${n} pernoctacions.`,
       h_execucions: (n, a, d) => `<b>${n}</b> habitatges amb execució hipotecària ${a}, ${d} que el 2014.`,
@@ -152,7 +152,7 @@
       societats: ["Empresas nuevas", "Sociedades mercantiles constituidas, suma de los últimos 12 meses. Índice, 2008 = 100"],
       h_ipc: (g, c, e, p) => `Los precios suben un <b>${g}</b> interanual en Girona (${p}), frente al ${c} en Cataluña y el ${e} en España.`,
       h_paro: (g, e, p) => `El paro es del <b>${g}</b> en Girona (${p}). En España, del ${e}.`,
-      h_ipc_grups: (g, v, a) => `En ${a}, lo que más se encarece en Girona es <b>${g.toLowerCase()}</b> (${v} en un año).`,
+      h_ipc_grups: (g, v, a) => `${a}, lo que más se encarece en Girona es <b>${g.toLowerCase()}</b> (${v} en un año).`,
       h_compra: (n, a, d, c, e) => `<b>${n}</b> compraventas de viviendas en 12 meses, ${a}: ${d} respecto a 2007. Cataluña, ${c}; España, ${e}.`,
       h_turisme: (g, a, n) => `El <b>${g}</b> de las noches de hotel son de turistas extranjeros (${a}), sobre ${n} pernoctaciones.`,
       h_execucions: (n, a, d) => `<b>${n}</b> viviendas con ejecución hipotecaria ${a}, ${d} que en 2014.`,
@@ -452,7 +452,7 @@
     "Vestido y calzado": "Vestit i calçat", "Vivienda, agua, electricidad, gas y otros combustibles": "Habitatge, aigua, electricitat i gas",
     "Muebles, artículos del hogar y artículos para el mantenimiento corriente del hogar": "Mobles i articles de la llar", "Sanidad": "Sanitat",
     "Transporte": "Transport", "Información y comunicaciones": "Informació i comunicacions", "Actividades recreativas, deporte y cultura": "Oci, esport i cultura",
-    "Servicios de educación": "Educació", "Restaurantes y servicios de alojamiento": "Restaurants i allotjament", "Seguros y servicios financieros": "Assegurances i serveis financers",
+    "Servicios de educación": "Educació", "Enseñanza": "Educació", "Bebidas alcohólicas y tabaco": "Begudes alcohòliques i tabac", "Restaurantes y servicios de alojamiento": "Restaurants i allotjament", "Seguros y servicios financieros": "Assegurances i serveis financers",
     "Cuidado personal, protección social, y bienes y servicios diversos": "Cura personal i altres serveis",
   };
   const GRUPS_ES = {
@@ -568,13 +568,20 @@
     const n = tp("mesos")[+m[2] - 1].toLowerCase();
     return LANG === "ca" ? `fins ${/^[aeiou]/.test(n) ? "a l'" : "al "}${n} del ${m[1]}` : `hasta ${n} de ${m[1]}`;
   };
+  // «A l'octubre del 2026» / «En octubre de 2026» / «El 2025»
+  const quan = (e) => {
+    const m = /^(\d{4})-(\d{2})$/.exec(e || "");
+    if (!m) return LANG === "ca" ? `El ${e}` : `En ${e}`;
+    const n = tp("mesos")[+m[2] - 1].toLowerCase();
+    return LANG === "ca" ? `${/^[aeiou]/.test(n) ? "A l'" : "Al "}${n} del ${m[1]}` : `En ${n} de ${m[1]}`;
+  };
   const delta = (idx) => { const d = idx - 100; return d < 0 ? tp("menys", pct(-d, 0)) : tp("mes", pct(d, 0)); };
   const ult = (sp, k) => { const s = sp.series && sp.series[k]; return s && s.length ? s[s.length - 1] : null; };
 
   function titular(id, sp, P) {
     if (id === "ipc") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp("h_ipc", pct(g[2], 1), pct(c && c[2], 1), pct(e && e[2], 1), etiqueta(g[1])) : ""; }
     if (id === "paro") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_paro", pct(g[2], 1), pct(e && e[2], 1), etiqueta(g[1])) : ""; }
-    if (id === "ipc_grups") { const g = sp.grups[0]; return g ? tp("h_ipc_grups", nomGrup(g.g), pct(g.gi, 1), etiqueta(String(g.any))) : ""; }
+    if (id === "ipc_grups") { const g = sp.grups[0]; return g ? tp("h_ipc_grups", nomGrup(g.g), pct(g.gi, 1), quan(String(g.any))) : ""; }
     if (id === "turisme") { const g = ult(sp, "gi"); return g && P.pernoct_total ? tp("h_turisme", pct(g[2], 0), g[1], fmt(P.pernoct_total.v / 1e6, 1) + " M") : ""; }
     if (["compra", "societats"].includes(id)) { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp(`h_${id}`, fmt(sp.abs.gi), fins(sp.any), delta(g[2]), delta(c[2]), delta(e[2])) : ""; }
     if (id === "hipoteques") { const g = ult(sp, "gi"), e = ult(sp, "esp"); return g ? tp("h_hipoteques", fmt(sp.abs.gi), fins(sp.any), delta(g[2]), delta(e[2])) : ""; }
