@@ -1,0 +1,1205 @@
+{
+ "n": 394,
+ "girona_nac": [
+  {
+   "nom": "Total Nacional. Índice general. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     97.397
+    ],
+    [
+     2023,
+     28,
+     94.768
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Índice general. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     2.7
+    ],
+    [
+     2024,
+     28,
+     2.8
+    ],
+    [
+     2023,
+     28,
+     3.5
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Cereales. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     97.256
+    ],
+    [
+     2023,
+     28,
+     95.953
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Cereales. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     2.8
+    ],
+    [
+     2024,
+     28,
+     1.4
+    ],
+    [
+     2023,
+     28,
+     19.3
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Harina de cereales. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     97.237
+    ],
+    [
+     2023,
+     28,
+     97.299
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Harina de cereales. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     2.8
+    ],
+    [
+     2024,
+     28,
+     -0.1
+    ],
+    [
+     2023,
+     28,
+     8.4
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Pan y productos de panadería. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     99.198
+    ],
+    [
+     2023,
+     28,
+     97.676
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Pan y productos de panadería. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     0.8
+    ],
+    [
+     2024,
+     28,
+     1.6
+    ],
+    [
+     2023,
+     28,
+     10.6
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Cereales de desayuno. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     96.354
+    ],
+    [
+     2023,
+     28,
+     94.032
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Cereales de desayuno. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     3.8
+    ],
+    [
+     2024,
+     28,
+     2.5
+    ],
+    [
+     2023,
+     28,
+     13.8
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Macarrones, tallarines, cuscús y pastas alimenticias similares. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     98.851
+    ],
+    [
+     2023,
+     28,
+     98.13
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Macarrones, tallarines, cuscús y pastas alimenticias similares. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     1.2
+    ],
+    [
+     2024,
+     28,
+     0.7
+    ],
+    [
+     2023,
+     28,
+     1.4
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Otros productos a base de cereales y de grano molidos. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     100.867
+    ],
+    [
+     2023,
+     28,
+     100.707
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Otros productos a base de cereales y de grano molidos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     -0.9
+    ],
+    [
+     2024,
+     28,
+     0.2
+    ],
+    [
+     2023,
+     28,
+     9.4
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Carne, fresca, refrigerada o congelada. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     94.459
+    ],
+    [
+     2023,
+     28,
+     91.673
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Carne, fresca, refrigerada o congelada. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     5.9
+    ],
+    [
+     2024,
+     28,
+     3.0
+    ],
+    [
+     2023,
+     28,
+     9.9
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Carne, seca, salada, en salmuera o ahumada. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     96.183
+    ],
+    [
+     2023,
+     28,
+     93.388
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Carne, seca, salada, en salmuera o ahumada. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     4.0
+    ],
+    [
+     2024,
+     28,
+     3.0
+    ],
+    [
+     2023,
+     28,
+     9.9
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Despojos, sangre y demás partes de animales sacrificados, frescos, refrigerados o congelados, secos, salados, en salmuera o ahumados. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     93.55
+    ],
+    [
+     2023,
+     28,
+     90.23
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Despojos, sangre y demás partes de animales sacrificados, frescos, refrigerados o congelados, secos, salados, en salmuera o ahumados. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     6.9
+    ],
+    [
+     2024,
+     28,
+     3.7
+    ],
+    [
+     2023,
+     28,
+     7.9
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Preparados de carne, despojos, sangre y demás partes de animales sacrificados. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     95.751
+    ],
+    [
+     2023,
+     28,
+     94.364
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Preparados de carne, despojos, sangre y demás partes de animales sacrificados. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     4.4
+    ],
+    [
+     2024,
+     28,
+     1.5
+    ],
+    [
+     2023,
+     28,
+     11.1
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Pescado, vivo, fresco, refrigerado o congelado. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     95.275
+    ],
+    [
+     2023,
+     28,
+     91.012
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Pescado, vivo, fresco, refrigerado o congelado. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     5.0
+    ],
+    [
+     2024,
+     28,
+     4.7
+    ],
+    [
+     2023,
+     28,
+     6.3
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Pescado, seco, salado, en salmuera o ahumado. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     98.397
+    ],
+    [
+     2023,
+     28,
+     96.794
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Pescado, seco, salado, en salmuera o ahumado. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     1.6
+    ],
+    [
+     2024,
+     28,
+     1.7
+    ],
+    [
+     2023,
+     28,
+     13.2
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Preparados de pescado. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     99.118
+    ],
+    [
+     2023,
+     28,
+     95.454
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Preparados de pescado. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     0.9
+    ],
+    [
+     2024,
+     28,
+     3.8
+    ],
+    [
+     2023,
+     28,
+     10.8
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Marisco, vivo, fresco, refrigerado o congelado. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     96.865
+    ],
+    [
+     2023,
+     28,
+     95.813
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Marisco, vivo, fresco, refrigerado o congelado. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     3.2
+    ],
+    [
+     2024,
+     28,
+     1.1
+    ],
+    [
+     2023,
+     28,
+     4.3
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Preparados de marisco. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     96.67
+    ],
+    [
+     2023,
+     28,
+     91.311
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Preparados de marisco. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     3.4
+    ],
+    [
+     2024,
+     28,
+     5.9
+    ],
+    [
+     2023,
+     28,
+     13.7
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Leche cruda y entera. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     95.199
+    ],
+    [
+     2023,
+     28,
+     95.143
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Leche cruda y entera. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     5.0
+    ],
+    [
+     2024,
+     28,
+     0.1
+    ],
+    [
+     2023,
+     28,
+     18.5
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Leche desnatada y semidesnatada. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     98.086
+    ],
+    [
+     2023,
+     28,
+     100.733
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Leche desnatada y semidesnatada. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     2.0
+    ],
+    [
+     2024,
+     28,
+     -2.6
+    ],
+    [
+     2023,
+     28,
+     17.3
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Otra leche y nata. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     98.707
+    ],
+    [
+     2023,
+     28,
+     98.092
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Otra leche y nata. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     1.3
+    ],
+    [
+     2024,
+     28,
+     0.6
+    ],
+    [
+     2023,
+     28,
+     22.3
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Leche no animal. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     100.058
+    ],
+    [
+     2023,
+     28,
+     99.216
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Leche no animal. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     -0.1
+    ],
+    [
+     2024,
+     28,
+     0.8
+    ],
+    [
+     2023,
+     28,
+     10.1
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Queso. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     95.417
+    ],
+    [
+     2023,
+     28,
+     93.596
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Queso. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     4.8
+    ],
+    [
+     2024,
+     28,
+     1.9
+    ],
+    [
+     2023,
+     28,
+     12.5
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Yogur y productos similares. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     102.932
+    ],
+    [
+     2023,
+     28,
+     103.45
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Yogur y productos similares. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     -2.8
+    ],
+    [
+     2024,
+     28,
+     -0.5
+    ],
+    [
+     2023,
+     28,
+     10.5
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Postres y bebidas a base de leche. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     97.955
+    ],
+    [
+     2023,
+     28,
+     98.572
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Postres y bebidas a base de leche. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     2.1
+    ],
+    [
+     2024,
+     28,
+     -0.6
+    ],
+    [
+     2023,
+     28,
+     15.7
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Huevos. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     85.078
+    ],
+    [
+     2023,
+     28,
+     83.292
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Huevos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     17.5
+    ],
+    [
+     2024,
+     28,
+     2.1
+    ],
+    [
+     2023,
+     28,
+     14.4
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Aceites vegetales. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     149.808
+    ],
+    [
+     2023,
+     28,
+     118.884
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Aceites vegetales. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     -33.2
+    ],
+    [
+     2024,
+     28,
+     26.0
+    ],
+    [
+     2023,
+     28,
+     30.3
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Mantequilla y otros aceites y grasas derivados de la leche. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     94.504
+    ],
+    [
+     2023,
+     28,
+     95.2
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Mantequilla y otros aceites y grasas derivados de la leche. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     5.8
+    ],
+    [
+     2024,
+     28,
+     -0.7
+    ],
+    [
+     2023,
+     28,
+     19.5
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Dátiles, higos y frutas tropicales, frescos. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     87.008
+    ],
+    [
+     2023,
+     28,
+     77.552
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Dátiles, higos y frutas tropicales, frescos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     14.9
+    ],
+    [
+     2024,
+     28,
+     12.2
+    ],
+    [
+     2023,
+     28,
+     -19.2
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Cítricos (agrios), frescos. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     95.492
+    ],
+    [
+     2023,
+     28,
+     93.137
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Cítricos (agrios), frescos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     4.7
+    ],
+    [
+     2024,
+     28,
+     2.5
+    ],
+    [
+     2023,
+     28,
+     12.7
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Frutas de hueso y frutas de pepita, frescas. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     92.861
+    ],
+    [
+     2023,
+     28,
+     90.83
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Frutas de hueso y frutas de pepita, frescas. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     7.7
+    ],
+    [
+     2024,
+     28,
+     2.2
+    ],
+    [
+     2023,
+     28,
+     9.8
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Bayas, frescas. Media anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     100.0
+    ],
+    [
+     2024,
+     28,
+     95.456
+    ],
+    [
+     2023,
+     28,
+     99.474
+    ]
+   ]
+  },
+  {
+   "nom": "Total Nacional. Bayas, frescas. Variación anual. ",
+   "d": [
+    [
+     2025,
+     28,
+     4.8
+    ],
+    [
+     2024,
+     28,
+     -4.0
+    ],
+    [
+     2023,
+     28,
+     14.3
+    ]
+   ]
+  }
+ ]
+}

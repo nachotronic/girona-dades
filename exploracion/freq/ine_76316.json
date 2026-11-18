@@ -1,0 +1,245 @@
+{
+ "n": 240,
+ "girona_nac": [
+  {
+   "nom": "Total fincas. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     42991.0
+    ],
+    [
+     2026,
+     7,
+     56595.0
+    ],
+    [
+     2026,
+     6,
+     58361.0
+    ]
+   ]
+  },
+  {
+   "nom": "Total fincas. Importe de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     8717121.0
+    ],
+    [
+     2026,
+     7,
+     12314875.0
+    ],
+    [
+     2026,
+     6,
+     12424304.0
+    ]
+   ]
+  },
+  {
+   "nom": "Total fincas rústicas. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     698.0
+    ],
+    [
+     2026,
+     7,
+     1061.0
+    ],
+    [
+     2026,
+     6,
+     975.0
+    ]
+   ]
+  },
+  {
+   "nom": "Total fincas rústicas. Importe de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     155999.0
+    ],
+    [
+     2026,
+     7,
+     262440.0
+    ],
+    [
+     2026,
+     6,
+     325558.0
+    ]
+   ]
+  },
+  {
+   "nom": "Total fincas urbanas. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     42293.0
+    ],
+    [
+     2026,
+     7,
+     55534.0
+    ],
+    [
+     2026,
+     6,
+     57386.0
+    ]
+   ]
+  },
+  {
+   "nom": "Total fincas urbanas. Importe de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     8561122.0
+    ],
+    [
+     2026,
+     7,
+     12052435.0
+    ],
+    [
+     2026,
+     6,
+     12098746.0
+    ]
+   ]
+  },
+  {
+   "nom": "Viviendas. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     33841.0
+    ],
+    [
+     2026,
+     7,
+     43372.0
+    ],
+    [
+     2026,
+     6,
+     45907.0
+    ]
+   ]
+  },
+  {
+   "nom": "Viviendas. Importe de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     6134856.0
+    ],
+    [
+     2026,
+     7,
+     7841020.0
+    ],
+    [
+     2026,
+     6,
+     8188218.0
+    ]
+   ]
+  },
+  {
+   "nom": "Solares. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     477.0
+    ],
+    [
+     2026,
+     7,
+     588.0
+    ],
+    [
+     2026,
+     6,
+     396.0
+    ]
+   ]
+  },
+  {
+   "nom": "Solares. Importe de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     553107.0
+    ],
+    [
+     2026,
+     7,
+     775084.0
+    ],
+    [
+     2026,
+     6,
+     497062.0
+    ]
+   ]
+  },
+  {
+   "nom": "Otros. Número de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     7975.0
+    ],
+    [
+     2026,
+     7,
+     11574.0
+    ],
+    [
+     2026,
+     6,
+     11083.0
+    ]
+   ]
+  },
+  {
+   "nom": "Otros. Importe de hipotecas. Total Nacional. Base nueva. Mensual. ",
+   "d": [
+    [
+     2026,
+     8,
+     1873159.0
+    ],
+    [
+     2026,
+     7,
+     3436331.0
+    ],
+    [
+     2026,
+     6,
+     3413466.0
+    ]
+   ]
+  }
+ ]
+}

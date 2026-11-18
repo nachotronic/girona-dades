@@ -1,0 +1,1226 @@
+{
+  "id" : "g2ay-3vnj",
+  "name" : "Actuacions dels Bombers de la Generalitat",
+  "assetType" : "dataset",
+  "attribution" : "Departament d'Interior i Seguretat Pública. Direcció General de Prevenció, Extinció d'Incendis i Salvaments",
+  "attributionLink" : "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "averageRating" : 0,
+  "category" : "Seguretat",
+  "createdAt" : 1617716586,
+  "description" : "Detall de les actuacions ateses pel cos de Bombers de la Generalitat de Catalunya, per regió d’emergències,  comarca i  municipi. Dades disponibles a partir de l’any 2010.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1870,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 2085929,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1622195890,
+  "publicationGroup" : 1383722,
+  "publicationStage" : "published",
+  "rowIdentifierColumnId" : 19575858,
+  "rowsUpdatedAt" : 1787036473,
+  "rowsUpdatedBy" : "a4b5-gx6v",
+  "tableId" : 1416760,
+  "totalTimesRated" : 0,
+  "viewCount" : 14804,
+  "viewLastModified" : 1789570009,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1679907753,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 1309312,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1679907753,
+    "targetAudience" : "public",
+    "workflowId" : 182,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1679907754,
+      "failureCount" : 0,
+      "startedAt" : 1679907753,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "a4b5-gx6v",
+      "displayName" : "Dades Obertes Catalunya"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 19575858,
+    "name" : "ACT_NUM_ACTUACIO",
+    "dataTypeName" : "text",
+    "description" : "Identificador de l’actuació",
+    "fieldName" : "act_num_actuacio",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626988,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "262702631",
+      "null" : "0",
+      "top" : [ {
+        "item" : "100200003",
+        "count" : "1"
+      }, {
+        "item" : "100200005",
+        "count" : "1"
+      }, {
+        "item" : "100200006",
+        "count" : "1"
+      }, {
+        "item" : "100200007",
+        "count" : "1"
+      }, {
+        "item" : "100200008",
+        "count" : "1"
+      }, {
+        "item" : "100200009",
+        "count" : "1"
+      }, {
+        "item" : "100200013",
+        "count" : "1"
+      }, {
+        "item" : "100200014",
+        "count" : "1"
+      }, {
+        "item" : "100200015",
+        "count" : "1"
+      }, {
+        "item" : "100200019",
+        "count" : "1"
+      }, {
+        "item" : "100200020",
+        "count" : "1"
+      }, {
+        "item" : "100200022",
+        "count" : "1"
+      }, {
+        "item" : "100200024",
+        "count" : "1"
+      }, {
+        "item" : "100200025",
+        "count" : "1"
+      }, {
+        "item" : "100200029",
+        "count" : "1"
+      }, {
+        "item" : "100200031",
+        "count" : "1"
+      }, {
+        "item" : "100200034",
+        "count" : "1"
+      }, {
+        "item" : "100200035",
+        "count" : "1"
+      }, {
+        "item" : "100200037",
+        "count" : "1"
+      }, {
+        "item" : "100200002",
+        "count" : "1"
+      } ],
+      "smallest" : "100200002",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575859,
+    "name" : "CODI_INE",
+    "dataTypeName" : "text",
+    "description" : "Codi de municipi segons l’Institut Nacional d’Estadística",
+    "fieldName" : "codi_ine",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626987,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "99999",
+      "null" : "0",
+      "top" : [ {
+        "item" : "08101",
+        "count" : "36711"
+      }, {
+        "item" : "08187",
+        "count" : "30906"
+      }, {
+        "item" : "08279",
+        "count" : "28325"
+      }, {
+        "item" : "43148",
+        "count" : "25884"
+      }, {
+        "item" : "25120",
+        "count" : "24958"
+      }, {
+        "item" : "08015",
+        "count" : "23884"
+      }, {
+        "item" : "43123",
+        "count" : "21631"
+      }, {
+        "item" : "17079",
+        "count" : "20777"
+      }, {
+        "item" : "08121",
+        "count" : "17007"
+      }, {
+        "item" : "08200",
+        "count" : "15911"
+      }, {
+        "item" : "08113",
+        "count" : "14477"
+      }, {
+        "item" : "08307",
+        "count" : "13589"
+      }, {
+        "item" : "08169",
+        "count" : "13187"
+      }, {
+        "item" : "08073",
+        "count" : "13093"
+      }, {
+        "item" : "17066",
+        "count" : "11497"
+      }, {
+        "item" : "08211",
+        "count" : "11293"
+      }, {
+        "item" : "25243",
+        "count" : "11137"
+      }, {
+        "item" : "08089",
+        "count" : "10948"
+      }, {
+        "item" : "08245",
+        "count" : "10872"
+      }, {
+        "item" : "08305",
+        "count" : "10859"
+      } ],
+      "smallest" : "08001",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575860,
+    "name" : "NOM REGIO",
+    "dataTypeName" : "text",
+    "description" : "Nom de la regió d’emergències",
+    "fieldName" : "nom_regio",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12627000,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "U.F. Val d'Aran",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Metropolitana Nord",
+        "count" : "264167"
+      }, {
+        "item" : "Metropolitana Sud",
+        "count" : "240723"
+      }, {
+        "item" : "Girona",
+        "count" : "207292"
+      }, {
+        "item" : "Tarragona",
+        "count" : "132261"
+      }, {
+        "item" : "Lleida",
+        "count" : "114719"
+      }, {
+        "item" : "Centre",
+        "count" : "94951"
+      }, {
+        "item" : "Terres de l'Ebre",
+        "count" : "52533"
+      }, {
+        "item" : "Subdirecció General Operativa",
+        "count" : "46387"
+      }, {
+        "item" : "U.F. Val d'Aran",
+        "count" : "23799"
+      } ],
+      "smallest" : "Centre",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575861,
+    "name" : "TAL_COD_ALARMA1",
+    "dataTypeName" : "text",
+    "description" : "Codi de grup d’actuació",
+    "fieldName" : "tal_cod_alarma1",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626999,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "XX",
+      "null" : "0",
+      "top" : [ {
+        "item" : "IU",
+        "count" : "225499"
+      }, {
+        "item" : "SV",
+        "count" : "223242"
+      }, {
+        "item" : "AT",
+        "count" : "177705"
+      }, {
+        "item" : "AC",
+        "count" : "171152"
+      }, {
+        "item" : "MO",
+        "count" : "155979"
+      }, {
+        "item" : "IV",
+        "count" : "86952"
+      }, {
+        "item" : "PR",
+        "count" : "76645"
+      }, {
+        "item" : "DP",
+        "count" : "26357"
+      }, {
+        "item" : "FU",
+        "count" : "22523"
+      }, {
+        "item" : "SI",
+        "count" : "6223"
+      }, {
+        "item" : "ST",
+        "count" : "4551"
+      }, {
+        "item" : "XX",
+        "count" : "4"
+      } ],
+      "smallest" : "AC",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575862,
+    "name" : "TGA_NOM_GRUPO",
+    "dataTypeName" : "text",
+    "description" : "Descriptiu de grup d’actuació",
+    "fieldName" : "tga_nom_grupo",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626998,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "suport tècnic",
+      "null" : "0",
+      "top" : [ {
+        "item" : "incendi urbà",
+        "count" : "225499"
+      }, {
+        "item" : "salvaments",
+        "count" : "223242"
+      }, {
+        "item" : "assistència tècnica",
+        "count" : "177705"
+      }, {
+        "item" : "activitat no urgent",
+        "count" : "171152"
+      }, {
+        "item" : "mobilitat",
+        "count" : "155979"
+      }, {
+        "item" : "incendi vegetació",
+        "count" : "86952"
+      }, {
+        "item" : "pràctiques",
+        "count" : "76645"
+      }, {
+        "item" : "dispositiu preventiu",
+        "count" : "26357"
+      }, {
+        "item" : "fuites perilloses",
+        "count" : "22523"
+      }, {
+        "item" : "simulacres",
+        "count" : "6223"
+      }, {
+        "item" : "suport tècnic",
+        "count" : "4551"
+      }, {
+        "item" : "altres urgents",
+        "count" : "4"
+      } ],
+      "smallest" : "activitat no urgent",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575863,
+    "name" : "TAL_COD_ALARMA2",
+    "dataTypeName" : "text",
+    "description" : "Codi de tipus d’actuació",
+    "fieldName" : "tal_cod_alarma2",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626997,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "XX",
+      "null" : "0",
+      "top" : [ {
+        "item" : "RU",
+        "count" : "180756"
+      }, {
+        "item" : "TR",
+        "count" : "127132"
+      }, {
+        "item" : "ED",
+        "count" : "123356"
+      }, {
+        "item" : "XX",
+        "count" : "116411"
+      }, {
+        "item" : "CD",
+        "count" : "65625"
+      }, {
+        "item" : "VF",
+        "count" : "62884"
+      }, {
+        "item" : "IN",
+        "count" : "45961"
+      }, {
+        "item" : "VL",
+        "count" : "37155"
+      }, {
+        "item" : "VA",
+        "count" : "34310"
+      }, {
+        "item" : "AS",
+        "count" : "34016"
+      }, {
+        "item" : "VU",
+        "count" : "33090"
+      }, {
+        "item" : "PC",
+        "count" : "27645"
+      }, {
+        "item" : "NC",
+        "count" : "22822"
+      }, {
+        "item" : "HI",
+        "count" : "22088"
+      }, {
+        "item" : "MU",
+        "count" : "20838"
+      }, {
+        "item" : "AN",
+        "count" : "19736"
+      }, {
+        "item" : "AT",
+        "count" : "16174"
+      }, {
+        "item" : "EL",
+        "count" : "14723"
+      }, {
+        "item" : "SP",
+        "count" : "12913"
+      }, {
+        "item" : "AB",
+        "count" : "12303"
+      } ],
+      "smallest" : "AB",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575864,
+    "name" : "TAL_NOM_ALARMA",
+    "dataTypeName" : "text",
+    "description" : "Descriptiu de tipus d’actuació",
+    "fieldName" : "tal_nom_alarma",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626996,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "Visita element de risc",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Accident trànsit amb ferits i/o atrapats",
+        "count" : "121984"
+      }, {
+        "item" : "Rescat urbà (precipitats, obertura de pisos risc persones)",
+        "count" : "102151"
+      }, {
+        "item" : "Altra assistència tècnica urgent",
+        "count" : "83556"
+      }, {
+        "item" : "Ruta urbana i coneixement del territori",
+        "count" : "78605"
+      }, {
+        "item" : "Incendi en edifici",
+        "count" : "76657"
+      }, {
+        "item" : "Incendi de contenidor de residus",
+        "count" : "65625"
+      }, {
+        "item" : "Inundació d'aigua",
+        "count" : "45961"
+      }, {
+        "item" : "Patologies edificació",
+        "count" : "45645"
+      }, {
+        "item" : "Rescat persones en ascensor",
+        "count" : "34016"
+      }, {
+        "item" : "Incendi vegetació agrícola",
+        "count" : "33365"
+      }, {
+        "item" : "Incendi vegetació urbana",
+        "count" : "33090"
+      }, {
+        "item" : "Ruta forestal i coneixement del territori",
+        "count" : "29785"
+      }, {
+        "item" : "Vehicle a l'aire lliure (no accident)",
+        "count" : "29601"
+      }, {
+        "item" : "Pràctiques conducció",
+        "count" : "27645"
+      }, {
+        "item" : "Varis (barraca, caseta d'obres,...)",
+        "count" : "25922"
+      }, {
+        "item" : "Neteja de calçada, sense accident de trànsit",
+        "count" : "22822"
+      }, {
+        "item" : "Inspecció d'hidrants",
+        "count" : "22088"
+      }, {
+        "item" : "Incendi vegetació forestal",
+        "count" : "20497"
+      }, {
+        "item" : "Salvament animals (excepte abelles)",
+        "count" : "19736"
+      }, {
+        "item" : "Pràctiques d'assistència tècnica",
+        "count" : "15808"
+      } ],
+      "smallest" : "Abelles",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575865,
+    "name" : "MUNICIPI",
+    "dataTypeName" : "text",
+    "description" : "Municipi on s’ha realitzat l’actuació",
+    "fieldName" : "municipi",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626995,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "Xerta",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Hospitalet de Llobregat, L'",
+        "count" : "36711"
+      }, {
+        "item" : "Sabadell",
+        "count" : "30906"
+      }, {
+        "item" : "Terrassa",
+        "count" : "28325"
+      }, {
+        "item" : "Tarragona",
+        "count" : "25884"
+      }, {
+        "item" : "Lleida",
+        "count" : "24958"
+      }, {
+        "item" : "Badalona",
+        "count" : "23884"
+      }, {
+        "item" : "Reus",
+        "count" : "21631"
+      }, {
+        "item" : "Girona",
+        "count" : "20777"
+      }, {
+        "item" : "Mataró",
+        "count" : "17007"
+      }, {
+        "item" : "Sant Boi de Llobregat",
+        "count" : "15911"
+      }, {
+        "item" : "Manresa",
+        "count" : "14477"
+      }, {
+        "item" : "Vilanova i la Geltrú",
+        "count" : "13589"
+      }, {
+        "item" : "Prat de Llobregat, El",
+        "count" : "13187"
+      }, {
+        "item" : "Cornellà de Llobregat",
+        "count" : "13093"
+      }, {
+        "item" : "Figueres",
+        "count" : "11497"
+      }, {
+        "item" : "Sant Feliu de Llobregat",
+        "count" : "11293"
+      }, {
+        "item" : "Vielha e Mijaran",
+        "count" : "11137"
+      }, {
+        "item" : "Gavà",
+        "count" : "10948"
+      }, {
+        "item" : "Santa Coloma de Gramenet",
+        "count" : "10872"
+      }, {
+        "item" : "Vilafranca del Penedès",
+        "count" : "10859"
+      } ],
+      "smallest" : "Abella de la Conca",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575866,
+    "name" : "NOM_POBLACIO",
+    "dataTypeName" : "text",
+    "description" : "Població on s’ha realitzat l’actuació",
+    "fieldName" : "nom_poblacio",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626994,
+    "cachedContents" : {
+      "non_null" : "1176827",
+      "largest" : "Zona Hotelera",
+      "null" : "5",
+      "top" : [ {
+        "item" : "Hospitalet de Llobregat, L'",
+        "count" : "31020"
+      }, {
+        "item" : "Sabadell",
+        "count" : "30903"
+      }, {
+        "item" : "Terrassa",
+        "count" : "28305"
+      }, {
+        "item" : "Lleida",
+        "count" : "24632"
+      }, {
+        "item" : "Badalona",
+        "count" : "23884"
+      }, {
+        "item" : "Tarragona",
+        "count" : "23740"
+      }, {
+        "item" : "Reus",
+        "count" : "21602"
+      }, {
+        "item" : "Girona",
+        "count" : "20525"
+      }, {
+        "item" : "Mataró",
+        "count" : "17007"
+      }, {
+        "item" : "Sant Boi de Llobregat",
+        "count" : "15911"
+      }, {
+        "item" : "Manresa",
+        "count" : "14398"
+      }, {
+        "item" : "Vilanova i la Geltrú",
+        "count" : "13589"
+      }, {
+        "item" : "Cornellà de Llobregat",
+        "count" : "13048"
+      }, {
+        "item" : "Figueres",
+        "count" : "11368"
+      }, {
+        "item" : "Sant Feliu de Llobregat",
+        "count" : "11293"
+      }, {
+        "item" : "Santa Coloma de Gramenet",
+        "count" : "10872"
+      }, {
+        "item" : "Vilafranca del Penedès",
+        "count" : "10856"
+      }, {
+        "item" : "Gavà",
+        "count" : "10839"
+      }, {
+        "item" : "Igualada",
+        "count" : "10832"
+      }, {
+        "item" : "Rubí",
+        "count" : "10718"
+      } ],
+      "smallest" : "180",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575867,
+    "name" : "CODI_COMARCA",
+    "dataTypeName" : "text",
+    "description" : "Codi de comarca on s’ha realitzat l’actuació",
+    "fieldName" : "codi_comarca",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626986,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "43",
+      "null" : "0",
+      "top" : [ {
+        "item" : "11",
+        "count" : "129571"
+      }, {
+        "item" : "40",
+        "count" : "122765"
+      }, {
+        "item" : "13",
+        "count" : "77706"
+      }, {
+        "item" : "41",
+        "count" : "56324"
+      }, {
+        "item" : "02",
+        "count" : "56014"
+      }, {
+        "item" : "21",
+        "count" : "56000"
+      }, {
+        "item" : "34",
+        "count" : "46596"
+      }, {
+        "item" : "36",
+        "count" : "43586"
+      }, {
+        "item" : "08",
+        "count" : "43510"
+      }, {
+        "item" : "20",
+        "count" : "40946"
+      }, {
+        "item" : "10",
+        "count" : "40526"
+      }, {
+        "item" : "33",
+        "count" : "36284"
+      }, {
+        "item" : "07",
+        "count" : "32853"
+      }, {
+        "item" : "06",
+        "count" : "30664"
+      }, {
+        "item" : "24",
+        "count" : "26713"
+      }, {
+        "item" : "17",
+        "count" : "26442"
+      }, {
+        "item" : "03",
+        "count" : "22981"
+      }, {
+        "item" : "39",
+        "count" : "22752"
+      }, {
+        "item" : "12",
+        "count" : "21049"
+      }, {
+        "item" : "09",
+        "count" : "20320"
+      } ],
+      "smallest" : "00",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575868,
+    "name" : "NOM_COMARCA",
+    "dataTypeName" : "text",
+    "description" : "Comarca on s’ha realitzat l’actuació",
+    "fieldName" : "nom_comarca",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626993,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "Vallès Oriental",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Baix Llobregat",
+        "count" : "129571"
+      }, {
+        "item" : "Vallès Occidental",
+        "count" : "122765"
+      }, {
+        "item" : "Barcelonès",
+        "count" : "77706"
+      }, {
+        "item" : "Vallès Oriental",
+        "count" : "56324"
+      }, {
+        "item" : "Alt Empordà",
+        "count" : "56014"
+      }, {
+        "item" : "Maresme",
+        "count" : "56000"
+      }, {
+        "item" : "Selva",
+        "count" : "46596"
+      }, {
+        "item" : "Tarragonès",
+        "count" : "43586"
+      }, {
+        "item" : "Baix Camp",
+        "count" : "43510"
+      }, {
+        "item" : "Gironès",
+        "count" : "40946"
+      }, {
+        "item" : "Baix Empordà",
+        "count" : "40526"
+      }, {
+        "item" : "Segrià",
+        "count" : "36284"
+      }, {
+        "item" : "Bages",
+        "count" : "32853"
+      }, {
+        "item" : "Anoia",
+        "count" : "30664"
+      }, {
+        "item" : "Osona",
+        "count" : "26713"
+      }, {
+        "item" : "Garraf",
+        "count" : "26442"
+      }, {
+        "item" : "Alt Penedès",
+        "count" : "22981"
+      }, {
+        "item" : "Val d'Aran",
+        "count" : "22752"
+      }, {
+        "item" : "Baix Penedès",
+        "count" : "21049"
+      }, {
+        "item" : "Baix Ebre",
+        "count" : "20320"
+      } ],
+      "smallest" : "Alta Ribagorça",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575869,
+    "name" : "ANY",
+    "dataTypeName" : "number",
+    "description" : "Any de l’actuació",
+    "fieldName" : "any",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 12626992,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "2026",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023",
+        "count" : "81796"
+      }, {
+        "item" : "2022",
+        "count" : "78050"
+      }, {
+        "item" : "2021",
+        "count" : "77121"
+      }, {
+        "item" : "2010",
+        "count" : "76639"
+      }, {
+        "item" : "2019",
+        "count" : "73677"
+      }, {
+        "item" : "2020",
+        "count" : "71208"
+      }, {
+        "item" : "2018",
+        "count" : "70768"
+      }, {
+        "item" : "2011",
+        "count" : "68994"
+      }, {
+        "item" : "2017",
+        "count" : "68244"
+      }, {
+        "item" : "2025",
+        "count" : "67948"
+      }, {
+        "item" : "2012",
+        "count" : "66758"
+      }, {
+        "item" : "2024",
+        "count" : "65153"
+      }, {
+        "item" : "2016",
+        "count" : "63673"
+      }, {
+        "item" : "2026",
+        "count" : "62536"
+      }, {
+        "item" : "2013",
+        "count" : "62060"
+      }, {
+        "item" : "2015",
+        "count" : "61491"
+      }, {
+        "item" : "2014",
+        "count" : "60716"
+      } ],
+      "smallest" : "2010",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 19575870,
+    "name" : "MES",
+    "dataTypeName" : "number",
+    "description" : "Mes de l’actuació",
+    "fieldName" : "mes",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 12626991,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "12",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6",
+        "count" : "120525"
+      }, {
+        "item" : "7",
+        "count" : "116642"
+      }, {
+        "item" : "1",
+        "count" : "107395"
+      }, {
+        "item" : "8",
+        "count" : "105437"
+      }, {
+        "item" : "3",
+        "count" : "101889"
+      }, {
+        "item" : "2",
+        "count" : "95987"
+      }, {
+        "item" : "5",
+        "count" : "91644"
+      }, {
+        "item" : "12",
+        "count" : "89409"
+      }, {
+        "item" : "10",
+        "count" : "87724"
+      }, {
+        "item" : "4",
+        "count" : "87635"
+      }, {
+        "item" : "11",
+        "count" : "86464"
+      }, {
+        "item" : "9",
+        "count" : "86081"
+      } ],
+      "smallest" : "1",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575871,
+    "name" : "ACT_DAT_ACTUACIO",
+    "dataTypeName" : "calendar_date",
+    "description" : "Data de l’actuació",
+    "fieldName" : "act_dat_actuacio",
+    "position" : 14,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 12626985,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "2026-08-17T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2020-01-21T00:00:00.000",
+        "count" : "2809"
+      }, {
+        "item" : "2026-02-12T00:00:00.000",
+        "count" : "1781"
+      }, {
+        "item" : "2020-01-20T00:00:00.000",
+        "count" : "1550"
+      }, {
+        "item" : "2014-12-09T00:00:00.000",
+        "count" : "1536"
+      }, {
+        "item" : "2020-01-22T00:00:00.000",
+        "count" : "1506"
+      }, {
+        "item" : "2010-03-08T00:00:00.000",
+        "count" : "1070"
+      }, {
+        "item" : "2019-10-23T00:00:00.000",
+        "count" : "964"
+      }, {
+        "item" : "2026-03-15T00:00:00.000",
+        "count" : "914"
+      }, {
+        "item" : "2010-03-09T00:00:00.000",
+        "count" : "866"
+      }, {
+        "item" : "2017-06-24T00:00:00.000",
+        "count" : "819"
+      }, {
+        "item" : "2019-10-22T00:00:00.000",
+        "count" : "805"
+      }, {
+        "item" : "2025-10-23T00:00:00.000",
+        "count" : "791"
+      }, {
+        "item" : "2014-11-30T00:00:00.000",
+        "count" : "787"
+      }, {
+        "item" : "2010-06-24T00:00:00.000",
+        "count" : "776"
+      }, {
+        "item" : "2026-06-24T00:00:00.000",
+        "count" : "760"
+      }, {
+        "item" : "2018-03-31T00:00:00.000",
+        "count" : "758"
+      }, {
+        "item" : "2026-03-29T00:00:00.000",
+        "count" : "750"
+      }, {
+        "item" : "2017-12-27T00:00:00.000",
+        "count" : "744"
+      }, {
+        "item" : "2019-06-24T00:00:00.000",
+        "count" : "743"
+      }, {
+        "item" : "2012-06-24T00:00:00.000",
+        "count" : "734"
+      } ],
+      "smallest" : "2010-01-01T00:00:00.000",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : {
+      "view" : "date_dmy"
+    }
+  }, {
+    "id" : 19575872,
+    "name" : "CODI_REGIO",
+    "dataTypeName" : "text",
+    "description" : "Identificador de regió d’emergències",
+    "fieldName" : "codi_regio",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626984,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "27",
+      "null" : "0",
+      "top" : [ {
+        "item" : "25",
+        "count" : "264167"
+      }, {
+        "item" : "24",
+        "count" : "240723"
+      }, {
+        "item" : "02",
+        "count" : "207292"
+      }, {
+        "item" : "04",
+        "count" : "132261"
+      }, {
+        "item" : "03",
+        "count" : "114719"
+      }, {
+        "item" : "23",
+        "count" : "94951"
+      }, {
+        "item" : "26",
+        "count" : "52533"
+      }, {
+        "item" : "08",
+        "count" : "46387"
+      }, {
+        "item" : "27",
+        "count" : "23799"
+      } ],
+      "smallest" : "02",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575873,
+    "name" : "URGENTS",
+    "dataTypeName" : "text",
+    "description" : "Indica si la tipologia d’actuació és urgent o no urgent",
+    "fieldName" : "urgents",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626990,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "S",
+      "null" : "0",
+      "top" : [ {
+        "item" : "S",
+        "count" : "891904"
+      }, {
+        "item" : "N",
+        "count" : "284928"
+      } ],
+      "smallest" : "N",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  }, {
+    "id" : 19575874,
+    "name" : "VALIDAT",
+    "dataTypeName" : "text",
+    "description" : "Camp que indica si la informació de l’actuació està validada i per tant és definitiva en els sistemes d’informació",
+    "fieldName" : "validat",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 12626989,
+    "cachedContents" : {
+      "non_null" : "1176832",
+      "largest" : "S",
+      "null" : "0",
+      "top" : [ {
+        "item" : "S",
+        "count" : "899399"
+      }, {
+        "item" : "N",
+        "count" : "277433"
+      } ],
+      "smallest" : "N",
+      "count" : "1176832",
+      "cardinality" : "1176832"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "act_dat_actuacio",
+        "ascending" : false
+      } ]
+    },
+    "custom_fields" : {
+      "Freqüència d'actualització" : {
+        "Freqüència d'actualització" : "Setmanal"
+      },
+      "Idioma" : {
+        "Idioma" : "Català",
+        "Dataset name (EN)" : "Rescue actions by Catalan Firefighters",
+        "Nombre del conjunto de datos (ES)" : "Actuaciones de los Bomberos de la Generalitat"
+      },
+      "Informació de gènere o sexe" : {
+        "Informació de gènere o sexe" : "No"
+      },
+      "Actors" : {
+        "Departament" : "Interior i Seguretat Pública",
+        "Tipus actor" : "Generalitat de Catalunya"
+      },
+      "Àmbit geogràfic" : {
+        "Informació geogràfica" : "Codi d'element",
+        "Àmbit geogràfic" : "Catalunya"
+      }
+    },
+    "rowIdentifier" : 19575858,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 19575871,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "a4b5-gx6v",
+    "displayName" : "Dades Obertes Catalunya",
+    "profileImageUrlLarge" : "/api/users/a4b5-gx6v/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/a4b5-gx6v/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/a4b5-gx6v/profile_images/TINY",
+    "screenName" : "Dades Obertes Catalunya",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula" ]
+  },
+  "tags" : [ "actuacions", "cos de bombers", "ods13_acció pel clima" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

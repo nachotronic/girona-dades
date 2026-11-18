@@ -1,0 +1,1205 @@
+{
+ "n": 3280,
+ "girona_nac": [
+  {
+   "nom": "Nacional. Alimentos. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     133.51
+    ],
+    [
+     2025,
+     11,
+     133.242
+    ],
+    [
+     2025,
+     10,
+     132.786
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alimentos. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.2
+    ],
+    [
+     2025,
+     11,
+     0.3
+    ],
+    [
+     2025,
+     10,
+     1.5
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alimentos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     2.7
+    ],
+    [
+     2025,
+     11,
+     2.5
+    ],
+    [
+     2025,
+     10,
+     2.0
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alimentos. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     2.7
+    ],
+    [
+     2025,
+     11,
+     2.5
+    ],
+    [
+     2025,
+     10,
+     2.1
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas no alcohólicas. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     136.275
+    ],
+    [
+     2025,
+     11,
+     136.096
+    ],
+    [
+     2025,
+     10,
+     135.926
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas no alcohólicas. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.1
+    ],
+    [
+     2025,
+     11,
+     0.1
+    ],
+    [
+     2025,
+     10,
+     0.7
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas no alcohólicas. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     6.4
+    ],
+    [
+     2025,
+     11,
+     6.3
+    ],
+    [
+     2025,
+     10,
+     6.7
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas no alcohólicas. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     6.4
+    ],
+    [
+     2025,
+     11,
+     6.2
+    ],
+    [
+     2025,
+     10,
+     6.1
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas alcohólicas. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     117.141
+    ],
+    [
+     2025,
+     11,
+     119.38
+    ],
+    [
+     2025,
+     10,
+     119.386
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas alcohólicas. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -1.9
+    ],
+    [
+     2025,
+     11,
+     0.0
+    ],
+    [
+     2025,
+     10,
+     0.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas alcohólicas. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.4
+    ],
+    [
+     2025,
+     11,
+     0.8
+    ],
+    [
+     2025,
+     10,
+     0.7
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Bebidas alcohólicas. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.4
+    ],
+    [
+     2025,
+     11,
+     2.3
+    ],
+    [
+     2025,
+     10,
+     2.3
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Tabaco. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     126.431
+    ],
+    [
+     2025,
+     11,
+     123.232
+    ],
+    [
+     2025,
+     10,
+     122.821
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Tabaco. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     2.6
+    ],
+    [
+     2025,
+     11,
+     0.3
+    ],
+    [
+     2025,
+     10,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Tabaco. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     7.4
+    ],
+    [
+     2025,
+     11,
+     6.9
+    ],
+    [
+     2025,
+     10,
+     6.7
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Tabaco. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     7.4
+    ],
+    [
+     2025,
+     11,
+     4.7
+    ],
+    [
+     2025,
+     10,
+     4.3
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Vestido. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     114.23
+    ],
+    [
+     2025,
+     11,
+     115.427
+    ],
+    [
+     2025,
+     10,
+     110.83
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Vestido. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -1.0
+    ],
+    [
+     2025,
+     11,
+     4.1
+    ],
+    [
+     2025,
+     10,
+     9.4
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Vestido. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.2
+    ],
+    [
+     2025,
+     11,
+     0.4
+    ],
+    [
+     2025,
+     10,
+     0.7
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Vestido. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.2
+    ],
+    [
+     2025,
+     11,
+     1.3
+    ],
+    [
+     2025,
+     10,
+     -2.8
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Calzado y sus reparaciones. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     112.811
+    ],
+    [
+     2025,
+     11,
+     113.102
+    ],
+    [
+     2025,
+     10,
+     109.451
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Calzado y sus reparaciones. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -0.3
+    ],
+    [
+     2025,
+     11,
+     3.3
+    ],
+    [
+     2025,
+     10,
+     4.6
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Calzado y sus reparaciones. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.1
+    ],
+    [
+     2025,
+     11,
+     0.0
+    ],
+    [
+     2025,
+     10,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Calzado y sus reparaciones. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.1
+    ],
+    [
+     2025,
+     11,
+     0.4
+    ],
+    [
+     2025,
+     10,
+     -2.8
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alquiler de vivienda. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     109.364
+    ],
+    [
+     2025,
+     11,
+     109.172
+    ],
+    [
+     2025,
+     10,
+     108.966
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alquiler de vivienda. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.2
+    ],
+    [
+     2025,
+     11,
+     0.2
+    ],
+    [
+     2025,
+     10,
+     0.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alquiler de vivienda. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     2.5
+    ],
+    [
+     2025,
+     11,
+     2.4
+    ],
+    [
+     2025,
+     10,
+     2.4
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Alquiler de vivienda. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     2.5
+    ],
+    [
+     2025,
+     11,
+     2.3
+    ],
+    [
+     2025,
+     10,
+     2.1
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Conservación y reparación de la vivienda. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     120.245
+    ],
+    [
+     2025,
+     11,
+     120.096
+    ],
+    [
+     2025,
+     10,
+     119.834
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Conservación y reparación de la vivienda. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.1
+    ],
+    [
+     2025,
+     11,
+     0.2
+    ],
+    [
+     2025,
+     10,
+     0.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Conservación y reparación de la vivienda. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     3.0
+    ],
+    [
+     2025,
+     11,
+     3.1
+    ],
+    [
+     2025,
+     10,
+     3.1
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Conservación y reparación de la vivienda. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     3.0
+    ],
+    [
+     2025,
+     11,
+     2.9
+    ],
+    [
+     2025,
+     10,
+     2.7
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Suministro de agua y otros servicios relacionados con la vivienda. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     112.838
+    ],
+    [
+     2025,
+     11,
+     112.673
+    ],
+    [
+     2025,
+     10,
+     112.648
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Suministro de agua y otros servicios relacionados con la vivienda. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.1
+    ],
+    [
+     2025,
+     11,
+     0.0
+    ],
+    [
+     2025,
+     10,
+     0.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Suministro de agua y otros servicios relacionados con la vivienda. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     5.5
+    ],
+    [
+     2025,
+     11,
+     5.5
+    ],
+    [
+     2025,
+     10,
+     5.5
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Suministro de agua y otros servicios relacionados con la vivienda. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     5.5
+    ],
+    [
+     2025,
+     11,
+     5.3
+    ],
+    [
+     2025,
+     10,
+     5.3
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Electricidad, gas y otros combustibles. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     112.775
+    ],
+    [
+     2025,
+     11,
+     111.451
+    ],
+    [
+     2025,
+     10,
+     112.161
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Electricidad, gas y otros combustibles. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     1.2
+    ],
+    [
+     2025,
+     11,
+     -0.6
+    ],
+    [
+     2025,
+     10,
+     2.1
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Electricidad, gas y otros combustibles. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     8.7
+    ],
+    [
+     2025,
+     11,
+     8.7
+    ],
+    [
+     2025,
+     10,
+     13.4
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Electricidad, gas y otros combustibles. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     8.7
+    ],
+    [
+     2025,
+     11,
+     7.5
+    ],
+    [
+     2025,
+     10,
+     8.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Muebles y accesorios, alfombras y otros revestimientos de suelos. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     114.827
+    ],
+    [
+     2025,
+     11,
+     114.971
+    ],
+    [
+     2025,
+     10,
+     114.535
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Muebles y accesorios, alfombras y otros revestimientos de suelos. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -0.1
+    ],
+    [
+     2025,
+     11,
+     0.4
+    ],
+    [
+     2025,
+     10,
+     0.5
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Muebles y accesorios, alfombras y otros revestimientos de suelos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.7
+    ],
+    [
+     2025,
+     11,
+     1.0
+    ],
+    [
+     2025,
+     10,
+     0.9
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Muebles y accesorios, alfombras y otros revestimientos de suelos. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.7
+    ],
+    [
+     2025,
+     11,
+     0.8
+    ],
+    [
+     2025,
+     10,
+     0.4
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Artículos textiles para el hogar. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     106.289
+    ],
+    [
+     2025,
+     11,
+     105.802
+    ],
+    [
+     2025,
+     10,
+     104.468
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Artículos textiles para el hogar. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.5
+    ],
+    [
+     2025,
+     11,
+     1.3
+    ],
+    [
+     2025,
+     10,
+     1.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Artículos textiles para el hogar. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -1.1
+    ],
+    [
+     2025,
+     11,
+     -1.0
+    ],
+    [
+     2025,
+     10,
+     -1.0
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Artículos textiles para el hogar. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     -1.1
+    ],
+    [
+     2025,
+     11,
+     -1.6
+    ],
+    [
+     2025,
+     10,
+     -2.8
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Aparatos domésticos. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     104.05
+    ],
+    [
+     2025,
+     11,
+     104.506
+    ],
+    [
+     2025,
+     10,
+     104.648
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Aparatos domésticos. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -0.4
+    ],
+    [
+     2025,
+     11,
+     -0.1
+    ],
+    [
+     2025,
+     10,
+     0.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Aparatos domésticos. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -1.3
+    ],
+    [
+     2025,
+     11,
+     -1.0
+    ],
+    [
+     2025,
+     10,
+     -0.9
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Aparatos domésticos. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     -1.3
+    ],
+    [
+     2025,
+     11,
+     -0.9
+    ],
+    [
+     2025,
+     10,
+     -0.8
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Cristalería, vajilla y utensilios para el hogar. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     116.679
+    ],
+    [
+     2025,
+     11,
+     116.749
+    ],
+    [
+     2025,
+     10,
+     116.437
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Cristalería, vajilla y utensilios para el hogar. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -0.1
+    ],
+    [
+     2025,
+     11,
+     0.3
+    ],
+    [
+     2025,
+     10,
+     0.1
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Cristalería, vajilla y utensilios para el hogar. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.2
+    ],
+    [
+     2025,
+     11,
+     0.2
+    ],
+    [
+     2025,
+     10,
+     0.2
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Cristalería, vajilla y utensilios para el hogar. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.2
+    ],
+    [
+     2025,
+     11,
+     0.2
+    ],
+    [
+     2025,
+     10,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Herramientas y equipos para el hogar y el jardín. Índice. ",
+   "d": [
+    [
+     2025,
+     12,
+     105.734
+    ],
+    [
+     2025,
+     11,
+     105.696
+    ],
+    [
+     2025,
+     10,
+     105.476
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Herramientas y equipos para el hogar y el jardín. Variación mensual. ",
+   "d": [
+    [
+     2025,
+     12,
+     0.0
+    ],
+    [
+     2025,
+     11,
+     0.2
+    ],
+    [
+     2025,
+     10,
+     0.0
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Herramientas y equipos para el hogar y el jardín. Variación anual. ",
+   "d": [
+    [
+     2025,
+     12,
+     -0.3
+    ],
+    [
+     2025,
+     11,
+     -0.5
+    ],
+    [
+     2025,
+     10,
+     -0.4
+    ]
+   ]
+  },
+  {
+   "nom": "Nacional. Herramientas y equipos para el hogar y el jardín. Variación en lo que va de año. ",
+   "d": [
+    [
+     2025,
+     12,
+     -0.3
+    ],
+    [
+     2025,
+     11,
+     -0.4
+    ],
+    [
+     2025,
+     10,
+     -0.6
+    ]
+   ]
+  }
+ ]
+}
