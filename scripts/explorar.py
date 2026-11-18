@@ -5,6 +5,7 @@ Se ejecuta en GitHub Actions (workflow explorar.yml). Escribe:
   exploracion/muestras/<id>.*   primeros 150 KB de cada respuesta
 """
 import pathlib
+import re
 import time
 import urllib.parse
 
@@ -68,6 +69,140 @@ for k, u in {"sig_wfs": "https://sig.gencat.cat/ows/PLANEJAMENT/wfs?service=WFS&
              "muc_robots": "https://territori.gencat.cat/robots.txt",
              "sig_robots": "https://sig.gencat.cat/robots.txt"}.items():
     CANDIDATAS_E[k] = u
+
+# Población por provincia actual (INE)
+CANDIDATAS_E = {}
+for k in ("TABLAS_OPERACION/ECP", "TABLAS_OPERACION/22", "DATOS_TABLA/2852?nult=1", "DATOS_TABLA/56934?nult=1"):
+    CANDIDATAS_E["ine_" + re.sub(r"\W", "_", k)] = "https://servicios.ine.es/wstempus/js/ES/" + k
+STF = "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/Aduanas/Comercio_exterior/"
+
+def explora_territoriales(filas: list) -> None:
+    import io, zipfile, collections
+    from pypdf import PdfReader
+    for k in ("pdf_mens", "pdf_anual"):
+        f = MUESTRAS / f"{k}.txt"
+        try:
+            r = requests.get(CANDIDATAS_E[k], headers=UA, timeout=120)
+            f.write_text("\n".join(p.extract_text() or "" for p in PdfReader(io.BytesIO(r.content)).pages), encoding="utf-8")
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| {k} pdf | error | {e} | | |")
+    out = []
+    for rango in ("24", "38", "43", "49", "67", "71", "83", "85", "92", "99"):
+        url = STF + f"historicas_anuales/territoriales_anuales/tr24an{rango}.zip"
+        try:
+            z = zipfile.ZipFile(io.BytesIO(requests.get(url, headers=UA, timeout=300).content))
+        except Exception as e:  # noqa: BLE001
+            filas.append(f"| tr24an{rango} | error | {e} | | |"); continue
+        for n in z.namelist():
+            lineas = z.read(n).decode("latin-1").splitlines()
+            cab = lineas[0]
+            cnt = collections.Counter(); val = collections.Counter(); g = []
+            for l in lineas[1:]:
+                try:
+                    v = int(l[-16:-3])
+                except ValueError:
+                    v = -1
+                clave = (l[3:4], l[5:7].strip() and "AD", l[8:10] if l[8:10].strip() else "--", l[-2:] == "17")
+                cnt[clave] += 1; val[clave] += v
+                if (l[8:10] == "17") and len(g) < 40:
+                    g.append(l)
+            muestra = [lineas[i] for i in range(1, len(lineas), max(1, len(lineas) // 40))]
+            gi = collections.Counter(); gv = collections.Counter()
+            for c, v in val.items():
+                if c[2] == "17":
+                    gi[("PR17", c[0])] += v
+                if c[3]:
+                    gv[("DF17", c[0])] += v
+            out.append(f"== {n} lineas={len(lineas)} cab={cab!r}")
+            out.append("ejemplo largo: " + repr(lineas[1]) + f" len={len(lineas[1])}")
+            out += ["muestra:"] + muestra
+            out.append(f"girona PR: {dict(gi)} DF: {dict(gv)}")
+            prov = collections.Counter()
+            for c, v in val.items():
+                prov[(c[0], c[2])] += v
+            out.append("por PR: " + str(sorted(prov.items(), key=lambda x: -x[1])[:25]))
+            out.append("-- con 17 --"); out += g
+    (MUESTRAS / "TERRITORIALES.txt").write_text("\n".join(out), encoding="utf-8")
+
+PAT_ENLACES = re.compile(r'href="([^"]+)"', re.I)
+CLAVES_ENLACE = re.compile(r"export|exterior|comex|cex|provinc|descarga|\.zip|\.xls|\.csv", re.I)
+
+
+def explora_zipsae(filas: list) -> None:
+    out = []
+    for f in sorted(MUESTRAS.glob("ae_*.html")):
+        t = f.read_text("utf-8", "ignore")
+        enl = sorted(set(e for e in PAT_ENLACES.findall(t) if ".zip" in e or "comercio-exterior/" in e))
+        out.append(f"== {f.name}\n" + "\n".join(enl))
+    (MUESTRAS / "ZIPS_AE.txt").write_text("\n".join(out), encoding="utf-8")
+
+def explora_enlaces(filas: list) -> None:
+    """Saca de cada página guardada los enlaces que parecen de comercio exterior."""
+    out = []
+    for f in sorted(MUESTRAS.glob("*")):
+        if f.suffix not in (".html", ".txt", ".json"):
+            continue
+        t = f.read_text("utf-8", "ignore")
+        enl = sorted({e for e in PAT_ENLACES.findall(t) if CLAVES_ENLACE.search(e)})
+        out.append(f"== {f.name}\n" + "\n".join(enl[:200]))
+    (MUESTRAS / "ENLACES.txt").write_text("\n".join(out), encoding="utf-8")
+
+
+def explora_ficheros(filas: list) -> None:
+    """Baja el primer fichero (zip/xlsx/csv) enlazado en cada página de la AEAT y guarda su cabecera."""
+    import io, zipfile
+    for f in sorted(MUESTRAS.glob("aeat_*.html")):
+        t = f.read_text("utf-8", "ignore")
+        enl = [e for e in PAT_ENLACES.findall(t) if re.search(r"\.(zip|xlsx?|csv|txt|gz)$", e, re.I)]
+        (MUESTRAS / f"{f.stem}_FICHEROS.txt").write_text("\n".join(enl), encoding="utf-8")
+        for e in enl[:2]:
+            url = urllib.parse.urljoin("https://sede.agenciatributaria.gob.es/", e)
+            try:
+                r = requests.get(url, headers=UA, timeout=300)
+                filas.append(f"| fich {f.stem} | {r.status_code} | {r.headers.get('content-type','')} | {len(r.content)} | {url} |")
+                nom = MUESTRAS / f"{f.stem}__{pathlib.Path(e).name}.txt"
+                if url.lower().endswith(".zip"):
+                    z = zipfile.ZipFile(io.BytesIO(r.content)); txt = []
+                    for n in z.namelist()[:6]:
+                        with z.open(n) as fz:
+                            txt.append(f"== {n} ({z.getinfo(n).file_size} bytes)")
+                            datos = fz.read(3_000_000).decode("latin-1").splitlines()
+                            txt += datos[:30] + ["--- 17/Girona ---"] + [l for l in datos if "Girona" in l or ";17;" in l or "|17|" in l][:60]
+                    nom.write_text("\n".join(txt), encoding="utf-8")
+                elif url.lower().endswith((".xlsx", ".xls")):
+                    (MUESTRAS / f"{f.stem}__{pathlib.Path(e).name}").write_bytes(r.content[:8_000_000])
+                else:
+                    nom.write_text(r.content[:200_000].decode("latin-1"), encoding="utf-8")
+            except Exception as ex:  # noqa: BLE001
+                filas.append(f"| fich {f.stem} | error | {str(ex)[:80]} | | {url} |")
+
+def explora_idescat(filas: list) -> None:
+    """Recorre el catálogo de tablas de Idescat buscando comercio exterior."""
+    import json
+    try:
+        cat = requests.get(f"{IDC}?lang=ca", headers=UA, timeout=60).json()
+    except Exception as e:  # noqa: BLE001
+        filas.append(f"| idescat_walk | error | {e} | | |"); return
+    txt = json.dumps(cat, ensure_ascii=False)
+    ids = sorted(set(re.findall(r'taules/v2/([a-z0-9]+)\?', txt)))
+    lines = [f"stats: {ids}"]
+    for st in ids:
+        try:
+            r = requests.get(f"{IDC}/{st}?lang=ca", headers=UA, timeout=60)
+            t = r.text
+        except Exception:  # noqa: BLE001
+            continue
+        if re.search(r"xport|xterior|comer", t, re.I):
+            lines.append(f"=== {st}\n{t[:20000]}")
+            for nodo in sorted(set(re.findall(rf'taules/v2/{st}/(\d+)\?', t)))[:20]:
+                try:
+                    t2 = requests.get(f"{IDC}/{st}/{nodo}?lang=ca", headers=UA, timeout=60).text
+                    lines.append(f"--- {st}/{nodo}\n{t2[:6000]}")
+                except Exception:  # noqa: BLE001
+                    pass
+        time.sleep(0.3)
+    (MUESTRAS / "IDESCAT_WALK.txt").write_text("\n".join(lines), encoding="utf-8")
+
 
 def explora_parque(filas: list) -> None:
     import re

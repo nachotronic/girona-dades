@@ -1,0 +1,3402 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="no-js ie9" lang="es"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="es">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>DataComex - Descarga de Datos</title>
+
+    <!-- Meta específico para Móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <!-- Tipografía -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,600,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link href="/bundles/layout_css?v=kSwU5asH1nqcHz6JcN6dsKk1fCX4e9libi7hq8cFlYk1" rel="stylesheet"/>
+
+
+    <script src="/bundles/modernizr-custom?v=eT-jNgcPZ6g7Tp6mP6bs0haeDQn_AKWXCNaCB_Pu3no1"></script>
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" />
+</head>
+
+<body>
+    <div id="loaderespera" class="loader">
+    <div class="bars">
+        <div class="bar"></div>
+        <div class="bar" data-char="C"></div>
+        <div class="bar" data-char="A"></div>
+        <div class="bar" data-char="R"></div>
+        <div class="bar" data-char="G"></div>
+        <div class="bar" data-char="A"></div>
+        <div class="bar" data-char="N"></div>
+        <div class="bar" data-char="D"></div>
+        <div class="bar" data-char="O"></div>
+        <div class="bar"></div>
+    </div>
+    <h1 class="tagline">
+        <label>Data<span>Comex</span></label>
+        <span class="tt-aplicacion">Estadísticas de comercio exterior español</span>
+    </h1>
+    <div class="progress-bar">
+        <div class="progress">
+            <p>Por favor, espere...</p>
+        </div>
+    </div>
+</div>
+    <style>
+        body > div.banner {
+            background: #fbd62d;
+            padding: 5px 10px;
+            display: table;
+            width: 100%;
+        }
+
+            body > div.banner p,
+            body > div.banner div {
+                display: inline;
+                color: #000;
+            }
+
+            body > div.banner div {
+                position: relative;
+            }
+
+            body > div.banner a {
+                color: #000;
+            }
+
+            body > div.banner div button {
+                background: transparent;
+                border: 0 none;
+                padding: 4px;
+                margin: 0;
+                width: auto;
+                text-align: center;
+                display: inline-flex;
+            }
+
+                body > div.banner div button i {
+                    display: block;
+                    text-align: center;
+                    color: #000;
+                    padding: 0;
+                    position: relative;
+                    top: 3px;
+                    margin-left: 5px;
+                }
+
+                body > div.banner div button + ul {
+                    display: none;
+                }
+
+                    body > div.banner div button + ul > li:not(:first-child) {
+                        list-style: disc;
+                        padding: 0;
+                    }
+
+                    body > div.banner div button + ul > li:first-child {
+                        margin-left: -18px;
+                        font-size: 1.2rem;
+                    }
+
+                body > div.banner div button:hover + ul {
+                    display: block;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #ecece2;
+                    padding: 4px 8px;
+                    border: 1px solid rgba(0,0,0,0.2);
+                    z-index: 999;
+                    width: 360px;
+                    padding-left: 25px;
+                    box-shadow: 0 0 100px 0 #EDE9E5;
+                }
+
+        body > div.container {
+            position: relative;
+        }
+
+        nav#menu-principal .menu-collapser {
+            top: -90px;
+        }
+    </style>
+    <!--<div class="banner">
+        <p>Esta web presenta la <strong>nueva versión de DataComex.</strong> Puede seguir utilizando la versión anterior de DataComex por tiempo limitado en este <strong><a target="_blank" href="https://datacomex_v6.comercio.es" style="text-decoration:underline">enlace</a></strong>.</p>
+        <div>
+            <button>
+                <span>Novedades: </span> <i class="fas fa-eye"></i>
+            </button>
+            <ul>
+                <li><strong>Novedades:</strong></li>
+                <li>Informe dinámico: interfaz actualizada y más integrada.</li>
+                <li>Nueva API: permite la extracción de datos desde aplicaciones.</li>
+                <li>Datos de Empresas: permite filtrado por tramos de exportación e importación.</li>-->
+    
+    <!--</ul>
+        </div>
+    </div>-->
+
+    <div class="container">
+        <!-- Cabecera:Start -->
+        <div class="header-container">
+            <header role="banner">
+                <div class="nombre-app">
+                    <div class="logo">
+                        <a href="https://portal.mineco.gob.es/es-es/Paginas/index.aspx"
+                           title="Ir a Gobierno de España. Ministerio de Economía, Comercio y Empresa">
+                            <img src="/img/logo-ministerio.png"
+                                 alt="Logo de Gobierno de España. Ministerio de Economía, Comercio y Empresa">
+                        </a>
+                    </div>
+                    <p class="tagline">
+                        <a href="/">Data<span>Comex</span></a>
+                        <span class="tt-aplicacion">Estadísticas de comercio exterior de bienes de España y la UE</span>
+                        
+                    </p>
+                </div>
+            </header>
+        </div>
+
+        <!-- Cabecera:End -->
+        <!-- Menú de Navegación:Start -->
+        <nav id="menu-principal" role="navigation" aria-label="Menú principal" class="emty">
+            <ul class="slimmenu">
+                <li class="image-header-menu">
+                    <div>
+                        <a href="/">Data<span>Comex</span></a>
+                        <span class="tt-aplicacion">Estadísticas de comercio exterior español</span>
+                    </div>
+                    <img src="/img/analytics.png" alt="imagen decorativa de DataComex" />
+                    <span>Menú principal</span>
+                </li>
+                <li class="accesible-button">
+                    <button type="button" class="fas fa-font less" onclick="decreaseFontSize()" aria-label="Disminuir el tamaño de la fuente de la página">
+                        <em>
+                            Disminuir tamaño de fuente
+                        </em>
+                    </button>
+                </li>
+                <li class="accesible-button">
+                    <button type="button" class="fas fa-font plus" onclick="increaseFontSize()" aria-label="Aumentar el tamaño de la fuente de la página">
+                        <em>
+                            Aumentar tamaño de fuente
+                        </em>
+                    </button>
+                </li>
+                <li>
+                    <a href="/Home/Index" title="Ir al Inicio (Atajo de teclado: 1)." accesskey="1">
+                        <span class="fas fa-home"></span> Inicio
+                    </a>
+                </li>
+                    <li>
+        <a href="/User?ret=" title="Ir a Iniciar sesión (Atajo de teclado: 2)." accesskey="2">
+            <span class="fas fa-sign-in-alt"></span> Iniciar sesión
+        </a>
+    </li>
+
+
+            </ul>
+        </nav>
+
+        <!-- Menú de Navegación:End -->
+        
+
+
+<!-- Contenido:Start -->
+<div class="main-container" style="margin-top: -2px; display: block;">
+    <main id="contenido" role="main">
+        <fieldset>
+            <legend>Selección de datos</legend>
+
+            <div style="color: rgba(20,59,106,1);border-style: dotted;border-color: #ccc;border-width: thin;background-color: rgba(235,241,247,1);position: relative;padding-left: 40px;font-family: 'Open Sans',sans-serif; min-height:45px; padding-top:9px;">
+                <span class="fas fa-question" style="color: rgba(76,165,224,1); padding: 5px 5px 0 10px; font-size: 2rem; position: absolute; top: 5px; left: 0;"></span>
+                <span style="font-weight: bold;">Para hacer una consulta de datos debe seleccionar alguno de los filtros de Flujo, Periodo, País o Taric. Después, hacer clic en el botón Buscar. Se mostrarán los resultados y tendrá la opción de descargarlos en un fichero con formato CSV.</span>
+            </div>
+
+
+
+            <form action="/Data/Index" method="POST" id="formularioBusqueda">
+                <div class="row">
+                    <div class="col-12">
+                        <label style="margin-top: 15px;">Flujo</label>
+
+                        <div class="checkbox-list">
+                            <div class="btn-group">
+                                <input type="checkbox"
+                                       name="chk_import"
+                                       id="chk_import" />
+                                <label for="chk_import">Importación</label>
+                            </div>
+                            <div class="btn-group">
+                                <input type="checkbox"
+                                       name="chk_export"
+                                       id="chk_export" />
+                                <label for="chk_export">Exportación</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-2" style="padding-bottom: 38px;">
+                                <label>Periodo</label>
+                            </div>
+                            <div class="col-10" style="padding-bottom: 38px;">
+                                <button type="button" id="seleccionarPeriodos" class="btn-xs btn-white toLeftSide" style="margin-top: -4px; padding-left: 2px; padding-right: 2px; font-weight: bold;"><span id="textoSeleccionarPeriodos">Seleccionar todos</span></button>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:0">
+                            <div class="col-12">
+                                <ul id="treeview-periodos" class="treeview">
+                                    
+
+
+<li><input type="hidden" name="twPlaceholder" value="32" /></li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2026]"
+               class="no-select periodosArbol"
+               data-id="tw2026"
+               id="tw_period2026" />
+        <label rel="label"
+               for="tw_period2026"
+               class="no-select"
+               data-id="2026">
+            Año 2026 (enero-septiembre, provisional)
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202601]"
+                               data-id="20261"
+                               id="tw20261" />
+                        <label for="tw20261"
+                               class="no-select"
+                               data-id="20261">
+                            Enero 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202602]"
+                               data-id="20262"
+                               id="tw20262" />
+                        <label for="tw20262"
+                               class="no-select"
+                               data-id="20262">
+                            Febrero 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202603]"
+                               data-id="20263"
+                               id="tw20263" />
+                        <label for="tw20263"
+                               class="no-select"
+                               data-id="20263">
+                            Marzo 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202604]"
+                               data-id="20264"
+                               id="tw20264" />
+                        <label for="tw20264"
+                               class="no-select"
+                               data-id="20264">
+                            Abril 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202605]"
+                               data-id="20265"
+                               id="tw20265" />
+                        <label for="tw20265"
+                               class="no-select"
+                               data-id="20265">
+                            Mayo 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202606]"
+                               data-id="20266"
+                               id="tw20266" />
+                        <label for="tw20266"
+                               class="no-select"
+                               data-id="20266">
+                            Junio 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202607]"
+                               data-id="20267"
+                               id="tw20267" />
+                        <label for="tw20267"
+                               class="no-select"
+                               data-id="20267">
+                            Julio 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202608]"
+                               data-id="20268"
+                               id="tw20268" />
+                        <label for="tw20268"
+                               class="no-select"
+                               data-id="20268">
+                            Agosto 2026
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202609]"
+                               data-id="20269"
+                               id="tw20269" />
+                        <label for="tw20269"
+                               class="no-select"
+                               data-id="20269">
+                            Septiembre 2026
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2025]"
+               class="no-select periodosArbol"
+               data-id="tw2025"
+               id="tw_period2025" />
+        <label rel="label"
+               for="tw_period2025"
+               class="no-select"
+               data-id="2025">
+            Año 2025 (provisional)
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202501]"
+                               data-id="20251"
+                               id="tw20251" />
+                        <label for="tw20251"
+                               class="no-select"
+                               data-id="20251">
+                            Enero 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202502]"
+                               data-id="20252"
+                               id="tw20252" />
+                        <label for="tw20252"
+                               class="no-select"
+                               data-id="20252">
+                            Febrero 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202503]"
+                               data-id="20253"
+                               id="tw20253" />
+                        <label for="tw20253"
+                               class="no-select"
+                               data-id="20253">
+                            Marzo 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202504]"
+                               data-id="20254"
+                               id="tw20254" />
+                        <label for="tw20254"
+                               class="no-select"
+                               data-id="20254">
+                            Abril 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202505]"
+                               data-id="20255"
+                               id="tw20255" />
+                        <label for="tw20255"
+                               class="no-select"
+                               data-id="20255">
+                            Mayo 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202506]"
+                               data-id="20256"
+                               id="tw20256" />
+                        <label for="tw20256"
+                               class="no-select"
+                               data-id="20256">
+                            Junio 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202507]"
+                               data-id="20257"
+                               id="tw20257" />
+                        <label for="tw20257"
+                               class="no-select"
+                               data-id="20257">
+                            Julio 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202508]"
+                               data-id="20258"
+                               id="tw20258" />
+                        <label for="tw20258"
+                               class="no-select"
+                               data-id="20258">
+                            Agosto 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202509]"
+                               data-id="20259"
+                               id="tw20259" />
+                        <label for="tw20259"
+                               class="no-select"
+                               data-id="20259">
+                            Septiembre 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202510]"
+                               data-id="202510"
+                               id="tw202510" />
+                        <label for="tw202510"
+                               class="no-select"
+                               data-id="202510">
+                            Octubre 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202511]"
+                               data-id="202511"
+                               id="tw202511" />
+                        <label for="tw202511"
+                               class="no-select"
+                               data-id="202511">
+                            Noviembre 2025
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202512]"
+                               data-id="202512"
+                               id="tw202512" />
+                        <label for="tw202512"
+                               class="no-select"
+                               data-id="202512">
+                            Diciembre 2025
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2024]"
+               class="no-select periodosArbol"
+               data-id="tw2024"
+               id="tw_period2024" />
+        <label rel="label"
+               for="tw_period2024"
+               class="no-select"
+               data-id="2024">
+            Año 2024 (provisional)
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202401]"
+                               data-id="20241"
+                               id="tw20241" />
+                        <label for="tw20241"
+                               class="no-select"
+                               data-id="20241">
+                            Enero 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202402]"
+                               data-id="20242"
+                               id="tw20242" />
+                        <label for="tw20242"
+                               class="no-select"
+                               data-id="20242">
+                            Febrero 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202403]"
+                               data-id="20243"
+                               id="tw20243" />
+                        <label for="tw20243"
+                               class="no-select"
+                               data-id="20243">
+                            Marzo 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202404]"
+                               data-id="20244"
+                               id="tw20244" />
+                        <label for="tw20244"
+                               class="no-select"
+                               data-id="20244">
+                            Abril 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202405]"
+                               data-id="20245"
+                               id="tw20245" />
+                        <label for="tw20245"
+                               class="no-select"
+                               data-id="20245">
+                            Mayo 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202406]"
+                               data-id="20246"
+                               id="tw20246" />
+                        <label for="tw20246"
+                               class="no-select"
+                               data-id="20246">
+                            Junio 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202407]"
+                               data-id="20247"
+                               id="tw20247" />
+                        <label for="tw20247"
+                               class="no-select"
+                               data-id="20247">
+                            Julio 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202408]"
+                               data-id="20248"
+                               id="tw20248" />
+                        <label for="tw20248"
+                               class="no-select"
+                               data-id="20248">
+                            Agosto 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202409]"
+                               data-id="20249"
+                               id="tw20249" />
+                        <label for="tw20249"
+                               class="no-select"
+                               data-id="20249">
+                            Septiembre 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202410]"
+                               data-id="202410"
+                               id="tw202410" />
+                        <label for="tw202410"
+                               class="no-select"
+                               data-id="202410">
+                            Octubre 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202411]"
+                               data-id="202411"
+                               id="tw202411" />
+                        <label for="tw202411"
+                               class="no-select"
+                               data-id="202411">
+                            Noviembre 2024
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202412]"
+                               data-id="202412"
+                               id="tw202412" />
+                        <label for="tw202412"
+                               class="no-select"
+                               data-id="202412">
+                            Diciembre 2024
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2023]"
+               class="no-select periodosArbol"
+               data-id="tw2023"
+               id="tw_period2023" />
+        <label rel="label"
+               for="tw_period2023"
+               class="no-select"
+               data-id="2023">
+            Año 2023
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202301]"
+                               data-id="20231"
+                               id="tw20231" />
+                        <label for="tw20231"
+                               class="no-select"
+                               data-id="20231">
+                            Enero 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202302]"
+                               data-id="20232"
+                               id="tw20232" />
+                        <label for="tw20232"
+                               class="no-select"
+                               data-id="20232">
+                            Febrero 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202303]"
+                               data-id="20233"
+                               id="tw20233" />
+                        <label for="tw20233"
+                               class="no-select"
+                               data-id="20233">
+                            Marzo 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202304]"
+                               data-id="20234"
+                               id="tw20234" />
+                        <label for="tw20234"
+                               class="no-select"
+                               data-id="20234">
+                            Abril 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202305]"
+                               data-id="20235"
+                               id="tw20235" />
+                        <label for="tw20235"
+                               class="no-select"
+                               data-id="20235">
+                            Mayo 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202306]"
+                               data-id="20236"
+                               id="tw20236" />
+                        <label for="tw20236"
+                               class="no-select"
+                               data-id="20236">
+                            Junio 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202307]"
+                               data-id="20237"
+                               id="tw20237" />
+                        <label for="tw20237"
+                               class="no-select"
+                               data-id="20237">
+                            Julio 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202308]"
+                               data-id="20238"
+                               id="tw20238" />
+                        <label for="tw20238"
+                               class="no-select"
+                               data-id="20238">
+                            Agosto 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202309]"
+                               data-id="20239"
+                               id="tw20239" />
+                        <label for="tw20239"
+                               class="no-select"
+                               data-id="20239">
+                            Septiembre 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202310]"
+                               data-id="202310"
+                               id="tw202310" />
+                        <label for="tw202310"
+                               class="no-select"
+                               data-id="202310">
+                            Octubre 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202311]"
+                               data-id="202311"
+                               id="tw202311" />
+                        <label for="tw202311"
+                               class="no-select"
+                               data-id="202311">
+                            Noviembre 2023
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202312]"
+                               data-id="202312"
+                               id="tw202312" />
+                        <label for="tw202312"
+                               class="no-select"
+                               data-id="202312">
+                            Diciembre 2023
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2022]"
+               class="no-select periodosArbol"
+               data-id="tw2022"
+               id="tw_period2022" />
+        <label rel="label"
+               for="tw_period2022"
+               class="no-select"
+               data-id="2022">
+            Año 2022
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202201]"
+                               data-id="20221"
+                               id="tw20221" />
+                        <label for="tw20221"
+                               class="no-select"
+                               data-id="20221">
+                            Enero 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202202]"
+                               data-id="20222"
+                               id="tw20222" />
+                        <label for="tw20222"
+                               class="no-select"
+                               data-id="20222">
+                            Febrero 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202203]"
+                               data-id="20223"
+                               id="tw20223" />
+                        <label for="tw20223"
+                               class="no-select"
+                               data-id="20223">
+                            Marzo 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202204]"
+                               data-id="20224"
+                               id="tw20224" />
+                        <label for="tw20224"
+                               class="no-select"
+                               data-id="20224">
+                            Abril 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202205]"
+                               data-id="20225"
+                               id="tw20225" />
+                        <label for="tw20225"
+                               class="no-select"
+                               data-id="20225">
+                            Mayo 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202206]"
+                               data-id="20226"
+                               id="tw20226" />
+                        <label for="tw20226"
+                               class="no-select"
+                               data-id="20226">
+                            Junio 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202207]"
+                               data-id="20227"
+                               id="tw20227" />
+                        <label for="tw20227"
+                               class="no-select"
+                               data-id="20227">
+                            Julio 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202208]"
+                               data-id="20228"
+                               id="tw20228" />
+                        <label for="tw20228"
+                               class="no-select"
+                               data-id="20228">
+                            Agosto 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202209]"
+                               data-id="20229"
+                               id="tw20229" />
+                        <label for="tw20229"
+                               class="no-select"
+                               data-id="20229">
+                            Septiembre 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202210]"
+                               data-id="202210"
+                               id="tw202210" />
+                        <label for="tw202210"
+                               class="no-select"
+                               data-id="202210">
+                            Octubre 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202211]"
+                               data-id="202211"
+                               id="tw202211" />
+                        <label for="tw202211"
+                               class="no-select"
+                               data-id="202211">
+                            Noviembre 2022
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202212]"
+                               data-id="202212"
+                               id="tw202212" />
+                        <label for="tw202212"
+                               class="no-select"
+                               data-id="202212">
+                            Diciembre 2022
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2021]"
+               class="no-select periodosArbol"
+               data-id="tw2021"
+               id="tw_period2021" />
+        <label rel="label"
+               for="tw_period2021"
+               class="no-select"
+               data-id="2021">
+            Año 2021
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202101]"
+                               data-id="20211"
+                               id="tw20211" />
+                        <label for="tw20211"
+                               class="no-select"
+                               data-id="20211">
+                            Enero 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202102]"
+                               data-id="20212"
+                               id="tw20212" />
+                        <label for="tw20212"
+                               class="no-select"
+                               data-id="20212">
+                            Febrero 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202103]"
+                               data-id="20213"
+                               id="tw20213" />
+                        <label for="tw20213"
+                               class="no-select"
+                               data-id="20213">
+                            Marzo 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202104]"
+                               data-id="20214"
+                               id="tw20214" />
+                        <label for="tw20214"
+                               class="no-select"
+                               data-id="20214">
+                            Abril 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202105]"
+                               data-id="20215"
+                               id="tw20215" />
+                        <label for="tw20215"
+                               class="no-select"
+                               data-id="20215">
+                            Mayo 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202106]"
+                               data-id="20216"
+                               id="tw20216" />
+                        <label for="tw20216"
+                               class="no-select"
+                               data-id="20216">
+                            Junio 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202107]"
+                               data-id="20217"
+                               id="tw20217" />
+                        <label for="tw20217"
+                               class="no-select"
+                               data-id="20217">
+                            Julio 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202108]"
+                               data-id="20218"
+                               id="tw20218" />
+                        <label for="tw20218"
+                               class="no-select"
+                               data-id="20218">
+                            Agosto 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202109]"
+                               data-id="20219"
+                               id="tw20219" />
+                        <label for="tw20219"
+                               class="no-select"
+                               data-id="20219">
+                            Septiembre 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202110]"
+                               data-id="202110"
+                               id="tw202110" />
+                        <label for="tw202110"
+                               class="no-select"
+                               data-id="202110">
+                            Octubre 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202111]"
+                               data-id="202111"
+                               id="tw202111" />
+                        <label for="tw202111"
+                               class="no-select"
+                               data-id="202111">
+                            Noviembre 2021
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202112]"
+                               data-id="202112"
+                               id="tw202112" />
+                        <label for="tw202112"
+                               class="no-select"
+                               data-id="202112">
+                            Diciembre 2021
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2020]"
+               class="no-select periodosArbol"
+               data-id="tw2020"
+               id="tw_period2020" />
+        <label rel="label"
+               for="tw_period2020"
+               class="no-select"
+               data-id="2020">
+            Año 2020
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202001]"
+                               data-id="20201"
+                               id="tw20201" />
+                        <label for="tw20201"
+                               class="no-select"
+                               data-id="20201">
+                            Enero 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202002]"
+                               data-id="20202"
+                               id="tw20202" />
+                        <label for="tw20202"
+                               class="no-select"
+                               data-id="20202">
+                            Febrero 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202003]"
+                               data-id="20203"
+                               id="tw20203" />
+                        <label for="tw20203"
+                               class="no-select"
+                               data-id="20203">
+                            Marzo 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202004]"
+                               data-id="20204"
+                               id="tw20204" />
+                        <label for="tw20204"
+                               class="no-select"
+                               data-id="20204">
+                            Abril 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202005]"
+                               data-id="20205"
+                               id="tw20205" />
+                        <label for="tw20205"
+                               class="no-select"
+                               data-id="20205">
+                            Mayo 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202006]"
+                               data-id="20206"
+                               id="tw20206" />
+                        <label for="tw20206"
+                               class="no-select"
+                               data-id="20206">
+                            Junio 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202007]"
+                               data-id="20207"
+                               id="tw20207" />
+                        <label for="tw20207"
+                               class="no-select"
+                               data-id="20207">
+                            Julio 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202008]"
+                               data-id="20208"
+                               id="tw20208" />
+                        <label for="tw20208"
+                               class="no-select"
+                               data-id="20208">
+                            Agosto 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202009]"
+                               data-id="20209"
+                               id="tw20209" />
+                        <label for="tw20209"
+                               class="no-select"
+                               data-id="20209">
+                            Septiembre 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202010]"
+                               data-id="202010"
+                               id="tw202010" />
+                        <label for="tw202010"
+                               class="no-select"
+                               data-id="202010">
+                            Octubre 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202011]"
+                               data-id="202011"
+                               id="tw202011" />
+                        <label for="tw202011"
+                               class="no-select"
+                               data-id="202011">
+                            Noviembre 2020
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[202012]"
+                               data-id="202012"
+                               id="tw202012" />
+                        <label for="tw202012"
+                               class="no-select"
+                               data-id="202012">
+                            Diciembre 2020
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2019]"
+               class="no-select periodosArbol"
+               data-id="tw2019"
+               id="tw_period2019" />
+        <label rel="label"
+               for="tw_period2019"
+               class="no-select"
+               data-id="2019">
+            Año 2019
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201901]"
+                               data-id="20191"
+                               id="tw20191" />
+                        <label for="tw20191"
+                               class="no-select"
+                               data-id="20191">
+                            Enero 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201902]"
+                               data-id="20192"
+                               id="tw20192" />
+                        <label for="tw20192"
+                               class="no-select"
+                               data-id="20192">
+                            Febrero 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201903]"
+                               data-id="20193"
+                               id="tw20193" />
+                        <label for="tw20193"
+                               class="no-select"
+                               data-id="20193">
+                            Marzo 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201904]"
+                               data-id="20194"
+                               id="tw20194" />
+                        <label for="tw20194"
+                               class="no-select"
+                               data-id="20194">
+                            Abril 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201905]"
+                               data-id="20195"
+                               id="tw20195" />
+                        <label for="tw20195"
+                               class="no-select"
+                               data-id="20195">
+                            Mayo 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201906]"
+                               data-id="20196"
+                               id="tw20196" />
+                        <label for="tw20196"
+                               class="no-select"
+                               data-id="20196">
+                            Junio 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201907]"
+                               data-id="20197"
+                               id="tw20197" />
+                        <label for="tw20197"
+                               class="no-select"
+                               data-id="20197">
+                            Julio 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201908]"
+                               data-id="20198"
+                               id="tw20198" />
+                        <label for="tw20198"
+                               class="no-select"
+                               data-id="20198">
+                            Agosto 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201909]"
+                               data-id="20199"
+                               id="tw20199" />
+                        <label for="tw20199"
+                               class="no-select"
+                               data-id="20199">
+                            Septiembre 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201910]"
+                               data-id="201910"
+                               id="tw201910" />
+                        <label for="tw201910"
+                               class="no-select"
+                               data-id="201910">
+                            Octubre 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201911]"
+                               data-id="201911"
+                               id="tw201911" />
+                        <label for="tw201911"
+                               class="no-select"
+                               data-id="201911">
+                            Noviembre 2019
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201912]"
+                               data-id="201912"
+                               id="tw201912" />
+                        <label for="tw201912"
+                               class="no-select"
+                               data-id="201912">
+                            Diciembre 2019
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2018]"
+               class="no-select periodosArbol"
+               data-id="tw2018"
+               id="tw_period2018" />
+        <label rel="label"
+               for="tw_period2018"
+               class="no-select"
+               data-id="2018">
+            Año 2018
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201801]"
+                               data-id="20181"
+                               id="tw20181" />
+                        <label for="tw20181"
+                               class="no-select"
+                               data-id="20181">
+                            Enero 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201802]"
+                               data-id="20182"
+                               id="tw20182" />
+                        <label for="tw20182"
+                               class="no-select"
+                               data-id="20182">
+                            Febrero 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201803]"
+                               data-id="20183"
+                               id="tw20183" />
+                        <label for="tw20183"
+                               class="no-select"
+                               data-id="20183">
+                            Marzo 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201804]"
+                               data-id="20184"
+                               id="tw20184" />
+                        <label for="tw20184"
+                               class="no-select"
+                               data-id="20184">
+                            Abril 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201805]"
+                               data-id="20185"
+                               id="tw20185" />
+                        <label for="tw20185"
+                               class="no-select"
+                               data-id="20185">
+                            Mayo 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201806]"
+                               data-id="20186"
+                               id="tw20186" />
+                        <label for="tw20186"
+                               class="no-select"
+                               data-id="20186">
+                            Junio 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201807]"
+                               data-id="20187"
+                               id="tw20187" />
+                        <label for="tw20187"
+                               class="no-select"
+                               data-id="20187">
+                            Julio 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201808]"
+                               data-id="20188"
+                               id="tw20188" />
+                        <label for="tw20188"
+                               class="no-select"
+                               data-id="20188">
+                            Agosto 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201809]"
+                               data-id="20189"
+                               id="tw20189" />
+                        <label for="tw20189"
+                               class="no-select"
+                               data-id="20189">
+                            Septiembre 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201810]"
+                               data-id="201810"
+                               id="tw201810" />
+                        <label for="tw201810"
+                               class="no-select"
+                               data-id="201810">
+                            Octubre 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201811]"
+                               data-id="201811"
+                               id="tw201811" />
+                        <label for="tw201811"
+                               class="no-select"
+                               data-id="201811">
+                            Noviembre 2018
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201812]"
+                               data-id="201812"
+                               id="tw201812" />
+                        <label for="tw201812"
+                               class="no-select"
+                               data-id="201812">
+                            Diciembre 2018
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2017]"
+               class="no-select periodosArbol"
+               data-id="tw2017"
+               id="tw_period2017" />
+        <label rel="label"
+               for="tw_period2017"
+               class="no-select"
+               data-id="2017">
+            Año 2017
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201701]"
+                               data-id="20171"
+                               id="tw20171" />
+                        <label for="tw20171"
+                               class="no-select"
+                               data-id="20171">
+                            Enero 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201702]"
+                               data-id="20172"
+                               id="tw20172" />
+                        <label for="tw20172"
+                               class="no-select"
+                               data-id="20172">
+                            Febrero 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201703]"
+                               data-id="20173"
+                               id="tw20173" />
+                        <label for="tw20173"
+                               class="no-select"
+                               data-id="20173">
+                            Marzo 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201704]"
+                               data-id="20174"
+                               id="tw20174" />
+                        <label for="tw20174"
+                               class="no-select"
+                               data-id="20174">
+                            Abril 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201705]"
+                               data-id="20175"
+                               id="tw20175" />
+                        <label for="tw20175"
+                               class="no-select"
+                               data-id="20175">
+                            Mayo 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201706]"
+                               data-id="20176"
+                               id="tw20176" />
+                        <label for="tw20176"
+                               class="no-select"
+                               data-id="20176">
+                            Junio 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201707]"
+                               data-id="20177"
+                               id="tw20177" />
+                        <label for="tw20177"
+                               class="no-select"
+                               data-id="20177">
+                            Julio 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201708]"
+                               data-id="20178"
+                               id="tw20178" />
+                        <label for="tw20178"
+                               class="no-select"
+                               data-id="20178">
+                            Agosto 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201709]"
+                               data-id="20179"
+                               id="tw20179" />
+                        <label for="tw20179"
+                               class="no-select"
+                               data-id="20179">
+                            Septiembre 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201710]"
+                               data-id="201710"
+                               id="tw201710" />
+                        <label for="tw201710"
+                               class="no-select"
+                               data-id="201710">
+                            Octubre 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201711]"
+                               data-id="201711"
+                               id="tw201711" />
+                        <label for="tw201711"
+                               class="no-select"
+                               data-id="201711">
+                            Noviembre 2017
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201712]"
+                               data-id="201712"
+                               id="tw201712" />
+                        <label for="tw201712"
+                               class="no-select"
+                               data-id="201712">
+                            Diciembre 2017
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2016]"
+               class="no-select periodosArbol"
+               data-id="tw2016"
+               id="tw_period2016" />
+        <label rel="label"
+               for="tw_period2016"
+               class="no-select"
+               data-id="2016">
+            Año 2016
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201601]"
+                               data-id="20161"
+                               id="tw20161" />
+                        <label for="tw20161"
+                               class="no-select"
+                               data-id="20161">
+                            Enero 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201602]"
+                               data-id="20162"
+                               id="tw20162" />
+                        <label for="tw20162"
+                               class="no-select"
+                               data-id="20162">
+                            Febrero 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201603]"
+                               data-id="20163"
+                               id="tw20163" />
+                        <label for="tw20163"
+                               class="no-select"
+                               data-id="20163">
+                            Marzo 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201604]"
+                               data-id="20164"
+                               id="tw20164" />
+                        <label for="tw20164"
+                               class="no-select"
+                               data-id="20164">
+                            Abril 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201605]"
+                               data-id="20165"
+                               id="tw20165" />
+                        <label for="tw20165"
+                               class="no-select"
+                               data-id="20165">
+                            Mayo 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201606]"
+                               data-id="20166"
+                               id="tw20166" />
+                        <label for="tw20166"
+                               class="no-select"
+                               data-id="20166">
+                            Junio 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201607]"
+                               data-id="20167"
+                               id="tw20167" />
+                        <label for="tw20167"
+                               class="no-select"
+                               data-id="20167">
+                            Julio 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201608]"
+                               data-id="20168"
+                               id="tw20168" />
+                        <label for="tw20168"
+                               class="no-select"
+                               data-id="20168">
+                            Agosto 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201609]"
+                               data-id="20169"
+                               id="tw20169" />
+                        <label for="tw20169"
+                               class="no-select"
+                               data-id="20169">
+                            Septiembre 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201610]"
+                               data-id="201610"
+                               id="tw201610" />
+                        <label for="tw201610"
+                               class="no-select"
+                               data-id="201610">
+                            Octubre 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201611]"
+                               data-id="201611"
+                               id="tw201611" />
+                        <label for="tw201611"
+                               class="no-select"
+                               data-id="201611">
+                            Noviembre 2016
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201612]"
+                               data-id="201612"
+                               id="tw201612" />
+                        <label for="tw201612"
+                               class="no-select"
+                               data-id="201612">
+                            Diciembre 2016
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2015]"
+               class="no-select periodosArbol"
+               data-id="tw2015"
+               id="tw_period2015" />
+        <label rel="label"
+               for="tw_period2015"
+               class="no-select"
+               data-id="2015">
+            Año 2015
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201501]"
+                               data-id="20151"
+                               id="tw20151" />
+                        <label for="tw20151"
+                               class="no-select"
+                               data-id="20151">
+                            Enero 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201502]"
+                               data-id="20152"
+                               id="tw20152" />
+                        <label for="tw20152"
+                               class="no-select"
+                               data-id="20152">
+                            Febrero 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201503]"
+                               data-id="20153"
+                               id="tw20153" />
+                        <label for="tw20153"
+                               class="no-select"
+                               data-id="20153">
+                            Marzo 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201504]"
+                               data-id="20154"
+                               id="tw20154" />
+                        <label for="tw20154"
+                               class="no-select"
+                               data-id="20154">
+                            Abril 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201505]"
+                               data-id="20155"
+                               id="tw20155" />
+                        <label for="tw20155"
+                               class="no-select"
+                               data-id="20155">
+                            Mayo 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201506]"
+                               data-id="20156"
+                               id="tw20156" />
+                        <label for="tw20156"
+                               class="no-select"
+                               data-id="20156">
+                            Junio 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201507]"
+                               data-id="20157"
+                               id="tw20157" />
+                        <label for="tw20157"
+                               class="no-select"
+                               data-id="20157">
+                            Julio 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201508]"
+                               data-id="20158"
+                               id="tw20158" />
+                        <label for="tw20158"
+                               class="no-select"
+                               data-id="20158">
+                            Agosto 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201509]"
+                               data-id="20159"
+                               id="tw20159" />
+                        <label for="tw20159"
+                               class="no-select"
+                               data-id="20159">
+                            Septiembre 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201510]"
+                               data-id="201510"
+                               id="tw201510" />
+                        <label for="tw201510"
+                               class="no-select"
+                               data-id="201510">
+                            Octubre 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201511]"
+                               data-id="201511"
+                               id="tw201511" />
+                        <label for="tw201511"
+                               class="no-select"
+                               data-id="201511">
+                            Noviembre 2015
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201512]"
+                               data-id="201512"
+                               id="tw201512" />
+                        <label for="tw201512"
+                               class="no-select"
+                               data-id="201512">
+                            Diciembre 2015
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2014]"
+               class="no-select periodosArbol"
+               data-id="tw2014"
+               id="tw_period2014" />
+        <label rel="label"
+               for="tw_period2014"
+               class="no-select"
+               data-id="2014">
+            Año 2014
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201401]"
+                               data-id="20141"
+                               id="tw20141" />
+                        <label for="tw20141"
+                               class="no-select"
+                               data-id="20141">
+                            Enero 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201402]"
+                               data-id="20142"
+                               id="tw20142" />
+                        <label for="tw20142"
+                               class="no-select"
+                               data-id="20142">
+                            Febrero 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201403]"
+                               data-id="20143"
+                               id="tw20143" />
+                        <label for="tw20143"
+                               class="no-select"
+                               data-id="20143">
+                            Marzo 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201404]"
+                               data-id="20144"
+                               id="tw20144" />
+                        <label for="tw20144"
+                               class="no-select"
+                               data-id="20144">
+                            Abril 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201405]"
+                               data-id="20145"
+                               id="tw20145" />
+                        <label for="tw20145"
+                               class="no-select"
+                               data-id="20145">
+                            Mayo 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201406]"
+                               data-id="20146"
+                               id="tw20146" />
+                        <label for="tw20146"
+                               class="no-select"
+                               data-id="20146">
+                            Junio 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201407]"
+                               data-id="20147"
+                               id="tw20147" />
+                        <label for="tw20147"
+                               class="no-select"
+                               data-id="20147">
+                            Julio 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201408]"
+                               data-id="20148"
+                               id="tw20148" />
+                        <label for="tw20148"
+                               class="no-select"
+                               data-id="20148">
+                            Agosto 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201409]"
+                               data-id="20149"
+                               id="tw20149" />
+                        <label for="tw20149"
+                               class="no-select"
+                               data-id="20149">
+                            Septiembre 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201410]"
+                               data-id="201410"
+                               id="tw201410" />
+                        <label for="tw201410"
+                               class="no-select"
+                               data-id="201410">
+                            Octubre 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201411]"
+                               data-id="201411"
+                               id="tw201411" />
+                        <label for="tw201411"
+                               class="no-select"
+                               data-id="201411">
+                            Noviembre 2014
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201412]"
+                               data-id="201412"
+                               id="tw201412" />
+                        <label for="tw201412"
+                               class="no-select"
+                               data-id="201412">
+                            Diciembre 2014
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2013]"
+               class="no-select periodosArbol"
+               data-id="tw2013"
+               id="tw_period2013" />
+        <label rel="label"
+               for="tw_period2013"
+               class="no-select"
+               data-id="2013">
+            Año 2013
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201301]"
+                               data-id="20131"
+                               id="tw20131" />
+                        <label for="tw20131"
+                               class="no-select"
+                               data-id="20131">
+                            Enero 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201302]"
+                               data-id="20132"
+                               id="tw20132" />
+                        <label for="tw20132"
+                               class="no-select"
+                               data-id="20132">
+                            Febrero 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201303]"
+                               data-id="20133"
+                               id="tw20133" />
+                        <label for="tw20133"
+                               class="no-select"
+                               data-id="20133">
+                            Marzo 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201304]"
+                               data-id="20134"
+                               id="tw20134" />
+                        <label for="tw20134"
+                               class="no-select"
+                               data-id="20134">
+                            Abril 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201305]"
+                               data-id="20135"
+                               id="tw20135" />
+                        <label for="tw20135"
+                               class="no-select"
+                               data-id="20135">
+                            Mayo 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201306]"
+                               data-id="20136"
+                               id="tw20136" />
+                        <label for="tw20136"
+                               class="no-select"
+                               data-id="20136">
+                            Junio 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201307]"
+                               data-id="20137"
+                               id="tw20137" />
+                        <label for="tw20137"
+                               class="no-select"
+                               data-id="20137">
+                            Julio 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201308]"
+                               data-id="20138"
+                               id="tw20138" />
+                        <label for="tw20138"
+                               class="no-select"
+                               data-id="20138">
+                            Agosto 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201309]"
+                               data-id="20139"
+                               id="tw20139" />
+                        <label for="tw20139"
+                               class="no-select"
+                               data-id="20139">
+                            Septiembre 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201310]"
+                               data-id="201310"
+                               id="tw201310" />
+                        <label for="tw201310"
+                               class="no-select"
+                               data-id="201310">
+                            Octubre 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201311]"
+                               data-id="201311"
+                               id="tw201311" />
+                        <label for="tw201311"
+                               class="no-select"
+                               data-id="201311">
+                            Noviembre 2013
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201312]"
+                               data-id="201312"
+                               id="tw201312" />
+                        <label for="tw201312"
+                               class="no-select"
+                               data-id="201312">
+                            Diciembre 2013
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2012]"
+               class="no-select periodosArbol"
+               data-id="tw2012"
+               id="tw_period2012" />
+        <label rel="label"
+               for="tw_period2012"
+               class="no-select"
+               data-id="2012">
+            Año 2012
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201201]"
+                               data-id="20121"
+                               id="tw20121" />
+                        <label for="tw20121"
+                               class="no-select"
+                               data-id="20121">
+                            Enero 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201202]"
+                               data-id="20122"
+                               id="tw20122" />
+                        <label for="tw20122"
+                               class="no-select"
+                               data-id="20122">
+                            Febrero 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201203]"
+                               data-id="20123"
+                               id="tw20123" />
+                        <label for="tw20123"
+                               class="no-select"
+                               data-id="20123">
+                            Marzo 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201204]"
+                               data-id="20124"
+                               id="tw20124" />
+                        <label for="tw20124"
+                               class="no-select"
+                               data-id="20124">
+                            Abril 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201205]"
+                               data-id="20125"
+                               id="tw20125" />
+                        <label for="tw20125"
+                               class="no-select"
+                               data-id="20125">
+                            Mayo 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201206]"
+                               data-id="20126"
+                               id="tw20126" />
+                        <label for="tw20126"
+                               class="no-select"
+                               data-id="20126">
+                            Junio 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201207]"
+                               data-id="20127"
+                               id="tw20127" />
+                        <label for="tw20127"
+                               class="no-select"
+                               data-id="20127">
+                            Julio 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201208]"
+                               data-id="20128"
+                               id="tw20128" />
+                        <label for="tw20128"
+                               class="no-select"
+                               data-id="20128">
+                            Agosto 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201209]"
+                               data-id="20129"
+                               id="tw20129" />
+                        <label for="tw20129"
+                               class="no-select"
+                               data-id="20129">
+                            Septiembre 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201210]"
+                               data-id="201210"
+                               id="tw201210" />
+                        <label for="tw201210"
+                               class="no-select"
+                               data-id="201210">
+                            Octubre 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201211]"
+                               data-id="201211"
+                               id="tw201211" />
+                        <label for="tw201211"
+                               class="no-select"
+                               data-id="201211">
+                            Noviembre 2012
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201212]"
+                               data-id="201212"
+                               id="tw201212" />
+                        <label for="tw201212"
+                               class="no-select"
+                               data-id="201212">
+                            Diciembre 2012
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2011]"
+               class="no-select periodosArbol"
+               data-id="tw2011"
+               id="tw_period2011" />
+        <label rel="label"
+               for="tw_period2011"
+               class="no-select"
+               data-id="2011">
+            Año 2011
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201101]"
+                               data-id="20111"
+                               id="tw20111" />
+                        <label for="tw20111"
+                               class="no-select"
+                               data-id="20111">
+                            Enero 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201102]"
+                               data-id="20112"
+                               id="tw20112" />
+                        <label for="tw20112"
+                               class="no-select"
+                               data-id="20112">
+                            Febrero 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201103]"
+                               data-id="20113"
+                               id="tw20113" />
+                        <label for="tw20113"
+                               class="no-select"
+                               data-id="20113">
+                            Marzo 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201104]"
+                               data-id="20114"
+                               id="tw20114" />
+                        <label for="tw20114"
+                               class="no-select"
+                               data-id="20114">
+                            Abril 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201105]"
+                               data-id="20115"
+                               id="tw20115" />
+                        <label for="tw20115"
+                               class="no-select"
+                               data-id="20115">
+                            Mayo 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201106]"
+                               data-id="20116"
+                               id="tw20116" />
+                        <label for="tw20116"
+                               class="no-select"
+                               data-id="20116">
+                            Junio 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201107]"
+                               data-id="20117"
+                               id="tw20117" />
+                        <label for="tw20117"
+                               class="no-select"
+                               data-id="20117">
+                            Julio 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201108]"
+                               data-id="20118"
+                               id="tw20118" />
+                        <label for="tw20118"
+                               class="no-select"
+                               data-id="20118">
+                            Agosto 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201109]"
+                               data-id="20119"
+                               id="tw20119" />
+                        <label for="tw20119"
+                               class="no-select"
+                               data-id="20119">
+                            Septiembre 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201110]"
+                               data-id="201110"
+                               id="tw201110" />
+                        <label for="tw201110"
+                               class="no-select"
+                               data-id="201110">
+                            Octubre 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201111]"
+                               data-id="201111"
+                               id="tw201111" />
+                        <label for="tw201111"
+                               class="no-select"
+                               data-id="201111">
+                            Noviembre 2011
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201112]"
+                               data-id="201112"
+                               id="tw201112" />
+                        <label for="tw201112"
+                               class="no-select"
+                               data-id="201112">
+                            Diciembre 2011
+                        </label>
+                    </li>
+        </ul>
+    </li>
+    <li class="collapsed level-1">
+        <em class="icon">
+            <em class="fas fa-folder-o"></em>
+        </em>
+        <em class="toggler" onclick="toggleNodo(this)">
+            <em class="fas fa-plus"></em>
+        </em>
+        <input type="checkbox"
+               name="year_[2010]"
+               class="no-select periodosArbol"
+               data-id="tw2010"
+               id="tw_period2010" />
+        <label rel="label"
+               for="tw_period2010"
+               class="no-select"
+               data-id="2010">
+            Año 2010
+        </label>
+        <ul class="children" hidden>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201001]"
+                               data-id="20101"
+                               id="tw20101" />
+                        <label for="tw20101"
+                               class="no-select"
+                               data-id="20101">
+                            Enero 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201002]"
+                               data-id="20102"
+                               id="tw20102" />
+                        <label for="tw20102"
+                               class="no-select"
+                               data-id="20102">
+                            Febrero 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201003]"
+                               data-id="20103"
+                               id="tw20103" />
+                        <label for="tw20103"
+                               class="no-select"
+                               data-id="20103">
+                            Marzo 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201004]"
+                               data-id="20104"
+                               id="tw20104" />
+                        <label for="tw20104"
+                               class="no-select"
+                               data-id="20104">
+                            Abril 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201005]"
+                               data-id="20105"
+                               id="tw20105" />
+                        <label for="tw20105"
+                               class="no-select"
+                               data-id="20105">
+                            Mayo 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201006]"
+                               data-id="20106"
+                               id="tw20106" />
+                        <label for="tw20106"
+                               class="no-select"
+                               data-id="20106">
+                            Junio 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201007]"
+                               data-id="20107"
+                               id="tw20107" />
+                        <label for="tw20107"
+                               class="no-select"
+                               data-id="20107">
+                            Julio 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201008]"
+                               data-id="20108"
+                               id="tw20108" />
+                        <label for="tw20108"
+                               class="no-select"
+                               data-id="20108">
+                            Agosto 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201009]"
+                               data-id="20109"
+                               id="tw20109" />
+                        <label for="tw20109"
+                               class="no-select"
+                               data-id="20109">
+                            Septiembre 2010
+                        </label>
+                    </li>
+                    <li class="expanded level-2 leaf-node">
+                        <em class="icon">
+                            <em class="far fa-calendar"></em>
+                        </em>
+                        <input type="checkbox"
+                               name="year_[201010]"
+                    

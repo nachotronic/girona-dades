@@ -44,6 +44,7 @@
       <a href="#s-conj" data-t="nav_conj">Conjuntura</a>
       <a href="#s-prov" data-t="nav_prov">La província</a>
       <a href="#s-tur" data-t="nav_tur">Turisme</a>
+      <a href="#s-exp" data-t="nav_exp">Exportacions</a>
       <a href="#s-mob" data-t="nav_mob">Mobilitat</a>
       <a href="#s-salut" data-t="nav_salut">Salut</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
@@ -163,9 +164,40 @@
     <div class="pg-graella" id="tur-grafics"></div>
   </section>
 
+  <section id="s-exp" class="amplada sec" aria-labelledby="h-exp">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">05</span> <span data-t="nav_exp">Exportacions</span></p>
+      <h2 id="h-exp" data-t="h_exp">Què ven la província al món</h2>
+      <p class="lead" data-t="lead_exp">Quant exporta i importa la província, de quins productes i amb quins països, i com queda davant Catalunya i les altres províncies.</p>
+    </header>
+    <div class="xifres ex-xifres" id="exp-xifres"></div>
+    <figure class="pg-fig ex-mapafig">
+      <figcaption><span class="pg-tit" id="exp-mon-tit"></span><span class="unitat" data-t="ex_u_mon">milions d'euros</span></figcaption>
+      <div class="ex-ctl" id="exp-mon-ctl"></div>
+      <p class="pg-h" id="exp-mon-h"></p>
+      <div class="ex-mapa-graella">
+        <div><div class="ex-mapa ex-mon" id="exp-mon" role="region" aria-label="Mapa"></div><div class="llegenda-mapa ex-lleg" id="exp-mon-lleg"></div></div>
+        <div class="ex-rq" id="exp-mon-rq"></div>
+      </div>
+      <p class="pg-font ex-font"></p>
+    </figure>
+    <figure class="pg-fig ex-mapafig">
+      <figcaption><span class="pg-tit" id="exp-esp-tit"></span><span class="unitat" id="exp-esp-u"></span></figcaption>
+      <div class="ex-ctl" id="exp-esp-ctl"></div>
+      <p class="pg-h" id="exp-esp-h"></p>
+      <div class="ex-mapa-graella">
+        <div><div class="ex-mapa ex-esp" id="exp-esp" role="region" aria-label="Mapa"></div><div class="llegenda-mapa ex-lleg" id="exp-esp-lleg"></div></div>
+        <div class="ex-rq" id="exp-esp-rq"></div>
+      </div>
+      <p class="pg-font ex-font" data-p="1"></p>
+    </figure>
+    <div class="pg-graella" id="exp-grafics"></div>
+    <p class="ex-nd" id="exp-nd"></p>
+  </section>
+
   <section id="s-mob" class="amplada sec" aria-labelledby="h-mob">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">05</span> <span data-t="nav_mob">Mobilitat</span></p>
+      <p class="sobre"><span class="num">06</span> <span data-t="nav_mob">Mobilitat</span></p>
       <h2 id="h-mob" data-t="h_mob">Com es mou la gent</h2>
       <p class="lead" data-t="lead_mob">Quants desplaçaments fem cada dia feiner, amb quin mitjà, per què, a quina hora i cap a on.</p>
     </header>
@@ -175,7 +207,7 @@
 
   <section id="s-salut" class="amplada sec" aria-labelledby="h-salut">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">06</span> <span data-t="nav_salut">Salut</span></p>
+      <p class="sobre"><span class="num">07</span> <span data-t="nav_salut">Salut</span></p>
       <h2 id="h-salut" data-t="h_salut">Llistes d'espera, receptes, infeccions i hàbits</h2>
       <p class="lead" data-t="lead_salut">Quant s'espera per operar-se o per veure l'especialista a cada hospital, quants medicaments es receten, com circulen la grip i les infeccions respiratòries, i què diu la gent de la seva salut i dels seus hàbits. Regió sanitària de Girona davant Catalunya.</p>
     </header>
@@ -184,7 +216,7 @@
 
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">07</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">08</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -278,6 +310,7 @@
       <li data-font="turisme"><a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INE, turisme</a><span data-t="f_turisme">ocupació, preus dels hotels, despesa i turistes per municipi segons la telefonia mòbil</span></li>
       <li data-font="turisme"><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra_tur">hotels, càmpings, turisme rural i habitatges d'ús turístic per municipi i any</span></li>
       <li data-font="turisme"><a href="https://analisi.transparenciacatalunya.cat/d/q4sr-68c3">Agència Tributària de Catalunya</a><span data-t="f_ieet">impost sobre les estades en establiments turístics</span></li>
+      <li data-font="exportacions"><a href="https://sede.agenciatributaria.gob.es/Sede/estadisticas/estadisticas-comercio-exterior.html">Agència Tributària, estadístiques de comerç exterior</a><span data-t="f_exportacions">exportacions i importacions per província, país, producte i mitjà de transport, anuals i mensuals</span></li>
       <li data-font="emq"><a href="https://www.atmgirona.cat/mobilitat/emq/">ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025</a><span data-t="f_emq">desplaçaments, mitjà de transport, motiu, horari, origen i destinació, vehicles i teletreball per municipi i comarca</span></li>
     </ul>
     <ul class="peu-legal">
@@ -303,6 +336,7 @@
 <script src="tributs.js"></script>
 <script src="turisme.js"></script>
 <script src="mobilitat.js"></script>
+<script src="exportacions.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>

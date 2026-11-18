@@ -83,6 +83,13 @@
   "durada": 72,
   "resum": "EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…); ERROR en 4: lv_mun_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:47.611Z\", \"rootActivityId\": \"7ef8874a-ca66-4606-b515-7a8a2c65e28a\", \"fromCache\" | lv_com_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:48.724Z\", \"rootActivityId\": \"b3496ebb-8c5b-4d2a-aca4-2e8a1b645323\", \"fromCache\" | lv_tot_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:49.823Z\", \"rootActivityId\": \"2ea05cff-5397-4bd5-8807-9a2ad9480edd\", \"fromCache\" | pe_mun__P7_8A_DADES RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:32:30.241Z\", \"rootActivityId\": \"282a720d-18a8-46ad-b64c-b28f241a1b7b\", \"fromCache\""
  },
+ "exportacions": {
+  "estat": "ok",
+  "intent": "2026-11-18T00:25:17Z",
+  "ok": "2026-11-18T00:25:17Z",
+  "durada": 2440,
+  "resum": "M€ e importa 3,416.1 M€\n2021-01: 10 ficheros, Girona exporta 468.9 M€ e importa 231.9 M€\n2021-06: 10 ficheros, Girona exporta 566.3 M€ e importa 304.3 M€\n2021-07: 10 ficheros, Girona exporta 554.1 M€ e importa 300.7 M€\n2021-08: 10 ficheros, Girona exporta 448.8 M€ e importa 236.6 M€\n2021-09: 10 ficheros, Girona exporta 538.8 M€ e importa 296.0 M€\n2021-10: 10 ficheros, Girona exporta 516.9 M€ e importa 298.4 M€\n2021-11: 10 ficheros, Girona exporta 561.4 M€ e importa 340.4 M€\n2021-12: 10 ficheros, Girona exporta 488.0 M€ e importa 298.9 M€\n2022: 10 ficheros, Girona exporta 7,849.9 M€ e importa 4,075.2 M€\n2022-01: 10 ficheros, Girona exporta 528.7 M€ e importa 315.8 M€\n2022-02: 10 ficheros, Girona exporta 596.6 M€ e importa 321.9 M€\n2022-03: 10 ficheros, Girona exporta 679.2 M€ e importa 360.6 M€\n2022-04: 10 ficheros, Girona exporta 629.1 M€ e importa 351.4 M€\n2022-05: 10 ficheros, Girona exporta 692.6 M€ e importa 371.0 M€\n2022-06: 10 ficheros, Girona exporta 718.4 M€ e importa 375.4 M€\n2022-07: 10 ficheros, Girona exporta 681.2 M€ e importa 349.7 M€\n2022-08: 10 ficheros, Girona exporta 575.1 M€ e importa 311.1 M€\n2022-09: 10 ficheros, Girona exporta 724.0 M€ e importa 347.4 M€\n2022-10: 10 ficheros, Girona exporta 674.4 M€ e importa 338.0 M€\n2022-11: 10 ficheros, Girona exporta 715.2 M€ e importa 333.3 M€\n2022-12: 10 ficheros, Girona exporta 635.6 M€ e importa 284.7 M€\n2023: 10 ficheros, Girona exporta 8,156.9 M€ e importa 3,890.1 M€\npoblación INE 2852: 53 zonas, años 2018-2021"
+ },
  "generalitat": {
   "estat": "ok",
   "intent": "2026-11-16T15:29:03Z",

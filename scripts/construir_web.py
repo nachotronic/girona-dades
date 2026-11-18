@@ -2516,6 +2516,12 @@ def main():
         if m["ine"] in tw["fitxa"]:
             m["turf"] = tw["fitxa"][m["ine"]]
     anys_extra.update(tw["anys"])
+    # Comercio exterior (AEAT): sección Exportacions, fichero aparte que la web pide al pintarla
+    import exportacions_web
+    try:
+        print("exportacions:", exportacions_web.construir(SALIDA.parent))
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin la sección
+        print("exportacions: ERROR", type(e).__name__, e)
     # Movilidad: Enquesta de Mobilitat Quotidiana (ATM Girona), tema «mob», nivel «com» y sección Mobilitat
     import mobilitat_web
     mw = mobilitat_web.construir(municipios, SALIDA.parent)

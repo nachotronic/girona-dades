@@ -1,0 +1,17 @@
+{
+  "class" : "collection",
+  "href" : "https://api.idescat.cat/taules/v2/comest/18136/4?lang=ca",
+  "label" : "Exportacions i importacions. Per països, mitjà de transport i capítols (Nomenclatura combinada - 2 dígits)",
+  "link" : {
+    "item" : [ {
+      "class" : "dataset",
+      "href" : "https://api.idescat.cat/taules/v2/comest/18136/4/cat?lang=ca",
+      "label" : "Catalunya"
+    }, {
+      "class" : "dataset",
+      "href" : "https://api.idescat.cat/taules/v2/comest/18136/4/prov?lang=ca",
+      "label" : "Per províncies"
+    } ]
+  },
+  "version" : "2.0"
+}
