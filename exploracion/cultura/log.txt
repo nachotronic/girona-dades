@@ -14,4 +14,4 @@ Idescat AEC 15959 radio_fm: años []...[] (0)
 Idescat AEC 15766 bcin: años []...[] (0)
 Idescat AEC 15759 teatre_espectadors: años []...[] (0)
 Idescat AEC 15758 teatre_representacions: años []...[] (0)
-ERROR DadesBib: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/
+ERROR DadesBib: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=tyffrduduxujn0zjfws1cnj4&Culture=1033&CultureOverrides=T
