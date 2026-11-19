@@ -121,22 +121,49 @@ class DadesBib:
 
 
 def dadesbib(sal) -> list[str]:
+    """Provincias y Cataluña en un informe; municipios de Girona por tandas (un informe grande da 502), con el detalle por biblioteca."""
     res = []
     d = DadesBib()
-    for nom, abast, filtre, detall in (
-        ("bib_municipis", "Municipis", lambda v, e: v.startswith("17"), False),
-        ("bib_biblioteques", "Municipis", lambda v, e: v.startswith("17"), True),
-        ("bib_ambits", "Províncies", lambda v, e: True, False),
-        ("bib_catalunya", "Tot Catalunya", lambda v, e: True, False),
-    ):
+    txt, n, nv, na = d.informe("Províncies", lambda v, e: True, False)
+    (sal / "bib_ambits_raw.csv").write_text(txt, encoding="utf-8")
+    res.append(f"DadesBib provincias: {n} elementos, {nv} variables, {na} años")
+    d.post({"__EVENTTARGET": MC + "list_abast", "__EVENTARGUMENT": "", MC + "RadioList": "RadioAbast", MC + "list_abast": "Municipis"})
+    munis = [v for v, _ in _opcions(d.t, MC + "items_seg") if v.startswith("17")]
+    trossos, mida = [], 15
+    for i in range(0, len(munis), mida):
+        grup = set(munis[i:i + mida])
+        for intent in range(3):
+            try:
+                d = DadesBib()
+                txt, n, nv, na = d.informe("Municipis", lambda v, e, g=grup: v in g, True)
+                trossos.append(txt)
+                break
+            except Exception as e:  # noqa: BLE001
+                if intent == 2:
+                    res.append(f"ERROR DadesBib municipios {i}-{i + mida}: {type(e).__name__}: {str(e)[:160]}")
+    (sal / "bib_municipis_raw.csv").write_text("\n\n".join(trossos), encoding="utf-8")
+    res.append(f"DadesBib municipios: {len(munis)} municipios en {len(trossos)} informes")
+    return res
+
+
+def idescat_aec(sal) -> list[str]:
+    """Taulas comarcales del Anuari estadístic (cine, museos, archivos, bibliotecas, radios, BCIN, teatro): todos los años."""
+    res = []
+    taules = {15753: "cinema_sales", 15754: "cinema_espectadors", 15762: "museus", 15761: "arxius", 15763: "biblioteques",
+              15959: "radio_fm", 15766: "bcin", 15759: "teatre_espectadors", 15758: "teatre_representacions"}
+    for n, nom in taules.items():
+        base = f"https://www.idescat.cat/indicadors/?id=aec&n={n}&lang=ca"
         try:
-            txt, n, nv, na = d.informe(abast, filtre, detall)
-            (sal / f"{nom}_raw.csv").write_text(txt, encoding="utf-8")
-            files = list(csv.reader(io.StringIO(txt)))
-            res.append(f"DadesBib {nom}: {n} elementos, {nv} variables, {na} años; {len(files)} filas en el CSV")
+            t = get(base).text
+            anys = sorted(set(re.findall(r"[?&](?:amp;)?t=(\d{4})", t)))
+            parts = []
+            for a in anys or [""]:
+                r = get(base + (f"&t={a}" if a else "") + "&f=ssv")
+                parts.append(f"#ANY {a}\n" + r.content.decode("utf-8-sig", errors="replace"))
+            (sal / f"aec_{nom}.txt").write_text("\n".join(parts), encoding="utf-8")
+            res.append(f"Idescat AEC {n} {nom}: años {anys[:3]}...{anys[-3:]} ({len(anys)})")
         except Exception as e:  # noqa: BLE001
-            res.append(f"ERROR DadesBib {nom}: {type(e).__name__}: {str(e)[:200]}")
-            d = DadesBib()
+            res.append(f"ERROR Idescat AEC {n}: {type(e).__name__}: {str(e)[:160]}")
     return res
 
 
@@ -167,7 +194,7 @@ def socrata(sal) -> list[str]:
 def ejecutar() -> str:
     sal = carpeta("cultura")
     lineas = []
-    for nom, f in (("Socrata", socrata), ("DadesBib", dadesbib)):
+    for nom, f in (("Socrata", socrata), ("Idescat", idescat_aec), ("DadesBib", dadesbib)):
         try:
             lineas += f(sal)
         except Exception as e:  # noqa: BLE001
