@@ -60,11 +60,44 @@ def sct(sal) -> list[str]:
     return res
 
 
+def _xlsx(contingut: bytes) -> pd.DataFrame:
+    """Lee la primera hoja de un xlsx sin openpyxl: los ficheros antiguos de la DGT no tienen
+    docProps/core.xml y openpyxl no los abre."""
+    import html
+    import re
+    import zipfile
+
+    z = zipfile.ZipFile(io.BytesIO(contingut))
+    noms = z.namelist()
+    ss = []
+    if "xl/sharedStrings.xml" in noms:
+        t = z.read("xl/sharedStrings.xml").decode("utf-8")
+        ss = [html.unescape(re.sub(r"<[^>]+>", "", m)) for m in re.findall(r"<si>(.*?)</si>", t, re.S)]
+    full = sorted(n for n in noms if re.fullmatch(r"xl/worksheets/sheet\d+\.xml", n))[0]
+    t = z.read(full).decode("utf-8")
+    files = []
+    for fila in re.findall(r"<row[^>]*>(.*?)</row>", t, re.S):
+        o = {}
+        for ref, at, cos in re.findall(r'<c r="([A-Z]+)\d+"([^>]*?)(?:/>|>(.*?)</c>)', fila, re.S):
+            v = re.search(r"<v>(.*?)</v>", cos or "", re.S)
+            if 't="s"' in at and v:
+                o[ref] = ss[int(v.group(1))]
+            elif 't="inlineStr"' in at:
+                o[ref] = html.unescape(re.sub(r"<[^>]+>", "", cos))
+            elif v:
+                o[ref] = html.unescape(v.group(1))
+        files.append(o)
+    col = lambda c: sum((ord(x) - 64) * 26 ** i for i, x in enumerate(reversed(c)))  # noqa: E731
+    cols = sorted({c for f in files for c in f}, key=col)
+    cap = files[0]
+    return pd.DataFrame([[f.get(c) for c in cols] for f in files[1:]], columns=[cap.get(c, c) for c in cols])
+
+
 def _dgt_any(a: int) -> pd.DataFrame:
     r = get(DGT.format(a=a), timeout=300)
-    d = pd.read_excel(io.BytesIO(r.content), dtype={"Código INE": str})
+    d = _xlsx(r.content)
     d = d.rename(columns={"Código INE": "ine", "Municipio": "municipi", "Provincia": "provincia", "Comunidad Autónoma": "ccaa"})
-    d["ine"] = d["ine"].astype(str).str.strip().str.zfill(5)
+    d["ine"] = d["ine"].astype(str).str.strip().str.replace(r"\.0$", "", regex=True).str.zfill(5)
     d = d[d["ine"].str.fullmatch(r"\d{5}")]
     d.insert(0, "any", a)
     return d
