@@ -20,6 +20,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -- data/estado.json data/estado.md || true
           git add exploracion data/processed/transit
           git commit -m "Exploración de fuentes" || echo "Sin cambios"
           git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME"
