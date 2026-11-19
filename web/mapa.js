@@ -85,6 +85,7 @@
     { id: "seg", ca: "Seguretat", es: "Seguridad" },
     { id: "jus", ca: "Justícia", es: "Justicia" },
     { id: "eme", ca: "Emergències", es: "Emergencias" },
+    { id: "acc", ca: "Trànsit", es: "Tráfico" },
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "agr", ca: "Camp", es: "Campo" },
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
@@ -118,6 +119,30 @@
   const perHabZ = (c, z, a, k) => (z === "cat" && D.cj.pob_cat && CJP(c, "m", "cat")(a) != null ? (CJP(c, "m", "cat")(a) / D.cj.pob_cat.pob) * k : null);
   const NOTA_SEPE = { ca: "SEPE, atur registrat el darrer dia del mes. Les xifres d'1 a 4 no es publiquen.", es: "SEPE, paro registrado el último día del mes. Las cifras de 1 a 4 no se publican." };
   const NOTA_CONTR = { ca: "SEPE, contractes registrats al mes al municipi del centre de treball.", es: "SEPE, contratos registrados en el mes en el municipio del centro de trabajo." };
+
+  // Accidentes de tráfico: m.acc = {clave: {año: valor}}, D.acc_ref = {clave: {año: {gi, cat, esp}}}, D.anys.acc (SCT) y D.anys.accu (DGT)
+  const AC = (k) => (m, a) => (a != null && m.acc && m.acc[k] && m.acc[k][a] != null ? m.acc[k][a] : null);
+  const ACR = (k, z) => (a) => { const r = D.acc_ref && D.acc_ref[k] && D.acc_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const NOTA_SCT = { ca: "Servei Català de Trànsit: accidents amb algun mort o ferit greu, a la carretera i a la ciutat, segons el municipi on van passar. Els ferits lleus no hi són. Les taxes es calculen sobre la població resident: als municipis petits travessats per una carretera gran (l'AP-7, l'N-II) i a la costa a l'estiu surten molt altes. La mitjana de 5 anys d'un any inclou aquell any i els quatre anteriors. Mireu també les comarques.", es: "Servei Català de Trànsit: accidentes con algún muerto o herido grave, en carretera y en ciudad, según el municipio donde ocurrieron. Los heridos leves no están. Las tasas se calculan sobre la población residente: en los municipios pequeños atravesados por una carretera grande (la AP-7, la N-II) y en la costa en verano salen muy altas. La media de 5 años de un año incluye ese año y los cuatro anteriores. Mirad también las comarcas." };
+  const NOTA_DGT = { ca: "DGT, dades municipals de sinistralitat: tots els accidents amb víctimes (també els ferits lleus) però només els de les vies urbanes, no els de la carretera. Taxa sobre la població resident.", es: "DGT, datos municipales de siniestralidad: todos los accidentes con víctimas (también los heridos leves) pero solo los de las vías urbanas, no los de carretera. Tasa sobre la población residente." };
+  const ACC = [
+    ["s_mfg_h5", "acc", ["Morts i ferits greus", "Morts i ferits greus en accidents per 10.000 habitants i any (mitjana de 5 anys)"], ["Muertos y heridos graves", "Muertos y heridos graves en accidentes por 10.000 habitantes y año (media de 5 años)"], NOTA_SCT, N1],
+    ["s_mfg_h", "acc", ["Morts i ferits greus (un any)", "Morts i ferits greus en accidents de trànsit per 10.000 habitants"], ["Muertos y heridos graves (un año)", "Muertos y heridos graves en accidentes de tráfico por 10.000 habitantes"], NOTA_SCT, N1],
+    ["s_n", "acc", ["Accidents greus", "Accidents de trànsit amb algun mort o ferit greu"], ["Accidentes graves", "Accidentes de tráfico con algún muerto o herido grave"], NOTA_SCT, { sumable: true, ...N0 }],
+    ["s_morts", "acc", ["Morts a la carretera i la ciutat", "Persones mortes en accidents de trànsit"], ["Muertos en carretera y ciudad", "Personas muertas en accidentes de tráfico"], NOTA_SCT, { sumable: true, ...N0 }],
+    ["s_mfg", "acc", ["Morts i ferits greus (total)", "Persones mortes o ferides greus en accidents de trànsit"], ["Muertos y heridos graves (total)", "Personas muertas o heridas graves en accidentes de tráfico"], NOTA_SCT, { sumable: true, ...N0 }],
+    ["s_carr_p", "acc", ["Accidents greus a la carretera", "Accidents greus a la carretera, no a la zona urbana (%)"], ["Accidentes graves en carretera", "Accidentes graves en carretera, no en zona urbana (%)"], NOTA_SCT, { sumable: false, cob: 0.2, ...P0 }],
+    ["s_moto_p", "acc", ["Accidents greus amb moto", "Accidents greus amb alguna moto o ciclomotor implicat (%)"], ["Accidentes graves con moto", "Accidentes graves con alguna moto o ciclomotor implicado (%)"], NOTA_SCT, { sumable: false, cob: 0.2, ...P0 }],
+    ["s_vian_p", "acc", ["Atropellaments greus", "Accidents greus amb algun vianant implicat (%)"], ["Atropellos graves", "Accidentes graves con algún peatón implicado (%)"], NOTA_SCT, { sumable: false, cob: 0.2, ...P0 }],
+    ["u_h", "accu", ["Accidents a la ciutat", "Accidents amb víctimes a les vies urbanes per 1.000 habitants"], ["Accidentes en la ciudad", "Accidentes con víctimas en las vías urbanas por 1.000 habitantes"], NOTA_DGT, N1],
+    ["u_vic_h", "accu", ["Víctimes a la ciutat", "Morts i ferits (també lleus) a les vies urbanes per 1.000 habitants"], ["Víctimas en la ciudad", "Muertos y heridos (también leves) en las vías urbanas por 1.000 habitantes"], NOTA_DGT, N1],
+    ["u_n", "accu", ["Accidents a la ciutat (total)", "Accidents amb víctimes a les vies urbanes"], ["Accidentes en la ciudad (total)", "Accidentes con víctimas en las vías urbanas"], NOTA_DGT, { sumable: true, ...N0 }],
+    ["u_vian_h", "accu", ["Vianants atropellats", "Vianants morts o ferits a les vies urbanes per 10.000 habitants"], ["Peatones atropellados", "Peatones muertos o heridos en las vías urbanas por 10.000 habitantes"], NOTA_DGT, N1],
+    ["u_bici_h", "accu", ["Ciclistes i patinets", "Ciclistes i usuaris de patinet morts o ferits a les vies urbanes per 10.000 habitants"], ["Ciclistas y patinetes", "Ciclistas y usuarios de patinete muertos o heridos en las vías urbanas por 10.000 habitantes"], NOTA_DGT, N1],
+    ["u_moto_h", "accu", ["Motoristes ferits a la ciutat", "Motoristes morts o ferits a les vies urbanes per 10.000 habitants"], ["Motoristas heridos en la ciudad", "Motoristas muertos o heridos en las vías urbanas por 10.000 habitantes"], NOTA_DGT, N1],
+  ];
+  // Comarcas: el año elegido en el mapa solo se aplica a los municipios; las comarcas muestran el último
+  const ACZ = (k, a) => (x) => { const o = x && x[k]; if (!o) return null; const y = D.anys && D.anys[a]; return y != null && o[y] != null ? o[y] : null; };
 
   // Parque de vehículos (DGT, anual): m.veh = {clave: {año: valor}}, D.veh_ref = {clave: {año: {gi, cat, esp}}}
   const AT = (k) => (m, a) => (a != null && m.ats && m.ats[k] && m.ats[k][a] != null ? m.ats[k][a] : null);
@@ -605,6 +630,8 @@
     { id: "selectiva", tema: "ene", ca: ["Recollida selectiva", "Recollida selectiva (% dels residus)"], es: ["Recogida selectiva", "Recogida selectiva (% de los residuos)"], a: "selectiva", v: X("selectiva"), ...P0 },
     { id: "residus", tema: "ene", ca: ["Residus per habitant", "Residus municipals per habitant i dia (kg)"], es: ["Residuos por habitante", "Residuos municipales por habitante y día (kg)"], a: "residus", v: X("residus"), ...N2 },
     // Parque de vehículos (DGT)
+    ...ACC.map(([k, a, ca, es, nota, fmtk]) => ({ id: "acc_" + k, tema: "acc", ca, es, a, v: (m) => AC(k)(m, D.anys && D.anys[a]), t: AC(k), pv: ACR(k, "gi"),
+      com: ACZ(k, a), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: ACR(k, "cat")(y), esp: ACR(k, "esp")(y) }; }, nota, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
@@ -839,6 +866,7 @@
     if (!cacheAnys[i.id]) {
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini", "renda_bruta", "renda_bruta_llar", "renda_mediana"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "acc") D.municipios.forEach((m) => Object.values(m.acc || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
@@ -1386,7 +1414,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "ats" || /^hb/.test(i.a || "") || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "ats" || /^hb/.test(i.a || "") || i.a === "veh" || i.a === "acc" || i.a === "accu" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
