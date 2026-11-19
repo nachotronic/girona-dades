@@ -4,7 +4,10 @@ import re
 import shutil
 import sys
 
-import requests
+import subprocess
+
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "pandas"], check=False)  # explorar.yml solo instala requests
+import requests  # noqa: E402
 
 sys.path.insert(0, ".")
 OUT = pathlib.Path("exploracion/cultura")
