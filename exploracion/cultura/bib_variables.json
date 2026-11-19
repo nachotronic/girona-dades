@@ -1,0 +1,188 @@
+{
+ "Equipament": [
+  [
+   "DO_50",
+   "Nombre biblioteques"
+  ],
+  [
+   "DO_52",
+   "Superfície útil (m²)"
+  ],
+  [
+   "IND_41",
+   "Superfície útil (m²) per 1.000 habitants"
+  ],
+  [
+   "DO_54",
+   "Llocs de consulta"
+  ],
+  [
+   "IND_42",
+   "Llocs de consulta per 1.000 habitants"
+  ],
+  [
+   "DO_562",
+   "Ordinadors d’ús públic"
+  ],
+  [
+   "IND_43",
+   "Ordinadors d’ús públic per 1.000 habitants"
+  ]
+ ],
+ "Usuaris registrats (carnets)": [
+  [
+   "DO_61",
+   "Carnets (total persones + entitats)"
+  ],
+  [
+   "DO_611",
+   "Carnets persones"
+  ],
+  [
+   "DO_612",
+   "Carnets entitats"
+  ],
+  [
+   "IND_51",
+   "% de carnets (persones) sobre població total"
+  ],
+  [
+   "DO_62",
+   "Altes de carnets"
+  ],
+  [
+   "DO_63",
+   "Baixes de carnets"
+  ],
+  [
+   "IND_52",
+   "% d'increment de carnets en relació amb l'any anterior"
+  ]
+ ],
+ "Préstec": [
+  [
+   "DO_72",
+   "Usuaris actius de préstec"
+  ],
+  [
+   "IND_61",
+   "Usuaris actius de préstec per habitant"
+  ],
+  [
+   "DO_710",
+   "Préstecs totals"
+  ],
+  [
+   "IND_63",
+   "% de préstecs en relació amb el fons total de préstec"
+  ],
+  [
+   "IND_64",
+   "Préstecs per habitant"
+  ],
+  [
+   "IND_66",
+   "Préstecs per usuari actiu de préstec"
+  ],
+  [
+   "DO_7101",
+   "Préstecs llibres"
+  ],
+  [
+   "IND_69",
+   "% préstecs llibres sobre préstecs totals"
+  ],
+  [
+   "DO_7102",
+   "Préstecs revistes"
+  ],
+  [
+   "IND_610",
+   "% préstecs revistes sobre préstecs totals"
+  ],
+  [
+   "DO_7103",
+   "Préstecs sonors"
+  ],
+  [
+   "IND_611",
+   "% préstecs sonors sobre préstecs totals"
+  ],
+  [
+   "DO_7104",
+   "Préstecs audiovisuals"
+  ],
+  [
+   "IND_612",
+   "% préstecs audiovisuals sobre préstecs totals"
+  ],
+  [
+   "DO_7105",
+   "Préstecs materials electrònics (no e-books)"
+  ],
+  [
+   "IND_613",
+   "% préstecs materials electrònics (no e-books) sobre préstecs totals"
+  ],
+  [
+   "DO_7106",
+   "Préstecs altres"
+  ],
+  [
+   "IND_614",
+   "% préstecs altres sobre préstecs totals"
+  ]
+ ],
+ "Activitats": [
+  [
+   "DO_101",
+   "Activitats (sessions)"
+  ],
+  [
+   "DO_102",
+   "Activitats (assistents)"
+  ],
+  [
+   "IND_91",
+   "Assistents a activitats per 1.000 habitants"
+  ]
+ ],
+ "Ús d'altres serveis": [
+  [
+   "DO_91",
+   "Visites total"
+  ],
+  [
+   "IND_81",
+   "Visites per habitant"
+  ],
+  [
+   "IND_82",
+   "Visites per dia de servei"
+  ],
+  [
+   "DO_92",
+   "Visites en línia total"
+  ],
+  [
+   "IND_84",
+   "Visites en línia per habitant"
+  ],
+  [
+   "DO_9022",
+   "Usos (sessions) d'internet i ofimàtica"
+  ],
+  [
+   "IND_85",
+   "Usos (sessions) d'internet i ofimàtica per habitant"
+  ],
+  [
+   "IND_86",
+   "Usos (sessions) d'internet i ofimàtica per dia de servei"
+  ],
+  [
+   "DO_98",
+   "Usos (sessions) espai Wi-Fi"
+  ]
+ ]
+}

@@ -1,0 +1,325 @@
+{
+ "nom": "Agenda cultural de Catalunya (per localitzacions)",
+ "desc": "L’Agenda Cultural del Departament de Cultura de la Generalitat ofereix un recull d’activitats culturals destacades que es realitzen per tot Catalunya. \n\nEn aquest dataset es presenten les activitats segons la seva localització.\n\nS’ha actualitzat l’estructura de la base de dades, afegint més camps. Els registres anteriors al canvi (març 2025) inclouen registres en blanc en aquests camps, ja que no es disposa d’aquesta informació.",
+ "rows": 1795105386,
+ "cols": [
+  [
+   "codi",
+   "codi",
+   "number",
+   []
+  ],
+  [
+   "urlactivitat",
+   "URL activitat",
+   "text",
+   []
+  ],
+  [
+   "data_fi",
+   "Data fi",
+   "calendar_date",
+   []
+  ],
+  [
+   "data_inici",
+   "Data inici",
+   "calendar_date",
+   []
+  ],
+  [
+   "data_fi_aproximada",
+   "Data fi aproximada",
+   "text",
+   []
+  ],
+  [
+   "denominaci",
+   "Denominació",
+   "text",
+   []
+  ],
+  [
+   "subt_tol",
+   "Subtítol",
+   "text",
+   []
+  ],
+  [
+   "descripcio",
+   "Descripcio",
+   "text",
+   []
+  ],
+  [
+   "tags_mbits",
+   "Tags àmbits",
+   "text",
+   []
+  ],
+  [
+   "tags_categor_es",
+   "Tags categoríes",
+   "text",
+   []
+  ],
+  [
+   "tags_altres_categor_es",
+   "Tags altres categoríes",
+   "text",
+   []
+  ],
+  [
+   "entrades",
+   "Entrades",
+   "text",
+   []
+  ],
+  [
+   "nombotoentrades",
+   "Entrades, nom del botó",
+   "text",
+   []
+  ],
+  [
+   "linkbotoentrades",
+   "Entrades, URL del botó",
+   "text",
+   []
+  ],
+  [
+   "horari",
+   "Horari",
+   "text",
+   []
+  ],
+  [
+   "gratuita",
+   "Activitat gratuïta",
+   "text",
+   []
+  ],
+  [
+   "permanent",
+   "Activitat permanent",
+   "text",
+   []
+  ],
+  [
+   "ocultarpermanent",
+   "Amagar literal: Activitat permanent",
+   "text",
+   []
+  ],
+  [
+   "enlla_os",
+   "Enllaços",
+   "text",
+   []
+  ],
+  [
+   "enllac1_nom",
+   "Enllaços, nom de l'enllaç 1",
+   "text",
+   []
+  ],
+  [
+   "enllac1_url",
+   "Enllaços, URL de l'enllaç 1",
+   "text",
+   []
+  ],
+  [
+   "enllac2_nom",
+   "Enllaços, nom de l'enllaç 2",
+   "text",
+   []
+  ],
+  [
+   "enllac2_url",
+   "Enllaços, URL de l'enllaç 2",
+   "text",
+   []
+  ],
+  [
+   "enllac3_nom",
+   "Enllaços, nom de l'enllaç 3",
+   "text",
+   []
+  ],
+  [
+   "enllac3_url",
+   "Enllaços, URL de l'enllaç 3",
+   "text",
+   []
+  ],
+  [
+   "modalitat",
+   "Modalitat",
+   "text",
+   []
+  ],
+  [
+   "destacada",
+   "Activitat destacada",
+   "text",
+   []
+  ],
+  [
+   "destacada_titol",
+   "Títol destacada",
+   "text",
+   []
+  ],
+  [
+   "destacada_subtitol",
+   "Subtítol destacada",
+   "text",
+   []
+  ],
+  [
+   "destacada_imatge",
+   "Imatge destacada",
+   "text",
+   []
+  ],
+  [
+   "documents",
+   "Documents",
+   "text",
+   []
+  ],
+  [
+   "imatges",
+   "Imatges",
+   "text",
+   []
+  ],
+  [
+   "v_deos",
+   "Vídeos",
+   "text",
+   []
+  ],
+  [
+   "adre_a",
+   "Adreça",
+   "text",
+   []
+  ],
+  [
+   "codi_postal",
+   "Codi postal",
+   "text",
+   []
+  ],
+  [
+   "comarca_i_municipi",
+   "Comarca i municipi",
+   "text",
+   []
+  ],
+  [
+   "email",
+   "email",
+   "text",
+   []
+  ],
+  [
+   "espai",
+   "Espai",
+   "text",
+   []
+  ],
+  [
+   "latitud",
+   "Latitud",
+   "number",
+   []
+  ],
+  [
+   "localitat",
+   "Localitat",
+   "text",
+   []
+  ],
+  [
+   "longitud",
+   "Longitud",
+   "number",
+   []
+  ],
+  [
+   "regi_o_pa_s",
+   "Regió o país",
+   "text",
+   []
+  ],
+  [
+   "tel_fon",
+   "Telèfon",
+   "text",
+   []
+  ],
+  [
+   "url",
+   "URL",
+   "text",
+   []
+  ],
+  [
+   "imgapp",
+   "imgApp",
+   "text",
+   []
+  ],
+  [
+   "descripcio_html",
+   "descripcio_html",
+   "text",
+   []
+  ],
+  [
+   "georefer_ncia",
+   "Georeferència",
+   "point",
+   []
+  ],
+  [
+   "municipi",
+   "Municipi",
+   "text",
+   []
+  ],
+  [
+   "comarca",
+   "Comarca",
+   "text",
+   []
+  ],
+  [
+   "amagar_dates",
+   "Amagar dates",
+   "text",
+   []
+  ],
+  [
+   "data_creacio",
+   "Data de creació",
+   "calendar_date",
+   []
+  ],
+  [
+   ":@computed_region_wvic_k925",
+   "LIMADM COMARCA",
+   "number",
+   []
+  ],
+  [
+   ":@computed_region_bh64_c7uy",
+   "LIMADM_MUNICIPI",
+   "number",
+   []
+  ]
+ ]
+}

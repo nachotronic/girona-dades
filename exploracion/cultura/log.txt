@@ -1,42 +1,86 @@
-200 64996 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 56374 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 112617 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 129 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 94409 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 284018 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 129 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 129 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 77922 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 65479 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 22665 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 710213 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 129 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 252690 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 129 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 109213 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 151184 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 6976 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 164323 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 74885 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 27149 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 15253 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 24467 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 54573 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 129 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 31470 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 53592 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 8261 https://analisi.transparenciacatalunya.cat/api/catalog/v1
-200 53789 https://zenodo.org/records/15815448/files/data.csv?download=1
-200 118359 https://estadistiquesbiblioteques.gencat.cat/
-404 7820 https://dadesculturals.gencat.cat/ca/estadistica_per_temes/
-404 7820 https://dadesculturals.gencat.cat/ca/estadistica_per_temes/biblioteques/index.html
-404 7820 https://dadesculturals.gencat.cat/ca/estadistica_per_temes/museus/index.html
-404 7820 https://dadesculturals.gencat.cat/ca/estadistica_per_temes/cinema/index.html
-200 5909 https://api.idescat.cat/taules/v2?lang=ca
-404 7810 https://icec.gencat.cat/ca/sectors/audiovisual/dades/
-  enlaces dadesbib.html: 
-  enlaces dadesculturals_bib.html: 
-  enlaces dadesculturals_mus.html: 
-  enlaces dadesculturals.html: 
-  enlaces dadesculturals_cin.html: 
-  enlaces icec_cinema.html: 
+200 64076 https://analisi.transparenciacatalunya.cat/api/views/48s6-82h2.json
+200 3332 https://analisi.transparenciacatalunya.cat/resource/48s6-82h2.json?%24limit=4
+ERR ReadTimeout https://analisi.transparenciacatalunya.cat/resource/48s6-82h2.json
+200 66870 https://analisi.transparenciacatalunya.cat/api/views/v366-9743.json
+200 4328 https://analisi.transparenciacatalunya.cat/resource/v366-9743.json?%24limit=4
+200 18 https://analisi.transparenciacatalunya.cat/resource/v366-9743.json?%24select=count%28%2A%29
+  count v366-9743: [{"count":"387"}]
+
+404 97 https://analisi.transparenciacatalunya.cat/api/views/mnw2-hjsc.json
+404 48 https://analisi.transparenciacatalunya.cat/resource/mnw2-hjsc.json?%24limit=4
+404 48 https://analisi.transparenciacatalunya.cat/resource/mnw2-hjsc.json?%24select=count%28%2A%29
+  count mnw2-hjsc: {
+  "error" : true,
+  "message" : "Not found"
+}
+
+200 72332 https://analisi.transparenciacatalunya.cat/api/views/pdn2-3bbd.json
+200 3132 https://analisi.transparenciacatalunya.cat/resource/pdn2-3bbd.json?%24limit=4
+200 19 https://analisi.transparenciacatalunya.cat/resource/pdn2-3bbd.json?%24select=count%28%2A%29
+  count pdn2-3bbd: [{"count":"2027"}]
+
+200 73793 https://analisi.transparenciacatalunya.cat/api/views/igtv-wrij.json
+200 4334 https://analisi.transparenciacatalunya.cat/resource/igtv-wrij.json?%24limit=4
+200 18 https://analisi.transparenciacatalunya.cat/resource/igtv-wrij.json?%24select=count%28%2A%29
+  count igtv-wrij: [{"count":"512"}]
+
+200 21486 https://analisi.transparenciacatalunya.cat/api/views/kgek-zg4b.json
+200 1226 https://analisi.transparenciacatalunya.cat/resource/kgek-zg4b.json?%24limit=4
+200 17 https://analisi.transparenciacatalunya.cat/resource/kgek-zg4b.json?%24select=count%28%2A%29
+  count kgek-zg4b: [{"count":"54"}]
+
+200 28936 https://analisi.transparenciacatalunya.cat/api/views/2xiz-255m.json
+200 1841 https://analisi.transparenciacatalunya.cat/resource/2xiz-255m.json?%24limit=4
+200 20 https://analisi.transparenciacatalunya.cat/resource/2xiz-255m.json?%24select=count%28%2A%29
+  count 2xiz-255m: [{"count":"26129"}]
+
+200 22864 https://analisi.transparenciacatalunya.cat/api/views/rhpv-yr4f.json
+200 13747 https://analisi.transparenciacatalunya.cat/resource/rhpv-yr4f.json?%24limit=4
+200 20 https://analisi.transparenciacatalunya.cat/resource/rhpv-yr4f.json?%24select=count%28%2A%29
+  count rhpv-yr4f: [{"count":"69310"}]
+
+200 8348 https://analisi.transparenciacatalunya.cat/api/views/4fyy-qt6t.json
+200 1775 https://analisi.transparenciacatalunya.cat/resource/4fyy-qt6t.json?%24limit=4
+200 20 https://analisi.transparenciacatalunya.cat/resource/4fyy-qt6t.json?%24select=count%28%2A%29
+  count 4fyy-qt6t: [{"count":"14119"}]
+
+200 57215 https://analisi.transparenciacatalunya.cat/api/views/8gmd-gz7i.json
+200 2636 https://analisi.transparenciacatalunya.cat/resource/8gmd-gz7i.json?%24limit=4
+200 20 https://analisi.transparenciacatalunya.cat/resource/8gmd-gz7i.json?%24select=count%28%2A%29
+  count 8gmd-gz7i: [{"count":"26697"}]
+
+200 44469 https://analisi.transparenciacatalunya.cat/api/views/aqrw-u8kv.json
+200 2557 https://analisi.transparenciacatalunya.cat/resource/aqrw-u8kv.json?%24limit=4
+200 20 https://analisi.transparenciacatalunya.cat/resource/aqrw-u8kv.json?%24select=count%28%2A%29
+  count aqrw-u8kv: [{"count":"17494"}]
+
+200 37171 https://analisi.transparenciacatalunya.cat/api/views/q8hv-6y23.json
+200 1953 https://analisi.transparenciacatalunya.cat/resource/q8hv-6y23.json?%24limit=4
+200 18 https://analisi.transparenciacatalunya.cat/resource/q8hv-6y23.json?%24select=count%28%2A%29
+  count q8hv-6y23: [{"count":"298"}]
+
+200 33938 https://www.idescat.cat/tema/cultu?lang=ca
+  enlaces idescat_cultu.html: /indicadors/?id=aec /indicadors/?id=aec&amp;n=15038&amp;tema=cultu /indicadors/?id=aec&amp;n=15039&amp;tema=cultu /indicadors/?id=aec&amp;n=15040&amp;tema=cultu /indicadors/?id=aec&amp;n=15041&amp;tema=cultu /indicadors/?id=aec&amp;n=15042&amp;tema=cultu /indicadors/?id=aec&amp;n=15043&amp;tema=cultu /indicadors/?id=aec&amp;n=15044&amp;tema=cultu /indicadors/?id=aec&amp;n=15045&amp;tema=cultu /indicadors/?id=aec&amp;n=15046&amp;tema=cultu https://www.idescat.cat/indicadors/?id=basics&n=10359&tema=cultu https://www.idescat.cat/indicadors/?id=basics&n=10361&tema=cultu https://www.idescat.cat/indicadors/?id=basics&n=10362&tema=cultu https://www.idescat.cat/indicadors/?id=basics&n=10364&tema=cultu https://www.idescat.cat/indicadors/?id=basics&n=10367&tema=cultu https://www.idescat.cat/indicadors/?id=basics&n=22191&tema=cultu
+200 14121 https://www.idescat.cat/indicadors/?id=aec&t=cultu&lang=ca
+  enlaces idescat_aec_cultura.html: /indicadors/?id=aec
+200 18561 https://www.idescat.cat/emex/?id=170792&lang=ca#h4000
+  enlaces idescat_emex_cultura.html: /indicadors/?id=aec
+200 118359 https://estadistiquesbiblioteques.gencat.cat/Cercastat/
+post 1 200 152264 ['__EVENTTARGET', '__EVENTARGUMENT', 'ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast']
+  items_seg (948): [('250019', 'Abella de la Conca'), ('080018', 'Abrera'), ('250024', 'Àger'), ('250030', 'Agramunt'), ('080023', 'Aguilar de Segarra'), ('170010', 'Agullana'), ('080142', 'Aiguafreda'), ('430017', 'Aiguamúrcia'), ('170025', 'Aiguaviva'), ('250387', 'Aitona'), ('250045', 'Alamús, els'), ('250058', 'Alàs i Cerc'), ('250061', "Albagés, l'"), ('170031', 'Albanyà'), ('250077', 'Albatàrrec')]
+post 2 200 152284 ['ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg', 'ctl00$MainContent$add_seg']
+  items_seg_sel: [('170669', 'Figueres'), ('170792', 'Girona')]
+post 3 200 153442 ['__EVENTTARGET', '__EVENTARGUMENT', 'ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables']
+post 4 200 153514 ['ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables', 'ctl00$MainContent$var', 'ctl00$MainContent$add_var']
+post 5 200 154455 ['__EVENTTARGET', '__EVENTARGUMENT', 'ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables']
+post 6 200 154523 ['ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables', 'ctl00$MainContent$var', 'ctl00$MainContent$add_var']
+post 7 200 157325 ['__EVENTTARGET', '__EVENTARGUMENT', 'ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables']
+post 8 200 157465 ['ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables', 'ctl00$MainContent$var', 'ctl00$MainContent$add_var']
+post 9 200 157855 ['__EVENTTARGET', '__EVENTARGUMENT', 'ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables']
+post 10 200 157895 ['ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables', 'ctl00$MainContent$var', 'ctl00$MainContent$add_var']
+post 11 200 159195 ['__EVENTTARGET', '__EVENTARGUMENT', 'ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables']
+post 12 200 159275 ['ctl00$MainContent$RadioList', 'ctl00$MainContent$list_abast', 'ctl00$MainContent$items_seg_sel', 'ctl00$MainContent$agr_variables', 'ctl00$MainContent$var', 'ctl00$MainContent$add_var']
+  var_sel (44)
+post 13 200 49847 ['ctl00$MainContent$CheckAny$CheckAny_0', 'ctl00$MainContent$CheckAny$CheckAny_1', 'ctl00$MainContent$CheckAny$CheckAny_2', 'ctl00$MainContent$CheckAny$CheckAny_3', 'ctl00$MainContent$CheckAny$CheckAny_4', 'ctl00$MainContent$CheckAny$CheckAny_5']
+  enlaces resultado: # javascript:$get(&#39;ReportViewer1_AsyncWait&#39;).control._cancelCurrentPostback(); javascript:void(0) reports.aspx
+  inputs resultado: []

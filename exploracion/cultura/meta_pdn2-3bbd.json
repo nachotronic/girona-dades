@@ -1,0 +1,2738 @@
+{
+ "nom": "Entitats culturals i associacions (ECA) de Catalunya",
+ "desc": "Base de dades de les entitats del tercer sector cultural: federacions i entitats federades, cases regionals i centres d’estudis. \nRecull les dades de contacte i els àmbits d’actuació de les entitats de cultura popular i tradicional catalanes.",
+ "rows": 1689750890,
+ "cols": [
+  [
+   "nif",
+   "NIF",
+   "text",
+   [
+    {
+     "item": "G58016262",
+     "count": "1"
+    },
+    {
+     "item": "G65227746",
+     "count": "1"
+    },
+    {
+     "item": "G65831034",
+     "count": "1"
+    },
+    {
+     "item": "G17269952",
+     "count": "1"
+    },
+    {
+     "item": "G63506679",
+     "count": "1"
+    },
+    {
+     "item": "G60993177",
+     "count": "1"
+    },
+    {
+     "item": "G64854920",
+     "count": "1"
+    },
+    {
+     "item": "G67069435",
+     "count": "1"
+    },
+    {
+     "item": "G59161596",
+     "count": "1"
+    },
+    {
+     "item": "G58348749",
+     "count": "1"
+    },
+    {
+     "item": "G66620691",
+     "count": "1"
+    },
+    {
+     "item": "G55728117",
+     "count": "1"
+    },
+    {
+     "item": "G60531795",
+     "count": "1"
+    },
+    {
+     "item": "G58193525",
+     "count": "1"
+    },
+    {
+     "item": "G58715178",
+     "count": "1"
+    },
+    {
+     "item": "G59675793",
+     "count": "1"
+    },
+    {
+     "item": "G17711136",
+     "count": "1"
+    },
+    {
+     "item": "G60708526",
+     "count": "1"
+    },
+    {
+     "item": "G55127617",
+     "count": "1"
+    },
+    {
+     "item": "G25073099",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "nom",
+   "Nom",
+   "text",
+   [
+    {
+     "item": "Foment Cultural i Artístic",
+     "count": "2"
+    },
+    {
+     "item": "Ateneu Bisbalenc",
+     "count": "1"
+    },
+    {
+     "item": "Grup Pessebrista del Vendrell",
+     "count": "1"
+    },
+    {
+     "item": "Centro Galego de Barcelona",
+     "count": "1"
+    },
+    {
+     "item": "Colla Gegantera del Port de la Selva",
+     "count": "1"
+    },
+    {
+     "item": "Colla Castallera Ganàpies de la Uab",
+     "count": "1"
+    },
+    {
+     "item": "Colla del Drac de les Roquetes del Garraf",
+     "count": "1"
+    },
+    {
+     "item": "Societat Coral Joventut Tianenca",
+     "count": "1"
+    },
+    {
+     "item": "Associació d'Animació les Anades d'Olla de Rubí",
+     "count": "1"
+    },
+    {
+     "item": "Centre Comarcal Lleidatà",
+     "count": "1"
+    },
+    {
+     "item": "Centro Aragonés de Barcelona (Casa de Aragón)",
+     "count": "1"
+    },
+    {
+     "item": "Associació Juvenil Colla Gegantera la Patufa",
+     "count": "1"
+    },
+    {
+     "item": "Cor Lieder Camera",
+     "count": "1"
+    },
+    {
+     "item": "Associació Diables Alguaire",
+     "count": "1"
+    },
+    {
+     "item": "Amical",
+     "count": "1"
+    },
+    {
+     "item": "Amics de Sant Antoni Abat de Polinyà",
+     "count": "1"
+    },
+    {
+     "item": "Coral Castellterçol",
+     "count": "1"
+    },
+    {
+     "item": "As. de Geganters i Grallers de la Vall de Sitges",
+     "count": "1"
+    },
+    {
+     "item": "Grup de Joves de Lavern",
+     "count": "1"
+    },
+    {
+     "item": "Associació Cultural i d'Esbarjo Mestres del Gai Saber",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "tipus_d_entitat",
+   "Tipus d’entitat",
+   "text",
+   [
+    {
+     "item": "Associació (1)",
+     "count": "1992"
+    },
+    {
+     "item": "Fundació (3)",
+     "count": "19"
+    },
+    {
+     "item": "Federació (2)",
+     "count": "16"
+    }
+   ]
+  ],
+  [
+   "mbit_actuaci_1",
+   "Àmbit actuació (1)",
+   "text",
+   [
+    {
+     "item": "Gegants i nans - Gegants (20)",
+     "count": "330"
+    },
+    {
+     "item": "Cant coral - Corals i orfeons (21)",
+     "count": "279"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Bestiari (13)",
+     "count": "200"
+    },
+    {
+     "item": "Centres d'Estudis - Centres d'estudis (30)",
+     "count": "199"
+    },
+    {
+     "item": "Cases regionals - Cases regionals (38)",
+     "count": "186"
+    },
+    {
+     "item": "Teatre - Teatre amateur (34)",
+     "count": "139"
+    },
+    {
+     "item": "Ateneisme cultural - Ateneisme (19)",
+     "count": "123"
+    },
+    {
+     "item": "Castells i falcons - Castells (17)",
+     "count": "74"
+    },
+    {
+     "item": "Cinema i fotografia - Cinema (6)",
+     "count": "57"
+    },
+    {
+     "item": "Dansa - Sardanes (11)",
+     "count": "49"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Trabucaires (15)",
+     "count": "47"
+    },
+    {
+     "item": "Teatre - Pessebres vivents (33)",
+     "count": "44"
+    },
+    {
+     "item": "Dansa - Esbarts (10)",
+     "count": "39"
+    },
+    {
+     "item": "Festa i artesania - Pessebristes (3)",
+     "count": "31"
+    },
+    {
+     "item": "Cant coral - Cors Clavé (22)",
+     "count": "30"
+    },
+    {
+     "item": "Dansa - Bastoners (9)",
+     "count": "27"
+    },
+    {
+     "item": "Cinema i fotografia - Fotografia (7)",
+     "count": "24"
+    },
+    {
+     "item": "Festa i artesania - Tres Tombs (4)",
+     "count": "21"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Diables (14)",
+     "count": "20"
+    },
+    {
+     "item": "Teatre - Pastorets (32)",
+     "count": "16"
+    }
+   ]
+  ],
+  [
+   "mbit_actuaci_2",
+   "Àmbit actuació (2)",
+   "text",
+   [
+    {
+     "item": "Música - Grallers (27)",
+     "count": "54"
+    },
+    {
+     "item": "Cant coral - Altres cant coral (24)",
+     "count": "42"
+    },
+    {
+     "item": "Altres - Altres no contemplats al Consell (42)",
+     "count": "40"
+    },
+    {
+     "item": "Dansa - Altres dansa (12)",
+     "count": "36"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Bestiari (13)",
+     "count": "32"
+    },
+    {
+     "item": "Música - Altres música (29)",
+     "count": "31"
+    },
+    {
+     "item": "Gegants i nans - Gegants (20)",
+     "count": "24"
+    },
+    {
+     "item": "Ateneisme cultural - Ateneisme (19)",
+     "count": "23"
+    },
+    {
+     "item": "Teatre - Pastorets (32)",
+     "count": "21"
+    },
+    {
+     "item": "Música - Tabalers (28)",
+     "count": "21"
+    },
+    {
+     "item": "Altres - Festivals (39)",
+     "count": "21"
+    },
+    {
+     "item": "Cant coral - Corals i orfeons (21)",
+     "count": "20"
+    },
+    {
+     "item": "Teatre - Teatre amateur (34)",
+     "count": "18"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Diables (14)",
+     "count": "18"
+    },
+    {
+     "item": "Teatre - Altres teatre (35)",
+     "count": "16"
+    },
+    {
+     "item": "Cinema i fotografia - Cinema (6)",
+     "count": "16"
+    },
+    {
+     "item": "Dansa - Esbarts (10)",
+     "count": "14"
+    },
+    {
+     "item": "Dansa - Bastoners (9)",
+     "count": "12"
+    },
+    {
+     "item": "Altres - Comunicació (41)",
+     "count": "12"
+    },
+    {
+     "item": "Dansa - Ball de gitanes (8)",
+     "count": "9"
+    }
+   ]
+  ],
+  [
+   "mbit_actuaci_3",
+   "Àmbit actuació (3)",
+   "text",
+   [
+    {
+     "item": "Música - Tabalers (28)",
+     "count": "29"
+    },
+    {
+     "item": "Música - Altres música (29)",
+     "count": "27"
+    },
+    {
+     "item": "Altres - Festivals (39)",
+     "count": "24"
+    },
+    {
+     "item": "Teatre - Teatre amateur (34)",
+     "count": "23"
+    },
+    {
+     "item": "Dansa - Altres dansa (12)",
+     "count": "21"
+    },
+    {
+     "item": "Altres - Altres no contemplats al Consell (42)",
+     "count": "20"
+    },
+    {
+     "item": "Música - Grallers (27)",
+     "count": "15"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Diables (14)",
+     "count": "12"
+    },
+    {
+     "item": "Teatre - Altres teatre (35)",
+     "count": "11"
+    },
+    {
+     "item": "Teatre - Pastorets (32)",
+     "count": "11"
+    },
+    {
+     "item": "Cant coral - Altres cant coral (24)",
+     "count": "10"
+    },
+    {
+     "item": "Cant coral - Corals i orfeons (21)",
+     "count": "10"
+    },
+    {
+     "item": "Cinema i fotografia - Cinema (6)",
+     "count": "9"
+    },
+    {
+     "item": "Gegants i nans - Gegants (20)",
+     "count": "9"
+    },
+    {
+     "item": "Dansa - Bastoners (9)",
+     "count": "8"
+    },
+    {
+     "item": "Festa i artesania - Altres artesania i festa (5)",
+     "count": "7"
+    },
+    {
+     "item": "Dansa - Sardanes (11)",
+     "count": "7"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Bestiari (13)",
+     "count": "7"
+    },
+    {
+     "item": "Joc tradicional - Jocs Populars i Tradicionals (36)",
+     "count": "7"
+    },
+    {
+     "item": "Cinema i fotografia - Fotografia (7)",
+     "count": "6"
+    }
+   ]
+  ],
+  [
+   "mbit_actuaci_4",
+   "Àmbit actuació (4)",
+   "text",
+   [
+    {
+     "item": "Música - Altres música (29)",
+     "count": "19"
+    },
+    {
+     "item": "Teatre - Teatre amateur (34)",
+     "count": "17"
+    },
+    {
+     "item": "Altres - Altres no contemplats al Consell (42)",
+     "count": "15"
+    },
+    {
+     "item": "Altres - Festivals (39)",
+     "count": "14"
+    },
+    {
+     "item": "Música - Grallers (27)",
+     "count": "12"
+    },
+    {
+     "item": "Teatre - Altres teatre (35)",
+     "count": "12"
+    },
+    {
+     "item": "Dansa - Altres dansa (12)",
+     "count": "12"
+    },
+    {
+     "item": "Música - Tabalers (28)",
+     "count": "11"
+    },
+    {
+     "item": "Dansa - Esbarts (10)",
+     "count": "7"
+    },
+    {
+     "item": "Teatre - Pastorets (32)",
+     "count": "6"
+    },
+    {
+     "item": "Dansa - Bastoners (9)",
+     "count": "5"
+    },
+    {
+     "item": "Gegants i nans - Gegants (20)",
+     "count": "5"
+    },
+    {
+     "item": "Ateneisme cultural - Ateneisme (19)",
+     "count": "4"
+    },
+    {
+     "item": "Joc tradicional - Jocs Populars i Tradicionals (36)",
+     "count": "4"
+    },
+    {
+     "item": "Diables, bestiari i trabucaires  - Altres diables, bestiari i trabucaires (16)",
+     "count": "4"
+    },
+    {
+     "item": "Altres - Comunicació (41)",
+     "count": "4"
+    },
+    {
+     "item": "Dansa - Ball de gitanes (8)",
+     "count": "4"
+    },
+    {
+     "item": "Altres - Projecció exterior (40)",
+     "count": "3"
+    },
+    {
+     "item": "Cinema i fotografia - Cinema (6)",
+     "count": "3"
+    },
+    {
+     "item": "Cinema i fotografia - Fotografia (7)",
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   "mbit_actuaci_5",
+   "Àmbit actuació (5)",
+   "text",
+   [
+    {
+     "item": "Música - Altres música (29)",
+     "count": "15"
+    },
+    {
+     "item": "Altres - Altres no contemplats al Consell (42)",
+     "count": "15"
+    },
+    {
+     "item": "Música - Tabalers (28)",
+     "count": "10"
+    },
+    {
+     "item": "Teatre - Teatre amateur (34)",
+     "count": "9"
+    },
+    {
+     "item": "Altres - Festivals (39)",
+     "count": "8"
+    },
+    {
+     "item": "Teatre - Altres teatre (35)",
+     "count": "7"
+    },
+    {
+     "item": "Altres - Comunicació (41)",
+     "count": "6"
+    },
+    {
+     "item": "Altres - Projecció exterior (40)",
+     "count": "5"
+    },
+    {
+     "item": "Dansa - Sardanes (11)",
+     "count": "5"
+    },
+    {
+     "item": "Música - Grallers (27)",
+     "count": "5"
+    },
+    {
+     "item": "Dansa - Altres dansa (12)",
+     "count": "4"
+    },
+    {
+     "item": "Ateneisme cultural - Ateneisme (19)",
+     "count": "3"
+    },
+    {
+     "item": "Cant coral - Altres cant coral (24)",
+     "count": "3"
+    },
+    {
+     "item": "Festa i artesania - Tres Tombs (4)",
+     "count": "2"
+    },
+    {
+     "item": "Gegants i nans - Gegants (20)",
+     "count": "2"
+    },
+    {
+     "item": "Cinema i fotografia - Cinema (6)",
+     "count": "2"
+    },
+    {
+     "item": "Teatre - Pastorets (32)",
+     "count": "2"
+    },
+    {
+     "item": "Festa i artesania - Altres artesania i festa (5)",
+     "count": "2"
+    },
+    {
+     "item": "Música - Cobles (26)",
+     "count": "1"
+    },
+    {
+     "item": "Dansa - Ball de gitanes (8)",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "federada",
+   "Federada",
+   "text",
+   [
+    {
+     "item": "Sí",
+     "count": "1915"
+    },
+    {
+     "item": "No",
+     "count": "112"
+    }
+   ]
+  ],
+  [
+   "federaci_adscrita_1",
+   "Federació adscrita (1)",
+   "text",
+   [
+    {
+     "item": "Federació Agrupació Colles Geganteres de Catalunya (18)",
+     "count": "326"
+    },
+    {
+     "item": "Federació Catalana d’Entitats Corals (23)",
+     "count": "244"
+    },
+    {
+     "item": "Agrupació del Bestiari Festiu i Popular de Catalunya (17)",
+     "count": "213"
+    },
+    {
+     "item": "Coordinadora de Centres d’Estudis de Parla Catalana (13)",
+     "count": "191"
+    },
+    {
+     "item": "Federació de Grups Amateurs de Teatre de Catalunya (20)",
+     "count": "139"
+    },
+    {
+     "item": "Federació d’Ateneus de Catalunya (22)",
+     "count": "136"
+    },
+    {
+     "item": "Coordinadora de Colles Castelleres de Catalunya (5)",
+     "count": "74"
+    },
+    {
+     "item": "Federació Catalana de Fotografia (27)",
+     "count": "65"
+    },
+    {
+     "item": "Coordinadora de Trabucaires de Catalunya (15)",
+     "count": "47"
+    },
+    {
+     "item": "Federació d'Entitats Culturals Andaluses a Catalunya (FECAC) (43)",
+     "count": "46"
+    },
+    {
+     "item": "Federació Pessebres Vivents de Catalunya (24)",
+     "count": "44"
+    },
+    {
+     "item": "Federació Unió de Colles Sardanistes de Catalunya (8)",
+     "count": "41"
+    },
+    {
+     "item": "Federació Agrupament d'Esbarts Dansaires Segle XXI (6)",
+     "count": "40"
+    },
+    {
+     "item": "Federació Secretariat de Corals Infantils de Catalunya (32)",
+     "count": "34"
+    },
+    {
+     "item": "Federació Catalana de Pessebristes (12)",
+     "count": "31"
+    },
+    {
+     "item": "Federació de Cors de Clavé (31)",
+     "count": "30"
+    },
+    {
+     "item": "Coordinadora d'Associacions de Ball de Bastons de Catalunya (14)",
+     "count": "29"
+    },
+    {
+     "item": "Federació Catalana dels Tres Tombs (3)",
+     "count": "21"
+    },
+    {
+     "item": "Federació Andalusa de Comunitats (FAC) (42)",
+     "count": "19"
+    },
+    {
+     "item": "Federació de Cases Regionals i Entitats Culturals a Catalunya (FECARECAT) (36)",
+     "count": "16"
+    }
+   ]
+  ],
+  [
+   "federaci_adscrita_2",
+   "Federació adscrita (2)",
+   "text",
+   [
+    {
+     "item": "Federació de Diables i Dimonis de Catalunya (16)",
+     "count": "28"
+    },
+    {
+     "item": "Agrupació del Bestiari Festiu i Popular de Catalunya (17)",
+     "count": "25"
+    },
+    {
+     "item": "Coordinadora de Pastorets de Catalunya (19)",
+     "count": "18"
+    },
+    {
+     "item": "Federació Agrupació Colles Geganteres de Catalunya (18)",
+     "count": "18"
+    },
+    {
+     "item": "Confederació Sardanista de Catalunya (4)",
+     "count": "16"
+    },
+    {
+     "item": "Federació de Grups Amateurs de Teatre de Catalunya (20)",
+     "count": "15"
+    },
+    {
+     "item": "Federació Catalana d’Entitats Corals (23)",
+     "count": "14"
+    },
+    {
+     "item": "Federació de Cors de Clavé (31)",
+     "count": "13"
+    },
+    {
+     "item": "Coordinadora d'Associacions de Ball de Bastons de Catalunya (14)",
+     "count": "11"
+    },
+    {
+     "item": "Federació d’Ateneus de Catalunya (22)",
+     "count": "9"
+    },
+    {
+     "item": "Federació Agrupament d'Esbarts Dansaires Segle XXI (6)",
+     "count": "7"
+    },
+    {
+     "item": "Ens de l’Associacionisme Cultural Català (9)",
+     "count": "7"
+    },
+    {
+     "item": "Federació Corals Joves de Catalunya (33)",
+     "count": "6"
+    },
+    {
+     "item": "Coordinadora de Trabucaires de Catalunya (15)",
+     "count": "4"
+    },
+    {
+     "item": "Federació Catalana de Cineclubs (26)",
+     "count": "4"
+    },
+    {
+     "item": "Federació Secretariat de Corals Infantils de Catalunya (32)",
+     "count": "4"
+    },
+    {
+     "item": "Federació Andalusa de Comunitats (FAC) (42)",
+     "count": "3"
+    },
+    {
+     "item": "Federació Unió de Colles Sardanistes de Catalunya (8)",
+     "count": "3"
+    },
+    {
+     "item": "Agrupació de Colles de Balls de Gitanes del Vallès (34)",
+     "count": "3"
+    },
+    {
+     "item": "Institució Obra del Ballet Popular (2)",
+     "count": "2"
+    }
+   ]
+  ],
+  [
+   "federaci_adscrita_3",
+   "Federació adscrita (3)",
+   "text",
+   [
+    {
+     "item": "Coordinadora de Pastorets de Catalunya (19)",
+     "count": "7"
+    },
+    {
+     "item": "Federació Agrupació Colles Geganteres de Catalunya (18)",
+     "count": "5"
+    },
+    {
+     "item": "Federació de Diables i Dimonis de Catalunya (16)",
+     "count": "5"
+    },
+    {
+     "item": "Federació Agrupament d'Esbarts Dansaires Segle XXI (6)",
+     "count": "3"
+    },
+    {
+     "item": "Federació d’Ateneus de Catalunya (22)",
+     "count": "3"
+    },
+    {
+     "item": "Federació Secretariat de Corals Infantils de Catalunya (32)",
+     "count": "3"
+    },
+    {
+     "item": "Federació de Cors de Clavé (31)",
+     "count": "3"
+    },
+    {
+     "item": "Federació de Grups Amateurs de Teatre de Catalunya (20)",
+     "count": "3"
+    },
+    {
+     "item": "Coordinadora d'Associacions de Ball de Bastons de Catalunya (14)",
+     "count": "3"
+    },
+    {
+     "item": "Federació Catalana d’Entitats Corals (23)",
+     "count": "3"
+    },
+    {
+     "item": "Institució Obra del Ballet Popular (2)",
+     "count": "3"
+    },
+    {
+     "item": "Federació Catalana de Cineclubs (26)",
+     "count": "3"
+    },
+    {
+     "item": "Federació Unió de Colles Sardanistes de Catalunya (8)",
+     "count": "2"
+    },
+    {
+     "item": "Associació Catalana de Puntaires (10)",
+     "count": "2"
+    },
+    {
+     "item": "Moviment Coral Català (21)",
+     "count": "1"
+    },
+    {
+     "item": "Confederació Sardanista de Catalunya (4)",
+     "count": "1"
+    },
+    {
+     "item": "Coordinadora de Centres d’Estudis de Parla Catalana (13)",
+     "count": "1"
+    },
+    {
+     "item": "Coordinadora de Colles Castelleres de Catalunya (5)",
+     "count": "1"
+    },
+    {
+     "item": "Ens de l’Associacionisme Cultural Català (9)",
+     "count": "1"
+    },
+    {
+     "item": "Federació Catalana de Jocs, Esports i Deports Tradicionals (25)",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "federaci_adscrita_4",
+   "Federació adscrita (4)",
+   "text",
+   [
+    {
+     "item": "Federació Catalana d’Entitats Corals (23)",
+     "count": "8"
+    },
+    {
+     "item": "Federació Agrupament d'Esbarts Dansaires Segle XXI (6)",
+     "count": "4"
+    },
+    {
+     "item": "Agrupació del Bestiari Festiu i Popular de Catalunya (17)",
+     "count": "3"
+    },
+    {
+     "item": "Federació de Diables i Dimonis de Catalunya (16)",
+     "count": "2"
+    },
+    {
+     "item": "Federació de Grups Amateurs de Teatre de Catalunya (20)",
+     "count": "2"
+    },
+    {
+     "item": "Federació Secretariat de Corals Infantils de Catalunya (32)",
+     "count": "1"
+    },
+    {
+     "item": "Moviment Coral Català (21)",
+     "count": "1"
+    },
+    {
+     "item": "Confederació Sardanista de Catalunya (4)",
+     "count": "1"
+    },
+    {
+     "item": "Ens de l’Associacionisme Cultural Català (9)",
+     "count": "1"
+    },
+    {
+     "item": "Federació Agrupació Colles Geganteres de Catalunya (18)",
+     "count": "1"
+    },
+    {
+     "item": "Federació Catalana de Fotografia (27)",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "federaci_adscrita_5",
+   "Federació adscrita (5)",
+   "text",
+   [
+    {
+     "item": "Federació de Grups Amateurs de Teatre de Catalunya (20)",
+     "count": "3"
+    },
+    {
+     "item": "Ens de l’Associacionisme Cultural Català (9)",
+     "count": "2"
+    },
+    {
+     "item": "Institució Obra del Ballet Popular (2)",
+     "count": "2"
+    },
+    {
+     "item": "Federació Corals Joves de Catalunya (33)",
+     "count": "1"
+    },
+    {
+     "item": "Federació Catalana de Fotografia (27)",
+     "count": "1"
+    },
+    {
+     "item": "Federació Catalana de Cineclubs (26)",
+     "count": "1"
+    },
+    {
+     "item": "Associació Catalana de Puntaires (10)",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "abast_territorial_principal",
+   "Abast territorial principal",
+   "text",
+   [
+    {
+     "item": "Catalunya (3)",
+     "count": "1614"
+    },
+    {
+     "item": "Local (1)",
+     "count": "300"
+    },
+    {
+     "item": "Comarcal (2)",
+     "count": "108"
+    },
+    {
+     "item": "Altres (4)",
+     "count": "5"
+    }
+   ]
+  ],
+  [
+   "territori_concret",
+   "Territori concret",
+   "text",
+   [
+    {
+     "item": "Comarcal",
+     "count": "5"
+    },
+    {
+     "item": "Catalunya Nord",
+     "count": "5"
+    },
+    {
+     "item": "França",
+     "count": "3"
+    },
+    {
+     "item": "Països Catalans",
+     "count": "3"
+    },
+    {
+     "item": "Catalunya",
+     "count": "3"
+    },
+    {
+     "item": "Aragó",
+     "count": "2"
+    },
+    {
+     "item": "Espanya",
+     "count": "2"
+    },
+    {
+     "item": "Balears",
+     "count": "2"
+    },
+    {
+     "item": "Catalunya del Nord",
+     "count": "1"
+    },
+    {
+     "item": "catalunya nord",
+     "count": "1"
+    },
+    {
+     "item": "Catalunya, País Valencià, Mallorca, Aragó, Unió Europea, Argentina, Uruguai, Mexic",
+     "count": "1"
+    },
+    {
+     "item": "Cerdanya Francesa, ocasionalment, a la resta de l'Estat espanyol.",
+     "count": "1"
+    },
+    {
+     "item": "Comarques de la Catalunya Nord: Roselló, Capcir, Alta Cerdanya, Vallespir",
+     "count": "1"
+    },
+    {
+     "item": "Conca de Barberà",
+     "count": "1"
+    },
+    {
+     "item": "Cuenca, Ávila, Menorca",
+     "count": "1"
+    },
+    {
+     "item": "Espanya, Andorra i França",
+     "count": "1"
+    },
+    {
+     "item": "Espanya e Internacional",
+     "count": "1"
+    },
+    {
+     "item": "Espanya, Europa",
+     "count": "1"
+    },
+    {
+     "item": "Espanya frança",
+     "count": "1"
+    },
+    {
+     "item": "Espanya, França, Suïssa",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "observacions",
+   "Observacions",
+   "text",
+   []
+  ],
+  [
+   "declarada_d_inter_s_cultural",
+   "Declarada d'interès cultural",
+   "text",
+   [
+    {
+     "item": "No",
+     "count": "2027"
+    }
+   ]
+  ],
+  [
+   "any_declaraci_inter_s_cultural",
+   "Any declaració interès cultural",
+   "text",
+   []
+  ],
+  [
+   "declarada_d_utilitat_p_blica",
+   "Declarada d’utilitat pública",
+   "text",
+   [
+    {
+     "item": "No",
+     "count": "2027"
+    }
+   ]
+  ],
+  [
+   "any_declaraci_utilitat_p",
+   "Any declaració utilitat pública",
+   "text",
+   []
+  ],
+  [
+   "n_mero_de_registre_com_a",
+   "Número de registre com a entitat jurídica",
+   "text",
+   [
+    {
+     "item": "23",
+     "count": "2"
+    },
+    {
+     "item": "84",
+     "count": "2"
+    },
+    {
+     "item": "600",
+     "count": "2"
+    },
+    {
+     "item": "1081",
+     "count": "2"
+    },
+    {
+     "item": "12035",
+     "count": "2"
+    },
+    {
+     "item": "62813",
+     "count": "2"
+    },
+    {
+     "item": "94",
+     "count": "2"
+    },
+    {
+     "item": "22313",
+     "count": "2"
+    },
+    {
+     "item": "10272",
+     "count": "1"
+    },
+    {
+     "item": "1031",
+     "count": "1"
+    },
+    {
+     "item": "10326",
+     "count": "1"
+    },
+    {
+     "item": "1038",
+     "count": "1"
+    },
+    {
+     "item": "1041",
+     "count": "1"
+    },
+    {
+     "item": "1050",
+     "count": "1"
+    },
+    {
+     "item": "1057",
+     "count": "1"
+    },
+    {
+     "item": "1062",
+     "count": "1"
+    },
+    {
+     "item": "1067",
+     "count": "1"
+    },
+    {
+     "item": "10735-J/1",
+     "count": "1"
+    },
+    {
+     "item": "10757",
+     "count": "1"
+    },
+    {
+     "item": "10794",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "data_d_inscripci_al_registre",
+   "Data d’inscripció al registre d’entitats jurídiques",
+   "calendar_date",
+   [
+    {
+     "item": "1967-01-28T00:00:00.000",
+     "count": "3"
+    },
+    {
+     "item": "2020-06-08T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1990-11-20T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2010-06-08T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1999-12-15T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2018-02-21T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2010-07-27T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1983-04-29T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2006-03-29T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1966-07-12T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1985-03-26T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1988-03-25T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2010-12-14T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2000-09-13T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1990-03-01T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2006-11-07T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1985-04-16T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "1985-05-28T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2019-02-19T00:00:00.000",
+     "count": "2"
+    },
+    {
+     "item": "2013-01-28T00:00:00.000",
+     "count": "2"
+    }
+   ]
+  ],
+  [
+   "adre_a_electr_nica_1",
+   "Adreça electrònica 1",
+   "text",
+   [
+    {
+     "item": "4brisas4@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "7cervells1994@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "a8040643@xtec.cat",
+     "count": "1"
+    },
+    {
+     "item": "a.a.esencia.rociera.badalona@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "aagentgranolot@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "aarb@aarb.cat",
+     "count": "1"
+    },
+    {
+     "item": "aarnalotmon@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "abplescabanyes@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "absc@tinet.cat",
+     "count": "1"
+    },
+    {
+     "item": "acacasadeandaluciacalafell@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "academiaaranesalenguaoccitana@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acae@esplugues.org",
+     "count": "1"
+    },
+    {
+     "item": "a.c.almacali@hotmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acamarismas@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "a.c.a.sta.cruz@hotmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acatcultural@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "a.c.a.zaharadelasierra@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acc@acciocivicacalderina.cat",
+     "count": "1"
+    },
+    {
+     "item": "acciofotografica@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acclm.terrassa@gmail.com",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "adre_a_electr_nica_2",
+   "Adreça electrònica 2",
+   "text",
+   [
+    {
+     "item": "geganterindepe@gmail.com",
+     "count": "2"
+    },
+    {
+     "item": "alaqant@hotmail.com",
+     "count": "2"
+    },
+    {
+     "item": "a8042871@xtec.cat",
+     "count": "1"
+    },
+    {
+     "item": "aapd.foto@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "ac4mes1@yahoo.es",
+     "count": "1"
+    },
+    {
+     "item": "acfllampecnois@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acobo2521@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "acodinai@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "admin@arreplegats.cat",
+     "count": "1"
+    },
+    {
+     "item": "administracio@collajoves.org",
+     "count": "1"
+    },
+    {
+     "item": "administracio@iepenedesencs.iorg",
+     "count": "1"
+    },
+    {
+     "item": "administracio@lapassiodecervera.com",
+     "count": "1"
+    },
+    {
+     "item": "administracion@casamurciabcn.com",
+     "count": "1"
+    },
+    {
+     "item": "admin@pehoc.cat",
+     "count": "1"
+    },
+    {
+     "item": "adririude@hotmail.com",
+     "count": "1"
+    },
+    {
+     "item": "africa8591@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "agnesff@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "agsantaeulalia@gmail.com",
+     "count": "1"
+    },
+    {
+     "item": "aguegui@hotmail.com",
+     "count": "1"
+    },
+    {
+     "item": "agustinak3@hotmail.com",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "adre_a_web_principal",
+   "Adreça web principal",
+   "url",
+   []
+  ],
+  [
+   "tel_fon_1",
+   "Telèfon 1",
+   "text",
+   [
+    {
+     "item": "609725794",
+     "count": "3"
+    },
+    {
+     "item": "620743314",
+     "count": "3"
+    },
+    {
+     "item": "627446885",
+     "count": "2"
+    },
+    {
+     "item": "932957200",
+     "count": "2"
+    },
+    {
+     "item": "658105779",
+     "count": "2"
+    },
+    {
+     "item": "649119029",
+     "count": "2"
+    },
+    {
+     "item": "639760163",
+     "count": "2"
+    },
+    {
+     "item": "934406616",
+     "count": "2"
+    },
+    {
+     "item": "674672314",
+     "count": "2"
+    },
+    {
+     "item": "937771587",
+     "count": "2"
+    },
+    {
+     "item": "934449000",
+     "count": "2"
+    },
+    {
+     "item": "977233160",
+     "count": "2"
+    },
+    {
+     "item": "977870359",
+     "count": "2"
+    },
+    {
+     "item": "973275415",
+     "count": "2"
+    },
+    {
+     "item": "698530031",
+     "count": "2"
+    },
+    {
+     "item": "689708984",
+     "count": "2"
+    },
+    {
+     "item": "932683531",
+     "count": "2"
+    },
+    {
+     "item": "937921001",
+     "count": "2"
+    },
+    {
+     "item": "932039772",
+     "count": "2"
+    },
+    {
+     "item": "972260132",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "tel_fon_2",
+   "Telèfon 2",
+   "text",
+   [
+    {
+     "item": "686955023",
+     "count": "2"
+    },
+    {
+     "item": "686441641",
+     "count": "2"
+    },
+    {
+     "item": "693725264",
+     "count": "2"
+    },
+    {
+     "item": "600433382",
+     "count": "1"
+    },
+    {
+     "item": "600481927",
+     "count": "1"
+    },
+    {
+     "item": "600529268",
+     "count": "1"
+    },
+    {
+     "item": "600658372",
+     "count": "1"
+    },
+    {
+     "item": "600754681",
+     "count": "1"
+    },
+    {
+     "item": "601004174",
+     "count": "1"
+    },
+    {
+     "item": "602921505",
+     "count": "1"
+    },
+    {
+     "item": "603736210",
+     "count": "1"
+    },
+    {
+     "item": "605318338",
+     "count": "1"
+    },
+    {
+     "item": "605515450",
+     "count": "1"
+    },
+    {
+     "item": "605566649",
+     "count": "1"
+    },
+    {
+     "item": "605612044",
+     "count": "1"
+    },
+    {
+     "item": "605738936",
+     "count": "1"
+    },
+    {
+     "item": "605874166",
+     "count": "1"
+    },
+    {
+     "item": "606010858",
+     "count": "1"
+    },
+    {
+     "item": "606299402",
+     "count": "1"
+    },
+    {
+     "item": "606379443",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "municipi",
+   "Municipi",
+   "text",
+   [
+    {
+     "item": "Barcelona",
+     "count": "264"
+    },
+    {
+     "item": "Terrassa",
+     "count": "44"
+    },
+    {
+     "item": "Mataró",
+     "count": "39"
+    },
+    {
+     "item": "Hospitalet de Llobregat, l'",
+     "count": "35"
+    },
+    {
+     "item": "Sabadell",
+     "count": "34"
+    },
+    {
+     "item": "Tarragona",
+     "count": "34"
+    },
+    {
+     "item": "Badalona",
+     "count": "33"
+    },
+    {
+     "item": "Reus",
+     "count": "23"
+    },
+    {
+     "item": "Lleida",
+     "count": "22"
+    },
+    {
+     "item": "Igualada",
+     "count": "21"
+    },
+    {
+     "item": "Vendrell, el",
+     "count": "20"
+    },
+    {
+     "item": "Tortosa",
+     "count": "20"
+    },
+    {
+     "item": "Vilafranca del Penedès",
+     "count": "19"
+    },
+    {
+     "item": "Sant Cugat del Vallès",
+     "count": "19"
+    },
+    {
+     "item": "Manresa",
+     "count": "19"
+    },
+    {
+     "item": "Vilanova i la Geltrú",
+     "count": "18"
+    },
+    {
+     "item": "Girona",
+     "count": "18"
+    },
+    {
+     "item": "Prat de Llobregat, el",
+     "count": "16"
+    },
+    {
+     "item": "Sant Feliu de Llobregat",
+     "count": "16"
+    },
+    {
+     "item": "Cornellà de Llobregat",
+     "count": "16"
+    }
+   ]
+  ],
+  [
+   "codi_municipi",
+   "Codi municipi",
+   "text",
+   [
+    {
+     "item": "080193",
+     "count": "264"
+    },
+    {
+     "item": "082798",
+     "count": "44"
+    },
+    {
+     "item": "081213",
+     "count": "39"
+    },
+    {
+     "item": "081017",
+     "count": "35"
+    },
+    {
+     "item": "081878",
+     "count": "34"
+    },
+    {
+     "item": "431482",
+     "count": "34"
+    },
+    {
+     "item": "080155",
+     "count": "33"
+    },
+    {
+     "item": "431233",
+     "count": "23"
+    },
+    {
+     "item": "251207",
+     "count": "22"
+    },
+    {
+     "item": "081022",
+     "count": "21"
+    },
+    {
+     "item": "431634",
+     "count": "20"
+    },
+    {
+     "item": "431554",
+     "count": "20"
+    },
+    {
+     "item": "081136",
+     "count": "19"
+    },
+    {
+     "item": "082055",
+     "count": "19"
+    },
+    {
+     "item": "083054",
+     "count": "19"
+    },
+    {
+     "item": "083073",
+     "count": "18"
+    },
+    {
+     "item": "170792",
+     "count": "18"
+    },
+    {
+     "item": "080734",
+     "count": "16"
+    },
+    {
+     "item": "082114",
+     "count": "16"
+    },
+    {
+     "item": "081691",
+     "count": "16"
+    }
+   ]
+  ],
+  [
+   "submunicipi",
+   "Submunicipi",
+   "text",
+   [
+    {
+     "item": "Valldoreix (082055000400)",
+     "count": "2"
+    },
+    {
+     "item": "Ràpita, la (082515000900)",
+     "count": "2"
+    },
+    {
+     "item": "Jesús (431554000100)",
+     "count": "2"
+    },
+    {
+     "item": "Fals (080847000200)",
+     "count": "1"
+    },
+    {
+     "item": "Gunyoles, les (080137000400)",
+     "count": "1"
+    },
+    {
+     "item": "Hospitalet de l'Infant, l' (431628000100)",
+     "count": "1"
+    },
+    {
+     "item": "Hostalets de Balenyà, els (080174000200)",
+     "count": "1"
+    },
+    {
+     "item": "Joanetes (172076020200)",
+     "count": "1"
+    },
+    {
+     "item": "Lilla (430862000200)",
+     "count": "1"
+    },
+    {
+     "item": "Lleger (431378000400)",
+     "count": "1"
+    },
+    {
+     "item": "Mira-sol (082055000200)",
+     "count": "1"
+    },
+    {
+     "item": "Moja (081458000100)",
+     "count": "1"
+    },
+    {
+     "item": "Ordal (082732000900)",
+     "count": "1"
+    },
+    {
+     "item": "Riells del Fai (080235000300)",
+     "count": "1"
+    },
+    {
+     "item": "Sant Marçal (080581000500)",
+     "count": "1"
+    },
+    {
+     "item": "Sant Martí de Maldà (259025000300)",
+     "count": "1"
+    },
+    {
+     "item": "Torreta, la (081810000300)",
+     "count": "1"
+    },
+    {
+     "item": "Tragó (251654000500)",
+     "count": "1"
+    },
+    {
+     "item": "Vilavenut (170715000600)",
+     "count": "1"
+    },
+    {
+     "item": "Ametlla de Merola, l' (081751000100)",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "codi_postal",
+   "Codi postal",
+   "text",
+   [
+    {
+     "item": "08700",
+     "count": "21"
+    },
+    {
+     "item": "43700",
+     "count": "20"
+    },
+    {
+     "item": "08720",
+     "count": "19"
+    },
+    {
+     "item": "08003",
+     "count": "18"
+    },
+    {
+     "item": "08800",
+     "count": "18"
+    },
+    {
+     "item": "08030",
+     "count": "18"
+    },
+    {
+     "item": "08014",
+     "count": "16"
+    },
+    {
+     "item": "08940",
+     "count": "16"
+    },
+    {
+     "item": "08820",
+     "count": "16"
+    },
+    {
+     "item": "08191",
+     "count": "15"
+    },
+    {
+     "item": "43500",
+     "count": "15"
+    },
+    {
+     "item": "08950",
+     "count": "15"
+    },
+    {
+     "item": "08301",
+     "count": "15"
+    },
+    {
+     "item": "08980",
+     "count": "15"
+    },
+    {
+     "item": "08241",
+     "count": "14"
+    },
+    {
+     "item": "08005",
+     "count": "14"
+    },
+    {
+     "item": "08830",
+     "count": "14"
+    },
+    {
+     "item": "17600",
+     "count": "13"
+    },
+    {
+     "item": "08750",
+     "count": "13"
+    },
+    {
+     "item": "08303",
+     "count": "13"
+    }
+   ]
+  ],
+  [
+   "tipus_via",
+   "Tipus via",
+   "text",
+   [
+    {
+     "item": "Carrer (8)",
+     "count": "1387"
+    },
+    {
+     "item": "Plaça (31)",
+     "count": "249"
+    },
+    {
+     "item": "Avinguda (3)",
+     "count": "157"
+    },
+    {
+     "item": "Passeig (30)",
+     "count": "67"
+    },
+    {
+     "item": "Rambla (32)",
+     "count": "34"
+    },
+    {
+     "item": "Carretera (13)",
+     "count": "32"
+    },
+    {
+     "item": "Passatge (26)",
+     "count": "23"
+    },
+    {
+     "item": "Camí (11)",
+     "count": "16"
+    },
+    {
+     "item": "Ronda (33)",
+     "count": "13"
+    },
+    {
+     "item": "Gran Via (20)",
+     "count": "10"
+    },
+    {
+     "item": "Via (40)",
+     "count": "7"
+    },
+    {
+     "item": "Travessera (37)",
+     "count": "5"
+    },
+    {
+     "item": "Apt. Correus (45)",
+     "count": "5"
+    },
+    {
+     "item": "Barri (7)",
+     "count": "4"
+    },
+    {
+     "item": "Travessia (36)",
+     "count": "3"
+    },
+    {
+     "item": "Edifici (17)",
+     "count": "2"
+    },
+    {
+     "item": "Cases (14)",
+     "count": "2"
+    },
+    {
+     "item": "Carreró (10)",
+     "count": "2"
+    },
+    {
+     "item": "Colònia (12)",
+     "count": "1"
+    },
+    {
+     "item": "Barranc (4)",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "nom_via",
+   "Nom via",
+   "text",
+   [
+    {
+     "item": "Major",
+     "count": "73"
+    },
+    {
+     "item": "Nou",
+     "count": "18"
+    },
+    {
+     "item": "de l'Església",
+     "count": "16"
+    },
+    {
+     "item": "de Catalunya",
+     "count": "14"
+    },
+    {
+     "item": "Pau Casals",
+     "count": "11"
+    },
+    {
+     "item": "Catalunya",
+     "count": "11"
+    },
+    {
+     "item": "de la Font",
+     "count": "10"
+    },
+    {
+     "item": "Sant Joan",
+     "count": "10"
+    },
+    {
+     "item": "de la Vila",
+     "count": "10"
+    },
+    {
+     "item": "Prat de la Riba",
+     "count": "9"
+    },
+    {
+     "item": "de les Escoles",
+     "count": "9"
+    },
+    {
+     "item": "de les Corts Catalanes",
+     "count": "9"
+    },
+    {
+     "item": "de les Beates",
+     "count": "8"
+    },
+    {
+     "item": "Barcelona",
+     "count": "8"
+    },
+    {
+     "item": "Vella",
+     "count": "8"
+    },
+    {
+     "item": "de l'Ajuntament",
+     "count": "7"
+    },
+    {
+     "item": "Joan Maragall",
+     "count": "7"
+    },
+    {
+     "item": "Església",
+     "count": "7"
+    },
+    {
+     "item": "de Sant Josep",
+     "count": "7"
+    },
+    {
+     "item": "del Carme",
+     "count": "7"
+    }
+   ]
+  ],
+  [
+   "n_mero",
+   "Número",
+   "text",
+   [
+    {
+     "item": "s/n",
+     "count": "176"
+    },
+    {
+     "item": "1",
+     "count": "146"
+    },
+    {
+     "item": "2",
+     "count": "123"
+    },
+    {
+     "item": "4",
+     "count": "69"
+    },
+    {
+     "item": "3",
+     "count": "67"
+    },
+    {
+     "item": "6",
+     "count": "62"
+    },
+    {
+     "item": "5",
+     "count": "58"
+    },
+    {
+     "item": "10",
+     "count": "48"
+    },
+    {
+     "item": "7",
+     "count": "46"
+    },
+    {
+     "item": "16",
+     "count": "36"
+    },
+    {
+     "item": "8",
+     "count": "35"
+    },
+    {
+     "item": "20",
+     "count": "34"
+    },
+    {
+     "item": "17",
+     "count": "34"
+    },
+    {
+     "item": "13",
+     "count": "33"
+    },
+    {
+     "item": "15",
+     "count": "33"
+    },
+    {
+     "item": "9",
+     "count": "31"
+    },
+    {
+     "item": "14",
+     "count": "29"
+    },
+    {
+     "item": "11",
+     "count": "27"
+    },
+    {
+     "item": "30",
+     "count": "25"
+    },
+    {
+     "item": "12",
+     "count": "25"
+    }
+   ]
+  ],
+  [
+   "bloc",
+   "Bloc",
+   "text",
+   [
+    {
+     "item": "Local",
+     "count": "2"
+    },
+    {
+     "item": "B",
+     "count": "2"
+    },
+    {
+     "item": "Bis",
+     "count": "2"
+    },
+    {
+     "item": "1",
+     "count": "2"
+    },
+    {
+     "item": "Armand",
+     "count": "1"
+    },
+    {
+     "item": "C",
+     "count": "1"
+    },
+    {
+     "item": "Can Buxó",
+     "count": "1"
+    },
+    {
+     "item": "Despatx",
+     "count": "1"
+    },
+    {
+     "item": "galeries",
+     "count": "1"
+    },
+    {
+     "item": "Omega",
+     "count": "1"
+    },
+    {
+     "item": "R-112",
+     "count": "1"
+    },
+    {
+     "item": "U",
+     "count": "1"
+    },
+    {
+     "item": "15",
+     "count": "1"
+    },
+    {
+     "item": "A",
+     "count": "1"
+    },
+    {
+     "item": "Albada",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "escala",
+   "Escala",
+   "text",
+   [
+    {
+     "item": "B",
+     "count": "6"
+    },
+    {
+     "item": "A",
+     "count": "4"
+    },
+    {
+     "item": "1",
+     "count": "2"
+    },
+    {
+     "item": "9",
+     "count": "1"
+    },
+    {
+     "item": "A1",
+     "count": "1"
+    },
+    {
+     "item": "C",
+     "count": "1"
+    },
+    {
+     "item": "D",
+     "count": "1"
+    },
+    {
+     "item": "ESQUERRE",
+     "count": "1"
+    },
+    {
+     "item": "F",
+     "count": "1"
+    },
+    {
+     "item": "2",
+     "count": "1"
+    },
+    {
+     "item": "3",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "pis",
+   "Pis",
+   "text",
+   [
+    {
+     "item": "BXS",
+     "count": "120"
+    },
+    {
+     "item": "1",
+     "count": "90"
+    },
+    {
+     "item": "2",
+     "count": "79"
+    },
+    {
+     "item": "3",
+     "count": "52"
+    },
+    {
+     "item": "4",
+     "count": "21"
+    },
+    {
+     "item": "PRAL",
+     "count": "14"
+    },
+    {
+     "item": "ENTL",
+     "count": "12"
+    },
+    {
+     "item": "6",
+     "count": "9"
+    },
+    {
+     "item": "5",
+     "count": "9"
+    },
+    {
+     "item": "LOCAL",
+     "count": "9"
+    },
+    {
+     "item": "AT",
+     "count": "8"
+    },
+    {
+     "item": "7",
+     "count": "5"
+    },
+    {
+     "item": "8",
+     "count": "2"
+    },
+    {
+     "item": "B",
+     "count": "2"
+    },
+    {
+     "item": "CLAUSTRE",
+     "count": "1"
+    },
+    {
+     "item": "18 BIS",
+     "count": "1"
+    },
+    {
+     "item": "SAT",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "porta",
+   "Porta",
+   "text",
+   [
+    {
+     "item": "2",
+     "count": "88"
+    },
+    {
+     "item": "1",
+     "count": "84"
+    },
+    {
+     "item": "3",
+     "count": "24"
+    },
+    {
+     "item": "4",
+     "count": "21"
+    },
+    {
+     "item": "A",
+     "count": "14"
+    },
+    {
+     "item": "B",
+     "count": "9"
+    },
+    {
+     "item": "5",
+     "count": "8"
+    },
+    {
+     "item": "DRETA",
+     "count": "5"
+    },
+    {
+     "item": "D",
+     "count": "5"
+    },
+    {
+     "item": "208",
+     "count": "2"
+    },
+    {
+     "item": "16",
+     "count": "1"
+    },
+    {
+     "item": "45",
+     "count": "1"
+    },
+    {
+     "item": "151",
+     "count": "1"
+    },
+    {
+     "item": "6",
+     "count": "1"
+    },
+    {
+     "item": "7",
+     "count": "1"
+    },
+    {
+     "item": "8",
+     "count": "1"
+    },
+    {
+     "item": "9",
+     "count": "1"
+    },
+    {
+     "item": "11",
+     "count": "1"
+    },
+    {
+     "item": "10",
+     "count": "1"
+    },
+    {
+     "item": "B4",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "utm_x",
+   "UTM_X",
+   "number",
+   [
+    {
+     "item": "41.3860579",
+     "count": "9"
+    },
+    {
+     "item": "41.5599150",
+     "count": "4"
+    },
+    {
+     "item": "41.6174328",
+     "count": "4"
+    },
+    {
+     "item": "41.4009171",
+     "count": "4"
+    },
+    {
+     "item": "41.3702485",
+     "count": "3"
+    },
+    {
+     "item": "41.4398537",
+     "count": "3"
+    },
+    {
+     "item": "41.4620526",
+     "count": "3"
+    },
+    {
+     "item": "41.4519533",
+     "count": "3"
+    },
+    {
+     "item": "41.5792116",
+     "count": "3"
+    },
+    {
+     "item": "41.4398217",
+     "count": "3"
+    },
+    {
+     "item": "41.4471599",
+     "count": "3"
+    },
+    {
+     "item": "41.3491843",
+     "count": "3"
+    },
+    {
+     "item": "41.4010560",
+     "count": "3"
+    },
+    {
+     "item": "41.6475101",
+     "count": "3"
+    },
+    {
+     "item": "41.5433352",
+     "count": "3"
+    },
+    {
+     "item": "41.6662445",
+     "count": "3"
+    },
+    {
+     "item": "41.3201091",
+     "count": "3"
+    },
+    {
+     "item": "41.1527603",
+     "count": "3"
+    },
+    {
+     "item": "41.3139188",
+     "count": "3"
+    },
+    {
+     "item": "41.3820413",
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   "utm_y",
+   "UTM_Y",
+   "number",
+   [
+    {
+     "item": "2.1768480",
+     "count": "9"
+    },
+    {
+     "item": "2.6618076",
+     "count": "4"
+    },
+    {
+     "item": "2.1022655",
+     "count": "4"
+    },
+    {
+     "item": "2.1563247",
+     "count": "4"
+    },
+    {
+     "item": "2.9568665",
+     "count": "3"
+    },
+    {
+     "item": "1.8639784",
+     "count": "3"
+    },
+    {
+     "item": "1.6222367",
+     "count": "3"
+    },
+    {
+     "item": "1.2714965",
+     "count": "3"
+    },
+    {
+     "item": "2.1753859",
+     "count": "3"
+    },
+    {
+     "item": "2.1046391",
+     "count": "3"
+    },
+    {
+     "item": "2.9743677",
+     "count": "3"
+    },
+    {
+     "item": "1.6963637",
+     "count": "3"
+    },
+    {
+     "item": "2.0844855",
+     "count": "3"
+    },
+    {
+     "item": "2.0283522",
+     "count": "3"
+    },
+    {
+     "item": "2.2043679",
+     "count": "3"
+    },
+    {
+     "item": "2.0110570",
+     "count": "3"
+    },
+    {
+     "item": "0.9214399",
+     "count": "3"
+    },
+    {
+     "item": "1.9744048",
+     "count": "3"
+    },
+    {
+     "item": "3.1286082",
+     "count": "3"
+    },
+    {
+     "item": "2.0469715",
+     "count": "3"
+    }
+   ]
+  ]
+ ]
+}

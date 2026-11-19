@@ -1,0 +1,85 @@
+{
+ "nom": "Memòria del Departament de Cultura",
+ "desc": "Informació dels indicadors d’activitat, pressupost i personal disponibles a les memòries del Departament de Cultura de la Generalitat de Catalunya.",
+ "rows": 1759825723,
+ "cols": [
+  [
+   "id_ref",
+   "ID",
+   "text",
+   []
+  ],
+  [
+   "tipus",
+   "Tipus",
+   "text",
+   []
+  ],
+  [
+   "sector_1",
+   "Sector 1",
+   "text",
+   []
+  ],
+  [
+   "sector_2",
+   "Sector 2",
+   "text",
+   []
+  ],
+  [
+   "descripcio_general_indicador",
+   "Descripció general indicador",
+   "text",
+   []
+  ],
+  [
+   "descripcio_especifica",
+   "Descripció especifica indicador",
+   "text",
+   []
+  ],
+  [
+   "servei_1",
+   "Servei 1",
+   "text",
+   []
+  ],
+  [
+   "servei_2",
+   "Servei 2",
+   "text",
+   []
+  ],
+  [
+   "any",
+   "Any",
+   "text",
+   []
+  ],
+  [
+   "dada",
+   "Dada",
+   "text",
+   []
+  ],
+  [
+   "unitats_de_mesura",
+   "Unitats de mesura",
+   "text",
+   []
+  ],
+  [
+   "tematica",
+   "Temàtica",
+   "text",
+   []
+  ],
+  [
+   "observacions",
+   "Observacions",
+   "text",
+   []
+  ]
+ ]
+}

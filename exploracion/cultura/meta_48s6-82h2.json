@@ -1,0 +1,2712 @@
+{
+ "nom": "Equipaments culturals de Catalunya",
+ "desc": "Base de dades dels equipaments culturals de Catalunya: arxius, biblioteques, museus i col·leccions, centres culturals, espais d'arts visuals, espais escènics i musicals, fàbriques de creació i altres espais aptes per a ús cultural.",
+ "rows": 1745308382,
+ "cols": [
+  [
+   "id_gt",
+   "ID GT",
+   "text",
+   [
+    {
+     "item": "247",
+     "count": "1"
+    },
+    {
+     "item": "3542",
+     "count": "1"
+    },
+    {
+     "item": "3226",
+     "count": "1"
+    },
+    {
+     "item": "2585",
+     "count": "1"
+    },
+    {
+     "item": "2880",
+     "count": "1"
+    },
+    {
+     "item": "4165",
+     "count": "1"
+    },
+    {
+     "item": "2275",
+     "count": "1"
+    },
+    {
+     "item": "3202",
+     "count": "1"
+    },
+    {
+     "item": "5601",
+     "count": "1"
+    },
+    {
+     "item": "1822",
+     "count": "1"
+    },
+    {
+     "item": "1320",
+     "count": "1"
+    },
+    {
+     "item": "4834",
+     "count": "1"
+    },
+    {
+     "item": "3781",
+     "count": "1"
+    },
+    {
+     "item": "641",
+     "count": "1"
+    },
+    {
+     "item": "2658",
+     "count": "1"
+    },
+    {
+     "item": "4583",
+     "count": "1"
+    },
+    {
+     "item": "2179",
+     "count": "1"
+    },
+    {
+     "item": "4276",
+     "count": "1"
+    },
+    {
+     "item": "2255",
+     "count": "1"
+    },
+    {
+     "item": "2571",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "id_peccat",
+   "ID PECCat",
+   "text",
+   [
+    {
+     "item": "E8920A53-1DAE-4958-A623-8722477162F4",
+     "count": "1"
+    },
+    {
+     "item": "75210EAD-A360-46D0-ACCB-6CA283743701",
+     "count": "1"
+    },
+    {
+     "item": "ED986F3A-27FD-404C-B861-A52FF7CCF113",
+     "count": "1"
+    },
+    {
+     "item": "4FB2555D-210E-495F-AD76-FE0587BC78A8",
+     "count": "1"
+    },
+    {
+     "item": "6E0D1AA3-2931-4261-8B74-3DD59F5718DD",
+     "count": "1"
+    },
+    {
+     "item": "A3FDDF1F-CE29-49C0-B2FC-5FDC2B3204D5",
+     "count": "1"
+    },
+    {
+     "item": "7611B6D7-BAB6-4597-8D31-97DAC2970886",
+     "count": "1"
+    },
+    {
+     "item": "20FC5DA7-203F-4966-B1D8-879796B2FF74",
+     "count": "1"
+    },
+    {
+     "item": "61C0C211-8774-4090-9BE6-026E3529A885",
+     "count": "1"
+    },
+    {
+     "item": "0FAB7405-2BDA-45D9-9521-F5D7B31E96C1",
+     "count": "1"
+    },
+    {
+     "item": "836987B2-A8E3-491D-A1BC-D94DD5B8136A",
+     "count": "1"
+    },
+    {
+     "item": "4382CAC1-7B5B-48CE-A046-D376C8A083B2",
+     "count": "1"
+    },
+    {
+     "item": "87E5D26A-FA76-4341-A5D6-6A0C5678E5AD",
+     "count": "1"
+    },
+    {
+     "item": "6C7EBF19-6ACE-4384-8A18-3BBB46DF061E",
+     "count": "1"
+    },
+    {
+     "item": "998E0741-03EE-45AD-B407-D826F52FA5D9",
+     "count": "1"
+    },
+    {
+     "item": "558CB0AE-2980-4D75-B127-42AB2DEFA338",
+     "count": "1"
+    },
+    {
+     "item": "6D42EB38-BB52-409A-93A6-74315D5DD31C",
+     "count": "1"
+    },
+    {
+     "item": "F8F91C96-C168-416D-9486-F007DB73D4AC",
+     "count": "1"
+    },
+    {
+     "item": "64DB2BFC-6C5C-45E0-9C92-88DB0663116E",
+     "count": "1"
+    },
+    {
+     "item": "7E400C30-98F5-442D-AA8E-6D6878269C68",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "id_bcn",
+   "ID BCN",
+   "text",
+   [
+    {
+     "item": "462",
+     "count": "1"
+    },
+    {
+     "item": "383",
+     "count": "1"
+    },
+    {
+     "item": "247",
+     "count": "1"
+    },
+    {
+     "item": "144",
+     "count": "1"
+    },
+    {
+     "item": "93",
+     "count": "1"
+    },
+    {
+     "item": "94",
+     "count": "1"
+    },
+    {
+     "item": "325",
+     "count": "1"
+    },
+    {
+     "item": "182",
+     "count": "1"
+    },
+    {
+     "item": "115",
+     "count": "1"
+    },
+    {
+     "item": "2",
+     "count": "1"
+    },
+    {
+     "item": "134",
+     "count": "1"
+    },
+    {
+     "item": "268",
+     "count": "1"
+    },
+    {
+     "item": "37",
+     "count": "1"
+    },
+    {
+     "item": "282",
+     "count": "1"
+    },
+    {
+     "item": "442",
+     "count": "1"
+    },
+    {
+     "item": "45",
+     "count": "1"
+    },
+    {
+     "item": "285",
+     "count": "1"
+    },
+    {
+     "item": "199",
+     "count": "1"
+    },
+    {
+     "item": "455",
+     "count": "1"
+    },
+    {
+     "item": "491",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "actualitzaci",
+   "Actualització",
+   "calendar_date",
+   [
+    {
+     "item": "2023-11-28T00:00:00.000",
+     "count": "198"
+    },
+    {
+     "item": "2009-01-14T00:00:00.000",
+     "count": "180"
+    },
+    {
+     "item": "2010-11-23T00:00:00.000",
+     "count": "109"
+    },
+    {
+     "item": "2015-12-22T00:00:00.000",
+     "count": "106"
+    },
+    {
+     "item": "2015-12-04T00:00:00.000",
+     "count": "88"
+    },
+    {
+     "item": "2015-12-10T00:00:00.000",
+     "count": "85"
+    },
+    {
+     "item": "2018-07-06T00:00:00.000",
+     "count": "85"
+    },
+    {
+     "item": "2015-11-30T00:00:00.000",
+     "count": "85"
+    },
+    {
+     "item": "2010-11-16T00:00:00.000",
+     "count": "76"
+    },
+    {
+     "item": "2015-12-09T00:00:00.000",
+     "count": "74"
+    },
+    {
+     "item": "2015-11-25T00:00:00.000",
+     "count": "64"
+    },
+    {
+     "item": "2015-12-16T00:00:00.000",
+     "count": "64"
+    },
+    {
+     "item": "2023-03-06T00:00:00.000",
+     "count": "63"
+    },
+    {
+     "item": "2015-12-01T00:00:00.000",
+     "count": "61"
+    },
+    {
+     "item": "2023-02-07T00:00:00.000",
+     "count": "60"
+    },
+    {
+     "item": "2015-12-21T00:00:00.000",
+     "count": "59"
+    },
+    {
+     "item": "2010-11-15T00:00:00.000",
+     "count": "59"
+    },
+    {
+     "item": "2015-11-26T00:00:00.000",
+     "count": "56"
+    },
+    {
+     "item": "2015-12-17T00:00:00.000",
+     "count": "54"
+    },
+    {
+     "item": "2024-08-26T00:00:00.000",
+     "count": "53"
+    }
+   ]
+  ],
+  [
+   "nom",
+   "Nom",
+   "text",
+   [
+    {
+     "item": "SALA POLIVALENT",
+     "count": "67"
+    },
+    {
+     "item": "LOCAL SOCIAL",
+     "count": "37"
+    },
+    {
+     "item": "CENTRE CÍVIC",
+     "count": "33"
+    },
+    {
+     "item": "CASA DE CULTURA",
+     "count": "22"
+    },
+    {
+     "item": "CASAL MUNICIPAL",
+     "count": "16"
+    },
+    {
+     "item": "SALA D'EXPOSICIONS",
+     "count": "15"
+    },
+    {
+     "item": "CENTRE CIVIC",
+     "count": "13"
+    },
+    {
+     "item": "CASAL CULTURAL",
+     "count": "12"
+    },
+    {
+     "item": "SALA D'ACTES",
+     "count": "12"
+    },
+    {
+     "item": "LOCAL POLIVALENT",
+     "count": "11"
+    },
+    {
+     "item": "LA SALA",
+     "count": "11"
+    },
+    {
+     "item": "LLAR DE JUBILATS",
+     "count": "10"
+    },
+    {
+     "item": "CASAL DE CULTURA",
+     "count": "10"
+    },
+    {
+     "item": "HOTEL D'ENTITATS",
+     "count": "8"
+    },
+    {
+     "item": "CENTRE CULTURAL",
+     "count": "8"
+    },
+    {
+     "item": "PAVELLÓ MUNICIPAL",
+     "count": "7"
+    },
+    {
+     "item": "TEATRE MUNICIPAL",
+     "count": "7"
+    },
+    {
+     "item": "CASAL",
+     "count": "6"
+    },
+    {
+     "item": "LOCAL CULTURAL",
+     "count": "6"
+    },
+    {
+     "item": "CASAL D'AVIS",
+     "count": "6"
+    }
+   ]
+  ],
+  [
+   "tipus",
+   "Tipus",
+   "text",
+   [
+    {
+     "item": "Centres culturals: ateneus, centres cívics i cases de cultura",
+     "count": "1458"
+    },
+    {
+     "item": "Altres espais aptes per a ús cultural",
+     "count": "993"
+    },
+    {
+     "item": "Biblioteques",
+     "count": "898"
+    },
+    {
+     "item": "Espais escènics i musicals",
+     "count": "884"
+    },
+    {
+     "item": "Museus, col·leccions i centres d'interpretació",
+     "count": "612"
+    },
+    {
+     "item": "Espais d'arts visuals",
+     "count": "432"
+    },
+    {
+     "item": "Arxius",
+     "count": "426"
+    },
+    {
+     "item": "Cinemes",
+     "count": "135"
+    },
+    {
+     "item": "Fàbriques de Creació",
+     "count": "2"
+    }
+   ]
+  ],
+  [
+   "subtipus",
+   "Subtipus",
+   "text",
+   [
+    {
+     "item": "NA",
+     "count": "612"
+    },
+    {
+     "item": "Museus i col·leccions",
+     "count": "596"
+    },
+    {
+     "item": "Centre cívic",
+     "count": "583"
+    },
+    {
+     "item": "Locals i espais polivalents",
+     "count": "562"
+    },
+    {
+     "item": "Casa de Cultura/casals",
+     "count": "439"
+    },
+    {
+     "item": "Ateneu",
+     "count": "430"
+    },
+    {
+     "item": "Especialitzada",
+     "count": "393"
+    },
+    {
+     "item": "Altres",
+     "count": "349"
+    },
+    {
+     "item": "Sala polivalent",
+     "count": "313"
+    },
+    {
+     "item": "Sales d'exposicions",
+     "count": "311"
+    },
+    {
+     "item": "Teatre",
+     "count": "307"
+    },
+    {
+     "item": "Pública (Local)",
+     "count": "241"
+    },
+    {
+     "item": "Pública (Punt d'informació i lectura)",
+     "count": "116"
+    },
+    {
+     "item": "Auditori",
+     "count": "87"
+    },
+    {
+     "item": "Sales d’actes",
+     "count": "71"
+    },
+    {
+     "item": "Espai d’arts visuals",
+     "count": "67"
+    },
+    {
+     "item": "Pública (Filial)",
+     "count": "59"
+    },
+    {
+     "item": "Llar de jubilats",
+     "count": "52"
+    },
+    {
+     "item": "Sales de concerts",
+     "count": "50"
+    },
+    {
+     "item": "Hotel d'entitats",
+     "count": "37"
+    }
+   ]
+  ],
+  [
+   "adre_a",
+   "Adreça",
+   "text",
+   [
+    {
+     "item": "NA",
+     "count": "1063"
+    },
+    {
+     "item": "Plaça Major, 1",
+     "count": "25"
+    },
+    {
+     "item": "Carrer Major, s/n",
+     "count": "15"
+    },
+    {
+     "item": "Plaça De La Vila, 1",
+     "count": "12"
+    },
+    {
+     "item": "Carrer Major, 1",
+     "count": "11"
+    },
+    {
+     "item": "Carrer Major, 2",
+     "count": "10"
+    },
+    {
+     "item": "Plaça Església, s/n",
+     "count": "9"
+    },
+    {
+     "item": "Avinguda Catalunya, 16",
+     "count": "9"
+    },
+    {
+     "item": "Carrer Major, 3",
+     "count": "9"
+    },
+    {
+     "item": "Carrer Església, 1",
+     "count": "8"
+    },
+    {
+     "item": "Avinguda Catalunya, s/n",
+     "count": "8"
+    },
+    {
+     "item": "Plaça Catalunya, s/n",
+     "count": "8"
+    },
+    {
+     "item": "Carrer Major, 13",
+     "count": "7"
+    },
+    {
+     "item": "Plaça Major, s/n",
+     "count": "7"
+    },
+    {
+     "item": "Carrer Major, 36",
+     "count": "6"
+    },
+    {
+     "item": "Carrer Migdia, 1",
+     "count": "6"
+    },
+    {
+     "item": "Carrer Nou, 1",
+     "count": "6"
+    },
+    {
+     "item": "Carrer Escoles, s/n",
+     "count": "6"
+    },
+    {
+     "item": "Carrer Raval, s/n",
+     "count": "6"
+    },
+    {
+     "item": "Carrer Piscina, 1",
+     "count": "5"
+    }
+   ]
+  ],
+  [
+   "tipus_via",
+   "Tipus via",
+   "text",
+   [
+    {
+     "item": "Carrer",
+     "count": "2883"
+    },
+    {
+     "item": "NA",
+     "count": "1070"
+    },
+    {
+     "item": "Plaça",
+     "count": "812"
+    },
+    {
+     "item": "Avinguda",
+     "count": "429"
+    },
+    {
+     "item": "Carretera",
+     "count": "157"
+    },
+    {
+     "item": "Passeig",
+     "count": "149"
+    },
+    {
+     "item": "Rambla",
+     "count": "85"
+    },
+    {
+     "item": "Camí",
+     "count": "51"
+    },
+    {
+     "item": "Passatge",
+     "count": "36"
+    },
+    {
+     "item": "Parc",
+     "count": "27"
+    },
+    {
+     "item": "Ronda",
+     "count": "26"
+    },
+    {
+     "item": "Urbanització",
+     "count": "15"
+    },
+    {
+     "item": "Via",
+     "count": "14"
+    },
+    {
+     "item": "Gran Via",
+     "count": "14"
+    },
+    {
+     "item": "Pujada",
+     "count": "8"
+    },
+    {
+     "item": "Polígon",
+     "count": "7"
+    },
+    {
+     "item": "Raval",
+     "count": "6"
+    },
+    {
+     "item": "Moll",
+     "count": "6"
+    },
+    {
+     "item": "Placeta",
+     "count": "5"
+    },
+    {
+     "item": "Travessera",
+     "count": "5"
+    }
+   ]
+  ],
+  [
+   "nom_via",
+   "Nom via",
+   "text",
+   [
+    {
+     "item": "NA",
+     "count": "1066"
+    },
+    {
+     "item": "Major",
+     "count": "240"
+    },
+    {
+     "item": "Catalunya",
+     "count": "83"
+    },
+    {
+     "item": "Nou",
+     "count": "37"
+    },
+    {
+     "item": "Església",
+     "count": "34"
+    },
+    {
+     "item": "Pau Casals",
+     "count": "32"
+    },
+    {
+     "item": "Escoles",
+     "count": "29"
+    },
+    {
+     "item": "De La Vila",
+     "count": "29"
+    },
+    {
+     "item": "Anselm Clavé",
+     "count": "24"
+    },
+    {
+     "item": "Sant Antoni",
+     "count": "23"
+    },
+    {
+     "item": "Sant Joan",
+     "count": "20"
+    },
+    {
+     "item": "De l'Església",
+     "count": "20"
+    },
+    {
+     "item": "Barcelona",
+     "count": "20"
+    },
+    {
+     "item": "Diagonal",
+     "count": "19"
+    },
+    {
+     "item": "Sant Jordi",
+     "count": "19"
+    },
+    {
+     "item": "Francesc Macià",
+     "count": "18"
+    },
+    {
+     "item": "Sant Pere",
+     "count": "17"
+    },
+    {
+     "item": "Generalitat",
+     "count": "16"
+    },
+    {
+     "item": "Diputació",
+     "count": "15"
+    },
+    {
+     "item": "Ponent",
+     "count": "14"
+    }
+   ]
+  ],
+  [
+   "n_mero_via",
+   "Número via",
+   "text",
+   [
+    {
+     "item": "s/n",
+     "count": "1975"
+    },
+    {
+     "item": "1",
+     "count": "644"
+    },
+    {
+     "item": "2",
+     "count": "280"
+    },
+    {
+     "item": "3",
+     "count": "150"
+    },
+    {
+     "item": "4",
+     "count": "141"
+    },
+    {
+     "item": "6",
+     "count": "120"
+    },
+    {
+     "item": "5",
+     "count": "100"
+    },
+    {
+     "item": "9",
+     "count": "93"
+    },
+    {
+     "item": "7",
+     "count": "86"
+    },
+    {
+     "item": "8",
+     "count": "84"
+    },
+    {
+     "item": "12",
+     "count": "80"
+    },
+    {
+     "item": "10",
+     "count": "80"
+    },
+    {
+     "item": "15",
+     "count": "72"
+    },
+    {
+     "item": "16",
+     "count": "67"
+    },
+    {
+     "item": "13",
+     "count": "64"
+    },
+    {
+     "item": "11",
+     "count": "64"
+    },
+    {
+     "item": "17",
+     "count": "50"
+    },
+    {
+     "item": "20",
+     "count": "45"
+    },
+    {
+     "item": "14",
+     "count": "42"
+    },
+    {
+     "item": "22",
+     "count": "42"
+    }
+   ]
+  ],
+  [
+   "codi_postal",
+   "Codi postal",
+   "text",
+   [
+    {
+     "item": "08002",
+     "count": "64"
+    },
+    {
+     "item": "08003",
+     "count": "64"
+    },
+    {
+     "item": "08001",
+     "count": "53"
+    },
+    {
+     "item": "08800",
+     "count": "49"
+    },
+    {
+     "item": "17600",
+     "count": "45"
+    },
+    {
+     "item": "17004",
+     "count": "44"
+    },
+    {
+     "item": "43003",
+     "count": "40"
+    },
+    {
+     "item": "08500",
+     "count": "38"
+    },
+    {
+     "item": "08038",
+     "count": "35"
+    },
+    {
+     "item": "08221",
+     "count": "34"
+    },
+    {
+     "item": "11111",
+     "count": "32"
+    },
+    {
+     "item": "08028",
+     "count": "31"
+    },
+    {
+     "item": "08019",
+     "count": "30"
+    },
+    {
+     "item": "43850",
+     "count": "30"
+    },
+    {
+     "item": "08700",
+     "count": "29"
+    },
+    {
+     "item": "08007",
+     "count": "28"
+    },
+    {
+     "item": "17257",
+     "count": "27"
+    },
+    {
+     "item": "08005",
+     "count": "26"
+    },
+    {
+     "item": "08172",
+     "count": "24"
+    },
+    {
+     "item": "08720",
+     "count": "23"
+    }
+   ]
+  ],
+  [
+   "id_municipi",
+   "ID Municipi",
+   "text",
+   [
+    {
+     "item": "080193",
+     "count": "788"
+    },
+    {
+     "item": "170792",
+     "count": "99"
+    },
+    {
+     "item": "431482",
+     "count": "91"
+    },
+    {
+     "item": "251207",
+     "count": "75"
+    },
+    {
+     "item": "082798",
+     "count": "73"
+    },
+    {
+     "item": "081878",
+     "count": "64"
+    },
+    {
+     "item": "082055",
+     "count": "53"
+    },
+    {
+     "item": "081017",
+     "count": "52"
+    },
+    {
+     "item": "083073",
+     "count": "47"
+    },
+    {
+     "item": "080155",
+     "count": "46"
+    },
+    {
+     "item": "431233",
+     "count": "44"
+    },
+    {
+     "item": "170669",
+     "count": "44"
+    },
+    {
+     "item": "080961",
+     "count": "40"
+    },
+    {
+     "item": "082981",
+     "count": "38"
+    },
+    {
+     "item": "082457",
+     "count": "35"
+    },
+    {
+     "item": "081136",
+     "count": "34"
+    },
+    {
+     "item": "081213",
+     "count": "33"
+    },
+    {
+     "item": "430385",
+     "count": "30"
+    },
+    {
+     "item": "081022",
+     "count": "29"
+    },
+    {
+     "item": "171997",
+     "count": "29"
+    }
+   ]
+  ],
+  [
+   "municipi",
+   "Municipi",
+   "text",
+   [
+    {
+     "item": "Barcelona",
+     "count": "788"
+    },
+    {
+     "item": "Girona",
+     "count": "99"
+    },
+    {
+     "item": "Tarragona",
+     "count": "91"
+    },
+    {
+     "item": "Lleida",
+     "count": "75"
+    },
+    {
+     "item": "Terrassa",
+     "count": "73"
+    },
+    {
+     "item": "Sabadell",
+     "count": "64"
+    },
+    {
+     "item": "Sant Cugat del Vallès",
+     "count": "53"
+    },
+    {
+     "item": "Hospitalet de Llobregat, l'",
+     "count": "52"
+    },
+    {
+     "item": "Vilanova i la Geltrú",
+     "count": "47"
+    },
+    {
+     "item": "Badalona",
+     "count": "46"
+    },
+    {
+     "item": "Reus",
+     "count": "44"
+    },
+    {
+     "item": "Figueres",
+     "count": "44"
+    },
+    {
+     "item": "Granollers",
+     "count": "40"
+    },
+    {
+     "item": "Vic",
+     "count": "38"
+    },
+    {
+     "item": "Santa Coloma de Gramenet",
+     "count": "35"
+    },
+    {
+     "item": "Manresa",
+     "count": "34"
+    },
+    {
+     "item": "Mataró",
+     "count": "33"
+    },
+    {
+     "item": "Cambrils",
+     "count": "30"
+    },
+    {
+     "item": "Torroella de Montgrí",
+     "count": "29"
+    },
+    {
+     "item": "Igualada",
+     "count": "29"
+    }
+   ]
+  ],
+  [
+   "id_comarca",
+   "ID Comarca",
+   "text",
+   [
+    {
+     "item": "13",
+     "count": "934"
+    },
+    {
+     "item": "40",
+     "count": "357"
+    },
+    {
+     "item": "11",
+     "count": "306"
+    },
+    {
+     "item": "41",
+     "count": "277"
+    },
+    {
+     "item": "02",
+     "count": "256"
+    },
+    {
+     "item": "21",
+     "count": "242"
+    },
+    {
+     "item": "36",
+     "count": "206"
+    },
+    {
+     "item": "20",
+     "count": "200"
+    },
+    {
+     "item": "07",
+     "count": "182"
+    },
+    {
+     "item": "33",
+     "count": "182"
+    },
+    {
+     "item": "08",
+     "count": "179"
+    },
+    {
+     "item": "03",
+     "count": "167"
+    },
+    {
+     "item": "24",
+     "count": "163"
+    },
+    {
+     "item": "10",
+     "count": "163"
+    },
+    {
+     "item": "34",
+     "count": "161"
+    },
+    {
+     "item": "06",
+     "count": "158"
+    },
+    {
+     "item": "23",
+     "count": "120"
+    },
+    {
+     "item": "17",
+     "count": "105"
+    },
+    {
+     "item": "12",
+     "count": "103"
+    },
+    {
+     "item": "19",
+     "count": "93"
+    }
+   ]
+  ],
+  [
+   "comarca",
+   "Comarca",
+   "text",
+   [
+    {
+     "item": "Barcelonès",
+     "count": "934"
+    },
+    {
+     "item": "Vallès Occidental",
+     "count": "357"
+    },
+    {
+     "item": "Baix Llobregat",
+     "count": "306"
+    },
+    {
+     "item": "Vallès Oriental",
+     "count": "277"
+    },
+    {
+     "item": "Alt Empordà",
+     "count": "256"
+    },
+    {
+     "item": "Maresme",
+     "count": "242"
+    },
+    {
+     "item": "Tarragonès",
+     "count": "206"
+    },
+    {
+     "item": "Gironès",
+     "count": "200"
+    },
+    {
+     "item": "Bages",
+     "count": "182"
+    },
+    {
+     "item": "Segrià",
+     "count": "182"
+    },
+    {
+     "item": "Baix Camp",
+     "count": "179"
+    },
+    {
+     "item": "Alt Penedès",
+     "count": "167"
+    },
+    {
+     "item": "Osona",
+     "count": "163"
+    },
+    {
+     "item": "Baix Empordà",
+     "count": "163"
+    },
+    {
+     "item": "Selva",
+     "count": "161"
+    },
+    {
+     "item": "Anoia",
+     "count": "158"
+    },
+    {
+     "item": "Noguera",
+     "count": "120"
+    },
+    {
+     "item": "Garraf",
+     "count": "105"
+    },
+    {
+     "item": "Baix Penedès",
+     "count": "103"
+    },
+    {
+     "item": "Garrotxa",
+     "count": "93"
+    }
+   ]
+  ],
+  [
+   "id_mbit_territorial",
+   "ID Àmbit territorial",
+   "text",
+   [
+    {
+     "item": "AT01",
+     "count": "2128"
+    },
+    {
+     "item": "AT02",
+     "count": "993"
+    },
+    {
+     "item": "AT05",
+     "count": "568"
+    },
+    {
+     "item": "AT03",
+     "count": "556"
+    },
+    {
+     "item": "AT06",
+     "count": "551"
+    },
+    {
+     "item": "AT08",
+     "count": "509"
+    },
+    {
+     "item": "AT04",
+     "count": "278"
+    },
+    {
+     "item": "AT07",
+     "count": "257"
+    }
+   ]
+  ],
+  [
+   "mbit_territorial",
+   "Àmbit territorial",
+   "text",
+   [
+    {
+     "item": "Metropolità",
+     "count": "2128"
+    },
+    {
+     "item": "Comarques Gironines",
+     "count": "993"
+    },
+    {
+     "item": "Ponent",
+     "count": "568"
+    },
+    {
+     "item": "Camp de Tarragona",
+     "count": "556"
+    },
+    {
+     "item": "Comarques Centrals",
+     "count": "551"
+    },
+    {
+     "item": "Penedès",
+     "count": "509"
+    },
+    {
+     "item": "Terres de l'Ebre",
+     "count": "278"
+    },
+    {
+     "item": "Alt Pirineu i Aran",
+     "count": "257"
+    }
+   ]
+  ],
+  [
+   "id_prov_ncia",
+   "ID Província",
+   "text",
+   [
+    {
+     "item": "08",
+     "count": "3034"
+    },
+    {
+     "item": "17",
+     "count": "1034"
+    },
+    {
+     "item": "43",
+     "count": "937"
+    },
+    {
+     "item": "25",
+     "count": "835"
+    }
+   ]
+  ],
+  [
+   "prov_ncia",
+   "Província",
+   "text",
+   [
+    {
+     "item": "Barcelona",
+     "count": "3034"
+    },
+    {
+     "item": "Girona",
+     "count": "1034"
+    },
+    {
+     "item": "Tarragona",
+     "count": "937"
+    },
+    {
+     "item": "Lleida",
+     "count": "835"
+    }
+   ]
+  ],
+  [
+   "utm_x",
+   "UTM X",
+   "number",
+   [
+    {
+     "item": "392100238",
+     "count": "5"
+    },
+    {
+     "item": "353114673",
+     "count": "4"
+    },
+    {
+     "item": "428031172",
+     "count": "4"
+    },
+    {
+     "item": "485169037",
+     "count": "4"
+    },
+    {
+     "item": "430069.85",
+     "count": "3"
+    },
+    {
+     "item": "413247044",
+     "count": "3"
+    },
+    {
+     "item": "459818",
+     "count": "3"
+    },
+    {
+     "item": "336614779",
+     "count": "3"
+    },
+    {
+     "item": "437277314",
+     "count": "3"
+    },
+    {
+     "item": "301960106",
+     "count": "3"
+    },
+    {
+     "item": "326589806",
+     "count": "3"
+    },
+    {
+     "item": "363042471",
+     "count": "3"
+    },
+    {
+     "item": "301119188",
+     "count": "3"
+    },
+    {
+     "item": "436099391",
+     "count": "3"
+    },
+    {
+     "item": "514242586",
+     "count": "3"
+    },
+    {
+     "item": "426101964",
+     "count": "3"
+    },
+    {
+     "item": "299605212",
+     "count": "3"
+    },
+    {
+     "item": "342342077",
+     "count": "3"
+    },
+    {
+     "item": "336454944",
+     "count": "3"
+    },
+    {
+     "item": "422713157",
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   "utm_y",
+   "UTM Y",
+   "number",
+   [
+    {
+     "item": "4585947077",
+     "count": "5"
+    },
+    {
+     "item": "4647736749",
+     "count": "4"
+    },
+    {
+     "item": "4578558937",
+     "count": "4"
+    },
+    {
+     "item": "4552956627",
+     "count": "4"
+    },
+    {
+     "item": "4688824431",
+     "count": "3"
+    },
+    {
+     "item": "4672494.03",
+     "count": "3"
+    },
+    {
+     "item": "4547849292",
+     "count": "3"
+    },
+    {
+     "item": "4635977043",
+     "count": "3"
+    },
+    {
+     "item": "4611577.97",
+     "count": "3"
+    },
+    {
+     "item": "4553555.29",
+     "count": "3"
+    },
+    {
+     "item": "4581936.47",
+     "count": "3"
+    },
+    {
+     "item": "4579888863",
+     "count": "3"
+    },
+    {
+     "item": "4594793888",
+     "count": "3"
+    },
+    {
+     "item": "4578496.1",
+     "count": "3"
+    },
+    {
+     "item": "4678848782",
+     "count": "3"
+    },
+    {
+     "item": "4627707699",
+     "count": "3"
+    },
+    {
+     "item": "4612447925",
+     "count": "3"
+    },
+    {
+     "item": "4597614708",
+     "count": "3"
+    },
+    {
+     "item": "4645268483",
+     "count": "3"
+    },
+    {
+     "item": "4609512131",
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   "latitud",
+   "Latitud",
+   "number",
+   [
+    {
+     "item": "41.3873974",
+     "count": "7"
+    },
+    {
+     "item": "41.1178189",
+     "count": "7"
+    },
+    {
+     "item": "42.6857103",
+     "count": "6"
+    },
+    {
+     "item": "42.2888095",
+     "count": "5"
+    },
+    {
+     "item": "41.383923",
+     "count": "5"
+    },
+    {
+     "item": "41.4521975",
+     "count": "4"
+    },
+    {
+     "item": "40.6356057",
+     "count": "4"
+    },
+    {
+     "item": "42.2655066",
+     "count": "4"
+    },
+    {
+     "item": "41.7437079",
+     "count": "4"
+    },
+    {
+     "item": "41.6996477",
+     "count": "4"
+    },
+    {
+     "item": "42.0419133",
+     "count": "4"
+    },
+    {
+     "item": "41.81054",
+     "count": "4"
+    },
+    {
+     "item": "41.417838018",
+     "count": "4"
+    },
+    {
+     "item": "41.356443593",
+     "count": "4"
+    },
+    {
+     "item": "41.5353285",
+     "count": "4"
+    },
+    {
+     "item": "41.0668154",
+     "count": "4"
+    },
+    {
+     "item": "41.0737564",
+     "count": "4"
+    },
+    {
+     "item": "41.7114576",
+     "count": "3"
+    },
+    {
+     "item": "41.98868",
+     "count": "3"
+    },
+    {
+     "item": "41.5272561",
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   "longitud",
+   "Longitud",
+   "number",
+   [
+    {
+     "item": "2.168568",
+     "count": "7"
+    },
+    {
+     "item": "1.2554925",
+     "count": "7"
+    },
+    {
+     "item": "0.7342734",
+     "count": "6"
+    },
+    {
+     "item": "2.1776677",
+     "count": "5"
+    },
+    {
+     "item": "1.2313618",
+     "count": "5"
+    },
+    {
+     "item": "1.70885531",
+     "count": "4"
+    },
+    {
+     "item": "2.3651425",
+     "count": "4"
+    },
+    {
+     "item": "1.4036179",
+     "count": "4"
+    },
+    {
+     "item": "3.1265315",
+     "count": "4"
+    },
+    {
+     "item": "2.4900943",
+     "count": "4"
+    },
+    {
+     "item": "2.8507256",
+     "count": "4"
+    },
+    {
+     "item": "2.2476875",
+     "count": "4"
+    },
+    {
+     "item": "2.1821487",
+     "count": "4"
+    },
+    {
+     "item": "1.7830973",
+     "count": "4"
+    },
+    {
+     "item": "1.053281",
+     "count": "4"
+    },
+    {
+     "item": "2.9581046",
+     "count": "4"
+    },
+    {
+     "item": "0.2843096",
+     "count": "4"
+    },
+    {
+     "item": "1.0594201",
+     "count": "4"
+    },
+    {
+     "item": "2.140779518",
+     "count": "4"
+    },
+    {
+     "item": "1.2370723",
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   "tel_fon",
+   "Telèfon",
+   "text",
+   [
+    {
+     "item": "973640018",
+     "count": "19"
+    },
+    {
+     "item": "972420058",
+     "count": "12"
+    },
+    {
+     "item": "972546020",
+     "count": "10"
+    },
+    {
+     "item": "977713000",
+     "count": "10"
+    },
+    {
+     "item": "973520184",
+     "count": "9"
+    },
+    {
+     "item": "977670326",
+     "count": "9"
+    },
+    {
+     "item": "973644030",
+     "count": "9"
+    },
+    {
+     "item": "938415225",
+     "count": "9"
+    },
+    {
+     "item": "972774848",
+     "count": "9"
+    },
+    {
+     "item": "937153030",
+     "count": "8"
+    },
+    {
+     "item": "977653101",
+     "count": "8"
+    },
+    {
+     "item": "938985002",
+     "count": "8"
+    },
+    {
+     "item": "973415005",
+     "count": "8"
+    },
+    {
+     "item": "977489309",
+     "count": "8"
+    },
+    {
+     "item": "972032200",
+     "count": "8"
+    },
+    {
+     "item": "973387086",
+     "count": "8"
+    },
+    {
+     "item": "973700279",
+     "count": "7"
+    },
+    {
+     "item": "938568000",
+     "count": "7"
+    },
+    {
+     "item": "972757301",
+     "count": "7"
+    },
+    {
+     "item": "972158040",
+     "count": "7"
+    }
+   ]
+  ],
+  [
+   "adre_a_electr_nica",
+   "Adreça electrònica",
+   "text",
+   [
+    {
+     "item": "info@vielha-mirajan.org",
+     "count": "16"
+    },
+    {
+     "item": "cuencass@gramenet.diba.es",
+     "count": "14"
+    },
+    {
+     "item": "participacio@paeria.cat",
+     "count": "13"
+    },
+    {
+     "item": "ccivics@ajsabadell.cat",
+     "count": "13"
+    },
+    {
+     "item": "castellet@castelletilagornal.cat",
+     "count": "12"
+    },
+    {
+     "item": "info@angles.cat",
+     "count": "12"
+    },
+    {
+     "item": "ajuntament@torrefeta.ddl.net",
+     "count": "9"
+    },
+    {
+     "item": "ajuntament@vallsaguilar.ddl.net",
+     "count": "9"
+    },
+    {
+     "item": "cultura@lasenia.cat",
+     "count": "9"
+    },
+    {
+     "item": "ajuntament@vilanovameia.cat",
+     "count": "9"
+    },
+    {
+     "item": "cultura@ajmataro.cat",
+     "count": "8"
+    },
+    {
+     "item": "cultura@figueres.org",
+     "count": "8"
+    },
+    {
+     "item": "ajuntament@vallfogona.net",
+     "count": "8"
+    },
+    {
+     "item": "llam.participacio@llicamunt.cat",
+     "count": "8"
+    },
+    {
+     "item": "cultura@molletvalles.cat",
+     "count": "8"
+    },
+    {
+     "item": "sallent@sallent.cat",
+     "count": "7"
+    },
+    {
+     "item": "cultura@martorelles.cat",
+     "count": "7"
+    },
+    {
+     "item": "ajuntament@isona.ddl.net",
+     "count": "7"
+    },
+    {
+     "item": "museudeterrassa@terrassa.cat",
+     "count": "7"
+    },
+    {
+     "item": "mediona@diba.cat",
+     "count": "7"
+    }
+   ]
+  ],
+  [
+   "adre_a_web",
+   "Adreça web",
+   "text",
+   [
+    {
+     "item": "https://www.vielha-mijaran.org",
+     "count": "19"
+    },
+    {
+     "item": "http://www.biblioebre.com",
+     "count": "18"
+    },
+    {
+     "item": "https://www.grame.net",
+     "count": "17"
+    },
+    {
+     "item": "https://www.badalonacultura.cat/",
+     "count": "14"
+    },
+    {
+     "item": "https://www.castelletilagornal.cat",
+     "count": "12"
+    },
+    {
+     "item": "https://www.sabadell.cat",
+     "count": "12"
+    },
+    {
+     "item": "https://www.llicamunt.cat",
+     "count": "10"
+    },
+    {
+     "item": "https://www.castello.cat/",
+     "count": "10"
+    },
+    {
+     "item": "https://www.molletvalles.cat",
+     "count": "10"
+    },
+    {
+     "item": "http://www.angles.cat",
+     "count": "9"
+    },
+    {
+     "item": "https://justicia.gencat.cat/ca/ambits/administracio-de-justicia/arxius-biblioteques-i-diposits-judicials/biblioteques/",
+     "count": "9"
+    },
+    {
+     "item": "https://torrefeta.ddl.net",
+     "count": "9"
+    },
+    {
+     "item": "http://www.urv.cat/crai/",
+     "count": "8"
+    },
+    {
+     "item": "https://www.figueres.cat/tramits/tramits-i-gestions/cultura",
+     "count": "8"
+    },
+    {
+     "item": "https://www.girona.cat/ccivics",
+     "count": "8"
+    },
+    {
+     "item": "https://www.vilanovameia.cat",
+     "count": "8"
+    },
+    {
+     "item": "https://www.cambrils.cat",
+     "count": "8"
+    },
+    {
+     "item": "https://vallsaguilar.ddl.net",
+     "count": "8"
+    },
+    {
+     "item": "https://www.vilamajor.cat",
+     "count": "7"
+    },
+    {
+     "item": "http://www.museuhistoria.tarragona.cat",
+     "count": "7"
+    }
+   ]
+  ],
+  [
+   "titularitat",
+   "Titularitat",
+   "text",
+   [
+    {
+     "item": "Pública",
+     "count": "4351"
+    },
+    {
+     "item": "Privada",
+     "count": "993"
+    },
+    {
+     "item": "Altres",
+     "count": "381"
+    },
+    {
+     "item": "NA",
+     "count": "115"
+    }
+   ]
+  ],
+  [
+   "gesti",
+   "Gestió",
+   "text",
+   [
+    {
+     "item": "Pública",
+     "count": "2594"
+    },
+    {
+     "item": "NA",
+     "count": "2126"
+    },
+    {
+     "item": "Privada",
+     "count": "936"
+    },
+    {
+     "item": "Altres",
+     "count": "184"
+    }
+   ]
+  ],
+  [
+   "aforament_sala_principal",
+   "Aforament sala principal",
+   "number",
+   [
+    {
+     "item": "100",
+     "count": "198"
+    },
+    {
+     "item": "50",
+     "count": "156"
+    },
+    {
+     "item": "200",
+     "count": "150"
+    },
+    {
+     "item": "150",
+     "count": "143"
+    },
+    {
+     "item": "300",
+     "count": "103"
+    },
+    {
+     "item": "80",
+     "count": "90"
+    },
+    {
+     "item": "60",
+     "count": "73"
+    },
+    {
+     "item": "250",
+     "count": "71"
+    },
+    {
+     "item": "40",
+     "count": "63"
+    },
+    {
+     "item": "30",
+     "count": "62"
+    },
+    {
+     "item": "500",
+     "count": "61"
+    },
+    {
+     "item": "120",
+     "count": "50"
+    },
+    {
+     "item": "400",
+     "count": "40"
+    },
+    {
+     "item": "20",
+     "count": "40"
+    },
+    {
+     "item": "70",
+     "count": "36"
+    },
+    {
+     "item": "90",
+     "count": "28"
+    },
+    {
+     "item": "350",
+     "count": "24"
+    },
+    {
+     "item": "25",
+     "count": "23"
+    },
+    {
+     "item": "180",
+     "count": "21"
+    },
+    {
+     "item": "75",
+     "count": "19"
+    }
+   ]
+  ],
+  [
+   "aforament_sala_2",
+   "Aforament sala 2",
+   "text",
+   [
+    {
+     "item": "60",
+     "count": "5"
+    },
+    {
+     "item": "0",
+     "count": "4"
+    },
+    {
+     "item": "100",
+     "count": "3"
+    },
+    {
+     "item": "190",
+     "count": "2"
+    },
+    {
+     "item": "200",
+     "count": "1"
+    },
+    {
+     "item": "24",
+     "count": "1"
+    },
+    {
+     "item": "400",
+     "count": "1"
+    },
+    {
+     "item": "45",
+     "count": "1"
+    },
+    {
+     "item": "50",
+     "count": "1"
+    },
+    {
+     "item": "70",
+     "count": "1"
+    },
+    {
+     "item": "75",
+     "count": "1"
+    },
+    {
+     "item": "800",
+     "count": "1"
+    },
+    {
+     "item": "90",
+     "count": "1"
+    },
+    {
+     "item": "118",
+     "count": "1"
+    },
+    {
+     "item": "160",
+     "count": "1"
+    },
+    {
+     "item": "20",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "aforament_total",
+   "Aforament total",
+   "number",
+   [
+    {
+     "item": "200",
+     "count": "66"
+    },
+    {
+     "item": "300",
+     "count": "65"
+    },
+    {
+     "item": "100",
+     "count": "57"
+    },
+    {
+     "item": "150",
+     "count": "48"
+    },
+    {
+     "item": "250",
+     "count": "35"
+    },
+    {
+     "item": "400",
+     "count": "30"
+    },
+    {
+     "item": "500",
+     "count": "23"
+    },
+    {
+     "item": "120",
+     "count": "19"
+    },
+    {
+     "item": "60",
+     "count": "12"
+    },
+    {
+     "item": "180",
+     "count": "12"
+    },
+    {
+     "item": "80",
+     "count": "12"
+    },
+    {
+     "item": "50",
+     "count": "12"
+    },
+    {
+     "item": "350",
+     "count": "11"
+    },
+    {
+     "item": "110",
+     "count": "10"
+    },
+    {
+     "item": "450",
+     "count": "10"
+    },
+    {
+     "item": "90",
+     "count": "9"
+    },
+    {
+     "item": "40",
+     "count": "8"
+    },
+    {
+     "item": "600",
+     "count": "8"
+    },
+    {
+     "item": "45",
+     "count": "7"
+    },
+    {
+     "item": "30",
+     "count": "6"
+    }
+   ]
+  ],
+  [
+   "codicions_accessibilitat",
+   "Codicions accessibilitat instal·lacions",
+   "text",
+   [
+    {
+     "item": "NA",
+     "count": "3968"
+    },
+    {
+     "item": "Accessible",
+     "count": "1401"
+    },
+    {
+     "item": "Parcialment accessible",
+     "count": "233"
+    },
+    {
+     "item": "Inaccessible",
+     "count": "130"
+    },
+    {
+     "item": "Practicable",
+     "count": "107"
+    },
+    {
+     "item": "Itinerari adaptat",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "lavabos_accessibles",
+   "Lavabos accessibles",
+   "text",
+   [
+    {
+     "item": "No",
+     "count": "4762"
+    },
+    {
+     "item": "Sí",
+     "count": "944"
+    },
+    {
+     "item": "NA",
+     "count": "134"
+    }
+   ]
+  ],
+  [
+   "places_aparcament_reservades",
+   "Places aparcament reservades",
+   "number",
+   [
+    {
+     "item": "0",
+     "count": "1302"
+    },
+    {
+     "item": "1",
+     "count": "242"
+    },
+    {
+     "item": "2",
+     "count": "97"
+    },
+    {
+     "item": "3",
+     "count": "11"
+    },
+    {
+     "item": "4",
+     "count": "9"
+    },
+    {
+     "item": "10",
+     "count": "4"
+    },
+    {
+     "item": "5",
+     "count": "2"
+    },
+    {
+     "item": "8",
+     "count": "2"
+    },
+    {
+     "item": "6",
+     "count": "1"
+    },
+    {
+     "item": "30",
+     "count": "1"
+    },
+    {
+     "item": "20",
+     "count": "1"
+    }
+   ]
+  ],
+  [
+   "pla_accessibilitat",
+   "Pla accessibilitat",
+   "text",
+   [
+    {
+     "item": "No",
+     "count": "5488"
+    },
+    {
+     "item": "Sí",
+     "count": "220"
+    },
+    {
+     "item": "NA",
+     "count": "132"
+    }
+   ]
+  ],
+  [
+   "georrefer_ncia",
+   "Georreferència",
+   "point",
+   [
+    {
+     "item": {
+      "coordinates": [
+       1.2554925,
+       41.1178189
+      ],
+      "type": "Point"
+     },
+     "count": "7"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.168568,
+       41.3873974
+      ],
+      "type": "Point"
+     },
+     "count": "7"
+    },
+    {
+     "item": {
+      "coordinates": [
+       0.7342734,
+       42.6857103
+      ],
+      "type": "Point"
+     },
+     "count": "6"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.1776677,
+       41.383923
+      ],
+      "type": "Point"
+     },
+     "count": "5"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.2313618,
+       42.2888095
+      ],
+      "type": "Point"
+     },
+     "count": "5"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.8507256,
+       41.6996477
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.4900943,
+       41.7437079
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       0.2843096,
+       40.6356057
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.70885531,
+       41.417838018
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.4036179,
+       41.81054
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.053281,
+       41.0737564
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.2476875,
+       41.4521975
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.0594201,
+       41.0668154
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.9581046,
+       42.2655066
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.140779518,
+       41.356443593
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       2.1821487,
+       41.5353285
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       3.1265315,
+       42.0419133
+      ],
+      "type": "Point"
+     },
+     "count": "4"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.6797134,
+       41.913607
+      ],
+      "type": "Point"
+     },
+     "count": "3"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.5693045,
+       41.640391
+      ],
+      "type": "Point"
+     },
+     "count": "3"
+    },
+    {
+     "item": {
+      "coordinates": [
+       1.98069,
+       41.35901
+      ],
+      "type": "Point"
+     },
+     "count": "3"
+    }
+   ]
+  ],
+  [
+   ":@computed_region_bh64_c7uy",
+   "LIMADM_MUNICIPI",
+   "number",
+   []
+  ]
+ ]
+}
