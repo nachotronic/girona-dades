@@ -1,4 +1,4 @@
-"""Exploración de cultura, 4.ª ronda (temporal): ejecuta fuentes/cultura.py y copia el resultado a exploracion/."""
+"""Exploración de cultura, 5.ª ronda (temporal): ejecuta fuentes/cultura.py y copia el resultado a exploracion/."""
 import pathlib
 import re
 import shutil
@@ -11,6 +11,10 @@ import requests  # noqa: E402
 
 sys.path.insert(0, ".")
 OUT = pathlib.Path("exploracion/cultura")
+SRC = pathlib.Path("data/processed/cultura")
+SRC.mkdir(parents=True, exist_ok=True)
+for f in OUT.glob("bib_mun_*.csv"):  # tandas ya descargadas en ejecuciones anteriores
+    shutil.copy(f, SRC / f.name)
 for f in OUT.glob("*"):
     f.unlink()
 OUT.mkdir(parents=True, exist_ok=True)

@@ -25,6 +25,7 @@ import csv
 import html as H
 import io
 import re
+import time
 import urllib.parse
 
 import pandas as pd
@@ -35,6 +36,7 @@ from .comun import UA, carpeta, get
 DOMINIO = "https://analisi.transparenciacatalunya.cat"
 BIB = "https://estadistiquesbiblioteques.gencat.cat/"
 MC = "ctl00$MainContent$"
+LIMIT_S = 35 * 60  # tiempo máximo para DadesBib en cada ejecución
 GRUPS_BIB = ["Equipament", "Obertura al públic", "Fons", "Usuaris registrats (carnets)", "Préstec", "Activitats", "Ús d'altres serveis",
              "Despesa de funcionament"]
 
@@ -80,7 +82,7 @@ class DadesBib:
     def post(self, extra: dict) -> str:
         f = _camps(self.t)
         f.update(extra)
-        r = self.s.post(self.url, data=f, timeout=600)
+        r = self.s.post(self.url, data=f, timeout=240)
         r.raise_for_status()
         self.t = r.text
         return r.text
@@ -111,7 +113,7 @@ class DadesBib:
         if not m:
             raise RuntimeError("DadesBib: el informe no tiene ExportUrlBase")
         exp = urllib.parse.urljoin(self.url, m.group(1).encode().decode("unicode_escape")) + "CSV"
-        r = self.s.get(exp, timeout=900)
+        r = self.s.get(exp, timeout=420)
         r.raise_for_status()
         txt = r.content.decode("utf-8-sig", errors="replace")
         # volver al formulario para la siguiente consulta
@@ -121,28 +123,42 @@ class DadesBib:
 
 
 def dadesbib(sal) -> list[str]:
-    """Provincias y Cataluña en un informe; municipios de Girona por tandas (un informe grande da 502), con el detalle por biblioteca."""
+    """Provincias y Cataluña en un informe; municipios de Girona por tandas de 15 (un informe grande da 502), con el
+    detalle por biblioteca. Cada tanda se guarda en bib_mun_NN.csv y no se vuelve a pedir si ya tiene el último año:
+    si una ejecución se queda sin tiempo, la siguiente sigue donde lo dejó."""
     res = []
+    t0 = time.monotonic()
     d = DadesBib()
     txt, n, nv, na = d.informe("Províncies", lambda v, e: True, False)
     (sal / "bib_ambits_raw.csv").write_text(txt, encoding="utf-8")
-    res.append(f"DadesBib provincias: {n} elementos, {nv} variables, {na} años")
+    ultim = max(int(a) for a in re.findall(r",((?:19|20)\d\d),", txt))
+    res.append(f"DadesBib provincias: {n} elementos, {nv} variables, {na} años (último {ultim}, {time.monotonic() - t0:.0f} s)")
     d.post({"__EVENTTARGET": MC + "list_abast", "__EVENTARGUMENT": "", MC + "RadioList": "RadioAbast", MC + "list_abast": "Municipis"})
-    munis = [v for v, _ in _opcions(d.t, MC + "items_seg") if v.startswith("17")]
-    trossos, mida = [], 15
-    for i in range(0, len(munis), mida):
+    munis = sorted(v for v, _ in _opcions(d.t, MC + "items_seg") if v.startswith("17"))
+    mida, fets, salts = 15, 0, 0
+    for k, i in enumerate(range(0, len(munis), mida)):
+        f = sal / f"bib_mun_{k:02d}.csv"
+        if f.exists() and f",{ultim}," in f.read_text(encoding="utf-8"):
+            salts += 1
+            continue
+        if time.monotonic() - t0 > LIMIT_S:
+            res.append(f"AVISO DadesBib: sin tiempo, quedan tandas para la próxima ejecución (desde la {k})")
+            break
         grup = set(munis[i:i + mida])
-        for intent in range(3):
+        for intent in range(2):
             try:
+                t1 = time.monotonic()
                 d = DadesBib()
                 txt, n, nv, na = d.informe("Municipis", lambda v, e, g=grup: v in g, True)
-                trossos.append(txt)
+                f.write_text(txt, encoding="utf-8")
+                fets += 1
+                print(f"DadesBib tanda {k}: {n} municipios, {len(txt)} bytes, {time.monotonic() - t1:.0f} s", flush=True)
                 break
             except Exception as e:  # noqa: BLE001
-                if intent == 2:
-                    res.append(f"ERROR DadesBib municipios {i}-{i + mida}: {type(e).__name__}: {str(e)[:160]}")
-    (sal / "bib_municipis_raw.csv").write_text("\n\n".join(trossos), encoding="utf-8")
-    res.append(f"DadesBib municipios: {len(munis)} municipios en {len(trossos)} informes")
+                print(f"DadesBib tanda {k} intento {intent}: {type(e).__name__}: {str(e)[:160]}", flush=True)
+                if intent == 1:
+                    res.append(f"ERROR DadesBib tanda {k}: {type(e).__name__}: {str(e)[:160]}")
+    res.append(f"DadesBib municipios: {len(munis)} municipios, {fets} tandas descargadas, {salts} ya al día ({time.monotonic() - t0:.0f} s)")
     return res
 
 
