@@ -247,7 +247,8 @@
       ${dsHtml ? `<div class="rs-dest"><h4>${tx("destaca")}</h4><ol>${dsHtml}</ol><p class="rt-nota">${LANG === "ca" ? `Posició entre els ${D.municipios.length} municipis.` : `Posición entre los ${D.municipios.length} municipios.`}</p></div>` : ""}</div>
       ${taula(m)}</section>`;
     if (!extra) return;
-    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}`;
+    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}${window.blocCultura ? window.blocCultura(m) : ""}`;
+    if (window.pintaCultura) window.pintaCultura(extra, m);
     const gc = extra.querySelector(".g-com");
     if (gc) {
       const R = (D.com_ref || {}).est_h || {}, z = (k) => Object.fromEntries(Object.entries(R).map(([a, o]) => [a, o[k]]).filter(([, v]) => v != null));

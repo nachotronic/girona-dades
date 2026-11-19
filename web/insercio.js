@@ -45,7 +45,7 @@
     // Bloques que ya llevan su propia fuente
     com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
     tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
-    sol: { sel: ".fitxa-sol" },
+    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" },
   };
   // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
   const SECCIONS = {
@@ -68,6 +68,7 @@
     ene: ["Generalitat i Xifra (Diputació de Girona)", "Generalitat y Xifra (Diputació de Girona)"], ele: ["Generalitat, resultats per secció censal", "Generalitat, resultados por sección censal"],
     pol: ["Generalitat, ens locals", "Generalitat, entes locales"],
     agr: ["INE, cens agrari 2020, via Idescat", "INE, censo agrario 2020, vía Idescat"],
+    cul: ["Departament de Cultura (DadesBib, cens d'equipaments, Programa.cat i agenda cultural)", "Departament de Cultura (DadesBib, censo de equipamientos, Programa.cat y agenda cultural)"],
   };
   const ll = (p) => p[LANG === "ca" ? 0 : 1];
 

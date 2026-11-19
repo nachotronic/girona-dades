@@ -86,6 +86,7 @@
     { id: "jus", ca: "Justícia", es: "Justicia" },
     { id: "eme", ca: "Emergències", es: "Emergencias" },
     { id: "acc", ca: "Trànsit", es: "Tráfico" },
+    { id: "cul", ca: "Cultura", es: "Cultura" },
     { id: "ter", ca: "Territori", es: "Territorio" },
     { id: "agr", ca: "Camp", es: "Campo" },
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
@@ -143,6 +144,63 @@
   ];
   // Comarcas: el año elegido en el mapa solo se aplica a los municipios; las comarcas muestran el último
   const ACZ = (k, a) => (x) => { const o = x && x[k]; if (!o) return null; const y = D.anys && D.anys[a]; return y != null && o[y] != null ? o[y] : null; };
+
+  // Cultura: m.cul = {clave: {año: valor}}, D.cul_ref = {clave: {año: {gi, cat}}}, D.anys.cul_bib/cul_eq/cul_prog/cul_ag, comarcas en D.arees.com[c]["cul_" + clave]
+  const CU = (k) => (m, a) => (a != null && m.cul && m.cul[k] && m.cul[k][a] != null ? m.cul[k][a] : null);
+  const CUR = (k, z) => (a) => { const r = D.cul_ref && D.cul_ref[k] && D.cul_ref[k][a]; return r && r[z] != null ? r[z] : null; };
+  const CUZ = (k, a) => (x) => { const o = x && x["cul_" + k]; if (!o) return null; const y = D.anys && D.anys[a]; return y != null && o[y] != null ? o[y] : null; };
+  const EUR1 = { f: (v) => `${fmt(v, 2)} €`, c: (v) => `${fmt(v, 0)} €` };
+  const NOTA_BIB = { ca: "Departament de Cultura, estadístiques de les biblioteques públiques (DadesBib). Només hi surten els municipis amb biblioteca pública; els que només tenen el bibliobús, no. Les xifres per habitant són sobre la població del municipi, encara que la biblioteca també serveixi els pobles del voltant: mireu també les comarques.", es: "Departament de Cultura, estadísticas de las bibliotecas públicas (DadesBib). Solo salen los municipios con biblioteca pública; los que solo tienen el bibliobús, no. Las cifras por habitante son sobre la población del municipio, aunque la biblioteca también sirva a los pueblos de alrededor: mirad también las comarcas." };
+  const NOTA_EQ = { ca: "Departament de Cultura, cens d'equipaments culturals de Catalunya: equipaments públics i privats inscrits al cens.", es: "Departament de Cultura, censo de equipamientos culturales de Cataluña: equipamientos públicos y privados inscritos en el censo." };
+  const NOTA_ENT = { ca: "Departament de Cultura, cens d'entitats de cultura popular i associacions (gegants, corals, teatre amateur, diables, castells...). Només les entitats inscrites al cens.", es: "Departament de Cultura, censo de entidades de cultura popular y asociaciones (gigantes, corales, teatro aficionado, diablos, castells...). Solo las entidades inscritas en el censo." };
+  const NOTA_ARX = { ca: "Departament de Cultura, directori d'arxius de Catalunya (municipals, comarcals, eclesiàstics, d'empresa...).", es: "Departament de Cultura, directorio de archivos de Cataluña (municipales, comarcales, eclesiásticos, de empresa...)." };
+  const NOTA_LLIB = { ca: "Departament de Cultura, xarxa de llibreries acreditades (llibreries independents amb fons i activitat cultural reconeguts). No són totes les llibreries.", es: "Departament de Cultura, red de librerías acreditadas (librerías independientes con fondo y actividad cultural reconocidos). No son todas las librerías." };
+  const NOTA_PROG = { ca: "Programa.cat: funcions professionals de teatre, música, circ i dansa que els ajuntaments contracten amb ajut del Departament de Cultura i de la Diputació, segons el municipi on es fan. No és tota la programació del municipi.", es: "Programa.cat: funciones profesionales de teatro, música, circo y danza que los ayuntamientos contratan con ayuda del Departament de Cultura y de la Diputació, según el municipio donde se hacen. No es toda la programación del municipio." };
+  const NOTA_AG = { ca: "Agenda cultural de Catalunya: activitats que els ajuntaments, els equipaments i les entitats hi publiquen, segons el municipi i l'any en què comencen. Depèn de qui hi publica: no és el total d'activitats.", es: "Agenda cultural de Cataluña: actividades que los ayuntamientos, los equipamientos y las entidades publican en ella, según el municipio y el año en que empiezan. Depende de quién publica: no es el total de actividades." };
+  const BIBC = { cob: 0.1 };
+  // Solo comarcas (Idescat, último año): x["cul_" + clave] = {año: valor}
+  const CUL_DARRER = (o) => { if (!o) return null; const ks = Object.keys(o).sort(); return ks.length ? o[ks[ks.length - 1]] : null; };
+  const CUC = (k) => (x) => CUL_DARRER(x && x["cul_" + k]);
+  const CUCR = (k) => () => { const r = D.cul_ref && D.cul_ref[k]; const o = r ? CUL_DARRER(r) : null; return o || {}; };
+  const NOTA_COMC = { ca: "Només per comarques: Idescat, Anuari estadístic de Catalunya (font: Departament de Cultura), darrer any publicat. Les xifres per habitant són sobre la població de la comarca. La Cerdanya i Osona no hi surten perquè només una part és de la província.", es: "Solo por comarcas: Idescat, Anuario estadístico de Cataluña (fuente: Departament de Cultura), último año publicado. Las cifras por habitante son sobre la población de la comarca. La Cerdanya y Osona no salen porque solo una parte es de la provincia." };
+  const CULC = [
+    ["c_esp_h", ["Anar al cinema", "Entrades de cinema venudes per habitant i any"], ["Ir al cine", "Entradas de cine vendidas por habitante y año"], N2],
+    ["c_pant", ["Pantalles de cinema", "Pantalles de cinema"], ["Pantallas de cine", "Pantallas de cine"], N0],
+    ["c_but_h", ["Butaques de cinema", "Butaques de cinema per 1.000 habitants"], ["Butacas de cine", "Butacas de cine por 1.000 habitantes"], N1],
+    ["c_esp", ["Espectadors de cinema", "Entrades de cinema venudes"], ["Espectadores de cine", "Entradas de cine vendidas"], N0],
+    ["m_vis_h", ["Visitants dels museus", "Visitants de museus i col·leccions per habitant"], ["Visitantes de los museos", "Visitantes de museos y colecciones por habitante"], N1],
+    ["m_vis", ["Visitants dels museus (total)", "Visitants de museus i col·leccions"], ["Visitantes de los museos (total)", "Visitantes de museos y colecciones"], N0],
+    ["m_n", ["Museus registrats", "Museus i col·leccions registrats (seus i subseus)"], ["Museos registrados", "Museos y colecciones registrados (sedes y subsedes)"], N0],
+    ["r_fm", ["Ràdios FM", "Emissores de ràdio de freqüència modulada (privades i municipals)"], ["Radios FM", "Emisoras de radio de frecuencia modulada (privadas y municipales)"], N0],
+  ];
+  const CUL = [
+    ["b_prest_h", "cul_bib", ["Préstecs de biblioteca", "Préstecs de les biblioteques públiques per habitant"], ["Préstamos de biblioteca", "Préstamos de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
+    ["b_vis_h", "cul_bib", ["Visites a la biblioteca", "Visites a les biblioteques públiques per habitant"], ["Visitas a la biblioteca", "Visitas a las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
+    ["b_carn_p", "cul_bib", ["Carnet de biblioteca", "Persones amb carnet de biblioteca (% de la població)"], ["Carné de biblioteca", "Personas con carné de biblioteca (% de la población)"], NOTA_BIB, { ...BIBC, ...P0 }],
+    ["b_usu_p", "cul_bib", ["Usuaris actius", "Persones que s'han endut algun préstec durant l'any (% de la població)"], ["Usuarios activos", "Personas que se han llevado algún préstamo durante el año (% de la población)"], NOTA_BIB, { ...BIBC, ...P1 }],
+    ["b_act_h", "cul_bib", ["Activitats a la biblioteca", "Assistents a activitats de les biblioteques per 1.000 habitants"], ["Actividades en la biblioteca", "Asistentes a actividades de las bibliotecas por 1.000 habitantes"], NOTA_BIB, { ...BIBC, ...N0 }],
+    ["b_fons_h", "cul_bib", ["Llibres i documents", "Fons de les biblioteques públiques per habitant"], ["Libros y documentos", "Fondo de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N1 }],
+    ["b_desp_h", "cul_bib", ["Despesa en biblioteques", "Despesa de funcionament de les biblioteques per habitant"], ["Gasto en bibliotecas", "Gasto de funcionamiento de las bibliotecas por habitante"], NOTA_BIB, { ...BIBC, ...EUR1 }],
+    ["b_hores", "cul_bib", ["Hores d'obertura", "Hores d'obertura de les biblioteques a la setmana"], ["Horas de apertura", "Horas de apertura de las bibliotecas a la semana"], NOTA_BIB, { ...BIBC, sumable: true, ...N0 }],
+    ["b_prest", "cul_bib", ["Préstecs (total)", "Préstecs de les biblioteques públiques"], ["Préstamos (total)", "Préstamos de las bibliotecas públicas"], NOTA_BIB, { ...BIBC, sumable: true, ...N0 }],
+    ["b_vis", "cul_bib", ["Visites (total)", "Visites a les biblioteques públiques"], ["Visitas (total)", "Visitas a las bibliotecas públicas"], NOTA_BIB, { ...BIBC, sumable: true, ...N0 }],
+    ["e_n_h", "cul_eq", ["Equipaments culturals", "Equipaments culturals per 10.000 habitants"], ["Equipamientos culturales", "Equipamientos culturales por 10.000 habitantes"], NOTA_EQ, N1],
+    ["e_but_h", "cul_eq", ["Butaques de teatre i auditori", "Places dels espais escènics i musicals per 1.000 habitants"], ["Butacas de teatro y auditorio", "Plazas de los espacios escénicos y musicales por 1.000 habitantes"], NOTA_EQ, N0],
+    ["e_esc", "cul_eq", ["Espais escènics i musicals", "Teatres, auditoris i sales polivalents"], ["Espacios escénicos y musicales", "Teatros, auditorios y salas polivalentes"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["e_teatres", "cul_eq", ["Teatres i auditoris", "Teatres i auditoris"], ["Teatros y auditorios", "Teatros y auditorios"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["e_mus", "cul_eq", ["Museus i col·leccions", "Museus, col·leccions i centres d'interpretació"], ["Museos y colecciones", "Museos, colecciones y centros de interpretación"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["e_civ", "cul_eq", ["Ateneus i centres cívics", "Ateneus, centres cívics i cases de cultura"], ["Ateneos y centros cívicos", "Ateneos, centros cívicos y casas de cultura"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["e_vis", "cul_eq", ["Sales d'exposicions", "Sales d'exposicions i centres d'arts visuals"], ["Salas de exposiciones", "Salas de exposiciones y centros de artes visuales"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["e_cin", "cul_eq", ["Cinemes", "Cinemes"], ["Cines", "Cines"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["e_n", "cul_eq", ["Equipaments culturals (total)", "Equipaments culturals al cens"], ["Equipamientos culturales (total)", "Equipamientos culturales en el censo"], NOTA_EQ, { sumable: true, ...N0 }],
+    ["ent_n", "cul_eq", ["Entitats de cultura popular", "Entitats culturals inscrites al cens"], ["Entidades de cultura popular", "Entidades culturales inscritas en el censo"], NOTA_ENT, { sumable: true, ...N0 }],
+    ["arx_n", "cul_eq", ["Arxius", "Arxius oberts a la consulta"], ["Archivos", "Archivos abiertos a la consulta"], NOTA_ARX, { sumable: true, ...N0 }],
+    ["llib_n", "cul_eq", ["Llibreries acreditades", "Llibreries de la xarxa acreditada per la Generalitat"], ["Librerías acreditadas", "Librerías de la red acreditada por la Generalitat"], NOTA_LLIB, { sumable: true, ...N0 }],
+    ["p_h", "cul_prog", ["Funcions de teatre i música", "Funcions professionals de Programa.cat per 10.000 habitants"], ["Funciones de teatro y música", "Funciones profesionales de Programa.cat por 10.000 habitantes"], NOTA_PROG, N1],
+    ["p_n", "cul_prog", ["Funcions (total)", "Funcions professionals de teatre, música, circ i dansa de Programa.cat"], ["Funciones (total)", "Funciones profesionales de teatro, música, circo y danza de Programa.cat"], NOTA_PROG, { sumable: true, ...N0 }],
+    ["ag_h", "cul_ag", ["Agenda cultural", "Activitats publicades a l'agenda cultural per 1.000 habitants"], ["Agenda cultural", "Actividades publicadas en la agenda cultural por 1.000 habitantes"], NOTA_AG, N1],
+    ["ag_n", "cul_ag", ["Agenda cultural (total)", "Activitats publicades a l'agenda cultural"], ["Agenda cultural (total)", "Actividades publicadas en la agenda cultural"], NOTA_AG, { sumable: true, ...N0 }],
+  ];
 
   // Parque de vehículos (DGT, anual): m.veh = {clave: {año: valor}}, D.veh_ref = {clave: {año: {gi, cat, esp}}}
   const AT = (k) => (m, a) => (a != null && m.ats && m.ats[k] && m.ats[k][a] != null ? m.ats[k][a] : null);
@@ -632,6 +690,9 @@
     // Parque de vehículos (DGT)
     ...ACC.map(([k, a, ca, es, nota, fmtk]) => ({ id: "acc_" + k, tema: "acc", ca, es, a, v: (m) => AC(k)(m, D.anys && D.anys[a]), t: AC(k), pv: ACR(k, "gi"),
       com: ACZ(k, a), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: ACR(k, "cat")(y), esp: ACR(k, "esp")(y) }; }, nota, ...fmtk })),
+    ...CUL.map(([k, a, ca, es, nota, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a, v: (m) => CU(k)(m, D.anys && D.anys[a]), t: CU(k), pv: CUR(k, "gi"),
+      ...(/^b_/.test(k) ? { com: CUZ(k, a), buit: () => !(D.anys && D.anys[a]) } : {}), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: CUR(k, "cat")(y) }; }, nota, ...fmtk })),
+    ...CULC.map(([k, ca, es, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a: "cul_com", sumable: false, com: CUC(k), ref: CUCR(k), nota: NOTA_COMC, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
@@ -748,8 +809,8 @@
     { id: "co2_residencial", tema: "ene", ca: ["CO₂ de les llars", "Emissions de CO₂ dels habitatges per habitant (tones/any)"], es: ["CO₂ de los hogares", "Emisiones de CO₂ de las viviendas por habitante (toneladas/año)"], a: "co2", v: X("co2_residencial"), nota: NX, ...N2 },
     { id: "gas", tema: "ene", ca: ["Consum de gas", "Consum de gas natural per habitant (kWh)"], es: ["Consumo de gas", "Consumo de gas natural por habitante (kWh)"], a: "gas", v: X("gas"), nota: { ca: "Xifra. Només municipis amb xarxa de gas i dades publicades.", es: "Xifra. Solo municipios con red de gas y datos publicados." }, ...N0 },
     { id: "bancs", tema: "ter", ca: ["Oficines bancàries", "Oficines de bancs i caixes per 10.000 habitants"], es: ["Oficinas bancarias", "Oficinas de bancos y cajas por 10.000 habitantes"], a: "bancs", v: X("bancs"), nota: { ca: "Banc d'Espanya, via Xifra.", es: "Banco de España, vía Xifra." }, ...N1 },
-    { id: "biblio", tema: "ter", ca: ["Biblioteques", "Biblioteques per 10.000 habitants"], es: ["Bibliotecas", "Bibliotecas por 10.000 habitantes"], a: "biblio", v: X("biblio"), nota: NX, ...N1 },
-    { id: "museus", sumable: false, tema: "ter", ca: ["Museus", "Museus i col·leccions"], es: ["Museos", "Museos y colecciones"], a: "museus", v: X("museus"), nota: NX, ...N0 },
+    { id: "biblio", tema: "cul", ca: ["Biblioteques", "Biblioteques per 10.000 habitants"], es: ["Bibliotecas", "Bibliotecas por 10.000 habitantes"], a: "biblio", v: X("biblio"), nota: NX, ...N1 },
+    { id: "museus", sumable: false, tema: "cul", ca: ["Museus", "Museus i col·leccions"], es: ["Museos", "Museos y colecciones"], a: "museus", v: X("museus"), nota: NX, ...N0 },
     { id: "explotacions", tema: "ter", ca: ["Explotacions agràries", "Explotacions agràries per 1.000 habitants"], es: ["Explotaciones agrarias", "Explotaciones agrarias por 1.000 habitantes"], a: "explotacions", v: X("explotacions"), nota: { ca: "Cens agrari 2020 (INE), via Xifra.", es: "Censo agrario 2020 (INE), vía Xifra." }, ...N1 },
     { id: "furgonetes", tema: "ter", ca: ["Furgonetes i camions", "Vehicles industrials per 1.000 habitants"], es: ["Furgonetas y camiones", "Vehículos industriales por 1.000 habitantes"], a: "furgonetes", v: X("furgonetes"), nota: NE, ...N0 },
     // Resto de la ficha EMEX de Idescat (2026-11-17)
@@ -867,6 +928,7 @@
       const tots = new Set(); D.municipios.forEach((m) => ["alquiler", "compraventas", "renta_persona", "renta_hogar", "gini", "renda_bruta", "renda_bruta_llar", "renda_mediana"].forEach((k) => Object.keys(m[k] || {}).forEach((a) => tots.add(a))));
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "acc") D.municipios.forEach((m) => Object.values(m.acc || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "cul") D.municipios.forEach((m) => Object.values(m.cul || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
@@ -1176,8 +1238,8 @@
     const q = normal(consulta.trim());
     const temes = TEMES.map((tm) => `<button type="button" class="tema" data-tema="${tm.id}" aria-pressed="${!q && tm.id === tema}">${tm[LANG]}</button>`).join("");
     const llista = q
-      ? IND.filter((i) => normal([...i.ca, ...i.es].join(" ")).includes(q))
-      : IND.filter((i) => i.tema === tema);
+      ? IND.filter((i) => !(i.buit && i.buit()) && normal([...i.ca, ...i.es].join(" ")).includes(q))
+      : IND.filter((i) => !(i.buit && i.buit()) && i.tema === tema);
     const xips = llista.map((i) => {
       const ok = NIVELLS.some((n) => disponible(i, n)) && !absent(i);
       const pref = q ? `<span class="xip-tema">${TEMES.find((tm) => tm.id === i.tema)[LANG]}</span>` : "";
@@ -1411,10 +1473,10 @@
     };
     const cap = `<div class="fi-fila fi-cap"><span></span><span class="fi-strip-cap"></span><span>${m.nom}</span><span>${t("ref_gi_curt")}</span><span>${t("ref_cat")}</span><span>${t("ref_esp")}</span></div>`;
     const blocs = TEMES.map((tm) => {
-      const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el).map((i) => {
+      const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el && !(i.buit && i.buit())).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "ats" || /^hb/.test(i.a || "") || i.a === "veh" || i.a === "acc" || i.a === "accu" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "ats" || /^hb/.test(i.a || "") || i.a === "veh" || i.a === "acc" || i.a === "accu" || /^cul_/.test(i.a || "") || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
