@@ -303,4 +303,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import runpy
+    runpy.run_path("scripts/explorar_cultura.py", run_name="__main__")  # exploración temporal
