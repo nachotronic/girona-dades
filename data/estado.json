@@ -41,6 +41,13 @@
   "durada": 7,
   "resum": "paro 2019: ya guardado\nparo 2020: ya guardado\nparo 2021: ya guardado\nparo 2022: ya guardado\nparo 2023: ya guardado\nparo 2024: ya guardado\nparo 2025: ya guardado\nparo 2026: 2210 filas de Girona, meses 202601-202610\ncontratos 2020: ya guardado\ncontratos 2021: ya guardado\ncontratos 2022: ya guardado\ncontratos 2023: ya guardado\ncontratos 2024: ya guardado\ncontratos 2025: ya guardado\ncontratos 2026: 2210 filas de Girona, meses 202601-202610\ndtes 2019: ya guardado\ndtes 2020: ya guardado\ndtes 2021: ya guardado\ndtes 2022: ya guardado\ndtes 2023: ya guardado\ndtes 2024: ya guardado\ndtes 2025: ya guardado\ndtes 2026: 2210 filas de Girona, meses 202601-202610"
  },
+ "cultura": {
+  "estat": "avís",
+  "intent": "2026-11-19T23:52:17Z",
+  "ok": null,
+  "durada": 2277,
+  "resum": "?ReportSession=odfhud45kawt5bjm\nERROR DadesBib tanda 5: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=3gwz4c2h1o1ne355\nERROR DadesBib tanda 6: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 7: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=bszlzorxmpmzte45\nERROR DadesBib tanda 8: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 9: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 10: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 11: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=aucmszb0dgovyv3h\nERROR DadesBib tanda 12: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=qm1eec45yhjr4v45\nAVISO DadesBib: sin tiempo, quedan tandas para la próxima ejecución (desde la 13)\nDadesBib municipios: 222 municipios, 0 tandas descargadas, 0 ya al día (2267 s)"
+ },
  "dgt": {
   "estat": "ok",
   "intent": "2026-11-16T12:11:55Z",
