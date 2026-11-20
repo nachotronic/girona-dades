@@ -11,12 +11,14 @@
     kgek-zg4b  Xarxa de llibreries acreditades
     2xiz-255m  Programa.cat: espectáculos profesionales subvencionados, por municipio y fecha
     rhpv-yr4f  Agenda cultural de Catalunya (actividades por municipio)
+    q9ct-fkjt  Inscripciones a los cursos de catalán del CPNL por municipio (2011-2021)
 
 Escribe en data/processed/cultura/:
   bib_mun_AAAA.csv      DadesBib, municipios de Girona de un año, variables de la web (formato largo)
   bib_ambits_raw.csv    DadesBib, provincias y Cataluña por año e indicador
   equipaments.csv, biblioteques_cens.csv, entitats.csv, arxius.csv, llibreries.csv, programa_cat.csv
   agenda.csv            actividades de la agenda por municipio y año (toda Cataluña)
+  cpnl.csv              inscripciones a cursos de catalán por municipio y año
 """
 from __future__ import annotations
 
@@ -177,7 +179,7 @@ def idescat_aec(sal) -> list[str]:
     """Taulas comarcales del Anuari estadístic (cine, museos, archivos, bibliotecas, radios, BCIN, teatro): todos los años."""
     res = []
     taules = {15753: "cinema_sales", 15754: "cinema_espectadors", 15762: "museus", 15761: "arxius", 15763: "biblioteques",
-              15959: "radio_fm", 15766: "bcin", 15759: "teatre_espectadors", 15758: "teatre_representacions"}
+              15959: "radio_fm", 15766: "bcin", 15759: "teatre_espectadors", 15758: "teatre_representacions", 15912: "centres_culte"}
     for n, nom in taules.items():
         base = f"https://www.idescat.cat/indicadors/?id=aec&n={n}&lang=ca"
         try:
@@ -205,6 +207,7 @@ def socrata(sal) -> list[str]:
         "arxius": ("igtv-wrij", {"$where": "starts_with(codi_ine, '17')"}),
         "llibreries": ("kgek-zg4b", {}),
         "programa_cat": ("2xiz-255m", {}),
+        "cpnl": ("q9ct-fkjt", {"$where": "starts_with(codi_municipi, '17')"}),
         "agenda": ("rhpv-yr4f", {"$select": "municipi, comarca, date_extract_y(data_inici) as any, count(*) as n",
                                  "$group": "municipi, comarca, any", "$order": "any"}),
     }
