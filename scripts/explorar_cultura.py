@@ -26,21 +26,23 @@ def prova(nom, n_mun, detall, anys=None, vars_grups=None):
         d = cultura.DadesBib()
         txt, n, nv, na = d.informe("Municipis", lambda v, e: v in grup, detall, anys)
         (OUT / f"{nom}.csv").write_text(txt[:3_000_000], encoding="utf-8")
-        log.append(f"OK {nom}: {n} mun, {nv} vars, anys {anys or na}, detall {detall}: {len(txt)} bytes, {txt.count(chr(10))} líneas, {time.monotonic() - t0:.0f} s")
+        log.append(f"OK {nom} {cultura.GRUPS_BIB}: {n} mun, {nv} vars, anys {anys or na}, detall {detall}: {len(txt)} bytes, {txt.count(chr(10))} líneas, {time.monotonic() - t0:.0f} s")
     except Exception as e:  # noqa: BLE001
         log.append(f"ERR {nom}: {type(e).__name__}: {str(e)[:150]} ({time.monotonic() - t0:.0f} s)")
     print(log[-1], flush=True)
 
 
 GR = list(cultura.GRUPS_BIB)
-prova("m1", 1, False)
-prova("m1_det", 1, True)
-prova("m5", 5, False)
-prova("m5_det", 5, True)
-prova("m5_det_1any", 5, True, [11])
-prova("m15", 15, False)
-prova("m15_1any", 15, False, [11])
-prova("m15_prestec", 15, False, None, ["Préstec"])
-prova("m60_1any", 60, False, [11])
+OUT2 = OUT
+for f in OUT.glob("*"):
+    f.unlink()
+prova("tot_prestec_1any", 300, False, [11], ["Préstec"])
+prova("tot_prestec_1any_det", 300, True, [11], ["Préstec"])
+prova("tot_equip_1any_det", 300, True, [11], ["Equipament"])
+prova("tot_usuaris_1any_det", 300, True, [11], ["Usuaris registrats (carnets)"])
+prova("tot_despesa_1any_det", 300, True, [11], ["Despesa de funcionament"])
+prova("m60_tot_1any_det", 60, True, [11])
+prova("tot_prestec_3anys_det", 300, True, [9, 10, 11], ["Préstec"])
+prova("m15_prestec_tots_det", 15, True, None, ["Préstec"])
 cultura.GRUPS_BIB[:] = GR
 (OUT / "log.txt").write_text("\n".join(log), encoding="utf-8")
