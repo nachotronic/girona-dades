@@ -1,9 +1,8 @@
-ERR m1: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=ihsrxc (89 s)
-ERR m1_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=n00rva (85 s)
-ERR m5: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=ruh11b (85 s)
-ERR m5_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=skvnwr (86 s)
-ERR m5_det_1any: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=ocn1l2 (84 s)
-ERR m15: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=lvwpdw (88 s)
-OK m15_1any: 15 mun, 106 vars, anys [11], detall False: 50517 bytes, 880 líneas, 64 s
-OK m15_prestec: 15 mun, 18 vars, anys 12, detall False: 61344 bytes, 1087 líneas, 19 s
-OK m60_1any: 60 mun, 18 vars, anys [11], detall False: 22452 bytes, 349 líneas, 20 s
+OK tot_prestec_1any ['Préstec']: 222 mun, 18 vars, anys [11], detall False: 67899 bytes, 1069 líneas, 32 s
+ERR tot_prestec_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=k0bdwg (68 s)
+ERR tot_equip_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=3134kf (69 s)
+ERR tot_usuaris_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=p0mj5y (67 s)
+ERR tot_despesa_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=0ijjd5 (67 s)
+ERR m60_tot_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=xoxelg (68 s)
+ERR tot_prestec_3anys_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=4r2put (69 s)
+ERR m15_prestec_tots_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=axkm32 (69 s)
