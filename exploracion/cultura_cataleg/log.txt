@@ -1,1 +1,23 @@
-0 conjuntos
+{'categories': 'Cultura i lleure'}: HTTP 200, 0
+{'attribution': 'Departament de Cultura'}: HTTP 200, 20
+{'q': 'cultura'}: HTTP 200, 182
+{'q': 'biblioteques'}: HTTP 200, 5
+{'q': 'museus'}: HTTP 200, 4
+{'q': 'patrimoni'}: HTTP 200, 29
+{'q': 'cinema'}: HTTP 200, 16
+{'q': 'teatre'}: HTTP 200, 5
+{'q': 'música'}: HTTP 200, 16
+{'q': 'festes'}: HTTP 200, 4
+{'q': 'arqueologia'}: HTTP 200, 1
+{'q': 'jaciments'}: HTTP 200, 0
+{'q': 'inventari'}: HTTP 200, 11
+{'q': 'visitants'}: HTTP 200, 30
+{'q': 'festivals'}: HTTP 200, 3
+{'q': 'català'}: HTTP 200, 1003
+{'q': 'sardanes'}: HTTP 200, 1
+{'q': 'castells'}: HTTP 200, 4
+{'q': 'llengua'}: HTTP 200, 21
+{'q': 'audiovisual'}: HTTP 200, 11
+{'q': 'llibre'}: HTTP 200, 17
+{'q': 'arts escèniques'}: HTTP 200, 7
+1060 conjuntos
