@@ -349,7 +349,7 @@ def _agenda(municipios):
 
 
 def _cpnl(municipios):
-    """Inscripciones a los cursos de catalán del CPNL por municipio de residencia del alumno (2011-2021)."""
+    """Inscripciones a los cursos de catalán del CPNL por municipio de residencia del alumno (desde 2011)."""
     f = D / "cpnl.csv"
     if not f.exists():
         return {}, {}, None
@@ -386,7 +386,7 @@ def _aec(nom):
     if not f.exists():
         return None, {}
     t = f.read_text(encoding="utf-8")
-    m = re.search(r"^((?:19|20)\d\d)\s*$", t, re.M)
+    m = re.search(r"^(?:.*\. )?((?:19|20)\d\d)\s*$", t, re.M)
     cap, files = None, {}
     for lin in t.splitlines():
         x = lin.split(";")
@@ -405,7 +405,7 @@ COM_PARTIDES = {"Cerdanya", "Osona"}
 
 
 def _comarques_idescat(municipios):
-    """Cine, museos y radios por comarca (Anuari estadístic de Catalunya). Solo hay el último año."""
+    """Cine, museos, radios y centros de culto por comarca (Anuari estadístic de Catalunya). Solo hay el último año."""
     pob = defaultdict(float)
     for m in municipios:
         if m.get("comarca"):
@@ -416,6 +416,8 @@ def _comarques_idescat(municipios):
         "cinema_espectadors": [("c_esp_h", "Espectadors", 1, 2), ("c_esp", "Espectadors", None, 0)],
         "museus": [("m_vis_h", "Visitants", 1, 1), ("m_vis", "Visitants", None, 0), ("m_n", "Total", None, 0)],
         "radio_fm": [("r_fm", "Total", None, 0)],
+        "centres_culte": [("ct_n", "Total", None, 0), ("ct_h", "Total", 10_000, 1), ("ct_cat", "Centres de culte catòlics", None, 0),
+                          ("ct_ev", "Esglésies Evangèliques", None, 0), ("ct_isl", "Islam", None, 0)],
     }
     for nom, cols in defs.items():
         a, files = _aec(nom)

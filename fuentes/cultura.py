@@ -11,7 +11,7 @@
     kgek-zg4b  Xarxa de llibreries acreditades
     2xiz-255m  Programa.cat: espectáculos profesionales subvencionados, por municipio y fecha
     rhpv-yr4f  Agenda cultural de Catalunya (actividades por municipio)
-    q9ct-fkjt  Inscripciones a los cursos de catalán del CPNL por municipio (2011-2021)
+    q9ct-fkjt  Inscripciones a los cursos de catalán del CPNL por municipio (desde 2011)
 
 Escribe en data/processed/cultura/:
   bib_mun_AAAA.csv      DadesBib, municipios de Girona de un año, variables de la web (formato largo)
