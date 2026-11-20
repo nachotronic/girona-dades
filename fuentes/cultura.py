@@ -13,9 +13,8 @@
     rhpv-yr4f  Agenda cultural de Catalunya (actividades por municipio)
 
 Escribe en data/processed/cultura/:
-  bib_municipis.csv     DadesBib, municipios de Girona por año e indicador (formato largo)
-  bib_biblioteques.csv  DadesBib, cada biblioteca de la provincia por año e indicador
-  bib_ambits.csv        DadesBib, provincias y Cataluña por año e indicador
+  bib_mun_AAAA.csv      DadesBib, municipios de Girona de un año, variables de la web (formato largo)
+  bib_ambits_raw.csv    DadesBib, provincias y Cataluña por año e indicador
   equipaments.csv, biblioteques_cens.csv, entitats.csv, arxius.csv, llibreries.csv, programa_cat.csv
   agenda.csv            actividades de la agenda por municipio y año (toda Cataluña)
 """
@@ -37,6 +36,14 @@ DOMINIO = "https://analisi.transparenciacatalunya.cat"
 BIB = "https://estadistiquesbiblioteques.gencat.cat/"
 MC = "ctl00$MainContent$"
 LIMIT_S = 35 * 60  # tiempo máximo para DadesBib en cada ejecución
+# Variables de DadesBib que usa la web (scripts/cultura_web.py, BIB)
+VARS_BIB = {"Nombre biblioteques", "Préstecs totals", "Préstecs per habitant", "Visites total", "Visites per habitant",
+            "% de carnets (persones) sobre població total", "Usuaris actius de préstec per habitant",
+            "Assistents a activitats per 1.000 habitants", "Activitats (sessions)", "Fons per habitant",
+            "Despesa de funcionament per habitant", "Hores setmanals d'obertura al públic",
+            "Superfície útil (m²) per 1.000 habitants", "Usos (sessions) d'internet i ofimàtica per habitant",
+            "Préstecs audiovisuals", "Carnets persones", "Usuaris actius de préstec", "Activitats (assistents)",
+            "Despesa total de funcionament", "Fons total"}
 GRUPS_BIB = ["Equipament", "Obertura al públic", "Fons", "Usuaris registrats (carnets)", "Préstec", "Activitats", "Ús d'altres serveis",
              "Despesa de funcionament"]
 
@@ -87,7 +94,7 @@ class DadesBib:
         self.t = r.text
         return r.text
 
-    def informe(self, abast: str, filtre, detall: bool, anys: list[int] | None = None) -> str:
+    def informe(self, abast: str, filtre, detall: bool, anys: list[int] | None = None, vars_ok=None) -> str:
         """Devuelve el CSV del informe: todos los años, los municipios/ámbitos que pasan `filtre` y todas las variables."""
         base = {MC + "RadioList": "RadioAbast", MC + "list_abast": abast}
         self.post({"__EVENTTARGET": MC + "list_abast", "__EVENTARGUMENT": "", **base})
@@ -99,7 +106,7 @@ class DadesBib:
         base[MC + "items_seg_sel"] = sel
         for g in GRUPS_BIB:
             self.post({"__EVENTTARGET": MC + "agr_variables", "__EVENTARGUMENT": "", **base, MC + "agr_variables": g})
-            vs = [v for v, _ in _opcions(self.t, MC + "var")]
+            vs = [v for v, e in _opcions(self.t, MC + "var") if vars_ok is None or v in vars_ok or e in vars_ok]
             if vs:
                 self.post({**base, MC + "agr_variables": g, MC + "var": vs, MC + "add_var": ""})
         var_sel = [v for v, _ in _opcions(self.t, MC + "var_sel")]
@@ -123,42 +130,46 @@ class DadesBib:
 
 
 def dadesbib(sal) -> list[str]:
-    """Provincias y Cataluña en un informe; municipios de Girona por tandas de 15 (un informe grande da 502), con el
-    detalle por biblioteca. Cada tanda se guarda en bib_mun_NN.csv y no se vuelve a pedir si ya tiene el último año:
-    si una ejecución se queda sin tiempo, la siguiente sigue donde lo dejó."""
+    """Provincias y Cataluña: un informe con todas las variables y años. Municipios de Girona: un informe por año con
+    solo las variables que usa la web (VARS_BIB) y sin el detalle por biblioteca. Los informes más grandes, o con
+    detalle por biblioteca, tardan más de un minuto y la pasarela del servidor responde 502 (probado en nov. 2026).
+    Cada año se guarda en bib_mun_AAAA.csv; los años anteriores al último no se vuelven a pedir si ya están."""
     res = []
     t0 = time.monotonic()
     d = DadesBib()
     txt, n, nv, na = d.informe("Províncies", lambda v, e: True, False)
     (sal / "bib_ambits_raw.csv").write_text(txt, encoding="utf-8")
-    ultim = max(int(a) for a in re.findall(r",((?:19|20)\d\d),", txt))
+    anys = sorted({int(a) for a in re.findall(r",((?:19|20)\d\d),", txt)})
+    ultim = anys[-1]
     res.append(f"DadesBib provincias: {n} elementos, {nv} variables, {na} años (último {ultim}, {time.monotonic() - t0:.0f} s)")
-    d.post({"__EVENTTARGET": MC + "list_abast", "__EVENTARGUMENT": "", MC + "RadioList": "RadioAbast", MC + "list_abast": "Municipis"})
-    munis = sorted(v for v, _ in _opcions(d.t, MC + "items_seg") if v.startswith("17"))
-    mida, fets, salts = 15, 0, 0
-    for k, i in enumerate(range(0, len(munis), mida)):
-        f = sal / f"bib_mun_{k:02d}.csv"
-        if f.exists() and f",{ultim}," in f.read_text(encoding="utf-8"):
+    fets, salts, errs = [], 0, []
+    for k, a in enumerate(anys):  # el año k es la casilla CheckAny_k (en orden)
+        f = sal / f"bib_mun_{a}.csv"
+        if a < ultim and f.exists() and f",{a}," in f.read_text(encoding="utf-8"):
             salts += 1
             continue
         if time.monotonic() - t0 > LIMIT_S:
-            res.append(f"AVISO DadesBib: sin tiempo, quedan tandas para la próxima ejecución (desde la {k})")
+            res.append(f"AVISO DadesBib: sin tiempo, quedan años para la próxima ejecución (desde {a})")
             break
-        grup = set(munis[i:i + mida])
         for intent in range(2):
             try:
                 t1 = time.monotonic()
                 d = DadesBib()
-                txt, n, nv, na = d.informe("Municipis", lambda v, e, g=grup: v in g, True)
+                txt, n, nv, _ = d.informe("Municipis", lambda v, e: v.startswith("17"), False, [k], VARS_BIB)
+                if f",{a}," not in txt:
+                    raise RuntimeError(f"el informe no tiene datos de {a}")
                 f.write_text(txt, encoding="utf-8")
-                fets += 1
-                print(f"DadesBib tanda {k}: {n} municipios, {len(txt)} bytes, {time.monotonic() - t1:.0f} s", flush=True)
+                fets.append(a)
+                print(f"DadesBib {a}: {n} municipios, {nv} variables, {len(txt)} bytes, {time.monotonic() - t1:.0f} s", flush=True)
                 break
             except Exception as e:  # noqa: BLE001
-                print(f"DadesBib tanda {k} intento {intent}: {type(e).__name__}: {str(e)[:160]}", flush=True)
+                print(f"DadesBib {a} intento {intent}: {type(e).__name__}: {str(e)[:160]}", flush=True)
                 if intent == 1:
-                    res.append(f"ERROR DadesBib tanda {k}: {type(e).__name__}: {str(e)[:160]}")
-    res.append(f"DadesBib municipios: {len(munis)} municipios, {fets} tandas descargadas, {salts} ya al día ({time.monotonic() - t0:.0f} s)")
+                    errs.append(a)
+                    res.append(f"ERROR DadesBib {a}: {type(e).__name__}: {str(e)[:160]}")
+    for f in sal.glob("bib_mun_[0-9][0-9].csv"):  # tandas del formato anterior
+        f.unlink()
+    res.append(f"DadesBib municipios: años descargados {fets}, {salts} ya al día ({time.monotonic() - t0:.0f} s)")
     return res
 
 

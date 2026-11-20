@@ -84,6 +84,9 @@ def _arr(v, dec):
     return int(round(v)) if dec == 0 else round(float(v), dec)
 
 
+ALIES_BIB = {normaliza("Palamós"): "17118"}  # DadesBib usa el nombre antiguo
+
+
 def _files_bib(text: str):
     """Filas de datos de un CSV de DadesBib (varios informes separados por líneas en blanco).
 
@@ -132,9 +135,10 @@ def _bib(municipios):
     if fms:
         prest_bib = defaultdict(lambda: defaultdict(dict))  # ine -> biblioteca -> año -> préstamos
         for amb, bib, a, var, val in _files_bib("\n\n".join(f.read_text(encoding="utf-8") for f in fms)):
-            ine = ine_de.get(normaliza(amb))
+            ine = ine_de.get(normaliza(amb)) or ALIES_BIB.get(normaliza(amb))
             if not ine:
-                sense.add(amb)
+                if amb not in ("Tot Catalunya", "Girona (província)") and not amb.endswith(":"):
+                    sense.add(amb)
                 continue
             v = _num(val)
             if v is None:
