@@ -348,6 +348,38 @@ def _agenda(municipios):
     return mun, refs, (max(anys) if anys else None)
 
 
+def _cpnl(municipios):
+    """Inscripciones a los cursos de catalán del CPNL por municipio de residencia del alumno (2011-2021)."""
+    f = D / "cpnl.csv"
+    if not f.exists():
+        return {}, {}, None
+    d = pd.read_csv(f, dtype=str)
+    d["ine"] = d["codi_municipi"].str[:5]
+    d["any"] = pd.to_numeric(d["any"], errors="coerce")
+    d["n"] = pd.to_numeric(d["inscripcions_totals"], errors="coerce").fillna(0)
+    d = d.dropna(subset=["any"])
+    d["any"] = d["any"].astype(int)
+    g = d.groupby(["ine", "any"])["n"].sum().to_dict()
+    anys = sorted(int(a) for a in d["any"].unique())
+    pob = {m["ine"]: m.get("poblacion") or 0 for m in municipios}
+    mun = {}
+    for m in municipios:
+        o = {}
+        for a in anys:
+            n = int(g.get((m["ine"], a), 0))
+            o.setdefault("cpnl_n", {})[a] = n
+            if pob[m["ine"]]:
+                o.setdefault("cpnl_h", {})[a] = _arr(n / pob[m["ine"]] * 1000, 1)
+        mun[m["ine"]] = o
+    ptot = sum(pob.values())
+    refs = {"cpnl_n": {}, "cpnl_h": {}}
+    for a in anys:
+        n = int(d.loc[d["any"] == a, "n"].sum())
+        refs["cpnl_n"][a] = {"gi": n}
+        refs["cpnl_h"][a] = {"gi": _arr(n / ptot * 1000, 1) if ptot else None}
+    return mun, refs, (anys[-1] if anys else None)
+
+
 def _aec(nom):
     """Tabla comarcal del Anuari de l'Idescat (aec_<nom>.txt, formato ssv): (año, {comarca: {columna: valor}})."""
     f = D / f"aec_{nom}.txt"
@@ -451,6 +483,11 @@ def construir(municipios) -> dict:
     res["prov"].update(pp)
     if ap:
         res["anys"]["cul_prog"] = ap
+    mc, rc, ac = _cpnl(municipios)
+    _junta(res["mun"], mc)
+    res["refs"].update(rc)
+    if ac:
+        res["anys"]["cul_cpnl"] = ac
     mg, rg, ag = _agenda(municipios)
     _junta(res["mun"], mg)
     res["refs"].update(rg)

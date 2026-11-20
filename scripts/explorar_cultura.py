@@ -10,7 +10,8 @@ from fuentes import cultura  # noqa: E402
 
 OUT = pathlib.Path("exploracion/cultura_nou")
 OUT.mkdir(parents=True, exist_ok=True)
-sal = cultura.carpeta("cultura")
+sal = pathlib.Path("/tmp/cultura")  # fuera del repo, para no dejar cambios sin guardar
+sal.mkdir(exist_ok=True)
 log = cultura.socrata(sal) + cultura.idescat_aec(sal)
 for n in ["cpnl.csv", "aec_centres_culte.txt"]:
     if (sal / n).exists():
