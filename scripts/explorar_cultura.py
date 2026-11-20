@@ -12,12 +12,14 @@ log = []
 vistos = {}
 for q in [{"categories": "Cultura i lleure"}, {"attribution": "Departament de Cultura"}, {"q": "cultura"}, {"q": "biblioteques"},
           {"q": "museus"}, {"q": "patrimoni"}, {"q": "cinema"}, {"q": "teatre"}, {"q": "música"}, {"q": "festes"},
-          {"q": "arqueologia"}, {"q": "llengua"}, {"q": "audiovisual"}, {"q": "llibre"}, {"q": "arts escèniques"}]:
+          {"q": "arqueologia"}, {"q": "jaciments"}, {"q": "inventari"}, {"q": "visitants"}, {"q": "festivals"}, {"q": "català"}, {"q": "sardanes"}, {"q": "castells"}, {"q": "llengua"}, {"q": "audiovisual"}, {"q": "llibre"}, {"q": "arts escèniques"}]:
     off = 0
     while True:
-        p = {"domains": "analisi.transparenciacatalunya.cat", "limit": 100, "offset": off, "only": "dataset", **q}
+        p = {"limit": 100, "offset": off, "only": "dataset", **q}
         try:
-            r = requests.get("https://api.us.socrata.com/api/catalog/v1", params=p, headers=UA, timeout=120)
+            r = requests.get("https://analisi.transparenciacatalunya.cat/api/catalog/v1", params=p, headers=UA, timeout=120)
+            if off == 0:
+                log.append(f"{q}: HTTP {r.status_code}, {r.json().get('resultSetSize')}")
             res = r.json().get("results", [])
         except Exception as e:  # noqa: BLE001
             log.append(f"ERR {q}: {e}")
@@ -35,14 +37,18 @@ log.append(f"{len(vistos)} conjuntos")
 cult = {k: v for k, v in vistos.items() if (v["cat"] or "").startswith("Cultura") or "Cultura" in (v["attr"] or "")}
 (OUT / "cataleg.json").write_text(json.dumps(cult, ensure_ascii=False, indent=1), encoding="utf-8")
 (OUT / "tots.json").write_text(json.dumps({k: [v["nom"], v["attr"], v["cat"]] for k, v in vistos.items()}, ensure_ascii=False, indent=0), encoding="utf-8")
-# Idescat: lista de tablas del anuario (AEC) sobre cultura
+# Idescat: publicaciones de cultura con nivel municipal o comarcal (contenido de la página)
+for pub in ["cine", "eauvi", "eulp", "ec", "eb", "bcin", "eae"]:
+    try:
+        r = requests.get(f"https://www.idescat.cat/pub/?id={pub}&lang=ca", headers=UA, timeout=60)
+        (OUT / f"pub_{pub}.html").write_text(r.text, encoding="utf-8")
+    except Exception as e:  # noqa: BLE001
+        log.append(f"ERR pub {pub} {e}")
+# EMEX de Girona (para ver qué indicadores de lengua/cultura hay por municipio)
 try:
-    t = requests.get("https://www.idescat.cat/indicadors/?id=aec&n=15753&lang=ca", headers=UA, timeout=60).text
-    (OUT / "idescat_aec_15753.html").write_text(t, encoding="utf-8")
-    for tema in ["https://www.idescat.cat/tema/cultu?lang=ca", "https://www.idescat.cat/indicadors/?id=aec&lang=ca"]:
-        r = requests.get(tema, headers=UA, timeout=60)
-        (OUT / (re.sub(r"\W+", "_", tema)[-40:] + ".html")).write_text(r.text, encoding="utf-8")
+    r = requests.get("https://api.idescat.cat/emex/v1/dades.json?id=170792&lang=ca", headers=UA, timeout=60)
+    (OUT / "emex_girona.json").write_text(r.text, encoding="utf-8")
 except Exception as e:  # noqa: BLE001
-    log.append(f"ERR idescat {e}")
+    log.append(f"ERR emex {e}")
 (OUT / "log.txt").write_text("\n".join(log), encoding="utf-8")
 print("\n".join(log))
