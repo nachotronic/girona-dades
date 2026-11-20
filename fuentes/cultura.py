@@ -87,7 +87,7 @@ class DadesBib:
         self.t = r.text
         return r.text
 
-    def informe(self, abast: str, filtre, detall: bool) -> str:
+    def informe(self, abast: str, filtre, detall: bool, anys: list[int] | None = None) -> str:
         """Devuelve el CSV del informe: todos los años, los municipios/ámbitos que pasan `filtre` y todas las variables."""
         base = {MC + "RadioList": "RadioAbast", MC + "list_abast": abast}
         self.post({"__EVENTTARGET": MC + "list_abast", "__EVENTARGUMENT": "", **base})
@@ -104,7 +104,7 @@ class DadesBib:
                 self.post({**base, MC + "agr_variables": g, MC + "var": vs, MC + "add_var": ""})
         var_sel = [v for v, _ in _opcions(self.t, MC + "var_sel")]
         n_anys = len(re.findall(r'id="CheckAny_\d+"', self.t))
-        ext = {f"{MC}CheckAny$CheckAny_{i}": "on" for i in range(n_anys)}
+        ext = {f"{MC}CheckAny$CheckAny_{i}": "on" for i in (range(n_anys) if anys is None else anys)}
         ext.update({**base, MC + "var_sel": var_sel, MC + "Button_Submit_Top": "Envia"})
         if detall:
             ext[MC + "chk_detall_biblio"] = "on"
