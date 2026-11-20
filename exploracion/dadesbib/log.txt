@@ -1,8 +1,2 @@
-OK tot_prestec_1any ['Préstec']: 222 mun, 18 vars, anys [11], detall False: 67899 bytes, 1069 líneas, 32 s
-ERR tot_prestec_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=k0bdwg (68 s)
-ERR tot_equip_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=3134kf (69 s)
-ERR tot_usuaris_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=p0mj5y (67 s)
-ERR tot_despesa_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=0ijjd5 (67 s)
-ERR m60_tot_1any_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=xoxelg (68 s)
-ERR tot_prestec_3anys_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=4r2put (69 s)
-ERR m15_prestec_tots_det: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=axkm32 (69 s)
+DadesBib provincias: 4 elementos, 106 variables, 12 años (último 2025, 56 s)
+DadesBib municipios: años descargados [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], 0 ya al día (816 s)
