@@ -3,7 +3,7 @@ name: Publicar web
 on:
   push:
     branches: [main]
-    paths: ["web/**", "scripts/construir_web.py", "scripts/referencia/**", "lloc.yml", ".github/workflows/web.yml"]
+    paths: ["web/**", "scripts/construir_web.py", "scripts/pimec_web.py", "data/processed/pimec/**", "scripts/referencia/**", "lloc.yml", ".github/workflows/web.yml"]
   workflow_run:
     workflows: ["Actualizar datos"]
     types: [completed]
