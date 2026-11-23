@@ -1,240 +1,282 @@
 {
  "aeat": {
   "estat": "ok",
-  "intent": "2026-11-16T14:02:17Z",
-  "ok": "2026-11-16T14:02:17Z",
-  "durada": 164,
-  "resum": "2022: 94 municipios\n2023: ya guardado\n2024: 95 municipios\n285 filas, 238 columnas"
+  "intent": "2026-11-23T14:29:00Z",
+  "ok": "2026-11-23T14:29:00Z",
+  "durada": 3,
+  "resum": "2022: ya guardado\n2023: ya guardado\n2024: ya guardado"
  },
  "aena": {
   "estat": "ok",
-  "intent": "2026-11-16T12:11:55Z",
-  "ok": "2026-11-16T12:11:55Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:28:25Z",
+  "ok": "2026-11-23T14:28:25Z",
+  "durada": 9,
+  "resum": "0 filas nuevas\n"
  },
  "afiliacio": {
   "estat": "ok",
-  "intent": "2026-11-16T12:11:55Z",
-  "ok": "2026-11-16T12:11:55Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:23:14Z",
+  "ok": "2026-11-23T14:23:14Z",
+  "durada": 311,
+  "resum": "223 ámbitos, meses 2012-03-2026-10, 0 errores"
+ },
+ "anuari_aeat": {
+  "estat": "ok",
+  "intent": "2026-11-23T14:29:03Z",
+  "ok": "2026-11-23T14:29:03Z",
+  "durada": 71,
+  "resum": "IRPF provincial: años 2009-2024\nsalarios: años 2009-2025\npensiones: años 2009-2025\nIRPF municipal: 96 municipios de Girona, años 2013-2024 (72 filas de España sin código)"
+ },
+ "cadastre": {
+  "estat": "ok",
+  "intent": "2026-11-23T15:19:42Z",
+  "ok": "2026-11-23T15:19:42Z",
+  "durada": 344,
+  "resum": "2012: 3 ficheros, 7593 municipios\n2013: 3 ficheros, 7594 municipios\n2014: 3 ficheros, 7595 municipios\n2015: 3 ficheros, 7595 municipios\n2016: 3 ficheros, 7602 municipios\n2017: 3 ficheros, 7603 municipios\n2018: 3 ficheros, 7603 municipios\n2019: 3 ficheros, 7610 municipios\n2020: 3 ficheros, 7610 municipios\n2021: 3 ficheros, 7610 municipios\n2022: 3 ficheros, 7610 municipios\n2023: 3 ficheros, 7610 municipios\n2024: 3 ficheros, 7610 municipios\n2025: 3 ficheros, 7610 municipios\n2026: 3 ficheros, 7610 municipios\nGirona: 221 municipios, años 2012-2026, 77 columnas\ndistritos censales: 428 distritos, años 2013-2025\nIBI económico-financiero: 221 municipios, años 2008-2025\nhistórico urbana: px/datoshistoricos/urbana/H1M117.px\nhistórico rustica: px/datoshistoricos/rustica/H1M217.px\nhistórico ibi: px/datoshistoricos/IBI/H1M317.px"
  },
  "catastro": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T13:58:04Z",
+  "ok": "2026-11-23T13:58:04Z",
+  "durada": 218,
+  "resum": "221 municipios, 249948 edificios, 514588 viviendas; 0 sin código INE; errores: []"
+ },
+ "cgpj": {
+  "estat": "ok",
+  "intent": "2026-11-23T14:33:55Z",
+  "ok": "2026-11-23T14:33:55Z",
+  "durada": 117,
+  "resum": "n forzosa medidas proteccion menores | Expedientes de dominio | Expedientes relativos a patria potestad (Ejercicio inadecuado/desacuerdo) | Extraccion de organos de donantes vivos | Guarda, Custodia o Alimentos de hijos no matrimoniales menores o con discapacidad con medidas de apoyo de progenitores,  no consensuada | Guarda, Custodia o Alimentos de hijos no matrimoniales menores o con discapacidad con medidas de apoyo de progenitores, consensuadas | INCIDENTES EN PROCESOS FAMILIA, INFANCIA Y CAPACIDAD. TOTAL | INCIDENTES TOTAL CIVIL | INTERNAMIENTOS | INTERNAMIENTOS DE LARGA DURACION SUJETOS A SEGUIMIENTO Y CONTROL | Incidentes Concursales (Civil) | Incidentes del Art. 241.1 LOPJ (Civil) | Incidentes del Art. 241.1 LO\nOUJII021 (llancaments): años 2013-2025, partidos de Girona 9, procedimientos 4: Consecuencia proc. Ejecucion hipotecaria | Consecuencia proc. Ley Arrendamientos Urbanos | Otros | TOTAL LANZAMIENTOS PRACTICADOS\nOUJII012 (impagament): años 2021-2025, partidos de Girona 9, procedimientos 5: Decreto final por archivo para ejecucion (art. 440.3 pf.5 LEC) | Decreto final por enervacion (art. 22.4 LEC) | Decreto final por entrega de posesion (art.440.3 pf.6 LEC) | Decreto final por otras causas (arts. 22.1 y 242.1 LEC) | Total\nOUJII009 (concursos): años 2016-2025, partidos de Girona 9, procedimientos 1: Numero\nOUSCN002 (scn): años 2012-2025, partidos de Girona 7, procedimientos 4: DILIGENCIAS EN COMISION. TOTAL | EMBARGOS | LANZAMIENTOS | OTRAS DILIGENCIAS EN COMISION"
  },
  "comerc": {
   "estat": "avís",
-  "intent": "2026-11-16T15:53:05Z",
+  "intent": "2026-11-23T14:41:42Z",
   "ok": "2026-11-16T15:31:22Z",
-  "durada": 589,
-  "resum": "CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 1075 consultes, 1075 municipi-any; ERROR en 30 consultes; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc"
+  "durada": 259,
+  "resum": "CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 220 consultes, 1075 municipi-any; ERROR en 30 consultes; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc"
  },
  "conjuntura": {
   "estat": "ok",
-  "intent": "2026-11-16T14:00:18Z",
-  "ok": "2026-11-16T14:00:18Z",
-  "durada": 7,
+  "intent": "2026-11-23T14:22:29Z",
+  "ok": "2026-11-23T14:22:29Z",
+  "durada": 6,
   "resum": "paro 2019: ya guardado\nparo 2020: ya guardado\nparo 2021: ya guardado\nparo 2022: ya guardado\nparo 2023: ya guardado\nparo 2024: ya guardado\nparo 2025: ya guardado\nparo 2026: 2210 filas de Girona, meses 202601-202610\ncontratos 2020: ya guardado\ncontratos 2021: ya guardado\ncontratos 2022: ya guardado\ncontratos 2023: ya guardado\ncontratos 2024: ya guardado\ncontratos 2025: ya guardado\ncontratos 2026: 2210 filas de Girona, meses 202601-202610\ndtes 2019: ya guardado\ndtes 2020: ya guardado\ndtes 2021: ya guardado\ndtes 2022: ya guardado\ndtes 2023: ya guardado\ndtes 2024: ya guardado\ndtes 2025: ya guardado\ndtes 2026: 2210 filas de Girona, meses 202601-202610"
  },
  "cultura": {
   "estat": "avís",
-  "intent": "2026-11-19T23:52:17Z",
+  "intent": "2026-11-23T15:32:34Z",
   "ok": null,
-  "durada": 2277,
-  "resum": "?ReportSession=odfhud45kawt5bjm\nERROR DadesBib tanda 5: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=3gwz4c2h1o1ne355\nERROR DadesBib tanda 6: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 7: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=bszlzorxmpmzte45\nERROR DadesBib tanda 8: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 9: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 10: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 11: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=aucmszb0dgovyv3h\nERROR DadesBib tanda 12: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=qm1eec45yhjr4v45\nAVISO DadesBib: sin tiempo, quedan tandas para la próxima ejecución (desde la 13)\nDadesBib municipios: 222 municipios, 0 tandas descargadas, 0 ya al día (2267 s)"
+  "durada": 2115,
+  "resum": "lioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=eslre0iftff3ec55\nERROR DadesBib tanda 5: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=v44mjl45lcgi3z45\nERROR DadesBib tanda 6: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 7: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 8: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 9: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 10: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/\nERROR DadesBib tanda 11: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=1lcxebvchmejbn45\nERROR DadesBib tanda 12: HTTPError: 502 Server Error: Bad Gateway for url: https://estadistiquesbiblioteques.gencat.cat/Cercastat/Reserved.ReportViewerWebControl.axd?ReportSession=hl4yqa3leerc31a2\nAVISO DadesBib: sin tiempo, quedan tandas para la próxima ejecución (desde la 13)\nDadesBib municipios: 222 municipios, 0 tandas descargadas, 0 ya al día (2106 s)"
+ },
+ "demografia": {
+  "estat": "ok",
+  "intent": "2026-11-23T15:28:31Z",
+  "ok": "2026-11-23T15:28:31Z",
+  "durada": 232,
+  "resum": "les y acumulados por provincia (provisional): 64 series, último año 2026\nINE 62278 EDeS: defunciones mensuales y acumuladas por provincia (provisional): 53 series, último año 2026\nINE 35168 EDeS: defunciones semanales y acumuladas por provincia (provisional): 64 series, último año 2026\nINE 1470 IDB: tasa bruta de natalidad por provincia: 53 series, último año 2025\nINE 1478 IDB: indicador coyuntural de fecundidad por provincia: 265 series, último año 2025\nINE 1581 IDB: edad media a la maternidad por provincia: 261 series, último año 2025\nINE 1482 IDB: tasa bruta de mortalidad por provincia: 53 series, último año 2025\nINE 1484 IDB: tasa de mortalidad infantil por provincia: 159 series, último año 2025\nINE 1487 IDB: saldo vegetativo por mil habitantes por provincia: 53 series, último año 2024\nINE 1485 IDB: esperanza de vida al nacimiento por provincia: 156 series, último año 2025\nINE 73035 ECM: defunciones por causas (capítulos) por sexo y provincia: 2862 series, último año 2025\nINE 6510 Nacimientos por grupo de edad de la madre (Girona): 54 series, último año 2025\nINE 6549 Defunciones por sexo y grupo de edad (Girona): 126 series, último año 2025\nCatSalut diario: 2017-01-01 a 2026-11-08, Girona 76662 defunciones\nCatSalut por ABS y mes: 379 ABS, 2017-01 a 2026-11\nCatSalut por edad (RS Girona): 2826 filas\nnoms: años 1997-2025 (2 bajados), 301 nombres en 2025; primeros JAN y JULIA; comarcas ['Alt Empordà', 'Baix Empordà', 'Garrotxa', 'Gironès', 'Osona', \"Pla de l'Estany\", 'Selva']"
  },
  "dgt": {
   "estat": "ok",
-  "intent": "2026-11-16T12:11:55Z",
-  "ok": "2026-11-16T12:11:55Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:28:25Z",
+  "ok": "2026-11-23T14:28:25Z",
+  "durada": 0,
+  "resum": "0 meses nuevos\n"
  },
  "educacio": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:21:49Z",
+  "ok": "2026-11-23T14:21:49Z",
+  "durada": 21,
+  "resum": "censo 2021: 533 secciones de Girona\nmatrícula 2025/2026: 15261 filas (2683 de Girona); histórico 9713 filas\ncentros 2026/2027: 635 en Girona\npreinscripción: 76479 filas, cursos ['2024-2025', '2025-2026', '2026-2027']\nevaluación 6e: 165 filas, áreas ['Alt Pirineu i Aran', 'Baix Llobregat', 'Barcelona Comarques', 'Barcelonès', 'Catalunya Central', \"Consorci d'Educació de Barcelona\", 'Girona', 'Lleida', 'Maresme - Vallès Oriental', 'Penedès', 'Tarragona', \"Terres de l'Ebre\"]\nevaluación 4eso: 147 filas, áreas ['Alt Pirineu i Aran', 'Baix Llobregat', 'Barcelona Comarques', 'Barcelonès', 'Catalunya Central', \"Consorci d'Educació de Barcelona\", 'Garraf', 'Girona', 'Lleida', 'Maresme - Vallès Oriental', 'Penedès', 'Tarragona']\nuniversitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']\nestadística de l'ensenyament 2025/2026: alumnos de Girona por etapa: llar 7714, inf 19018, pri 47406, eso 36603, batx 9467, fp 15228\npersonal docente 2025/2026: 12439 en Girona\nresultados ESO 2024/2025: 36833 alumnos evaluados en Girona"
  },
  "eleccions": {
   "estat": "ok",
-  "intent": "2026-11-16T14:00:15Z",
-  "ok": "2026-11-16T14:00:15Z",
-  "durada": 2,
+  "intent": "2026-11-23T14:28:34Z",
+  "ok": "2026-11-23T14:28:34Z",
+  "durada": 1,
   "resum": "A20101: ya guardada (resultados definitivos)\nM20111: ya guardada (resultados definitivos)\nG20111: ya guardada (resultados definitivos)\nA20121: ya guardada (resultados definitivos)\nE20141: ya guardada (resultados definitivos)\nM20151: ya guardada (resultados definitivos)\nA20151: ya guardada (resultados definitivos)\nG20151: ya guardada (resultados definitivos)\nG20161: ya guardada (resultados definitivos)\nA20171: ya guardada (resultados definitivos)\nG20191: ya guardada (resultados definitivos)\nM20191: ya guardada (resultados definitivos)\nE20191: ya guardada (resultados definitivos)\nG20192: ya guardada (resultados definitivos)\nA20211: ya guardada (resultados definitivos)\nM20231: ya guardada (resultados definitivos)\nG20231: ya guardada (resultados definitivos)\nA20241: ya guardada (resultados definitivos)\nE20241: ya guardada (resultados definitivos)"
  },
  "emergencies": {
   "estat": "ok",
-  "intent": "2026-11-18T09:21:37Z",
-  "ok": "2026-11-18T09:21:37Z",
-  "durada": 7,
+  "intent": "2026-11-23T14:22:36Z",
+  "ok": "2026-11-23T14:22:36Z",
+  "durada": 39,
   "resum": "relación Idescat: 938 municipios (221 con código 17); regiones Bombers en Girona: {'Centre': 14, 'Girona': 207}; áreas regionales AR: {'Alt Pirineu': 11, 'Catalunya Central': 3, 'Girona': 207}\n9 áreas básicas de Agents Rurals en la provincia: Cerdanya, Osona - Lluçanès, Alt Empordà, Baix Empordà, Garrotxa, Gironès, Pla de l'Estany, Ripollès, Selva; municipios sin área: []\nactuaciones Bombers: 88805 filas; códigos de ejemplo ['08223', '08200', '25023']; grupos ['activitat no urgent', 'altres urgents', 'assistència tècnica', 'dispositiu preventiu', 'fuites perilloses', 'incendi urbà', 'incendi vegetació', 'mobilitat', 'pràctiques', 'salvaments', 'simulacres', 'suport tècnic']\nactuaciones Bombers mensuales (Girona): 82548 filas, último mes 2026-08\naños: 2023 2023-01-01→2023-12-26 (81796); 2024 2024-01-01→2024-12-31 (65153); 2025 2025-01-01→2025-12-29 (67948); 2026 2026-01-01→2026-08-17 (62536)\nincendios forestales: 8010 (2011-2025); códigos de ejemplo ['431299', '430483', '170545']; columnas ['data_incendi', 'codi_comarca', 'comarca', 'codi_municipi', 'termemunic', 'haarbrades', 'hanoarbrad', 'hanoforest', 'haforestal', 'font', 'any']"
  },
  "emex": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:20:39Z",
+  "ok": "2026-11-23T14:20:39Z",
+  "durada": 70,
+  "resum": "221 municipios, 44182 valores; errores: []"
  },
  "emq": {
-  "estat": "avís",
-  "intent": "2026-11-17T12:31:38Z",
-  "ok": null,
-  "durada": 72,
-  "resum": "EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…); ERROR en 4: lv_mun_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:47.611Z\", \"rootActivityId\": \"7ef8874a-ca66-4606-b515-7a8a2c65e28a\", \"fromCache\" | lv_com_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:48.724Z\", \"rootActivityId\": \"b3496ebb-8c5b-4d2a-aca4-2e8a1b645323\", \"fromCache\" | lv_tot_kpi RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:31:49.823Z\", \"rootActivityId\": \"2ea05cff-5397-4bd5-8807-9a2ad9480edd\", \"fromCache\" | pe_mun__P7_8A_DADES RuntimeError: {\"data\": {\"timestamp\": \"2026-11-17T12:32:30.241Z\", \"rootActivityId\": \"282a720d-18a8-46ad-b64c-b28f241a1b7b\", \"fromCache\""
+  "estat": "ok",
+  "intent": "2026-11-23T15:26:38Z",
+  "ok": "2026-11-23T15:26:38Z",
+  "durada": 57,
+  "resum": "EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…)"
  },
  "exportacions": {
-  "estat": "ok",
-  "intent": "2026-11-18T00:25:17Z",
+  "estat": "avís",
+  "intent": "2026-11-23T15:27:34Z",
   "ok": "2026-11-18T00:25:17Z",
-  "durada": 2440,
-  "resum": "M€ e importa 3,416.1 M€\n2021-01: 10 ficheros, Girona exporta 468.9 M€ e importa 231.9 M€\n2021-06: 10 ficheros, Girona exporta 566.3 M€ e importa 304.3 M€\n2021-07: 10 ficheros, Girona exporta 554.1 M€ e importa 300.7 M€\n2021-08: 10 ficheros, Girona exporta 448.8 M€ e importa 236.6 M€\n2021-09: 10 ficheros, Girona exporta 538.8 M€ e importa 296.0 M€\n2021-10: 10 ficheros, Girona exporta 516.9 M€ e importa 298.4 M€\n2021-11: 10 ficheros, Girona exporta 561.4 M€ e importa 340.4 M€\n2021-12: 10 ficheros, Girona exporta 488.0 M€ e importa 298.9 M€\n2022: 10 ficheros, Girona exporta 7,849.9 M€ e importa 4,075.2 M€\n2022-01: 10 ficheros, Girona exporta 528.7 M€ e importa 315.8 M€\n2022-02: 10 ficheros, Girona exporta 596.6 M€ e importa 321.9 M€\n2022-03: 10 ficheros, Girona exporta 679.2 M€ e importa 360.6 M€\n2022-04: 10 ficheros, Girona exporta 629.1 M€ e importa 351.4 M€\n2022-05: 10 ficheros, Girona exporta 692.6 M€ e importa 371.0 M€\n2022-06: 10 ficheros, Girona exporta 718.4 M€ e importa 375.4 M€\n2022-07: 10 ficheros, Girona exporta 681.2 M€ e importa 349.7 M€\n2022-08: 10 ficheros, Girona exporta 575.1 M€ e importa 311.1 M€\n2022-09: 10 ficheros, Girona exporta 724.0 M€ e importa 347.4 M€\n2022-10: 10 ficheros, Girona exporta 674.4 M€ e importa 338.0 M€\n2022-11: 10 ficheros, Girona exporta 715.2 M€ e importa 333.3 M€\n2022-12: 10 ficheros, Girona exporta 635.6 M€ e importa 284.7 M€\n2023: 10 ficheros, Girona exporta 8,156.9 M€ e importa 3,890.1 M€\npoblación INE 2852: 53 zonas, años 2018-2021"
+  "durada": 56,
+  "resum": "ERROR población: AttributeError: 'str' object has no attribute 'get'\nSin cambios (99 periodos publicados, último 2026-09)"
  },
  "generalitat": {
   "estat": "ok",
-  "intent": "2026-11-16T15:29:03Z",
-  "ok": "2026-11-16T15:29:03Z",
-  "durada": 46,
+  "intent": "2026-11-23T13:53:49Z",
+  "ok": "2026-11-23T13:53:49Z",
+  "durada": 34,
   "resum": "qww9-bvhh: 11753/47541 filas, filtrado por Codi territorial (codigo)\nt2h3-cgys: 47806/112696 filas, filtrado por Codi Municipi (IDESCAT) (codigo)\nq4sr-68c3: 382/1378 filas, filtrado por Municipi (nombre)\nu5i2-b24m: 5852/26031 filas, filtrado por Codi municipi (codigo)\n69zu-w48s: 5525/23687 filas, filtrado por Codi municipi (codigo)\n8idm-becu: 12803/54611 filas, filtrado por CDMUN (codigo)\n2b4s-skfm: 23591/138769 filas, filtrado por Codi IDESCAT municipi (17)\nagregats autoconsum: 138701 fotovoltaiques a Catalunya, fins a 2025-12\n8aaj-ypcb: 442/1896 filas, filtrado por Codi municipi (codigo)\nyqwd-vj5e: 47/245 filas, filtrado por CODI_MUNICIPI (codigo)\nqnyt-emjc: 47600/340144 filas, filtrado por Regió Policial (RP)=Girona\nj8h8-vxug: 5746/24622 filas, filtrado por Codi IDESCAT (codigo)\nnm3n-3vbj: 1963/10591 filas, filtrado por CODI_10 (codigo)\nvevv-8fvw: 221/947 filas, filtrado por CODI_ENS (codigo)\n2v2p-vu4h: 2729/11873 filas, filtrado por CODI_10 (codigo)\nvq27-2ky2: 7125/36748 filas, filtrado por CODI_ENS (codigo)\nques-gd6z: 2649/11368 filas, filtrado por CODI_ENS (codigo)"
  },
  "geometria": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:01:43Z",
+  "ok": "2026-11-23T14:01:43Z",
+  "durada": 50,
+  "resum": "536 secciones, 221 municipios (CRS origen EPSG:25830)\n249790 de 249948 edificios asignados a 536 secciones"
  },
  "habitatge": {
   "estat": "ok",
-  "intent": "2026-11-17T12:20:05Z",
-  "ok": "2026-11-17T12:20:05Z",
-  "durada": 79,
-  "resum": "iniciats i acabats 1990-2025 (Girona 2025: 2834 iniciats, 2454 acabats); HPO 2002-2025; cèdules 1919-2026, Girona 2026: 11534; 91012 punts 2021-2026 a 536 seccions; IHB 2018-2025: 161 municipis; Girona 2025: 439 pisos; àrees de política d'habitatge: 221 municipis, 47 en zona tensionada; mapa urbanístic 2012-2025; sectors: 1616 a Girona, 113334 habitatges previstos, 88265 pendents; població de Catalunya 1996-2021; MUC per secció: 9943 polígons, columna «CODI_CLAS_MUC», classes ['SNC', 'SND', 'SNU', 'SUC', 'SUD'], 536 seccions; columnes ['id', 'ID', 'CODI_CLAS_MUC', 'DESC_CLAS_MUC', 'CODI_CLAS_AJUNT', 'DESC_CLAS_AJUNT', 'CODI_INE']"
+  "intent": "2026-11-23T15:25:25Z",
+  "ok": "2026-11-23T15:25:25Z",
+  "durada": 72,
+  "resum": "iniciats i acabats 1990-2025 (Girona 2025: 2834 iniciats, 2454 acabats); HPO 2002-2025; cèdules 1919-2026, Girona 2026: 11815; 91283 punts 2021-2026 a 536 seccions; IHB 2018-2025: 161 municipis; Girona 2025: 439 pisos; àrees de política d'habitatge: 221 municipis, 47 en zona tensionada; mapa urbanístic 2012-2025; sectors: 1616 a Girona, 113334 habitatges previstos, 88265 pendents; població de Catalunya 1996-2021; MUC per secció: 9943 polígons, columna «CODI_CLAS_MUC», classes ['SNC', 'SND', 'SNU', 'SUC', 'SUD'], 536 seccions; columnes ['id', 'ID', 'CODI_CLAS_MUC', 'DESC_CLAS_MUC', 'CODI_CLAS_AJUNT', 'DESC_CLAS_AJUNT', 'CODI_INE']"
  },
  "ine": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T13:54:23Z",
+  "ok": "2026-11-23T13:54:23Z",
+  "durada": 29,
+  "resum": "10 tablas del Atlas para Girona\n31016 Indicadores de renta media y mediana: 60840 filas\n31017 Distribución por fuente de ingresos: 50700 filas\n31018 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo: 91260 filas\n31019 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo y tramos de edad: 273780 filas\n31020 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo y nacionalidad: 182520 filas\n31021 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo: 182520 filas\n31022 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo y tramos de edad: 547560 filas\n31023 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo y nacionalidad: 365040 filas\n37697 Índice de Gini y Distribución de la renta P80/P20: 20280 filas\n31024 Indicadores demográficos: 70980 filas"
+ },
+ "interior": {
+  "estat": "error",
+  "intent": "2026-11-23T14:35:51Z",
+  "ok": null,
+  "durada": 350,
+  "resum": "n/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 510, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/girona-dades/girona-dades/scripts/actualizar.py\", line 166, in main\n    res = str(importlib.import_module(f\"fuentes.{n}\").ejecutar())\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/girona-dades/girona-dades/fuentes/interior.py\", line 43, in ejecutar\n    h = get(f\"{MIR}/publico/portalestadistico/balances\", timeout=120).text\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/girona-dades/girona-dades/fuentes/comun.py\", line 25, in get\n    r = _sesion.get(url, **kw)\n        ^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))\n"
  },
  "llistes_espera": {
   "estat": "ok",
-  "intent": "2026-11-16T14:41:17Z",
-  "ok": "2026-11-16T14:41:17Z",
-  "durada": 137,
-  "resum": "quirurgiques: 93 mesos baixats, últim 2026-09\nexternes: 93 mesos baixats, últim 2026-09\ndiagnostiques: 93 mesos baixats, últim 2026-09"
+  "intent": "2026-11-23T14:33:36Z",
+  "ok": "2026-11-23T14:33:36Z",
+  "durada": 19,
+  "resum": "quirurgiques: 2 mesos baixats, últim 2026-09\nexternes: 2 mesos baixats, últim 2026-09\ndiagnostiques: 2 mesos baixats, últim 2026-09"
  },
  "mapaelectoral": {
   "estat": "ok",
-  "intent": "2026-11-17T09:55:11Z",
-  "ok": "2026-11-17T09:55:11Z",
-  "durada": 16,
+  "intent": "2026-11-23T14:28:35Z",
+  "ok": "2026-11-23T14:28:35Z",
+  "durada": 14,
   "resum": "G20041: 4473 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}\nG20081: 5141 filas de votos, zonas {'SE': 523, 'MU': 221, 'CA': 1}\nE20041: 4375 filas de votos, zonas {'SE': 495, 'MU': 221, 'CA': 1}\nE20091: 4917 filas de votos, zonas {'SE': 525, 'MU': 221, 'CA': 1}\nM20071: 680 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19771: 1482 filas de votos, zonas {'MU': 217, 'CA': 1}\nG19791: 1485 filas de votos, zonas {'MU': 218, 'CA': 1}\nG19821: 1643 filas de votos, zonas {'MU': 213, 'CA': 1}\nG19861: 1491 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19891: 1493 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19931: 1424 filas de votos, zonas {'MU': 221, 'CA': 1}\nG19961: 1248 filas de votos, zonas {'MU': 221, 'CA': 1}\nG20001: 1296 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19871: 1787 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19891: 1654 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19941: 1583 filas de votos, zonas {'MU': 221, 'CA': 1}\nE19991: 1666 filas de votos, zonas {'MU': 221, 'CA': 1}\nM19791: 422 filas de votos, zonas {'MU': 216, 'CA': 1}\nM19831: 422 filas de votos, zonas {'MU': 219, 'CA': 1}\nM19871: 416 filas de votos, zonas {'MU': 218, 'CA': 1}\nM19911: 467 filas de votos, zonas {'MU': 219, 'CA': 1}\nM19951: 530 filas de votos, zonas {'MU': 221, 'CA': 1}\nM19991: 559 filas de votos, zonas {'MU': 221, 'CA': 1}\nM20031: 587 filas de votos, zonas {'MU': 221, 'CA': 1}\nR19331: 885 filas de votos, zonas {'MU': 218, 'CA': 1}\nR19361: 445 filas de votos, zonas {'MU': 219, 'CA': 1}"
  },
  "mitma": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T13:54:52Z",
+  "ok": "2026-11-23T13:54:52Z",
+  "durada": 40,
+  "resum": "incia): 5 hojas, 363 filas\n34010130 (provincia): 5 hojas, 364 filas\n34010140 (provincia): 5 hojas, 363 filas\n34010150 (provincia): 5 hojas, 366 filas\n34010160 (provincia): 5 hojas, 365 filas\n34010170 (provincia): 5 hojas, 364 filas\n34010180 (provincia): 5 hojas, 363 filas\n34010190 (provincia): 5 hojas, 364 filas\n340101a0 (provincia): 86 hojas, 6038 filas\n340101d0 (provincia): 78 hojas, 5612 filas\n340101f0 (provincia): 78 hojas, 4762 filas\n340101h0 (provincia): 78 hojas, 4763 filas\n340101l0 (provincia): 64 hojas, 1024 filas\n34020110 (provincia): 6 hojas, 436 filas\n34020150 (provincia): 6 hojas, 437 filas\n34020160 (provincia): 6 hojas, 437 filas\n34020170 (provincia): 6 hojas, 439 filas\n34020180 (provincia): 30 hojas, 2165 filas\n36100500 (provincia): 1 hojas, 71 filas\n36101000 (provincia): 1 hojas, 72 filas\n36101500 (provincia): 1 hojas, 72 filas\n36200500 (provincia): 1 hojas, 72 filas\n36201000 (provincia): 1 hojas, 73 filas\n36201500 (provincia): 1 hojas, 73 filas\n36300500 (provincia): 1 hojas, 72 filas\n36301000 (provincia): 1 hojas, 73 filas\n36301500 (provincia): 1 hojas, 73 filas\n36400500 (provincia): 1 hojas, 70 filas\n35101000 (provincia): 8 hojas, 581 filas\n35101500 (provincia): 4 hojas, 290 filas\n35102000 (provincia): 4 hojas, 287 filas\n35102500 (provincia): 6 hojas, 439 filas\n35103000 (provincia): 5 hojas, 366 filas\n32100500 (provincia): 1 hojas, 72 filas\n32101000 (provincia): 1 hojas, 71 filas\n32200500 (provincia): 1 hojas, 70 filas\n32201000 (provincia): 1 hojas, 70 filas"
  },
  "nacionalitat": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:22:11Z",
+  "ok": "2026-11-23T14:22:11Z",
+  "durada": 17,
+  "resum": "idescat 6000: 13200 filas, 16 municipios, columnas ['YEAR', 'MUN', 'COUNTRY_G', 'SEX', 'CONCEPT', 'valor']\nidescat 16352: 35055 filas, 26 municipios, columnas ['YEAR', 'MUN', 'AGE', 'NATION', 'SEX', 'CONCEPT', 'valor']\ntablas Girona: {'nacionalitats': 33790, 'edat_nacionalitat': 33789}"
  },
  "padro": {
-  "estat": "ok",
-  "intent": "2026-11-16T12:09:19Z",
+  "estat": "avís",
+  "intent": "2026-11-23T14:30:14Z",
   "ok": "2026-11-16T12:09:19Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "durada": 12,
+  "resum": "esperanza 30687: 6 series de 465; ej.: Girona. Mortalidad. Esperanza de vida. Ambos sexos. 0 años. Dato base. ; Girona. Mortalidad. Esperanza de vida. Hombres. 0 años. Dato base. ; Girona. Mortalidad. Esperanza de vida. Mujeres. 0 años. Dato base. ; Torrent. Mortalidad. Esperanza de vida. Ambos sexos. 0 años. Dato base. \nesperanza 77117: 3 series de 156; ej.: Mortalidad. Girona. Ambos sexos.; Mortalidad. Girona. Varones.; Mortalidad. Girona. Mujeres.\nDIRCE: ERROR 500 Server Error: Internal Server Error for url: https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/DIRCE\nop 22: 65 tablas, 1 de Girona: 2870 Girona: Población por municipios y sexo. \ntabla 2870: 221 municipios, años 1996-2025"
  },
  "policia": {
   "estat": "ok",
-  "intent": "2026-11-18T09:20:59Z",
-  "ok": "2026-11-18T09:20:59Z",
-  "durada": 38,
-  "resum": "relación municipio-ABP: 956 filas, columnas ['OBJECTID', 'CODI_MUNICIPI', 'CODI_ABP_MOSSOS', 'CODI_DISTRICTE', 'NOM_DISTRICTE']\npoblación ABP (año 2026): total 8,202,978\n11 ABP en la provincia (de 60): Alt Empordà-Figueres, Alt Empordà-Roses, Baix Empordà-la Bisbal, Baix Empordà-Sant Feliu, Garrotxa, Gironès-Pla de l'Estany, Ripollès, Selva Interior, Selva Litoral, Cerdanya, Osona\nseries mensuales: 10 regiones, 14 tipos, hasta 2026-10; 12 meses por ABP: 62 ABP\n12 meses por ABP y título: 62 ABP, 2025-11 a 2026-10\nhechos penales: años completos [2023, 2024, 2025], 62 ABP; ABP de Girona sin datos: []"
+  "intent": "2026-11-23T14:08:52Z",
+  "ok": "2026-11-23T14:08:52Z",
+  "durada": 27,
+  "resum": "relación municipio-ABP: 956 filas, columnas ['OBJECTID', 'CODI_MUNICIPI', 'CODI_ABP_MOSSOS', 'CODI_DISTRICTE', 'NOM_DISTRICTE']\npoblación ABP (año 2026): total 8,204,407\n11 ABP en la provincia (de 60): Alt Empordà-Figueres, Alt Empordà-Roses, Baix Empordà-la Bisbal, Baix Empordà-Sant Feliu, Garrotxa, Gironès-Pla de l'Estany, Ripollès, Selva Interior, Selva Litoral, Cerdanya, Osona\nseries mensuales: 10 regiones, 14 tipos, hasta 2026-10; 12 meses por ABP: 62 ABP\n12 meses por ABP y título: 62 ABP, 2025-11 a 2026-10\nhechos penales: años completos [2023, 2024, 2025], 62 ABP; ABP de Girona sin datos: []"
  },
  "pressupostos": {
   "estat": "ok",
-  "intent": "2026-11-16T12:09:19Z",
-  "ok": "2026-11-16T12:09:19Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:30:26Z",
+  "ok": "2026-11-23T14:30:26Z",
+  "durada": 11,
+  "resum": "102311 filas, 221 municipios, años 2011-2025"
  },
  "provincia": {
   "estat": "ok",
-  "intent": "2026-11-18T09:07:29Z",
-  "ok": "2026-11-18T09:07:29Z",
-  "durada": 810,
+  "intent": "2026-11-23T14:09:22Z",
+  "ok": "2026-11-23T14:09:22Z",
+  "durada": 677,
   "resum": "ales por naturaleza de la finca, provincias, interés del préstamo y número e importe. : 180 series\n3237 HPT: Hipotecas anuales por naturaleza de la finca (rústicas), provincias, tramos de extensión y número e importe. : 60 series\n3238 HPT: Hipotecas anuales por naturaleza de la finca (urbanas), provincias, tramos de extensión y número e importe. : 80 series\n3239 HPT: Hipotecas anuales por naturaleza de la finca, provincias, entidad que concede el préstamo y número e importe.: 180 series\n3240 HPT: Hipotecas anuales por naturaleza de la finca, provincias, duración en años y número e importe.: 180 series\n3241 HPT: Resumen anual de hipotecas por provincias, naturaleza de la finca y número e importe.: 24 series\n3242 HPT: Resumen anual de hipotecas por provincias, bienes muebles y número e importe.: 12 series\n3222 HPT: Hipotecas canceladas registralmente por provincias, naturaleza de la finca y entidad prestamista: 18 series\n73035 ECM: Defunciones por causas (capítulos) por sexo y provincia: 108 series\n2063 EOAP: Viajeros y pernoctaciones por provincias: 4 series\n2061 EOAP: Estancia media por provincias: 1 series\n2072 EOAP: Plazas, apartamentos, grados de ocupación y personal empleado por provincias: 6 series\n49380 EOTR: Viajeros y pernoctaciones por provincias: 4 series\n2073 EOTR: Viajeros y pernoctaciones por provincias: 4 series\n2067 EOTR: Estancia media por provincias: 1 series\n2070 EOTR: Establecimientos, plazas, grados de ocupación y personal empleado por provincias: 6 series"
  },
  "referencies": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:09:19Z",
+  "ok": "2026-11-23T14:09:19Z",
+  "durada": 4,
+  "resum": "EMEX: 232 indicadores\nINE 53689 (renta media y mediana): 18 valores\nINE 53687 (fuentes de ingresos): 15 valores\nINE 53690 (umbrales fijos): 27 valores\nINE 53694 (umbrales relativos): 54 valores"
  },
  "salut": {
   "estat": "ok",
-  "intent": "2026-11-16T14:36:06Z",
-  "ok": "2026-11-16T14:36:06Z",
-  "durada": 310,
-  "resum": "39 ABS en la provincia (de 377)\nmortalidad [2021, 2022, 2023, 2024, 2025]: 39 ABS; RME Girona 104.7\natención primaria 2022-12: 21 indicadores, 39 ABS\nreceptes: 1128 files (fins 2025-10), 175 grups ATC\ninfeccions: setmanes fins 2026-11-02, 39 ABS\ncentres sanitaris: 202 ({'cap': 133, 'continuada': 24, 'mental': 16, 'sociosanitari': 12, 'hospital': 11, 'drogues': 6})"
+  "intent": "2026-11-23T14:02:33Z",
+  "ok": "2026-11-23T14:02:33Z",
+  "durada": 379,
+  "resum": "39 ABS en la provincia (de 379)\nmortalidad [2021, 2022, 2023, 2024, 2025]: 39 ABS; RME Girona 104.7\natención primaria 2022-12: 21 indicadores, 39 ABS\nreceptes: 1128 files (fins 2025-10), 175 grups ATC\ninfeccions: setmanes fins 2026-11-09, 39 ABS\ncentres sanitaris: 202 ({'cap': 133, 'continuada': 24, 'mental': 16, 'sociosanitari': 12, 'hospital': 11, 'drogues': 6})"
  },
  "territorio": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T13:53:48Z",
+  "ok": "2026-11-23T13:53:48Z",
+  "durada": 1,
+  "resum": "221 municipios, 9 comarcas"
+ },
+ "transit": {
+  "estat": "ok",
+  "intent": "2026-11-23T15:32:23Z",
+  "ok": "2026-11-23T15:32:23Z",
+  "durada": 11,
+  "resum": "SCT: 3453 accidentes graves en la provincia (2010-2023), 211 municipios; Cataluña 112 filas\nDGT 2024: 222 municipios de Girona; urbanas Girona 1129 accidentes, 6 muertos; España 66224\nDGT 2025: todavía no publicado\nMossos: 190 meses, último 2026-10 (Girona 355 intervenciones)"
  },
  "tributs": {
   "estat": "ok",
-  "intent": "2026-11-16T13:08:39Z",
-  "ok": "2026-11-16T13:08:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:30:38Z",
+  "ok": "2026-11-23T14:30:38Z",
+  "durada": 178,
+  "resum": "2025: 218 municipios de Girona, 7399 de España\n2026: 213 municipios de Girona, 7391 de España"
  },
  "turisme": {
-  "estat": "avís",
-  "intent": "2026-11-16T16:19:19Z",
-  "ok": null,
-  "durada": 1403,
-  "resum": "s, ocupación y personal por provincias: 6 series\nINE 2061 Apartamentos: estancia media por provincias: 1 series\nINE 2073 Turismo rural: viajeros y pernoctaciones por provincias: 4 series\nINE 2070 Turismo rural: plazas, ocupación y personal por provincias: 6 series\nINE 2067 Turismo rural: estancia media por provincias: 1 series\nINE 48427 Pernoctaciones en alojamientos turísticos y de corta estancia por provincias (mensual): 6 series\nINE 48440 Ocupación en alojamientos turísticos y de corta estancia (anual): 9 series\nINE 23998 EGATUR: gasto de los turistas internacionales por CCAA de destino: 16 series\nINE 24745 EGATUR: partidas de gasto por CCAA: 32 series\nINE 23988 FRONTUR: turistas internacionales por CCAA de destino: 4 series\nINE 52047 Turistas extranjeros por provincia de destino y país (telefonía móvil): 1266 series\nINE 52997 Turistas residentes por provincia de destino y provincia de origen (telefonía móvil): 1251 series\nXifra hotels: 23 anys (2003–2025)\nXifra campings: 23 anys (2003–2025)\nXifra rural: 23 anys (2003–2025)\nXifra oficines: 32 anys (1994–2025)\nXifra hut: 11 anys (2015–2025)\nXifra apart: 11 anys (2015–2025)\nTelefonía móvil rec (52048): ERROR TypeError: string indices must be integers, not 'str'\nTelefonía móvil int (53464): 221 municipios\nViviendas turísticas INE 39363 (viviendas y plazas): 221 municipios\nViviendas turísticas INE 39366 (porcentaje sobre las viviendas): 221 municipios\n2nmt-74sj → ieet_comarques.csv: 790 files\n83qv-sib8 → platges.csv: 271 files"
+  "estat": "ok",
+  "intent": "2026-11-23T14:46:01Z",
+  "ok": "2026-11-23T14:46:01Z",
+  "durada": 2021,
+  "resum": "por provincias: 6 series\nINE 2061 Apartamentos: estancia media por provincias: 1 series\nINE 2073 Turismo rural: viajeros y pernoctaciones por provincias: 4 series\nINE 2070 Turismo rural: plazas, ocupación y personal por provincias: 6 series\nINE 2067 Turismo rural: estancia media por provincias: 1 series\nINE 48427 Pernoctaciones en alojamientos turísticos y de corta estancia por provincias (mensual): 6 series\nINE 48440 Ocupación en alojamientos turísticos y de corta estancia (anual): 9 series\nINE 23998 EGATUR: gasto de los turistas internacionales por CCAA de destino: 16 series\nINE 24745 EGATUR: partidas de gasto por CCAA: 32 series\nINE 23988 FRONTUR: turistas internacionales por CCAA de destino: 4 series\nINE 52047 Turistas extranjeros por provincia de destino y país (telefonía móvil): 1266 series\nINE 52997 Turistas residentes por provincia de destino y provincia de origen (telefonía móvil): 1251 series\nXifra hotels: 23 anys (2003–2025)\nXifra campings: 23 anys (2003–2025)\nXifra rural: 23 anys (2003–2025)\nXifra oficines: 32 anys (1994–2025)\nXifra hut: 11 anys (2015–2025)\nXifra apart: 11 anys (2015–2025)\nTelefonía móvil int (53464): 221 municipios\nTelefonía móvil rec (52048): 221 municipios (INE: {'status': 'No puede mostrarse por restricciones de volumen'})\nViviendas turísticas INE 39363 (viviendas y plazas): 221 municipios\nViviendas turísticas INE 39366 (porcentaje sobre las viviendas): 221 municipios\n2nmt-74sj → ieet_comarques.csv: 790 files\n83qv-sib8 → platges.csv: 271 files"
  },
  "universitaris": {
   "estat": "ok",
-  "intent": "2026-11-16T12:19:03Z",
-  "ok": "2026-11-16T12:19:03Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T14:22:28Z",
+  "ok": "2026-11-23T14:22:28Z",
+  "durada": 2,
+  "resum": "universitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']"
  },
  "vehicles": {
   "estat": "ok",
-  "intent": "2026-11-16T15:05:26Z",
-  "ok": "2026-11-16T15:05:26Z",
-  "durada": 32,
-  "resum": "2020: 221 municipios, parque Girona 702143, Cataluña 5651996, España 36656957\n2021: 221 municipios, parque Girona 707007, Cataluña 5624611, España 37046864\n2022: 221 municipios, parque Girona 714688, Cataluña 5626952, España 37510944\n2023: 221 municipios, parque Girona 719969, Cataluña 5643692, España 37890861\n2024: 221 municipios, parque Girona 716524, Cataluña 5597285, España 37862492\n2025: 221 municipios, parque Girona 729603, Cataluña 5698722, España 38641163\n2026: HTTPError: 404 Client Error: Not Found for url: https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/dg"
+  "intent": "2026-11-23T14:28:50Z",
+  "ok": "2026-11-23T14:28:50Z",
+  "durada": 10,
+  "resum": "2025: 221 municipios, parque Girona 729603, Cataluña 5698722, España 38641163\n2026: todavía no publicado"
  },
  "xifra": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T13:55:31Z",
+  "ok": "2026-11-23T13:55:31Z",
+  "durada": 153,
+  "resum": "131 tablas de 129 páginas; 0 errores"
  }
 }

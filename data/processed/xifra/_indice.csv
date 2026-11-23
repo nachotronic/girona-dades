@@ -36,7 +36,7 @@ idmenu,titulo,dades,dades_nom,any,tabla,filas,columnas,fichero,url
 030511,Polítiques d'habitatge,,,2025,0,221,8,030511_politiques-d-habitatge_dades_2025_0.csv,https://www.ddgi.cat/xifra/activecon/hpo.asp?IdMenu=030511
 030514,Parc de vehicles,0,,2024,0,220,8,030514_parc-de-vehicles_dades_2024_0.csv,https://www.ddgi.cat/xifra/activecon/parc_auto.asp?IdMenu=030514
 030516,Entitats financeres,0,,2026,0,221,6,030516_entitats-financeres_dades_2026_0.csv,https://www.ddgi.cat/xifra/activecon/Ent_Fin2.asp?IdMenu=03051601
-030518,Renda familiar disponible,,,2022,0,94,3,030518_renda-familiar-disponible_dades_2022_0.csv,https://www.ddgi.cat/xifra/activecon/RendaFam.asp?IdMenu=030518
+030518,Renda familiar disponible,,,2023,0,94,3,030518_renda-familiar-disponible_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/RendaFam.asp?IdMenu=030518
 030520,Producte interior brut,,,2023,0,36,3,030520_producte-interior-brut_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/pib.asp?IdMenu=03052001
 030521,Impost sobre la renda de les persones físiques (IRPF),,,2023,0,221,4,030521_impost-sobre-la-renda-de-les-persones-fi_dades_2023_0.csv,https://www.ddgi.cat/xifra/activecon/irpf.asp?IdMenu=030521
 030601,Llocs de treball,0,,,0,221,7,030601_llocs-de-treball_dades_ultimo_0.csv,https://www.ddgi.cat/xifra/inss/inssAssal.asp?IdMenu=03060101
@@ -65,7 +65,7 @@ idmenu,titulo,dades,dades_nom,any,tabla,filas,columnas,fichero,url
 03030204,"Cinemes, teatres i auditoris",0,,2025,0,221,5,03030204_cinemes-teatres-i-auditoris_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/equip_cult2.asp?IdMenu=03030204
 03030205,Centres culturals,0,,2025,0,221,6,03030205_centres-culturals_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/ccc.asp?IdMenu=03030205
 03030206,Espais d'arts visuals,0,,2025,0,221,6,03030206_espais-d-arts-visuals_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/cav.asp?IdMenu=03030206
-03030402,Residus industrials,0,,2024,0,221,6,03030402_residus-industrials_dades_2024_0.csv,https://www.ddgi.cat/xifra/qualitat/resid_ind.asp?IdMenu=03030402
+03030402,Residus industrials,0,,2025,0,221,6,03030402_residus-industrials_dades_2025_0.csv,https://www.ddgi.cat/xifra/qualitat/resid_ind.asp?IdMenu=03030402
 03030502,Consum d'energia elèctrica,,,2024,0,221,8,03030502_consum-d-energia-electrica_dades_2024_0.csv,https://www.ddgi.cat/xifra/qualitat/cee.asp?IdMenu=03030502
 03030602,Emissions de CO 2 d'edificis del sector terciari,0,,2019,0,221,7,03030602_emissions-de-co-2-d-edificis-del-sector-_dades_2019_0.csv,https://www.ddgi.cat/xifra/qualitat/CO2EST.asp?IdMenu=03030602
 03030603,Emissions de CO 2 per tractament de residus sòlids i urbans,0,,2019,0,221,3,03030603_emissions-de-co-2-per-tractament-de-resi_dades_2019_0.csv,https://www.ddgi.cat/xifra/qualitat/CO2TRSU.asp?IdMenu=03030603

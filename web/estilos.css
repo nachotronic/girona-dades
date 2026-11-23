@@ -615,6 +615,10 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .mapa-panell .ind-desc:empty { display: none; }
 }
 .pg-bg-cat { background: var(--tinta); }
+/* Pymes por demarcación (Pimec): Barcelona, Lleida y Tarragona junto a Girona */
+.pg-dot.pg-bcn, .pg-bg-bcn { background: var(--tinta); } .pg-dot.pg-lle, .pg-bg-lle { background: var(--barra); } .pg-dot.pg-tar, .pg-bg-tar { background: var(--text-3); }
+.pg-l.pg-bcn { stroke: var(--tinta); } .pg-l.pg-lle { stroke: var(--barra); } .pg-l.pg-tar { stroke: var(--text-3); stroke-dasharray: 4 3; }
+.pg-p.pg-bcn, .pg-e.pg-bcn { fill: var(--tinta); } .pg-p.pg-lle, .pg-e.pg-lle { fill: var(--barra); } .pg-p.pg-tar, .pg-e.pg-tar { fill: var(--text-3); }
 
 /* ---------- Menú de indicadores junto al mapa (2026-11-16) ---------- */
 /* El selector vive dentro de la rejilla del mapa: columna fija en escritorio, barra fija + hoja inferior en tablet y móvil */
@@ -1287,3 +1291,34 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .menu a { flex: 1 0 auto; text-align: center; padding: 10px 6px 11px; border-top: 1px solid var(--vora); }
   .menu a + a { border-left: 1px solid var(--vora); }
 }
+
+/* ---------- Educació: escoles i alumnes (ficha) ---------- */
+.fx-ens { grid-column: 1 / -1; }
+.en-et { list-style: none; margin: 0 0 8px; padding: 0; }
+.en-et li { display: grid; grid-template-columns: minmax(0, 12em) minmax(0, 1fr) 9.5em; align-items: center; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--graella); font-size: 14px; }
+.en-nom { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.en-barra { display: flex; height: 14px; background: var(--fons-2); }
+.en-barra b { display: block; height: 100%; }
+.en-v { font: 500 13px var(--mono); text-align: right; white-space: nowrap; }
+.en-v small { display: block; color: var(--text-3); font-size: 11px; }
+.en-0, .ub-lleg li i.en-0, .pg-bg-pub, .pg-dot.pg-pub { background: var(--barra); }
+.en-1, .ub-lleg li i.en-1, .pg-bg-conc, .pg-dot.pg-conc { background: var(--barra-suau); }
+.en-2, .ub-lleg li i.en-2, .pg-bg-priv, .pg-dot.pg-priv { background: var(--tinta); }
+.en-lleg { display: flex; flex-wrap: wrap; gap: 0 22px; margin-bottom: 4px; }
+.en-lleg li { border-bottom: 0; padding: 2px 0; font-size: 13px; }
+.en-lleg li span { margin-left: 4px; color: var(--text-3); }
+.en-edat { height: 170px; margin: 6px 0 8px; }
+.en-cols { display: flex; align-items: stretch; gap: 2px; height: 100%; }
+.en-col { flex: 1 1 0; display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
+.en-pila { display: flex; flex-direction: column; justify-content: flex-end; background: var(--barra-suau); min-height: 1px; }
+.en-pila b { display: block; background: var(--accent); }
+.en-col small { font: 10.5px var(--mono); color: var(--text-3); text-align: center; height: 14px; margin-top: 3px; }
+.ub-lleg li i.en-esp { background: var(--barra-suau); } .ub-lleg li i.en-ext { background: var(--accent); }
+@media (max-width: 820px) {
+  .en-et li { grid-template-columns: minmax(0, 7.5em) minmax(0, 1fr) 7.5em; gap: 8px; font-size: 13.5px; }
+  .en-v small { font-size: 10px; }
+  .fx-ens .nb li { grid-template-columns: minmax(0, 8em) minmax(0, 1fr) 7.5em; }
+}
+
+/* Segmentos largos (p. ej. Exportaciones, 4 opciones) no deben desbordar en móvil */
+.segment { max-width: 100%; flex-wrap: wrap; }

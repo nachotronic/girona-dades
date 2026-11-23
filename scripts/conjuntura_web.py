@@ -156,6 +156,23 @@ def _dgt():
     return pd.concat(parts) if parts else pd.DataFrame(columns=["ine", "tipus", "nou", "electric", "n", "per"])
 
 
+def _trf():
+    """Transferencias de vehículos (segunda mano), DGT. Girona por municipio y todas las provincias."""
+    gi, pr = [], []
+    for f in sorted(glob.glob(str(P / "conjuntura" / "dgt" / "trf_*.csv"))):
+        st = pathlib.Path(f).stem
+        a = st.rsplit("_", 1)[1]
+        d = pd.read_csv(f, dtype={"ine": str, "prov": str}, keep_default_na=False)
+        d["per"] = f"{a[:4]}-{a[4:]}"
+        (pr if st.startswith("trf_prov_") else gi).append(d)
+    gi = pd.concat(gi) if gi else pd.DataFrame(columns=["ine", "tipus", "edat", "empresa", "n", "per"])
+    pr = pd.concat(pr) if pr else pd.DataFrame(columns=["prov", "tipus", "n", "per"])
+    return gi, pr
+
+
+PROV_CAT = {"B", "GI", "L", "T"}
+
+
 def _aena():
     f = P / "conjuntura" / "aena.csv"
     return pd.read_csv(f, dtype={"mes": str}) if f.exists() else pd.DataFrame(columns=["mes", "aeroport", "passatgers"])
@@ -224,6 +241,7 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     afi = _afiliacio()
     dgt = _dgt()
     aena = _aena()
+    trf, trf_p = _trf()
     vt_prov, vt = _valor_taxat()
 
     ults = [df["per"].max() for df in (paro, contr) if len(df)] + ([afi["mes"].max()] if len(afi) else [])
@@ -275,6 +293,15 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
         for i in mun:
             d = per_mun.get(i, {})
             mun[i]["mat"] = arr({p: d.get(p, 0) for p in mesos_dgt}, M)
+    # Turismos de segunda mano: transferencias (cambios de titular) y las de coches de 15 años o más
+    if len(trf):
+        tt = trf[trf["tipus"] == "turisme"]
+        mesos_trf = set(trf["per"])
+        for k, g0 in (("trf", tt), ("trf_v", tt[tt["edat"] == "15+"])):
+            per_mun = {i: g.groupby("per")["n"].sum().to_dict() for i, g in g0.groupby("ine")}
+            for i in mun:
+                d = per_mun.get(i, {})
+                mun[i][k] = arr({p: d.get(p, 0) for p in mesos_trf}, M)
     # Valor tasado (solo municipios de más de 25.000 habitantes)
     for n, i in nombres.items():
         if n in vt and i in mun:
@@ -342,6 +369,20 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
         el = tur[(tur["nou"].astype(str) == "True") & (tur["electric"].astype(str) == "True")].groupby("per")["n"].sum()
         prov["mat"] = {"per": "m", "gi": arr(nous.to_dict(), M)}
         prov["mat_el"] = {"per": "m", "gi": [round(el.get(p, 0) / nous[p] * 100, 1) if p in nous and nous[p] else None for p in M]}
+    if len(trf):
+        tt = trf[trf["tipus"] == "turisme"]
+        tot = tt.groupby("per")["n"].sum()
+        tp = trf_p[trf_p["tipus"] == "turisme"]
+        prov["trf"] = {"per": "m", "gi": arr(tot.to_dict(), M),
+                       "cat": arr(tp[tp["prov"].isin(PROV_CAT)].groupby("per")["n"].sum().to_dict(), M),
+                       "esp": arr(tp.groupby("per")["n"].sum().to_dict(), M)}
+        # Reparto por antigüedad y por tipo de comprador (% del mes)
+        for k, filtre in (("trf_v", tt["edat"] == "15+"), ("trf_j", tt["edat"] == "0-4"), ("trf_e", tt["empresa"].astype(str) == "True")):
+            sub = tt[filtre].groupby("per")["n"].sum()
+            prov[k] = {"per": "m", "gi": [round(sub.get(p, 0) / tot[p] * 100, 1) if p in tot and tot[p] else None for p in M]}
+        # Otras categorías: motos
+        mo = trf[trf["tipus"] == "moto"].groupby("per")["n"].sum()
+        prov["trf_moto"] = {"per": "m", "gi": arr(mo.to_dict(), M)}
     if len(aena):
         g = aena[aena["aeroport"] == "girona"]
         if len(g):
