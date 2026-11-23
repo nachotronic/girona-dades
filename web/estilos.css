@@ -615,6 +615,10 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .mapa-panell .ind-desc:empty { display: none; }
 }
 .pg-bg-cat { background: var(--tinta); }
+/* Pymes por demarcación (Pimec): Barcelona, Lleida y Tarragona junto a Girona */
+.pg-dot.pg-bcn, .pg-bg-bcn { background: var(--tinta); } .pg-dot.pg-lle, .pg-bg-lle { background: var(--barra); } .pg-dot.pg-tar, .pg-bg-tar { background: var(--text-3); }
+.pg-l.pg-bcn { stroke: var(--tinta); } .pg-l.pg-lle { stroke: var(--barra); } .pg-l.pg-tar { stroke: var(--text-3); stroke-dasharray: 4 3; }
+.pg-p.pg-bcn, .pg-e.pg-bcn { fill: var(--tinta); } .pg-p.pg-lle, .pg-e.pg-lle { fill: var(--barra); } .pg-p.pg-tar, .pg-e.pg-tar { fill: var(--text-3); }
 
 /* ---------- Menú de indicadores junto al mapa (2026-11-16) ---------- */
 /* El selector vive dentro de la rejilla del mapa: columna fija en escritorio, barra fija + hoja inferior en tablet y móvil */
