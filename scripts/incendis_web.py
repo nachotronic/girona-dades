@@ -54,10 +54,10 @@ def construir() -> dict:
     cat_u = sum(taula[(u, z)].morts for z in CAT) if all((u, z) in taula for z in CAT) else None
     abs_ = {"any": u, "n": gi[-1][2], "viv": viv[-1][2] if viv and viv[-1][0] == u else None,
             "cat": cat_u, "esp": int(taula[(u, "ESPANA")].morts) if (u, "ESPANA") in taula else None,
-            "total": sum(x[2] for x in gi), "a0": anys[0]}
+            "total": sum(x[2] for x in gi), "a0": anys[0],
+            "max": max(gi, key=lambda x: x[2])[2], "amax": max(gi, key=lambda x: x[2])[0]}
     prov = {
         "inc_morts": {"tipus": "linia", "u": "", "dec": 1, "series": taxa, "abs": abs_},
-        "inc_morts_n": {"tipus": "linia", "u": "", "dec": 0, "noms": "incm", "series": {"gi": gi, "cat": viv}},
     }
     return {"prov": prov, "resum": f"{len(anys)} años {anys[0]}-{u}; Girona {u}: {gi[-1][2]} muertos"}
 
