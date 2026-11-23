@@ -31,6 +31,10 @@ def estat_fonts() -> dict:
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))
         res["esca"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("edicio")}
+    fm = P / "sem" / "sem_meta.json"
+    if fm.exists():
+        m = json.loads(fm.read_text(encoding="utf-8"))
+        res["sem"] = {"estat": "manual", "ok": m.get("carregat")}
     return res
 
 
@@ -1337,6 +1341,60 @@ def esca_series():
     return out
 
 
+def sem_series():
+    """Sistema d'Emergències Mèdiques (carga manual, scripts/sem_manual.py). Solo hay datos por región sanitaria."""
+    d = P / "sem"
+    out = {}
+    pr = P / "salut" / "poblacio_rs.csv"
+    pob = {}
+    if pr.exists():
+        po = pd.read_csv(pr, dtype={"rs_codi": str})
+        for a, g in po.groupby("any"):
+            pob[int(a)] = {"gi": float(g.loc[g["rs_codi"] == "64", "p"].sum()), "cat": float(g["p"].sum())}
+    def pob_any(a, z):
+        if not pob:
+            return None
+        a2 = a if a in pob else min(pob, key=lambda y: abs(y - a))
+        return pob[a2][z] or None
+    ft = d / "sem_temps.csv"
+    if ft.exists():
+        t = pd.read_csv(ft)
+        for k, col in (("sem_lent", "n20"), ("sem_rapid", "n10")):
+            ser = {}
+            for z, x in (("gi", t[t["ambit"] == "GIRONA"]), ("cat", t)):
+                g = x.groupby("any")[[col, "total"]].sum()
+                parc = set(t.loc[t["parcial"] == 1, "any"])
+                ser[z] = [[int(a), f"{a}, 1r sem." if a in parc else str(a), round(float(v[col]) / v["total"] * 100, 1)] for a, v in g.iterrows() if v["total"]]
+            out[k] = {"tipus": "linia", "u": "%", "dec": 1, "series": ser}
+    # Códigos de activación: serie anual por 100.000 habitantes (sin el semestre suelto del 2022)
+    fc, fm = d / "sem_codis.csv", d / "sem_codis_memoria.csv"
+    cs = [pd.read_csv(f) for f in (fc, fm) if f.exists()]
+    if cs:
+        c = pd.concat(cs, ignore_index=True)
+        c = c[c.get("parcial", 0).fillna(0) != 1]
+        gi = c[c["regio"] == "GIRONA"].groupby("any")[["iam", "ictus", "ppt"]].sum()
+        ca = c.groupby("any")[["iam", "ictus", "ppt"]].sum()
+        ult = int(gi.index.max())
+        out["sem_codis"] = {"tipus": "barres", "u": "n", "dec": 1, "claus": ["gi", "cat"], "any": str(ult), "grups": [
+            {"g": k, "c": "sem:" + k, "gi": round(float(gi.loc[ult, k]) / pob_any(ult, "gi") * 1e5, 1), "cat": round(float(ca.loc[ult, k]) / pob_any(ult, "cat") * 1e5, 1),
+             "n": int(gi.loc[ult, k])} for k in ("ppt", "ictus", "iam")], "nu": "casos"}
+        # Evolución en Girona: solo años seguidos (el Excel acaba el 2021; la memoria salta al 2025)
+        anys = sorted(int(a) for a in gi.index)
+        seg = [a for a in anys if a <= anys[0] + len(anys) - 1 and all(y in anys for y in range(anys[0], a + 1))]
+        out["sem_codis_evol"] = {"tipus": "linia", "u": "n", "dec": 0, "noms": "codis", "series": {
+            z: [[a, str(a), int(gi.loc[a, k])] for a in seg] for z, k in (("gi", "ppt"), ("cat", "ictus"), ("esp", "iam"))}}
+    fr = d / "sem_recursos.csv"
+    if fr.exists():
+        r = pd.read_csv(fr)
+        ult = int(r["any"].max())
+        r = r[r["any"] == ult]
+        g = r[r["regio"] == "GIRONA"].iloc[0]
+        out["sem_recursos"] = {"tipus": "barres", "u": "n", "dec": 1, "claus": ["gi", "cat"], "any": str(ult), "nu": "unitats", "grups": [
+            {"g": k, "c": "sem:" + k, "gi": round(float(g[k]) / pob_any(ult, "gi") * 1e6, 1), "cat": round(float(r[k].sum()) / pob_any(ult, "cat") * 1e6, 1), "n": int(g[k])}
+            for k in ("svb", "sva", "vir", "hems")], "abs": {"gi": int(g[["svb", "sva", "vir", "hems"]].sum()), "cat": int(r[["svb", "sva", "vir", "hems"]].sum().sum())}}
+    return out
+
+
 def salut_series():
     sal = P / "salut"
     out = {}
@@ -1422,6 +1480,7 @@ def salut_series():
             per = f"{str(ms[0])[:4]}-{str(ms[0])[4:]}/{str(ms[-1])[:4]}-{str(ms[-1])[4:]}"
             out["rec_grups"] = {"tipus": "barres", "u": "n", "dec": 1, "claus": ["gi", "cat"], "any": per, "grups": grups}
     out.update(esca_series())
+    out.update(sem_series())
     # Infecciones respiratorias atendidas en primaria, semanal, por 100.000 habitantes
     fi = sal / "infeccions_rs.csv"
     if fi.exists() and pr.exists():
@@ -2757,6 +2816,13 @@ def main():
         anys_extra["mob"] = mw["any"]
         zones["com"] = mw["com"]
     # Accidentes de tráfico: Servei Català de Trànsit, DGT (vías urbanas) y Mossos. Tema «acc», nivel «com» y gráficos de la provincia
+    import incendis_web
+    try:
+        icw = incendis_web.construir()
+        print("incendis:", icw["resum"])
+    except Exception as e:  # noqa: BLE001
+        print("incendis: ERROR", type(e).__name__, e)
+        icw = {"prov": {}}
     import transit_web
     try:
         trw = transit_web.construir(municipios)
@@ -2811,7 +2877,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **icw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
         "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
