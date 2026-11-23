@@ -2904,6 +2904,22 @@ def main():
         if m["ine"] in enw["fitxa"]:
             m["en_f"] = enw["fitxa"][m["ine"]]
     anys_extra.update(enw["anys"])
+    # Dinero público: contratos de los ayuntamientos y subvenciones (RAISC). Tema «dp» y sección Diners públics
+    import diners_web
+    try:
+        dpw = diners_web.construir(municipios)
+        print("diners_publics:", dpw["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin dinero público
+        print("diners_publics: ERROR", type(e).__name__, e)
+        dpw = {"mun": {}, "com": {}, "anys": {}, "fitxa": {}, "prov": {}, "refs": {}, "xifres": {}}
+    for m in municipios:
+        if m["ine"] in dpw["mun"]:
+            m["dp"] = dpw["mun"][m["ine"]]
+        if m["ine"] in dpw["fitxa"]:
+            m["dp_f"] = dpw["fitxa"][m["ine"]]
+    anys_extra.update(dpw["anys"])
+    for c, o in dpw["com"].items():
+        zones.setdefault("com", {}).setdefault(c, {}).update({"dp_" + k: v for k, v in o.items()})
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -2923,7 +2939,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "en": {"prov": enw["prov"], "x": enw["xifres"]}, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

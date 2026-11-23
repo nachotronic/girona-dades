@@ -1251,9 +1251,9 @@ th, td { padding-left: 10px; padding-right: 10px; }
 /* Cabecera de escritorio: cada enlace en una sola línea («La província» se partía en dos);
    si no caben todos, el menú se desplaza en horizontal como en el móvil */
 @media (min-width: 761px) {
-  .menu { gap: 14px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .menu { gap: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
   .menu::-webkit-scrollbar { display: none; }
-  .menu a { white-space: nowrap; flex: none; letter-spacing: .03em; }
+  .menu a { white-space: nowrap; flex: none; letter-spacing: .01em; font-size: 11px; }
 }
 @media (min-width: 761px) and (max-width: 1279px) { .menu { gap: 6px; } .menu a { font-size: 11px; letter-spacing: 0; } }
 
@@ -1329,3 +1329,7 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .en-A { background: #0b6b66; } .en-B { background: #3f938b; } .en-C { background: #8fc0b9; color: #0f1113 !important; }
 .en-D { background: #c4c8cd; color: #0f1113 !important; } .en-E { background: #f1a6ab; color: #0f1113 !important; }
 .en-F { background: #e45663; } .en-G { background: #b8001f; }
+
+/* Diners públics: llista de contractes grans */
+.dp-grans li span:first-child { white-space: normal; }
+.dp-grans small { color: var(--text-3); font: 400 11.5px var(--mono); }

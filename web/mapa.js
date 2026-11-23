@@ -92,6 +92,7 @@
     { id: "agr", ca: "Camp", es: "Campo" },
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
+    { id: "dp", ca: "Diners públics", es: "Dinero público" },
     { id: "cad", ca: "Cadastre", es: "Catastro" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
@@ -259,6 +260,31 @@
     ["cob_1g", "en_cob", ["Internet d'1 Gbps", "Habitatges amb cobertura d'1 Gbps o més (%)"], ["Internet de 1 Gbps", "Viviendas con cobertura de 1 Gbps o más (%)"], NOTA_COB, P1],
     ["cob_100", "en_cob", ["Internet de 100 Mbps", "Habitatges amb cobertura de 100 Mbps o més (%)"], ["Internet de 100 Mbps", "Viviendas con cobertura de 100 Mbps o más (%)"], NOTA_COB, P1],
     ["cob_5g", "en_cob", ["Cobertura 5G", "Habitatges amb cobertura mòbil 5G (%)"], ["Cobertura 5G", "Viviendas con cobertura móvil 5G (%)"], NOTA_COB, P1],
+  ];
+  // Diners públics: m.dp = {clave: {año: valor}}, D.anys.dp_contr/dp_plat/dp_subv; comarcas en D.arees.com[c]["dp_" + clave]; D.dp_ref
+  const DP = (k) => (m, a) => (a != null && m.dp && m.dp[k] && m.dp[k][a] != null ? m.dp[k][a] : null);
+  const DPZ = (k) => (x) => CUL_DARRER(x && x["dp_" + k]);
+  const DPR = (k) => (a) => { const r = D.dp_ref && D.dp_ref[k]; if (!r) return {}; const o = r[a] || CUL_DARRER(r); return o || {}; };
+  const NOTA_DPC = { ca: "Registre públic de contractes de Catalunya: contractes adjudicats per cada ajuntament (no inclou les seves empreses ni organismes), per exercici. Dades completes, amb els contractes menors, des del 2023. Un sol contracte plurianual gran (una concessió) pot disparar l'import d'un any.", es: "Registre públic de contractes de Catalunya: contratos adjudicados por cada ayuntamiento (no incluye sus empresas ni organismos), por ejercicio. Datos completos, con los contratos menores, desde 2023. Un solo contrato plurianual grande (una concesión) puede disparar el importe de un año." };
+  const NOTA_MENOR = { ca: "Registre públic de contractes. Contractes menors: fins a 15.000 € (serveis i subministraments) o 40.000 € (obres), sense concurrència obligatòria. Adjudicació directa: negociat sense publicitat, emergències i altres adjudicacions directes. Percentatge sobre l'import adjudicat per l'ajuntament.", es: "Registre públic de contractes. Contratos menores: hasta 15.000 € (servicios y suministros) o 40.000 € (obras), sin concurrencia obligatoria. Adjudicación directa: negociado sin publicidad, emergencias y otras adjudicaciones directas. Porcentaje sobre el importe adjudicado por el ayuntamiento." };
+  const NOTA_PLAT = { ca: "Plataforma de serveis de contractació pública: contractes no menors de l'ajuntament i les seves empreses i organismes adjudicats des del 2023 amb les ofertes rebudes publicades. Només municipis amb 10 contractes o més.", es: "Plataforma de serveis de contractació pública: contratos no menores del ayuntamiento y sus empresas y organismos adjudicados desde 2023 con las ofertas recibidas publicadas. Solo municipios con 10 contratos o más." };
+  const NOTA_SUBV = { ca: "Registre de subvencions i ajuts de Catalunya (RAISC): subvencions concedides per l'ajuntament, per any de concessió. Només hi surten els ajuntaments que les registren al RAISC (a Girona, uns 50 cada any); un municipi sense dada no vol dir que no en doni.", es: "Registro de subvenciones y ayudas de Cataluña (RAISC): subvenciones concedidas por el ayuntamiento, por año de concesión. Solo salen los ayuntamientos que las registran en el RAISC (en Girona, unos 50 cada año); un municipio sin dato no significa que no las dé." };
+  const NOTA_SUBVC = { ca: "Registre de subvencions i ajuts de Catalunya (RAISC): import concedit a beneficiaris de cada comarca (la part gironina de la Cerdanya i Osona) per totes les administracions catalanes, per habitant. No inclou els ajuts de l'Estat ni de la UE gestionats directament. Últim any complet.", es: "Registro de subvenciones y ayudas de Cataluña (RAISC): importe concedido a beneficiarios de cada comarca (la parte gerundense de la Cerdanya y Osona) por todas las administraciones catalanas, por habitante. No incluye las ayudas del Estado ni de la UE gestionadas directamente. Último año completo." };
+  const EUR0 = { f: (v) => `${fmt(v)} €`, c: (v) => `${fmt(v)} €` };
+  const DPM = [
+    ["contr_hab", "dp_contr", ["Contractes de l'ajuntament", "Import adjudicat per l'ajuntament per habitant (€)"], ["Contratos del ayuntamiento", "Importe adjudicado por el ayuntamiento por habitante (€)"], NOTA_DPC, EUR0],
+    ["menor", "dp_contr", ["Contractes menors", "Import adjudicat en contractes menors (% del total)"], ["Contratos menores", "Importe adjudicado en contratos menores (% del total)"], NOTA_MENOR, P0],
+    ["directe", "dp_contr", ["Adjudicació directa", "Import adjudicat sense concurrència: negociat sense publicitat i emergències (%)"], ["Adjudicación directa", "Importe adjudicado sin concurrencia: negociado sin publicidad y emergencias (%)"], NOTA_MENOR, P1],
+    ["1of", "dp_plat", ["Concursos amb una sola oferta", "Contractes no menors adjudicats amb una sola oferta, des del 2023 (%)"], ["Concursos con una sola oferta", "Contratos no menores adjudicados con una sola oferta, desde 2023 (%)"], NOTA_PLAT, P0],
+    ["of", "dp_plat", ["Ofertes per concurs", "Ofertes rebudes de mitjana als contractes no menors, des del 2023"], ["Ofertas por concurso", "Ofertas recibidas de media en los contratos no menores, desde 2023"], NOTA_PLAT, N1],
+    ["pime", "dp_plat", ["Contractes a pimes", "Import dels contractes no menors adjudicat a pimes, des del 2023 (%)"], ["Contratos a pymes", "Importe de los contratos no menores adjudicado a pymes, desde 2023 (%)"], NOTA_PLAT, P0],
+    ["subv_hab", "dp_subv", ["Subvencions de l'ajuntament", "Subvencions concedides per l'ajuntament per habitant (€)"], ["Subvenciones del ayuntamiento", "Subvenciones concedidas por el ayuntamiento por habitante (€)"], NOTA_SUBV, { f: (v) => `${fmt(v, 1)} €`, c: (v) => `${fmt(v)} €` }],
+  ];
+  const DPC = [
+    ["subv", ["Subvencions rebudes", "Subvencions i ajuts rebuts a la comarca per habitant (€)"], ["Subvenciones recibidas", "Subvenciones y ayudas recibidas en la comarca por habitante (€)"]],
+    ["subv_gen", ["Subvencions de la Generalitat", "Subvencions de la Generalitat rebudes a la comarca per habitant (€)"], ["Subvenciones de la Generalitat", "Subvenciones de la Generalitat recibidas en la comarca por habitante (€)"]],
+    ["subv_dip", ["Subvencions de la Diputació", "Subvencions de la Diputació de Girona rebudes a la comarca per habitant (€)"], ["Subvenciones de la Diputación", "Subvenciones de la Diputació de Girona recibidas en la comarca por habitante (€)"]],
+    ["subv_soc", ["Ajuts socials", "Subvencions de serveis socials i promoció social per habitant (€)"], ["Ayudas sociales", "Subvenciones de servicios sociales y promoción social por habitante (€)"]],
   ];
   const CUL = [
     ["b_prest_h", "cul_bib", ["Préstecs de biblioteca", "Préstecs de les biblioteques públiques per habitant"], ["Préstamos de biblioteca", "Préstamos de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
@@ -806,6 +832,10 @@
     ...AMB_COM.map(([k, ca, es, fmtk]) => ({ id: "amb_c_" + k, tema: "amb", ca, es, a: "amb_aigua", sumable: false, com: AMZ(k), ref: AMR(k), nota: NOTA_AIGUA, ...fmtk })),
     ...AMB_AIRE.map(([k, ca, es, fmtk]) => ({ id: "amb_a_" + k, tema: "amb", ca, es, a: "amb_aire", sumable: false, aire: A(k), nota: NOTA_AIRE, ...fmtk })),
     ...AMB_MET.map(([k, ca, es, fmtk]) => ({ id: "amb_m_" + k, tema: "amb", ca, es, a: "amb_met", sumable: false, met: A(k), nota: NOTA_MET, ...fmtk })),
+    ...DPM.map(([k, a, ca, es, nota, fmtk]) => ({ id: "dp_" + k, tema: "dp", dk: "dp_" + k, ca, es, a, sumable: false, v: (m) => DP("dp_" + k)(m, D.anys && D.anys[a]), t: a === "dp_plat" ? undefined : DP("dp_" + k), nota,
+      ref: ["menor", "directe", "contr_hab"].includes(k) ? () => ({ cat: DPR("dp_" + k)(anyActiu() || (D.anys && D.anys[a])).cat }) : undefined, ...fmtk })),
+    ...DPC.map(([k, ca, es]) => ({ id: "dp_c_" + k, tema: "dp", ca, es, a: "dp_subv", sumable: false, com: DPZ(k), nota: NOTA_SUBVC, ...EUR0,
+      ref: k === "subv" ? () => { const o = DPR("dp_c_subv")(D.anys && D.anys.dp_subv); return { gi: o.gi, cat: o.cat }; } : undefined })),
     ...ENE.map(([k, a, ca, es, nota, fmtk]) => ({ id: "en_" + k, tema: "ene", ca, es, a, sumable: false, v: (m) => EN("en_" + k)(m, D.anys && D.anys[a]), t: a === "en_cob" ? EN("en_" + k) : undefined, nota,
       ref: /^gas_g|^gas_d/.test(k) ? () => { const r = D.en_ref && D.en_ref[k]; return r ? { cat: r.cat, esp: r.esp } : {}; } : undefined, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
@@ -1045,6 +1075,7 @@
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "acc") D.municipios.forEach((m) => Object.values(m.acc || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "cul") D.municipios.forEach((m) => Object.values(m.cul || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "dp" && i.dk) D.municipios.forEach((m) => Object.keys((m.dp || {})[i.dk] || {}).forEach((a) => tots.add(a)));
       if (i.a === "en_cob") D.municipios.forEach((m) => Object.entries(m.en || {}).forEach(([k, o]) => /^en_cob_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "amb_seq") D.municipios.forEach((m) => Object.entries(m.amb || {}).forEach(([k, o]) => /^seq_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
