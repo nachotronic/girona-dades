@@ -54,7 +54,7 @@ PROV_POB = D["provincia"].get("poblacio")
 # Fuentes de los indicadores que no llevan nota en mapa.js (la nota ya cita la fuente)
 F = {
     "incasol": ("Incasòl / Agència de l'Habitatge de Catalunya, fiances de lloguer", "https://analisi.transparenciacatalunya.cat/d/qww9-bvhh"),
-    "mitma": ("Ministerio de Transportes y Movilidad Sostenible, compraventas de viviendas (notarios)", "https://apps.fomento.gob.es/BoletinOnline2/?nivel=2&orden=34000000"),
+    "mitma": ("Ministerio de Transportes y Movilidad Sostenible, compraventas de viviendas (notarios)", "https://boletinestadistico.transportes.gob.es/2?nivel=2&orden=34000000"),
     "atlas": ("INE, Atlas de distribución de renta de los hogares", "https://www.ine.es/dynt3/inebase/index.htm?padre=12385"),
     "registre": ("Registre de Turisme de Catalunya", "https://analisi.transparenciacatalunya.cat/d/t2h3-cgys"),
     "catastro": ("Dirección General del Catastro, INSPIRE", "https://www.catastro.hacienda.gob.es/INSPIRE/buildings/17/ES.SDGC.BU.atom_17.xml"),
