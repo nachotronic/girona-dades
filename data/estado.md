@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 10:31 UTC
+Última ejecución: 2026-11-23 16:18 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -23,6 +23,7 @@
 | emergencies — Bombers, Agents Rurals i incendis forestals | ok | 2026-11-18 09:21 | 2026-11-18 09:21 | mensual (Bombers) / anual |
 | afiliacio — Idescat, afiliació a la Seguretat Social | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | dgt — DGT, matriculacions | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
+| transferencias — DGT, transferències de vehicles (segona mà) | — | — | — | mensual |
 | aena — Aena, passatgers de l'aeroport | ok | 2026-11-16 12:11 | 2026-11-16 12:11 | mensual |
 | eleccions — Generalitat, processos electorals | ok | 2026-11-16 14:00 | 2026-11-16 14:00 | per elecció |
 | mapaelectoral — Mapa Electoral, resultats històrics (1933-2009) | ok | 2026-11-17 09:55 | 2026-11-17 09:55 | per elecció |
@@ -44,20 +45,15 @@
 | demografia — Naixements, defuncions i causes de mort (INE), defuncions per ABS (CatSalut) i noms dels nadons (Idescat) | — | — | — | setmanal/mensual |
 | transit — Accidents de trànsit: Servei Català de Trànsit, DGT (vies urbanes) i Mossos | — | — | — | anual/mensual |
 | cultura — Cultura: biblioteques públiques (DadesBib), equipaments, entitats, arxius, llibreries, Programa.cat i agenda cultural | avís | — | 2026-11-19 23:52 | anual |
+| medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | avís | — | 2026-11-23 16:16 | diari/anual |
 
 ## Detalle de la última ejecución
 
-### educacio: ok (28 s)
+### medi_ambient: avís (120 s)
 
 ```
-censo 2021: 533 secciones de Girona
-matrícula 2025/2026: 15261 filas (2683 de Girona); histórico 9713 filas
-centros 2026/2027: 635 en Girona
-preinscripción: 76479 filas, cursos ['2024-2025', '2025-2026', '2026-2027']
-evaluación 6e: 165 filas, áreas ['Alt Pirineu i Aran', 'Baix Llobregat', 'Barcelona Comarques', 'Barcelonès', 'Catalunya Central', "Consorci d'Educació de Barcelona", 'Girona', 'Lleida', 'Maresme - Vallès Oriental', 'Penedès', 'Tarragona', "Terres de l'Ebre"]
-evaluación 4eso: 147 filas, áreas ['Alt Pirineu i Aran', 'Baix Llobregat', 'Barcelona Comarques', 'Barcelonès', 'Catalunya Central', "Consorci d'Educació de Barcelona", 'Garraf', 'Girona', 'Lleida', 'Maresme - Vallès Oriental', 'Penedès', 'Tarragona']
-universitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']
-estadística de l'ensenyament 2025/2026: alumnos de Girona por etapa: llar 7714, inf 19018, pri 47406, eso 36603, batx 9467, fp 15228
-personal docente 2025/2026: 12439 en Girona
-resultados ESO 2024/2025: 36833 alumnos evaluados en Girona
+_aire: ERROR ValueError: dropna must be unspecified as the new implementation does not introduce rows of NA values. This argument will be removed in a future version of pandas.
+meteo: 47 estaciones, 1989-2026, 3823 filas anuales
+aigua: embalses 2000-01-01-2026-11-23 (29470 filas), sequía 213 municipios (último cambio 2025-05-16), consumo 2012-2025, 271 playas
+zvn: ERROR BadZipFile: File is not a zip file; n2000: 46 polígonos de n2000_2025_shp.zip, 182 municipios tocan; enp: 130 polígonos de Enp2025_shp.zip, 185 municipios tocan
 ```
