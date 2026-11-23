@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 20:44 UTC
+Última ejecución: 2026-11-23 20:55 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -46,15 +46,18 @@
 | transit — Accidents de trànsit: Servei Català de Trànsit, DGT (vies urbanes) i Mossos | ok | 2026-11-23 15:32 | 2026-11-23 15:32 | anual/mensual |
 | cultura — Cultura: biblioteques públiques (DadesBib), equipaments, entitats, arxius, llibreries, Programa.cat i agenda cultural | avís | — | 2026-11-23 15:32 | anual |
 | medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
-| energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | ok | 2026-11-23 20:40 | 2026-11-23 20:40 | diari/anual |
+| energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 
 ## Detalle de la última ejecución
 
-### energia: ok (242 s)
+### energia: avís (43 s)
 
 ```
 certificados: 155668 únicos, 96% con sección, hasta 2026-11-21
 recarga: 349 puntos
-gasolineras: 276 hoy, 203 meses (203 nuevos), refs {'cat': {'g95': 1.559, 'diesel': 1.779, 'g98': 1.745, 'glp': 1.179}, 'esp': {'g95': 1.567, 'diesel': 1.799, 'g98': 1.739, 'glp': 1.169}}
-cobertura: Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Leyenda: sin cabecera ((12, 1)); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%hogar: sin código de municipio; columnas ['Comunidad Autónoma', 'Provincia', 'CMUN', 'Municipio', 'Habitantes', 'Hogares', 'nan', 'Inalámbrico fijo\n(junio 2023)', 'Inalámbrico fijo\n(junio 2024)', 'Inalámbrico fijo\n(junio 2025)', 'nan', 'FTTH \n(junio 2023)']; Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Provincia_%hogar: sin cabecera ((53, 35)); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/CCAA_%hogar: sin cabecera ((20, 34)); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Nacional_%hogar: sin cabecera ((2, 34)); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%viviendas: sin código de municipio; columnas ['Comunidad Autónoma', 'Provincia', 'CMUN', 'Municipio', 'Habitantes', 'Viviendas\n(Catastro Enero 2024)', 'nan', 'Inalámbrico fijo\n(junio 2021)', 'Inalámbrico fijo\n(junio 2022)', 'Inalámbrico fijo\n(junio 2023)', 'Inalámbrico fijo\n(junio 2024)', 'Inalámbrico fijo\n(junio 2025)']; Cobe
+_carburants: ERROR SSLError: HTTPSConnectionPool(host='sedeaplicaciones.minetur.gob.es', port=443): Max retries exceeded with url: /ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroProvincia/17 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_s
+cobertura: Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%hogar: 221 municipios, 27 columnas (4G, 5G, 5G-Banda 3,5GHz, Cob. 100Mbps condiciones máxima demanda, Cob. 1Gbps descarga condiciones máxima demanda, Cob. 30Mbps condiciones máxima demanda, FTTH, HFC, Inalámbrico fijo); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%viviendas: 221 municipios, 42 columnas (4G, 5G, 5G-Banda 3,5GHz, Cob. 100Mbps, Cob. 100Mbps condiciones máxima demanda, Cob. 1Gbps descarga condiciones máxima demanda, Cob. 30Mbps, Cob. 30Mbps condiciones máxima demanda, FTTH, HFC, Inalámbrico fijo); cobertura_ba_espana_2013-2020_esp_mun_prov_ccaa_nacional_datosgob.xlsx/Municipio: 221 municipios, 106 columnas (ADSL 10Mbps, ADSL 2Mbps, Cob. 100Mbps, Cob. 10Mbps, Cob. 2Mbps, Cob. 30Mbps, Cob. 30Mbps criterio A.E., FTTH, HFC, HSPA, Inal. 2Mbps, Inal. 30Mbps, Inal. 30Mbps criterio A.E., LTE, VDSL 30Mbps)
+
+Ficheros restaurados (habrían perdido más de la mitad):
+data/processed/energia/cobertura_fulls.txt: 2 KB -> 0 KB, restaurat
 ```
