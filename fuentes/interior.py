@@ -40,7 +40,7 @@ def _csv(carpeta_px: str, fitxer: str) -> pd.DataFrame:
 
 def ejecutar() -> str:
     lineas = []
-    h = get(f"{MIR}/publico/portalestadistico/balances", timeout=120).text
+    h = get(f"{MIR}/publico/portalestadistico/balances", timeout=120, reintentos=5).text
     paths = sorted(set(re.findall(r"(DatosBalance\w*/(\d{4})(\d)/)", h)), key=lambda x: (x[1], x[2]))
     if not paths:
         raise RuntimeError("no hay trimestres en la página de balances")

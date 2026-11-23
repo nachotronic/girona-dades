@@ -136,6 +136,9 @@ def _poblacio(sal) -> str:
             js = get(url, timeout=300).json()
         except Exception:  # noqa: BLE001
             continue
+        if not isinstance(js, list):
+            # El INE responde con un diccionario de estado (p. ej. «restricciones de volumen»): se prueba la siguiente
+            continue
         for se in js:
             parts = [x.strip() for x in se.get("Nombre", "").split(".")]
             if len(parts) < 3 or not ("Todas las edades" in parts or parts[1] == "Total") or "Total" not in parts[1:3]:

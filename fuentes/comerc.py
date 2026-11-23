@@ -125,21 +125,40 @@ def _sectors_api(sal, df) -> str:
     gi = df[df["ine"].notna()][["ine", "municipi", "any"]].drop_duplicates()
     darrer = gi["any"].max()
     fets = set(zip(prev["ine"], prev["any"])) if len(prev) else set()
-    files, errors, n = [], 0, 0
-    for x in gi.itertuples():
-        if (x.ine, x.any) in fets and x.any != darrer:
-            continue
+    files, fallits, n = [], [], 0
+
+    def consulta(x) -> bool:
+        nonlocal n
         try:
             r = get(API + "sector/filtre/municipi", params={"municipi": x.municipi, "year": x.any}, timeout=60, reintentos=3)
             dades = r.json()
         except Exception:  # noqa: BLE001
-            errors += 1
-            continue
+            return False
         n += 1
         for s in dades if isinstance(dades, list) else []:
             files.append({"ine": x.ine, "municipi": x.municipi, "any": x.any, "sector": s.get("sector"),
                           "establiments": s.get("numEstabliments") or 0, "sup_venda": s.get("supVenda") or 0})
+        return True
+
+    for x in gi.itertuples():
+        if (x.ine, x.any) in fets and x.any != darrer:
+            continue
+        if not consulta(x):
+            fallits.append(x)
         time.sleep(0.15)
+    # L'API falla a ratxes (503): segona passada, més a poc a poc, només per a les consultes fallides
+    if fallits:
+        time.sleep(60)
+        resten = []
+        for x in fallits:
+            if not consulta(x):
+                resten.append(x)
+            time.sleep(1.5)
+        fallits = resten
+    # Les que continuen fallant però ja tenien dades d'una execució anterior es conserven: no és un error
+    sense = [x for x in fallits if (x.ine, x.any) not in fets]
+    conservats = len(fallits) - len(sense)
+    errors = len(sense)
     nou = pd.DataFrame(files, dtype=str)
     if len(nou):
         claus = set(zip(nou["ine"], nou["any"]))
@@ -147,4 +166,5 @@ def _sectors_api(sal, df) -> str:
     tot = pd.concat([prev, nou], ignore_index=True).sort_values(["ine", "any", "sector"])
     tot.to_csv(f, index=False)
     return (f"Sectors per municipi (API): {n} consultes, {tot[['ine', 'any']].drop_duplicates().shape[0]} municipi-any"
-            + (f"; ERROR en {errors} consultes" if errors else ""))
+            + (f"; {conservats} consultes fallides, es conserven les dades anteriors" if conservats else "")
+            + (f"; ERROR en {errors} consultes sense dades anteriors" if errors else ""))
