@@ -123,6 +123,19 @@
       h_rec_euros: (g, a, c) => `<b>${g} €</b> en medicaments receptats per habitant el ${a}, davant dels ${c} € de Catalunya.`,
       h_rec_grups: (g, v, c) => `El que més es recepta són <b>${g.charAt(0).toLowerCase() + g.slice(1)}</b>: ${v} receptes per cada 100 habitants en un any (Catalunya, ${c}).`,
       h_inf: (v, d, c) => `La ${d}, <b>${v} casos</b> per 100.000 habitants a la regió de Girona. A Catalunya, ${c}.`,
+      sem_lent: ["Quan l'ambulància triga", "Urgències més greus (prioritat 0) en què el SEM va arribar en més de 20 minuts (%)"],
+      sem_rapid: ["Arribar en menys de 10 minuts", "Urgències més greus (prioritat 0) ateses en menys de 10 minuts (%)"],
+      sem_codis: ["Infarts, ictus i politraumatismes", "Codis d'urgència activats pel SEM per 100.000 habitants"],
+      sem_codis_evol: ["Codis d'urgència, any a any", "Codis activats a la regió sanitària de Girona"],
+      sem_recursos: ["Ambulàncies i helicòpters", "Unitats del SEM per milió d'habitants"],
+      codis_noms: { gi: "Politraumatisme greu", cat: "Ictus", esp: "Infart" },
+      casos: "casos", unitats: "unitats", unitats_1: "unitat",
+      h_sem_lent: (g, a, c, g0, a0) => `${/sem/.test(a) ? "La primera meitat del 2022" : "El " + a}, l'ambulància va trigar més de 20 minuts en el <b>${g}</b> de les urgències més greus de la regió de Girona (a Catalunya, en el ${c}). El ${a0}, en el ${g0}.`,
+      h_sem_rapid: (g, a, c, g0, a0) => `Només el <b>${g}</b> de les urgències més greus es van atendre en menys de 10 minuts (${a}); a Catalunya, el ${c}. El ${a0}, el ${g0}.`,
+      h_sem_codis: (n, a, g, c) => `El ${a} el SEM va activar <b>${n} codis</b> de politraumatisme greu a la regió de Girona: ${g} per 100.000 habitants, davant de ${c} a Catalunya.`,
+      h_sem_codis_evol: (a, i, i0, a0) => `Els codis ictus van passar de ${i0} el ${a0} a <b>${i}</b> el ${a}.`,
+      h_sem_recursos: (n, a, s, sc) => `La regió de Girona té <b>${n} unitats</b> del SEM (${a}): ${s} ambulàncies de suport vital bàsic per milió d'habitants, davant de ${sc} a Catalunya. No compta la població estacional.`,
+      font_sem: "Font: Sistema d'Emergències Mèdiques (SEM), resum d'activitat 2013-2022 i memòria anual. Dades per regió sanitària; població: Idescat.",
       esca_salut: ["Com diuen que estan", "Enquesta de salut: adults de 15 anys o més (%)"],
       esca_habits: ["Hàbits", "Enquesta de salut: adults de 15 anys o més (%)"],
       esca_serveis: ["Ús de la sanitat", "Enquesta de salut: tota la població (%)"],
@@ -260,6 +273,19 @@
       h_rec_euros: (g, a, c) => `<b>${g} €</b> en medicamentos recetados por habitante en ${a}, frente a los ${c} € de Cataluña.`,
       h_rec_grups: (g, v, c) => `Lo que más se receta son <b>${g.charAt(0).toLowerCase() + g.slice(1)}</b>: ${v} recetas por cada 100 habitantes en un año (Cataluña, ${c}).`,
       h_inf: (v, d, c) => `La ${d}, <b>${v} casos</b> por 100.000 habitantes en la región de Girona. En Cataluña, ${c}.`,
+      sem_lent: ["Cuando la ambulancia tarda", "Urgencias más graves (prioridad 0) en las que el SEM llegó en más de 20 minutos (%)"],
+      sem_rapid: ["Llegar en menos de 10 minutos", "Urgencias más graves (prioridad 0) atendidas en menos de 10 minutos (%)"],
+      sem_codis: ["Infartos, ictus y politraumatismos", "Códigos de urgencia activados por el SEM por 100.000 habitantes"],
+      sem_codis_evol: ["Códigos de urgencia, año a año", "Códigos activados en la región sanitaria de Girona"],
+      sem_recursos: ["Ambulancias y helicópteros", "Unidades del SEM por millón de habitantes"],
+      codis_noms: { gi: "Politraumatismo grave", cat: "Ictus", esp: "Infarto" },
+      casos: "casos", unitats: "unidades", unitats_1: "unidad",
+      h_sem_lent: (g, a, c, g0, a0) => `${/sem/.test(a) ? "En la primera mitad de 2022" : "En " + a}, la ambulancia tardó más de 20 minutos en el <b>${g}</b> de las urgencias más graves de la región de Girona (en Cataluña, en el ${c}). En ${a0}, en el ${g0}.`,
+      h_sem_rapid: (g, a, c, g0, a0) => `Solo el <b>${g}</b> de las urgencias más graves se atendieron en menos de 10 minutos (${a.replace("1r sem.", "1.er sem.")}); en Cataluña, el ${c}. En ${a0}, el ${g0}.`,
+      h_sem_codis: (n, a, g, c) => `En ${a} el SEM activó <b>${n} códigos</b> de politraumatismo grave en la región de Girona: ${g} por 100.000 habitantes, frente a ${c} en Cataluña.`,
+      h_sem_codis_evol: (a, i, i0, a0) => `Los códigos ictus pasaron de ${i0} en ${a0} a <b>${i}</b> en ${a}.`,
+      h_sem_recursos: (n, a, s, sc) => `La región de Girona tiene <b>${n} unidades</b> del SEM (${a}): ${s} ambulancias de soporte vital básico por millón de habitantes, frente a ${sc} en Cataluña. No cuenta la población estacional.`,
+      font_sem: "Fuente: Sistema d'Emergències Mèdiques (SEM), resumen de actividad 2013-2022 y memoria anual. Datos por región sanitaria; población: Idescat.",
       esca_salut: ["Cómo dicen que están", "Encuesta de salud: adultos de 15 años o más (%)"],
       esca_habits: ["Hábitos", "Encuesta de salud: adultos de 15 años o más (%)"],
       esca_serveis: ["Uso de la sanidad", "Encuesta de salud: toda la población (%)"],
@@ -492,12 +518,17 @@
     mental: ["Probable problema de salut mental", "Probable problema de salud mental"], oci_actiu: ["Oci actiu", "Ocio activo"], oci_sed: ["Oci sedentari", "Ocio sedentario"],
     hipercalorics: ["Menjar hipercalòric sovint", "Comida hipercalórica a menudo"], dents: ["Es renten les dents 2 cops al dia", "Se lavan los dientes 2 veces al día"],
   };
+  const SEM = {
+    ppt: ["Politraumatisme greu", "Politraumatismo grave"], ictus: ["Ictus", "Ictus"], iam: ["Infart", "Infarto"],
+    svb: ["Suport vital bàsic", "Soporte vital básico"], sva: ["Suport vital avançat", "Soporte vital avanzado"],
+    vir: ["Vehicle d'intervenció ràpida", "Vehículo de intervención rápida"], hems: ["Helicòpter", "Helicóptero"],
+  };
   const MATERIES = { pcat: ["Català", "Catalán"], pcast: ["Castellà", "Castellano"], pang: ["Anglès", "Inglés"], pmat: ["Matemàtiques", "Matemáticas"], pcien: ["Ciències", "Ciencias"] };
   const tp = (k, ...a) => { const v = TP[LANG][k]; return typeof v === "function" ? v(...a) : v; };
   // Ampliaciones de otras secciones (demografia.js): textos, nombres de grupo y titulares propios
   const EXT = { grup: [], titular: [] };
   const nomGrup = (g, c) => EXT.grup.reduce((r, f) => r || f(g, c), null) || nomGrup0(g, c);
-  const nomGrup0 = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("hu:") ? tp("hu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
+  const nomGrup0 = (g, c) => (c && /^a[sn]:/.test(c) ? tp("ag")[c.slice(3)] || g : c && c.startsWith("ae:") ? `${c.slice(3)} ${tp("anys_edat")}` : c && c.startsWith("cu:") ? tp("cu")[c.slice(3)] || g : c && c.startsWith("hu:") ? tp("hu")[c.slice(3)] || g : c && c.startsWith("esca:") ? (ESCA[c.slice(5)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("sem:") ? (SEM[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("tt:") ? tp("tt")[c.slice(3)] || g : c && c.startsWith("mes:") ? tp("mesos_c")[+c.slice(4) - 1] : c && c.startsWith("or:") ? (ORIG[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("atc:") ? (ATC[c.slice(4)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("mo:") ? (MO[c.slice(3)] || [g, g])[LANG === "ca" ? 0 : 1] : c && c.startsWith("z:") ? tp("z_" + c.slice(2)) : c && c.startsWith("pais:") ? nomPais(c.slice(5)) : c && MATERIES[c] ? MATERIES[c][LANG === "ca" ? 0 : 1] : c && CAUSES[c] ? CAUSES[c][LANG === "ca" ? 0 : 1] : LANG === "ca" ? GRUPS_CA[g] || g : GRUPS_ES[g] || g);
   const nomSerie = (sp, k) => (sp.noms ? tp(sp.noms + "_noms")[k] : tp(k));
   const unitat = (sp) => (sp.u === "%" ? " %" : sp.u === "€" ? " €" : sp.u === "M" ? " M" : sp.u === "dies" ? " " + tp("dies") : sp.u === "W" ? " W" : sp.u === "m²" ? " m²" : "");
   const etiqueta = (e) => {
@@ -562,7 +593,7 @@
     const mx = Math.max(...gs.flatMap((g) => ks.map((k) => Math.abs(g[k])))) || 1;
     const fv = (v) => (sp.u === "%" ? pct(v, 1) : fmt(v, sp.dec));
     const b = (v, k) => v == null ? "" : `<span class="pb-b"><b class="pg-bg-${k}" style="width:${(Math.abs(v) / mx) * 100}%"></b><em>${fv(v)}</em></span>`;
-    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp(sp.nu || "pac")}</small>` : ""}${g.s ? ` <small class="pb-n pb-s${g.s > 0 ? "m" : "n"}">${g.s > 0 ? "▲ " + tp("sig_mes") : "▼ " + tp("sig_menys")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
+    cont.innerHTML = `<div class="pb">${gs.map((g) => `<div class="pb-fila"><span class="pb-nom">${nomGrup(g.g, g.c)}${g.n != null ? ` <small class="pb-n">${fmt(g.n)} ${tp(g.n === 1 && TP[LANG][(sp.nu || "pac") + "_1"] ? (sp.nu || "pac") + "_1" : sp.nu || "pac")}</small>` : ""}${g.s ? ` <small class="pb-n pb-s${g.s > 0 ? "m" : "n"}">${g.s > 0 ? "▲ " + tp("sig_mes") : "▼ " + tp("sig_menys")}</small>` : ""}</span><span class="pb-barres">${ks.map((k) => b(g[k], k)).join("")}</span></div>`).join("")}</div>`;
   }
 
   // «fins a l'agost del 2026» / «hasta agosto de 2026»
@@ -625,6 +656,10 @@
     if (id === "rec_grups") { const g = sp.grups[0]; return g ? tp("h_rec_grups", nomGrup(g.g, g.c), fmt(g.gi, 1), fmt(g.cat, 1)) : ""; }
     if (id === "inf_setm" || id === "grip_setm") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_inf", fmt(g[2]), tp("setmana", etiqueta(g[1])), fmt(c && c[2])) : ""; }
     if (/^t_/.test(id)) return titularTur(id, sp);
+    if (id === "sem_lent" || id === "sem_rapid") { const s_ = sp.series.gi, g = s_[s_.length - 1], c = ult(sp, "cat"); return g ? tp(`h_${id}`, pct(g[2], 1), g[1], pct(c && c[2], 1), pct(s_[0][2], 1), s_[0][1]) : ""; }
+    if (id === "sem_codis") { const g = sp.grups[0]; return g ? tp("h_sem_codis", fmt(g.n), sp.any, fmt(g.gi, 0), fmt(g.cat, 0)) : ""; }
+    if (id === "sem_codis_evol") { const s_ = sp.series.cat; return s_ && s_.length ? tp("h_sem_codis_evol", s_[s_.length - 1][1], fmt(s_[s_.length - 1][2]), fmt(s_[0][2]), s_[0][1]) : ""; }
+    if (id === "sem_recursos") { const g = sp.grups.find((x) => x.g === "svb"); return g && sp.abs ? tp("h_sem_recursos", fmt(sp.abs.gi), sp.any, fmt(g.gi, 0), fmt(g.cat, 0)) : ""; }
     if (id === "esca_salut") { const g = sp.grups.find((x) => x.g === "percepcio"); return g ? tp("h_esca", fmt(g.gi, 0), sp.any, fmt(g.cat, 0)) : ""; }
     if (id === "esca_habits" || id === "esca_serveis") { const d = sp.grups.filter((x) => x.s); return d.length ? tp("h_esca_dif", d.map((x) => `${nomGrup(x.g, x.c).charAt(0).toLowerCase() + nomGrup(x.g, x.c).slice(1)}, ${pct(x.gi, 0)} ${tp("davant")} ${pct(x.cat, 0)}`).join("; "), sp.any) : ""; }
     if (id === "esca_infants") { const g = sp.grups.find((x) => x.g === "exces_pes"); return g ? tp("h_esca_infants", pct(g.gi, 0), pct(g.cat, 0)) : ""; }
@@ -716,7 +751,7 @@
     if (!S || !Object.keys(S).length) { if (sec) sec.hidden = true; return; }
     ["le_quir_hosp", "le_ext_hosp", "le_diag_hosp"].forEach((k) => { if (S[k]) S[k].noms = "hosp"; });
     if (S.le_pacients) S.le_pacients.noms = "rgi";
-    const ids = ["le_quir", "le_quir_hosp", "le_quir_proc", "le_pacients", "le_ext", "le_ext_hosp", "le_ext_proc", "le_diag", "le_diag_hosp", "le_diag_proc", "rec_hab", "rec_euros", "rec_grups", "inf_setm", "grip_setm", "esca_salut", "esca_habits", "esca_serveis", "esca_infants", "esca_evol"];
-    pintaGrafics(document.getElementById("salut-grafics"), S, ids, (id) => (/^le_/.test(id) ? "font_le" : /^rec_/.test(id) ? "font_rec" : /^esca_/.test(id) ? "font_esca" : "font_inf"));
+    const ids = ["le_quir", "le_quir_hosp", "le_quir_proc", "le_pacients", "le_ext", "le_ext_hosp", "le_ext_proc", "le_diag", "le_diag_hosp", "le_diag_proc", "rec_hab", "rec_euros", "rec_grups", "inf_setm", "grip_setm", "esca_salut", "esca_habits", "esca_serveis", "esca_infants", "esca_evol", "sem_lent", "sem_rapid", "sem_codis", "sem_codis_evol", "sem_recursos"];
+    pintaGrafics(document.getElementById("salut-grafics"), S, ids, (id) => (/^le_/.test(id) ? "font_le" : /^rec_/.test(id) ? "font_rec" : /^esca_/.test(id) ? "font_esca" : /^sem_/.test(id) ? "font_sem" : "font_inf"));
   };
 })();
