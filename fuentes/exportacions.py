@@ -40,7 +40,7 @@ MESOS = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6
 RE_ZIP = re.compile(r'href="([^"]*/tr(\d\d)(an|[a-z]{2})(\d\d)\.zip)"', re.I)
 RE_PAG = re.compile(r'href="(/Sede/estadisticas/estadisticas-comercio-exterior/[^"#?]+\.html)"')
 # Población residente por provincia (ECP, tabla 56945; la 2852 del padrón se dejó de actualizar en 2021)
-INE_POB = ["https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/56945?nult=1", "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2852?nult=1"]
+INE_POB = ["https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/56945?nult=1", "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2852?nult=10"]
 PROVS = {"01": "Araba/Álava", "02": "Albacete", "03": "Alicante/Alacant", "04": "Almería", "05": "Ávila", "06": "Badajoz",
          "07": "Balears, Illes", "08": "Barcelona", "09": "Burgos", "10": "Cáceres", "11": "Cádiz", "12": "Castellón/Castelló",
          "13": "Ciudad Real", "14": "Córdoba", "15": "Coruña, A", "16": "Cuenca", "17": "Girona", "18": "Granada", "19": "Guadalajara",

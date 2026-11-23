@@ -122,17 +122,31 @@ def ejecutar() -> str:
 def _sectors_api(sal, df) -> str:
     f = sal / "sectors_municipis.csv"
     prev = pd.read_csv(f, dtype=str) if f.exists() else pd.DataFrame(columns=["ine", "municipi", "any", "sector", "establiments", "sup_venda"])
-    gi = df[df["ine"].notna()][["ine", "municipi", "any"]].drop_duplicates()
+    gi = df[df["ine"].notna()][["ine", "municipi", "any", "establiments"]].drop_duplicates(["ine", "municipi", "any"])
     darrer = gi["any"].max()
     fets = set(zip(prev["ine"], prev["any"])) if len(prev) else set()
     files, fallits, n = [], [], 0
 
+    def variants(nom: str) -> list[str]:
+        """L'API no sempre fa servir el nom del cens: «Bisbal d'Empordà, la» -> «la Bisbal d'Empordà», noms antics."""
+        v = [nom]
+        if ", " in nom:
+            base, art = nom.rsplit(", ", 1)
+            v.append(f"{art}{base}" if art.endswith("'") else f"{art} {base}")
+        v += [k for k, val in ALIES.items() if val == nom]
+        return list(dict.fromkeys(v))
+
     def consulta(x) -> bool:
         nonlocal n
-        try:
-            r = get(API + "sector/filtre/municipi", params={"municipi": x.municipi, "year": x.any}, timeout=60, reintentos=3)
-            dades = r.json()
-        except Exception:  # noqa: BLE001
+        dades = None
+        for nom in variants(x.municipi):
+            try:
+                r = get(API + "sector/filtre/municipi", params={"municipi": nom, "year": x.any}, timeout=60, reintentos=2)
+                dades = r.json()
+                break
+            except Exception:  # noqa: BLE001
+                continue
+        if dades is None:
             return False
         n += 1
         for s in dades if isinstance(dades, list) else []:
@@ -158,7 +172,9 @@ def _sectors_api(sal, df) -> str:
     # Les que continuen fallant però ja tenien dades d'una execució anterior es conserven: no és un error
     sense = [x for x in fallits if (x.ine, x.any) not in fets]
     conservats = len(fallits) - len(sense)
-    errors = len(sense)
+    # Municipis sense cap establiment aquell any: l'API no en té fitxa, no és un error
+    buits = [x for x in sense if pd.to_numeric(x.establiments, errors="coerce") == 0]
+    errors = len(sense) - len(buits)
     nou = pd.DataFrame(files, dtype=str)
     if len(nou):
         claus = set(zip(nou["ine"], nou["any"]))
@@ -167,4 +183,5 @@ def _sectors_api(sal, df) -> str:
     tot.to_csv(f, index=False)
     return (f"Sectors per municipi (API): {n} consultes, {tot[['ine', 'any']].drop_duplicates().shape[0]} municipi-any"
             + (f"; {conservats} consultes fallides, es conserven les dades anteriors" if conservats else "")
-            + (f"; ERROR en {errors} consultes sense dades anteriors" if errors else ""))
+            + (f"; {len(buits)} municipi-any sense establiments (l'API no en té fitxa)" if buits else "")
+            + (f"; ERROR en {errors} consultes sense dades anteriors: " + ", ".join(f"{x.municipi} {x.any}" for x in sense if x not in buits)[:300] if errors else ""))
