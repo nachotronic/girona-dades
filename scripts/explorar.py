@@ -272,20 +272,8 @@ def extension(tipo: str) -> str:
     return "txt"
 
 
-def diseno_trf() -> None:
-    """Temporal: texto del diseño de registro de transferencias de la DGT."""
-    import io
-    from pypdf import PdfReader
-    url = "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/dgt-en-cifras/matraba/TRANSFERENCIAS_MATRABA.pdf"
-    r = requests.get(url, headers=UA, timeout=120)
-    txt = "\n".join(f"## p{i + 1}\n" + (pg.extract_text() or "") for i, pg in enumerate(PdfReader(io.BytesIO(r.content)).pages))
-    (SALIDA / "dgt_transferencias_diseno.txt").write_text(txt, encoding="utf-8")
-
-
 def main() -> None:
     MUESTRAS.mkdir(parents=True, exist_ok=True)
-    diseno_trf()
-    return
     filas = ["| id | estado | tipo | tamaño | url final |", "| --- | --- | --- | --- | --- |"]
     for clave, url in CANDIDATAS_E.items():
         try:
