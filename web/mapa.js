@@ -159,12 +159,14 @@
   const NOTA_ARX = { ca: "Departament de Cultura, directori d'arxius de Catalunya (municipals, comarcals, eclesiàstics, d'empresa...).", es: "Departament de Cultura, directorio de archivos de Cataluña (municipales, comarcales, eclesiásticos, de empresa...)." };
   const NOTA_LLIB = { ca: "Departament de Cultura, xarxa de llibreries acreditades (llibreries independents amb fons i activitat cultural reconeguts). No són totes les llibreries.", es: "Departament de Cultura, red de librerías acreditadas (librerías independientes con fondo y actividad cultural reconocidos). No son todas las librerías." };
   const NOTA_PROG = { ca: "Programa.cat: funcions professionals de teatre, música, circ i dansa que els ajuntaments contracten amb ajut del Departament de Cultura i de la Diputació, segons el municipi on es fan. No és tota la programació del municipi.", es: "Programa.cat: funciones profesionales de teatro, música, circo y danza que los ayuntamientos contratan con ayuda del Departament de Cultura y de la Diputació, según el municipio donde se hacen. No es toda la programación del municipio." };
+  const NOTA_CPNL = { ca: "Consorci per a la Normalització Lingüística (CPNL): inscripcions als seus cursos de català segons el municipi de residència de l'alumne. Una persona que fa dos cursos l'any compta dues vegades. No inclou altres escoles d'idiomes. Dades des del 2011.", es: "Consorci per a la Normalització Lingüística (CPNL): inscripciones en sus cursos de catalán según el municipio de residencia del alumno. Una persona que hace dos cursos al año cuenta dos veces. No incluye otras escuelas de idiomas. Datos desde 2011." };
   const NOTA_AG = { ca: "Agenda cultural de Catalunya: activitats que els ajuntaments, els equipaments i les entitats hi publiquen, segons el municipi i l'any en què comencen. Depèn de qui hi publica: no és el total d'activitats.", es: "Agenda cultural de Cataluña: actividades que los ayuntamientos, los equipamientos y las entidades publican en ella, según el municipio y el año en que empiezan. Depende de quién publica: no es el total de actividades." };
   const BIBC = { cob: 0.1 };
   // Solo comarcas (Idescat, último año): x["cul_" + clave] = {año: valor}
   const CUL_DARRER = (o) => { if (!o) return null; const ks = Object.keys(o).sort(); return ks.length ? o[ks[ks.length - 1]] : null; };
   const CUC = (k) => (x) => CUL_DARRER(x && x["cul_" + k]);
   const CUCR = (k) => () => { const r = D.cul_ref && D.cul_ref[k]; const o = r ? CUL_DARRER(r) : null; return o || {}; };
+  const NOTA_CULTE = { ca: "Només per comarques: Idescat, Anuari estadístic de Catalunya (font: Direcció General d'Afers Religiosos, Departament de Justícia), darrer any publicat. Compta els llocs de culte registrats de cada confessió. La Cerdanya i Osona no hi surten perquè només una part és de la província.", es: "Solo por comarcas: Idescat, Anuario estadístico de Cataluña (fuente: Direcció General d'Afers Religiosos, Departament de Justícia), último año publicado. Cuenta los lugares de culto registrados de cada confesión. La Cerdanya y Osona no salen porque solo una parte es de la provincia." };
   const NOTA_COMC = { ca: "Només per comarques: Idescat, Anuari estadístic de Catalunya (font: Departament de Cultura), darrer any publicat. Les xifres per habitant són sobre la població de la comarca. La Cerdanya i Osona no hi surten perquè només una part és de la província.", es: "Solo por comarcas: Idescat, Anuario estadístico de Cataluña (fuente: Departament de Cultura), último año publicado. Las cifras por habitante son sobre la población de la comarca. La Cerdanya y Osona no salen porque solo una parte es de la provincia." };
   const CULC = [
     ["c_esp_h", ["Anar al cinema", "Entrades de cinema venudes per habitant i any"], ["Ir al cine", "Entradas de cine vendidas por habitante y año"], N2],
@@ -174,6 +176,11 @@
     ["m_vis_h", ["Visitants dels museus", "Visitants de museus i col·leccions per habitant"], ["Visitantes de los museos", "Visitantes de museos y colecciones por habitante"], N1],
     ["m_vis", ["Visitants dels museus (total)", "Visitants de museus i col·leccions"], ["Visitantes de los museos (total)", "Visitantes de museos y colecciones"], N0],
     ["m_n", ["Museus registrats", "Museus i col·leccions registrats (seus i subseus)"], ["Museos registrados", "Museos y colecciones registrados (sedes y subsedes)"], N0],
+    ["ct_h", ["Centres de culte", "Centres de culte per 10.000 habitants"], ["Centros de culto", "Centros de culto por 10.000 habitantes"], N1, NOTA_CULTE],
+    ["ct_n", ["Centres de culte (total)", "Centres de culte de totes les confessions"], ["Centros de culto (total)", "Centros de culto de todas las confesiones"], N0, NOTA_CULTE],
+    ["ct_cat", ["Esglésies catòliques", "Centres de culte catòlics"], ["Iglesias católicas", "Centros de culto católicos"], N0, NOTA_CULTE],
+    ["ct_ev", ["Esglésies evangèliques", "Centres de culte evangèlics"], ["Iglesias evangélicas", "Centros de culto evangélicos"], N0, NOTA_CULTE],
+    ["ct_isl", ["Mesquites i oratoris", "Centres de culte islàmics"], ["Mezquitas y oratorios", "Centros de culto islámicos"], N0, NOTA_CULTE],
     ["r_fm", ["Ràdios FM", "Emissores de ràdio de freqüència modulada (privades i municipals)"], ["Radios FM", "Emisoras de radio de frecuencia modulada (privadas y municipales)"], N0],
   ];
   const CUL = [
@@ -201,6 +208,8 @@
     ["llib_n", "cul_eq", ["Llibreries acreditades", "Llibreries de la xarxa acreditada per la Generalitat"], ["Librerías acreditadas", "Librerías de la red acreditada por la Generalitat"], NOTA_LLIB, { sumable: true, ...N0 }],
     ["p_h", "cul_prog", ["Funcions de teatre i música", "Funcions professionals de Programa.cat per 10.000 habitants"], ["Funciones de teatro y música", "Funciones profesionales de Programa.cat por 10.000 habitantes"], NOTA_PROG, N1],
     ["p_n", "cul_prog", ["Funcions (total)", "Funcions professionals de teatre, música, circ i dansa de Programa.cat"], ["Funciones (total)", "Funciones profesionales de teatro, música, circo y danza de Programa.cat"], NOTA_PROG, { sumable: true, ...N0 }],
+    ["cpnl_h", "cul_cpnl", ["Cursos de català", "Inscripcions als cursos de català del CPNL per 1.000 habitants"], ["Cursos de catalán", "Inscripciones en los cursos de catalán del CPNL por 1.000 habitantes"], NOTA_CPNL, N1],
+    ["cpnl_n", "cul_cpnl", ["Cursos de català (total)", "Inscripcions als cursos de català del CPNL"], ["Cursos de catalán (total)", "Inscripciones en los cursos de catalán del CPNL"], NOTA_CPNL, { sumable: true, ...N0 }],
     ["ag_h", "cul_ag", ["Agenda cultural", "Activitats publicades a l'agenda cultural per 1.000 habitants"], ["Agenda cultural", "Actividades publicadas en la agenda cultural por 1.000 habitantes"], NOTA_AG, N1],
     ["ag_n", "cul_ag", ["Agenda cultural (total)", "Activitats publicades a l'agenda cultural"], ["Agenda cultural (total)", "Actividades publicadas en la agenda cultural"], NOTA_AG, { sumable: true, ...N0 }],
   ];
@@ -715,7 +724,7 @@
       com: ACZ(k, a), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: ACR(k, "cat")(y), esp: ACR(k, "esp")(y) }; }, nota, ...fmtk })),
     ...CUL.map(([k, a, ca, es, nota, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a, v: (m) => CU(k)(m, D.anys && D.anys[a]), t: CU(k), pv: CUR(k, "gi"),
       ...(/^b_/.test(k) ? { com: CUZ(k, a), buit: () => !(D.anys && D.anys[a]) } : {}), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: CUR(k, "cat")(y) }; }, nota, ...fmtk })),
-    ...CULC.map(([k, ca, es, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a: "cul_com", sumable: false, com: CUC(k), ref: CUCR(k), nota: NOTA_COMC, ...fmtk })),
+    ...CULC.map(([k, ca, es, fmtk, nota]) => ({ id: "cul_" + k, tema: "cul", ca, es, a: "cul_com", sumable: false, com: CUC(k), ref: CUCR(k), nota: nota || NOTA_COMC, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
