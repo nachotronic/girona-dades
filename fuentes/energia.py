@@ -124,39 +124,50 @@ def _carburants(d) -> str:
 
 
 def _cobertura(d) -> str:
+    """Cobertura de banda ancha por municipio, en formato largo: ine, fitxer, base (llars/habitatges), tecnologia, data, pct."""
     html = get(COB_PAGINA).text
     enllacos = [urllib.parse.urljoin(COB_PAGINA, h) for h in re.findall(r'href="([^"]+\.xlsx)"', html) if re.search(r"cobertura", h, re.I)]
     if not enllacos:
         raise RuntimeError("no hay enlaces .xlsx en la página de cobertura")
-    lineas = []
-    files = []
+    lineas, files = [], []
     for url in enllacos:
         nom = urllib.parse.unquote(url.rsplit("/", 1)[-1])
         x = descargar(url, RAW / "energia" / nom, timeout=900)
         xl = pd.ExcelFile(x)
         for full in xl.sheet_names:
+            if not re.match(r"(?i)^municipio", full):
+                continue
             df = xl.parse(full, header=None, dtype=str)
-            # Fila de cabecera: la primera que menciona el municipio o el código INE
-            cap = next((i for i in range(min(30, len(df))) if df.iloc[i].astype(str).str.contains(r"(?i)municipio|c[oó]d.*ine|cod_?mun", regex=True).any()), None)
+            cap = next((i for i in range(min(30, len(df))) if (df.iloc[i].astype(str).str.strip() == "CMUN").any()), None)
             if cap is None:
-                lineas.append(f"{nom}/{full}: sin cabecera ({df.shape})")
+                lineas.append(f"{nom}/{full}: ERROR sin columna CMUN")
                 continue
             t = df.iloc[cap + 1:].copy()
-            t.columns = [str(c).strip() for c in df.iloc[cap]]
-            ccod = next((c for c in t.columns if re.search(r"(?i)c[oó]d|ine", c) and t[c].astype(str).str.match(r"^\s*17\d{3}\s*$").any()), None)
-            if not ccod:
-                lineas.append(f"{nom}/{full}: sin código de municipio; columnas {list(t.columns)[:12]}")
-                continue
-            t = t[t[ccod].astype(str).str.strip().str.match(r"^17\d{3}$")].copy()
-            t.insert(0, "ine", t[ccod].astype(str).str.strip())
-            t.insert(0, "full", full)
-            t.insert(0, "fitxer", nom)
-            files.append(t)
-            lineas.append(f"{nom}/{full}: {len(t)} municipios; columnas {list(t.columns)[3:20]}")
+            t.columns = [re.sub(r"\s+", " ", str(c)).strip() for c in df.iloc[cap]]
+            t = t.loc[:, ~pd.Index(t.columns).duplicated()]
+            cm = t["CMUN"].astype(str).str.strip().str.replace(r"\.0$", "", regex=True)
+            if cm.str.match(r"^17\d{3}$").any():
+                ine = cm.str.zfill(5)
+            else:
+                ine = "17" + cm.str.zfill(3)
+                ine = ine.where(t["Provincia"].astype(str).str.contains(r"(?i)girona|gerona"))
+            t["ine"] = ine
+            t = t[t["ine"].fillna("").str.match(r"^17\d{3}$")]
+            base = "habitatges" if re.search(r"(?i)vivienda", full) else "llars"
+            cols = [c for c in t.columns if re.search(r"\((?:[a-zA-Záéíóú]+\.?\s+)?\d{4}\)$", c)]
+            for c in cols:
+                m = re.match(r"^(.*?)\s*\((?:([a-zA-Záéíóú]+)\.?\s+)?(\d{4})\)$", c)
+                v = pd.to_numeric(t[c].astype(str).str.replace(",", ".").str.replace("%", ""), errors="coerce")
+                if v.max() is not None and v.max() > 1.5:
+                    v = v / 100
+                files.append(pd.DataFrame({"ine": t["ine"], "fitxer": nom[:40], "base": base, "tecnologia": m.group(1).strip(),
+                                           "mes": (m.group(2) or "").lower()[:3], "any": int(m.group(3)), "pct": v.round(4)}))
+            lineas.append(f"{nom}/{full}: {t['ine'].nunique()} municipios, {len(cols)} columnas ({', '.join(sorted({re.sub(r' *\(.*', '', c) for c in cols}))[:300]})")
     if files:
-        pd.concat(files, ignore_index=True).to_csv(d / "cobertura.csv.gz", index=False, compression="gzip")
+        out = pd.concat(files, ignore_index=True).dropna(subset=["pct"])
+        out.to_csv(d / "cobertura.csv.gz", index=False, compression="gzip")
     (d / "cobertura_fulls.txt").write_text("\n".join(lineas), encoding="utf-8")
-    return "cobertura: " + "; ".join(lineas)[:1200]
+    return "cobertura: " + "; ".join(lineas)[:1500]
 
 
 def ejecutar() -> str:
