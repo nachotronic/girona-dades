@@ -38,6 +38,8 @@ def _ines_ajuntaments(noms: pd.Series) -> pd.Series:
     """'Ajuntament de la Bisbal d'Empordà' -> 17023 (solo municipios de la provincia)."""
     mun = municipios()
     per_nom = dict(zip(mun["nom_normalitzat"], mun["codi_ine"].astype(str).str.zfill(5)))
+    # Nombres cortos que usan algunos ayuntamientos
+    per_nom.update({"aro castell platja": "17048", "calonge": "17034", "aro castell": "17048"})
     net = noms.fillna("").str.replace(r"(?i)^\s*ajuntament\s+(de\s+|d['’]\s*)?", "", regex=True)
     return net.map(lambda s: per_nom.get(normaliza(s)))
 
