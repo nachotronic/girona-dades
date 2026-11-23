@@ -21,6 +21,8 @@
       extra: ["Apartaments, càmpings i rural", "Pernoctacions al mes"],
       aena: ["Aeroport de Girona", "Passatgers al mes"],
       mat: ["Cotxes nous", "Turismes nous matriculats al mes"],
+      trf: ["Cotxes de segona mà", "Turismes venuts entre particulars i empreses al mes (canvis de titular)"],
+      vells: (v) => `${v} tenen 15 anys o més`,
       soc: ["Empreses noves", "Societats mercantils constituïdes al mes"],
       g_feina: "Feina", g_hab: "Habitatge", g_tur: "Turisme i mobilitat", g_eco: "Preus i empreses",
       electrics: (v) => `${v} elèctrics`,
@@ -30,7 +32,7 @@
       h_fitxa: "Conjuntura", sub_fitxa: "Últims tres anys, mes a mes o trimestre a trimestre.",
       f_atur: ["Atur registrat", "persones"], f_contr: ["Contractes signats", "al municipi del centre de treball"],
       f_llq: ["Lloguer mitjà del trimestre", "€/mes, contractes nous"], f_cvq: ["Compravendes d'habitatges", "per trimestre"],
-      f_ini: ["Habitatges iniciats", "per trimestre"], f_afil: ["Afiliats a la Seguretat Social", "residents al municipi"], f_mat: ["Cotxes nous", "turismes matriculats per veïns i empreses"], sense: "Sense dades recents per a aquest municipi.",
+      f_ini: ["Habitatges iniciats", "per trimestre"], f_afil: ["Afiliats a la Seguretat Social", "residents al municipi"], f_mat: ["Cotxes nous", "turismes matriculats per veïns i empreses"], f_trf: ["Cotxes de segona mà", "turismes comprats per veïns i empreses"], sense: "Sense dades recents per a aquest municipi.",
       llegenda: (p, a) => `<i class="cj-l-ult"></i>${p} <i class="cj-l-ant"></i>${a}`,
     },
     es: {
@@ -51,6 +53,8 @@
       extra: ["Apartamentos, campings y rural", "Pernoctaciones en el mes"],
       aena: ["Aeropuerto de Girona", "Pasajeros en el mes"],
       mat: ["Coches nuevos", "Turismos nuevos matriculados en el mes"],
+      trf: ["Coches de segunda mano", "Turismos vendidos entre particulares y empresas en el mes (cambios de titular)"],
+      vells: (v) => `${v} tienen 15 años o más`,
       soc: ["Empresas nuevas", "Sociedades mercantiles constituidas en el mes"],
       g_feina: "Empleo", g_hab: "Vivienda", g_tur: "Turismo y movilidad", g_eco: "Precios y empresas",
       electrics: (v) => `${v} eléctricos`,
@@ -60,7 +64,7 @@
       h_fitxa: "Coyuntura", sub_fitxa: "Últimos tres años, mes a mes o trimestre a trimestre.",
       f_atur: ["Paro registrado", "personas"], f_contr: ["Contratos firmados", "en el municipio del centro de trabajo"],
       f_llq: ["Alquiler medio del trimestre", "€/mes, contratos nuevos"], f_cvq: ["Compraventas de viviendas", "por trimestre"],
-      f_ini: ["Viviendas iniciadas", "por trimestre"], f_afil: ["Afiliados a la Seguridad Social", "residentes en el municipio"], f_mat: ["Coches nuevos", "turismos matriculados por vecinos y empresas"], sense: "Sin datos recientes para este municipio.",
+      f_ini: ["Viviendas iniciadas", "por trimestre"], f_afil: ["Afiliados a la Seguridad Social", "residentes en el municipio"], f_mat: ["Coches nuevos", "turismos matriculados por vecinos y empresas"], f_trf: ["Coches de segunda mano", "turismos comprados por vecinos y empresas"], sense: "Sin datos recientes para este municipio.",
       llegenda: (p, a) => `<i class="cj-l-ult"></i>${p} <i class="cj-l-ant"></i>${a}`,
     },
   };
@@ -86,6 +90,7 @@
     { id: "ipc", g: "eco", per: "m", pp: true, linia: true, u: "%", dec: 1, nivell: true, font: "INE, IPC" },
     { id: "soc", g: "eco", per: "m", flux: true, font: "INE, Societats mercantils" },
     { id: "mat", g: "eco", per: "m", flux: true, mapa: "cj_mat", font: "DGT" },
+    { id: "trf", g: "eco", per: "m", flux: true, mapa: "cj_trf", font: "DGT" },
   ];
   const GRUPS = ["feina", "hab", "tur", "eco"];
 
@@ -204,6 +209,7 @@
     }).join("");
     const n = salt(c.per), acum = c.flux ? suma(s, i, n) : null, acumAnt = c.flux ? suma(s, i - n, n) : null;
     let extraTxt = "";
+    if (c.id === "trf" && D.cj.prov.trf_v && D.cj.prov.trf_v.gi && D.cj.prov.trf_v.gi[i] != null) extraTxt = `<p class="cj-acum">${tx("vells", pct(D.cj.prov.trf_v.gi[i], 1))}</p>`;
     if (c.id === "mat" && D.cj.prov.mat_el && D.cj.prov.mat_el.gi && D.cj.prov.mat_el.gi[i] != null) extraTxt = `<p class="cj-acum">${tx("electrics", pct(D.cj.prov.mat_el.gi[i], 1))}</p>`;
     const acumTxt = acum != null ? `<p class="cj-acum">${tx(c.per === "m" ? "ult12" : "ult4")}: <b>${fv(acum, c)}</b>${acumAnt ? ` <span class="${cls((acum / acumAnt - 1) * 100)}">${signe((acum / acumAnt - 1) * 100)}</span>` : ""}</p>` : "";
     const varTxt = c.nivell ? `<p class="cj-var">${ant ? `${tx("vs", etPer(ant))}: <b>${fv(s[i - n], c)}</b>` : ""}</p>`
@@ -242,6 +248,7 @@
     { k: "afil", per: "m", t: "f_afil" },
     { k: "contr", per: "m", t: "f_contr", flux: true },
     { k: "mat", per: "m", t: "f_mat", flux: true },
+    { k: "trf", per: "m", t: "f_trf", flux: true },
     { k: "llq", per: "t", t: "f_llq", u: "€" },
     { k: "cvq", per: "t", t: "f_cvq", flux: true },
   ];
