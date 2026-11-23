@@ -13,7 +13,9 @@ import yaml
 from .comun import RAIZ, RAW, carpeta, descargar, normaliza, slug
 from .territorio import municipios
 
-URL = "https://apps.fomento.gob.es/BoletinOnline2/sedal/{codigo}.XLS"
+# El Boletín se mudó a boletinestadistico.transportes.gob.es en 2026: la dirección antigua
+# (apps.fomento.gob.es/BoletinOnline2/sedal/) devuelve una página HTML en lugar del Excel
+URL = "https://cdn.transportes.gob.es/estadistica/BoletinOnline2/{codigo}.xls"
 
 
 def _codigos() -> dict[str, list[str]]:
