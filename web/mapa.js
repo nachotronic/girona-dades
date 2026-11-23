@@ -196,6 +196,7 @@
   const PCA = { f: (v) => `${v > 0 ? "+" : ""}${pct(v, 0)}`, c: (v) => `${v > 0 ? "+" : ""}${fmt(v, 0)}` };
   const AMB_MUN = [
     ["seq_exc", "amb_seq", ["Dies de sequera greu", "Dies en excepcionalitat o emergència per sequera"], ["Días de sequía grave", "Días en excepcionalidad o emergencia por sequía"], NOTA_SEQ, N0],
+    ["seq_exc_tot", "amb_terr", ["Sequera greu des del 2021", "Dies en excepcionalitat o emergència per sequera des del 2021"], ["Sequía grave desde 2021", "Días en excepcionalidad o emergencia por sequía desde 2021"], NOTA_SEQ, N0],
     ["seq_alerta", "amb_seq", ["Dies en alerta per sequera", "Dies en alerta, excepcionalitat o emergència per sequera"], ["Días en alerta por sequía", "Días en alerta, excepcionalidad o emergencia por sequía"], NOTA_SEQ, N0],
     ["n2000_pct", "amb_terr", ["Xarxa Natura 2000", "Terme municipal dins la Xarxa Natura 2000 (%)"], ["Red Natura 2000", "Término municipal dentro de la Red Natura 2000 (%)"], NOTA_N2000, P0],
     ["enp_pct", "amb_terr", ["Espais naturals protegits", "Terme municipal dins d'espais naturals protegits (%)"], ["Espacios naturales protegidos", "Término municipal dentro de espacios naturales protegidos (%)"], NOTA_ENP, P0],

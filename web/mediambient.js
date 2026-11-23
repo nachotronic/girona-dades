@@ -154,7 +154,7 @@
     if (!x) return;
     const e = D.amb.emb, t = A.amb_temp && A.amb_temp.series.gi, sq = A.amb_seq && A.amb_seq.series.gi;
     const ts = t && t.length ? t[t.length - 1] : null;
-    const any = D.anys && D.anys.amb_seq;
+    const any = (e && e.seq_pitjor) || (D.anys && D.anys.amb_seq);
     let nSeq = null, nTot = 0;
     if (any) D.municipios.forEach((m) => { const v = m.amb && m.amb.seq_exc && m.amb.seq_exc[any]; if (m.amb && m.amb.seq_exc) { nTot++; if (v > 0) nSeq = (nSeq || 0) + 1; } });
     x.innerHTML = [

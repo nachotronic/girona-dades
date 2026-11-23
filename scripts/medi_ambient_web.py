@@ -100,8 +100,9 @@ def _sequera(municipios):
         dies = pd.Series(g["g"].to_numpy(), index=g["data"]).resample("D").ffill()
         dies = dies.reindex(pd.date_range(dies.index.min(), avui, freq="D")).ffill()
         o = {}
+        o["seq_exc_tot"] = {avui.year: int((dies[dies.index >= "2021-01-01"] >= 3).sum())}
         for a, x in dies.groupby(dies.index.year):
-            if a < 2021:
+            if a < 2021 or a >= avui.year:  # el año en curso no está completo
                 continue
             o.setdefault("seq_alerta", {})[int(a)] = int((x >= 2).sum())
             o.setdefault("seq_exc", {})[int(a)] = int((x >= 3).sum())
@@ -112,6 +113,9 @@ def _sequera(municipios):
                 mensual[mes][2 if x.max() >= 3 else 1 if x.max() >= 2 else 0] += 1
     # Último año: días transcurridos (no completo)
     anys = sorted({a for o in mun.values() for a in o.get("seq_exc", {})})
+    # Año con más municipios en sequía grave (para la cifra de la sección)
+    pitjor = max(anys, key=lambda a: sum(1 for o in mun.values() if o.get("seq_exc", {}).get(a, 0) > 0)) if anys else None
+    mensual["_pitjor"] = pitjor
     return mun, (anys[-1] if anys else None), dict(mensual), ara
 
 
@@ -351,6 +355,7 @@ def construir(municipios, sortida: pathlib.Path) -> dict:
             res["mun"].setdefault(ine, {}).update(o)
     if as_:
         res["anys"]["amb_seq"] = as_
+        res["seq_pitjor"] = mensual.pop("_pitjor", None)
         mesos = sorted(mensual)
         res["prov"]["amb_seq"] = {"tipus": "linia", "u": "", "dec": 0, "noms": "amb_seq", "zero": True, "series": {
             "gi": [[int(m[:4]) + (int(m[5:]) - 1) / 12, m, mensual[m].get(2, 0)] for m in mesos],
@@ -363,6 +368,9 @@ def construir(municipios, sortida: pathlib.Path) -> dict:
         if ine in ines:
             for k, v in o.items():
                 res["mun"].setdefault(ine, {})[k] = {any_terr: v}
+    for ine, o in ms.items():
+        if ine in ines and "seq_exc_tot" in o:
+            res["mun"][ine]["seq_exc_tot"] = o["seq_exc_tot"]
     if mt:
         res["anys"]["amb_terr"] = any_terr
         resum.append(f"territorio {len(mt)} municipios")
@@ -386,6 +394,8 @@ def construir(municipios, sortida: pathlib.Path) -> dict:
     res["prov"].update(pe)
     if ult_e:
         res["emb"] = ult_e
+    if res.get("seq_pitjor"):
+        res["emb"] = {**res.get("emb", {}), "seq_pitjor": res["seq_pitjor"]}
     # Estaciones
     ai, aai, pai, fai = _aire()
     if aai:

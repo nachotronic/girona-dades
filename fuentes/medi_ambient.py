@@ -178,11 +178,7 @@ def _capa(url: str, nom: str):
     dest = RAW / "medi_ambient" / nom
     with zipfile.ZipFile(z) as f:
         f.extractall(dest)
-    for lpk in list(dest.rglob("*.lpk")):
-        import py7zr
-        with py7zr.SevenZipFile(lpk) as f:
-            f.extractall(dest / lpk.stem)
-    gdbs = sorted(p for p in dest.rglob("*.gdb") if p.is_dir())
+    gdbs = sorted(p for p in dest.rglob("*.gdb") if p.is_dir()) + sorted(dest.rglob("*.gpkg"))
     if gdbs:
         import pyogrio
         out = []
@@ -206,7 +202,7 @@ def _territori(d) -> str:
     res = mun[["ine", "ha"]].copy().set_index("ine")
     lineas, llistes = [], []
     capes = {
-        # Los .zip de DescargaFichero piden un captcha: se usa el paquete de capa (.lpk, 7z con una geodatabase) de miteco.gob.es
+        # Los .zip de DescargaFichero piden un captcha: se usa el «paquete de capa» de miteco.gob.es (un zip con un GeoPackage)
         "zvn": (_enllac(ZVN_PAGINA, r"lpk-Zonas_Vulnerables[^\"]*\.zip"), None),
         "n2000": (_enllac(N2000_PAGINA, r"n2000_\d{4}_shp\.zip"), None),
         "enp": (_enllac(ENP_PAGINA, r"Enp\d{4}_shp\.zip"), None),
