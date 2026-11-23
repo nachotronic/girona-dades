@@ -45,7 +45,7 @@
     // Bloques que ya llevan su propia fuente
     com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
     tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
-    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" }, ene: { sel: ".fx-ene" },
+    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" }, ene: { sel: ".fx-ene" }, dp: { sel: ".fx-dp" },
   };
   // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
   const SECCIONS = {
@@ -58,9 +58,11 @@
     dem: { sel: "#s-dem :is(.pg-fig, .dm-peca)", ancla: "#s-dem", pinta: "pintaSeccioDemografia" },
     amb: { sel: "#amb-grafics .pg-fig", ancla: "#s-amb", pinta: "pintaSeccioAmb" },
     ene: { sel: "#ene-grafics .pg-fig", ancla: "#s-ene", pinta: "pintaSeccioEne" },
+    dp: { sel: "#dp-grafics .pg-fig", ancla: "#s-dp", pinta: "pintaSeccioDp" },
   };
   // Fuente corta de los mapas, por tema del indicador
   const FONT_TEMA = {
+    dp: ["RAISC, Registre públic de contractes i Plataforma de contractació pública", "RAISC, Registre públic de contractes y Plataforma de contractació pública"],
     con: ["SEPE, Idescat, DGT i Incasòl", "SEPE, Idescat, DGT e Incasòl"], hab: ["Incasòl, Ministeri d'Habitatge, Cadastre i Registre de Turisme", "Incasòl, Ministerio de Vivienda, Catastro y Registro de Turismo"],
     ren: ["INE, Atlas de renda, i Agència Tributària", "INE, Atlas de renta, y Agencia Tributaria"], pob: ["INE i Idescat, padró", "INE e Idescat, padrón"],
     edu: ["Departament d'Educació, INE i Idescat", "Departament d'Educació, INE e Idescat"], tre: ["Idescat, Seguretat Social i Xifra (Diputació de Girona)", "Idescat, Seguridad Social y Xifra (Diputació de Girona)"],
@@ -166,6 +168,7 @@
     { sel: "#mob-grafics .pg-fig", clau: (e) => `mob:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#amb-grafics .pg-fig", clau: (e) => `amb:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#ene-grafics .pg-fig", clau: (e) => `ene:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#dp-grafics .pg-fig", clau: (e) => `dp:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
   ];
   const urlDe = (c, extra = "") => `${BASE}?embed=${encodeURIComponent(c).replace(/%3A/g, ":")}${extra}&lang=${LANG}`;
   const boto = (fn) => {

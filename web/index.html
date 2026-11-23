@@ -50,6 +50,7 @@
       <a href="#s-dem" data-t="nav_dem">Demografia</a>
       <a href="#s-amb" data-t="nav_amb">Medi ambient</a>
       <a href="#s-ene" data-t="nav_ene">Energia</a>
+      <a href="#s-dp" data-t="nav_dp">Diners</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -281,9 +282,19 @@
     <div class="pg-graella" id="ene-grafics"></div>
   </section>
 
+  <section id="s-dp" class="amplada sec" aria-labelledby="h-dp">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">11</span> <span data-t="sec_dp">Diners públics</span></p>
+      <h2 id="h-dp" data-t="h_dp">Subvencions i contractes</h2>
+      <p class="lead" data-t="lead_dp">Quants diners reparteixen en subvencions la Generalitat, la Diputació i els ajuntaments, i com contracten els ajuntaments: quant, quanta part a dit en contractes menors i quants concursos tenen una sola oferta. Al mapa, el tema «Diners públics» ho baixa a cada municipi i comarca.</p>
+    </header>
+    <div class="xifres dp-xifres" id="dp-xifres"></div>
+    <div class="pg-graella" id="dp-grafics"></div>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">11</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">12</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -368,6 +379,9 @@
       <li data-font="energia"><a href="https://analisi.transparenciacatalunya.cat/d/tb2m-m33b">Generalitat de Catalunya</a><span data-t="f_ene_rec">punts de recàrrega per a vehicles elèctrics</span></li>
       <li data-font="energia"><a href="https://geoportalgasolineras.es/">Ministerio para la Transición Ecológica</a><span data-t="f_ene_carb">preus dels carburants a cada gasolinera, avui i el primer dia de cada mes des del 2010</span></li>
       <li data-font="energia"><a href="https://digital.gob.es/telecomunicaciones-infraestructuras-digitales/areas-interes/banda-ancha/informacion-cobertura.html">Ministerio para la Transformación Digital</a><span data-t="f_ene_cob">cobertura de banda ampla i mòbil per municipi des del 2013</span></li>
+      <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/s9xt-n979">Registre de subvencions i ajuts de Catalunya (RAISC)</a><span data-t="f_dp_raisc">subvencions concedides per la Generalitat, la Diputació, els consells comarcals i els ajuntaments</span></li>
+      <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/hb6v-jcbf">Registre públic de contractes</a><span data-t="f_dp_reg">contractes adjudicats per cada ajuntament, amb els menors</span></li>
+      <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/ybgg-dgi6">Plataforma de serveis de contractació pública</a><span data-t="f_dp_plat">licitacions, ofertes rebudes i adjudicataris dels ens locals</span></li>
       <li data-font="habitatge"><a href="https://analisi.transparenciacatalunya.cat/">Departament de Territori i Agència Tributària de Catalunya, dades obertes</a><span data-t="f_hab">habitatges iniciats i acabats (1990-2025), habitatge protegit, cèdules d'habitabilitat per municipi i secció, àrees de política d'habitatge i Mapa urbanístic de Catalunya</span></li>
       <li data-font="cadastre"><a href="https://www.catastro.hacienda.gob.es/es-ES/estadisticas.html">Dirección General del Catastro, estadístiques</a><span data-t="f_cad">immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal</span></li>
       <li data-font="tributs"><a href="https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/listado_municipiosm.aspx">Ministerio de Hacienda, tipos impositivos municipales</a><span data-t="f_trib">tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)</span></li>
@@ -433,6 +447,7 @@
 <script src="demografia.js"></script>
 <script src="mediambient.js"></script>
 <script src="energia.js"></script>
+<script src="diners.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>
