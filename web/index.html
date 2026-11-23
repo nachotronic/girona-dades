@@ -51,6 +51,7 @@
       <a href="#s-amb" data-t="nav_amb">Medi ambient</a>
       <a href="#s-ene" data-t="nav_ene">Energia</a>
       <a href="#s-dp" data-t="nav_dp">Diners</a>
+      <a href="#s-soc" data-t="nav_soc">Social</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -168,6 +169,7 @@
     </header>
     <div class="xifres tur-xifres" id="tur-xifres"></div>
     <div class="pg-graella" id="tur-grafics"></div>
+    <div class="xifres tur-air" id="tur-air"></div>
   </section>
 
   <section id="s-exp" class="amplada sec" aria-labelledby="h-exp">
@@ -292,9 +294,19 @@
     <div class="pg-graella" id="dp-grafics"></div>
   </section>
 
+  <section id="s-soc" class="amplada sec" aria-labelledby="h-soc">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">12</span> <span data-t="nav_soc">Social</span></p>
+      <h2 id="h-soc" data-t="h_soc">Qui cuida i qui és cuidat</h2>
+      <p class="lead" data-t="lead_soc">Quantes persones atenen els serveis socials, quantes reben ajuda per dependència, quantes places de residència hi ha per a la gent gran i quantes persones cuiden un familiar. Al mapa, el tema «Social» ho baixa a cada municipi i comarca.</p>
+    </header>
+    <div class="xifres soc-xifres" id="soc-xifres"></div>
+    <div class="pg-graella" id="soc-grafics"></div>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">12</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">13</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -382,6 +394,9 @@
       <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/s9xt-n979">Registre de subvencions i ajuts de Catalunya (RAISC)</a><span data-t="f_dp_raisc">subvencions concedides per la Generalitat, la Diputació, els consells comarcals i els ajuntaments</span></li>
       <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/hb6v-jcbf">Registre públic de contractes</a><span data-t="f_dp_reg">contractes adjudicats per cada ajuntament, amb els menors</span></li>
       <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/ybgg-dgi6">Plataforma de serveis de contractació pública</a><span data-t="f_dp_plat">licitacions, ofertes rebudes i adjudicataris dels ens locals</span></li>
+      <li data-font="social"><a href="https://analisi.transparenciacatalunya.cat/d/ivft-vegh">Registre d'entitats, serveis i establiments socials (RESES)</a><span data-t="f_soc_reses">serveis socials de la província, amb la tipologia i les places</span></li>
+      <li data-font="social"><a href="https://analisi.transparenciacatalunya.cat/d/fp8n-2tg5">Departament de Drets Socials</a><span data-t="f_soc_drets">persones ateses pels serveis socials bàsics i els menjadors, dependència, teleassistència, ajuda a domicili i cuidadors no professionals</span></li>
+      <li data-font="social"><a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a><span data-t="f_soc_air">anuncis d'Airbnb a la província, amb coordenades, tipus, preu i número de registre</span></li>
       <li data-font="habitatge"><a href="https://analisi.transparenciacatalunya.cat/">Departament de Territori i Agència Tributària de Catalunya, dades obertes</a><span data-t="f_hab">habitatges iniciats i acabats (1990-2025), habitatge protegit, cèdules d'habitabilitat per municipi i secció, àrees de política d'habitatge i Mapa urbanístic de Catalunya</span></li>
       <li data-font="cadastre"><a href="https://www.catastro.hacienda.gob.es/es-ES/estadisticas.html">Dirección General del Catastro, estadístiques</a><span data-t="f_cad">immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal</span></li>
       <li data-font="tributs"><a href="https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/listado_municipiosm.aspx">Ministerio de Hacienda, tipos impositivos municipales</a><span data-t="f_trib">tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)</span></li>
@@ -448,6 +463,7 @@
 <script src="mediambient.js"></script>
 <script src="energia.js"></script>
 <script src="diners.js"></script>
+<script src="social.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>
