@@ -174,7 +174,10 @@ def _sectors_api(sal, df) -> str:
     conservats = len(fallits) - len(sense)
     # Municipis sense cap establiment aquell any: l'API no en té fitxa, no és un error
     buits = [x for x in sense if pd.to_numeric(x.establiments, errors="coerce") == 0]
-    errors = len(sense) - len(buits)
+    # Anys anteriors al darrer que l'API no dona mai (p. ex. 2021 per als municipis amb article: «Escala, l'»):
+    # forat conegut de la font, s'informa però no és un error. Només és error si falla el darrer any.
+    forats = [x for x in sense if x not in buits and x.any != darrer]
+    errors = len(sense) - len(buits) - len(forats)
     nou = pd.DataFrame(files, dtype=str)
     if len(nou):
         claus = set(zip(nou["ine"], nou["any"]))
@@ -184,4 +187,5 @@ def _sectors_api(sal, df) -> str:
     return (f"Sectors per municipi (API): {n} consultes, {tot[['ine', 'any']].drop_duplicates().shape[0]} municipi-any"
             + (f"; {conservats} consultes fallides, es conserven les dades anteriors" if conservats else "")
             + (f"; {len(buits)} municipi-any sense establiments (l'API no en té fitxa)" if buits else "")
-            + (f"; ERROR en {errors} consultes sense dades anteriors: " + ", ".join(f"{x.municipi} {x.any}" for x in sense if x not in buits)[:300] if errors else ""))
+            + (f"; l'API no té {len(forats)} municipi-any antics: " + ", ".join(f"{x.municipi} {x.any}" for x in forats)[:300] if forats else "")
+            + (f"; ERROR en {errors} consultes del darrer any: " + ", ".join(f"{x.municipi} {x.any}" for x in sense if x not in buits and x not in forats)[:300] if errors else ""))
