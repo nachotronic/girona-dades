@@ -1,0 +1,897 @@
+## p1
+DGT 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SECRETARÍA GENERAL 
+JOSEFA VALCÁRCEL, 44 
+28027-MADRID 
+Documento de interfaz de Envío de 
+Datos (Transferencias) 
+## p2
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 2 
+ 
+ 
+ 
+ 
+ 
+Índice General 
+1 DEFINICIÓN DE LOS FICHEROS DE INTERFAZ DE ENVÍO .......................................................................................... 3 
+1.1 CONTENIDO DE LOS FICHEROS ..................................................................................................................................................................... 3 
+1.2 RELACIÓN DE TABLAS Y FICHEROS........................................................................................................................................................... 7 
+1.3 ANEXO I – TABLAS DE CÓDIGOS ................................................................................................................................................................. 7 
+1.3.1 COD_CLASE_MAT ................................................................................................................................................ 7 
+1.3.2 COD_PROCEDENCIA .......................................................................................................................................... 8 
+1.3.3 COD_SERVICIO .................................................................................................................................................... 8 
+1.3.4 COD_TIPO ............................................................................................................................................................ 9 
+1.3.5 COD_PROPULSION ........................................................................................................................................... 12 
+1.3.6 COD_PROVINCIA_VEH ..................................................................................................................................... 13 
+1.3.7 COD_PROVINCIA_MAT ..................................................................................................................................... 15 
+1.3.8 CLAVE_TRAMITE ............................................................................................................................................... 16 
+1.3.9 SERVICIO ............................................................................................................................................................ 17 
+1.3.10 IND_BAJA_DEF ................................................................................................................................................ 18 
+1.3.11 CATEGORÍA_VEHÍCULO_ELÉCTRICO .......................................................................................................... 18 
+Índice tablas 
+TABLA 1. CONTENIDOS DE LOS FICHEROS ....................................................................................................................... 6 
+TABLA 2. RELACIÓN DE TABLAS Y FICHEROS ................................................................................................................... 7 
+## p3
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 3 
+ 
+ 
+ 
+1  Definición de los Ficheros de Interfaz de 
+Envío 
+En este capítulo, se describe el formato de cada uno de los ficheros que van a componer la 
+Interfaz de Envío 
+1.1 Contenido de los ficheros 
+ 
+• Transferencias de vehículos: Contiene los trámites de transferencias de vehículos. 
+ 
+ 
+ Nombre Campo Descripción Tipo y 
+Longitud 
+Formato 
+1 FEC_MATRICULA Fecha de matriculación del 
+vehículos 
+CHAR(8) DATE. Formato: 
+DDMMYYYY 
+2 COD_CLASE_MAT Código de clase de matrícula CHAR(1) (Ver anexo I) 
+3 FEC_TRAMITACION Fecha de tramitación, que se 
+corresponde con la fecha de 
+transferencia del vehículo contenida 
+en los datos de transferencias. 
+CHAR(8) DATE. Formato: 
+DDMMYYYY 
+4 MARCA_ITV Descripción de la marca del vehículo CHAR(30)  
+5 MODELO_ITV Modelo del vehículo CHAR(22)  
+6 COD_PROCEDENCIA_ITV Código de la procedencia del 
+vehículo. 
+CHAR(1) (Ver anexo I) 
+7 BASTIDOR_ITV Ocho primeros caracteres del Bastidor 
+del vehículo. El resto se completa con 
+*. 
+CHAR(21)  
+8 COD_TIPO Código del tipo de vehículo CHAR(2) (Ver anexo I) 
+9 COD_PROPULSION_ITV Código del tipo de propulsión CHAR(1) (Ver anexo I) 
+10 CILINDRADA_ITV Cilindrada del vehículo CHAR(5) DECIMAL(5,0), 
+FORMAT 'ZZZZ9' 
+11 POTENCIA_ITV Potencia fiscal del vehículo. En CVF. 
+Redondeado a la segunda cifra 
+decimal. 3 enteros y 2 decimales 
+EEEDD 
+CHAR(6) DECIMAL (5,2), 
+FORMAT 'ZZ9.99' 
+12 TARA Tara del vehículo (peso del vehículo). CHAR(6) DECIMAL(7,0), 
+## p4
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 4 
+ 
+ 
+ 
+ Nombre Campo Descripción Tipo y 
+Longitud 
+Formato 
+  la carga útil será la el peso_max - tara  FORMAT 'ZZZZ9' 
+13 PESO_MAX Peso máximo del vehículo CHAR(6) DECIMAL(7,0), 
+FORMAT 
+'ZZZZZ9' 
+14 NUM_PLAZAS Número de plazas de un vehículo. 
+Para un vehículo de carga, este 
+campo indicará el número de plazas 
+máximo permitido cuando el vehículo 
+está "descargado". 
+CHAR(3) INTEGER, 
+FORMAT 'ZZ9' 
+15 IND_PRECINTO Indicador de vehículo precintado CHAR(2) Valores: SI / 
+BLANCO 
+16 IND_EMBARGO Indicador de vehículo embargado CHAR(2) Valores: SI / 
+BLANCO 
+17 NUM_TRANSMISIONES Número de transmisiones que ha 
+tenido el vehículo 
+CHAR(2) INTEGER,FORM 
+AT '99' 
+18 NUM_TITULARES Número de titulares del vehículo CHAR(2) INTEGER,FORM 
+AT '99' 
+19 LOCALIDAD_VEHICULO Localidad del domicilio del vehículo CHAR(24)  
+20 COD_PROVINCIA_VEH Código de la provincia donde está 
+domiciliado el vehículo 
+CHAR(2) (Ver anexo I) 
+21 COD_PROVINCIA_MAT Código de la provincia donde fue 
+matriculado el vehículo 
+CHAR(2) (Ver anexo I) 
+22 CLAVE_TRAMITE Código del trámite CHAR(1) (Ver anexo I) 
+23 FEC_TRAMITE Fecha en la que se realizó el trámite CHAR(8)  
+24 CODIGO_POSTAL Código postal donde está domiciliado 
+el vehículo 
+CHAR(5) INTEGER, 
+FORMAT '99999' 
+25 FEC_PRIM_MATRICULACI 
+ON 
+Fecha de la primera matriculación del 
+vehículo. 
+CHAR(8) DATE. Formato: 
+DDMMYYYY 
+26 IND_NUEVO_USADO Indica si el vehículo es nuevo (N)i o 
+usado (U) al momento de la 
+matriculación FEC_MATRICULA. 
+Este campo se calcula en el almacén 
+de datos. 
+CHAR(1)  
+27 PERSONA_FISICA_JURIDIC 
+A 
+Si es una persona física o jurídica el 
+titular del vehículo 
+CHAR(1) Valores: D 
+(Física)/ X 
+(Jurídica) 
+28 CODIGO_ITV Código ITV CHAR(9)  
+29 SERVICIO Código de servicio del vehículo 
+(nueva versión del campo) 
+CHAR(3) (Ver anexo I) 
+## p5
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 5 
+ 
+ 
+ 
+ Nombre Campo Descripción Tipo y 
+Longitud 
+Formato 
+30 COD_MUNICIPIO_INE_VEH Código INE del municipio del 
+domicilio del vehículo 
+CHAR(5) INTEGER , 
+FORMAT '99999' 
+31 MUNICIPIO Nombre del municipio donde esta 
+domiciliado el vehículo 
+CHAR(30)  
+32 KW_ITV Potencia neta máxima en KW) CHAR(7) DECIMAL(8,2), 
+FORMAT 
+'ZZZ9.99'. Si es 
+nulo el valor será 
+'*******' 
+33 NUM_PLAZAS_MAX Número de plazas máximo de un 
+vehículo. Ejemplo 1: para un 
+vehículo de carga, este campo 
+indicará el número de plazas máximo 
+permitido cuando el vehículo está 
+"cargado". 
+CHAR(3) INTEGER , 
+FORMAT 'ZZ9' 
+34 CO2_ITV Emisiones CO2. CHAR(5) SMALLINT, 
+FORMAT 'ZZZZZ' 
+35 RENTING Indica si es vehículo de renting CHAR(1) S (vehículo 
+destinado a 
+renting) 
+N ó blanco 
+(vehículo no 
+destinado a 
+renting) 
+36 COD_TUTELA Indica si un vehículo está a nombre 
+de un titular menor de edad o con 
+tutela judicial 
+CHAR(1) N- No 
+S - Si 
+Blanco – sin 
+especificar 
+37 COD_POSESION Código del tipo de posesión del 
+vehículo. Indica si es un vehículo con 
+posesión por alguien distinto al titular 
+(herencias, compraventas...) 
+CHAR(1) V- Venta 
+S - Subasta 
+Blanco – sin 
+especificar 
+38 IND_BAJA_DEF Indicador de baja definitiva del 
+vehículo 
+CHAR(1) (Ver anexo I) 
+39 IND_BAJA_TEMP Indicador de baja temporal del 
+vehículo 
+CHAR(1) S - el vehículo está 
+dado de baja 
+temporal 
+N o blanco , el 
+vehículo no está de 
+baja temporal 
+40 IND_SUSTRACCION Indicador de vehículo robado CHAR(1) S – el vehículo está 
+denunciado como 
+robado 
+## p6
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 6 
+ 
+ 
+ 
+ Nombre Campo Descripción Tipo y 
+Longitud 
+Formato 
+    N o blanco el 
+vehículo no esta 
+denunciado como 
+robado 
+41 BAJA_TELEMATICA Si es una baja telemática su valor será 
+“En desguace”. En caso contrario 
+vendrá a blancos. 
+CHAR(11)  
+42 TIPO_ITV Tipo del vehículo CHAR(25)  
+43 VARIANTE_ITV Variante del vehículo CHAR(25)  
+44 VERSION_ITV Versión del vehículo CHAR(35)  
+45 FABRICANTE_ITV Fabricante del vehículo completo o 
+completado 
+CHAR(70)  
+46 MASA_ORDEN_MARCHA_I 
+TV 
+Masa en orden de marcha CHAR(6)  
+47 MASA_MÁXIMA_TECNICA 
+_ADMISIBLE_ITV 
+Masa máxima técnicamente 
+admisible 
+CHAR(6)  
+48 CATEGORÍA_HOMOLOGAC 
+IÓN_EUROPEA_ITV 
+Categoría homologación UE CHAR(4)  
+49 CARROCERIA Carrocería del vehículo CHAR(4)  
+50 PLAZAS_PIE Número plazas de pié CHAR(3) FORMAT 'zz9' 
+51 NIVEL_EMISIONES_EURO_I 
+TV 
+Nivel emisiones EURO CHAR(8)  
+52 CONSUMO WH/KM_ITV Consumo energía eléctrica CHAR(4) FORMAT 'zz9' 
+53 CLASIFICACIÓN_REGLAM 
+ENTO_VEHICULOS_ITV 
+Clasificación Anexo II RD 2822 CHAR(4)  
+54 CATEGORÍA_VEHÍCULO_E 
+LÉCTRICO 
+Categoría de vehículo eléctrico CHAR(4)  
+55 AUTONOMÍA_VEHÍCULO_E 
+LÉCTRICO 
+Autonomía del vehículo eléctrico CHAR(6)  
+56 MARCA_VEHÍCULO_BASE Marca del vehículo base CHAR(30)  
+57 FABRICANTE_VEHÍCULO_ 
+BASE 
+Fabricante del vehículo base CHAR(50)  
+58 TIPO_VEHÍCULO_BASE Tipo del vehículo base CHAR(35)  
+59 VARIANTE_VEHÍCULO_BA 
+SE 
+Variante del vehículo base CHAR(25)  
+60 VERSIÓN_VEHÍCULO_BAS 
+E 
+Versión del vehículo base CHAR(35)  
+61 DISTANCIA_EJES_12 Distancia entre ejes 1-2 CHAR(4)  
+## p7
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 7 
+ 
+ 
+ 
+ Nombre Campo Descripción Tipo y 
+Longitud 
+Formato 
+62 VIA_ANTERIOR_ITV En mm. CHAR(4)  
+63 VIA_POSTERIOR_ITV En mm. CHAR(4)  
+64 TIPO_ALIMENTACION_ITV M= monocombustible. B= 
+bicombustible F= flexicombustiblel. 
+CHAR(1)  
+65 CONTRASEÑA_HOMOLOG 
+ACION_ITV 
+Contraseña de homologación. CHAR(25)  
+66 ECO_INNOVACION_ITV S= SI, N= NO. A la espera de definir 
+por UE, hasta entonces se deja en 
+blanco. 
+CHAR(1)  
+67 REDUCCION_ECO_ITV A la espera de definir por UE, hasta 
+entonces se deba en blanco. 
+CHAR(4)  
+68 CODIGO_ECO_ITV A la espera de definir por UE, hasta 
+entonces se deba en blanco. 
+CHAR(25)  
+69 FEC_PROCESO Fecha en la que grabo el proceso de 
+la operación (matriculación, baja o 
+transferencia) 
+CHAR(8) DATE, FORMAT 
+'DDMMYYYY' 
+ 
+ 
+Tabla 1. Contenidos de los ficheros 
+ 
+1.2 Relación de Tablas y Ficheros 
+ 
+ 
+Nº Tablas Fichero Interfaz 
+1 Transferencias (Diario) export_trf_YYYYMMDD.txt 
+2 Transferencias (Mensual) export_mensual_trf_YYYYMM.txt 
+ 
+ 
+Tabla 2. Relación de tablas y ficheros 
+ 
+ 
+ 
+1.3 Anexo I – Tablas de Códigos 
+ 
+1.3.1 COD_CLASE_MAT 
+Funcionalidad: Código de clase de matrícula. 
+## p8
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 8 
+ 
+ 
+ 
+COD_CLASE_MAT DESCRIPCION 
+0 Ordinaria 
+1 Turística 
+2 Remolque 
+3 Diplomática 
+4 Reservada 
+5 Vehículo especial 
+6 Ciclomotor 
+7 Transporte Temporal 
+8 Histórica 
+ 
+ 
+1.3.2 COD_PROCEDENCIA 
+Funcionalidad: Código de la procedencia de los datos de filiación. 
+ 
+COD_PROCEDENCIA DESCRIPCION 
+0 Fabricación Nacional 
+‘ ‘ Fabricación Nacional 
+nulo Fabricación Nacional 
+1 Importación no comunitaria 
+2 Subasta 
+3 Importación U.E 
+1.3.3 COD_SERVICIO 
+Funcionalidad: Código de servicio antiguo. 
+ 
+ 
+COD_SERVICIO DESCRIPCION 
+0 Particular 
+1 Público 
+2 Auto Taxi 
+3 Alquiler con conductor 
+4 Alquiler sin conductor 
+5 Escuela de conductores 
+## p9
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 9 
+ 
+ 
+6 Agrícola 
+## p10
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 10 
+ 
+ 
+ 
+COD_SERVICIO DESCRIPCION 
+7 Obras y servicios 
+8 Transporte escolar 
+9 Mercancías peligrosas 
+1.3.4 COD_TIPO 
+Funcionalidad: Código del tipo de vehículo. 
+ 
+ 
+COD_TIPO DESCRIPCION 
+‘ ‘ SIN ESPECIFICAR 
+nulo SIN ESPECIFICAR 
+0 SIN ESPECIFICAR 
+00 CAMIÓN 
+01 CAMIÓN PLATAFORMA 
+02 CAMIÓN CAJA 
+03 CAMIÓN FURGÓN 
+04 CAMIÓN BOTELLERO 
+05 CAMIÓN CISTERNA 
+06 CAMIÓN JAULA 
+07 CAMIÓN FRIGORÍFICO 
+08 CAMIÓN TALLER 
+09 CAMIÓN PARA CANTERA 
+0A CAMIÓN PORTAVEHÍCULOS 
+0B CAMIÓN MIXTO 
+0C CAMIÓN PORTACONTENEDORES 
+0D CAMIÓN BASURERO 
+0E CAMIÓN ISOTERMO 
+0F CAMIÓN SILO 
+0G VEHICULO MIXTO ADAPTABLE 
+10 CAMIÓN ARTICULADO 
+11 CAMIÓN ARTICULADO PLATAFORMA 
+12 CAMIÓN ARTICULADO CAJA 
+13 CAMIÓN ARTICULADO FURGÓN 
+14 CAMIÓN ARTICULADO BOTELLERO 
+15 CAMIÓN ARTICULADO CISTERNA 
+## p11
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 11 
+ 
+ 
+16 CAMIÓN ARTICULADO JAULA 
+## p12
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 12 
+ 
+ 
+ 
+COD_TIPO DESCRIPCION 
+17 CAMIÓN ARTICULADO FRIGORÍFICO 
+18 CAMIÓN ARTICULADO TALLER 
+19 CAMIÓN ARTICULADO PARA CANTERA 
+1A CAMIÓN ARTICULADO VIVIENDA O CARAVANA 
+1C CAMIÓN ARTICULADO HORMIGONERA 
+1D CAMIÓN ARTICULADO VOLQUETE 
+1E CAMIÓN ARTICULADO GRÚA 
+1F CAMIÓN ARTICULADO CONTRA INCENDIOS 
+20 FURGONETA 
+21 FURGONETA MIXTA 
+22 AMBULANCIA 
+23 COCHE FÚNEBRE 
+24 CAMIONETA 
+25 TODO TERRENO 
+30 AUTOBÚS 
+31 AUTOBÚS ARTICULADO 
+32 AUTOBÚS MIXTO 
+33 BIBLIOBÚS 
+34 AUTOBÚS LABORATORIO 
+35 AUTOBÚS TALLER 
+36 AUTOBÚS SANITARIO 
+40 TURISMO 
+50 MOTOCICLETA DE 2 RUEDAS SIN SIDECAR 
+51 MOTOCICLETA CON SIDECAR 
+52 MOTOCARRO 
+53 AUTOMÓVIL DE 3 RUEDAS 
+54 CUATRICICLO PESADO 
+60 COCHE DE INVÁLIDO 
+70 VEHÍCULO ESPECIAL 
+71 PALA CARGADORA 
+72 PALA EXCAVADORA 
+73 CARRETILLA ELEVADORA 
+74 MONIVELADORA 
+75 COMPACTADORA 
+## p13
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 13 
+ 
+ 
+ 
+COD_TIPO DESCRIPCION 
+76 APISONADORA 
+77 GIROGRAVILLADORA 
+78 MACHACADORA 
+79 QUITANIEVES 
+7A VIVIENDA 
+7B BARREDORA 
+7C HORMIGONERA 
+7D VOLQUETE DE CANTERAS 
+7E GRÚA 
+7F SERVICIO CONTRA INCENDIOS 
+7G ASPIRADORA DE FANGOS 
+7H MOTOCULTOR 
+7I MAQUINARIA AGRÍCOLA AUTOMOTRIZ 
+7J PALA CARGADORA-RETROEXCAVADORA 
+7K TREN HASTA 160 PLAZAS 
+80 TRACTOR 
+81 TRACTOCAMIÓN 
+82 TRACTOCARRO 
+90 CICLOMOTOR DE 2 RUEDAS 
+91 CICLOMOTOR DE 3 RUEDAS 
+92 CUATRICICLO LIGERO 
+EX EXTRANJERO 
+R0 REMOLQUE 
+R1 REMOLQUE PLATAFORMA 
+R2 REMOLQUE CAJA 
+R3 REMOLQUE FURGÓN 
+R4 REMOLQUE BOTELLERO 
+R5 REMOLQUE CISTERNA 
+R6 REMOLQUE JAULA 
+R7 REMOLQUE FRIGORÍFICO 
+R8 REMOLQUE TALLER 
+R9 REMOLQUE PARA CANTERAS 
+RA REMOLQUE VIVIENDA O CARAVANA 
+RB REMOLQUE DE VIAJEROS O DE AUTOBÚS 
+## p14
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 14 
+ 
+ 
+ 
+COD_TIPO DESCRIPCION 
+RC REMOLQUE HORMIGONERA 
+RD REMOLQUE VOLQUETE DE CANTERA 
+RE REMOLQUE DE GRÚA 
+RF REMOLQUE CONTRA INCENDIOS 
+RH MAQ.AGRÍCOLA ARRASTRADA DE 2 EJES 
+S0 SEMIRREMOLQUE 
+S1 SEMIRREMOLQUE PLATAFORMA 
+S2 SEMIRREMOLQUE CAJA 
+S3 SEMIRREMOLQUE FURGÓN 
+S4 SEMIRREMOLQUE BOTELLERO 
+S5 SEMIRREMOLQUE CISTERNA 
+S6 SEMIRREMOLQUE JAULA 
+S7 SEMIRREMOLQUE FRIGORÍFICO 
+S8 SEMIRREMOLQUE TALLER 
+S9 SEMIRREMOLQUE CANTERA 
+SA SEMIRREMOLQUE VIVIENDA O CARAVANA 
+SB SEMIRREMOLQUE VIAJEROS O AUTOBÚS 
+SC SEMIRREMOLQUE HORMIGONERA 
+SD SEMIRREMOLQUE VOLQUETE DE CANTERA 
+SE SEMIRREMOLQUE GRÚA 
+SF SEMIRREMOLQUE CONTRA INCENDIOS 
+SH MAQ.AGRICOLA ARRASTRADA DE 1 EJE 
+1.3.5 COD_PROPULSION 
+Funcionalidad: Código del tipo de propulsión. 
+ 
+ 
+COD_PROPULSION DESCRIPCION 
+0 Gasolina 
+1 Diesel 
+2 Eléctrico 
+3 Otros 
+4 Butano 
+5 Solar 
+## p15
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 15 
+ 
+ 
+ 
+COD_PROPULSION DESCRIPCION 
+6 Gas Licuado de Petróleo 
+7 Gas Natural Comprimido 
+8 Gas Natural Licuado 
+9 Hidrógeno 
+A Biometano 
+B Etanol 
+C Biodiesel 
+1.3.6 COD_PROVINCIA_VEH 
+Funcionalidad: Código de la provincia donde está domiciliado el vehículo. 
+ 
+ 
+COD_PROVINCIA_VEH DESCRIPCION 
+A Alicante/Alacant 
+AB Albacete 
+AL Almería 
+AV Ávila 
+B Barcelona 
+BA Badajoz 
+BI Bizkaia 
+BU Burgos 
+C Coruña (A) 
+CA Cádiz 
+CC Cáceres 
+CE Ceuta 
+CO Córdoba 
+CR Ciudad Real 
+CS Castellón/Castelló 
+CU Cuenca 
+DS Desconocido 
+EX Extranjero 
+GC Palmas (Las) 
+GI Girona 
+GR Granada 
+## p16
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 16 
+ 
+ 
+ 
+COD_PROVINCIA_VEH DESCRIPCION 
+GU Guadalajara 
+H Huelva 
+HU Huesca 
+J Jaén 
+L Lleida 
+LE León 
+LO Rioja (La) 
+LU Lugo 
+M Madrid 
+MA Málaga 
+ML Melilla 
+MU Murcia 
+NA Navarra 
+O Asturias 
+OU Ourense 
+P Palencia 
+IB Balears (Illes) 
+PO Pontevedra 
+S Cantabria 
+SA Salamanca 
+SE Sevilla 
+SG Segovia 
+SO Soria 
+SS Gipuzkoa 
+T Tarragona 
+TE Teruel 
+TF Santa Cruz de Tenerife 
+TO Toledo 
+V Valencia/València 
+VA Valladolid 
+VI Araba/Álava 
+Z Zaragoza 
+ZA Zamora 
+## p17
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 17 
+ 
+ 
+ 
+1.3.7 COD_PROVINCIA_MAT 
+Funcionalidad: Código de la provincia donde fue matriculado el vehículo. 
+ 
+ 
+COD_PROVINCIA_MAT DESCRIPCION 
+A Alicante/Alacant 
+AB Albacete 
+AL Almería 
+AV Ávila 
+B Barcelona 
+BA Badajoz 
+BI Bizkaia 
+BU Burgos 
+C Coruña (A) 
+CA Cádiz 
+CC Cáceres 
+CE Ceuta 
+CO Córdoba 
+CR Ciudad Real 
+CS Castellón/Castelló 
+CU Cuenca 
+DS Desconocido 
+EX Extranjero 
+GC Palmas (Las) 
+GI Girona 
+GR Granada 
+GU Guadalajara 
+H Huelva 
+HU Huesca 
+J Jaén 
+L Lleida 
+LE León 
+LO Rioja (La) 
+LU Lugo 
+M Madrid 
+## p18
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 18 
+ 
+ 
+ 
+COD_PROVINCIA_MAT DESCRIPCION 
+MA Málaga 
+ML Melilla 
+MU Murcia 
+NA Navarra 
+O Asturias 
+OU Ourense 
+P Palencia 
+IB Balears (Illes) 
+PO Pontevedra 
+S Cantabria 
+SA Salamanca 
+SC Servicios Centrales 
+SE Sevilla 
+SG Segovia 
+SO Soria 
+SS Gipuzkoa 
+T Tarragona 
+TE Teruel 
+TF Santa Cruz de Tenerife 
+TO Toledo 
+V Valencia/València 
+VA Valladolid 
+VI Araba/Álava 
+Z Zaragoza 
+ZA Zamora 
+1.3.8 CLAVE_TRAMITE 
+Funcionalidad: Código del trámite. 
+ 
+ 
+CLAVE_TRAMITE DESCRIPCION 
+1 Matriculación ordinaria y de ciclomotores 
+2 Transferencia 
+3 Baja definitiva (excluidos Plan Renove, Baja por exportación y Tránsito 
+## p19
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 19 
+ 
+ 
+ 
+CLAVE_TRAMITE DESCRIPCION 
+ comunitario) 
+4 Baja definitiva por Plan Renove 
+5 Rematriculación 
+6 Baja temporal 
+7 Baja definitiva por Exportación y por Tránsito comunitario 
+8 Matriculación vehículo especial 
+9 Matriculación temporal 
+A Prorroga matricula temporal 
+B Paso de matrícula temporal a definitiva 
+1.3.9 SERVICIO 
+Funcionalidad: Código de servicio del vehículo (nueva versión del campo). 
+ 
+ 
+SERVICIO DESCRIPCION 
+A00 Público PUBL-Sin especificar 
+A01 Público PUBL-Alquiler sin conductor 
+A02 Público PUBL-Alquiler con conductor 
+A03 Público PUBL-Aprendizaje de conducción 
+A04 Público PUBL-Taxi 
+A05 Público PUBL-Auxilio en carretera 
+A07 Público PUBL-Ambulancia 
+A08 Público PUBL-Funerario 
+A07 ParticularPART-Obras 
+A10 Público PUBL-Mercancías peligrosas 
+A11 Público PUBL-Basurero 
+A12 Público PUBL-Transporte escolar 
+A13 Público PUBL-Policía 
+A14 Público PUBL-Bomberos 
+A15 Público PUBL-Protección civil y salvamento 
+A16 Público PUBL-Defensa 
+A18 Público PUBL-Actividad económica 
+A20 Público PUBL-Mercancías perecederas 
+B00 Particular PART-Sin especificar 
+## p20
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 20 
+ 
+ 
+ 
+SERVICIO DESCRIPCION 
+B06 Particular PART-Agrícola 
+B07 ParticularPART- 
+B09 Particular PART-Obras 
+B17 Particular PART-Vivienda 
+B18 Público PART-Actividad económica 
+B19 Particular PART-Recreativo 
+B21 Particular PART-Vehículo para ferias 
+1.3.10 IND_BAJA_DEF 
+Funcionalidad: Indicador del motivo de la baja definitiva. 
+ 
+ 
+IND_BAJA_DEF DESCRIPCION 
+0 Desguace 
+1 Agotamiento 
+2 Antigüedad 
+3 Renovación del parque 
+4 Otros motivos 
+5 R.D.L 4/1994 , R.D.L 10/1994 , R.D.L 4/1997 
+7 Voluntaria 
+8 Exportación 
+9 Transito comunitario 
+A De oficio por abandono 
+B De oficio por seguridad 
+C Por Tratamiento Residual 
+ 
+1.3.11 CATEGORÍA_VEHÍCULO_ELÉCTRICO 
+Funcionalidad: Categoría eléctrica de los vehículos. 
+ 
+ 
+CATEGORÍA_VEHÍCULO_ELÉCTRICO DESCRIPCION 
+PHEV Eléctrico Enchufable 
+REEV Eléctrico de Autonomía Extendida 
+## p21
+MINISTERIO 
+DEL INTERIOR 
+DIRECCIÓN GENERAL DE TRÁFICO 
+SECRETARÍA GENERAL 
+Interfaz de Envío de Datos 21 
+ 
+ 
+ 
+CATEGORÍA_VEHÍCULO_ELÉCTRICO DESCRIPCION 
+HEV Eléctrico Híbrido 
+BEV Eléctrico de Batería 
+ 
