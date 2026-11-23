@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -84,6 +84,7 @@ FONTS = {
     "turisme": ("Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat", "mensual"),
     "comerc": ("Generalitat, cens d'establiments comercials i ocupació comercial", "anual"),
     "cadastre": ("Catastro, estadístiques per municipi i districte censal", "anual"),
+    "medi_ambient": ("Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO)", "diari/anual"),
     "habitatge": ("Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic", "anual/trimestral"),
 }
 

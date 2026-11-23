@@ -48,6 +48,7 @@
       <a href="#s-mob" data-t="nav_mob">Mobilitat</a>
       <a href="#s-salut" data-t="nav_salut">Salut</a>
       <a href="#s-dem" data-t="nav_dem">Demografia</a>
+      <a href="#s-amb" data-t="nav_amb">Medi ambient</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -124,6 +125,8 @@
           <button type="button" data-nivell="aar" aria-pressed="false" data-t="nivell_aar" hidden>Àrees d'Agents Rurals</button>
           <button type="button" data-nivell="pj" aria-pressed="false" data-t="nivell_pj" hidden>Partits judicials</button>
           <button type="button" data-nivell="com" aria-pressed="false" data-t="nivell_com" hidden>Comarques</button>
+          <button type="button" data-nivell="aire" aria-pressed="false" data-t="nivell_aire" hidden>Estacions de l'aire</button>
+          <button type="button" data-nivell="met" aria-pressed="false" data-t="nivell_met" hidden>Estacions meteorològiques</button>
         </div>
         <h3 id="ind-titol" class="ind-titol"></h3>
         <button type="button" class="emb-btn emb-btn-mapa" id="emb-btn-mapa"></button>
@@ -257,9 +260,19 @@
     </figure>
   </section>
 
+  <section id="s-amb" class="amplada sec" aria-labelledby="h-amb">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">09</span> <span data-t="nav_amb">Medi ambient</span></p>
+      <h2 id="h-amb" data-t="h_amb">L'aire, la calor, la pluja i l'aigua</h2>
+      <p class="lead" data-t="lead_amb">Com és l'aire que es respira a les estacions de la província, com s'escalfa el clima, quanta aigua queda als embassaments, quants municipis han patit la sequera i quanta aigua gastem. Al mapa, el tema «Medi ambient» ho baixa a cada estació, municipi i comarca.</p>
+    </header>
+    <div class="xifres amb-xifres" id="amb-xifres"></div>
+    <div class="pg-graella" id="amb-grafics"></div>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">09</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">10</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -335,6 +348,11 @@
       <li data-font="pimec"><a href="https://pimec.org/lobservatori">Pimec, Anuari de la Pime Catalana</a><span data-t="f_pimec">rendibilitat, productivitat, endeutament i vendes de les pimes per demarcació (2013-2024) i per activitat</span></li>
       <li data-font="mapfre"><a href="https://documentacion.fundacionmapfre.org/documentacion/publico/es/media/group/1138552.do">Fundación Mapfre i APTB, Víctimes d'incendis a Espanya</a><span data-t="f_mapfre">morts en incendis per província des del 2010</span></li>
       <li data-font="emergencies"><a href="https://analisi.transparenciacatalunya.cat/d/bks7-dkfd">Departament d'Agricultura</a><span data-t="f_incendis">incendis forestals per municipi d'inici</span></li>
+      <li data-font="medi_ambient"><a href="https://analisi.transparenciacatalunya.cat/d/tasf-thgu">Generalitat, Xarxa de Vigilància i Previsió de la Contaminació Atmosfèrica</a><span data-t="f_amb_aire">qualitat de l'aire hora a hora a les estacions automàtiques de la província</span></li>
+      <li data-font="medi_ambient"><a href="https://analisi.transparenciacatalunya.cat/d/7bvh-jvq2">Servei Meteorològic de Catalunya (XEMA)</a><span data-t="f_amb_met">temperatura i pluja diàries de les estacions automàtiques</span></li>
+      <li data-font="medi_ambient"><a href="https://analisi.transparenciacatalunya.cat/d/gn9e-3qhr">Agència Catalana de l'Aigua</a><span data-t="f_amb_aca">aigua als embassaments, estat de sequera per municipi i consum d'aigua per comarca</span></li>
+      <li data-font="medi_ambient"><a href="https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/agua/zonas-vulnerables.html">Ministerio para la Transición Ecológica (MITECO)</a><span data-t="f_amb_miteco">zones vulnerables per nitrats, Xarxa Natura 2000 i espais naturals protegits</span></li>
+      <li data-font="medi_ambient"><a href="https://analisi.transparenciacatalunya.cat/d/83qv-sib8">Departament de Territori</a><span data-t="f_amb_platges">inventari de platges</span></li>
       <li data-font="habitatge"><a href="https://analisi.transparenciacatalunya.cat/">Departament de Territori i Agència Tributària de Catalunya, dades obertes</a><span data-t="f_hab">habitatges iniciats i acabats (1990-2025), habitatge protegit, cèdules d'habitabilitat per municipi i secció, àrees de política d'habitatge i Mapa urbanístic de Catalunya</span></li>
       <li data-font="cadastre"><a href="https://www.catastro.hacienda.gob.es/es-ES/estadisticas.html">Dirección General del Catastro, estadístiques</a><span data-t="f_cad">immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal</span></li>
       <li data-font="tributs"><a href="https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/listado_municipiosm.aspx">Ministerio de Hacienda, tipos impositivos municipales</a><span data-t="f_trib">tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)</span></li>
@@ -398,6 +416,7 @@
 <script src="mobilitat.js"></script>
 <script src="exportacions.js"></script>
 <script src="demografia.js"></script>
+<script src="mediambient.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>

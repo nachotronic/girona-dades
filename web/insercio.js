@@ -45,7 +45,7 @@
     // Bloques que ya llevan su propia fuente
     com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
     tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
-    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" },
+    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" },
   };
   // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
   const SECCIONS = {
@@ -56,6 +56,7 @@
     exp: { sel: "#s-exp .pg-fig", ancla: "#s-exp", pinta: "pintaSeccioExportacions" },
     mob: { sel: "#mob-grafics .pg-fig", ancla: "#s-mob", pinta: "pintaSeccioMobilitat" },
     dem: { sel: "#s-dem :is(.pg-fig, .dm-peca)", ancla: "#s-dem", pinta: "pintaSeccioDemografia" },
+    amb: { sel: "#amb-grafics .pg-fig", ancla: "#s-amb", pinta: "pintaSeccioAmb" },
   };
   // Fuente corta de los mapas, por tema del indicador
   const FONT_TEMA = {
@@ -68,6 +69,7 @@
     ene: ["Generalitat i Xifra (Diputació de Girona)", "Generalitat y Xifra (Diputació de Girona)"], ele: ["Generalitat, resultats per secció censal", "Generalitat, resultados por sección censal"],
     pol: ["Generalitat, ens locals", "Generalitat, entes locales"],
     agr: ["INE, cens agrari 2020, via Idescat", "INE, censo agrario 2020, vía Idescat"],
+    amb: ["Meteocat, XVPCA, Agència Catalana de l'Aigua i MITECO", "Meteocat, XVPCA, Agència Catalana de l'Aigua y MITECO"],
     cul: ["Departament de Cultura (DadesBib, cens d'equipaments, Programa.cat i agenda cultural)", "Departament de Cultura (DadesBib, censo de equipamientos, Programa.cat y agenda cultural)"],
   };
   const ll = (p) => p[LANG === "ca" ? 0 : 1];
@@ -161,6 +163,7 @@
     { sel: "#tur-grafics .pg-fig", clau: (e) => `tur:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#s-exp .pg-fig[data-id]", clau: (e) => `exp:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#mob-grafics .pg-fig", clau: (e) => `mob:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#amb-grafics .pg-fig", clau: (e) => `amb:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
   ];
   const urlDe = (c, extra = "") => `${BASE}?embed=${encodeURIComponent(c).replace(/%3A/g, ":")}${extra}&lang=${LANG}`;
   const boto = (fn) => {

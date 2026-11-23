@@ -247,7 +247,7 @@
       ${dsHtml ? `<div class="rs-dest"><h4>${tx("destaca")}</h4><ol>${dsHtml}</ol><p class="rt-nota">${LANG === "ca" ? `Posició entre els ${D.municipios.length} municipis.` : `Posición entre los ${D.municipios.length} municipios.`}</p></div>` : ""}</div>
       ${taula(m)}</section>`;
     if (!extra) return;
-    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}${window.blocEnsenyament ? window.blocEnsenyament(m) : ""}${window.blocCultura ? window.blocCultura(m) : ""}`;
+    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}${window.blocEnsenyament ? window.blocEnsenyament(m) : ""}${window.blocCultura ? window.blocCultura(m) : ""}${window.blocMediAmbient ? window.blocMediAmbient(m) : ""}`;
     if (window.pintaCultura) window.pintaCultura(extra, m);
     if (window.pintaEnsenyament) window.pintaEnsenyament(extra, m);
     const gc = extra.querySelector(".g-com");

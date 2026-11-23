@@ -1,0 +1,9 @@
+codi_eoi,nom,municipi,ine,tipus,area,lat,lon,d0,d1,contaminants
+17001002,Agullana,Agullana,17001,background,rural,42.392002,2.8420997,1992-02-06,2026-11-23,O3
+17013001,Begur,Begur,17013,background,rural,41.95867,3.2129009,1993-02-05,2026-11-23,NO2 O3 PM10 PM2.5
+17073001,Fornells de la Selva (escola municipal),Fornells de la Selva,17073,background,rural,41.930025,2.807499,1994-02-03,2001-09-30,CO NO2 SO2
+17079001,Girona (parc de la Devesa),Girona,17079,traffic,peri-urban,41.984743,2.810553,2004-06-24,2011-05-03,CO NO2 SO2
+17079003,Girona (Escola de Música),Girona,17079,traffic,urban,41.97638,2.8165,2011-05-19,2026-11-23,CO NO2 PM10 PM2.5 SO2
+17125001,Pardines,Pardines,17125,background,rural,42.31196,2.2130551,1994-07-29,2026-11-23,O3
+17184001,Santa Pau,Santa Pau,17184,background,rural,42.14328,2.5102024,1994-01-25,2026-11-23,NO2 O3
+17186001,Sarrià de Ter,Sarrià de Ter,17186,traffic,urban,42.01637,2.822499,1992-02-24,2003-11-30,CO NO2 O3 SO2
