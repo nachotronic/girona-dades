@@ -1322,3 +1322,10 @@ th, td { padding-left: 10px; padding-right: 10px; }
 
 /* Segmentos largos (p. ej. Exportaciones, 4 opciones) no deben desbordar en móvil */
 .segment { max-width: 100%; flex-wrap: wrap; }
+
+/* Energia: barra de lletres dels certificats */
+.en-barra { display: flex; height: 22px; margin: 8px 0 10px; border: 1px solid var(--tinta); }
+.en-barra span { display: flex; align-items: center; justify-content: center; font: 600 11px var(--mono); color: #fff; min-width: 0; overflow: hidden; }
+.en-A { background: #0b6b66; } .en-B { background: #3f938b; } .en-C { background: #8fc0b9; color: #0f1113 !important; }
+.en-D { background: #c4c8cd; color: #0f1113 !important; } .en-E { background: #f1a6ab; color: #0f1113 !important; }
+.en-F { background: #e45663; } .en-G { background: #b8001f; }

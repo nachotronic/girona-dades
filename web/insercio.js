@@ -45,7 +45,7 @@
     // Bloques que ya llevan su propia fuente
     com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
     tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
-    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" },
+    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" }, ene: { sel: ".fx-ene" },
   };
   // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
   const SECCIONS = {
@@ -57,6 +57,7 @@
     mob: { sel: "#mob-grafics .pg-fig", ancla: "#s-mob", pinta: "pintaSeccioMobilitat" },
     dem: { sel: "#s-dem :is(.pg-fig, .dm-peca)", ancla: "#s-dem", pinta: "pintaSeccioDemografia" },
     amb: { sel: "#amb-grafics .pg-fig", ancla: "#s-amb", pinta: "pintaSeccioAmb" },
+    ene: { sel: "#ene-grafics .pg-fig", ancla: "#s-ene", pinta: "pintaSeccioEne" },
   };
   // Fuente corta de los mapas, por tema del indicador
   const FONT_TEMA = {
@@ -66,7 +67,7 @@
     sal: ["CatSalut i Observatori del Sistema de Salut", "CatSalut y Observatori del Sistema de Salut"], seg: ["Mossos d'Esquadra", "Mossos d'Esquadra"],
     eme: ["Bombers, Agents Rurals i Departament d'Agricultura", "Bombers, Agents Rurals y Departament d'Agricultura"], ter: ["Xifra (Diputació de Girona) i Cadastre", "Xifra (Diputació de Girona) y Catastro"],
     veh: ["DGT", "DGT"], ajt: ["Generalitat i Ministeri d'Hisenda", "Generalitat y Ministerio de Hacienda"], tri: ["Ministeri d'Hisenda, tipus impositius municipals", "Ministerio de Hacienda, tipos impositivos municipales"],
-    ene: ["Generalitat i Xifra (Diputació de Girona)", "Generalitat y Xifra (Diputació de Girona)"], ele: ["Generalitat, resultats per secció censal", "Generalitat, resultados por sección censal"],
+    ene: ["Generalitat, ICAEN, Xifra (Diputació de Girona) i ministeris de Transició Ecològica i de Transformació Digital", "Generalitat, ICAEN, Xifra (Diputació de Girona) y ministerios de Transición Ecológica y de Transformación Digital"], ele: ["Generalitat, resultats per secció censal", "Generalitat, resultados por sección censal"],
     pol: ["Generalitat, ens locals", "Generalitat, entes locales"],
     agr: ["INE, cens agrari 2020, via Idescat", "INE, censo agrario 2020, vía Idescat"],
     amb: ["Meteocat, XVPCA, Agència Catalana de l'Aigua i MITECO", "Meteocat, XVPCA, Agència Catalana de l'Aigua y MITECO"],
@@ -164,6 +165,7 @@
     { sel: "#s-exp .pg-fig[data-id]", clau: (e) => `exp:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#mob-grafics .pg-fig", clau: (e) => `mob:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#amb-grafics .pg-fig", clau: (e) => `amb:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#ene-grafics .pg-fig", clau: (e) => `ene:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
   ];
   const urlDe = (c, extra = "") => `${BASE}?embed=${encodeURIComponent(c).replace(/%3A/g, ":")}${extra}&lang=${LANG}`;
   const boto = (fn) => {
