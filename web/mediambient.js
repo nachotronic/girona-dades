@@ -50,7 +50,7 @@
     if (!m.amb && !f.met) return "";
     const fila = (k) => { const v = val(m, k + "_pct"); return v == null ? "" : `<li><span>${tx(k)}</span><span>${v > 0 ? `<b>${pct(v, v < 1 ? 1 : 0)}</b> ${tx("del_terme")}` : tx("cap")}</span></li>`; };
     const esp = [...(f.esp && f.esp.n2000 || []), ...(f.esp && f.esp.enp || [])];
-    const unics = [...new Set(esp)].slice(0, 8);
+    const vist = new Set(), unics = esp.filter((n) => { const k = n.toLowerCase(); if (vist.has(k)) return false; vist.add(k); return true; }).slice(0, 8);
     const a = D.anys && D.anys.amb_seq, se = a && m.amb && m.amb.seq_exc ? m.amb.seq_exc : null;
     // Año con más días de sequía grave
     let seqTxt = "";
@@ -75,7 +75,7 @@
     h_amb_emb: (v, d, b) => `Sau i Susqueda, que abasteixen Girona i bona part de l'àrea de Barcelona, són al <b>${v}</b> (${d}). Boadella, que abasteix l'Alt Empordà, al ${b}.`,
     amb_seq: ["Municipis en sequera", "Municipis de la província en cada estat de sequera, per mes"],
     amb_seq_noms: { gi: "Excepcionalitat o emergència", cat: "Alerta o pitjor" },
-    h_amb_seq: (n, mes, mx, mmx) => `El pitjor moment va ser ${mmx}, amb <b>${mx} municipis</b> en excepcionalitat o emergència. ${mes}: ${n}.`,
+    h_amb_seq: (n, mes, mx, mmx) => `El pitjor moment va ser ${mmx}, amb <b>${mx} municipis</b> en excepcionalitat o emergència. Ara (${mes}), ${n}.`,
     amb_temp: ["Temperatura mitjana", "Mitjana anual de les estacions de la XEMA amb sèrie completa (°C)"],
     amb_clima_noms: { gi: "Estacions de la província" },
     h_amb_temp: (v, a, d, a0, n) => `El ${a}, les ${n} estacions amb sèrie completa van marcar una mitjana de <b>${v} °C</b>, ${d} més que el ${a0}.`,
@@ -103,7 +103,7 @@
     h_amb_emb: (v, d, b) => `Sau y Susqueda, que abastecen a Girona y a buena parte del área de Barcelona, están al <b>${v}</b> (${d}). Boadella, que abastece al Alt Empordà, al ${b}.`,
     amb_seq: ["Municipios en sequía", "Municipios de la provincia en cada estado de sequía, por mes"],
     amb_seq_noms: { gi: "Excepcionalidad o emergencia", cat: "Alerta o peor" },
-    h_amb_seq: (n, mes, mx, mmx) => `El peor momento fue ${mmx}, con <b>${mx} municipios</b> en excepcionalidad o emergencia. ${mes}: ${n}.`,
+    h_amb_seq: (n, mes, mx, mmx) => `El peor momento fue ${mmx}, con <b>${mx} municipios</b> en excepcionalidad o emergencia. Ahora (${mes}), ${n}.`,
     amb_temp: ["Temperatura media", "Media anual de las estaciones de la XEMA con serie completa (°C)"],
     amb_clima_noms: { gi: "Estaciones de la provincia" },
     h_amb_temp: (v, a, d, a0, n) => `En ${a}, las ${n} estaciones con serie completa marcaron una media de <b>${v} °C</b>, ${d} más que en ${a0}.`,
@@ -133,7 +133,7 @@
     if (!/^amb_/.test(id)) return null;
     const s = sp.series || {}, g = ult(s.gi), c = ult(s.cat);
     if (id === "amb_emb" && g) return tp("h_amb_emb", pct(g[2], 0), window.PG.etiqueta(g[1]), c ? pct(c[2], 0) : "–");
-    if (id === "amb_seq" && g) { const mx = s.gi.reduce((b, x) => (x[2] > b[2] ? x : b), s.gi[0]); return tp("h_amb_seq", fmt(g[2]), window.PG.etiqueta(g[1]), fmt(mx[2]), mes(mx[1])); }
+    if (id === "amb_seq" && g) { const mx = s.gi.reduce((b, x) => (x[2] > b[2] ? x : b), s.gi[0]); return tp("h_amb_seq", fmt(g[2]), mes(g[1]), fmt(mx[2]), mes(mx[1])); }
     if (id === "amb_temp" && g) { const g0 = s.gi[0]; return tp("h_amb_temp", fmt(g[2], 1), g[1], `${fmt(g[2] - g0[2], 1)} °C`, g0[1], sp.n_est); }
     if (id === "amb_calor" && g) { const g0 = s.gi[0]; return tp("h_amb_calor", fmt(g[2]), g[1], fmt(g0[2]), g0[1]); }
     if (id === "amb_prec" && g) { const mn = s.gi.reduce((b, x) => (x[2] < b[2] ? x : b), s.gi[0]); return tp("h_amb_prec", fmt(g[2]), g[1], fmt(mn[2]), mn[1]); }

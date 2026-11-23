@@ -16,6 +16,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import math
+import re
 import pathlib
 import sys
 from collections import defaultdict
@@ -119,6 +120,17 @@ def _sequera(municipios):
     return mun, (anys[-1] if anys else None), dict(mensual), ara
 
 
+def _nom_espai(n: str) -> str:
+    """«Gavarres, les» -> «Les Gavarres», para que coincidan los nombres de Natura 2000 y de los ENP."""
+    n = re.sub(r"[`´’]", "'", str(n).strip())
+    m = re.match(r"^(.*),\s*(el|la|les|els|l'|s')$", n, re.I)
+    if m:
+        art = m.group(2).capitalize()
+        sep = "" if art.endswith("'") else " "
+        n = f"{art}{sep}{m.group(1)}"
+    return n[:1].upper() + n[1:]
+
+
 def _territori(municipios):
     f = D / "territori_protegit.csv"
     if not f.exists():
@@ -136,7 +148,7 @@ def _territori(municipios):
     if fe.exists():
         e = pd.read_csv(fe, dtype=str)
         for (capa, ine), g in e.groupby(["capa", "ine"]):
-            noms[ine][capa] = sorted({n.strip() for n in g["nom"].dropna()})[:12]
+            noms[ine][capa] = sorted({_nom_espai(n) for n in g["nom"].dropna()})[:12]
     return mun, noms
 
 
@@ -223,7 +235,7 @@ def _aire():
     est = pd.read_csv(fe, dtype={"codi_eoi": str, "ine": str})
     an = pd.read_csv(fa, dtype={"codi_eoi": str})
     # Año completo: cada contaminante con al menos el 75 % de las horas
-    an = an[an["hores"] >= 0.75 * 8760]
+    an = an[(an["hores"] >= 0.75 * 8760) & (an["any"] < dt.date.today().year)]
     if not len(an):
         return {}, None, {}, []
     any_ = int(an["any"].max())
@@ -282,6 +294,7 @@ def _meteo():
     di = pd.read_csv(fd, dtype={"codi_estacio": str}) if fd.exists() else pd.DataFrame(columns=["codi_estacio", "any"])
     di["any"] = _num(di["any"])
     # Años completos por estación (temperatura media con ≥330 días)
+    an = an[an["any"] < dt.date.today().year]
     t = an[(an["codi_variable"] == 1000) & (an["n"] >= MIN_DIES)].set_index(["codi_estacio", "any"])["mitjana"]
     p = an[(an["codi_variable"] == 1300) & (an["n"] >= MIN_DIES)].set_index(["codi_estacio", "any"])["suma"]
     tx = an[(an["codi_variable"] == 1001) & (an["n"] >= MIN_DIES)].set_index(["codi_estacio", "any"])["mitjana"]
@@ -318,7 +331,7 @@ def _meteo():
         if len(pb) >= 10 and "p" in o and pb.mean():
             o["pa"] = _r((o["p"] / pb.mean() - 1) * 100, 0)
         res[c] = o
-        info[c] = (float(e["longitud"]), float(e["latitud"]), str(e["nom_estacio"]), e.get("altitud"))
+        info[c] = (float(e["longitud"]), float(e["latitud"]), str(e["nom_estacio"]), str(e.get("codi_municipi") or "")[:5])
         feats.append({"type": "Feature", "geometry": _cercle(float(e["longitud"]), float(e["latitud"]), 2.2),
                       "properties": {"id": c, "nom": str(e["nom_estacio"]), "munis": f"Meteocat (XEMA) · {e['nom_municipi']} · {e['altitud']} m · dades del {any_}"}})
     # Gráficos: media de las estaciones con todos los años completos desde el 2002
@@ -422,7 +435,8 @@ def construir(municipios, sortida: pathlib.Path) -> dict:
             f["seq_ara"] = ara[ine]
         if cent.get(ine) and info_me:
             c = min(info_me, key=lambda k: _dist(cent[ine], info_me[k][:2]))
-            f["met"] = {"id": c, "nom": info_me[c][2], "km": round(_dist(cent[ine], info_me[c][:2]), 0), **me[c]}
+            km = 0 if info_me[c][3] == ine else round(_dist(cent[ine], info_me[c][:2]), 0)
+            f["met"] = {"id": c, "nom": info_me[c][2], "km": km, **me[c]}
         if f:
             res["fitxa"][ine] = f
     res["resum"] = ", ".join(resum)
