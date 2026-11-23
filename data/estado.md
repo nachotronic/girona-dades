@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 21:09 UTC
+Última ejecución: 2026-11-23 21:48 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -48,12 +48,14 @@
 | medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
 | energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
+| social — Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb) | ok | 2026-11-23 21:48 | 2026-11-23 21:48 | setmanal/anual |
 
 ## Detalle de la última ejecución
 
-### diners_publics: ok (71 s)
+### social: ok (4 s)
 
 ```
-subvenciones: 4590 filas comarcales (3,422 M€), 70 ayuntamientos que conceden, hasta 2026 (año 2026)
-contratos: registro 178 ayuntamientos de Girona (3475 filas), ejercicios 2010-2028; plataforma 86184 publicaciones
+RESES: 736 servicios, 99% con municipio, 11,918 plazas
+servicios sociales: ssb_ateses 744 filas hasta 2024; menjador 744 filas hasta 2024; dependencia_grau 422 filas hasta 2024; teleassistencia 465 filas hasta 2025; ajuda_domicili 465 filas hasta 2025; prestacio_cuidador 465 filas hasta 2025; cuidadores 176,162 en Cataluña
+Airbnb: instantánea 2026-09-25 (nueva), 20470 anuncios, columnas ['id', 'name', 'host_id', 'host_profile_id', 'host_name', 'neighbourhood_group', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'price', 'minimum_nights', 'number_of_reviews', 'last_review', 'reviews_per_month', 'calculated_host_listings_count', 'availability_365', 'number_of_reviews_ltm']
 ```

@@ -251,6 +251,13 @@
   "durada": 379,
   "resum": "39 ABS en la provincia (de 379)\nmortalidad [2021, 2022, 2023, 2024, 2025]: 39 ABS; RME Girona 104.7\natención primaria 2022-12: 21 indicadores, 39 ABS\nreceptes: 1128 files (fins 2025-10), 175 grups ATC\ninfeccions: setmanes fins 2026-11-09, 39 ABS\ncentres sanitaris: 202 ({'cap': 133, 'continuada': 24, 'mental': 16, 'sociosanitari': 12, 'hospital': 11, 'drogues': 6})"
  },
+ "social": {
+  "estat": "ok",
+  "intent": "2026-11-23T21:48:42Z",
+  "ok": "2026-11-23T21:48:42Z",
+  "durada": 4,
+  "resum": "RESES: 736 servicios, 99% con municipio, 11,918 plazas\nservicios sociales: ssb_ateses 744 filas hasta 2024; menjador 744 filas hasta 2024; dependencia_grau 422 filas hasta 2024; teleassistencia 465 filas hasta 2025; ajuda_domicili 465 filas hasta 2025; prestacio_cuidador 465 filas hasta 2025; cuidadores 176,162 en Cataluña\nAirbnb: instantánea 2026-09-25 (nueva), 20470 anuncios, columnas ['id', 'name', 'host_id', 'host_profile_id', 'host_name', 'neighbourhood_group', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'price', 'minimum_nights', 'number_of_reviews', 'last_review', 'reviews_per_month', 'calculated_host_listings_count', 'availability_365', 'number_of_reviews_ltm']"
+ },
  "territorio": {
   "estat": "ok",
   "intent": "2026-11-23T13:53:48Z",
