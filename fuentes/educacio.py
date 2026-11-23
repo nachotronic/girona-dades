@@ -7,6 +7,9 @@
 - 99md-r3rq  asignación de plazas en la preinscripción (1.ª petición)
 - rk5x-gny6  evaluación de 6.º de primaria (por alumno; se agrega en el servidor)
 - 59vm-wwq7  evaluación de 4.º de ESO (por alumno; se agrega en el servidor)
+- Estadística de l'ensenyament (curso actual, CSV en educacio.gencat.cat): alumnos por municipio,
+  etapa, pública/concertada/privada, sexo, zona de nacionalidad y NESE; resultados de ESO del curso
+  anterior; personal docente por municipio, sexo y edad; FP por familia profesional.
 
 Cada parte va en su propio try para que un fallo no tumbe las demás.
 """
@@ -136,6 +139,126 @@ def _universitaris(sal) -> str:
         _ssv(EMOUNIV.format(n=n) + geo).to_csv(sal / f"univ_{nom}.csv", index=False)
     return f"universitarios: {len(mun)} municipios, {len(com)} comarcas; columnas {list(mun.columns)}"
 
+EST = "https://educacio.gencat.cat/web/.content/home/departament/estadistiques/estadistiques-ensenyament/curs-actual/"
+# etapa -> fichero de alumnos matriculados (municipio, titularidad, concierto, sexo, nacionalidad, NESE)
+EST_ALUMNES = {
+    "llar": "infantil-1cicle/einf1c-a-csv-01.csv",
+    "inf": "infantil-2cicle/einf2c-a-csv-01.csv",
+    "pri": "educacio-primaria/pri-a-csv-01.csv",
+    "eso": "eso/eso-a-csv-01.csv",
+    "batx": "batxillerat/batx-a-csv-01.csv",
+    "fp": "fp/fitxers/fp-distancia/fptotal-a-csv-01.csv",
+}
+EST_DOCENTS = {"inf_pri": "personal-docent-regim-general/einf2ciprimaria-p-csv-03.csv",
+               "sec": "personal-docent-regim-general/secundaria-p-csv-03.csv"}
+EST_RESULTATS = "eso/eso-a-csv-02.csv"
+
+
+def _est_csv(ruta: str) -> pd.DataFrame:
+    r = get(EST + ruta, timeout=300)
+    for enc in ("utf-8-sig", "cp1252"):
+        try:
+            txt = r.content.decode(enc)
+            break
+        except UnicodeDecodeError:
+            continue
+    df = pd.read_csv(io.StringIO(txt), sep=";", dtype=str, keep_default_na=False)
+    df.columns = [c.strip() for c in df.columns]
+    df["n"] = pd.to_numeric(df[df.columns[-1]], errors="coerce").fillna(0)
+    df["ine"] = df["Codi municipi"].str.strip().str.zfill(5)
+    return df
+
+
+def _col(df: pd.DataFrame, *prefixos: str) -> str | None:
+    return next((c for c in df.columns for p in prefixos if c.lower().startswith(p.lower())), None)
+
+
+def _tipus(df: pd.DataFrame) -> pd.Series:
+    """pub = público, conc = privado concertado, priv = privado no concertado."""
+    cc = _col(df, "Matrícula concertada", "Concertat")
+    conc = df[cc].str.strip().str.upper().isin(["SI", "S", "SÍ"]) if cc else pd.Series(False, index=df.index)
+    pub = df["Naturalesa"].str.upper().str.startswith("P\u00daBLIC")
+    return pd.Series("priv", index=df.index).mask(conc, "conc").mask(pub, "pub")
+
+
+def _agrega(df: pd.DataFrame, claus: list[str]) -> pd.DataFrame:
+    """Suma por municipio de Girona y añade el total de Cataluña (ine = 'CAT')."""
+    gi = df[df["ine"].str.startswith("17")].groupby(["ine"] + claus, dropna=False)["n"].sum().reset_index()
+    cat = df.groupby(claus, dropna=False)["n"].sum().reset_index()
+    cat.insert(0, "ine", "CAT")
+    out = pd.concat([gi, cat], ignore_index=True)
+    out["n"] = out["n"].astype(int)
+    return out[out["n"] > 0]
+
+
+def _ensenyament(sal) -> str:
+    parts, edats, curs, msg = [], [], None, []
+    for etapa, ruta in EST_ALUMNES.items():
+        try:
+            df = _est_csv(ruta)
+        except Exception as e:  # noqa: BLE001
+            msg.append(f"{etapa} ERROR {type(e).__name__}")
+            continue
+        curs = curs or df["Curs"].iloc[0]
+        df["etapa"], df["tipus"] = etapa, _tipus(df)
+        df["sexe"] = df["Sexe"].str.upper().str[0]
+        df["zona"] = df[_col(df, "Zona nacionalitat")].str.strip().str.upper()
+        nc = _col(df, "Necessitats específiques")
+        df["nese"] = df[nc].str.strip().str.upper().str[:1] if nc else ""
+        # Edad respecto a la teórica del curso (1.º de primaria = 6, 1.º de ESO = 12, 1.º de bachillerato = 16)
+        edat = pd.to_numeric(df["Edat"], errors="coerce") if "Edat" in df.columns else pd.Series(float("nan"), index=df.index)
+        df["edat"] = edat.astype("Int64").astype(str).replace("<NA>", "")
+        teorica = {"pri": 5, "eso": 11, "batx": 15}.get(etapa)
+        nivell = pd.to_numeric(df["Nivell"], errors="coerce") if "Nivell" in df.columns else None
+        df["retard"] = ((edat > nivell + teorica).map({True: "S", False: "N"}) if teorica and nivell is not None else "")
+        df["retard"] = df["retard"].fillna("")
+        claus = ["etapa", "tipus", "sexe", "zona", "nese", "retard"]
+        ed = _agrega(df, ["etapa", "edat", "zona"])
+        ed.insert(0, "curs", df["Curs"].iloc[0])
+        edats.append(ed)
+        if etapa == "fp":
+            df["familia"] = df[_col(df, "Temàtica")].str.strip()
+            df["grau"] = df[_col(df, "Grau")].str.strip()
+            fam = _agrega(df, ["grau", "familia"])
+            fam.insert(0, "curs", curs)
+            fam.to_csv(sal / "ens_fp_families.csv", index=False)
+        a = _agrega(df, claus)
+        parts.append(a)
+        msg.append(f"{etapa} {int(a.loc[a['ine'] != 'CAT', 'n'].sum())}")
+    if not parts:
+        raise RuntimeError("ningún fichero de alumnos")
+    out = pd.concat(parts, ignore_index=True)
+    out.insert(0, "curs", curs)
+    out.to_csv(sal / "ens_alumnes.csv.gz", index=False)
+    pd.concat(edats, ignore_index=True).to_csv(sal / "ens_edats.csv.gz", index=False)
+    return f"estadística de l'ensenyament {curs}: alumnos de Girona por etapa: " + ", ".join(msg)
+
+
+def _ens_docents(sal) -> str:
+    parts = []
+    for nom, ruta in EST_DOCENTS.items():
+        df = _est_csv(ruta)
+        df["nivell"], df["tipus"] = nom, _tipus(df)
+        df["sexe"] = df["Sexe"].str.upper().str[0]
+        df["edat"] = df["Edat"].str.strip().str.upper()
+        a = _agrega(df, ["nivell", "tipus", "sexe", "edat"])
+        a.insert(0, "curs", df["Curs"].iloc[0])
+        parts.append(a)
+    out = pd.concat(parts, ignore_index=True)
+    out.to_csv(sal / "ens_docents.csv", index=False)
+    return f"personal docente {out['curs'].iloc[0]}: {int(out.loc[out['ine'] != 'CAT', 'n'].sum())} en Girona"
+
+
+def _ens_resultats(sal) -> str:
+    df = _est_csv(EST_RESULTATS)
+    df["tipus"] = _tipus(df)
+    df["nivell"] = df["Nivell"].str.strip()
+    df["resultat"] = df[_col(df, "Resultat")].str.strip().str.upper()
+    a = _agrega(df, ["nivell", "tipus", "resultat"])
+    a.insert(0, "curs", df["Curs"].iloc[0])
+    a.to_csv(sal / "ens_resultats_eso.csv", index=False)
+    return f"resultados ESO {a['curs'].iloc[0]}: {int(a.loc[a['ine'] != 'CAT', 'n'].sum())} alumnos evaluados en Girona"
+
 
 def ejecutar() -> str:
     sal = carpeta("educacio")
@@ -143,7 +266,9 @@ def ejecutar() -> str:
     passos = [("censo", lambda: _censo(sal)), ("matricula", lambda: _matricula(sal)), ("centres", lambda: _centres(sal)),
               ("preinscripcio", lambda: _preinscripcio(sal)),
               ("6e", lambda: _avaluacio(sal, "rk5x-gny6", "6e")), ("4eso", lambda: _avaluacio(sal, "59vm-wwq7", "4eso")),
-              ("universitaris", lambda: _universitaris(sal))]
+              ("universitaris", lambda: _universitaris(sal)),
+              ("ensenyament", lambda: _ensenyament(sal)), ("docents", lambda: _ens_docents(sal)),
+              ("resultats", lambda: _ens_resultats(sal))]
     for nom, f in passos:
         try:
             lineas.append(f())
