@@ -1561,6 +1561,151 @@ def educacio_indicadores(pob):
     return res, sec, refs, anys
 
 
+ENS_BASE = ["inf", "pri", "eso", "batx"]  # infantil 2.º ciclo a bachillerato (misma base que «Escola pública»)
+ENS_ZONES = {"RESTA UNIÓ EUROPEA": "ue", "RESTA D'EUROPA": "eur", "MAGREB": "mag", "RESTA D'ÀFRICA": "afr",
+             "CENTRE I SUDAMÈRICA": "sud", "AMÈRICA DEL NORD": "nam", "ÀSIA I OCEANIA": "asi"}
+
+
+def ensenyament_indicadores():
+    """Estadística de l'ensenyament (curso actual): titularidad, nacionalidad, edad, NESE, docentes y resultados.
+
+    Devuelve (por municipio, refs, años, series provinciales). En m.x van los indicadores del mapa y «ens»,
+    el desglose para la ficha: alumnos por etapa y tipo de centro, extranjeros por zona y alumnos por edad.
+    """
+    d = P / "educacio"
+    res, refs, anys, prov = {}, {}, {}, {}
+    f = d / "ens_alumnes.csv.gz"
+    if not f.exists():
+        return res, refs, anys, prov
+    a = pd.read_csv(f, dtype=str, keep_default_na=False)
+    a["n"] = pd.to_numeric(a["n"], errors="coerce").fillna(0)
+    curs = _curs_ini(a["curs"].iloc[0])
+    a["estr"] = ~a["zona"].isin(["ESPANYA", ""])
+    gi_mask = a["ine"].str.startswith("17")
+    put = lambda ine, k, v, dec=1: res.setdefault(ine, {}).__setitem__(k, round(float(v), dec)) if v == v and v is not None and math.isfinite(float(v)) else None  # noqa: E731
+
+    def ind(g):
+        o = {}
+        b = g[g["etapa"].isin(ENS_BASE)]
+        nb = b["n"].sum()
+        if nb >= 50:
+            for k, t in (("edu_conc", "conc"), ("edu_priv", "priv")):
+                o[k] = 100 * b.loc[b["tipus"] == t, "n"].sum() / nb
+            o["edu_estr"] = 100 * b.loc[b["estr"], "n"].sum() / nb
+            nn = b[b["nese"].isin(["S", "N"])]
+            if nn["n"].sum():
+                o["edu_nese"] = 100 * nn.loc[nn["nese"] == "S", "n"].sum() / nn["n"].sum()
+        e = g[(g["etapa"] == "eso") & g["retard"].isin(["S", "N"])]
+        if e["n"].sum() >= 50:
+            o["edu_retard"] = 100 * e.loc[e["retard"] == "S", "n"].sum() / e["n"].sum()
+        fp = g.loc[g["etapa"] == "fp", "n"].sum()
+        if fp:
+            o["edu_fp"] = fp
+        return o
+    for ine, g in a[gi_mask].groupby("ine"):
+        for k, v in ind(g).items():
+            put(ine, k, v, 0 if k == "edu_fp" else 1)
+        et = {}
+        for (e, t), n in g.groupby(["etapa", "tipus"])["n"].sum().items():
+            et.setdefault(e, {"pub": 0, "conc": 0, "priv": 0, "estr": 0})[t] = int(n)
+        for e, n in g[g["estr"]].groupby("etapa")["n"].sum().items():
+            et[e]["estr"] = int(n)
+        zones = {ENS_ZONES.get(z, "alt"): int(n) for z, n in g[g["estr"]].groupby("zona")["n"].sum().items() if n}
+        res.setdefault(ine, {})["ens"] = {"et": {e: [v["pub"], v["conc"], v["priv"], v["estr"]] for e, v in et.items()}, "z": zones}
+    cat_o, gi_o = ind(a[a["ine"] == "CAT"]), ind(a[gi_mask])
+    for k in cat_o:
+        if k != "edu_fp":
+            refs[k] = {"cat": round(cat_o[k], 1), "gi": round(gi_o.get(k, float("nan")), 1)}
+        anys[k] = curs
+    refs["edu_fp"] = {"gi": int(gi_o.get("edu_fp", 0))}
+    # Edad de los alumnos (para la ficha): [edad, total, extranjeros], de 0 a 20 años y «21 o más»
+    f = d / "ens_edats.csv.gz"
+    if f.exists():
+        ed = pd.read_csv(f, dtype=str, keep_default_na=False)
+        ed["n"] = pd.to_numeric(ed["n"], errors="coerce").fillna(0)
+        ed["e"] = pd.to_numeric(ed["edat"], errors="coerce").clip(upper=21)
+        ed["estr"] = ~ed["zona"].isin(["ESPANYA", ""])
+        ed = ed[ed["e"].notna() & ed["ine"].str.startswith("17")]
+        for ine, g in ed.groupby("ine"):
+            t = g.groupby("e")["n"].sum()
+            x = g[g["estr"]].groupby("e")["n"].sum()
+            if ine in res and "ens" in res[ine]:
+                res[ine]["ens"]["ed"] = [[int(e), int(n), int(x.get(e, 0))] for e, n in t.items() if n]
+    # Docentes del centro (infantil-primaria y secundaria) por municipio del centro
+    f = d / "ens_docents.csv"
+    if f.exists():
+        dc = pd.read_csv(f, dtype=str, keep_default_na=False)
+        dc["n"] = pd.to_numeric(dc["n"], errors="coerce").fillna(0)
+        dc["gran"] = dc["edat"].str.contains("50|55|60|MÉS DE 64", regex=True)
+
+        def doc(g, al):
+            o, n = {}, g["n"].sum()
+            if n >= 10:
+                o["edu_doc_dones"] = 100 * g.loc[g["sexe"] == "D", "n"].sum() / n
+                o["edu_doc_50"] = 100 * g.loc[g["gran"], "n"].sum() / n
+                if al:
+                    o["edu_alum_doc"] = al / n
+            if n:
+                o["edu_docents"] = n
+            return o
+        al_m = a[a["etapa"].isin(["inf", "pri", "eso", "batx", "fp"])].groupby("ine")["n"].sum()
+        for ine, g in dc[dc["ine"].str.startswith("17")].groupby("ine"):
+            for k, v in doc(g, al_m.get(ine, 0)).items():
+                put(ine, k, v, 0 if k == "edu_docents" else 1)
+        al_gi = al_m[al_m.index.str.startswith("17")].sum()
+        c_o, g_o = doc(dc[dc["ine"] == "CAT"], al_m.get("CAT", 0)), doc(dc[dc["ine"].str.startswith("17")], al_gi)
+        for k in ("edu_doc_dones", "edu_doc_50", "edu_alum_doc"):
+            if k in c_o:
+                refs[k] = {"cat": round(c_o[k], 1), "gi": round(g_o[k], 1)}
+        refs["edu_docents"] = {"gi": int(g_o.get("edu_docents", 0))}
+        for k in ("edu_doc_dones", "edu_doc_50", "edu_alum_doc", "edu_docents"):
+            anys[k] = _curs_ini(dc["curs"].iloc[0])
+    # Resultados de ESO del curso anterior: alumnos de 4.º que obtienen el título (promocionan)
+    f = d / "ens_resultats_eso.csv"
+    if f.exists():
+        r = pd.read_csv(f, dtype=str, keep_default_na=False)
+        r["n"] = pd.to_numeric(r["n"], errors="coerce").fillna(0)
+        r = r[r["nivell"] == "4"]
+        r["no"] = r["resultat"].str.startswith("NO ")
+
+        def grad(g):
+            n = g["n"].sum()
+            return 100 * (n - g.loc[g["no"], "n"].sum()) / n if n else None
+        for ine, g in r[r["ine"].str.startswith("17")].groupby("ine"):
+            if g["n"].sum() >= 20:
+                put(ine, "edu_grad4", grad(g))
+        refs["edu_grad4"] = {"cat": round(grad(r[r["ine"] == "CAT"]), 1), "gi": round(grad(r[r["ine"].str.startswith("17")]), 1)}
+        anys["edu_grad4"] = _curs_ini(r["curs"].iloc[0])
+    # «La província»: alumnado extranjero por etapa y por zona de nacionalidad (Girona y Cataluña)
+    noms = {"llar": "et:llar", "inf": "et:inf", "pri": "et:pri", "eso": "et:eso", "batx": "et:batx", "fp": "et:fp"}
+    grups = []
+    for e, c in noms.items():
+        g, k = a[gi_mask & (a["etapa"] == e)], a[(a["ine"] == "CAT") & (a["etapa"] == e)]
+        if g["n"].sum() and k["n"].sum():
+            grups.append({"g": e, "c": c, "gi": round(100 * g.loc[g["estr"], "n"].sum() / g["n"].sum(), 1),
+                          "cat": round(100 * k.loc[k["estr"], "n"].sum() / k["n"].sum(), 1), "n": int(g["n"].sum()), "any": curs})
+    if grups:
+        prov["edu_estr_etapa"] = {"tipus": "barres", "u": "%", "dec": 1, "nu": "alu", "claus": ["gi", "cat"], "any": curs, "grups": grups}
+    ex_g, ex_c = a[gi_mask & a["estr"]], a[(a["ine"] == "CAT") & a["estr"]]
+    zg, zc = ex_g.groupby("zona")["n"].sum(), ex_c.groupby("zona")["n"].sum()
+    grups = [{"g": z, "c": "ez:" + ENS_ZONES.get(z, "alt"), "gi": round(100 * zg.get(z, 0) / zg.sum(), 1), "cat": round(100 * zc.get(z, 0) / zc.sum(), 1), "any": curs}
+             for z in zg.sort_values(ascending=False).index]
+    if grups:
+        prov["edu_zones"] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["gi", "cat"], "any": curs, "grups": grups,
+                             "abs": {"n": int(zg.sum()), "pct": round(100 * zg.sum() / a.loc[gi_mask, "n"].sum(), 1)}}
+    # Tipo de centro por etapa en la provincia (% pública, concertada y privada)
+    grups = []
+    for e, c in noms.items():
+        g = a[gi_mask & (a["etapa"] == e)]
+        n = g["n"].sum()
+        if n:
+            t = g.groupby("tipus")["n"].sum()
+            grups.append({"g": e, "c": c, **{k: round(100 * t.get(k, 0) / n, 1) for k in ("pub", "conc", "priv")}, "n": int(n), "any": curs})
+    if grups:
+        prov["edu_tipus_etapa"] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["pub", "conc", "priv"], "any": curs, "grups": grups, "noms": "tc", "nu": "alu"}
+    return res, refs, anys, prov
+
+
 def educacio_series():
     """Series provinciales: competencias básicas y alumnado en centros públicos (Girona vs Cataluña)."""
     d = P / "educacio"
@@ -2453,6 +2598,11 @@ def main():
     for ine, x in ed.items():
         extra_mun.setdefault(ine, {}).update(x)
     anys_extra.update(anys_ed)
+    en, refs_en, anys_en, prov_en = ensenyament_indicadores()
+    for ine, x in en.items():
+        extra_mun.setdefault(ine, {}).update(x)
+    anys_extra.update(anys_en)
+    refs_ed.update(refs_en)
     un, refs_un, anys_un = universitaris_indicadores(pob)
     for ine, x in un.items():
         extra_mun.setdefault(ine, {}).update(x)
@@ -2661,7 +2811,7 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
         "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {

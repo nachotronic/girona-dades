@@ -45,7 +45,7 @@
     // Bloques que ya llevan su propia fuente
     com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
     tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
-    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" },
+    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" },
   };
   // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
   const SECCIONS = {
