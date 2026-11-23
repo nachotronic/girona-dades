@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 16:35 UTC
+Última ejecución: 2026-11-23 16:43 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -36,7 +36,7 @@
 | llistes_espera — CatSalut, llistes d'espera per hospital | ok | 2026-11-23 14:33 | 2026-11-23 14:33 | mensual |
 | cgpj — CGPJ, estadística judicial per partit judicial | ok | 2026-11-23 14:33 | 2026-11-23 14:33 | trimestral |
 | interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-23 16:16 | 2026-11-23 16:16 | trimestral |
-| comerc — Generalitat, cens d'establiments comercials i ocupació comercial | avís | 2026-11-16 15:31 | 2026-11-23 16:28 | anual |
+| comerc — Generalitat, cens d'establiments comercials i ocupació comercial | ok | 2026-11-23 16:36 | 2026-11-23 16:36 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | ok | 2026-11-23 14:46 | 2026-11-23 14:46 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-23 15:19 | 2026-11-23 15:19 | anual |
 | habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-23 15:25 | 2026-11-23 15:25 | anual/trimestral |
@@ -48,15 +48,8 @@
 
 ## Detalle de la última ejecución
 
-### exportacions: ok (62 s)
+### comerc: ok (403 s)
 
 ```
-población INE (2852?nult=10): 53 zonas, años 2012-2021
-Sin cambios (99 periodos publicados, último 2026-09)
-```
-
-### comerc: avís (386 s)
-
-```
-CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 221 consultes, 1076 municipi-any; 12 municipi-any sense establiments (l'API no en té fitxa); ERROR en 17 consultes sense dades anteriors: Bisbal d'Empordà, la 2021, Escala, l' 2021, Jonquera, la 2021, Vall d'en Bas, la 2021, Cellera de Ter, la 2021, Preses, les 2021, Planes d'Hostoles, les 2021, Vall de Bianya, la 2021, Port de la Selva, el 2021, Armentera, l' 2021, Far d'Empordà, el 2021, Tallada d'Empordà, la 2021, Pera, la 2021, Se; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc
+CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 221 consultes, 1076 municipi-any; 12 municipi-any sense establiments (l'API no en té fitxa); l'API no té 17 municipi-any antics: Bisbal d'Empordà, la 2021, Escala, l' 2021, Jonquera, la 2021, Vall d'en Bas, la 2021, Cellera de Ter, la 2021, Preses, les 2021, Planes d'Hostoles, les 2021, Vall de Bianya, la 2021, Port de la Selva, el 2021, Armentera, l' 2021, Far d'Empordà, el 2021, Tallada d'Empordà, la 2021, Pera, la 2021, Se; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc
 ```
