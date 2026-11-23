@@ -185,6 +185,8 @@ ATLAS_EXTRA = {
     "pobresa": ("31021.csv.gz", {3: "Total", 4: "Población con ingresos por unidad de consumo por debajo 60% de la mediana"}, 1),
     "pobresa_sev": ("31021.csv.gz", {3: "Total", 4: "Población con ingresos por unidad de consumo por debajo 40% de la mediana"}, 1),
     "alts_ingressos": ("31021.csv.gz", {3: "Total", 4: "Población con ingresos por unidad de consumo por encima 200% de la mediana"}, 1),
+    "pobresa_esp": ("31023.csv.gz", {3: "Total", 4: "Española", 5: "Población con ingresos por unidad de consumo por debajo 60% de la mediana"}, 1),
+    "pobresa_ext": ("31023.csv.gz", {3: "Total", 4: "Extranjera", 5: "Población con ingresos por unidad de consumo por debajo 60% de la mediana"}, 1),
     "edat": ("31024.csv.gz", {3: "Edad media de la población"}, 1),
     "menors18": ("31024.csv.gz", {3: "Porcentaje de población menor de 18 años"}, 1),
     "majors65": ("31024.csv.gz", {3: "Porcentaje de población de 65 y más años"}, 1),

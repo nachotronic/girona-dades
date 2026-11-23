@@ -67,6 +67,8 @@ window.PREGUNTA_DIC = {
     renda: "renta, renda, ingresos, ingressos, rico, ricos, rica, ricas, rics, riques, renta media, renda mitjana, renta per capita, renda per capita, dinero, diners, gana, guanya, ganan, guanyen, cobran, cobren, nivel de vida, nivell de vida, poder adquisitivo, poder adquisitiu, riqueza de la gente, sueldos, sous, salarios",
     renda_llar: "renta por hogar, renda per llar, renta familiar, renda familiar, ingresos por hogar, ingressos per llar, ingresos familiares, ingressos familiars, por familia, per familia",
     pobresa: "pobreza, pobresa, pobres, riesgo de pobreza, risc de pobresa, exclusion, exclusio, vulnerabilidad, vulnerabilitat",
+    pobresa_esp: "pobreza de los españoles, pobresa dels espanyols, españoles pobres, espanyols pobres, pobreza nacionales, pobreza autoctonos",
+    pobresa_ext: "pobreza de los extranjeros, pobresa dels estrangers, extranjeros pobres, estrangers pobres, pobreza inmigrantes, pobresa immigrants",
     pobresa_sev: "pobreza severa, pobresa severa, pobreza extrema, pobresa extrema, muy pobres, molt pobres",
     alts: "rentas altas, rendes altes, ricos de verdad, gente rica, gent rica, millonarios, milionaris",
     gini: "desigualdad, desigualtat, gini, diferencias de renta, diferencies de renda",
