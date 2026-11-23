@@ -19,6 +19,8 @@ window.PREGUNTA_DIC = {
     cj_contr: "contratos, contractes, contrataciones, contractacions, contratos firmados, contractes signats",
     cj_indef: "contratos indefinidos, contractes indefinits, indefinidos, indefinits, contratos fijos, contractes fixos, empleo estable, feina estable",
     cj_mat: "matriculaciones, matriculacions, coches matriculados, cotxes matriculats",
+    cj_trf: "coches de segunda mano, cotxes de segona ma, vehiculos de ocasion, vehicles d ocasio, coches usados, cotxes usats, compraventa de coches, transferencias de vehiculos, transferencies, ventas de coches usados",
+    cj_trf_vell: "coches viejos vendidos, cotxes vells venuts, antiguedad de los coches vendidos, coches de mas de 15 anos",
     llocs: "puestos de trabajo, llocs de treball, empleos, feines, empleo local, lugares de trabajo",
     autonoms: "autonomos por habitante, autonoms per habitant",
     empreses: "empresas, empreses, negocios, negocis, companias, companyies, sociedades",

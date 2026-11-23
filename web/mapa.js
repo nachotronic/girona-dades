@@ -110,6 +110,9 @@
   const afil = CJ("afil", "m"), reta = CJ("reta", "m"), mat = CJ("mat", "m");
   const suma12 = (f) => (x, a) => { let s = 0; for (let k = 0; k < 12; k++) { const b = k ? antPer("m", a, k) : a, v = b ? f(x, b) : null; if (v == null) return null; s += v; } return s; };
   const mat12 = suma12(mat), mat12P = suma12((_, a) => CJP("mat", "m")(a));
+  const trf12 = suma12(CJ("trf", "m")), trfV12 = suma12(CJ("trf_v", "m")), trf12P = suma12((_, a) => CJP("trf", "m")(a));
+  const trf12Z = (z) => suma12((_, a) => CJP("trf", "m", z)(a));
+  const NOTA_TRF = { ca: "DGT, microdades de transferències: canvis de titular de turismes segons el domicili del nou titular. Inclou els cotxes que compren els concessionaris i compravendes per revendre'ls, per això surten tan alts municipis com Fornells de la Selva o Vilamalla. Ganvam i Faconauto parteixen d'aquestes dades, però publiquen una xifra un 30 % més baixa perquè en descompten operacions que no són vendes al comprador final.", es: "DGT, microdatos de transferencias: cambios de titular de turismos según el domicilio del nuevo titular. Incluye los coches que compran concesionarios y compraventas para revenderlos, por eso salen tan altos municipios como Fornells de la Selva o Vilamalla. Ganvam y Faconauto parten de estos datos, pero publican una cifra un 30 % más baja porque descuentan operaciones que no son ventas al comprador final." };
   const NOTA_AFI = { ca: "Idescat a partir de la Seguretat Social: afiliacions al règim general i d'autònoms segons el municipi de residència. Mensual des del maig del 2020, trimestral abans.", es: "Idescat a partir de la Seguridad Social: afiliaciones al régimen general y de autónomos según el municipio de residencia. Mensual desde mayo de 2020, trimestral antes." };
   const aturP = CJP("atur", "m"), cvqP = CJP("cvq", "t"), cvq4 = suma4(cvq), cvq4P = suma4((_, a) => cvqP(a));
   const refCJ = (k, per, fn) => () => { const a = D.cj && D.cj.per[per].slice(-1)[0]; return a ? { cat: fn("cat", a), esp: fn("esp", a) } : {}; };
@@ -502,6 +505,13 @@
     { id: "cj_mat", per: "m", cob: 0.3, tema: "con", ca: ["Cotxes nous", "Turismes nous matriculats en 12 mesos per 1.000 habitants"], es: ["Coches nuevos", "Turismos nuevos matriculados en 12 meses por 1.000 habitantes"],
       t: (m, a) => { const v = mat12(m, a); return v != null && m.poblacion ? (v / m.poblacion) * 1000 : null; }, pv: (a) => { const v = mat12P(null, a); return v != null ? (v / sumaPob()) * 1000 : null; },
       nota: { ca: "DGT, segons el domicili del titular. Inclou les empreses de lloguer, que pugen molt la xifra d'alguns municipis.", es: "DGT, según el domicilio del titular. Incluye las empresas de alquiler, que disparan la cifra de algunos municipios." }, ...N1 },
+    { id: "cj_trf", per: "m", cob: 0.3, tema: "con", ca: ["Cotxes de segona mà", "Turismes de segona mà comprats en 12 mesos per 1.000 habitants"], es: ["Coches de segunda mano", "Turismos de segunda mano comprados en 12 meses por 1.000 habitantes"],
+      t: (m, a) => { const v = trf12(m, a); return v != null && m.poblacion ? (v / m.poblacion) * 1000 : null; }, pv: (a) => { const v = trf12P(null, a); return v != null ? (v / sumaPob()) * 1000 : null; },
+      ref: refCJ("trf", "m", (z, a) => { const v = trf12Z(z)(null, a); return z === "cat" && v != null && D.cj.pob_cat ? (v / D.cj.pob_cat.pob) * 1000 : null; }), nota: NOTA_TRF, ...N1 },
+    { id: "cj_trf_vell", per: "m", cob: 0.3, sumable: false, tema: "con", ca: ["Cotxes vells venuts", "Turismes de 15 anys o més (% dels de segona mà comprats en 12 mesos)"], es: ["Coches viejos vendidos", "Turismos de 15 años o más (% de los de segunda mano comprados en 12 meses)"],
+      t: (m, a) => { const v = trfV12(m, a), t = trf12(m, a); return v != null && t >= 20 ? (v / t) * 100 : null; },
+      pv: (a) => { let v = 0, t = 0; for (let k = 0; k < 12; k++) { const b = k ? antPer("m", a, k) : a, x = b ? CJP("trf", "m")(b) : null, p = b ? CJP("trf_v", "m")(b) : null; if (x == null || p == null) return null; t += x; v += (x * p) / 100; } return t ? (v / t) * 100 : null; },
+      nota: { ca: "Antiguitat comptada des de la primera matriculació. Només municipis amb 20 compres o més en 12 mesos. " + NOTA_TRF.ca, es: "Antigüedad contada desde la primera matriculación. Solo municipios con 20 compras o más en 12 meses. " + NOTA_TRF.es }, ...P0 },
     { id: "cj_llq", per: "t", cob: 0.2, tema: "con", ca: ["Lloguer del trimestre", "Lloguer mitjà dels contractes nous del trimestre (€/mes)"], es: ["Alquiler del trimestre", "Alquiler medio de los contratos nuevos del trimestre (€/mes)"],
       t: llq, pv: CJP("llq", "t"), nota: { ca: "Incasòl, fiances dipositades. Només municipis amb prou contractes.", es: "Incasòl, fianzas depositadas. Solo municipios con suficientes contratos." }, ...EU },
     { id: "cj_llq_var", per: "t", cob: 0.2, sumable: false, tema: "con", ca: ["Lloguer: variació anual", "Variació del lloguer mitjà respecte al mateix trimestre de l'any anterior (%)"], es: ["Alquiler: variación anual", "Variación del alquiler medio respecto al mismo trimestre del año anterior (%)"],
@@ -906,6 +916,7 @@
   // Los indicadores de coyuntura muestran el último periodo con datos
   // Las matriculaciones mensuales también en el tema Vehicles, después del parque
   { const m = IND.find((i) => i.id === "cj_mat"), p = IND.findIndex((i) => i.id === "veh_tur_h"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: "veh_mat", tema: "veh" }); }
+  ["cj_trf_vell", "cj_trf"].forEach((id) => { const m = IND.find((i) => i.id === id), p = IND.findIndex((i) => i.id === "veh_mat"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: id.replace("cj_", "veh_"), tema: "veh" }); });
   IND.forEach((i) => { if (i.per) i.v = (m) => (D.cj ? i.t(m, anysDe(i).slice(-1)[0]) : null); });
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
