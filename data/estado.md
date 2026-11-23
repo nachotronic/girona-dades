@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 16:26 UTC
+Última ejecución: 2026-11-23 16:30 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -45,15 +45,15 @@
 | demografia — Naixements, defuncions i causes de mort (INE), defuncions per ABS (CatSalut) i noms dels nadons (Idescat) | — | — | — | setmanal/mensual |
 | transit — Accidents de trànsit: Servei Català de Trànsit, DGT (vies urbanes) i Mossos | — | — | — | anual/mensual |
 | cultura — Cultura: biblioteques públiques (DadesBib), equipaments, entitats, arxius, llibreries, Programa.cat i agenda cultural | avís | — | 2026-11-19 23:52 | anual |
-| medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | avís | — | 2026-11-23 16:24 | diari/anual |
+| medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
 
 ## Detalle de la última ejecución
 
-### medi_ambient: avís (140 s)
+### medi_ambient: ok (174 s)
 
 ```
 aire: 8 estaciones (5 activas), 321 filas anuales, hasta 2026-11-23
 meteo: 47 estaciones, 1989-2026, 3823 filas anuales
 aigua: embalses 2000-01-01-2026-11-23 (29470 filas), sequía 213 municipios (último cambio 2025-05-16), consumo 2012-2025, 271 playas
-zvn: ERROR ValueError: No objects to concatenate; n2000: 46 polígonos de n2000_2025_shp.zip, 182 municipios tocan; enp: 130 polígonos de Enp2025_shp.zip, 185 municipios tocan
+zvn: 29 polígonos de lpk-Zonas_Vulnerables_dic2024.zip, 161 municipios tocan; n2000: 46 polígonos de n2000_2025_shp.zip, 182 municipios tocan; enp: 130 polígonos de Enp2025_shp.zip, 185 municipios tocan
 ```
