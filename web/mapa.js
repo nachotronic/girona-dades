@@ -237,6 +237,29 @@
     ["pa", ["Anomalia de pluja", "Pluja de l'any davant la mitjana dels anys anteriors (%)"], ["Anomalía de lluvia", "Lluvia del año frente a la media de los años anteriores (%)"], PCA],
     ["pluja1", ["Dies de pluja", "Dies amb 1 mm de pluja o més"], ["Días de lluvia", "Días con 1 mm de lluvia o más"], N0],
   ];
+  // Energia i connectivitat: m.en = {clave: {año: valor}}, D.anys.en_cert/en_rec/en_carb/en_cob; secciones en SEC[cusec]["en_cert_*"]; D.en_ref = medianas de carburantes
+  const EN = (k) => (m, a) => (a != null && m.en && m.en[k] && m.en[k][a] != null ? m.en[k][a] : null);
+  const NOTA_CERT = { ca: "Institut Català d'Energia (ICAEN), registre de certificats d'eficiència energètica d'edificis (des del 2016). Habitatges amb certificat, l'últim de cada referència cadastral; qualificació de consum d'energia primària no renovable. Només municipis amb 10 certificats o més i seccions amb 30 o més. Certifiquen sobretot els pisos que es venen o es lloguen.", es: "Institut Català d'Energia (ICAEN), registro de certificados de eficiencia energética de edificios (desde 2016). Viviendas con certificado, el último de cada referencia catastral; calificación de consumo de energía primaria no renovable. Solo municipios con 10 certificados o más y secciones con 30 o más. Se certifican sobre todo los pisos que se venden o se alquilan." };
+  const NOTA_REC = { ca: "Generalitat, punts de recàrrega per a vehicles elèctrics (dades obertes). Ràpids: 50 kW o més. Taxa sobre la població resident.", es: "Generalitat, puntos de recarga para vehículos eléctricos (datos abiertos). Rápidos: 50 kW o más. Tasa sobre la población residente." };
+  const NOTA_CARB = { ca: "Ministeri per a la Transició Ecològica, preus dels carburants a les estacions de servei. Mediana de les gasolineres del municipi el dia de la darrera descàrrega (setmanal). Referències: medianes de Catalunya i d'Espanya el mateix dia.", es: "Ministerio para la Transición Ecológica, precios de los carburantes en las estaciones de servicio. Mediana de las gasolineras del municipio el día de la última descarga (semanal). Referencias: medianas de Cataluña y de España el mismo día." };
+  const NOTA_COB = { ca: "Ministeri per a la Transformació Digital, cobertura de banda ampla per municipi (juny de cada any; fins al 2020, desembre). Percentatge d'habitatges (fins al 2020, llars) amb cobertura. Des del 2022 les velocitats es mesuren «en condicions de màxima demanda».", es: "Ministerio para la Transformación Digital, cobertura de banda ancha por municipio (junio de cada año; hasta 2020, diciembre). Porcentaje de viviendas (hasta 2020, hogares) con cobertura. Desde 2022 las velocidades se miden «en condiciones de máxima demanda»." };
+  const ENE = [
+    ["cert_eg", "en_cert", ["Pisos poc eficients", "Habitatges certificats amb lletra E, F o G (%)"], ["Pisos poco eficientes", "Viviendas certificadas con letra E, F o G (%)"], NOTA_CERT, { s: S("en_cert_eg"), ...P0 }],
+    ["cert_ab", "en_cert", ["Pisos eficients", "Habitatges certificats amb lletra A o B (%)"], ["Pisos eficientes", "Viviendas certificadas con letra A o B (%)"], NOTA_CERT, { s: S("en_cert_ab"), ...P1 }],
+    ["cert_g", "en_cert", ["Pisos amb lletra G", "Habitatges certificats amb la pitjor lletra, la G (%)"], ["Pisos con letra G", "Viviendas certificadas con la peor letra, la G (%)"], NOTA_CERT, { s: S("en_cert_g"), ...P0 }],
+    ["cert_kwh", "en_cert", ["Consum d'energia dels pisos", "Energia primària no renovable dels habitatges certificats (kWh/m² any)"], ["Consumo de energía de los pisos", "Energía primaria no renovable de las viviendas certificadas (kWh/m² año)"], NOTA_CERT, { s: S("en_cert_kwh"), ...N0 }],
+    ["cert_n", "en_cert", ["Certificats energètics", "Habitatges amb certificat energètic per 1.000 habitants"], ["Certificados energéticos", "Viviendas con certificado energético por 1.000 habitantes"], NOTA_CERT, N0],
+    ["rec_n", "en_rec", ["Punts de recàrrega", "Punts de recàrrega per a vehicles elèctrics"], ["Puntos de recarga", "Puntos de recarga para vehículos eléctricos"], NOTA_REC, { sumable: true, ...N0 }],
+    ["rec_10k", "en_rec", ["Recàrrega per habitant", "Punts de recàrrega per 10.000 habitants"], ["Recarga por habitante", "Puntos de recarga por 10.000 habitantes"], NOTA_REC, N1],
+    ["rec_rapid", "en_rec", ["Recàrrega ràpida", "Punts de recàrrega ràpida (50 kW o més)"], ["Recarga rápida", "Puntos de recarga rápida (50 kW o más)"], NOTA_REC, { sumable: true, ...N0 }],
+    ["gas_n", "en_carb", ["Gasolineres", "Estacions de servei"], ["Gasolineras", "Estaciones de servicio"], NOTA_CARB, { sumable: true, ...N0 }],
+    ["gas_g95", "en_carb", ["Preu de la gasolina", "Gasolina 95, preu mitjà a les gasolineres del municipi (€/litre)"], ["Precio de la gasolina", "Gasolina 95, precio medio en las gasolineras del municipio (€/litro)"], NOTA_CARB, { f: (v) => `${fmt(v, 3)} €`, c: (v) => `${fmt(v, 2)} €` }],
+    ["gas_diesel", "en_carb", ["Preu del gasoil", "Gasoil A, preu mitjà a les gasolineres del municipi (€/litre)"], ["Precio del gasóleo", "Gasóleo A, precio medio en las gasolineras del municipio (€/litro)"], NOTA_CARB, { f: (v) => `${fmt(v, 3)} €`, c: (v) => `${fmt(v, 2)} €` }],
+    ["cob_ftth", "en_cob", ["Fibra òptica", "Habitatges amb cobertura de fibra fins a casa, FTTH (%)"], ["Fibra óptica", "Viviendas con cobertura de fibra hasta casa, FTTH (%)"], NOTA_COB, P1],
+    ["cob_1g", "en_cob", ["Internet d'1 Gbps", "Habitatges amb cobertura d'1 Gbps o més (%)"], ["Internet de 1 Gbps", "Viviendas con cobertura de 1 Gbps o más (%)"], NOTA_COB, P1],
+    ["cob_100", "en_cob", ["Internet de 100 Mbps", "Habitatges amb cobertura de 100 Mbps o més (%)"], ["Internet de 100 Mbps", "Viviendas con cobertura de 100 Mbps o más (%)"], NOTA_COB, P1],
+    ["cob_5g", "en_cob", ["Cobertura 5G", "Habitatges amb cobertura mòbil 5G (%)"], ["Cobertura 5G", "Viviendas con cobertura móvil 5G (%)"], NOTA_COB, P1],
+  ];
   const CUL = [
     ["b_prest_h", "cul_bib", ["Préstecs de biblioteca", "Préstecs de les biblioteques públiques per habitant"], ["Préstamos de biblioteca", "Préstamos de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
     ["b_vis_h", "cul_bib", ["Visites a la biblioteca", "Visites a les biblioteques públiques per habitant"], ["Visitas a la biblioteca", "Visitas a las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
@@ -783,6 +806,8 @@
     ...AMB_COM.map(([k, ca, es, fmtk]) => ({ id: "amb_c_" + k, tema: "amb", ca, es, a: "amb_aigua", sumable: false, com: AMZ(k), ref: AMR(k), nota: NOTA_AIGUA, ...fmtk })),
     ...AMB_AIRE.map(([k, ca, es, fmtk]) => ({ id: "amb_a_" + k, tema: "amb", ca, es, a: "amb_aire", sumable: false, aire: A(k), nota: NOTA_AIRE, ...fmtk })),
     ...AMB_MET.map(([k, ca, es, fmtk]) => ({ id: "amb_m_" + k, tema: "amb", ca, es, a: "amb_met", sumable: false, met: A(k), nota: NOTA_MET, ...fmtk })),
+    ...ENE.map(([k, a, ca, es, nota, fmtk]) => ({ id: "en_" + k, tema: "ene", ca, es, a, sumable: false, v: (m) => EN("en_" + k)(m, D.anys && D.anys[a]), t: a === "en_cob" ? EN("en_" + k) : undefined, nota,
+      ref: /^gas_g|^gas_d/.test(k) ? () => { const r = D.en_ref && D.en_ref[k]; return r ? { cat: r.cat, esp: r.esp } : {}; } : undefined, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
@@ -1020,6 +1045,7 @@
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "acc") D.municipios.forEach((m) => Object.values(m.acc || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "cul") D.municipios.forEach((m) => Object.values(m.cul || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.a === "en_cob") D.municipios.forEach((m) => Object.entries(m.en || {}).forEach(([k, o]) => /^en_cob_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "amb_seq") D.municipios.forEach((m) => Object.entries(m.amb || {}).forEach(([k, o]) => /^seq_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));

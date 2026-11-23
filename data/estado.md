@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 16:43 UTC
+Última ejecución: 2026-11-23 20:55 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -45,11 +45,19 @@
 | demografia — Naixements, defuncions i causes de mort (INE), defuncions per ABS (CatSalut) i noms dels nadons (Idescat) | ok | 2026-11-23 15:28 | 2026-11-23 15:28 | setmanal/mensual |
 | transit — Accidents de trànsit: Servei Català de Trànsit, DGT (vies urbanes) i Mossos | ok | 2026-11-23 15:32 | 2026-11-23 15:32 | anual/mensual |
 | cultura — Cultura: biblioteques públiques (DadesBib), equipaments, entitats, arxius, llibreries, Programa.cat i agenda cultural | avís | — | 2026-11-23 15:32 | anual |
+| medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
+| energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 
 ## Detalle de la última ejecución
 
-### comerc: ok (403 s)
+### energia: avís (43 s)
 
 ```
-CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 221 consultes, 1076 municipi-any; 12 municipi-any sense establiments (l'API no en té fitxa); l'API no té 17 municipi-any antics: Bisbal d'Empordà, la 2021, Escala, l' 2021, Jonquera, la 2021, Vall d'en Bas, la 2021, Cellera de Ter, la 2021, Preses, les 2021, Planes d'Hostoles, les 2021, Vall de Bianya, la 2021, Port de la Selva, el 2021, Armentera, l' 2021, Far d'Empordà, el 2021, Tallada d'Empordà, la 2021, Pera, la 2021, Se; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc
+certificados: 155668 únicos, 96% con sección, hasta 2026-11-21
+recarga: 349 puntos
+_carburants: ERROR SSLError: HTTPSConnectionPool(host='sedeaplicaciones.minetur.gob.es', port=443): Max retries exceeded with url: /ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroProvincia/17 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_s
+cobertura: Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%hogar: 221 municipios, 27 columnas (4G, 5G, 5G-Banda 3,5GHz, Cob. 100Mbps condiciones máxima demanda, Cob. 1Gbps descarga condiciones máxima demanda, Cob. 30Mbps condiciones máxima demanda, FTTH, HFC, Inalámbrico fijo); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%viviendas: 221 municipios, 42 columnas (4G, 5G, 5G-Banda 3,5GHz, Cob. 100Mbps, Cob. 100Mbps condiciones máxima demanda, Cob. 1Gbps descarga condiciones máxima demanda, Cob. 30Mbps, Cob. 30Mbps condiciones máxima demanda, FTTH, HFC, Inalámbrico fijo); cobertura_ba_espana_2013-2020_esp_mun_prov_ccaa_nacional_datosgob.xlsx/Municipio: 221 municipios, 106 columnas (ADSL 10Mbps, ADSL 2Mbps, Cob. 100Mbps, Cob. 10Mbps, Cob. 2Mbps, Cob. 30Mbps, Cob. 30Mbps criterio A.E., FTTH, HFC, HSPA, Inal. 2Mbps, Inal. 30Mbps, Inal. 30Mbps criterio A.E., LTE, VDSL 30Mbps)
+
+Ficheros restaurados (habrían perdido más de la mitad):
+data/processed/energia/cobertura_fulls.txt: 2 KB -> 0 KB, restaurat
 ```

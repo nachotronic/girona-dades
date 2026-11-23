@@ -118,6 +118,13 @@
   "durada": 57,
   "resum": "EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…)"
  },
+ "energia": {
+  "estat": "avís",
+  "intent": "2026-11-23T20:55:12Z",
+  "ok": "2026-11-23T20:40:51Z",
+  "durada": 43,
+  "resum": "certificados: 155668 únicos, 96% con sección, hasta 2026-11-21\nrecarga: 349 puntos\n_carburants: ERROR SSLError: HTTPSConnectionPool(host='sedeaplicaciones.minetur.gob.es', port=443): Max retries exceeded with url: /ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroProvincia/17 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_s\ncobertura: Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%hogar: 221 municipios, 27 columnas (4G, 5G, 5G-Banda 3,5GHz, Cob. 100Mbps condiciones máxima demanda, Cob. 1Gbps descarga condiciones máxima demanda, Cob. 30Mbps condiciones máxima demanda, FTTH, HFC, Inalámbrico fijo); Cobertura_BA_España_2021-2025_MUN_PROV_CCAA_Nacional_datosgob_DEF.xlsx/Municipio_%viviendas: 221 municipios, 42 columnas (4G, 5G, 5G-Banda 3,5GHz, Cob. 100Mbps, Cob. 100Mbps condiciones máxima demanda, Cob. 1Gbps descarga condiciones máxima demanda, Cob. 30Mbps, Cob. 30Mbps condiciones máxima demanda, FTTH, HFC, Inalámbrico fijo); cobertura_ba_espana_2013-2020_esp_mun_prov_ccaa_nacional_datosgob.xlsx/Municipio: 221 municipios, 106 columnas (ADSL 10Mbps, ADSL 2Mbps, Cob. 100Mbps, Cob. 10Mbps, Cob. 2Mbps, Cob. 30Mbps, Cob. 30Mbps criterio A.E., FTTH, HFC, HSPA, Inal. 2Mbps, Inal. 30Mbps, Inal. 30Mbps criterio A.E., LTE, VDSL 30Mbps)\n\nFicheros restaurados (habrían perdido más de la mitad):\ndata/processed/energia/cobertura_fulls.txt: 2 KB -> 0 KB, restaurat"
+ },
  "exportacions": {
   "estat": "ok",
   "intent": "2026-11-23T16:27:39Z",
