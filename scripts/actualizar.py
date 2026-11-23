@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient", "energia", "diners_publics"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient", "energia", "diners_publics", "social"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -87,6 +87,7 @@ FONTS = {
     "medi_ambient": ("Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO)", "diari/anual"),
     "energia": ("Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital)", "diari/anual"),
     "diners_publics": ("Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública)", "setmanal/anual"),
+    "social": ("Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb)", "setmanal/anual"),
     "habitatge": ("Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic", "anual/trimestral"),
 }
 
