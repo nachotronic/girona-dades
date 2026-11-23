@@ -1319,3 +1319,6 @@ th, td { padding-left: 10px; padding-right: 10px; }
   .en-v small { font-size: 10px; }
   .fx-ens .nb li { grid-template-columns: minmax(0, 8em) minmax(0, 1fr) 7.5em; }
 }
+
+/* Segmentos largos (p. ej. Exportaciones, 4 opciones) no deben desbordar en móvil */
+.segment { max-width: 100%; flex-wrap: wrap; }
