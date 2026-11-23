@@ -57,10 +57,10 @@
  },
  "educacio": {
   "estat": "ok",
-  "intent": "2026-11-16T12:42:39Z",
-  "ok": "2026-11-16T12:42:39Z",
-  "durada": null,
-  "resum": "Estat inicial deduït de l'historial de git (últim commit de dades d'aquesta font)."
+  "intent": "2026-11-23T10:31:21Z",
+  "ok": "2026-11-23T10:31:21Z",
+  "durada": 28,
+  "resum": "censo 2021: 533 secciones de Girona\nmatrícula 2025/2026: 15261 filas (2683 de Girona); histórico 9713 filas\ncentros 2026/2027: 635 en Girona\npreinscripción: 76479 filas, cursos ['2024-2025', '2025-2026', '2026-2027']\nevaluación 6e: 165 filas, áreas ['Alt Pirineu i Aran', 'Baix Llobregat', 'Barcelona Comarques', 'Barcelonès', 'Catalunya Central', \"Consorci d'Educació de Barcelona\", 'Girona', 'Lleida', 'Maresme - Vallès Oriental', 'Penedès', 'Tarragona', \"Terres de l'Ebre\"]\nevaluación 4eso: 147 filas, áreas ['Alt Pirineu i Aran', 'Baix Llobregat', 'Barcelona Comarques', 'Barcelonès', 'Catalunya Central', \"Consorci d'Educació de Barcelona\", 'Garraf', 'Girona', 'Lleida', 'Maresme - Vallès Oriental', 'Penedès', 'Tarragona']\nuniversitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']\nestadística de l'ensenyament 2025/2026: alumnos de Girona por etapa: llar 7714, inf 19018, pri 47406, eso 36603, batx 9467, fp 15228\npersonal docente 2025/2026: 12439 en Girona\nresultados ESO 2024/2025: 36833 alumnos evaluados en Girona"
  },
  "eleccions": {
   "estat": "ok",
