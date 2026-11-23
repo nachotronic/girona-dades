@@ -83,7 +83,7 @@ def _aire(d) -> str:
         g = g.sort_values("data")
         if c == "O3":
             # Serie horaria continua para la media móvil de 8 horas
-            s = g.set_index("data")[hores].stack(dropna=False)
+            s = g.set_index("data")[hores].stack(future_stack=True)
             idx = [d_ + pd.Timedelta(hours=int(h[1:]) - 1) for d_, h in s.index]
             s = pd.Series(s.to_numpy(), index=pd.DatetimeIndex(idx)).sort_index()
             m8 = s.rolling(8, min_periods=6).mean()
@@ -178,6 +178,20 @@ def _capa(url: str, nom: str):
     dest = RAW / "medi_ambient" / nom
     with zipfile.ZipFile(z) as f:
         f.extractall(dest)
+    for lpk in list(dest.rglob("*.lpk")):
+        import py7zr
+        with py7zr.SevenZipFile(lpk) as f:
+            f.extractall(dest / lpk.stem)
+    gdbs = sorted(p for p in dest.rglob("*.gdb") if p.is_dir())
+    if gdbs:
+        import pyogrio
+        out = []
+        for gdb in gdbs:
+            for capa, tipus in pyogrio.list_layers(gdb):
+                if tipus and "Polygon" in str(tipus):
+                    out.append(gpd.read_file(gdb, layer=capa))
+        if out:
+            return out, url
     shps = sorted(dest.rglob("*.shp"), key=lambda p: p.stat().st_size, reverse=True)
     if not shps:
         shps = sorted(dest.rglob("*.geojson"), key=lambda p: p.stat().st_size, reverse=True)
@@ -192,7 +206,8 @@ def _territori(d) -> str:
     res = mun[["ine", "ha"]].copy().set_index("ine")
     lineas, llistes = [], []
     capes = {
-        "zvn": (_enllac(ZVN_PAGINA, r"DescargaFichero\?f=zonas-vulnerables-[^\"]*\.zip"), None),
+        # Los .zip de DescargaFichero piden un captcha: se usa el paquete de capa (.lpk, 7z con una geodatabase) de miteco.gob.es
+        "zvn": (_enllac(ZVN_PAGINA, r"lpk-Zonas_Vulnerables[^\"]*\.zip"), None),
         "n2000": (_enllac(N2000_PAGINA, r"n2000_\d{4}_shp\.zip"), None),
         "enp": (_enllac(ENP_PAGINA, r"Enp\d{4}_shp\.zip"), None),
     }

@@ -88,6 +88,7 @@
     { id: "acc", ca: "Trànsit", es: "Tráfico" },
     { id: "cul", ca: "Cultura", es: "Cultura" },
     { id: "ter", ca: "Territori", es: "Territorio" },
+    { id: "amb", ca: "Medi ambient", es: "Medio ambiente" },
     { id: "agr", ca: "Camp", es: "Campo" },
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
@@ -175,6 +176,58 @@
     ["m_vis", ["Visitants dels museus (total)", "Visitants de museus i col·leccions"], ["Visitantes de los museos (total)", "Visitantes de museos y colecciones"], N0],
     ["m_n", ["Museus registrats", "Museus i col·leccions registrats (seus i subseus)"], ["Museos registrados", "Museos y colecciones registrados (sedes y subsedes)"], N0],
     ["r_fm", ["Ràdios FM", "Emissores de ràdio de freqüència modulada (privades i municipals)"], ["Radios FM", "Emisoras de radio de frecuencia modulada (privadas y municipales)"], N0],
+  ];
+  // Medi ambient: m.amb = {clave: {año: valor}}, D.anys.amb_seq/amb_terr/amb_aigua/amb_aire/amb_met; comarcas en D.arees.com[c]["amb_" + clave];
+  // estaciones de calidad del aire (D.arees.aire) y meteorológicas (D.arees.met) como niveles propios del mapa
+  const AM = (k) => (m, a) => (a != null && m.amb && m.amb[k] && m.amb[k][a] != null ? m.amb[k][a] : null);
+  const AMZ = (k) => (x) => CUL_DARRER(x && x["amb_" + k]);
+  const AMR = (k) => () => { const r = D.amb_ref && D.amb_ref["aigua_" + k]; const o = r ? CUL_DARRER(r) : null; return o || {}; };
+  const NOTA_SEQ = { ca: "Agència Catalana de l'Aigua, estat de sequera hidrològica de la unitat d'explotació que abasteix cada municipi (historial de canvis des del 2021). Excepcionalitat i emergència porten restriccions de consum; l'últim any no és complet.", es: "Agència Catalana de l'Aigua, estado de sequía hidrológica de la unidad de explotación que abastece a cada municipio (historial de cambios desde 2021). Excepcionalidad y emergencia conllevan restricciones de consumo; el último año no está completo." };
+  const NOTA_N2000 = { ca: "MITECO, cartografia de la Xarxa Natura 2000 (zones d'especial conservació i zones d'especial protecció per a les aus), creuada amb el terme municipal. Inclou la part terrestre.", es: "MITECO, cartografía de la Red Natura 2000 (zonas especiales de conservación y zonas de especial protección para las aves), cruzada con el término municipal. Incluye la parte terrestre." };
+  const NOTA_ENP = { ca: "MITECO, espais naturals protegits (parcs naturals, reserves, paratges, espais del PEIN declarats…), creuats amb el terme municipal.", es: "MITECO, espacios naturales protegidos (parques naturales, reservas, parajes, espacios del PEIN declarados…), cruzados con el término municipal." };
+  const NOTA_ZVN = { ca: "MITECO, zones vulnerables per contaminació de nitrats d'origen agrari (darrera designació publicada), creuades amb el terme municipal. A les zones vulnerables, la quantitat de fems i purins que es pot abocar als camps està limitada.", es: "MITECO, zonas vulnerables por contaminación de nitratos de origen agrario (última designación publicada), cruzadas con el término municipal. En las zonas vulnerables, la cantidad de estiércol y purines que se puede echar en los campos está limitada." };
+  const NOTA_PL = { ca: "Departament de Territori, inventari de platges de Catalunya.", es: "Departament de Territori, inventario de playas de Cataluña." };
+  const NOTA_AIGUA = { ca: "Agència Catalana de l'Aigua, consum d'aigua per comarques (xarxa d'abastament, sense pous propis). Litres per habitant i dia sobre la població resident: a les comarques turístiques, l'estiu l'infla. La Cerdanya i Osona no hi surten perquè només una part és de la província.", es: "Agència Catalana de l'Aigua, consumo de agua por comarcas (red de abastecimiento, sin pozos propios). Litros por habitante y día sobre la población residente: en las comarcas turísticas, el verano lo infla. La Cerdanya y Osona no salen porque solo una parte es de la provincia." };
+  const NOTA_AIRE = { ca: "Generalitat, Xarxa de Vigilància i Previsió de la Contaminació Atmosfèrica (XVPCA): estacions automàtiques de la província, darrer any complet (75 % d'hores vàlides). Límit anual de la UE: 40 µg/m³ per al NO₂ i el PM10, 25 per al PM2,5; l'OMS recomana 10, 15 i 5.", es: "Generalitat, Red de Vigilancia y Previsión de la Contaminación Atmosférica (XVPCA): estaciones automáticas de la provincia, último año completo (75 % de horas válidas). Límite anual de la UE: 40 µg/m³ para el NO₂ y el PM10, 25 para el PM2,5; la OMS recomienda 10, 15 y 5." };
+  const NOTA_MET = { ca: "Meteocat, Xarxa d'Estacions Meteorològiques Automàtiques (XEMA): estacions operatives de la província, darrer any complet. L'anomalia compara amb la mitjana dels anys complets anteriors de la mateixa estació (com a mínim 10).", es: "Meteocat, Red de Estaciones Meteorológicas Automáticas (XEMA): estaciones operativas de la provincia, último año completo. La anomalía compara con la media de los años completos anteriores de la misma estación (como mínimo 10)." };
+  const UG = { f: (v) => `${fmt(v, 1)} µg/m³`, c: (v) => fmt(v, 0) };
+  const GR = { f: (v) => `${fmt(v, 1)} °C`, c: (v) => fmt(v, 1) };
+  const GRA = { f: (v) => `${v > 0 ? "+" : ""}${fmt(v, 1)} °C`, c: (v) => `${v > 0 ? "+" : ""}${fmt(v, 1)}` };
+  const PCA = { f: (v) => `${v > 0 ? "+" : ""}${pct(v, 0)}`, c: (v) => `${v > 0 ? "+" : ""}${fmt(v, 0)}` };
+  const AMB_MUN = [
+    ["seq_exc", "amb_seq", ["Dies de sequera greu", "Dies en excepcionalitat o emergència per sequera"], ["Días de sequía grave", "Días en excepcionalidad o emergencia por sequía"], NOTA_SEQ, N0],
+    ["seq_alerta", "amb_seq", ["Dies en alerta per sequera", "Dies en alerta, excepcionalitat o emergència per sequera"], ["Días en alerta por sequía", "Días en alerta, excepcionalidad o emergencia por sequía"], NOTA_SEQ, N0],
+    ["n2000_pct", "amb_terr", ["Xarxa Natura 2000", "Terme municipal dins la Xarxa Natura 2000 (%)"], ["Red Natura 2000", "Término municipal dentro de la Red Natura 2000 (%)"], NOTA_N2000, P0],
+    ["enp_pct", "amb_terr", ["Espais naturals protegits", "Terme municipal dins d'espais naturals protegits (%)"], ["Espacios naturales protegidos", "Término municipal dentro de espacios naturales protegidos (%)"], NOTA_ENP, P0],
+    ["zvn_pct", "amb_terr", ["Zona vulnerable per nitrats", "Terme municipal en zona vulnerable per nitrats (%)"], ["Zona vulnerable por nitratos", "Término municipal en zona vulnerable por nitratos (%)"], NOTA_ZVN, P0],
+    ["platges", "amb_terr", ["Platges", "Platges del municipi"], ["Playas", "Playas del municipio"], NOTA_PL, { sumable: true, ...N0 }],
+  ];
+  const AMB_COM = [
+    ["dom", ["Aigua a casa", "Consum domèstic d'aigua (litres per habitant i dia)"], ["Agua en casa", "Consumo doméstico de agua (litros por habitante y día)"], N0],
+    ["tot", ["Consum d'aigua total", "Consum total d'aigua de la xarxa (litres per habitant i dia)"], ["Consumo de agua total", "Consumo total de agua de la red (litros por habitante y día)"], N0],
+    ["act", ["Aigua de les activitats", "Consum d'aigua de les activitats econòmiques (litres per habitant i dia)"], ["Agua de las actividades", "Consumo de agua de las actividades económicas (litros por habitante y día)"], N0],
+  ];
+  const AMB_AIRE = [
+    ["no2", ["Diòxid de nitrogen (NO₂)", "NO₂, mitjana anual (µg/m³)"], ["Dióxido de nitrógeno (NO₂)", "NO₂, media anual (µg/m³)"], UG],
+    ["pm10", ["Partícules PM10", "PM10, mitjana anual (µg/m³)"], ["Partículas PM10", "PM10, media anual (µg/m³)"], UG],
+    ["pm25", ["Partícules fines PM2,5", "PM2,5, mitjana anual (µg/m³)"], ["Partículas finas PM2,5", "PM2,5, media anual (µg/m³)"], UG],
+    ["o3", ["Ozó (O₃)", "O₃, mitjana anual (µg/m³)"], ["Ozono (O₃)", "O₃, media anual (µg/m³)"], UG],
+    ["o3d", ["Dies amb massa ozó", "Dies amb la mitjana de 8 hores d'ozó per sobre de 120 µg/m³"], ["Días con demasiado ozono", "Días con la media de 8 horas de ozono por encima de 120 µg/m³"], N0],
+    ["pm10d", ["Dies amb massa partícules", "Dies amb la mitjana diària de PM10 per sobre de 50 µg/m³"], ["Días con demasiadas partículas", "Días con la media diaria de PM10 por encima de 50 µg/m³"], N0],
+    ["so2", ["Diòxid de sofre (SO₂)", "SO₂, mitjana anual (µg/m³)"], ["Dióxido de azufre (SO₂)", "SO₂, media anual (µg/m³)"], UG],
+  ];
+  const AMB_MET = [
+    ["t", ["Temperatura mitjana", "Temperatura mitjana de l'any (°C)"], ["Temperatura media", "Temperatura media del año (°C)"], GR],
+    ["ta", ["Anomalia de temperatura", "Diferència amb la temperatura mitjana dels anys anteriors (°C)"], ["Anomalía de temperatura", "Diferencia con la temperatura media de los años anteriores (°C)"], GRA],
+    ["tx", ["Temperatura màxima", "Mitjana de les màximes diàries (°C)"], ["Temperatura máxima", "Media de las máximas diarias (°C)"], GR],
+    ["tn", ["Temperatura mínima", "Mitjana de les mínimes diàries (°C)"], ["Temperatura mínima", "Media de las mínimas diarias (°C)"], GR],
+    ["dies30", ["Dies de calor", "Dies amb una màxima de 30 °C o més"], ["Días de calor", "Días con una máxima de 30 °C o más"], N0],
+    ["dies35", ["Dies de calor extrema", "Dies amb una màxima de 35 °C o més"], ["Días de calor extremo", "Días con una máxima de 35 °C o más"], N0],
+    ["nits20", ["Nits tropicals", "Nits amb una mínima de 20 °C o més"], ["Noches tropicales", "Noches con una mínima de 20 °C o más"], N0],
+    ["glacades", ["Dies de glaçada", "Dies amb la mínima per sota de 0 °C"], ["Días de helada", "Días con la mínima por debajo de 0 °C"], N0],
+    ["p", ["Pluja de l'any", "Precipitació acumulada a l'any (mm)"], ["Lluvia del año", "Precipitación acumulada en el año (mm)"], N0],
+    ["pa", ["Anomalia de pluja", "Pluja de l'any davant la mitjana dels anys anteriors (%)"], ["Anomalía de lluvia", "Lluvia del año frente a la media de los años anteriores (%)"], PCA],
+    ["pluja1", ["Dies de pluja", "Dies amb 1 mm de pluja o més"], ["Días de lluvia", "Días con 1 mm de lluvia o más"], N0],
   ];
   const CUL = [
     ["b_prest_h", "cul_bib", ["Préstecs de biblioteca", "Préstecs de les biblioteques públiques per habitant"], ["Préstamos de biblioteca", "Préstamos de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
@@ -716,6 +769,10 @@
     ...CUL.map(([k, a, ca, es, nota, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a, v: (m) => CU(k)(m, D.anys && D.anys[a]), t: CU(k), pv: CUR(k, "gi"),
       ...(/^b_/.test(k) ? { com: CUZ(k, a), buit: () => !(D.anys && D.anys[a]) } : {}), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: CUR(k, "cat")(y) }; }, nota, ...fmtk })),
     ...CULC.map(([k, ca, es, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a: "cul_com", sumable: false, com: CUC(k), ref: CUCR(k), nota: NOTA_COMC, ...fmtk })),
+    ...AMB_MUN.map(([k, a, ca, es, nota, fmtk]) => ({ id: "amb_" + k, tema: "amb", ca, es, a, v: (m) => AM(k)(m, D.anys && D.anys[a]), t: a === "amb_seq" ? AM(k) : undefined, nota, ...fmtk })),
+    ...AMB_COM.map(([k, ca, es, fmtk]) => ({ id: "amb_c_" + k, tema: "amb", ca, es, a: "amb_aigua", sumable: false, com: AMZ(k), ref: AMR(k), nota: NOTA_AIGUA, ...fmtk })),
+    ...AMB_AIRE.map(([k, ca, es, fmtk]) => ({ id: "amb_a_" + k, tema: "amb", ca, es, a: "amb_aire", sumable: false, aire: A(k), nota: NOTA_AIRE, ...fmtk })),
+    ...AMB_MET.map(([k, ca, es, fmtk]) => ({ id: "amb_m_" + k, tema: "amb", ca, es, a: "amb_met", sumable: false, met: A(k), nota: NOTA_MET, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
       ref: () => { const a = D.anys && D.anys.veh; return { cat: VHR(k, "cat")(a), esp: VHR(k, "esp")(a) }; }, nota: NOTA_VEH, ...fmtk })),
     // Turismo
@@ -933,8 +990,8 @@
 
   let mapa = null, geoMun = null, geoSec = null, SEC = {}, nivell = "mun", ind = null, llindars = [];
   // Niveles por áreas (salud y policía): geometría y datos por código de área
-  const NIVELLS = ["mun", "sec", "abs", "abp", "aar", "pj", "com"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} }, pj: { geo: null, d: {} }, com: { geo: null, d: {} } };
-  const esArea = (n) => n === "abs" || n === "abp" || n === "aar" || n === "pj" || n === "com";
+  const NIVELLS = ["mun", "sec", "abs", "abp", "aar", "pj", "com", "aire", "met"], ZONA = { abs: { geo: null, d: {} }, abp: { geo: null, d: {} }, aar: { geo: null, d: {} }, pj: { geo: null, d: {} }, com: { geo: null, d: {} }, aire: { geo: null, d: {} }, met: { geo: null, d: {} } };
+  const esArea = (n) => n === "abs" || n === "abp" || n === "aar" || n === "pj" || n === "com" || n === "aire" || n === "met";
   // Colores fijos para las áreas básicas de Agents Rurals (por orden de la lista de Idescat)
   const AREES_AAR = ["Alt Empordà", "Baix Empordà", "Garrotxa", "Gironès", "Pla de l'Estany", "Ripollès", "Selva", "Cerdanya", "Osona - Lluçanès"];
   const colorArea = (v) => { const i = AREES_AAR.indexOf(v); return i >= 0 ? PAIS_COLORS[i] : "#a5abb5"; };
@@ -953,6 +1010,7 @@
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "acc") D.municipios.forEach((m) => Object.values(m.acc || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "cul") D.municipios.forEach((m) => Object.values(m.cul || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.a === "amb_seq") D.municipios.forEach((m) => Object.entries(m.amb || {}).forEach(([k, o]) => /^seq_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));

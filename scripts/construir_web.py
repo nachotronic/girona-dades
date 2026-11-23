@@ -2870,6 +2870,26 @@ def main():
     anys_extra.update(cuw["anys"])
     for c, o in cuw["com"].items():
         zones.setdefault("com", {}).setdefault(c, {}).update({"cul_" + k: v for k, v in o.items()})
+    # Medio ambiente: aire y clima por estación, sequía, territorio protegido, playas y agua por comarca. Tema «amb» y sección Medi ambient
+    import medi_ambient_web
+    try:
+        maw = medi_ambient_web.construir(municipios, SALIDA.parent)
+        print("medi_ambient:", maw["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin medio ambiente
+        print("medi_ambient: ERROR", type(e).__name__, e)
+        maw = {"mun": {}, "anys": {}, "com": {}, "aire": {}, "met": {}, "fitxa": {}, "prov": {}, "refs": {}}
+    for m in municipios:
+        if m["ine"] in maw["mun"]:
+            m["amb"] = maw["mun"][m["ine"]]
+        if m["ine"] in maw["fitxa"]:
+            m["amb_f"] = maw["fitxa"][m["ine"]]
+    anys_extra.update(maw["anys"])
+    for c, o in maw["com"].items():
+        zones.setdefault("com", {}).setdefault(c, {}).update({"amb_" + k: v for k, v in o.items()})
+    if maw["aire"]:
+        zones["aire"] = maw["aire"]
+    if maw["met"]:
+        zones["met"] = maw["met"]
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -2889,7 +2909,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
