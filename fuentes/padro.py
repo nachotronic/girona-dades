@@ -41,10 +41,26 @@ def _dirce(sal, lineas) -> None:
     streaming y se guardan solo las filas de municipios de Girona (código 17xxx)."""
     import re
     import requests
+    # El código «DIRCE» ya no lo acepta TABLAS_OPERACION (500): se busca el Id numérico de la operación
+    tablas, prov = None, []
     try:
-        tablas = get(f"{API}/TABLAS_OPERACION/DIRCE", timeout=120).json()
+        ops = get(f"{API}/OPERACIONES_DISPONIBLES", timeout=120).json()
+        ids = [str(o.get("Id")) for o in ops if "DIRCE" in str(o.get("Codigo", "")).upper()
+               or "directorio central de empresas" in str(o.get("Nombre", "")).lower()]
     except Exception as e:  # noqa: BLE001
-        lineas.append(f"DIRCE: ERROR {e}")
+        ids = []
+        prov.append(f"operaciones: {type(e).__name__}")
+    for ident in ids + ["DIRCE"]:
+        try:
+            t = get(f"{API}/TABLAS_OPERACION/{ident}", timeout=120).json()
+        except Exception as e:  # noqa: BLE001
+            prov.append(f"{ident}: {str(e)[:60]}")
+            continue
+        if isinstance(t, list) and t:
+            tablas = t
+            break
+    if not tablas:
+        lineas.append("DIRCE: ERROR ninguna operación del INE da sus tablas (" + "; ".join(prov) + ")")
         return
     cand = [t for t in tablas if "unicipio" in t.get("Nombre", "")]
     lineas.append(f"DIRCE: {len(tablas)} tablas; por municipio: " + "; ".join(f"{t['Id']} {t['Nombre']}" for t in cand[:8]))

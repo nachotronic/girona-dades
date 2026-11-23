@@ -49,11 +49,11 @@
   "resum": "n forzosa medidas proteccion menores | Expedientes de dominio | Expedientes relativos a patria potestad (Ejercicio inadecuado/desacuerdo) | Extraccion de organos de donantes vivos | Guarda, Custodia o Alimentos de hijos no matrimoniales menores o con discapacidad con medidas de apoyo de progenitores,  no consensuada | Guarda, Custodia o Alimentos de hijos no matrimoniales menores o con discapacidad con medidas de apoyo de progenitores, consensuadas | INCIDENTES EN PROCESOS FAMILIA, INFANCIA Y CAPACIDAD. TOTAL | INCIDENTES TOTAL CIVIL | INTERNAMIENTOS | INTERNAMIENTOS DE LARGA DURACION SUJETOS A SEGUIMIENTO Y CONTROL | Incidentes Concursales (Civil) | Incidentes del Art. 241.1 LOPJ (Civil) | Incidentes del Art. 241.1 LO\nOUJII021 (llancaments): años 2013-2025, partidos de Girona 9, procedimientos 4: Consecuencia proc. Ejecucion hipotecaria | Consecuencia proc. Ley Arrendamientos Urbanos | Otros | TOTAL LANZAMIENTOS PRACTICADOS\nOUJII012 (impagament): años 2021-2025, partidos de Girona 9, procedimientos 5: Decreto final por archivo para ejecucion (art. 440.3 pf.5 LEC) | Decreto final por enervacion (art. 22.4 LEC) | Decreto final por entrega de posesion (art.440.3 pf.6 LEC) | Decreto final por otras causas (arts. 22.1 y 242.1 LEC) | Total\nOUJII009 (concursos): años 2016-2025, partidos de Girona 9, procedimientos 1: Numero\nOUSCN002 (scn): años 2012-2025, partidos de Girona 7, procedimientos 4: DILIGENCIAS EN COMISION. TOTAL | EMBARGOS | LANZAMIENTOS | OTRAS DILIGENCIAS EN COMISION"
  },
  "comerc": {
-  "estat": "avís",
-  "intent": "2026-11-23T14:41:42Z",
-  "ok": "2026-11-16T15:31:22Z",
-  "durada": 259,
-  "resum": "CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 220 consultes, 1075 municipi-any; ERROR en 30 consultes; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc"
+  "estat": "ok",
+  "intent": "2026-11-23T16:36:24Z",
+  "ok": "2026-11-23T16:36:24Z",
+  "durada": 403,
+  "resum": "CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 221 consultes, 1076 municipi-any; 12 municipi-any sense establiments (l'API no en té fitxa); l'API no té 17 municipi-any antics: Bisbal d'Empordà, la 2021, Escala, l' 2021, Jonquera, la 2021, Vall d'en Bas, la 2021, Cellera de Ter, la 2021, Preses, les 2021, Planes d'Hostoles, les 2021, Vall de Bianya, la 2021, Port de la Selva, el 2021, Armentera, l' 2021, Far d'Empordà, el 2021, Tallada d'Empordà, la 2021, Pera, la 2021, Se; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc"
  },
  "conjuntura": {
   "estat": "ok",
@@ -119,11 +119,11 @@
   "resum": "EMQ 2024-2025: 56 consultes (lv_mun_mode:648, lv_mun_motiu:824, lv_mun_mitja:1394, lv_mun_intra:575, lv_mun_tipus:742, lv_mun_hora:3376…)"
  },
  "exportacions": {
-  "estat": "avís",
-  "intent": "2026-11-23T15:27:34Z",
-  "ok": "2026-11-18T00:25:17Z",
-  "durada": 56,
-  "resum": "ERROR población: AttributeError: 'str' object has no attribute 'get'\nSin cambios (99 periodos publicados, último 2026-09)"
+  "estat": "ok",
+  "intent": "2026-11-23T16:27:39Z",
+  "ok": "2026-11-23T16:27:39Z",
+  "durada": 62,
+  "resum": "población INE (2852?nult=10): 53 zonas, años 2012-2021\nSin cambios (99 periodos publicados, último 2026-09)"
  },
  "generalitat": {
   "estat": "ok",
@@ -154,11 +154,11 @@
   "resum": "10 tablas del Atlas para Girona\n31016 Indicadores de renta media y mediana: 60840 filas\n31017 Distribución por fuente de ingresos: 50700 filas\n31018 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo: 91260 filas\n31019 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo y tramos de edad: 273780 filas\n31020 Porcentaje de población con ingresos por unidad de consumo por debajo de determinados umbrales fijos por sexo y nacionalidad: 182520 filas\n31021 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo: 182520 filas\n31022 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo y tramos de edad: 547560 filas\n31023 Porcentaje de población con ingresos por unidad de consumo por debajo/encima de determinados umbrales relativos por sexo y nacionalidad: 365040 filas\n37697 Índice de Gini y Distribución de la renta P80/P20: 20280 filas\n31024 Indicadores demográficos: 70980 filas"
  },
  "interior": {
-  "estat": "error",
-  "intent": "2026-11-23T14:35:51Z",
-  "ok": null,
-  "durada": 350,
-  "resum": "n/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 510, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/girona-dades/girona-dades/scripts/actualizar.py\", line 166, in main\n    res = str(importlib.import_module(f\"fuentes.{n}\").ejecutar())\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/girona-dades/girona-dades/fuentes/interior.py\", line 43, in ejecutar\n    h = get(f\"{MIR}/publico/portalestadistico/balances\", timeout=120).text\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/girona-dades/girona-dades/fuentes/comun.py\", line 25, in get\n    r = _sesion.get(url, **kw)\n        ^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))\n"
+  "estat": "ok",
+  "intent": "2026-11-23T16:16:01Z",
+  "ok": "2026-11-23T16:16:01Z",
+  "durada": 42,
+  "resum": "2019T4: 3 tablas\n2020T4: 3 tablas\n2021T4: 3 tablas\n2022T4: 3 tablas\n2023T4: 3 tablas\n2024T4: 3 tablas\n2025T4: 3 tablas\n2026T2: 3 tablas\nmunicipios de Girona: Banyoles, Blanes, Figueres, Girona, Lloret de Mar, Olot, Palafrugell, Roses, Salt, Sant Feliu de Guíxols; años 2018-2026; último periodo: 2026T2"
  },
  "llistes_espera": {
   "estat": "ok",
@@ -189,11 +189,11 @@
   "resum": "idescat 6000: 13200 filas, 16 municipios, columnas ['YEAR', 'MUN', 'COUNTRY_G', 'SEX', 'CONCEPT', 'valor']\nidescat 16352: 35055 filas, 26 municipios, columnas ['YEAR', 'MUN', 'AGE', 'NATION', 'SEX', 'CONCEPT', 'valor']\ntablas Girona: {'nacionalitats': 33790, 'edat_nacionalitat': 33789}"
  },
  "padro": {
-  "estat": "avís",
-  "intent": "2026-11-23T14:30:14Z",
-  "ok": "2026-11-16T12:09:19Z",
-  "durada": 12,
-  "resum": "esperanza 30687: 6 series de 465; ej.: Girona. Mortalidad. Esperanza de vida. Ambos sexos. 0 años. Dato base. ; Girona. Mortalidad. Esperanza de vida. Hombres. 0 años. Dato base. ; Girona. Mortalidad. Esperanza de vida. Mujeres. 0 años. Dato base. ; Torrent. Mortalidad. Esperanza de vida. Ambos sexos. 0 años. Dato base. \nesperanza 77117: 3 series de 156; ej.: Mortalidad. Girona. Ambos sexos.; Mortalidad. Girona. Varones.; Mortalidad. Girona. Mujeres.\nDIRCE: ERROR 500 Server Error: Internal Server Error for url: https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/DIRCE\nop 22: 65 tablas, 1 de Girona: 2870 Girona: Población por municipios y sexo. \ntabla 2870: 221 municipios, años 1996-2025"
+  "estat": "ok",
+  "intent": "2026-11-23T16:15:57Z",
+  "ok": "2026-11-23T16:15:57Z",
+  "durada": 5,
+  "resum": "esperanza 30687: 6 series de 465; ej.: Girona. Mortalidad. Esperanza de vida. Ambos sexos. 0 años. Dato base. ; Girona. Mortalidad. Esperanza de vida. Hombres. 0 años. Dato base. ; Girona. Mortalidad. Esperanza de vida. Mujeres. 0 años. Dato base. ; Torrent. Mortalidad. Esperanza de vida. Ambos sexos. 0 años. Dato base. \nesperanza 77117: 3 series de 156; ej.: Mortalidad. Girona. Ambos sexos.; Mortalidad. Girona. Varones.; Mortalidad. Girona. Mujeres.\nDIRCE: 14 tablas; por municipio: \nop 22: 65 tablas, 1 de Girona: 2870 Girona: Población por municipios y sexo. \ntabla 2870: 221 municipios, años 1996-2025"
  },
  "policia": {
   "estat": "ok",
