@@ -24,6 +24,8 @@ from .dgt import _tipus
 
 URL = "https://www.dgt.es/microdatos/salida/{a}/{m}/vehiculos/transferencias/export_mensual_trf_{a}{m:02d}.zip"
 DESDE = (2015, 1)
+# Meses que la DGT no ha publicado (404 en su listado)
+HUECOS = {(2022, 12)}
 # Posiciones (base 0) del diseño de registro
 FEC_MAT, TIPUS, PROV, MUN, PRIM, PJ = slice(0, 8), slice(91, 93), slice(152, 154), slice(192, 197), slice(170, 178), 179
 
@@ -69,7 +71,7 @@ def ejecutar() -> str:
     linies, nous = [], 0
     while (a, m) < (avui.year, avui.month):
         desti, desti_p = sal / f"trf_{a}{m:02d}.csv", sal / f"trf_prov_{a}{m:02d}.csv"
-        if not (desti.exists() and desti_p.exists()):
+        if (a, m) not in HUECOS and not (desti.exists() and desti_p.exists()):
             try:
                 df, dp = _mes(a, m)
                 df.to_csv(desti, index=False)
