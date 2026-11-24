@@ -1253,7 +1253,7 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 /* Cabecera de escritorio: cada enlace en una sola línea («La província» se partía en dos);
    si no caben todos, el menú se desplaza en horizontal como en el móvil */
 @media (min-width: 761px) {
-  .menu { gap: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .menu { gap: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); padding-right: 30px; }
   .menu::-webkit-scrollbar { display: none; }
   .menu a { white-space: nowrap; flex: none; letter-spacing: .01em; font-size: 11px; }
 }
@@ -1335,3 +1335,4 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 /* Diners públics: llista de contractes grans */
 .dp-grans li span:first-child { white-space: normal; }
 .dp-grans small { color: var(--text-3); font: 400 11.5px var(--mono); }
+.tur-air { margin-top: 28px; }

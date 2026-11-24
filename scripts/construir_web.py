@@ -2920,6 +2920,22 @@ def main():
     anys_extra.update(dpw["anys"])
     for c, o in dpw["com"].items():
         zones.setdefault("com", {}).setdefault(c, {}).update({"dp_" + k: v for k, v in o.items()})
+    # Social: equipamientos sociales (RESES), cuidadores, servicios sociales y dependencia por comarca, Airbnb. Tema «soc» y sección Social
+    import social_web
+    try:
+        sow = social_web.construir(municipios)
+        print("social:", sow["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin social
+        print("social: ERROR", type(e).__name__, e)
+        sow = {"mun": {}, "sec": {}, "com": {}, "anys": {}, "fitxa": {}, "prov": {}, "refs": {}, "xifres": {}}
+    for m in municipios:
+        if m["ine"] in sow["mun"]:
+            m["soc"] = sow["mun"][m["ine"]]
+        if m["ine"] in sow["fitxa"]:
+            m["soc_f"] = sow["fitxa"][m["ine"]]
+    anys_extra.update(sow["anys"])
+    for c, o in sow["com"].items():
+        zones.setdefault("com", {}).setdefault(c, {}).update({"soc_" + k: v for k, v in o.items()})
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -2939,7 +2955,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
@@ -2971,6 +2987,8 @@ def main():
     for cusec, x in hw["sec"].items():
         sec.setdefault(cusec, {}).update(x)
     for cusec, x in enw["sec"].items():
+        sec.setdefault(cusec, {}).update(x)
+    for cusec, x in sow["sec"].items():
         sec.setdefault(cusec, {}).update(x)
     for cusec, x in cuw.get("sec", {}).items():
         sec.setdefault(cusec, {}).update(x)

@@ -93,6 +93,7 @@
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "dp", ca: "Diners públics", es: "Dinero público" },
+    { id: "soc", ca: "Social", es: "Social" },
     { id: "cad", ca: "Cadastre", es: "Catastro" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
@@ -281,6 +282,38 @@
     ["subv_gen", ["Subvencions de la Generalitat", "Subvencions de la Generalitat rebudes a la comarca per habitant (€)"], ["Subvenciones de la Generalitat", "Subvenciones de la Generalitat recibidas en la comarca por habitante (€)"]],
     ["subv_dip", ["Subvencions de la Diputació", "Subvencions de la Diputació de Girona rebudes a la comarca per habitant (€)"], ["Subvenciones de la Diputación", "Subvenciones de la Diputació de Girona recibidas en la comarca por habitante (€)"]],
     ["subv_soc", ["Ajuts socials", "Subvencions de serveis socials i promoció social per habitant (€)"], ["Ayudas sociales", "Subvenciones de servicios sociales y promoción social por habitante (€)"]],
+  ];
+  // Social: m.soc = {clave: {año|fecha: valor}}, D.anys.soc_reses/soc_cuid/soc_air/soc_c_*; comarcas en D.arees.com[c]["soc_" + clave]; D.soc_ref
+  const SO = (k) => (m, a) => (a != null && m.soc && m.soc[k] && m.soc[k][a] != null ? m.soc[k][a] : null);
+  const SOZ = (k) => (x) => CUL_DARRER(x && x["soc_" + k]);
+  const NOTA_RESES = { ca: "Registre d'entitats, serveis i establiments socials (RESES) de la Generalitat: serveis inscrits ara mateix, públics i privats, amb les places autoritzades. Residències: residències assistides i llars residència per a gent gran. Persones de 65 anys o més: padró (Idescat). Un municipi sense residència surt amb 0.", es: "Registre d'entitats, serveis i establiments socials (RESES) de la Generalitat: servicios inscritos ahora mismo, públicos y privados, con las plazas autorizadas. Residencias: residencias asistidas y hogares residencia para mayores. Personas de 65 años o más: padrón (Idescat). Un municipio sin residencia sale con 0." };
+  const NOTA_CUID = { ca: "Departament de Drets Socials: persones cuidadores no professionals (familiars que cuiden una persona dependent i cobren la prestació), pel municipi on viuen. Registre actual.", es: "Departament de Drets Socials: personas cuidadoras no profesionales (familiares que cuidan a una persona dependiente y cobran la prestación), por el municipio donde viven. Registro actual." };
+  const NOTA_SOCC = { ca: "Departament de Drets Socials, per comarca sencera (la Cerdanya i Osona inclouen la part de Lleida i de Barcelona), per 1.000 habitants. Serveis socials bàsics i menjador: suma del consell comarcal i dels ajuntaments de més de 20.000 habitants; des del 2022 algunes àrees canvien molt d'un any a l'altre per com compten les persones. Dependència: persones amb grau reconegut que reben una prestació o un servei.", es: "Departament de Drets Socials, por comarca entera (la Cerdanya y Osona incluyen la parte de Lleida y de Barcelona), por 1.000 habitantes. Servicios sociales básicos y comedor: suma del consejo comarcal y de los ayuntamientos de más de 20.000 habitantes; desde 2022 algunas áreas cambian mucho de un año a otro por cómo cuentan a las personas. Dependencia: personas con grado reconocido que reciben una prestación o un servicio." };
+  const NOTA_AIR = { ca: "Inside Airbnb, darrera instantània dels anuncis d'Airbnb a la província (s'hi afegeix cada nova). Municipi i secció per les coordenades de l'anunci, que Airbnb desplaça fins a 150 metres. Habitatges: Cadastre. Sense registre: anuncis que no mostren cap número d'habitatge d'ús turístic ni de registre (ni n'estan exempts). Amfitrions grans: 10 anuncis o més.", es: "Inside Airbnb, última instantánea de los anuncios de Airbnb en la provincia (se añade cada nueva). Municipio y sección por las coordenadas del anuncio, que Airbnb desplaza hasta 150 metros. Viviendas: Catastro. Sin registro: anuncios que no muestran ningún número de vivienda de uso turístico ni de registro (ni están exentos). Anfitriones grandes: 10 anuncios o más." };
+  const SOM = [
+    ["res65", "soc_reses", ["Places de residència", "Places en residències per a gent gran per cada 100 persones de 65 anys o més"], ["Plazas de residencia", "Plazas en residencias para mayores por cada 100 personas de 65 años o más"], NOTA_RESES, N1],
+    ["dia65", "soc_reses", ["Places de centre de dia", "Places en centres de dia per a gent gran per cada 100 persones de 65 anys o més"], ["Plazas de centro de día", "Plazas en centros de día para mayores por cada 100 personas de 65 años o más"], NOTA_RESES, N1],
+    ["disc", "soc_reses", ["Places per a discapacitat", "Places en serveis per a persones amb discapacitat o malaltia mental per 1.000 habitants"], ["Plazas para discapacidad", "Plazas en servicios para personas con discapacidad o enfermedad mental por 1.000 habitantes"], NOTA_RESES, N1],
+    ["serveis", "soc_reses", ["Serveis socials", "Serveis i establiments socials registrats al municipi"], ["Servicios sociales", "Servicios y establecimientos sociales registrados en el municipio"], NOTA_RESES, { sumable: true, ...N0 }],
+    ["cuid", "soc_cuid", ["Cuidadors familiars", "Persones cuidadores no professionals per 1.000 habitants"], ["Cuidadores familiares", "Personas cuidadoras no profesionales por 1.000 habitantes"], NOTA_CUID, N1],
+    ["cuid_d", "soc_cuid", ["Cuidadores dones", "Persones cuidadores no professionals que són dones (%)"], ["Cuidadoras mujeres", "Personas cuidadoras no profesionales que son mujeres (%)"], NOTA_CUID, P0],
+  ];
+  const SOC = [
+    ["ssb", ["Ateses pels serveis socials", "Persones ateses pels serveis socials bàsics per 1.000 habitants"], ["Atendidas por los servicios sociales", "Personas atendidas por los servicios sociales básicos por 1.000 habitantes"]],
+    ["menj", ["Menjador social", "Persones ateses en menjadors socials per 1.000 habitants"], ["Comedor social", "Personas atendidas en comedores sociales por 1.000 habitantes"]],
+    ["dep", ["Dependència", "Persones amb dependència que reben prestació o servei per 1.000 habitants"], ["Dependencia", "Personas con dependencia que reciben prestación o servicio por 1.000 habitantes"]],
+    ["dep3", ["Gran dependència", "Persones amb grau III de dependència ateses per 1.000 habitants"], ["Gran dependencia", "Personas con grado III de dependencia atendidas por 1.000 habitantes"]],
+    ["pcuid", ["Prestació per cuidar a casa", "Prestacions per a cuidador no professional o assistent personal per 1.000 habitants"], ["Prestación por cuidar en casa", "Prestaciones para cuidador no profesional o asistente personal por 1.000 habitantes"]],
+    ["sad", ["Ajuda a domicili", "Persones dependents amb servei d'ajuda a domicili per 1.000 habitants"], ["Ayuda a domicilio", "Personas dependientes con servicio de ayuda a domicilio por 1.000 habitantes"]],
+    ["tele", ["Teleassistència", "Persones dependents amb teleassistència per 1.000 habitants"], ["Teleasistencia", "Personas dependientes con teleasistencia por 1.000 habitantes"]],
+  ];
+  const AIR = [
+    ["air_n", ["Anuncis d'Airbnb", "Anuncis d'Airbnb actius"], ["Anuncios de Airbnb", "Anuncios de Airbnb activos"], { sumable: true, s: S("soc_air_n"), ...N0 }],
+    ["air_100", ["Airbnb per habitatge", "Anuncis d'Airbnb per cada 100 habitatges"], ["Airbnb por vivienda", "Anuncios de Airbnb por cada 100 viviendas"], { s: S("soc_air_100"), ...N1 }],
+    ["air_sencer", ["Pisos sencers a Airbnb", "Anuncis d'Airbnb que són un habitatge sencer (%)"], ["Pisos enteros en Airbnb", "Anuncios de Airbnb que son una vivienda entera (%)"], P0],
+    ["air_sense", ["Airbnb sense registre", "Anuncis d'Airbnb sense número de registre (%)"], ["Airbnb sin registro", "Anuncios de Airbnb sin número de registro (%)"], P0],
+    ["air_multi", ["Amfitrions grans", "Anuncis d'Airbnb d'amfitrions amb 10 anuncis o més (%)"], ["Anfitriones grandes", "Anuncios de Airbnb de anfitriones con 10 anuncios o más (%)"], P0],
+    ["air_preu", ["Preu a Airbnb", "Preu mitjà per nit d'un habitatge sencer a Airbnb (mediana, €)"], ["Precio en Airbnb", "Precio medio por noche de una vivienda entera en Airbnb (mediana, €)"], EUR0],
   ];
   const CUL = [
     ["b_prest_h", "cul_bib", ["Préstecs de biblioteca", "Préstecs de les biblioteques públiques per habitant"], ["Préstamos de biblioteca", "Préstamos de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
@@ -840,6 +873,10 @@
       ref: ["menor", "directe", "contr_hab"].includes(k) ? () => ({ cat: DPR("dp_" + k)(anyActiu() || (D.anys && D.anys[a])).cat }) : undefined, ...fmtk })),
     ...DPC.map(([k, ca, es]) => ({ id: "dp_c_" + k, tema: "dp", ca, es, a: "dp_subv", sumable: false, com: DPZ(k), nota: NOTA_SUBVC, ...EUR0,
       ref: k === "subv" ? () => { const o = DPR("dp_c_subv")(D.anys && D.anys.dp_subv); return { gi: o.gi, cat: o.cat }; } : undefined })),
+    ...SOM.map(([k, a, ca, es, nota, fmtk]) => ({ id: "soc_" + k, tema: "soc", ca, es, a, sumable: false, v: (m) => SO("soc_" + k)(m, D.anys && D.anys[a]), nota, ...fmtk })),
+    ...SOC.map(([k, ca, es]) => ({ id: "soc_c_" + k, tema: "soc", ca, es, a: "soc_c_" + k, sumable: false, com: SOZ(k), nota: NOTA_SOCC, ...N1,
+      ref: () => { const r = D.soc_ref && D.soc_ref["soc_c_" + k]; const o = r ? r[D.anys && D.anys["soc_c_" + k]] || CUL_DARRER(r) : null; return o ? { gi: o.gi, cat: o.cat } : {}; } })),
+    ...AIR.map(([k, ca, es, fmtk]) => ({ id: "soc_" + k, tema: "tur", sk: "soc_" + k, ca, es, a: "soc_air", sumable: false, v: (m) => SO("soc_" + k)(m, D.anys && D.anys.soc_air), t: SO("soc_" + k), nota: NOTA_AIR, ...fmtk })),
     ...ENE.map(([k, a, ca, es, nota, fmtk]) => ({ id: "en_" + k, tema: "ene", ca, es, a, sumable: false, v: (m) => EN("en_" + k)(m, D.anys && D.anys[a]), t: a === "en_cob" ? EN("en_" + k) : undefined, nota,
       ref: /^gas_g|^gas_d/.test(k) ? () => { const r = D.en_ref && D.en_ref[k]; return r ? { cat: r.cat, esp: r.esp } : {}; } : undefined, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
@@ -1083,7 +1120,8 @@
       if (i.a === "en_cob") D.municipios.forEach((m) => Object.entries(m.en || {}).forEach(([k, o]) => /^en_cob_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "amb_seq") D.municipios.forEach((m) => Object.entries(m.amb || {}).forEach(([k, o]) => /^seq_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
-      if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.sk) D.municipios.forEach((m) => Object.keys((m.soc || {})[i.sk] || {}).forEach((a) => tots.add(a)));
+      if (i.tema === "tur" && !i.sk) D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
