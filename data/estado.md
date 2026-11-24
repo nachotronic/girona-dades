@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 15:30 UTC
+Última ejecución: 2026-11-24 15:44 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@
 | interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-23 16:16 | 2026-11-23 16:16 | trimestral |
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | ok | 2026-11-23 16:36 | 2026-11-23 16:36 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | ok | 2026-11-23 14:46 | 2026-11-23 14:46 | mensual |
-| cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-24 15:17 | 2026-11-24 15:17 | anual |
+| cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-24 15:36 | 2026-11-24 15:36 | anual |
 | habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-23 15:25 | 2026-11-23 15:25 | anual/trimestral |
 | emq — ATM Girona, Enquesta de Mobilitat Quotidiana 2024-2025 (visor Power BI) | ok | 2026-11-23 15:26 | 2026-11-23 15:26 | per edició |
 | exportacions — Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | mensual |
@@ -56,7 +56,7 @@
 
 ## Detalle de la última ejecución
 
-### cadastre: ok (770 s)
+### cadastre: ok (476 s)
 
 ```
 2012: 3 ficheros, 7593 municipios
@@ -117,13 +117,8 @@ AVISO cultivos 2014 04217: tamaño inesperado
 AVISO cultivos 2015 04217: tamaño inesperado
 AVISO cultivos 2016 04217: tamaño inesperado
 cultivos: 221 municipios, años 2017-2026
-ordenanzas en px.zip: 2786 tablas, p. ej. ['px/datoshistoricos/Ordenanzas/', 'px/datoshistoricos/Ordenanzas/H1M402.px', 'px/datoshistoricos/Ordenanzas/H1M403.px']
-AVISO gravamen 2006: dimensiones ['Municipios', 'Tipo de gravamen']
-AVISO gravamen 2007: dimensiones ['Municipios', 'Tipos de gravamen']
-AVISO gravamen 2008: dimensiones ['municipios', 'tipos de gravamen']
-AVISO gravamen 2009: dimensiones ['municipios', 'tipos de gravamen']
-AVISO gravamen 2010: dimensiones ['municipios', 'tipos de gravamen']
-AVISO gravamen 2011: dimensiones ['municipios', 'tipos de gravamen']
-AVISO gravamen 2012: dimensiones ['municipios', 'tipos de gravamen']
-gravamen: 221 municipios, años 2013-2016, columnas ['codi_ine', 'any', 'rev', 'urb', 'rus', 'bice_a', 'bice_b', 'bice_c', 'bice_d']
+AVISO gravamen 2014: 221 municipios sin código ()
+AVISO gravamen 2015: 221 municipios sin código ()
+AVISO gravamen 2016: 221 municipios sin código ()
+gravamen: 221 municipios, años 2006-2026
 ```
