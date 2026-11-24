@@ -217,11 +217,11 @@
   "resum": "idescat 6000: 13200 filas, 16 municipios, columnas ['YEAR', 'MUN', 'COUNTRY_G', 'SEX', 'CONCEPT', 'valor']\nidescat 16352: 35055 filas, 26 municipios, columnas ['YEAR', 'MUN', 'AGE', 'NATION', 'SEX', 'CONCEPT', 'valor']\ntablas Girona: {'nacionalitats': 33790, 'edat_nacionalitat': 33789}"
  },
  "notariado": {
-  "estat": "avís",
-  "intent": "2026-11-24T08:09:47Z",
-  "ok": "2026-11-24T08:02:50Z",
-  "durada": 238,
-  "resum": "ERROR población: RuntimeError: población incompleta: 0 zonas\nherencies: 50 provincias, Girona 233 valores, último (2026, 5)\ntestaments: 50 provincias, Girona 78 valores, último (2026, 2)\nabintestat: 50 provincias, Girona 78 valores, último (2026, 2)\ndonacions: 50 provincias, Girona 78 valores, último (2026, 2)\npoder_general: 50 provincias, Girona 78 valores, último (2026, 2)\npoder_plets: 50 provincias, Girona 233 valores, último (2026, 5)\npoder_altres: 50 provincias, Girona 233 valores, último (2026, 5)\nhip_vivenda: 50 provincias, Girona 466 valores, último (2026, 5)\nhip_total: 50 provincias, Girona 466 valores, último (2026, 5)\ncancel_hip: 50 provincias, Girona 466 valores, último (2026, 5)\nsubrogacio: 50 provincias, Girona 156 valores, último (2026, 2)\npolissa: 50 provincias, Girona 466 valores, último (2026, 5)\npolissa_aval: 50 provincias, Girona 466 valores, último (2026, 5)\nsocietats: 50 provincias, Girona 390 valores, último (2026, 2)\nsegregacio: 50 provincias, Girona 78 valores, último (2026, 2)\nsubsanacio: 50 provincias, Girona 78 valores, último (2026, 2)\nactes.csv: 205781 filas, 16 indicadores"
+  "estat": "ok",
+  "intent": "2026-11-24T08:18:23Z",
+  "ok": "2026-11-24T08:18:23Z",
+  "durada": 213,
+  "resum": "población INE 56945: 53 zonas, años 2000-2025\nherencies: 50 provincias, Girona 233 valores, último (2026, 5)\ntestaments: 50 provincias, Girona 78 valores, último (2026, 2)\nabintestat: 50 provincias, Girona 78 valores, último (2026, 2)\ndonacions: 50 provincias, Girona 78 valores, último (2026, 2)\npoder_general: 50 provincias, Girona 78 valores, último (2026, 2)\npoder_plets: 50 provincias, Girona 233 valores, último (2026, 5)\npoder_altres: 50 provincias, Girona 233 valores, último (2026, 5)\nhip_vivenda: 50 provincias, Girona 466 valores, último (2026, 5)\nhip_total: 50 provincias, Girona 466 valores, último (2026, 5)\ncancel_hip: 50 provincias, Girona 466 valores, último (2026, 5)\nsubrogacio: 50 provincias, Girona 156 valores, último (2026, 2)\npolissa: 50 provincias, Girona 466 valores, último (2026, 5)\npolissa_aval: 50 provincias, Girona 466 valores, último (2026, 5)\nsocietats: 50 provincias, Girona 390 valores, último (2026, 2)\nsegregacio: 50 provincias, Girona 78 valores, último (2026, 2)\nsubsanacio: 50 provincias, Girona 78 valores, último (2026, 2)\nactes.csv: 205781 filas, 16 indicadores"
  },
  "padro": {
   "estat": "ok",

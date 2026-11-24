@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 08:13 UTC
+Última ejecución: 2026-11-24 08:21 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -50,14 +50,14 @@
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
 | culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | ok | 2026-11-24 07:38 | 2026-11-24 07:38 | anual |
 | social — Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb) | ok | 2026-11-23 21:48 | 2026-11-23 21:48 | setmanal/anual |
-| notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | avís | 2026-11-24 08:02 | 2026-11-24 08:09 | mensual/trimestral |
+| notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | ok | 2026-11-24 08:18 | 2026-11-24 08:18 | mensual/trimestral |
 
 ## Detalle de la última ejecución
 
-### notariado: avís (238 s)
+### notariado: ok (213 s)
 
 ```
-ERROR población: RuntimeError: población incompleta: 0 zonas
+población INE 56945: 53 zonas, años 2000-2025
 herencies: 50 provincias, Girona 233 valores, último (2026, 5)
 testaments: 50 provincias, Girona 78 valores, último (2026, 2)
 abintestat: 50 provincias, Girona 78 valores, último (2026, 2)
