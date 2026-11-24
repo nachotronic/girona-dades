@@ -98,3 +98,6 @@ causas de muerte	graf:causes|graf:dm_causes_sexe		graf
 listas de espera de los hospitales	graf:le_quir_hosp|graf:le_quir|graf:le_pacients|graf:le_ext_hosp		graf
 nivel de los embalses	graf:amb_emb		graf
 reserva dels embassaments	graf:amb_emb		graf
+precio del metro cuadrado en Girona	preu_m2	Girona	mun
+preu de l habitatge usat a Figueres	preu_m2_usat	Figueres	mun
+precio de la obra nueva en Blanes	preu_m2_nou	Blanes	mun

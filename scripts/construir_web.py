@@ -31,6 +31,10 @@ def estat_fonts() -> dict:
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))
         res["esca"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("edicio")}
+    fm = P / "compravendes" / "compravendes_meta.json"
+    if fm.exists():
+        m = json.loads(fm.read_text(encoding="utf-8"))
+        res["compravendes"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("ultim")}
     fm = P / "sem" / "sem_meta.json"
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))

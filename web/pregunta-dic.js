@@ -97,7 +97,7 @@ window.PREGUNTA_DIC = {
     aeat_fills: "declaraciones con hijos, declaracions amb fills, familias con hijos, families amb fills",
     aeat_var: "cuanto ha crecido la renta, quant ha crescut la renda",
     // ---------------------------------------------------------------- Habitatge
-    lloguer: "alquiler, alquileres, lloguer, lloguers, alquilar, llogar, arrendamiento, arrendament, renta del piso, precio del alquiler, preu del lloguer, piso de alquiler, pis de lloguer, cuanto cuesta alquilar, quant costa llogar, precio de la vivienda, preu de l habitatge, precio vivienda, preu habitatge, cuanto cuesta un piso, quant costa un pis, precio de los pisos, preu dels pisos, alquilar un piso, llogar un pis, mensualidad, mensualitat",
+    lloguer: "alquiler, alquileres, lloguer, lloguers, alquilar, llogar, arrendamiento, arrendament, renta del piso, precio del alquiler, preu del lloguer, piso de alquiler, pis de lloguer, cuanto cuesta alquilar, quant costa llogar, alquilar un piso, llogar un pis, mensualidad, mensualitat",
     var5: "subida del alquiler, pujada del lloguer, cuanto ha subido el alquiler, quant ha pujat el lloguer, encarecimiento, encariment",
     esforc: "esfuerzo, esforc, cuanto se dedica al alquiler, quant es dedica al lloguer, accesibilidad, accessibilitat, porcentaje del sueldo, percentatge del sou, asequible, assequible",
     compra: "pisos se venden, pisos vendidos, cuantos pisos se venden, quants pisos es venen, pisos venuts, casas vendidas, cases venudes, compraventas, compravendes, compraventa, compravenda, ventas de pisos, vendes de pisos, venta de viviendas, venda d habitatges, se venden, es venen, compra de vivienda, compra d habitatge, mercado inmobiliario, mercat immobiliari, operaciones, operacions",
@@ -106,6 +106,9 @@ window.PREGUNTA_DIC = {
     hut: "pisos turisticos, pis turistic, pisos turistics, airbnb, viviendas turisticas, habitatges turistics, habitatges d us turistic, vut, hut, alquiler turistico, lloguer turistic, apartamentos turisticos, apartaments turistics, alquiler vacacional, lloguer vacacional",
     buits: "pisos vacios, pisos buits, viviendas vacias, habitatges buits, casas vacias, cases buides, vacios, buits",
     visats: "visados, visats, pisos en proyecto, pisos en projecte, licencias, llicencies",
+    preu_m2: "precio de la vivienda, preu de l habitatge, precio vivienda, preu habitatge, cuanto cuesta un piso, quant costa un pis, precio de los pisos, preu dels pisos, precio de compraventa, preu de compravenda, precio de venta, preu de venda, precio por metro cuadrado, preu per metre quadrat, euros por metro, euros el metro, metro cuadrado, m2, precio m2, preu m2, cuanto cuesta comprar, quant costa comprar, comprar un piso, comprar un pis, precio de compra, preu de compra, vivienda cara, habitatge car, donde es mas cara la vivienda, on es mes car l habitatge",
+    preu_m2_usat: "precio de la vivienda usada, preu de l habitatge usat, segunda mano, segona ma, pisos de segunda mano, pisos de segona ma, vivienda usada, habitatge usat",
+    preu_m2_nou: "precio de la obra nueva, preu de l obra nova, vivienda nueva, habitatge nou, pisos nuevos, pisos nous, precio obra nueva, preu obra nova",
     valor_cad: "valor catastral de la vivienda, valor cadastral de l habitatge",
     antics: "viviendas viejas, habitatges vells, edificios antiguos, edificis antics, antes de 1980, abans del 1980, pisos viejos, pisos vells",
     anyo: "ano de construccion, any de construccio, antiguedad de las viviendas, antiguitat dels habitatges, cuando se construyo, quan es va construir",

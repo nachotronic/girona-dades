@@ -45,8 +45,8 @@ alquiler en Girona	lloguer	Girona	mun
 precio del alquiler en Sant Feliu	lloguer	Sant Feliu de Guíxols	mun
 cuánto cuesta alquilar en Platja d'Aro	lloguer	Castell d'Aro, Platja d'Aro i s'Agaró	mun
 lloguer mitjà a Olot	lloguer	Olot	mun
-precio de la vivienda en Girona	lloguer|cad_vm2	Girona	mun
-cuánto cuesta un piso en Figueres	lloguer	Figueres	mun
+precio de la vivienda en Girona	preu_m2|lloguer|cad_vm2	Girona	mun
+cuánto cuesta un piso en Figueres	preu_m2|lloguer	Figueres	mun
 cuánto ha subido el alquiler en Girona	var5|lloguer	Girona	mun|evol
 esfuerzo para pagar el alquiler en Salt	esforc	Salt	mun
 compraventas de viviendas en Roses	compra	Roses	mun
