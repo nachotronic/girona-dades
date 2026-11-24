@@ -2125,7 +2125,7 @@ def zona_aar(zona):
 # ---------------------------------------------------------------------------
 # Tipos impositivos municipales (Hacienda, SGFAL)
 
-TRIB_DEC = {"ibi_u": 3, "ibi_r": 3, "ibi_bice": 3, "ibi_rev": 0, "iae_max": 2, "iae_min": 2,
+TRIB_DEC = {"ibi_u": 3, "ibi_r": 3, "ibi_bice": 3, "ibi_rev": 0, "ibi_coef": 2, "iae_max": 2, "iae_min": 2,
             "ivtm_8": 2, "ivtm_12": 2, "ivtm_16": 2, "ivtm_moto": 2, "iivtnu": 2, "icio": 2}
 
 
@@ -2152,6 +2152,13 @@ def tributs():
 USOS_CAD = ["RES", "ALMACEN", "COMERCIAL", "INDUSTRIAL", "OFICINAS", "HOSTELERIA", "SOLAR", "DEPORTIVO", "CULTURAL", "SANIDAD", "RELIGIOSO", "ESPECTACULOS", "SINGULAR"]
 CAD_DEC = {"n": 0, "vm": 0, "vviv": 0, "vhab": 0, "sol": 1, "ih": 1, "res": 1, "alm": 1, "com": 1, "ind": 1, "ofi": 2, "hos": 0,
            "solar": 1, "suph": 0, "rha": 0, "rpar": 2, "rev": 0,
+           "vsm2": 0, "vcon": 0, "parc": 0, "parc_m": 0, "copr": 1, "pgran": 1, "solar_ha": 1, "rpn": 0, "rsub": 2,
+           "dep": 0, "cult": 0, "san": 0, "rel": 0, "espc": 0, "sing": 0,
+           "tit_pj": 1, "tit_soc": 1, "tit_ex": 1, "tit_g10": 1, "tit_soc10": 1, "tit_aapp": 1, "tit_vp": 2,
+           "alt_n": 0, "alt_h": 2, "alt_soc": 1, "alt_ex": 1,
+           "ant_80": 1, "ant_10": 1, "ant_cat": 2, "sed_n": 0, "sed_ha": 1,
+           "rc_bosc": 1, "rc_past": 1, "rc_sec": 1, "rc_reg": 1, "rc_fru": 1, "rc_vin": 1, "rc_oli": 1,
+           "bice_n": 0, "bice_v": 0,
            "vm2": 0, "sm2": 0, "ibi_hab": 0, "ibi_rec": 0, "ibi_base": 0, "ibi_bon": 1, "ibi_tot": 0, "ibi_desoc": 0}
 
 
@@ -2165,7 +2172,131 @@ def _cad_ind(f, pob):
             "alm": q(g("UU_ALMACEN"), n, 100), "com": q(g("UU_COMERCIAL"), pob, 1000), "ind": q(g("UU_INDUSTRIAL"), pob, 1000),
             "ofi": q(g("UU_OFICINAS"), pob, 1000), "hos": g("UU_HOSTELERIA"), "solar": q(g("SOLAR_URB"), g("PARCELAS_URB"), 100),
             "suph": q(g("SUPERF_URB"), pob), "rha": q(g("VALOR_MILES_RUS"), g("SUPERFICIE_HA_RUS"), 1000),
-            "rpar": q(g("SUPERFICIE_HA_RUS"), g("PARCELAS_RUS")), "rev": g("ULT_REVISION")}
+            "rpar": q(g("SUPERFICIE_HA_RUS"), g("PARCELAS_RUS")), "rev": g("ULT_REVISION"),
+            # Valor del suelo por m² de parcela urbana y de la construcción por inmueble
+            "vsm2": q(g("V_SUELO"), g("SUPERF_URB")), "vcon": q(g("V_CONSTRUCCION"), n),
+            # Parcelas urbanas: número, tamaño medio, edificios en copropiedad (pisos) y parcelas de más de 1.000 m²
+            "parc": g("PARCELAS_URB"), "parc_m": q(g("SUPERF_URB"), g("PARCELAS_URB")), "copr": q(g("CONST_CP"), g("CONST_URB"), 100),
+            "pgran": q(sum(g(k) or 0 for k in ("CONST10000", "CONSTREST", "SOLAR10000", "SOLARREST")), g("PARCELAS_URB"), 100) if g("CONST10000") is not None else None,
+            "solar_ha": q(g("SUP_SOLAR"), 10000), "rpn": g("PARCELAS_RUS"), "rsub": q(g("SUBPARCELAS_RUS"), g("PARCELAS_RUS")),
+            # Usos minoritarios: número de inmuebles
+            "dep": g("UU_DEPORTIVO"), "cult": g("UU_CULTURAL"), "san": g("UU_SANIDAD"), "rel": g("UU_RELIGIOSO"),
+            "espc": g("UU_ESPECTACULOS"), "sing": g("UU_SINGULAR")}
+
+
+def _num(v):
+    return None if v is None or (isinstance(v, float) and math.isnan(v)) else float(v)
+
+
+def _cad_tit(f, pob=None):
+    """Titularidad de las viviendas (inmuebles residenciales con recibo del IBI)."""
+    g = lambda k: _num(f.get(k))  # noqa: E731
+    inm = g("inm")
+    q = lambda a, k=100: (a / inm * k) if a is not None and inm else None  # noqa: E731
+    fis = (g("i_fna") or 0) + (g("i_fex") or 0) if g("i_fna") is not None else None
+    return {"tit_pj": q(inm - fis) if fis is not None and inm else None, "tit_soc": q(g("i_soc")), "tit_ex": q(g("i_fex")),
+            "tit_g10": q(sum(g(k) or 0 for k in ("i_t25", "i_t100", "i_tm"))) if g("i_t25") is not None else None,
+            "tit_soc10": q(g("i_soc10")), "tit_aapp": q(g("i_aapp")), "tit_vp": (inm / g("sp")) if inm and g("sp") else None}
+
+
+def _cad_alt(f, pob):
+    g = lambda k: _num(f.get(k))  # noqa: E731
+    n = g("ALTAS")
+    q = lambda a: (a / n * 100) if a is not None and n else None  # noqa: E731
+    return {"alt_n": n, "alt_h": (n / pob * 1000) if n is not None and pob else None, "alt_soc": q(g("SOCIEDADES")), "alt_ex": q(g("PF_EXTRANJERAS"))}
+
+
+ANT_80 = ("A1950", "A1950_1959", "A1960_1969", "A1970_1979")
+ANT = (*ANT_80, "A1980_1989", "A1990_1999", "A2000_2009", "A2010")
+
+
+def _cad_ant(f, pob=None):
+    """Urbana trimestral: antigüedad, categoría de la construcción (1 = mejor, 9 = peor) y suelo sin edificar."""
+    g = lambda k: _num(f.get(k))  # noqa: E731
+    tot = sum(g(k) or 0 for k in ANT)
+    cats = [(i, g(f"CAT_{i}") or 0) for i in range(1, 10)]
+    nc = sum(x for _, x in cats)
+    return {"ant_80": (sum(g(k) or 0 for k in ANT_80) / tot * 100) if tot else None, "ant_10": ((g("A2010") or 0) / tot * 100) if tot else None,
+            "ant_cat": (sum(i * x for i, x in cats) / nc) if nc else None, "sed_n": g("PARCELAS_SIN_EDIFICAR"),
+            "sed_ha": (g("SUP_SIN_EDIFICAR_M2") / 10000) if g("SUP_SIN_EDIFICAR_M2") is not None else None}
+
+
+RC = {"rc_bosc": ("fus_l", "fus_r"), "rc_past": ("past",), "rc_sec": ("sec",), "rc_reg": ("reg",), "rc_fru": ("fru", "fsec", "citr"), "rc_vin": ("vin",), "rc_oli": ("oli",)}
+
+
+def _cad_rc(f, pob=None):
+    return {k: (sum(f.get(c) or 0 for c in cs) if any(f.get(c) is not None for c in cs) else None) for k, cs in RC.items()}
+
+
+def _cad_bice(f, pob=None):
+    g = lambda k: _num(f.get(k))  # noqa: E731
+    return {"bice_n": g("UNIDADES_SINGULARIZADAS"), "bice_v": (g("VC_MILES") * 1000) if g("VC_MILES") is not None else None}
+
+
+BICE_TIPUS = {"A1": "elec", "A2": "gas", "A3": "petroli", "A4": "nuclear", "A5": "eolic", "A6": "solar", "A7": "biomassa", "B": "presa", "C": "autopista", "D1": "aeroport", "D2": "port"}
+
+
+def cad_detall(mun, refs, pob, pz, prox):
+    """Titularidad, altas, urbana trimestral, cultivos y BICE (fuentes/cadastre_detall.py).
+    Añade las claves a mun/refs y devuelve {ine: {tipo BICE: unidades}} del último año y los últimos años."""
+    d = P / "cadastre"
+    fr = d / "detall_referencies.json"
+    dr = json.loads(fr.read_text(encoding="utf-8")) if fr.exists() else {}
+    anys, bice_t, tit_t = {}, {}, {}
+    for nom, fn, a in (("titulars", _cad_tit, "cad_tit"), ("altes", _cad_alt, "cad_alt"), ("trimestral", _cad_ant, "cad_ant"), ("bice", _cad_bice, "cad_bice")):
+        f = d / f"{nom}.csv.gz"
+        if not f.exists():
+            continue
+        t = pd.read_csv(f, dtype={"codi_ine": str})
+        if not len(t):
+            continue
+        anys[a] = int(t["any"].max())
+        for x in t.to_dict("records"):
+            y = int(x["any"])
+            for k, v in fn(x, pob(x["codi_ine"], y + (1 if nom in ("altes", "trimestral") else 0))).items():
+                if v is not None:
+                    mun.setdefault(x["codi_ine"], {}).setdefault(k, {})[y] = round(v, CAD_DEC[k]) if CAD_DEC[k] else int(round(v))
+            if nom == "titulars" and y == anys[a]:
+                tit_t[x["codi_ine"]] = _tit_t(x)
+            if nom == "bice" and y == anys[a]:
+                bice_t[x["codi_ine"]] = {BICE_TIPUS[c.split("_")[0]]: int(x[c]) for c in x if c.split("_")[0] in BICE_TIPUS and x[c] == x[c] and x[c]}
+        # Las altas y la urbana trimestral son del año (no del padrón a 1 de enero): población del mismo año
+        for z, per_any in (dr.get(nom) or {}).items():
+            for y, fila in per_any.items():
+                y = int(y)
+                for k, v in fn(fila, prox(pz.get(z, {}), y - (0 if nom in ("altes", "trimestral") else 1))).items():
+                    if v is not None and k not in ("alt_n", "sed_n", "sed_ha", "bice_n", "bice_v"):
+                        refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
+    f = d / "cultius.csv.gz"
+    if f.exists():
+        t = pd.read_csv(f, dtype={"codi_ine": str})
+        if len(t):
+            anys["cad_rc"] = int(t["any"].max())
+            for (ine, y), g_ in t.groupby(["codi_ine", "any"]):
+                for k, v in _cad_rc(dict(zip(g_["cultiu"], g_["pct"]))).items():
+                    if v is not None:
+                        mun.setdefault(ine, {}).setdefault(k, {})[int(y)] = round(v, 1)
+            for z, per_any in ((dr.get("cultius") or {}).items()):
+                for y, fila in per_any.items():
+                    for k, v in _cad_rc(fila).items():
+                        if v is not None:
+                            refs.setdefault(k, {}).setdefault(int(y), {})[z] = round(v, 1)
+    # Referencias del reparto de la titularidad (último año)
+    rt = (dr.get("titulars") or {})
+    if anys.get("cad_tit"):
+        tit_t["_any"] = anys["cad_tit"]
+        for z, per_any in rt.items():
+            f_ = per_any.get(str(anys["cad_tit"]))
+            if f_:
+                tit_t["_" + z] = _tit_t(f_)
+    return bice_t, anys, tit_t
+
+
+def _tit_t(f):
+    """Viviendas por tipo de titular y por número de viviendas del titular."""
+    g = lambda k: int(_num(f.get(k)) or 0)  # noqa: E731
+    return {"fna": g("i_fna"), "fex": g("i_fex"), "soc": g("i_soc"), "ent": sum(g(k) for k in ("i_esal", "i_espj", "i_jex", "i_ndef", "i_otr")), "aapp": g("i_aapp"),
+            "t1": g("i_t1"), "t5": g("i_t5"), "t10": g("i_t10"), "t25": g("i_t25"), "t100": g("i_t100") + g("i_tm")}
 
 
 def _px(ruta):
@@ -2328,6 +2459,10 @@ def cadastre():
                             refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
                     if f.get("N_MUNICIPIOS"):
                         refs.setdefault("ibi_desoc_n", {}).setdefault(y, {})[z] = [f.get("N_RECARGO") or 0, f["N_MUNICIPIOS"]]
+    bice_t, anys_d, tit_t = cad_detall(mun, refs, pob, pz, prox)
+    refs["_anys"] = anys_d
+    refs["_bice"] = bice_t
+    refs["_tit"] = tit_t
     return mun, refs, ult, usos_mun, usos_ref
 
 
@@ -2341,9 +2476,26 @@ def _ibi_ind(f, pob):
             "ibi_desoc": g("RECARGO_DESOCUPADOS") or (0 if "RECARGO_DESOCUPADOS" in f else None)}
 
 
-def cadastre_prov(refs, ult, usos_ref):
-    """Gráficos de «La província»: valor catastral de la vivienda (serie) e inmuebles por uso."""
+def cadastre_prov(refs, ult, usos_ref, tit=None):
+    """Gráficos de «La província»: valor catastral de la vivienda (serie), inmuebles por uso,
+    titularidad de la vivienda y altas de viviendas."""
     out = {}
+    tit = tit or {}
+    if tit.get("_gi"):
+        for id_, ks in (("cad_tit", ("fna", "fex", "soc", "ent", "aapp")), ("cad_tam", ("t1", "t5", "t10", "t25", "t100"))):
+            grups = []
+            for k in ks:
+                g = {"g": k, "c": "ct:" + k}
+                for z in ("gi", "cat", "esp"):
+                    t_ = tit.get("_" + z) or {}
+                    tot = sum(t_.get(x, 0) for x in ks)
+                    g[z] = round(t_.get(k, 0) / tot * 100, 1) if tot else None
+                grups.append(g)
+            out[id_] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["gi", "cat", "esp"], "any": tit.get("_any"), "grups": grups}
+    v = refs.get("alt_h", {})
+    ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
+    if ser.get("gi"):
+        out["cad_alt"] = {"tipus": "linia", "u": "", "dec": 1, "series": ser}
     v = refs.get("vviv", {})
     ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
     if ser.get("gi"):
@@ -2694,6 +2846,7 @@ def main():
     import anuari_aeat_web
     aw = anuari_aeat_web.construir()
     cad, refs_cad, any_cad, usos_cad, usos_cad_ref = cadastre()
+    anys_cd, bice_cad, tit_cad = refs_cad.pop("_anys", {}), refs_cad.pop("_bice", {}), refs_cad.pop("_tit", {})
     cm, refs_cm, anys_cm, fitxa_cm = complements_indicadores(pob)
     ats, refs_ats = atur_detall()
     for ine, x in cm.items():
@@ -2745,7 +2898,7 @@ def main():
             **({"com_f": fitxa_com[ine]} if ine in fitxa_com else {}),
             **({"sol": sol[ine]} if ine in sol else {}),
             **({"irpf": aw["mun"][ine]} if ine in aw["mun"] else {}),
-            **({"cad": cad[ine], "cad_u": usos_cad.get(ine)} if ine in cad else {}),
+            **({"cad": cad[ine], "cad_u": usos_cad.get(ine), **({"cad_b": bice_cad[ine]} if bice_cad.get(ine) else {}), **({"cad_t": tit_cad[ine]} if tit_cad.get(ine) else {})} if ine in cad else {}),
             **({"nac": nac_mun[ine]} if ine in nac_mun else {}),
             **({"hb": hw["mun"][ine]} if ine in hw["mun"] else {}),
             **({"hbf": hw["fix"][ine]} if ine in hw["fix"] else {}),
@@ -2982,9 +3135,9 @@ def main():
         refs.setdefault("lloguer", {})["gi"] = prov_alq[max(prov_alq)]
     datos = {
         "generado": dt.date.today().isoformat(),
-        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
-        "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref, tit_cad), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
+        "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"trib_coef": max(y for x in trib.values() for y in x.get("ibi_coef", {}))} if any(x.get("ibi_coef") for x in trib.values()) else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **anys_cd, **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "cad_t_ref": {k[1:]: v for k, v in tit_cad.items() if k.startswith("_")}, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,
