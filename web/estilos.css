@@ -534,8 +534,9 @@ tbody tr:hover { background: var(--fons-2); }
 .pb-fila { display: grid; grid-template-columns: minmax(120px, 42%) 1fr; gap: 12px; align-items: center; font-size: 12.5px; }
 .pb-nom { line-height: 1.2; }
 .pb-barres { display: grid; gap: 2px; }
-.pb-b { display: flex; align-items: center; gap: 6px; height: 9px; }
-.pb-b b { display: block; height: 100%; }
+.pb-b { display: flex; align-items: center; gap: 6px; height: 9px; padding-right: 64px; }
+/* La barra no se encoge: la etiqueta va en el margen derecho y las barras largas no se igualan */
+.pb-b b { display: block; height: 100%; flex-shrink: 0; }
 .pb-b em { font: normal 10.5px var(--mono); color: var(--text-2); white-space: nowrap; }
 .pg-bg-gi { background: var(--accent); } .pg-bg-esp { background: var(--text-3); }
 @media (min-width: 761px) {
@@ -1455,3 +1456,13 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 #not-esp-ctl select { max-width: calc(100vw - 140px); }
 /* Con Notarías hay 17 enlaces: menos espaciado para que quepan a 1440 px */
 @media (min-width: 1280px) { .menu { gap: 7px; } .menu a { letter-spacing: 0; } }
+
+/* Ficha: ayuntamiento y servicios (Xifra municipal) */
+.fx-xm-g { border-top: 1px solid var(--tinta); margin-top: 8px; }
+.fx-xm-f { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 9px 0; border-bottom: 1px solid var(--vora); }
+.fx-xm-f span { font-size: 14px; color: var(--text-2); }
+.fx-xm-f b { font: 700 14px var(--mono); color: var(--tinta); text-align: right; }
+.fx-xm-f b small { font-weight: 400; color: var(--text-3); }
+.fx-xm-l { grid-template-columns: 1fr; }
+.fx-xm-l b { text-align: left; font-weight: 500; }
+.fx-xm-f > small { grid-column: 1 / -1; font: 400 11.5px var(--mono); color: var(--text-3); }
