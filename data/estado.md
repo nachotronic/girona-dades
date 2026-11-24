@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 14:04 UTC
+Última ejecución: 2026-11-24 14:34 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -53,12 +53,12 @@
 | urbans — INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona | ok | 2026-11-24 08:01 | 2026-11-24 08:01 | anual |
 | notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | ok | 2026-11-24 08:18 | 2026-11-24 08:18 | mensual/trimestral |
 | xifra_treball — Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral | avís | — | 2026-11-24 12:17 | mensual |
-| xifra_municipal — Xifra, Diputació de Girona: policia local, lloc de naixement, cens d'habitatges 2021, romanent, resultat pressupostari, cost efectiu dels serveis i turisme per comarca | avís | — | 2026-11-24 13:25 | mensual |
+| xifra_municipal — Xifra, Diputació de Girona: policia local, lloc de naixement, cens d'habitatges 2021, romanent, resultat pressupostari, cost efectiu dels serveis i turisme per comarca | ok | 2026-11-24 14:23 | 2026-11-24 14:23 | mensual |
 
 ## Detalle de la última ejecución
 
-### xifra_municipal: avís (2336 s)
+### xifra_municipal: ok (707 s)
 
 ```
-tur_comarca: 306 consultas; policia: 221 municipios; naixement: 221 municipios; romanent: 221 municipios; resultat: 221 municipios; cesel: 221 municipios; cens_hin: ERROR sin datos; cens_hpp: ERROR sin datos; cens_hpt: 221 municipios; cens_enp: 112 municipios
+prestacions: 197 meses consultados hasta 2026-05; tur_comarca: 177 consultas; policia: al día; naixement: al día; romanent: al día; resultat: al día; cesel: al día; cens_hpt: 221 municipios; cens_enp: 112 municipios
 ```

@@ -329,11 +329,11 @@
   "resum": "131 tablas de 129 páginas; 0 errores"
  },
  "xifra_municipal": {
-  "estat": "avís",
-  "intent": "2026-11-24T13:25:24Z",
-  "ok": null,
-  "durada": 2336,
-  "resum": "tur_comarca: 306 consultas; policia: 221 municipios; naixement: 221 municipios; romanent: 221 municipios; resultat: 221 municipios; cesel: 221 municipios; cens_hin: ERROR sin datos; cens_hpp: ERROR sin datos; cens_hpt: 221 municipios; cens_enp: 112 municipios"
+  "estat": "ok",
+  "intent": "2026-11-24T14:23:06Z",
+  "ok": "2026-11-24T14:23:06Z",
+  "durada": 707,
+  "resum": "prestacions: 197 meses consultados hasta 2026-05; tur_comarca: 177 consultas; policia: al día; naixement: al día; romanent: al día; resultat: al día; cesel: al día; cens_hpt: 221 municipios; cens_enp: 112 municipios"
  },
  "xifra_treball": {
   "estat": "avís",
