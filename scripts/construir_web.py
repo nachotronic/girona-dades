@@ -3030,6 +3030,11 @@ def main():
     pob1564 = dict(zip(e27["ine"].str.zfill(5), pd.to_numeric(e27["mun"], errors="coerce")))
     cj = conjuntura_web.construir(municipios, pob1564)
     cj["generado"] = datos["generado"]
+    # Mercado de trabajo de Xifra: series trimestrales largas por municipio
+    import treball_web
+    xt = treball_web.construir(municipios)
+    if xt:
+        cj["xt"] = xt
     # Población de Cataluña (total y de 15 a 64 años) para las tasas de referencia
     cat = lambda f: pd.to_numeric(emex[emex["id"] == f]["cat"].str.replace("_", ""), errors="coerce").dropna()
     if len(cat("f27")) and len(cat("f321")):

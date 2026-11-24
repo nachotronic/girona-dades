@@ -647,7 +647,7 @@
     if (PERIODE_FIX[i.id]) return PERIODE_FIX[i.id];
     const p = typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
     if (p) return etPer(String(p));
-    if (i.per) { const l = serie(i); return l.length ? etPer(l[l.length - 1]) : ""; }
+    if (i.per || i.xt) { const l = serie(i); return l.length ? etPer(l[l.length - 1]) : ""; }
     return "";
   }
   function font(i) {
@@ -663,7 +663,7 @@
   function refs(i) {
     let r = {};
     try {
-      r = (i.ref && (i.per || i.virtual || i.a === "sol" || i.a === "irpf" || /^hb/.test(i.a || "") || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || (i.ref && !i.v ? i.ref() : {}) || {};
+      r = (i.ref && (i.per || i.xt || i.virtual || i.a === "sol" || i.a === "irpf" || /^hb/.test(i.a || "") || i.a === "veh" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || (i.ref && !i.v ? i.ref() : {}) || {};
     } catch (e) { r = {}; }
     let gi = null;
     try { gi = i.id === "pob" ? D.provincia && D.provincia.poblacion : valorProvincia(i); } catch (e) { gi = null; }

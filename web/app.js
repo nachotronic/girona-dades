@@ -69,7 +69,7 @@ const T = {
     f_edu: "alumnes, centres, docents, preinscripció, avaluacions i nivell d'estudis", f_univ: "on estudien els universitaris de cada municipi", f_afil: "afiliats i autònoms per municipi de residència, cada mes",
     f_dgt: "matriculacions de vehicles per municipi, cada mes", f_trf: "transferències de vehicles (segona mà) per municipi, cada mes", f_aena: "passatgers de l'aeroport de Girona, cada mes",
     font_act: "Descarregat", font_manual: "Càrrega manual", f_cvreg: "compravendes inscrites als registres i preu per m² per municipi, cada trimestre", f_esca: "enquesta de salut per regió sanitària i sèrie de Catalunya", f_sem: "temps de resposta, codis d'urgència i recursos per regió sanitària", font_avis: "Última descàrrega correcta", font_avis_t: "L'última descàrrega va fallar en part: es mostren les dades anteriors",
-    f_xifra: "població, treball, ajuntaments, energia", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
+    f_xifra: "població, treball, ajuntaments, energia", f_xifra_tre: "població activa i taxa d'atur registral, atur per estudis i ocupació, contractes (ETT i estrangers), llocs de treball i afiliats, trimestrals des del 2005", nav_tre: "Feina", h_tre: "Qui treballa, qui busca feina i amb quins contractes", lead_tre: "Taxa d'atur registral, contractes, llocs de treball per sector i qui són els afiliats, trimestre a trimestre des del 2005, i els aturats per estudis, ocupació i activitat. Al mapa, el tema «Treball» ho baixa a cada municipi.", f_gen: "renda garantida, plaques solars d'autoconsum, residus",
     actualitzat: "Actualitzat el",
     codi: "Codi i dades a GitHub", ref_pagines: "Dades per municipi en text, CSV i JSON",
     l_qui: "Qui som", l_avis: "Avís legal", l_priv: "Privacitat i galetes", l_llic: "Reutilització: CC BY 4.0",
@@ -172,7 +172,7 @@ const T = {
     f_edu: "alumnos, centros, docentes, preinscripción, evaluaciones y nivel de estudios", f_univ: "dónde estudian los universitarios de cada municipio", f_afil: "afiliados y autónomos por municipio de residencia, cada mes",
     f_dgt: "matriculaciones de vehículos por municipio, cada mes", f_trf: "transferencias de vehículos (segunda mano) por municipio, cada mes", f_aena: "pasajeros del aeropuerto de Girona, cada mes",
     font_act: "Descargado", font_manual: "Carga manual", f_cvreg: "compraventas inscritas en los registros y precio por m² por municipio, cada trimestre", f_esca: "encuesta de salud por región sanitaria y serie de Cataluña", f_sem: "tiempos de respuesta, códigos de urgencia y recursos por región sanitaria", font_avis: "Última descarga correcta", font_avis_t: "La última descarga falló en parte: se muestran los datos anteriores",
-    f_xifra: "población, trabajo, ayuntamientos, energía", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
+    f_xifra: "población, trabajo, ayuntamientos, energía", f_xifra_tre: "población activa y tasa de paro registral, paro por estudios y ocupación, contratos (ETT y extranjeros), puestos de trabajo y afiliados, trimestrales desde 2005", nav_tre: "Trabajo", h_tre: "Quién trabaja, quién busca empleo y con qué contratos", lead_tre: "Tasa de paro registral, contratos, puestos de trabajo por sector y quiénes son los afiliados, trimestre a trimestre desde 2005, y los parados por estudios, ocupación y actividad. En el mapa, el tema «Trabajo» lo baja a cada municipio.", f_gen: "renta garantizada, placas solares de autoconsumo, residuos",
     actualitzat: "Actualizado el",
     codi: "Código y datos en GitHub", ref_pagines: "Datos por municipio en texto, CSV y JSON",
     l_qui: "Quiénes somos", l_avis: "Aviso legal", l_priv: "Privacidad y cookies", l_llic: "Reutilización: CC BY 4.0",
@@ -683,6 +683,7 @@ function pintaTot() {
   if (window.pintaSeccioExportacions) window.pintaSeccioExportacions();
   if (window.pintaSeccioNotariado) window.pintaSeccioNotariado();
   if (window.pintaSeccioDemografia) window.pintaSeccioDemografia();
+  if (window.pintaSeccioTreball) window.pintaSeccioTreball();
   pintaTaula();
   const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
   document.querySelectorAll(".data-gen").forEach((e) => { e.textContent = dg; });
@@ -708,6 +709,7 @@ addEventListener("resize", () => {
   if (window.pintaSeccioExportacions) window.pintaSeccioExportacions();
   if (window.pintaSeccioNotariado) window.pintaSeccioNotariado();
   if (window.pintaSeccioDemografia) window.pintaSeccioDemografia();
+  if (window.pintaSeccioTreball) window.pintaSeccioTreball();
   if (seleccionat) obreFitxa(seleccionat, false);
 });
 
@@ -720,6 +722,7 @@ Promise.all([
   if (cj) {
     cj.idx = {};
     Object.entries(cj.per).forEach(([k, l]) => { cj.idx[k] = {}; l.forEach((a, i) => { cj.idx[k][a] = i; }); });
+    if (cj.xt) { cj.xt.idx = {}; cj.xt.per.forEach((a, i) => { cj.xt.idx[a] = i; }); }
     D.cj = cj;
   }
   // Inserción (iframe): solo se carga el mapa si la pieza lo necesita, y la ficha sin desplazar la página
