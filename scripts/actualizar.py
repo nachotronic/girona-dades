@@ -89,6 +89,7 @@ FONTS = {
     "diners_publics": ("Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública)", "setmanal/anual"),
     "social": ("Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb)", "setmanal/anual"),
     "culte": ("Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap)", "anual"),
+    "notariado": ("Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província", "mensual/trimestral"),
     "habitatge": ("Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic", "anual/trimestral"),
 }
 
