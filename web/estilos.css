@@ -1094,6 +1094,8 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .pq-pos b { color: var(--tinta); }
 .pq-nota, .pq-avis { margin: 4px 0 8px; font-size: 14px; line-height: 1.5; color: var(--text-2); max-width: 46em; }
 .pq-avis { border-left: 3px solid var(--accent); padding-left: 10px; }
+/* Gràfic al qual porta el cercador */
+figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; transition: outline-color .4s; }
 .pq-refs { display: flex; flex-wrap: wrap; gap: 0; margin: 12px 0 4px; border-top: 1px solid var(--vora); }
 .pq-ref { padding: 8px 18px 6px 0; margin-right: 18px; }
 .pq-ref dt { font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--text-3); }

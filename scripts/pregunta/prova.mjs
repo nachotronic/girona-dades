@@ -27,6 +27,9 @@ else await p.route(/^https?:\/\/(?!127\.0\.0\.1)/, (r) => r.abort());
 p.on("pageerror", (e) => console.error("Error:", e.message));
 await p.goto(`http://127.0.0.1:${srv.address().port}/?lang=es`);
 await p.waitForFunction(() => window.preguntaDades && typeof D !== "undefined" && D && D.cj, null, { timeout: 120000 });
+// Els gràfics de les seccions també es busquen: s'espera que estiguin pintats
+await p.waitForLoadState("networkidle").catch(() => {});
+await p.waitForFunction(() => { const n = document.querySelectorAll("section.sec figure[data-id]").length; const ok = n > 0 && n === window.__nFig; window.__nFig = n; return ok; }, null, { timeout: 60000, polling: 1000 }).catch(() => {});
 const res = await p.evaluate(async (casos) => {
   const out = [];
   for (const c of casos) {

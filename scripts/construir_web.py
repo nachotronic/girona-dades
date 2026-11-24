@@ -2990,6 +2990,8 @@ def main():
         sec.setdefault(cusec, {}).update(x)
     for cusec, x in sow["sec"].items():
         sec.setdefault(cusec, {}).update(x)
+    for cusec, x in cuw.get("sec", {}).items():
+        sec.setdefault(cusec, {}).update(x)
     (SALIDA.parent / "seccions.json").write_text(json.dumps(sec, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"seccions.json: {len(sec)} secciones")
     # Coyuntura (mensual y trimestral), en un fichero aparte
