@@ -60,6 +60,7 @@
     ene: { sel: "#ene-grafics .pg-fig", ancla: "#s-ene", pinta: "pintaSeccioEne" },
     dp: { sel: "#dp-grafics .pg-fig", ancla: "#s-dp", pinta: "pintaSeccioDp" },
     soc: { sel: "#soc-grafics .pg-fig", ancla: "#s-soc", pinta: "pintaSeccioSoc" },
+    not: { sel: "#s-not .pg-fig", ancla: "#s-not", pinta: "pintaSeccioNotariado" },
   };
   // Fuente corta de los mapas, por tema del indicador
   const FONT_TEMA = {
@@ -172,6 +173,7 @@
     { sel: "#ene-grafics .pg-fig", clau: (e) => `ene:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#dp-grafics .pg-fig", clau: (e) => `dp:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
     { sel: "#soc-grafics .pg-fig", clau: (e) => `soc:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
+    { sel: "#s-not .pg-fig[data-id]", clau: (e) => `not:${e.dataset.id}`, tit: (e) => e.querySelector(".pg-tit") },
   ];
   const urlDe = (c, extra = "") => `${BASE}?embed=${encodeURIComponent(c).replace(/%3A/g, ":")}${extra}&lang=${LANG}`;
   const boto = (fn) => {

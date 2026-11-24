@@ -1220,7 +1220,7 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 .pq-parcial p { text-transform: none; letter-spacing: 0; font: 400 14px/1.45 var(--sans); color: var(--text-2); border-left: 3px solid var(--accent); padding-left: 10px; margin-bottom: 6px; }
 
 /* ---------- Exportacions ---------- */
-.ex-xifres { margin-bottom: 40px; }
+.ex-xifres, .not-xifres { margin-bottom: 40px; }
 .ex-mapafig { margin-bottom: 48px; }
 .ex-ctl { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 8px 0 10px; }
 .ex-any { display: inline-flex; align-items: center; gap: 8px; font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--text-2); }
@@ -1451,3 +1451,7 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 .al-taula th:first-child, .al-taula td:first-child { text-align: left; }
 .al-taula tbody tr:first-child td { font-weight: 600; color: var(--tinta); }
 .tur-air { margin-top: 28px; }
+#not-esp-ctl .ex-any { max-width: 100%; }
+#not-esp-ctl select { max-width: calc(100vw - 140px); }
+/* Con Notarías hay 17 enlaces: menos espaciado para que quepan a 1440 px */
+@media (min-width: 1280px) { .menu { gap: 7px; } .menu a { letter-spacing: 0; } }

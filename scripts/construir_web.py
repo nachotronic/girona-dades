@@ -31,6 +31,10 @@ def estat_fonts() -> dict:
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))
         res["esca"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("edicio")}
+    fm = P / "compravendes" / "compravendes_meta.json"
+    if fm.exists():
+        m = json.loads(fm.read_text(encoding="utf-8"))
+        res["compravendes"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("ultim")}
     fm = P / "sem" / "sem_meta.json"
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))
@@ -2812,6 +2816,12 @@ def main():
         print("exportacions:", exportacions_web.construir(SALIDA.parent))
     except Exception as e:  # noqa: BLE001 - la web se publica igual sin la sección
         print("exportacions: ERROR", type(e).__name__, e)
+    # Notariado (CIEN): sección Notaries, fichero aparte que la web pide al pintarla (usa la población de exportacions)
+    import notariado_web
+    try:
+        print("notariado:", notariado_web.construir(SALIDA.parent)["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin la sección
+        print("notariado: ERROR", type(e).__name__, e)
     # Movilidad: Enquesta de Mobilitat Quotidiana (ATM Girona), tema «mob», nivel «com» y sección Mobilitat
     import mobilitat_web
     mw = mobilitat_web.construir(municipios, SALIDA.parent)

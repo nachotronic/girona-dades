@@ -92,6 +92,45 @@ def _lloguer_trim():
     return d[["ine", "per", "renda", "contr"]]
 
 
+def _preu_venda():
+    """Compraventas registradas (Secretaria d'Habitatge, Registradores; carga manual con
+    scripts/compravendes_manual.py): por trimestre, número y €/m² construido total, nuevo y usado.
+    Devuelve {zona: {periodo: (n, m2_tot, m2_nou, m2_usat, n_nou, n_usat)}} con los municipios por
+    código INE y «gi» (demarcación de Girona) y «cat» (Cataluña)."""
+    f = P / "compravendes" / "compravendes.csv.gz"
+    if not f.exists():
+        return {}
+    d = pd.read_csv(f, dtype={"codi": str})
+    d = d[(d["tipus"] == "mun") | ((d["ambit"] == "Demarcacions territorials") & d["nom"].isin(["Girona", "Catalunya"]))]
+    res = {}
+    for r in d.itertuples():
+        z = r.codi if r.tipus == "mun" else ("gi" if r.nom == "Girona" else "cat")
+        res.setdefault(z, {})[r.per] = (r.n_tot, r.m2_tot, r.m2_nou, r.m2_usat, r.n_nou, r.n_usat)
+    return res
+
+
+def _preu12(s: dict, per: list[str]) -> dict:
+    """€/m² de los últimos cuatro trimestres (media de los trimestres ponderada por compraventas)."""
+    out = {}
+    for k, (i_, j_) in {"pm2_12": (1, 0), "pm2n_12": (2, 4), "pm2u_12": (3, 5)}.items():
+        o = {}
+        for p in per:
+            a, q = int(p[:4]), int(p[-1])
+            ps = [f"{a - (1 if q - x <= 0 else 0)}T{(q - x - 1) % 4 + 1}" for x in range(4)]
+            if not all(x in s for x in ps):
+                continue
+            num = den = 0.0
+            for x in ps:
+                v, n = s[x][i_], s[x][j_]
+                if v == v and v is not None and n == n and n:
+                    num += v * n
+                    den += n
+            if den >= 5:
+                o[p] = num / den
+        out[k] = o
+    return out
+
+
 def _compraventes_trim(nombres):
     """Tabla municipal del Ministerio: columnas por año y trimestre."""
     from fuentes.comun import normaliza
@@ -243,6 +282,7 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     aena = _aena()
     trf, trf_p = _trf()
     vt_prov, vt = _valor_taxat()
+    pv = _preu_venda()
 
     ults = [df["per"].max() for df in (paro, contr) if len(df)] + ([afi["mes"].max()] if len(afi) else [])
     ults += [max(_serie_ine(ine, "6150", "Girona.", "General. Compraventa. Número") or {"": ""}), max(_serie_ine(ine, "2074", "Girona.", "Pernoctaciones. Total") or {"": ""})]
@@ -276,6 +316,13 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     for i, s in ini.items():
         if i in mun:
             mun[i]["ini"] = arr(s, T)
+    # Precio de compraventa registrado (€/m², municipios de más de 2.000 habitantes; 5.000 hasta 2024)
+    for i, s in pv.items():
+        if i in mun:
+            mun[i]["pm2"] = arr({p: v[1] for p, v in s.items() if v[1] == v[1]}, T)
+            mun[i]["pm2_n"] = arr({p: v[0] for p, v in s.items()}, T)
+            for k, o in _preu12(s, T).items():
+                mun[i][k] = arr(o, T)
     # Afiliación por residencia (régimen general + autónomos) y autónomos
     if len(afi):
         piv = afi.pivot_table(index=["ambit", "mes"], columns="reg", values="valor", aggfunc="sum").reset_index()
@@ -413,6 +460,12 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     if ini:
         prov["ini"] = {"per": "t", "gi": [_n(sum(s[p] for s in ini.values() if p in s)) if any(p in s for s in ini.values()) else None for p in T]}
         prov["aca"] = {"per": "t", "gi": [_n(sum(s[p] for s in aca.values() if p in s)) if any(p in s for s in aca.values()) else None for p in T]}
+    if "gi" in pv:
+        prov["pm2"] = {"per": "t", **{z: arr({p: v[1] for p, v in pv[z].items() if v[1] == v[1]}, T) for z in ("gi", "cat") if z in pv}}
+        prov["pm2_n"] = {"per": "t", "gi": arr({p: v[0] for p, v in pv["gi"].items()}, T)}
+        for z in ("gi", "cat"):
+            for k, o in _preu12(pv.get(z, {}), T).items():
+                prov.setdefault(k, {"per": "t"})[z] = arr(o, T)
     vz = {a: vt_prov.get(normaliza(n)) for a, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
     if vz["gi"]:
         prov["vt"] = {"per": "t", **{a: arr(x, T) for a, x in vz.items() if x}}
