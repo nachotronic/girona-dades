@@ -74,14 +74,14 @@ def consulta(clau: str, geografia: str) -> list[dict]:
     params = {"actos": actos, "tabla": tabla, "variables": variables, "geografia": geografia, "ccaaid": "",
               "provid": ",".join(str(p) for p in PROVS) if geografia == "05" else "", "munid": "", "distid": "",
               "temporal": temporal, "fechaInicio": DES_DE, "fechaFin": fi.strftime("%d/%m/%Y"), **extra}
-    for intent in range(4):
+    for intent in range(3):
         try:
-            r = post(URL, params, timeout=300)
+            r = post(URL, params, timeout=(20, 240))
             r.encoding = "latin-1"
             js = r.json()
             break
         except Exception:  # noqa: BLE001
-            if intent == 3:
+            if intent == 2:
                 raise
             time.sleep(10 * (intent + 1))
     if "datos" not in js:
@@ -105,7 +105,11 @@ def consulta(clau: str, geografia: str) -> list[dict]:
 def ejecutar() -> str:
     lineas: list[str] = []
     totes: list[dict] = []
+    errors = 0
     for clau in INDICADORS:
+        if errors >= 3 and not totes:
+            lineas.append("ERROR: el servidor del Notariado no responde; se deja de intentar")
+            break
         for geo in ("05", "04"):
             try:
                 f = consulta(clau, geo)
@@ -115,6 +119,7 @@ def ejecutar() -> str:
                     ult = max(((x["any"], x["per"]) for x in gi), default=None)
                     lineas.append(f"{clau}: {len({x['zona'] for x in f})} provincias, Girona {len(gi)} valores, último {ult}")
             except Exception as e:  # noqa: BLE001
+                errors += 1
                 lineas.append(f"ERROR {clau} ({'provincias' if geo == '05' else 'España'}): {type(e).__name__}: {str(e)[:200]}")
             time.sleep(1)
     if not totes:
