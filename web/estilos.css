@@ -1336,3 +1336,5 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 .dp-grans li span:first-child { white-space: normal; }
 .dp-grans small { color: var(--text-3); font: 400 11.5px var(--mono); }
 .tur-air { margin-top: 28px; }
+#not-esp-ctl .ex-any { max-width: 100%; }
+#not-esp-ctl select { max-width: calc(100vw - 140px); }
