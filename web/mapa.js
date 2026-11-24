@@ -846,7 +846,7 @@
       ref: k === "subv" ? () => { const o = DPR("dp_c_subv")(D.anys && D.anys.dp_subv); return { gi: o.gi, cat: o.cat }; } : undefined })),
     ...(window.UA_CAT || []).filter((x) => x[5]).map(([k, , ca, es, fk]) => ({ id: "ua_" + k.slice(1).replace(/^_/, ""), uk: k, tema: "urb", ca, es, a: "ua", sumable: false, cob: 0.004,
       v: (m) => UAV(k)(m, anysDe(IND.find((i) => i.uk === k)).slice(-1)[0]), t: UAV(k),
-      ref: () => { const i = IND.find((x) => x.uk === k), a = anyActiu() || anysDe(i).slice(-1)[0]; return { esp: UAE(k, a) }; }, nota: window.UA_NOTA, ...window.UA_FMT(fk) })),
+      ref: () => { const i = IND.find((x) => x.uk === k), a = anyActiu() || anysDe(i).slice(-1)[0]; return { esp: window.UA_ABS.has(k) ? null : UAE(k, a) }; }, nota: window.UA_NOTA, ...window.UA_FMT(fk) })),
     ...ENE.map(([k, a, ca, es, nota, fmtk]) => ({ id: "en_" + k, tema: "ene", ca, es, a, sumable: false, v: (m) => EN("en_" + k)(m, D.anys && D.anys[a]), t: a === "en_cob" ? EN("en_" + k) : undefined, nota,
       ref: /^gas_g|^gas_d/.test(k) ? () => { const r = D.en_ref && D.en_ref[k]; return r ? { cat: r.cat, esp: r.esp } : {}; } : undefined, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
@@ -1335,7 +1335,7 @@
     const el = document.getElementById("info");
     const mini = (m) => (ind.t && !esArea(nivell) ? minigrafic([
       ...(m ? [{ nom: m.nom, cls: "s-mun", d: serieMun(ind, m) }] : []),
-      { nom: t("prov_curt"), cls: "s-prov", d: serieProv(ind) },
+      ...(!ind.uk ? [{ nom: t("prov_curt"), cls: "s-prov", d: serieProv(ind) }] : window.UA_ABS.has(ind.uk) ? [] : [{ nom: t("ref_esp"), cls: "s-prov", d: (D.ua && D.ua.z && D.ua.z.esp && D.ua.z.esp[ind.uk]) || {} }]),
     ]) : "");
     if (!props) { el.innerHTML = `<p class="pista">${t("pista")}</p>${mini(null)}`; return; }
     if (ind.el) return infoEl(el, props);

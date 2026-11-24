@@ -20,7 +20,7 @@
       xn: (c, p, n, e) => `${c} · ${p}a de ${n} ciutats d'Espanya · Espanya ${e}`,
       xn_jove: (c, p, n, e) => `${c}, d'edat mediana · ${n - p + 1}a més jove de ${n} · Espanya ${e}`,
       sense: "Sense dades",
-      nota_auf: "L'àrea urbana funcional de Girona inclou la ciutat i els municipis on una bona part de la població hi va a treballar; la conurbació, la ciutat i els municipis enganxats (Salt, Sarrià de Ter…).",
+      nota_auf: "L'àrea urbana funcional de Girona inclou la ciutat i els municipis on una bona part de la població hi va a treballar; la conurbació, la ciutat i els municipis que formen un continu urbà amb ella.",
     },
     es: {
       h: "Indicadores urbanos del INE",
@@ -37,12 +37,14 @@
       xn: (c, p, n, e) => `${c} · ${p}.ª de ${n} ciudades de España · España ${e}`,
       xn_jove: (c, p, n, e) => `${c}, de edad mediana · ${n - p + 1}.ª más joven de ${n} · España ${e}`,
       sense: "Sin datos",
-      nota_auf: "El área urbana funcional de Girona incluye la ciudad y los municipios donde buena parte de la población va a trabajar a ella; la conurbación, la ciudad y los municipios pegados (Salt, Sarrià de Ter…).",
+      nota_auf: "El área urbana funcional de Girona incluye la ciudad y los municipios donde buena parte de la población va a trabajar a ella; la conurbación, la ciudad y los municipios que forman un continuo urbano con ella.",
     },
   };
   const tx = (k, ...a) => { const v = TX[LANG][k]; return typeof v === "function" ? v(...a) : v; };
   const L = () => (LANG === "es" ? 1 : 0);
   const CAT = () => window.UA_CAT || [];
+  // Totales que no se comparan con el total de España
+  const ABS = window.UA_ABS;
   const info = (k) => CAT().find((x) => x[0] === k);
   const F = (k) => window.UA_FMT(info(k)[4]);
   const nom = (k, curt) => info(k)[2 + L()][curt ? 0 : 1];
@@ -66,7 +68,7 @@
     const grups = Object.keys(window.UA_AMB).map((amb) => {
       const files = CAT().filter((x) => x[1] === amb && m.ua[x[0]]).map(([k]) => {
         const a = darrer(m.ua[k]); if (!a) return "";
-        const v = m.ua[k][a], e = (zona("esp", k) || {})[a], r = R[k], f = F(k).f;
+        const v = m.ua[k][a], e = ABS.has(k) ? null : (zona("esp", k) || {})[a], r = R[k], f = F(k).f;
         const strip = r ? `<span class="ua-strip" aria-hidden="true"><i style="left:${(100 * (1 - (r[0] - 1) / Math.max(1, r[1] - 1))).toFixed(1)}%"></i></span>` : "";
         return `<tr><th scope="row">${nom(k, true)}<small>${nom(k)}</small></th><td class="ua-v">${f(v)}<small>${a}</small></td><td>${e != null ? f(e) : "–"}</td>
           <td class="ua-p">${r ? `${strip}<span>${tx("pos", r[0], r[1])}</span>` : "–"}</td></tr>`;
@@ -118,11 +120,11 @@
 
   function barres(cont, k, a) {
     const f = F(k).f, cs = ciutats().filter((m) => m.ua[k] && m.ua[k][a] != null).sort((p, q) => q.ua[k][a] - p.ua[k][a]);
-    const refs = [["auf", tx("auf")], ["kernel", tx("kernel")], ["esp", tx("esp")]].map(([z, n]) => [z, n, (zona(z, k) || {})[a]]).filter((x) => x[2] != null);
+    const refs = [["auf", tx("auf")], ["kernel", tx("kernel")], ["esp", tx("esp")]].filter(([z]) => !(ABS.has(k) && z === "esp")).map(([z, n]) => [z, n, (zona(z, k) || {})[a]]).filter((x) => x[2] != null);
     const mx = Math.max(...cs.map((m) => Math.abs(m.ua[k][a])), ...refs.map((x) => Math.abs(x[2]))) || 1;
-    const fila = (cls, n, v, extra, ine) => `<li class="${cls}"${ine ? ` data-ine="${ine}" tabindex="0" role="button" aria-pressed="${ine === sel}"` : ""}><span class="ub-n">${n}</span><span class="ub-b"><b style="width:${(Math.abs(v) / mx) * 100}%"></b></span><span class="ub-v">${f(v)}</span><span class="ub-r">${extra}</span></li>`;
-    cont.innerHTML = `<ol class="ub">${cs.map((m) => { const r = (m.ua_r || {})[k]; return fila(m.ine === sel ? "ub-sel" : "", esc(m.nom), m.ua[k][a], r && String(r[2]) === a ? tx("pos", r[0], r[1]) : "", m.ine); }).join("")}</ol>
-      ${refs.length ? `<ol class="ub ub-refs">${refs.map(([z, n, v]) => fila("ub-" + z, n, v, "")).join("")}</ol>` : ""}`;
+    const fila = (cls, n, v, extra, ine) => `<li class="${cls}"${ine ? ` data-ine="${ine}" tabindex="0" role="button" aria-pressed="${ine === sel}"` : ""}><span class="uc-n">${n}</span><span class="uc-b"><b style="width:${(Math.abs(v) / mx) * 100}%"></b></span><span class="uc-v">${f(v)}</span><span class="uc-r">${extra}</span></li>`;
+    cont.innerHTML = `<ol class="uc">${cs.map((m) => { const r = (m.ua_r || {})[k]; return fila(m.ine === sel ? "uc-sel" : "", esc(m.nom), m.ua[k][a], r && String(r[2]) === a ? tx("pos", r[0], r[1]) : "", m.ine); }).join("")}</ol>
+      ${refs.length ? `<ol class="uc uc-refs">${refs.map(([z, n, v]) => fila("uc-" + z, n, v, "")).join("")}</ol>` : ""}`;
     cont.querySelectorAll("li[data-ine]").forEach((li) => {
       const tria = () => { sel = li.dataset.ine; pintaComp(); };
       li.addEventListener("click", tria);
@@ -136,9 +138,9 @@
     cont.innerHTML = "";
     const cs = ciutats().filter((m) => m.ua[k]);
     const sers = cs.map((m) => ({ id: m.ine, nom: m.nom, d: m.ua[k] }));
-    const e = zona("esp", k); if (e) sers.push({ id: "esp", nom: tx("esp"), d: e });
+    const e = ABS.has(k) ? null : zona("esp", k); if (e) sers.push({ id: "esp", nom: tx("esp"), d: e });
     const anys = [...new Set(sers.flatMap((s) => Object.keys(s.d)))].map(Number).sort((a, b) => a - b);
-    if (anys.length < 2) { cont.innerHTML = `<p class="ub-buit">${tx("any", anys[0] || "")}</p>`; return; }
+    if (anys.length < 2) { cont.innerHTML = `<p class="uc-buit">${tx("any", anys[0] || "")}</p>`; return; }
     const vals = sers.flatMap((s) => Object.values(s.d));
     const fk = info(k)[4], f = F(k);
     const W = Math.max(300, cont.clientWidth || 560), H = W < 440 ? 230 : 270, mg = { t: 14, r: 92, b: 26, l: 8 };

@@ -59,6 +59,8 @@ window.UA_CAT = [
   ["u_pern_hab", "tur", ["Pernoctacions per habitant", "Pernoctacions turístiques per habitant"], ["Pernoctaciones por habitante", "Pernoctaciones turísticas por habitante"], "n1", 1],
   ["u292656", "tur", ["Places turístiques", "Places en establiments turístics"], ["Plazas turísticas", "Plazas en establecimientos turísticos"], "n0", 1],
 ];
+// Totales absolutos: no se comparan con el total de España
+window.UA_ABS = new Set(["u21523", "u292638", "u292641", "u292695", "u292655", "u292656"]);
 window.UA_FMT = (fk) => {
   const d = +fk.slice(-1) || 0, n = (v, dd = d) => fmt(v, dd);
   if (fk[0] === "p") return { f: (v) => pct(v, d), c: (v) => pct(v, 0) };
