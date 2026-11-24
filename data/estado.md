@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 14:22 UTC
+Última ejecución: 2026-11-24 15:51 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@
 | interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-23 16:16 | 2026-11-23 16:16 | trimestral |
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | ok | 2026-11-23 16:36 | 2026-11-23 16:36 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | ok | 2026-11-23 14:46 | 2026-11-23 14:46 | mensual |
-| cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-24 14:12 | 2026-11-24 14:12 | anual |
+| cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-24 15:45 | 2026-11-24 15:45 | anual |
 | habitatge — Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic | ok | 2026-11-23 15:25 | 2026-11-23 15:25 | anual/trimestral |
 | emq — ATM Girona, Enquesta de Mobilitat Quotidiana 2024-2025 (visor Power BI) | ok | 2026-11-23 15:26 | 2026-11-23 15:26 | per edició |
 | exportacions — Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | mensual |
@@ -56,7 +56,7 @@
 
 ## Detalle de la última ejecución
 
-### cadastre: ok (633 s)
+### cadastre: ok (380 s)
 
 ```
 2012: 3 ficheros, 7593 municipios
@@ -91,6 +91,11 @@ urbana trimestral 2024: T4, 7610 municipios
 urbana trimestral 2025: T4, 7610 municipios
 urbana trimestral 2026: T3, 7610 municipios
 BICE 2024: 3202 municipios
+piscinas 2022: 6890 municipios
+piscinas 2023: 6895 municipios
+piscinas 2024: 6909 municipios
+piscinas 2025: 6914 municipios
+piscinas 2026: 6928 municipios
 AVISO cultivos 2006 02002: tamaño inesperado
 AVISO cultivos 2006 03002: tamaño inesperado
 AVISO cultivos 2006 04217: tamaño inesperado
@@ -112,4 +117,5 @@ AVISO cultivos 2014 04217: tamaño inesperado
 AVISO cultivos 2015 04217: tamaño inesperado
 AVISO cultivos 2016 04217: tamaño inesperado
 cultivos: 221 municipios, años 2017-2026
+gravamen: 221 municipios, años 2006-2026
 ```

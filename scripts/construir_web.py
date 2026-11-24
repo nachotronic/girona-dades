@@ -178,6 +178,11 @@ def secciones():
         for cusec in list(res):
             if cusec[:7] in dis:
                 res[cusec]["cad_vmu_" + u] = dis[cusec[:7]]
+    _, dis_i, _, _ = cad_inm_districtes()
+    for k, dis in dis_i.items():
+        for cusec in list(res):
+            if cusec[:7] in dis:
+                res[cusec]["cad_" + k] = dis[cusec[:7]]
     _, extra, _ = atlas_extra()
     for cusec, x in extra.items():
         res.setdefault(cusec, {}).update(x)
@@ -2130,7 +2135,7 @@ def zona_aar(zona):
 # ---------------------------------------------------------------------------
 # Tipos impositivos municipales (Hacienda, SGFAL)
 
-TRIB_DEC = {"ibi_u": 3, "ibi_r": 3, "ibi_bice": 3, "ibi_rev": 0, "ibi_coef": 2, "iae_max": 2, "iae_min": 2,
+TRIB_DEC = {"ibi_u": 3, "ibi_r": 3, "ibi_bice": 3, "ibi_bice_a": 3, "ibi_bice_b": 3, "ibi_bice_c": 3, "ibi_bice_d": 3, "ibi_rev": 0, "ibi_coef": 2, "iae_max": 2, "iae_min": 2,
             "ivtm_8": 2, "ivtm_12": 2, "ivtm_16": 2, "ivtm_moto": 2, "iivtnu": 2, "icio": 2}
 
 
@@ -2151,6 +2156,15 @@ def tributs():
             for cl, x in (zs.get(z) or {}).items():
                 if cl in TRIB_DEC and x.get("pond") is not None:
                     refs.setdefault(cl, {}).setdefault(int(a), {})[z] = round(x["pond"], TRIB_DEC[cl])
+    # Tipos del IBI de los BICE por grupo (Catastro, ordenanzas fiscales: tabla 04117)
+    fg = P / "cadastre" / "gravamen.csv.gz"
+    if fg.exists():
+        g = pd.read_csv(fg, dtype={"codi_ine": str})
+        for x in g.to_dict("records"):
+            for gr in "abcd":
+                v = x.get("bice_" + gr)
+                if v is not None and v == v:
+                    mun.setdefault(x["codi_ine"], {}).setdefault("ibi_bice_" + gr, {})[int(x["any"])] = round(float(v), 3)
     return mun, refs, int(k["any"].max()) if len(k) else None
 
 
@@ -2164,6 +2178,8 @@ CAD_DEC = {"n": 0, "vm": 0, "vviv": 0, "vhab": 0, "sol": 1, "ih": 1, "res": 1, "
            "ant_80": 1, "ant_10": 1, "ant_cat": 2, "sed_n": 0, "sed_ha": 1,
            "rc_bosc": 1, "rc_past": 1, "rc_sec": 1, "rc_reg": 1, "rc_fru": 1, "rc_vin": 1, "rc_oli": 1,
            "bice_n": 0, "bice_v": 0,
+           "pis_n": 0, "pis_c": 0, "pis_h": 1, "pis_cas": 1,
+           "inm_viv": 0, "inm_vuni": 1, "inm_apa": 1, "inm_com": 1, "inm_ind": 1, "inm_ofi": 1,
            "vmu_vcol": 0, "vmu_vuni": 0, "vmu_apa": 0, "vmu_com": 0, "vmu_ind": 0, "vmu_ofi": 0,
            "vm2": 0, "sm2": 0, "ibi_hab": 0, "ibi_rec": 0, "ibi_base": 0, "ibi_bon": 1, "ibi_tot": 0, "ibi_desoc": 0}
 
@@ -2239,6 +2255,15 @@ def _cad_bice(f, pob=None):
     return {"bice_n": g("UNIDADES_SINGULARIZADAS"), "bice_v": (g("VC_MILES") * 1000) if g("VC_MILES") is not None else None}
 
 
+def _cad_pis(f, pob, cases=None):
+    """Piscinas: total, cubiertas, por 1.000 habitantes y por 100 viviendas unifamiliares."""
+    g = lambda k: _num(f.get(k))  # noqa: E731
+    c, dsc = g("cub"), g("desc")
+    n = (c or 0) + (dsc or 0) if c is not None or dsc is not None else None
+    return {"pis_n": n, "pis_c": c or (0 if n is not None else None), "pis_h": (n / pob * 1000) if n is not None and pob else None,
+            "pis_cas": (n / cases * 100) if n is not None and cases else None}
+
+
 BICE_TIPUS = {"A1": "elec", "A2": "gas", "A3": "petroli", "A4": "nuclear", "A5": "eolic", "A6": "solar", "A7": "biomassa", "B": "presa", "C": "autopista", "D1": "aeroport", "D2": "port"}
 
 
@@ -2273,6 +2298,27 @@ def cad_detall(mun, refs, pob, pz, prox):
                 for k, v in fn(fila, prox(pz.get(z, {}), y - (0 if nom in ("altes", "trimestral") else 1))).items():
                     if v is not None and k not in ("alt_n", "sed_n", "sed_ha", "bice_n", "bice_v"):
                         refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
+    f = d / "piscines.csv.gz"
+    if f.exists():
+        t = pd.read_csv(f, dtype={"codi_ine": str})
+        if len(t):
+            anys["cad_pis"] = int(t["any"].max())
+            _, _, _, cases = cad_inm_districtes()
+            cases_gi = {}
+            for per in cases.values():
+                for y, v in per.items():
+                    cases_gi[y] = cases_gi.get(y, 0) + v
+            for x in t.to_dict("records"):
+                y = int(x["any"])
+                for k, v in _cad_pis(x, pob(x["codi_ine"], y), prox(cases.get(x["codi_ine"], {}), y)).items():
+                    if v is not None:
+                        mun.setdefault(x["codi_ine"], {}).setdefault(k, {})[y] = round(v, CAD_DEC[k]) if CAD_DEC[k] else int(round(v))
+            for z, per_any in (dr.get("piscines") or {}).items():
+                for y, fila in per_any.items():
+                    y = int(y)
+                    for k, v in _cad_pis(fila, prox(pz.get(z, {}), y - 1), prox(cases_gi, y) if z == "gi" and cases_gi else None).items():
+                        if v is not None and k in ("pis_h", "pis_cas"):
+                            refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
     f = d / "cultius.csv.gz"
     if f.exists():
         t = pd.read_csv(f, dtype={"codi_ine": str})
@@ -2400,6 +2446,59 @@ def cad_usos_districtes():
     return mun, dis, prov
 
 
+INM_USOS = {"inm_apa": "inm_apa", "inm_com": "inm_com", "inm_ind": "inm_ind", "inm_ofi": "inm_ofi"}
+
+
+def _inm_ind(viv, uni, x):
+    """Inmuebles por uso: viviendas, % de casas y otros usos por 100 viviendas."""
+    o = {"inm_viv": viv, "inm_vuni": (uni / viv * 100) if viv else None}
+    for k, c in INM_USOS.items():
+        o[k] = (x[c] / viv * 100) if viv and x.get(c) is not None and x[c] == x[c] else None
+    return o
+
+
+def cad_inm_districtes():
+    """Número de inmuebles por uso y distrito censal (series del Catastro, 2013-). Devuelve
+    {clave: {ine: {año: v}}}, {clave: {districte: v}} del último año, {clave: {año: v}} de la provincia
+    y {ine: {año: casas}} (viviendas unifamiliares, para las piscinas)."""
+    f = P / "cadastre" / "districtes.csv.gz"
+    if not f.exists():
+        return {}, {}, {}, {}
+    d = pd.read_csv(f, dtype={"districte": str})
+    if "inm_vuni" not in d.columns:
+        return {}, {}, {}, {}
+    d["ine"] = d["districte"].str[:5]
+    cols = ["inm_vcol", "inm_vuni", *INM_USOS.values()]
+    d[cols] = d[cols].fillna(0)
+    ult = int(d["any"].max())
+    mun, dis, prov, cases = {}, {}, {}, {}
+
+    def posa(dst, clau, x):
+        viv = x["inm_vcol"] + x["inm_vuni"]
+        if viv <= 0:
+            return
+        for k, v in _inm_ind(viv, x["inm_vuni"], x).items():
+            if v is not None:
+                dst.setdefault(k, {})[clau] = round(v, CAD_DEC[k]) if CAD_DEC[k] else int(round(v))
+
+    for (ine, y), g in d.groupby(["ine", "any"]):
+        s_ = g[cols].sum()
+        cases.setdefault(ine, {})[int(y)] = float(s_["inm_vuni"])
+        tmp = {}
+        posa(tmp, int(y), s_)
+        for k, v in tmp.items():
+            mun.setdefault(k, {}).setdefault(ine, {}).update(v)
+    for y, g in d.groupby("any"):
+        tmp = {}
+        posa(tmp, int(y), g[cols].sum())
+        for k, v in tmp.items():
+            prov.setdefault(k, {}).update(v)
+    for x in d[d["any"] == ult].to_dict("records"):
+        if x["inm_vcol"] + x["inm_vuni"] >= 20:
+            posa(dis, x["districte"], x)
+    return mun, dis, prov, cases
+
+
 def cadastre():
     """Estadísticas del Catastro por municipio y año (Datos municipios, 2012-). Devuelve
     {ine: {clave: {año: v}}}, {clave: {año: {gi, cat, esp}}}, último año, {ine: usos} y {ámbito: usos}
@@ -2477,6 +2576,14 @@ def cadastre():
                 mun[ine]["vmu_" + u] = serie
         for y, v in pu.get(u, {}).items():
             refs.setdefault("vmu_" + u, {}).setdefault(y, {})["gi"] = v
+    mi, _, pi, _ = cad_inm_districtes()
+    for k, per in mi.items():
+        for ine, serie in per.items():
+            if ine in mun:
+                mun[ine][k] = serie
+        if k != "inm_viv":
+            for y, v in pi.get(k, {}).items():
+                refs.setdefault(k, {}).setdefault(y, {})["gi"] = v
     # IBI: información económico-financiera (recibos, bases y cuotas), 2008-
     fi = d / "ibi_municipis.csv.gz"
     if fi.exists():
@@ -2536,6 +2643,10 @@ def cadastre_prov(refs, ult, usos_ref, tit=None):
     ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
     if ser.get("gi"):
         out["cad_alt"] = {"tipus": "linia", "u": "", "dec": 1, "series": ser}
+    v = refs.get("pis_h", {})
+    ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
+    if ser.get("gi"):
+        out["cad_pis"] = {"tipus": "linia", "u": "", "dec": 1, "series": ser}
     v = refs.get("vviv", {})
     ser = {z: sorted([[y, str(y), r_[z]] for y, r_ in v.items() if r_.get(z) is not None]) for z in ("gi", "cat", "esp")}
     if ser.get("gi"):

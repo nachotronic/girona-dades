@@ -48,8 +48,10 @@
       cad_tit: ["De qui són els habitatges", "Habitatges segons el tipus de titular (%)"],
       cad_tam: ["Grans i petits propietaris", "Habitatges segons quants habitatges té el titular al municipi (%)"],
       cad_alt: ["Habitatges nous al cadastre", "Altes d'habitatges al Cadastre per 1.000 habitants"],
+      cad_pis: ["Piscines", "Piscines al Cadastre per 1.000 habitants"],
       h_cad_tit: (s, a, c, e) => `El <b>${s}</b> dels habitatges de la província són de societats (${a}), davant del ${c} a Catalunya i del ${e} a Espanya.`,
       h_cad_tam: (g, a, c) => `El <b>${g}</b> dels habitatges de la província són de titulars amb més de 10 habitatges al mateix municipi (${a}); a Catalunya, el ${c}.`,
+      h_cad_pis: (g, a, c, e) => `El ${a} la província tenia <b>${g} piscines per cada 1.000 habitants</b>, davant de ${c} a Catalunya i ${e} a Espanya.`,
       h_cad_alt: (g, a, c) => `El ${a} van entrar al Cadastre <b>${g} habitatges per cada 1.000 habitants</b> a la província, davant de ${c} a Catalunya.`,
       ct: { fna: "Persones físiques espanyoles", fex: "Persones físiques estrangeres", soc: "Societats", ent: "Altres entitats", aapp: "Administracions públiques", t1: "Titulars d'1 habitatge", t5: "De 2 a 5", t10: "De 6 a 10", t25: "D'11 a 25", t100: "Més de 25" },
       cad_ibi: ["Rebut de l'IBI", "Quota líquida mitjana per rebut de l'IBI urbà (€)"],
@@ -205,8 +207,10 @@
       cad_tit: ["De quién son las viviendas", "Viviendas según el tipo de titular (%)"],
       cad_tam: ["Grandes y pequeños propietarios", "Viviendas según cuántas viviendas tiene el titular en el municipio (%)"],
       cad_alt: ["Viviendas nuevas en el catastro", "Altas de viviendas en el Catastro por 1.000 habitantes"],
+      cad_pis: ["Piscinas", "Piscinas en el Catastro por 1.000 habitantes"],
       h_cad_tit: (s, a, c, e) => `El <b>${s}</b> de las viviendas de la provincia son de sociedades (${a}), frente al ${c} en Cataluña y al ${e} en España.`,
       h_cad_tam: (g, a, c) => `El <b>${g}</b> de las viviendas de la provincia son de titulares con más de 10 viviendas en el mismo municipio (${a}); en Cataluña, el ${c}.`,
+      h_cad_pis: (g, a, c, e) => `En ${a} la provincia tenía <b>${g} piscinas por cada 1.000 habitantes</b>, frente a ${c} en Cataluña y ${e} en España.`,
       h_cad_alt: (g, a, c) => `En ${a} entraron en el Catastro <b>${g} viviendas por cada 1.000 habitantes</b> en la provincia, frente a ${c} en Cataluña.`,
       ct: { fna: "Personas físicas españolas", fex: "Personas físicas extranjeras", soc: "Sociedades", ent: "Otras entidades", aapp: "Administraciones públicas", t1: "Titulares de 1 vivienda", t5: "De 2 a 5", t10: "De 6 a 10", t25: "De 11 a 25", t100: "Más de 25" },
       cad_ibi: ["Recibo del IBI", "Cuota líquida media por recibo del IBI urbano (€)"],
@@ -654,6 +658,7 @@
     if (id === "cad_ibi") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"), d = sp.abs && sp.abs.desoc; return g ? tp("h_cad_ibi", fmt(g[2]), g[1], fmt(c && c[2]), fmt(e && e[2]), d ? d[0] : null, d ? d[1] : null) : ""; }
     if (id === "cad_tit") { const g = sp.grups.find((x) => x.g === "soc"); return g ? tp("h_cad_tit", pct(g.gi, 1), sp.any, pct(g.cat, 1), pct(g.esp, 1)) : ""; }
     if (id === "cad_tam") { const s = (z) => sp.grups.filter((x) => x.g === "t25" || x.g === "t100").reduce((a, x) => a + (x[z] || 0), 0); return tp("h_cad_tam", pct(s("gi"), 1), sp.any, pct(s("cat"), 1)); }
+    if (id === "cad_pis") { const g = ult(sp, "gi"), c = ult(sp, "cat"), e = ult(sp, "esp"); return g ? tp("h_cad_pis", fmt(g[2], 1), g[1], c ? fmt(c[2], 1) : "–", e ? fmt(e[2], 1) : "–") : ""; }
     if (id === "cad_alt") { const g = ult(sp, "gi"), c = ult(sp, "cat"); return g ? tp("h_cad_alt", fmt(g[2], 1), g[1], c ? fmt(c[2], 1) : "–") : ""; }
     if (id === "cad_usos") { const g = sp.grups[0]; return g && sp.res ? tp("h_cad_usos", pct(sp.res.gi, 0), sp.any, nomGrup(g.g, g.c), pct(g.gi, 1)) : ""; }
     if (id === "esperanca") { const g = ult(sp, "gi"), d = ult(sp, "cat"), h = ult(sp, "esp"); return g ? tp("h_esperanca", fmt(g[2], 1), g[1], fmt(d && d[2], 1), fmt(h && h[2], 1)) : ""; }
@@ -749,7 +754,7 @@
   };
 
   window.pintaSeccioProv = () => {
-    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "hb_ini", "hb_aca", "hb_hpo", "hb_ced", "hb_m2", "hb_ihb", "hb_sol", "mt_preu", "mt_rangs", "mt_qui", "mt_ext", "mt_nova", "mt_unif", "mt_ini", "mt_vt", "cad_viv", "cad_ibi", "cad_usos", "cad_tit", "cad_tam", "cad_alt", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "pime_rf", "pime_sect_rf", "pime_vab", "pime_sect_vab", "pime_deute", "pime_vendes", "edu_publica_prov", "edu_tipus_etapa", "edu_estr_etapa", "edu_zones", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "odi_any", "odi_ambit", "llancaments", "llanc_tipus", "vdg", "bomb_mes", "inc_morts", "acc_greus", "acc_morts", "acc_urb", "acc_usuaris", "acc_mossos", "cul_prest", "cul_carn", "cul_vis", "cul_desp", "cul_eq", "cul_prog", "cul_prog_amb", "cul_ct", "cul_ct_nocat"];
+    const ids = ["ipc", "paro", "ipc_grups", "compra", "hipoteques", "hipoteca_mitjana", "societats", "execucions", "causes", "esperanca", "solar", "hb_ini", "hb_aca", "hb_hpo", "hb_ced", "hb_m2", "hb_ihb", "hb_sol", "mt_preu", "mt_rangs", "mt_qui", "mt_ext", "mt_nova", "mt_unif", "mt_ini", "mt_vt", "cad_viv", "cad_ibi", "cad_usos", "cad_tit", "cad_tam", "cad_alt", "cad_pis", "at_renda", "at_tipus", "at_nac", "at_salari", "at_sectors", "at_qui", "at_bretxa", "at_pensio", "pime_rf", "pime_sect_rf", "pime_vab", "pime_sect_vab", "pime_deute", "pime_vendes", "edu_publica_prov", "edu_tipus_etapa", "edu_estr_etapa", "edu_zones", "univ_fora_prov", "comp_4eso", "comp_4eso_mat", "comp_6e", "nac_prov", "mossos_mes", "rp_fets", "rp_tipus", "int_munis", "odi_any", "odi_ambit", "llancaments", "llanc_tipus", "vdg", "bomb_mes", "inc_morts", "acc_greus", "acc_morts", "acc_urb", "acc_usuaris", "acc_mossos", "cul_prest", "cul_carn", "cul_vis", "cul_desp", "cul_eq", "cul_prog", "cul_prog_amb", "cul_ct", "cul_ct_nocat"];
     pintaGrafics(document.getElementById("prov-grafics"), D.prov, ids, (id) => (/^mt_/.test(id) ? (id === "mt_ini" ? "font_mt_ini" : id === "mt_vt" ? "font_mt_vt" : "font_mt") : /^(mossos_mes|rp_)/.test(id) ? "font_mossos" : /^cul_(prest|carn|vis|desp)$/.test(id) ? "font_bib" : id === "cul_eq" ? "font_eq" : /^cul_prog/.test(id) ? "font_prog" : /^cul_ct/.test(id) ? "font_ct" : /^acc_(greus|morts)$/.test(id) ? "font_sct" : /^acc_(urb|usuaris)$/.test(id) ? "font_dgt" : id === "acc_mossos" ? "font_acc_mossos" : id === "bomb_mes" ? "font_bombers" : id === "inc_morts" ? "font_mapfre" : id === "int_munis" ? "font_interior" : /^odi_/.test(id) ? "font_odi" : /^(llanc|vdg)/.test(id) ? "font_cgpj" : id === "causes" ? "font_causes" : id === "solar" ? "font_sol" : /^cad_/.test(id) ? "font_cad" : /^hb_/.test(id) ? "font_hab" : /^at_/.test(id) ? "font_aeat" : /^pime_/.test(id) ? "font_pimec" : id === "univ_fora_prov" ? "font_univ" : id === "nac_prov" ? "font_nac" : /^(comp_|edu_)/.test(id) ? "font_edu" : "font"));
   };
 
