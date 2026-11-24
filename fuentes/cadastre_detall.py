@@ -246,6 +246,10 @@ def _piscines(res: list[str]) -> tuple[pd.DataFrame | None, dict]:
             if d is None or "CODINE" not in d.columns:
                 continue
             d["codi_ine"] = d["CODINE"].str.zfill(5)
+            if "MUNINENOMBRE" in d.columns:
+                for nm, c in zip(d["MUNINENOMBRE"], d["codi_ine"]):
+                    if c.startswith("17"):
+                        _NOMS.setdefault(_nom(nm), c)
             fs[k] = _num(d, ["TOTAL"]).groupby("codi_ine")["TOTAL"].sum()
         if not fs:
             continue
@@ -264,41 +268,66 @@ def _piscines(res: list[str]) -> tuple[pd.DataFrame | None, dict]:
     return t[t["codi_ine"].str[:2] == "17"], refs
 
 
+_NOMS: dict[str, str] = {}  # nombre del municipio (normalizado) -> código INE, de los CSV de piscinas
+
+
+def _nom(n: str) -> str:
+    """«Far d'Empordà (El)» y «Far d'Empordà, El» -> «far d'empordà, el»."""
+    n = re.sub(r"\s+", " ", n.strip().lower().replace("’", "'"))
+    m = re.fullmatch(r"(.*?) \((.+)\)", n)
+    return f"{m.group(1)}, {m.group(2)}" if m else n
+
+
 def _gravamen(z: zipfile.ZipFile, res: list[str]) -> pd.DataFrame | None:
-    """Tipos de gravamen por municipio de Girona (tabla 04117 de ordenanzas fiscales)."""
-    files = []
-    noms = [n for n in z.namelist() if re.search(r"ordenanz", n, re.I)]
-    res.append(f"ordenanzas en px.zip: {len(noms)} tablas, p. ej. {noms[:3]}")
-    for n in noms:
-        m = re.search(r"est(\d{4})/.*?04117\.px$", n, re.I)
-        if not m:
-            continue
-        any_ = int(m.group(1))
+    """Tipos de gravamen por municipio de Girona (tabla 04117 de ordenanzas fiscales, 2006-).
+    Hasta 2013 la tabla trae CODES con el código INE; después solo el nombre del municipio."""
+    files, noms = [], dict(_NOMS)
+    taules = sorted((int(m.group(1)), n) for n in z.namelist() if (m := re.search(r"est(\d{4})/ordenanzasfiscales/04117\.px$", n, re.I)))
+    for any_, n in taules:
         try:
-            dims, ordre, nums = _px_long(z.read(n).decode("latin-1"))
-            muns, vars_ = dims[ordre[0]], dims[ordre[-1]]
-            if len(ordre) != 2 or len(nums) != len(muns) * len(vars_):
-                res.append(f"AVISO gravamen {any_}: dimensiones {ordre}")
+            text = z.read(n).decode("latin-1")
+            cap, dades = text.split("DATA=", 1)
+            vals = {m.group(1).lower(): re.findall(r'"([^"]*)"', m.group(2)) for m in re.finditer(r'VALUES\("([^"]+)"\)\s*=(.*?);', cap, re.S)}
+            codes = {m.group(1).lower(): re.findall(r'"([^"]*)"', m.group(2)) for m in re.finditer(r'CODES\("([^"]+)"\)\s*=(.*?);', cap, re.S)}
+            stub = re.findall(r'"([^"]+)"', re.search(r"STUB=(.*?);", cap, re.S).group(1))[0].lower()
+            head = re.findall(r'"([^"]+)"', re.search(r"HEADING=(.*?);", cap, re.S).group(1))[0].lower()
+            muns, vars_ = vals[stub], vals[head]
+            cods = codes.get(stub)
+            if cods:
+                for nm, c in zip(muns, cods):
+                    noms.setdefault(_nom(nm), c)
+            for nm in muns:
+                if mc := re.match(r"(17\d{3})\b\s*[-–]?\s*(.*)", nm.strip()):
+                    noms.setdefault(_nom(mc.group(2)), mc.group(1))
+            toks = re.findall(r'"[^"]*"|[-+]?(?:\d+\.?\d*|\.\d+)(?:[eE][-+]?\d+)?', dades.replace(";", " "))
+            nums = [None if x.startswith('"') else float(x) for x in toks]
+            if len(nums) != len(muns) * len(vars_):
+                res.append(f"AVISO gravamen {any_}: {len(nums)} valores para {len(muns)}×{len(vars_)}")
                 continue
             col = {}
             for j, v in enumerate(vars_):
-                vl = v.lower()
-                k = ("rev" if "valora" in vl or "ponencia" in vl else "urb" if "urbana" in vl else "rus" if "stica" in vl
-                     else ("bice_" + vl.strip()[-1]) if "bice" in vl and vl.strip()[-1] in "abcd" else "bice" if "bice" in vl else None)
+                vl = v.lower().strip()
+                k = ("rev" if "valora" in vl else "urb" if vl == "urbana" else "rus" if vl.startswith("r") and "stica" in vl
+                     else ("bice_" + vl[-1]) if vl.startswith("bice") and vl[-1] in "abcd" else None)
                 if k:
                     col[k] = j
+            falten = 0
             for i, mu in enumerate(muns):
-                cod = mu.split()[0]
-                if not re.fullmatch(r"17\d{3}", cod):
+                mc = re.match(r"(17\d{3})\b\s*[-–]?\s*(.*)", mu.strip())
+                cod = cods[i] if cods else mc.group(1) if mc else noms.get(_nom(mu))
+                if not cod or not re.fullmatch(r"17\d{3}", cod):
+                    falten += 1
                     continue
                 files.append({"codi_ine": cod, "any": any_, **{k: nums[i * len(vars_) + j] for k, j in col.items()}})
+            if falten:
+                res.append(f"AVISO gravamen {any_}: {falten} municipios sin código ({', '.join(m for m in muns if not noms.get(_nom(m)) and not re.match(r"17\d{3}", m))[:200]})")
         except Exception as e:  # noqa: BLE001
             res.append(f"AVISO gravamen {n}: {e}")
     if not files:
         res.append("ERROR gravamen: ninguna tabla 04117")
         return None
     d = pd.DataFrame(files)
-    res.append(f"gravamen: {d['codi_ine'].nunique()} municipios, años {d['any'].min()}-{d['any'].max()}, columnas {list(d.columns)}")
+    res.append(f"gravamen: {d['codi_ine'].nunique()} municipios, años {d['any'].min()}-{d['any'].max()}")
     return d
 
 
