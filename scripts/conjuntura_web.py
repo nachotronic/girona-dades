@@ -266,6 +266,16 @@ def _valor_taxat():
     return prov, mun
 
 
+def _prestacions():
+    """Xifra: beneficiarios de prestaciones por desempleo por municipio y mes (fuentes/xifra_municipal.py)."""
+    f = RAIZ / "data" / "processed" / "xifra_municipal" / "prestacions.csv"
+    if not f.exists():
+        return pd.DataFrame(columns=["ine", "mes", "serie", "v"])
+    d = pd.read_csv(f, dtype={"ine": str, "mes": str})
+    d["v"] = pd.to_numeric(d["v"], errors="coerce")
+    return d
+
+
 def construir(municipios: list[dict], pob1564: dict) -> dict:
     from fuentes.comun import normaliza
     ines = [m["ine"] for m in municipios]
@@ -283,6 +293,7 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     trf, trf_p = _trf()
     vt_prov, vt = _valor_taxat()
     pv = _preu_venda()
+    pres = _prestacions()
 
     ults = [df["per"].max() for df in (paro, contr) if len(df)] + ([afi["mes"].max()] if len(afi) else [])
     ults += [max(_serie_ine(ine, "6150", "Girona.", "General. Compraventa. Número") or {"": ""}), max(_serie_ine(ine, "2074", "Girona.", "Pernoctaciones. Total") or {"": ""})]
@@ -469,4 +480,30 @@ def construir(municipios: list[dict], pob1564: dict) -> dict:
     vz = {a: vt_prov.get(normaliza(n)) for a, n in (("gi", "Girona"), ("cat", "Cataluña"), ("esp", "Total Nacional"))}
     if vz["gi"]:
         prov["vt"] = {"per": "t", **{a: arr(x, T) for a, x in vz.items() if x}}
+    # Beneficiarios de prestaciones por desempleo (Xifra): total y asistenciales (subsidio + RAI)
+    if len(pres):
+        pv_ = pres.pivot_table(index=["ine", "mes"], columns="serie", values="v", aggfunc="first")
+        # El SEPE oculta el total si una parte es pequeña (casi siempre la RAI): se rehace con las partes
+        if {"contrib", "subsidi", "total"} <= set(pv_):
+            rai = pv_["rai"].fillna(0) if "rai" in pv_ else 0
+            pv_["total"] = pv_["total"].fillna(pv_["contrib"] + pv_["subsidi"] + rai)
+        for i, g in pv_.groupby(level=0):
+            if i not in mun:
+                continue
+            g = g.droplevel(0)
+            mun[i]["prest"] = arr(g["total"].dropna().to_dict(), M)
+            if {"subsidi", "rai"} <= set(g):
+                mun[i]["prest_as"] = arr((g["subsidi"].fillna(0) + g["rai"].fillna(0)).where(g["total"].notna()).dropna().to_dict(), M)
+        tp = pv_.groupby(level=1).sum(min_count=1)
+        # Total de la provincia solo los meses en que los municipios con dato suman el 95 % del paro
+        cob = {}
+        for j, p_ in enumerate(M):
+            tot_a = sum((mun[i].get("atur") or [None] * len(M))[j] or 0 for i in mun)
+            amb = sum((mun[i].get("atur") or [None] * len(M))[j] or 0 for i in mun if (mun[i].get("prest") or [None] * len(M))[j] is not None)
+            cob[p_] = amb / tot_a if tot_a else 0
+        tp = tp[[cob.get(p_, 0) >= 0.95 for p_ in tp.index]]
+        prov["prest"] = {"per": "m", "gi": arr(tp["total"].dropna().to_dict(), M)}
+        for c in ("contrib", "subsidi", "rai"):
+            if c in tp:
+                prov["prest_" + c] = {"per": "m", "gi": arr(tp[c].dropna().to_dict(), M)}
     return {"per": {"m": M, "t": T}, "mun": mun, "pob1564": {k: int(v) for k, v in pob1564.items() if v}, "prov": prov}

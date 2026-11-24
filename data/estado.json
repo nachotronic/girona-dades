@@ -328,6 +328,13 @@
   "durada": 153,
   "resum": "131 tablas de 129 páginas; 0 errores"
  },
+ "xifra_municipal": {
+  "estat": "ok",
+  "intent": "2026-11-24T15:00:25Z",
+  "ok": "2026-11-24T15:00:25Z",
+  "durada": 324,
+  "resum": "prestacions: 197 meses consultados hasta 2026-05; tur_comarca: 177 consultas; policia: al día; naixement: al día; romanent: al día; resultat: al día; cesel: al día; cens: al día (censo 2021)"
+ },
  "xifra_treball": {
   "estat": "avís",
   "intent": "2026-11-24T12:17:57Z",

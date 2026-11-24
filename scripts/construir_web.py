@@ -3190,6 +3190,19 @@ def main():
     anys_extra.update(cuw["anys"])
     for c, o in cuw["com"].items():
         zones.setdefault("com", {}).setdefault(c, {}).update({"cul_" + k: v for k, v in o.items()})
+    # Xifra municipal: cuentas municipales, coste de los servicios, policía local, lugar de nacimiento,
+    # censo de viviendas 2021, centros ocupacionales, equipamientos funerarios y turismo por comarca
+    import municipal_web
+    try:
+        xmw = municipal_web.construir(municipios)
+        print("xifra_municipal:", xmw["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin estos datos
+        print("xifra_municipal: ERROR", type(e).__name__, e)
+        xmw = {"mun": {}, "refs": {}, "anys": {}, "prov": {}}
+    for m in municipios:
+        if m["ine"] in xmw["mun"]:
+            m["xm"] = xmw["mun"][m["ine"]]
+    anys_extra.update(xmw["anys"])
     # Medio ambiente: aire y clima por estación, sequía, territorio protegido, playas y agua por comarca. Tema «amb» y sección Medi ambient
     import medi_ambient_web
     try:
@@ -3288,7 +3301,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref, tit_cad), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"trib_coef": max(y for x in trib.values() for y in x.get("ibi_coef", {}))} if any(x.get("ibi_coef") for x in trib.values()) else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **anys_cd, **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "cad_t_ref": {k[1:]: v for k, v in tit_cad.items() if k.startswith("_")}, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "xm_ref": xmw["refs"], "xm": xmw["prov"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "cad_t_ref": {k[1:]: v for k, v in tit_cad.items() if k.startswith("_")}, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

@@ -684,6 +684,7 @@ function pintaTot() {
   if (window.pintaSeccioNotariado) window.pintaSeccioNotariado();
   if (window.pintaSeccioDemografia) window.pintaSeccioDemografia();
   if (window.pintaSeccioTreball) window.pintaSeccioTreball();
+  if (window.pintaSeccioXM) window.pintaSeccioXM();
   pintaTaula();
   const dg = new Date(D.generado).toLocaleDateString(loc(), { day: "numeric", month: "long", year: "numeric" });
   document.querySelectorAll(".data-gen").forEach((e) => { e.textContent = dg; });
@@ -710,6 +711,7 @@ addEventListener("resize", () => {
   if (window.pintaSeccioNotariado) window.pintaSeccioNotariado();
   if (window.pintaSeccioDemografia) window.pintaSeccioDemografia();
   if (window.pintaSeccioTreball) window.pintaSeccioTreball();
+  if (window.pintaSeccioXM) window.pintaSeccioXM();
   if (seleccionat) obreFitxa(seleccionat, false);
 });
 
