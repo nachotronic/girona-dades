@@ -89,7 +89,7 @@
   }
   function anyDe(i) {
     const IM = window.indMapa;
-    if (i.per) { const a = IM.anysDe(i).slice(-1)[0]; return a ? etPer(String(a)) : ""; }
+    if (i.per || i.xt) { const a = IM.anysDe(i).slice(-1)[0]; return a ? etPer(String(a)) : ""; }
     if (typeof i.a === "number") return String(i.a);
     if (i.a && D.anys && D.anys[i.a]) return String(D.anys[i.a]);
     if (i.id === "pob" || i.id === "pob_var") return "2025";
@@ -247,8 +247,9 @@
       ${dsHtml ? `<div class="rs-dest"><h4>${tx("destaca")}</h4><ol>${dsHtml}</ol><p class="rt-nota">${LANG === "ca" ? `Posició entre els ${D.municipios.length} municipis.` : `Posición entre los ${D.municipios.length} municipios.`}</p></div>` : ""}</div>
       ${taula(m)}</section>`;
     if (!extra) return;
-    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}${window.blocEnsenyament ? window.blocEnsenyament(m) : ""}${window.blocCultura ? window.blocCultura(m) : ""}${window.blocMediAmbient ? window.blocMediAmbient(m) : ""}${window.blocEnergia ? window.blocEnergia(m) : ""}${window.blocDiners ? window.blocDiners(m) : ""}${window.blocSocial ? window.blocSocial(m) : ""}${window.blocAirbnb ? window.blocAirbnb(m) : ""}${window.blocUrbans ? window.blocUrbans(m) : ""}`;
+    extra.innerHTML = `${blocPoblacio(m)}${blocIrpf(m)}${blocPressupost(m)}${blocComerc(m)}${window.blocEnsenyament ? window.blocEnsenyament(m) : ""}${window.blocCultura ? window.blocCultura(m) : ""}${window.blocMediAmbient ? window.blocMediAmbient(m) : ""}${window.blocEnergia ? window.blocEnergia(m) : ""}${window.blocDiners ? window.blocDiners(m) : ""}${window.blocTreball ? window.blocTreball(m) : ""}${window.blocSocial ? window.blocSocial(m) : ""}${window.blocAirbnb ? window.blocAirbnb(m) : ""}${window.blocUrbans ? window.blocUrbans(m) : ""}`;
     if (window.pintaCultura) window.pintaCultura(extra, m);
+    if (window.pintaTreball) window.pintaTreball(extra, m);
     if (window.pintaEnsenyament) window.pintaEnsenyament(extra, m);
     const gc = extra.querySelector(".g-com");
     if (gc) {

@@ -121,6 +121,22 @@
   const aturP = CJP("atur", "m"), cvqP = CJP("cvq", "t"), cvq4 = suma4(cvq), cvq4P = suma4((_, a) => cvqP(a));
   const refCJ = (k, per, fn) => () => { const a = D.cj && D.cj.per[per].slice(-1)[0]; return a ? { cat: fn("cat", a), esp: fn("esp", a) } : {}; };
   const varZ = (k, per, n) => (z, a) => { const b = antPer(per, a, n), va = CJP(k, per, z)(a), vb = b ? CJP(k, per, z)(b) : null; return va != null && vb ? (va / vb - 1) * 100 : null; };
+  // Mercado de trabajo de Xifra (conjuntura.json → D.cj.xt): series trimestrales desde 2005 por municipio y provincia
+  const XT = (k) => (m, a) => { const x = D.cj && D.cj.xt, s = x && x.mun[m.ine] && x.mun[m.ine][k], i = s ? x.idx[a] : null; return i == null ? null : s[i]; };
+  const XTP = (k) => (a) => { const x = D.cj && D.cj.xt, s = x && x.prov[k], i = s ? x.idx[a] : null; return i == null ? null : s[i]; };
+  // Paro por categorías (D.cj.xt.cat): parte de los parados del último año que cumplen `re`
+  const XTC = (s, re, prov) => (m) => {
+    const c = D.cj && D.cj.xt && D.cj.xt.cat; if (!c || !c.noms[s]) return null;
+    const v = prov ? c.prov[s] : c.mun[m.ine] && c.mun[m.ine][s]; if (!v) return null;
+    let tot = 0, sel = 0; c.noms[s].forEach((n, i) => { const x = v[i] && v[i][0]; if (x != null) { tot += x; if (re.test(n)) sel += x; } });
+    return tot >= 20 ? (sel / tot) * 100 : null;
+  };
+  const NOTA_XT = { ca: "Xifra (Diputació de Girona), a partir del Departament d'Empresa i Treball i de la Seguretat Social. Trimestral.", es: "Xifra (Diputació de Girona), a partir del Departament d'Empresa i Treball y de la Seguridad Social. Trimestral." };
+  const NOTA_XT_PA = { ca: "Aturats registrats (mitjana del trimestre) sobre la població activa local registrada que calcula Xifra amb la Xarxa d'Observatoris de Desenvolupament Econòmic Local a partir de la Mostra Contínua de Vides Laborals. Només municipis amb 30 actius o més.", es: "Parados registrados (media del trimestre) sobre la población activa local registrada que calcula Xifra con la Xarxa d'Observatoris de Desenvolupament Econòmic Local a partir de la Muestra Continua de Vidas Laborales. Solo municipios con 30 activos o más." };
+  const NOTA_XT_CONTR = { ca: "Xifra, a partir del Departament d'Empresa i Treball: contractes registrats al trimestre segons el municipi del centre de treball. Només municipis amb 30 contractes o més al trimestre.", es: "Xifra, a partir del Departament d'Empresa i Treball: contratos registrados en el trimestre según el municipio del centro de trabajo. Solo municipios con 30 contratos o más en el trimestre." };
+  const NOTA_XT_LLOCS = { ca: "Xifra, a partir de la Seguretat Social: afiliats assalariats i autònoms segons el municipi del centre de treball, a final de trimestre.", es: "Xifra, a partir de la Seguridad Social: afiliados asalariados y autónomos según el municipio del centro de trabajo, a final de trimestre." };
+  const NOTA_XT_OCUP = { ca: "Xifra, a partir de la Seguretat Social: afiliats segons el municipi de residència, a final de trimestre. Xifra arrodoneix a 5 els municipis petits.", es: "Xifra, a partir de la Seguridad Social: afiliados según el municipio de residencia, a final de trimestre. Xifra redondea a 5 los municipios pequeños." };
+  const NOTA_XT_CAT = { ca: "Xifra, a partir del Departament d'Empresa i Treball: mitjana dels aturats registrats de l'últim any complet. Només municipis amb 20 aturats o més.", es: "Xifra, a partir del Departament d'Empresa i Treball: media de los parados registrados del último año completo. Solo municipios con 20 parados o más." };
   // Por habitante (padrón) a partir de una serie de la coyuntura: municipio, provincia y Cataluña
   const perHab = (f, k) => (m, a) => { const v = f(m, a); return v != null && m.poblacion ? (v / m.poblacion) * k : null; };
   const perHabP = (c, k) => (a) => { const v = CJP(c, "m")(a); return v != null ? (v / sumaPob()) * k : null; };
@@ -789,24 +805,36 @@
     { id: "edu_alumnes", tema: "edu", ca: ["Alumnes", "Alumnes matriculats d'infantil a batxillerat"], es: ["Alumnos", "Alumnos matriculados de infantil a bachillerato"], a: "edu_alumnes", v: X("edu_alumnes"), nota: { ca: "Departament d'Educació. Alumnes als centres del municipi.", es: "Departament d'Educació. Alumnos en los centros del municipio." }, ...N0 },
     // Trabajo y economía
     // Paro, autónomos y afiliados: mensuales (SEPE e Idescat/Seguridad Social, los mismos datos que Coyuntura) por 100 habitantes
+    { id: "xt_taxa", xt: "taxa", cob: 0.8, sumable: false, tema: "tre", ca: ["Taxa d'atur registral", "Aturats registrats sobre la població activa (%), per trimestre"], es: ["Tasa de paro registral", "Parados registrados sobre la población activa (%), por trimestre"], t: XT("taxa"), pv: XTP("taxa"), nota: NOTA_XT_PA, ...P1 },
     { id: "atur", per: "m", tema: "tre", ca: ["Atur registrat", "Aturats registrats per 100 habitants, a final de mes"], es: ["Paro registrado", "Parados registrados por 100 habitantes, a final de mes"],
       t: perHab(atur, 100), pv: perHabP("atur", 100), ref: refCJ("atur", "m", (z, a) => perHabZ("atur", z, a, 100)), nota: NOTA_SEPE, ...N1 },
-    { id: "llocs", tema: "tre", ca: ["Llocs de treball", "Llocs de treball per 100 habitants"], es: ["Puestos de trabajo", "Puestos de trabajo por 100 habitantes"], v: X("llocs"), ...N0 },
+    { id: "llocs", xt: "llocs_h", cob: 0.9, sumable: false, tema: "tre", ca: ["Llocs de treball", "Llocs de treball per 100 habitants (afiliats als centres de treball del municipi)"], es: ["Puestos de trabajo", "Puestos de trabajo por 100 habitantes (afiliados en los centros de trabajo del municipio)"], t: XT("llocs_h"), pv: XTP("llocs_h"), nota: NOTA_XT_LLOCS, ...N0 },
     { id: "autonoms", per: "m", cob: 0.5, tema: "tre", ca: ["Autònoms", "Afiliats al règim d'autònoms per 100 habitants, a final de mes"], es: ["Autónomos", "Afiliados al régimen de autónomos por 100 habitantes, a final de mes"],
       t: perHab(reta, 100), pv: perHabP("reta", 100), ref: refCJ("reta", "m", (z, a) => perHabZ("reta", z, a, 100)), nota: NOTA_AFI, ...N1 },
     { id: "empreses", tema: "tre", ca: ["Empreses", "Empreses per 1.000 habitants"], es: ["Empresas", "Empresas por 1.000 habitantes"], v: X("empreses"), ...N1 },
     { id: "ocupats", per: "m", cob: 0.5, tema: "tre", ca: ["Afiliats", "Afiliats a la Seguretat Social per 100 habitants (per residència), a final de mes"], es: ["Afiliados", "Afiliados a la Seguridad Social por 100 habitantes (por residencia), a final de mes"],
       t: perHab(afil, 100), pv: perHabP("afil", 100), ref: refCJ("afil", "m", (z, a) => perHabZ("afil", z, a, 100)), nota: NOTA_AFI, ...N1 },
-    { id: "ocupats_dones", tema: "tre", ca: ["Afiliades dones", "Dones entre els afiliats a la Seguretat Social (%)"], es: ["Afiliadas mujeres", "Mujeres entre los afiliados a la Seguridad Social (%)"], v: X("ocupats_dones"), ...P1 },
+    { id: "ocupats_dones", xt: "ocup_d", cob: 0.9, sumable: false, tema: "tre", ca: ["Afiliades dones", "Dones entre els afiliats a la Seguretat Social (%), per residència"], es: ["Afiliadas mujeres", "Mujeres entre los afiliados a la Seguridad Social (%), por residencia"], t: XT("ocup_d"), pv: XTP("ocup_d"), nota: NOTA_XT_OCUP, ...P1 },
+    { id: "xt_ocup_est", xt: "ocup_est", cob: 0.9, sumable: false, tema: "tre", ca: ["Afiliats estrangers", "Estrangers entre els afiliats a la Seguretat Social (%), per residència"], es: ["Afiliados extranjeros", "Extranjeros entre los afiliados a la Seguridad Social (%), por residencia"], t: XT("ocup_est"), pv: XTP("ocup_est"), nota: NOTA_XT_OCUP, ...P0 },
+    { id: "xt_ocup_30", xt: "ocup_30", cob: 0.9, sumable: false, tema: "tre", ca: ["Afiliats joves", "Afiliats de menys de 30 anys (%), per residència"], es: ["Afiliados jóvenes", "Afiliados de menos de 30 años (%), por residencia"], t: XT("ocup_30"), pv: XTP("ocup_30"), nota: NOTA_XT_OCUP, ...P0 },
+    { id: "xt_ocup_55", xt: "ocup_55", cob: 0.9, sumable: false, tema: "tre", ca: ["Afiliats grans", "Afiliats de 55 anys o més (%), per residència"], es: ["Afiliados mayores", "Afiliados de 55 años o más (%), por residencia"], t: XT("ocup_55"), pv: XTP("ocup_55"), nota: NOTA_XT_OCUP, ...P0 },
     { id: "atur_var", per: "m", sumable: false, tema: "tre", ca: ["Variació de l'atur", "Variació de l'atur registrat respecte al mateix mes de l'any anterior (%)"], es: ["Variación del paro", "Variación del paro registrado respecto al mismo mes del año anterior (%)"],
       t: variacio(atur, "m", 12, 20), pv: (a) => varZ("atur", "m", 12)("gi", a), ref: refCJ("atur", "m", (z, a) => varZ("atur", "m", 12)(z, a)),
       nota: { ca: "Només municipis amb almenys 20 aturats fa un any. SEPE.", es: "Solo municipios con al menos 20 parados hace un año. SEPE." }, f: (v) => pct(v, 1, true), c: (v) => pct(v, 0, true) },
-    { id: "atur_estr", tema: "tre", ca: ["Aturats estrangers", "Estrangers entre els aturats registrats (%)"], es: ["Parados extranjeros", "Extranjeros entre los parados registrados (%)"], a: "atur_estr", v: X("atur_estr"), ...P0 },
+    { id: "atur_estr", xt: "atur_est", cob: 0.5, sumable: false, tema: "tre", ca: ["Aturats estrangers", "Estrangers entre els aturats registrats (%), mitjana del trimestre"], es: ["Parados extranjeros", "Extranjeros entre los parados registrados (%), media del trimestre"], t: XT("atur_est"), pv: XTP("atur_est"), nota: { ca: "Xifra, a partir del Departament d'Empresa i Treball. Només municipis amb 20 aturats o més.", es: "Xifra, a partir del Departament d'Empresa i Treball. Solo municipios con 20 parados o más." }, ...P0 },
+    { id: "xt_atur_nf_baix", sumable: false, tema: "tre", ca: ["Aturats sense ESO", "Aturats sense estudis, amb primària o amb l'ESO sense acabar (%)"], es: ["Parados sin ESO", "Parados sin estudios, con primaria o con la ESO sin terminar (%)"], v: XTC("nf", /sense estudis|primaris|sense titulaci/i), ref: () => ({ gi: XTC("nf", /sense estudis|primaris|sense titulaci/i, true)() }), nota: NOTA_XT_CAT, ...P0 },
+    { id: "xt_atur_nf_univ", sumable: false, tema: "tre", ca: ["Aturats universitaris", "Aturats amb estudis universitaris (%)"], es: ["Parados universitarios", "Parados con estudios universitarios (%)"], v: XTC("nf", /universit/i), ref: () => ({ gi: XTC("nf", /universit/i, true)() }), nota: NOTA_XT_CAT, ...P0 },
+    { id: "xt_atur_go_elem", sumable: false, tema: "tre", ca: ["Atur: feines elementals", "Aturats que buscaven feina en ocupacions elementals (%)"], es: ["Paro: trabajos elementales", "Parados que buscaban empleo en ocupaciones elementales (%)"], v: XTC("go", /elementals/i), ref: () => ({ gi: XTC("go", /elementals/i, true)() }), nota: NOTA_XT_CAT, ...P0 },
+    { id: "xt_atur_go_rest", sumable: false, tema: "tre", ca: ["Atur: restauració i comerç", "Aturats de restauració, serveis personals, protecció i venda (%)"], es: ["Paro: hostelería y comercio", "Parados de restauración, servicios personales, protección y venta (%)"], v: XTC("go", /restauraci/i), ref: () => ({ gi: XTC("go", /restauraci/i, true)() }), nota: NOTA_XT_CAT, ...P0 },
+    { id: "xt_contr_h", xt: "contr_h", cob: 0.9, sumable: false, tema: "tre", ca: ["Contractes per habitant", "Contractes registrats al trimestre per 1.000 habitants"], es: ["Contratos por habitante", "Contratos registrados en el trimestre por 1.000 habitantes"], t: XT("contr_h"), pv: XTP("contr_h"), nota: NOTA_XT_CONTR, ...N0 },
+    { id: "xt_contr_ett", xt: "contr_ett", cob: 0.3, sumable: false, tema: "tre", ca: ["Contractes d'ETT", "Contractes fets per empreses de treball temporal (%)"], es: ["Contratos de ETT", "Contratos hechos por empresas de trabajo temporal (%)"], t: XT("contr_ett"), pv: XTP("contr_ett"), nota: NOTA_XT_CONTR, ...P1 },
+    { id: "xt_contr_est", xt: "contr_est", cob: 0.3, sumable: false, tema: "tre", ca: ["Contractes a estrangers", "Contractes signats per persones estrangeres (%)"], es: ["Contratos a extranjeros", "Contratos firmados por personas extranjeras (%)"], t: XT("contr_est"), pv: XTP("contr_est"), nota: NOTA_XT_CONTR, ...P0 },
+    { id: "xt_auton", xt: "auton", cob: 0.9, sumable: false, tema: "tre", ca: ["Autònoms entre els llocs", "Autònoms entre els llocs de treball del municipi (%)"], es: ["Autónomos entre los puestos", "Autónomos entre los puestos de trabajo del municipio (%)"], t: XT("auton"), pv: XTP("auton"), nota: NOTA_XT_LLOCS, ...P0 },
     { id: "prest_atur_ben", tema: "tre", ca: ["Prestacions d'atur", "Beneficiaris de prestacions d'atur per 1.000 habitants"], es: ["Prestaciones de paro", "Beneficiarios de prestaciones de paro por 1.000 habitantes"], a: "prest_atur", v: X("prest_atur"), ...N1 },
-    { id: "sector_serveis", tema: "tre", ca: ["Serveis", "Llocs de treball als serveis (%)"], es: ["Servicios", "Puestos de trabajo en servicios (%)"], v: X("sector_serveis"), ...P0 },
-    { id: "sector_ind", tema: "tre", ca: ["Indústria", "Llocs de treball a la indústria (%)"], es: ["Industria", "Puestos de trabajo en la industria (%)"], v: X("sector_ind"), ...P0 },
-    { id: "sector_const", tema: "tre", ca: ["Construcció", "Llocs de treball a la construcció (%)"], es: ["Construcción", "Puestos de trabajo en la construcción (%)"], v: X("sector_const"), ...P0 },
-    { id: "sector_agri", tema: "tre", ca: ["Agricultura", "Llocs de treball a l'agricultura (%)"], es: ["Agricultura", "Puestos de trabajo en la agricultura (%)"], v: X("sector_agri"), ...P1 },
+    { id: "sector_serveis", xt: "llocs_serv", cob: 0.9, sumable: false, tema: "tre", ca: ["Serveis", "Llocs de treball als serveis (%)"], es: ["Servicios", "Puestos de trabajo en servicios (%)"], t: XT("llocs_serv"), pv: XTP("llocs_serv"), nota: NOTA_XT_LLOCS, ...P0 },
+    { id: "sector_ind", xt: "llocs_ind", cob: 0.9, sumable: false, tema: "tre", ca: ["Indústria", "Llocs de treball a la indústria (%)"], es: ["Industria", "Puestos de trabajo en la industria (%)"], t: XT("llocs_ind"), pv: XTP("llocs_ind"), nota: NOTA_XT_LLOCS, ...P0 },
+    { id: "sector_const", xt: "llocs_cons", cob: 0.9, sumable: false, tema: "tre", ca: ["Construcció", "Llocs de treball a la construcció (%)"], es: ["Construcción", "Puestos de trabajo en la construcción (%)"], t: XT("llocs_cons"), pv: XTP("llocs_cons"), nota: NOTA_XT_LLOCS, ...P0 },
+    { id: "sector_agri", xt: "llocs_agri", cob: 0.9, sumable: false, tema: "tre", ca: ["Agricultura", "Llocs de treball a l'agricultura (%)"], es: ["Agricultura", "Puestos de trabajo en la agricultura (%)"], t: XT("llocs_agri"), pv: XTP("llocs_agri"), nota: NOTA_XT_LLOCS, ...P1 },
     { id: "pib_hab", tema: "tre", ca: ["PIB per habitant", "Producte interior brut per habitant (€)"], es: ["PIB por habitante", "Producto interior bruto por habitante (€)"], a: "pib_hab", v: X("pib_hab"), ...EU },
     { id: "places_tur", tema: "tur", ca: ["Hotel, càmping i rural", "Places d'hotel, càmping i turisme rural per 1.000 habitants"], es: ["Hotel, camping y rural", "Plazas de hotel, camping y turismo rural por 1.000 habitantes"], a: "places_tur", v: X("places_tur"), ...N0 },
     // Salud y servicios sociales
@@ -1096,13 +1124,13 @@
   // Las matriculaciones mensuales también en el tema Vehicles, después del parque
   { const m = IND.find((i) => i.id === "cj_mat"), p = IND.findIndex((i) => i.id === "veh_tur_h"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: "veh_mat", tema: "veh" }); }
   ["cj_trf_vell", "cj_trf"].forEach((id) => { const m = IND.find((i) => i.id === id), p = IND.findIndex((i) => i.id === "veh_mat"); if (m && p >= 0) IND.splice(p + 1, 0, { ...m, id: id.replace("cj_", "veh_"), tema: "veh" }); });
-  IND.forEach((i) => { if (i.per) i.v = (m) => (D.cj ? i.t(m, anysDe(i).slice(-1)[0]) : null); });
+  IND.forEach((i) => { if (i.per || i.xt) i.v = (m) => (D.cj ? i.t(m, anysDe(i).slice(-1)[0]) : null); });
   const nomInd = (i, curt) => {
     const txt = i[LANG][curt ? 0 : 1];
     if (curt) return txt;
     if (i.el) { const c = elInfo(); return c ? `${txt}\u00a0· ${c.n[LANG]}` : txt; }
     const a = i === ind && anyActiu() ? anyActiu() : i.uk ? anysDe(i).slice(-1)[0] : typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
-    const ap = i.per && !a && D.cj ? anysDe(i).slice(-1)[0] : a;
+    const ap = (i.per || i.xt) && !a && D.cj ? anysDe(i).slice(-1)[0] : a;
     return ap ? `${txt} · ${etPer(String(ap))}` : txt;
   };
   let tema = "ren";
@@ -1125,6 +1153,11 @@
     if (i.per) {
       if (!D.cj) return [];
       if (!cacheAnys[i.id]) cacheAnys[i.id] = D.cj.per[i.per].filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob || 0.3));
+      return cacheAnys[i.id];
+    }
+    if (i.xt) {
+      if (!D.cj || !D.cj.xt) return [];
+      if (!cacheAnys[i.id]) cacheAnys[i.id] = D.cj.xt.per.filter((a) => D.municipios.filter((m) => { const v = i.t(m, a); return v != null && isFinite(v); }).length >= D.municipios.length * (i.cob || 0.3));
       return cacheAnys[i.id];
     }
     if (!cacheAnys[i.id]) {
@@ -1206,7 +1239,7 @@
       reproduint = setInterval(() => {
         k++; anySel = anys[k]; pinta();
         if (k >= anys.length - 1) { para(); controlAnys(); }
-      }, ind.per === "m" ? 200 : ind.per === "t" ? 450 : 900);
+      }, ind.per === "m" ? 200 : ind.xt ? 220 : ind.per === "t" ? 450 : 900);
       controlAnys();
     });
   }

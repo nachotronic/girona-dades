@@ -45,7 +45,7 @@
     // Bloques que ya llevan su propia fuente
     com: { sel: ".fx-com", font: ["Generalitat, cens d'establiments comercials", "Generalitat, censo de establecimientos comerciales"] },
     tur: { sel: ".fitxa-tur" }, hab: { sel: ".fitxa-hab" }, mob: { sel: ".fitxa-mob" }, cad: { sel: ".fitxa-cad" },
-    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" }, ene: { sel: ".fx-ene" }, dp: { sel: ".fx-dp" }, soc: { sel: ".fx-soc" }, air: { sel: ".fx-air" },
+    sol: { sel: ".fitxa-sol" }, cul: { sel: ".fx-cul" }, ens: { sel: ".fx-ens" }, amb: { sel: ".fx-amb" }, ene: { sel: ".fx-ene" }, dp: { sel: ".fx-dp" }, soc: { sel: ".fx-soc" }, tre: { sel: ".fx-tre" }, air: { sel: ".fx-air" },
   };
   // Secciones con gráficos insertables: contenedor, ancla de la sección y función que la vuelve a dibujar
   const SECCIONS = {
@@ -60,6 +60,7 @@
     ene: { sel: "#ene-grafics .pg-fig", ancla: "#s-ene", pinta: "pintaSeccioEne" },
     dp: { sel: "#dp-grafics .pg-fig", ancla: "#s-dp", pinta: "pintaSeccioDp" },
     soc: { sel: "#soc-grafics .pg-fig", ancla: "#s-soc", pinta: "pintaSeccioSoc" },
+    tre: { sel: "#tre-grafics .pg-fig", ancla: "#s-tre", pinta: "pintaSeccioTreball" },
     not: { sel: "#s-not .pg-fig", ancla: "#s-not", pinta: "pintaSeccioNotariado" },
   };
   // Fuente corta de los mapas, por tema del indicador
