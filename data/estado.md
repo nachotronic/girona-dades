@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 21:09 UTC
+Última ejecución: 2026-11-24 07:39 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -48,12 +48,12 @@
 | medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
 | energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
+| culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | ok | 2026-11-24 07:38 | 2026-11-24 07:38 | anual |
 
 ## Detalle de la última ejecución
 
-### diners_publics: ok (71 s)
+### culte: ok (46 s)
 
 ```
-subvenciones: 4590 filas comarcales (3,422 M€), 70 ayuntamientos que conceden, hasta 2026 (año 2026)
-contratos: registro 178 ayuntamientos de Girona (3475 filas), ejercicios 2010-2028; plataforma 86184 publicaciones
+Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: 935 de 935 edificios religiosos con sección
 ```
