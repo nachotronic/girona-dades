@@ -254,6 +254,13 @@ window.PREGUNTA_DIC = {
     bancs: "bancos, bancs, oficinas bancarias, oficines bancaries, cajeros, caixers, sucursales, sucursals",
     biblio: "bibliotecas, biblioteques, biblioteca",
     museus: "museos, museus, museo",
+    cul_ct_h: "centros de culto, centres de culte, lugares de culto, llocs de culte, templos, temples, religion, religio",
+    cul_ct_n: "numero de centros de culto, nombre de centres de culte, cuantas iglesias, quantes esglesies",
+    cul_ct_cat: "iglesias, esglesies, iglesia catolica, esglesia catolica, parroquias, parroquies, ermitas, ermites, capillas, capelles, catolicos, catolics",
+    cul_ct_ev: "evangelicos, evangelics, iglesias evangelicas, esglesies evangeliques, protestantes, protestants, pentecostales",
+    cul_ct_isl: "mezquitas, mesquites, mezquita, mesquita, oratorios, oratoris, islam, musulmanes, musulmans",
+    cul_ct_alt: "budistas, budistes, testigos de jehova, testimonis de jehova, ortodoxos, ortodoxes, sijs, sikhs, otras religiones, altres religions",
+    cul_ct_nocat_p: "religiones minoritarias, religions minoritaries, diversidad religiosa, diversitat religiosa, culto no catolico, culte no catolic",
     explotacions: "explotaciones agrarias, explotacions agraries, granjas, granges, masias, masies",
     // ---------------------------------------------------------------- Energia i medi ambient
     kwh: "consumo electrico, consum electric, electricidad, electricitat, luz, llum, consumo de luz, consum de llum",

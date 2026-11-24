@@ -17,6 +17,10 @@
       prest: "préstecs", mes: (n) => `i ${n} més`,
       prog: (n, a) => `Programa.cat: <b>${n} funcions</b> professionals de teatre, música, circ i dansa el ${a}.`,
       font: "Fonts: Departament de Cultura (cens d'equipaments culturals, DadesBib i Programa.cat).",
+      ct: "Centres de culte",
+      ct_frase: (n, a, h, hp, nc) => `<b>${n} ${n === "1" ? "centre de culte actiu" : "centres de culte actius"}</b> el ${a}, ${h} per 10.000 habitants (província: ${hp})${nc ? `; ${nc} no són catòlics` : ""}.`,
+      ct_cap: (a) => `Cap centre de culte actiu registrat el ${a}.`,
+      ct_font: "Font: Generalitat, Direcció General d'Afers Religiosos.",
     },
     es: {
       h: "Cultura",
@@ -32,8 +36,20 @@
       prest: "préstamos", mes: (n) => `y ${n} más`,
       prog: (n, a) => `Programa.cat: <b>${n} funciones</b> profesionales de teatro, música, circo y danza en ${a}.`,
       font: "Fuentes: Departament de Cultura (censo de equipamientos culturales, DadesBib y Programa.cat).",
+      ct: "Centros de culto",
+      ct_frase: (n, a, h, hp, nc) => `<b>${n} ${n === "1" ? "centro de culto activo" : "centros de culto activos"}</b> en ${a}, ${h} por 10.000 habitantes (provincia: ${hp})${nc ? `; ${nc} no son católicos` : ""}.`,
+      ct_cap: (a) => `Ningún centro de culto activo registrado en ${a}.`,
+      ct_font: "Fuente: Generalitat, Direcció General d'Afers Religiosos.",
     },
   };
+  // Confesiones (nombre de la Generalitat, en catalán) -> castellano
+  const CONF_ES = { "Església catòlica": "Iglesia católica", "Esglésies Evangèliques": "Iglesias evangélicas", "Islam": "Islam", "Budisme": "Budismo",
+    "Testimonis cristians de Jehovà": "Testigos cristianos de Jehová", "Esglésies orientals": "Iglesias orientales (ortodoxas)", "Altres": "Otras",
+    "Sikhisme": "Sijismo", "Església Adventista del Setè Dia": "Iglesia Adventista del Séptimo Día", "Fe Bahà'í": "Fe bahaí", "Hinduisme": "Hinduismo",
+    "Església de Jesucrist dels Sants dels Darrers Dies": "Iglesia de Jesucristo de los Santos de los Últimos Días", "Judaisme": "Judaísmo",
+    "Esglésies Ortodoxes": "Iglesias ortodoxas", "Taoisme": "Taoísmo" };
+  const CONF_CA = { "Esglésies orientals": "Esglésies orientals (ortodoxes)" };
+  window.nomConfessio = (c) => (LANG === "es" ? CONF_ES[c] || c : CONF_CA[c] || c);
   const tx = (k, ...a) => { const v = TX[LANG][k]; return typeof v === "function" ? v(...a) : v; };
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   // «TEATRE MUNICIPAL DE GIRONA» -> «Teatre Municipal de Girona»
@@ -61,7 +77,21 @@
       ${p != null ? `<p class="fx-dada">${tx("bib_frase", fmt(p), ab, fmt(val(m, "b_prest_h", ab), 2), fmt(ref("b_prest_h", ab, "gi"), 2), pct(val(m, "b_carn_p", ab), 0), pct(ref("b_carn_p", ab, "gi"), 0))}</p>
         ${bibs ? `<ul class="cu-bib">${bibs}</ul>` : ""}
         <figure class="grafic"><figcaption><span>${tx("evol")}</span></figcaption><div class="g-cul"></div></figure>` : ab ? `<p class="fx-dada">${tx("sense_bib")}</p>` : ""}</div></div>
-      <p class="fb-font">${tx("font")}</p></section>`;
+      <p class="fb-font">${tx("font")}</p>${blocCulte(m)}</section>`;
+  };
+  const blocCulte = (m) => {
+    const a = D.anys && D.anys.cul_ct;
+    if (!a) return "";
+    const ct = (m.cul_f || {}).ct || [], n = val(m, "ct_n", a);
+    const grups = {};
+    ct.forEach(([nm, , c]) => (grups[c] = grups[c] || []).push(nm));
+    const ordre = Object.keys(grups).sort((x, y) => (x === "Església catòlica" ? -1 : y === "Església catòlica" ? 1 : grups[y].length - grups[x].length));
+    const llista = ordre.map((c) => `<li><span class="cu-t">${esc(nomConfessio(c))} <small>${grups[c].length}</small></span>
+      <span class="cu-n">${grups[c].slice(0, MAX).map(esc).join(" · ")}${grups[c].length > MAX ? ` <small>${tx("mes", grups[c].length - MAX)}</small>` : ""}</span></li>`).join("");
+    const nc = n ? n - (val(m, "ct_cat", a) || 0) : 0;
+    return `<p class="fx-sub2">${tx("ct")}</p>
+      <p class="fx-dada">${n ? tx("ct_frase", fmt(n), a, fmt(val(m, "ct_h", a), 1), fmt(ref("ct_h", a, "gi"), 1), nc ? fmt(nc) : "") : tx("ct_cap", a)}</p>
+      ${llista ? `<ul class="cu-eq">${llista}</ul>` : ""}<p class="fb-font">${tx("ct_font")}</p>`;
   };
   window.pintaCultura = (cont, m) => {
     const g = cont && cont.querySelector(".g-cul");
@@ -98,6 +128,13 @@
     font_bib: "Font: Departament de Cultura, estadístiques de biblioteques públiques (DadesBib)",
     font_eq: "Font: Departament de Cultura, cens d'equipaments culturals",
     font_prog: "Font: Departament de Cultura, Programa.cat",
+    cul_ct: ["Centres de culte per confessió", "Centres de culte actius a la província, per confessió"],
+    cul_ct_noms: { gi: "Província de Girona" },
+    h_cul_ct: (n, a, c, p) => `La província tenia <b>${n} centres de culte actius</b> el ${a}. El ${p} són de l'Església catòlica; la segona confessió són les ${c}.`,
+    cul_ct_nocat: ["Culte no catòlic", "Centres de culte d'altres confessions que la catòlica (%)"],
+    cul_ct_nocat_noms: { gi: "Província de Girona", cat: "Catalunya" },
+    h_cul_ct_nocat: (v, a, c) => `El <b>${v}</b> dels centres de culte de la província no són catòlics (${a}); a Catalunya, el ${c}.`,
+    font_ct: "Font: Generalitat, Direcció General d'Afers Religiosos (centres de culte de Catalunya)",
   };
   const es = {
     cul_prest: ["Préstamos de las bibliotecas", "Préstamos de las bibliotecas públicas por habitante"],
@@ -121,11 +158,18 @@
     font_bib: "Fuente: Departament de Cultura, estadísticas de bibliotecas públicas (DadesBib)",
     font_eq: "Fuente: Departament de Cultura, censo de equipamientos culturales",
     font_prog: "Fuente: Departament de Cultura, Programa.cat",
+    cul_ct: ["Centros de culto por confesión", "Centros de culto activos en la provincia, por confesión"],
+    cul_ct_noms: { gi: "Provincia de Girona" },
+    h_cul_ct: (n, a, c, p) => `La provincia tenía <b>${n} centros de culto activos</b> en ${a}. El ${p} son de la Iglesia católica; la segunda confesión son las ${c}.`,
+    cul_ct_nocat: ["Culto no católico", "Centros de culto de confesiones distintas de la católica (%)"],
+    cul_ct_nocat_noms: { gi: "Provincia de Girona", cat: "Cataluña" },
+    h_cul_ct_nocat: (v, a, c) => `El <b>${v}</b> de los centros de culto de la provincia no son católicos (${a}); en Cataluña, el ${c}.`,
+    font_ct: "Fuente: Generalitat, Direcció General d'Afers Religiosos (centros de culto de Cataluña)",
   };
   window.PG.textos(ca, es);
   const T = () => (LANG === "es" ? es : ca);
   const tp = (k, ...a) => { const v = T()[k]; return typeof v === "function" ? v(...a) : v; };
-  window.PG.grup((g, c) => (c && c.startsWith("ce:") ? T().ce[c.slice(3)] || g : c && c.startsWith("cp:") ? T().cp[c.slice(3)] || g : null));
+  window.PG.grup((g, c) => (c && c.startsWith("ct:") ? nomConfessio(c.slice(3)) : c && c.startsWith("ce:") ? T().ce[c.slice(3)] || g : c && c.startsWith("cp:") ? T().cp[c.slice(3)] || g : null));
   const ult = (s) => (s && s.length ? s[s.length - 1] : null);
   window.PG.titular((id, sp) => {
     if (!/^cul_/.test(id)) return null;
@@ -137,6 +181,9 @@
     if (id === "cul_eq" && sp.grups && sp.grups.length) { const m = [...sp.grups].filter(x => !/alt$/.test(x.g)).sort((a, b) => b.gi - a.gi)[0]; return tp("h_cul_eq", fmt(sp.total), sp.any, T().ce[m.g].toLowerCase(), fmt(m.gi)); }
     if (id === "cul_prog" && sp.abs) return tp("h_cul_prog", fmt(sp.abs.n), sp.abs.any, fmt(sp.abs.munis), fmt(sp.abs.eur));
     if (id === "cul_prog_amb" && sp.grups && sp.grups.length) return tp("h_cul_prog_amb", T().cp[sp.grups[0].c.slice(3)].toLowerCase(), pct(sp.grups[0].gi, 0), sp.any);
+    if (id === "cul_ct" && sp.grups && sp.grups.length > 1) { const c0 = sp.grups.find((x) => x.g === "Església catòlica") || sp.grups[0], c1 = sp.grups.filter((x) => x !== c0)[0];
+      return tp("h_cul_ct", fmt(sp.total), sp.any, nomConfessio(c1.g).toLowerCase(), pct(100 * c0.gi / sp.total, 0)); }
+    if (id === "cul_ct_nocat" && g) return tp("h_cul_ct_nocat", pct(g[2], 0), g[1], c ? pct(c[2], 0) : "–");
     return "";
   });
 })();
