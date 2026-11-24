@@ -415,7 +415,7 @@
     ["rural_n", ["Cases de turisme rural", "Establiments de turisme rural"], ["Casas de turismo rural", "Establecimientos de turismo rural"], NT.xifra, N0],
     ["mov_rec_h", ["Turistes estrangers", "Turistes estrangers a l'any per habitant (telefonia mòbil)"], ["Turistas extranjeros", "Turistas extranjeros al año por habitante (telefonía móvil)"], NT.mov, N1],
     ["mov_int_h", ["Turistes d'altres províncies", "Turistes d'altres províncies a l'any per habitant (telefonia mòbil)"], ["Turistas de otras provincias", "Turistas de otras provincias al año por habitante (telefonía móvil)"], NT.mov, N1],
-    ["mov_rec", ["Turistes estrangers (total)", "Turistes estrangers a l'any (telefonia mòbil)"], ["Turistas extranjeros (total)", "Turistas extranjeros al año (telefonía móvil)"], NT.mov, N0],
+    ["mov_rec", ["Turistes estrangers (total)", "Turistes estrangers a l'any (telefonia mòbil)"], ["Turistas extranjeros (total)", "Turistas extranjeros al año (telefonía móvil)"], NT.mov, { ...N0, llindars: [2000, 10000, 25000, 50000, 100000, 250000] }],
     ["mov_ext_p", ["Pes del turisme estranger", "Turistes estrangers sobre el total (%)"], ["Peso del turismo extranjero", "Turistas extranjeros sobre el total (%)"], NT.mov, { sumable: false, ...P0 }],
     ["mov_fr", ["Turistes francesos", "Francesos sobre els turistes estrangers (%)"], ["Turistas franceses", "Franceses sobre los turistas extranjeros (%)"], NT.mov, { sumable: false, ...P0 }],
     ["estiu_p", ["Estacionalitat", "Turistes del juliol i l'agost sobre els de tot l'any (%)"], ["Estacionalidad", "Turistas de julio y agosto sobre los de todo el año (%)"], NT.mov, { sumable: false, ...P0 }],
@@ -1258,7 +1258,8 @@
     const valors = geo.features.map((f) => valorDe(f.properties));
     if (ind.cat) return pintaCat(geo, valors);
     // Con serie temporal, los cortes se fijan con todos los años para que se vea el cambio
-    llindars = ambSerie() ? quantils(anysDe(ind).flatMap((a) => D.municipios.map((m) => ind.t(m, a)))) : quantils(valors);
+    // Algunos totales muy concentrados llevan cortes fijos: con cuantiles, el puesto 30 caería en el mismo color que Lloret
+    llindars = ind.llindars && nivell === "mun" ? ind.llindars.slice() : ambSerie() ? quantils(anysDe(ind).flatMap((a) => D.municipios.map((m) => ind.t(m, a)))) : quantils(valors);
     const n = llindars.length + 1;
     geo.features.forEach((f, i) => {
       const c = classe(valors[i]);
