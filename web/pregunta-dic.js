@@ -184,6 +184,8 @@ window.PREGUNTA_DIC = {
     mo_agressions_sexuals: "agresiones sexuales, agressions sexuals, violaciones, violacions, abusos sexuales, abusos sexuals",
     mo_alcohol: "alcohol al volante, alcohol al volant, conducir borracho, conduir begut, alcoholemia",
     mo_trencament: "quebrantamientos, trencaments, ordenes de alejamiento, ordres d allunyament",
+    odi: "delitos de odio, delictes d odi, odio, odi, discriminacion, discriminacio, racismo, racisme, homofobia, lgtbifobia, lgtbi fobia, transfobia, islamofobia, antisemitismo, antisemitisme, xenofobia, aporofobia, agresiones racistas, agressions racistes, delitos de odio por municipio",
+    mo_odi: "delitos de odio por zona, delictes d odi per area, odio por area policial",
     int_conv: "criminalidad convencional, criminalitat convencional",
     int_ciber: "ciberdelitos, ciberdelictes, cibercrimen, estafas por internet, estafes per internet, delitos informaticos",
     int_domicilis: "robos en domicilios, robatoris en domicilis",

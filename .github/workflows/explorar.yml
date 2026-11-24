@@ -14,12 +14,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests pandas
-      - run: python -c "from fuentes.policia import odi; from fuentes.comun import carpeta; print(odi(carpeta('policia')))"
+      - run: pip install requests pypdf
+      - run: python scripts/explorar.py
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed/policia/odi_fets.csv
-          git commit -m "Delitos de odio: datos de prueba" || echo "Sin cambios"
+          git add exploracion
+          git commit -m "Exploración de fuentes" || echo "Sin cambios"
           git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push origin HEAD:"$GITHUB_REF_NAME"
