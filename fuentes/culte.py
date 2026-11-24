@@ -23,7 +23,7 @@ from .comun import PROC, carpeta, get
 DOMINIO = "https://analisi.transparenciacatalunya.cat"
 OVERPASS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter",
             "https://maps.mail.ru/osm/tools/overpass/api/interpreter"]
-Q_OSM = '[out:json][timeout:180];area["ref:ine"="17"]["admin_level"="6"]->.a;nwr["amenity"="place_of_worship"](area.a);out center tags;'
+Q_OSM = '[out:json][timeout:180];area["ISO3166-2"="ES-GI"]->.a;nwr["amenity"="place_of_worship"](area.a);out center tags;'
 
 
 def soql(ident: str, **params) -> pd.DataFrame:
