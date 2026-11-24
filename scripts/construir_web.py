@@ -173,6 +173,11 @@ def secciones():
         for cusec in list(res):
             if cusec[:7] in dis:
                 res[cusec][clau] = dis[cusec[:7]]
+    _, dis_u, _ = cad_usos_districtes()
+    for u, dis in dis_u.items():
+        for cusec in list(res):
+            if cusec[:7] in dis:
+                res[cusec]["cad_vmu_" + u] = dis[cusec[:7]]
     _, extra, _ = atlas_extra()
     for cusec, x in extra.items():
         res.setdefault(cusec, {}).update(x)
@@ -2159,6 +2164,7 @@ CAD_DEC = {"n": 0, "vm": 0, "vviv": 0, "vhab": 0, "sol": 1, "ih": 1, "res": 1, "
            "ant_80": 1, "ant_10": 1, "ant_cat": 2, "sed_n": 0, "sed_ha": 1,
            "rc_bosc": 1, "rc_past": 1, "rc_sec": 1, "rc_reg": 1, "rc_fru": 1, "rc_vin": 1, "rc_oli": 1,
            "bice_n": 0, "bice_v": 0,
+           "vmu_vcol": 0, "vmu_vuni": 0, "vmu_apa": 0, "vmu_com": 0, "vmu_ind": 0, "vmu_ofi": 0,
            "vm2": 0, "sm2": 0, "ibi_hab": 0, "ibi_rec": 0, "ibi_base": 0, "ibi_bon": 1, "ibi_tot": 0, "ibi_desoc": 0}
 
 
@@ -2367,6 +2373,33 @@ def cad_districtes(k="vm"):
     return mun, dis, prov, ult
 
 
+VMU = {"vcol": "viv_colectiva", "vuni": "viv_unifamiliar", "apa": "aparcamiento", "com": "comercial", "ind": "industrial", "ofi": "oficina"}
+
+
+def cad_usos_districtes():
+    """Valor catastral medio (€/m²) por uso y distrito censal (series del Catastro, 2013-).
+    Devuelve {uso: {ine: {año: v}}} (media del municipio ponderada por inmuebles),
+    {uso: {districte: v}} del último año (con 5 inmuebles o más) y {uso: {año: v}} de la provincia."""
+    f = P / "cadastre" / "districtes.csv.gz"
+    if not f.exists():
+        return {}, {}, {}
+    d = pd.read_csv(f, dtype={"districte": str})
+    d["ine"] = d["districte"].str[:5]
+    ult = int(d["any"].max())
+    mun, dis, prov = {}, {}, {}
+    for u, c in VMU.items():
+        ci, cv = f"inm_{u}", f"vm_vm_{c}"
+        if ci not in d.columns or cv not in d.columns:
+            continue
+        x = d[(d[ci] > 0) & (d[cv] > 0)].copy()
+        x["s"] = x[ci] * x[cv]
+        for (ine, y), g in x.groupby(["ine", "any"]):
+            mun.setdefault(u, {}).setdefault(ine, {})[int(y)] = int(round(g["s"].sum() / g[ci].sum()))
+        dis[u] = {r.districte: int(r[cv]) for _, r in x[(x["any"] == ult) & (x[ci] >= 5)].iterrows()}
+        prov[u] = {int(y): int(round(g["s"].sum() / g[ci].sum())) for y, g in x.groupby("any")}
+    return mun, dis, prov
+
+
 def cadastre():
     """Estadísticas del Catastro por municipio y año (Datos municipios, 2012-). Devuelve
     {ine: {clave: {año: v}}}, {clave: {año: {gi, cat, esp}}}, último año, {ine: usos} y {ámbito: usos}
@@ -2437,6 +2470,13 @@ def cadastre():
                 mun[ine][clau] = serie
         for y, v in dprov.items():
             refs.setdefault(clau, {}).setdefault(y, {})["gi"] = v
+    mu, _, pu = cad_usos_districtes()
+    for u, per in mu.items():
+        for ine, serie in per.items():
+            if ine in mun:
+                mun[ine]["vmu_" + u] = serie
+        for y, v in pu.get(u, {}).items():
+            refs.setdefault("vmu_" + u, {}).setdefault(y, {})["gi"] = v
     # IBI: información económico-financiera (recibos, bases y cuotas), 2008-
     fi = d / "ibi_municipis.csv.gz"
     if fi.exists():
