@@ -9,6 +9,8 @@
    sin edificar por municipio. Un CSV por trimestre desde 2021; se guarda el último de cada año.
 4. Rústica por tipo de cultivo (estadisticas_10): % de superficie por cultivo, del paquete PC-Axis.
 5. Bienes inmuebles de características especiales (estadisticas_11): BICE por municipio.
+6. Piscinas (estadisticas_12): piscinas cubiertas y no cubiertas por municipio, CSV desde 2022.
+7. Tipos de gravamen (estadisticas_9, PC-Axis 04117): IBI urbana, rústica y BICE por grupos (A-D).
 
 El portal devuelve una página HTML con código 200 cuando un fichero no existe: se descarta.
 
@@ -18,6 +20,8 @@ Genera en data/processed/cadastre/:
   trimestral.csv.gz     codi_ine, any, trimestre y columnas del fichero trimestral
   cultius.csv.gz        codi_ine, any, cultivo, % de superficie
   bice.csv.gz           codi_ine, any, unidades, valor y tipos
+  piscines.csv.gz       codi_ine, any, cub (cubiertas), desc (no cubiertas)
+  gravamen.csv.gz       codi_ine, any, rev (año de la ponencia), urb, rus, bice_a..bice_d
   detall_referencies.json  sumas por año para Girona (gi), Cataluña (cat) y España (esp)
 """
 from __future__ import annotations
@@ -233,9 +237,74 @@ def _bice(res: list[str]) -> tuple[pd.DataFrame | None, dict]:
     return t[t["codi_ine"].str[:2] == "17"], refs
 
 
+def _piscines(res: list[str]) -> tuple[pd.DataFrame | None, dict]:
+    parts = []
+    for any_ in range(2022, dt.date.today().year + 2):
+        fs = {}
+        for k, nom in (("cub", "piscinas_cubiertas"), ("desc", "piscinas_no_cubiertas")):
+            d = _csv(C + f"piscinas/{any_}/{nom}_{any_}.csv")
+            if d is None or "CODINE" not in d.columns:
+                continue
+            d["codi_ine"] = d["CODINE"].str.zfill(5)
+            fs[k] = _num(d, ["TOTAL"]).groupby("codi_ine")["TOTAL"].sum()
+        if not fs:
+            continue
+        o = pd.DataFrame(fs).reset_index().rename(columns={"index": "codi_ine"})
+        for k in ("cub", "desc"):
+            if k not in o.columns:
+                o[k] = None
+        o.insert(1, "any", any_)
+        parts.append(o)
+        res.append(f"piscinas {any_}: {len(o)} municipios")
+    if not parts:
+        res.append("ERROR piscinas: ningún fichero")
+        return None, {}
+    t = pd.concat(parts, ignore_index=True)
+    refs = _refs(t, ["cub", "desc"])
+    return t[t["codi_ine"].str[:2] == "17"], refs
+
+
+def _gravamen(z: zipfile.ZipFile, res: list[str]) -> pd.DataFrame | None:
+    """Tipos de gravamen por municipio de Girona (tabla 04117 de ordenanzas fiscales)."""
+    files = []
+    noms = [n for n in z.namelist() if re.search(r"ordenanz", n, re.I)]
+    res.append(f"ordenanzas en px.zip: {len(noms)} tablas, p. ej. {noms[:3]}")
+    for n in noms:
+        m = re.search(r"est(\d{4})/.*?04117\.px$", n, re.I)
+        if not m:
+            continue
+        any_ = int(m.group(1))
+        try:
+            dims, ordre, nums = _px_long(z.read(n).decode("latin-1"))
+            muns, vars_ = dims[ordre[0]], dims[ordre[-1]]
+            if len(ordre) != 2 or len(nums) != len(muns) * len(vars_):
+                res.append(f"AVISO gravamen {any_}: dimensiones {ordre}")
+                continue
+            col = {}
+            for j, v in enumerate(vars_):
+                vl = v.lower()
+                k = ("rev" if "valora" in vl or "ponencia" in vl else "urb" if "urbana" in vl else "rus" if "stica" in vl
+                     else ("bice_" + vl.strip()[-1]) if "bice" in vl and vl.strip()[-1] in "abcd" else "bice" if "bice" in vl else None)
+                if k:
+                    col[k] = j
+            for i, mu in enumerate(muns):
+                cod = mu.split()[0]
+                if not re.fullmatch(r"17\d{3}", cod):
+                    continue
+                files.append({"codi_ine": cod, "any": any_, **{k: nums[i * len(vars_) + j] for k, j in col.items()}})
+        except Exception as e:  # noqa: BLE001
+            res.append(f"AVISO gravamen {n}: {e}")
+    if not files:
+        res.append("ERROR gravamen: ninguna tabla 04117")
+        return None
+    d = pd.DataFrame(files)
+    res.append(f"gravamen: {d['codi_ine'].nunique()} municipios, años {d['any'].min()}-{d['any'].max()}, columnas {list(d.columns)}")
+    return d
+
+
 def ejecutar(out, res: list[str]) -> None:
     refs = {}
-    for nom, fn in (("titulars", _titulars), ("altes", _altes), ("trimestral", _trimestral), ("bice", _bice)):
+    for nom, fn in (("titulars", _titulars), ("altes", _altes), ("trimestral", _trimestral), ("bice", _bice), ("piscines", _piscines)):
         try:
             d, r = fn(res)
         except Exception as e:  # noqa: BLE001
@@ -254,4 +323,11 @@ def ejecutar(out, res: list[str]) -> None:
                 refs["cultius"] = r
         except Exception as e:  # noqa: BLE001
             res.append(f"ERROR cultivos: {e}")
+        try:
+            with zipfile.ZipFile(ruta) as z:
+                d = _gravamen(z, res)
+            if d is not None:
+                d.to_csv(out / "gravamen.csv.gz", index=False)
+        except Exception as e:  # noqa: BLE001
+            res.append(f"ERROR gravamen: {e}")
     (out / "detall_referencies.json").write_text(json.dumps(refs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
