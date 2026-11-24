@@ -307,6 +307,13 @@
   "durada": 2,
   "resum": "universitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']"
  },
+ "urbans": {
+  "estat": "ok",
+  "intent": "2026-11-24T08:01:41Z",
+  "ok": "2026-11-24T08:01:41Z",
+  "durada": 87,
+  "resum": "64 indicadores, 434 municipios de España (10 de Girona), 2010-2025; AUF y conurbación de Girona: 795 valores"
+ },
  "vehicles": {
   "estat": "ok",
   "intent": "2026-11-23T14:28:50Z",

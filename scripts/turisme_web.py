@@ -429,6 +429,31 @@ def mov_municipis(d):
     return res, mens, ult
 
 
+def punts_de_pas(d, reg):
+    """Municipios donde la telefonía móvil cuenta como «turistas» sobre todo a gente de paso: la frontera y los
+    grandes aparcamientos de camiones de la AP-7 y la N-II (La Jonquera, Agullana, Cabanes, Vilamalla…).
+    El INE llama turista a quien pasa la noche fuera de su municipio de residencia, y el móvil se asigna al lugar
+    donde duerme: un camionero francés que duerme en La Jonquera, o un móvil de Le Perthús que se conecta a una
+    antena española, cuentan. Criterio: más turistas extranjeros al año que la mitad de las plazas-noche de
+    alojamiento registradas (plazas × 365) y casi sin temporada (julio y agosto < 26 % del año)."""
+    if d is None or not len(d):
+        return set()
+    x = d[(d["t"] == "rec") & (d["orig"] == "Total")]
+    comp = _anys_complets(x)
+    if not comp:
+        return set()
+    a = max(comp)
+    y = x[x["any"] == a]
+    tot = y.groupby("ine")["turistes"].sum()
+    estiu = y[y["mes"].str[5:7].isin(["07", "08"])].groupby("ine")["turistes"].sum()
+    pas = set()
+    for ine, v in tot.items():
+        pl = sum(n for k, n in reg.get(ine, {}).items() if k.endswith("_pl"))
+        if v >= 5000 and v > 0.5 * max(pl, 1) * 365 and estiu.get(ine, 0) / v < 0.26:
+            pas.add(ine)
+    return pas
+
+
 def mov_provincia(d, pob_prov):
     """Gráficos de origen (últimos 12 meses completos) para la sección."""
     out = {}
@@ -607,7 +632,16 @@ def construir(municipios):
                 posa(ine, "ieet", a, v)
     # Telefonía móvil
     d_mov = movils()
+    pas = punts_de_pas(d_mov, reg)
+    if d_mov is not None and pas:
+        mens_tots = mov_municipis(d_mov)[1]
+        d_mov = d_mov[~d_mov["ine"].isin(pas)]
     mm, mens, any_mov = mov_municipis(d_mov)
+    if pas:
+        for ine in pas:
+            mens[ine] = mens_tots.get(ine, {})
+            fitxa.setdefault(ine, {})["mov_pas"] = 1
+        print("turisme: puntos de paso excluidos de los turistas por móvil:", sorted(pas))
     for ine, o in mm.items():
         p = pob.get(ine)
         for k, ser in o.items():
