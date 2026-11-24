@@ -1,7 +1,7 @@
 """Sección «Notaries» de la web: actos notariales por provincia (Consejo General del Notariado).
 
 Lee data/processed/notariado/actes.csv.gz (fuentes/notariado.py) y la población provincial de
-data/processed/exportacions/poblacio.csv, y escribe web/datos/notariado.json, que la web pide al
+data/processed/notariado/poblacio.csv (INE, ECP), y escribe web/datos/notariado.json, que la web pide al
 pintar la sección:
 
   ind   por indicador: freq (m/t), ult (último periodo), series de Girona, Cataluña y España
@@ -93,10 +93,14 @@ def construir(salida: pathlib.Path) -> dict:
     if not fa.exists():
         return {"resum": "sin datos"}
     a = pd.read_csv(fa, dtype={"zona": str})
-    fp = RAIZ / "data" / "processed" / "exportacions" / "poblacio.csv"
+    fp = DIR / "poblacio.csv"
+    if not fp.exists():  # todavía sin descargar: la de exportacions (hasta 2021)
+        fp = RAIZ / "data" / "processed" / "exportacions" / "poblacio.csv"
     p = pd.read_csv(fp, dtype={"prov": str})
+    p = p[p["prov"].str.fullmatch(r"\d\d|ES")]
     pob = p.pivot_table(index="any", columns="prov", values="poblacio")
-    pob["ES"] = pob.sum(axis=1)
+    if "ES" not in pob.columns:
+        pob["ES"] = pob.drop(columns=["51", "52"], errors="ignore").sum(axis=1)
     pob["CAT"] = pob[CAT].sum(axis=1)
     pob_ult = int(pob.index.max())
 
@@ -113,6 +117,9 @@ def construir(salida: pathlib.Path) -> dict:
         freqs = set(d["freq"])
         if len(freqs) > 1:
             d = _trimestre(d)
+            # solo los periodos en que están todos los actos que se suman
+            nc = d[d["var"] == "n"].groupby(["zona", "any", "per"])["clau"].transform("nunique")
+            d = d.loc[nc[nc == len(claus)].index]
         freq = "t" if "t" in freqs else "m"
         s = _afegeix_cat(serie(d, var, freq))
         win = 12 if freq == "m" else 4

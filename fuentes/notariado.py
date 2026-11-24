@@ -20,7 +20,7 @@ import time
 
 import pandas as pd
 
-from .comun import PROC, carpeta, normaliza, post
+from .comun import PROC, carpeta, get, normaliza, post
 
 URL = "https://www.notariado.org/cienServices/service/buscador/json"
 DES_DE = "01/01/2007"
@@ -104,8 +104,37 @@ def consulta(clau: str, geografia: str) -> list[dict]:
     return files
 
 
+def poblacio(lineas: list[str]) -> None:
+    """Población residente por provincia (INE, Estadística Continua de Población, tabla 56945), a 1 de enero."""
+    u = ("https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/56945?nult=100&tv=356:15668&tv=18:451&tip=AM")
+    js = get(u, reintentos=5).json()
+    files = []
+    for s in js:
+        cod = next((m.get("Codigo") for m in s.get("MetaData", []) if m.get("FK_Variable") in (115, 349)), None)
+        if cod is None:
+            continue
+        zona = "ES" if cod == "00" else cod
+        per_any: dict[int, tuple[int, float]] = {}
+        for d in s.get("Data", []):
+            if d.get("Valor") is None:
+                continue
+            a, p = int(d["Anyo"]), int(d.get("FK_Periodo") or 0)
+            if a not in per_any or p < per_any[a][0]:  # el primer periodo del año (1 de enero)
+                per_any[a] = (p, float(d["Valor"]))
+        files += [{"prov": zona, "any": a, "poblacio": v} for a, (_, v) in per_any.items()]
+    p = pd.DataFrame(files)
+    if p.empty or p["prov"].nunique() < 50:
+        raise RuntimeError(f"población incompleta: {p['prov'].nunique() if not p.empty else 0} zonas")
+    p.sort_values(["prov", "any"]).to_csv(carpeta("notariado") / "poblacio.csv", index=False)
+    lineas.append(f"población INE 56945: {p['prov'].nunique()} zonas, años {p['any'].min()}-{p['any'].max()}")
+
+
 def ejecutar() -> str:
     lineas: list[str] = []
+    try:
+        poblacio(lineas)
+    except Exception as e:  # noqa: BLE001
+        lineas.append(f"ERROR población: {type(e).__name__}: {str(e)[:200]}")
     totes: list[dict] = []
     errors = 0
     for clau in INDICADORS:
