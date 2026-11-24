@@ -192,12 +192,19 @@ TRIMESTRALS = {
 def _trimestral(nom: str) -> str:
     files, fets = [], set()
     ultim = None
+    resum = []
     for pag, idm, pre, cols in TRIMESTRALS[nom]:
-        html = _peticio("GET", f"{pag}?IdMenu={idm}")
-        anys, any_def = _opcions(html, "any1")
-        _, q_def = _opcions(html, "MTSA1")
+        for _ in range(3):
+            html = _peticio("GET", f"{pag}?IdMenu={idm}")
+            anys, any_def = _opcions(html, "any1")
+            _, q_def = _opcions(html, "MTSA1")
+            if anys:
+                break
+            time.sleep(20)
         if not anys:
+            resum.append(f"{pre} ERROR sin formulario")
             continue
+        n0 = len(files)
         u = (int(any_def), int(q_def))
         ultim = max(ultim or u, u)
         tots = _trimestres((min(int(x) for x in anys), 1), u)
@@ -217,6 +224,7 @@ def _trimestral(nom: str) -> str:
                 for c, v in zip(cols, f[2:]):
                     files.append({"ine": f[0], "per": per, "serie": f"{pre}_{c}", "v": _num(v)})
             fets.add(per)
+        resum.append(f"{pre} {len(files) - n0} valores")
     if files:
         df = pd.DataFrame(files)
         f = carpeta("xifra_treball") / f"{nom}.csv"
@@ -226,7 +234,7 @@ def _trimestral(nom: str) -> str:
             vell = vell[[(p, s) not in clau for p, s in zip(vell["per"], vell["serie"])]]
             df = pd.concat([vell, df])
         df.sort_values(["serie", "per", "ine"]).drop_duplicates(["ine", "per", "serie"], keep="last").to_csv(f, index=False)
-    return f"{nom}: {len(fets)} trimestres bajados" + (f" hasta {ultim[0]}T{ultim[1]}" if ultim else " (ERROR sin formulario)")
+    return f"{nom}: {len(fets)} trimestres bajados" + (f" hasta {ultim[0]}T{ultim[1]}" if ultim else " (ERROR sin formulario)") + f" ({', '.join(resum)})"
 
 
 _CACHE_SERIES: dict[str, pd.DataFrame] = {}
