@@ -40,7 +40,7 @@ from .xifra import _html
 BASE = "https://www.ddgi.cat/xifra/"
 PAUSA = float(os.environ.get("XIFRA_PAUSA", "0.6"))
 # Minutos como máximo para la población activa en cada ejecución (consulta por municipio)
-LIMIT_MIN = float(os.environ.get("XIFRA_TREBALL_MIN", "150"))
+LIMIT_MIN = float(os.environ.get("XIFRA_TREBALL_MIN", "4"))
 # Los últimos periodos se vuelven a bajar siempre: Xifra los revisa
 REFRESCA = 2
 
