@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient", "energia", "diners_publics", "culte", "social", "urbans", "notariado", "xifra_treball"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient", "energia", "diners_publics", "culte", "social", "urbans", "notariado", "xifra_treball", "xifra_municipal"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -92,6 +92,7 @@ FONTS = {
     "notariado": ("Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província", "mensual/trimestral"),
     "urbans": ("INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona", "anual"),
     "xifra_treball": ("Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral", "mensual"),
+    "xifra_municipal": ("Xifra, Diputació de Girona: policia local, lloc de naixement, cens d'habitatges 2021, romanent, resultat pressupostari, cost efectiu dels serveis i turisme per comarca", "mensual"),
     "habitatge": ("Generalitat: habitatges iniciats i acabats, HPO, cèdules, impost de pisos buits i mapa urbanístic", "anual/trimestral"),
 }
 
