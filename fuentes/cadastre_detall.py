@@ -314,13 +314,16 @@ def _gravamen(z: zipfile.ZipFile, res: list[str]) -> pd.DataFrame | None:
             falten = 0
             for i, mu in enumerate(muns):
                 mc = re.match(r"(17\d{3})\b\s*[-–]?\s*(.*)", mu.strip())
-                cod = cods[i] if cods else mc.group(1) if mc else noms.get(_nom(mu))
+                cands = [cods[i] if cods else None, mc.group(1) if mc else None, noms.get(_nom(mc.group(2) if mc else mu))]
+                if cods and len(cods[i]) < 5 and cods[i].isdigit():
+                    cands.append("17" + cods[i].zfill(3))
+                cod = next((c for c in cands if c and re.fullmatch(r"17\d{3}", c)), None)
                 if not cod or not re.fullmatch(r"17\d{3}", cod):
                     falten += 1
                     continue
                 files.append({"codi_ine": cod, "any": any_, **{k: nums[i * len(vars_) + j] for k, j in col.items()}})
             if falten:
-                res.append(f"AVISO gravamen {any_}: {falten} municipios sin código ({', '.join(m for m in muns if not noms.get(_nom(m)) and not re.match(r"17\d{3}", m))[:200]})")
+                res.append(f"AVISO gravamen {any_}: {falten} municipios sin código (ej. {muns[:2]}, códigos {(cods or [])[:2]}; {', '.join(m for m in muns if not noms.get(_nom(m)) and not re.match(r"17\d{3}", m))[:200]})")
         except Exception as e:  # noqa: BLE001
             res.append(f"AVISO gravamen {n}: {e}")
     if not files:
