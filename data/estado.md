@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 07:37 UTC
+Última ejecución: 2026-11-24 07:39 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -48,12 +48,12 @@
 | medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
 | energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
-| culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | avís | 2026-11-24 07:27 | 2026-11-24 07:32 | anual |
+| culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | ok | 2026-11-24 07:38 | 2026-11-24 07:38 | anual |
 
 ## Detalle de la última ejecución
 
-### culte: avís (322 s)
+### culte: ok (46 s)
 
 ```
-Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: ERROR 0 de 1271 elementos con sección (lat 41.14-41.92, lon -8.09--7.18)
+Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: 935 de 935 edificios religiosos con sección
 ```

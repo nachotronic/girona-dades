@@ -63,11 +63,11 @@
   "resum": "paro 2019: ya guardado\nparo 2020: ya guardado\nparo 2021: ya guardado\nparo 2022: ya guardado\nparo 2023: ya guardado\nparo 2024: ya guardado\nparo 2025: ya guardado\nparo 2026: 2210 filas de Girona, meses 202601-202610\ncontratos 2020: ya guardado\ncontratos 2021: ya guardado\ncontratos 2022: ya guardado\ncontratos 2023: ya guardado\ncontratos 2024: ya guardado\ncontratos 2025: ya guardado\ncontratos 2026: 2210 filas de Girona, meses 202601-202610\ndtes 2019: ya guardado\ndtes 2020: ya guardado\ndtes 2021: ya guardado\ndtes 2022: ya guardado\ndtes 2023: ya guardado\ndtes 2024: ya guardado\ndtes 2025: ya guardado\ndtes 2026: 2210 filas de Girona, meses 202601-202610"
  },
  "culte": {
-  "estat": "avís",
-  "intent": "2026-11-24T07:32:10Z",
-  "ok": "2026-11-24T07:27:28Z",
-  "durada": 322,
-  "resum": "Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: ERROR 0 de 1271 elementos con sección (lat 41.14-41.92, lon -8.09--7.18)"
+  "estat": "ok",
+  "intent": "2026-11-24T07:38:27Z",
+  "ok": "2026-11-24T07:38:27Z",
+  "durada": 46,
+  "resum": "Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: 935 de 935 edificios religiosos con sección"
  },
  "cultura": {
   "estat": "avís",
