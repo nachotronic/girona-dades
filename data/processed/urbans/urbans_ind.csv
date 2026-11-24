@@ -1,0 +1,65 @@
+ind,tabla,ambit,nombre,unidad
+21523,69329,dem,Población residente (Personas),Personas
+23121,69329,dem,Edad mediana de la población (años),Años
+292631,69329,dem,Proporción de población de  0-14 años (Porcentaje),Porcentaje
+292632,69329,dem,Proporción de población de 15-64 años (Porcentaje),Porcentaje
+292633,69329,dem,Proporción de población >=65 años (Porcentaje),Porcentaje
+292634,69329,dem,Proporción de nacionales sobre la población total (Porcentaje),Porcentaje
+292635,69329,dem,Proporción de nativos nacionales sobre la población total (Porcentaje),Porcentaje
+292636,69329,dem,Proporción de nacidos en el extranjero sobre la población total (Porcentaje),Porcentaje
+292637,69329,dem,Proporción de extranjeros sobre la población total (Porcentaje),Porcentaje
+292644,69329,dem,Tasa bruta de natalidad (Tantos por mil de personas),Tanto por mil
+292645,69329,dem,Tasa bruta de mortalidad (Tanto por mil de personas),Tanto por mil
+312422,69329,dem,Esperanza de vida al nacer (Años),Años
+321950,69329,dem,Número medio de hijos por mujer (Número),Número
+292638,69330,soc,Número total de hogares (Número),Número
+292639,69330,soc,Tamaño medio de los hogares (Número),Número
+292640,69330,soc,Proporción de hogares de una persona sobre el total de hogares (Porcentaje),Porcentaje
+292641,69330,soc,Número de viviendas convencionales según Catastro (Número),Número
+292642,69330,soc,Número de viviendas convencionales según Censo (Número),Número
+292643,69330,soc,Proporción de viviendas vacías (Porcentaje),Porcentaje
+311394,69330,soc,Total infracciones penales (Tasa por mil habitantes),Tanto por mil
+417725,69330,soc,Alquiler anual medio por metro cuadrado (Euros/m2),Euros/m2
+417726,69330,soc,Alquiler mensual medio (Euros),Euros
+417727,69330,soc,Mediana del alquiler anual por metro cuadrado (Euros/m2),Euros/m2
+417728,69330,soc,Mediana del alquiler mensual (Euros),Euros
+417729,69330,soc,Primer cuartil del alquiler anual por metro cuadrado (Euros/m2),Euros
+417730,69330,soc,Primer cuartil del alquiler mensual (Euros),Euros
+417731,69330,soc,Tercer cuartil del alquiler anual por metro cuadrado (Euros/m2),Euros/m2
+417732,69330,soc,Tercer cuartil del alquiler mensual (Euros),Euros
+437955,69330,soc,Robos y hurtos (Tasa por mil habitantes),Tanto por mil
+437956,69330,soc,Delitos contra la libertad sexual (Tasa por mil habitantes),Tanto por mil
+438466,69330,soc,Precio medio de la vivienda (Euros),Euros
+438467,69330,soc,Precio medio de la vivienda tipo piso (Euros),Euros
+438468,69330,soc,Precio medio de la vivienda tipo unifamiliar (Euros),Euros
+438469,69330,soc,Precio medio por metro cuadrado de la vivienda (Euros/m2),Euros
+438470,69330,soc,Precio medio por metro cuadrado de la vivienda tipo piso (Euros/m2),Euros/m2
+438471,69330,soc,Precio medio por metro cuadrado de la vivienda tipo unifamiliar (Euros/m2),Euros/m2
+283908,69331,eco,Tasa de actividad (Porcentaje),Porcentaje
+292646,69331,eco,Tasa de desempleo (Porcentaje),Porcentaje
+292647,69331,eco,Proporción de ocupados entre 20-64 años sobre la población activa (Porcentaje),Porcentaje
+292648,69331,eco,Proporción de empleo en servicios (NACE Rev.2 G-U) (Porcentaje),Porcentaje
+292649,69331,eco,Proporción de empleo en industria (NACE Rev.2 B-E) (Porcentaje),Porcentaje
+292650,69331,eco,Renta neta media anual de los hogares (Euros),Euros
+312423,69331,eco,Renta neta media anual por habitante (Euros),Euros
+312424,69331,eco,Renta neta media anual por unidad de consumo (Euros),Euros
+292651,69332,edu,Proporción de niños de 0-4 años en guarderías sobre la población de 0-4 años (Porcentaje),Porcentaje
+292652,69332,edu,"Proporción de población entre 25-64 años con máximo nivel educación ISCED 0, 1 ó 2 (Porcentaje)",Porcentaje
+292653,69332,edu,Proporción de población entre 25-64 años con máximo nivel de educación ISCED 3 ó 4 (Porcentaje),Porcentaje
+292654,69332,edu,"Proporción de población entre 25-64 años con máximo nivel de educación ISCED 5, 6, 7 ó 8 (Porcentaje)",Porcentaje
+292695,69333,sol,Superficie total (Km2),Kilómetros cuadrados
+312414,69333,sol,Uso del suelo (%): Tejido urbano residencial continuo,Porcentaje
+312415,69333,sol,Uso del suelo (%): Tejido urbano residencial discontinuo,Porcentaje
+312416,69333,sol,Uso del suelo (%): Infraestructuras de transporte,Porcentaje
+312417,69333,sol,"Uso del suelo (%): Unidades industriales, comerciales, públicas, militares y priva",Porcentaje
+312418,69333,sol,Uso del suelo (%): Otras zonas artificiales,Porcentaje
+312419,69333,sol,"Uso del suelo (%): Zonas verdes urbanas, instalaciones deportivas y de ocio",Porcentaje
+312420,69333,sol,Uso del suelo (%): Zonas agrícolas,Porcentaje
+312421,69333,sol,Uso del suelo (%): Zonas naturales,Porcentaje
+321951,69333,sol,"Relación de zona verdes, deportivas y de ocio sobre zonas urbanas residenciales continuas y discontinuas",Porcentaje
+21836,69334,mob,Porcentaje de desplazamientos al trabajo en coche (Porcentaje),Porcentaje
+21841,69334,mob,Porcentaje de desplazamientos al trabajo a pie (Porcentaje),Porcentaje
+21843,69334,mob,Porcentaje de desplazamientos al trabajo en transporte público (Porcentaje),Porcentaje
+21846,69334,mob,Duración media del desplazamiento al trabajo (Minutos),Minutos
+292655,69335,tur,Número de pernoctaciones turísticas anuales (Número),Número
+292656,69335,tur,Número de plazas disponibles en establecimientos turísticos (Número),Número
