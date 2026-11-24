@@ -149,6 +149,19 @@ def _financera(nom, pag, idm, fi):
     return _per_municipi(nom, pag, idm, "Municipi", "any", anys[:1], {}, ll, fi)
 
 
+def _col_prest(c: str) -> str:
+    c = c.lower()
+    if "total" in c:
+        return "total"
+    if "contributiu" in c:
+        return "contrib"
+    if "inserci" in c:
+        return "rai"
+    if "assistencial" in c or "subsidi" in c:
+        return "subsidi"
+    return "altres"
+
+
 def _prestacions(fi):
     """Una consulta por mes con los 221 municipios. Se revisan siempre los 3 últimos meses."""
     f = _sal("prestacions")
@@ -163,7 +176,6 @@ def _prestacions(fi):
     ultim = (int(any_def), int(mes_def))
     mesos = [(a, m) for a in range(min(int(x) for x in anys), ultim[0] + 1) for m in range(1, 13) if (a, m) <= ultim]
     pend = [p for p in mesos if f"{p[0]}-{p[1]:02d}" not in fets] + mesos[-3:]
-    cols = ["contrib", "subsidi", "rai", "total"]
     files, n = [], 0
     for a, m in dict.fromkeys(pend):
         if time.time() > fi:
@@ -171,10 +183,21 @@ def _prestacions(fi):
         h = html if (a, m) == ultim else _peticio("POST", pag, {"IdMenu": idm, "any": a, "mes": m, "dades": "0", "boton": "Actualitzar"})
         t = _taula_amb(h, lambda c: c[0].startswith("Codi INE"))
         n += 1
-        for r in (t or [])[1:]:
+        if not t:
+            continue
+        # Las columnas cambian con los años (antes había más tipos de subsidio): se leen por la cabecera
+        cols = [_col_prest(c) for c in t[0][2:]]
+        for r in t[1:]:
             if re.fullmatch(r"17\d{3}", r[0]):
+                vals = {}
                 for c, v in zip(cols, r[2:]):
-                    files.append({"ine": r[0], "mes": f"{a}-{m:02d}", "serie": c, "v": _num(v)})
+                    x = _num(v)
+                    if c in vals and x is not None:
+                        vals[c] = (vals[c] or 0) + x
+                    elif c not in vals:
+                        vals[c] = x
+                for c, x in vals.items():
+                    files.append({"ine": r[0], "mes": f"{a}-{m:02d}", "serie": c, "v": x})
     if files:
         d = pd.DataFrame(files).fillna("").astype(str)
         vell = vell[~vell["mes"].isin(set(d["mes"]))]

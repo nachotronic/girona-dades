@@ -158,6 +158,12 @@ def construir(municipios: list[dict]) -> dict:
     d = _llegeix("cens")
     if d is not None:
         d["n"] = pd.to_numeric(d["n"], errors="coerce")
+        # Tipo de vivienda: «no principal» incluye las vacías; se separan en secundarias y otras / vacías
+        h = d[d["taula"] == "hpt"].pivot_table(index=["ine", "any"], columns="cat", values="n", aggfunc="first").reset_index()
+        if {"Habitatge principal", "Habitatge no principal", "Habitatge buit"} <= set(h.columns):
+            h["Habitatge secundari o altres"] = h["Habitatge no principal"] - h["Habitatge buit"].fillna(0)
+            h = h.melt(id_vars=["ine", "any"], value_vars=["Habitatge principal", "Habitatge secundari o altres", "Habitatge buit"], var_name="cat", value_name="n")
+            d = pd.concat([d[d["taula"] != "hpt"], h.assign(taula="hpt")])
         prov["cens"] = {}
         for taula, g0 in d.groupby("taula"):
             cats = list(dict.fromkeys(g0["cat"]))

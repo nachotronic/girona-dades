@@ -9,8 +9,8 @@
     xm_ces: ["Quant costen els serveis", "Cost efectiu per habitant (€), mitjana de la província"], xm_ces_noms: { gi: "Últim any", esp: "Any anterior" },
     xm_pol: ["Policia local", "Efectius a 31 de desembre, per graduació"], xm_pol_noms: { gi: "Últim any", esp: "Fa dos anys" },
     xm_naix: ["On han nascut els que hi viuen", "% de la població de la província"], xm_naix_noms: { gi: "Població" },
-    xm_cens_hpt: ["Habitatges segons el tipus d'edifici", "% dels habitatges principals, cens del 2021"], xm_cens_hpt_noms: { gi: "Habitatges" },
-    xm_cens_enp: ["Edificis segons el nombre de plantes", "% dels edificis amb habitatge, cens del 2021"], xm_cens_enp_noms: { gi: "Edificis" },
+    xm_cens_hpt: ["Habitatges principals, secundaris i buits", "% dels habitatges, cens del 2021"], xm_cens_hpt_noms: { gi: "Habitatges" },
+    xm_cens_enp: ["Habitatges segons les plantes de l'edifici", "% dels habitatges, cens del 2021"], xm_cens_enp_noms: { gi: "Habitatges" },
     xm_tur_ocup: ["Ocupació de les places", "% de places ocupades, mitjana de l'any"], xm_tur_ocup_noms: { gi: "Hotels", bcn: "Càmpings", lle: "Turisme rural" },
     xm_tur_com: ["Ocupació per comarques", "% de places ocupades, mitjana de l'any"], xm_tur_com_noms: { gi: "Hotels", bcn: "Càmpings", lle: "Turisme rural" },
     xm_tur_pern: ["Pernoctacions per comarques", "Nits als hotels, milers"], xm_tur_pern_noms: { gi: "Últim any", esp: "Fa deu anys" },
@@ -18,8 +18,8 @@
     h_xm_ces: (s, v, a) => `El ${a}, el servei més car per habitant era <b>${s.toLowerCase()}</b>: ${v}.`,
     h_xm_pol: (n, a, h) => `El ${a}, la província tenia <b>${n} policies locals</b>, ${h} per cada 10.000 habitants.`,
     h_xm_naix: (e, m, a) => `El ${a}, el <b>${e}</b> dels habitants de la província havien nascut a l'estranger i el ${m} al mateix municipi on viuen.`,
-    h_xm_cens_hpt: (c, v) => `El 2021, el tipus d'habitatge més comú era <b>${c.toLowerCase()}</b>: el ${v}.`,
-    h_xm_cens_enp: (v) => `El 2021, el <b>${v}</b> dels edificis amb habitatge tenien una o dues plantes.`,
+    h_xm_cens_hpt: (p, b) => `El 2021, només el <b>${p}</b> dels habitatges de la província eren la residència habitual d'algú; el ${b} eren buits.`,
+    h_xm_cens_enp: (v) => `El 2021, el <b>${v}</b> dels habitatges eren en edificis d'una o dues plantes.`,
     h_xm_tur_ocup: (v, a) => `El ${a}, els hotels de la província van ocupar de mitjana el <b>${v}</b> de les places.`,
     h_xm_tur_com: (c, v, a) => `El ${a}, la comarca amb els hotels més plens va ser <b>${c}</b>, amb un ${v} d'ocupació.`,
     h_xm_tur_pern: (c, v, a) => `El ${a}, <b>${c}</b> va sumar ${v} pernoctacions d'hotel.`,
@@ -38,8 +38,8 @@
     xm_ces: ["Cuánto cuestan los servicios", "Coste efectivo por habitante (€), media de la provincia"], xm_ces_noms: { gi: "Último año", esp: "Año anterior" },
     xm_pol: ["Policía local", "Efectivos a 31 de diciembre, por graduación"], xm_pol_noms: { gi: "Último año", esp: "Hace dos años" },
     xm_naix: ["Dónde han nacido los que viven aquí", "% de la población de la provincia"], xm_naix_noms: { gi: "Población" },
-    xm_cens_hpt: ["Viviendas según el tipo de edificio", "% de las viviendas principales, censo de 2021"], xm_cens_hpt_noms: { gi: "Viviendas" },
-    xm_cens_enp: ["Edificios según el número de plantas", "% de los edificios con vivienda, censo de 2021"], xm_cens_enp_noms: { gi: "Edificios" },
+    xm_cens_hpt: ["Viviendas principales, secundarias y vacías", "% de las viviendas, censo de 2021"], xm_cens_hpt_noms: { gi: "Viviendas" },
+    xm_cens_enp: ["Viviendas según las plantas del edificio", "% de las viviendas, censo de 2021"], xm_cens_enp_noms: { gi: "Viviendas" },
     xm_tur_ocup: ["Ocupación de las plazas", "% de plazas ocupadas, media del año"], xm_tur_ocup_noms: { gi: "Hoteles", bcn: "Campings", lle: "Turismo rural" },
     xm_tur_com: ["Ocupación por comarcas", "% de plazas ocupadas, media del año"], xm_tur_com_noms: { gi: "Hoteles", bcn: "Campings", lle: "Turismo rural" },
     xm_tur_pern: ["Pernoctaciones por comarcas", "Noches en hoteles, miles"], xm_tur_pern_noms: { gi: "Último año", esp: "Hace diez años" },
@@ -47,8 +47,8 @@
     h_xm_ces: (s, v, a) => `En ${a}, el servicio más caro por habitante era <b>${s.toLowerCase()}</b>: ${v}.`,
     h_xm_pol: (n, a, h) => `En ${a}, la provincia tenía <b>${n} policías locales</b>, ${h} por cada 10.000 habitantes.`,
     h_xm_naix: (e, m, a) => `En ${a}, el <b>${e}</b> de los habitantes de la provincia había nacido en el extranjero y el ${m} en el mismo municipio donde vive.`,
-    h_xm_cens_hpt: (c, v) => `En 2021, el tipo de vivienda más común era <b>${c.toLowerCase()}</b>: el ${v}.`,
-    h_xm_cens_enp: (v) => `En 2021, el <b>${v}</b> de los edificios con vivienda tenían una o dos plantas.`,
+    h_xm_cens_hpt: (p, b) => `En 2021, solo el <b>${p}</b> de las viviendas de la provincia eran la residencia habitual de alguien; el ${b} estaban vacías.`,
+    h_xm_cens_enp: (v) => `En 2021, el <b>${v}</b> de las viviendas estaban en edificios de una o dos plantas.`,
     h_xm_tur_ocup: (v, a) => `En ${a}, los hoteles de la provincia ocuparon de media el <b>${v}</b> de las plazas.`,
     h_xm_tur_com: (c, v, a) => `En ${a}, la comarca con los hoteles más llenos fue <b>${c}</b>, con un ${v} de ocupación.`,
     h_xm_tur_pern: (c, v, a) => `En ${a}, <b>${c}</b> sumó ${v} pernoctaciones de hotel.`,
@@ -68,6 +68,8 @@
     "Altra comunitat autònoma": "Otra comunidad autónoma", "Total nascuts a l'estranger": "Extranjero",
     Agent: "Agente", Caporal: "Cabo", Sergent: "Sargento", Sotsinspector: "Subinspector", Inspector: "Inspector", Intendent: "Intendente", "Intendent major": "Intendente mayor", Superintendent: "Superintendente",
     "Província de Girona": "Provincia de Girona",
+    "Habitatge principal": "Vivienda principal", "Habitatge secundari o altres": "Segunda residencia u otros usos", "Habitatge buit": "Vivienda vacía",
+    "Una planta": "Una planta", "Dues plantes": "Dos plantas", "Tres plantes": "Tres plantas", "Quatre plantes": "Cuatro plantas", "Cinc plantes": "Cinco plantas", "Sis plantes": "Seis plantas", "Set plantes": "Siete plantas", "Vuit i més": "Ocho o más", "No costa": "No consta",
   };
   const CURT = { "Mateix municipi. Mateixa província": "Mateix municipi", "Diferent municipi. Mateixa província": "Un altre municipi de la província", "Altra comunitat autònoma": "Una altra comunitat autònoma", "Total nascuts a l'estranger": "Estranger" };
   const nom = (c) => (LANG === "es" ? TRAD[c] || c : CURT[c] || c);
@@ -102,7 +104,7 @@
       ["hpt", "enp"].forEach((k) => {
         const l = X.cens[k]; if (!l || !l.length) return;
         const t = l.reduce((u, x) => u + (x[1] || 0), 0); if (!t) return;
-        G["xm_cens_" + k] = { tipus: "barres", u: "%", dec: 1, claus: ["gi"], noms: "xm_cens_" + k, any: "2021", grups: l.map(([g, v]) => ({ g, gi: (v / t) * 100 })) };
+        G["xm_cens_" + k] = { tipus: "barres", u: "%", dec: 1, claus: ["gi"], noms: "xm_cens_" + k, any: "2021", grups: l.map(([g, v]) => ({ g: nom(g), gi: (v / t) * 100 })) };
       });
     }
     const TC = X.tur_com;
@@ -130,7 +132,7 @@
     if (id === "xm_ces" && gs.length) return tp("h_xm_ces", gs[0].g, eur(gs[0].gi), sp.any);
     if (id === "xm_pol") { const h = (R("pol_h")[sp.any] || {}).gi; return tp("h_xm_pol", fmt(sp.total), sp.any, h != null ? fmt(h, 1) : "–"); }
     if (id === "xm_naix" && gs.length) return tp("h_xm_naix", pct(gs[gs.length - 1].gi, 1), pct(gs[0].gi, 0), sp.any);
-    if (id === "xm_cens_hpt" && gs.length) { const t = [...gs].sort((a, b) => b.gi - a.gi)[0]; return tp("h_xm_cens_hpt", t.g, pct(t.gi, 0)); }
+    if (id === "xm_cens_hpt" && gs.length >= 3) return tp("h_xm_cens_hpt", pct(gs[0].gi, 0), pct(gs[2].gi, 0));
     if (id === "xm_cens_enp" && gs.length) return tp("h_xm_cens_enp", pct(gs.slice(0, 2).reduce((u, x) => u + (x.gi || 0), 0), 0));
     if (id === "xm_tur_ocup" && g) return tp("h_xm_tur_ocup", pct(g[2], 1), g[1]);
     if (id === "xm_tur_com" && gs.length) return tp("h_xm_tur_com", gs[0].g, pct(gs[0].gi, 1), sp.any);
