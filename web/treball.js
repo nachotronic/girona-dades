@@ -118,7 +118,7 @@
     tr_atur: ["Atur registrat", "Aturats, mitjana del trimestre"],
     tr_contr: ["Contractes", "Contractes registrats al trimestre"],
     tr_contr_pct: ["Qui fa i qui signa els contractes", "% dels contractes del trimestre"], tr_contr_pct_noms: { gi: "Fets per ETT", cat: "Signats per estrangers" },
-    tr_llocs: ["Llocs de treball per sector", "% dels llocs de treball, a final de trimestre"], tr_llocs_noms: { gi: "Serveis", cat: "Indústria", esp: "Construcció", bcn: "Agricultura" },
+    tr_llocs: ["Llocs de treball per sector", "% dels llocs de treball, a final de trimestre"], tr_llocs_noms: { gi: "Serveis", cat: "Indústria", esp: "Construcció", lle: "Agricultura" },
     tr_ocup: ["Qui treballa", "% dels afiliats residents a la província"], tr_ocup_noms: { gi: "Estrangers", cat: "Menys de 30 anys", esp: "55 anys o més" },
     tr_nf: ["Aturats per nivell d'estudis", "% dels aturats"], tr_nf_noms: { gi: "Mitjana de l'últim any", esp: "Últim mes" },
     tr_go: ["Aturats per ocupació", "% dels aturats, segons l'ocupació que busquen"], tr_go_noms: { gi: "Mitjana de l'últim any", esp: "Últim mes" },
@@ -139,7 +139,7 @@
     tr_atur: ["Paro registrado", "Parados, media del trimestre"],
     tr_contr: ["Contratos", "Contratos registrados en el trimestre"],
     tr_contr_pct: ["Quién hace y quién firma los contratos", "% de los contratos del trimestre"], tr_contr_pct_noms: { gi: "Hechos por ETT", cat: "Firmados por extranjeros" },
-    tr_llocs: ["Puestos de trabajo por sector", "% de los puestos de trabajo, a final de trimestre"], tr_llocs_noms: { gi: "Servicios", cat: "Industria", esp: "Construcción", bcn: "Agricultura" },
+    tr_llocs: ["Puestos de trabajo por sector", "% de los puestos de trabajo, a final de trimestre"], tr_llocs_noms: { gi: "Servicios", cat: "Industria", esp: "Construcción", lle: "Agricultura" },
     tr_ocup: ["Quién trabaja", "% de los afiliados residentes en la provincia"], tr_ocup_noms: { gi: "Extranjeros", cat: "Menos de 30 años", esp: "55 años o más" },
     tr_nf: ["Parados por nivel de estudios", "% de los parados"], tr_nf_noms: { gi: "Media del último año", esp: "Último mes" },
     tr_go: ["Parados por ocupación", "% de los parados, según la ocupación que buscan"], tr_go_noms: { gi: "Media del último año", esp: "Último mes" },
@@ -167,7 +167,7 @@
     if (P.atur) G.tr_atur = lin({ gi: serie(P.atur) }, "", 0, { zero: true });
     if (P.contr) G.tr_contr = lin({ gi: serie(P.contr) }, "", 0, { zero: true });
     if (P.contr_ett) G.tr_contr_pct = lin({ gi: serie(P.contr_ett), cat: serie(P.contr_est) }, "%", 1, { noms: "tr_contr_pct" });
-    if (P.llocs_serv) G.tr_llocs = lin({ gi: serie(P.llocs_serv), cat: serie(P.llocs_ind), esp: serie(P.llocs_cons), bcn: serie(P.llocs_agri) }, "%", 1, { noms: "tr_llocs" });
+    if (P.llocs_serv) G.tr_llocs = lin({ gi: serie(P.llocs_serv), cat: serie(P.llocs_ind), esp: serie(P.llocs_cons), lle: serie(P.llocs_agri) }, "%", 1, { noms: "tr_llocs" });
     if (P.ocup_est) G.tr_ocup = lin({ gi: serie(P.ocup_est), cat: serie(P.ocup_30), esp: serie(P.ocup_55) }, "%", 1, { noms: "tr_ocup" });
     const c = x.cat;
     if (c) {

@@ -38,6 +38,7 @@ def construir(municipios: list[dict]) -> dict | None:
     if not len(d):
         return None
     d = d[d["per"].str.fullmatch(r"\d{4}T[1-4]", na=False)]
+    d = d.assign(v=pd.to_numeric(d["v"], errors="coerce").astype(float))
     piv = d.pivot_table(index=["ine", "per"], columns="serie", values="v", aggfunc="first")
     pers = sorted(set(d["per"]))
     # Sin trimestres vacíos por en medio
