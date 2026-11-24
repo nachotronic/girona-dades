@@ -3,6 +3,9 @@
 - i2dd-kfpa  geometrías de las ABP
 - dtpq-6fvw  relación municipio -> ABP
 - qnyt-emjc  hechos penales conocidos, resueltos y detenciones por ABP y mes
+- y48r-ae59  hechos de odio y discriminación (delitos e infracciones administrativas) por año,
+             ABP, municipio (los de menos de 20.000 habitantes van juntos como «Resta de municipis»)
+             y ámbito (racismo, LGTBI-fobia, ideología…); anual
 
 Se guardan las ABP que tocan la provincia y los hechos agregados por ABP, año
 y título del Código Penal para toda Cataluña (para poder comparar).
@@ -67,6 +70,21 @@ def mensuals(f: pd.DataFrame, sal) -> str:
             f"12 meses por ABP: {a['abp'].nunique()} ABP" + (f"; ERROR tipos sin casar: {sense}" if sense else ""))
 
 
+def odi(sal) -> str:
+    """Hechos de odio y discriminación (Mossos): suma por año, ABP, municipio, ámbito y tipo, toda Cataluña."""
+    from .salut import soql
+    d = soql("y48r-ae59", **{
+        "$select": "any, rea_b_sica_policial_abp as abp, prov_ncia as provincia, municipi, mbit_fet as ambit, "
+                   "tipus_de_fet as tipus, sum(nombre_fets_o_infraccions) as n",
+        "$group": "any, rea_b_sica_policial_abp, prov_ncia, municipi, mbit_fet, tipus_de_fet",
+        "$order": "any, abp, municipi"})
+    d["n"] = pd.to_numeric(d["n"], errors="coerce").fillna(0).astype(int)
+    d.to_csv(sal / "odi_fets.csv", index=False)
+    g = d[d["provincia"] == "Girona"]
+    return (f"odio: {d['n'].sum()} hechos {d['any'].min()}-{d['any'].max()}, "
+            f"Girona {g['n'].sum()} ({', '.join(f'{a}: {n}' for a, n in g.groupby('any')['n'].sum().items())})")
+
+
 def ejecutar() -> str:
     import geopandas as gpd
     from shapely import wkt
@@ -119,6 +137,11 @@ def ejecutar() -> str:
     dins.to_crs(4326)[["codi", "nom", "clau", "poblacio", "geometry"]].to_file(
         sal / "abp.geojson", driver="GeoJSON", COORDINATE_PRECISION=5)
     lineas.append(f"{len(dins)} ABP en la provincia (de {len(g)}): {', '.join(dins['nom'])}")
+
+    try:
+        lineas.append(odi(sal))
+    except Exception as e:  # noqa: BLE001
+        lineas.append(f"ERROR odio (y48r-ae59): {e}")
 
     f = _csv("qnyt-emjc")
     f["Coneguts"] = pd.to_numeric(f["Coneguts"], errors="coerce").fillna(0)

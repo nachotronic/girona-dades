@@ -372,6 +372,81 @@ def _interior(municipios, pp, refs, anys):
 
 
 # ---------------------------------------------------------------------------
+# Delitos de odio (Mossos): municipios de más de 20.000 habitantes, ABP y provincia
+
+# ABP antiguas (antes de 2022) -> ABP actuales
+ODI_ABP = {"girona": "estany girones pla", "lloret mar": "litoral selva", "feliu guixols sant": "baix emporda feliu sant"}
+ODI_AMB = [("racisme", r"tni|racial|gitan"), ("lgtbi", r"lgtbi"), ("politica", r"pol[ií]tica"),
+           ("religio", r"isl[aà]m|religi|antisemit"), ("sexisme", r"sexisme"), ("aporofobia", r"aporof"),
+           ("discapacitat", r"discapacitat")]
+ODI_N = 3  # años completos que se promedian
+
+
+def _ambit(a) -> str:
+    a = str(a).lower()
+    return next((k for k, pat in ODI_AMB if re.search(pat, a)), "altres")
+
+
+def _odi(municipios, pp, refs, anys):
+    f = P / "policia" / "odi_fets.csv"
+    if not f.exists():
+        return {}, {}, {}
+    from fuentes.policia import clau_abp
+    d = pd.read_csv(f, dtype=str)
+    d["n"] = pd.to_numeric(d["n"], errors="coerce").fillna(0)
+    d["any"] = pd.to_numeric(d["any"], errors="coerce")
+    d = d.dropna(subset=["any"])
+    d["any"] = d["any"].astype(int)
+    d["k"] = d["ambit"].map(_ambit)
+    anys_ = sorted(d["any"].unique())
+    ult = anys_[-ODI_N:]
+    per = f"{ult[0]}–{ult[-1]}"
+    gi = d[d["provincia"] == "Girona"]
+    u = d[d["any"].isin(ult)]
+    ug = gi[gi["any"].isin(ult)]
+    # Municipios de más de 20.000 habitantes: los únicos que los Mossos publican siempre por separado
+    grans = {normaliza(m["nom"]): m for m in municipios if (m.get("poblacion") or 0) > 20000}
+    x = {}
+    for nom, g in ug.groupby(ug["municipi"].map(lambda v: normaliza(str(v)))):
+        m = grans.get(nom)
+        if m:
+            x[m["ine"]] = {"odi": taxa(g["n"].sum() / len(ult), m["poblacion"], 100000, 1)}
+    for m in grans.values():  # sin ningún hecho en el periodo
+        x.setdefault(m["ine"], {"odi": 0.0})
+    # ABP: población de cada área
+    pa = pd.read_csv(P / "policia" / "poblacio_abp.csv")
+    pob = dict(zip(pa["clau"], pa["poblacio"]))
+    cl = u["abp"].map(lambda v: clau_abp(str(v))).map(lambda c: ODI_ABP.get(c, c))
+    abp = {}
+    for c, n in u.groupby(cl)["n"].sum().items():
+        if c in pob:
+            abp[c] = {"mo_odi": taxa(n / len(ult), pob[c], 100000, 1)}
+    g = json.loads((P / "policia" / "abp.geojson").read_text(encoding="utf-8"))
+    for c in (f["properties"]["clau"] for f in g["features"]):
+        abp.setdefault(c, {"mo_odi": 0.0})
+    pb = _pob_any(pp, ult[-1])
+    refs["odi"] = {"gi": taxa(ug["n"].sum() / len(ult), pb.get("gi"), 100000, 1), "cat": taxa(u["n"].sum() / len(ult), pb.get("cat"), 100000, 1)}
+    refs["mo_odi"] = dict(refs["odi"])
+    anys["odi"] = anys["mo_odi"] = per
+    # Gráficos de la provincia: evolución y ámbitos
+    series = {}
+    for z, g in (("gi", gi), ("cat", d)):
+        s = g.groupby("any")["n"].sum()
+        series[z] = [[int(a), str(a), taxa(v, _pob_any(pp, a).get(z), 100000, 1)] for a, v in s.items()]
+    sg, sc = ug.groupby("k")["n"].sum(), u.groupby("k")["n"].sum()
+    grups = [{"g": k, "c": "odi:" + k, "gi": r(sg.get(k, 0) / sg.sum() * 100, 1), "cat": r(sc.get(k, 0) / sc.sum() * 100, 1)}
+             for k in [k for k, _ in ODI_AMB] + ["altres"] if sc.get(k, 0) or sg.get(k, 0)]
+    grups = sorted([g for g in grups if g["c"] != "odi:altres"], key=lambda g: -(g["gi"] or 0)) + [g for g in grups if g["c"] == "odi:altres"]
+    ng = gi[gi["any"] == ult[-1]]["n"].sum()
+    ng0 = gi[gi["any"] == ult[-1] - 1]["n"].sum()
+    prov = {"odi_any": {"tipus": "linia", "u": "", "dec": 1, "noms": "odia", "series": series,
+                        "abs": {"n": int(ng), "n_ant": int(ng0), "any": int(ult[-1]), "a0": int(anys_[0]), "n0": int(gi[gi["any"] == anys_[0]]["n"].sum())}},
+            "odi_ambit": {"tipus": "barres", "u": "%", "dec": 1, "claus": ["gi", "cat"], "noms": "odib", "grups": grups,
+                          "abs": {"per": per, "n": int(ug["n"].sum())}}}
+    return x, abp, prov
+
+
+# ---------------------------------------------------------------------------
 
 def construir(municipios, salida: pathlib.Path) -> dict:
     refs, anys, prov, x = {}, {}, {}, {}
@@ -405,5 +480,15 @@ def construir(municipios, salida: pathlib.Path) -> dict:
     for c, o in xi.items():
         x.setdefault(c, {}).update(o)
     prov.update(pi)
-    print(f"justicia: {len(zona_pj)} partidos, {len(abp)} ABP con tipos, {len(xi)} municipios de Interior, gráficos {sorted(prov)}")
+    try:
+        xo, ao, po = _odi(municipios, pp, refs, anys)
+    except Exception as e:  # noqa: BLE001
+        print("AVISO odio:", e)
+        xo, ao, po = {}, {}, {}
+    for c, o in xo.items():
+        x.setdefault(c, {}).update(o)
+    for c, o in ao.items():
+        abp.setdefault(c, {}).update(o)
+    prov.update(po)
+    print(f"justicia: {len(zona_pj)} partidos, {len(abp)} ABP con tipos, {len(xi)} municipios de Interior, {len(xo)} con delitos de odio, gráficos {sorted(prov)}")
     return {"pj": zona_pj, "abp": abp, "x": x, "refs": refs, "anys": anys, "prov": prov}
