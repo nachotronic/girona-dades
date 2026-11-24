@@ -97,6 +97,7 @@
     { id: "cad", ca: "Cadastre", es: "Catastro" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
+    { id: "urb", ca: "Ciutats (INE)", es: "Ciudades (INE)" },
     { id: "ele", ca: "Eleccions", es: "Elecciones" },
     { id: "pol", ca: "Alcaldies", es: "Alcaldías" },
   ];
@@ -235,6 +236,9 @@
     ["pa", ["Anomalia de pluja", "Pluja de l'any davant la mitjana dels anys anteriors (%)"], ["Anomalía de lluvia", "Lluvia del año frente a la media de los años anteriores (%)"], PCA],
     ["pluja1", ["Dies de pluja", "Dies amb 1 mm de pluja o més"], ["Días de lluvia", "Días con 1 mm de lluvia o más"], N0],
   ];
+  // Indicadores urbanos del INE: m.ua = {clave: {año: valor}}, D.ua.z.esp = España; solo los 10 municipios de más de 20.000 hab.
+  const UAV = (k) => (m, a) => (a != null && m.ua && m.ua[k] && m.ua[k][a] != null ? m.ua[k][a] : null);
+  const UAE = (k, a) => { const z = D.ua && D.ua.z && D.ua.z.esp && D.ua.z.esp[k]; return z && a != null && z[a] != null ? z[a] : null; };
   // Energia i connectivitat: m.en = {clave: {año: valor}}, D.anys.en_cert/en_rec/en_carb/en_cob; secciones en SEC[cusec]["en_cert_*"]; D.en_ref = medianas de carburantes
   const EN = (k) => (m, a) => (a != null && m.en && m.en[k] && m.en[k][a] != null ? m.en[k][a] : null);
   const NOTA_CERT = { ca: "Institut Català d'Energia (ICAEN), registre de certificats d'eficiència energètica d'edificis (des del 2016). Habitatges amb certificat, l'últim de cada referència cadastral; qualificació de consum d'energia primària no renovable. Només municipis amb 10 certificats o més i seccions amb 30 o més. Certifiquen sobretot els pisos que es venen o es lloguen.", es: "Institut Català d'Energia (ICAEN), registro de certificados de eficiencia energética de edificios (desde 2016). Viviendas con certificado, el último de cada referencia catastral; calificación de consumo de energía primaria no renovable. Solo municipios con 10 certificados o más y secciones con 30 o más. Se certifican sobre todo los pisos que se venden o se alquilan." };
@@ -873,6 +877,9 @@
       ref: ["menor", "directe", "contr_hab"].includes(k) ? () => ({ cat: DPR("dp_" + k)(anyActiu() || (D.anys && D.anys[a])).cat }) : undefined, ...fmtk })),
     ...DPC.map(([k, ca, es]) => ({ id: "dp_c_" + k, tema: "dp", ca, es, a: "dp_subv", sumable: false, com: DPZ(k), nota: NOTA_SUBVC, ...EUR0,
       ref: k === "subv" ? () => { const o = DPR("dp_c_subv")(D.anys && D.anys.dp_subv); return { gi: o.gi, cat: o.cat }; } : undefined })),
+    ...(window.UA_CAT || []).filter((x) => x[5]).map(([k, , ca, es, fk]) => ({ id: "ua_" + k.slice(1).replace(/^_/, ""), uk: k, tema: "urb", ca, es, a: "ua", sumable: false, cob: 0.004,
+      v: (m) => UAV(k)(m, anysDe(IND.find((i) => i.uk === k)).slice(-1)[0]), t: UAV(k),
+      ref: () => { const i = IND.find((x) => x.uk === k), a = anyActiu() || anysDe(i).slice(-1)[0]; return { esp: window.UA_ABS.has(k) ? null : UAE(k, a) }; }, nota: window.UA_NOTA, ...window.UA_FMT(fk) })),
     ...SOM.map(([k, a, ca, es, nota, fmtk]) => ({ id: "soc_" + k, tema: "soc", ca, es, a, sumable: false, v: (m) => SO("soc_" + k)(m, D.anys && D.anys[a]), nota, ...fmtk })),
     ...SOC.map(([k, ca, es]) => ({ id: "soc_c_" + k, tema: "soc", ca, es, a: "soc_c_" + k, sumable: false, com: SOZ(k), nota: NOTA_SOCC, ...N1,
       ref: () => { const r = D.soc_ref && D.soc_ref["soc_c_" + k]; const o = r ? r[D.anys && D.anys["soc_c_" + k]] || CUL_DARRER(r) : null; return o ? { gi: o.gi, cat: o.cat } : {}; } })),
@@ -1085,7 +1092,7 @@
     const txt = i[LANG][curt ? 0 : 1];
     if (curt) return txt;
     if (i.el) { const c = elInfo(); return c ? `${txt}\u00a0· ${c.n[LANG]}` : txt; }
-    const a = i === ind && anyActiu() ? anyActiu() : typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
+    const a = i === ind && anyActiu() ? anyActiu() : i.uk ? anysDe(i).slice(-1)[0] : typeof i.a === "number" ? i.a : i.a && D.anys ? D.anys[i.a] : null;
     const ap = i.per && !a && D.cj ? anysDe(i).slice(-1)[0] : a;
     return ap ? `${txt} · ${etPer(String(ap))}` : txt;
   };
@@ -1116,6 +1123,7 @@
       if (i.tema === "tri") D.municipios.forEach((m) => Object.values(m.trib || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "acc") D.municipios.forEach((m) => Object.values(m.acc || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "cul") D.municipios.forEach((m) => Object.values(m.cul || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.tema === "urb") D.municipios.forEach((m) => Object.keys((m.ua || {})[i.uk] || {}).forEach((a) => tots.add(a)));
       if (i.tema === "dp" && i.dk) D.municipios.forEach((m) => Object.keys((m.dp || {})[i.dk] || {}).forEach((a) => tots.add(a)));
       if (i.a === "en_cob") D.municipios.forEach((m) => Object.entries(m.en || {}).forEach(([k, o]) => /^en_cob_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "amb_seq") D.municipios.forEach((m) => Object.entries(m.amb || {}).forEach(([k, o]) => /^seq_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
@@ -1366,7 +1374,7 @@
     const el = document.getElementById("info");
     const mini = (m) => (ind.t && !esArea(nivell) ? minigrafic([
       ...(m ? [{ nom: m.nom, cls: "s-mun", d: serieMun(ind, m) }] : []),
-      { nom: t("prov_curt"), cls: "s-prov", d: serieProv(ind) },
+      ...(!ind.uk ? [{ nom: t("prov_curt"), cls: "s-prov", d: serieProv(ind) }] : window.UA_ABS.has(ind.uk) ? [] : [{ nom: t("ref_esp"), cls: "s-prov", d: (D.ua && D.ua.z && D.ua.z.esp && D.ua.z.esp[ind.uk]) || {} }]),
     ]) : "");
     if (!props) { el.innerHTML = `<p class="pista">${t("pista")}</p>${mini(null)}`; return; }
     if (ind.el) return infoEl(el, props);
@@ -1668,7 +1676,7 @@
       const files = IND.filter((i) => i.tema === tm.id && !i.cat && !i.el && !(i.buit && i.buit())).map((i) => {
         const v = valorM(i);
         if (v == null || !isFinite(v)) return "";
-        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "ats" || /^hb/.test(i.a || "") || i.a === "veh" || i.a === "acc" || i.a === "accu" || /^cul_/.test(i.a || "") || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
+        const r = (i.ref && (i.a === "sol" || i.a === "irpf" || i.a === "ats" || /^hb/.test(i.a || "") || i.a === "veh" || i.a === "acc" || i.a === "accu" || /^cul_/.test(i.a || "") || i.a === "ua" || ["cad", "cad_vm2", "cad_ibi"].includes(i.a)) ? i.ref() : (D.ref || {})[i.id]) || {};
         const gi = valorProvincia(i), cat = r.cat, esp = r.esp;
         // Escala: todos los municipios (o áreas) y las referencias
         const zk = i.abs ? "abs" : i.abp ? "abp" : "pj";
