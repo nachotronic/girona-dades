@@ -1453,3 +1453,5 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 .tur-air { margin-top: 28px; }
 #not-esp-ctl .ex-any { max-width: 100%; }
 #not-esp-ctl select { max-width: calc(100vw - 140px); }
+/* Con Notarías hay 17 enlaces: menos espaciado para que quepan a 1440 px */
+@media (min-width: 1280px) { .menu { gap: 7px; } .menu a { letter-spacing: 0; } }
