@@ -2,7 +2,7 @@
 
   policia.csv    efectivos de la policía local por graduación (últimos 3 años)
   naixement.csv  población por lugar de nacimiento (último año)
-  cens.csv       censo de viviendas 2021: instalaciones, problemas, tipo de vivienda y plantas
+  cens.csv       censo de viviendas 2021: tipo de vivienda y edificios por número de plantas
   romanent.csv   remanente de tesorería (cuatro últimos años)
   resultat.csv   resultado presupuestario (cuatro últimos años)
   cesel.csv      coste efectivo de los servicios (tres últimos años)
@@ -100,12 +100,12 @@ def _naixement(fi):
     return _per_municipi("naixement", "demografia/dpn1.asp", "03020301", "mun_ambit", "any", anys[:1], {"dades": "0"}, ll, fi)
 
 
-CENS = {"hin": ("qualitat/hab_hin.asp", "03031103"), "hpp": ("qualitat/hab_hpp.asp", "03031104"),
-        "hpt": ("qualitat/hab_hpt.asp", "03031105"), "enp": ("qualitat/hab_enp.asp", "03031108")}
+# Instalaciones (hab_hin) y problemas del edificio (hab_hpp) solo llegan a 2011 y 2001: no se bajan
+CENS = {"hpt": ("qualitat/hab_hpt.asp", "03031105"), "enp": ("qualitat/hab_enp.asp", "03031108")}
 
 
 def _cens(fi):
-    if _sal("cens").exists():
+    if _sal("cens").exists() and set(pd.read_csv(_sal("cens"), dtype=str)["taula"]) >= set(CENS):
         return "cens: al día (censo 2021)"
     res, files = [], []
     for k, (pag, idm) in CENS.items():
@@ -120,7 +120,7 @@ def _cens(fi):
         if f.exists():
             files.append(pd.read_csv(f, dtype=str))
             f.unlink()
-    if len(files) == len(CENS):
+    if files:
         pd.concat(files).to_csv(_sal("cens"), index=False)
     return "; ".join(res)
 
