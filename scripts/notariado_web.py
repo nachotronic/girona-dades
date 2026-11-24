@@ -1,6 +1,6 @@
 """Sección «Notaries» de la web: actos notariales por provincia (Consejo General del Notariado).
 
-Lee data/processed/notariado/actes.csv (fuentes/notariado.py) y la población provincial de
+Lee data/processed/notariado/actes.csv.gz (fuentes/notariado.py) y la población provincial de
 data/processed/exportacions/poblacio.csv, y escribe web/datos/notariado.json, que la web pide al
 pintar la sección:
 
@@ -54,6 +54,11 @@ def _trimestre(d: pd.DataFrame) -> pd.DataFrame:
     d = d.copy()
     m = d["freq"] == "m"
     d.loc[m, "per"] = (d.loc[m, "per"] - 1) // 3 + 1
+    # solo trimestres completos (los tres meses) de los indicadores mensuales
+    k = ["clau", "zona", "any", "per", "var"]
+    n = d[m].groupby(k)["valor"].transform("size")
+    d = d[~m | (n.reindex(d.index).fillna(3) == 3)]
+    d = d.groupby(k + ["freq"], as_index=False)["valor"].sum()
     d["freq"] = "t"
     return d
 
@@ -84,7 +89,7 @@ def _afegeix_cat(s: pd.DataFrame) -> pd.DataFrame:
 
 
 def construir(salida: pathlib.Path) -> dict:
-    fa = DIR / "actes.csv"
+    fa = DIR / "actes.csv.gz"
     if not fa.exists():
         return {"resum": "sin datos"}
     a = pd.read_csv(fa, dtype={"zona": str})

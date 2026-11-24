@@ -8,7 +8,7 @@ ciudades), así que se descargan todas las provincias y el total de España para
 Cada indicador se pide con la frecuencia más fina que el Notariado publica para las provincias
 (mensual o trimestral). Se guarda una tabla larga:
 
-  data/processed/notariado/actes.csv   clau, zona (código INE de provincia o ES), any, per
+  data/processed/notariado/actes.csv.gz  clau, zona (código INE de provincia o ES), any, per
                                        (mes 1-12 o trimestre 1-4), freq (m/t),
                                        var (n = número de actos, cuantia = importe medio en €,
                                        capital, capital_mitja, socis, socis_mitja), valor
@@ -95,10 +95,12 @@ def consulta(clau: str, geografia: str) -> list[dict]:
         per = d.get("MES") or d.get("TRIMESTRE") or d.get("SEMESTRE") or "1"
         vs = d["VARIABLES"] if isinstance(d["VARIABLES"], list) else [d["VARIABLES"]]
         for v in vs:
-            if v.get("VALOR") in (None, ""):
+            try:
+                valor = float(v.get("VALOR"))
+            except (TypeError, ValueError):  # «ND»: dato no disponible (pocos actos)
                 continue
             files.append({"clau": clau, "zona": zona, "any": int(d["ANO"]), "per": int(per), "freq": freq,
-                          "var": VARS.get(str(v["ID"]), str(v["ID"])), "valor": float(v["VALOR"])})
+                          "var": VARS.get(str(v["ID"]), str(v["ID"])), "valor": valor})
     return files
 
 
@@ -125,7 +127,7 @@ def ejecutar() -> str:
     if not totes:
         raise RuntimeError("el Notariado no ha devuelto datos")
     d = pd.DataFrame(totes).drop_duplicates(["clau", "zona", "any", "per", "var"], keep="last")
-    d.sort_values(["clau", "zona", "any", "per", "var"]).to_csv(carpeta("notariado") / "actes.csv", index=False)
+    d.sort_values(["clau", "zona", "any", "per", "var"]).to_csv(carpeta("notariado") / "actes.csv.gz", index=False)
     lineas.append(f"actes.csv: {len(d)} filas, {d['clau'].nunique()} indicadores")
     return "\n".join(lineas)
 
