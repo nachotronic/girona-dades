@@ -330,9 +330,9 @@
  },
  "xifra_treball": {
   "estat": "avís",
-  "intent": "2026-11-24T09:30:28Z",
+  "intent": "2026-11-24T09:50:57Z",
   "ok": null,
-  "durada": 494,
-  "resum": "atur: 87 trimestres nuevos o revisados hasta 2026T3; atur_est: 83 trimestres nuevos o revisados hasta 2026T3; contr: 83 trimestres nuevos o revisados hasta 2026T3; contr_est: 83 trimestres nuevos o revisados hasta 2026T3; contr_ett: 83 trimestres nuevos o revisados hasta 2026T3; llocs: 75 trimestres bajados hasta 2026T3; ocup: 58 trimestres bajados hasta 2026T2; atur_cat: ERROR sin datos; pa: 0/74 trimestres completos hasta 2026T2 (0 tocados en esta ejecución)"
+  "durada": 8610,
+  "resum": "atur: 2 trimestres nuevos o revisados hasta 2026T3; atur_est: 2 trimestres nuevos o revisados hasta 2026T3; contr: 2 trimestres nuevos o revisados hasta 2026T3; contr_est: 2 trimestres nuevos o revisados hasta 2026T3; contr_ett: 2 trimestres nuevos o revisados hasta 2026T3; llocs: 2 trimestres bajados hasta 2026T3 (assal 2210 valores, auton 2210 valores); ocup: 2 trimestres bajados hasta 2026T2 (ocup 1326 valores, ocup_edat 2210 valores, ocup_nac 0 valores); atur_cat: 221 municipios, 2025 y 2026-10; pa: ERROR atur/aturepe.asp"
  }
 }

@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 09:38 UTC
+Última ejecución: 2026-11-24 12:14 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -52,12 +52,12 @@
 | social — Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb) | ok | 2026-11-23 21:48 | 2026-11-23 21:48 | setmanal/anual |
 | urbans — INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona | ok | 2026-11-24 08:01 | 2026-11-24 08:01 | anual |
 | notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | ok | 2026-11-24 08:18 | 2026-11-24 08:18 | mensual/trimestral |
-| xifra_treball — Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral | avís | — | 2026-11-24 09:30 | mensual |
+| xifra_treball — Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral | avís | — | 2026-11-24 09:50 | mensual |
 
 ## Detalle de la última ejecución
 
-### xifra_treball: avís (494 s)
+### xifra_treball: avís (8610 s)
 
 ```
-atur: 87 trimestres nuevos o revisados hasta 2026T3; atur_est: 83 trimestres nuevos o revisados hasta 2026T3; contr: 83 trimestres nuevos o revisados hasta 2026T3; contr_est: 83 trimestres nuevos o revisados hasta 2026T3; contr_ett: 83 trimestres nuevos o revisados hasta 2026T3; llocs: 75 trimestres bajados hasta 2026T3; ocup: 58 trimestres bajados hasta 2026T2; atur_cat: ERROR sin datos; pa: 0/74 trimestres completos hasta 2026T2 (0 tocados en esta ejecución)
+atur: 2 trimestres nuevos o revisados hasta 2026T3; atur_est: 2 trimestres nuevos o revisados hasta 2026T3; contr: 2 trimestres nuevos o revisados hasta 2026T3; contr_est: 2 trimestres nuevos o revisados hasta 2026T3; contr_ett: 2 trimestres nuevos o revisados hasta 2026T3; llocs: 2 trimestres bajados hasta 2026T3 (assal 2210 valores, auton 2210 valores); ocup: 2 trimestres bajados hasta 2026T2 (ocup 1326 valores, ocup_edat 2210 valores, ocup_nac 0 valores); atur_cat: 221 municipios, 2025 y 2026-10; pa: ERROR atur/aturepe.asp
 ```
