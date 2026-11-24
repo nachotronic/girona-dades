@@ -6,6 +6,8 @@
   romanent.csv   remanente de tesorería (cuatro últimos años)
   resultat.csv   resultado presupuestario (cuatro últimos años)
   cesel.csv      coste efectivo de los servicios (tres últimos años)
+  prestacions.csv beneficiarios de prestaciones por desempleo por municipio y mes desde 2010
+                 (contributiva, subsidio, renta activa de inserción, total)
   tur_comarca.csv viajeros, pernoctaciones y ocupación de hoteles, campings y turismo rural
                  por comarca, anual y trimestral desde 2006
 
@@ -67,7 +69,7 @@ def _per_municipi(nom, pag, idm, camp_mun, camp_any, anys, extra, llegeix, fi):
     if f.exists() and "any" in d:
         vell = pd.read_csv(f, dtype=str)
         vell = vell[~vell["any"].isin(set(d["any"].astype(str)))]
-        d = pd.concat([vell, d.astype(str)])
+        d = pd.concat([vell, d.fillna("").astype(str)])
     d.to_csv(f, index=False)
     return f"{nom}: {d['ine'].nunique()} municipios"
 
@@ -147,6 +149,39 @@ def _financera(nom, pag, idm, fi):
     return _per_municipi(nom, pag, idm, "Municipi", "any", anys[:1], {}, ll, fi)
 
 
+def _prestacions(fi):
+    """Una consulta por mes con los 221 municipios. Se revisan siempre los 3 últimos meses."""
+    f = _sal("prestacions")
+    vell = pd.read_csv(f, dtype=str) if f.exists() else pd.DataFrame(columns=["ine", "mes", "serie", "v"])
+    fets = set(vell["mes"])
+    pag, idm = "atur/ppd.asp", "030609"
+    html = _peticio("GET", f"{pag}?IdMenu={idm}")
+    anys, any_def = _opcions(html, "any")
+    _, mes_def = _opcions(html, "mes")
+    if not anys or not any_def or not mes_def:
+        return "prestacions: ERROR sin formulario"
+    ultim = (int(any_def), int(mes_def))
+    mesos = [(a, m) for a in range(min(int(x) for x in anys), ultim[0] + 1) for m in range(1, 13) if (a, m) <= ultim]
+    pend = [p for p in mesos if f"{p[0]}-{p[1]:02d}" not in fets] + mesos[-3:]
+    cols = ["contrib", "subsidi", "rai", "total"]
+    files, n = [], 0
+    for a, m in dict.fromkeys(pend):
+        if time.time() > fi:
+            break
+        h = html if (a, m) == ultim else _peticio("POST", pag, {"IdMenu": idm, "any": a, "mes": m, "dades": "0", "boton": "Actualitzar"})
+        t = _taula_amb(h, lambda c: c[0].startswith("Codi INE"))
+        n += 1
+        for r in (t or [])[1:]:
+            if re.fullmatch(r"17\d{3}", r[0]):
+                for c, v in zip(cols, r[2:]):
+                    files.append({"ine": r[0], "mes": f"{a}-{m:02d}", "serie": c, "v": _num(v)})
+    if files:
+        d = pd.DataFrame(files).fillna("").astype(str)
+        vell = vell[~vell["mes"].isin(set(d["mes"]))]
+        pd.concat([vell, d]).sort_values(["mes", "serie", "ine"]).to_csv(f, index=False)
+    return f"prestacions: {n} meses consultados hasta {ultim[0]}-{ultim[1]:02d}"
+
+
 TUR = {"hotel": ("provincials/activecon/tur_enq_hotel.asp", "03040802"),
        "camping": ("provincials/activecon/tur_enq_campings.asp", "03040804"),
        "rural": ("provincials/activecon/tur_enq_trural.asp", "03040806")}
@@ -180,7 +215,7 @@ def _turisme_comarca(fi):
                         files.append({"tipus": tipus, "any": a, "trim": q, "comarca": r[1],
                                       "viatgers": _num(r[2]), "pernoct": _num(r[3]), "ocup": _num(r[4]) if len(r) > 4 else None})
     if files:
-        d = pd.DataFrame(files).astype(str)
+        d = pd.DataFrame(files).fillna("").astype(str)
         clau = set(zip(d["tipus"], d["any"], d["trim"]))
         vell = vell[[(a, b, c) not in clau for a, b, c in zip(vell["tipus"], vell["any"], vell["trim"])]]
         pd.concat([vell, d]).to_csv(f, index=False)
@@ -190,7 +225,7 @@ def _turisme_comarca(fi):
 def ejecutar() -> str:
     fi = time.time() + LIMIT_S
     res = []
-    for fn in (_turisme_comarca, _policia, _naixement,
+    for fn in (_prestacions, _turisme_comarca, _policia, _naixement,
                lambda fi: _financera("romanent", "financera/rop.asp", "03070107", fi),
                lambda fi: _financera("resultat", "financera/rep.asp", "03070106", fi),
                lambda fi: _financera("cesel", "financera/cesel.asp", "030706", fi),
