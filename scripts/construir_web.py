@@ -2920,6 +2920,19 @@ def main():
     anys_extra.update(dpw["anys"])
     for c, o in dpw["com"].items():
         zones.setdefault("com", {}).setdefault(c, {}).update({"dp_" + k: v for k, v in o.items()})
+    # Indicadores urbanos del INE (Urban Audit): municipios de más de 20.000 habitantes. Tema «urb», sección Ciutats y ficha
+    import urbans_web
+    try:
+        uaw = urbans_web.construir(municipios)
+        print("urbans:", uaw["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin indicadores urbanos
+        print("urbans: ERROR", type(e).__name__, e)
+        uaw = {"mun": {}, "rank": {}, "zones": {}, "n": 0, "anys": {}}
+    for m in municipios:
+        if m["ine"] in uaw["mun"]:
+            m["ua"] = uaw["mun"][m["ine"]]
+            m["ua_r"] = uaw["rank"].get(m["ine"], {})
+    anys_extra.update({k: v for k, v in uaw["anys"].items() if v})
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -2939,7 +2952,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

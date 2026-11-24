@@ -1335,3 +1335,79 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 /* Diners públics: llista de contractes grans */
 .dp-grans li span:first-child { white-space: normal; }
 .dp-grans small { color: var(--text-3); font: 400 11.5px var(--mono); }
+
+/* ---------- Indicadors urbans (INE): comparador de ciutats i bloc de la fitxa ---------- */
+.urb-xifres { grid-template-columns: repeat(5, 1fr); gap: 0 28px; }
+.urb-xifres .xifra .valor { font-size: clamp(30px, 3vw, 42px); }
+@media (max-width: 1100px) { .urb-xifres { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px) { .urb-xifres { grid-template-columns: repeat(2, 1fr); gap: 0 24px; } }
+.urb-comp { margin-top: 28px; border-top: 2px solid var(--tinta); padding-top: 16px; }
+.urb-ctl { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 24px; }
+.urb-ctl label { display: flex; flex-direction: column; gap: 6px; }
+.urb-ctl .sobre { margin: 0; }
+.urb-ctl select { font: 500 14px/1.2 var(--mono); padding: 9px 10px; min-width: min(340px, 100%); max-width: 100%; border: 1px solid var(--tinta); border-radius: 0; background: var(--paper); color: var(--tinta); }
+.urb-pista { font: 400 11.5px/1.4 var(--mono); color: var(--text-3); margin: 0 0 10px; }
+.urb-tit { font: 800 clamp(24px, 2.6vw, 32px)/1.08 var(--serif); font-stretch: 72%; letter-spacing: -0.01em; color: var(--tinta); margin: 18px 0 4px; }
+.urb-tit small { display: block; font: 500 11.5px/1.4 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); margin-top: 6px; font-stretch: 100%; }
+.urb-dues { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 40px; }
+@media (max-width: 860px) { .urb-dues { grid-template-columns: 1fr; gap: 8px; } }
+.ub { list-style: none; margin: 0; padding: 0; }
+.ub li { display: grid; grid-template-columns: minmax(96px, 30%) 1fr auto 74px; gap: 10px; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--vora); font-size: 13.5px; }
+.ub li[data-ine] { cursor: pointer; }
+.ub li[data-ine]:hover .ub-n, .ub li[data-ine]:focus-visible .ub-n { text-decoration: underline; text-underline-offset: 3px; }
+.ub li:focus-visible { outline: 2px solid var(--serie-1); outline-offset: 1px; }
+.ub-n { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ub-b { height: 12px; background: transparent; }
+.ub-b b { display: block; height: 100%; background: var(--barra-suau); }
+.ub-v { font: 500 13px var(--mono); color: var(--tinta); text-align: right; white-space: nowrap; }
+.ub-r { font: 400 10.5px var(--mono); color: var(--text-3); text-align: right; white-space: nowrap; }
+.ub-sel .ub-n { font-weight: 700; color: var(--tinta); }
+.ub-sel .ub-b b { background: var(--serie-1); }
+.ub-refs { margin-top: 10px; border-top: 1px solid var(--tinta); }
+.ub-refs li { font-size: 12.5px; }
+.ub-refs .ub-n { color: var(--text-2); }
+.ub-refs .ub-b b { background: var(--vora-2); }
+.ub-refs .ub-esp .ub-b b { background: var(--accent); }
+.ub-buit { font-size: 13px; color: var(--text-3); }
+.urb-linies { min-height: 230px; }
+.ul { width: 100%; height: auto; display: block; overflow: visible; }
+.ul-g { stroke: var(--graella); stroke-width: 1; }
+.ul-t { font: 10.5px var(--mono); fill: var(--text-3); }
+.ul-l { fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.ul-alt { stroke: var(--vora-2); stroke-width: 1.25; }
+.ul-esp { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 5 4; }
+.ul-sel { stroke: var(--serie-1); stroke-width: 3; }
+.ul-p.ul-esp { fill: var(--accent); stroke: none; } .ul-p.ul-sel { fill: var(--serie-1); stroke: none; }
+.ul-e { font: 500 11px var(--mono); }
+.ul-e.ul-sel { fill: var(--serie-1); stroke: none; font-weight: 700; } .ul-e.ul-esp { fill: var(--accent); stroke: none; }
+.ul-guia { stroke: var(--text-3); stroke-dasharray: 3 3; }
+.lleg-ul { display: flex; flex-wrap: wrap; gap: 4px 16px; font: 400 11px var(--mono); color: var(--text-2); margin: 6px 0 0; }
+.lleg-ul > span { display: inline-flex; align-items: center; gap: 6px; }
+.lleg-ul i { display: inline-block; width: 16px; height: 0; border-top: 3px solid var(--serie-1); }
+.lleg-ul .ul-esp i { border-top: 2px dashed var(--accent); }
+.lleg-ul .ul-alt i { border-top: 1.5px solid var(--vora-2); }
+.lleg-ul > span { stroke: none; }
+.fx-ua { grid-column: 1 / -1; }
+.ua-taula-caixa { overflow-x: auto; }
+.ua-taula { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.ua-taula thead th { font: 500 10.5px/1.3 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-3); text-align: right; padding: 0 0 6px 12px; border-bottom: 1px solid var(--tinta); }
+.ua-taula thead th:first-child { text-align: left; padding-left: 0; }
+.ua-taula td, .ua-taula tbody th { padding: 6px 0 6px 12px; border-bottom: 1px solid var(--vora); text-align: right; vertical-align: top; font: 400 13px var(--mono); color: var(--text-2); white-space: nowrap; }
+.ua-taula tbody th { text-align: left; padding-left: 0; font: 500 14px/1.25 var(--sans); color: var(--tinta); white-space: normal; }
+.ua-taula tbody th small { display: block; font: 400 12px/1.3 var(--sans); color: var(--text-3); margin-top: 2px; }
+.ua-taula .ua-v { color: var(--tinta); font-weight: 500; }
+.ua-taula .ua-v small { display: block; font-size: 10.5px; color: var(--text-3); font-weight: 400; }
+.ua-taula tr.ua-g th { font: 500 11px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-3); padding-top: 18px; border-bottom: 1px solid var(--tinta); }
+.ua-p { min-width: 150px; }
+.ua-p span:last-child { display: block; }
+.ua-strip { display: block; position: relative; height: 6px; background: var(--fons-2); margin: 5px 0 4px; }
+.ua-strip i { position: absolute; top: -2px; width: 10px; height: 10px; border-radius: 50%; background: var(--serie-1); transform: translateX(-5px); }
+.ua-mes { margin: 12px 0 0; font-size: 14px; }
+@media (max-width: 560px) {
+  .ub li { grid-template-columns: minmax(84px, 34%) 1fr auto; }
+  .ub-r { grid-column: 1 / -1; text-align: left; margin-top: -4px; }
+  .ub-r:empty { display: none; }
+  .ua-p { min-width: 96px; }
+  .ua-taula td:nth-child(3) { display: none; }
+  .ua-taula thead th:nth-child(3) { display: none; }
+}

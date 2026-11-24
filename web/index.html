@@ -51,6 +51,7 @@
       <a href="#s-amb" data-t="nav_amb">Medi ambient</a>
       <a href="#s-ene" data-t="nav_ene">Energia</a>
       <a href="#s-dp" data-t="nav_dp">Diners</a>
+      <a href="#s-urb" data-t="nav_urb">Ciutats</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -292,9 +293,19 @@
     <div class="pg-graella" id="dp-grafics"></div>
   </section>
 
+  <section id="s-urb" class="amplada sec" aria-labelledby="h-urb">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">12</span> <span data-t="sec_urb">Ciutats</span></p>
+      <h2 id="h-urb" data-t="h_urb">Deu ciutats davant les d'Espanya</h2>
+      <p class="lead" data-t="lead_urb">Els Indicadors urbans de l'INE comparen amb el mateix mètode tots els municipis d'Espanya de més de 20.000 habitants: preu de l'habitatge i del lloguer, atur, renda, estudis, delinqüència, edat, turisme… A la província n'hi ha deu. Tria un indicador i mira com queden entre elles, davant l'àrea urbana de Girona i davant Espanya. Al mapa, el tema «Ciutats (INE)».</p>
+    </header>
+    <div class="xifres urb-xifres" id="urb-xifres"></div>
+    <div class="urb-comp" id="urb-comp"></div>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">12</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">13</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -413,6 +424,7 @@
       <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/2xiz-255m">Departament de Cultura, Programa.cat i agenda cultural</a><span data-t="f_cul_prog">funcions professionals de teatre, música, circ i dansa per municipi i data (Programa.cat), i activitats de l'agenda cultural</span></li>
       <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/q9ct-fkjt">Consorci per a la Normalització Lingüística</a><span data-t="f_cul_cpnl">inscripcions als cursos de català per municipi i any</span></li>
       <li data-font="culte"><a href="https://analisi.transparenciacatalunya.cat/d/fmpi-m3ni">Generalitat, Direcció General d'Afers Religiosos, i OpenStreetMap</a><span data-t="f_culte">centres de culte actius per municipi i confessió, des del 2020; edificis religiosos cartografiats per secció censal</span></li>
+      <li data-font="urbans"><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176957&amp;menu=ultiDatos&amp;idp=1254735976608">INE, Indicadors urbans (Urban Audit)</a><span data-t="f_urbans">indicadors anuals dels municipis de més de 20.000 habitants, l'àrea urbana funcional i la conurbació de Girona, des del 2010</span></li>
       <li data-font="emq"><a href="https://www.atmgirona.cat/mobilitat/emq/">ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025</a><span data-t="f_emq">desplaçaments, mitjà de transport, motiu, horari, origen i destinació, vehicles i teletreball per municipi i comarca</span></li>
     </ul>
     <ul class="peu-legal">
@@ -429,6 +441,7 @@
 <div id="tip" class="tip" role="status" hidden></div>
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="app.js"></script>
+<script src="urbans-cat.js"></script>
 <script src="mapa.js"></script>
 <script src="conjuntura.js"></script>
 <script src="provincia.js"></script>
@@ -448,6 +461,7 @@
 <script src="demografia.js"></script>
 <script src="mediambient.js"></script>
 <script src="energia.js"></script>
+<script src="urbans.js"></script>
 <script src="diners.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
