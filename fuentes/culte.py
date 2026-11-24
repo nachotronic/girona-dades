@@ -32,6 +32,14 @@ def soql(ident: str, **params) -> pd.DataFrame:
     return pd.read_csv(io.BytesIO(r.content), dtype=str, low_memory=False)
 
 
+def _sesion_post(url, q):
+    import requests
+    from .comun import UA
+    r = requests.post(url, data={"data": q}, headers={"User-Agent": UA}, timeout=300)
+    r.raise_for_status()
+    return r
+
+
 def _generalitat(d) -> str:
     c = soql("fmpi-m3ni", **{"$where": "codi_provincia='17'", "$order": "any,codi_municipi,id_entitat"})
     c["ine"] = c["codi_municipi"].str.zfill(6).str[:5]
@@ -48,9 +56,12 @@ def _osm(d) -> str:
     j, err = None, None
     for url in OVERPASS:
         try:
-            r = get(url, params={"data": Q_OSM}, timeout=300)
+            r = _sesion_post(url, Q_OSM)
             j = r.json()
-            break
+            if j.get("elements"):
+                break
+            err = RuntimeError(f"{url}: sin elementos ({str(j.get('remark', ''))[:200]})")
+            j = None
         except Exception as e:  # noqa: BLE001 - se prueba el siguiente servidor
             err = e
     if j is None:
@@ -70,9 +81,13 @@ def _osm(d) -> str:
     s = gpd.sjoin(pts, sec.to_crs(4326), predicate="within", how="left")
     s = s[~s.index.duplicated()]
     o["cusec"], o["ine"] = s["cusec"].to_numpy(), s["ine"].to_numpy()
+    tot = len(o)
+    caixa = f"lat {o['lat'].min():.2f}-{o['lat'].max():.2f}, lon {o['lon'].min():.2f}-{o['lon'].max():.2f}"
     o = o[o["cusec"].notna()].sort_values(["cusec", "osm"])
+    if len(o) < 500:
+        return f"OSM: ERROR {len(o)} de {tot} elementos con sección ({caixa})"
     o.to_csv(d / "culte_osm.csv", index=False)
-    return f"OSM: {len(o)} edificios religiosos con sección"
+    return f"OSM: {len(o)} de {tot} edificios religiosos con sección"
 
 
 def ejecutar() -> str:
