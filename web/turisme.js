@@ -16,6 +16,7 @@
       g_mov: "Turistes a l'any", g_hut: "Pisos turístics registrats", g_mesos: (a) => `Turistes de cada mes, ${a}`,
       estr: "Estrangers", nac: "D'altres províncies", fr: (v) => `El ${v} dels estrangers són francesos.`,
       estiu: (v) => `El juliol i l'agost hi arriba el ${v} dels turistes de l'any.`,
+      pas: "Punt de pas: la telefonia mòbil hi compta com a turistes sobretot camioners i viatgers que hi dormen de camí i mòbils francesos de la frontera. Per això aquí no es donen turistes per mòbil ni entren als rànquings; el gràfic mensual és només orientatiu.",
       font: "Fonts: Registre de Turisme de Catalunya; Xifra (Diputació de Girona); INE, turisme a partir de la telefonia mòbil (experimental); Agència Tributària de Catalunya.",
       mesos: ["G", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
       x_places: "Places turístiques", xn_places: (v) => `${v} per cada 100 habitants`,
@@ -39,6 +40,7 @@
       g_mov: "Turistas al año", g_hut: "Pisos turísticos registrados", g_mesos: (a) => `Turistas de cada mes, ${a}`,
       estr: "Extranjeros", nac: "De otras provincias", fr: (v) => `El ${v} de los extranjeros son franceses.`,
       estiu: (v) => `En julio y agosto llega el ${v} de los turistas del año.`,
+      pas: "Punto de paso: la telefonía móvil cuenta aquí como turistas sobre todo a camioneros y viajeros que duermen de camino y a móviles franceses de la frontera. Por eso aquí no se dan turistas por móvil ni entran en los rankings; el gráfico mensual es solo orientativo.",
       font: "Fuentes: Registre de Turisme de Catalunya; Xifra (Diputació de Girona); INE, turismo a partir de la telefonía móvil (experimental); Agència Tributària de Catalunya.",
       mesos: ["E", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
       x_places: "Plazas turísticas", xn_places: (v) => `${v} por cada 100 habitantes`,
@@ -93,7 +95,8 @@
     if (!tiles.length) { cont.innerHTML = ""; return; }
     const frases = [];
     const afr = ultA(tu.mov_fr); if (afr && tu.mov_fr[afr] >= 1) frases.push(tx("fr", pct(tu.mov_fr[afr], 0)));
-    const aes = ultA(tu.estiu_p); if (aes) frases.push(tx("estiu", pct(tu.estiu_p[aes], 0)));
+    const aes = ultA(tu.estiu_p); if (aes && !f.mov_pas) frases.push(tx("estiu", pct(tu.estiu_p[aes], 0)));
+    if (f.mov_pas) frases.push(tx("pas"));
     // Turistas de cada mes del último año completo (extranjeros + otras provincias)
     let mesos = "";
     const mv = f.mov || {};
