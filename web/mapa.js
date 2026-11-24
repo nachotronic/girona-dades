@@ -1664,16 +1664,28 @@
     get ind() { return ind; }, get nivell() { return nivell; }, get any() { return anySel; }, get fixat() { return fixat; }, get mapa() { return mapa; },
     tria(id) { const i = IND.find((x) => x.id === id); if (!i) return; consulta = ""; const c = document.getElementById("cerca-ind"); if (c) c.value = ""; return tria(i); },
     // Para pregunta.js: área (de salud, policial, judicial, de Agents Rurals) de un municipio y nombres de las áreas
-    async area(n, ine) {
+    // Comarca: la del municipio. Estaciones de aire y meteorológicas: la que lo cubre o, si no, la más cercana con dato (hasta `max` km)
+    async area(n, ine, te) {
       const m = munPerIne[ine] || D.municipios.find((x) => x.ine === ine);
       if (!m) return null;
       if (n === "pj") return m.x && m.x.pj ? { id: m.x.pj, nom: m.x.pj_nom } : null;
+      if (n === "com") return m.comarca ? { id: m.comarca, nom: m.comarca } : null;
       if (!geoMun || !ZONA[n]) return null;
-      return areaDe(n, m);
+      const z = await areaDe(n, m);
+      if (n !== "aire" && n !== "met") return z;
+      if (z && (!te || te(z.id))) return { ...z, km: 0 };
+      const f = geoMun.features.find((x) => x.properties.ine === m.ine);
+      if (!f) return null;
+      const [x0, y0] = centre(f), km = ([x, y]) => Math.hypot((x - x0) * 111.32 * Math.cos((y0 * Math.PI) / 180), (y - y0) * 110.57);
+      const max = n === "aire" ? 20 : 15;
+      let millor = null;
+      ZONA[n].geo.features.forEach((e) => { const d = km(centre(e)); if (d <= max && (!te || te(e.properties.id)) && (!millor || d < millor.km)) millor = { ...e.properties, km: d }; });
+      return millor;
     },
     async noms(n) {
       const o = {};
       if (n === "pj") { D.municipios.forEach((m) => { if (m.x && m.x.pj) o[m.x.pj] = m.x.pj_nom; }); return o; }
+      if (n === "com") { Object.keys((D.arees && D.arees.com) || {}).forEach((c) => { o[c] = c; }); return o; }
       if (!ZONA[n]) return o;
       await carregaZona(n);
       ZONA[n].geo.features.forEach((f) => { o[f.properties.id] = f.properties.nom; });

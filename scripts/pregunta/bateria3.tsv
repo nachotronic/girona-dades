@@ -1,0 +1,100 @@
+# Dades noves (nov 2026): medi ambient, energia, diners públics, cultura, trànsit, segona mà, pobresa per nacionalitat, seccions provincials
+# pregunta	indicador esperat (alternatives amb |, - cap)	municipis (separats per ;)	tipus
+¿Cuántos días de sequía grave ha tenido Figueres?	amb_seq_exc|amb_seq_exc_tot	Figueres	mun
+municipios con más días de sequía	amb_seq_exc|amb_seq_exc_tot|amb_seq_alerta		rank
+dies en alerta per sequera a Olot	amb_seq_alerta	Olot	mun
+¿Qué parte de Cadaqués es Red Natura 2000?	amb_n2000_pct	Cadaqués	mun
+espacios naturales protegidos en Lloret de Mar	amb_enp_pct	Lloret de Mar	mun
+municipios con más espacio protegido	amb_enp_pct|amb_n2000_pct		rank
+nitratos en Vic	-		fora
+contaminación por nitratos en Banyoles	amb_zvn_pct	Banyoles	mun
+zona vulnerable de nitrats a Torroella de Montgrí	amb_zvn_pct	Torroella de Montgrí	mun
+cuántas playas tiene Palafrugell	amb_platges|tur_platges	Palafrugell	mun
+municipis amb més platges	amb_platges|tur_platges		rank
+¿Cuánta agua gasta cada casa en el Gironès?	amb_c_dom		rank|area
+consumo de agua en Girona	amb_c_dom|amb_c_tot	Girona	area
+consum d'aigua domèstic a Olot	amb_c_dom	Olot	area
+calidad del aire en Girona	amb_a_no2|amb_a_pm10|amb_a_o3|amb_a_pm25	Girona	area
+dióxido de nitrógeno en Girona	amb_a_no2	Girona	area
+ozono en Agullana	amb_a_o3	Agullana	area
+partículas PM10 en Girona	amb_a_pm10	Girona	area
+temperatura media en Olot	amb_m_t	Olot	area
+¿Dónde hace más calor?	amb_m_tx|amb_m_dies30|amb_m_t		rank
+noches tropicales en Girona	amb_m_nits20	Girona	area
+cuánto llueve en Portbou	amb_m_p	Portbou	area
+días de helada en Puigcerdà	amb_m_glacades	Puigcerdà	area
+on plou més	amb_m_p|amb_m_pluja1		rank
+pisos poco eficientes en Girona	en_cert_eg|cert_eg	Girona	mun
+pisos con letra G en Salt	en_cert_g	Salt	mun
+certificado energético de los pisos de Figueres	en_cert_eg|en_cert_ab|en_cert_n|en_cert_kwh|cert_eg|cert_ab	Figueres	mun
+eficiencia energética de las viviendas en Blanes	en_cert_eg|en_cert_ab|cert_eg|cert_ab	Blanes	mun
+consumo de energía de los pisos en Olot	en_cert_kwh	Olot	mun
+puntos de recarga de coches eléctricos en Girona	en_rec_n|en_rec_10k	Girona	mun
+on puc carregar el cotxe elèctric a Figueres	en_rec_n|en_rec_10k	Figueres	mun
+cargadores rápidos en Lloret	en_rec_rapid	Lloret de Mar	mun
+cuántas gasolineras hay en Blanes	en_gas_n	Blanes	mun
+precio de la gasolina en Figueres	en_gas_g95	Figueres	mun
+dónde está más barata la gasolina	en_gas_g95		rank
+preu del gasoil a Olot	en_gas_diesel	Olot	mun
+diesel más barato	en_gas_diesel		rank
+fibra óptica en Cadaqués	en_cob_ftth	Cadaqués	mun
+cobertura 5G en Ripoll	en_cob_5g	Ripoll	mun
+pueblos sin fibra	en_cob_ftth		rank
+internet rápido en Camprodon	en_cob_100|en_cob_1g|en_cob_ftth	Camprodon	mun
+contratos del ayuntamiento de Girona	dp_contr_hab	Girona	mun
+contratos menores en Lloret de Mar	dp_menor	Lloret de Mar	mun
+contractes a dit a Figueres	dp_menor|dp_directe	Figueres	mun
+adjudicaciones a dedo en Salt	dp_directe|dp_menor	Salt	mun
+concursos con una sola oferta en Blanes	dp_1of	Blanes	mun
+ayuntamientos con más concursos de una sola oferta	dp_1of		rank
+ofertas por concurso en Olot	dp_of	Olot	mun
+contratos a pymes en Banyoles	dp_pime	Banyoles	mun
+subvenciones del ayuntamiento de Roses	dp_subv_hab	Roses	mun
+subvenciones recibidas en el Ripollès	dp_c_subv|dp_c_subv_gen		rank|area
+subvenciones de la Generalitat en Olot	dp_c_subv_gen	Olot	area
+ayudas de la Diputación en Girona	dp_c_subv_dip	Girona	area
+ajuts socials a Figueres	dp_c_subv_soc	Figueres	area
+préstamos de libros en Girona	cul_b_prest_h|cul_b_prest	Girona	mun
+quién lee más libros	cul_b_prest_h		rank
+visitas a la biblioteca de Olot	cul_b_vis_h|cul_b_vis	Olot	mun
+carnet de biblioteca en Figueres	cul_b_carn_p	Figueres	mun
+cuántos museos hay en Girona	cul_e_mus|museus	Girona	mun
+cines en Figueres	cul_e_cin	Figueres	mun
+teatros en Girona	cul_e_teatres|cul_e_esc	Girona	mun
+equipamientos culturales en Banyoles	cul_e_n_h|cul_e_n	Banyoles	mun
+cursos de catalán en Salt	cul_cpnl_h|cul_cpnl_n	Salt	mun
+agenda cultural de Olot	cul_ag_h|cul_ag_n	Olot	mun
+funciones de teatro en Girona	cul_p_h|cul_p_n	Girona	mun
+librerías en Girona	cul_llib_n	Girona	mun
+espectadores de cine en el Gironès	cul_c_esp|cul_c_esp_h		rank|area
+mezquitas en Salt	cul_ct_isl	Salt	area
+iglesias evangélicas en Figueres	cul_ct_ev	Figueres	area
+centros de culto en Girona	cul_ct_h|cul_ct_n	Girona	area
+visitantes de museos en Figueres	cul_m_vis_h|cul_m_vis	Figueres	area
+accidentes de tráfico en Girona	acc_s_n|acc_u_h|acc_u_n|acc_s_mfg_h5	Girona	mun
+muertos en la carretera en Figueres	acc_s_morts	Figueres	mun
+atropellos en Girona	acc_u_vian_h|acc_s_vian_p	Girona	mun
+accidentes de moto en Lloret	acc_s_moto_p|acc_u_moto_h	Lloret de Mar	mun
+ciclistas heridos en Girona	acc_u_bici_h	Girona	mun
+municipios más peligrosos en la carretera	acc_s_mfg_h5|acc_s_mfg_h|acc_s_carr_p		rank
+accidents de trànsit a Olot	acc_s_n|acc_u_h|acc_u_n|acc_s_mfg_h5	Olot	mun
+coches de segunda mano vendidos en Figueres	cj_trf|veh_trf	Figueres	mun
+venta de coches usados en Girona	cj_trf|veh_trf	Girona	mun
+riesgo de pobreza de los extranjeros en Salt	pobresa_ext	Salt	mun
+pobreza de los españoles en Figueres	pobresa_esp	Figueres	mun
+placas solares en Girona	sol_n|sol_h|sol_w	Girona	mun
+residuos industriales en Celrà	residus_ind	Celrà	mun
+emisiones de CO2 de los hogares en Girona	co2_residencial	Girona	mun
+cerdos en Vic	-		fora
+cerdos en Torroella de Montgrí	ram_porcs|ram_porcs_hab	Torroella de Montgrí	mun
+viñedos en Capmany	agr_vinya	Capmany	mun
+olivos en Ventalló	agr_olivera	Ventalló	mun
+rentabilidad de las pymes	graf:pime_rf		graf
+pimes de Girona	graf:pime_rf|graf:pime_vab|graf:pime_vendes|graf:pime_deute	Girona	graf
+exportaciones de la provincia	graf:evol|graf:mon|graf:caps		graf
+què exporta Girona	graf:caps	Girona	graf
+nombres de bebés más puestos	graf:noms		graf
+causas de muerte	graf:causes|graf:dm_causes_sexe		graf
+listas de espera de los hospitales	graf:le_quir_hosp|graf:le_quir|graf:le_pacients|graf:le_ext_hosp		graf
+nivel de los embalses	graf:amb_emb		graf
+reserva dels embassaments	graf:amb_emb		graf

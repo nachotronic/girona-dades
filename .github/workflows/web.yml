@@ -42,6 +42,16 @@ jobs:
           node scripts/referencia/extreu.mjs web build/referencia.json
           VERSIO=${GITHUB_SHA::8} python scripts/referencia/genera.py build/referencia.json --publica
           ls web/ca web/es && head -5 web/llms.txt
+      # Buscador «Pregunta a los datos»: baterías de prueba y cobertura (qué indicadores y gráficos nuevos se encuentran
+      # y cuáles no tienen sinónimos en web/pregunta-dic.js). Sale en el resumen de la ejecución. No bloquea la publicación.
+      - name: Buscador de preguntas
+        continue-on-error: true
+        run: |
+          cd "$RUNNER_TEMP" && npm pack --silent maplibre-gl@4.7.1 && tar xzf maplibre-gl-4.7.1.tgz && cd "$GITHUB_WORKSPACE"
+          export MAPLIBRE="$RUNNER_TEMP/package/dist/maplibre-gl.js"
+          echo "## Buscador: baterías de prueba" >> "$GITHUB_STEP_SUMMARY"
+          for b in bateria bateria2 bateria3; do echo "- $b: $(node scripts/pregunta/prova.mjs web scripts/pregunta/$b.tsv | tail -1)" >> "$GITHUB_STEP_SUMMARY"; done
+          node scripts/pregunta/cobertura.mjs web --md "$GITHUB_STEP_SUMMARY"
       # Versiona CSS y JS en cada publicación para que el navegador no mezcle un index.html nuevo con estilos viejos en caché
       - run: sed -i -E "s/(href|src)=\"([a-z0-9-]+\.(css|js))\"/\1=\"\2?v=${GITHUB_SHA::8}\"/g" web/index.html web/qui-som.html web/avis-legal.html web/privacitat.html && grep -E "estilos|mapa\.js" web/index.html
       # Igual con los datos: sin versión, el navegador puede usar 10 minutos un municipios.json viejo con un mapa.js nuevo
