@@ -110,17 +110,22 @@ def poblacio(lineas: list[str]) -> None:
     js = get(u, reintentos=5).json()
     files = []
     for s in js:
-        cod = next((m.get("Codigo") for m in s.get("MetaData", []) if m.get("FK_Variable") in (115, 349)), None)
+        # con tip=AM la MetaData trae T3_Variable y Codigo («00» = total nacional)
+        cod = next((m.get("Codigo") for m in s.get("MetaData", [])
+                    if m.get("T3_Variable") in ("Provincias", "Total Nacional", "Total nacional") and m.get("Codigo")), None)
+        if cod is None:
+            cod = next((m.get("Codigo") for m in s.get("MetaData", [])
+                        if m.get("Codigo") and str(m["Codigo"]).isdigit() and len(str(m["Codigo"])) == 2), None)
         if cod is None:
             continue
         zona = "ES" if cod == "00" else cod
-        per_any: dict[int, tuple[int, float]] = {}
+        per_any: dict[int, tuple[str, float]] = {}
         for d in s.get("Data", []):
             if d.get("Valor") is None:
                 continue
-            a, p = int(d["Anyo"]), int(d.get("FK_Periodo") or 0)
-            if a not in per_any or p < per_any[a][0]:  # el primer periodo del año (1 de enero)
-                per_any[a] = (p, float(d["Valor"]))
+            a, f = int(d["Anyo"]), str(d.get("Fecha") or d.get("FK_Periodo") or "")
+            if a not in per_any or f < per_any[a][0]:  # el primer dato del año (1 de enero)
+                per_any[a] = (f, float(d["Valor"]))
         files += [{"prov": zona, "any": a, "poblacio": v} for a, (_, v) in per_any.items()]
     p = pd.DataFrame(files)
     if p.empty or p["prov"].nunique() < 50:
