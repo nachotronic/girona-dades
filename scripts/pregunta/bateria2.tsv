@@ -93,7 +93,7 @@ gente mayor en Olot	majors65	Olot	mun
 niños en Salt	menors18	Salt	mun
 gente que habla catalán en Olot	catala	Olot	mun
 pensiones en Figueres	pensions|pensio_mitjana	Figueres	mun
-quant costa un pis a Girona	lloguer|cad_vm2|cad_vm|compra	Girona	mun
+quant costa un pis a Girona	preu_m2|lloguer|cad_vm2|cad_vm|compra	Girona	mun
 lloguer a Figueres i Girona	lloguer	Figueres;Girona	comp
 atur a Banyoles	cj_atur	Banyoles	mun
 quina és la renda de Salt	renda	Salt	mun
@@ -117,4 +117,4 @@ alquiler en Empúries	lloguer	Castelló d'Empúries	mun
 renta en Pescador	renda	Sant Pere Pescador	mun
 Guíxols	-	Sant Feliu de Guíxols	resum
 Castellfollit	-	Castellfollit de la Roca	resum
-cuántas sales hay	sales_esport		prov
+cuántas sales hay	sales_esport|cul_e_vis		prov

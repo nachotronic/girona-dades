@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-23 21:09 UTC
+Última ejecución: 2026-11-24 08:03 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -48,12 +48,13 @@
 | medi_ambient — Medi ambient: qualitat de l'aire (XVPCA), clima (Meteocat), embassaments, sequera i consum d'aigua (ACA), platges, nitrats i espais protegits (MITECO) | ok | 2026-11-23 16:27 | 2026-11-23 16:27 | diari/anual |
 | energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
+| culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | ok | 2026-11-24 07:38 | 2026-11-24 07:38 | anual |
+| urbans — INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona | ok | 2026-11-24 08:01 | 2026-11-24 08:01 | anual |
 
 ## Detalle de la última ejecución
 
-### diners_publics: ok (71 s)
+### urbans: ok (87 s)
 
 ```
-subvenciones: 4590 filas comarcales (3,422 M€), 70 ayuntamientos que conceden, hasta 2026 (año 2026)
-contratos: registro 178 ayuntamientos de Girona (3475 filas), ejercicios 2010-2028; plataforma 86184 publicaciones
+64 indicadores, 434 municipios de España (10 de Girona), 2010-2025; AUF y conurbación de Girona: 795 valores
 ```

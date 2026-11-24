@@ -6,7 +6,8 @@ construir(municipios) devuelve un dict con:
   refs   {clave: {año: {gi, cat}}}          provincia y Cataluña
   anys   {"cul_bib": .., "cul_eq": .., "cul_prog": .., "cul_ag": .., "cul_com": ..}
   com    {comarca: {clave: {año: valor}}}   nivel de comarcas del mapa
-  fitxa  {ine: {"eq": [[nom, tipus, aforament]], "bib": [[nom, {año: préstamos}]]}}
+  fitxa  {ine: {"eq": [[nom, tipus, aforament]], "bib": [[nom, {año: préstamos}]], "ct": [[nom, grupo, confesión]]}}
+  sec    {cusec: {"cul_ct_osm": n}}         edificios religiosos de OpenStreetMap por sección censal
   prov   gráficos de «La província»
 """
 from __future__ import annotations
@@ -416,8 +417,6 @@ def _comarques_idescat(municipios):
         "cinema_espectadors": [("c_esp_h", "Espectadors", 1, 2), ("c_esp", "Espectadors", None, 0)],
         "museus": [("m_vis_h", "Visitants", 1, 1), ("m_vis", "Visitants", None, 0), ("m_n", "Total", None, 0)],
         "radio_fm": [("r_fm", "Total", None, 0)],
-        "centres_culte": [("ct_n", "Total", None, 0), ("ct_h", "Total", 10_000, 1), ("ct_cat", "Centres de culte catòlics", None, 0),
-                          ("ct_ev", "Esglésies Evangèliques", None, 0), ("ct_isl", "Islam", None, 0)],
     }
     for nom, cols in defs.items():
         a, files = _aec(nom)
@@ -442,6 +441,128 @@ def _comarques_idescat(municipios):
     return dict(com), refs, (max(anys) if anys else None)
 
 
+# Centros de culto (Generalitat, fmpi-m3ni): confesión -> grupo del mapa
+CT_GRUP = {"esglesia catolica": "cat", "esglesies evangeliques": "ev", "islam": "isl"}
+CT_CLAUS = ["ct_n", "ct_h", "ct_cat", "ct_ev", "ct_isl", "ct_alt", "ct_nocat_p"]
+
+
+def _ct_grup(conf):
+    s = normaliza(conf or "")
+    for k, g in CT_GRUP.items():
+        if normaliza(k) == s:
+            return g
+    return "alt"
+
+
+def _ct_valors(n, g, pob):
+    """Indicadores a partir del total, el recuento por grupo y la población."""
+    o = {"ct_n": n, "ct_cat": g.get("cat", 0), "ct_ev": g.get("ev", 0), "ct_isl": g.get("isl", 0), "ct_alt": g.get("alt", 0)}
+    if pob:
+        o["ct_h"] = _arr(n / pob * 10_000, 1)
+    if n:
+        o["ct_nocat_p"] = _arr(100 * (n - g.get("cat", 0)) / n, 1)
+    return o
+
+
+def _culte(municipios):
+    """Centros de culto por municipio, año y confesión; edificios religiosos de OpenStreetMap por sección."""
+    f = D / "culte.csv"
+    if not f.exists():
+        return {}, {}, None, {}, {}, {}, {}
+    d = pd.read_csv(f, dtype=str)
+    d["any"] = pd.to_numeric(d["any"], errors="coerce")
+    d = d.dropna(subset=["any"])
+    d["any"] = d["any"].astype(int)
+    d["conf"] = d["confessi"].fillna("Altres").str.strip()
+    # «Esglésies orientals» y «Esglésies Orientals» son la misma
+    d["conf"] = d["conf"].map(lambda c: c[0].upper() + c[1:].lower() if normaliza(c) == normaliza("Esglésies orientals") else c)
+    d["g"] = d["conf"].map(_ct_grup)
+    anys = sorted(int(a) for a in d["any"].unique())
+    ult = anys[-1]
+    pob = {m["ine"]: m.get("poblacion") or 0 for m in municipios}
+    com_de = {m["ine"]: m.get("comarca") for m in municipios}
+    cnt = d.groupby(["ine", "any", "g"]).size().to_dict()
+    mun, comg = {}, defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+    for m in municipios:
+        ine, o = m["ine"], {}
+        for a in anys:
+            g = {k: cnt.get((ine, a, k), 0) for k in ("cat", "ev", "isl", "alt")}
+            n = sum(g.values())
+            for k, v in _ct_valors(n, g, pob[ine]).items():
+                o.setdefault(k, {})[a] = v
+            c = com_de.get(ine)
+            if c:
+                for k, v in g.items():
+                    comg[c][a][k] += v
+        mun[ine] = o
+    pob_c = defaultdict(float)
+    for m in municipios:
+        if m.get("comarca"):
+            pob_c[m["comarca"]] += pob[m["ine"]]
+    com = {}
+    for c, per_any in comg.items():
+        oc = {}
+        for a, g in per_any.items():
+            for k, v in _ct_valors(sum(g.values()), g, pob_c[c]).items():
+                oc.setdefault(k, {})[a] = v
+        com[c] = oc
+    # Provincia y Cataluña
+    ptot = sum(pob.values())
+    cat = {}
+    fc = D / "culte_cat.csv"
+    if fc.exists():
+        t = pd.read_csv(fc, dtype=str)
+        t["any"], t["n"] = pd.to_numeric(t["any"], errors="coerce"), pd.to_numeric(t["n"], errors="coerce")
+        t["g"] = t["confessi"].map(_ct_grup)
+        for (a, g), n in t.groupby(["any", "g"])["n"].sum().items():
+            cat.setdefault(int(a), {})[g] = int(n)
+    refs = {k: {} for k in CT_CLAUS}
+    nocat = {"gi": [], "cat": []}
+    for a in anys:
+        g = d[d["any"] == a]["g"].value_counts().to_dict()
+        vg = _ct_valors(int(sum(g.values())), g, ptot)
+        gc = cat.get(a, {})
+        vc = _ct_valors(int(sum(gc.values())), gc, None) if gc else {}
+        for k in CT_CLAUS:
+            refs[k][a] = {"gi": vg.get(k)}
+            if k != "ct_h" and vc.get(k) is not None:
+                refs[k][a]["cat"] = vc[k]
+        nocat["gi"].append([a, str(a), vg.get("ct_nocat_p")])
+        if vc.get("ct_nocat_p") is not None:
+            nocat["cat"].append([a, str(a), vc["ct_nocat_p"]])
+    # Ficha: centros del último año, por confesión
+    fitxa = {}
+    u = d[d["any"] == ult].sort_values(["conf", "institucio"])
+    for ine, g in u.groupby("ine"):
+        fitxa[ine] = [[str(r.institucio), r.g, r.conf] for r in g.itertuples()]
+    # «La província»: confesiones del último año y peso de las no católicas
+    conf = u["conf"].value_counts()
+    prov = {
+        "cul_ct": {"tipus": "barres", "u": "", "dec": 0, "claus": ["gi"], "any": ult,
+                   "noms": "cul_ct", "grups": [{"g": c, "c": "ct:" + c, "gi": int(n)} for c, n in conf.items()], "total": int(conf.sum())},
+        "cul_ct_nocat": {"tipus": "linia", "u": "%", "dec": 1, "noms": "cul_ct_nocat", "series": nocat},
+    }
+    # Secciones: edificios religiosos de OpenStreetMap
+    sec = {}
+    fo = D / "culte_osm.csv"
+    fg = RAIZ / "data" / "processed" / "geo" / "seccions.geojson"
+    if fo.exists() and fg.exists():
+        import json
+        o = pd.read_csv(fo, dtype=str)
+        n = o.groupby("cusec").size().to_dict()
+        osm_any = int(pd.Timestamp(fo.stat().st_mtime, unit="s").year)
+        for ine, k in o.groupby("ine").size().items():
+            if str(ine).zfill(5) in mun:
+                mun[str(ine).zfill(5)]["ct_osm"] = {osm_any: int(k)}
+        for m in municipios:
+            mun[m["ine"]].setdefault("ct_osm", {osm_any: 0})
+        prov["_osm_any"] = osm_any
+        for ft in json.loads(fg.read_text(encoding="utf-8"))["features"]:
+            cs = str(ft["properties"]["cusec"]).zfill(10)
+            sec[cs] = {"cul_ct_osm": int(n.get(cs, 0))}
+    return mun, refs, ult, com, fitxa, prov, sec
+
+
 def _junta(dst, src):
     for ine, o in src.items():
         for k, s in o.items():
@@ -449,7 +570,7 @@ def _junta(dst, src):
 
 
 def construir(municipios) -> dict:
-    res = {"mun": {}, "refs": {}, "anys": {}, "com": {}, "fitxa": {}, "prov": {}, "resum": []}
+    res = {"mun": {}, "refs": {}, "anys": {}, "com": {}, "fitxa": {}, "prov": {}, "sec": {}, "resum": []}
     mb, rb, ab, fb, brut = _bib(municipios)
     _junta(res["mun"], mb)
     res["refs"].update(rb)
@@ -503,8 +624,22 @@ def construir(municipios) -> dict:
             res["com"].setdefault(c, {}).update({k: v for k, v in o.items() if v})
     for ine in set(fe) | set(fb):
         res["fitxa"][ine] = {**({"eq": fe[ine]} if fe.get(ine) else {}), **({"bib": fb[ine][:8]} if fb.get(ine) else {})}
+    mt, rt, at, ct, ft, pt, st = _culte(municipios)
+    if at:
+        _junta(res["mun"], mt)
+        res["refs"].update(rt)
+        res["anys"]["cul_ct"] = at
+        osm_any = pt.pop("_osm_any", None)
+        if osm_any:
+            res["anys"]["cul_osm"] = osm_any
+        res["prov"].update(pt)
+        res["sec"] = st
+        for c, o in ct.items():
+            res["com"].setdefault(c, {}).update(o)
+        for ine, x in ft.items():
+            res["fitxa"].setdefault(ine, {})["ct"] = x
     res["resum"] = (f"bibliotecas {len(mb)} municipios (último {ab}), equipamientos {sum(len(v) for v in fe.values())} ({ae}), "
-                    f"Programa.cat hasta {ap}, agenda hasta {ag}")
+                    f"Programa.cat hasta {ap}, agenda hasta {ag}, centros de culto hasta {at} ({len(st)} secciones)")
     return res
 
 

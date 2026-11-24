@@ -1,0 +1,936 @@
+osm,nom,religio,denominacio,edifici,lat,lon,cusec,ine
+n1368742413,Ermita de Santa Eugènia,christian,,,42.4167593,2.8286057,1700101001,17001
+w76983632,Església de Santa Maria de L'Estrada,christian,catholic,,42.3921274,2.867986,1700101001,17001
+w85866755,Església de Santa Maria,christian,catholic,church,42.3941813,2.8467007,1700101001,17001
+w390526401,Església de Sant Joan,christian,catholic,yes,41.9384745,2.7617019,1700201001,17002
+w517028302,Santa Maria de Vilademany,christian,,church,41.9194587,2.7699164,1700201001,17002
+n3702397804,Sant Cristòfol dels Horts,christian,catholic,church,42.361072,2.6796388,1700301001,17003
+r6474891,Mare de Déu del Mont,christian,catholic,yes,42.2585208,2.7068612,1700301001,17003
+w1004955812,Sant Llorenç de Sous,christian,catholic,church,42.2546126,2.7151269,1700301001,17003
+w176496677,Sant Martí de Corsavell,christian,catholic,,42.3126976,2.6647279,1700301001,17003
+w176508057,Sant Miquel de Bassegoda,christian,catholic,church,42.3117624,2.6458877,1700301001,17003
+w176520498,Sant Pere d'Albanyà,christian,catholic,church,42.3045313,2.719996,1700301001,17003
+w177266635,Sant Feliu de Carbonills,christian,catholic,church,42.3364193,2.7237892,1700301001,17003
+w189245024,Sant Corneli de Ribelles,christian,catholic,church,42.3480919,2.5992849,1700301001,17003
+w189245027,Sant Julià de Ribelles,christian,catholic,,42.3333437,2.5917082,1700301001,17003
+w366172671,Sant Bartomeu de Pincaró,christian,roman_catholic,church,42.3347374,2.6764411,1700301001,17003
+w366279759,Santa Maria del Fau,christian,catholic,church,42.3560098,2.7146112,1700301001,17003
+w676509789,Sant Joan de Bossols,christian,roman_catholic,chapel,42.3200599,2.6762651,1700301001,17003
+w611860075,Església de Sant Cugat d'Albons,christian,catholic,church,42.1042896,3.085713,1700401001,17004
+w81145717,Sant Grau d'Albons,christian,,,42.1093727,3.0591853,1700401001,17004
+w32470359,Església de Sant Martí,christian,catholic,church,42.2519034,2.996262,1700501001,17005
+w232260692,Sant Pere d'Alp,christian,catholic,church,42.37266,1.885353,1700601001,17006
+w429871588,Mare de Déu de les Neus,christian,catholic,church,42.3357938,1.9371718,1700601001,17006
+n11578277996,Sant Genís Sacosta,christian,roman_catholic,,42.0372257,2.5624435,1700701001,17007
+n966112981,Santa Maria d'Amer,christian,,,42.0098447,2.6019394,1700701001,17007
+r15063810,Mare de Déu de la Pietat,christian,,church,42.0060406,2.6047654,1700701001,17007
+w289514371,Santa Brígida,christian,catholic,church,42.0206933,2.6105143,1700701001,17007
+w777678512,Sant Climent d'Amer,christian,roman_catholic,church,42.0045038,2.6370635,1700701001,17007
+w294214720,Església de Sant Miquel,christian,catholic,yes,41.9564857,2.6389661,1700801001,17008
+w153756797,Sant Pere ses Tronques,christian,catholic,yes,41.9398607,2.6619966,1700801003,17008
+w802198057,Ermita de Sant Amanç,christian,,yes,41.9319256,2.6380904,1700801003,17008
+w260615732,Parròquia de Sant Quirze i Santa Julita,christian,roman_catholic,yes,41.8162561,2.5140171,1700901001,17009
+w49135784,Capella de la Pietat,christian,roman_catholic,church,41.8156124,2.5193334,1700901002,17009
+w278399016,Sant Pere Desplà,christian,roman_catholic,yes,41.8415499,2.4744892,1700902001,17009
+w297360319,Santa Maria de Lliors,christian,catholic,yes,41.8227242,2.4359566,1700902001,17009
+w481358864,el Nen Jesús de Praga,christian,roman_catholic,yes,41.8700337,2.5265479,1700902001,17009
+w623580316,San Cristòfol de Cerdans,christian,roman_catholic,chapel,41.8427162,2.430886,1700902001,17009
+w829402331,Sant Mateu de Joanet,christian,catholic,church,41.8440153,2.5275289,1700902001,17009
+w1013148793,Església de Santa Anna,christian,catholic,church,42.2141017,2.6426057,1701001001,17010
+w1013150477,Santa Maria d'Argelaguer,christian,catholic,church,42.2132314,2.6417868,1701001001,17010
+w604857593,Santa Magdalena de Montpalau,christian,catholic,church,42.2061038,2.6088905,1701001001,17010
+w810778327,Mare de Déu del Guilar,christian,catholic,chapel,42.2064647,2.6504946,1701001001,17010
+w530668226,Església de Sant Martí,christian,catholic,church,42.1721901,3.0750064,1701101001,17011
+w413127585,Església de Sant Esteve,christian,catholic,church,42.2495775,2.9144038,1701201001,17012
+w782382561,Santa Eugènia d'Avinyonet,christian,catholic,church,42.2399346,2.9172149,1701201001,17012
+w819375353,,christian,catholic,church,41.9781734,3.2074671,1701301001,17013
+w788554071,Sant Esteve d'Esclanyà,christian,catholic,church,41.9293676,3.1764136,1701301002,17013
+w369031252,Ermita de Sant Ramon,christian,,yes,41.9570817,3.2076119,1701301003,17013
+w55085689,Sant Pere i Santa Reparada,christian,catholic,church,41.9543259,3.2074448,1701301003,17013
+w223534852,Sant Martí,christian,roman_catholic,,42.4040363,2.8000651,1701401001,17014
+r4481571,Església de Santa Maria de Banyoles,christian,catholic,church,42.1194833,2.7669114,1701501001,17015
+r4478547,Monestir de Sant Esteve,christian,catholic,temple,42.1204328,2.7697053,1701501003,17015
+r4493382,Església del Sagrat Cor,christian,,church,42.120423,2.7682794,1701501003,17015
+r4500600,Església de la Providència,christian,,yes,42.1183876,2.7684147,1701501003,17015
+n6125105638,Església Cementiri,multifaith,,,42.1284803,2.7646751,1701501004,17015
+w307322517,Església del Remei de Guèmol,christian,catholic,church,42.1121784,2.7640366,1701502001,17015
+r4427050,Església de la Sagrada Família,christian,catholic,church,42.1183052,2.7609876,1701502003,17015
+w182543234,Església de Sant Pere,christian,catholic,yes,42.1122729,2.7688888,1701503001,17015
+n1923326119,Centre Evangelista,christian,evangelical,,42.1126964,2.7784456,1701503002,17015
+w828598408,Sant Jaume de Puigpalter,christian,catholic,church,42.121137,2.796071,1701503002,17015
+r13875601,Sant Iscle i Santa Victòria de Bàscara,christian,catholic,church,42.1606147,2.9101324,1701601001,17016
+w527242125,Església i Castell de Sant Feliu de Calabuig,christian,catholic,church,42.1520019,2.9250536,1701601001,17016
+w527245938,,christian,catholic,yes,42.1600473,2.9291178,1701601001,17016
+w527264775,Església de Sant Genís d'Orriols,christian,catholic,church,42.1243885,2.9069209,1701601001,17016
+w394358349,Antigua Església preromànica de Sant Joan de Bellcaire,christian,catholic,church,42.0815852,3.0956915,1701801001,17018
+w394358351,Església de Sant Joan de Bellcaire,christian,catholic,church,42.0810298,3.0942906,1701801001,17018
+n11544197069,Miqve de Besalu,jewish,,,42.1990795,2.7004246,1701901001,17019
+n9923254192,Església de Santa Fe,christian,,,42.198255,2.6981271,1701901001,17019
+w184549896,Sant Pere,christian,catholic,church,42.1982063,2.6989497,1701901001,17019
+w252054495,Sant Vicenç,christian,catholic,church,42.1996235,2.6984057,1701901001,17019
+w355533587,Sant Martí,christian,catholic,chapel,42.2008702,2.7018599,1701901001,17019
+r4602429,Església de Sant Llorenç,christian,,yes,41.96545,2.7427262,1702001001,17020
+w297942181,Santa Margarida,christian,roman_catholic,chapel,41.961952,2.7294616,1702001001,17020
+w854176610,Ermita de la Concepció,christian,,yes,41.9688297,2.7305196,1702001001,17020
+r16678519,Sant Mateu,christian,,yes,41.9759041,2.7032998,1702001002,17020
+w239063462,Sant Andreu d'Estanyol,christian,catholic,yes,41.9414766,2.740836,1702001002,17020
+w746727336,Església de Sant Pere,christian,,yes,41.9683886,2.7595889,1702001002,17020
+w795217294,Capella de Sant Bartomeu,christian,,yes,41.9594633,2.6684325,1702001002,17020
+w795527659,Ermita de Sant Pere,christian,,yes,41.9431893,2.7281483,1702001002,17020
+w795861314,Sant Martí de Ca n'Amat Gros,christian,catholic,church,41.9698766,2.697546,1702001002,17020
+w821489310,Sant Bartomeu,christian,,yes,41.9366459,2.7350889,1702001002,17020
+w251766941,Sant Miquel de Coma de Roure,christian,roman_catholic,chapel,42.2522732,2.6792083,1702101001,17021
+w368878931,Sant Feliu,christian,catholic,yes,42.2370407,2.7097444,1702101001,17021
+w368880625,Sant Sepulcre de Palera,christian,catholic,yes,42.2238957,2.6987308,1702101001,17021
+w368900698,Sant Pere de Lligordà,christian,catholic,yes,42.2192533,2.7075137,1702101001,17021
+w813195666,Santa Llúcia de Beuda,christian,catholic,church,42.2267002,2.7498766,1702101001,17021
+w813195991,Santa Maria de Segueró,christian,catholic,church,42.2417483,2.7483909,1702101001,17021
+w995932908,Sant Miquel,christian,,yes,42.2306183,2.761137,1702101001,17021
+w1421959889,Sant Martí de Llaneres,christian,catholic,church,41.9807735,3.0520518,1702201004,17022
+w210873098,Santa Maria,christian,catholic,yes,41.9601638,3.0385855,1702202001,17022
+w611217880,Santa Llúcia de l'Arboç,christian,,yes,41.91226,3.0444802,1702202003,17022
+w788559987,Església de Sant Pol de la Bisbal,christian,catholic,church,41.9295384,3.0361988,1702202003,17022
+w304482566,Santa Maria de Blanes,christian,catholic,yes,41.6759275,2.7927991,1702301002,17023
+w344441644,Parroquia de la Sagrada Familia (Els Pins),christian,catholic,church,41.6661386,2.7846833,1702301004,17023
+w304482564,Mare de Déu de l'Esperança,christian,,yes,41.6760038,2.7956695,1702301007,17023
+w41817534,Sant Joan Baptista,christian,catholic,church,41.6788897,2.7980057,1702301007,17023
+w43309555,Sant Francesc,christian,catholic,church,41.6780452,2.8060806,1702301007,17023
+w702370599,Nostra Senyora de l'Antiga,christian,catholic,church,41.6747599,2.7893066,1702302001,17023
+w702370602,Mare de Déu de la Font de la Salut,christian,catholic,church,41.6764379,2.7910043,1702302002,17023
+n13013334459,Església de Jesucrist dels Sants dels últims dies,christian,latter_day_saints,,41.6752249,2.7744778,1702302005,17023
+w702417702,Ermita de Santa Bàrbara,christian,,church,41.6820511,2.8009369,1702302013,17023
+w41828290,Santuari del Vilar,christian,catholic,yes,41.7144395,2.7769818,1702303002,17023
+w172685499,Mare de Deu del Remei,christian,catholic,church,42.4199845,1.8902198,1702401001,17024
+w306390829,Mare de Déu de l'Esperança,christian,catholic,chapel,42.4194497,1.8789267,1702401001,17024
+w306390842,Església de Santa Cecília,christian,catholic,church,42.4196989,1.8787607,1702401001,17024
+n3320515962,Can Baldiret,christian,,,42.0486413,2.9159704,1702501001,17025
+w393264065,Església de Sant Esteve de Bordils,christian,,church,42.0440585,2.911365,1702501001,17025
+r12969626,Església de Sant Andreu,christian,catholic,church,42.2230992,2.9263781,1702601001,17026
+w424389069,Església de Santa Maria de Creixell,christian,catholic,church,42.2113834,2.9344358,1702601001,17026
+w1322511522,Església de Sant Salvador,christian,,yes,41.7482844,2.5572259,1702701001,17027
+w241288058,Ermita de Santa Anna,christian,,yes,41.7421746,2.5625144,1702701001,17027
+w280279135,Sant Romà,christian,catholic,yes;roof,41.9279796,2.6979732,1702801001,17028
+w354123838,Mare de Déu de Serrallonga,christian,,chapel,41.8836546,2.6993269,1702801001,17028
+w605831211,Església de Sant Martí Sapresa,christian,catholic,yes,41.9258702,2.6506662,1702801001,17028
+w527890013,Parròquia de Santa Cecília de Boadella,christian,catholic,church,42.3297606,2.8562169,1702901001,17029
+w528091604,Església de Sant Martí de les Escaules,christian,catholic,industrial,42.3205603,2.8825163,1702901001,17029
+w410232348,Església de Sant Vicenç,christian,catholic,church,42.3072258,2.9776099,1703001001,17030
+w782379801,Sant Feliu de Cadins,christian,catholic,church,42.3066537,2.9598232,1703001001,17030
+w158897021,Santa Maria de l'Estela,christian,,yes,42.2832287,2.7824925,1703101001,17031
+w159015384,Església de Sant Martí Sesserres,christian,,yes,42.2598325,2.7747205,1703101001,17031
+w159019342,Sant Miquel de Cirera,christian,,yes,42.2889793,2.7234574,1703101001,17031
+w159045195,Sant Benet,christian,,yes,42.2724166,2.7485278,1703101001,17031
+w246778844,Església de Santa Coloma de Cabanelles,christian,catholic,church,42.2309379,2.8197356,1703101001,17031
+w412557346,Sant Llorenç,christian,catholic,church,42.1888689,2.8446761,1703101001,17031
+w421377710,Sant Martí de Queixàs,christian,catholic,church,42.2141388,2.7981124,1703101001,17031
+w528734207,Sant Romà de Casamor,christian,,ruins,42.2198064,2.8102315,1703101001,17031
+w528744466,Sant Mateu de Vilademires,christian,catholic,church,42.2290322,2.7942136,1703101001,17031
+w128606866,Santa Maria,christian,catholic,yes,42.2881759,3.2756252,1703201001,17032
+w129861272,Sant Baldiri,christian,catholic,chapel,42.2920407,3.2839829,1703201001,17032
+n2549809563,Sant Grau,christian,,,41.8386476,2.8080332,1703301001,17033
+w221955904,Església de Sant Esteve de Caldes,christian,catholic,yes,41.8365357,2.8088447,1703301001,17033
+w1263045264,Sant Mateu,christian,roman_catholic,church,41.8738395,2.7856672,1703301002,17033
+w222547943,Sant Sebastià,christian,catholic,yes,41.829656,2.7778821,1703301002,17033
+n3614562532,Santa Francesca Romana,christian,,,41.8113979,2.8695954,1703301004,17033
+w1568224916,Santa Seclina,christian,catholic,church,41.7983186,2.8491335,1703301004,17033
+w284258745,Sant Maurici,christian,,yes,41.8165403,2.800243,1703301004,17033
+n2054885867,Sant Martí,christian,,,41.86241,3.0730709,1703401001,17034
+w185646459,Parroquia de Sant Antoni de Calonge,christian,,yes,41.848325,3.1071555,1703401002,17034
+w788550937,Santa Maria del Collet,christian,catholic,chapel,41.8504335,3.1118675,1703401003,17034
+w188988953,Sant Jordi de Treumal,christian,,chapel,41.8279072,3.0829831,1703401005,17034
+r9597090,Església de Santa Maria de Camós,christian,catholic,church,42.0801255,2.7744751,1703501001,17035
+w406007437,Església de Santa Magdalena de Noves,christian,catholic,church,42.098256,2.7599935,1703501001,17035
+w406008397,Església de Sant Vicenç de Camós,christian,catholic,church,42.0872007,2.7620145,1703501001,17035
+w423863909,,christian,roman_catholic,church,42.2244464,2.1668171,1703601002,17036
+w1037810979,Sant Llorenç de Campdevànol,christian,,yes,42.2318068,2.1277415,1703601003,17036
+w253386072,Sant Grau,christian,catholic,chapel,42.2414064,2.1739534,1703601003,17036
+w253386414,Sant Martí Vell,christian,catholic,yes,42.2447068,2.1865989,1703601003,17036
+w1040891758,Església Sant Bartomeu,christian,,yes,42.2781946,2.1458442,1703701001,17037
+w577931439,,christian,catholic,church,42.2947489,2.1405794,1703701001,17037
+w1053576126,Església de Campllong,christian,,yes,41.8910254,2.8302035,1703801001,17038
+w423768735,Mare de Déu del Carme,christian,catholic,church,42.3108362,2.3656973,1703901001,17039
+w423793426,Mare de Déu del Roure,christian,catholic,chapel,42.3152796,2.3782515,1703901001,17039
+n2306991123,Ascensió,christian,catholic,,42.3358213,2.3702143,1703901002,17039
+w1011305798,Sant Bartomeu del Sitjar,christian,catholic,church,42.2808297,2.3948056,1703901002,17039
+w170711352,Monestir de Sant Pere de Camprodon,christian,catholic,monastery,42.314315,2.3695932,1703901002,17039
+w170717053,Sant Cristòfol,christian,catholic,church,42.3211208,2.4801327,1703901002,17039
+w204140757,Sant Andreu de Bestracà,christian,catholic,church,42.2907176,2.5165448,1703901002,17039
+w241572699,el Remei de Creixenturri,christian,catholic,church,42.2903423,2.3752515,1703901002,17039
+w253369103,Sant Antoni,christian,catholic,yes,42.3051488,2.3757418,1703901002,17039
+w335472381,Sant Feliu,christian,catholic,church,42.3381151,2.4505256,1703901002,17039
+w335476685,Sant Valentí de Salarça,christian,catholic,church,42.3056479,2.4512577,1703901002,17039
+w335476686,Santa Maria de Bolòs,christian,catholic,yes,42.3027871,2.4218594,1703901002,17039
+w423789984,Santa Maria,christian,catholic,church,42.3139664,2.3685903,1703901002,17039
+w426530319,Mare de Déu del Remei,christian,catholic,church,42.3190814,2.479926,1703901002,17039
+w829607500,Sant Miquel de Cavallera,christian,catholic,church,42.2925903,2.3446019,1703901002,17039
+n1424288892,Santa Maria de Rocacorba,christian,catholic,,42.0672497,2.6877693,1704001001,17040
+w276826864,Sant Martí de Biert,christian,catholic,church,42.0799526,2.707864,1704001001,17040
+w277217675,Sant Llorenç,christian,,,42.0521367,2.7409696,1704001001,17040
+w408888029,Sant Vicenç,christian,catholic,church,42.0381318,2.7349477,1704001001,17040
+w433084237,Sant Joan de Montbó,christian,roman_catholic,yes,42.0489282,2.7653026,1704001001,17040
+w813870418,Santa Cecília de Montcal,christian,catholic,church,42.0371824,2.7590905,1704001001,17040
+w528828646,Església de Sant Esteve,christian,roman_catholic,church,42.4225093,2.9250294,1704101001,17041
+w240235808,Sant Sebastià,christian,catholic,yes,42.3742123,2.9202894,1704201001,17042
+w408006370,Església de Santa Àgata,christian,catholic,church,42.3726434,2.9209841,1704201001,17042
+n5918175234,Crucifix,christian,catholic,,42.3926736,2.1564249,1704301001,17043
+w1051808405,Basílica de la Mare de Déu de Núria,christian,catholic,,42.3972178,2.1534356,1704301001,17043
+w1306253248,Oratori del Corbell,christian,catholic,church,42.3635589,2.1678799,1704301001,17043
+w205994042,Sant Gil,christian,catholic,chapel,42.3958795,2.1522544,1704301001,17043
+w206017748,Sant Sadurní,christian,catholic,,42.3419359,2.1706281,1704301001,17043
+w206084507,Sant Jaume de Queralbs,christian,catholic,,42.3484673,2.1612282,1704301001,17043
+w206084508,Sant Sebastià,christian,catholic,chapel,42.3471694,2.1589437,1704301001,17043
+w448589648,Mare de Déu del Remei del Serrat,christian,catholic,church,42.3419459,2.1853097,1704301001,17043
+n3594172695,Sant Martí de Porres,christian,,,41.883248,2.8948245,1704401002,17044
+w76978048,Església de Sant Martí de Tours,christian,catholic,church,41.8874102,2.8745335,1704402001,17044
+n9537168202,Sant Vicenç de Vilabella,christian,catholic,,41.8522698,2.8593283,1704402003,17044
+w993563713,Capella del Remei,christian,,yes,41.8845557,2.8446654,1704402003,17044
+r6704504,Església Vella de Sant Salvador,christian,roman_catholic,church,42.2184035,2.5544318,1704601001,17046
+w1296935470,Església Nova de Sant Salvador,christian,roman_catholic,church,42.2190174,2.5469921,1704601001,17046
+w544204176,Basílica de Santa Maria,christian,catholic,cathedral,42.2594976,3.0763009,1704701002,17047
+w277516787,Santa Maria de Fenals d'Amunt,christian,roman_catholic,church,41.8428933,3.0432814,1704801001,17048
+w300359457,Església de Santa María,christian,catholic,church,41.8152504,3.0307047,1704801001,17048
+w201198272,Església de Fanals,christian,,yes,41.8234252,3.0587045,1704801003,17048
+w201381188,Santa Maria,christian,catholic,yes,41.8193335,3.0652529,1704801003,17048
+w203020954,Església de Nostra Senyora de l'Esperança,christian,,yes,41.7949329,3.0588762,1704801005,17048
+n13028181626,,christian,,,41.8156161,3.0613654,1704801006,17048
+n2985930984,Oratori de Sant Sixt i Sant Hou,christian,roman_catholic,,42.0182954,2.8531972,1704901001,17049
+r4647847,Sant Feliu,christian,catholic,yes,42.0247536,2.8793254,1704901001,17049
+w210965477,Santa Maria de Cervià,christian,catholic,church,42.0679023,2.9124259,1705001001,17050
+w211037143,Sant Cristòfol (S-XVIII),christian,,church,42.0703208,2.926121,1705001001,17050
+w224826954,Sant Genís,christian,,yes,42.0676854,2.9100462,1705001001,17050
+w264612211,Ermita de Sant Roc,christian,catholic,yes,42.0744888,2.9242026,1705001001,17050
+w1235578578,Mare de Déu de Vida,christian,catholic,church,42.2665392,2.838476,1705101001,17051
+w433343529,Església de Santa Maria de Cistella,christian,catholic,church,42.2686234,2.8483437,1705101001,17051
+w782474353,Sant Martí de Vilarig,christian,catholic,church,42.2863717,2.833661,1705101001,17051
+w407299519,Església de Santa Coloma,christian,catholic,church,42.2094781,2.994616,1705201001,17052
+w170664846,Sant Miquel de Colera,christian,catholic,yes,42.3994032,3.0948853,1705401001,17054
+w399207014,Església de Sant Miquel,christian,catholic,church,42.4043959,3.1513631,1705401001,17054
+w498113722,Santa Maria de Colomers,christian,catholic,church,42.0841354,2.9873534,1705501001,17055
+r5988609,Església de Sant Julià de Corts,christian,catholic,church,42.0948285,2.7889753,1705601001,17056
+r6831408,Santa Maria de Pujals dels Pagesos,christian,catholic,yes,42.1071757,2.8338243,1705601001,17056
+r7305390,Sant Joan Baptista de Borgonyà,christian,catholic,church,42.1016355,2.8019064,1705601001,17056
+w1103632237,Santa Llogaia del Terri,christian,roman_catholic,church,42.0835754,2.8390257,1705601001,17056
+w358644944,Sant Esteve de Sords,christian,catholic,,42.0886668,2.824642,1705601001,17056
+w401675729,Sant Pere,christian,catholic,church,42.0899689,2.8157216,1705601001,17056
+w462572850,Santa Eulàlia de Pujals dels Cavallers,christian,catholic,church,42.105569,2.8190821,1705601001,17056
+w462641001,Sant Antoni,christian,catholic,yes,42.0898952,2.8176507,1705601001,17056
+w829627091,Església de Sant Andreu del Terri,christian,catholic,church,42.0646583,2.8458081,1705601001,17056
+w829628473,Sant Cugat de Ravós del Terri,christian,catholic,church,42.070989,2.8381741,1705601001,17056
+w669785318,Sant Sebastià,christian,catholic,chapel,41.9914526,3.0156639,1705701001,17057
+w669788322,Sant Julià,christian,catholic,church,41.9894442,3.0172655,1705701001,17057
+w669794423,Sant Joan,christian,catholic,church,42.0057305,3.0439134,1705701001,17057
+w669794438,Església de Sant Genís,christian,catholic,church,41.9998447,3.0330761,1705701001,17057
+w788558734,Sant Martí,christian,catholic,church,42.0079442,2.9946775,1705701001,17057
+w788563442,Santa Cristina de Corçà,christian,catholic,church,41.9809392,3.0096122,1705701001,17057
+w251701036,Sant Bartomeu del Portell,christian,catholic,yes,42.1845794,2.7825982,1705801001,17058
+w252048020,Sant Miquel de la Roca,christian,catholic,yes,42.1843823,2.7820203,1705801001,17058
+w252057137,Santa Eulàlia,christian,catholic,yes,42.1870607,2.7992235,1705801001,17058
+w421375521,Sants Just i Pastor de Pedrinyà,christian,catholic,church,42.2028402,2.7792429,1705801001,17058
+n3065701628,Sant Esteve del Llop,christian,,,42.3706768,2.8049413,1706001001,17060
+w369047095,Santa Maria de Darnius,christian,catholic,church,42.3689533,2.8315347,1706001001,17060
+w230898133,Santa Maria de Mosoll,christian,catholic,church,42.3766947,1.8685381,1706101001,17061
+w401097025,Sant Llorenç,christian,catholic,church,42.3608295,1.8700765,1706101001,17061
+w401097034,Sant Iscle i Santa Victòria de Sanavastre,christian,catholic,church,42.3851979,1.8497478,1706101001,17061
+w792173066,Santa Bàrbara de Das,christian,catholic,wayside_chapel,42.3592257,1.867932,1706101001,17061
+w792177469,Sant Julià de Tartera,christian,catholic,church,42.358643,1.8529596,1706101001,17061
+r11803684,Sant Pere,christian,catholic,public,42.1246436,3.1331035,1706201001,17062
+w246056361,Església de Sant Martí d'Empúries,christian,catholic,church,42.139944,3.1183619,1706201003,17062
+w766496294,Església de Santa Reparada,christian,,yes,42.1374694,3.1005489,1706201003,17062
+w766641426,Església Evangèlica Baptista,christian,evangelical,public,42.1267158,3.1297535,1706201003,17062
+w767358902,Centro Islámico l'Escala,muslim,,public,42.1255331,3.1311626,1706201003,17062
+w782541148,Sant Vicenç de les Corts,christian,catholic,church,42.1241424,3.1153417,1706201003,17062
+w195431823,Sant Vicenç,christian,catholic,church,41.8688258,2.4174303,1706301001,17063
+n7128938294,Sant Miquel de Freixe,christian,,,42.4512741,3.033165,1706401001,17064
+w139830896,Sant Genís Desprac,christian,catholic,church,42.439227,3.0089794,1706401001,17064
+w139830897,Sant Martí de Baussitges,christian,catholic,church,42.4498814,3.0042015,1706401001,17064
+w408572115,Sant Jaume d'Espolla,christian,catholic,church,42.392442,3.0010462,1706401001,17064
+w228397706,Sant Cebrià d'Esponellà,christian,catholic,,42.1790491,2.7954599,1706501001,17065
+w412562285,Església de Santa Maria,christian,catholic,church,42.1740523,2.8215095,1706501001,17065
+w828598365,Sant Iscle i Santa Victòria de Centenys,christian,catholic,church,42.1592873,2.7847935,1706501001,17065
+w356066729,Nostra Senyora de Loreto,christian,catholic,chapel,42.2740652,2.9531688,1706601002,17066
+w83834374,Capella,christian,catholic,chapel,42.2758012,2.9462462,1706601002,17066
+r5320448,Església Evangèlica Baptista de Figueres,christian,evangelical,yes,42.2660191,2.9565746,1706601003,17066
+n9659469766,Parròquia del Bon Pastor,christian,catholic,,42.2653259,2.9501322,1706601006,17066
+w233182179,Sant Pere de Figueres,christian,catholic,church,42.2678622,2.960203,1706602001,17066
+w1303745415,Sagrada Família,christian,catholic,church,42.2715165,2.967318,1706602004,17066
+n9122762515,Centro Cristiano el Buen Sembrador. Ministerio Asamblea de Dios,christian,,,42.2686282,2.9650426,1706603001,17066
+n9684374114,Capella i mas de Sant Pau de la Calçada,christian,catholic,,42.2495071,2.9746999,1706603002,17066
+w590170936,Església de Sant Joan de Vilatenim,christian,catholic,church,42.2712172,2.9948639,1706603002,17066
+w590170945,Capella de Sant Antoni,christian,catholic,chapel,42.2691064,2.9943283,1706603002,17066
+w934718661,Mesquita Al Imam Warsh,muslim,,,42.2698221,2.9727127,1706603002,17066
+n5046554255,Iglesia Evangélica Asamblea de Dios Belen,christian,evangelical,,42.2624215,2.9606498,1706604002,17066
+r18106490,Església de Jesucrist dels Sants dels últims dies,christian,latter_day_saints,,42.2629465,2.958544,1706604002,17066
+r7488654,Església de la Inmaculada Concepció,christian,catholic,church,42.2634257,2.9628122,1706604002,17066
+n9090762435,Església Cristiana Adventista del 7è Dia,christian,,,42.2617278,2.9625012,1706604003,17066
+r4628757,Sant Cebrià,christian,roman_catholic,yes,42.0502447,2.953438,1706701001,17067
+w999690291,Mare de Déu de l'Esperança,christian,,,42.044962,2.9721058,1706701001,17067
+w401747679,Santa Maria de La Sala,christian,roman_catholic,church,42.0329931,3.0167894,1706801001,17068
+w601369361,Sant Joan,christian,catholic,church,42.0397084,2.9968361,1706801001,17068
+w788552139,Església de Sant Llorenç de les Arenes,christian,catholic,church,42.0611466,2.9778515,1706801001,17068
+w230316286,Sant Esteve de les Pereres,christian,catholic,yes,42.4030184,1.932414,1706901001,17069
+w401097036,Sant Cosme i Sant Damià de Queixans,christian,catholic,church,42.398537,1.9217445,1706901001,17069
+w401146712,Sant Martí,christian,catholic,church,42.3867578,1.9102234,1706901001,17069
+w792181447,Sant Miquel de Soriguerola,christian,catholic,church,42.3972395,1.881395,1706901001,17069
+w392137656,Església de Sant Romà,christian,,,42.0182638,3.0882448,1707001001,17070
+w398245855,Església de Sant Martí de Fontanilles,christian,,church,42.0119197,3.1075582,1707001001,17070
+r12444543,Sant Sadurní de Vilavenut,christian,catholic,church,42.1394622,2.8214861,1707101001,17071
+w256279251,Església de Melianta,christian,catholic,church,42.1469932,2.774155,1707101001,17071
+w386540348,Santa Caterina d'Espasens,christian,catholic,church,42.1253322,2.8363981,1707101001,17071
+w696079517,Església de la Mare de Déu de la font,christian,catholic,yes,42.146411,2.7823975,1707101001,17071
+w828561077,Sant Bartomeu de Torres,christian,catholic,church,42.1220914,2.8176052,1707101001,17071
+w828597590,Sant Feliu de Fontcoberta,christian,catholic,church,42.1428408,2.7898797,1707101001,17071
+w690590428,Sant Cugat de Fornells de la Selva,christian,catholic,church,41.9313115,2.8127384,1707301001,17073
+w993566543,Santa Maria del Castell,christian,,ruins,41.9264474,2.8033268,1707301002,17073
+w414812776,Església de Sant Julià i Santa Basilissa,christian,catholic,church,42.2420021,3.0410096,1707401001,17074
+w205787230,Santa Maria d'Ermedàs,christian,catholic,,42.1865449,2.938268,1707501001,17075
+w207100795,Santa Magdalena de Vilajoan,christian,catholic,yes,42.1664069,2.9348794,1707501001,17075
+w436278241,Església de la Sagrada Família,christian,catholic,church,42.1941394,2.9536369,1707501001,17075
+w436279551,Església de Sant Miquel de Garrigàs,christian,catholic,church,42.1977103,2.9501267,1707501001,17075
+w436281402,Església de Santa Llúcia,christian,catholic,church,42.2082722,2.9767319,1707501001,17075
+w436289834,Església de Sant Sadurní,christian,catholic,church,42.166005,2.9534898,1707501001,17075
+w571021756,Ermita de Santa Anna,christian,catholic,chapel,42.17035,2.92394,1707501001,17075
+w610839197,Església de Sant Sadurní de Garrigoles,christian,catholic,church,42.1072753,3.0305832,1707601001,17076
+w611842454,Església de Sant Vicenç de les Olives,christian,catholic,church,42.103656,3.0208635,1707601001,17076
+w267105735,Mare de Deu del Camp,christian,,chapel,42.3517923,3.066212,1707701001,17077
+w410067297,Santa Eulàlia de Noves,christian,catholic,church,42.3423089,3.0648672,1707701001,17077
+w792173333,Sant Climent de Gréixer,christian,catholic,church,42.4127806,1.8244697,1707801001,17078
+w792174507,Santa Coloma de Ger,christian,catholic,church,42.4112937,1.8439132,1707801001,17078
+w792174802,Santa Eugènia de Saga,christian,catholic,church,42.4152493,1.8599093,1707801001,17078
+r1009963,Església del Sagrat Cor,christian,catholic,yes,41.9818728,2.8242981,1707901001,17079
+n4847795550,Parròquia de Santa Maria de Vista Alegre,christian,,,41.9769668,2.8247484,1707901003,17079
+n4847795551,Parròquia Palol d'Onyar - Vila-Roja,christian,,,41.9697406,2.8418505,1707901006,17079
+n3679085073,Església Evangèlica Baptista de Girona,christian,evangelical,church,41.9791205,2.8194022,1707902003,17079
+r1010561,Església dels Pares Claretians,christian,,church,41.9794432,2.8216196,1707902004,17079
+w583613916,Parròquia Sant Josep,christian,roman_catholic,,41.9739754,2.8237928,1707902008,17079
+n5121434560,Prediquem a Crist,christian,evangelical,,41.9688019,2.821176,1707902010,17079
+n12291629467,Església de Jesucrist dels Sants dels darrers dies,christian,latter_day_saints,,41.9688371,2.8177664,1707902011,17079
+n4847794914,Parròquia Palau-sacosta,christian,,,41.9674134,2.821229,1707902019,17079
+w63936607,Església de Palau-sacosta,christian,,yes,41.9569526,2.8222542,1707902020,17079
+w583614398,Parròquia de Sant Pau,christian,roman_catholic,church,41.9700043,2.8166193,1707902021,17079
+r1011169,Església Santa Susanna del Mercadal,christian,catholic,yes,41.9839584,2.8224728,1707903001,17079
+r1006178,Parroquia de Sant Narcis,christian,roman_catholic,church,41.9749058,2.8105668,1707903006,17079
+r1005213,Iglesia de Cristo la salvación del hombre,christian,,apartments,41.9768255,2.8021079,1707903014,17079
+n5327615553,Església de Jesucrist dels Sants dels darrers dies,christian,latter_day_saints,,41.9782112,2.8131825,1707903015,17079
+w63921735,Parròquia de Santa Eugènia de Ter,christian,catholic,church,41.9734924,2.807095,1707903017,17079
+w63939178,Parròquia de Sant Salvador d'Horta,christian,catholic,church,41.9831744,2.8123395,1707903019,17079
+n3034770254,,muslim,,,41.9763505,2.8072445,1707903021,17079
+r1011556,Església del Carme,christian,catholic,yes,41.9844649,2.8259504,1707904001,17079
+r1012115,Catedral de Girona,christian,catholic,cathedral,41.9875074,2.8263403,1707904001,17079
+n4847794911,Església del seminari,christian,,,41.9851109,2.8268028,1707904002,17079
+n795788752,Església de Sant Martí Sacosta,christian,catholic,,41.9850403,2.8265741,1707904002,17079
+r1009233,Basilica de Sant Feliu,christian,roman_catholic,church,41.9879799,2.8248903,1707904002,17079
+n2406425892,Iglesia Nueva Apostólica,christian,new_apostolic,,41.9902309,2.8258262,1707905002,17079
+n9228543662,,christian,orthodox,,41.989331,2.8255411,1707905004,17079
+w63917521,Capella del Calvari,christian,catholic,yes,41.983923,2.8353737,1707905004,17079
+w63921474,Ermita de Sant Miquel,christian,,yes,42.0069251,2.8620484,1707905004,17079
+n4847797433,Parròquia de Campdorà,christian,,public,42.0129334,2.8442261,1707905005,17079
+n4847795558,Parròquia de Fontajau,christian,,,41.991421,2.8175124,1707906001,17079
+n1407397374,Sala del Regne dels Testimonis Cristians de Jehovà,christian,jehovahs_witness,,41.992688,2.795908,1707906002,17079
+w63915698,Sant Feliu,christian,roman_catholic,public,41.9911529,2.7970671,1707906002,17079
+n13641645914,Església Apostólica Pentecostal,christian,,,41.986809,2.7882448,1707906004,17079
+w1038282485,Sant Pere,christian,,yes,42.248534,2.0910322,1708001001,17080
+w1552583002,Santa Maria de Montgrony,christian,catholic,yes;chapel,42.26575,2.0859045,1708001001,17080
+w160368633,Mare de Déu de Lurda,christian,catholic,church,42.2465426,2.0797975,1708001001,17080
+w176334191,Sant Pere de Montgrony,christian,catholic,church,42.2663945,2.0857916,1708001001,17080
+w364668792,Sant Joan de Mataplana,christian,catholic,church,42.2620957,2.0613598,1708001001,17080
+w738065425,Sant Romà d'Aranyonet,christian,catholic,church,42.2346785,2.0329422,1708001001,17080
+w388102613,Església de Santa Maria,christian,,,42.0292457,3.1034166,1708101001,17081
+w401146711,Sant Esteve,christian,catholic,church,42.447999,1.8780437,1708201001,17082
+w516631392,Sant Vicenç,christian,catholic,church,42.4448776,1.9031758,1708201001,17082
+w274934874,Església Santa María dels Socorrs,christian,,yes,41.7455514,2.6358949,1708301001,17083
+w171253545,Santa Maria d'All,christian,,,42.3978419,1.8386262,1708401001,17084
+w221965685,Santa Maria de Quadres,christian,catholic,church,42.3864846,1.8370784,1708401001,17084
+w355932349,,christian,,yes,42.3787042,1.8177418,1708401001,17084
+w570502073,Sant Pere,christian,,,42.3916402,1.8132951,1708401001,17084
+w809210560,Santuari de la Font-Santa,christian,,yes,42.0758771,3.0091241,1708501001,17085
+w809293408,Església de Sant Martí de Jafre,christian,catholic,yes,42.0726155,3.0110018,1708501001,17085
+w179648742,Sant Pere del Pla de l'Arca,christian,catholic,yes,42.4496389,2.8850977,1708601001,17086
+w189200082,Sant Julià dels Torts,christian,catholic,,42.4386259,2.8393882,1708601001,17086
+w451895220,Santuari de Requesens,christian,catholic,church,42.4505738,2.9385883,1708601001,17086
+n12802203503,Sant Jaume de Canadal,christian,roman_catholic,,42.4105529,2.8830047,1708601002,17086
+w189194599,Sant Miquel de Solans,christian,catholic,church,42.4272179,2.8948203,1708601002,17086
+w337451484,Santa Maria,christian,catholic,yes,42.4172995,2.8735215,1708601002,17086
+w411110790,Sant Pere,christian,roman_catholic,yes,42.0172248,2.9068943,1708701001,17087
+r12955877,Santa Maria de Lladó,christian,catholic,yes,42.2478394,2.8135735,1708801001,17088
+w86380962,Església de Sant Feliu,christian,catholic,yes,42.2492606,2.8138224,1708801001,17088
+w86381042,Capella dels Apòstols,christian,,yes,42.2552899,2.7982071,1708801001,17088
+w664862493,Església de Sant Feliu,christian,catholic,church,41.8287029,2.8923378,1708901001,17089
+w1138417977,Mare de Déu del Roser,christian,catholic,church,41.8267265,2.8904409,1708901002,17089
+n3617984395,Mare de Déu del Carme,christian,,,41.8005606,2.8754817,1708901003,17089
+w1117571143,Ermita de Can Nadal,christian,,yes,41.8211394,2.9113868,1708901003,17089
+w1126544644,Ermita de Sant Llorenç,christian,catholic,yes,41.8051966,2.9041564,1708901003,17089
+w813816441,Sant Ampèlit,christian,catholic,church,41.839426,2.9526809,1708901003,17089
+w1164545729,Mare de Déu de la Pietat d'Erols,christian,,yes,41.9292183,2.850897,1709001001,17090
+w813817639,Sant Cristòfol del Bosc,christian,catholic,chapel,41.9135182,2.8806844,1709001001,17090
+w813861934,Sant Cristòfol de Llambilles,christian,catholic,church,41.9210278,2.8591903,1709001001,17090
+n11279982335,Verge del Raïm,christian,catholic,,42.3207965,2.3354944,1709101001,17091
+w1085129983,Sant Esteve de Llanars,christian,catholic,church,42.3204491,2.3443169,1709101001,17091
+w234874842,Església del Port,christian,catholic,yes,42.3685191,3.1583132,1709201001,17092
+w183432307,Església de Sant Vicenç,christian,,yes,42.363028,3.1516279,1709201002,17092
+w170663435,Sant Martí de Vallmala,christian,catholic,church,42.3884525,3.0871948,1709201003,17092
+w337142890,Sant Genis del Terrer,christian,catholic,chapel,42.3623065,3.1149369,1709201003,17092
+w782539455,Sant Silvestre de Valleta,christian,catholic,chapel,42.370011,3.0978857,1709201003,17092
+w1049403892,Església de Sant Julià i rectoria,christian,,church,42.2913996,2.9113941,1709301001,17093
+w1049407670,Església de Sant Quirze d'Olmells,christian,,chapel,42.2860264,2.8815215,1709301001,17093
+w171797064,Mare de Déu dels Àngels,christian,catholic,church,42.4652591,1.9821182,1709401001,17094
+w243097374,Ermita de Sant Guillem,christian,catholic,yes,42.4592421,1.9805611,1709401001,17094
+w44523937,Ermita de Santa Cristina,christian,catholic,yes,41.6878533,2.8162258,1709501004,17095
+w702444709,Sant Romà,christian,catholic,church,41.699686,2.8475319,1709502001,17095
+w218315322,Mare de Déu de les Alegries,christian,catholic,church,41.7175424,2.8295507,1709503004,17095
+n9928878117,Iglésia ruso,christian,russian_orthodox,,41.7029177,2.8333353,1709504001,17095
+w222501584,Creu del Terme,christian,catholic,yes,41.7103822,2.7933583,1709504001,17095
+w42454862,Santuari de Sant Pere del Bosc,christian,,yes,41.711928,2.7905801,1709504001,17095
+n5554854575,Ermita de Sant Martí de Vinyoles,christian,,,42.1367143,2.1382665,1709601001,17096
+w107285958,Santa Margarida de Vinyoles,christian,Santuari,yes,42.1391661,2.1231839,1709601001,17096
+w1457873961,Santa Maria de les Llosses,christian,catholic,church,42.1525759,2.1043276,1709601001,17096
+w232413383,Santa Eulàlia de Viladonja,christian,catholic,yes,42.1655775,2.0676395,1709601001,17096
+w253468165,Sant Julià de Cosp,christian,catholic,yes,42.1863393,1.9803071,1709601001,17096
+w293151450,Sant Feliu d'Estiula,christian,catholic,yes,42.2034019,2.1073611,1709601001,17096
+w431606026,Santa Maria de Matamala,christian,catholic,chapel,42.1583024,2.0891699,1709601001,17096
+w431606154,Sant Julià de Moreta,christian,catholic,chapel,42.1637969,2.0466467,1709601001,17096
+w446586078,Sant Esteve de Vallespirans,christian,catholic,church,42.1772696,2.1421323,1709601001,17096
+w480428322,Sant Llorenç Corrubí,christian,catholic,church,42.2057921,2.054899,1709601001,17096
+w496713652,Sant Sadurní de Sovelles,christian,,church,42.1420387,2.1606654,1709601001,17096
+w778410987,Sant Vicenç,christian,catholic,chapel,42.1517887,2.0471718,1709601001,17096
+w829601334,Sant Vicenç de Palmerola,christian,catholic,church,42.156168,2.0343931,1709601001,17096
+n815019281,Església de Sant Esteve,christian,,,41.9899201,2.9571728,1709701001,17097
+w496440976,Sant Esteve de Madremanya,christian,catholic,church,41.9899302,2.9572462,1709701001,17097
+w813867469,Sant Iscle i Santa Victòria del castell de Millars,christian,catholic,church,41.9886577,2.9709712,1709701001,17097
+w231126435,Sant Vicenç,christian,catholic,church,42.22237,2.7423071,1709801001,17098
+w421349290,Sant Martí de Dosquers,christian,catholic,church,42.1951811,2.7534819,1709801001,17098
+w995923088,Ermita de Sant Prim,christian,,yes,42.2100414,2.733763,1709801001,17098
+w568874152,Sant Serni,christian,catholic,church,42.4463289,1.7868651,1709901001,17099
+r11813269,Església de Sant Pere,christian,catholic,church,42.3412502,2.9530553,1710001001,17100
+w409574031,Santa Maria de l'Om,christian,catholic,church,42.3516907,2.9807587,1710001001,17100
+w1135249491,Sant Roc,christian,catholic,church,41.7639752,2.6562181,1710101001,17101
+w1137874437,Sant Josep Obrer,christian,,church,41.7747466,2.6719563,1710101001,17101
+w294259153,Sant Esteve de Massanes,christian,catholic,church,41.7657938,2.651571,1710101001,17101
+w1339176417,Sant Andreu d'Oliveda,christian,,church,42.3651244,2.7541819,1710201001,17102
+w365710575,Mare de Déu de les Salines,christian,catholic,church,42.4208701,2.7488785,1710201001,17102
+w366279758,Sant Miquel de Fontfreda,christian,catholic,church,42.348694,2.7369099,1710201001,17102
+w366292570,Sant Pere dels Vilars,christian,catholic,church,42.36757,2.7294528,1710201001,17102
+w366301097,Sant Briç,christian,catholic,church,42.3803214,2.7012749,1710201001,17102
+w284291219,Sant Llorenç de Maçanet,christian,catholic,church,41.7775658,2.7305824,1710301001,17103
+n3637824549,Mare de Déu de Valldemaria,christian,,,41.7362071,2.7534742,1710301004,17103
+w280131778,Sant Pere de Martorell,christian,catholic,yes,41.761584,2.692318,1710301004,17103
+w839148525,Santa Anna,christian,roman_catholic,chapel,41.7837606,2.7185341,1710301004,17103
+r6921218,Sant Pere,christian,catholic,church,42.1270657,2.6390912,1710501001,17105
+w482518806,Sant Andreu,christian,catholic,chapel,42.1077139,2.6393116,1710501001,17105
+w484208277,Santa Maria del Freixe,christian,catholic,chapel,42.0993137,2.627105,1710501001,17105
+w409851015,Sant Cebrià de Mollet,christian,catholic,church,42.3606311,2.999792,1710601001,17106
+w167670849,Mare de Déu de les Neus,christian,roman_catholic,church,42.378048,2.3992385,1710701001,17107
+w221643065,Sant Pere,christian,catholic,yes,42.3670338,2.4193562,1710701001,17107
+w221644823,Santa Cecília,christian,roman_catholic,church,42.3487258,2.4051322,1710701001,17107
+w335472382,Sant Sebastià,christian,catholic,yes,42.3468915,2.404481,1710701001,17107
+n10911612838,Oratori de Plansalloses,christian,,chapel,42.2515817,2.5882435,1710901001,17109
+n2425714280,Sant Vicenç del Principi,christian,catholic,,42.3180842,2.614079,1710901001,17109
+r10981577,Sant Pere de Montagut,christian,catholic,church,42.2301767,2.5964889,1710901001,17109
+w176483772,Mare de Déu de les Agulles,christian,catholic,church,42.3059082,2.6222472,1710901001,17109
+w176483774,Sant Feliu de Riu,christian,catholic,,42.2962955,2.5939204,1710901001,17109
+w176496676,Sant Aniol d'Aguja,christian,catholic,church,42.3168924,2.5880572,1710901001,17109
+w176505820,Sant Llorenç d'Oix,christian,roman_catholic,church,42.2714286,2.5289635,1710901001,17109
+w176524327,Santa Bàrbara de Pruneres,christian,catholic,church,42.2754308,2.55886,1710901001,17109
+w176557467,Sant Martí de Toralles,christian,catholic,yes,42.2599576,2.4932774,1710901001,17109
+w176640463,Mare de Déu del Cós,christian,roman_catholic,church,42.2307481,2.5724641,1710901001,17109
+w189251721,Sant Martí,christian,catholic,,42.301344,2.5722129,1710901001,17109
+w204138099,Santa Maria d'Escales,christian,catholic,church,42.2884082,2.5653996,1710901001,17109
+w204140758,Sant Miquel d'Hortmoier,christian,catholic,church,42.2984351,2.5387536,1710901001,17109
+w366333036,Sant Sebastià de Monars,christian,catholic,church,42.3259357,2.5387599,1710901001,17109
+w419194409,Mare de Déu de la Devesa,christian,catholic,church,42.2062926,2.5680165,1710901001,17109
+w813196871,Sant Eudald de Jou,christian,catholic,church,42.2459688,2.5701954,1710901001,17109
+w989759212,Sant Miquel,christian,,yes,42.2838666,2.4948133,1710901001,17109
+w1081739611,Capella del Sant Crist del Cementiri de Palafrugell,christian,,,41.9188156,3.146936,1711001001,17110
+w172423699,Església de Mont-Ras,christian,,yes,41.9091286,3.1435099,1711001001,17110
+r12955851,Parròquia de St. Pere de Navata,christian,catholic,church,42.223918,2.8614655,1711101001,17111
+w1055804005,Sant Pere de Navata (Can Miró),christian,,church,42.2174234,2.8670664,1711101001,17111
+w669500214,Sant Esteve,christian,catholic,church,42.1945679,2.8804663,1711101001,17111
+n5884573454,Església de Santa Bàrbara,christian,catholic,,42.2690739,2.2734429,1711201001,17112
+n6188295950,Tumba,christian,,,42.2861288,2.2896311,1711201001,17112
+w295776561,Església de Sant Martí d'Ogassa,christian,catholic,church,42.2722391,2.2336361,1711201001,17112
+w364768293,Sant Julià,christian,catholic,church,42.2561123,2.1948984,1711201001,17112
+w829619125,Sant Martí de Surroca,christian,catholic,church,42.2750418,2.2833008,1711201001,17112
+w177367674,,christian,catholic,yes,42.182321,2.4885727,1711401001,17114
+n13159281215,Església de Jesucrist dels Sants dels últims dies,christian,latter_day_saints,,42.1819557,2.4845364,1711401002,17114
+n863356361,Sant Ferriol,christian,catholic,,42.1813447,2.4854837,1711401002,17114
+n12166002864,,muslim,,,42.1788924,2.4900104,1711401005,17114
+w860298952,Sant Roc,christian,catholic,yes,42.1731754,2.4730944,1711402004,17114
+n9522712433,Ermita de Sant Sebastià,christian,,,42.1755656,2.4918338,1711403001,17114
+w325546808,Sant Cristòfol de les Fonts,christian,,yes,42.1686327,2.4998598,1711403001,17114
+w943351887,la Salut,christian,,yes,42.1687632,2.4867842,1711403001,17114
+n9381668845,Sagrada Familia,christian,catholic,,42.1673551,2.5226095,1711403003,17114
+w511668016,Santa Maria de Batet,christian,catholic,church,42.181159,2.5166331,1711403003,17114
+w1213920408,Mare de Déu de l'Esperança,christian,,yes,42.2046062,2.4925502,1711404002,17114
+r18777778,,christian,,yes,42.1872142,2.4884746,1711405001,17114
+w1075371422,Sant Andreu del Coll,christian,,yes,42.1967518,2.4587965,1711405001,17114
+w860298977,Ermita de Sant Francesc,christian,roman_catholic,chapel,42.1872142,2.4884746,1711405001,17114
+w179548105,Sant Pere Màrtir,christian,catholic,yes,42.1822037,2.4782019,1711405003,17114
+w326785752,Mare de Déu dels Desemparats,christian,catholic,yes,42.1765638,2.4782772,1711405003,17114
+w218647776,Sant Julià d'Ordis,christian,catholic,church,42.2186356,2.9070026,1711501001,17115
+w223694884,Església de Sant Nicolau,christian,catholic,,42.2028359,2.8909193,1711501001,17115
+w162685264,Santa Bàrbara,christian,catholic,yes,41.9262485,2.6180376,1711601001,17116
+w175993218,Ermita de Sant Gregori,christian,catholic,yes,41.9631299,2.5693401,1711601001,17116
+w280143199,Santa Creu d'Horta,christian,catholic,yes,41.91597,2.5838972,1711601001,17116
+w364367500,Santuari de la Mare de Déu del Coll d'Osor,christian,catholic,church,41.9578781,2.5244215,1711601001,17116
+w547490776,Capella de la Mare de Déu del Part,christian,catholic,chapel,41.9583068,2.5405739,1711601001,17116
+w671998647,Sant Pere d'Osor,christian,,yes,41.9452586,2.5566286,1711601001,17116
+w826189806,Sant Josep,christian,catholic,church,41.9625876,2.5779989,1711601001,17116
+w829393872,Sant Miquel de Maifré,christian,catholic,church,41.9848008,2.5400345,1711601001,17116
+w1081739614,Capella de l'Asil d'Ancians,christian,,yes,41.9192273,3.1632102,1711701001,17117
+w235176344,Església Parroquial de Sant Martí,christian,catholic,yes,41.917242,3.1641438,1711701001,17117
+w1081739612,Capella del Col·legi Vedruna,christian,,yes,41.9170304,3.169476,1711701003,17117
+n9914388618,Església dels Dolors,christian,catholic,,41.9157731,3.1631715,1711702001,17117
+w1081739613,Església dels Dolors,christian,,yes,41.9156994,3.1630535,1711702001,17117
+n7372926089,Santa Margarida de Vilarnau,christian,catholic,church,41.9070756,3.171458,1711702003,17117
+w174859983,Santa Margarida de Vilarnau,christian,catholic,church,41.9074204,3.1717788,1711702003,17117
+w176193932,Sant Ramon d'Ermedàs,christian,catholic,yes,41.8944392,3.1636983,1711702003,17117
+w297526504,Ermita de Sant Sebastià de la Guarda,christian,catholic,church,41.8971273,3.2026819,1711702003,17117
+w364829669,Sant Pere de Calella,christian,catholic,church,41.8896661,3.1856991,1711702003,17117
+w167643633,Església de Sant Fruitós,christian,,yes,41.9305061,3.1320299,1711703002,17117
+w787666678,Mesquita Al-Ummah de Palafrugell,muslim,,mosque,41.9257151,3.1567972,1711703002,17117
+n2384034526,Santa Maria del Mar,christian,catholic,,41.846981,3.1285872,1711801001,17118
+w700054513,Santa Maria de Bell-lloc,christian,catholic,church,41.8815132,3.109126,1711803002,17118
+w206291011,Santa Eugènia de Vila-Romà,christian,roman_catholic,church,41.8574424,3.1296552,1711804001,17118
+w206986241,Santa Maria de la Fosca,christian,roman_catholic,chapel,41.8547404,3.1420874,1711804002,17118
+w571126704,Santa Eulàlia de Palau,christian,catholic,church,42.173404,2.9647477,1711901001,17119
+w139438034,Ermita de Sant Onofre,christian,catholic,yes,42.3180652,3.1609672,1712001001,17120
+w145030011,Sant Joan de Palau-saverdera,christian,catholic,church,42.3068095,3.145947,1712001001,17120
+w364801276,Església de Sant Feliu de Boada,christian,,church,41.973774,3.1254618,1712101001,17121
+w398602153,Sant Pau de Fontclara,christian,catholic,church,41.9937852,3.1229788,1712101001,17121
+w398610521,Església de Sant Julià de Boada,christian,catholic,church,41.9853966,3.1219748,1712101001,17121
+w399315615,Església de Sant Pere de Palau-Sator,christian,,,41.9881006,3.109655,1712101001,17121
+n9177618876,,christian,catholic,,42.0518471,2.7894902,1712301001,17123
+r5988757,Església de Sant Miquel de Palol de Revardit,christian,catholic,church,42.0697317,2.7963565,1712301001,17123
+w778894124,Sant Martí de Riudellots de la Creu,christian,catholic,church,42.0572966,2.8133869,1712301001,17123
+w176495974,Església de Sant Pere,christian,roman_catholic,yes,41.9717806,3.143846,1712401001,17124
+w422064131,Sant Fructuós,christian,catholic,church,41.9781459,3.1608345,1712401001,17124
+w729065666,Santa Magdalena de Puigsac,christian,catholic,chapel,42.3083052,2.2269995,1712501001,17125
+w392756391,Església de Sant Cristófor,christian,,,42.0210311,3.0523022,1712601001,17126
+w392756392,Església de Sant Feliu,christian,,,42.0222224,3.0300428,1712601001,17126
+w417648799,Església de Sant Martí,christian,catholic,church,42.3158701,3.1166167,1712801001,17128
+w226833387,Sant Esteve de Pedret,christian,catholic,church,42.3064509,3.0827835,1712901001,17129
+w416254891,Església de Sant Isidre i Sant Antoni,christian,catholic,church,42.3107189,3.0662272,1712901001,17129
+w255608429,Església de Sant Andreu de Pedrinyà,christian,catholic,church,42.0094924,2.9648214,1713001001,17130
+w498104960,Església de Sant Pere de Púbol,christian,catholic,public,42.0147729,2.9833738,1713001001,17130
+w669577301,Sant Isidor,christian,catholic,church,42.0204006,2.9736255,1713001001,17130
+w232958923,Ermita de Sant Joan Sescloses,christian,catholic,chapel,42.278295,3.0721976,1713201001,17132
+w408366380,Església de Santa Eulàlia de Vilanova de la Muga,christian,catholic,yes,42.2801111,3.0427028,1713201001,17132
+w410270109,Església de Sant Martí de Peralada,christian,catholic,church,42.3083364,3.0084571,1713201001,17132
+w529081545,Monestir de Santa Clara,christian,catholic,yes,42.2605289,3.0478014,1713201001,17132
+w782529537,Sant Nazari de les Olives,christian,catholic,church,42.3221753,2.9953714,1713201001,17132
+n2968414453,Sant Salvador de Puig-alder,christian,catholic,yes,42.0977683,2.5337062,1713301001,17133
+n6738527286,Santa Maria de les Encies,christian,catholic,,42.0660971,2.5760723,1713301001,17133
+r15413801,Església parroquial de Sant Cristòfol de les Planes,christian,,church,42.055399,2.5368146,1713301001,17133
+w1070418550,Ermita de l'Àngel,christian,roman_catholic,chapel,42.0590045,2.5336644,1713301001,17133
+w545303789,Sant Pere Sacosta,christian,,ruins,42.0516055,2.5157545,1713301001,17133
+w743139474,Sant Cristòfol de Cogolls,christian,catholic,church,42.0853666,2.5419175,1713301001,17133
+w743139477,Ermita de Sant Pelegrí,christian,roman_catholic,chapel,42.0753895,2.5420157,1713301001,17133
+w829615529,Sant Vicenç de Planoles,christian,catholic,church,42.3160669,2.1044231,1713401001,17134
+w829619859,Sant Marcel de Planès,christian,catholic,church,42.3197691,2.0980675,1713401001,17134
+w525693220,Església de Sant Sebastià de Molins,christian,catholic,church,42.3156932,2.9214503,1713501001,17135
+w558599363,Església de Sant Martí,christian,catholic,church,42.1868063,2.9171978,1713601001,17136
+w571021758,Sant Medir de Romanyà,christian,catholic,church,42.1766297,2.8946851,1713601001,17136
+n12115116716,Ermita de St. Patllari,christian,,,42.1120822,2.7116311,1713701001,17137
+n2441576592,Sant Cebrià,christian,catholic,,42.1020144,2.7082429,1713701001,17137
+r7242110,Sant Patllari,christian,catholic,chapel,42.1120824,2.7116363,1713701001,17137
+r7539830,Església de Sant Romà de Miànigues,christian,catholic,church,42.1061407,2.7568279,1713701001,17137
+w309937177,Església de Santa Maria de Porqueres,christian,catholic,church,42.1217985,2.7486697,1713701001,17137
+w339396491,Ermita de Sant Quirze i Santa Julita de Merlant,christian,,chapel,42.1486455,2.7094551,1713701001,17137
+w684955315,Sant Maurici del Calç,christian,catholic,chapel,42.0998046,2.7275266,1713701001,17137
+w828544710,Sant Bartomeu de Matamala,christian,catholic,church,42.1206119,2.7163922,1713701001,17137
+w828561560,Sant Cristòfol d'Usall,christian,catholic,church,42.1487211,2.7571245,1713701001,17137
+w305282381,Església de Sant Andreu de Mata,christian,catholic,church,42.1073111,2.7836896,1713701002,17137
+w240953776,Església de St.Joan,christian,,yes,42.1036984,2.7719063,1713701003,17137
+w398337965,Temple parroquial de Santa Maria,christian,catholic,yes,42.4261608,3.1579439,1713801001,17138
+w512482949,Sant Martí del Corb,christian,roman_catholic,church,42.1395221,2.4915196,1713901001,17139
+w512585314,Sant Miquel del Corb,christian,,church,42.1439326,2.4849871,1713901001,17139
+w512840364,Sant Pere,christian,,yes,42.1409701,2.4611279,1713901001,17139
+r6002785,Monestir de Sant Pere de Rodes,christian,catholic,yes,42.3233443,3.1664303,1714001001,17140
+w157018688,Sant Baldiri de Taballera,christian,catholic,yes,42.3256467,3.230012,1714001001,17140
+w188131985,Santa Helena de Rodes,christian,catholic,yes,42.3266367,3.1600722,1714001001,17140
+w399365983,Mare de Déu de les Neus,christian,catholic,church,42.3380146,3.2049471,1714001001,17140
+w669510719,Sant Fruitós,christian,catholic,church,42.3358718,3.1666391,1714001001,17140
+n11030234406,Capella de la Mare de Déu de Gràcia,christian,roman_catholic,chapel,42.4314259,1.9286501,1714101001,17141
+w1040204130,Sant Domènec,christian,catholic,church,42.4327161,1.9287981,1714101002,17141
+w230315018,Sant Tomàs,christian,catholic,yes,42.4157441,1.9116137,1714101003,17141
+w295251188,Sant Jaume,christian,,yes,42.4470355,1.938693,1714101003,17141
+w401097023,Sant Andreu,christian,catholic,church,42.4079173,1.9526231,1714101003,17141
+w401097024,Sant Julià,christian,catholic,church,42.418469,1.9472947,1714101003,17141
+w860725918,Sant Marc,christian,roman_catholic,chapel,42.4178443,1.9299627,1714101005,17141
+w214798334,Sant Mateu de Montnegre,christian,roman_catholic,church,41.9460517,2.9031828,1714201001,17142
+w813852694,Mare de Déu de Montnegre,christian,catholic,church,41.9557402,2.9323718,1714201001,17142
+w952902861,Sant Martí de Castellar de la Selva,christian,,church,41.9490567,2.8695237,1714201001,17142
+w166105970,Sant Sadurní,christian,catholic,yes,41.9563559,2.8505871,1714201002,17142
+w250787292,Santa Margarida,christian,,house,41.940488,2.845744,1714201002,17142
+w159693570,Monestir de Sant Quirze de Colera,christian,catholic,yes,42.4162761,3.0588853,1714301001,17143
+w159693571,Santa Maria de Colera,christian,catholic,church,42.4161302,3.0577479,1714301001,17143
+w408623862,Sant Julià de Rabós,christian,catholic,church,42.378986,3.0287178,1714301001,17143
+w782532818,Sant Romà de Delfià,christian,catholic,church,42.3555279,3.0321986,1714301001,17143
+w991425363,Sant Quirc i Santa Julita,christian,catholic,church,42.392764,3.0441002,1714301001,17143
+w174487963,Església de Regencós,christian,catholic,yes,41.9525472,3.1699758,1714401001,17144
+w1041029921,Mare de Déu del Carme,christian,,yes,42.3262174,2.1663841,1714501001,17145
+w1079691400,Capella de Sant Cristòfor,christian,catholic,yes,42.3075078,2.1656946,1714501001,17145
+w176683586,Sant Cristòfol,christian,catholic,chapel,42.3176368,2.1373955,1714501001,17145
+w206132238,Sant Antoni,christian,catholic,yes,42.303279,2.1588517,1714501001,17145
+w501663994,Santa Maria,christian,catholic,church,42.3062202,2.1678729,1714501001,17145
+w506295593,Mare de Déu dels Desemparats,christian,catholic,church,42.3076269,2.1696728,1714501001,17145
+w1067863271,Mare de Déu del Roser,christian,catholic,church,42.2684,2.1595687,1714501002,17145
+w309370303,Sant Esteve de Perramon,christian,catholic,yes,42.2748889,2.170097,1714501002,17145
+w596419563,Sant Feliu,christian,catholic,church,42.2768107,2.1862989,1714501002,17145
+w103203774,Sant Martí,christian,catholic,church,41.7765871,2.5126245,1714601001,17146
+w308432034,Sant Llop,christian,,yes,41.7468971,2.5403556,1714601001,17146
+w160718293,Sant Pere de Ripoll,christian,catholic,church,42.201308,2.1900071,1714701001,17147
+w160718300,Monestir de Santa Maria de Ripoll,christian,catholic,yes,42.2014251,2.1908167,1714701001,17147
+n3099078392,Parròquia de Sant Josep Obrer,christian,,,42.1930467,2.1940024,1714703004,17147
+w1034447880,Sant Bernabé de Tenes,christian,catholic,church,42.1939768,2.2455883,1714704001,17147
+w109890764,el Remei,christian,catholic,yes,42.1870326,2.1785152,1714704001,17147
+w1196064772,Ermita de Sant Roc,christian,catholic,church,42.2128577,2.1875472,1714704001,17147
+w204116635,Sant Jaume del Barretó,christian,catholic,,42.1476465,2.2899015,1714704001,17147
+w421983311,Sant Bartomeu de Llaés,christian,catholic,church,42.1546658,2.2483347,1714704001,17147
+w421984734,Mare de Déu de la Cau,christian,catholic,church,42.163335,2.2631473,1714704001,17147
+w213890014,Mare de Déu d'Argimon,christian,catholic,yes,41.8305749,2.6359214,1714801001,17148
+w504389412,Sant Martí,christian,catholic,church,41.8263054,2.6575817,1714801001,17148
+w578911908,Mare de Déu de Montcorb,christian,roman_catholic,chapel,41.8098989,2.7013362,1714801001,17148
+n2404967234,Sant Joan de la Font,christian,catholic,church,42.1712037,2.3948688,1714901001,17149
+w685067249,Santa Maria de Riudaura,christian,catholic,church,42.187575,2.4087221,1714901001,17149
+w793229854,Sant Miquel del Mont,christian,roman_catholic,chapel,42.1979161,2.4466158,1714901001,17149
+w364367499,Església de Sant Esteve,christian,catholic,church,41.8927038,2.8036719,1715001001,17150
+w967295416,Capella de la Mare de Déu del Remei,christian,catholic,yes,41.8972901,2.7837756,1715001001,17150
+w415162939,Església de Sant Mamet,christian,catholic,church,42.2274667,3.042272,1715101001,17151
+w305726832,Església de Santa Maria de Roses,christian,,church,42.2619667,3.1781951,1715202001,17152
+w668320637,Sant Vicenç,christian,catholic,church,42.0208327,3.0104869,1715301001,17153
+w1240850709,Sant Grau d'Entreperes,christian,roman_catholic,chapel,42.2747667,2.6255603,1715401001,17154
+w176483775,Santa Cecília de Sadernes,christian,catholic,,42.270067,2.5961013,1715401001,17154
+w178268880,Sant Andreu de Guitarriu,christian,catholic,,42.287062,2.6209904,1715401001,17154
+w727279039,Sant Miquel de Monteia,christian,catholic,yes,42.2669357,2.6481797,1715401001,17154
+w778919384,Sant Martí,christian,roman_catholic,church,42.235759,2.6496916,1715401001,17154
+r4455461,Església de Sant Cugat,christian,catholic,yes,41.9745964,2.7812232,1715501001,17155
+w696308957,مسجد سالت الكبير,muslim,,yes,41.9661072,2.7777266,1715501008,17155
+n9028474509,,sikh,,,41.9756122,2.7951971,1715502001,17155
+w256354709,Església Sant Jaume,christian,,yes,41.9767724,2.7957731,1715502005,17155
+w601310550,Església parroquial de Sant Andreu Salou,christian,,church,41.8738898,2.8253598,1715701001,17157
+r6109806,Església de Sant Climent,christian,catholic,church,42.3688121,2.9801738,1715801001,17158
+w294261053,Església Sant Gabriel de Grions,christian,catholic,yes,41.7610595,2.6085654,1715901001,17159
+w302309487,Ermita Sant Romà,christian,catholic,chapel,41.8001857,2.5997227,1715901001,17159
+w339905317,Església de Sant Llorenç de Gaserans,christian,catholic,yes,41.7493702,2.5905195,1715901001,17159
+w353482271,Sant Segimon del Bosc,christian,catholic,church,41.8118624,2.5615954,1715901001,17159
+w829436405,Església de Sant Feliu de Buixalleu,christian,catholic,church,41.7913086,2.5863992,1715901001,17159
+n401288429,Ermita St. Elm,christian,catholic,,41.7746451,3.0274075,1716001001,17160
+w1476308023,Monestir benedictí Sant Feliu de Guíxols,christian,roman_catholic,monastery,41.7798957,3.0264913,1716001001,17160
+w170713450,Sant Amanç,christian,,yes,41.787667,3.0151164,1716001002,17160
+w358309799,Ermita de Pedralta,christian,catholic,church,41.7918164,2.9821866,1716001002,17160
+w204406267,Sant Joan de Vilartagues,christian,roman_catholic,church,41.7919448,3.025461,1716002004,17160
+w186612014,Santa Maria Assumpta,christian,roman_catholic,yes,41.7859387,3.0331496,1716003001,17160
+w414806127,la Salut,christian,catholic,church,42.062957,2.4960338,1716101001,17161
+w414820098,Santa Cecília,christian,catholic,chapel,42.0945059,2.4884353,1716101001,17161
+w477471529,Sant Iscle,christian,,,42.1193886,2.5286034,1716101001,17161
+w704594899,Sant Sebastià,christian,catholic,chapel,42.0774298,2.5100177,1716101001,17161
+w812752060,Sant Miquel de Pineda,christian,catholic,church,42.1019449,2.4940719,1716101001,17161
+r6722224,Església de Santa Maria del Collell,christian,catholic,church,42.151266,2.6575658,1716201001,17162
+w210637902,Sant Ferriol,christian,catholic,church,42.1978329,2.6685611,1716201001,17162
+w242814140,el Sagrat Cor,christian,catholic,church,42.190263,2.6847858,1716201001,17162
+w516464445,Sant Fruitós d'Ossinyà,christian,,church,42.1816426,2.6886979,1716201001,17162
+w604862200,Sant Miquel de la Miana,christian,catholic,church,42.1799187,2.6314426,1716201001,17162
+w785161195,Santa Maria de Fares,christian,catholic,church,42.1865535,2.7356213,1716201001,17162
+w813198933,Sant Andreu del Torn,christian,catholic,church,42.1604686,2.645561,1716201001,17162
+n3907798695,Oratori de la Mare de Déu de Fàtima,christian,catholic,,42.0088285,2.7196775,1716301002,17163
+n4227468229,,christian,,,41.982606,2.6899139,1716301002,17163
+w1348099458,Ermita de Sant Grau,christian,catholic,yes,41.99244,2.7150334,1716301002,17163
+w286672988,Santuari de Santa Afra,christian,roman_catholic,yes,42.0061072,2.7207324,1716301002,17163
+w357543951,Sant Narcís,christian,roman_catholic,church,41.9987835,2.7918266,1716301002,17163
+w386985813,Església Vella de Sant Gregori,christian,catholic,church,41.991477,2.7381724,1716301002,17163
+w435553110,Mare de Déu de la Pietat,christian,,yes,41.986707,2.7016298,1716301002,17163
+w466427217,Santa Maria de Calders,christian,catholic,church,41.9802402,2.6715095,1716301002,17163
+w778882349,Església de Sant Feliu,christian,,yes,42.0236517,2.7663456,1716301002,17163
+w813817238,Sant Bartomeu de Segalars,christian,catholic,church,41.977932,2.7481091,1716301002,17163
+w813860538,Església de Sant Medir de Cartellà,christian,catholic,church,42.0271292,2.7734128,1716301002,17163
+w934416309,Santa Maria de Ginestar,christian,catholic,church,42.0149643,2.7171428,1716301002,17163
+w275335780,Església de Sant Hilari Sacalm,christian,catholic,church,41.8789541,2.5084419,1716401001,17164
+w372586378,Sant Martí de Querós,christian,,yes,41.9593832,2.4702291,1716401001,17164
+w829393411,Santa Maria de Mansolí,christian,catholic,church,41.9034025,2.5025685,1716401001,17164
+w280143195,Mare de Déu del Pedró,christian,catholic,,41.8977948,2.5654573,1716401003,17164
+w280143200,Santa Margarida de Vallors,christian,catholic,yes,41.8835929,2.5497419,1716401003,17164
+w152485704,Ermita de Sant Mateu,christian,catholic,,42.0899344,2.9604071,1716601001,17166
+w217180590,Església de Sant Jordi Desvalls,christian,,church,42.0721087,2.9536973,1716601001,17166
+w813866712,Sant Feliu de Diana,christian,catholic,church,42.085187,2.9536266,1716601001,17166
+w709233437,Mare de Déu del Prat,christian,catholic,church,42.2371757,2.289274,1716701002,17167
+w253390052,Santa Magdalena de Parella,christian,catholic,church,42.2560819,2.3337096,1716701003,17167
+w338041224,Ermita de Sant Antoni de Pàdua,christian,catholic,church,42.2281397,2.2955499,1716701003,17167
+w414695860,Santa Llúcia de Puigmal,christian,catholic,chapel,42.2165006,2.3571765,1716701003,17167
+r4635384,Sant Joan,christian,roman_catholic,church,42.0458505,2.9427222,1716801001,17168
+n4492150821,Parroquia de Sant Julià de Ramis,christian,catholic,,42.0342732,2.8395107,1716901001,17169
+w221533535,Sant Vicenç de les Roquetes,christian,catholic,church,42.0270825,2.8503584,1716901001,17169
+w221752043,Església dels Sants metges,christian,catholic,church,42.0281094,2.853554,1716901001,17169
+n7743271030,Santa Maria del Pòpulo,christian,catholic,church,42.1959282,2.3032426,1717001001,17170
+w177906793,Sant Julià,christian,catholic,church,42.1974937,2.3067515,1717001001,17170
+w421999184,el Comunidor,christian,,yes,42.1975835,2.3062967,1717001001,17170
+w421999193,la Salut,christian,catholic,church,42.1974014,2.3045019,1717001001,17170
+w607450224,Mare de Déu dels Àngels,christian,roman_catholic,chapel,42.1822925,2.2746471,1717001001,17170
+w829614194,Santa Cecília de Ragort,christian,catholic,church,42.1965705,2.2922792,1717001001,17170
+n4192060143,Ermita de Sant Jordi,christian,,,42.3282841,2.7660824,1717101001,17171
+w1239413972,Sant Sebastià de la Muga,christian,,yes,42.3379068,2.8132544,1717101001,17171
+w369045440,Sant Antoni,christian,catholic,yes,42.3172104,2.7814876,1717101001,17171
+w369046347,Sant Andreu,christian,catholic,yes,42.3222078,2.7902216,1717101001,17171
+w587744038,Església de Sant Llorenç de la Muga,christian,catholic,church,42.3201358,2.7901752,1717101001,17171
+w782473560,Mare de Déu de Palau,christian,catholic,church,42.3072118,2.7388991,1717101001,17171
+r14482578,Santa Cecília de les Serres,christian,roman_catholic,chapel,41.9996448,2.6716926,1717201001,17172
+w229771606,Santa Maria,christian,catholic,,42.0685787,2.6519176,1717201001,17172
+w403515228,Ermita de Sant Joan,christian,,chapel,42.0236454,2.6789746,1717201001,17172
+w407906775,Sant Nazari,christian,roman_catholic,chapel,42.0346155,2.6626532,1717201001,17172
+w407906842,Capella de Sant Medir,christian,,chapel,42.0198826,2.6908836,1717201001,17172
+w491110470,Sant Pere de Llorà,christian,roman_catholic,church,42.0204896,2.7069872,1717201001,17172
+w491122760,Sant Martí,christian,,yes,42.0362819,2.6470665,1717201001,17172
+r11203198,Església de la Mare de Déu dels Àngels,christian,roman_catholic,church,41.9846738,2.9087888,1717301001,17173
+r11203199,Santuari de la Mare de Déu dels Àngels,christian,,,41.9846871,2.9089104,1717301001,17173
+r15432177,Sant Martí,christian,roman_catholic,church,42.0196726,2.93088,1717301001,17173
+w815890859,Santuari Mare de Déu dels Angels,christian,catholic,,41.9847906,2.9087777,1717301001,17173
+w815890860,Santuari Mare de Déu dels Angels,christian,catholic,,41.9847657,2.9088043,1717301001,17173
+w815890863,Santuari Mare de Déu dels Angels,christian,catholic,,41.9846858,2.9088853,1717301001,17173
+w241096058,Església de St. Miquel de Campmajor,christian,catholic,church,42.1360272,2.6792776,1717401001,17174
+w241096362,Església de Sant Martí de Campmajor,christian,,church,42.1316134,2.6888355,1717401001,17174
+w241096727,Església de Sant Vicenç de Falgons,christian,,church,42.1086098,2.66088,1717401001,17174
+w386907319,Ermita de Sant Natzari,christian,,chapel,42.0976684,2.6850675,1717401001,17174
+w386907320,Ermita de Mare de Déu de Loreto,christian,,chapel,42.1630334,2.6823718,1717401001,17174
+w386907864,Sant Nicolau,christian,catholic,chapel,42.0868814,2.6837378,1717401001,17174
+w386908770,Ermita de Sant Esteve de Briolf,christian,catholic,chapel,42.169088,2.6890884,1717401001,17174
+w112798609,Ermita de Sant Sebastià,christian,roman_catholic,chapel,42.1807297,2.9885773,1717501001,17175
+w279730871,Església de Sant Miquel,christian,catholic,church,42.1718293,2.9919187,1717501001,17175
+w584431006,Església de Sant Maurici,christian,catholic,church,42.1537605,2.9910802,1717601001,17176
+w1124362531,Sant Pau Vell,christian,roman_catholic,church,42.2617324,2.3720571,1717701001,17177
+w1511912691,Mare de Déu de Gràcia,christian,catholic,church,42.2791984,2.3712321,1717701001,17177
+w178947063,,christian,,,42.2628925,2.3658206,1717701001,17177
+w1153741977,Capella de Sant Sebastià,christian,,chapel,42.1916238,3.0825283,1717801001,17178
+w659861641,Església de Sant Pere,christian,catholic,church,42.188383,3.0821387,1717801001,17178
+w347302319,Església parroquial de Santa Coloma de Farners,christian,catholic,yes,41.863629,2.6629297,1718001002,17180
+w140277045,Mare de Déu de Farners,christian,catholic,chapel,41.8600506,2.6328741,1718001006,17180
+w280134076,Sant Iscle i Santa Victòria de Sauleda,christian,catholic,church,41.8516051,2.6009784,1718001006,17180
+w280143196,Sant Andreu de Castanyet,christian,catholic,yes,41.8886204,2.6237452,1718001006,17180
+w280143197,Sant Miquel de Cladells,christian,catholic,yes,41.8571808,2.563731,1718001006,17180
+w280143198,Sant Pere Cercada,christian,catholic,yes,41.8353207,2.6082703,1718001006,17180
+w364454306,Sant Marçal,christian,catholic,chapel,41.8526594,2.6929212,1718001006,17180
+n2992134661,Parròquia de Santa Cristina,christian,catholic,,41.815637,3.0034505,1718101001,17181
+w295423449,Església de Santa Cristina d'Aro,christian,catholic,church,41.8156464,3.0034618,1718101001,17181
+n1725434113,,christian,catholic,,41.8543423,2.9862026,1718101002,17181
+w218284266,Santa Agnès de Solius,christian,roman_catholic,church,41.8149231,2.9618459,1718101002,17181
+w222607269,Capella,christian,catholic,yes,41.7968923,2.9598647,1718101002,17181
+w231548286,Sant Martí de Romanyá,christian,,,41.8536977,2.9843909,1718101002,17181
+w674875081,Santa María de Bell-Lloch,christian,catholic,church,41.8398838,2.9778471,1718101002,17181
+w960190488,Capella de Sant Josep,christian,catholic,chapel,41.8106742,3.01887,1718101002,17181
+w223307038,Santa Llogaia,christian,catholic,,42.2332843,2.952189,1718201001,17182
+w1258837480,Sant Miquel,christian,roman_catholic,chapel,42.0919566,2.6135881,1718301001,17183
+w167032325,Santa Lena,christian,catholic,chapel,42.0261904,2.6407041,1718301001,17183
+w174817714,Ermita de Sant Roc,christian,catholic,yes,42.0174679,2.6619453,1718301001,17183
+w234889237,Santa Maria de Finestres,christian,catholic,chapel,42.1118956,2.5930299,1718301001,17183
+w407907520,Sant Aniol de Finestres,christian,catholic,yes,42.090355,2.5869437,1718301001,17183
+w763241554,Sant Cebrià,christian,roman_catholic,chapel,42.0642284,2.6070065,1718301001,17183
+w813197351,Sant Julià de les Medes,christian,catholic,church,42.1167149,2.5545253,1718301001,17183
+w214456698,Sant Julià del Mont,christian,catholic,,42.1741613,2.5780626,1718401001,17184
+w239796450,Santa Margarida de Sacot,christian,catholic,chapel,42.1415096,2.5417648,1718401001,17184
+w312405342,Sant Martí Vell,christian,,,42.1544971,2.578981,1718401001,17184
+w483200057,Santa Maria,christian,roman_catholic,church,42.1442633,2.5717097,1718401001,17184
+w501652836,Sant Miquel Sacot,christian,,yes,42.1392511,2.5321988,1718401001,17184
+w512379509,Mare de Déu dels Arcs,christian,,yes,42.1412238,2.58526,1718401001,17184
+w512379519,Sant Vicenç de Sallent,christian,,yes,42.1543688,2.6148026,1718401001,17184
+w604857621,Sant Abdó i Sant Senén,christian,catholic,church,42.1722816,2.5601607,1718401001,17184
+w1212852855,Sant Sebastià,christian,,yes,42.2157779,2.5209184,1718501001,17185
+w306173519,Sant Joan les Fonts,christian,,yes,42.2176097,2.5149974,1718501001,17185
+w605173797,Sant Joan Baptista,christian,catholic,church,42.2132871,2.5090185,1718501002,17185
+n3476119566,Sant Josep Obrer,christian,catholic,,42.2059263,2.4931188,1718501003,17185
+w1005916847,Sant Cosme,christian,roman_catholic,chapel,42.1926005,2.5232104,1718501003,17185
+w419197670,Mare de Déu de Mont-ros,christian,catholic,church,42.2067454,2.5503805,1718501003,17185
+w813194917,Santa Eulàlia de Begudà,christian,catholic,church,42.1958061,2.5460535,1718501003,17185
+w1211373997,Mare de Déu de la Santa Misericòrdia,christian,catholic,church,42.015943,2.8236373,1718601001,17186
+w272135367,Sant Pau,christian,catholic,,42.0162761,2.8088115,1718601002,17186
+w175760227,Sant Martí de Llampaies,christian,catholic,,42.1210856,2.936738,1718701001,17187
+w297175925,Església de Sant Sebastià,christian,,yes,42.1207938,2.9633441,1718701001,17187
+w297316259,Església de Sant Bartomeu,christian,catholic,yes,42.1227174,2.9620352,1718701001,17187
+w609254585,Església de Santa Eugènia,christian,catholic,church,42.1324504,2.9788021,1718701001,17187
+w159218059,Sant Sebastià,christian,catholic,,42.3224858,3.1846398,1718801001,17188
+w399417936,Sant Esteve,christian,catholic,church,42.324621,3.1868415,1718801001,17188
+n867469541,Oratori de Sant Benet de Palerm,christian,,,41.9735898,2.6183135,1718901001,17189
+r1280056,Església de la Cellera de Ter,christian,catholic,church,41.9690803,2.6210404,1718901001,17189
+w73106880,Sants Just i Pastor,christian,catholic,church,41.9831272,2.6207667,1718901001,17189
+n7773218437,Oratori de Sant Pelegri,christian,,,41.970385,2.6174136,1718901002,17189
+r5974332,Sant Andreu,christian,catholic,church,42.1689275,2.74468,1719001001,17190
+w828542945,Sant Miquel Sesvinyes,christian,catholic,church,42.1603031,2.733029,1719001001,17190
+w392756393,Església de Santa Maria,christian,,,42.0285842,3.0723108,1719101001,17191
+w401418074,Església de Sant Iscle d'Empordà,christian,catholic,church,42.0322757,3.0569636,1719101001,17191
+w338006884,Sant Miquel,christian,catholic,yes,42.3756895,2.3011678,1719201001,17192
+w943378612,Santa Maria de Sils,christian,,temple,41.8058733,2.7429078,1719301002,17193
+w285763125,Església de Vallcanera,christian,catholic,church,41.8404885,2.7381278,1719301003,17193
+w155851720,Santa Anna del Grau,christian,roman_catholic,chapel,42.0267271,2.5334785,1719401001,17194
+w176344220,Sant Martí Sacalm,christian,catholic,,42.0145905,2.5445088,1719401001,17194
+w548876863,Capella de les Ofrenes,christian,catholic,chapel,42.0211052,2.5363503,1719401001,17194
+w548876864,Mare de Déu del Far,christian,catholic,church,42.0211767,2.5365991,1719401001,17194
+r5900762,Sant Climent de Tor,christian,catholic,church,42.0889618,3.0672137,1719501001,17195
+w181600756,Sant Esteve de Maranyà,christian,catholic,church,42.0920252,3.0464814,1719501001,17195
+w392824732,Església de Sant Mateu de Canet,christian,,yes,42.0529932,3.068159,1719501001,17195
+w672119833,Santa Maria,christian,catholic,church,42.0800701,3.0559162,1719501001,17195
+n976066595,Santa Cecília,christian,catholic,,42.3102195,2.8398446,1719601001,17196
+w172970419,Santuari de la Mare de Déu de la Salut,christian,,yes,42.3253313,2.8342872,1719601001,17196
+w173165964,Ermita de Santa Magdalena,christian,catholic,chapel,42.3244992,2.8258637,1719601001,17196
+w174374234,Sant Vicenç de Torrent,christian,catholic,yes,41.9520652,3.1271312,1719701001,17197
+w494171028,Església de Sant Esteve de Vilacolum,christian,catholic,church,42.1946555,3.0371358,1719801001,17198
+w577518207,Església de Sant Cebrià,christian,catholic,church,42.1740018,3.0450637,1719801001,17198
+w577532876,Església de Sant Tomàs de Fluvià,christian,catholic,church,42.1810484,3.0096082,1719801001,17198
+w257226663,Església de Sant Genís,christian,catholic,church,42.0435848,3.1261698,1719901001,17199
+n3975772023,Centro Cristiano Internacional,christian,evangelical,temple,42.0417896,3.1241354,1719901002,17199
+w394028830,Església de la Divina Providència,christian,,church,42.0423321,3.1246696,1719901002,17199
+n3065266899,,muslim,,,42.0519049,3.1960254,1719901003,17199
+n4424286314,Santa Maria del Mar,christian,roman_catholic,chapel,42.0506704,3.1778956,1719901003,17199
+n5082552858,Santa Anna,christian,,,42.0554161,3.1991654,1719901003,17199
+w315565946,Parròquia de Santa Anna,christian,catholic,church,42.055405,3.1990931,1719901003,17199
+w392834757,Capella del Roser,christian,,chapel,42.0447645,3.122489,1719901004,17199
+w399512343,Mesquita de Torroella de Montgrí,muslim,,mosque,42.0408724,3.1377771,1719901006,17199
+w125128547,Ermita de Santa Caterina,christian,catholic,temple,42.0581233,3.13446,1719901007,17199
+w159555820,Santa Maria del Palau,christian,catholic,,42.09407,3.1429912,1719901007,17199
+w605016434,,christian,,yes,42.0125125,3.187986,1719901007,17199
+r6837375,Església de Santa Maria de Tortellà,christian,,church,42.2330401,2.6297477,1720001001,17200
+w810774890,Santa Maria de Bellpuig,christian,catholic,church,42.2419098,2.6177032,1720001001,17200
+w183209106,Mare de Déu del Carme de Nevà,christian,catholic,,42.3134116,2.0787924,1720101001,17201
+w247193891,Sant Martí,christian,catholic,church,42.3237076,2.0462573,1720101001,17201
+w570785001,Sant Cristòfol de Toses,christian,catholic,yes,42.3231861,2.018693,1720101001,17201
+w174170780,Sant Vicenç,christian,,yes,41.7179482,2.9308284,1720201001,17202
+w80908927,Església Vella,christian,catholic,yes,41.7166792,2.9341422,1720201001,17202
+w1567742113,Capella dels Socors,christian,catholic,church,41.718565,2.9319555,1720201002,17202
+n1027160680,Mare de Déu de Gràcia,christian,catholic,,41.7433756,2.9336733,1720201003,17202
+r2952104,Santuari de Sant Grau d'Ardenya,christian,catholic,church,41.7595336,2.9486983,1720201003,17202
+w1416283552,Sant Benet,christian,catholic,church,41.7343664,2.8976705,1720201003,17202
+w788563974,Santa Eulàlia d'Ultramort,christian,catholic,church,42.0361829,3.034428,1720301001,17203
+n7372425128,Sant Andreu d'Ullà,christian,catholic,church,42.051803,3.1085448,1720401001,17204
+w235491176,Església de Santa Maria,christian,catholic,church,42.0516711,3.1082585,1720401001,17204
+w591223805,Església de Sant Pere,christian,,yes,42.0004932,3.0687527,1720501001,17205
+w228289242,Ermita de Sant Grau,christian,catholic,yes,42.3417057,1.8415673,1720601001,17206
+w401146710,Sant Climent,christian,catholic,church,42.3499166,1.8542879,1720601001,17206
+n5370688822,Església de Santa Maria,christian,roman_catholic,church,42.1015151,2.4495421,1720701001,17207
+w1304416696,Santa Margarida,christian,catholic,church,42.1192675,2.4737049,1720701001,17207
+w155852311,Sant Simplici,christian,catholic,church,42.0978152,2.4590646,1720701001,17207
+w155861757,Sant Miquel de Castelló,christian,,,42.1020702,2.4312739,1720701001,17207
+w340422243,Sant Esteve,christian,catholic,church,42.1184746,2.4591714,1720701001,17207
+w340442150,Sant Quintí,christian,catholic,church,42.1163557,2.4418033,1720701001,17207
+n2412830904,Mare de Déu de les Olletes,christian,catholic,,42.1344506,2.3952656,1720701002,17207
+n3478853598,Sant Bartomeu,christian,catholic,church,42.1496925,2.439316,1720701002,17207
+n7231326148,Santa Magdalena,christian,catholic,,42.1335856,2.3988808,1720701002,17207
+n9882045241,Sant Valentí de la Pinya,christian,roman_catholic,,42.1745793,2.4517787,1720701002,17207
+w1296818011,Sant Privat d'en Bas,christian,roman_catholic,church,42.1494811,2.4078487,1720701002,17207
+w1306523542,Santa Maria,christian,catholic,church,42.1741779,2.443665,1720701002,17207
+w1380466712,Sant Romà,christian,,yes,42.1216203,2.420086,1720701002,17207
+w155312680,Santa Magdalena del Mont,christian,catholic,yes,42.1334987,2.3989392,1720701002,17207
+w155861759,Sant Pere de Falgars,christian,,church,42.0858395,2.4385033,1720701002,17207
+w199249993,Santa Maria de Puigpardines,christian,catholic,,42.1395702,2.428724,1720701002,17207
+w340446124,Sant Mateu,christian,catholic,chapel,42.1150993,2.4005457,1720701002,17207
+w345723229,Sant Joan dels Balbs,christian,catholic,church,42.1720862,2.426074,1720701002,17207
+w586078514,Sant Antoni de Puigpardines,christian,catholic,chapel,42.1372472,2.4272248,1720701002,17207
+n1892879513,Ermita de Sant Feliu del Bac,christian,,church,42.2608436,2.414899,1720801001,17208
+n5111394918,Sant Pere Despuig,christian,catholic,,42.2136836,2.4262264,1720801001,17208
+r8262092,Santa Maria de Castellar de Muntanya,christian,catholic,chapel,42.2379868,2.4999536,1720801001,17208
+w1077824460,Església de Sant Andreu de Socarrats,christian,catholic,church,42.2078274,2.4747239,1720801001,17208
+w1125132719,Ermita de Sant Feliu del Bac,christian,,yes,42.2608434,2.4148676,1720801001,17208
+w178945332,Ermita de la Mare de Déu dels Àngels,christian,catholic,church,42.2582728,2.4509367,1720801001,17208
+w178996209,Sant Miquel de la Torre,christian,catholic,church,42.2647283,2.453549,1720801001,17208
+w338041222,Sant Ponç d'Aulina,christian,catholic,yes,42.2366064,2.3571769,1720801001,17208
+w489984126,Sant Andreu de Porreres,christian,catholic,church,42.2732986,2.434378,1720801001,17208
+w515505246,Sant Salvador,christian,,yes,42.2471292,2.4009851,1720801001,17208
+w813199967,Santa Margarida de Bianya,christian,roman_catholic,church,42.2075511,2.4446524,1720801001,17208
+w813200583,Sant Martí de Capsec,christian,catholic,church,42.2330369,2.4719465,1720801001,17208
+w205670545,Església de Sant Mateu,christian,catholic,yes,41.8811654,3.1256285,1720901001,17209
+w589502123,Església de Sant Miquel,christian,catholic,church,42.1491331,3.0265131,1721001001,17210
+w589518395,Església de Sant Vicenç,christian,catholic,church,42.1613024,3.0366572,1721001001,17210
+w608730185,Església de Sant Sadurní de Montiró,christian,catholic,church,42.1546398,3.0698456,1721001001,17210
+w608736535,Església de Santa Eugènia de Saldet,christian,catholic,church,42.171145,3.0627157,1721001001,17210
+w609181636,Església de Sant Andreu,christian,catholic,church,42.1645465,3.0091221,1721001001,17210
+w781490080,Església vella de Sant Andreu de Vila-robau,christian,,yes,42.1653244,3.008576,1721001001,17210
+w79990154,Mare de Deu de l'Om,christian,,church,42.1500867,3.0636597,1721001001,17210
+w112799756,Església de Sant Julià,christian,,yes,42.0607912,3.0464978,1721101001,17211
+w1306646027,Santa Bàrbara,christian,catholic,chapel,42.1237052,2.3166085,1721201001,17212
+w183173350,Santa Magdalena de Cambrils,christian,catholic,church,42.1690443,2.3402436,1721201001,17212
+w204112178,Sant Hilari,christian,catholic,,42.1224929,2.3094243,1721201001,17212
+w204155915,Sant Bartomeu de Covildases,christian,catholic,,42.123646,2.3609098,1721201001,17212
+w204234838,Sant Llúcia,christian,catholic,church,42.1445456,2.3307578,1721201001,17212
+w204248464,Santa Margarida de Cabagés,christian,catholic,,42.1523759,2.3197569,1721201001,17212
+w851803834,Església Sta. Maria,christian,roman_catholic,church,41.7890532,2.7794526,1721301001,17213
+w218468330,Santa Susanna de Caulès,christian,catholic,,41.7730954,2.8471317,1721301004,17213
+r6102826,Canònica de Santa Maria de Vilabertran,christian,catholic,church,42.2820958,2.9790821,1721401001,17214
+w342742501,Capella de Sant Roc,christian,catholic,yes,41.9485636,2.7654113,1721501001,17215
+w698182813,Sant Menna,christian,,yes,41.9567835,2.7729245,1721501001,17215
+w156612677,Santa Maria de la Móra (Sant Martí),christian,catholic,church,42.1046505,2.9333567,1721601001,17216
+w813858420,Sant Martí de Fellines,christian,catholic,church,42.0948083,2.9038447,1721601001,17216
+w813869651,Sant Vicenç de Viladasens,christian,catholic,church,42.0959275,2.9299798,1721601001,17216
+w449082974,Església de Sant Feliu de la Garriga,christian,catholic,church,42.1191177,3.0532993,1721701001,17217
+w483845988,Església de Santa Eulàlia de Palauborrell,christian,catholic,church,42.1320772,3.0443322,1721701001,17217
+w589428079,Església de Sant Quirze de Viladamat,christian,catholic,church,42.1333379,3.0753164,1721701001,17217
+r5926469,Ermita de Sant Pere de Juïgues,christian,catholic,chapel,42.1288527,2.8496602,1721801001,17218
+r5926566,Església de Sant Martí d'Ollers,christian,catholic,church,42.1536924,2.8336338,1721801001,17218
+w196675131,Santa Maria de Vilamarí,christian,catholic,church,42.112397,2.8520034,1721801001,17218
+w394888331,Ermita de Sant Mer,christian,catholic,chapel,42.0917786,2.8554853,1721801001,17218
+w394889387,Ermita de Santa Càndida,christian,catholic,chapel,42.0973346,2.8600597,1721801001,17218
+w394890750,Capella de Sant Llorenç de Perles,christian,catholic,chapel,42.0793036,2.8722541,1721801001,17218
+w394890752,Ermita de Sant Baldiri,christian,catholic,chapel,42.151323,2.886316,1721801001,17218
+w394891842,Ermita de Sant Roc de Vilademí,christian,catholic,chapel,42.147328,2.8132225,1721801001,17218
+w394892761,Ermita de Sant Roc d'Orfes,christian,catholic,chapel,42.1727687,2.8646734,1721801001,17218
+w394893678,Ermita de Sant Andreu del Vilar,christian,catholic,chapel,42.1137942,2.8973302,1721801001,17218
+w394893679,Ermita de Sant Sebastià d'Ollers,christian,catholic,chapel,42.1533382,2.8310652,1721801001,17218
+w394894235,Església de Sant Esteve de Guialbes,christian,catholic,church,42.1154817,2.8781887,1721801001,17218
+w394895683,Església de Sant Joan Baptista de Vilademuls,christian,catholic,church,42.1383033,2.8876038,1721801001,17218
+w394895686,Església de Sant Marçal de Quarantella,christian,catholic,church,42.125463,2.8681189,1721801001,17218
+w394895689,Església de Sant Julià de Galliners,christian,catholic,church,42.1497557,2.8721821,1721801001,17218
+w394896544,Església de Sant Martí de Terradelles,christian,catholic,church,42.1181261,2.8888804,1721801001,17218
+w394915750,Església de Sant Sadurní de Vilafreser,christian,catholic,church,42.0845528,2.8824001,1721801001,17218
+w394915752,Església de Santa Llogaia de Parets d'Empordà,christian,catholic,church,42.1668359,2.8890898,1721801001,17218
+w394922814,Església de Santa Maria d'Olives,christian,catholic,church,42.0986595,2.8715523,1721801001,17218
+w394922815,Església de Santa Maria d'Orfes,christian,catholic,church,42.1725108,2.8667397,1721801001,17218
+w412563766,Església de Sant Esteve de Vilademí,christian,catholic,church,42.1524812,2.8128288,1721801001,17218
+w699837002,Sant Miquel,christian,catholic,chapel,42.1038612,2.8961211,1721801001,17218
+n3702799765,,christian,,,41.8377874,2.3945324,1722001001,17220
+n582783372,Sant Segimon,christian,,,41.8220444,2.3547667,1722001001,17220
+n8695224113,Sant Miquel d'Espinzella,christian,catholic,,41.8548712,2.3382255,1722001001,17220
+w366309567,Capella de la Pietat,christian,catholic,yes,41.8465452,2.3916733,1722001001,17220
+w611949071,Sant Martí de Viladrau,christian,catholic,church,41.8476124,2.3893179,1722001001,17220
+w675912239,Mare de Déu de l'Erola,christian,catholic,chapel,41.8321483,2.3651377,1722001001,17220
+w979321487,Sant Miquel dels Barretons,christian,catholic,church,41.8212747,2.3549925,1722001001,17220
+n1119520744,Sant Cebrià,christian,catholic,,42.2470767,2.9378011,1722101001,17221
+w585649465,Sant Esteve de Vilaür,christian,catholic,church,42.1436711,2.9548757,1722201001,17222
+n4454745389,San Feliu,christian,,,42.3250944,3.0929952,1722301001,17223
+w1418861489,Mare de Déu dels Dolors,christian,catholic,chapel,42.332481,2.3090819,1722401001,17224
+w221652124,Mare de Déu del Catllar,christian,catholic,chapel,42.3587276,2.2920144,1722401001,17224
+w829613696,Santa Llúcia d'Abella,christian,catholic,church,42.3189565,2.3152603,1722401001,17224
+w829618246,Sant Martí de Vilallonga,christian,catholic,church,42.3314358,2.3117241,1722401001,17224
+w829620768,Sant Julià de Tregurà,christian,catholic,church,42.3441485,2.2874647,1722401001,17224
+w829622777,La Pietat de la Roca,christian,catholic,church,42.32253,2.3322136,1722401001,17224
+w122834660,Santa Maria,christian,catholic,,42.1950256,3.0584264,1722501001,17225
+w406826270,Església Sant Vicenç,christian,roman_catholic,church,42.2185779,2.9704038,1722601001,17226
+w408662854,Església de Sant Gil de Vilamaniscle,christian,catholic,church,42.3739739,3.0689956,1722701001,17227
+w587879031,Església de Santa Maria de Vilanant,christian,catholic,church,42.254764,2.8890928,1722801001,17228
+w587887999,Església de Sant Martí de Taravaus,christian,catholic,church,42.2447447,2.8899006,1722801001,17228
+w782537937,Sant Salvador de Coquells,christian,catholic,church,42.2744014,2.8673608,1722801001,17228
+w782538569,Sant Jaume dels Verders,christian,catholic,chapel,42.2474811,2.8639325,1722801001,17228
+w414677772,Església de Sant Esteve,christian,catholic,church,42.266146,3.0183937,1723001001,17230
+w609275749,Sant Mateu de Valldevià,christian,catholic,church,42.1218651,3.0018951,1723201001,17232
+w609287476,Església de Sant Pere,christian,catholic,church,42.1044257,2.991806,1723201001,17232
+w609295718,Església de Santa Maria de Gaüses,christian,catholic,church,42.1062079,2.9661974,1723201001,17232
+w609704228,Ermita de Sant Roc,christian,catholic,chapel,42.0990508,2.967026,1723201001,17232
+n4043568611,,christian,,,41.914809,2.7358921,1723301001,17233
+w193376933,Ermita de la Mare de déu de les Fonts,christian,,,41.9159025,2.7468242,1723301001,17233
+w401950637,Sant Dalmai,christian,roman_catholic,yes,41.91479,2.7359172,1723301001,17233
+n1092790385,Sant Esteve,christian,catholic,,41.8889096,2.7426845,1723301002,17233
+w440235405,Santa Margarida,christian,catholic,chapel,41.8739895,2.750433,1723301002,17233
+w829436615,Ermita de Santa Margarida,christian,catholic,chapel,41.8739887,2.7504276,1723301002,17233
+w527344305,Església de Sant Esteve,christian,catholic,industrial,42.3379585,2.8950103,1723401001,17234
+w175784952,Església de Sant Cebrià de Lledó,christian,roman_catholic,church,41.9124674,2.9668452,1790101001,17901
+w265278450,Sant Cebrià dels Alls,christian,catholic,yes,41.8873537,3.0146801,1790101001,17901
+w380725666,Església de Santa Pellaia,christian,roman_catholic,church,41.9202042,2.9171682,1790101001,17901
+w400875576,Sant Miquel de Cruilles,christian,catholic,yes,41.9539687,3.0046204,1790101001,17901
+w518855009,Església de Sant Génis,christian,catholic,yes,41.9753738,2.9965992,1790101001,17901
+w672080408,,christian,roman_catholic,church,41.9560322,3.0115403,1790101001,17901
+w672086129,Sant Sadurní de l'Heura,christian,catholic,church,41.9563359,2.9909963,1790101001,17901
+w788556975,Església de Sant Joan de Salelles,christian,catholic,church,41.9482993,2.9993252,1790101001,17901
+w841747269,Mare de Déu de l'Esperança,christian,catholic,church,41.9639073,3.0118574,1790101001,17901
+w228891685,Sant Julià i Santa Basilissa de Vulpellac,christian,,yes,41.9600269,3.0546024,1790201001,17902
+w282591046,Església de Santa Susanna de Peralta,christian,catholic,yes,41.9569214,3.0910367,1790201002,17902
+w282592966,Església de Sant Esteve de Peratallada,christian,catholic,yes,41.9796252,3.0905394,1790201002,17902
+w398733805,Església de Sant Esteve de Canapost,christian,catholic,church,41.9753432,3.0722921,1790201002,17902
+w731945853,Santa Coloma de Fitor,christian,catholic,church,41.9059977,3.08679,1790201002,17902
+w747161107,Sant Climent de Peralta,christian,roman_catholic,church,41.9497063,3.0952948,1790201002,17902
+w747445798,Santa Maria de Fonteta,christian,catholic,church,41.9503557,3.0574056,1790201002,17902
+n1540720875,Sant Pere Màrtir,christian,,,41.974089,2.6405228,1790301001,17903
+r1659215,Ermita de Sant Julià del Llor,christian,catholic,chapel,41.9691759,2.6476741,1790301001,17903
+w390631309,Església de Bonmatí,christian,catholic,yes,41.9704144,2.663512,1790301001,17903

@@ -62,6 +62,13 @@
   "durada": 6,
   "resum": "paro 2019: ya guardado\nparo 2020: ya guardado\nparo 2021: ya guardado\nparo 2022: ya guardado\nparo 2023: ya guardado\nparo 2024: ya guardado\nparo 2025: ya guardado\nparo 2026: 2210 filas de Girona, meses 202601-202610\ncontratos 2020: ya guardado\ncontratos 2021: ya guardado\ncontratos 2022: ya guardado\ncontratos 2023: ya guardado\ncontratos 2024: ya guardado\ncontratos 2025: ya guardado\ncontratos 2026: 2210 filas de Girona, meses 202601-202610\ndtes 2019: ya guardado\ndtes 2020: ya guardado\ndtes 2021: ya guardado\ndtes 2022: ya guardado\ndtes 2023: ya guardado\ndtes 2024: ya guardado\ndtes 2025: ya guardado\ndtes 2026: 2210 filas de Girona, meses 202601-202610"
  },
+ "culte": {
+  "estat": "ok",
+  "intent": "2026-11-24T07:38:27Z",
+  "ok": "2026-11-24T07:38:27Z",
+  "durada": 46,
+  "resum": "Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: 935 de 935 edificios religiosos con sección"
+ },
  "cultura": {
   "estat": "avís",
   "intent": "2026-11-23T15:32:34Z",
@@ -209,6 +216,13 @@
   "durada": 17,
   "resum": "idescat 6000: 13200 filas, 16 municipios, columnas ['YEAR', 'MUN', 'COUNTRY_G', 'SEX', 'CONCEPT', 'valor']\nidescat 16352: 35055 filas, 26 municipios, columnas ['YEAR', 'MUN', 'AGE', 'NATION', 'SEX', 'CONCEPT', 'valor']\ntablas Girona: {'nacionalitats': 33790, 'edat_nacionalitat': 33789}"
  },
+ "notariado": {
+  "estat": "ok",
+  "intent": "2026-11-24T08:18:23Z",
+  "ok": "2026-11-24T08:18:23Z",
+  "durada": 213,
+  "resum": "población INE 56945: 53 zonas, años 2000-2025\nherencies: 50 provincias, Girona 233 valores, último (2026, 5)\ntestaments: 50 provincias, Girona 78 valores, último (2026, 2)\nabintestat: 50 provincias, Girona 78 valores, último (2026, 2)\ndonacions: 50 provincias, Girona 78 valores, último (2026, 2)\npoder_general: 50 provincias, Girona 78 valores, último (2026, 2)\npoder_plets: 50 provincias, Girona 233 valores, último (2026, 5)\npoder_altres: 50 provincias, Girona 233 valores, último (2026, 5)\nhip_vivenda: 50 provincias, Girona 466 valores, último (2026, 5)\nhip_total: 50 provincias, Girona 466 valores, último (2026, 5)\ncancel_hip: 50 provincias, Girona 466 valores, último (2026, 5)\nsubrogacio: 50 provincias, Girona 156 valores, último (2026, 2)\npolissa: 50 provincias, Girona 466 valores, último (2026, 5)\npolissa_aval: 50 provincias, Girona 466 valores, último (2026, 5)\nsocietats: 50 provincias, Girona 390 valores, último (2026, 2)\nsegregacio: 50 provincias, Girona 78 valores, último (2026, 2)\nsubsanacio: 50 provincias, Girona 78 valores, último (2026, 2)\nactes.csv: 205781 filas, 16 indicadores"
+ },
  "padro": {
   "estat": "ok",
   "intent": "2026-11-23T16:15:57Z",
@@ -251,6 +265,13 @@
   "durada": 379,
   "resum": "39 ABS en la provincia (de 379)\nmortalidad [2021, 2022, 2023, 2024, 2025]: 39 ABS; RME Girona 104.7\natención primaria 2022-12: 21 indicadores, 39 ABS\nreceptes: 1128 files (fins 2025-10), 175 grups ATC\ninfeccions: setmanes fins 2026-11-09, 39 ABS\ncentres sanitaris: 202 ({'cap': 133, 'continuada': 24, 'mental': 16, 'sociosanitari': 12, 'hospital': 11, 'drogues': 6})"
  },
+ "social": {
+  "estat": "ok",
+  "intent": "2026-11-23T21:48:42Z",
+  "ok": "2026-11-23T21:48:42Z",
+  "durada": 4,
+  "resum": "RESES: 736 servicios, 99% con municipio, 11,918 plazas\nservicios sociales: ssb_ateses 744 filas hasta 2024; menjador 744 filas hasta 2024; dependencia_grau 422 filas hasta 2024; teleassistencia 465 filas hasta 2025; ajuda_domicili 465 filas hasta 2025; prestacio_cuidador 465 filas hasta 2025; cuidadores 176,162 en Cataluña\nAirbnb: instantánea 2026-09-25 (nueva), 20470 anuncios, columnas ['id', 'name', 'host_id', 'host_profile_id', 'host_name', 'neighbourhood_group', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'price', 'minimum_nights', 'number_of_reviews', 'last_review', 'reviews_per_month', 'calculated_host_listings_count', 'availability_365', 'number_of_reviews_ltm']"
+ },
  "territorio": {
   "estat": "ok",
   "intent": "2026-11-23T13:53:48Z",
@@ -285,6 +306,13 @@
   "ok": "2026-11-23T14:22:28Z",
   "durada": 2,
   "resum": "universitarios: 221 municipios, 43 comarcas; columnas ['Codi', 'Nom', 'Estudien al mateix municipi', 'Estudien a la resta de la comarca', 'Estudien a la resta de Catalunya', 'Total alumnes residents']"
+ },
+ "urbans": {
+  "estat": "ok",
+  "intent": "2026-11-24T08:01:41Z",
+  "ok": "2026-11-24T08:01:41Z",
+  "durada": 87,
+  "resum": "64 indicadores, 434 municipios de España (10 de Girona), 2010-2025; AUF y conurbación de Girona: 795 valores"
  },
  "vehicles": {
   "estat": "ok",

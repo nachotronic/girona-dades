@@ -64,10 +64,15 @@
       cond_tit: "Municipis que compleixen les condicions", cond_frase: (n, c) => `<b>${n}</b> ${n === 1 ? "municipi" : "municipis"} ${c}.`, cond_i: " i ",
       cond_mes: (i, v) => `amb ${i} per sobre de ${v}`, cond_menys: (i, v) => `amb ${i} per sota de ${v}`, cond_cap: "Cap municipi compleix les condicions.",
       // Àrees (salut, policia, jutjats, agents rurals)
-      area_tit: { abs: "Àrea bàsica de salut", abp: "Àrea bàsica policial", pj: "Partit judicial", aar: "Àrea d'Agents Rurals" },
+      area_tit: { abs: "Àrea bàsica de salut", abp: "Àrea bàsica policial", pj: "Partit judicial", aar: "Àrea d'Agents Rurals", com: "Comarca", aire: "Estació de qualitat de l'aire", met: "Estació meteorològica" },
       area_nota: (t, n) => `Dada de l'${t.toLowerCase()} <b>${n}</b>, a la qual pertany el municipi: la font no la publica per municipis.`,
       area_nota_pj: (n) => `Dada del partit judicial de <b>${n}</b>, al qual pertany el municipi: la font no la publica per municipis.`,
-      arees: { abs: "àrees de salut", abp: "àrees policials", pj: "partits judicials", aar: "àrees" },
+      graf_sobre: "Gràfic del web", graf_veure: "Veure el gràfic", graf_altres: "Altres gràfics",
+      graf_prov: (m) => `Aquesta dada no es publica per municipis: el gràfic és de la província, no de ${m}.`,
+      area_nota_com: (n) => `Dada de la comarca <b>${n}</b>: la font no la publica per municipis.`,
+      area_nota_est: (n, km) => `Dada de l'estació de <b>${n}</b>${km >= 1 ? `, la més propera al municipi amb aquesta mesura (a ${fmt(km, 0)} km)` : ", que cobreix el municipi"}: es mesura només a les estacions.`,
+      area_cap_est: (i, m) => `Cap estació a prop de ${m} mesura «${i}». Al mapa hi ha totes les estacions.`,
+      arees: { abs: "àrees de salut", abp: "àrees policials", pj: "partits judicials", aar: "àrees", com: "comarques", aire: "estacions", met: "estacions" },
       // Tema
       tema_tit: (tm, m) => `${tm} a ${m}`, tema_prov: (tm) => `${tm} a la província`, tema_frase: (n) => `${n} indicadors d'aquest tema. Toca'n un per veure'l en detall.`,
       // Font
@@ -132,10 +137,15 @@
       multi_tit: (m) => `${m}: varios datos`, multi_comp: "Varios datos y municipios",
       cond_tit: "Municipios que cumplen las condiciones", cond_frase: (n, c) => `<b>${n}</b> ${n === 1 ? "municipio" : "municipios"} ${c}.`, cond_i: " y ",
       cond_mes: (i, v) => `con ${i} por encima de ${v}`, cond_menys: (i, v) => `con ${i} por debajo de ${v}`, cond_cap: "Ningún municipio cumple las condiciones.",
-      area_tit: { abs: "Área básica de salud", abp: "Área básica policial", pj: "Partido judicial", aar: "Área de Agents Rurals" },
+      area_tit: { abs: "Área básica de salud", abp: "Área básica policial", pj: "Partido judicial", aar: "Área de Agents Rurals", com: "Comarca", aire: "Estación de calidad del aire", met: "Estación meteorológica" },
       area_nota: (t, n) => `Dato del ${t.toLowerCase()} <b>${n}</b>, al que pertenece el municipio: la fuente no lo publica por municipios.`,
       area_nota_pj: (n) => `Dato del partido judicial de <b>${n}</b>, al que pertenece el municipio: la fuente no lo publica por municipios.`,
-      arees: { abs: "áreas de salud", abp: "áreas policiales", pj: "partidos judiciales", aar: "áreas" },
+      graf_sobre: "Gráfico de la web", graf_veure: "Ver el gráfico", graf_altres: "Otros gráficos",
+      graf_prov: (m) => `Este dato no se publica por municipios: el gráfico es de la provincia, no de ${m}.`,
+      area_nota_com: (n) => `Dato de la comarca <b>${n}</b>: la fuente no lo publica por municipios.`,
+      area_nota_est: (n, km) => `Dato de la estación de <b>${n}</b>${km >= 1 ? `, la más cercana al municipio que mide esto (a ${fmt(km, 0)} km)` : ", que cubre el municipio"}: solo se mide en las estaciones.`,
+      area_cap_est: (i, m) => `Ninguna estación cerca de ${m} mide «${i}». En el mapa están todas las estaciones.`,
+      arees: { abs: "áreas de salud", abp: "áreas policiales", pj: "partidos judiciales", aar: "áreas", com: "comarcas", aire: "estaciones", met: "estaciones" },
       tema_tit: (tm, m) => `${tm} en ${m}`, tema_prov: (tm) => `${tm} en la provincia`, tema_frase: (n) => `${n} indicadores de este tema. Toca uno para verlo en detalle.`,
       font_tit: "De dónde sale este dato", font_frase: (i) => `El dato «${i}» sale de:`, font_per: (p) => `Periodo: ${p}.`, font_totes: "Todas las fuentes de la web",
       perque: "No puedo explicar las causas: solo enseño los datos publicados. Estos son los que tienen relación:",
@@ -234,9 +244,11 @@
     ["envejecido envejecidos envellit envellits viejo vieja viejos viejas vell vella vells velles envejecida envejecidas antiguo", "edat", "desc"], ["joven jovenes jove joves rejuvenecido", "edat", "asc"],
     ["seguro segura segur segura tranquilo tranquil", "int_total", "asc"], ["peligroso peligrosa perillos perillosa inseguro insegur conflictivo", "int_total", "desc"],
     ["turistico turistica turistic turistica", "tur_mov_rec_h", "desc"], ["multicultural diverso divers", "estrangers", "desc"],
+    ["calor caluroso calurosa calurosos calid calida calent calenta", "amb_m_tx", "desc"], ["frio fria frios fred freda freds", "amb_m_tn", "asc"],
+    ["lluvioso lluviosa lluviosos plujos plujosa plujosos humedo humit", "amb_m_p", "desc"], ["seco seca secos sec seca secs arido arid", "amb_m_p", "asc"],
   ].map(([w, id, dir]) => ({ w: new Set(w.split(" ")), id, dir }));
   const PRI = ["q_asal", "q_afil", "pob", "renda", "lloguer", "cj_atur", "cj_atur_n", "compra", "hut", "edat", "estrangers", "int_total", "cj_afil", "atur", "ocupats", "renda_llar", "esforc"];
-  const RISC = new Set(["das", "pau", "quart", "pera", "colera", "torrent", "verges", "salt", "ger", "pals", "alp", "sils", "cabanes", "ordis", "osor", "llers", "mieres", "jafre", "foixa", "saus", "serinya", "escala", "breda", "amer", "pont de molins", "flaca", "urus", "ulla", "bolvir", "toses", "cistella", "juia", "quart", "sant mori", "garrigas", "porqueres", "beuda", "palau", "vilaur", "crespia", "regencos"]);
+  const RISC = new Set(["casa", "cases", "casas", "das", "pau", "quart", "pera", "colera", "torrent", "verges", "salt", "ger", "pals", "alp", "sils", "cabanes", "ordis", "osor", "llers", "mieres", "jafre", "foixa", "saus", "serinya", "escala", "breda", "amer", "pont de molins", "flaca", "urus", "ulla", "bolvir", "toses", "cistella", "juia", "quart", "sant mori", "garrigas", "porqueres", "beuda", "palau", "vilaur", "crespia", "regencos"]);
   const PREP = new Set(["de", "d", "en", "a", "al", "del", "entre", "y", "i", "vs", "o", "per", "por", "con", "amb", "sobre", "que", "desde", "hasta", "fins"]);
 
   // Partits (blocs dels resultats electorals)
@@ -272,7 +284,7 @@
       mk("q_reta", ["Autònoms (persones)", "Afiliats autònoms a la Seguretat Social, per residència (persones)"], ["Autónomos (personas)", "Afiliados autónomos a la Seguridad Social, por residencia (personas)"], (g) => g("reta"), "cj_reta"),
     ];
   }
-  const zonaDe = (i) => (i.v ? null : i.abs ? "abs" : i.abp ? "abp" : i.pj ? "pj" : i.aar ? "aar" : null);
+  const zonaDe = (i) => (i.v ? null : i.abs ? "abs" : i.abp ? "abp" : i.pj ? "pj" : i.aar ? "aar" : i.com ? "com" : i.aire ? "aire" : i.met ? "met" : null);
 
   function prepara() {
     if (LISTO) return true;
@@ -421,6 +433,59 @@
       return { x, sc: sc + (x.pri >= 0 ? (PRI.length - x.pri) * 0.01 : 0) };
     }).filter((o) => o.sc >= 1).sort((a, b) => b.sc - a.sc);
   }
+  // ---------------------------------------------------------------- Gràfics de les seccions del web
+  // S'indexen sols a partir del que hi ha a la pàgina (títol i subtítol de cada figure[data-id]): un gràfic nou ja es pot trobar.
+  // DIC.GRAFICS hi afegeix frases en tots dos idiomes, per «secció/id», per id o per secció (llavors van al primer gràfic).
+  let GRAF = [], GRAF_K = "", IDFG = {};
+  function grafics() {
+    const figs = [...document.querySelectorAll("section.sec[id] figure[data-id]")];
+    const k = LANG + figs.length;
+    if (GRAF_K === k) return GRAF;
+    const G = DIC.GRAFICS || {}, primer = {};
+    const txt = (el) => (el ? el.textContent.replace(/\s+/g, " ").trim() : "");
+    // Fora les paraules que surten a molts indicadors del mapa («habitantes», «media»…): no diuen de quin gràfic es tracta
+    const paraules = (x) => toks(x).filter((w) => !STOP.has(w) && !XERRA.has(w) && !LLOC.has(w) && !/^[\d.]+$/.test(w) && !(IDF[stem(w)] < 3));
+    GRAF = figs.map((f) => {
+      const sc = f.closest("section"), sec = sc.id, id = f.dataset.id;
+      const tit = txt(f.querySelector(".pg-tit")), sub = txt(f.querySelector(".unitat"));
+      if (!tit) return null;
+      const esPrimer = !primer[sec]; primer[sec] = true;
+      const extra = [G[sec + "/" + id], G[id], esPrimer ? G[sec] : null].filter(Boolean).join(",");
+      const fr = extra.split(",").map((x) => toks(x).map(stem)).filter((x) => x.length);
+      toks(extra).forEach((w) => VOCAB.add(w));
+      paraules(tit + " " + sub).forEach((w) => VOCAB.add(w));
+      return { sec, id, tit, sub, nav: txt(sc.querySelector(".sobre [data-t]")),
+        sh: new Set(paraules(tit).map(stem)), lg: new Set(paraules(sub).map(stem)), synTk: fr.filter((x) => x.length === 1).map((x) => x[0]), synFr: fr.filter((x) => x.length > 1) };
+    }).filter(Boolean);
+    IDFG = {};
+    GRAF.forEach((g) => new Set([...g.sh, ...g.lg, ...g.synTk]).forEach((w) => { IDFG[w] = (IDFG[w] || 0) + 1; }));
+    Object.keys(IDFG).forEach((w) => { IDFG[w] = Math.log(1 + GRAF.length / IDFG[w]); });
+    GRAF_K = k;
+    return GRAF;
+  }
+  const eqTokG = (q, k) => q === k || (q.length >= 6 && k.length >= 6 && lev(q, k, 1) <= 1);
+  function puntuaG(qs, qall) {
+    return grafics().map((g) => {
+      let sc = 0, fr = false, cur = false;
+      const vist = new Set();
+      qs.forEach(({ s }) => {
+        if (vist.has(s)) return; vist.add(s);
+        let best = 0;
+        g.synTk.forEach((k) => { if (s === k) { best = Math.max(best, 4 * (IDFG[k] || 1)); cur = true; } else if (eqTokG(s, k)) best = Math.max(best, 2.5 * (IDFG[k] || 1)); });
+        g.sh.forEach((k) => { if (s === k) best = Math.max(best, 2.5 * (IDFG[k] || 1)); else if (eqTokG(s, k)) best = Math.max(best, 2 * (IDFG[k] || 1)); });
+        if (!best) g.lg.forEach((k) => { if (eqTokG(s, k)) best = Math.max(best, 0.8 * (IDFG[k] || 1)); });
+        sc += best;
+      });
+      g.synFr.forEach((f) => {
+        for (let k = 0; k + f.length <= qall.length; k++) {
+          if (f.every((w, j) => eqTok(qall[k + j], w))) { sc += 2 + f.reduce((t, w) => t + (STOP.has(w) ? 0 : 4 * (IDFG[w] || 1)), 0); fr = cur = true; return; }
+        }
+      });
+      // Totes les paraules del títol a la pregunta: és aquest gràfic
+      if (g.sh.size && [...g.sh].every((k) => qs.some((o) => o.s === k))) { sc += 6; fr = true; }
+      return { g, sc, fr, cur };
+    }).filter((o) => o.sc >= 1).sort((a, b) => b.sc - a.sc);
+  }
   const fraseA = (tk, f) => { for (let k = 0; k + f.length <= tk.length; k++) if (f.every((w, j) => tk[k + j] === w)) return k; return -1; };
 
   // ---------------------------------------------------------------- Anàlisi de la pregunta
@@ -489,9 +554,11 @@
     const elec = tk.some((w) => EL_PARAULES.has(w)) || (blocs.length > 0 && (has("voto", "vot", "votos", "vots", "votan", "voten", "vota") || !!elTipus)) || (blocs.length > 0 && tk.length <= 6);
     // Paraules per a l'indicador, separades en parts per «y», «i», comes
     const qs = [], segs = [[]];
+    // «más» només separa dades si hi ha algun altre separador («paro y más alquiler»); sol és comparatiu («quién lee más libros»)
+    const nomesMes = !tk.some((w, k) => !usat[k] && SEP.has(w) && w !== "mas" && w !== "plus");
     tk.forEach((w, k) => {
       if (usat[k]) return;
-      if (SEP.has(w) && segs[segs.length - 1].length) { segs.push([]); return; }
+      if (SEP.has(w) && !(nomesMes && (w === "mas" || w === "plus")) && segs[segs.length - 1].length) { segs.push([]); return; }
       if (!STOP.has(w) && !/^[\d.]+$/.test(w) && !XERRA.has(w)) { qs.push({ w, s: stem(w), k }); segs[segs.length - 1].push({ w, s: stem(w), k }); }
     });
     const qall = tk.filter((w, k) => !usat[k]).map(stem);
@@ -503,6 +570,7 @@
     const EVW = /^(evoluc|cambi|canvi|pujat|subid|crecid|cresc|bajad|baixat|caid|caigut|variad|variat)/;
     if (evol) { const sv = qs.filter((o) => !EVW.test(o.w)); if (sv.length && sv.length < qs.length) { qs.length = 0; qs.push(...sv); } }
     let cands = puntua(qs, qall);
+    const grafs = forcat ? [] : puntuaG(qs, qall);
     if (compte && cands.length) {
       const pref = { cj_atur: "cj_atur_n", atur: "cj_atur_n", cj_afil: "q_afil", ocupats: "q_afil", cj_reta: "q_reta", autonoms: "q_reta", tur_hut_c: "tur_hut_n", hut: "tur_hut_n", sol_h: "sol_n", tur_mov_rec_h: "tur_mov_rec", veh_total_h: "veh_n", veh_tur_h: "veh_n", com_est_h: "com_n", tur_pl_hotel_h: "tur_hotels" };
       const p = pref[cands[0].x.i.id];
@@ -554,7 +622,7 @@
     const alt = cands.filter((c) => !inds.includes(c.x.i)).slice(0, 4).map((c) => c.x.i);
     const dubte = !forcat && cands.length > 1 && ind && inds.length === 1 && cands[1].sc >= cands[0].sc * 0.85;
     const ignora = qs.filter(({ w }) => w.length >= 4 && !VOCAB.has(w) && !ADJ.some((a) => a.w.has(w)) && !/^(evoluc|cambi|canvi|pujat|subid|crecid|cresc|bajad|baixat|caid|caigut|compar|seccio|seccion|debajo|encima|sota|superior|inferior|supera|llega|arriba|habitant|vecin|veins|person|barri|censal|mitjan|medi|promed|respect|frente|davant|tant|tanto|tanta)/.test(w)).map((o) => o.w);
-    return { tk, muns, coms, fora, prov, nuclis, parcials, dir, ranqParaula, nTop, any, evol, ultAnys, compte, font, perque, seccio, resum, tema, elec, elTipus: elTipus ? elTipus[0] : null, blocs, ind, inds, conds, alt, dubte, minPob, maxPob, qs, ignora, cands };
+    return { grafs, tk, muns, coms, fora, prov, nuclis, parcials, dir, ranqParaula, nTop, any, evol, ultAnys, compte, font, perque, seccio, resum, tema, elec, elTipus: elTipus ? elTipus[0] : null, blocs, ind, inds, conds, alt, dubte, minPob, maxPob, qs, ignora, cands };
   }
 
   // ---------------------------------------------------------------- Dades d'un indicador
@@ -701,24 +769,30 @@
       `<p class="pq-pos">${tx("posicio", pos, vals.length)}</p>` + (i.virtual || i.id === "pob" ? "" : frasesVs(i, mv.v, r, esc(nomMun(m)))) + extra + refsHtml(i, r) + tira(i, vals, m, r) + peuFont(i, !!a) + botons(i, m);
   }
 
-  // Dada per àrea (salut, policia, jutjats, agents rurals)
+  // Dada per àrea (salut, policia, jutjats, agents rurals, comarca) o per estació (aire, meteorologia)
   async function respArea(q, i, m) {
     const zk = zonaDe(i);
     const AR = (D.arees || {})[zk] || {};
     const noms = await window.mapaApi.noms(zk).catch(() => ({}));
     const vals = Object.entries(AR).map(([id, d]) => { let v = null; try { v = i[zk](d); } catch (e) { /* */ } return { id, nom: noms[id] || id, v }; }).filter((o) => num(o.v));
     const r = refs(i);
-    if (!m) return respRanquingArea(q, i, vals, zk, r);
-    const z = await window.mapaApi.area(zk, m.ine).catch(() => null);
+    // «… en el Ripollès»: la dada de la comarca
+    const comQ = !m && zk === "com" && q.coms.length === 1 ? vals.find((o) => o.id === q.coms[0]) : null;
+    if (!m && !comQ) return respRanquingArea(q, i, vals, zk, r);
+    const est = zk === "aire" || zk === "met";
+    const z = comQ ? comQ : await window.mapaApi.area(zk, m.ine, est ? (id) => vals.some((o) => String(o.id) === String(id)) : null).catch(() => null);
     const mv = z ? vals.find((o) => String(o.id) === String(z.id)) : null;
-    const sobre = `${esc(nomMun(m))} · ${esc(m.comarca)}`;
-    if (!mv) return cap(sobre, nomCurt(i)) + `<p class="pq-frase">${tx("sense_dada", esc(nomLlarg(i)), esc(nomMun(m)))}</p>` + refsHtml(i, r) + peuFont(i) + botons(i, m);
+    const sobre = comQ ? `${esc(comQ.nom)} · ${esc(tx("area_tit").com)}` : `${esc(nomMun(m))} · ${esc(m.comarca)}`;
+    if (!mv) return cap(sobre, nomCurt(i)) + `<p class="pq-frase">${est ? tx("area_cap_est", esc(nomCurt(i)), esc(nomMun(m))) : tx("sense_dada", esc(nomLlarg(i)), esc(nomMun(m)))}</p>` + refsHtml(i, r) + peuFont(i) + botons(i, m);
     const pos = vals.filter((o) => o.v > mv.v).length + 1;
     const tz = tx("area_tit")[zk];
+    // Si la dada de la província és la suma de les àrees (un recompte), no té sentit dir «un 78 % per sota de la província»
+    const esTotal = vals.length > 1 && num(r.gi) && Math.abs(vals.reduce((t, o) => t + o.v, 0) - r.gi) <= Math.abs(r.gi) * 0.01;
+    const nota = comQ ? "" : zk === "pj" ? tx("area_nota_pj", esc(mv.nom)) : zk === "com" ? tx("area_nota_com", esc(mv.nom)) : est ? tx("area_nota_est", esc(mv.nom), z.km || 0) : tx("area_nota", tz, esc(mv.nom));
     return cap(sobre, nomCurt(i)) +
       `<p class="pq-valor"><span class="pq-num">${esc(i.f(mv.v))}</span><span class="pq-unitat">${esc(nomLlarg(i))}${periode(i) ? ` · ${esc(periode(i))}` : ""}</span></p>` +
-      `<p class="pq-avis">${zk === "pj" ? tx("area_nota_pj", esc(mv.nom)) : tx("area_nota", tz, esc(mv.nom))}</p>` +
-      `<p class="pq-pos">${tx("posicio_z", pos, vals.length, tx("arees")[zk])}</p>` + frasesVs(i, mv.v, r, esc(mv.nom)) + refsHtml(i, r) + tira(i, vals, mv.id, r) + peuFont(i) + botons(i, m);
+      (nota ? `<p class="pq-avis">${nota}</p>` : "") +
+      `<p class="pq-pos">${tx("posicio_z", pos, vals.length, tx("arees")[zk])}</p>` + (esTotal ? "" : frasesVs(i, mv.v, r, esc(mv.nom))) + refsHtml(i, r) + tira(i, vals, mv.id, r) + peuFont(i) + botons(i, m);
   }
   function respRanquingArea(q, i, vals, zk, r) {
     const asc = q.dir === "asc";
@@ -968,6 +1042,20 @@
     return cap(sobre, nomC) + blocs + elFont + btnEl;
   }
 
+  // Un gràfic d'una secció del web: el títol, la frase que hi escriu el web amb la xifra i un botó per anar-hi
+  const figG = (g) => [...document.querySelectorAll(`#${CSS.escape(g.sec)} figure[data-id]`)].find((x) => x.dataset.id === g.id);
+  const hG = (g) => { const f = figG(g), h = f && f.querySelector(".pg-h"); return h ? h.textContent.replace(/\s+/g, " ").trim() : ""; };
+  function respGrafic(q, grafs) {
+    const g = grafs[0].g, m = q.muns.length === 1 && q.muns[0].ine !== "17079" ? q.muns[0] : null;
+    const altres = grafs.slice(1).filter((o) => o.sc >= grafs[0].sc * 0.5 && o.g.tit !== g.tit).slice(0, 3);
+    return cap(`${esc(g.nav)} · ${tx("graf_sobre")}`, g.tit) +
+      (g.sub ? `<p class="pq-sub">${esc(g.sub)}</p>` : "") + (hG(g) ? `<p class="pq-frase">${esc(hG(g))}</p>` : "") +
+      (m ? `<p class="pq-avis">${tx("graf_prov", esc(nomMun(m)))}</p>` : "") +
+      `<p class="pq-accions"><button type="button" class="pq-btn" data-graf="${esc(g.sec)}|${esc(g.id)}">${tx("graf_veure")} →</button>${m ? `<button type="button" class="pq-btn pq-btn-2" data-fitxa="${m.ine}">${esc(tx("fitxa", nomMun(m)))} →</button>` : ""}</p>` +
+      (altres.length ? `<div class="pq-alt"><p>${tx("graf_altres")}</p>${altres.map((o) => `<button type="button" class="pq-xip" data-graf="${esc(o.g.sec)}|${esc(o.g.id)}">${esc(o.g.tit)}</button>`).join("")}</div>` : "") +
+      (q.alt.length ? chips(q.alt.slice(0, 3), tx("altres"), m ? m.ine : null) : "");
+  }
+
   function noEntenc(extra) {
     return `<p class="pq-frase">${tx("no_entenc")}</p>${extra || ""}<p class="pq-sub">${tx("no_entenc_2")}</p><div class="pq-alt">${tx("exemples").slice(0, 6).map((e) => `<button type="button" class="pq-xip" data-q="${esc(e)}">${esc(e)}</button>`).join("")}</div>`;
   }
@@ -975,11 +1063,19 @@
   // ---------------------------------------------------------------- Pla: quin tipus de resposta toca
   function planifica(q, forcat) {
     const i = q.ind, ninds = q.inds.length;
-    if (!q.muns.length && q.fora.length && !q.prov) return { tipus: "fora" };
+    const g0 = !forcat && q.grafs.length ? q.grafs[0] : null;
+    if (!q.muns.length && q.fora.length && !q.prov && !(g0 && g0.cur && g0.sc >= 12)) return { tipus: "fora" };
     if (i && i.id === "alcalde" && q.muns.length) return { tipus: "alcalde" };
     if (q.elec && !forcat) return { tipus: "elec" };
     if (q.font && i && !i.especial) return { tipus: "font" };
     if (q.conds.length && q.conds.some((c) => c.ind && c.ind.v) && !q.muns.length) return { tipus: "cond" };
+    // Un gràfic de les seccions (dades de la província): si no hi ha cap indicador del mapa o si el gràfic encaixa més
+    const g = !forcat && q.grafs.length ? q.grafs[0] : null;
+    if (g && g.sc >= 8 && !q.evol && (!q.dir || g.fr) && !q.seccio) {
+      const iSc = q.cands.length ? q.cands[0].sc : 0, nomesGi = !q.muns.length || (q.muns.length === 1 && q.muns[0].ine === "17079");
+      if (!i && (!q.tema || g.fr) && (!q.muns.length || g.fr || g.sc >= 12)) return { tipus: "graf" };
+      if (i && nomesGi && (!q.muns.length || g.cur) && ninds <= 1 && (!q.tema || g.fr) && g.sc > iSc * 1.15) return { tipus: "graf" };
+    }
     if (q.seccio && i && !i.especial) return { tipus: "sec" };
     if (q.tema && !ninds) return { tipus: "tema" };
     if (ninds > 1) return { tipus: "multi" };
@@ -1017,6 +1113,7 @@
       if (tipus === "fora") html = `<p class="pq-frase">${esc(tx("fora", q.fora[0]))}</p>` + noEntenc("").replace(/^<p class="pq-frase">.*?<\/p>/, "");
       else if (tipus === "elec") { pinta(`<p class="pq-sub">${tx("el_carregant")}</p>`); html = await respEleccions(q); }
       else if (tipus === "font") html = respFont(q, i);
+      else if (tipus === "graf") html = respGrafic(q, q.grafs);
       else if (tipus === "cond") html = respCondicions(q);
       else if (tipus === "sec") { html = await respSeccions(q, i, q.muns[0] || null); }
       else if (tipus === "tema") html = respTema(q, q.tema, q.muns[0] || null);
@@ -1042,7 +1139,7 @@
     if (parc) html = /<\/h3>/.test(html) ? html.replace(/(<\/h3>)/, `$1${parc}`) : parc + html;
     if (i && !forcat && q.ignora.length && !i.especial && !["resum", "no", "fora", "elec"].includes(tipus)) html = html.replace(/(<\/h3>)/, `$1<p class="pq-avis">${tx("no_tinc", esc(q.ignora.join(" ")))}</p>`);
     if (q.perque && i) html = html.replace(/(<\/h3>)/, `$1<p class="pq-avis">${tx("perque")}</p>`);
-    if (i && !i.especial && q.alt.length && !q.altFet && !["multi", "tema", "elec", "font"].includes(tipus)) html += chips(q.alt.slice(0, q.dubte ? 4 : 3), q.dubte ? tx("semblants") : tx("altres"), q.muns.length === 1 ? q.muns[0].ine : null);
+    if (i && !i.especial && q.alt.length && !q.altFet && !["multi", "tema", "elec", "font", "graf"].includes(tipus)) html += chips(q.alt.slice(0, q.dubte ? 4 : 3), q.dubte ? tx("semblants") : tx("altres"), q.muns.length === 1 ? q.muns[0].ine : null);
     pinta(html);
   }
 
@@ -1141,6 +1238,13 @@
   out.addEventListener("click", (e) => {
     const q = e.target.closest("[data-q]");
     if (q) { pregunta(q.dataset.q); return; }
+    const gr = e.target.closest("[data-graf]");
+    if (gr) {
+      const [sec, id] = gr.dataset.graf.split("|");
+      const f = [...document.querySelectorAll(`#${CSS.escape(sec)} figure[data-id]`)].find((x) => x.dataset.id === id);
+      if (f) { f.scrollIntoView({ behavior: "smooth", block: "center" }); f.classList.remove("pq-ressalta"); void f.offsetWidth; f.classList.add("pq-ressalta"); setTimeout(() => f.classList.remove("pq-ressalta"), 2600); }
+      return;
+    }
     const mp = e.target.closest("[data-mapa]");
     if (mp && window.mapaApi) {
       const id = mp.dataset.mapa, ine = mp.dataset.ine, sec = mp.dataset.sec, conv = mp.dataset.conv;
@@ -1196,8 +1300,15 @@
       prepara(); const q = analitza(s); const p = planifica(q);
       let inds = q.inds.map((i) => i.id);
       if (p.tipus === "elec") inds = q.blocs.length ? q.blocs.map((b) => "el_" + b.toLowerCase().replace("ç", "c").replace("í", "i")) : / (participacion|participacio|abstencion|abstencio) /.test(" " + q.tk.join(" ") + " ") ? ["el_part"] : ["el_guany"];
+      if (p.tipus === "graf") inds = ["graf:" + q.grafs[0].g.id];
       return { tipus: p.tipus, inds, muns: q.muns.map((m) => m.nom) };
     },
     suggeriments: (s) => (prepara() ? suggeriments(s).s : []),
+    // Per a scripts/pregunta/cobertura.mjs: indicadors que fa servir el cercador, amb el municipi més poblat que té dada
+    indicadors: () => (prepara() ? INDS.filter((x) => !x.i.especial).map((x) => {
+      const i = x.i, zona = zonaDe(i), vals = zona ? [] : valors(i).sort((a, b) => (b.m.poblacion || 0) - (a.m.poblacion || 0));
+      return { id: i.id, tema: i.tema, zona, sin: !!DIC.SIN[i.id], ca: i.ca[0], es: i.es[0], mun: zona ? "Girona" : vals.length ? nomMun(vals[0].m) : null };
+    }) : []),
+    grafics: () => grafics().map((g) => ({ sec: g.sec, id: g.id, tit: g.tit, frases: g.synTk.length + g.synFr.length })),
   };
 })();

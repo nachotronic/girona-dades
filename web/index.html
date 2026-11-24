@@ -51,6 +51,9 @@
       <a href="#s-amb" data-t="nav_amb">Medi ambient</a>
       <a href="#s-ene" data-t="nav_ene">Energia</a>
       <a href="#s-dp" data-t="nav_dp">Diners</a>
+      <a href="#s-soc" data-t="nav_soc">Social</a>
+      <a href="#s-urb" data-t="nav_urb">Ciutats</a>
+      <a href="#s-not" data-t="nav_not">Notaries</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -167,7 +170,9 @@
       <p class="lead" data-t="lead_tur">Places, pernoctacions, ocupació, preus dels hotels, d'on vénen els turistes i quant gasten. Província de Girona davant Catalunya i Espanya. Al mapa, el tema «Turisme» ho baixa a cada municipi.</p>
     </header>
     <div class="xifres tur-xifres" id="tur-xifres"></div>
+    <div id="tur-allot"></div>
     <div class="pg-graella" id="tur-grafics"></div>
+    <div class="xifres tur-air" id="tur-air"></div>
   </section>
 
   <section id="s-exp" class="amplada sec" aria-labelledby="h-exp">
@@ -292,9 +297,48 @@
     <div class="pg-graella" id="dp-grafics"></div>
   </section>
 
+  <section id="s-soc" class="amplada sec" aria-labelledby="h-soc">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">12</span> <span data-t="nav_soc">Social</span></p>
+      <h2 id="h-soc" data-t="h_soc">Qui cuida i qui és cuidat</h2>
+      <p class="lead" data-t="lead_soc">Quantes persones atenen els serveis socials, quantes reben ajuda per dependència, quantes places de residència hi ha per a la gent gran i quantes persones cuiden un familiar. Al mapa, el tema «Social» ho baixa a cada municipi i comarca.</p>
+    </header>
+    <div class="xifres soc-xifres" id="soc-xifres"></div>
+    <div class="pg-graella" id="soc-grafics"></div>
+  </section>
+
+  <section id="s-urb" class="amplada sec" aria-labelledby="h-urb">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">13</span> <span data-t="sec_urb">Ciutats</span></p>
+      <h2 id="h-urb" data-t="h_urb">Deu ciutats davant les d'Espanya</h2>
+      <p class="lead" data-t="lead_urb">Els Indicadors urbans de l'INE comparen amb el mateix mètode tots els municipis d'Espanya de més de 20.000 habitants: preu de l'habitatge i del lloguer, atur, renda, estudis, delinqüència, edat, turisme… A la província n'hi ha deu. Tria un indicador i mira com queden entre elles, davant l'àrea urbana de Girona i davant Espanya. Al mapa, el tema «Ciutats (INE)».</p>
+    </header>
+    <div class="xifres urb-xifres" id="urb-xifres"></div>
+    <div class="urb-comp" id="urb-comp"></div>
+  </section>
+
+  <section id="s-not" class="amplada sec" aria-labelledby="h-not">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">14</span> <span data-t="nav_not">Notaries</span></p>
+      <h2 id="h-not" data-t="h_not">Herències, testaments i hipoteques</h2>
+      <p class="lead" data-t="lead_not">Quantes herències, testaments, donacions, poders, hipoteques i societats noves passen per les notaries de la província, i com queda Girona davant les altres províncies.</p>
+    </header>
+    <div class="xifres not-xifres" id="not-xifres"></div>
+    <figure class="pg-fig ex-mapafig" data-id="not_esp">
+      <figcaption><span class="pg-tit" id="not-esp-tit"></span><span class="unitat" id="not-esp-u"></span></figcaption>
+      <div class="ex-ctl" id="not-esp-ctl"></div>
+      <p class="pg-h" id="not-esp-h"></p>
+      <div class="ex-mapa-graella">
+        <div><div class="ex-mapa ex-esp" id="not-esp" role="region" aria-label="Mapa"></div><div class="llegenda-mapa ex-lleg" id="not-esp-lleg"></div></div>
+        <div class="ex-rq" id="not-esp-rq"></div>
+      </div>
+      <p class="pg-font ex-font not-font"></p>
+    </figure>
+    <div class="pg-graella" id="not-grafics"></div>
+    <p class="ex-nd" id="not-nd"></p>
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">12</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">15</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -356,6 +400,7 @@
       <li data-font="xifra"><a href="https://www.ddgi.cat/xifra/">Xifra, Diputació de Girona</a><span data-t="f_xifra">població, treball, ajuntaments, energia</span></li>
       <li data-font="generalitat"><a href="https://analisi.transparenciacatalunya.cat/">Dades obertes de la Generalitat</a><span data-t="f_gen">renda garantida, plaques solars d'autoconsum, residus</span></li>
       <li data-font="salut"><a href="https://analisi.transparenciacatalunya.cat/d/3cre-fa8v">CatSalut i Observatori del Sistema de Salut</a><span data-t="f_salut">població, defuncions, atenció primària, infeccions, receptes i centres sanitaris</span></li>
+      <li data-font="compravendes"><a href="https://habitatge.gencat.cat/ca/dades/indicadors_estadistiques/estadistiques_de_construccio_i_mercat_immobiliari/estadistica-de-les-compravendes/compravendes-habitatges-Catalunya/">Secretaria d'Habitatge, a partir del Col·legi de Registradors</a><span data-t="f_cvreg">compravendes inscrites als registres i preu per m² per municipi, cada trimestre</span></li>
       <li data-font="esca"><a href="https://scientiasalut.gencat.cat/handle/11351/1566">Departament de Salut, Enquesta de salut de Catalunya (ESCA)</a><span data-t="f_esca">enquesta de salut per regió sanitària i sèrie de Catalunya</span></li>
       <li data-font="sem"><a href="https://sem.gencat.cat/ca/coneixer-el-sem/el-sem-en-xifres/">Sistema d'Emergències Mèdiques (SEM)</a><span data-t="f_sem">temps de resposta, codis d'urgència i recursos per regió sanitària</span></li>
       <li data-font="llistes_espera"><a href="https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/">CatSalut, llistes d'espera</a><span data-t="f_llistes">llistes d'espera per hospital</span></li>
@@ -382,6 +427,9 @@
       <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/s9xt-n979">Registre de subvencions i ajuts de Catalunya (RAISC)</a><span data-t="f_dp_raisc">subvencions concedides per la Generalitat, la Diputació, els consells comarcals i els ajuntaments</span></li>
       <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/hb6v-jcbf">Registre públic de contractes</a><span data-t="f_dp_reg">contractes adjudicats per cada ajuntament, amb els menors</span></li>
       <li data-font="diners_publics"><a href="https://analisi.transparenciacatalunya.cat/d/ybgg-dgi6">Plataforma de serveis de contractació pública</a><span data-t="f_dp_plat">licitacions, ofertes rebudes i adjudicataris dels ens locals</span></li>
+      <li data-font="social"><a href="https://analisi.transparenciacatalunya.cat/d/ivft-vegh">Registre d'entitats, serveis i establiments socials (RESES)</a><span data-t="f_soc_reses">serveis socials de la província, amb la tipologia i les places</span></li>
+      <li data-font="social"><a href="https://analisi.transparenciacatalunya.cat/d/fp8n-2tg5">Departament de Drets Socials</a><span data-t="f_soc_drets">persones ateses pels serveis socials bàsics i els menjadors, dependència, teleassistència, ajuda a domicili i cuidadors no professionals</span></li>
+      <li data-font="social"><a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a><span data-t="f_soc_air">anuncis d'Airbnb a la província, amb coordenades, tipus, preu i número de registre</span></li>
       <li data-font="habitatge"><a href="https://analisi.transparenciacatalunya.cat/">Departament de Territori i Agència Tributària de Catalunya, dades obertes</a><span data-t="f_hab">habitatges iniciats i acabats (1990-2025), habitatge protegit, cèdules d'habitabilitat per municipi i secció, àrees de política d'habitatge i Mapa urbanístic de Catalunya</span></li>
       <li data-font="cadastre"><a href="https://www.catastro.hacienda.gob.es/es-ES/estadisticas.html">Dirección General del Catastro, estadístiques</a><span data-t="f_cad">immobles, valor cadastral, sòl i usos per municipi (1990-2026), IBI per municipi (2008-2025) i valor i superfície de l'habitatge per districte censal</span></li>
       <li data-font="tributs"><a href="https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/listado_municipiosm.aspx">Ministerio de Hacienda, tipos impositivos municipales</a><span data-t="f_trib">tipus de l'IBI, IAE, impost de circulació, plusvàlua i ICIO de cada ajuntament (2000-2026)</span></li>
@@ -411,7 +459,10 @@
       <li data-font="cultura"><a href="https://estadistiquesbiblioteques.gencat.cat/">Departament de Cultura, estadístiques de biblioteques públiques (DadesBib)</a><span data-t="f_cul_bib">préstecs, visites, carnets, activitats, fons i despesa de cada biblioteca pública, des del 2014</span></li>
       <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/48s6-82h2">Departament de Cultura, equipaments culturals, entitats, arxius i llibreries</a><span data-t="f_cul_eq">teatres, auditoris, cinemes, museus, sales d'exposicions, ateneus i centres cívics, arxius, entitats de cultura popular i llibreries acreditades</span></li>
       <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/2xiz-255m">Departament de Cultura, Programa.cat i agenda cultural</a><span data-t="f_cul_prog">funcions professionals de teatre, música, circ i dansa per municipi i data (Programa.cat), i activitats de l'agenda cultural</span></li>
-      <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/q9ct-fkjt">Consorci per a la Normalització Lingüística i Direcció General d'Afers Religiosos</a><span data-t="f_cul_cpnl">inscripcions als cursos de català per municipi i any; centres de culte per comarca (Idescat, Anuari estadístic)</span></li>
+      <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/q9ct-fkjt">Consorci per a la Normalització Lingüística</a><span data-t="f_cul_cpnl">inscripcions als cursos de català per municipi i any</span></li>
+      <li data-font="culte"><a href="https://analisi.transparenciacatalunya.cat/d/fmpi-m3ni">Generalitat, Direcció General d'Afers Religiosos, i OpenStreetMap</a><span data-t="f_culte">centres de culte actius per municipi i confessió, des del 2020; edificis religiosos cartografiats per secció censal</span></li>
+      <li data-font="notariado"><a href="https://www.notariado.org/liferay/web/cien/estadisticas-al-completo">Consell General del Notariat, Centre d'Informació Estadística</a><span data-t="f_notariado">herències, testaments, donacions, poders, hipoteques, cancel·lacions i societats noves per província, mensuals i trimestrals, des del 2007</span></li>
+      <li data-font="urbans"><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176957&amp;menu=ultiDatos&amp;idp=1254735976608">INE, Indicadors urbans (Urban Audit)</a><span data-t="f_urbans">indicadors anuals dels municipis de més de 20.000 habitants, l'àrea urbana funcional i la conurbació de Girona, des del 2010</span></li>
       <li data-font="emq"><a href="https://www.atmgirona.cat/mobilitat/emq/">ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025</a><span data-t="f_emq">desplaçaments, mitjà de transport, motiu, horari, origen i destinació, vehicles i teletreball per municipi i comarca</span></li>
     </ul>
     <ul class="peu-legal">
@@ -428,6 +479,7 @@
 <div id="tip" class="tip" role="status" hidden></div>
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="app.js"></script>
+<script src="urbans-cat.js"></script>
 <script src="mapa.js"></script>
 <script src="conjuntura.js"></script>
 <script src="provincia.js"></script>
@@ -442,12 +494,16 @@
 <script src="cadastre.js"></script>
 <script src="tributs.js"></script>
 <script src="turisme.js"></script>
+<script src="allotjaments.js"></script>
 <script src="mobilitat.js"></script>
 <script src="exportacions.js"></script>
 <script src="demografia.js"></script>
 <script src="mediambient.js"></script>
 <script src="energia.js"></script>
+<script src="urbans.js"></script>
 <script src="diners.js"></script>
+<script src="social.js"></script>
+<script src="notariado.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>
