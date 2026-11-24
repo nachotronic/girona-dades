@@ -51,7 +51,29 @@
     return r;
   };
   const suma4 = (s, i) => { if (!s || i < 3) return null; let t = 0; for (let k = i - 3; k <= i; k++) { if (s[k] == null) return null; t += s[k]; } return t; };
-  const NOMS_CURTS = { "Treballadors dels serveis de restauració, personals, protecció i venedors": "Restauració, serveis personals i venda" };
+  window.TRAD_XT = {
+    "Sense estudis": "Sin estudios", "Estudis primaris": "Estudios primarios", "ESO sense titulació": "ESO sin titulación", "ESO amb titulació": "ESO con titulación",
+    "Batxillerat i equivalents": "Bachillerato y equivalentes", "Grau mitjà FP": "FP de grado medio", "Grau superior FP": "FP de grado superior",
+    "Universitaris cicle mig": "Universitarios de ciclo corto", "Universitaris segon cicle": "Universitarios de segundo ciclo", "Universitaris EEES (Bolonya)": "Universitarios EEES (Bolonia)", "Altres titulacions": "Otras titulaciones",
+    "Directors i gerents": "Directores y gerentes", "Professionals científics i intel·lectuals": "Profesionales científicos e intelectuales", "Tècnics i professionals de suport": "Técnicos y profesionales de apoyo",
+    "Empleats d'oficina, comptables i administratius": "Empleados de oficina, contables y administrativos", "Treballadors de restauració, personals i venedors": "Restauración, servicios personales y venta",
+    "Restauració, serveis personals i venda": "Restauración, servicios personales y venta", "Treballadors d'act. agrícoles, ramaderes i pesqueres": "Agricultura, ganadería y pesca",
+    "Artesans, treballadors d'indústries i construcció": "Artesanos, industria y construcción", "Operadors d'instal·lacions i màquines, i muntadors": "Operadores de instalaciones y máquinas, y montadores",
+    "Ocupacions elementals": "Ocupaciones elementales", "Ocupacions militars": "Ocupaciones militares",
+    "Agricultura, ramaderia, silvicultura i pesca": "Agricultura, ganadería, silvicultura y pesca", "Indústries extractives": "Industrias extractivas", "Indústries manufactureres": "Industria manufacturera",
+    "Subministrament d'energia elèctrica, gas, vapor i aire condicionat": "Suministro de energía eléctrica, gas, vapor y aire acondicionado",
+    "Subministrament d'aigua, activitats de sanejament, gestió de residus i descontaminació": "Suministro de agua, saneamiento, residuos y descontaminación",
+    "Construcció": "Construcción", "Comerç a l'engròs i al detall": "Comercio al por mayor y al por menor", "Transport i emmagatzematge": "Transporte y almacenamiento", "Hostaleria": "Hostelería",
+    "Activitats d'edició, radiodifusió i producció i distribució de continguts": "Edición, radiodifusión y producción de contenidos",
+    "Telecomunicacions, programació informàtica, consultoria, infraestructura inf. i altres serveis inf": "Telecomunicaciones, programación y servicios informáticos",
+    "Activitats financeres i d'assegurances": "Actividades financieras y de seguros", "Activitats immobiliàries": "Actividades inmobiliarias",
+    "Activitats professionals, científiques i tècniques": "Actividades profesionales, científicas y técnicas", "Activitats administratives i serveis auxiliars": "Actividades administrativas y servicios auxiliares",
+    "Administració pública, defensa i Seguretat Social obligatòria": "Administración pública, defensa y Seguridad Social", "Educació": "Educación",
+    "Activitats sanitàries i de serveis socials": "Actividades sanitarias y de servicios sociales", "Activitats artístiques, recreatives i d'entreteniment": "Actividades artísticas, recreativas y de entretenimiento",
+    "Altres serveis": "Otros servicios", "Activitats de les llars que donen ocupació a personal domèstic": "Hogares que emplean personal doméstico",
+    "Organismes extraterritorials": "Organismos extraterritoriales", "Sense ocupació anterior": "Sin empleo anterior",
+  };
+  const NOMS_CURTS = { "Treballadors dels serveis de restauració, personals, protecció i venedors": "Restauració, serveis personals i venda", "Treballadors de restauració, personals i venedors": "Restauració, serveis personals i venda" };
   const nomCat = (n) => {
     const c = NOMS_CURTS[n] || n;
     if (LANG !== "es") return c;
