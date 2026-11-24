@@ -40,7 +40,7 @@ from .xifra import _html
 BASE = "https://www.ddgi.cat/xifra/"
 PAUSA = float(os.environ.get("XIFRA_PAUSA", "0.6"))
 # Minutos como máximo para la población activa en cada ejecución (consulta por municipio)
-LIMIT_MIN = float(os.environ.get("XIFRA_TREBALL_MIN", "4"))
+LIMIT_MIN = float(os.environ.get("XIFRA_TREBALL_MIN", "150"))
 # Los últimos periodos se vuelven a bajar siempre: Xifra los revisa
 REFRESCA = 2
 
@@ -345,7 +345,6 @@ def _atur_categories(fi: float) -> str:
 
 
 def ejecutar() -> str:
-    t0 = time.time()
     res = []
     for nom in PERIODES:
         try:
@@ -358,11 +357,11 @@ def ejecutar() -> str:
         except Exception as e:  # noqa: BLE001
             res.append(f"{nom}: ERROR {e}")
     try:
-        res.append(_atur_categories(t0 + 60 * LIMIT_MIN))
+        res.append(_atur_categories(time.time() + 60 * 30))
     except Exception as e:  # noqa: BLE001
         res.append(f"atur_cat: ERROR {e}")
     try:
-        res.append(_poblacio_activa(t0 + 60 * LIMIT_MIN))
+        res.append(_poblacio_activa(time.time() + 60 * LIMIT_MIN))
     except Exception as e:  # noqa: BLE001
         res.append(f"pa: ERROR {e}")
     return "; ".join(res)
