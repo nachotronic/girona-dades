@@ -743,6 +743,7 @@
     const font = (id) => (/^t_(adr|revpar)$/.test(id) ? "font_irsh" : /^t_(orig|mov)/.test(id) ? "font_mov" : /^t_gasto/.test(id) ? "font_egatur" : /^t_ieet/.test(id) ? "font_ieet" : id === "t_places" ? "font_reg" : id === "t_aena" ? "font_aena" : "font_tur");
     pintaGrafics(document.getElementById("tur-grafics"), T, ids, font);
     if (window.xifresTurisme) window.xifresTurisme(document.getElementById("tur-xifres"));
+    if (window.pintaAllotjaments) window.pintaAllotjaments();
   };
 
   window.pintaSeccioSalut = () => {

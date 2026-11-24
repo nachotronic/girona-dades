@@ -561,6 +561,7 @@ function obreFitxa(ine, desplaca) {
     <div class="fitxa-blocs">${blocNacionalitats(m)}${blocUniversitaris(m)}</div>
     <div class="fitxa-extra"></div>
     <div class="fitxa-tur"></div>
+    <div class="fitxa-allot"></div>
     <div class="fitxa-hab"></div>
     <div class="fitxa-mob"></div>
     <div class="fitxa-cad"></div>
@@ -586,6 +587,7 @@ function obreFitxa(ine, desplaca) {
   if (window.fitxaCadastre) window.fitxaCadastre(f.querySelector(".fitxa-cad"), m);
   if (window.fitxaTributs) window.fitxaTributs(f.querySelector(".fitxa-trib"), m);
   if (window.fitxaTurisme) window.fitxaTurisme(f.querySelector(".fitxa-tur"), m);
+  if (window.fitxaAllotjaments) window.fitxaAllotjaments(f.querySelector(".fitxa-allot"), m);
   if (window.fitxaMobilitat) window.fitxaMobilitat(f.querySelector(".fitxa-mob"), m);
   fitxaSolar(f.querySelector(".fitxa-sol"), m);
   if (window.fitxaProposa) window.fitxaProposa(f.querySelector(".fitxa-proposa"), m);

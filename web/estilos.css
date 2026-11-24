@@ -1335,4 +1335,36 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 /* Diners públics: llista de contractes grans */
 .dp-grans li span:first-child { white-space: normal; }
 .dp-grans small { color: var(--text-3); font: 400 11.5px var(--mono); }
+
+/* Allotjaments mes a mes (allotjaments.js) */
+.al { margin: 28px 0 36px; border-top: 3px solid var(--tinta); padding-top: 14px; }
+.al-tit { font: 600 24px/1.1 var(--sans); letter-spacing: -0.01em; color: var(--tinta); margin: 0 0 6px; }
+.fitxa-allot .al-tit { font-size: 22px; }
+.al-sub { color: var(--text-2); font-size: 14px; margin: 0 0 12px; max-width: 70ch; }
+.al-ctl { margin: 4px 0 16px; }
+.al-tipus { flex-wrap: wrap; }
+.al-zona select { max-width: min(78vw, 420px); }
+.al-xifres { margin-bottom: 18px; }
+.al-graella { margin-top: 6px; }
+.al-fig-anys { grid-column: 1 / -1; }
+.al-inds { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 8px; }
+.al-lleg { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 6px 0 0; font: 11.5px/1.3 var(--mono); color: var(--text-2); }
+.pg-l.al-a0 { stroke: var(--accent); stroke-width: 2.75; } .pg-l.al-a1 { stroke: var(--tinta); stroke-width: 2; }
+.pg-l.al-a19 { stroke: var(--text-3); stroke-dasharray: 4 3; } .pg-l.al-ax { stroke: var(--vora-2); stroke-width: 1.5; }
+.pg-p.al-a0, .pg-e.al-a0 { fill: var(--accent); } .pg-p.al-a1, .pg-e.al-a1 { fill: var(--tinta); } .pg-p.al-a19 { fill: var(--text-3); } .pg-p.al-ax { fill: var(--vora-2); }
+.pg-dot.al-a0 { background: var(--accent); } .pg-dot.al-a1 { background: var(--tinta); } .pg-dot.al-a19 { background: var(--text-3); } .pg-dot.al-ax { background: var(--vora-2); }
+.al-e { fill: var(--barra); } .al-x { fill: var(--tinta); } .pg-dot.al-e { background: var(--barra); } .pg-dot.al-x { background: var(--tinta); }
+.al-col:hover rect { opacity: .75; }
+.al-orig { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 7px; }
+.al-orig li { display: grid; grid-template-columns: minmax(110px, 38%) 1fr 56px; align-items: center; gap: 10px; font-size: 13px; }
+.al-orig b { display: block; height: 12px; width: var(--w); background: var(--barra); }
+.al-orig li:first-child b { background: var(--accent); }
+.al-orig em { font: 500 12px var(--mono); font-style: normal; text-align: right; }
+.al-taula-c { margin-top: 22px; overflow-x: auto; }
+.al-ttit { font: 600 12px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; color: var(--tinta); }
+.al-taula { border-collapse: collapse; width: 100%; font: 12.5px/1.3 var(--mono); min-width: 520px; }
+.al-taula th { text-align: right; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: var(--text-2); border-bottom: 2px solid var(--tinta); padding: 6px 8px; }
+.al-taula td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--vora); white-space: nowrap; }
+.al-taula th:first-child, .al-taula td:first-child { text-align: left; }
+.al-taula tbody tr:first-child td { font-weight: 600; color: var(--tinta); }
 .tur-air { margin-top: 28px; }

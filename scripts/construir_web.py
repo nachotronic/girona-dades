@@ -2800,6 +2800,12 @@ def main():
         if m["ine"] in tw["fitxa"]:
             m["turf"] = tw["fitxa"][m["ine"]]
     anys_extra.update(tw["anys"])
+    # Ocupación de hoteles, campings, apartamentos y turismo rural mes a mes (INE), fichero aparte
+    import allotjaments_web
+    try:
+        print("allotjaments:", allotjaments_web.escriure(SALIDA.parent).get("ult"))
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin el bloque
+        print("allotjaments: ERROR", type(e).__name__, e)
     # Comercio exterior (AEAT): sección Exportacions, fichero aparte que la web pide al pintarla
     import exportacions_web
     try:
