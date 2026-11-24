@@ -1382,6 +1382,22 @@
   const normal = (s) => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let consulta = "";
 
+  // Que el indicador elegido quede a la vista dentro de la lista, sin mover la página
+  function mostraTriat() {
+    const cont = document.getElementById("indicadors"), fila = cont.querySelector(".xips-fila");
+    const sel = cont.querySelector('.xip[aria-checked="true"]');
+    const desp = fila && fila.scrollHeight > fila.clientHeight + 1 ? fila : cont.scrollHeight > cont.clientHeight + 1 ? cont : null;
+    if (!sel || !desp) return;
+    const rc = desp.getBoundingClientRect(), rs = sel.getBoundingClientRect();
+    if (rs.top < rc.top) desp.scrollTop -= rc.top - rs.top + 8;
+    else if (rs.bottom > rc.bottom) desp.scrollTop += rs.bottom - rc.bottom + 8;
+  }
+  // En tablet y móvil la hoja se oculta al elegir y el navegador pierde su desplazamiento: se guarda para reabrirla igual
+  let posHoja = { clau: null, top: 0 };
+  document.getElementById("indicadors").addEventListener("scroll", (e) => {
+    const c = e.currentTarget; if (c.clientHeight) posHoja = { clau: c.dataset.clau, top: c.scrollTop };
+  });
+
   function omplirSelector() {
     const cont = document.getElementById("indicadors");
     const q = normal(consulta.trim());
@@ -1394,7 +1410,19 @@
       const pref = q ? `<span class="xip-tema">${TEMES.find((tm) => tm.id === i.tema)[LANG]}</span>` : "";
       return `<button type="button" class="xip" role="radio" data-id="${i.id}" aria-checked="${i.id === ind.id}" ${ok ? "" : "disabled"} title="${nomInd(i)}">${pref}${nomInd(i, true)}</button>`;
     }).join("");
+    // Al repintar se conserva el desplazamiento de la lista (escritorio: .xips-fila; tablet y móvil: .xips) y el foco,
+    // para que elegir un indicador no devuelva la lista arriba. Si cambia el tema o la búsqueda, la lista empieza arriba.
+    const clau = q ? `q:${q}` : `t:${tema}`;
+    const mateixa = cont.dataset.clau === clau;
+    const fila0 = cont.querySelector(".xips-fila");
+    const pos = mateixa && fila0 ? fila0.scrollTop : 0, posCaixa = mateixa ? cont.scrollTop : 0;
+    const act = document.activeElement, focus = act && cont.contains(act) ? (act.dataset.id ? `.xip[data-id="${act.dataset.id}"]` : act.dataset.tema ? `.tema[data-tema="${act.dataset.tema}"]` : null) : null;
+    cont.dataset.clau = clau;
     cont.innerHTML = `<div class="temes" role="group">${temes}</div><div class="xips-fila">${xips || `<p class="cap-ind">${t("cap_ind")}</p>`}</div>`;
+    const fila = cont.querySelector(".xips-fila");
+    fila.scrollTop = pos; cont.scrollTop = posCaixa;
+    if (focus) { const f = cont.querySelector(focus); if (f) f.focus({ preventScroll: true }); }
+    mostraTriat();
     cont.querySelectorAll(".tema").forEach((b) => b.addEventListener("click", () => {
       tema = b.dataset.tema; consulta = ""; document.getElementById("cerca-ind").value = "";
       const prim = IND.find((i) => i.tema === tema && disponible(i, nivell)) || IND.find((i) => i.tema === tema);
@@ -1415,7 +1443,7 @@
     const compacte = matchMedia("(max-width: 1099px)");
     const obert = () => btn.getAttribute("aria-expanded") === "true";
     function obre() {
-      if (document.body.classList.contains("mm-ple")) { btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert"); avisa("menu-obert"); return; }
+      if (document.body.classList.contains("mm-ple")) { btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert"); avisa("menu-obert"); recupera(); return; }
       // Deja el mapa justo bajo la barra y la hoja ocupa el resto de la pantalla
       const cap = document.querySelector(".cap");
       const dalt = (cap && getComputedStyle(cap).position === "sticky" ? cap.offsetHeight : 0) + btn.offsetHeight;
@@ -1425,6 +1453,12 @@
       const lliure = innerHeight - dalt - caixa.offsetHeight;
       full.style.setProperty("--alt-full", `${Math.round(Math.max(lliure, innerHeight * (innerWidth > 640 ? 0.36 : 0.42)))}px`);
       btn.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-ind-obert"); avisa("menu-obert");
+      recupera();
+    }
+    function recupera() {
+      const cont = $("indicadors");
+      if (posHoja.clau && posHoja.clau === cont.dataset.clau) cont.scrollTop = posHoja.top;
+      mostraTriat();
     }
     function tanca() { if (!obert()) return; btn.setAttribute("aria-expanded", "false"); document.body.classList.remove("menu-ind-obert"); avisa("menu-tancat"); }
     btn.addEventListener("click", () => (obert() ? tanca() : obre()));
