@@ -216,6 +216,13 @@
   "durada": 17,
   "resum": "idescat 6000: 13200 filas, 16 municipios, columnas ['YEAR', 'MUN', 'COUNTRY_G', 'SEX', 'CONCEPT', 'valor']\nidescat 16352: 35055 filas, 26 municipios, columnas ['YEAR', 'MUN', 'AGE', 'NATION', 'SEX', 'CONCEPT', 'valor']\ntablas Girona: {'nacionalitats': 33790, 'edat_nacionalitat': 33789}"
  },
+ "notariado": {
+  "estat": "avís",
+  "intent": "2026-11-24T07:56:51Z",
+  "ok": null,
+  "durada": 285,
+  "resum": "ERROR herencies (provincias): ValueError: could not convert string to float: 'ND'\ntestaments: 50 provincias, Girona 78 valores, último (2026, 2)\nabintestat: 50 provincias, Girona 78 valores, último (2026, 2)\nERROR donacions (provincias): ValueError: could not convert string to float: 'ND'\npoder_general: 50 provincias, Girona 78 valores, último (2026, 2)\nERROR poder_plets (provincias): ValueError: could not convert string to float: 'ND'\nERROR poder_altres (provincias): ValueError: could not convert string to float: 'ND'\nERROR hip_vivenda (provincias): ValueError: could not convert string to float: 'ND'\nhip_total: 50 provincias, Girona 466 valores, último (2026, 5)\nERROR cancel_hip (provincias): ValueError: could not convert string to float: 'ND'\nERROR subrogacio (provincias): ValueError: could not convert string to float: 'ND'\npolissa: 50 provincias, Girona 466 valores, último (2026, 5)\npolissa_aval: 50 provincias, Girona 466 valores, último (2026, 5)\nsocietats: 50 provincias, Girona 390 valores, último (2026, 2)\nERROR segregacio (provincias): ValueError: could not convert string to float: 'ND'\nsubsanacio: 50 provincias, Girona 78 valores, último (2026, 2)\nactes.csv: 109043 filas, 16 indicadores"
+ },
  "padro": {
   "estat": "ok",
   "intent": "2026-11-23T16:15:57Z",

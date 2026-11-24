@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 07:39 UTC
+Última ejecución: 2026-11-24 08:01 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -49,11 +49,29 @@
 | energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
 | culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | ok | 2026-11-24 07:38 | 2026-11-24 07:38 | anual |
+| social — Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb) | ok | 2026-11-23 21:48 | 2026-11-23 21:48 | setmanal/anual |
+| notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | avís | — | 2026-11-24 07:56 | mensual/trimestral |
 
 ## Detalle de la última ejecución
 
-### culte: ok (46 s)
+### notariado: avís (285 s)
 
 ```
-Generalitat: 6302 filas (2020-2024), 1159 centros en 2024; OSM: 935 de 935 edificios religiosos con sección
+ERROR herencies (provincias): ValueError: could not convert string to float: 'ND'
+testaments: 50 provincias, Girona 78 valores, último (2026, 2)
+abintestat: 50 provincias, Girona 78 valores, último (2026, 2)
+ERROR donacions (provincias): ValueError: could not convert string to float: 'ND'
+poder_general: 50 provincias, Girona 78 valores, último (2026, 2)
+ERROR poder_plets (provincias): ValueError: could not convert string to float: 'ND'
+ERROR poder_altres (provincias): ValueError: could not convert string to float: 'ND'
+ERROR hip_vivenda (provincias): ValueError: could not convert string to float: 'ND'
+hip_total: 50 provincias, Girona 466 valores, último (2026, 5)
+ERROR cancel_hip (provincias): ValueError: could not convert string to float: 'ND'
+ERROR subrogacio (provincias): ValueError: could not convert string to float: 'ND'
+polissa: 50 provincias, Girona 466 valores, último (2026, 5)
+polissa_aval: 50 provincias, Girona 466 valores, último (2026, 5)
+societats: 50 provincias, Girona 390 valores, último (2026, 2)
+ERROR segregacio (provincias): ValueError: could not convert string to float: 'ND'
+subsanacio: 50 provincias, Girona 78 valores, último (2026, 2)
+actes.csv: 109043 filas, 16 indicadores
 ```
