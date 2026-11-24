@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 08:03 UTC
+Última ejecución: 2026-11-24 09:38 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -49,12 +49,15 @@
 | energia — Energia i connectivitat: certificats energètics (ICAEN), punts de recàrrega, preus dels carburants (MITECO) i cobertura de banda ampla (Ministeri per a la Transformació Digital) | avís | 2026-11-23 20:40 | 2026-11-23 20:55 | diari/anual |
 | diners_publics — Diners públics: subvencions i ajuts (RAISC) i contractes públics (Registre públic de contractes i Plataforma de contractació pública) | ok | 2026-11-23 21:08 | 2026-11-23 21:08 | setmanal/anual |
 | culte — Centres de culte: llocs de culte per municipi i confessió (Afers Religiosos, Generalitat) i edificis religiosos per secció (OpenStreetMap) | ok | 2026-11-24 07:38 | 2026-11-24 07:38 | anual |
+| social — Social: serveis socials bàsics, menjador social i dependència (Departament de Drets Socials), equipaments socials (RESES) i anuncis d'Airbnb (Inside Airbnb) | ok | 2026-11-23 21:48 | 2026-11-23 21:48 | setmanal/anual |
 | urbans — INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona | ok | 2026-11-24 08:01 | 2026-11-24 08:01 | anual |
+| notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | ok | 2026-11-24 08:18 | 2026-11-24 08:18 | mensual/trimestral |
+| xifra_treball — Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral | avís | — | 2026-11-24 09:30 | mensual |
 
 ## Detalle de la última ejecución
 
-### urbans: ok (87 s)
+### xifra_treball: avís (494 s)
 
 ```
-64 indicadores, 434 municipios de España (10 de Girona), 2010-2025; AUF y conurbación de Girona: 795 valores
+atur: 87 trimestres nuevos o revisados hasta 2026T3; atur_est: 83 trimestres nuevos o revisados hasta 2026T3; contr: 83 trimestres nuevos o revisados hasta 2026T3; contr_est: 83 trimestres nuevos o revisados hasta 2026T3; contr_ett: 83 trimestres nuevos o revisados hasta 2026T3; llocs: 75 trimestres bajados hasta 2026T3; ocup: 58 trimestres bajados hasta 2026T2; atur_cat: ERROR sin datos; pa: 0/74 trimestres completos hasta 2026T2 (0 tocados en esta ejecución)
 ```
