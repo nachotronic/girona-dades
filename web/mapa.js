@@ -1222,7 +1222,7 @@
       if (i.sk) D.municipios.forEach((m) => Object.keys((m.soc || {})[i.sk] || {}).forEach((a) => tots.add(a)));
       if (i.tema === "tur" && !i.sk) D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
-      if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (/^cad(_|$)/.test(i.a || "")) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "irpf") D.municipios.forEach((m) => Object.values(m.irpf || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "ats") D.municipios.forEach((m) => Object.values(m.ats || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));

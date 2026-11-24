@@ -2412,7 +2412,7 @@ def cadastre():
             for y, f in per_any.items():
                 y = int(y)
                 for k, v in _cad_ind(f, prox(pz.get(z, {}), y - 1)).items():
-                    if v is not None and k not in ("rev", "hos", "n"):
+                    if v is not None and k not in ("rev", "hos", "n", "parc", "rpn", "solar_ha", "dep", "cult", "san", "rel", "espc", "sing"):
                         refs.setdefault(k, {}).setdefault(y, {})[z] = round(v, CAD_DEC[k])
                 if y == ult:
                     usos_ref[z] = usos(f)
@@ -2485,7 +2485,7 @@ def cadastre_prov(refs, ult, usos_ref, tit=None):
         for id_, ks in (("cad_tit", ("fna", "fex", "soc", "ent", "aapp")), ("cad_tam", ("t1", "t5", "t10", "t25", "t100"))):
             grups = []
             for k in ks:
-                g = {"g": k, "c": "ct:" + k}
+                g = {"g": k, "c": "cti:" + k}
                 for z in ("gi", "cat", "esp"):
                     t_ = tit.get("_" + z) or {}
                     tot = sum(t_.get(x, 0) for x in ks)
