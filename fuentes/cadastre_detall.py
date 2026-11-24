@@ -56,7 +56,7 @@ def _csv(url: str, **kw) -> pd.DataFrame | None:
     if "html" in r.headers.get("content-type", "") or r.content[:200].lstrip().lower().startswith((b"<!doctype", b"<html")):
         return None
     txt = r.content.decode("utf-8-sig") if r.content[:3] == b"\xef\xbb\xbf" else r.content.decode("latin-1")
-    d = pd.read_csv(io.StringIO(txt), sep=";", dtype=str, **kw)
+    d = pd.read_csv(io.StringIO(txt), sep=";", dtype=str, index_col=False, **kw)
     d.columns = [c.strip().strip("'\"").upper() for c in d.columns]
     for c in d.columns:
         d[c] = d[c].astype(str).str.strip().str.strip("'\"").str.strip()
