@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 12:50 UTC
+Última ejecución: 2026-11-24 14:04 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@
 | catastro — Catastro INSPIRE, edificis | ok | 2026-11-23 13:58 | 2026-11-23 13:58 | semestral |
 | geometria — INE, seccionat censal 2024 | ok | 2026-11-23 14:01 | 2026-11-23 14:01 | fix |
 | salut — CatSalut: àrees bàsiques de salut, receptes, infeccions i centres | ok | 2026-11-23 14:02 | 2026-11-23 14:02 | setmanal/mensual |
-| policia — Mossos d'Esquadra, fets penals | ok | 2026-11-23 14:08 | 2026-11-23 14:08 | mensual |
+| policia — Mossos d'Esquadra, fets penals i delictes d'odi | ok | 2026-11-23 14:08 | 2026-11-23 14:08 | mensual |
 | referencies — Valors de referència de Catalunya i Espanya | ok | 2026-11-23 14:09 | 2026-11-23 14:09 | anual |
 | provincia — INE, sèries de la província | ok | 2026-11-23 14:09 | 2026-11-23 14:09 | mensual |
 | emex — Idescat, El municipi en xifres | ok | 2026-11-23 14:20 | 2026-11-23 14:20 | anual |
@@ -53,11 +53,12 @@
 | urbans — INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona | ok | 2026-11-24 08:01 | 2026-11-24 08:01 | anual |
 | notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | ok | 2026-11-24 08:18 | 2026-11-24 08:18 | mensual/trimestral |
 | xifra_treball — Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral | avís | — | 2026-11-24 12:17 | mensual |
+| xifra_municipal — Xifra, Diputació de Girona: policia local, lloc de naixement, cens d'habitatges 2021, romanent, resultat pressupostari, cost efectiu dels serveis i turisme per comarca | avís | — | 2026-11-24 13:25 | mensual |
 
 ## Detalle de la última ejecución
 
-### xifra_treball: avís (1941 s)
+### xifra_municipal: avís (2336 s)
 
 ```
-atur: 2 trimestres nuevos o revisados hasta 2026T3; atur_est: 2 trimestres nuevos o revisados hasta 2026T3; contr: 2 trimestres nuevos o revisados hasta 2026T3; contr_est: 2 trimestres nuevos o revisados hasta 2026T3; contr_ett: 2 trimestres nuevos o revisados hasta 2026T3; llocs: 2 trimestres bajados hasta 2026T3 (assal 2210 valores, auton 2210 valores); ocup: 58 trimestres bajados hasta 2026T2 (ocup 1326 valores, ocup_edat 2210 valores, ocup_nac 38454 valores); atur_cat: al día (2026-10); pa: ERROR atur/aturepe.asp
+tur_comarca: 306 consultas; policia: 221 municipios; naixement: 221 municipios; romanent: 221 municipios; resultat: 221 municipios; cesel: 221 municipios; cens_hin: ERROR sin datos; cens_hpp: ERROR sin datos; cens_hpt: 221 municipios; cens_enp: 112 municipios
 ```
