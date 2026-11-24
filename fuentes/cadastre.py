@@ -22,6 +22,7 @@ import zipfile
 
 import pandas as pd
 
+from . import cadastre_detall
 from .comun import RAW, carpeta, descargar, get
 
 C = "https://www.catastro.hacienda.gob.es/documentos/estadisticas/"
@@ -201,4 +202,6 @@ def ejecutar() -> str:
         _historics(out, res)
     except Exception as e:  # noqa: BLE001
         res.append(f"ERROR series históricas: {e}")
+    # Titularidad, altas, urbana trimestral, cultivos y BICE (usa el px.zip ya descargado)
+    cadastre_detall.ejecutar(out, res)
     return "\n".join(res)
