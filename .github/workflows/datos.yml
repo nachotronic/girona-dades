@@ -40,7 +40,7 @@ jobs:
         env:
           PROBLEMES_MD: ${{ runner.temp }}/problemes.md
           XIFRA_HISTORICO: ${{ inputs.xifra_historico || '0' }}
-          FUENTES: ${{ github.event.schedule == '0 9 2-8 * *' && 'conjuntura afiliacio dgt transferencias aena provincia mitma llistes_espera turisme policia emergencies interior cgpj demografia transit' || inputs.fuentes }}
+          FUENTES: ${{ github.event.schedule == '0 9 2-8 * *' && 'conjuntura afiliacio dgt transferencias aena provincia mitma llistes_espera turisme policia emergencies interior cgpj demografia transit xifra_treball' || inputs.fuentes }}
         run: python scripts/actualizar.py $FUENTES
       - name: Guardar resultados
         if: always()
