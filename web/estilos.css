@@ -1094,6 +1094,8 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .pq-pos b { color: var(--tinta); }
 .pq-nota, .pq-avis { margin: 4px 0 8px; font-size: 14px; line-height: 1.5; color: var(--text-2); max-width: 46em; }
 .pq-avis { border-left: 3px solid var(--accent); padding-left: 10px; }
+/* Gràfic al qual porta el cercador */
+figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; transition: outline-color .4s; }
 .pq-refs { display: flex; flex-wrap: wrap; gap: 0; margin: 12px 0 4px; border-top: 1px solid var(--vora); }
 .pq-ref { padding: 8px 18px 6px 0; margin-right: 18px; }
 .pq-ref dt { font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--text-3); }
@@ -1251,7 +1253,7 @@ th, td { padding-left: 10px; padding-right: 10px; }
 /* Cabecera de escritorio: cada enlace en una sola línea («La província» se partía en dos);
    si no caben todos, el menú se desplaza en horizontal como en el móvil */
 @media (min-width: 761px) {
-  .menu { gap: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .menu { gap: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); padding-right: 30px; }
   .menu::-webkit-scrollbar { display: none; }
   .menu a { white-space: nowrap; flex: none; letter-spacing: .01em; font-size: 11px; }
 }
@@ -1365,3 +1367,4 @@ th, td { padding-left: 10px; padding-right: 10px; }
 .al-taula td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--vora); white-space: nowrap; }
 .al-taula th:first-child, .al-taula td:first-child { text-align: left; }
 .al-taula tbody tr:first-child td { font-weight: 600; color: var(--tinta); }
+.tur-air { margin-top: 28px; }

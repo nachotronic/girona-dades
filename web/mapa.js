@@ -93,6 +93,7 @@
     { id: "veh", ca: "Vehicles", es: "Vehículos" },
     { id: "ajt", ca: "Ajuntaments", es: "Ayuntamientos" },
     { id: "dp", ca: "Diners públics", es: "Dinero público" },
+    { id: "soc", ca: "Social", es: "Social" },
     { id: "cad", ca: "Cadastre", es: "Catastro" },
     { id: "tri", ca: "Impostos locals", es: "Impuestos locales" },
     { id: "ene", ca: "Energia", es: "Energía" },
@@ -168,7 +169,8 @@
   const CUL_DARRER = (o) => { if (!o) return null; const ks = Object.keys(o).sort(); return ks.length ? o[ks[ks.length - 1]] : null; };
   const CUC = (k) => (x) => CUL_DARRER(x && x["cul_" + k]);
   const CUCR = (k) => () => { const r = D.cul_ref && D.cul_ref[k]; const o = r ? CUL_DARRER(r) : null; return o || {}; };
-  const NOTA_CULTE = { ca: "Només per comarques: Idescat, Anuari estadístic de Catalunya (font: Direcció General d'Afers Religiosos, Departament de Justícia), darrer any publicat. Compta els llocs de culte registrats de cada confessió. La Cerdanya i Osona no hi surten perquè només una part és de la província.", es: "Solo por comarcas: Idescat, Anuario estadístico de Cataluña (fuente: Direcció General d'Afers Religiosos, Departament de Justícia), último año publicado. Cuenta los lugares de culto registrados de cada confesión. La Cerdanya y Osona no salen porque solo una parte es de la provincia." };
+  const NOTA_CULTE = { ca: "Generalitat, Direcció General d'Afers Religiosos: centres de culte actius (on s'hi fa culte almenys una vegada l'any) de cada municipi i confessió, des del 2020. Esglésies, ermites, santuaris, oratoris, mesquites, sales del Regne… Cada centre compta una vegada encara que hi facin culte diverses comunitats. Els centres catòlics depenen de la llista que revisa cada bisbat: el de Girona en dona 867 el 2020, 773 del 2021 al 2023 i 661 el 2024; la baixada no vol dir que s'hagin tancat tantes esglésies.", es: "Generalitat, Direcció General d'Afers Religiosos: centros de culto activos (donde se celebra culto al menos una vez al año) de cada municipio y confesión, desde 2020. Iglesias, ermitas, santuarios, oratorios, mezquitas, salones del Reino… Cada centro cuenta una vez aunque celebren culto varias comunidades. Los centros católicos dependen de la lista que revisa cada obispado: el de Girona da 867 en 2020, 773 de 2021 a 2023 y 661 en 2024; la bajada no significa que se hayan cerrado tantas iglesias." };
+  const NOTA_CT_OSM = { ca: "OpenStreetMap: edificis i llocs de culte cartografiats (amenity=place_of_worship), situats a la seva secció censal. A la província són gairebé tots esglésies i ermites catòliques: les mesquites, les esglésies evangèliques i els altres llocs de culte de les confessions minoritàries gairebé no hi són. Per comptar totes les confessions, mireu els municipis.", es: "OpenStreetMap: edificios y lugares de culto cartografiados (amenity=place_of_worship), situados en su sección censal. En la provincia son casi todos iglesias y ermitas católicas: las mezquitas, las iglesias evangélicas y los demás lugares de culto de las confesiones minoritarias casi no están. Para contar todas las confesiones, mirad los municipios." };
   const NOTA_COMC = { ca: "Només per comarques: Idescat, Anuari estadístic de Catalunya (font: Departament de Cultura), darrer any publicat. Les xifres per habitant són sobre la població de la comarca. La Cerdanya i Osona no hi surten perquè només una part és de la província.", es: "Solo por comarcas: Idescat, Anuario estadístico de Cataluña (fuente: Departament de Cultura), último año publicado. Las cifras por habitante son sobre la población de la comarca. La Cerdanya y Osona no salen porque solo una parte es de la provincia." };
   const CULC = [
     ["c_esp_h", ["Anar al cinema", "Entrades de cinema venudes per habitant i any"], ["Ir al cine", "Entradas de cine vendidas por habitante y año"], N2],
@@ -178,11 +180,6 @@
     ["m_vis_h", ["Visitants dels museus", "Visitants de museus i col·leccions per habitant"], ["Visitantes de los museos", "Visitantes de museos y colecciones por habitante"], N1],
     ["m_vis", ["Visitants dels museus (total)", "Visitants de museus i col·leccions"], ["Visitantes de los museos (total)", "Visitantes de museos y colecciones"], N0],
     ["m_n", ["Museus registrats", "Museus i col·leccions registrats (seus i subseus)"], ["Museos registrados", "Museos y colecciones registrados (sedes y subsedes)"], N0],
-    ["ct_h", ["Centres de culte", "Centres de culte per 10.000 habitants"], ["Centros de culto", "Centros de culto por 10.000 habitantes"], N1, NOTA_CULTE],
-    ["ct_n", ["Centres de culte (total)", "Centres de culte de totes les confessions"], ["Centros de culto (total)", "Centros de culto de todas las confesiones"], N0, NOTA_CULTE],
-    ["ct_cat", ["Esglésies catòliques", "Centres de culte catòlics"], ["Iglesias católicas", "Centros de culto católicos"], N0, NOTA_CULTE],
-    ["ct_ev", ["Esglésies evangèliques", "Centres de culte evangèlics"], ["Iglesias evangélicas", "Centros de culto evangélicos"], N0, NOTA_CULTE],
-    ["ct_isl", ["Mesquites i oratoris", "Centres de culte islàmics"], ["Mezquitas y oratorios", "Centros de culto islámicos"], N0, NOTA_CULTE],
     ["r_fm", ["Ràdios FM", "Emissores de ràdio de freqüència modulada (privades i municipals)"], ["Radios FM", "Emisoras de radio de frecuencia modulada (privadas y municipales)"], N0],
   ];
   // Medi ambient: m.amb = {clave: {año: valor}}, D.anys.amb_seq/amb_terr/amb_aigua/amb_aire/amb_met; comarcas en D.arees.com[c]["amb_" + clave];
@@ -286,6 +283,38 @@
     ["subv_dip", ["Subvencions de la Diputació", "Subvencions de la Diputació de Girona rebudes a la comarca per habitant (€)"], ["Subvenciones de la Diputación", "Subvenciones de la Diputació de Girona recibidas en la comarca por habitante (€)"]],
     ["subv_soc", ["Ajuts socials", "Subvencions de serveis socials i promoció social per habitant (€)"], ["Ayudas sociales", "Subvenciones de servicios sociales y promoción social por habitante (€)"]],
   ];
+  // Social: m.soc = {clave: {año|fecha: valor}}, D.anys.soc_reses/soc_cuid/soc_air/soc_c_*; comarcas en D.arees.com[c]["soc_" + clave]; D.soc_ref
+  const SO = (k) => (m, a) => (a != null && m.soc && m.soc[k] && m.soc[k][a] != null ? m.soc[k][a] : null);
+  const SOZ = (k) => (x) => CUL_DARRER(x && x["soc_" + k]);
+  const NOTA_RESES = { ca: "Registre d'entitats, serveis i establiments socials (RESES) de la Generalitat: serveis inscrits ara mateix, públics i privats, amb les places autoritzades. Residències: residències assistides i llars residència per a gent gran. Persones de 65 anys o més: padró (Idescat). Un municipi sense residència surt amb 0.", es: "Registre d'entitats, serveis i establiments socials (RESES) de la Generalitat: servicios inscritos ahora mismo, públicos y privados, con las plazas autorizadas. Residencias: residencias asistidas y hogares residencia para mayores. Personas de 65 años o más: padrón (Idescat). Un municipio sin residencia sale con 0." };
+  const NOTA_CUID = { ca: "Departament de Drets Socials: persones cuidadores no professionals (familiars que cuiden una persona dependent i cobren la prestació), pel municipi on viuen. Registre actual.", es: "Departament de Drets Socials: personas cuidadoras no profesionales (familiares que cuidan a una persona dependiente y cobran la prestación), por el municipio donde viven. Registro actual." };
+  const NOTA_SOCC = { ca: "Departament de Drets Socials, per comarca sencera (la Cerdanya i Osona inclouen la part de Lleida i de Barcelona), per 1.000 habitants. Serveis socials bàsics i menjador: suma del consell comarcal i dels ajuntaments de més de 20.000 habitants; des del 2022 algunes àrees canvien molt d'un any a l'altre per com compten les persones. Dependència: persones amb grau reconegut que reben una prestació o un servei.", es: "Departament de Drets Socials, por comarca entera (la Cerdanya y Osona incluyen la parte de Lleida y de Barcelona), por 1.000 habitantes. Servicios sociales básicos y comedor: suma del consejo comarcal y de los ayuntamientos de más de 20.000 habitantes; desde 2022 algunas áreas cambian mucho de un año a otro por cómo cuentan a las personas. Dependencia: personas con grado reconocido que reciben una prestación o un servicio." };
+  const NOTA_AIR = { ca: "Inside Airbnb, darrera instantània dels anuncis d'Airbnb a la província (s'hi afegeix cada nova). Municipi i secció per les coordenades de l'anunci, que Airbnb desplaça fins a 150 metres. Habitatges: Cadastre. Sense registre: anuncis que no mostren cap número d'habitatge d'ús turístic ni de registre (ni n'estan exempts). Amfitrions grans: 10 anuncis o més.", es: "Inside Airbnb, última instantánea de los anuncios de Airbnb en la provincia (se añade cada nueva). Municipio y sección por las coordenadas del anuncio, que Airbnb desplaza hasta 150 metros. Viviendas: Catastro. Sin registro: anuncios que no muestran ningún número de vivienda de uso turístico ni de registro (ni están exentos). Anfitriones grandes: 10 anuncios o más." };
+  const SOM = [
+    ["res65", "soc_reses", ["Places de residència", "Places en residències per a gent gran per cada 100 persones de 65 anys o més"], ["Plazas de residencia", "Plazas en residencias para mayores por cada 100 personas de 65 años o más"], NOTA_RESES, N1],
+    ["dia65", "soc_reses", ["Places de centre de dia", "Places en centres de dia per a gent gran per cada 100 persones de 65 anys o més"], ["Plazas de centro de día", "Plazas en centros de día para mayores por cada 100 personas de 65 años o más"], NOTA_RESES, N1],
+    ["disc", "soc_reses", ["Places per a discapacitat", "Places en serveis per a persones amb discapacitat o malaltia mental per 1.000 habitants"], ["Plazas para discapacidad", "Plazas en servicios para personas con discapacidad o enfermedad mental por 1.000 habitantes"], NOTA_RESES, N1],
+    ["serveis", "soc_reses", ["Serveis socials", "Serveis i establiments socials registrats al municipi"], ["Servicios sociales", "Servicios y establecimientos sociales registrados en el municipio"], NOTA_RESES, { sumable: true, ...N0 }],
+    ["cuid", "soc_cuid", ["Cuidadors familiars", "Persones cuidadores no professionals per 1.000 habitants"], ["Cuidadores familiares", "Personas cuidadoras no profesionales por 1.000 habitantes"], NOTA_CUID, N1],
+    ["cuid_d", "soc_cuid", ["Cuidadores dones", "Persones cuidadores no professionals que són dones (%)"], ["Cuidadoras mujeres", "Personas cuidadoras no profesionales que son mujeres (%)"], NOTA_CUID, P0],
+  ];
+  const SOC = [
+    ["ssb", ["Ateses pels serveis socials", "Persones ateses pels serveis socials bàsics per 1.000 habitants"], ["Atendidas por los servicios sociales", "Personas atendidas por los servicios sociales básicos por 1.000 habitantes"]],
+    ["menj", ["Menjador social", "Persones ateses en menjadors socials per 1.000 habitants"], ["Comedor social", "Personas atendidas en comedores sociales por 1.000 habitantes"]],
+    ["dep", ["Dependència", "Persones amb dependència que reben prestació o servei per 1.000 habitants"], ["Dependencia", "Personas con dependencia que reciben prestación o servicio por 1.000 habitantes"]],
+    ["dep3", ["Gran dependència", "Persones amb grau III de dependència ateses per 1.000 habitants"], ["Gran dependencia", "Personas con grado III de dependencia atendidas por 1.000 habitantes"]],
+    ["pcuid", ["Prestació per cuidar a casa", "Prestacions per a cuidador no professional o assistent personal per 1.000 habitants"], ["Prestación por cuidar en casa", "Prestaciones para cuidador no profesional o asistente personal por 1.000 habitantes"]],
+    ["sad", ["Ajuda a domicili", "Persones dependents amb servei d'ajuda a domicili per 1.000 habitants"], ["Ayuda a domicilio", "Personas dependientes con servicio de ayuda a domicilio por 1.000 habitantes"]],
+    ["tele", ["Teleassistència", "Persones dependents amb teleassistència per 1.000 habitants"], ["Teleasistencia", "Personas dependientes con teleasistencia por 1.000 habitantes"]],
+  ];
+  const AIR = [
+    ["air_n", ["Anuncis d'Airbnb", "Anuncis d'Airbnb actius"], ["Anuncios de Airbnb", "Anuncios de Airbnb activos"], { sumable: true, s: S("soc_air_n"), ...N0 }],
+    ["air_100", ["Airbnb per habitatge", "Anuncis d'Airbnb per cada 100 habitatges"], ["Airbnb por vivienda", "Anuncios de Airbnb por cada 100 viviendas"], { s: S("soc_air_100"), ...N1 }],
+    ["air_sencer", ["Pisos sencers a Airbnb", "Anuncis d'Airbnb que són un habitatge sencer (%)"], ["Pisos enteros en Airbnb", "Anuncios de Airbnb que son una vivienda entera (%)"], P0],
+    ["air_sense", ["Airbnb sense registre", "Anuncis d'Airbnb sense número de registre (%)"], ["Airbnb sin registro", "Anuncios de Airbnb sin número de registro (%)"], P0],
+    ["air_multi", ["Amfitrions grans", "Anuncis d'Airbnb d'amfitrions amb 10 anuncis o més (%)"], ["Anfitriones grandes", "Anuncios de Airbnb de anfitriones con 10 anuncios o más (%)"], P0],
+    ["air_preu", ["Preu a Airbnb", "Preu mitjà per nit d'un habitatge sencer a Airbnb (mediana, €)"], ["Precio en Airbnb", "Precio medio por noche de una vivienda entera en Airbnb (mediana, €)"], EUR0],
+  ];
   const CUL = [
     ["b_prest_h", "cul_bib", ["Préstecs de biblioteca", "Préstecs de les biblioteques públiques per habitant"], ["Préstamos de biblioteca", "Préstamos de las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
     ["b_vis_h", "cul_bib", ["Visites a la biblioteca", "Visites a les biblioteques públiques per habitant"], ["Visitas a la biblioteca", "Visitas a las bibliotecas públicas por habitante"], NOTA_BIB, { ...BIBC, ...N2 }],
@@ -315,6 +344,14 @@
     ["cpnl_n", "cul_cpnl", ["Cursos de català (total)", "Inscripcions als cursos de català del CPNL"], ["Cursos de catalán (total)", "Inscripciones en los cursos de catalán del CPNL"], NOTA_CPNL, { sumable: true, ...N0 }],
     ["ag_h", "cul_ag", ["Agenda cultural", "Activitats publicades a l'agenda cultural per 1.000 habitants"], ["Agenda cultural", "Actividades publicadas en la agenda cultural por 1.000 habitantes"], NOTA_AG, N1],
     ["ag_n", "cul_ag", ["Agenda cultural (total)", "Activitats publicades a l'agenda cultural"], ["Agenda cultural (total)", "Actividades publicadas en la agenda cultural"], NOTA_AG, { sumable: true, ...N0 }],
+    ["ct_h", "cul_ct", ["Centres de culte", "Centres de culte per 10.000 habitants"], ["Centros de culto", "Centros de culto por 10.000 habitantes"], NOTA_CULTE, N1],
+    ["ct_n", "cul_ct", ["Centres de culte (total)", "Centres de culte de totes les confessions"], ["Centros de culto (total)", "Centros de culto de todas las confesiones"], NOTA_CULTE, { sumable: true, ...N0 }],
+    ["ct_cat", "cul_ct", ["Esglésies catòliques", "Centres de culte de l'Església catòlica"], ["Iglesias católicas", "Centros de culto de la Iglesia católica"], NOTA_CULTE, { sumable: true, ...N0 }],
+    ["ct_ev", "cul_ct", ["Esglésies evangèliques", "Centres de culte evangèlics"], ["Iglesias evangélicas", "Centros de culto evangélicos"], NOTA_CULTE, { sumable: true, ...N0 }],
+    ["ct_isl", "cul_ct", ["Mesquites i oratoris", "Centres de culte islàmics"], ["Mezquitas y oratorios", "Centros de culto islámicos"], NOTA_CULTE, { sumable: true, ...N0 }],
+    ["ct_alt", "cul_ct", ["Altres confessions", "Centres de culte d'altres confessions (budistes, testimonis de Jehovà, ortodoxos, sikhs…)"], ["Otras confesiones", "Centros de culto de otras confesiones (budistas, testigos de Jehová, ortodoxos, sijs…)"], NOTA_CULTE, { sumable: true, ...N0 }],
+    ["ct_nocat_p", "cul_ct", ["Culte no catòlic", "Centres de culte d'altres confessions que la catòlica (%)"], ["Culto no católico", "Centros de culto de confesiones distintas de la católica (%)"], NOTA_CULTE, { sumable: false, ...P0 }],
+    ["ct_osm", "cul_osm", ["Esglésies i ermites al mapa", "Edificis religiosos cartografiats a OpenStreetMap"], ["Iglesias y ermitas en el mapa", "Edificios religiosos cartografiados en OpenStreetMap"], NOTA_CT_OSM, { sumable: true, s: S("cul_ct_osm"), ...N0 }],
   ];
 
   // Parque de vehículos (DGT, anual): m.veh = {clave: {año: valor}}, D.veh_ref = {clave: {año: {gi, cat, esp}}}
@@ -826,7 +863,7 @@
     ...ACC.map(([k, a, ca, es, nota, fmtk]) => ({ id: "acc_" + k, tema: "acc", ca, es, a, v: (m) => AC(k)(m, D.anys && D.anys[a]), t: AC(k), pv: ACR(k, "gi"),
       com: ACZ(k, a), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: ACR(k, "cat")(y), esp: ACR(k, "esp")(y) }; }, nota, ...fmtk })),
     ...CUL.map(([k, a, ca, es, nota, fmtk]) => ({ id: "cul_" + k, tema: "cul", ca, es, a, v: (m) => CU(k)(m, D.anys && D.anys[a]), t: CU(k), pv: CUR(k, "gi"),
-      ...(/^b_/.test(k) ? { com: CUZ(k, a), buit: () => !(D.anys && D.anys[a]) } : {}), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: CUR(k, "cat")(y) }; }, nota, ...fmtk })),
+      ...(/^b_/.test(k) ? { com: CUZ(k, a), buit: () => !(D.anys && D.anys[a]) } : /^ct_/.test(k) && k !== "ct_osm" ? { com: CUZ(k, a), buit: () => !(D.anys && D.anys[a]) } : k === "ct_osm" ? { buit: () => !(D.anys && D.anys[a]) } : {}), ref: () => { const y = (ind && ind.a === a && anyActiu()) || (D.anys && D.anys[a]); return { cat: CUR(k, "cat")(y) }; }, nota, ...fmtk })),
     ...CULC.map(([k, ca, es, fmtk, nota]) => ({ id: "cul_" + k, tema: "cul", ca, es, a: "cul_com", sumable: false, com: CUC(k), ref: CUCR(k), nota: nota || NOTA_COMC, ...fmtk })),
     ...AMB_MUN.map(([k, a, ca, es, nota, fmtk]) => ({ id: "amb_" + k, tema: "amb", ca, es, a, v: (m) => AM(k)(m, D.anys && D.anys[a]), t: a === "amb_seq" ? AM(k) : undefined, nota, ...fmtk })),
     ...AMB_COM.map(([k, ca, es, fmtk]) => ({ id: "amb_c_" + k, tema: "amb", ca, es, a: "amb_aigua", sumable: false, com: AMZ(k), ref: AMR(k), nota: NOTA_AIGUA, ...fmtk })),
@@ -836,6 +873,10 @@
       ref: ["menor", "directe", "contr_hab"].includes(k) ? () => ({ cat: DPR("dp_" + k)(anyActiu() || (D.anys && D.anys[a])).cat }) : undefined, ...fmtk })),
     ...DPC.map(([k, ca, es]) => ({ id: "dp_c_" + k, tema: "dp", ca, es, a: "dp_subv", sumable: false, com: DPZ(k), nota: NOTA_SUBVC, ...EUR0,
       ref: k === "subv" ? () => { const o = DPR("dp_c_subv")(D.anys && D.anys.dp_subv); return { gi: o.gi, cat: o.cat }; } : undefined })),
+    ...SOM.map(([k, a, ca, es, nota, fmtk]) => ({ id: "soc_" + k, tema: "soc", ca, es, a, sumable: false, v: (m) => SO("soc_" + k)(m, D.anys && D.anys[a]), nota, ...fmtk })),
+    ...SOC.map(([k, ca, es]) => ({ id: "soc_c_" + k, tema: "soc", ca, es, a: "soc_c_" + k, sumable: false, com: SOZ(k), nota: NOTA_SOCC, ...N1,
+      ref: () => { const r = D.soc_ref && D.soc_ref["soc_c_" + k]; const o = r ? r[D.anys && D.anys["soc_c_" + k]] || CUL_DARRER(r) : null; return o ? { gi: o.gi, cat: o.cat } : {}; } })),
+    ...AIR.map(([k, ca, es, fmtk]) => ({ id: "soc_" + k, tema: "tur", sk: "soc_" + k, ca, es, a: "soc_air", sumable: false, v: (m) => SO("soc_" + k)(m, D.anys && D.anys.soc_air), t: SO("soc_" + k), nota: NOTA_AIR, ...fmtk })),
     ...ENE.map(([k, a, ca, es, nota, fmtk]) => ({ id: "en_" + k, tema: "ene", ca, es, a, sumable: false, v: (m) => EN("en_" + k)(m, D.anys && D.anys[a]), t: a === "en_cob" ? EN("en_" + k) : undefined, nota,
       ref: /^gas_g|^gas_d/.test(k) ? () => { const r = D.en_ref && D.en_ref[k]; return r ? { cat: r.cat, esp: r.esp } : {}; } : undefined, ...fmtk })),
     ...VEH.map(([k, ca, es, fmtk]) => ({ id: "veh_" + k, tema: "veh", ca, es, a: "veh", sumable: k === "n", v: (m) => VH(k)(m, D.anys && D.anys.veh), t: VH(k), pv: VHR(k, "gi"),
@@ -1079,7 +1120,8 @@
       if (i.a === "en_cob") D.municipios.forEach((m) => Object.entries(m.en || {}).forEach(([k, o]) => /^en_cob_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "amb_seq") D.municipios.forEach((m) => Object.entries(m.amb || {}).forEach(([k, o]) => /^seq_/.test(k) && Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "veh") D.municipios.forEach((m) => Object.values(m.veh || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
-      if (i.tema === "tur") D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
+      if (i.sk) D.municipios.forEach((m) => Object.keys((m.soc || {})[i.sk] || {}).forEach((a) => tots.add(a)));
+      if (i.tema === "tur" && !i.sk) D.municipios.forEach((m) => Object.values(m.tur || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.tema === "com") D.municipios.forEach((m) => Object.values(m.com || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (["cad", "cad_vm2", "cad_ibi"].includes(i.a)) D.municipios.forEach((m) => Object.values(m.cad || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
       if (i.a === "sol") D.municipios.forEach((m) => Object.values(m.sol || {}).forEach((o) => Object.keys(o).forEach((a) => tots.add(a))));
@@ -1664,16 +1706,28 @@
     get ind() { return ind; }, get nivell() { return nivell; }, get any() { return anySel; }, get fixat() { return fixat; }, get mapa() { return mapa; },
     tria(id) { const i = IND.find((x) => x.id === id); if (!i) return; consulta = ""; const c = document.getElementById("cerca-ind"); if (c) c.value = ""; return tria(i); },
     // Para pregunta.js: área (de salud, policial, judicial, de Agents Rurals) de un municipio y nombres de las áreas
-    async area(n, ine) {
+    // Comarca: la del municipio. Estaciones de aire y meteorológicas: la que lo cubre o, si no, la más cercana con dato (hasta `max` km)
+    async area(n, ine, te) {
       const m = munPerIne[ine] || D.municipios.find((x) => x.ine === ine);
       if (!m) return null;
       if (n === "pj") return m.x && m.x.pj ? { id: m.x.pj, nom: m.x.pj_nom } : null;
+      if (n === "com") return m.comarca ? { id: m.comarca, nom: m.comarca } : null;
       if (!geoMun || !ZONA[n]) return null;
-      return areaDe(n, m);
+      const z = await areaDe(n, m);
+      if (n !== "aire" && n !== "met") return z;
+      if (z && (!te || te(z.id))) return { ...z, km: 0 };
+      const f = geoMun.features.find((x) => x.properties.ine === m.ine);
+      if (!f) return null;
+      const [x0, y0] = centre(f), km = ([x, y]) => Math.hypot((x - x0) * 111.32 * Math.cos((y0 * Math.PI) / 180), (y - y0) * 110.57);
+      const max = n === "aire" ? 20 : 15;
+      let millor = null;
+      ZONA[n].geo.features.forEach((e) => { const d = km(centre(e)); if (d <= max && (!te || te(e.properties.id)) && (!millor || d < millor.km)) millor = { ...e.properties, km: d }; });
+      return millor;
     },
     async noms(n) {
       const o = {};
       if (n === "pj") { D.municipios.forEach((m) => { if (m.x && m.x.pj) o[m.x.pj] = m.x.pj_nom; }); return o; }
+      if (n === "com") { Object.keys((D.arees && D.arees.com) || {}).forEach((c) => { o[c] = c; }); return o; }
       if (!ZONA[n]) return o;
       await carregaZona(n);
       ZONA[n].geo.features.forEach((f) => { o[f.properties.id] = f.properties.nom; });
