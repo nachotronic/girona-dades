@@ -66,7 +66,8 @@ def _peticio(metode: str, url: str, dades: dict | None = None) -> str:
 
 
 def _taules(html: str) -> list[list[list[str]]]:
-    soup = BeautifulSoup(html, "lxml")
+    # Algunas páginas (ocupados por nacionalidad) escriben «<tr">», que lxml toma por otra etiqueta
+    soup = BeautifulSoup(re.sub(r'<tr"+', "<tr", html), "lxml")
     res = []
     for t in soup.find_all("table"):
         if t.find("table"):
