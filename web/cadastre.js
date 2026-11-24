@@ -82,7 +82,7 @@
     };
     const titHtml = ct ? taulaT(["fna", "fex", "soc", "ent", "aapp"], tx("tit_h"), tx("tit_c")) + taulaT(["t1", "t5", "t10", "t25", "t100"], tx("tam_h"), tx("tam_c")) : "";
     const cb = m.cad_b;
-    const biceHtml = cb && Object.keys(cb).length ? `<p class="cd-u"><b>${tx("bice")}:</b> ${Object.entries(cb).map(([k, n]) => `${tx("bt")[k] || k}${n > 1 ? ` (${fmt(n)})` : ""}`).join(", ")}.</p>` : "";
+    const biceHtml = cb && Object.keys(cb).length ? `<p class="cd-u"><b>${tx("bice")}:</b> ${Object.entries(cb).map(([k, n]) => `${tx("bt")[k] || k}`).join(", ")}.</p>` : "";
     const anyAra = Number(a);
     cont.innerHTML = `<section class="tb cd"><h3 class="ajt-tit">${tx("tit")}</h3><p class="tb-sub">${rev && anyAra - rev >= 15 ? `${tx("sub", a, null)} ${tx("vella", rev, anyAra)}` : tx("sub", a, rev)}</p>
       <div class="tb-cos">
