@@ -508,6 +508,20 @@ window.PREGUNTA_DIC = {
   // Gràfics de les seccions (pregunta.js els troba sols pel títol; aquí, frases de més en tots dos idiomes).
   // Clau: «secció/id» o id del figure[data-id], o la secció sencera (llavors porta al primer gràfic).
   GRAFICS: {
+    "s-not": "notario, notarios, notaria, notarias, notari, notaris, notaries, notariado, notariat, escrituras, escriptures, actos notariales, actes notarials",
+    "s-not/not_her": "herencias, herencia, herencies, herencia, heredar, heretar, herederos, hereus, sucesiones, successions, adjudicacion de herencia, adjudicacio d herencia, cuantas herencias, quantes herencies",
+    "s-not/not_test": "testamentos, testamento, testaments, testament, hacer testamento, fer testament, cuantos testamentos, quants testaments",
+    "s-not/not_abint": "abintestato, abintestat, sin testamento, sense testament, declaracion de herederos, declaracio d hereus, morir sin testamento, morir sense testament",
+    "s-not/not_don": "donaciones, donacion, donacions, donacio, donar un piso, regalar un piso, donar un pis, donaciones en vida",
+    "s-not/not_pod": "poderes, poder notarial, poders, poder notarial, apoderamientos, apoderaments, poder para pleitos, poder per a plets",
+    "s-not/not_hipv": "hipotecas de vivienda segun notarios, hipoteques d habitatge segons notaris, prestamos hipotecarios notario, prestecs hipotecaris notari",
+    "s-not/not_hipv_imp": "hipoteca media notarios, hipoteca mitjana notaris, importe medio de la hipoteca, import mitja de la hipoteca, cuanto se pide de hipoteca, quant es demana d hipoteca",
+    "s-not/not_hc": "cancelaciones de hipoteca, cancelacions d hipoteca, hipotecas canceladas, hipoteques cancel lades, terminar de pagar la hipoteca, acabar de pagar la hipoteca, carta de pago, carta de pagament",
+    "s-not/not_soc": "sociedades constituidas notario, societats constituides notari, empresas nuevas notario, empreses noves notari, crear una empresa, montar una sociedad",
+    "s-not/not_soc_cap": "capital social, capital de las sociedades, capital de les societats, capital medio sociedades",
+    "s-not/not_pol": "polizas de prestamo, polisses de prestec, polizas de credito, polisses de credit, creditos a empresas, credits a empreses",
+    "s-not/not_seg": "segregaciones, segregacions, segregar una finca, dividir una finca, partir un terreno",
+    "s-not/not_esp": "herencias por provincia, herencies per provincia, notarios por provincia, provincias con mas herencias, provincies amb mes herencies",
     "s-exp": "exportaciones, exportacions, exporta, exportan, exporten, exportar, comercio exterior, comerc exterior, aduanas, duanes, ventas al extranjero, vendes a l estranger",
     "s-exp/caps": "que exporta, que exporten, que vende la provincia, que ven la provincia, productos exportados, productes exportats, que productos se exportan",
     "s-exp/paisos": "a quien vende, a qui ven, clientes, clients, paises a los que exporta, paisos on exporta, principales clientes, principals clients",

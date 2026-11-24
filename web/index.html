@@ -52,6 +52,7 @@
       <a href="#s-ene" data-t="nav_ene">Energia</a>
       <a href="#s-dp" data-t="nav_dp">Diners</a>
       <a href="#s-soc" data-t="nav_soc">Social</a>
+      <a href="#s-not" data-t="nav_not">Notaries</a>
       <a href="#s-mun" data-t="nav_mun">Municipis</a>
       <a href="#s-fonts" data-t="nav_fonts">Fonts</a>
     </nav>
@@ -304,9 +305,30 @@
     <div class="pg-graella" id="soc-grafics"></div>
   </section>
 
+  <section id="s-not" class="amplada sec" aria-labelledby="h-not">
+    <header class="sec-cap">
+      <p class="sobre"><span class="num">13</span> <span data-t="nav_not">Notaries</span></p>
+      <h2 id="h-not" data-t="h_not">Herències, testaments i hipoteques</h2>
+      <p class="lead" data-t="lead_not">Quantes herències, testaments, donacions, poders, hipoteques i societats noves passen per les notaries de la província, i com queda Girona davant les altres províncies.</p>
+    </header>
+    <div class="xifres not-xifres" id="not-xifres"></div>
+    <figure class="pg-fig ex-mapafig" data-id="not_esp">
+      <figcaption><span class="pg-tit" id="not-esp-tit"></span><span class="unitat" id="not-esp-u"></span></figcaption>
+      <div class="ex-ctl" id="not-esp-ctl"></div>
+      <p class="pg-h" id="not-esp-h"></p>
+      <div class="ex-mapa-graella">
+        <div><div class="ex-mapa ex-esp" id="not-esp" role="region" aria-label="Mapa"></div><div class="llegenda-mapa ex-lleg" id="not-esp-lleg"></div></div>
+        <div class="ex-rq" id="not-esp-rq"></div>
+      </div>
+      <p class="pg-font ex-font not-font"></p>
+    </figure>
+    <div class="pg-graella" id="not-grafics"></div>
+    <p class="ex-nd" id="not-nd"></p>
+  </section>
+
   <section id="s-mun" class="amplada sec" aria-labelledby="h-mun">
     <header class="sec-cap">
-      <p class="sobre"><span class="num">13</span> <span data-t="nav_mun">Municipis</span></p>
+      <p class="sobre"><span class="num">14</span> <span data-t="nav_mun">Municipis</span></p>
       <h2 id="h-mun" data-t="h_mun">Municipi a municipi</h2>
       <p class="lead" data-t="ajuda_taula">Ordena per qualsevol columna i obre la fitxa de cada municipi.</p>
     </header>
@@ -428,6 +450,7 @@
       <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/2xiz-255m">Departament de Cultura, Programa.cat i agenda cultural</a><span data-t="f_cul_prog">funcions professionals de teatre, música, circ i dansa per municipi i data (Programa.cat), i activitats de l'agenda cultural</span></li>
       <li data-font="cultura"><a href="https://analisi.transparenciacatalunya.cat/d/q9ct-fkjt">Consorci per a la Normalització Lingüística</a><span data-t="f_cul_cpnl">inscripcions als cursos de català per municipi i any</span></li>
       <li data-font="culte"><a href="https://analisi.transparenciacatalunya.cat/d/fmpi-m3ni">Generalitat, Direcció General d'Afers Religiosos, i OpenStreetMap</a><span data-t="f_culte">centres de culte actius per municipi i confessió, des del 2020; edificis religiosos cartografiats per secció censal</span></li>
+      <li data-font="notariado"><a href="https://www.notariado.org/liferay/web/cien/estadisticas-al-completo">Consell General del Notariat, Centre d'Informació Estadística</a><span data-t="f_notariado">herències, testaments, donacions, poders, hipoteques, cancel·lacions i societats noves per província, mensuals i trimestrals, des del 2007</span></li>
       <li data-font="emq"><a href="https://www.atmgirona.cat/mobilitat/emq/">ATM Àrea de Girona, Enquesta de Mobilitat Quotidiana 2024-2025</a><span data-t="f_emq">desplaçaments, mitjà de transport, motiu, horari, origen i destinació, vehicles i teletreball per municipi i comarca</span></li>
     </ul>
     <ul class="peu-legal">
@@ -465,6 +488,7 @@
 <script src="energia.js"></script>
 <script src="diners.js"></script>
 <script src="social.js"></script>
+<script src="notariado.js"></script>
 <script src="insercio.js"></script>
 <script src="mapamobil.js"></script>
 <script src="proposa.js"></script>
