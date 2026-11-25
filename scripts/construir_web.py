@@ -35,6 +35,10 @@ def estat_fonts() -> dict:
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))
         res["compravendes"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("ultim")}
+    fm = P / "mortalitat" / "mortalitat_meta.json"
+    if fm.exists():
+        m = json.loads(fm.read_text(encoding="utf-8"))
+        res["mortalitat"] = {"estat": "manual", "ok": m.get("carregat"), "edicio": m.get("edicio")}
     fm = P / "sem" / "sem_meta.json"
     if fm.exists():
         m = json.loads(fm.read_text(encoding="utf-8"))
@@ -3282,6 +3286,17 @@ def main():
     anys_extra.update(sow["anys"])
     for c, o in sow["com"].items():
         zones.setdefault("com", {}).setdefault(c, {}).update({"soc_" + k: v for k, v in o.items()})
+    # Anàlisi de la mortalitat (Departament de Salut, carga manual anual): comarcas en el tema «sal» y bloque en Demografia
+    import mortalitat_web
+    try:
+        mcw = mortalitat_web.construir()
+        print("mortalitat:", mcw["resum"])
+    except Exception as e:  # noqa: BLE001 - la web se publica igual sin el análisis de mortalidad
+        print("mortalitat: ERROR", type(e).__name__, e)
+        mcw = {"com": {}, "refs": {}, "anys": {}, "prov": {}, "xifres": {}}
+    anys_extra.update(mcw["anys"])
+    for c, o in mcw["com"].items():
+        zones.setdefault("com", {}).setdefault(c, {}).update({"mc_" + k: v for k, v in o.items()})
     refs = referencias()
     for k, v in refs_emex.items():
         refs.setdefault(k, {}).update(v)
@@ -3301,7 +3316,7 @@ def main():
         "generado": dt.date.today().isoformat(),
         "arees": zones, "ref": refs, "prov": {**provincia_series(), **educacio_series(), **prov_en, **universitaris_series(), **prov_nac, **esperanca_series(), **jw["prov"], **prov_sol, **aw["prov"], **({"bomb_mes": BOMB_MES} if BOMB_MES else {}), **cadastre_prov(refs_cad, any_cad, usos_cad_ref, tit_cad), **hw["prov"], **trw["prov"], **icw["prov"], **pmw["prov"], **cuw["prov"], **mtw["prov"]}, "salut": salut_series(), "pres_noms": noms_pres, "paisos": paisos, "paisos_ordre": paisos_ordre,
         "anys": {**anys_extra, **hw["anys"], **({"trib": any_trib} if any_trib else {}), **({"trib_coef": max(y for x in trib.values() for y in x.get("ibi_coef", {}))} if any(x.get("ibi_coef") for x in trib.values()) else {}), **({"veh": any_veh} if any_veh else {}), **({"sol": any_sol} if any_sol else {}), **({"irpf": aw["any"]} if aw["any"] else {}), **({"com": any_com} if any_com else {}), **({"cad": any_cad} if any_cad else {}), **anys_cd, **({"cad_vm2": cad_districtes()[3], "cad_ibi": max(refs_cad.get("ibi_rec") or {0: 0}) or None} if any_cad else {})},
-        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "xm_ref": xmw["refs"], "xm": xmw["prov"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "cad_t_ref": {k[1:]: v for k, v in tit_cad.items() if k.startswith("_")}, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
+        "acc_ref": trw["refs"], "cul_ref": cuw["refs"], "xm_ref": xmw["refs"], "xm": xmw["prov"], "amb_ref": maw["refs"], "en_ref": enw["refs"], "dp_ref": dpw["refs"], "dp": {"prov": dpw["prov"], "x": dpw["xifres"]}, "soc_ref": sow["refs"], "soc": {"prov": sow["prov"], "x": sow["xifres"]}, "mc_ref": mcw["refs"], "mort": {"prov": mcw["prov"], "x": mcw["xifres"]} if mcw["prov"] else None, "en": {"prov": enw["prov"], "x": enw["xifres"]}, "ua": {"z": uaw["zones"], "n": uaw["n"]} if uaw["mun"] else None, "amb": {"prov": maw["prov"], **({"emb": maw["emb"]} if maw.get("emb") else {})}, "trib_ref": refs_trib, "veh_ref": refs_veh, "ats_ref": refs_ats, "sol_ref": refs_sol, "irpf_ref": aw["refs"], "cad_ref": refs_cad, "hb_ref": hw["refs"], "cad_u_ref": usos_cad_ref, "cad_t_ref": {k[1:]: v for k, v in tit_cad.items() if k.startswith("_")}, "com_ref": refs_com, "sol_mes": mes_sol, "tur": tw["prov"], "tur_ref": tw["refs"], "mob": {"ref": mw["ref"], "s": mw["seccio"], "min_n": mobilitat_web.MIN_N} if mw["any"] else None,
         "provincia": {
             "poblacion": sum(m["poblacion"] or 0 for m in municipios),
             "alquiler": prov_alq, "compraventas": prov_cv, "renta_persona": prov_renta,

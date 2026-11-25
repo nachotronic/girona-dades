@@ -306,6 +306,28 @@
     ["subv_dip", ["Subvencions de la Diputació", "Subvencions de la Diputació de Girona rebudes a la comarca per habitant (€)"], ["Subvenciones de la Diputación", "Subvenciones de la Diputació de Girona recibidas en la comarca por habitante (€)"]],
     ["subv_soc", ["Ajuts socials", "Subvencions de serveis socials i promoció social per habitant (€)"], ["Ayudas sociales", "Subvenciones de servicios sociales y promoción social por habitante (€)"]],
   ];
+  // Anàlisi de la mortalitat (Departament de Salut): solo comarcas, D.arees.com[c]["mc_" + clave] = {año: valor}; D.mc_ref; D.anys.mc
+  const MCZ = (k) => (x) => CUL_DARRER(x && x["mc_" + k]);
+  const NOTA_MC = { ca: "Departament de Salut, Anàlisi de la mortalitat a Catalunya (registre de mortalitat), per comarca de residència. La Cerdanya i Osona hi són senceres. La comparació «Província» és la regió sanitària de Girona (sense la Cerdanya i amb el nord del Maresme). Taxa estandarditzada: defuncions per 100.000 habitants amb la població europea del 2013, per poder comparar comarques més velles i més joves. Índex de mortalitat estàndard: Catalunya = 100. A les comarques petites (la Cerdanya, el Ripollès, el Pla de l'Estany) un any pot variar molt.", es: "Departament de Salut, Anàlisi de la mortalitat a Catalunya (registro de mortalidad), por comarca de residencia. La Cerdanya y Osona están enteras. La comparación «Provincia» es la región sanitaria de Girona (sin la Cerdanya y con el norte del Maresme). Tasa estandarizada: defunciones por 100.000 habitantes con la población europea de 2013, para poder comparar comarcas más viejas y más jóvenes. Índice de mortalidad estándar: Cataluña = 100. En las comarcas pequeñas (la Cerdanya, el Ripollès, el Pla de l'Estany) un año puede variar mucho." };
+  const NOTA_MC_CALC = { ca: " Les taxes per causa i la mortalitat prematura les calcula Girona en xifres amb les defuncions i la població per edat de l'informe (mateix mètode; surten fins a un 2 % per sobre de les oficials de Catalunya).", es: " Las tasas por causa y la mortalidad prematura las calcula Girona en xifres con las defunciones y la población por edad del informe (mismo método; salen hasta un 2 % por encima de las oficiales de Cataluña)." };
+  const NOTA_MC_RS = { ca: "Província: regió sanitària de Girona.", es: "Provincia: región sanitaria de Girona." };
+  const NOTA_MCC = { ca: NOTA_MC.ca + NOTA_MC_CALC.ca, es: NOTA_MC.es + NOTA_MC_CALC.es };
+  const ANYS = { f: (v) => `${fmt(v, 1)} ${LANG === "es" ? "años" : "anys"}`, c: (v) => fmt(v, 1) };
+  const MC = [
+    ["ev0", ["Esperança de vida", "Esperança de vida en néixer (anys)"], ["Esperanza de vida", "Esperanza de vida al nacer (años)"], NOTA_MC, ANYS],
+    ["ev0_d", ["Esperança de vida de les dones", "Esperança de vida de les dones en néixer (anys)"], ["Esperanza de vida de las mujeres", "Esperanza de vida de las mujeres al nacer (años)"], NOTA_MC, ANYS],
+    ["ev0_h", ["Esperança de vida dels homes", "Esperança de vida dels homes en néixer (anys)"], ["Esperanza de vida de los hombres", "Esperanza de vida de los hombres al nacer (años)"], NOTA_MC, ANYS],
+    ["ev65", ["Esperança de vida als 65", "Anys que queden per viure als 65 anys"], ["Esperanza de vida a los 65", "Años que quedan por vivir a los 65 años"], NOTA_MC, ANYS],
+    ["tme", ["Mortalitat estandarditzada", "Defuncions per 100.000 habitants, ajustada per edat"], ["Mortalidad estandarizada", "Defunciones por 100.000 habitantes, ajustada por edad"], NOTA_MC, N0],
+    ["ime", ["Índex de mortalitat", "Índex de mortalitat estàndard (Catalunya = 100)"], ["Índice de mortalidad", "Índice de mortalidad estándar (Cataluña = 100)"], NOTA_MC, N0],
+    ["tbm", ["Taxa de mortalitat", "Defuncions per 1.000 habitants (sense ajustar per edat)"], ["Tasa de mortalidad", "Defunciones por 1.000 habitantes (sin ajustar por edad)"], NOTA_MC, N1],
+    ["prem", ["Mortalitat prematura", "Defuncions abans dels 75 anys per 100.000 habitants, ajustada per edat"], ["Mortalidad prematura", "Defunciones antes de los 75 años por 100.000 habitantes, ajustada por edad"], NOTA_MCC, N0],
+    ["tum", ["Morts per càncer", "Defuncions per tumors per 100.000 habitants, ajustada per edat"], ["Muertes por cáncer", "Defunciones por tumores por 100.000 habitantes, ajustada por edad"], NOTA_MCC, N0],
+    ["circ", ["Morts per malalties del cor", "Defuncions per malalties de l'aparell circulatori per 100.000 habitants, ajustada per edat"], ["Muertes por enfermedades del corazón", "Defunciones por enfermedades del aparato circulatorio por 100.000 habitantes, ajustada por edad"], NOTA_MCC, N0],
+    ["resp", ["Morts per malalties respiratòries", "Defuncions per malalties de l'aparell respiratori per 100.000 habitants, ajustada per edat"], ["Muertes por enfermedades respiratorias", "Defunciones por enfermedades del aparato respiratorio por 100.000 habitantes, ajustada por edad"], NOTA_MCC, N0],
+    ["dem", ["Morts per demències i Alzheimer", "Defuncions per trastorns mentals i del sistema nerviós per 100.000 habitants, ajustada per edat"], ["Muertes por demencias y alzhéimer", "Defunciones por trastornos mentales y del sistema nervioso por 100.000 habitantes, ajustada por edad"], NOTA_MCC, N0],
+    ["ext", ["Morts per accidents i suïcidis", "Defuncions per causes externes (accidents, caigudes, suïcidis) per 100.000 habitants, ajustada per edat"], ["Muertes por accidentes y suicidios", "Defunciones por causas externas (accidentes, caídas, suicidios) por 100.000 habitantes, ajustada por edad"], NOTA_MCC, N0],
+  ];
   // Social: m.soc = {clave: {año|fecha: valor}}, D.anys.soc_reses/soc_cuid/soc_air/soc_c_*; comarcas en D.arees.com[c]["soc_" + clave]; D.soc_ref
   const SO = (k) => (m, a) => (a != null && m.soc && m.soc[k] && m.soc[k][a] != null ? m.soc[k][a] : null);
   const SOZ = (k) => (x) => CUL_DARRER(x && x["soc_" + k]);
@@ -1033,6 +1055,8 @@
     ...(window.UA_CAT || []).filter((x) => x[5]).map(([k, , ca, es, fk]) => ({ id: "ua_" + k.slice(1).replace(/^_/, ""), uk: k, tema: "urb", ca, es, a: "ua", sumable: false, cob: 0.004,
       v: (m) => UAV(k)(m, anysDe(IND.find((i) => i.uk === k)).slice(-1)[0]), t: UAV(k),
       ref: () => { const i = IND.find((x) => x.uk === k), a = anyActiu() || anysDe(i).slice(-1)[0]; return { esp: window.UA_ABS.has(k) ? null : UAE(k, a) }; }, nota: window.UA_NOTA, ...window.UA_FMT(fk) })),
+    ...MC.map(([k, ca, es, nota, fmtk]) => ({ id: "mc_" + k, tema: "sal", ca, es, a: "mc", sumable: false, com: MCZ(k), nota, ...fmtk,
+      ref: () => { const r = D.mc_ref && D.mc_ref["mc_" + k]; const o = r ? r[D.anys && D.anys.mc] || CUL_DARRER(r) : null; return o ? { gi: o.gi, cat: o.cat, nota: o.gi != null ? NOTA_MC_RS : null } : {}; } })),
     ...SOM.map(([k, a, ca, es, nota, fmtk]) => ({ id: "soc_" + k, tema: "soc", ca, es, a, sumable: false, v: (m) => SO("soc_" + k)(m, D.anys && D.anys[a]), nota, ...fmtk })),
     ...SOC.map(([k, ca, es]) => ({ id: "soc_c_" + k, tema: "soc", ca, es, a: "soc_c_" + k, sumable: false, com: SOZ(k), nota: NOTA_SOCC, ...N1,
       ref: () => { const r = D.soc_ref && D.soc_ref["soc_c_" + k]; const o = r ? r[D.anys && D.anys["soc_c_" + k]] || CUL_DARRER(r) : null; return o ? { gi: o.gi, cat: o.cat } : {}; } })),
