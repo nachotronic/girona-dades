@@ -37,6 +37,10 @@
       mort_com_tme: ["Mortalitat ajustada per comarca", "Defuncions per 100.000 habitants, ajustades per edat"],
       h_mort_com_tme: (a, c1, n) => `${n ? `<b>${n}</b> comarques moren per sobre de Catalunya amb una diferència que no s'explica per l'atzar` : "Cap comarca no es diferencia clarament de Catalunya"}${c1 ? `; la que més, el <b>${c1}</b>` : ""} (${a}). La Cerdanya i Osona hi són senceres.`,
       mort_evitable: ["Morts evitables", "Defuncions evitables per 100.000 habitants, per causa"],
+      ev_tit: "Qui mor més que Catalunya, any a any", ev_u: (a, b) => `Mortalitat ajustada per edat comparada amb Catalunya, ${a}-${b}`,
+      ev_h: (c, n, r) => `${c ? `${c.replace(/^((?:<[^>]+>)*)(.)/, (m, t, x) => t + x.toUpperCase())} és la comarca que més anys ha tingut una mortalitat clarament superior a la de Catalunya: <b>${n}</b>.` : ""}${r != null ? ` La regió sanitària de Girona hi ha estat per sobre <b>${r} dels últims 10 anys</b>.` : ""}`,
+      ev_s: { t: "Total", d: "Dones", h: "Homes" }, ev_l: { 1: "Més mortalitat que Catalunya", 0: "Sense diferència clara", "-1": "Menys mortalitat que Catalunya" },
+      ev_rs: "Regió sanitària de Girona", ev_font: "Font: Departament de Salut, Anàlisi de la mortalitat a Catalunya, evolució 1983-2024 (índex de mortalitat estàndard amb significació estadística; l'informe no en dona el valor). Regió sanitària des del 2005.",
       h_mort_evitable: (a, n, v, c) => `<b>${n}</b> morts evitables a la regió el ${a}: ${v} per 100.000 habitants (Catalunya, ${c}). El càncer de pulmó, lligat al tabac, n'és la primera causa.`,
       font_mort: "Font: Departament de Salut, Anàlisi de la mortalitat a Catalunya",
       fx_h: "Mortalitat a la comarca", fx_sub: (c, a) => `${c}, ${a}. El Departament de Salut no publica aquestes dades per municipi.`,
@@ -64,6 +68,10 @@
       mort_com_tme: ["Mortalidad ajustada por comarca", "Defunciones por 100.000 habitantes, ajustadas por edad"],
       h_mort_com_tme: (a, c1, n) => `${n ? `<b>${n}</b> comarcas mueren por encima de Cataluña con una diferencia que no se explica por el azar` : "Ninguna comarca se diferencia claramente de Cataluña"}${c1 ? `; la que más, el <b>${c1}</b>` : ""} (${a}). La Cerdanya y Osona están enteras.`,
       mort_evitable: ["Muertes evitables", "Defunciones evitables por 100.000 habitantes, por causa"],
+      ev_tit: "Quién muere más que Cataluña, año a año", ev_u: (a, b) => `Mortalidad ajustada por edad comparada con Cataluña, ${a}-${b}`,
+      ev_h: (c, n, r) => `${c ? `${c.replace(/^((?:<[^>]+>)*)(.)/, (m, t, x) => t + x.toUpperCase())} es la comarca que más años ha tenido una mortalidad claramente superior a la de Cataluña: <b>${n}</b>.` : ""}${r != null ? ` La región sanitaria de Girona ha estado por encima <b>${r} de los últimos 10 años</b>.` : ""}`,
+      ev_s: { t: "Total", d: "Mujeres", h: "Hombres" }, ev_l: { 1: "Más mortalidad que Cataluña", 0: "Sin diferencia clara", "-1": "Menos mortalidad que Cataluña" },
+      ev_rs: "Región sanitaria de Girona", ev_font: "Fuente: Departament de Salut, Anàlisi de la mortalitat a Catalunya, evolución 1983-2024 (índice de mortalidad estándar con significación estadística; el informe no da su valor). Región sanitaria desde 2005.",
       h_mort_evitable: (a, n, v, c) => `<b>${n}</b> muertes evitables en la región en ${a}: ${v} por 100.000 habitantes (Cataluña, ${c}). El cáncer de pulmón, ligado al tabaco, es la primera causa.`,
       font_mort: "Fuente: Departament de Salut, Anàlisi de la mortalitat a Catalunya",
       fx_h: "Mortalidad en la comarca", fx_sub: (c, a) => `${c}, ${a}. El Departament de Salut no publica estos datos por municipio.`,
@@ -76,7 +84,8 @@
   const L = () => (LANG === "es" ? 1 : 0);
   const tx = (k, ...a) => { const v = TX[LANG][k]; return typeof v === "function" ? v(...a) : v; };
   const ult = (o) => { if (!o) return null; const ks = Object.keys(o).sort(); return ks.length ? o[ks[ks.length - 1]] : null; };
-  const art = (c) => (/^[AEIOUÀÈÉÍÒÓÚ]/i.test(c) ? `l'${c}` : c); // «el Ripollès», «l'Alt Empordà»
+  const artEs = (c) => (/^(Selva|Cerdanya|Garrotxa)$/.test(c) ? `la ${c}` : `el ${c}`);
+  const art = (c) => (/^[AEIOUÀÈÉÍÒÓÚ]/i.test(c) ? `l'${c}` : /^(Selva|Cerdanya|Garrotxa)$/.test(c) ? `la ${c}` : `el ${c}`); // «el Ripollès», «l'Alt Empordà»
 
   // ---------- Ficha municipal (datos de la comarca)
   window.blocMortalitat = (m) => {
@@ -107,6 +116,26 @@
     return "";
   });
 
+  let sexeEv = "t";
+  function graellaEvol(cont, G) {
+    if (!cont || !G) return;
+    const anys = G.anys, fila = (nom, v, cls) => `<div class="mev-fila${cls ? " " + cls : ""}"><span class="mev-nom">${nom}</span><span class="mev-cel" style="--n:${anys.length}">${v.map((x, i) => `<i class="mev-${x == null ? "x" : x > 0 ? "s" : x < 0 ? "i" : "n"}" data-t="${nom}|${anys[i]}|${x == null ? "" : x}"></i>`).join("")}</span></div>`;
+    const ord = G.files.map((f) => ({ ...f, n: f[sexeEv].filter((x) => x === 1).length })).sort((a, b) => b.n - a.n || a.g.localeCompare(b.g));
+    const top = [...G.files].map((f) => ({ g: f.g, n: f.t.filter((x) => x === 1).length })).sort((a, b) => b.n - a.n)[0];
+    const eix = anys.map((a, i) => (a % 5 === 0 || i === anys.length - 1 ? `<span style="left:${((i + 0.5) / anys.length) * 100}%">${a}</span>` : "")).join("");
+    cont.innerHTML = `<figure class="pg-fig mev" data-id="mort_ime_evol"><figcaption><span class="pg-tit">${tx("ev_tit")}</span><span class="unitat">${tx("ev_u", anys[0], anys[anys.length - 1])}</span></figcaption>
+      <p class="pg-h">${tx("ev_h", top && top.n ? `<b>${LANG === "es" ? artEs(top.g) : art(top.g)}</b>` : "", top ? top.n : 0, G.rs ? G.rs.t.slice(-10).filter((x) => x === 1).length : null)}</p>
+      <div class="ex-ctl"><div class="segment" role="group">${["t", "d", "h"].map((k) => `<button type="button" data-sx="${k}" aria-pressed="${k === sexeEv}">${tx("ev_s")[k]}</button>`).join("")}</div></div>
+      <p class="pg-lleg">${[1, 0, -1].map((k) => `<span><i class="mev-q mev-${k > 0 ? "s" : k < 0 ? "i" : "n"}"></i>${tx("ev_l")[k]}</span>`).join("")}</p>
+      <div class="mev-g">${G.rs ? fila(tx("ev_rs"), G.rs[sexeEv], "mev-rs") : ""}${ord.map((f) => fila(f.g, f[sexeEv])).join("")}<div class="mev-fila"><span class="mev-nom"></span><span class="mev-eix">${eix}</span></div></div>
+      <p class="pg-font">${tx("ev_font")}</p></figure>`;
+    cont.querySelectorAll("[data-sx]").forEach((b) => b.addEventListener("click", () => { sexeEv = b.dataset.sx; graellaEvol(cont, G); }));
+    cont.querySelectorAll(".mev-cel i").forEach((c) => {
+      c.addEventListener("pointermove", (ev) => { const [n, a, v] = c.dataset.t.split("|"); mostraTip(`<b>${n}</b> · ${a}<br>${v === "" ? "–" : tx("ev_l")[v]}`, ev.clientX, ev.clientY); });
+      c.addEventListener("pointerleave", amagaTip);
+    });
+  }
+
   window.pintaSeccioMort = () => {
     const M = D.mort, cont = document.getElementById("dem-mort");
     if (!cont) return;
@@ -123,8 +152,10 @@
       <h3 class="al-tit">${tx("tit")}</h3><p class="al-sub">${tx("sub", a)}</p>
       <div class="xifres al-xifres">${tiles}</div>
       <div class="pg-graella al-graella" id="dem-mort-g"></div>
+      <div id="dem-mort-ev"></div>
       <p class="dm-mort-mapa"><button type="button" class="xip" data-mc="mc_ev0">${tx("mapa")} →</button></p></section>`;
     window.PG.pintaGrafics(document.getElementById("dem-mort-g"), M.prov, ["mort_causes", "mort_com_ev", "mort_com_tme", "mort_evitable"], () => "font_mort");
+    graellaEvol(document.getElementById("dem-mort-ev"), M.prov.mort_ime_evol);
     const b = cont.querySelector("[data-mc]");
     if (b) b.addEventListener("click", async () => {
       const s = document.getElementById("s-mapa");

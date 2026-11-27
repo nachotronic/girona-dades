@@ -1466,3 +1466,21 @@ figure.pq-ressalta { outline: 3px solid var(--accent); outline-offset: 6px; tran
 .fx-xm-l { grid-template-columns: 1fr; }
 .fx-xm-l b { text-align: left; font-weight: 500; }
 .fx-xm-f > small { grid-column: 1 / -1; font: 400 11.5px var(--mono); color: var(--text-3); }
+/* Mortalitat: evolució de l'IME per comarca (mortalitat.js) */
+.mev { margin-top: 8px; }
+.mev-g { margin-top: 10px; }
+.mev-fila { display: grid; grid-template-columns: minmax(110px, 200px) 1fr; gap: 10px; align-items: center; margin: 3px 0; }
+.mev-nom { font-size: 14px; color: var(--tinta); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mev-rs .mev-nom { font-weight: 700; white-space: normal; line-height: 1.15; }
+.mev-eix span:last-child { transform: translateX(-100%); }
+.mev-rs { padding-bottom: 6px; margin-bottom: 6px; border-bottom: 1px solid var(--vora); }
+.mev-cel { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 2px; }
+.mev-cel i { display: block; height: 22px; }
+.mev-s { background: #e3001b; }
+.mev-i { background: #5aa9a0; }
+.mev-n { background: var(--vora); }
+.mev-x { background: repeating-linear-gradient(45deg, transparent 0 3px, var(--vora) 3px 4px); }
+.mev-q { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -1px; }
+.mev-eix { position: relative; height: 18px; font: 11px/1 var(--mono, monospace); color: var(--text-2); }
+.mev-eix span { position: absolute; transform: translateX(-50%); top: 4px; }
+@media (max-width: 760px) { .mev-fila { grid-template-columns: 92px 1fr; gap: 6px; } .mev-nom { font-size: 12px; } .mev-cel { gap: 1px; } .mev-cel i { height: 18px; } .mev-eix span:not(:first-child):not(:last-child) { display: none; } }

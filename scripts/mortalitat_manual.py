@@ -23,6 +23,9 @@ Además se calculan (población estándar europea 2013, grupos de edad de las ta
   - tasa estandarizada por grupo de causas para cada comarca, la región y Cataluña;
   - mortalidad prematura: tasa estandarizada de las defunciones antes de los 75 años.
 
+Con el otro Excel del informe, «…-evolucio-1983-AAAA.xlsx», el mismo script lee la evolución del índex de
+mortalitat estàndard por comarca (1999-) y región sanitaria (2005-) -> mortalitat_ime_evol.csv (ver evolucio_ime).
+
 Escribe en data/processed/mortalitat/:
   mortalitat.csv        any, nivell (com / rs / cat), ambit, ind, sexe (d / h / t), v, li, ls
   mortalitat_meta.json  edición, fichero de origen y fecha de carga
@@ -410,7 +413,77 @@ def main(ruta: str) -> None:
     print(gi[gi["ind"].isin(["ev0", "tme", "ime", "prem"])].pivot(index="ambit", columns="ind", values="v").round(1).to_string())
 
 
+# ---------------------------------------------------------------- Excel «evolució 1983-AAAA»
+SUPERIOR, INFERIOR = "FFE20025", "FFBCBF00"  # colores de la tabla: mortalidad superior / inferior a Cataluña
+
+
+def _sig_color(c) -> int:
+    f = c.fill
+    if not f or not f.fill_type or f.fgColor.type != "rgb":
+        return 0
+    return 1 if f.fgColor.rgb == SUPERIOR else -1 if f.fgColor.rgb == INFERIOR else 0
+
+
+def _any(v) -> int | None:
+    m = re.match(r"^\s*((19|20)\d\d)\b", str(v)) if v is not None else None
+    return int(m.group(1)) if m else None
+
+
+def evolucio_ime(ruta: str) -> None:
+    """Hojas «IME per comarca» (1999-) e «IME per regió sanitària» (2005-): el IME no viene en cifras, solo el color
+    de cada celda (rojo = mortalidad superior a la de Cataluña, verde oliva = inferior, blanco = sin diferencia
+    significativa). Escribe mortalitat_ime_evol.csv: any, nivell (com / rs), ambit, sexe, sig (1 / 0 / -1)."""
+    wb = openpyxl.load_workbook(ruta)  # sin read_only: hacen falta los colores
+    files = []
+    for full, nivell in (("IME per comarca", "com"), ("IME per regió sanitària", "rs")):
+        ws = wb[full]
+        sexe, anys = None, {}
+        for r in range(1, ws.max_row + 1):
+            b = _txt(ws.cell(r, 2).value)
+            if b in SEXES:
+                sexe = SEXES[b]
+                anys = {}
+                for rr in range(r, r + 4):  # la fila de años va en la misma fila o unas debajo
+                    anys = {k: _any(ws.cell(rr, k).value) for k in range(3, 40) if _any(ws.cell(rr, k).value)}
+                    if len(anys) > 3:
+                        break
+                continue
+            if sexe and anys and b and not b.startswith(("*", "<", "^")) and r > 0:
+                if all(ws.cell(r, k).value is None or isinstance(ws.cell(r, k).value, str) for k in anys):
+                    for k, y in anys.items():
+                        files.append({"any": y, "nivell": nivell, "ambit": _norm(b), "sexe": sexe, "sig": _sig_color(ws.cell(r, k))})
+    df = pd.DataFrame(files)
+    df = df[df["ambit"].str.len() > 2]
+    if df.empty or df["sig"].abs().sum() == 0:
+        raise SystemExit("No se encuentran los colores del IME en el Excel de evolución")
+    # Comprobación: el último año debe coincidir con el IME y su intervalo de las tablas del año (mortalitat.csv)
+    f = SAL / "mortalitat.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        u = int(df["any"].max())
+        x = d[(d["any"] == u) & (d["nivell"] == "com") & (d["ind"] == "ime") & (d["sexe"] == "t")]
+        ok = tot = 0
+        for r in x.itertuples():
+            s = 1 if r.li > 100 else -1 if r.ls < 100 else 0
+            e = df[(df["any"] == u) & (df["nivell"] == "com") & (df["ambit"] == r.ambit) & (df["sexe"] == "t")]
+            if not e.empty:
+                tot += 1; ok += int(e["sig"].iloc[0] == s)
+        print(f"Comprobación con las tablas {u}: {ok} de {tot} comarcas coinciden")
+    SAL.mkdir(parents=True, exist_ok=True)
+    df.sort_values(["nivell", "ambit", "sexe", "any"]).to_csv(SAL / "mortalitat_ime_evol.csv", index=False)
+    fm = SAL / "mortalitat_meta.json"
+    meta = json.loads(fm.read_text(encoding="utf-8")) if fm.exists() else {}
+    meta.update({"evolucio": pathlib.Path(ruta).name, "evolucio_anys": [int(df["any"].min()), int(df["any"].max())], "carregat": datetime.date.today().isoformat()})
+    fm.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
+    g = df[(df["nivell"] == "com") & df["ambit"].isin(COM_GI) & (df["sexe"] == "t")]
+    print(g.pivot(index="ambit", columns="any", values="sig").replace({1: "+", -1: "-", 0: "."}).apply(lambda r: "".join(r), axis=1).to_string())
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit(__doc__)
-    main(sys.argv[1])
+    wb0 = openpyxl.load_workbook(sys.argv[1], read_only=True)
+    if "IME per comarca" in wb0.sheetnames:
+        evolucio_ime(sys.argv[1])
+    else:
+        main(sys.argv[1])
