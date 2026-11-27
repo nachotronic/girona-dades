@@ -40,7 +40,7 @@ F_JSON = RAIZ / "data" / "estado.json"
 F_MD = RAIZ / "data" / "estado.md"
 DIES_CADUCAT = 15  # todas las fuentes se ejecutan cada semana: dos semanas sin éxito es un problema
 
-TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient", "energia", "diners_publics", "culte", "social", "urbans", "notariado", "xifra_treball", "xifra_municipal"]
+TODAS = ["territorio", "generalitat", "ine", "mitma", "xifra", "catastro", "geometria", "salut", "policia", "referencies", "provincia", "emex", "educacio", "nacionalitat", "universitaris", "conjuntura", "emergencies", "afiliacio", "dgt", "transferencias", "aena", "eleccions", "mapaelectoral", "vehicles", "aeat", "anuari_aeat", "padro", "pressupostos", "tributs", "llistes_espera", "cgpj", "interior", "condemnats", "comerc", "turisme", "cadastre", "habitatge", "emq", "exportacions", "demografia", "transit", "cultura", "medi_ambient", "energia", "diners_publics", "culte", "social", "urbans", "notariado", "xifra_treball", "xifra_municipal"]
 
 # Nombre de cada fuente (para estado.md, la issue y la web) y cada cuánto publica el organismo
 FONTS = {
@@ -77,6 +77,7 @@ FONTS = {
     "tributs": ("Ministerio de Hacienda, tipus impositius municipals", "anual"),
     "cgpj": ("CGPJ, estadística judicial per partit judicial", "trimestral"),
     "interior": ("Ministerio del Interior, Balance de Criminalidad", "trimestral"),
+    "condemnats": ("INE, condemnats per nacionalitat, i Interior, detinguts i investigats estrangers", "anual"),
     "exportacions": ("Comerç exterior: AEAT (Duanes), fitxers territorials per província, país i producte", "mensual"),
     "demografia": ("Naixements, defuncions i causes de mort (INE), defuncions per ABS (CatSalut) i noms dels nadons (Idescat)", "setmanal/mensual"),
     "cultura": ("Cultura: biblioteques públiques (DadesBib), equipaments, entitats, arxius, llibreries, Programa.cat i agenda cultural", "anual"),
