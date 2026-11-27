@@ -247,6 +247,7 @@
     ["calor caluroso calurosa calurosos calid calida calent calenta", "amb_m_tx", "desc"], ["frio fria frios fred freda freds", "amb_m_tn", "asc"],
     ["lluvioso lluviosa lluviosos plujos plujosa plujosos humedo humit", "amb_m_p", "desc"], ["seco seca secos sec seca secs arido arid", "amb_m_p", "asc"],
   ].map(([w, id, dir]) => ({ w: new Set(w.split(" ")), id, dir }));
+  const URB_MARCA = new Set("urban urbano urbanos urbana urbanas urbans urbanes audit ine espana espanya capital capitales capitals europa".split(" ").map(stem));
   const PRI = ["q_asal", "q_afil", "pob", "renda", "lloguer", "cj_atur", "cj_atur_n", "compra", "hut", "edat", "estrangers", "int_total", "cj_afil", "atur", "ocupats", "renda_llar", "esforc"];
   const RISC = new Set(["casa", "cases", "casas", "das", "pau", "quart", "pera", "colera", "torrent", "verges", "salt", "ger", "pals", "alp", "sils", "cabanes", "ordis", "osor", "llers", "mieres", "jafre", "foixa", "saus", "serinya", "escala", "breda", "amer", "pont de molins", "flaca", "urus", "ulla", "bolvir", "toses", "cistella", "juia", "quart", "sant mori", "garrigas", "porqueres", "beuda", "palau", "vilaur", "crespia", "regencos"]);
   const PREP = new Set(["de", "d", "en", "a", "al", "del", "entre", "y", "i", "vs", "o", "per", "por", "con", "amb", "sobre", "que", "desde", "hasta", "fins"]);
@@ -374,7 +375,9 @@
     for (let s = 0; s < tk.length; s++) {
       for (let n = 1; n <= maxN && s + n <= tk.length; n++) {
         const fin = tk.slice(s, s + n);
-        if (STOP.has(fin[0]) && !ART.has(fin[0]) && !ABREV[fin[0]]) continue;
+        // Una paraula buida al principi («baix», «alt»…) només val si el nom coincideix sencer: «al Baix Empordà», «Alt Camp»
+        const buidaIni = STOP.has(fin[0]) && !ART.has(fin[0]) && !ABREV[fin[0]];
+        if (buidaIni && n === 1) continue;
         if (n > 1 && (STOP.has(fin[n - 1]) && !ART.has(fin[n - 1]))) continue;
         const k = clau(fin);
         if (k.length < 3) continue;
@@ -382,6 +385,7 @@
         ENT.forEach((e) => {
           let sc = 0;
           if (e.k === k) sc = k.length * 2 + 1;
+          else if (buidaIni) return;
           else if (k.length >= 5 && e.k.length >= 5 && k[0] === e.k[0]) {
             // Aproximat: només si la finestra no és vocabulari de les dades
             if (n === 1 && (VOCAB.has(fin[0]) || STOP.has(fin[0]) || XERRA.has(fin[0]))) return;
@@ -430,6 +434,8 @@
           if (f.every((w, j) => eqTok(qall[k + j], w))) { sc += 2 + f.reduce((t, w) => t + (STOP.has(w) ? 0 : 4 * (IDF[w] || 1)), 0); return; }
         }
       });
+      // Indicadors urbans de l'INE (només deu ciutats): cedeixen davant la dada municipal si la pregunta no parla de l'INE o d'altres ciutats
+      if (x.i.tema === "urb" && !qall.some((w) => URB_MARCA.has(w))) sc *= 0.5;
       return { x, sc: sc + (x.pri >= 0 ? (PRI.length - x.pri) * 0.01 : 0) };
     }).filter((o) => o.sc >= 1).sort((a, b) => b.sc - a.sc);
   }
@@ -446,7 +452,7 @@
     // Fora les paraules que surten a molts indicadors del mapa («habitantes», «media»…): no diuen de quin gràfic es tracta
     const paraules = (x) => toks(x).filter((w) => !STOP.has(w) && !XERRA.has(w) && !LLOC.has(w) && !/^[\d.]+$/.test(w) && !(IDF[stem(w)] < 3));
     GRAF = figs.map((f) => {
-      const sc = f.closest("section"), sec = sc.id, id = f.dataset.id;
+      const sc = f.closest("section.sec[id]"), sec = sc.id, id = f.dataset.id;
       const tit = txt(f.querySelector(".pg-tit")), sub = txt(f.querySelector(".unitat"));
       if (!tit) return null;
       const esPrimer = !primer[sec]; primer[sec] = true;
@@ -528,7 +534,7 @@
     let dir = null;
     if (has2("menos", "menys", "menor", "minimo", "minim", "minima", "pitjor", "peor") || /\b(mas|mes) (bajo|baja|bajos|bajas|baix|baixa|baixos|baixes)\b/.test(txt3)) dir = "asc";
     else if (has2("mas", "mayor", "major", "maximo", "maxim", "maxima", "top", "ranking", "ranquing", "lider", "encabeza", "primeros", "primers", "millor", "mejor", "record") ||
-      (s2.has("mes") && !/\b(el|este|aquest|cada|al|per|por|ultimo|ultim|darrer|del|un|aquell|aquel|pasado|passat) mes\b/.test(txt3))) dir = "desc";
+      (s2.has("mes") && !/\b(el|este|aquest|cada|al|per|por|ultimo|ultim|darrer|del|un|aquell|aquel|pasado|passat) mes\b/.test(txt3) && !/\bmes a mes\b/.test(txt3))) dir = "desc";
     let adjInd = null;
     tk2.forEach((w) => ADJ.forEach((a) => { if (a.w.has(w)) adjInd = a; }));
     if (adjInd) dir = adjInd.dir;
@@ -571,6 +577,8 @@
     if (evol) { const sv = qs.filter((o) => !EVW.test(o.w)); if (sv.length && sv.length < qs.length) { qs.length = 0; qs.push(...sv); } }
     let cands = puntua(qs, qall);
     const grafs = forcat ? [] : puntuaG(qs, qall);
+    // «mes a mes», «cada mes»: les dades mensuals són als gràfics de les seccions, no al mapa (anual)
+    if (/ (mes a mes|cada mes|mes per mes|mes por mes|mensual|mensuales|mensuals) /.test(txt)) { grafs.forEach((o) => { if (o.fr) o.sc *= 1.5; }); grafs.sort((a, b) => b.sc - a.sc); }
     if (compte && cands.length) {
       const pref = { cj_atur: "cj_atur_n", atur: "cj_atur_n", cj_afil: "q_afil", ocupats: "q_afil", cj_reta: "q_reta", autonoms: "q_reta", tur_hut_c: "tur_hut_n", hut: "tur_hut_n", sol_h: "sol_n", tur_mov_rec_h: "tur_mov_rec", veh_total_h: "veh_n", veh_tur_h: "veh_n", com_est_h: "com_n", tur_pl_hotel_h: "tur_hotels" };
       const p = pref[cands[0].x.i.id];

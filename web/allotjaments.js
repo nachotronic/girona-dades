@@ -248,12 +248,12 @@
       <div class="ex-ctl al-ctl"><div class="segment al-tipus" role="group">${tipusZ.map((t_) => `<button type="button" data-tipus="${t_}" aria-pressed="${t_ === T}">${tx("tipus")[t_]}</button>`).join("")}</div>${zonesSel}</div>
       <div class="xifres al-xifres">${tiles.join("")}</div>
       <div class="pg-graella al-graella">
-        <figure class="pg-fig al-fig-anys"><figcaption><span class="pg-tit">${tx("g_anys", indNom(st.ind))}</span><span class="unitat">${unitat(st.ind)}</span></figcaption>
+        <figure class="pg-fig al-fig-anys" data-id="al_anys"><figcaption><span class="pg-tit">${tx("g_anys", indNom(st.ind))}</span><span class="unitat">${unitat(st.ind)}</span></figcaption>
           <div class="al-inds" role="group">${inds.map((k) => `<button type="button" class="xip" data-ind="${k}" aria-checked="${k === st.ind}">${indNom(k)}</button>`).join("")}</div>
           <div class="al-g-anys"></div></figure>
-        ${Z.pern_e ? `<figure class="pg-fig"><figcaption><span class="pg-tit">${tx("g_res")}</span></figcaption><div class="al-g-res"></div></figure>` : ""}
-        ${esProv ? `<figure class="pg-fig"><figcaption><span class="pg-tit">${tx("g_cmp")}</span><span class="unitat">%</span></figcaption><div class="al-g-cmp"></div></figure>` : ""}
-        ${esProv && A.orig ? `<figure class="pg-fig"><figcaption><span class="pg-tit">${tx("g_orig", etMes(A.orig.des), etMes(A.orig.fins))}</span><span class="unitat">%</span></figcaption><div class="al-g-orig"></div></figure>` : ""}
+        ${Z.pern_e ? `<figure class="pg-fig" data-id="al_res"><figcaption><span class="pg-tit">${tx("g_res")}</span></figcaption><div class="al-g-res"></div></figure>` : ""}
+        ${esProv ? `<figure class="pg-fig" data-id="al_cmp"><figcaption><span class="pg-tit">${tx("g_cmp")}</span><span class="unitat">%</span></figcaption><div class="al-g-cmp"></div></figure>` : ""}
+        ${esProv && A.orig ? `<figure class="pg-fig" data-id="al_orig"><figcaption><span class="pg-tit">${tx("g_orig", etMes(A.orig.des), etMes(A.orig.fins))}</span><span class="unitat">%</span></figcaption><div class="al-g-orig"></div></figure>` : ""}
       </div>
       <div class="al-taula-c"><p class="al-ttit">${tx("taula")}</p><table class="al-taula"><thead><tr><th>${tx("mes")}</th>${cols.map((k) => `<th>${indNom(k)}</th>`).join("")}</tr></thead>
         <tbody>${files.map((m) => `<tr><td>${etMesC(m)}</td>${cols.map((k) => `<td>${cel(k, m)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>

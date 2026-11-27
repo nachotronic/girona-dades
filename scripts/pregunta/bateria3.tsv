@@ -67,9 +67,9 @@ agenda cultural de Olot	cul_ag_h|cul_ag_n	Olot	mun
 funciones de teatro en Girona	cul_p_h|cul_p_n	Girona	mun
 librerías en Girona	cul_llib_n	Girona	mun
 espectadores de cine en el Gironès	cul_c_esp|cul_c_esp_h		rank|area
-mezquitas en Salt	cul_ct_isl	Salt	area
-iglesias evangélicas en Figueres	cul_ct_ev	Figueres	area
-centros de culto en Girona	cul_ct_h|cul_ct_n	Girona	area
+mezquitas en Salt	cul_ct_isl	Salt	mun|area
+iglesias evangélicas en Figueres	cul_ct_ev	Figueres	mun|area
+centros de culto en Girona	cul_ct_h|cul_ct_n	Girona	mun|area
 visitantes de museos en Figueres	cul_m_vis_h|cul_m_vis	Figueres	area
 accidentes de tráfico en Girona	acc_s_n|acc_u_h|acc_u_n|acc_s_mfg_h5	Girona	mun
 muertos en la carretera en Figueres	acc_s_morts	Figueres	mun
