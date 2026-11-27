@@ -1,0 +1,106 @@
+# Dades noves (PR 62-77): social i Airbnb, allotjaments mes a mes, mortalitat per comarca, delictes d'odi, Xifra (feina i ajuntaments), cadastre i IBI, ciutats de l'INE, culte, notaris. També «al Baix Empordà» (comarca després de «al», «del»)
+# pregunta	indicador esperat (alternatives amb |, - cap)	municipis (separats per ;)	tipus
+anuncios de Airbnb en Begur	soc_air_n	Begur	mun
+quants airbnb hi ha a Cadaqués	soc_air_n	Cadaqués	mun
+pisos enteros en Airbnb en Roses	soc_air_sencer	Roses	mun
+Airbnb ilegales en Lloret de Mar	soc_air_sense	Lloret de Mar	mun
+pisos turístics sense registre a Palafrugell	soc_air_sense	Palafrugell	mun
+precio de Airbnb en Begur	soc_air_preu	Begur	mun
+quant costa un airbnb a Girona	soc_air_preu	Girona	mun
+multipropietarios de Airbnb en Roses	soc_air_multi	Roses	mun
+municipios con más Airbnb por vivienda	soc_air_100		rank
+plazas de residencia en Olot	residencies|soc_res65	Olot	mun
+places de centre de dia a Figueres	soc_dia65	Figueres	mun
+plazas para discapacidad en Girona	soc_disc	Girona	mun
+servicios sociales en Salt	soc_serveis	Salt	mun
+cuidadores familiares en Banyoles	soc_cuid	Banyoles	mun
+cuidadoras mujeres en Ripoll	soc_cuid_d	Ripoll	mun
+personas atendidas por los servicios sociales en el Gironès	soc_c_ssb		rank
+comedor social en Figueres	soc_c_menj	Figueres	area
+dependencia en la Garrotxa	soc_c_dep		rank
+gran dependència a l'Alt Empordà	soc_c_dep3		rank
+ayuda a domicilio en el Baix Empordà	soc_c_sad		rank
+teleasistencia en la Selva	soc_c_tele		rank
+plazas en pisos turísticos en Lloret	tur_pl_hut_h	Lloret de Mar	mun
+pisos turísticos por vivienda en Begur	tur_hut_viv	Begur	mun
+peso del turismo extranjero en Roses	tur_mov_ext_p	Roses	mun
+noches de camping en Torroella de Montgrí	tur_pern_camp_h	Torroella de Montgrí	mun
+ocupación de los campings en Sant Pere Pescador	tur_ocup_camp	Sant Pere Pescador	mun
+hoteles mes a mes en la provincia	graf:al_anys		graf
+campings de la Costa Brava	graf:al_anys		graf
+ocupación hotelera en Lloret de Mar	tur_ocup	Lloret de Mar	mun
+turistas extranjeros en La Jonquera	tur_mov_rec	Jonquera, la	mun
+turistes estrangers a Figueres	tur_mov_rec	Figueres	mun
+esperanza de vida en el Ripollès	mc_ev0		rank
+esperança de vida de les dones a la Cerdanya	mc_ev0_d		rank
+esperanza de vida de los hombres en el Pla de l'Estany	mc_ev0_h		rank
+tasa de mortalidad en Olot	mortalitat|mc_tbm	Olot	mun
+mortalidad prematura en el Alt Empordà	mort_prem|mc_prem		rank
+muertes por cáncer en la Selva	mc_tum		rank
+morts per malalties del cor al Gironès	mc_circ		rank
+muertes por alzhéimer en el Baix Empordà	mc_dem		rank
+suicidios y accidentes en la Garrotxa	mc_ext+acc_s_n		multi
+años con más mortalidad que Cataluña en el Ripollès	mc_ime_sup		rank
+comarcas donde se muere más	mc_tme		rank
+mortalidad por comarca	mc_tme		rank
+esperanza de vida por comarca	mc_ev0		rank
+delitos de odio en Girona	odi	Girona	mun
+delictes d'odi a Figueres	odi	Figueres	mun
+racismo en Salt	odi	Salt	mun
+delitos de odio en la provincia	odi		prov
+odio por qué	odi|graf:odi_ambit		prov|graf
+tasa de paro registral en Figueres	xt_taxa	Figueres	mun
+taxa d'atur registral a Salt	xt_taxa	Salt	mun
+cuanto paro hay en Blanes	cj_atur	Blanes	mun
+parados universitarios en Girona	xt_atur_nf_univ	Girona	mun
+aturats sense ESO a Salt	xt_atur_nf_baix	Salt	mun
+contratos de ETT en Figueres	xt_contr_ett	Figueres	mun
+afiliados extranjeros en Lloret de Mar	xt_ocup_est	Lloret de Mar	mun
+afiliats joves a Olot	xt_ocup_30	Olot	mun
+contratos por habitante en Girona	xt_contr_h	Girona	mun
+remanente de tesorería del ayuntamiento de Girona	xm_rom_h	Girona	mun
+cuánto cuesta la recogida de basura en Figueres	xm_ces_res	Figueres	mun
+policía local en Roses	xm_pol_h	Roses	mun
+quants policies locals té Blanes	xm_pol_h	Blanes	mun
+nacidos en el extranjero en Salt	nascuts_estr|xm_naix_estr	Salt	mun
+cementerios en Girona	xm_cem_n	Girona	mun
+piscinas en Begur	cad_pis_h	Begur	mun
+cuántas piscinas hay en Calonge	cad_pis_h	Calonge i Sant Antoni	mun
+viviendas de grandes propietarios en Girona	cad_tit_g10	Girona	mun
+habitatges de propietaris estrangers a Begur	cad_tit_ex	Begur	mun
+viviendas de sociedades en Lloret	cad_tit_soc	Lloret de Mar	mun
+edificios de antes de 1980 en Figueres	antics|cad_ant_80	Figueres	mun
+viviendas nuevas en el catastro en Girona	cad_alt_h	Girona	mun
+valor catastral por habitante en Begur	cad_vm|cad_vhab	Begur	mun
+peso del suelo en Cadaqués	cad_sol	Cadaqués	mun
+trasteros y garajes en Girona	cad_alm	Girona	mun
+IBI rústico en Olot	trib_ibi_r	Olot	mun
+todo el IBI por habitante en Lloret de Mar	cad_ibi_tot	Lloret de Mar	mun
+base del IBI en Girona	cad_ibi_base	Girona	mun
+IBI de autopistas en La Jonquera	trib_ibi_bice_c	Jonquera, la	mun
+cultivos de secano en Vilafant	cad_rc_sec	Vilafant	mun
+viña en Capmany	agr_vinya|cad_rc_vin	Capmany	mun
+valor por m² de las oficinas en Girona	cad_ofi|cad_vmu_ofi	Girona	mun
+la ciudad más vieja	edat		rank
+edad mediana de las ciudades	ua_23121		rank
+precio del metro cuadrado en Girona	preu_m2	Girona	mun
+precio por m² según el INE en Girona	ua_438469	Girona	mun
+tasa de actividad en Figueres	taxa_activitat|ua_283908	Figueres	mun
+indicadores urbanos de Girona	-	Girona	tema
+gente que vive sola en Girona	unipersonals|ua_292640	Girona	mun
+mezquitas en Salt	cul_ct_isl	Salt	mun
+centros de culto en Figueres	cul_ct_h	Figueres	mun
+iglesias y ermitas en Olot	cul_ct_osm	Olot	mun
+culto no católico en Salt	cul_ct_nocat_p	Salt	mun
+herencias en la provincia	graf:not_her		graf
+testamentos	graf:not_test		graf
+hipoteca media según los notarios	graf:not_hipv_imp		graf
+cuánto tarda en pagar el ayuntamiento de Figueres	pmp	Figueres	mun
+campings mes a mes	graf:al_anys		graf
+nacimientos mes a mes	graf:dm_mes		graf
+ocupació dels càmpings mes a mes	tur_ocup_camp|graf:al_anys		prov|graf
+muertes evitables	graf:mort_evitable		graf
+quién muere más que Cataluña	graf:mort_ime_evol		graf
+ajuda a domicili al Baix Empordà	soc_c_sad		rank
+atur al Baix Empordà	cj_atur|atur		rank
+renda del Baix Empordà	renda|renda_llar		rank
