@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-24 15:51 UTC
+Última ejecución: 2026-11-27 17:02 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -36,6 +36,7 @@
 | llistes_espera — CatSalut, llistes d'espera per hospital | ok | 2026-11-23 14:33 | 2026-11-23 14:33 | mensual |
 | cgpj — CGPJ, estadística judicial per partit judicial | ok | 2026-11-23 14:33 | 2026-11-23 14:33 | trimestral |
 | interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-23 16:16 | 2026-11-23 16:16 | trimestral |
+| condemnats — INE, condemnats per nacionalitat, i Interior, detinguts i investigats estrangers | ok | 2026-11-27 17:00 | 2026-11-27 17:00 | anual |
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | ok | 2026-11-23 16:36 | 2026-11-23 16:36 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | ok | 2026-11-23 14:46 | 2026-11-23 14:46 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-24 15:45 | 2026-11-24 15:45 | anual |
@@ -53,69 +54,14 @@
 | urbans — INE, Indicadors urbans (Urban Audit): ciutats de més de 20.000 habitants, àrea urbana funcional i conurbació de Girona | ok | 2026-11-24 08:01 | 2026-11-24 08:01 | anual |
 | notariado — Consell General del Notariat: herències, testaments, donacions, poders, hipoteques i societats per província | ok | 2026-11-24 08:18 | 2026-11-24 08:18 | mensual/trimestral |
 | xifra_treball — Xifra, Diputació de Girona: mercat de treball per municipi (població activa i taxa d'atur registral, atur, contractes, llocs de treball i ocupats), trimestral | avís | — | 2026-11-24 12:17 | mensual |
+| xifra_municipal — Xifra, Diputació de Girona: policia local, lloc de naixement, cens d'habitatges 2021, romanent, resultat pressupostari, cost efectiu dels serveis i turisme per comarca | ok | 2026-11-24 15:00 | 2026-11-24 15:00 | mensual |
 
 ## Detalle de la última ejecución
 
-### cadastre: ok (380 s)
+### condemnats: ok (133 s)
 
 ```
-2012: 3 ficheros, 7593 municipios
-2013: 3 ficheros, 7594 municipios
-2014: 3 ficheros, 7595 municipios
-2015: 3 ficheros, 7595 municipios
-2016: 3 ficheros, 7602 municipios
-2017: 3 ficheros, 7603 municipios
-2018: 3 ficheros, 7603 municipios
-2019: 3 ficheros, 7610 municipios
-2020: 3 ficheros, 7610 municipios
-2021: 3 ficheros, 7610 municipios
-2022: 3 ficheros, 7610 municipios
-2023: 3 ficheros, 7610 municipios
-2024: 3 ficheros, 7610 municipios
-2025: 3 ficheros, 7610 municipios
-2026: 3 ficheros, 7610 municipios
-Girona: 221 municipios, años 2012-2026, 77 columnas
-distritos censales: 428 distritos, años 2013-2025
-IBI económico-financiero: 221 municipios, años 2008-2025
-histórico urbana: px/datoshistoricos/urbana/H1M117.px
-histórico rustica: px/datoshistoricos/rustica/H1M217.px
-histórico ibi: px/datoshistoricos/IBI/H1M317.px
-titularidad 2024: 7610 municipios
-titularidad 2025: 7610 municipios
-titularidad 2026: 7610 municipios
-altas residenciales: 221 municipios, 2008-2025
-urbana trimestral 2021: T4, 7610 municipios
-urbana trimestral 2022: T4, 7610 municipios
-urbana trimestral 2023: T4, 7610 municipios
-urbana trimestral 2024: T4, 7610 municipios
-urbana trimestral 2025: T4, 7610 municipios
-urbana trimestral 2026: T3, 7610 municipios
-BICE 2024: 3202 municipios
-piscinas 2022: 6890 municipios
-piscinas 2023: 6895 municipios
-piscinas 2024: 6909 municipios
-piscinas 2025: 6914 municipios
-piscinas 2026: 6928 municipios
-AVISO cultivos 2006 02002: tamaño inesperado
-AVISO cultivos 2006 03002: tamaño inesperado
-AVISO cultivos 2006 04217: tamaño inesperado
-AVISO cultivos 2007 02002: tamaño inesperado
-AVISO cultivos 2007 03002: tamaño inesperado
-AVISO cultivos 2007 04217: tamaño inesperado
-AVISO cultivos 2008 02002: tamaño inesperado
-AVISO cultivos 2008 03002: tamaño inesperado
-AVISO cultivos 2008 04217: tamaño inesperado
-AVISO cultivos 2009 02002: tamaño inesperado
-AVISO cultivos 2009 03002: tamaño inesperado
-AVISO cultivos 2009 04217: tamaño inesperado
-AVISO cultivos 2010 02002: tamaño inesperado
-AVISO cultivos 2010 03002: tamaño inesperado
-AVISO cultivos 2010 04217: tamaño inesperado
-AVISO cultivos 2011 04217: tamaño inesperado
-AVISO cultivos 2013 04217: tamaño inesperado
-AVISO cultivos 2014 04217: tamaño inesperado
-AVISO cultivos 2015 04217: tamaño inesperado
-AVISO cultivos 2016 04217: tamaño inesperado
-cultivos: 221 municipios, años 2017-2026
-gravamen: 221 municipios, años 2006-2026
+INE condenados: 585 filas (2013-2025), origen 520, tipos 61
+INE población 56947: 176400 filas, 2002-01-2026-01
+Interior detenciones: 14080 filas (2010-2025), países 52
 ```

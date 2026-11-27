@@ -530,6 +530,7 @@ tbody tr:hover { background: var(--fons-2); }
 .pg-e { font: 600 11px var(--mono); } .pg-e.pg-gi { fill: var(--accent); } .pg-e.pg-cat { fill: var(--tinta); } .pg-e.pg-esp { fill: var(--text-3); }
 .pg-guia { stroke: var(--text-3); stroke-dasharray: 3 3; }
 .pg-font { font: 10.5px var(--mono); color: var(--text-3); margin: 6px 0 0; }
+.pg-nota { font-size: 12.5px; line-height: 1.45; color: var(--text-2); margin: 8px 0 0; padding-left: 10px; border-left: 2px solid var(--vora); }
 .pb { display: grid; gap: 7px; margin-top: 4px; }
 .pb-fila { display: grid; grid-template-columns: minmax(120px, 42%) 1fr; gap: 12px; align-items: center; font-size: 12.5px; }
 .pb-nom { line-height: 1.2; }
