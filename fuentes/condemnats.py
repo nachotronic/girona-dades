@@ -80,15 +80,15 @@ def _poblacio(sal) -> str:
         if cap is None:
             cap = linia.split(";")
             continue
-        c = linia.split(";")
+        c = [x.strip().strip('"') for x in linia.split(";")]
         if len(c) < 6:
             continue
         z = _zona(c[0])
         m = re.match(r"1 de (enero|julio) de (\d{4})", c[4])
         if not z or not m:
             continue
-        v = c[5].replace(".", "").replace(",", ".")
-        if not v.strip():
+        v = c[5].strip().strip('"').replace(".", "").replace(",", ".")
+        if not v:
             continue
         files.append({"zona": z, "edat": c[1], "nac": c[2], "sexe": c[3], "data": f"{m[2]}-{'01' if m[1] == 'enero' else '07'}", "n": float(v)})
     p = pd.DataFrame(files)
