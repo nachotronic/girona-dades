@@ -26,6 +26,13 @@ ORIGENS = [("es", ["Española"], ["Española"]),
            ("afr", ["De Africa"], ["De Africa"]),
            ("ame", ["De América"], ["De América del Norte", "De Centro América y Caribe", "De Sudamérica"]),
            ("asi", ["De Asia"], ["De Asia"])]
+# Tipos de delito del INE que no se solapan entre sí (clave del texto en la web, nombre en el INE)
+TIPUS = [("homicidi", "Homicidio y sus formas"), ("lesions", "Lesiones"), ("sexual", "Contra la libertad e indemnidad sexuales"),
+         ("maltracte", "Trato degradante y violencia"), ("amenaces", "Amenazas"), ("furts", "Hurtos"), ("robatori_f", "Robo con fuerza"),
+         ("robatori_v", "Robo con violencia"), ("estafes", "Estafas"), ("danys", "Daños"), ("usurpacio", "Usurpación"),
+         ("drogues", "Contra la salud pública"), ("seg_vial", "Contra la seguridad vial"), ("falsedat", "Falsedades documentales"),
+         ("autoritat", "Atentados contra la autoridad y de la resistencia y desobediencia"), ("trencament", "Quebrantamiento de condena"),
+         ("familia", "Abandono de familia")]
 
 
 def r(x, n=1):
@@ -142,14 +149,11 @@ def _condemnats(pob: Pob) -> dict:
         piv = u.pivot_table(index="tipus", columns="nac", values="n", aggfunc="sum")
         if "Total" in piv and "Española" in piv:
             piv["pct"] = (1 - piv["Española"] / piv["Total"]) * 100
-            piv = piv[piv["Total"] >= 2000]
             tot = piv.loc["Delitos"] if "Delitos" in piv.index else None
-            piv = piv.drop(index=[i for i in piv.index if i == "Delitos"]).sort_values("pct", ascending=False)
-            gt = [{"g": i, "c": "cnt:" + i, "esp": r(f_["pct"], 1), "n": int(f_["Total"])} for i, f_ in piv.head(12).iterrows()]
+            gt = [{"g": k, "c": "cnt:" + k, "esp": r(piv.loc[n, "pct"], 1), "n": int(piv.loc[n, "Total"])} for k, n in TIPUS if n in piv.index]
+            gt.sort(key=lambda x: -(x["esp"] or 0))
             out["cn_tipus"] = {"tipus": "barres", "u": "%", "dec": 1, "claus": ["esp"], "noms": "cnz", "any": at, "nu": "cn_delictes", "grups": gt,
-                               "abs": {"tot": r(tot["pct"], 1) if tot is not None else None, "any": at,
-                                       "max": gt[0]["g"] if gt else None, "min": piv.index[-1] if len(piv) else None,
-                                       "min_v": r(piv["pct"].iloc[-1], 1) if len(piv) else None}}
+                               "abs": {"tot": r(tot["pct"], 1) if tot is not None else None, "any": at}}
     return out
 
 

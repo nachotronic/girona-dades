@@ -490,5 +490,10 @@ def construir(municipios, salida: pathlib.Path) -> dict:
     for c, o in ao.items():
         abp.setdefault(c, {}).update(o)
     prov.update(po)
+    try:  # delitos según nacionalidad (INE condenados, Interior detenidos)
+        import condemnats_web
+        prov.update(condemnats_web.construir())
+    except Exception as e:  # noqa: BLE001
+        print("AVISO condemnats:", e)
     print(f"justicia: {len(zona_pj)} partidos, {len(abp)} ABP con tipos, {len(xi)} municipios de Interior, {len(xo)} con delitos de odio, gráficos {sorted(prov)}")
     return {"pj": zona_pj, "abp": abp, "x": x, "refs": refs, "anys": anys, "prov": prov}

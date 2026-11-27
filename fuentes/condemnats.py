@@ -25,7 +25,7 @@ from .comun import carpeta, get, normaliza
 INE = "https://servicios.ine.es/wstempus/js/ES"
 CSV_INE = "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/{}.csv"
 MIR = "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_bdsc/Datos3/l0/{}.csv_bdsc"
-ZONES = {"girona": "gi", "barcelona": "bcn", "lleida": "lle", "tarragona": "tar", "total nacional": "esp"}
+ZONES = {"girona": "gi", "barcelona": "bcn", "lleida": "lle", "tarragona": "tar", "nacional total": "esp"}
 
 
 def _zona(nom: str) -> str | None:
