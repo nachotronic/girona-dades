@@ -57,10 +57,10 @@
  },
  "condemnats": {
   "estat": "ok",
-  "intent": "2026-11-27T16:57:39Z",
-  "ok": "2026-11-27T16:57:39Z",
-  "durada": 91,
-  "resum": "INE condenados: 468 filas (2013-2025), origen 416, tipos 61\nINE población 56947: 141120 filas, 2002-01-2026-01\nInterior detenciones: 11264 filas (2010-2025), países 52"
+  "intent": "2026-11-27T17:00:15Z",
+  "ok": "2026-11-27T17:00:15Z",
+  "durada": 133,
+  "resum": "INE condenados: 585 filas (2013-2025), origen 520, tipos 61\nINE población 56947: 176400 filas, 2002-01-2026-01\nInterior detenciones: 14080 filas (2010-2025), países 52"
  },
  "conjuntura": {
   "estat": "ok",

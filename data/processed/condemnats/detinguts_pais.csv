@@ -1,4 +1,836 @@
 zona,pais,any,valor
+esp,1.-CONTINENTE AFRICANO,2025,93161
+esp,1.-CONTINENTE AFRICANO,2024,80592
+esp,1.-CONTINENTE AFRICANO,2023,71186
+esp,1.-CONTINENTE AFRICANO,2022,62061
+esp,1.-CONTINENTE AFRICANO,2021,52986
+esp,1.-CONTINENTE AFRICANO,2020,44657
+esp,1.-CONTINENTE AFRICANO,2019,33162
+esp,1.-CONTINENTE AFRICANO,2018,28912
+esp,1.-CONTINENTE AFRICANO,2017,26085
+esp,1.-CONTINENTE AFRICANO,2016,25218
+esp,1.-CONTINENTE AFRICANO,2015,25679
+esp,1.-CONTINENTE AFRICANO,2014,30134
+esp,1.-CONTINENTE AFRICANO,2013,34324
+esp,1.-CONTINENTE AFRICANO,2012,36114
+esp,1.-CONTINENTE AFRICANO,2011,36321
+esp,1.-CONTINENTE AFRICANO,2010,30989
+esp,1.01.-Marruecos,2025,57621
+esp,1.01.-Marruecos,2024,52789
+esp,1.01.-Marruecos,2023,47865
+esp,1.01.-Marruecos,2022,42630
+esp,1.01.-Marruecos,2021,37764
+esp,1.01.-Marruecos,2020,32227
+esp,1.01.-Marruecos,2019,22731
+esp,1.01.-Marruecos,2018,19545
+esp,1.01.-Marruecos,2017,17464
+esp,1.01.-Marruecos,2016,16939
+esp,1.01.-Marruecos,2015,17303
+esp,1.01.-Marruecos,2014,20146
+esp,1.01.-Marruecos,2013,23079
+esp,1.01.-Marruecos,2012,24094
+esp,1.01.-Marruecos,2011,23705
+esp,1.01.-Marruecos,2010,19013
+esp,1.02.-Argelia,2025,21812
+esp,1.02.-Argelia,2024,15820
+esp,1.02.-Argelia,2023,12153
+esp,1.02.-Argelia,2022,9499
+esp,1.02.-Argelia,2021,6882
+esp,1.02.-Argelia,2020,4814
+esp,1.02.-Argelia,2019,3385
+esp,1.02.-Argelia,2018,2774
+esp,1.02.-Argelia,2017,2602
+esp,1.02.-Argelia,2016,2208
+esp,1.02.-Argelia,2015,2148
+esp,1.02.-Argelia,2014,2342
+esp,1.02.-Argelia,2013,2654
+esp,1.02.-Argelia,2012,2857
+esp,1.02.-Argelia,2011,3155
+esp,1.02.-Argelia,2010,2905
+esp,1.03.-Senegal,2025,4434
+esp,1.03.-Senegal,2024,4020
+esp,1.03.-Senegal,2023,3455
+esp,1.03.-Senegal,2022,3012
+esp,1.03.-Senegal,2021,2433
+esp,1.03.-Senegal,2020,1922
+esp,1.03.-Senegal,2019,2030
+esp,1.03.-Senegal,2018,1971
+esp,1.03.-Senegal,2017,1673
+esp,1.03.-Senegal,2016,1818
+esp,1.03.-Senegal,2015,1833
+esp,1.03.-Senegal,2014,2221
+esp,1.03.-Senegal,2013,2458
+esp,1.03.-Senegal,2012,2394
+esp,1.03.-Senegal,2011,2370
+esp,1.03.-Senegal,2010,2824
+esp,1.04.-Nigeria,2025,1146
+esp,1.04.-Nigeria,2024,1044
+esp,1.04.-Nigeria,2023,1156
+esp,1.04.-Nigeria,2022,1198
+esp,1.04.-Nigeria,2021,921
+esp,1.04.-Nigeria,2020,948
+esp,1.04.-Nigeria,2019,1072
+esp,1.04.-Nigeria,2018,1043
+esp,1.04.-Nigeria,2017,1068
+esp,1.04.-Nigeria,2016,1160
+esp,1.04.-Nigeria,2015,1244
+esp,1.04.-Nigeria,2014,1595
+esp,1.04.-Nigeria,2013,1723
+esp,1.04.-Nigeria,2012,2028
+esp,1.04.-Nigeria,2011,2029
+esp,1.04.-Nigeria,2010,1730
+esp,1.05.-Guinea Ecuatorial,2025,748
+esp,1.05.-Guinea Ecuatorial,2024,515
+esp,1.05.-Guinea Ecuatorial,2023,577
+esp,1.05.-Guinea Ecuatorial,2022,532
+esp,1.05.-Guinea Ecuatorial,2021,439
+esp,1.05.-Guinea Ecuatorial,2020,350
+esp,1.05.-Guinea Ecuatorial,2019,394
+esp,1.05.-Guinea Ecuatorial,2018,385
+esp,1.05.-Guinea Ecuatorial,2017,372
+esp,1.05.-Guinea Ecuatorial,2016,337
+esp,1.05.-Guinea Ecuatorial,2015,354
+esp,1.05.-Guinea Ecuatorial,2014,390
+esp,1.05.-Guinea Ecuatorial,2013,621
+esp,1.05.-Guinea Ecuatorial,2012,646
+esp,1.05.-Guinea Ecuatorial,2011,767
+esp,1.05.-Guinea Ecuatorial,2010,664
+esp,1.06.-Ghana,2025,498
+esp,1.06.-Ghana,2024,556
+esp,1.06.-Ghana,2023,574
+esp,1.06.-Ghana,2022,488
+esp,1.06.-Ghana,2021,472
+esp,1.06.-Ghana,2020,430
+esp,1.06.-Ghana,2019,374
+esp,1.06.-Ghana,2018,376
+esp,1.06.-Ghana,2017,371
+esp,1.06.-Ghana,2016,325
+esp,1.06.-Ghana,2015,297
+esp,1.06.-Ghana,2014,401
+esp,1.06.-Ghana,2013,426
+esp,1.06.-Ghana,2012,489
+esp,1.06.-Ghana,2011,496
+esp,1.06.-Ghana,2010,395
+esp,1.07.-Mali,2025,1006
+esp,1.07.-Mali,2024,871
+esp,1.07.-Mali,2023,771
+esp,1.07.-Mali,2022,629
+esp,1.07.-Mali,2021,578
+esp,1.07.-Mali,2020,580
+esp,1.07.-Mali,2019,480
+esp,1.07.-Mali,2018,390
+esp,1.07.-Mali,2017,311
+esp,1.07.-Mali,2016,349
+esp,1.07.-Mali,2015,348
+esp,1.07.-Mali,2014,454
+esp,1.07.-Mali,2013,448
+esp,1.07.-Mali,2012,486
+esp,1.07.-Mali,2011,516
+esp,1.07.-Mali,2010,367
+esp,1.08.-Camerún,2025,481
+esp,1.08.-Camerún,2024,376
+esp,1.08.-Camerún,2023,399
+esp,1.08.-Camerún,2022,355
+esp,1.08.-Camerún,2021,330
+esp,1.08.-Camerún,2020,296
+esp,1.08.-Camerún,2019,344
+esp,1.08.-Camerún,2018,370
+esp,1.08.-Camerún,2017,365
+esp,1.08.-Camerún,2016,347
+esp,1.08.-Camerún,2015,345
+esp,1.08.-Camerún,2014,392
+esp,1.08.-Camerún,2013,453
+esp,1.08.-Camerún,2012,509
+esp,1.08.-Camerún,2011,551
+esp,1.08.-Camerún,2010,600
+esp,1.09.-Gambia,2025,1297
+esp,1.09.-Gambia,2024,1299
+esp,1.09.-Gambia,2023,1017
+esp,1.09.-Gambia,2022,818
+esp,1.09.-Gambia,2021,646
+esp,1.09.-Gambia,2020,671
+esp,1.09.-Gambia,2019,352
+esp,1.09.-Gambia,2018,323
+esp,1.09.-Gambia,2017,175
+esp,1.09.-Gambia,2016,201
+esp,1.09.-Gambia,2015,255
+esp,1.09.-Gambia,2014,300
+esp,1.09.-Gambia,2013,331
+esp,1.09.-Gambia,2012,373
+esp,1.09.-Gambia,2011,362
+esp,1.09.-Gambia,2010,353
+esp,1.10.-Guinea Bisau,2025,233
+esp,1.10.-Guinea Bisau,2024,171
+esp,1.10.-Guinea Bisau,2023,196
+esp,1.10.-Guinea Bisau,2022,176
+esp,1.10.-Guinea Bisau,2021,182
+esp,1.10.-Guinea Bisau,2020,158
+esp,1.10.-Guinea Bisau,2019,215
+esp,1.10.-Guinea Bisau,2018,210
+esp,1.10.-Guinea Bisau,2017,205
+esp,1.10.-Guinea Bisau,2016,197
+esp,1.10.-Guinea Bisau,2015,258
+esp,1.10.-Guinea Bisau,2014,292
+esp,1.10.-Guinea Bisau,2013,295
+esp,1.10.-Guinea Bisau,2012,318
+esp,1.10.-Guinea Bisau,2011,333
+esp,1.10.-Guinea Bisau,2010,323
+esp,1.11.-Resto África,2025,3885
+esp,1.11.-Resto África,2024,3131
+esp,1.11.-Resto África,2023,3023
+esp,1.11.-Resto África,2022,2724
+esp,1.11.-Resto África,2021,2339
+esp,1.11.-Resto África,2020,2261
+esp,1.11.-Resto África,2019,1785
+esp,1.11.-Resto África,2018,1525
+esp,1.11.-Resto África,2017,1479
+esp,1.11.-Resto África,2016,1337
+esp,1.11.-Resto África,2015,1294
+esp,1.11.-Resto África,2014,1601
+esp,1.11.-Resto África,2013,1836
+esp,1.11.-Resto África,2012,1920
+esp,1.11.-Resto África,2011,2037
+esp,1.11.-Resto África,2010,1815
+esp,2.-CONTINENTE AMERICANO,2025,84682
+esp,2.-CONTINENTE AMERICANO,2024,71604
+esp,2.-CONTINENTE AMERICANO,2023,63676
+esp,2.-CONTINENTE AMERICANO,2022,53862
+esp,2.-CONTINENTE AMERICANO,2021,44372
+esp,2.-CONTINENTE AMERICANO,2020,41384
+esp,2.-CONTINENTE AMERICANO,2019,29864
+esp,2.-CONTINENTE AMERICANO,2018,25341
+esp,2.-CONTINENTE AMERICANO,2017,22980
+esp,2.-CONTINENTE AMERICANO,2016,21223
+esp,2.-CONTINENTE AMERICANO,2015,21977
+esp,2.-CONTINENTE AMERICANO,2014,26984
+esp,2.-CONTINENTE AMERICANO,2013,35217
+esp,2.-CONTINENTE AMERICANO,2012,37451
+esp,2.-CONTINENTE AMERICANO,2011,40339
+esp,2.-CONTINENTE AMERICANO,2010,32642
+esp,2.01.-Ecuador,2025,7354
+esp,2.01.-Ecuador,2024,6699
+esp,2.01.-Ecuador,2023,6538
+esp,2.01.-Ecuador,2022,6283
+esp,2.01.-Ecuador,2021,5730
+esp,2.01.-Ecuador,2020,5392
+esp,2.01.-Ecuador,2019,4746
+esp,2.01.-Ecuador,2018,4630
+esp,2.01.-Ecuador,2017,4627
+esp,2.01.-Ecuador,2016,4609
+esp,2.01.-Ecuador,2015,5206
+esp,2.01.-Ecuador,2014,6523
+esp,2.01.-Ecuador,2013,9012
+esp,2.01.-Ecuador,2012,9761
+esp,2.01.-Ecuador,2011,10846
+esp,2.01.-Ecuador,2010,9310
+esp,2.02.-Colombia,2025,25922
+esp,2.02.-Colombia,2024,21292
+esp,2.02.-Colombia,2023,17756
+esp,2.02.-Colombia,2022,13390
+esp,2.02.-Colombia,2021,10161
+esp,2.02.-Colombia,2020,9260
+esp,2.02.-Colombia,2019,6930
+esp,2.02.-Colombia,2018,5537
+esp,2.02.-Colombia,2017,4726
+esp,2.02.-Colombia,2016,4413
+esp,2.02.-Colombia,2015,4530
+esp,2.02.-Colombia,2014,5682
+esp,2.02.-Colombia,2013,7503
+esp,2.02.-Colombia,2012,7928
+esp,2.02.-Colombia,2011,8373
+esp,2.02.-Colombia,2010,6847
+esp,2.03.-Rep. Dominicana,2025,4731
+esp,2.03.-Rep. Dominicana,2024,4642
+esp,2.03.-Rep. Dominicana,2023,4354
+esp,2.03.-Rep. Dominicana,2022,4042
+esp,2.03.-Rep. Dominicana,2021,3905
+esp,2.03.-Rep. Dominicana,2020,3586
+esp,2.03.-Rep. Dominicana,2019,2538
+esp,2.03.-Rep. Dominicana,2018,2357
+esp,2.03.-Rep. Dominicana,2017,2266
+esp,2.03.-Rep. Dominicana,2016,2316
+esp,2.03.-Rep. Dominicana,2015,2474
+esp,2.03.-Rep. Dominicana,2014,2898
+esp,2.03.-Rep. Dominicana,2013,3970
+esp,2.03.-Rep. Dominicana,2012,4014
+esp,2.03.-Rep. Dominicana,2011,3726
+esp,2.03.-Rep. Dominicana,2010,2662
+esp,2.04.-Bolivia,2025,2963
+esp,2.04.-Bolivia,2024,2665
+esp,2.04.-Bolivia,2023,2842
+esp,2.04.-Bolivia,2022,2597
+esp,2.04.-Bolivia,2021,2448
+esp,2.04.-Bolivia,2020,2230
+esp,2.04.-Bolivia,2019,1926
+esp,2.04.-Bolivia,2018,1790
+esp,2.04.-Bolivia,2017,1827
+esp,2.04.-Bolivia,2016,1834
+esp,2.04.-Bolivia,2015,2056
+esp,2.04.-Bolivia,2014,2482
+esp,2.04.-Bolivia,2013,2900
+esp,2.04.-Bolivia,2012,3261
+esp,2.04.-Bolivia,2011,3787
+esp,2.04.-Bolivia,2010,3246
+esp,2.05.-Perú,2025,12535
+esp,2.05.-Perú,2024,10601
+esp,2.05.-Perú,2023,9010
+esp,2.05.-Perú,2022,6828
+esp,2.05.-Perú,2021,4562
+esp,2.05.-Perú,2020,4316
+esp,2.05.-Perú,2019,2510
+esp,2.05.-Perú,2018,1922
+esp,2.05.-Perú,2017,1519
+esp,2.05.-Perú,2016,1173
+esp,2.05.-Perú,2015,1241
+esp,2.05.-Perú,2014,1728
+esp,2.05.-Perú,2013,2512
+esp,2.05.-Perú,2012,2690
+esp,2.05.-Perú,2011,2915
+esp,2.05.-Perú,2010,2323
+esp,2.06.-Argentina,2025,3216
+esp,2.06.-Argentina,2024,2652
+esp,2.06.-Argentina,2023,2392
+esp,2.06.-Argentina,2022,2137
+esp,2.06.-Argentina,2021,1720
+esp,2.06.-Argentina,2020,1573
+esp,2.06.-Argentina,2019,1202
+esp,2.06.-Argentina,2018,1113
+esp,2.06.-Argentina,2017,1048
+esp,2.06.-Argentina,2016,961
+esp,2.06.-Argentina,2015,1050
+esp,2.06.-Argentina,2014,1222
+esp,2.06.-Argentina,2013,1600
+esp,2.06.-Argentina,2012,1658
+esp,2.06.-Argentina,2011,1820
+esp,2.06.-Argentina,2010,1282
+esp,2.07.-Brasil,2025,2919
+esp,2.07.-Brasil,2024,2500
+esp,2.07.-Brasil,2023,2315
+esp,2.07.-Brasil,2022,2340
+esp,2.07.-Brasil,2021,1886
+esp,2.07.-Brasil,2020,1846
+esp,2.07.-Brasil,2019,1577
+esp,2.07.-Brasil,2018,1391
+esp,2.07.-Brasil,2017,1257
+esp,2.07.-Brasil,2016,1193
+esp,2.07.-Brasil,2015,1040
+esp,2.07.-Brasil,2014,1269
+esp,2.07.-Brasil,2013,1479
+esp,2.07.-Brasil,2012,1682
+esp,2.07.-Brasil,2011,1945
+esp,2.07.-Brasil,2010,1849
+esp,2.08.-Cuba,2025,3098
+esp,2.08.-Cuba,2024,2668
+esp,2.08.-Cuba,2023,2857
+esp,2.08.-Cuba,2022,2565
+esp,2.08.-Cuba,2021,2206
+esp,2.08.-Cuba,2020,2565
+esp,2.08.-Cuba,2019,1755
+esp,2.08.-Cuba,2018,1437
+esp,2.08.-Cuba,2017,1300
+esp,2.08.-Cuba,2016,959
+esp,2.08.-Cuba,2015,977
+esp,2.08.-Cuba,2014,1216
+esp,2.08.-Cuba,2013,1550
+esp,2.08.-Cuba,2012,1462
+esp,2.08.-Cuba,2011,1601
+esp,2.08.-Cuba,2010,1107
+esp,2.09.-Venezuela,2025,7338
+esp,2.09.-Venezuela,2024,5740
+esp,2.09.-Venezuela,2023,4679
+esp,2.09.-Venezuela,2022,3931
+esp,2.09.-Venezuela,2021,3864
+esp,2.09.-Venezuela,2020,3387
+esp,2.09.-Venezuela,2019,1913
+esp,2.09.-Venezuela,2018,1435
+esp,2.09.-Venezuela,2017,1106
+esp,2.09.-Venezuela,2016,827
+esp,2.09.-Venezuela,2015,811
+esp,2.09.-Venezuela,2014,935
+esp,2.09.-Venezuela,2013,1283
+esp,2.09.-Venezuela,2012,1331
+esp,2.09.-Venezuela,2011,1340
+esp,2.09.-Venezuela,2010,1038
+esp,2.10.-Paraguay,2025,3273
+esp,2.10.-Paraguay,2024,2738
+esp,2.10.-Paraguay,2023,2374
+esp,2.10.-Paraguay,2022,2081
+esp,2.10.-Paraguay,2021,1639
+esp,2.10.-Paraguay,2020,1423
+esp,2.10.-Paraguay,2019,1328
+esp,2.10.-Paraguay,2018,1052
+esp,2.10.-Paraguay,2017,951
+esp,2.10.-Paraguay,2016,873
+esp,2.10.-Paraguay,2015,844
+esp,2.10.-Paraguay,2014,909
+esp,2.10.-Paraguay,2013,950
+esp,2.10.-Paraguay,2012,1048
+esp,2.10.-Paraguay,2011,1130
+esp,2.10.-Paraguay,2010,813
+esp,2.11.-Chile,2025,2013
+esp,2.11.-Chile,2024,1659
+esp,2.11.-Chile,2023,1636
+esp,2.11.-Chile,2022,1528
+esp,2.11.-Chile,2021,1094
+esp,2.11.-Chile,2020,1325
+esp,2.11.-Chile,2019,491
+esp,2.11.-Chile,2018,431
+esp,2.11.-Chile,2017,466
+esp,2.11.-Chile,2016,378
+esp,2.11.-Chile,2015,347
+esp,2.11.-Chile,2014,446
+esp,2.11.-Chile,2013,569
+esp,2.11.-Chile,2012,663
+esp,2.11.-Chile,2011,773
+esp,2.11.-Chile,2010,591
+esp,2.12.-Uruguay,2025,823
+esp,2.12.-Uruguay,2024,721
+esp,2.12.-Uruguay,2023,705
+esp,2.12.-Uruguay,2022,710
+esp,2.12.-Uruguay,2021,650
+esp,2.12.-Uruguay,2020,533
+esp,2.12.-Uruguay,2019,467
+esp,2.12.-Uruguay,2018,347
+esp,2.12.-Uruguay,2017,416
+esp,2.12.-Uruguay,2016,355
+esp,2.12.-Uruguay,2015,349
+esp,2.12.-Uruguay,2014,435
+esp,2.12.-Uruguay,2013,592
+esp,2.12.-Uruguay,2012,636
+esp,2.12.-Uruguay,2011,709
+esp,2.12.-Uruguay,2010,435
+esp,2.13.-Resto América,2025,8497
+esp,2.13.-Resto América,2024,7027
+esp,2.13.-Resto América,2023,6218
+esp,2.13.-Resto América,2022,5430
+esp,2.13.-Resto América,2021,4507
+esp,2.13.-Resto América,2020,3948
+esp,2.13.-Resto América,2019,2481
+esp,2.13.-Resto América,2018,1899
+esp,2.13.-Resto América,2017,1471
+esp,2.13.-Resto América,2016,1332
+esp,2.13.-Resto América,2015,1052
+esp,2.13.-Resto América,2014,1239
+esp,2.13.-Resto América,2013,1297
+esp,2.13.-Resto América,2012,1317
+esp,2.13.-Resto América,2011,1374
+esp,2.13.-Resto América,2010,1139
+esp,3.-CONTINENTE ASIÁTICO,2025,8121
+esp,3.-CONTINENTE ASIÁTICO,2024,7285
+esp,3.-CONTINENTE ASIÁTICO,2023,7262
+esp,3.-CONTINENTE ASIÁTICO,2022,6388
+esp,3.-CONTINENTE ASIÁTICO,2021,4882
+esp,3.-CONTINENTE ASIÁTICO,2020,4491
+esp,3.-CONTINENTE ASIÁTICO,2019,4349
+esp,3.-CONTINENTE ASIÁTICO,2018,4447
+esp,3.-CONTINENTE ASIÁTICO,2017,3682
+esp,3.-CONTINENTE ASIÁTICO,2016,3948
+esp,3.-CONTINENTE ASIÁTICO,2015,3927
+esp,3.-CONTINENTE ASIÁTICO,2014,3919
+esp,3.-CONTINENTE ASIÁTICO,2013,4329
+esp,3.-CONTINENTE ASIÁTICO,2012,4594
+esp,3.-CONTINENTE ASIÁTICO,2011,4439
+esp,3.-CONTINENTE ASIÁTICO,2010,3655
+esp,3.01.-China,2025,2606
+esp,3.01.-China,2024,2149
+esp,3.01.-China,2023,2322
+esp,3.01.-China,2022,1834
+esp,3.01.-China,2021,1556
+esp,3.01.-China,2020,1295
+esp,3.01.-China,2019,1525
+esp,3.01.-China,2018,1655
+esp,3.01.-China,2017,1378
+esp,3.01.-China,2016,1343
+esp,3.01.-China,2015,1685
+esp,3.01.-China,2014,1542
+esp,3.01.-China,2013,1579
+esp,3.01.-China,2012,1661
+esp,3.01.-China,2011,1764
+esp,3.01.-China,2010,1423
+esp,3.02.-Paquistán,2025,2059
+esp,3.02.-Paquistán,2024,1646
+esp,3.02.-Paquistán,2023,1663
+esp,3.02.-Paquistán,2022,1377
+esp,3.02.-Paquistán,2021,1257
+esp,3.02.-Paquistán,2020,1075
+esp,3.02.-Paquistán,2019,656
+esp,3.02.-Paquistán,2018,694
+esp,3.02.-Paquistán,2017,731
+esp,3.02.-Paquistán,2016,822
+esp,3.02.-Paquistán,2015,862
+esp,3.02.-Paquistán,2014,945
+esp,3.02.-Paquistán,2013,1034
+esp,3.02.-Paquistán,2012,1021
+esp,3.02.-Paquistán,2011,954
+esp,3.02.-Paquistán,2010,739
+esp,3.03.-India,2025,968
+esp,3.03.-India,2024,1288
+esp,3.03.-India,2023,1048
+esp,3.03.-India,2022,1418
+esp,3.03.-India,2021,704
+esp,3.03.-India,2020,514
+esp,3.03.-India,2019,360
+esp,3.03.-India,2018,400
+esp,3.03.-India,2017,268
+esp,3.03.-India,2016,387
+esp,3.03.-India,2015,323
+esp,3.03.-India,2014,391
+esp,3.03.-India,2013,424
+esp,3.03.-India,2012,437
+esp,3.03.-India,2011,354
+esp,3.03.-India,2010,247
+esp,3.04.-Bangladesh,2025,360
+esp,3.04.-Bangladesh,2024,258
+esp,3.04.-Bangladesh,2023,412
+esp,3.04.-Bangladesh,2022,218
+esp,3.04.-Bangladesh,2021,227
+esp,3.04.-Bangladesh,2020,254
+esp,3.04.-Bangladesh,2019,278
+esp,3.04.-Bangladesh,2018,211
+esp,3.04.-Bangladesh,2017,195
+esp,3.04.-Bangladesh,2016,178
+esp,3.04.-Bangladesh,2015,157
+esp,3.04.-Bangladesh,2014,171
+esp,3.04.-Bangladesh,2013,284
+esp,3.04.-Bangladesh,2012,320
+esp,3.04.-Bangladesh,2011,162
+esp,3.04.-Bangladesh,2010,202
+esp,3.05.-Irán,2025,366
+esp,3.05.-Irán,2024,265
+esp,3.05.-Irán,2023,386
+esp,3.05.-Irán,2022,447
+esp,3.05.-Irán,2021,161
+esp,3.05.-Irán,2020,171
+esp,3.05.-Irán,2019,550
+esp,3.05.-Irán,2018,473
+esp,3.05.-Irán,2017,276
+esp,3.05.-Irán,2016,439
+esp,3.05.-Irán,2015,231
+esp,3.05.-Irán,2014,100
+esp,3.05.-Irán,2013,185
+esp,3.05.-Irán,2012,255
+esp,3.05.-Irán,2011,241
+esp,3.05.-Irán,2010,138
+esp,3.06.-Filipinas,2025,224
+esp,3.06.-Filipinas,2024,230
+esp,3.06.-Filipinas,2023,179
+esp,3.06.-Filipinas,2022,182
+esp,3.06.-Filipinas,2021,198
+esp,3.06.-Filipinas,2020,291
+esp,3.06.-Filipinas,2019,163
+esp,3.06.-Filipinas,2018,127
+esp,3.06.-Filipinas,2017,134
+esp,3.06.-Filipinas,2016,143
+esp,3.06.-Filipinas,2015,128
+esp,3.06.-Filipinas,2014,164
+esp,3.06.-Filipinas,2013,180
+esp,3.06.-Filipinas,2012,185
+esp,3.06.-Filipinas,2011,166
+esp,3.06.-Filipinas,2010,107
+esp,3.07.-Resto de Asia,2025,1538
+esp,3.07.-Resto de Asia,2024,1449
+esp,3.07.-Resto de Asia,2023,1252
+esp,3.07.-Resto de Asia,2022,912
+esp,3.07.-Resto de Asia,2021,779
+esp,3.07.-Resto de Asia,2020,891
+esp,3.07.-Resto de Asia,2019,817
+esp,3.07.-Resto de Asia,2018,887
+esp,3.07.-Resto de Asia,2017,700
+esp,3.07.-Resto de Asia,2016,636
+esp,3.07.-Resto de Asia,2015,541
+esp,3.07.-Resto de Asia,2014,606
+esp,3.07.-Resto de Asia,2013,643
+esp,3.07.-Resto de Asia,2012,715
+esp,3.07.-Resto de Asia,2011,798
+esp,3.07.-Resto de Asia,2010,799
+esp,4.-CONTINENTE EUROPEO,2025,57495
+esp,4.-CONTINENTE EUROPEO,2024,57048
+esp,4.-CONTINENTE EUROPEO,2023,54491
+esp,4.-CONTINENTE EUROPEO,2022,49200
+esp,4.-CONTINENTE EUROPEO,2021,42560
+esp,4.-CONTINENTE EUROPEO,2020,40115
+esp,4.-CONTINENTE EUROPEO,2019,39933
+esp,4.-CONTINENTE EUROPEO,2018,40391
+esp,4.-CONTINENTE EUROPEO,2017,38436
+esp,4.-CONTINENTE EUROPEO,2016,39104
+esp,4.-CONTINENTE EUROPEO,2015,39967
+esp,4.-CONTINENTE EUROPEO,2014,46641
+esp,4.-CONTINENTE EUROPEO,2013,50186
+esp,4.-CONTINENTE EUROPEO,2012,50464
+esp,4.-CONTINENTE EUROPEO,2011,53781
+esp,4.-CONTINENTE EUROPEO,2010,40612
+esp,4.01.-Rumanía,2025,21557
+esp,4.01.-Rumanía,2024,21182
+esp,4.01.-Rumanía,2023,19969
+esp,4.01.-Rumanía,2022,18129
+esp,4.01.-Rumanía,2021,16356
+esp,4.01.-Rumanía,2020,16374
+esp,4.01.-Rumanía,2019,17235
+esp,4.01.-Rumanía,2018,18981
+esp,4.01.-Rumanía,2017,18032
+esp,4.01.-Rumanía,2016,19448
+esp,4.01.-Rumanía,2015,20689
+esp,4.01.-Rumanía,2014,25735
+esp,4.01.-Rumanía,2013,28173
+esp,4.01.-Rumanía,2012,28480
+esp,4.01.-Rumanía,2011,30740
+esp,4.01.-Rumanía,2010,22531
+esp,4.02.-Bulgaría,2025,2683
+esp,4.02.-Bulgaría,2024,2906
+esp,4.02.-Bulgaría,2023,2992
+esp,4.02.-Bulgaría,2022,2527
+esp,4.02.-Bulgaría,2021,2554
+esp,4.02.-Bulgaría,2020,2380
+esp,4.02.-Bulgaría,2019,2321
+esp,4.02.-Bulgaría,2018,2224
+esp,4.02.-Bulgaría,2017,2679
+esp,4.02.-Bulgaría,2016,2576
+esp,4.02.-Bulgaría,2015,2701
+esp,4.02.-Bulgaría,2014,2950
+esp,4.02.-Bulgaría,2013,2899
+esp,4.02.-Bulgaría,2012,2826
+esp,4.02.-Bulgaría,2011,2850
+esp,4.02.-Bulgaría,2010,2104
+esp,4.03.-Reino Unido,2025,3599
+esp,4.03.-Reino Unido,2024,3448
+esp,4.03.-Reino Unido,2023,3330
+esp,4.03.-Reino Unido,2022,3014
+esp,4.03.-Reino Unido,2021,2311
+esp,4.03.-Reino Unido,2020,2285
+esp,4.03.-Reino Unido,2019,3158
+esp,4.03.-Reino Unido,2018,3021
+esp,4.03.-Reino Unido,2017,3049
+esp,4.03.-Reino Unido,2016,2772
+esp,4.03.-Reino Unido,2015,2472
+esp,4.03.-Reino Unido,2014,2700
+esp,4.03.-Reino Unido,2013,2693
+esp,4.03.-Reino Unido,2012,2739
+esp,4.03.-Reino Unido,2011,2923
+esp,4.03.-Reino Unido,2010,2094
+esp,4.04.-Portugal,2025,2165
+esp,4.04.-Portugal,2024,2044
+esp,4.04.-Portugal,2023,2173
+esp,4.04.-Portugal,2022,2004
+esp,4.04.-Portugal,2021,1787
+esp,4.04.-Portugal,2020,1687
+esp,4.04.-Portugal,2019,1754
+esp,4.04.-Portugal,2018,1861
+esp,4.04.-Portugal,2017,1710
+esp,4.04.-Portugal,2016,1676
+esp,4.04.-Portugal,2015,1871
+esp,4.04.-Portugal,2014,2118
+esp,4.04.-Portugal,2013,2299
+esp,4.04.-Portugal,2012,2497
+esp,4.04.-Portugal,2011,2757
+esp,4.04.-Portugal,2010,2215
+esp,4.05.-Francia,2025,3561
+esp,4.05.-Francia,2024,3280
+esp,4.05.-Francia,2023,3052
+esp,4.05.-Francia,2022,2769
+esp,4.05.-Francia,2021,2460
+esp,4.05.-Francia,2020,2086
+esp,4.05.-Francia,2019,1758
+esp,4.05.-Francia,2018,1578
+esp,4.05.-Francia,2017,1624
+esp,4.05.-Francia,2016,1534
+esp,4.05.-Francia,2015,1580
+esp,4.05.-Francia,2014,1750
+esp,4.05.-Francia,2013,2026
+esp,4.05.-Francia,2012,1977
+esp,4.05.-Francia,2011,2131
+esp,4.05.-Francia,2010,1576
+esp,4.06.-Italia,2025,3832
+esp,4.06.-Italia,2024,3833
+esp,4.06.-Italia,2023,3579
+esp,4.06.-Italia,2022,3218
+esp,4.06.-Italia,2021,2705
+esp,4.06.-Italia,2020,2453
+esp,4.06.-Italia,2019,2062
+esp,4.06.-Italia,2018,2019
+esp,4.06.-Italia,2017,1836
+esp,4.06.-Italia,2016,1733
+esp,4.06.-Italia,2015,1566
+esp,4.06.-Italia,2014,1578
+esp,4.06.-Italia,2013,1508
+esp,4.06.-Italia,2012,1498
+esp,4.06.-Italia,2011,1611
+esp,4.06.-Italia,2010,1180
+esp,4.07.-Alemania,2025,1690
+esp,4.07.-Alemania,2024,1632
+esp,4.07.-Alemania,2023,1530
+esp,4.07.-Alemania,2022,1414
+esp,4.07.-Alemania,2021,1172
+esp,4.07.-Alemania,2020,902
+esp,4.07.-Alemania,2019,1096
+esp,4.07.-Alemania,2018,1135
+esp,4.07.-Alemania,2017,1076
+esp,4.07.-Alemania,2016,1015
+esp,4.07.-Alemania,2015,957
+esp,4.07.-Alemania,2014,1170
+esp,4.07.-Alemania,2013,1365
+esp,4.07.-Alemania,2012,1396
+esp,4.07.-Alemania,2011,1403
+esp,4.07.-Alemania,2010,1094
+esp,4.08.-Polonia,2025,1406
+esp,4.08.-Polonia,2024,1409
+esp,4.08.-Polonia,2023,1373
+esp,4.08.-Polonia,2022,1370
+esp,4.08.-Polonia,2021,1160
+esp,4.08.-Polonia,2020,1148
+esp,4.08.-Polonia,2019,1066
+esp,4.08.-Polonia,2018,1066
+esp,4.08.-Polonia,2017,965
+esp,4.08.-Polonia,2016,1036
+esp,4.08.-Polonia,2015,1035
+esp,4.08.-Polonia,2014,1030
+esp,4.08.-Polonia,2013,1188
+esp,4.08.-Polonia,2012,1175
+esp,4.08.-Polonia,2011,1357
+esp,4.08.-Polonia,2010,1067
+esp,4.09.-Ucrania,2025,2751
+esp,4.09.-Ucrania,2024,2701
+esp,4.09.-Ucrania,2023,2388
+esp,4.09.-Ucrania,2022,2063
+esp,4.09.-Ucrania,2021,1643
+esp,4.09.-Ucrania,2020,1476
+esp,4.09.-Ucrania,2019,1367
+esp,4.09.-Ucrania,2018,1194
+esp,4.09.-Ucrania,2017,1118
+esp,4.09.-Ucrania,2016,990
+esp,4.09.-Ucrania,2015,1119
+esp,4.09.-Ucrania,2014,1062
+esp,4.09.-Ucrania,2013,1083
+esp,4.09.-Ucrania,2012,1122
+esp,4.09.-Ucrania,2011,1192
+esp,4.09.-Ucrania,2010,1039
+esp,4.10.-Rusia,2025,1393
+esp,4.10.-Rusia,2024,1244
+esp,4.10.-Rusia,2023,1185
+esp,4.10.-Rusia,2022,1169
+esp,4.10.-Rusia,2021,937
+esp,4.10.-Rusia,2020,1048
+esp,4.10.-Rusia,2019,774
+esp,4.10.-Rusia,2018,675
+esp,4.10.-Rusia,2017,795
+esp,4.10.-Rusia,2016,654
+esp,4.10.-Rusia,2015,674
+esp,4.10.-Rusia,2014,786
+esp,4.10.-Rusia,2013,796
+esp,4.10.-Rusia,2012,987
+esp,4.10.-Rusia,2011,772
+esp,4.10.-Rusia,2010,640
+esp,4.11.-Lituania,2025,635
+esp,4.11.-Lituania,2024,662
+esp,4.11.-Lituania,2023,714
+esp,4.11.-Lituania,2022,687
+esp,4.11.-Lituania,2021,670
+esp,4.11.-Lituania,2020,586
+esp,4.11.-Lituania,2019,579
+esp,4.11.-Lituania,2018,596
+esp,4.11.-Lituania,2017,511
+esp,4.11.-Lituania,2016,516
+esp,4.11.-Lituania,2015,570
+esp,4.11.-Lituania,2014,651
+esp,4.11.-Lituania,2013,730
+esp,4.11.-Lituania,2012,795
+esp,4.11.-Lituania,2011,1084
+esp,4.11.-Lituania,2010,846
+esp,4.12.-Holanda,2025,1084
+esp,4.12.-Holanda,2024,982
+esp,4.12.-Holanda,2023,873
+esp,4.12.-Holanda,2022,807
+esp,4.12.-Holanda,2021,751
+esp,4.12.-Holanda,2020,647
+esp,4.12.-Holanda,2019,626
+esp,4.12.-Holanda,2018,620
+esp,4.12.-Holanda,2017,553
+esp,4.12.-Holanda,2016,557
+esp,4.12.-Holanda,2015,479
+esp,4.12.-Holanda,2014,554
+esp,4.12.-Holanda,2013,491
+esp,4.12.-Holanda,2012,445
+esp,4.12.-Holanda,2011,465
+esp,4.12.-Holanda,2010,368
+esp,4.13.-Bélgica,2025,864
+esp,4.13.-Bélgica,2024,941
+esp,4.13.-Bélgica,2023,867
+esp,4.13.-Bélgica,2022,777
+esp,4.13.-Bélgica,2021,643
+esp,4.13.-Bélgica,2020,530
+esp,4.13.-Bélgica,2019,547
+esp,4.13.-Bélgica,2018,563
+esp,4.13.-Bélgica,2017,469
+esp,4.13.-Bélgica,2016,455
+esp,4.13.-Bélgica,2015,386
+esp,4.13.-Bélgica,2014,397
+esp,4.13.-Bélgica,2013,486
+esp,4.13.-Bélgica,2012,432
+esp,4.13.-Bélgica,2011,440
+esp,4.13.-Bélgica,2010,331
+esp,4.14.-Resto de Europa,2025,10275
+esp,4.14.-Resto de Europa,2024,10784
+esp,4.14.-Resto de Europa,2023,10466
+esp,4.14.-Resto de Europa,2022,9252
+esp,4.14.-Resto de Europa,2021,7411
+esp,4.14.-Resto de Europa,2020,6513
+esp,4.14.-Resto de Europa,2019,5590
+esp,4.14.-Resto de Europa,2018,4858
+esp,4.14.-Resto de Europa,2017,4019
+esp,4.14.-Resto de Europa,2016,4142
+esp,4.14.-Resto de Europa,2015,3868
+esp,4.14.-Resto de Europa,2014,4160
+esp,4.14.-Resto de Europa,2013,4449
+esp,4.14.-Resto de Europa,2012,4095
+esp,4.14.-Resto de Europa,2011,4056
+esp,4.14.-Resto de Europa,2010,3527
+esp,5.-OCEANÍA,2025,191
+esp,5.-OCEANÍA,2024,180
+esp,5.-OCEANÍA,2023,206
+esp,5.-OCEANÍA,2022,119
+esp,5.-OCEANÍA,2021,103
+esp,5.-OCEANÍA,2020,107
+esp,5.-OCEANÍA,2019,34
+esp,5.-OCEANÍA,2018,43
+esp,5.-OCEANÍA,2017,49
+esp,5.-OCEANÍA,2016,57
+esp,5.-OCEANÍA,2015,37
+esp,5.-OCEANÍA,2014,55
+esp,5.-OCEANÍA,2013,69
+esp,5.-OCEANÍA,2012,54
+esp,5.-OCEANÍA,2011,51
+esp,5.-OCEANÍA,2010,68
+esp,6.-OTROS,2025,1952
+esp,6.-OTROS,2024,514
+esp,6.-OTROS,2023,439
+esp,6.-OTROS,2022,489
+esp,6.-OTROS,2021,400
+esp,6.-OTROS,2020,354
+esp,6.-OTROS,2019,334
+esp,6.-OTROS,2018,365
+esp,6.-OTROS,2017,779
+esp,6.-OTROS,2016,651
+esp,6.-OTROS,2015,221
+esp,6.-OTROS,2014,266
+esp,6.-OTROS,2013,269
+esp,6.-OTROS,2012,304
+esp,6.-OTROS,2011,568
+esp,6.-OTROS,2010,72
+esp,TOTAL,2025,245602
+esp,TOTAL,2024,217223
+esp,TOTAL,2023,197260
+esp,TOTAL,2022,172119
+esp,TOTAL,2021,145303
+esp,TOTAL,2020,131108
+esp,TOTAL,2019,107676
+esp,TOTAL,2018,99499
+esp,TOTAL,2017,92011
+esp,TOTAL,2016,90201
+esp,TOTAL,2015,91808
+esp,TOTAL,2014,107999
+esp,TOTAL,2013,124394
+esp,TOTAL,2012,128981
+esp,TOTAL,2011,135499
+esp,TOTAL,2010,108038
 bcn,1.-CONTINENTE AFRICANO,2025,21390
 bcn,1.-CONTINENTE AFRICANO,2024,20117
 bcn,1.-CONTINENTE AFRICANO,2023,17530

@@ -1,6 +1,6 @@
 # Estado de las fuentes
 
-Última ejecución: 2026-11-27 16:59 UTC
+Última ejecución: 2026-11-27 17:02 UTC
 
 | Font | Estat | Última descàrrega correcta | Últim intent | Publica |
 |---|---|---|---|---|
@@ -36,7 +36,7 @@
 | llistes_espera — CatSalut, llistes d'espera per hospital | ok | 2026-11-23 14:33 | 2026-11-23 14:33 | mensual |
 | cgpj — CGPJ, estadística judicial per partit judicial | ok | 2026-11-23 14:33 | 2026-11-23 14:33 | trimestral |
 | interior — Ministerio del Interior, Balance de Criminalidad | ok | 2026-11-23 16:16 | 2026-11-23 16:16 | trimestral |
-| condemnats — INE, condemnats per nacionalitat, i Interior, detinguts i investigats estrangers | ok | 2026-11-27 16:57 | 2026-11-27 16:57 | anual |
+| condemnats — INE, condemnats per nacionalitat, i Interior, detinguts i investigats estrangers | ok | 2026-11-27 17:00 | 2026-11-27 17:00 | anual |
 | comerc — Generalitat, cens d'establiments comercials i ocupació comercial | ok | 2026-11-23 16:36 | 2026-11-23 16:36 | anual |
 | turisme — Turisme: INE (ocupació, rendibilitat, despesa, telefonia mòbil), Xifra i Generalitat | ok | 2026-11-23 14:46 | 2026-11-23 14:46 | mensual |
 | cadastre — Catastro, estadístiques per municipi i districte censal | ok | 2026-11-24 15:45 | 2026-11-24 15:45 | anual |
@@ -58,10 +58,10 @@
 
 ## Detalle de la última ejecución
 
-### condemnats: ok (91 s)
+### condemnats: ok (133 s)
 
 ```
-INE condenados: 468 filas (2013-2025), origen 416, tipos 61
-INE población 56947: 141120 filas, 2002-01-2026-01
-Interior detenciones: 11264 filas (2010-2025), países 52
+INE condenados: 585 filas (2013-2025), origen 520, tipos 61
+INE población 56947: 176400 filas, 2002-01-2026-01
+Interior detenciones: 14080 filas (2010-2025), países 52
 ```
