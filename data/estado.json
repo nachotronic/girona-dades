@@ -55,6 +55,13 @@
   "durada": 403,
   "resum": "CECC 4735 files, anys 2017,2018,2019,2021,2023, 221 municipis de Girona; sense codi: Bellver de Cerdanya, Calonge de Segarra, Fogars de la Selva, Lles de Cerdanya, Montellà i Martinet, Prats i Sansor, Prullans, Riu de Cerdanya; Sectors per municipi (API): 221 consultes, 1076 municipi-any; 12 municipi-any sense establiments (l'API no en té fitxa); l'API no té 17 municipi-any antics: Bisbal d'Empordà, la 2021, Escala, l' 2021, Jonquera, la 2021, Vall d'en Bas, la 2021, Cellera de Ter, la 2021, Preses, les 2021, Planes d'Hostoles, les 2021, Vall de Bianya, la 2021, Port de la Selva, el 2021, Armentera, l' 2021, Far d'Empordà, el 2021, Tallada d'Empordà, la 2021, Pera, la 2021, Se; Mapa del Comerç 2022: 67 ciutats, 9 de Girona; IATC: 34 zones a Catalunya, 6 a Girona (Girona); Llicències comercials: 55 a Girona; Mapa Comercial 2024: 8 files, columnes ciutat, poblaci, rea_total_km2, total_actius, actius_km2, mercats_municipals, habitants_mercat, eixos_prime, habitants_eixos_prime, iatc, iac, idc"
  },
+ "condemnats": {
+  "estat": "avís",
+  "intent": "2026-11-27T16:55:52Z",
+  "ok": null,
+  "durada": 47,
+  "resum": "INE condenados: 468 filas (2013-2025), origen 416, tipos 61\nERROR _poblacio: ValueError: could not convert string to float: '\"\"'\nInterior detenciones: 11264 filas (2010-2025), países 52"
+ },
  "conjuntura": {
   "estat": "ok",
   "intent": "2026-11-23T14:22:29Z",
