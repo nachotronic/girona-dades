@@ -111,6 +111,26 @@ def construir() -> dict:
         files = sorted([f for f in files if f["gi"] and f["gi"] >= 1.5], key=lambda x: -x["gi"])[:9]
         res["prov"]["mort_evitable"] = {"tipus": "barres", "u": "n", "dec": 1, "claus": ["gi", "cat"], "noms": "mort", "any": u, "grups": files,
                                         "tot": [_r(val("rs", "GIRONA", "ev_tot"), 1), _r(val("cat", "CATALUNYA", "ev_tot"), 1), int(val("rs", "GIRONA", "ev_tot_n") or 0)]}
+    # Evolución del IME (Excel «evolució»): superior / inferior / igual que Cataluña cada año, por comarca y región
+    fe = F.parent / "mortalitat_ime_evol.csv"
+    if fe.exists():
+        e = pd.read_csv(fe)
+        anys_e = sorted(int(a) for a in e["any"].unique())
+        def serie(nivell, ambit, sexe):
+            x = e[(e["nivell"] == nivell) & (e["ambit"] == ambit) & (e["sexe"] == sexe)].set_index("any")["sig"]
+            return [None if a not in x.index else int(x[a]) for a in anys_e]
+        files = []
+        for cod, nom in COM_GI.items():
+            o = {s: serie("com", cod, s) for s in "tdh"}
+            if any(v is not None for v in o["t"]):
+                files.append({"g": nom, **o})
+                t = [v for v in o["t"] if v is not None]
+                for k, sg in (("ime_sup", 1), ("ime_inf", -1)):
+                    res["com"].setdefault(nom, {})[k] = {str(anys_e[-1]): sum(1 for v in t if v == sg)}
+                res["com"][nom]["ime_sup5"] = {str(anys_e[-1]): sum(1 for v in t[-5:] if v == 1)}
+        rs = {s: serie("rs", "GIRONA", s) for s in "tdh"}
+        if files:
+            res["prov"]["mort_ime_evol"] = {"tipus": "graella", "anys": anys_e, "files": files, "rs": rs}
     x = {"any": u}
     for k in ("ev0", "ev65", "tme", "prem", "ev_tot", "def", "inf"):
         for s in ("t", "d", "h"):
