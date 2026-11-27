@@ -104,3 +104,9 @@ quién muere más que Cataluña	graf:mort_ime_evol		graf
 ajuda a domicili al Baix Empordà	soc_c_sad		rank
 atur al Baix Empordà	cj_atur|atur		rank
 renda del Baix Empordà	renda|renda_llar		rank
+inmigrantes que cometen delitos	graf:cn_taxa		graf
+immigrants que cometen delictes	graf:cn_taxa		graf
+detenidos extranjeros	graf:dn_taxa		graf
+quins delictes cometen els estrangers	graf:cn_tipus		graf
+nacionalidad de los detenidos	graf:dn_pais		graf
+condenados extranjeros por continente	graf:cn_origen		graf

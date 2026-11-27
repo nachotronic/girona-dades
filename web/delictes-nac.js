@@ -2,8 +2,8 @@
    Textos, nombres de grupo, titulares y notas de los gráficos cn_* y dn_*. */
 (function () {
   if (!window.PG) return;
-  const NOTA_CN_CA = "Compta on es dicta la condemna, no on viu el condemnat: hi entren turistes i persones de pas, que no surten al padró, i a Girona això pesa (costa i frontera). Els estrangers residents són més joves i més sovint homes que els espanyols, i totes dues coses fan pujar qualsevol taxa; el gràfic per sexe en corregeix una part. La nacionalitat no explica per què: hi pesen l'edat, la renda, la feina i on vigila la policia. Població de 18 anys o més a 1 de juliol (els de 18 i 19 anys, estimats).";
-  const NOTA_CN_ES = "Cuenta dónde se dicta la condena, no dónde vive el condenado: entran turistas y personas de paso, que no salen en el padrón, y en Girona eso pesa (costa y frontera). Los extranjeros residentes son más jóvenes y más a menudo hombres que los españoles, y ambas cosas hacen subir cualquier tasa; el gráfico por sexo corrige una parte. La nacionalidad no explica el porqué: influyen la edad, la renta, el trabajo y dónde vigila la policía. Población de 18 años o más a 1 de julio (los de 18 y 19 años, estimados).";
+  const NOTA_CN_CA = "Compta on es dicta la condemna, no on viu el condemnat: hi entren turistes i persones de pas, que no surten al padró, i a Girona això pesa (costa i frontera). Els estrangers residents són més joves i més sovint homes que els espanyols, i totes dues coses fan pujar qualsevol taxa; el gràfic per sexe compara homes amb homes. La nacionalitat no explica per què: hi pesen l'edat, la renda, la feina i on vigila la policia. Població de 18 anys o més a 1 de juliol (els de 18 i 19 anys, estimats).";
+  const NOTA_CN_ES = "Cuenta dónde se dicta la condena, no dónde vive el condenado: entran turistas y personas de paso, que no salen en el padrón, y en Girona eso pesa (costa y frontera). Los extranjeros residentes son más jóvenes y más a menudo hombres que los españoles, y ambas cosas hacen subir cualquier tasa; el gráfico por sexo compara hombres con hombres. La nacionalidad no explica el porqué: influyen la edad, la renta, el trabajo y dónde vigila la policía. Población de 18 años o más a 1 de julio (los de 18 y 19 años, estimados).";
   const NOTA_DN_CA = "Detingut o investigat no vol dir culpable, i una persona pot sortir-hi més d'un cop. Inclou menors de 14 a 17 anys (es compara amb la població de 15 anys o més) i qualsevol persona detinguda a la província, hi visqui o no. Fins al 2019 Interior no comptava els Mossos en les dades d'estrangers: la sèrie comença el 2020.";
   const NOTA_DN_ES = "Detenido o investigado no quiere decir culpable, y una persona puede salir más de una vez. Incluye menores de 14 a 17 años (se compara con la población de 15 años o más) y a cualquier persona detenida en la provincia, viva o no en ella. Hasta 2019 Interior no contaba a los Mossos en los datos de extranjeros: la serie empieza en 2020.";
   const ca = {
@@ -18,7 +18,7 @@
     cn_sexe: ["Homes amb homes", "Condemnats per 1.000 residents de 18 anys o més, segons sexe i nacionalitat"],
     h_cn_sexe: (a, he, hx, de, dx) => `Comparant homes amb homes, el ${a} es van condemnar ${he} de cada 1.000 espanyols i <b>${hx} de cada 1.000 estrangers</b>. Les dones, molt menys: ${de} espanyoles i ${dx} estrangeres de cada 1.000.`,
     cn_origen: ["Segons d'on són", "Delictes condemnats per 1.000 residents de 18 anys o més, segons la nacionalitat"],
-    h_cn_origen: (a, mx, v, mn, vm) => `A la província, el ${a} la taxa més alta és la dels nacionals ${mx} (${v} delictes per 1.000 residents adults) i la més baixa, la dels ${mn} (${vm}). Una condemna pot incloure més d'un delicte.`,
+    h_cn_origen: (a, mx, v, mn, vm) => `A la província, el ${a} la taxa més alta és la dels ${mx} (${v} delictes per 1.000 residents adults) i la més baixa, la dels ${mn} (${vm}). Una condemna pot incloure més d'un delicte.`,
     cn_tipus: ["Quins delictes", "Estrangers entre els condemnats de cada delicte a tot Espanya (%)"],
     h_cn_tipus: (a, tot, t1, v1, tn, vn) => `A tot Espanya els estrangers van ser el ${tot} dels delictes condemnats el ${a}. Pesen més en <b>${t1}</b> (${v1}) i menys en ${tn} (${vn}). L'INE no dona aquest detall per províncies.`,
     cn_delictes: "delictes", cn_delictes_1: "delicte",
@@ -42,7 +42,7 @@
       "cnt:seg_vial": "Seguretat viària", "cnt:falsedat": "Falsedat documental", "cnt:autoritat": "Atemptat, resistència i desobediència",
       "cnt:trencament": "Trencament de condemna", "cnt:familia": "Abandonament de família",
     },
-    org: { es: "espanyols", ue: "de la Unió Europea", eur: "de la resta d'Europa", afr: "d'Àfrica", ame: "d'Amèrica", asi: "d'Àsia" },
+    org: { es: "espanyols", ue: "nacionals de la Unió Europea", eur: "nacionals de la resta d'Europa", afr: "nacionals d'Àfrica", ame: "nacionals d'Amèrica", asi: "nacionals d'Àsia" },
     paisos: { Marruecos: "el Marroc", Argelia: "Algèria", Rumanía: "Romania", Francia: "França", "Rep. Dominicana": "la República Dominicana", Gambia: "Gàmbia", Senegal: "el Senegal", Italia: "Itàlia", Alemania: "Alemanya", Holanda: "els Països Baixos", Bélgica: "Bèlgica", Polonia: "Polònia", Ucrania: "Ucraïna", Rusia: "Rússia", Lituania: "Lituània", "Reino Unido": "el Regne Unit", Bulgaría: "Bulgària", Paquistán: "el Pakistan", China: "la Xina", India: "l'Índia", Perú: "el Perú", Brasil: "el Brasil", Camerún: "el Camerun", Mali: "Mali", Ghana: "Ghana", Nigeria: "Nigèria", "Guinea Bisau": "Guinea Bissau", "Guinea Ecuatorial": "Guinea Equatorial", Filipinas: "les Filipines", Irán: "l'Iran", Paraguay: "el Paraguai", Uruguay: "l'Uruguai", Ecuador: "l'Equador" },
     font_cn: "Font: INE, Estadística de Població Condemnada Adulta; població: INE, Estadística Contínua de Població",
     font_dn: "Font: Ministeri de l'Interior, Portal Estadístic de Criminalitat (detencions i investigats); població: INE",
@@ -59,7 +59,7 @@
     cn_sexe: ["Hombres con hombres", "Condenados por 1.000 residentes de 18 años o más, según sexo y nacionalidad"],
     h_cn_sexe: (a, he, hx, de, dx) => `Comparando hombres con hombres, en ${a} se condenó a ${he} de cada 1.000 españoles y a <b>${hx} de cada 1.000 extranjeros</b>. Las mujeres, mucho menos: ${de} españolas y ${dx} extranjeras de cada 1.000.`,
     cn_origen: ["Según de dónde son", "Delitos condenados por 1.000 residentes de 18 años o más, según la nacionalidad"],
-    h_cn_origen: (a, mx, v, mn, vm) => `En la provincia, en ${a} la tasa más alta es la de los nacionales ${mx} (${v} delitos por 1.000 residentes adultos) y la más baja, la de los ${mn} (${vm}). Una condena puede incluir más de un delito.`,
+    h_cn_origen: (a, mx, v, mn, vm) => `En la provincia, en ${a} la tasa más alta es la de los ${mx} (${v} delitos por 1.000 residentes adultos) y la más baja, la de los ${mn} (${vm}). Una condena puede incluir más de un delito.`,
     cn_tipus: ["Qué delitos", "Extranjeros entre los condenados de cada delito en toda España (%)"],
     h_cn_tipus: (a, tot, t1, v1, tn, vn) => `En toda España los extranjeros fueron el ${tot} de los delitos condenados en ${a}. Pesan más en <b>${t1}</b> (${v1}) y menos en ${tn} (${vn}). El INE no da este detalle por provincias.`,
     cn_delictes: "delitos", cn_delictes_1: "delito",
@@ -82,7 +82,7 @@
       "cnt:seg_vial": "Seguridad vial", "cnt:falsedat": "Falsedad documental", "cnt:autoritat": "Atentado, resistencia y desobediencia",
       "cnt:trencament": "Quebrantamiento de condena", "cnt:familia": "Abandono de familia",
     },
-    org: { es: "españoles", ue: "de la Unión Europea", eur: "del resto de Europa", afr: "de África", ame: "de América", asi: "de Asia" },
+    org: { es: "españoles", ue: "nacionales de la Unión Europea", eur: "nacionales del resto de Europa", afr: "nacionales de África", ame: "nacionales de América", asi: "nacionales de Asia" },
     paisos: { "Rep. Dominicana": "República Dominicana", Bulgaría: "Bulgaria", Holanda: "Países Bajos" },
     font_cn: "Fuente: INE, Estadística de la Población Condenada Adulta; población: INE, Estadística Continua de Población",
     font_dn: "Fuente: Ministerio del Interior, Portal Estadístico de Criminalidad (detenciones e investigados); población: INE",
